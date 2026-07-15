@@ -1,60 +1,60 @@
-gp_recordstore_lightsparks01 = {
+GP_RecordStore_LightSparks01 = {
 	pos = (0.0, -1.7865801, -0.0)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	align
-	applypositionoffset
-	attachobject = z_recordstore_g_jg_hanglight01
-	emitrangedims = (0.1, 0.1, 0.1)
-	emit_target = (0.0, -0.5, 0.8)
-	enablerotate
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	Align
+	ApplyPositionOffset
+	AttachObject = Z_Recordstore_G_JG_Hanglight01
+	EmitRangeDims = (0.1, 0.1, 0.1)
+	emit_Target = (0.0, -0.5, 0.8)
+	EnableRotate
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, -4.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	radiate
-	anglespread = 200.0
-	bounceheight = 1.0
-	bouncecoeff = 0.2
-	bouncecallbackrate = 0.0
-	liferange = (1.0, 2.5)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	Radiate
+	AngleSpread = 200.0
+	BounceHeight = 1.0
+	BounceCoeff = 0.2
+	BounceCallbackRate = 0.0
+	LifeRange = (1.0, 2.5)
 	emit_rate = 200.0
 	max = 0
-	timeseed = 0.1
-	lifetime = 0.5
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.1
+	lifeTime = 0.5
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.06, 0.1)
 		(0.0, 0.1)
 	]
-	speedrange = (0.2, 3.0)
-	rotvel = (0.0, 0.0)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	alignwithpath
-	pathfollowtime = 0.07
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (0.2, 3.0)
+	RotVel = (0.0, 0.0)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	AlignWithPath
+	PathFollowTime = 0.07
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -7064577
-	lod_default
-	novisibilitytest
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = jow_spark01
-		specularpower = 0
+	LOD_Default
+	NoVisibilityTest
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = JOW_Spark01
+		SpecularPower = 0
 		alphacutoff = 16
-		blendmode = add
-		quadanimationfps = 0
+		blendMode = Add
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.46765104, 0.0, -0.0)
 		(-0.46765104, 0.0, -0.0)
 		(-0.155884, 0.0, -0.0)
@@ -62,13 +62,13 @@ gp_recordstore_lightsparks01 = {
 		(0.46765104, 0.0, -0.0)
 		(0.46765104, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-1
 		-1
 		-1
 		-1
 	]
-	vertexweight = [
+	VertexWeight = [
 		1.0
 	]
 }

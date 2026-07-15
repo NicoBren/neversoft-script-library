@@ -11,21 +11,21 @@ script ui_create_song_statistic
 		pos = [(640.0, 200.0) , (380.0, 500.0) , (640.0, 500.0) , (900.0, 500.0)]
 	endswitch
 	array = []
-	addarrayelement array = <array> element = ($player1_status.difficulty)
-	addarrayelement array = <array> element = ($player2_status.difficulty)
-	addarrayelement array = <array> element = ($player3_status.difficulty)
-	addarrayelement array = <array> element = ($player4_status.difficulty)
-	createscreenelement \{type = containerelement
+	AddArrayElement array = <array> element = ($player1_status.difficulty)
+	AddArrayElement array = <array> element = ($player2_status.difficulty)
+	AddArrayElement array = <array> element = ($player3_status.difficulty)
+	AddArrayElement array = <array> element = ($player4_status.difficulty)
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = song_statistic_container}
 	i = 1
 	begin
-	getplayerinfo <i> part
-	getplayerinfo <i> best_run
-	getplayerinfo <i> score
-	getplayerinfo <i> max_notes
-	getplayerinfo <i> notes_hit
-	getplayerinfo <i> stars
+	GetPlayerInfo <i> part
+	GetPlayerInfo <i> best_run
+	GetPlayerInfo <i> score
+	GetPlayerInfo <i> max_notes
+	GetPlayerInfo <i> notes_hit
+	GetPlayerInfo <i> stars
 	get_difficulty_text_nl difficulty = (<array> [(<i> - 1)])
 	if (<max_notes> = 0)
 		max_notes = 1
@@ -33,27 +33,27 @@ script ui_create_song_statistic
 	if (<stars> < 3)
 		stars = 3
 	endif
-	formattext textname = player_text qs(0x5c5cedaa) p = <i>
-	formattext textname = score_text qs(0x4d4555da) s = <score> decimalplaces = 0 usecommas
-	formattext textname = difficulty_text qs(0x48c6d14c) d = <difficulty_text_nl>
-	formattext textname = percent_text qs(0xc91ec3f1) p = (<notes_hit> / (<max_notes> * 1.0)) decimalplaces = 0
-	formattext textname = streak_text qs(0x883fc856) n = <best_run> decimalplaces = 0 usecommas
+	FormatText TextName = player_text qs("Player %p") p = <i>
+	FormatText TextName = score_text qs("%s") s = <score> DecimalPlaces = 0 usecommas
+	FormatText TextName = difficulty_text qs("%d") d = <difficulty_text_nl>
+	FormatText TextName = percent_text qs("%p\% Notes Hit") p = (<notes_hit> / (<max_notes> * 1.0)) DecimalPlaces = 0
+	FormatText TextName = streak_text qs("%n Note Streak") n = <best_run> DecimalPlaces = 0 usecommas
 	switch (<part>)
 		case guitar
 		icon_texture = guitar_stat
-		case bass
+		case Bass
 		icon_texture = bass_stat
 		case drum
 		icon_texture = drum_stat
-		case vocals
+		case Vocals
 		icon_texture = vocal_stat
 	endswitch
-	createscreenelement {
+	CreateScreenElement {
 		parent = song_statistic_container
-		type = descinterface
+		type = DescInterface
 		desc = 'song_statistic'
 		pos = (<pos> [(<i> - 1)])
-		autosizedims = true
+		autoSizeDims = true
 		just = [center center]
 		player_text = <player_text>
 		score_text = <score_text>
@@ -63,9 +63,9 @@ script ui_create_song_statistic
 		icon_textur = <icon_texture>
 	}
 	stars = 3
-	if <id> :desc_resolvealias name = alias_stars
-		if getscreenelementchildren id = <resolved_id>
-			getarraysize <children>
+	if <id> :Desc_ResolveAlias name = alias_stars
+		if GetScreenElementChildren id = <resolved_id>
+			GetArraySize <children>
 			j = 0
 			begin
 			<current> = (<children> [<j>])
@@ -73,7 +73,7 @@ script ui_create_song_statistic
 			if (<j> < <stars>)
 				alpha = 1.0
 			endif
-			<current> :se_setprops {
+			<current> :SE_SetProps {
 				alpha = <alpha>
 			}
 			j = (<j> + 1)
@@ -85,5 +85,5 @@ script ui_create_song_statistic
 endscript
 
 script ui_destroy_song_statistic 
-	song_statistic_container :die
+	song_statistic_container :Die
 endscript

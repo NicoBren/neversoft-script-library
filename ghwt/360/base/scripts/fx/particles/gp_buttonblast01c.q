@@ -1,23 +1,23 @@
 GP_ButtonBlast01c = {
-	Pos = (1.522998, -99.50123, 4.703488)
-	Angles = (0.0, 0.0, 0.0)
+	pos = (1.522998, -99.50123, 4.703488)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
 	EmitRangeDims = (0.05, 0.0, 0.05)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, 0.0, 0.0)
+	force = (0.0, 0.0, 0.0)
 	EmitterVelocityWeight = 0.0
 	AngleSpread = 45.0
 	LifeRange = (0.05, 0.1)
-	Emit_Rate = 32.0
-	Max = 0
+	emit_rate = 32.0
+	max = 0
 	TimeSeed = 0.0
-	LifeTime = 0.0
-	EmitNum = 0
+	lifeTime = 0.0
+	emitNum = 0
 	FollowEmitter = 0.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -31,15 +31,15 @@ GP_ButtonBlast01c = {
 	EmitDelayStart = 0.0
 	PathFollowTime = 0.0
 	History = 2
-	HistoryListCoordinateSpace = World
-	Color = -9035777
+	HistoryListCoordinateSpace = world
+	color = -9035777
 	LOD_Default
 	material = ButtonBlast01_ButtonBlast01
 	QuickMaterial = {
 		TextureLayout = Layout2x2
 		SpecularPower = 0
-		AlphaCutoff = 1
-		BlendMode = blend
+		alphacutoff = 1
+		blendMode = blend
 		QuadAnimationFPS = 0
 	}
 	Knot = [

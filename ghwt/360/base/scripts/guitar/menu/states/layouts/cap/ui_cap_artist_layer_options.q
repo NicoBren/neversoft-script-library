@@ -1,6 +1,6 @@
 
 script ui_create_cap_artist_layer_options \{back_steps = 2
-		text = qs(0x65b8a528)}
+		text = qs("Edit")}
 	RequireParams \{[
 			part
 			section
@@ -15,11 +15,11 @@ script ui_create_cap_artist_layer_options \{back_steps = 2
 		show_history
 		num_icons = <num_icons>
 	}
-	setup_cas_menu_handlers vmenu_id = create_cap_artist_layer_options_vmenu camera_list = <camera_list> zoom_camera = <zoom_camera> NO_ROTATE = <NO_ROTATE> no_zoom = <no_zoom>
-	cap_artist_layer_edit part = <part> section = <section> mask_index = <mask_index> vmenu_id = create_cap_artist_layer_options_vmenu color_wheel = <color_wheel> camera_list = <camera_list> zoom_camera = <zoom_camera> NO_ROTATE = <NO_ROTATE> no_zoom = <no_zoom>
+	setup_cas_menu_handlers vmenu_id = create_cap_artist_layer_options_vmenu camera_list = <camera_list> zoom_camera = <zoom_camera> no_rotate = <no_rotate> no_zoom = <no_zoom>
+	cap_artist_layer_edit part = <part> section = <section> mask_index = <mask_index> vmenu_id = create_cap_artist_layer_options_vmenu color_wheel = <color_wheel> camera_list = <camera_list> zoom_camera = <zoom_camera> no_rotate = <no_rotate> no_zoom = <no_zoom>
 	menu_finish \{car_helper_text_back}
 	if ScreenElementExists \{id = color_wheel_menu_item}
-		setup_cas_menu_handlers vmenu_id = color_wheel_menu_item camera_list = <camera_list> zoom_camera = <zoom_camera> NO_ROTATE = <NO_ROTATE> no_zoom = <no_zoom>
+		setup_cas_menu_handlers vmenu_id = color_wheel_menu_item camera_list = <camera_list> zoom_camera = <zoom_camera> no_rotate = <no_rotate> no_zoom = <no_zoom>
 	endif
 endscript
 
@@ -38,7 +38,7 @@ endscript
 
 script ui_deinit_cap_artist_layer_options \{back_steps = 2}
 	if (<back_steps> > 1)
-		flushallcompositetextures
+		FlushAllCompositeTextures
 	endif
 	ui_event_get_stack
 	i = 0
@@ -49,12 +49,12 @@ script ui_deinit_cap_artist_layer_options \{back_steps = 2}
 	i = (<i> + 1)
 	repeat <stack_size>
 	if NOT GotParam \{from_artist_layer}
-		flushallcompositetextures
+		FlushAllCompositeTextures
 	endif
 	if GotParam \{additional_deinit_script}
 		<additional_deinit_script>
 	endif
-	poptemporarycasappearance
+	PopTemporaryCASAppearance
 endscript
 
 script exit_artist_layer_options 
@@ -62,6 +62,6 @@ script exit_artist_layer_options
 endscript
 
 script exit_artist_layer_options_discard 
-	killallcompositetextures
+	KillAllCompositeTextures
 	discard_changes_prompt
 endscript

@@ -1,28 +1,28 @@
-gp_pinwheelsmoke01 = {
-	Pos = (-2.511173, 0.0, -2.78096)
-	Angles = (0.0, 0.0, 0.0)
+GP_PinWheelSmoke01 = {
+	pos = (-2.511173, 0.0, -2.78096)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
-	Attach
+	attach
 	Align
 	EmitRangeDims = (0.0, 0.0, 0.0)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EnableRotate
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, -0.03, 0.0)
+	force = (0.0, -0.03, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	AngleSpread = 20.0
 	LifeRange = (3.0, 4.0)
-	Emit_Rate = 4.7
-	Max = 0
+	emit_rate = 4.7
+	max = 0
 	TimeSeed = 0.0
-	LifeTime = 0.0
-	EmitNum = 0
+	lifeTime = 0.0
+	emitNum = 0
 	FollowEmitter = 0.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -36,8 +36,8 @@ gp_pinwheelsmoke01 = {
 	EmitDelayStart = 0.0
 	PathFollowTime = 0.0
 	History = 2
-	HistoryListCoordinateSpace = World
-	Color = -80
+	HistoryListCoordinateSpace = world
+	color = -80
 	LOD_Default
 	QuickMaterial = {
 		TextureLayout = Layout2x2
@@ -45,8 +45,8 @@ gp_pinwheelsmoke01 = {
 		DiffuseTexture = JOW_Steam02
 		SpecularPower = 0
 		fillburst
-		AlphaCutoff = 1
-		BlendMode = add
+		alphacutoff = 1
+		blendMode = Add
 		QuadAnimationFPS = 0
 	}
 	Knot = [

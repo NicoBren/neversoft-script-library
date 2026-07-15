@@ -1,55 +1,55 @@
-gp_purplesmoke01 = {
+GP_PurpleSmoke01 = {
 	pos = (0.132884, 0.0, 0.255335)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
+	CreatedAtStart
 	attach
-	emitrangedims = (0.0, 0.0, 0.0)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	EmitRangeDims = (0.0, 0.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, -0.03, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 20.0
-	liferange = (1.0, 6.0)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 20.0
+	LifeRange = (1.0, 6.0)
 	emit_rate = 32.0
 	max = 0
-	timeseed = 0.0
-	lifetime = 0.5
-	emitnum = 0
-	followemitter = 0.0
-	fillpath
-	alwaysemit
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 0.5
+	emitNum = 0
+	FollowEmitter = 0.0
+	FillPath
+	AlwaysEmit
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.5, 0.5)
 		(5.0, 5.0)
 	]
-	speedrange = (0.0, 0.0)
-	rotvel = (-0.2, 0.2)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	pathfollowtime = 0.0
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (0.0, 0.0)
+	RotVel = (-0.2, 0.2)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.0
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -33816686
-	lod_default
-	quickmaterial = {
-		texturelayout = layout2x2
-		diffusetextureenabled
-		diffusetexture = jow_steam02
-		specularpower = 0
+	LOD_Default
+	QuickMaterial = {
+		TextureLayout = Layout2x2
+		DiffuseTextureEnabled
+		DiffuseTexture = JOW_Steam02
+		SpecularPower = 0
 		fillburst
 		alphacutoff = 1
-		blendmode = blend
-		quadanimationfps = 0
+		blendMode = blend
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.377769, 0.0, -0.0)
 		(-0.377769, 0.0, -0.0)
 		(-0.26279598, 0.0, -0.0)
@@ -60,7 +60,7 @@ gp_purplesmoke01 = {
 		(0.41061902, 0.0, -0.0)
 		(0.41061902, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-101646337
 		-829554689
 		-287575426
@@ -68,7 +68,7 @@ gp_purplesmoke01 = {
 		-741092608
 		-522459904
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.17087801
 		1.0
 	]

@@ -58,7 +58,7 @@ training_star_power_tutorial_script = [
 
 script training_star_power_tutorial_startup 
 	training_init_session
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = root_window}
 	training_create_narrator_icons
 endscript
@@ -69,22 +69,22 @@ script training_2_1_show_title
 	if ($transitions_locked = 0)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	create_training_pause_handler
-	wait \{3
+	Wait \{3
 		seconds
 		ignoreslomo}
 	training_destroy_title
 endscript
-lesson_complete = 0
+LESSON_COMPLETE = 0
 
 script training_2_1_start_gem_scroller 
 	destroy_band
-	training_start_gem_scroller \{song = tutorial_2b}
-	if screenelementexists \{id = menu_tutorial}
-		launchevent \{type = unfocus
+	training_start_gem_scroller \{song = Tutorial_2B}
+	if ScreenElementExists \{id = menu_tutorial}
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif
@@ -104,19 +104,19 @@ script training_2_1_start_gem_scroller
 	training_set_lesson_header_body \{text = "Hit every note in a Star Combo for a Star Power Boost"}
 	training_show_lesson_header
 	safe_show \{id = lou_icon}
-	change \{lesson_complete = 0}
+	change \{LESSON_COMPLETE = 0}
 	change \{training_received_star_power = 0}
 	change \{notes_hit = 0}
 	training_wait_for_gem_scroller_startup
 endscript
 
 script training_2_1_explain 
-	wait \{3.5
+	Wait \{3.5
 		seconds
 		ignoreslomo}
 	training_pause_gem_scroller
-	training_play_sound \{sound = 'Tutorial_2A_01_lou'}
-	wait \{3
+	training_play_sound \{Sound = 'Tutorial_2A_01_lou'}
+	Wait \{3
 		seconds
 		ignoreslomo}
 	if training_are_notes_flipped
@@ -130,11 +130,11 @@ script training_2_1_explain
 			pos = (532.0, 360.0)
 			scale = 0.7}
 	endif
-	training_wait_for_sound \{sound = 'Tutorial_2A_01_lou'
-		wait}
+	training_wait_for_sound \{Sound = 'Tutorial_2A_01_lou'
+		Wait}
 	training_set_task_header_body \{text = "Nail the Star Combo to continue"}
 	training_show_task_header
-	wait \{2
+	Wait \{2
 		seconds
 		ignoreslomo}
 	training_resume_gem_scroller
@@ -156,7 +156,7 @@ script training_2_1_wait_for_star_power
 	if ($training_received_star_power = 1)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
@@ -164,32 +164,32 @@ endscript
 script training_2_1_lesson_complete 
 	destroy_menu \{menu_id = menu_tutorial}
 	create_training_pause_handler
-	wait \{0.75
+	Wait \{0.75
 		seconds
 		ignoreslomo}
-	stopallsounds
-	pausegame
-	pausegh3sounds
+	StopAllSounds
+	PauseGame
+	PauseGh3Sounds
 	training_hide_lesson_header
 	training_hide_task_header
-	wait \{0.5
+	Wait \{0.5
 		seconds
 		ignoreslomo}
-	killcamanim \{name = ch_view_cam}
+	KillCamAnim \{name = ch_view_cam}
 	kill_gem_scroller
 	destroy_bg_viewport
 	setup_bg_viewport
-	playigccam \{id = cs_view_cam_id
+	PlayIGCCam \{id = cs_view_cam_id
 		name = ch_view_cam
 		viewport = bg_viewport
-		lockto = world
+		LockTo = world
 		pos = (-0.068807, 1.5990009, 5.7975965)
-		quat = (0.000506, 0.99942994, -0.017537998)
-		fov = 72.0
-		play_hold = 1
+		Quat = (0.000506, 0.99942994, -0.017537998)
+		FOV = 72.0
+		Play_hold = 1
 		interrupt_current}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = training_container
 		id = tuning_complete_text
 		just = [center center]
@@ -199,10 +199,10 @@ script training_2_1_lesson_complete
 		scale = 1.0
 		rgba = ($training_text_color)
 	}
-	unpausegh3sounds
-	unpausegame
-	soundevent \{event = tutorial_mode_finish_chord_02}
-	wait \{2
+	UnpauseGh3Sounds
+	UnPauseGame
+	SoundEvent \{event = Tutorial_Mode_Finish_Chord_02}
+	Wait \{2
 		seconds
 		ignoreslomo}
 	safe_destroy \{id = tuning_complete_text}
@@ -210,9 +210,9 @@ endscript
 
 script training_2_2_start_gem_scroller 
 	destroy_band
-	training_start_gem_scroller \{song = tutorial_2b}
-	if screenelementexists \{id = menu_tutorial}
-		launchevent \{type = unfocus
+	training_start_gem_scroller \{song = Tutorial_2B}
+	if ScreenElementExists \{id = menu_tutorial}
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif
@@ -232,16 +232,16 @@ script training_2_2_start_gem_scroller
 endscript
 
 script training_create_whammy_sprites 
-	if iswinport
+	if IsWinPort
 		whammy_pos = (582.0, 405.0)
 	else
 		whammy_pos = (666.0, 416.0)
 	endif
 	whammy_scale = (0.7, 0.7)
 	z = 21
-	createscreenelement {
+	CreateScreenElement {
 		parent = training_container
-		type = spriteelement
+		type = SpriteElement
 		id = guitar_whammy_up
 		just = [center center]
 		texture = training_whammy_up
@@ -251,9 +251,9 @@ script training_create_whammy_sprites
 		scale = <whammy_scale>
 		z_priority = <z>
 	}
-	createscreenelement {
+	CreateScreenElement {
 		parent = training_container
-		type = spriteelement
+		type = SpriteElement
 		id = guitar_whammy_down
 		just = [center center]
 		texture = training_whammy_down
@@ -263,9 +263,9 @@ script training_create_whammy_sprites
 		scale = <whammy_scale>
 		z_priority = <z>
 	}
-	createscreenelement {
+	CreateScreenElement {
 		parent = training_container
-		type = spriteelement
+		type = SpriteElement
 		id = guitar_whammy_turn1
 		just = [center center]
 		texture = training_whammy_turn1
@@ -275,9 +275,9 @@ script training_create_whammy_sprites
 		scale = <whammy_scale>
 		z_priority = <z>
 	}
-	createscreenelement {
+	CreateScreenElement {
 		parent = training_container
-		type = spriteelement
+		type = SpriteElement
 		id = guitar_whammy_turn2
 		just = [center center]
 		texture = training_whammy_turn2
@@ -293,16 +293,16 @@ script training_create_whammy_sprites
 endscript
 
 script training_create_whammy_arrows 
-	if iswinport
+	if IsWinPort
 		whammy_pos = (532.0, 345.0)
 	else
 		whammy_pos = (616.0, 356.0)
 	endif
 	whammy_scale = (0.7, 0.7)
 	z = 21
-	createscreenelement {
+	CreateScreenElement {
 		parent = training_container
-		type = spriteelement
+		type = SpriteElement
 		id = guitar_whammy_up_arrow
 		just = [center center]
 		texture = training_arrow_green_wham_start
@@ -312,9 +312,9 @@ script training_create_whammy_arrows
 		scale = <whammy_scale>
 		z_priority = <z>
 	}
-	createscreenelement {
+	CreateScreenElement {
 		parent = training_container
-		type = spriteelement
+		type = SpriteElement
 		id = guitar_whammy_down_arrow
 		just = [center center]
 		texture = training_arrow_green_wham_end
@@ -325,9 +325,9 @@ script training_create_whammy_arrows
 		z_priority = <z>
 	}
 	whammy_pos = (671.0, 366.0)
-	createscreenelement {
+	CreateScreenElement {
 		parent = training_container
-		type = spriteelement
+		type = SpriteElement
 		id = training_arrow_red_start
 		just = [center center]
 		texture = training_arrow_red_wham_start
@@ -337,9 +337,9 @@ script training_create_whammy_arrows
 		scale = <whammy_scale>
 		z_priority = <z>
 	}
-	createscreenelement {
+	CreateScreenElement {
 		parent = training_container
-		type = spriteelement
+		type = SpriteElement
 		id = training_arrow_red_middle
 		just = [center center]
 		texture = training_arrow_red_wham_middle
@@ -349,9 +349,9 @@ script training_create_whammy_arrows
 		scale = <whammy_scale>
 		z_priority = <z>
 	}
-	createscreenelement {
+	CreateScreenElement {
 		parent = training_container
-		type = spriteelement
+		type = SpriteElement
 		id = training_arrow_red_end
 		just = [center center]
 		texture = training_arrow_red_wham_end
@@ -369,7 +369,7 @@ script training_create_whammy_arrows
 endscript
 
 script training_2_2_show_whammy 
-	wait \{1
+	Wait \{1
 		seconds
 		ignoreslomo}
 	training_pause_gem_scroller
@@ -377,8 +377,8 @@ script training_2_2_show_whammy
 	training_set_lesson_header_body \{text = ""}
 	training_show_lesson_header
 	safe_show \{id = lou_icon}
-	createscreenelement \{parent = training_container
-		type = spriteelement
+	CreateScreenElement \{parent = training_container
+		type = SpriteElement
 		id = guitar_sprite
 		just = [
 			center
@@ -397,7 +397,7 @@ script training_2_2_show_whammy
 		z_priority = 20}
 	training_create_whammy_sprites
 	training_create_whammy_arrows
-	if iswinport
+	if IsWinPort
 		training_add_arrow \{id = training_whammy_indicator
 			life = 7
 			pos = (601.0, 339.0)
@@ -410,32 +410,32 @@ script training_2_2_show_whammy
 			scale = 0.7
 			z = 60}
 	endif
-	training_play_sound \{sound = 'Tutorial_2B_01_lou'}
-	wait \{7
+	training_play_sound \{Sound = 'Tutorial_2B_01_lou'}
+	Wait \{7
 		seconds
 		ignoreslomo}
 	training_2_2_animate_whammy_turn
-	wait \{10
+	Wait \{10
 		seconds
 		ignoreslomo}
 	training_2_2_animate_whammy_up_down
-	wait \{2
+	Wait \{2
 		seconds
 		ignoreslomo}
-	training_wait_for_sound \{sound = 'Tutorial_2B_01_lou'}
+	training_wait_for_sound \{Sound = 'Tutorial_2B_01_lou'}
 	training_2_2_destroy_sprites
 	training_set_lesson_header_body \{text = "After playing a note, move the whammy bar in and out to extract Star Power"}
 	training_show_lesson_header
 	training_set_task_header_body \{text = "Boost the Star Power meter to continue"}
 	training_show_task_header
-	training_play_sound \{sound = 'Tutorial_2B_02_lou'
-		wait}
+	training_play_sound \{Sound = 'Tutorial_2B_02_lou'
+		Wait}
 	training_resume_gem_scroller
 endscript
 
 script training_2_2_animate_whammy_up_down 
 	safe_show \{id = guitar_whammy_up_arrow}
-	wait \{0.75
+	Wait \{0.75
 		seconds
 		ignoreslomo}
 	safe_hide \{id = guitar_whammy_up_arrow}
@@ -443,14 +443,14 @@ script training_2_2_animate_whammy_up_down
 	safe_show \{id = guitar_whammy_down_arrow}
 	safe_hide \{id = guitar_whammy_up}
 	safe_show \{id = guitar_whammy_down}
-	wait \{0.75
+	Wait \{0.75
 		seconds
 		ignoreslomo}
 	safe_hide \{id = guitar_whammy_down_arrow}
 	safe_show \{id = guitar_whammy_up_arrow}
 	safe_hide \{id = guitar_whammy_down}
 	safe_show \{id = guitar_whammy_up}
-	wait \{0.75
+	Wait \{0.75
 		seconds
 		ignoreslomo}
 	safe_hide \{id = guitar_whammy_up_arrow}
@@ -459,7 +459,7 @@ endscript
 
 script training_2_2_animate_whammy_turn 
 	safe_show \{id = training_arrow_red_start}
-	wait \{0.75
+	Wait \{0.75
 		seconds
 		ignoreslomo}
 	safe_hide \{id = training_arrow_red_start}
@@ -467,28 +467,28 @@ script training_2_2_animate_whammy_turn
 	safe_show \{id = training_arrow_red_middle}
 	safe_hide \{id = guitar_whammy_up}
 	safe_show \{id = guitar_whammy_turn1}
-	wait \{0.75
+	Wait \{0.75
 		seconds
 		ignoreslomo}
 	safe_hide \{id = training_arrow_red_middle}
 	safe_show \{id = training_arrow_red_end}
 	safe_hide \{id = guitar_whammy_turn1}
 	safe_show \{id = guitar_whammy_turn2}
-	wait \{0.75
+	Wait \{0.75
 		seconds
 		ignoreslomo}
 	safe_hide \{id = training_arrow_red_end}
 	safe_show \{id = training_arrow_red_middle}
 	safe_hide \{id = guitar_whammy_turn2}
 	safe_show \{id = guitar_whammy_turn1}
-	wait \{0.75
+	Wait \{0.75
 		seconds
 		ignoreslomo}
 	safe_hide \{id = training_arrow_red_middle}
 	safe_show \{id = training_arrow_red_start}
 	safe_hide \{id = guitar_whammy_turn1}
 	safe_show \{id = guitar_whammy_up}
-	wait \{0.75
+	Wait \{0.75
 		seconds
 		ignoreslomo}
 	safe_hide \{id = training_arrow_red_start}
@@ -509,15 +509,15 @@ script training_2_2_destroy_sprites
 endscript
 
 script training_2_2_watch_for_star_power 
-	change \{lesson_complete = 0}
+	change \{LESSON_COMPLETE = 0}
 	elapsed_time = 0
 	sound_played = false
 	begin
 	if (<sound_played> = false)
-		getdeltatime
+		GetDeltaTime
 		elapsed_time = (<elapsed_time> + <delta_time>)
 		if (<elapsed_time> > 20.0 && ($player1_status.star_power_amount < 25))
-			training_play_sound \{sound = 'Tutorial_2B_03_lou'}
+			training_play_sound \{Sound = 'Tutorial_2B_03_lou'}
 			sound_played = true
 			printf \{channel = training
 				"playing help sound....."}
@@ -533,43 +533,43 @@ script training_2_2_watch_for_star_power
 			"Song Over! "}
 		return
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
 script training_2_2_lesson_complete 
-	soundevent \{event = tutorial_mode_finish_chord_02}
-	enableinput off controller = ($player1_status.controller)
+	SoundEvent \{event = Tutorial_Mode_Finish_Chord_02}
+	EnableInput off controller = ($player1_status.controller)
 	change \{structurename = player1_status
 		star_power_usable = 0}
 	destroy_menu \{menu_id = menu_tutorial}
 	create_training_pause_handler
-	wait \{0.75
+	Wait \{0.75
 		seconds}
-	stopallsounds
-	pausegame
-	pausegh3sounds
+	StopAllSounds
+	PauseGame
+	PauseGh3Sounds
 	training_hide_lesson_header
 	training_hide_task_header
-	wait \{0.5
+	Wait \{0.5
 		seconds
 		ignoreslomo}
-	killcamanim \{name = ch_view_cam}
+	KillCamAnim \{name = ch_view_cam}
 	kill_gem_scroller
 	destroy_bg_viewport
 	setup_bg_viewport
-	playigccam \{id = cs_view_cam_id
+	PlayIGCCam \{id = cs_view_cam_id
 		name = ch_view_cam
 		viewport = bg_viewport
-		lockto = world
+		LockTo = world
 		pos = (-0.068807, 1.5990009, 5.7975965)
-		quat = (0.000506, 0.99942994, -0.017537998)
-		fov = 72.0
-		play_hold = 1
+		Quat = (0.000506, 0.99942994, -0.017537998)
+		FOV = 72.0
+		Play_hold = 1
 		interrupt_current}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = training_container
 		id = tuning_complete_text
 		just = [center center]
@@ -579,22 +579,22 @@ script training_2_2_lesson_complete
 		scale = 1.0
 		rgba = ($training_text_color)
 	}
-	unpausegh3sounds
-	unpausegame
-	wait \{0.5
+	UnpauseGh3Sounds
+	UnPauseGame
+	Wait \{0.5
 		seconds}
-	training_play_sound \{sound = 'Tutorial_2B_04_Lou'
-		wait}
+	training_play_sound \{Sound = 'Tutorial_2B_04_Lou'
+		Wait}
 	safe_destroy \{id = tuning_complete_text}
-	wait \{1
+	Wait \{1
 		seconds}
 endscript
 
 script training_2_3_start_gem_scroller 
 	destroy_band
-	training_start_gem_scroller \{song = tutorial_2c}
-	if screenelementexists \{id = menu_tutorial}
-		launchevent \{type = unfocus
+	training_start_gem_scroller \{song = Tutorial_2C}
+	if ScreenElementExists \{id = menu_tutorial}
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif
@@ -618,26 +618,26 @@ script training_2_3_start_gem_scroller
 	change \{notes_hit = 0}
 	change \{structurename = player1_status
 		star_power_amount = 0}
-	change \{lesson_complete = 0}
+	change \{LESSON_COMPLETE = 0}
 	training_wait_for_gem_scroller_startup
 endscript
 
 script training_2_3_explain 
-	wait \{2.0
+	Wait \{2.0
 		seconds
 		ignoreslomo}
 	training_pause_gem_scroller
-	training_play_sound \{sound = 'Tutorial_2C_01_lou'}
+	training_play_sound \{Sound = 'Tutorial_2C_01_lou'}
 	training_add_arrow \{id = training_arrow2
 		life = 6
 		pos = (970.0, 430.0)
 		scale = 0.7
 		rot = 0}
-	wait \{7.0
+	Wait \{7.0
 		seconds
 		ignoreslomo}
-	createscreenelement \{parent = training_container
-		type = spriteelement
+	CreateScreenElement \{parent = training_container
+		type = SpriteElement
 		id = guitar_sprite
 		just = [
 			center
@@ -654,30 +654,30 @@ script training_2_3_explain
 		]
 		scale = (0.8, 0.8)
 		z_priority = 4}
-	wait \{0.5
+	Wait \{0.5
 		seconds
 		ignoreslomo}
-	doscreenelementmorph \{id = guitar_sprite
+	doScreenElementMorph \{id = guitar_sprite
 		rot_angle = 0
 		time = 1.0}
-	wait \{3.75
+	Wait \{3.75
 		seconds
 		ignoreslomo}
 	safe_hide \{id = guitar_sprite}
-	doscreenelementmorph \{id = guitar_sprite
+	doScreenElementMorph \{id = guitar_sprite
 		rot_angle = 45
 		time = 0.0}
-	wait \{10.0
+	Wait \{10.0
 		seconds
 		ignoreslomo}
 	safe_show \{id = guitar_sprite}
-	wait \{1.5
+	Wait \{1.5
 		seconds
 		ignoreslomo}
-	doscreenelementmorph \{id = guitar_sprite
+	doScreenElementMorph \{id = guitar_sprite
 		rot_angle = 0
 		time = 1.0}
-	training_wait_for_sound \{sound = 'Tutorial_2C_01_lou'}
+	training_wait_for_sound \{Sound = 'Tutorial_2C_01_lou'}
 	training_set_lesson_header_body \{text = "Tilt the guitar upright to activate star power.\\nOnce it is activated, you can drop it back down"}
 	training_show_lesson_header
 	training_set_task_header_body \{text = "Tilt for Star Power and hit 8 notes to continue"}
@@ -693,9 +693,9 @@ endscript
 
 script training_2_3_wait_for_star_power 
 	change \{training_star_power_active = 0}
-	change \{lesson_complete = 0}
+	change \{LESSON_COMPLETE = 0}
 	change \{training_song_over = 0}
-	enableinput controller = ($player1_status.controller)
+	EnableInput controller = ($player1_status.controller)
 	change \{structurename = player1_status
 		star_power_usable = 1}
 	increase_star_power \{amount = 100}
@@ -706,15 +706,15 @@ script training_2_3_wait_for_star_power
 	if ($training_star_power_active = 1 || $player1_status.star_power_used = 1)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
 script training_2_3_watch_for_notes_hit 
 	change \{notes_hit = 0}
-	if screenelementexists \{id = menu_tutorial}
-		launchevent \{type = unfocus
+	if ScreenElementExists \{id = menu_tutorial}
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif
@@ -746,7 +746,7 @@ script training_2_3_watch_for_notes_hit
 			"done! "}
 		return
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
@@ -754,16 +754,16 @@ endscript
 script training_set_lesson_complete 
 	printf \{channel = training
 		"setting lesson complete................."}
-	change \{lesson_complete = 1}
+	change \{LESSON_COMPLETE = 1}
 endscript
 
 script training_2_tutorial_complete_message 
-	soundevent \{event = tutorial_mode_finish_chord}
+	SoundEvent \{event = Tutorial_Mode_Finish_Chord}
 	training_hide_lesson_header
 	training_hide_task_header
 	safe_hide \{id = lou_icon}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = training_container
 		id = lesson_complete_text
 		just = [center center]
@@ -774,10 +774,10 @@ script training_2_tutorial_complete_message
 		rgba = ($training_text_color)
 	}
 	safe_show \{id = god_icon}
-	training_play_sound \{sound = 'Tutorial_2C_02_god'
-		wait}
+	training_play_sound \{Sound = 'Tutorial_2C_02_god'
+		Wait}
 	safe_hide \{id = god_icon}
-	destroyscreenelement \{id = lesson_complete_text}
+	DestroyScreenElement \{id = lesson_complete_text}
 endscript
 
 script training_2_3_destroy_sprites 
@@ -787,51 +787,51 @@ endscript
 script training_2_3_end 
 	printf \{channel = training
 		"training_2_3_end........."}
-	wait \{1
+	Wait \{1
 		seconds
 		ignoreslomo}
 	training_2_3_destroy_sprites
-	if screenelementexists \{id = menu_tutorial}
+	if ScreenElementExists \{id = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 		create_training_pause_handler
 	endif
-	if screenelementexists \{id = notes_hit_text}
-		destroyscreenelement \{id = notes_hit_text}
+	if ScreenElementExists \{id = notes_hit_text}
+		DestroyScreenElement \{id = notes_hit_text}
 	endif
-	pausegame
-	pausegh3sounds
-	wait \{0.5
+	PauseGame
+	PauseGh3Sounds
+	Wait \{0.5
 		seconds
 		ignoreslomo}
-	killcamanim \{name = ch_view_cam}
+	KillCamAnim \{name = ch_view_cam}
 	kill_gem_scroller
 	destroy_bg_viewport
 	setup_bg_viewport
-	playigccam \{id = cs_view_cam_id
+	PlayIGCCam \{id = cs_view_cam_id
 		name = ch_view_cam
 		viewport = bg_viewport
-		lockto = world
+		LockTo = world
 		pos = (-0.068807, 1.5990009, 5.7975965)
-		quat = (0.000506, 0.99942994, -0.017537998)
-		fov = 72.0
-		play_hold = 1
+		Quat = (0.000506, 0.99942994, -0.017537998)
+		FOV = 72.0
+		Play_hold = 1
 		interrupt_current}
-	unpausegh3sounds
-	unpausegame
+	UnpauseGh3Sounds
+	UnPauseGame
 endscript
 
 script training_2_end 
 	training_kill_session
-	if screenelementexists \{id = training_container}
-		destroyscreenelement \{id = training_container}
+	if ScreenElementExists \{id = training_container}
+		DestroyScreenElement \{id = training_container}
 	endif
-	if screenelementexists \{id = menu_tutorial}
-		launchevent \{type = unfocus
+	if ScreenElementExists \{id = menu_tutorial}
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif
 	training_destroy_narrator_icons
-	setscreenelementprops \{id = root_window
+	SetScreenElementProps \{id = root_window
 		event_handlers = [
 			{
 				pad_start
@@ -839,7 +839,7 @@ script training_2_end
 			}
 		]
 		replace_handlers}
-	setglobaltags \{training
+	SetGlobalTags \{training
 		params = {
 			star_power_lesson = complete
 		}}
@@ -850,13 +850,13 @@ endscript
 script lesson2_hit_note 
 	change notes_hit = ($notes_hit + 1)
 	if (($notes_hit = 1) || ($notes_hit = 4))
-		getrandomvalue \{name = random_value
+		GetRandomValue \{name = random_value
 			a = 0
 			b = 10}
 		if (<random_value> < 5)
-			training_play_sound \{sound = 'Tutorial_God_Positive_01'}
+			training_play_sound \{Sound = 'Tutorial_God_Positive_01'}
 		elseif (<random_value> < 10)
-			training_play_sound \{sound = 'Tutorial_God_Positive_02'}
+			training_play_sound \{Sound = 'Tutorial_God_Positive_02'}
 		endif
 	endif
 	training_display_notes_hit \{notes_hit = $notes_hit}

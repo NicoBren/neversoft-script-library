@@ -7,7 +7,7 @@ frustumdebugtype = 3
 lockfrustums = 0
 renderinstances = 1
 rendergeoms = 1
-renderzonemode = 1
+renderZoneMode = 1
 showinstancesonly = 0
 renderprims = 1
 renderprims3d = 1
@@ -22,8 +22,8 @@ quadtreedensity_alpha_inc = 1
 norender_overridechecksum = 0
 onlyrender_overridechecksum = 0
 onlyrender_meshid = -1
-max_occluders_xenon = 16
-max_occluders_ps3 = 24
+max_occluders_Xenon = 16
+max_occluders_PS3 = 24
 spamifdataoutofbounds = 0
 vsync_interval_perc = 8
 draworderview = 0
@@ -31,10 +31,10 @@ tempcamerafarplane = 400
 quaddbg_2 = 0
 
 script toggle_one_zone_only 
-	if ($renderzonemode = 1)
-		change \{renderzonemode = 2}
+	if ($renderZoneMode = 1)
+		change \{renderZoneMode = 2}
 	else
-		change \{renderzonemode = 1}
+		change \{renderZoneMode = 1}
 	endif
 endscript
 

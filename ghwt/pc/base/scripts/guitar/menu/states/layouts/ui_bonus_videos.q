@@ -1,38 +1,38 @@
 
 script ui_create_bonus_videos 
 	change \{rich_presence_context = presence_videos}
-	make_generic_menu \{title = qs(0x884db659)
+	make_generic_menu \{title = qs("Bonus Videos")
 		scrolling}
 	add_generic_menu_text_item {
-		text = ($bonus_videos [0].text)
+		text = ($Bonus_Videos [0].text)
 		choose_state = uistate_bonus_videos_credits
 	}
-	getarraysize ($bonus_videos)
+	GetArraySize ($Bonus_Videos)
 	i = 1
 	begin
-	if NOT ui_bonus_videos_is_locked id = ($bonus_videos [<i>].id)
-		if (($bonus_videos [<i>].id) = ghmetallica)
-			movie = ($bonus_videos [<i>].movie)
-			getterritory
-			if gotparam \{territory}
+	if NOT ui_bonus_videos_is_locked id = ($Bonus_Videos [<i>].id)
+		if (($Bonus_Videos [<i>].id) = GHMetallica)
+			movie = ($Bonus_Videos [<i>].movie)
+			GetTerritory
+			if GotParam \{territory}
 				if NOT (<territory> = territory_us)
 					movie = 'gh_metallica_noesrb'
 				endif
 			endif
 			add_generic_menu_text_item {
-				text = ($bonus_videos [<i>].text)
+				text = ($Bonus_Videos [<i>].text)
 				pad_choose_script = ui_bonus_videos_play_video
-				pad_choose_params = {($bonus_videos [<i>]) movie = <movie>}
+				pad_choose_params = {($Bonus_Videos [<i>]) movie = <movie>}
 			}
 		else
 			add_generic_menu_text_item {
-				text = ($bonus_videos [<i>].text)
+				text = ($Bonus_Videos [<i>].text)
 				pad_choose_script = ui_bonus_videos_play_video
-				pad_choose_params = {($bonus_videos [<i>])}
+				pad_choose_params = {($Bonus_Videos [<i>])}
 			}
 		endif
 	else
-		add_generic_menu_text_item \{text = qs(0x24a08263)
+		add_generic_menu_text_item \{text = qs("LOCKED")
 			pad_choose_script = ui_bonus_videos_negative_sfx}
 	endif
 	<i> = (<i> + 1)
@@ -45,13 +45,13 @@ script ui_destroy_bonus_videos
 endscript
 
 script ui_bonus_videos_play_video \{movie = 'atvi'}
-	setspawninstancelimits \{max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
-	current_menu :se_setprops \{block_events}
+	current_menu :SE_SetProps \{block_events}
 	if ui_bonus_videos_is_locked id = <id>
 	else
-		menu_music_off
-		spawnscriptnow \{bg_crowd_front_end_silence
+		Menu_Music_Off
+		spawnscriptnow \{BG_Crowd_Front_End_Silence
 			params = {
 				immediate = 1
 			}}
@@ -60,41 +60,41 @@ script ui_bonus_videos_play_video \{movie = 'atvi'}
 			time = 0
 			z_priority = 200}
 		clean_up_user_control_helpers
-		netsessionfunc \{func = removeallcontrollers}
-		playmovieandwait noblack movie = <movie>
+		NetSessionFunc \{func = RemoveAllControllers}
+		PlayMovieAndWait noblack movie = <movie>
 		if ($invite_controller = -1)
-			netsessionfunc func = addcontrollers params = {controller = ($primary_controller)}
+			NetSessionFunc func = AddControllers params = {controller = ($primary_controller)}
 		else
-			netsessionfunc func = addcontrollers params = {controller = ($invite_controller)}
+			NetSessionFunc func = AddControllers params = {controller = ($invite_controller)}
 		endif
 		menu_finish
 		fadetoblack \{off
 			time = 0}
-		spawnscriptnow \{skate8_sfx_backgrounds_new_area
+		spawnscriptnow \{Skate8_SFX_Backgrounds_New_Area
 			params = {
-				bg_sfx_area = frontend_menu_music
+				BG_SFX_Area = FrontEnd_Menu_Music
 			}}
 		menu_music_on
 	endif
-	current_menu :se_setprops \{unblock_events}
+	current_menu :SE_SetProps \{unblock_events}
 endscript
 
 script ui_bonus_videos_is_locked 
-	getarraysize ($bonus_videos)
+	GetArraySize ($Bonus_Videos)
 	i = 0
 	begin
-	if gotparam \{id}
-		if (<id> = ($bonus_videos [<i>].id))
-			getglobaltags ($bonus_videos [<i>].id)
+	if GotParam \{id}
+		if (<id> = ($Bonus_Videos [<i>].id))
+			GetGlobalTags ($Bonus_Videos [<i>].id)
 			if (<unlocked> = 0)
 				return \{true}
 			else
 				return \{false}
 			endif
 		endif
-	elseif gotparam \{movie}
-		if (<movie> = ($bonus_videos [<i>].movie))
-			getglobaltags ($bonus_videos [<i>].id)
+	elseif GotParam \{movie}
+		if (<movie> = ($Bonus_Videos [<i>].movie))
+			GetGlobalTags ($Bonus_Videos [<i>].id)
 			if (<unlocked> = 0)
 				return \{true}
 			else
@@ -108,17 +108,17 @@ script ui_bonus_videos_is_locked
 endscript
 
 script get_movie_id_by_name 
-	getarraysize ($bonus_videos)
+	GetArraySize ($Bonus_Videos)
 	i = 0
 	begin
-	if (($bonus_videos [<i>].movie) = <movie>)
-		return id = ($bonus_videos [<i>].id)
+	if (($Bonus_Videos [<i>].movie) = <movie>)
+		return id = ($Bonus_Videos [<i>].id)
 	endif
 	<i> = (<i> + 1)
 	repeat <array_size>
-	scriptassert \{qs(0xbb136b8e)}
+	ScriptAssert \{qs("\LMovie not found in get_movie_id_by_name!")}
 endscript
 
 script ui_bonus_videos_negative_sfx 
-	soundevent \{event = ui_sfx_negative_select}
+	SoundEvent \{event = UI_SFX_Negative_Select}
 endscript

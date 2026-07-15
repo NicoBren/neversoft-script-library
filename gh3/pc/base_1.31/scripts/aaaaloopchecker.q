@@ -1,24 +1,24 @@
-donotassertforinfiniteloopsinthesescripts = [
-	avoidstate_stop
-	ped_randomwaitatnode01
+DoNotAssertForInfiniteLoopsInTheseScripts = [
+	AVOIDSTATE_STOP
+	Ped_RandomWaitAtNode01
 	igc_cycle_actor_anims
 	z_storyselect_loop_anims
 ]
-blockingfunctions = [
-	wait
-	obj_waitmove
-	obj_waitrotate
-	waitanimwalking
-	waitonegameframe
-	waitanimfinished
-	obj_waitanimfinished
-	domorph
-	goalinit_playanim
+BlockingFunctions = [
+	Wait
+	Obj_WaitMove
+	Obj_WaitRotate
+	WaitAnimWalking
+	WaitOneGameFrame
+	WaitAnimFinished
+	Obj_WaitAnimFinished
+	DoMorph
+	GoalInit_PlayAnim
 	fadein_fadeout
-	waitforevent
-	waitwalkingframe
-	waitanimwalkingframe
-	block
-	skater_waitanimfinished
-	ped_waitanimfinished
+	WaitForEvent
+	WaitWalkingFrame
+	WaitAnimWalkingFrame
+	Block
+	Skater_WaitAnimFinished
+	Ped_WaitAnimFinished
 ]

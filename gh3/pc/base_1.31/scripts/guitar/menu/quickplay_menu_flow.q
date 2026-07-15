@@ -329,7 +329,7 @@ quickplay_fail_song_fs = {
 }
 
 script quickplay_song_select_quit 
-	gh3_sfx_fail_song_stop_sounds
+	GH3_SFX_fail_song_stop_sounds
 	kill_gem_scroller
 endscript
 quickplay_song_ended_fs = {
@@ -460,21 +460,21 @@ script get_total_num_venues
 	if NOT get_valid_venue_index venue_index = <array_entry>
 		break
 	endif
-	get_levelzonearray_checksum index = <index>
-	printf ($levelzones.<level_checksum>.name)
+	get_LevelZoneArray_checksum index = <index>
+	printf ($LevelZones.<level_checksum>.name)
 	<array_entry> = (<array_entry> + 1)
 	repeat
 	return num_venues = <array_entry>
 endscript
 
 script get_valid_venue_index 
-	get_levelzonearray_size
+	get_LevelZoneArray_size
 	index = 0
 	begin
-	get_levelzonearray_checksum index = <index>
+	get_LevelZoneArray_checksum index = <index>
 	valid = 1
-	formattext checksumname = venue_checksum 'venue_%s' s = ($levelzones.<level_checksum>.name)
-	getglobaltags <venue_checksum>
+	FormatText checksumname = venue_checksum 'venue_%s' s = ($LevelZones.<level_checksum>.name)
+	GetGlobalTags <venue_checksum>
 	if NOT (<unlocked> = 1)
 		valid = 0
 	endif
@@ -494,35 +494,35 @@ script quickplay_start_song \{device_num = 0}
 	get_progression_globals game_mode = ($game_mode)
 	songlist = <tier_global>
 	cs_get_total_guitarists
-	getrandomvalue a = 0 b = (<num_guitarists> -1) name = random_guitarist_index integer
+	GetRandomValue a = 0 b = (<num_guitarists> -1) name = random_guitarist_index Integer
 	get_valid_character_index char_index = <random_guitarist_index> player = 1
 	get_musician_profile_struct index = <index>
-	formattext checksumname = character_id '%s' s = (<profile_struct>.name)
+	FormatText checksumname = character_id '%s' s = (<profile_struct>.name)
 	change structurename = player1_status character_id = <character_id>
 	change \{structurename = player1_status
 		style = 1}
 	change \{structurename = player1_status
 		outfit = 1}
-	guitar_array = ($bonus_guitars)
-	getarraysize ($secret_guitars)
+	guitar_array = ($Bonus_Guitars)
+	GetArraySize ($Secret_Guitars)
 	index = 0
 	begin
-	guitar_id = ($secret_guitars [<index>].id)
-	getglobaltags <guitar_id>
+	guitar_id = ($Secret_Guitars [<index>].id)
+	GetGlobalTags <guitar_id>
 	if (<unlocked_for_purchase> = 1)
-		addarrayelement array = (<guitar_array>) element = ($secret_guitars [<index>])
+		AddArrayElement array = (<guitar_array>) element = ($Secret_Guitars [<index>])
 		<guitar_array> = (<array>)
 	endif
 	<index> = (<index> + 1)
 	repeat <array_size>
-	getarraysize <guitar_array>
-	getrandomvalue a = 0 b = (<array_size> -1) name = random_guitar_index integer
+	GetArraySize <guitar_array>
+	GetRandomValue a = 0 b = (<array_size> -1) name = random_guitar_index Integer
 	get_musician_instrument_struct index = <random_guitar_index>
 	change structurename = player1_status instrument_id = (<info_struct>.desc_id)
 	get_total_num_venues
-	getrandomvalue a = 0 b = (<num_venues> -1) name = random_venue_index integer
+	GetRandomValue a = 0 b = (<num_venues> -1) name = random_venue_index Integer
 	get_valid_venue_index venue_index = <random_venue_index>
-	get_levelzonearray_checksum index = <index>
+	get_LevelZoneArray_checksum index = <index>
 	change current_level = <level_checksum>
 	printstruct x = <...>
 	printf "Random Guitarist index is %g. Random venue index is %v" g = <random_guitarist_index> v = <random_venue_index>

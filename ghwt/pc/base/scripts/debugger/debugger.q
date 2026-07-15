@@ -1,34 +1,34 @@
 
-script runremotescript_executeandreturnresult \{localcallback = null}
-	if NOT gotparam \{scriptname}
-		script_assert \{qs(0x9e2173bc)}
+script RunRemoteScript_ExecuteAndReturnResult \{LocalCallback = null}
+	if NOT GotParam \{ScriptName}
+		script_assert \{qs("\LExpected a ScriptName!")}
 		return
 	endif
-	if gotparam \{objid}
-		printf \{qs(0x58d8ff41)}
-		<objid> :<scriptname> <params>
+	if GotParam \{ObjID}
+		printf \{qs("\LRunning game script requested by debugger on object...")}
+		<ObjID> :<ScriptName> <params>
 	else
-		printf \{qs(0x19d64257)}
-		<scriptname> <params>
+		printf \{qs("\LRunning game script requested by debugger ...")}
+		<ScriptName> <params>
 	endif
-	if NOT checksumequals a = <localcallback> b = null
-		printf \{qs(0x9996cc69)}
-		removeparameter \{params}
-		removeparameter \{objid}
-		removeparameter \{scriptname}
-		runremotescript scriptname = <localcallback> params = {<...> localcallback = null}
+	if NOT ChecksumEquals a = <LocalCallback> b = null
+		printf \{qs("\LDebugger requested a callback, sending...")}
+		RemoveParameter \{params}
+		RemoveParameter \{ObjID}
+		RemoveParameter \{ScriptName}
+		RunRemoteScript ScriptName = <LocalCallback> params = {<...> LocalCallback = null}
 	endif
 endscript
 
-script copycameralocationtoclipboard 
-	getcamoffset
-	sendtoclipboard <...>
+script CopyCameraLocationToClipboard 
+	GetCamOffset
+	SendToClipboard <...>
 endscript
 
-script sendtoclipboard 
-	runremotescript scriptname = printstruct params = {<...> sendtoclipboard}
+script SendToClipboard 
+	RunRemoteScript ScriptName = printstruct params = {<...> SendToClipboard}
 endscript
 
-script sendtowindow 
-	runremotescript scriptname = printstruct params = {<...> sendtowindow}
+script SendToWindow 
+	RunRemoteScript ScriptName = printstruct params = {<...> SendToWindow}
 endscript

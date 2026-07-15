@@ -1,56 +1,56 @@
-gp_fx_scifi_elecexplo_smoke_01 = {
+GP_FX_SciFi_ElecExplo_Smoke_01 = {
 	pos = (4.697287, 2.0851018, 0.51167595)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	emitrangedims = (0.1, 0.1, 0.1)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	EmitRangeDims = (0.1, 0.1, 0.1)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, 0.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 10.0
-	liferange = (4.0, 6.0)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 10.0
+	LifeRange = (4.0, 6.0)
 	emit_rate = 5.0
 	max = 5
-	timeseed = 0.5
-	lifetime = 4.0
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.5
+	lifeTime = 4.0
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.3, 0.3)
 		(0.7, 0.7)
 	]
-	speedrange = (0.2, 0.4)
-	rotvel = (0.5, -0.5)
-	rotveltimescale = 0.5
-	emitdelaystart = 0.3
-	pathfollowtime = 0.0
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (0.2, 0.4)
+	RotVel = (0.5, -0.5)
+	RotVelTimeScale = 0.5
+	EmitDelayStart = 0.3
+	PathFollowTime = 0.0
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -123
-	lod_default
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = ph_smoke_singlepuff_blend_02
-		specularpower = 0
-		lighting
-		fakeambientocclusion
+	LOD_Default
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = PH_Smoke_SinglePuff_Blend_02
+		SpecularPower = 0
+		Lighting
+		FakeAmbientOcclusion
 		alphacutoff = 1
-		blendmode = blend
-		softedge
-		softedgescale = 0.2
-		burn
-		burnvalue = 0.3
-		quadanimationfps = 0
+		blendMode = blend
+		SoftEdge
+		SoftedgeScale = 0.2
+		Burn
+		BurnValue = 0.3
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.412285, 0.0, -0.0)
 		(-0.412285, 0.0, -0.0)
 		(-0.38650003, 0.0, -0.0)
@@ -64,7 +64,7 @@ gp_fx_scifi_elecexplo_smoke_01 = {
 		(0.41333, 0.0, -0.0)
 		(0.41333, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-256
 		-1414812928
 		-1
@@ -74,7 +74,7 @@ gp_fx_scifi_elecexplo_smoke_01 = {
 		-256
 		-1296911872
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.09369401
 		0.88996696
 		1.0

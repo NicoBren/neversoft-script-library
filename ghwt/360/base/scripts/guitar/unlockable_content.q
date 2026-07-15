@@ -1,95 +1,95 @@
-bonus_songs = {
+Bonus_Songs = {
 	prefix = 'bonus'
 	num_tiers = 1
 	tier1 = {
-		title = qs(0xb11ddafd)
+		title = qs("Bonus songs")
 		songs = [
 			eyeofthetiger
-			satchboogie
+			SatchBoogie
 		]
 		level = load_z_artdeco
 		defaultunlocked = 0
 	}
 }
-Bonus_videos = [
+Bonus_Videos = [
 	{
-		text = qs(0xeb365db4)
-		id = Credits
+		text = qs("CREDITS")
+		id = credits
 		movie = 'credits'
 		unlocked
 	}
 	{
-		text = qs(0xc208e7bd)
+		text = qs("LINE 6:WHAT IS POD?")
 		id = line6_01
 		movie = 'what_is_pod'
 		unlocked
 	}
 	{
-		text = qs(0x969a1fc0)
+		text = qs("LINE 6:GUITAR 101")
 		id = line6_02
 		movie = 'Line_6_Guitar_101'
 		unlocked
 	}
 	{
-		text = qs(0x448a708b)
-		id = in_gamemontage
+		text = qs("BEHIND THE SCENES")
+		id = In_GameMontage
 		movie = 'In-GameMontage'
 		unlocked
 	}
 	{
-		text = qs(0x0d03c6a5)
-		id = ghmetallica
+		text = qs("\LMETALLICA")
+		id = GHMetallica
 		movie = 'GHMetallica'
 		unlocked
 	}
 	{
-		text = qs(0xcb59f59d)
+		text = qs("BAND INTRO")
 		id = band_intro
 		movie = 'band_intro'
 		unlocked
 	}
 	{
-		text = qs(0x6ef2f4ed)
+		text = qs("BAND FINALE")
 		id = band_outro
 		movie = 'band_outro'
 	}
 	{
-		text = qs(0xb00841d3)
+		text = qs("GUITAR INTRO")
 		id = guitarist_intro
 		movie = 'guitarist_intro'
 	}
 	{
-		text = qs(0xcc049aa2)
+		text = qs("GUITAR FINALE")
 		id = guitarist_outro
 		movie = 'guitarist_outro'
 	}
 	{
-		text = qs(0x99f50351)
+		text = qs("DRUM INTRO")
 		id = drummer_intro
 		movie = 'drummer_intro'
 	}
 	{
-		text = qs(0x5d63692a)
+		text = qs("DRUM FINALE")
 		id = drummer_outro
 		movie = 'drummer_outro'
 	}
 	{
-		text = qs(0x274b1ff6)
+		text = qs("BASS INTRO")
 		id = bass_intro
 		movie = 'bass_intro'
 	}
 	{
-		text = qs(0xa824a1f5)
+		text = qs("BASS FINALE")
 		id = bass_outro
 		movie = 'bass_outro'
 	}
 	{
-		text = qs(0x1b20349e)
+		text = qs("SINGER INTRO")
 		id = singer_intro
 		movie = 'singer_intro'
 	}
 	{
-		text = qs(0xa9bc8571)
+		text = qs("SINGER FINALE")
 		id = singer_outro
 		movie = 'singer_outro'
 	}
@@ -98,40 +98,40 @@ Bonus_Songs_Info = [
 ]
 progression_band_rewards = [
 	{
-		group_name = qs(0xc8079001)
+		group_name = qs("Left Arm New Wristband")
 		car_pieces = [
 			{
-				part = cas_female_acc_left
+				part = CAS_Female_Acc_Left
 				desc_id = f_bmtl_acc_lstichband
 			}
 			{
-				part = cas_male_acc_left
+				part = CAS_Male_Acc_Left
 				desc_id = m_bmtl_acc_lstichband
 			}
 		]
 	}
 	{
-		group_name = qs(0x7fa7cae8)
+		group_name = qs("Right Arm New Wristband")
 		car_pieces = [
 			{
-				part = cas_female_acc_right
+				part = CAS_Female_Acc_Right
 				desc_id = f_glam_acc_rdenimband
 			}
 			{
-				part = cas_male_acc_right
+				part = CAS_Male_Acc_Right
 				desc_id = m_glam_acc_rdenimband
 			}
 		]
 	}
 	{
-		group_name = qs(0xc8079001)
+		group_name = qs("Left Arm New Wristband")
 		car_pieces = [
 			{
-				part = cas_female_acc_left
+				part = CAS_Female_Acc_Left
 				desc_id = f_glam_acc_purpleband
 			}
 			{
-				part = cas_male_acc_left
+				part = CAS_Male_Acc_Left
 				desc_id = m_glam_acc_lwristband
 			}
 		]
@@ -139,912 +139,912 @@ progression_band_rewards = [
 	{
 	}
 	{
-		group_name = qs(0x59a38f29)
+		group_name = qs("Left Arm New Spikes")
 		car_pieces = [
 			{
-				part = cas_female_acc_left
+				part = CAS_Female_Acc_Left
 				desc_id = f_bmtl_acc_ltripleband
 			}
 			{
-				part = cas_male_acc_left
+				part = CAS_Male_Acc_Left
 				desc_id = m_bmtl_acc_ltripleband
 			}
 		]
 	}
 	{
-		group_name = qs(0x59a38f29)
+		group_name = qs("Left Arm New Spikes")
 		car_pieces = [
 			{
-				part = cas_female_acc_left
+				part = CAS_Female_Acc_Left
 				desc_id = f_bmtl_acc_lblackspike
 			}
 			{
-				part = cas_male_acc_left
+				part = CAS_Male_Acc_Left
 				desc_id = m_bmtl_acc_lblackspike
 			}
 		]
 	}
 	{
-		group_name = qs(0xd2b66773)
+		group_name = qs("New Hat")
 		car_pieces = [
 			{
-				part = cas_female_hat
-				desc_id = f_metl_head_hatstuds01
+				part = CAS_Female_Hat
+				desc_id = F_Metl_Head_HatStuds01
 			}
 			{
-				part = cas_male_hat
-				desc_id = m_metl_hat_studs
+				part = CAS_Male_Hat
+				desc_id = M_Metl_Hat_Studs
 			}
 		]
 	}
 	{
-		group_name = qs(0xd2b66773)
+		group_name = qs("New Hat")
 		car_pieces = [
 			{
-				part = cas_female_hat
-				desc_id = f_pop_head_ww2helm
+				part = CAS_Female_Hat
+				desc_id = F_Pop_Head_WW2Helm
 			}
 			{
-				part = cas_male_hat
-				desc_id = m_pop_head_ww2helm
+				part = CAS_Male_Hat
+				desc_id = M_Pop_Head_WW2Helm
 			}
 		]
 	}
 	{
-		group_name = qs(0xfd5703e5)
+		group_name = qs("New Glasses")
 		car_pieces = [
 			{
-				part = cas_female_acc_face
+				part = CAS_Female_Acc_Face
 				desc_id = f_clsc_glasses_avtr
 			}
 			{
-				part = cas_male_acc_face
-				desc_id = m_clsc_glasses_avtr
+				part = CAS_Male_Acc_Face
+				desc_id = M_Clsc_Glasses_Avtr
 			}
 		]
 	}
 	{
-		group_name = qs(0xfd5703e5)
+		group_name = qs("New Glasses")
 		car_pieces = [
 			{
-				part = cas_female_acc_face
+				part = CAS_Female_Acc_Face
 				desc_id = f_goth_glasses_ggls
 			}
 			{
-				part = cas_male_acc_face
+				part = CAS_Male_Acc_Face
 				desc_id = m_goth_glasses_ggls
 			}
 		]
 	}
 	{
-		group_name = qs(0xd2b66773)
+		group_name = qs("New Hat")
 		car_pieces = [
 			{
-				part = cas_female_hat
+				part = CAS_Female_Hat
 				desc_id = f_rock_hat_cowboy
 			}
 			{
-				part = cas_male_hat
+				part = CAS_Male_Hat
 				desc_id = m_clsc_hat_cowboy
 			}
 		]
 	}
 	{
-		group_name = qs(0xd3d6264d)
+		group_name = qs("New Hats")
 		car_pieces = [
 			{
-				part = cas_female_hat
-				desc_id = f_pop_acc_catears
+				part = CAS_Female_Hat
+				desc_id = F_Pop_Acc_Catears
 			}
 			{
-				part = cas_male_hat
-				desc_id = m_hat_pimp
+				part = CAS_Male_Hat
+				desc_id = M_Hat_Pimp
 			}
 		]
 	}
 	{
-		group_name = qs(0x45c40989)
+		group_name = qs("New Helmet")
 		car_pieces = [
 			{
-				part = cas_female_hat
-				desc_id = f_bmtl_head_viking
+				part = CAS_Female_Hat
+				desc_id = F_Bmtl_Head_Viking
 			}
 			{
-				part = cas_male_hat
-				desc_id = m_bmtl_hat_viking
+				part = CAS_Male_Hat
+				desc_id = M_Bmtl_Hat_Viking
 			}
 		]
 	}
 	{
-		group_name = qs(0x45c40989)
+		group_name = qs("New Helmet")
 		car_pieces = [
 			{
-				part = cas_female_hat
-				desc_id = f_bmtl_hat_skullhelmet
+				part = CAS_Female_Hat
+				desc_id = F_Bmtl_Hat_SkullHelmet
 			}
 			{
-				part = cas_male_hat
-				desc_id = m_bmtl_hat_skullhelmet
+				part = CAS_Male_Hat
+				desc_id = M_Bmtl_Hat_SkullHelmet
 			}
 		]
 	}
 	{
-		group_name = qs(0x8bfe8042)
+		group_name = qs("New Torso")
 		car_pieces = [
 			{
-				part = cas_female_torso
+				part = CAS_Female_Torso
 				desc_id = f_fun_torso_angelw
 			}
 			{
-				part = cas_male_torso
+				part = CAS_Male_Torso
 				desc_id = m_fun_torso_angelw
 			}
 		]
 	}
 	{
-		group_name = qs(0x86e5e72b)
+		group_name = qs("\LBilly Corgan")
 		characters = [
-			billy
+			Billy
 		]
 	}
 ]
 progression_guitar_rewards = [
 	{
-		group_name = qs(0x4c749639)
+		group_name = qs("Ernie Ball Guitar Strings")
 		car_pieces = [
 			{
-				part = cas_guitar_strings
-				desc_id = hybrid_slinky
+				part = CAS_Guitar_Strings
+				desc_id = Hybrid_SLINKY
 			}
 			{
-				part = cas_guitar_strings
-				desc_id = beefy_slinky
+				part = CAS_Guitar_Strings
+				desc_id = Beefy_Slinky
 			}
 			{
-				part = cas_guitar_strings
-				desc_id = noteven_slinky
+				part = CAS_Guitar_Strings
+				desc_id = NotEven_Slinky
 			}
 			{
-				part = cas_guitar_strings
-				desc_id = skinny_top
+				part = CAS_Guitar_Strings
+				desc_id = Skinny_Top
 			}
 			{
-				part = cas_guitar_strings
-				desc_id = nickel_lite
+				part = CAS_Guitar_Strings
+				desc_id = Nickel_Lite
 			}
 			{
-				part = cas_guitar_strings
-				desc_id = nickel_med_lite
+				part = CAS_Guitar_Strings
+				desc_id = Nickel_Med_Lite
 			}
 			{
-				part = cas_guitar_strings
-				desc_id = nickel_medium
+				part = CAS_Guitar_Strings
+				desc_id = Nickel_Medium
 			}
 			{
-				part = cas_guitar_strings
-				desc_id = 7_string_slinky
+				part = CAS_Guitar_Strings
+				desc_id = 7_String_Slinky
 			}
 			{
-				part = cas_guitar_strings
-				desc_id = 7_string_slinky_2
+				part = CAS_Guitar_Strings
+				desc_id = 7_String_Slinky_2
 			}
 			{
-				part = cas_guitar_strings
-				desc_id = earthwood_acoustic_light
+				part = CAS_Guitar_Strings
+				desc_id = Earthwood_Acoustic_Light
 			}
 			{
-				part = cas_guitar_strings
-				desc_id = earthwood_acoustic_medium
+				part = CAS_Guitar_Strings
+				desc_id = Earthwood_Acoustic_Medium
 			}
 			{
-				part = cas_guitar_strings
-				desc_id = earthwood_acoustic_mediumlite
+				part = CAS_Guitar_Strings
+				desc_id = Earthwood_Acoustic_MediumLite
 			}
 			{
-				part = cas_guitar_strings
-				desc_id = reg_slinky_acoustic
+				part = CAS_Guitar_Strings
+				desc_id = Reg_Slinky_Acoustic
 			}
 			{
-				part = cas_guitar_strings
-				desc_id = regular_slinky
+				part = CAS_Guitar_Strings
+				desc_id = Regular_Slinky
 			}
 			{
-				part = cas_guitar_strings
-				desc_id = power_slinky
+				part = CAS_Guitar_Strings
+				desc_id = Power_Slinky
 			}
 			{
-				part = cas_guitar_strings
+				part = CAS_Guitar_Strings
 				desc_id = coat_reg_slinky
 			}
 			{
-				part = cas_guitar_strings
+				part = CAS_Guitar_Strings
 				desc_id = coat_super_slinky
 			}
 			{
-				part = cas_guitar_strings
+				part = CAS_Guitar_Strings
 				desc_id = coat_power_slinky
 			}
 			{
-				part = cas_guitar_strings
+				part = CAS_Guitar_Strings
 				desc_id = coat_hybrid_slinky
 			}
 		]
 	}
 	{
-		group_name = qs(0x5327c157)
+		group_name = qs("New Guitar Body Shape")
 		car_pieces = [
 			{
-				part = cas_guitar_body
-				desc_id = guitar_x_flames_08
+				part = CAS_Guitar_Body
+				desc_id = Guitar_X_Flames_08
 			}
 		]
 	}
 	{
-		group_name = qs(0x2fdc6c20)
+		group_name = qs("New Guitar Knobs")
 		car_pieces = [
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr1_knob_type6_04
+				part = CAS_Guitar_Knobs
+				desc_id = GTR1_Knob_Type6_04
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr2_knob_type6_04
+				part = CAS_Guitar_Knobs
+				desc_id = GTR2_Knob_Type6_04
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr3_knob_type6_03
+				part = CAS_Guitar_Knobs
+				desc_id = GTR3_Knob_Type6_03
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr4_knob_type6_04
+				part = CAS_Guitar_Knobs
+				desc_id = GTR4_Knob_Type6_04
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr6_knob_type6_03
+				part = CAS_Guitar_Knobs
+				desc_id = GTR6_Knob_Type6_03
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr7_knob_type6_03
+				part = CAS_Guitar_Knobs
+				desc_id = GTR7_Knob_Type6_03
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr8_knob_type6_03
+				part = CAS_Guitar_Knobs
+				desc_id = GTR8_Knob_Type6_03
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr9_knob_type6_03
+				part = CAS_Guitar_Knobs
+				desc_id = GTR9_Knob_Type6_03
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr10_knob_type6_03
+				part = CAS_Guitar_Knobs
+				desc_id = GTR10_Knob_Type6_03
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr11_knob_type6_03
+				part = CAS_Guitar_Knobs
+				desc_id = GTR11_Knob_Type6_03
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr12_knob_type6_04
+				part = CAS_Guitar_Knobs
+				desc_id = GTR12_Knob_Type6_04
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr13_knob_type6_02
+				part = CAS_Guitar_Knobs
+				desc_id = GTR13_Knob_Type6_02
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr14_knob_type6_04
+				part = CAS_Guitar_Knobs
+				desc_id = GTR14_Knob_Type6_04
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr15_knob_type6_03
+				part = CAS_Guitar_Knobs
+				desc_id = GTR15_Knob_Type6_03
 			}
 			{
-				part = cas_guitar_knobs
+				part = CAS_Guitar_Knobs
 				desc_id = gtr20_knob_type6_03
 			}
 			{
-				part = cas_guitar_knobs
+				part = CAS_Guitar_Knobs
 				desc_id = gtr31_knob_type6_03
 			}
 			{
-				part = cas_guitar_knobs
+				part = CAS_Guitar_Knobs
 				desc_id = gtr32_knob_type6_03
 			}
 			{
-				part = cas_guitar_knobs
+				part = CAS_Guitar_Knobs
 				desc_id = gtr_x13_knob_type6_02
 			}
 			{
-				part = cas_guitar_knobs
+				part = CAS_Guitar_Knobs
 				desc_id = gtr_x14_knob_type6_02
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr_x1_knob_type6_02
+				part = CAS_Guitar_Knobs
+				desc_id = GTR_X1_Knob_Type6_02
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr_x1_knob_type6_01
+				part = CAS_Guitar_Knobs
+				desc_id = GTR_X1_Knob_Type6_01
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr_x2_knob_type6_03
+				part = CAS_Guitar_Knobs
+				desc_id = GTR_X2_Knob_Type6_03
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr_x3_knob_type6_03
+				part = CAS_Guitar_Knobs
+				desc_id = GTR_X3_Knob_Type6_03
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr_x4_knob_type6_03
+				part = CAS_Guitar_Knobs
+				desc_id = GTR_X4_Knob_Type6_03
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr_x5_knob_type6_03
+				part = CAS_Guitar_Knobs
+				desc_id = GTR_X5_Knob_Type6_03
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr_x6_knob_type6_03
+				part = CAS_Guitar_Knobs
+				desc_id = GTR_X6_Knob_Type6_03
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr_x7_knob_type6_03
+				part = CAS_Guitar_Knobs
+				desc_id = GTR_X7_Knob_Type6_03
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr_x8_knob_type6_03
+				part = CAS_Guitar_Knobs
+				desc_id = GTR_X8_Knob_Type6_03
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr_x9_knob_type6_03
+				part = CAS_Guitar_Knobs
+				desc_id = GTR_X9_Knob_Type6_03
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr_x10_knob_type6_03
-			}
-		]
-	}
-	{
-		group_name = qs(0xfe17176e)
-		car_pieces = [
-			{
-				part = cas_guitar_pickups
-				desc_id = gtr_pickup_type3_02
-			}
-			{
-				part = cas_guitar_pickups
-				desc_id = gtr_pickup_type3_03
-			}
-			{
-				part = cas_guitar_pickups
-				desc_id = gtr_pickup_type3b_02
-			}
-			{
-				part = cas_guitar_pickups
-				desc_id = gtr_pickup_type3b_03
+				part = CAS_Guitar_Knobs
+				desc_id = GTR_X10_Knob_Type6_03
 			}
 		]
 	}
 	{
-		group_name = qs(0x5327c157)
+		group_name = qs("Humdinger Pickups")
 		car_pieces = [
 			{
-				part = cas_guitar_body
-				desc_id = guitar_x_trident_10
+				part = CAS_Guitar_Pickups
+				desc_id = GTR_Pickup_Type3_02
+			}
+			{
+				part = CAS_Guitar_Pickups
+				desc_id = GTR_Pickup_Type3_03
+			}
+			{
+				part = CAS_Guitar_Pickups
+				desc_id = GTR_Pickup_Type3b_02
+			}
+			{
+				part = CAS_Guitar_Pickups
+				desc_id = GTR_Pickup_Type3b_03
 			}
 		]
 	}
 	{
-		group_name = qs(0x79d4ee9d)
+		group_name = qs("New Guitar Body Shape")
 		car_pieces = [
 			{
-				part = cas_guitar_head
+				part = CAS_Guitar_Body
+				desc_id = Guitar_X_Trident_10
+			}
+		]
+	}
+	{
+		group_name = qs("New Guitar Headstock")
+		car_pieces = [
+			{
+				part = CAS_Guitar_Head
 				desc_id = guitar_head_x_03
 			}
 		]
 	}
 	{
-		group_name = qs(0x5327c157)
+		group_name = qs("New Guitar Body Shape")
 		car_pieces = [
 			{
-				part = cas_guitar_body
-				desc_id = guitar_x_anarchy_03
+				part = CAS_Guitar_Body
+				desc_id = Guitar_X_Anarchy_03
 			}
 		]
 	}
 	{
-		group_name = qs(0x2fdc6c20)
+		group_name = qs("New Guitar Knobs")
 		car_pieces = [
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr1_knob_type9_04
+				part = CAS_Guitar_Knobs
+				desc_id = GTR1_Knob_Type9_04
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr2_knob_type9_04
+				part = CAS_Guitar_Knobs
+				desc_id = GTR2_Knob_Type9_04
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr7_knob_type9_03
+				part = CAS_Guitar_Knobs
+				desc_id = GTR7_Knob_Type9_03
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr8_knob_type9_03
+				part = CAS_Guitar_Knobs
+				desc_id = GTR8_Knob_Type9_03
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr9_knob_type9_03
+				part = CAS_Guitar_Knobs
+				desc_id = GTR9_Knob_Type9_03
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr10_knob_type9_03
+				part = CAS_Guitar_Knobs
+				desc_id = GTR10_Knob_Type9_03
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr11_knob_type9_03
+				part = CAS_Guitar_Knobs
+				desc_id = GTR11_Knob_Type9_03
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr12_knob_type9_04
+				part = CAS_Guitar_Knobs
+				desc_id = GTR12_Knob_Type9_04
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr13_knob_type9_02
+				part = CAS_Guitar_Knobs
+				desc_id = GTR13_Knob_Type9_02
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr14_knob_type9_04
+				part = CAS_Guitar_Knobs
+				desc_id = GTR14_Knob_Type9_04
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr15_knob_type9_03
+				part = CAS_Guitar_Knobs
+				desc_id = GTR15_Knob_Type9_03
 			}
 			{
-				part = cas_guitar_knobs
+				part = CAS_Guitar_Knobs
 				desc_id = gtr20_knob_type9_03
 			}
 			{
-				part = cas_guitar_knobs
+				part = CAS_Guitar_Knobs
 				desc_id = gtr31_knob_type9_03
 			}
 			{
-				part = cas_guitar_knobs
+				part = CAS_Guitar_Knobs
 				desc_id = gtr32_knob_type9_03
 			}
 			{
-				part = cas_guitar_knobs
+				part = CAS_Guitar_Knobs
 				desc_id = gtr_x13_knob_type9_02
 			}
 			{
-				part = cas_guitar_knobs
+				part = CAS_Guitar_Knobs
 				desc_id = gtr_x14_knob_type9_02
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr_x1_knob_type9_02
+				part = CAS_Guitar_Knobs
+				desc_id = GTR_X1_Knob_Type9_02
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr_x1_knob_type9_01
+				part = CAS_Guitar_Knobs
+				desc_id = GTR_X1_Knob_Type9_01
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr_x2_knob_type9_03
+				part = CAS_Guitar_Knobs
+				desc_id = GTR_X2_Knob_Type9_03
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr_x3_knob_type9_03
+				part = CAS_Guitar_Knobs
+				desc_id = GTR_X3_Knob_Type9_03
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr_x4_knob_type9_03
+				part = CAS_Guitar_Knobs
+				desc_id = GTR_X4_Knob_Type9_03
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr_x5_knob_type9_03
+				part = CAS_Guitar_Knobs
+				desc_id = GTR_X5_Knob_Type9_03
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr_x6_knob_type9_03
+				part = CAS_Guitar_Knobs
+				desc_id = GTR_X6_Knob_Type9_03
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr_x7_knob_type9_03
+				part = CAS_Guitar_Knobs
+				desc_id = GTR_X7_Knob_Type9_03
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr_x8_knob_type9_03
+				part = CAS_Guitar_Knobs
+				desc_id = GTR_X8_Knob_Type9_03
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr_x9_knob_type9_03
+				part = CAS_Guitar_Knobs
+				desc_id = GTR_X9_Knob_Type9_03
 			}
 			{
-				part = cas_guitar_knobs
-				desc_id = gtr_x10_knob_type9_03
+				part = CAS_Guitar_Knobs
+				desc_id = GTR_X10_Knob_Type9_03
 			}
 		]
 	}
 	{
-		group_name = qs(0x5327c157)
+		group_name = qs("New Guitar Body Shape")
 		car_pieces = [
 			{
-				part = cas_guitar_body
-				desc_id = guitar_x_yinyang_14
+				part = CAS_Guitar_Body
+				desc_id = Guitar_X_YinYang_14
 			}
 		]
 	}
 	{
-		group_name = qs(0x79d4ee9d)
+		group_name = qs("New Guitar Headstock")
 		car_pieces = [
 			{
-				part = cas_guitar_head
-				desc_id = headstock_x_cents_07
+				part = CAS_Guitar_Head
+				desc_id = Headstock_X_Cents_07
 			}
 		]
 	}
 	{
-		group_name = qs(0x5327c157)
+		group_name = qs("New Guitar Body Shape")
 		car_pieces = [
 			{
-				part = cas_guitar_body
-				desc_id = guitar_x_freebird_09
+				part = CAS_Guitar_Body
+				desc_id = Guitar_X_Freebird_09
 			}
 		]
 	}
 	{
-		group_name = qs(0x5327c157)
+		group_name = qs("New Guitar Body Shape")
 		car_pieces = [
 			{
-				part = cas_guitar_body
-				desc_id = guitar_special_spider_02
+				part = CAS_Guitar_Body
+				desc_id = Guitar_Special_Spider_02
 			}
 		]
 	}
 	{
-		group_name = qs(0x5327c157)
+		group_name = qs("New Guitar Body Shape")
 		car_pieces = [
 			{
-				part = cas_guitar_body
-				desc_id = guitar_x_clear_11
+				part = CAS_Guitar_Body
+				desc_id = Guitar_X_Clear_11
 			}
 		]
 	}
 	{
-		group_name = qs(0x5327c157)
+		group_name = qs("New Guitar Body Shape")
 		car_pieces = [
 			{
-				part = cas_guitar_body
-				desc_id = guitar_x_clear_12
+				part = CAS_Guitar_Body
+				desc_id = Guitar_X_Clear_12
 			}
 		]
 	}
 	{
-		group_name = qs(0x5327c157)
+		group_name = qs("New Guitar Body Shape")
 		car_pieces = [
 			{
-				part = cas_guitar_body
-				desc_id = guitar_x_money_07
+				part = CAS_Guitar_Body
+				desc_id = Guitar_X_Money_07
 			}
 		]
 	}
 	{
-		group_name = qs(0x98fdbfd6)
+		group_name = qs("\LZakk Wylde")
 		characters = [
-			zakkwylde
+			ZakkWylde
 		]
 	}
 	{
-		group_name = qs(0xf25755cf)
+		group_name = qs("\LTed Nugent")
 		characters = [
-			tednugent
+			TedNugent
 		]
 	}
 ]
 progression_bass_rewards = [
 	{
-		group_name = qs(0x2fb4f6da)
+		group_name = qs("Ernie Ball Bass Strings")
 		car_pieces = [
 			{
-				part = cas_bass_strings
-				desc_id = hybrid_slinky
+				part = CAS_Bass_Strings
+				desc_id = Hybrid_SLINKY
 			}
 			{
-				part = cas_bass_strings
-				desc_id = power_slinky
+				part = CAS_Bass_Strings
+				desc_id = Power_Slinky
 			}
 			{
-				part = cas_bass_strings
-				desc_id = super_slinky
+				part = CAS_Bass_Strings
+				desc_id = Super_Slinky
 			}
 		]
 	}
 	{
-		group_name = qs(0xc2191427)
+		group_name = qs("New Bass Knobs")
 		car_pieces = [
 			{
-				part = cas_bass_knobs
+				part = CAS_Bass_Knobs
 				desc_id = cab_knob_spyt06
 			}
 			{
-				part = cas_bass_knobs
+				part = CAS_Bass_Knobs
 				desc_id = cab_knob_xrend07
 			}
 			{
-				part = cas_bass_knobs
+				part = CAS_Bass_Knobs
 				desc_id = cab_knob_unos07
 			}
 			{
-				part = cas_bass_knobs
+				part = CAS_Bass_Knobs
 				desc_id = cab_knob_hack07
 			}
 			{
-				part = cas_bass_knobs
+				part = CAS_Bass_Knobs
 				desc_id = cab_knob_chndr07
 			}
 			{
-				part = cas_bass_knobs
+				part = CAS_Bass_Knobs
 				desc_id = cab_knob_foots07
 			}
 			{
-				part = cas_bass_knobs
+				part = CAS_Bass_Knobs
 				desc_id = cab_knob_grmbl07
 			}
 			{
-				part = cas_bass_knobs
+				part = CAS_Bass_Knobs
 				desc_id = cab_knob_phunq07
 			}
 			{
-				part = cas_bass_knobs
+				part = CAS_Bass_Knobs
 				desc_id = cab_knob_skull07
 			}
 			{
-				part = cas_bass_knobs
+				part = CAS_Bass_Knobs
 				desc_id = cab_knob_rubyat07
 			}
 			{
-				part = cas_bass_knobs
+				part = CAS_Bass_Knobs
 				desc_id = cab_knob_icross07
 			}
 		]
 	}
 	{
-		group_name = qs(0x3df7f5a1)
+		group_name = qs("New Bass Headstock")
 		car_pieces = [
 			{
-				part = cas_bass_head
-				desc_id = cab_head_mlsplit
+				part = CAS_Bass_Head
+				desc_id = CAB_Head_MLSplit
 			}
 		]
 	}
 	{
-		group_name = qs(0x29b5eab0)
+		group_name = qs("New Bass Pickups")
 		car_pieces = [
 			{
-				part = cas_bass_pickups
-				desc_id = cab_hbuck_pickup_a1
+				part = CAS_Bass_Pickups
+				desc_id = CAB_HBuck_pickup_A1
 			}
 			{
-				part = cas_bass_pickups
-				desc_id = cab_hbuck_pickup_a2
+				part = CAS_Bass_Pickups
+				desc_id = CAB_HBuck_pickup_A2
 			}
 			{
-				part = cas_bass_pickups
-				desc_id = cab_hbuck_pickup_a3
+				part = CAS_Bass_Pickups
+				desc_id = CAB_HBuck_pickup_A3
 			}
 		]
 	}
 	{
-		group_name = qs(0x963ac9ca)
+		group_name = qs("New Bass Fretboard")
 		car_pieces = [
 			{
-				part = cas_bass_neck
-				desc_id = cab_neck_bfretlss01
+				part = CAS_Bass_Neck
+				desc_id = CAB_Neck_BFretlss01
 			}
 		]
 	}
 	{
-		group_name = qs(0xaab13567)
+		group_name = qs("New Bass Body Shape")
 		car_pieces = [
 			{
-				part = cas_bass_body
-				desc_id = cab_body_rubyat
+				part = CAS_Bass_Body
+				desc_id = CAB_Body_Rubyat
 			}
 		]
 	}
 	{
-		group_name = qs(0x3df7f5a1)
+		group_name = qs("New Bass Headstock")
 		car_pieces = [
 			{
-				part = cas_bass_head
-				desc_id = cab_head_mnemonic
+				part = CAS_Bass_Head
+				desc_id = CAB_Head_Mnemonic
 			}
 		]
 	}
 	{
-		group_name = qs(0x3df7f5a1)
+		group_name = qs("New Bass Headstock")
 		car_pieces = [
 			{
-				part = cas_bass_head
-				desc_id = cab_head_foots01
+				part = CAS_Bass_Head
+				desc_id = CAB_Head_Foots01
 			}
 		]
 	}
 	{
-		group_name = qs(0xaab13567)
+		group_name = qs("New Bass Body Shape")
 		car_pieces = [
 			{
-				part = cas_bass_body
-				desc_id = cab_bodyfoots01
+				part = CAS_Bass_Body
+				desc_id = CAB_BodyFoots01
 			}
 		]
 	}
 	{
-		group_name = qs(0x3df7f5a1)
+		group_name = qs("New Bass Headstock")
 		car_pieces = [
 			{
-				part = cas_bass_head
-				desc_id = cab_head_skull
+				part = CAS_Bass_Head
+				desc_id = CAB_Head_Skull
 			}
 		]
 	}
 	{
-		group_name = qs(0xaab13567)
+		group_name = qs("New Bass Body Shape")
 		car_pieces = [
 			{
-				part = cas_bass_body
-				desc_id = cab_body_laurenz_bba
+				part = CAS_Bass_Body
+				desc_id = CAB_Body_Laurenz_BBA
 			}
 		]
 	}
 	{
-		group_name = qs(0xaab13567)
+		group_name = qs("New Bass Body Shape")
 		car_pieces = [
 			{
-				part = cas_bass_body
-				desc_id = cab_body_xrend01
+				part = CAS_Bass_Body
+				desc_id = CAB_Body_XRend01
 			}
 		]
 	}
 	{
-		group_name = qs(0xaab13567)
+		group_name = qs("New Bass Body Shape")
 		car_pieces = [
 			{
-				part = cas_bass_body
-				desc_id = cab_skull
+				part = CAS_Bass_Body
+				desc_id = CAB_Skull
 			}
 		]
 	}
 	{
-		group_name = qs(0xaab13567)
+		group_name = qs("New Bass Body Shape")
 		car_pieces = [
 			{
-				part = cas_bass_body
-				desc_id = cab_body_x_icross
+				part = CAS_Bass_Body
+				desc_id = CAB_Body_X_ICross
 			}
 		]
 	}
 	{
-		group_name = qs(0xaab13567)
+		group_name = qs("New Bass Body Shape")
 		car_pieces = [
 			{
-				part = cas_bass_body
-				desc_id = cab_body_x_battleaxe
+				part = CAS_Bass_Body
+				desc_id = CAB_Body_X_Battleaxe
 			}
 		]
 	}
 	{
-		group_name = qs(0xb254a71a)
+		group_name = qs("\LSting")
 		characters = [
-			sting
+			Sting
 		]
 	}
 ]
 progression_drum_rewards = [
 	{
-		group_name = qs(0xbe7da843)
+		group_name = qs("\LZildjian Sticks")
 		car_pieces = [
 			{
-				part = cas_drums_sticks
-				desc_id = drumsticks_zildjian1
+				part = CAS_Drums_Sticks
+				desc_id = Drumsticks_Zildjian1
 			}
 			{
-				part = cas_drums_sticks
-				desc_id = drumsticks_zildjian2
-			}
-		]
-	}
-	{
-		group_name = qs(0x03444fa5)
-		car_pieces = [
-			{
-				part = cas_drums_sticks
-				desc_id = drumsticks_regal
+				part = CAS_Drums_Sticks
+				desc_id = Drumsticks_Zildjian2
 			}
 		]
 	}
 	{
-		group_name = qs(0x958a90ac)
+		group_name = qs("\LRegal Tip Sticks")
 		car_pieces = [
 			{
-				part = cas_drums
-				desc_id = doublebass
+				part = CAS_Drums_Sticks
+				desc_id = Drumsticks_Regal
+			}
+		]
+	}
+	{
+		group_name = qs("\LPork Pie Double Bass Kit")
+		car_pieces = [
+			{
+				part = CAS_Drums
+				desc_id = DoubleBass
 			}
 		]
 	}
 	{
 	}
 	{
-		group_name = qs(0x4a0fd0f1)
+		group_name = qs("New Piercing")
 		car_pieces = [
 			{
-				part = cas_female_acc_ears
+				part = CAS_Female_Acc_Ears
 				desc_id = f_punk_acc_ring_02
 			}
 			{
-				part = cas_male_acc_ears
-				desc_id = m_punk_acc_ring_02
+				part = CAS_Male_Acc_Ears
+				desc_id = M_Punk_Acc_Ring_02
 			}
 		]
 	}
 	{
-		group_name = qs(0xd2b66773)
+		group_name = qs("New Hat")
 		car_pieces = [
 			{
-				part = cas_female_hat
+				part = CAS_Female_Hat
 				desc_id = f_clsc_hat_cptn
 			}
 			{
-				part = cas_male_hat
+				part = CAS_Male_Hat
 				desc_id = m_clsc_hat_cptn
 			}
 		]
 	}
 	{
-		group_name = qs(0xd2b66773)
+		group_name = qs("New Hat")
 		car_pieces = [
 			{
-				part = cas_female_hat
+				part = CAS_Female_Hat
 				desc_id = f_rock_hat_starpin
 			}
 			{
-				part = cas_male_hat
+				part = CAS_Male_Hat
 				desc_id = m_rock_hat_starpin
 			}
 		]
 	}
 	{
-		group_name = qs(0x68afd340)
+		group_name = qs("\LOC Drums Monster Kit")
 		car_pieces = [
 			{
-				part = cas_drums
-				desc_id = monster
+				part = CAS_Drums
+				desc_id = Monster
 			}
 		]
 	}
 	{
-		group_name = qs(0xd2b66773)
+		group_name = qs("New Hat")
 		car_pieces = [
 			{
-				part = cas_female_hat
+				part = CAS_Female_Hat
 				desc_id = f_goth_hat_tophat
 			}
 			{
-				part = cas_male_hat
+				part = CAS_Male_Hat
 				desc_id = m_goth_hat_tophat
 			}
 		]
 	}
 	{
-		group_name = qs(0xd2b66773)
+		group_name = qs("New Hat")
 		car_pieces = [
 			{
-				part = cas_female_hat
-				desc_id = f_pop_head_gasmask
+				part = CAS_Female_Hat
+				desc_id = F_Pop_Head_GasMask
 			}
 			{
-				part = cas_male_hat
-				desc_id = m_pop_head_gasmask
+				part = CAS_Male_Hat
+				desc_id = M_Pop_Head_GasMask
 			}
 		]
 	}
@@ -1053,39 +1053,39 @@ progression_drum_rewards = [
 	{
 	}
 	{
-		group_name = qs(0xdfb74ad3)
+		group_name = qs("\LRockbot")
 		characters = [
-			rockbot
+			Rockbot
 		]
 	}
 	{
-		group_name = qs(0xd2b66773)
+		group_name = qs("New Hat")
 		car_pieces = [
 			{
-				part = cas_female_hat
-				desc_id = f_fun_hat_eyeball
+				part = CAS_Female_Hat
+				desc_id = F_Fun_Hat_EyeBall
 			}
 			{
-				part = cas_male_hat
-				desc_id = m_fun_hat_eyeball
+				part = CAS_Male_Hat
+				desc_id = M_Fun_Hat_EyeBall
 			}
 		]
 	}
 	{
-		group_name = qs(0xd2b66773)
+		group_name = qs("New Hat")
 		car_pieces = [
 			{
-				part = cas_female_hat
+				part = CAS_Female_Hat
 				desc_id = f_bmtl_hat_chicken
 			}
 			{
-				part = cas_male_hat
+				part = CAS_Male_Hat
 				desc_id = m_bmtl_hat_chicken
 			}
 		]
 	}
 	{
-		group_name = qs(0x47b25033)
+		group_name = qs("\LTravis Barker")
 		characters = [
 			travis
 		]
@@ -1093,160 +1093,160 @@ progression_drum_rewards = [
 ]
 progression_vocals_rewards = [
 	{
-		group_name = qs(0xc8079001)
+		group_name = qs("Left Arm New Wristband")
 		car_pieces = [
 			{
-				part = cas_female_acc_left
+				part = CAS_Female_Acc_Left
 				desc_id = f_clsc_acc_lbeads
 			}
 			{
-				part = cas_male_acc_left
+				part = CAS_Male_Acc_Left
 				desc_id = m_clsc_acc_lbeads
 			}
 		]
 	}
 	{
-		group_name = qs(0x424c5ab9)
+		group_name = qs("New Mic")
 		car_pieces = [
 			{
-				part = cas_mic
-				desc_id = pop
+				part = CAS_Mic
+				desc_id = Pop
 			}
 		]
 	}
 	{
-		group_name = qs(0x7c7ca1cf)
+		group_name = qs("New Mic Stand")
 		car_pieces = [
 			{
-				part = cas_mic_stand
-				desc_id = twisted
+				part = CAS_Mic_Stand
+				desc_id = Twisted
 			}
 		]
 	}
 	{
 	}
 	{
-		group_name = qs(0xd2b66773)
+		group_name = qs("New Hat")
 		car_pieces = [
 			{
-				part = cas_female_hat
+				part = CAS_Female_Hat
 				desc_id = f_clsc_hat_triangle
 			}
 			{
-				part = cas_male_hat
+				part = CAS_Male_Hat
 				desc_id = m_clsc_hat_triangle
 			}
 		]
 	}
 	{
-		group_name = qs(0x1eecf0c1)
+		group_name = qs("Left Arm New Watch")
 		car_pieces = [
 			{
-				part = cas_female_acc_left
+				part = CAS_Female_Acc_Left
 				desc_id = f_rock_acc_lskullwatch
 			}
 			{
-				part = cas_male_acc_left
-				desc_id = m_rock_acc_lskullwatch
+				part = CAS_Male_Acc_Left
+				desc_id = M_Rock_Acc_LSkullwatch
 			}
 		]
 	}
 	{
-		group_name = qs(0xd480ded2)
+		group_name = qs("New Face Accessory")
 		car_pieces = [
 			{
-				part = cas_female_acc_face
+				part = CAS_Female_Acc_Face
 				desc_id = f_metl_acc_eyepatch
 			}
 			{
-				part = cas_male_acc_face
+				part = CAS_Male_Acc_Face
 				desc_id = m_metl_eyepatch
 			}
 		]
 	}
 	{
-		group_name = qs(0x424c5ab9)
+		group_name = qs("New Mic")
 		car_pieces = [
 			{
-				part = cas_mic
-				desc_id = goth
+				part = CAS_Mic
+				desc_id = Goth
 			}
 		]
 	}
 	{
-		group_name = qs(0xd2b66773)
+		group_name = qs("New Hat")
 		car_pieces = [
 			{
-				part = cas_female_hat
-				desc_id = f_metl_acc_horn
+				part = CAS_Female_Hat
+				desc_id = F_Metl_Acc_Horn
 			}
 			{
-				part = cas_male_hat
-				desc_id = m_metl_horn
+				part = CAS_Male_Hat
+				desc_id = M_Metl_Horn
 			}
 		]
 	}
 	{
-		group_name = qs(0x7c7ca1cf)
+		group_name = qs("New Mic Stand")
 		car_pieces = [
 			{
-				part = cas_mic_stand
+				part = CAS_Mic_Stand
 				desc_id = mic_stand_blackmetal
 			}
 		]
 	}
 	{
-		group_name = qs(0x7c7ca1cf)
+		group_name = qs("New Mic Stand")
 		car_pieces = [
 			{
-				part = cas_mic_stand
+				part = CAS_Mic_Stand
 				desc_id = mic_stand_metal
 			}
 		]
 	}
 	{
-		group_name = qs(0x7c7ca1cf)
+		group_name = qs("New Mic Stand")
 		car_pieces = [
 			{
-				part = cas_mic_stand
-				desc_id = goth
+				part = CAS_Mic_Stand
+				desc_id = Goth
 			}
 		]
 	}
 	{
-		group_name = qs(0x998b2c00)
+		group_name = qs("\LSkeleton")
 		characters = [
-			Skeleton
+			skeleton
 		]
 	}
 	{
-		group_name = qs(0x424c5ab9)
+		group_name = qs("New Mic")
 		car_pieces = [
 			{
-				part = cas_mic
-				desc_id = rock
+				part = CAS_Mic
+				desc_id = Rock
 			}
 		]
 	}
 	{
-		group_name = qs(0x424c5ab9)
+		group_name = qs("New Mic")
 		car_pieces = [
 			{
-				part = cas_mic
+				part = CAS_Mic
 				desc_id = metal
 			}
 		]
 	}
 	{
-		group_name = qs(0x9e414de0)
+		group_name = qs("\LHayley Williams")
 		characters = [
-			hayley
+			Hayley
 		]
 	}
 	{
-		group_name = qs(0x7878e4e7)
+		group_name = qs("\LOzzy Osbourne")
 		characters = [
-			ozzy
+			Ozzy
 		]
 	}
 ]

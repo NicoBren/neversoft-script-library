@@ -2,41 +2,41 @@ current_page = 0
 current_cpu = 0
 
 script handle_keyboard_input 
-	if gotparam \{got_escape}
+	if GotParam \{got_escape}
 		if ($show_gpu_time = 1)
-			togglemetrics \{mode = 5}
-			if isps3
+			ToggleMetrics \{mode = 5}
+			if IsPs3
 				change \{current_cpu = 2}
 			else
 				change \{current_cpu = 6}
 			endif
 		else
-			togglemetrics \{mode = 0}
+			ToggleMetrics \{mode = 0}
 		endif
 	endif
-	if gotparam \{got_f1}
-		togglemetrics \{mode = 1}
+	if GotParam \{got_f1}
+		ToggleMetrics \{mode = 1}
 	endif
-	if gotparam \{got_f2}
-		togglemetrics \{mode = 2}
+	if GotParam \{got_f2}
+		ToggleMetrics \{mode = 2}
 	endif
-	if gotparam \{got_f3}
-		togglemetrics \{mode = 3}
+	if GotParam \{got_f3}
+		ToggleMetrics \{mode = 3}
 	endif
-	if gotparam \{got_f4}
-		togglemetrics \{mode = 4}
+	if GotParam \{got_f4}
+		ToggleMetrics \{mode = 4}
 	endif
-	getmetricsmode
-	getarraysize \{$profile_pages}
+	GetMetricsMode
+	GetArraySize \{$Profile_Pages}
 	num_pages = <array_size>
 	num_cpus = 7
-	if isps3
+	if IsPs3
 		<num_cpus> = 3
 	endif
-	if gotparam \{text}
+	if GotParam \{text}
 		<key> = 1
 		begin
-		formattext textname = key_name "%k" k = <key>
+		FormatText TextName = key_name "%k" k = <key>
 		if (<text> = <key_name>)
 			if (<mode> = 2)
 				if ((<key> - 1) < <num_cpus>)
@@ -57,7 +57,7 @@ script handle_keyboard_input
 		repeat 9
 		if (<mode> >= 2)
 			if (<text> = " ")
-				moveprofilecursor cpu = ($current_cpu) freeze
+				MoveProfileCursor cpu = ($current_cpu) freeze
 			endif
 		endif
 		if (<mode> = 2)
@@ -71,30 +71,30 @@ script handle_keyboard_input
 		if (<text> = "g")
 			change show_gpu_time = (1 - $show_gpu_time)
 			if ($show_gpu_time = 1)
-				togglemetrics \{mode = 5}
-				if isps3
+				ToggleMetrics \{mode = 5}
+				if IsPs3
 					change \{current_cpu = 2}
 				else
 					change \{current_cpu = 6}
 				endif
 			else
-				togglemetrics \{mode = 0}
+				ToggleMetrics \{mode = 0}
 			endif
 		endif
 		user_keyboard_script text = <text>
 	endif
 	if (<mode> = 2)
-		if gotparam \{got_left}
-			moveprofilecursor cpu = ($current_cpu) left
+		if GotParam \{got_left}
+			MoveProfileCursor cpu = ($current_cpu) left
 		endif
-		if gotparam \{got_right}
-			moveprofilecursor cpu = ($current_cpu) right
+		if GotParam \{got_right}
+			MoveProfileCursor cpu = ($current_cpu) right
 		endif
-		if gotparam \{got_up}
-			moveprofilecursor cpu = ($current_cpu) up
+		if GotParam \{got_up}
+			MoveProfileCursor cpu = ($current_cpu) up
 		endif
-		if gotparam \{got_down}
-			moveprofilecursor cpu = ($current_cpu) down
+		if GotParam \{got_down}
+			MoveProfileCursor cpu = ($current_cpu) down
 		endif
 	endif
 endscript

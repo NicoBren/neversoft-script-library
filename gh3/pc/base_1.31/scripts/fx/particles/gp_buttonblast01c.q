@@ -1,48 +1,48 @@
-gp_buttonblast01c = {
+GP_ButtonBlast01c = {
 	pos = (1.522998, -99.50123, 4.703488)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	emitrangedims = (0.05, 0.0, 0.05)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	EmitRangeDims = (0.05, 0.0, 0.05)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, 0.0, 0.0)
-	emittervelocityweight = 0.0
-	anglespread = 45.0
-	liferange = (0.05, 0.1)
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 45.0
+	LifeRange = (0.05, 0.1)
 	emit_rate = 32.0
 	max = 0
-	timeseed = 0.0
-	lifetime = 0.0
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 0.0
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.65000004, 0.5)
 		(0.85, 0.7)
 	]
-	speedrange = (0.0, 0.0)
-	rotvel = (0.0, 0.0)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	pathfollowtime = 0.0
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (0.0, 0.0)
+	RotVel = (0.0, 0.0)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.0
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -9035777
-	lod_default
-	material = buttonblast01_buttonblast01
-	quickmaterial = {
-		texturelayout = layout2x2
-		specularpower = 0
+	LOD_Default
+	material = ButtonBlast01_ButtonBlast01
+	QuickMaterial = {
+		TextureLayout = Layout2x2
+		SpecularPower = 0
 		alphacutoff = 1
-		blendmode = blend
-		quadanimationfps = 0
+		blendMode = blend
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.508085, 0.0, -0.0)
 		(-0.508085, 0.0, -0.0)
 		(-0.36291802, 0.0, -0.0)
@@ -53,7 +53,7 @@ gp_buttonblast01c = {
 		(0.580668, 0.0, -0.0)
 		(0.580668, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-1
 		-1
 		-1
@@ -61,7 +61,7 @@ gp_buttonblast01c = {
 		-1
 		-1
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.703438
 		1.0
 	]

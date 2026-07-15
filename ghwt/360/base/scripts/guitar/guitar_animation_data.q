@@ -7,7 +7,7 @@ med_strum_max_gem_length = 666
 strum_anim_lead_time = 66
 drum_anim_lead_time = 150
 bass_strum_note = 24
-always_strum = FALSE
+always_strum = false
 strum_blend_time = 0.075
 fret_blend_time = 0.2
 chord_blend_time = 0.05
@@ -39,47 +39,47 @@ drum_hard_hit_time = 500
 enable_tempo_matching = true
 use_band_manager = true
 camera_snap_threshold = 166
-female_playing_male_anim_diff = gh_rocker_female_guitarraise_d
-female_playing_female_anim_diff = gh_rocker_female_empty_d
+female_playing_male_anim_diff = GH_Rocker_Female_GuitarRaise_D
+female_playing_female_anim_diff = GH_Rocker_Female_Empty_D
 female_anim_list = [
-	guit_judita_areyou_075
-	guit_judita_areyou_100
-	guit_judita_areyou_120
-	guit_judita_bulls_075
-	guit_judita_bulls_100
-	guit_judita_bulls_120
-	guit_judita_joker_075
-	guit_judita_joker_100
-	guit_judita_joker_120
-	guit_ginger_areyou_075_01
-	guit_ginger_areyou_100_01
-	guit_ginger_areyou_120_01
+	guit_Judita_areyou_075
+	guit_Judita_areyou_100
+	guit_Judita_areyou_120
+	guit_Judita_bulls_075
+	guit_Judita_bulls_100
+	guit_Judita_bulls_120
+	guit_Judita_joker_075
+	guit_Judita_joker_100
+	guit_Judita_joker_120
+	guit_Ginger_areyou_075_01
+	guit_Ginger_areyou_100_01
+	guit_Ginger_areyou_120_01
 	guit_ginger_bulls_075_01
 	guit_ginger_bulls_100_01
 	guit_ginger_bulls_120_01
 	guit_ginger_joker_075_01
 	guit_ginger_joker_100_01
 	guit_ginger_joker_120_01
-	sing_natalie_areyou_075_1
-	sing_natalie_areyou_100_1
-	sing_natalie_areyou_120_1
-	sing_haley_bulls_075_01
-	sing_haley_bulls_100_01
-	sing_haley_bulls_120_01
-	sing_haley_dammit_075_01
-	sing_haley_dammit_100_01
-	sing_haley_dammit_120_01
-	sing_haley_joker_075_01
-	sing_haley_joker_100_01
-	sing_haley_joker_120_01
-	g_wind_cries_mary_01
-	g_wind_cries_mary_02
-	g_wind_cries_mary_03
-	g_wind_cries_mary_04
-	s_misery_business_01
-	s_misery_business_02
-	s_misery_business_03
-	gh_rocker_female_default
+	Sing_Natalie_AreYou_075_1
+	Sing_Natalie_AreYou_100_1
+	Sing_Natalie_AreYou_120_1
+	sing_Haley_Bulls_075_01
+	sing_Haley_Bulls_100_01
+	sing_Haley_Bulls_120_01
+	sing_Haley_Dammit_075_01
+	sing_Haley_Dammit_100_01
+	sing_Haley_Dammit_120_01
+	sing_Haley_Joker_075_01
+	sing_Haley_Joker_100_01
+	sing_Haley_Joker_120_01
+	G_Wind_Cries_Mary_01
+	G_Wind_Cries_Mary_02
+	G_Wind_Cries_Mary_03
+	G_Wind_Cries_Mary_04
+	S_Misery_Business_01
+	S_Misery_Business_02
+	S_Misery_Business_03
+	GH_Rocker_female_default
 	car_female_backoutleft_01
 	car_female_backoutleft_02
 	car_female_backoutright_01
@@ -92,15 +92,15 @@ female_anim_list = [
 	car_female_bandchoose_guit_02
 	car_female_bandchoose_sing_01
 	car_female_bandchoose_sing_02
-	car_female_idles_01
-	car_female_idles_02
+	CAR_female_idles_01
+	CAR_female_idles_02
 	car_female_idles_03
-	car_female_idles_04
-	car_female_idles_05
-	car_female_idles_06
-	car_female_idles_07
-	car_female_idles_08
-	car_female_idles_09
+	CAR_female_idles_04
+	CAR_female_idles_05
+	CAR_female_idles_06
+	CAR_female_idles_07
+	CAR_female_idles_08
+	CAR_female_idles_09
 	car_female_jeans
 	car_female_jeans_idle
 	car_female_jeans_intoidle
@@ -112,47 +112,47 @@ female_anim_list = [
 	car_female_react_right
 	car_female_react_right_01
 	car_female_react_right_02
-	car_female_ready2rock_blkmetal_01
+	CAR_female_ready2rock_blkmetal_01
 	car_female_ready2rock_blkmetal_02
-	car_female_readytorock_classic_01
+	CAR_female_readytorock_classic_01
 	car_female_readytorock_classic_02
-	car_female_readytorock_glam_01
+	CAR_female_readytorock_glam_01
 	car_female_readytorock_glam_02
-	car_female_readytorock_goth_01
+	CAR_female_readytorock_goth_01
 	car_female_readytorock_goth_02
-	car_female_readytorock_metal_01
+	CAR_female_readytorock_metal_01
 	car_female_readytorock_metal_02
-	car_female_readytorock_punk_01
+	CAR_female_readytorock_punk_01
 	car_female_readytorock_punk_02
-	car_female_select_accl_idle01
-	car_female_select_accl_in
-	car_female_select_accl_out
-	car_female_select_accr_idle01
-	car_female_select_accr_in
-	car_female_select_accr_out
-	car_female_select_acc_glasses_01
-	car_female_select_acc_glasses_02
-	car_female_select_acc_hat_01
-	car_female_select_acc_hat_02
+	CAR_female_Select_ACCL_Idle01
+	CAR_female_Select_ACCL_In
+	CAR_female_Select_ACCL_out
+	CAR_female_Select_ACCR_Idle01
+	CAR_female_Select_ACCR_In
+	CAR_female_Select_ACCR_out
+	CAR_female_Select_ACC_Glasses_01
+	CAR_female_Select_ACC_Glasses_02
+	CAR_female_Select_ACC_Hat_01
+	CAR_female_Select_ACC_Hat_02
 	car_female_select_drumsticks_idle
 	car_female_select_drumsticks_in
 	car_female_select_drumsticks_out
-	car_female_select_facel_idle
+	CAR_female_Select_faceL_idle
 	car_female_select_facel_intoidle
-	car_female_select_facel_outofidle
+	CAR_female_Select_faceL_outofidle
 	car_female_select_guitar_idle
 	car_female_select_guitar_idle_2
 	car_female_select_guitar_turnl
 	car_female_select_guitar_turnr
 	car_female_select_guitar_turn_back
 	car_female_select_guitar_turn_flip
-	car_female_select_hair_01
-	car_female_select_hair_02
-	car_female_select_hair_03
-	car_female_select_hair_04
-	car_female_select_hair_05
-	car_female_select_hair_06
-	car_female_shoes_idle
+	CAR_female_Select_hair_01
+	CAR_female_Select_Hair_02
+	CAR_female_Select_Hair_03
+	CAR_female_Select_Hair_04
+	CAR_female_Select_Hair_05
+	CAR_female_Select_Hair_06
+	CAR_female_shoes_idle
 	car_female_shoes_idle_01
 	car_female_shoes_idle_02
 	car_female_shoes_intoidle
@@ -178,12 +178,12 @@ female_anim_list = [
 	car_lose_walkoff
 	s_haley_lose_01
 	s_haley_win
-	gh_rocker_female_select_mic
-	gh_rocker_female_select_into_idle
-	gh_rocker_female_select_idle
-	gh_rocker_female_select_outof_idle
-	gh_rocker_female_select_drums
-	gh_rocker_female_select_drums_03
+	GH_Rocker_female_Select_Mic
+	GH_Rocker_female_Select_into_idle
+	GH_Rocker_female_Select_idle
+	GH_Rocker_female_Select_outof_idle
+	gh_rocker_female_select_Drums
+	gh_rocker_female_select_Drums_03
 	b_alla_win_generic
 	b_alla_win_jump
 	b_kris_win_crowdhype01
@@ -202,16 +202,16 @@ female_anim_list = [
 	car_female_wins_crowdhype
 	car_female_wins_elvis
 	car_female_wins_generic
-	car_female_wins_generic_02
-	car_female_wins_generic_03
-	car_female_wins_jump
-	car_female_wins_kick
-	car_female_wins_kungfu
+	CAR_Female_Wins_Generic_02
+	CAR_Female_Wins_Generic_03
+	CAR_Female_Wins_Jump
+	CAR_Female_Wins_kick
+	CAR_Female_Wins_KungFu
 	car_female_wins_pretentious
 	car_female_wins_robot
-	car_female_wins_scary
+	CAR_Female_Wins_Scary
 	car_female_wins_stagedive
-	car_female_wins_waving
+	CAR_Female_Wins_Waving
 	d_alla_win_generic
 	d_alla_win_jump
 	d_kris_win_crowdhype01
@@ -242,7 +242,7 @@ female_anim_list = [
 	g_kris_win_waving
 	s_alla_win_generic
 	s_alla_win_jump
-	s_billy_win_boss
+	S_Billy_Win_Boss
 	s_haley_win
 	s_haley_win_pointbass
 	s_haley_win_pointdrum
@@ -261,81 +261,81 @@ female_anim_list = [
 	s_kris_win_stagedive
 	s_kris_win_waving
 	bdgs_b_bassist_lose_01
-	b_kris_lose_angryatcrowd
-	b_kris_lose_depressed
-	b_kris_lose_pointbass
-	b_kris_lose_pointdrum
-	b_kris_lose_pointguit
-	b_kris_lose_pointsing
+	B_Kris_Lose_AngryAtCrowd
+	B_Kris_Lose_Depressed
+	B_Kris_Lose_PointBass
+	B_Kris_Lose_PointDrum
+	B_Kris_Lose_PointGuit
+	B_Kris_Lose_PointSing
 	b_kris_lose_pretentious
 	b_kris_lose_tantrum
-	car_female_lose_angryatcrowd
-	car_female_lose_depressed
+	CAR_Female_Lose_AngryAtCrowd
+	CAR_Female_Lose_Depressed
 	car_female_lose_fearful
-	car_female_lose_generic
-	car_female_lose_kickinstrument
+	CAR_female_lose_generic
+	CAR_female_Lose_KickInstrument
 	car_female_lose_pretentious
 	car_female_lose_smash
 	car_female_lose_tantrum
-	car_female_lose_walkoff
-	d_kris_lose_angryatcrowd
-	d_kris_lose_depressed
-	d_kris_lose_pointbass
-	d_kris_lose_pointdrum
-	d_kris_lose_pointguit
-	d_kris_lose_pointsing
+	CAR_female_Lose_WalkOff
+	D_Kris_Lose_AngryAtCrowd
+	D_Kris_Lose_Depressed
+	D_Kris_Lose_PointBass
+	D_Kris_Lose_PointDrum
+	D_Kris_Lose_PointGuit
+	D_Kris_Lose_PointSing
 	d_kris_lose_pretentious
 	d_kris_lose_tantrum
-	g_kris_lose_angryatcrowd
-	g_kris_lose_depressed
-	g_kris_lose_pointbass
-	g_kris_lose_pointdrum
-	g_kris_lose_pointguit
-	g_kris_lose_pointsing
+	G_Kris_Lose_AngryAtCrowd
+	G_Kris_Lose_Depressed
+	G_Kris_Lose_PointBass
+	G_Kris_Lose_PointDrum
+	G_Kris_Lose_PointGuit
+	G_Kris_Lose_PointSing
 	g_kris_lose_pretentious
 	g_kris_lose_tantrum
 	s_haley_lose_01
 	s_haley_lose_pointbass
 	s_haley_lose_pointdrum
 	s_haley_lose_pointguitar
-	s_kris_lose_angryatcrowd
-	s_kris_lose_depressed
-	s_kris_lose_pointbass
-	s_kris_lose_pointdrum
-	s_kris_lose_pointguit
-	s_kris_lose_pointsing
+	S_Kris_Lose_AngryAtCrowd
+	S_Kris_Lose_Depressed
+	S_Kris_Lose_PointBass
+	S_Kris_Lose_PointDrum
+	S_Kris_Lose_PointGuit
+	S_Kris_Lose_PointSing
 	s_kris_lose_pretentious
 	s_kris_lose_tantrum
 ]
 stances_disabling_ik = [
 	stance_frontend
 	stance_frontend_guitar
-	stance_frontend_instrument
-	stance_select_p1
-	stance_select_p2
-	stance_select_p3
-	stance_select_p4
-	stance_select_head
-	stance_select_profile
-	stance_select_tat_chest
-	stance_select_tat_arm_r
-	stance_select_tat_arm_l
-	stance_select_hair
-	stance_select_glasses
-	stance_select_hat
-	stance_select_arm_r
-	stance_select_arm_l
-	stance_select_piercings
-	stance_select_torso
-	stance_select_pants
-	stance_select_shoes
-	stance_select_guitar
-	stance_select_mic
-	stance_select_microphone
-	stance_select_drum
-	stance_select_drumsticks
-	Intro
-	intro_smStg
+	stance_frontEnd_instrument
+	Stance_Select_P1
+	Stance_Select_P2
+	Stance_Select_P3
+	Stance_Select_P4
+	Stance_Select_Head
+	Stance_Select_Profile
+	Stance_Select_Tat_Chest
+	Stance_Select_Tat_Arm_R
+	Stance_Select_Tat_Arm_L
+	Stance_Select_Hair
+	Stance_Select_Glasses
+	Stance_Select_Hat
+	Stance_Select_Arm_R
+	Stance_Select_Arm_L
+	Stance_Select_Piercings
+	Stance_Select_Torso
+	Stance_Select_Pants
+	Stance_Select_Shoes
+	Stance_Select_Guitar
+	Stance_Select_Mic
+	Stance_Select_Microphone
+	Stance_Select_Drum
+	Stance_Select_DrumSticks
+	intro
+	intro_smstg
 	win
 	win_smstg
 	lose
@@ -344,32 +344,32 @@ stances_disabling_ik = [
 stance_chains = {
 	stance_frontend = slave
 	stance_frontend_guitar = slave
-	stance_frontend_instrument = slave
-	stance_select_p1 = slave
-	stance_select_p2 = slave
-	stance_select_p3 = slave
-	stance_select_p4 = slave
-	stance_select_head = slave
-	stance_select_profile = slave
-	stance_select_tat_chest = slave
-	stance_select_tat_arm_r = slave
-	stance_select_tat_arm_l = slave
-	stance_select_hair = slave
-	stance_select_glasses = slave
-	stance_select_hat = slave
-	stance_select_arm_r = slave
-	stance_select_arm_l = slave
-	stance_select_piercings = slave
-	stance_select_torso = slave
-	stance_select_pants = slave
-	stance_select_shoes = slave
-	stance_select_guitar = slave
-	stance_select_mic = slave
-	stance_select_microphone = slave
-	stance_select_drum = slave
-	stance_select_drumsticks = slave
-	Intro = slave
-	intro_smStg = slave
+	stance_frontEnd_instrument = slave
+	Stance_Select_P1 = slave
+	Stance_Select_P2 = slave
+	Stance_Select_P3 = slave
+	Stance_Select_P4 = slave
+	Stance_Select_Head = slave
+	Stance_Select_Profile = slave
+	Stance_Select_Tat_Chest = slave
+	Stance_Select_Tat_Arm_R = slave
+	Stance_Select_Tat_Arm_L = slave
+	Stance_Select_Hair = slave
+	Stance_Select_Glasses = slave
+	Stance_Select_Hat = slave
+	Stance_Select_Arm_R = slave
+	Stance_Select_Arm_L = slave
+	Stance_Select_Piercings = slave
+	Stance_Select_Torso = slave
+	Stance_Select_Pants = slave
+	Stance_Select_Shoes = slave
+	Stance_Select_Guitar = slave
+	Stance_Select_Mic = slave
+	Stance_Select_Microphone = slave
+	Stance_Select_Drum = slave
+	Stance_Select_DrumSticks = slave
+	intro = slave
+	intro_smstg = slave
 	win = slave
 	win_smstg = slave
 	lose = slave
@@ -377,24 +377,24 @@ stance_chains = {
 }
 normal_walk_data = {
 	start_anim = {
-		slow = GH3_Guitarist_Judy_A_Med_Wlk_Start
-		med = GH3_Guitarist_Judy_A_Med_Wlk_Start
-		FAST = GH3_Guitarist_Judy_A_Med_Wlk_Start
+		Slow = GH3_Guitarist_Judy_A_Med_Wlk_Start
+		Med = GH3_Guitarist_Judy_A_Med_Wlk_Start
+		Fast = GH3_Guitarist_Judy_A_Med_Wlk_Start
 	}
 	cycle_anim = {
-		slow = GH3_Guitarist_Judy_A_Med_Wlk_Loop
-		med = GH3_Guitarist_Judy_A_Med_Wlk_Loop
-		FAST = GH3_Guitarist_Judy_A_Med_Wlk_Loop
+		Slow = GH3_Guitarist_Judy_A_Med_Wlk_Loop
+		Med = GH3_Guitarist_Judy_A_Med_Wlk_Loop
+		Fast = GH3_Guitarist_Judy_A_Med_Wlk_Loop
 	}
 	stop_left_anim = {
-		slow = GH3_Guitarist_Judy_A_Med_Wlk_EndL
-		med = GH3_Guitarist_Judy_A_Med_Wlk_EndL
-		FAST = GH3_Guitarist_Judy_A_Med_Wlk_EndL
+		Slow = GH3_Guitarist_Judy_A_Med_Wlk_EndL
+		Med = GH3_Guitarist_Judy_A_Med_Wlk_EndL
+		Fast = GH3_Guitarist_Judy_A_Med_Wlk_EndL
 	}
 	stop_right_anim = {
-		slow = GH3_Guitarist_Judy_A_Med_Wlk_EndR
-		med = GH3_Guitarist_Judy_A_Med_Wlk_EndR
-		FAST = GH3_Guitarist_Judy_A_Med_Wlk_EndR
+		Slow = GH3_Guitarist_Judy_A_Med_Wlk_EndR
+		Med = GH3_Guitarist_Judy_A_Med_Wlk_EndR
+		Fast = GH3_Guitarist_Judy_A_Med_Wlk_EndR
 	}
 }
 default_turn_data = {
@@ -405,95 +405,95 @@ default_turn_data = {
 	max_turn = 180
 }
 Normal_Strums = {
-	no_strum_anim = gh_rocker_female_empty_d
-	short = [
-		gh_rocker_female_empty_d
+	no_strum_anim = GH_Rocker_Female_Empty_D
+	Short = [
+		GH_Rocker_Female_Empty_D
 	]
-	med = [
-		gh_rocker_female_empty_d
+	Med = [
+		GH_Rocker_Female_Empty_D
 	]
-	long = [
-		gh_rocker_female_empty_d
+	Long = [
+		GH_Rocker_Female_Empty_D
 	]
 }
 Mute_Strums = {
-	no_strum_anim = gh_rocker_female_empty_d
-	short = [
-		gh_rocker_female_empty_d
+	no_strum_anim = GH_Rocker_Female_Empty_D
+	Short = [
+		GH_Rocker_Female_Empty_D
 	]
-	med = [
-		gh_rocker_female_empty_d
+	Med = [
+		GH_Rocker_Female_Empty_D
 	]
-	long = [
-		gh_rocker_female_empty_d
+	Long = [
+		GH_Rocker_Female_Empty_D
 	]
 }
 bad_strums = {
-	no_strum_anim = gh_rocker_female_empty_d
-	short = [
-		gh_rocker_female_empty_d
+	no_strum_anim = GH_Rocker_Female_Empty_D
+	Short = [
+		GH_Rocker_Female_Empty_D
 	]
-	med = [
-		gh_rocker_female_empty_d
+	Med = [
+		GH_Rocker_Female_Empty_D
 	]
-	long = [
-		gh_rocker_female_empty_d
+	Long = [
+		GH_Rocker_Female_Empty_D
 	]
 }
 Bass_Normal_Strums = {
-	no_strum_anim = gh_rocker_female_empty_d
-	short = [
-		gh_rocker_female_empty_d
+	no_strum_anim = GH_Rocker_Female_Empty_D
+	Short = [
+		GH_Rocker_Female_Empty_D
 	]
-	med = [
-		gh_rocker_female_empty_d
+	Med = [
+		GH_Rocker_Female_Empty_D
 	]
-	long = [
-		gh_rocker_female_empty_d
+	Long = [
+		GH_Rocker_Female_Empty_D
 	]
 }
 Bass_Pick_Strums = {
-	no_strum_anim = gh_rocker_female_empty_d
-	short = [
-		gh_rocker_female_empty_d
+	no_strum_anim = GH_Rocker_Female_Empty_D
+	Short = [
+		GH_Rocker_Female_Empty_D
 	]
-	med = [
-		gh_rocker_female_empty_d
+	Med = [
+		GH_Rocker_Female_Empty_D
 	]
-	long = [
-		gh_rocker_female_empty_d
+	Long = [
+		GH_Rocker_Female_Empty_D
 	]
 }
 Bass_Slap_Strums = {
-	no_strum_anim = gh_rocker_female_empty_d
-	short = [
-		gh_rocker_female_empty_d
+	no_strum_anim = GH_Rocker_Female_Empty_D
+	Short = [
+		GH_Rocker_Female_Empty_D
 	]
-	med = [
-		gh_rocker_female_empty_d
+	Med = [
+		GH_Rocker_Female_Empty_D
 	]
-	long = [
-		gh_rocker_female_empty_d
+	Long = [
+		GH_Rocker_Female_Empty_D
 	]
 }
-car_empty_strums = {
-	no_strum_anim = gh_rocker_female_empty_d
-	short = [
-		gh_rocker_female_empty_d
+CAR_Empty_Strums = {
+	no_strum_anim = GH_Rocker_Female_Empty_D
+	Short = [
+		GH_Rocker_Female_Empty_D
 	]
-	med = [
-		gh_rocker_female_empty_d
+	Med = [
+		GH_Rocker_Female_Empty_D
 	]
-	long = [
-		gh_rocker_female_empty_d
+	Long = [
+		GH_Rocker_Female_Empty_D
 	]
 }
 guitarist_finger_anims_small = {
 	green = GH3_Hnd_Guit_Chord_SML_G_D
 	red = GH3_Hnd_Guit_Chord_SML_C_D
-	yellow = GH3_Hnd_Guit_Chord_SML_A_D
-	blue = GH3_Hnd_Guit_Chord_SML_G_D
-	orange = GH3_Hnd_Guit_Chord_SML_DSUS_D
+	Yellow = GH3_Hnd_Guit_Chord_SML_A_D
+	Blue = GH3_Hnd_Guit_Chord_SML_G_D
+	Orange = GH3_Hnd_Guit_Chord_SML_DSUS_D
 	green_red = GH3_Hnd_Guit_Chord_SML_G_D
 	green_yellow = GH3_Hnd_Guit_Chord_SML_G_D
 	green_blue = GH3_Hnd_Guit_Chord_SML_G_D
@@ -519,15 +519,15 @@ guitarist_finger_anims_small = {
 	green_red_blue_orange = GH3_Hnd_Guit_Chord_SML_G_D
 	green_yellow_blue_orange = GH3_Hnd_Guit_Chord_SML_G_D
 	green_red_yellow_blue_orange = GH3_Hnd_Guit_Chord_SML_G_D
-	None = Gh3_hnd_guit_chord_SML_Empty_D
+	none = Gh3_hnd_guit_chord_SML_Empty_D
 	track_none = Gh3_hnd_guit_chord_SML_Empty_D
 }
 guitarist_finger_anims_medium = {
 	green = GH3_Hnd_Guit_Chord_LRG_G_D
 	red = GH3_Hnd_Guit_Chord_LRG_C_D
-	yellow = GH3_Hnd_Guit_Chord_LRG_A_D
-	blue = GH3_Hnd_Guit_Chord_LRG_G_D
-	orange = GH3_Hnd_Guit_Chord_LRG_DSUS_D
+	Yellow = GH3_Hnd_Guit_Chord_LRG_A_D
+	Blue = GH3_Hnd_Guit_Chord_LRG_G_D
+	Orange = GH3_Hnd_Guit_Chord_LRG_DSUS_D
 	green_red = GH3_Hnd_Guit_Chord_LRG_G_D
 	green_yellow = GH3_Hnd_Guit_Chord_LRG_G_D
 	green_blue = GH3_Hnd_Guit_Chord_LRG_G_D
@@ -553,15 +553,15 @@ guitarist_finger_anims_medium = {
 	green_red_blue_orange = GH3_Hnd_Guit_Chord_LRG_G_D
 	green_yellow_blue_orange = GH3_Hnd_Guit_Chord_LRG_G_D
 	green_red_yellow_blue_orange = GH3_Hnd_Guit_Chord_LRG_G_D
-	None = Gh3_hnd_guit_chord_LRG_Empty_D
+	none = Gh3_hnd_guit_chord_LRG_Empty_D
 	track_none = Gh3_hnd_guit_chord_LRG_Empty_D
 }
 guitarist_finger_anims_large = {
 	green = GH3_Hnd_Guit_Chord_LRG_Roll3_1_D
 	red = GH3_Hnd_Guit_Chord_LRG_Roll3_2_D
-	yellow = GH3_Hnd_Guit_Chord_LRG_Roll3_3_D
-	blue = GH3_Hnd_Guit_Chord_LRG_Roll3_4_D
-	orange = GH3_Hnd_Guit_Chord_LRG_Roll3_4_D
+	Yellow = GH3_Hnd_Guit_Chord_LRG_Roll3_3_D
+	Blue = GH3_Hnd_Guit_Chord_LRG_Roll3_4_D
+	Orange = GH3_Hnd_Guit_Chord_LRG_Roll3_4_D
 	green_red = GH3_Hnd_Guit_Chord_LRG_Bar2_D
 	green_yellow = GH3_Hnd_Guit_Chord_LRG_Bar3_D
 	green_blue = GH3_Hnd_Guit_Chord_LRG_Bar4_D
@@ -587,47 +587,47 @@ guitarist_finger_anims_large = {
 	green_red_blue_orange = GH3_Hnd_Guit_Chord_LRG_G_D
 	green_yellow_blue_orange = GH3_Hnd_Guit_Chord_LRG_G_D
 	green_red_yellow_blue_orange = GH3_Hnd_Guit_Chord_LRG_G_D
-	None = Gh3_hnd_guit_chord_LRG_Empty_D
+	none = Gh3_hnd_guit_chord_LRG_Empty_D
 	track_none = Gh3_hnd_guit_chord_LRG_Empty_D
 }
 guitarist_finger_anims_empty = {
-	green = gh_rocker_female_empty_d
-	red = gh_rocker_female_empty_d
-	yellow = gh_rocker_female_empty_d
-	blue = gh_rocker_female_empty_d
-	orange = gh_rocker_female_empty_d
-	green_red = gh_rocker_female_empty_d
-	green_yellow = gh_rocker_female_empty_d
-	green_blue = gh_rocker_female_empty_d
-	green_orange = gh_rocker_female_empty_d
-	red_yellow = gh_rocker_female_empty_d
-	red_blue = gh_rocker_female_empty_d
-	red_orange = gh_rocker_female_empty_d
-	yellow_blue = gh_rocker_female_empty_d
-	yellow_orange = gh_rocker_female_empty_d
-	blue_orange = gh_rocker_female_empty_d
-	green_red_yellow = gh_rocker_female_empty_d
-	green_red_blue = gh_rocker_female_empty_d
-	green_red_orange = gh_rocker_female_empty_d
-	green_yellow_blue = gh_rocker_female_empty_d
-	green_yellow_orange = gh_rocker_female_empty_d
-	green_blue_orange = gh_rocker_female_empty_d
-	red_yellow_blue = gh_rocker_female_empty_d
-	red_yellow_orange = gh_rocker_female_empty_d
-	red_blue_orange = gh_rocker_female_empty_d
-	yellow_blue_orange = gh_rocker_female_empty_d
-	green_red_yellow_blue = gh_rocker_female_empty_d
-	green_red_yellow_orange = gh_rocker_female_empty_d
-	green_red_blue_orange = gh_rocker_female_empty_d
-	green_yellow_blue_orange = gh_rocker_female_empty_d
-	green_red_yellow_blue_orange = gh_rocker_female_empty_d
-	None = gh_rocker_female_empty_d
-	track_none = gh_rocker_female_empty_d
+	green = GH_Rocker_Female_Empty_D
+	red = GH_Rocker_Female_Empty_D
+	Yellow = GH_Rocker_Female_Empty_D
+	Blue = GH_Rocker_Female_Empty_D
+	Orange = GH_Rocker_Female_Empty_D
+	green_red = GH_Rocker_Female_Empty_D
+	green_yellow = GH_Rocker_Female_Empty_D
+	green_blue = GH_Rocker_Female_Empty_D
+	green_orange = GH_Rocker_Female_Empty_D
+	red_yellow = GH_Rocker_Female_Empty_D
+	red_blue = GH_Rocker_Female_Empty_D
+	red_orange = GH_Rocker_Female_Empty_D
+	yellow_blue = GH_Rocker_Female_Empty_D
+	yellow_orange = GH_Rocker_Female_Empty_D
+	blue_orange = GH_Rocker_Female_Empty_D
+	green_red_yellow = GH_Rocker_Female_Empty_D
+	green_red_blue = GH_Rocker_Female_Empty_D
+	green_red_orange = GH_Rocker_Female_Empty_D
+	green_yellow_blue = GH_Rocker_Female_Empty_D
+	green_yellow_orange = GH_Rocker_Female_Empty_D
+	green_blue_orange = GH_Rocker_Female_Empty_D
+	red_yellow_blue = GH_Rocker_Female_Empty_D
+	red_yellow_orange = GH_Rocker_Female_Empty_D
+	red_blue_orange = GH_Rocker_Female_Empty_D
+	yellow_blue_orange = GH_Rocker_Female_Empty_D
+	green_red_yellow_blue = GH_Rocker_Female_Empty_D
+	green_red_yellow_orange = GH_Rocker_Female_Empty_D
+	green_red_blue_orange = GH_Rocker_Female_Empty_D
+	green_yellow_blue_orange = GH_Rocker_Female_Empty_D
+	green_red_yellow_blue_orange = GH_Rocker_Female_Empty_D
+	none = GH_Rocker_Female_Empty_D
+	track_none = GH_Rocker_Female_Empty_D
 }
 crowd_animations = {
 	Idle = {
 		good = {
-			FAST = [
+			Fast = [
 				GH3_crowd_jumping1
 				GH3_crowd_jumping1
 				GH3_crowd_jumping1
@@ -640,7 +640,7 @@ crowd_animations = {
 				GH3_crowd_cheer1
 				GH3_crowd_clapping1
 			]
-			med = [
+			Med = [
 				GH3_crowd_jumping1
 				GH3_crowd_jumping1
 				GH3_crowd_jumping1
@@ -653,7 +653,7 @@ crowd_animations = {
 				GH3_crowd_cheer1
 				GH3_crowd_clapping1
 			]
-			slow = [
+			Slow = [
 				GH3_crowd_jumping1
 				GH3_crowd_jumping1
 				GH3_crowd_jumping1
@@ -668,7 +668,7 @@ crowd_animations = {
 			]
 		}
 		Normal = {
-			FAST = [
+			Fast = [
 				GH3_crowd_cheer1
 				GH3_crowd_cheer1
 				GH3_crowd_cheer1
@@ -680,7 +680,7 @@ crowd_animations = {
 				GH3_crowd_jumping1
 				GH3_crowd_clapping1
 			]
-			med = [
+			Med = [
 				GH3_crowd_cheer1
 				GH3_crowd_cheer1
 				GH3_crowd_cheer1
@@ -692,7 +692,7 @@ crowd_animations = {
 				GH3_crowd_jumping1
 				GH3_crowd_clapping1
 			]
-			slow = [
+			Slow = [
 				GH3_crowd_cheer1
 				GH3_crowd_cheer1
 				GH3_crowd_cheer1
@@ -705,8 +705,8 @@ crowd_animations = {
 				GH3_crowd_clapping1
 			]
 		}
-		bad = {
-			FAST = [
+		Bad = {
+			Fast = [
 				GH3_crowd_clapping1
 				GH3_crowd_clapping1
 				GH3_crowd_clapping1
@@ -718,7 +718,7 @@ crowd_animations = {
 				GH3_crowd_cheer1
 				GH3_crowd_jumping1
 			]
-			med = [
+			Med = [
 				GH3_crowd_clapping1
 				GH3_crowd_clapping1
 				GH3_crowd_clapping1
@@ -730,7 +730,7 @@ crowd_animations = {
 				GH3_crowd_cheer1
 				GH3_crowd_jumping1
 			]
-			slow = [
+			Slow = [
 				GH3_crowd_clapping1
 				GH3_crowd_clapping1
 				GH3_crowd_clapping1
@@ -746,43 +746,43 @@ crowd_animations = {
 	}
 	Clapping = {
 		good = {
-			FAST = [
+			Fast = [
 				GH3_crowd_clapping1
 				GH3_crowd_clapping2
 			]
-			med = [
+			Med = [
 				GH3_crowd_clapping1
 				GH3_crowd_clapping2
 			]
-			slow = [
+			Slow = [
 				GH3_crowd_clapping1
 				GH3_crowd_clapping2
 			]
 		}
 		Normal = {
-			FAST = [
+			Fast = [
 				GH3_crowd_clapping1
 				GH3_crowd_clapping2
 			]
-			med = [
+			Med = [
 				GH3_crowd_clapping1
 				GH3_crowd_clapping2
 			]
-			slow = [
+			Slow = [
 				GH3_crowd_clapping1
 				GH3_crowd_clapping2
 			]
 		}
-		bad = {
-			FAST = [
+		Bad = {
+			Fast = [
 				GH3_crowd_clapping1
 				GH3_crowd_clapping2
 			]
-			med = [
+			Med = [
 				GH3_crowd_clapping1
 				GH3_crowd_clapping2
 			]
-			slow = [
+			Slow = [
 				GH3_crowd_clapping1
 				GH3_crowd_clapping2
 			]
@@ -790,51 +790,51 @@ crowd_animations = {
 	}
 	Jumping = {
 		good = {
-			FAST = [
+			Fast = [
 				GH3_crowd_jumping1
 				GH3_crowd_jumping2
 				GH3_crowd_jumping3
 			]
-			med = [
+			Med = [
 				GH3_crowd_jumping1
 				GH3_crowd_jumping2
 				GH3_crowd_jumping3
 			]
-			slow = [
+			Slow = [
 				GH3_crowd_jumping1
 				GH3_crowd_jumping2
 				GH3_crowd_jumping3
 			]
 		}
 		Normal = {
-			FAST = [
+			Fast = [
 				GH3_crowd_jumping1
 				GH3_crowd_jumping2
 				GH3_crowd_jumping3
 			]
-			med = [
+			Med = [
 				GH3_crowd_jumping1
 				GH3_crowd_jumping2
 				GH3_crowd_jumping3
 			]
-			slow = [
+			Slow = [
 				GH3_crowd_jumping1
 				GH3_crowd_jumping2
 				GH3_crowd_jumping3
 			]
 		}
-		bad = {
-			FAST = [
+		Bad = {
+			Fast = [
 				GH3_crowd_jumping1
 				GH3_crowd_jumping2
 				GH3_crowd_jumping3
 			]
-			med = [
+			Med = [
 				GH3_crowd_jumping1
 				GH3_crowd_jumping2
 				GH3_crowd_jumping3
 			]
-			slow = [
+			Slow = [
 				GH3_crowd_jumping1
 				GH3_crowd_jumping2
 				GH3_crowd_jumping3
@@ -843,43 +843,43 @@ crowd_animations = {
 	}
 	Cheering = {
 		good = {
-			FAST = [
+			Fast = [
 				GH3_crowd_cheer1
 				GH3_crowd_cheer2
 			]
-			med = [
+			Med = [
 				GH3_crowd_cheer1
 				GH3_crowd_cheer2
 			]
-			slow = [
+			Slow = [
 				GH3_crowd_cheer1
 				GH3_crowd_cheer2
 			]
 		}
 		Normal = {
-			FAST = [
+			Fast = [
 				GH3_crowd_cheer1
 				GH3_crowd_cheer2
 			]
-			med = [
+			Med = [
 				GH3_crowd_cheer1
 				GH3_crowd_cheer2
 			]
-			slow = [
+			Slow = [
 				GH3_crowd_cheer1
 				GH3_crowd_cheer2
 			]
 		}
-		bad = {
-			FAST = [
+		Bad = {
+			Fast = [
 				GH3_crowd_cheer1
 				GH3_crowd_cheer2
 			]
-			med = [
+			Med = [
 				GH3_crowd_cheer1
 				GH3_crowd_cheer2
 			]
-			slow = [
+			Slow = [
 				GH3_crowd_cheer1
 				GH3_crowd_cheer2
 			]
@@ -890,24 +890,24 @@ drum_sets = {
 	artdeco = drum_kit001
 	wikker = drum_kit002
 	budokan = drum_kit003
-	Default = drum_kit001
+	`default` = drum_kit001
 }
 drumkit_anims = [
-	gh_drum_kick
-	gh_drum_tom_3
-	gh_drum_tom_2
-	gh_drum_tom_1
-	gh_drum_snare
-	gh_drum_cymbal_hh_closed
-	gh_drum_cymbal_hh_open
-	gh_drum_cymbal_3
-	gh_drum_cymbal_1
-	gh_drum_cymbal_2
-	gh_drum_stop_cymbal_1
-	gh_drum_stop_cymbal_2
+	GH_Drum_Kick
+	GH_Drum_Tom_3
+	GH_Drum_Tom_2
+	GH_Drum_Tom_1
+	GH_Drum_Snare
+	GH_Drum_Cymbal_HH_Closed
+	GH_Drum_Cymbal_HH_Open
+	GH_Drum_Cymbal_3
+	GH_Drum_Cymbal_1
+	GH_Drum_Cymbal_2
+	GH_Drum_Stop_Cymbal_1
+	GH_Drum_Stop_Cymbal_2
 ]
 player1_battlemode_anims = {
-	Lightning = {
+	lightning = {
 		attack_anim = Attack
 		response_anim = React_right
 	}
@@ -937,7 +937,7 @@ player1_battlemode_anims = {
 	}
 }
 player2_battlemode_anims = {
-	Lightning = {
+	lightning = {
 		attack_anim = Attack_right
 		response_anim = React
 	}
@@ -966,1673 +966,1673 @@ player2_battlemode_anims = {
 		response_anim = React
 	}
 }
-queued_clip = None
-test_clip = {
+queued_clip = none
+Test_Clip = {
 	anims = {
-		GUITARIST = dammit_gb_playtogether_bass
+		Guitarist = Dammit_GB_PlayTogether_BASS
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT'
-			anim = dammit_gb_playtogether_camera01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT'
+			Anim = Dammit_GB_PlayTogether_Camera01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT'
-			anim = dammit_gb_playtogether_camera01
-			venues = [
-				venue2
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT'
+			Anim = Dammit_GB_PlayTogether_Camera01
+			Venues = [
+				Venue2
+				Venue3
 			]
 			weight = 2
 		}
 	]
 }
-generic_intro = {
+Generic_Intro = {
 	anims = {
-		GUITARIST = gsbd_uj_intro01_g
-		BASSIST = gsbd_uj_intro01_b
+		Guitarist = gsbd_uj_intro01_g
+		bassist = gsbd_uj_intro01_b
 		vocalist = gsbd_uj_intro01_s
-		drummer = gsbd_uj_intro01_d
+		Drummer = gsbd_uj_intro01_d
 	}
-	arms = {
-		GUITARIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+	Arms = {
+		Guitarist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
-		BASSIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+		bassist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
-		drummer = {
-			ik_targetl = slave
-			ik_targetr = slave
+		Drummer = {
+			IK_TargetL = slave
+			IK_TargetR = slave
 		}
 	}
 }
-generic_win = {
+Generic_Win = {
 	anims = {
-		GUITARIST = g_ringers_take02_wins01
-		BASSIST = b_ringers_take03_wins01
+		Guitarist = g_ringers_take02_wins01
+		bassist = b_ringers_take03_wins01
 		vocalist = s_ringers_take02_wins01
-		drummer = d_ringers_take02_wins01
+		Drummer = d_ringers_take02_wins01
 	}
-	arms = {
-		GUITARIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+	Arms = {
+		Guitarist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
-		BASSIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+		bassist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
-		drummer = {
-			ik_targetl = slave
-			ik_targetr = slave
+		Drummer = {
+			IK_TargetL = slave
+			IK_TargetR = slave
 		}
 	}
 }
-generic_lose = {
+Generic_Lose = {
 	anims = {
-		GUITARIST = bdgs_g_guitarist_lose_01
-		BASSIST = bdgs_b_guitarist_lose_01
-		vocalist = bdgs_s_guitarist_lose_01
-		drummer = bdgs_d_guitarist_lose_01
+		Guitarist = bdgs_g_guitarist_lose_01
+		bassist = BDGS_B_Guitarist_Lose_01
+		vocalist = BDGS_S_Guitarist_Lose_01
+		Drummer = BDGS_D_Guitarist_Lose_01
 	}
-	arms = {
-		GUITARIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+	Arms = {
+		Guitarist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
-		BASSIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+		bassist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
-		drummer = {
-			ik_targetl = slave
-			ik_targetr = slave
+		Drummer = {
+			IK_TargetL = slave
+			IK_TargetR = slave
 		}
 	}
 }
-song_loading = {
+Song_Loading = {
 	anims = {
-		GUITARIST = gsb_g_notempo_uj_01
-		BASSIST = gsb_b_notempo_uj_01
-		vocalist = gsb_s_notempo_uj_01
-		drummer = gsb_d_notempo_uj_01
+		Guitarist = GSB_G_NoTempo_UJ_01
+		bassist = GSB_B_NoTempo_UJ_01
+		vocalist = GSB_S_NoTempo_UJ_01
+		Drummer = GSB_D_NoTempo_UJ_01
 	}
-	arms = {
-		GUITARIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+	Arms = {
+		Guitarist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
-		BASSIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+		bassist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
-		drummer = {
-			ik_targetl = slave
-			ik_targetr = slave
+		Drummer = {
+			IK_TargetL = slave
+			IK_TargetR = slave
 		}
 	}
 }
-song_loading_singing_guitarist = {
+Song_Loading_Singing_Guitarist = {
 	anims = {
-		GUITARIST = gsb_g_notempo_uj_01
-		BASSIST = gsb_b_notempo_uj_01
-		vocalist = gsb_g_notempo_uj_01
-		drummer = gsb_d_notempo_uj_01
+		Guitarist = GSB_G_NoTempo_UJ_01
+		bassist = GSB_B_NoTempo_UJ_01
+		vocalist = GSB_G_NoTempo_UJ_01
+		Drummer = GSB_D_NoTempo_UJ_01
 	}
-	arms = {
-		GUITARIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+	Arms = {
+		Guitarist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
-		BASSIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+		bassist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
-		drummer = {
-			ik_targetl = slave
-			ik_targetr = slave
+		Drummer = {
+			IK_TargetL = slave
+			IK_TargetR = slave
 		}
 	}
 }
-song_loading_with_jimi = {
+Song_Loading_With_Jimi = {
 	anims = {
-		GUITARIST = gsb_g_notempo_uj_01
-		BASSIST = gsb_b_notempo_uj_01
-		vocalist = g_jimi_intro
-		drummer = gsb_d_notempo_uj_01
+		Guitarist = GSB_G_NoTempo_UJ_01
+		bassist = GSB_B_NoTempo_UJ_01
+		vocalist = G_Jimi_intro
+		Drummer = GSB_D_NoTempo_UJ_01
 	}
-	arms = {
-		GUITARIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+	Arms = {
+		Guitarist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
-		BASSIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+		bassist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
-		drummer = {
-			ik_targetl = slave
-			ik_targetr = slave
+		Drummer = {
+			IK_TargetL = slave
+			IK_TargetR = slave
 		}
 	}
 }
-group_starpower_01_clip = {
+Group_StarPower_01_Clip = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = gsb_s_jump01
-		BASSIST = gsb_b_jump01
-		GUITARIST = gsb_g_jump01
+		vocalist = GSB_S_Jump01
+		bassist = GSB_B_Jump01
+		Guitarist = GSB_G_Jump01
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_jump01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Jump01_c01
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_jump01_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Jump01_c02
 		}
 	]
-	startframe = 75
-	disableik = FALSE
+	startFrame = 75
+	DisableIK = false
 }
-group_starpower_02_clip = {
+Group_StarPower_02_Clip = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = gsb_s_kickstarpower01
-		BASSIST = gsb_b_kickstarpower01
-		GUITARIST = gsb_g_kickstarpower01
+		vocalist = GSB_S_KickStarPower01
+		bassist = GSB_B_KickStarPower01
+		Guitarist = GSB_G_KickStarPower01
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_kickstarpower01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_kickstarpower01_c01
 		}
 	]
-	disableik = true
+	DisableIK = true
 }
 kicks01_guit = {
 	anims = {
-		GUITARIST = kicks01_guit
+		Guitarist = kicks01_guit
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = kicks01_guit_camera01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = kicks01_GUIT_Camera01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-kicks02_guit = {
+kicks02_GUIT = {
 	anims = {
-		GUITARIST = kicks02_guit
+		Guitarist = kicks02_GUIT
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = kicks02_guit_camera01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = kicks02_GUIT_Camera01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-beatit_singtocam_sing = {
+BeatIt_SingToCam_SING = {
 	anims = {
-		vocalist = beatit_singtocam_sing
+		vocalist = BeatIt_SingToCam_SING
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = beatit_singtocam_sing_camera01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = BeatIt_SingToCam_SING_Camera01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING02'
-			anim = beatit_singtocam_sing_camera02
-			venues = [
-				venue2
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING02'
+			Anim = BeatIt_SingToCam_SING_Camera02
+			Venues = [
+				Venue2
+				Venue3
 			]
 			weight = 2
 		}
 	]
 }
-beatit_moonwalk_sing = {
+BeatIt_Moonwalk_SING = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_moonwalktosing
+		vocalist = S_MoonwalkToSing
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_moonwalktosing_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_MoonwalkToSing_C01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-beatit_moonwalk_sing02 = {
+BeatIt_Moonwalk_SING02 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_moonwalktosing
-		GUITARIST = b_underthestage01
+		vocalist = S_MoonwalkToSing
+		Guitarist = b_underthestage01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_moonwalktosing_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_MoonwalkToSing_C01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-dammit_gb_playtogether_guit = {
+Dammit_GB_PlayTogether_GUIT = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
-		BASSIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
+		bassist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = dammit_gb_playtogether_guit
-		BASSIST = dammit_gb_playtogether_bass
+		Guitarist = Dammit_GB_PlayTogether_GUIT
+		bassist = Dammit_GB_PlayTogether_BASS
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = dammit_gb_playtogether_camera01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = Dammit_GB_PlayTogether_Camera01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-beatit_dance01_sing = {
+BeatIt_Dance01_SING = {
 	anims = {
-		vocalist = s_dance_beatit
+		vocalist = S_Dance_BeatIt
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_dance_beatit_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Dance_BeatIt_C01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-kickquick_bass = {
+kickQuick_BASS = {
 	anims = {
-		BASSIST = kickquick_bass
+		bassist = kickQuick_BASS
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = kickquick_bass_camera01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = kickQuick_BASS_Camera01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-dammit_lookcam_bass = {
+Dammit_LookCam_BASS = {
 	anims = {
-		BASSIST = dammit_lookcam_bass
+		bassist = Dammit_LookCam_BASS
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = dammit_lookcam_bass_camera01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = Dammit_LookCam_BASS_Camera01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-dammit_lookheadbob_guit = {
+Dammit_LookHeadBob_GUIT = {
 	anims = {
-		GUITARIST = dammit_lookheadbob_guit
+		Guitarist = Dammit_LookHeadBob_GUIT
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = dammit_lookheadbob_guit_camera01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = Dammit_LookHeadBob_GUIT_Camera01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-spinjump01_guit = {
+SpinJump01_GUIT = {
 	anims = {
-		GUITARIST = spinjump01_guit
+		Guitarist = SpinJump01_GUIT
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = spinjump01_guit_camera
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = SpinJump01_GUIT_camera
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-camerapush_sing = {
+CameraPush_Sing = {
 	startnodes = {
-		BASSIST = 'vocalist_start'
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = s_singcampush
-		BASSIST = s_singcampush_bass
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singcampush_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-dammit_singingbounce_sing = {
-	anims = {
-		vocalist = dammit_singingbounce_sing
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = dammit_singingbounce_sing_camera
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-kicks03_guit = {
-	anims = {
-		GUITARIST = g_kick03
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_kick03_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-pointup_sing = {
-	anims = {
-		vocalist = s_pointup01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointup01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-look01_bass = {
-	anims = {
-		BASSIST = b_look01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_look01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-hotblooded_gsb_jam = {
-	startnodes = {
-		BASSIST = 'vocalist_start'
-		GUITARIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		BASSIST = gsb_b_jam01
-		GUITARIST = gsb_g_jam01
-		vocalist = gsb_s_jam01
+		vocalist = S_SingCamPush
+		bassist = S_SingCamPush_Bass
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_jam01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingCamPush_C01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-hotblooded_sing01_sing_rock = {
+Dammit_SingingBounce_SING = {
+	anims = {
+		vocalist = Dammit_SingingBounce_SING
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = Dammit_SingingBounce_SING_Camera
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+kicks03_GUIT = {
+	anims = {
+		Guitarist = G_kick03
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_kick03_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+PointUp_Sing = {
+	anims = {
+		vocalist = S_PointUp01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_PointUp01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+Look01_BASS = {
+	anims = {
+		bassist = B_Look01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_Look01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+HotBlooded_GSB_Jam = {
+	startnodes = {
+		bassist = 'vocalist_start'
+		Guitarist = 'vocalist_start'
+		vocalist = 'vocalist_start'
+	}
+	anims = {
+		bassist = GSB_B_Jam01
+		Guitarist = GSB_G_Jam01
+		vocalist = GSB_S_Jam01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Jam01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+HotBlooded_sing01_SING_Rock = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_singtocam01
+		vocalist = S_SingToCam01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCam01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCam01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-dammit_gb_playtogether = {
+Dammit_GB_PlayTogether = {
 	startnodes = {
-		BASSIST = 'guitarist_start'
-		GUITARIST = 'guitarist_start'
+		bassist = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		BASSIST = gb_playjumping_b
-		GUITARIST = gb_playjumping_g
+		bassist = GB_PlayJumping_B
+		Guitarist = GB_PlayJumping_G
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = gb_playjumping_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = GB_PlayJumping_C01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_orbitguit01 = {
+GSB_OrbitGuit01 = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_g_orbitguit01
+		Guitarist = GSB_G_OrbitGuit01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_orbitguit01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_OrbitGuit01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_singtocam01 = {
+S_SingToCam01 = {
 	anims = {
-		vocalist = s_singtocam01
+		vocalist = S_SingToCam01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCam01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCam01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_singtocam02 = {
+S_SingToCam02 = {
 	anims = {
-		vocalist = s_singtocam02
+		vocalist = S_SingToCam02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_singtocam02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_singtocam03 = {
+S_SingToCam03 = {
 	anims = {
-		vocalist = s_singtocam03
+		vocalist = S_SingToCam03
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam03_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCam03_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_singtocam04 = {
+S_SingToCam04 = {
 	anims = {
-		vocalist = s_singtocam04
+		vocalist = S_SingToCam04
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam04_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_singtocam04_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_pointcrowd01 = {
+S_PointCrowd01 = {
 	anims = {
-		vocalist = s_pointcrowd01
+		vocalist = S_PointCrowd01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointcrowd01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointcrowd01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointcrowd01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_PointCrowd01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_singatmic_075 = {
+GSB_SingAtMic_075 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = gsb_s_singatmic_075
-		BASSIST = gsb_b_singatmic_075
+		vocalist = GSB_S_SingAtMic_075
+		bassist = GSB_B_SingAtMic_075
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_075_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_075_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_loveme_pointing = {
+S_loveme_pointing = {
 	anims = {
-		vocalist = s_loveme_pointing01
+		vocalist = S_loveme_pointing01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_loveme_pointing01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_loveme_pointing01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_american_01 = {
+S_American_01 = {
 	anims = {
-		vocalist = s_american_01
+		vocalist = S_American_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_american_01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_american_02 = {
+S_American_02 = {
 	anims = {
-		vocalist = s_american_02
+		vocalist = S_American_02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_02_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_American_02_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gs_back2back01 = {
+GS_Back2Back01 = {
 	startnodes = {
 		vocalist = 'guitarist_start'
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		vocalist = gs_back2back01_s
-		GUITARIST = gs_back2back01_g
+		vocalist = GS_Back2Back01_S
+		Guitarist = GS_Back2Back01_G
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = gs_back2back01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = GS_Back2Back01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_bigstrum02 = {
+G_BigStrum02 = {
 	anims = {
-		GUITARIST = g_bigstrum02
+		Guitarist = G_BigStrum02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_bigstrum02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_BigStrum02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_solo06 = {
+G_Solo06 = {
 	anims = {
-		GUITARIST = g_solo06
+		Guitarist = G_Solo06
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo06_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo06_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_notempo_uj_01_everlong = {
+GSB_NoTempo_UJ_01_Everlong = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = gsb_s_notempo_uj_01
+		vocalist = GSB_S_NoTempo_UJ_01
 	}
-	measures = 3
+	Measures = 3
 }
-gsb_notempo_uj_01_b_everlong = {
+GSB_NoTempo_UJ_01_B_Everlong = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		BASSIST = 'bassist_start'
-		GUITARIST = 'guitarist_start'
+		bassist = 'bassist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		vocalist = gsb_s_notempo_uj_01
-		BASSIST = gsb_b_notempo_uj_01
-		GUITARIST = g_jeff_lowkey_100_01
+		vocalist = GSB_S_NoTempo_UJ_01
+		bassist = GSB_B_NoTempo_UJ_01
+		Guitarist = G_Jeff_LowKey_100_01
 	}
-	measures = 3
-	arms = {
-		BASSIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+	Measures = 3
+	Arms = {
+		bassist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 	}
 }
-gsb_orbitguit01_everlong = {
+GSB_OrbitGuit01_Everlong = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_g_orbitguit01
+		Guitarist = GSB_G_OrbitGuit01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_orbitguit01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_OrbitGuit01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_solo06_everlong = {
+G_Solo06_Everlong = {
 	anims = {
-		GUITARIST = g_solo06
+		Guitarist = G_Solo06
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo06_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo06_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-b_playstrut01_everlong = {
+B_PlayStrut01_Everlong = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		BASSIST = b_playstrut01
+		bassist = B_PlayStrut01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_playstrut01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_PlayStrut01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_spinjumps01_everlong = {
+G_SpinJumps01_Everlong = {
 	anims = {
-		GUITARIST = g_spinjumps01
+		Guitarist = G_SpinJumps01
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_spinjumps01_c01
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_SpinJumps01_C01
 		}
 	]
 }
-gsb_gkick2pan01_everlong = {
+GSB_GKick2Pan01_Everlong = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_g_gkick2pan01
+		Guitarist = GSB_G_GKick2Pan01
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_gkick2pan01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_GKick2Pan01_c01
 		}
 	]
 }
-g_solo01_everlong = {
+G_Solo01_Everlong = {
 	anims = {
-		GUITARIST = g_solo01
+		Guitarist = G_solo01
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo01_c01
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo01_c01
 		}
 	]
 }
-s_american_01_everlong = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = s_american_01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_01_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-s_american_06_everlong = {
+S_American_01_Everlong = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_american_06
+		vocalist = S_American_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_06_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_american_01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_06_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_American_01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_american_08_everlong = {
+S_American_06_Everlong = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_american_08
+		vocalist = S_American_06
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_08_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_american_06_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_08_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_American_06_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_jump01_everlong = {
-	startnodes = {
-		GUITARIST = 'vocalist_start'
-		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-	}
-	anims = {
-		vocalist = gsb_s_jump01
-		BASSIST = gsb_b_jump01
-		GUITARIST = gsb_g_jump01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_jump01_c01
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_jump01_c02
-		}
-	]
-}
-g_kick05_everlong = {
-	anims = {
-		GUITARIST = g_kick05
-	}
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_kick05_c01
-		}
-	]
-	arms = {
-		GUITARIST = {
-			ik_targetl = guitar
-			ik_targetr = guitar
-			strum = On
-			fret = On
-			chord = On
-		}
-	}
-}
-g_metalsolo01_crazytrain = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_metalsolo01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo01_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-g_metalsolo02_crazytrain = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_metalsolo02
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo02_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo02_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-g_metalsolo03_crazytrain = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_metalsolo03
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo03_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo03_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-g_metalsolo04_crazytrain = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_metalsolo04
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo04_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo04_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-g_solo05_crazytrain = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_solo05
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo05_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-g_bigstrum01_crazytrain = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_bigstrum01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_bigstrum01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_bigstrum01_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-b_jamonriser01_crazytrain = {
-	startnodes = {
-		BASSIST = 'drummer_start'
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		BASSIST = b_jamonriser01
-		vocalist = s_crazy_motion_to_side_01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_DRUM01'
-			anim = b_jamonriser01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_DRUM01'
-			anim = b_jamonriser01_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-s_crazy_grab_mic_beginning_01_crazytrain = {
+S_American_08_Everlong = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_crazy_grab_mic_beginning_01
+		vocalist = S_American_08
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_grab_mic_beginning_01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_American_08_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_grab_mic_beginning_01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_American_08_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_mrcrowley_duckundermic01_crazytrain = {
+GSB_Jump01_Everlong = {
+	startnodes = {
+		Guitarist = 'vocalist_start'
+		vocalist = 'vocalist_start'
+		bassist = 'vocalist_start'
+	}
+	anims = {
+		vocalist = GSB_S_Jump01
+		bassist = GSB_B_Jump01
+		Guitarist = GSB_G_Jump01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Jump01_c01
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Jump01_c02
+		}
+	]
+}
+G_Kick05_Everlong = {
+	anims = {
+		Guitarist = G_Kick05
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Kick05_c01
+		}
+	]
+	Arms = {
+		Guitarist = {
+			IK_TargetL = guitar
+			IK_TargetR = guitar
+			strum = on
+			fret = on
+			chord = on
+		}
+	}
+}
+G_MetalSolo01_CrazyTrain = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_MetalSolo01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo01_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+G_MetalSolo02_CrazyTrain = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_MetalSolo02
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo02_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo02_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+G_MetalSolo03_CrazyTrain = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_MetalSolo03
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo03_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo03_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+G_MetalSolo04_CrazyTrain = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_MetalSolo04
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo04_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo04_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+G_Solo05_CrazyTrain = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_Solo05
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_solo05_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+G_BigStrum01_CrazyTrain = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_BigStrum01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_bigstrum01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_bigstrum01_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+B_JamOnRiser01_CrazyTrain = {
+	startnodes = {
+		bassist = 'drummer_start'
+		vocalist = 'vocalist_start'
+	}
+	anims = {
+		bassist = B_JamOnRiser01
+		vocalist = S_crazy_motion_to_side_01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_DRUM01'
+			Anim = B_JamOnRiser01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_DRUM01'
+			Anim = B_JamOnRiser01_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+S_crazy_grab_mic_beginning_01_CrazyTrain = {
+	startnodes = {
+		vocalist = 'vocalist_start'
+	}
+	anims = {
+		vocalist = S_crazy_grab_mic_beginning_01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_grab_mic_beginning_01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_grab_mic_beginning_01_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+S_mrcrowley_duckundermic01_CrazyTrain = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
 		vocalist = s_mrcrowley_duckundermic01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mrcrowley_duckundermic01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_mrcrowley_duckundermic01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_crazy_armsapart_clapping_01_crazytrain = {
+S_crazy_armsapart_clapping_01_CrazyTrain = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_crazy_armsapart_clapping_01
+		vocalist = S_crazy_armsapart_clapping_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_armsapart_clapping_01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_armsapart_clapping_01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_armsapart_clapping_01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_armsapart_clapping_01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_crazy_motion_to_side_01_crazytrain = {
+S_crazy_motion_to_side_01_CrazyTrain = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_crazy_motion_to_side_01
+		vocalist = S_crazy_motion_to_side_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_motion_to_side_01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_motion_to_side_01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_motion_to_side_01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_motion_to_side_01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_crazy_hands_move_to_side_01_crazytrain = {
+S_crazy_hands_move_to_side_01_CrazyTrain = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_crazy_hands_move_to_side_01
+		vocalist = S_crazy_hands_move_to_side_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_hands_move_to_side_01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_hands_move_to_side_01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_hands_move_to_side_01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_hands_move_to_side_01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_crazy_holdmic_side_to_side_01_crazytrain = {
+S_crazy_holdmic_side_to_side_01_CrazyTrain = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_crazy_holdmic_sidetoside_01
+		vocalist = S_crazy_holdmic_sidetoside_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_holdmic_sidetoside_01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_holdmic_sidetoside_01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_holdmic_sidetoside_01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_holdmic_sidetoside_01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_crazy_sing_hands_to_side_01_crazytrain = {
+S_crazy_sing_hands_to_side_01_CrazyTrain = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_crazy_sing_hands_to_side_01
+		vocalist = S_crazy_sing_hands_to_side_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_sing_hands_to_side_01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_sing_hands_to_side_01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_sing_hands_to_side_01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_sing_hands_to_side_01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_crazy_look_to_side_low_01_crazytrain = {
+S_crazy_look_to_side_low_01_CrazyTrain = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_crazy_look_to_side_low_01
+		vocalist = S_crazy_look_to_side_low_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_look_to_side_low_01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_look_to_side_low_01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_look_to_side_low_01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_look_to_side_low_01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-d_solomoment01_crazytrain = {
+D_SoloMoment01_CrazyTrain = {
 	anims = {
-		drummer = d_solo_moment01
+		Drummer = D_Solo_Moment01
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_DRUM01'
-			anim = d_solo_moment01_c01
+			name = 'TRG_Geo_Camera_Performance_DRUM01'
+			Anim = D_Solo_Moment01_c01
 		}
 	]
 }
-gs_pretty_pan01 = {
+GS_Pretty_Pan01 = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gs_pretty_pan01_g
+		Guitarist = gs_pretty_pan01_g
 		vocalist = gs_pretty_pan01_s
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gs_pretty_pan01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gs_pretty_pan01_c01
 			weight = 1
 		}
 	]
 }
-gsb_pretty_jamming01 = {
+GSB_Pretty_Jamming01 = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_pretty_jamming01_g
+		Guitarist = gsb_pretty_jamming01_g
 		vocalist = gsb_pretty_jamming01_s
-		BASSIST = gsb_pretty_jamming01_b
+		bassist = gsb_pretty_jamming01_b
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_pretty_jamming01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_pretty_jamming01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_pretty_jamming01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_pretty_jamming01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_pretty_crossing01 = {
+GSB_Pretty_Crossing01 = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_pretty_crossing01_g
+		Guitarist = gsb_pretty_crossing01_g
 		vocalist = gsb_pretty_crossing01_s
-		BASSIST = gsb_pretty_crossing01_b
+		bassist = gsb_pretty_crossing01_b
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_pretty_crossing01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_pretty_crossing01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
@@ -2645,76 +2645,76 @@ s_pretty_singersinging01 = {
 	anims = {
 		vocalist = s_pretty_singersinging01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pretty_singersinging01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pretty_singersinging01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-bs_pretty_singtogether01 = {
+BS_Pretty_SingTogether01 = {
 	startnodes = {
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		BASSIST = bs_pretty_singtogether01_b
+		bassist = bs_pretty_singtogether01_b
 		vocalist = bs_pretty_singtogether01_s
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = bs_pretty_singtogether01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = bs_pretty_singtogether01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = bs_pretty_singtogether01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = bs_pretty_singtogether01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gs_pretty_sing02 = {
+GS_Pretty_Sing02 = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gs_pretty_sing02_g
+		Guitarist = gs_pretty_sing02_g
 		vocalist = gs_pretty_sing02_s
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gs_pretty_sing02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gs_pretty_sing02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gs_pretty_sing02_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gs_pretty_sing02_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
@@ -2727,6221 +2727,6221 @@ s_pretty_sing01 = {
 	anims = {
 		vocalist = s_pretty_sing01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pretty_sing01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pretty_sing01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pretty_sing01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pretty_sing01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gb_pretty_playwalk01 = {
+GB_Pretty_PlayWalk01 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
-		BASSIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
+		bassist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = gb_pretty_playwalk01_g
-		BASSIST = gb_pretty_playwalk01_b
+		Guitarist = gb_pretty_playwalk01_g
+		bassist = gb_pretty_playwalk01_b
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = gb_pretty_playwalk01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = gb_pretty_playwalk01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = gb_pretty_playwalk01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = gb_pretty_playwalk01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-b_pretty_playstrut02_pos = {
+B_Pretty_PlayStrut02_PoS = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		BASSIST = b_pretty_playstrut02
+		bassist = b_pretty_playstrut02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_pretty_playstrut02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = b_pretty_playstrut02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_electrorock_02a_pos = {
+S_Electrorock_02a_PoS = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_electrorock_02a
+		vocalist = S_Electrorock_02a
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_electrorock_02a_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Electrorock_02a_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_pretty_singersinging01_pos = {
+S_Pretty_SingerSinging01_PoS = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
 		vocalist = s_pretty_singersinging01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pretty_singersinging01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pretty_singersinging01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_pretty_jamming01_pos = {
+GSB_Pretty_Jamming01_PoS = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_pretty_jamming01_g
+		Guitarist = gsb_pretty_jamming01_g
 		vocalist = gsb_pretty_jamming01_s
-		BASSIST = gsb_pretty_jamming01_b
+		bassist = gsb_pretty_jamming01_b
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_pretty_jamming01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_pretty_jamming01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_pretty_jamming01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_pretty_jamming01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_pointsinging01_pos = {
+S_PointSinging01_PoS = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_pointsinging01
+		vocalist = S_pointsinging01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pointsinging01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointsinging01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_pretty_sing01_pos = {
+S_Pretty_Sing01_PoS = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
 		vocalist = s_pretty_sing01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pretty_sing01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pretty_sing01_c01
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pretty_sing01_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pretty_sing01_c02
 			weight = 1
 		}
 	]
 }
-g_solo02_pos = {
+G_Solo02_PoS = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_solo02
+		Guitarist = G_solo02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_solo02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo02_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_solo02_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_metalsolo02_pos = {
+G_MetalSolo02_PoS = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_metalsolo02
+		Guitarist = G_MetalSolo02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo02_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo02_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gb_back2back01_pos = {
+GB_Back2Back01_PoS = {
 	startnodes = {
-		GUITARIST = 'bassist_start'
-		BASSIST = 'bassist_start'
+		Guitarist = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		GUITARIST = gb_back2back01_g
-		BASSIST = gb_back2back01_b
+		Guitarist = GB_Back2Back01_G
+		bassist = GB_Back2Back01_B
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = gb_back2back01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = GB_Back2Back01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = gb_back2back01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = GB_Back2Back01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-bs_pretty_singtogether01_pos = {
+BS_Pretty_SingTogether01_PoS = {
 	startnodes = {
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		BASSIST = bs_pretty_singtogether01_b
+		bassist = bs_pretty_singtogether01_b
 		vocalist = bs_pretty_singtogether01_s
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = bs_pretty_singtogether01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = bs_pretty_singtogether01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = bs_pretty_singtogether01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = bs_pretty_singtogether01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_singpunch01_pos = {
+S_SingPunch01_PoS = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_singpunch01
+		vocalist = S_SingPunch01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singpunch01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingPunch01_c01
 			weight = 1
 		}
 	]
 }
-s_norain_hippy_airjam01_norain = {
+S_NoRain_Hippy_AirJam01_NoRain = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_norain_hippy_airjam01
+		vocalist = S_NoRain_Hippy_AirJam01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_norain_hippy_airjam01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_norain_hippy_airjam01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_norain_hippy_airjam01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_norain_hippy_airjam01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_solo06_norain = {
+G_Solo06_NoRain = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_solo06
+		Guitarist = G_Solo06
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo06_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo06_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_american_04_norain = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = s_american_04
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_04_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-s_singtocam06_norain = {
+S_American_04_NoRain = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_singtocam06
+		vocalist = S_American_04
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam06_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_American_04_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_singtocam02_norain = {
+S_SingToCam06_NoRain = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_singtocam02
+		vocalist = S_SingToCam06
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_singtocam06_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_singtocam03_norain = {
+S_SingToCam02_NoRain = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_singtocam03
+		vocalist = S_SingToCam02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam03_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_singtocam02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-b_jam2crowd01_norain = {
-	startnodes = {
-		BASSIST = 'bassist_start'
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		BASSIST = b_jam2crowd01
-		vocalist = s_norain_hippy_airjam01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_jam2crowd01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = s_norain_hippy_airjam01_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-s_singtocam01_norain = {
+S_SingToCam03_NoRain = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_singtocam01
+		vocalist = S_SingToCam03
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCam03_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_orbitguit01_norain = {
+B_Jam2Crowd01_NoRain = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
-		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-	}
-	anims = {
-		GUITARIST = gsb_g_orbitguit01
-		vocalist = gsb_s_orbitguit01
-		BASSIST = gsb_b_orbitguit01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_orbitguit01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-s_american_05_norain = {
-	startnodes = {
+		bassist = 'bassist_start'
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_american_05
+		bassist = B_Jam2Crowd01
+		vocalist = S_NoRain_Hippy_AirJam01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_05_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_Jam2Crowd01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_05_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = s_norain_hippy_airjam01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_eye_standonmonitor_sd = {
+S_SingToCam01_NoRain = {
+	startnodes = {
+		vocalist = 'vocalist_start'
+	}
+	anims = {
+		vocalist = S_SingToCam01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCam01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+GSB_OrbitGuit01_NoRain = {
+	startnodes = {
+		Guitarist = 'vocalist_start'
+		vocalist = 'vocalist_start'
+		bassist = 'vocalist_start'
+	}
+	anims = {
+		Guitarist = GSB_G_OrbitGuit01
+		vocalist = GSB_S_OrbitGuit01
+		bassist = GSB_B_OrbitGuit01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_OrbitGuit01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+S_American_05_NoRain = {
+	startnodes = {
+		vocalist = 'vocalist_start'
+	}
+	anims = {
+		vocalist = S_American_05
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_American_05_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_American_05_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+S_Eye_StandOnMonitor_SD = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
 		vocalist = s_eye_standonmonitor01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_eye_standonmonitor01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_eye_standonmonitor01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_metalsolo02_sd = {
+G_MetalSolo02_SD = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_metalsolo02
+		Guitarist = G_MetalSolo02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo02_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo02_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_pretty_jamming01_sd = {
+GSB_Pretty_Jamming01_SD = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_pretty_jamming01_g
+		Guitarist = gsb_pretty_jamming01_g
 		vocalist = gsb_pretty_jamming01_s
-		BASSIST = gsb_pretty_jamming01_b
+		bassist = gsb_pretty_jamming01_b
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_pretty_jamming01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_pretty_jamming01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_pretty_jamming01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_pretty_jamming01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_pretty_singersinging01_sd = {
+S_Pretty_SingerSinging01_SD = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
 		vocalist = s_pretty_singersinging01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pretty_singersinging01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pretty_singersinging01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_kick05_sd = {
+G_Kick05_SD = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_kick05
+		Guitarist = G_Kick05
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_kick05_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Kick05_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_american_02_sd = {
+S_american_02_SD = {
 	anims = {
-		vocalist = s_american_02
+		vocalist = S_American_02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_02_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_American_02_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-b_pretty_playstrut02_sd = {
+B_Pretty_PlayStrut02_SD = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		BASSIST = b_pretty_playstrut02
+		bassist = b_pretty_playstrut02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_pretty_playstrut02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = b_pretty_playstrut02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-bs_pretty_singtogether01_sd = {
+BS_Pretty_SingTogether01_SD = {
 	startnodes = {
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		BASSIST = bs_pretty_singtogether01_b
+		bassist = bs_pretty_singtogether01_b
 		vocalist = bs_pretty_singtogether01_s
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = bs_pretty_singtogether01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = bs_pretty_singtogether01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = bs_pretty_singtogether01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = bs_pretty_singtogether01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_lookheadbob_sd = {
+G_LookHeadBob_SD = {
 	anims = {
-		GUITARIST = g_lookheadbob
+		Guitarist = G_LookHeadBob
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_lookheadbob_c01
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_lookheadbob_c01
 		}
 	]
 }
-s_pointsinging04_sd = {
+S_PointSinging04_SD = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_pointsinging04
+		vocalist = S_pointsinging04
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging04_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointsinging04_c01
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging04_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointsinging04_c02
 		}
 	]
 }
-b_pretty_playstrut02_lrm = {
+B_Pretty_PlayStrut02_LRM = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		BASSIST = b_pretty_playstrut02
+		bassist = b_pretty_playstrut02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_pretty_playstrut02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = b_pretty_playstrut02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-bs_pretty_singtogether01a_lrm = {
+BS_Pretty_SingTogether01a_LRM = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 		vocalist = 'bassist_start'
 	}
 	anims = {
-		BASSIST = bs_pretty_singtogether01_b
+		bassist = bs_pretty_singtogether01_b
 		vocalist = bs_pretty_singtogether01_s
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = bs_pretty_singtogether01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = bs_pretty_singtogether01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = bs_pretty_singtogether01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = bs_pretty_singtogether01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-bs_pretty_singtogether01b_lrm = {
+BS_Pretty_SingTogether01b_LRM = {
 	startnodes = {
 		vocalist = 'bassist_start'
 	}
 	anims = {
 		vocalist = bs_pretty_singtogether01_s
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = bs_pretty_singtogether01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = bs_pretty_singtogether01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = bs_pretty_singtogether01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = bs_pretty_singtogether01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_pretty_jamming01_lrm = {
+GSB_Pretty_Jamming01_LRM = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_pretty_jamming01_g
+		Guitarist = gsb_pretty_jamming01_g
 		vocalist = gsb_pretty_jamming01_s
-		BASSIST = gsb_pretty_jamming01_b
+		bassist = gsb_pretty_jamming01_b
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_pretty_jamming01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_pretty_jamming01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_pretty_jamming01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_pretty_jamming01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_metalsolo02_lrm = {
+G_MetalSolo02_LRM = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		BASSIST = g_metalsolo02
+		bassist = G_MetalSolo02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = g_metalsolo02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = G_MetalSolo02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = g_metalsolo02_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = G_MetalSolo02_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_singtocam03_lrm = {
+S_SingToCam03_LRM = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_singtocam03
+		vocalist = S_SingToCam03
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam03_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCam03_c01
 		}
 	]
 }
-g_metalsolo04_lrm = {
+G_MetalSolo04_LRM = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_metalsolo04
+		Guitarist = G_MetalSolo04
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo04_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo04_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo04_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo04_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_metalsolo01_lrm = {
+G_MetalSolo01_LRM = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_metalsolo01
+		Guitarist = G_MetalSolo01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_solo04_lrm = {
+G_Solo04_LRM = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_solo04
+		Guitarist = G_solo04
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo04_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_solo04_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_pretty_sing01_lrm = {
+S_Pretty_Sing01_LRM = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
 		vocalist = s_pretty_sing01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pretty_sing01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pretty_sing01_c01
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pretty_sing01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pretty_sing01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_kick05_lrm = {
+G_Kick05_LRM = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_kick05
+		Guitarist = G_Kick05
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_kick05_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Kick05_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_notempo_uj_01_uab = {
+GSB_NoTempo_UJ_01_UAB = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = gsb_s_notempo_uj_01
+		vocalist = GSB_S_NoTempo_UJ_01
 	}
-	measures = 3
+	Measures = 3
 }
-s_singtocam01_uab = {
+S_SingToCam01_UAB = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		vocalist = s_singtocam01
-		BASSIST = g_lookheadbob
+		vocalist = S_SingToCam01
+		bassist = G_LookHeadBob
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCam01_c01
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam01_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCam01_c02
 		}
 	]
 }
-gsb_singatmic_120_uab = {
+GSB_SingAtMic_120_UAB = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_g_singatmic_120
-		vocalist = gsb_s_singatmic_120
-		BASSIST = gsb_b_singatmic_120
+		Guitarist = gsb_g_singatmic_120
+		vocalist = GSB_S_SingAtMic_120
+		bassist = GSB_B_SingAtMic_120
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_120_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_120_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_120_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_120_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-bs_pretty_singtogether01_uab = {
+BS_Pretty_SingTogether01_UAB = {
 	startnodes = {
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		BASSIST = bs_pretty_singtogether01_b
+		bassist = bs_pretty_singtogether01_b
 		vocalist = bs_pretty_singtogether01_s
-		GUITARIST = g_solo04
+		Guitarist = G_solo04
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = bs_pretty_singtogether01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = bs_pretty_singtogether01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = bs_pretty_singtogether01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = bs_pretty_singtogether01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_pointup_sing_uab = {
+S_PointUp_Sing_UAB = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_pointup01
+		vocalist = S_PointUp01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointup01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_PointUp01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_kick06_uab = {
+G_Kick06_UAB = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_kick06
+		Guitarist = G_kick06
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_kick06_c01
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_kick06_c01
 		}
 	]
 }
-b_leandown01_uab = {
+B_LeanDown01_UAB = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		BASSIST = b_leandown01
+		bassist = B_LeanDown01
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_leandown01_c01
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = b_leandown01_c01
 		}
 	]
 }
-s_crazy_clap_grabmic_01_uab = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = s_crazy_clap_grabmic_01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_clap_grabmic_01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-g_lookheadbob_uab = {
-	anims = {
-		GUITARIST = g_lookheadbob
-	}
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_lookheadbob_c01
-		}
-	]
-}
-s_crazy_motion_to_side_01_uab = {
+S_Crazy_clap_grabmic_01_UAB = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_crazy_motion_to_side_01
+		vocalist = S_crazy_clap_grabmic_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_motion_to_side_01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_motion_to_side_01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_clap_grabmic_01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_loveme_pointing_uab = {
+G_LookHeadBob_UAB = {
 	anims = {
-		vocalist = s_loveme_pointing01
+		Guitarist = G_LookHeadBob
 	}
-	measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_loveme_pointing01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_lookheadbob_c01
 		}
 	]
 }
-s_pointcrowd01_uab = {
+S_Crazy_motion_to_side_01_UAB = {
+	startnodes = {
+		vocalist = 'vocalist_start'
+	}
 	anims = {
-		vocalist = s_pointcrowd01
+		vocalist = S_crazy_motion_to_side_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointcrowd01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_motion_to_side_01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointcrowd01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_motion_to_side_01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_mountain_chillbignote01_yf = {
+S_LoveMe_pointing_UAB = {
 	anims = {
-		vocalist = s_mountain_chillbignote01
+		vocalist = S_loveme_pointing01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mountain_chillbignote01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mountain_chillbignote01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_loveme_pointing01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_pointcrowd01_yf = {
+S_PointCrowd01_UAB = {
 	anims = {
-		vocalist = s_pointcrowd01
+		vocalist = S_PointCrowd01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointcrowd01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointcrowd01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointcrowd01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_PointCrowd01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_pretty_singersinging01_yf = {
+S_Mountain_ChillBigNote01_YF = {
+	anims = {
+		vocalist = S_Mountain_ChillBigNote01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_mountain_chillbignote01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_mountain_chillbignote01_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+S_PointCrowd01_YF = {
+	anims = {
+		vocalist = S_PointCrowd01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointcrowd01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_PointCrowd01_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+S_Pretty_SingerSinging01_YF = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
 		vocalist = s_pretty_singersinging01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pretty_singersinging01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pretty_singersinging01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_singtocam02_yf = {
+S_SingToCam02_YF = {
 	startnodes = {
 	}
 	vocalist = 'vocalist_start'
 	anims = {
-		vocalist = s_singtocam02
+		vocalist = S_SingToCam02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_singtocam02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-b_look02_yf = {
+B_Look02_YF = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		BASSIST = b_look02
+		bassist = B_Look02
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_look02_c01
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = b_look02_c01
 		}
 	]
 }
-s_crazy_hands_move_to_side_01_yf = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = s_crazy_hands_move_to_side_01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_hands_move_to_side_01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_hands_move_to_side_01_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-s_loveme_pointing_yf = {
+S_crazy_hands_move_to_side_01_YF = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_loveme_pointing01
+		vocalist = S_crazy_hands_move_to_side_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_loveme_pointing01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_hands_move_to_side_01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_hands_move_to_side_01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-b_jamhard01_yf = {
+S_loveme_pointing_YF = {
 	startnodes = {
-		BASSIST = 'bassist_start'
-	}
-	anims = {
-		BASSIST = b_jamhard01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_jamhard01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-g_solo02_yf = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_solo02
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo02_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo02_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-gsb_sing01_hotblood_yf = {
-	startnodes = {
-		GUITARIST = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_sing01_hotblood_g
-		vocalist = gsb_sing01_hotblood_s
-		BASSIST = gsb_sing01_hotblood_b
+		vocalist = S_loveme_pointing01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_sing01_hotblood_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_loveme_pointing01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_metalsolo01_ls = {
+B_JamHard01_YF = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		GUITARIST = g_metalsolo01
+		bassist = B_JamHard01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_JamHard01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_solo01_ls = {
+G_Solo02_YF = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_solo01
+		Guitarist = G_solo02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_solo02_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_solo02_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_jam04_ls = {
+GSB_sing01_HotBlood_YF = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
+		vocalist = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		BASSIST = gsb_jam04_b
-		GUITARIST = gsb_jam04_g
+		Guitarist = GSB_sing01_HotBlood_G
+		vocalist = GSB_sing01_HotBlood_S
+		bassist = GSB_sing01_HotBlood_B
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_jam04_c01
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_jam04_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_sing01_HotBlood_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
 		}
 	]
 }
-g_metalsolo04_ls = {
+G_MetalSolo01_LS = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		BASSIST = g_metalsolo04
+		Guitarist = G_MetalSolo01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = g_metalsolo04_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = g_metalsolo04_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_eye_karate01_ls = {
+G_Solo01_LS = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_solo01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+GSB_Jam04_LS = {
+	startnodes = {
+		Guitarist = 'vocalist_start'
+		bassist = 'vocalist_start'
+	}
+	anims = {
+		bassist = GSB_Jam04_B
+		Guitarist = GSB_Jam04_G
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Jam04_c01
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Jam04_c02
+		}
+	]
+}
+G_MetalSolo04_LS = {
+	startnodes = {
+		bassist = 'bassist_start'
+	}
+	anims = {
+		bassist = G_MetalSolo04
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = G_MetalSolo04_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = G_MetalSolo04_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+S_Eye_Karate01_LS = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
 		vocalist = s_eye_karate01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_eye_karate01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_eye_karate01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_sing01_hotblood_ls = {
+GSB_sing01_HotBlood_LS = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_sing01_hotblood_g
-		vocalist = gsb_sing01_hotblood_s
-		BASSIST = gsb_sing01_hotblood_b
+		Guitarist = GSB_sing01_HotBlood_G
+		vocalist = GSB_sing01_HotBlood_S
+		bassist = GSB_sing01_HotBlood_B
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_sing01_hotblood_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_sing01_HotBlood_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_singatmic_075_ls = {
+GSB_SingAtMic_075_LS = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-		GUITARIST = 'vocalist_start'
+		bassist = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = gsb_s_singatmic_075
-		BASSIST = gsb_b_singatmic_075
-		GUITARIST = gsb_g_singatmic_075
+		vocalist = GSB_S_SingAtMic_075
+		bassist = GSB_B_SingAtMic_075
+		Guitarist = GSB_G_SingAtMic_075
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_075_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_075_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_075_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_075_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_crazy_hands_move_to_side_01_ls = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = s_crazy_hands_move_to_side_01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_hands_move_to_side_01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_hands_move_to_side_01_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-s_singtocam02_ls = {
+S_crazy_hands_move_to_side_01_LS = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_singtocam02
+		vocalist = S_crazy_hands_move_to_side_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_hands_move_to_side_01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_hands_move_to_side_01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_eye_singtocam02_ls = {
+S_SingToCam02_LS = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_eye_sing2cam02
+		vocalist = S_SingToCam02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_eye_sing2cam02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_singtocam02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_lookheadbob_ls = {
-	anims = {
-		GUITARIST = g_lookheadbob
-	}
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_lookheadbob_c01
-		}
-	]
-}
-s_crazy_clap_grabmic_01_ls = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = s_crazy_clap_grabmic_01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_clap_grabmic_01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-g_metalsolo03_ls = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_metalsolo03
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo03_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo03_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-g_metalsolo04a_ls = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_metalsolo04
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo04_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo04_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-gsb_singatmic_120_b_ls = {
-	startnodes = {
-		GUITARIST = 'vocalist_start'
-		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-	}
-	anims = {
-		GUITARIST = gsb_g_singatmic_120_b
-		vocalist = gsb_s_singatmic_120_b
-		BASSIST = gsb_b_singatmic_120_b
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_120_b_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_120_b_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-s_mountain_chillbignote01_wid = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-		GUITARIST = 'guitarist_start'
-		BASSIST = 'bassist_start'
-	}
-	anims = {
-		vocalist = s_mountain_chillbignote01
-		GUITARIST = gsb_g_notempo_uj_01
-		BASSIST = gsb_b_notempo_uj_01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mountain_chillbignote01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mountain_chillbignote01_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-tiger_s_intro01_wid = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = s_intro01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_intro01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-s_eye_singtocam02_wid = {
+S_Eye_SingToCam02_LS = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
 		vocalist = s_eye_sing2cam02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_eye_sing2cam02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_eye_sing2cam02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gs_pan01_wid = {
+G_LookHeadBob_LS = {
+	anims = {
+		Guitarist = G_LookHeadBob
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_lookheadbob_c01
+		}
+	]
+}
+S_Crazy_clap_grabmic_01_LS = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		vocalist = 'vocalist_start'
+	}
+	anims = {
+		vocalist = S_crazy_clap_grabmic_01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_clap_grabmic_01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+G_MetalSolo03_LS = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_MetalSolo03
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo03_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo03_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+G_MetalSolo04a_LS = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_MetalSolo04
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo04_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo04_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+GSB_SingAtMic_120_B_LS = {
+	startnodes = {
+		Guitarist = 'vocalist_start'
+		vocalist = 'vocalist_start'
+		bassist = 'vocalist_start'
+	}
+	anims = {
+		Guitarist = GSB_G_SingAtMic_120_B
+		vocalist = GSB_S_SingAtMic_120_B
+		bassist = GSB_B_SingAtMic_120_B
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_singatmic_120_b_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_120_B_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+S_Mountain_ChillBigNote01_WID = {
+	startnodes = {
+		vocalist = 'vocalist_start'
+		Guitarist = 'guitarist_start'
+		bassist = 'bassist_start'
+	}
+	anims = {
+		vocalist = S_Mountain_ChillBigNote01
+		Guitarist = GSB_G_NoTempo_UJ_01
+		bassist = GSB_B_NoTempo_UJ_01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_mountain_chillbignote01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_mountain_chillbignote01_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+Tiger_S_Intro01_WID = {
+	startnodes = {
+		vocalist = 'vocalist_start'
+	}
+	anims = {
+		vocalist = S_Intro01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Intro01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+S_Eye_SingToCam02_WID = {
+	startnodes = {
+		vocalist = 'vocalist_start'
+	}
+	anims = {
+		vocalist = s_eye_sing2cam02
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_eye_sing2cam02_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+GS_Pan01_WID = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
 		vocalist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = gs_pan01_g
-		vocalist = gs_pan01_s
+		Guitarist = GS_pan01_G
+		vocalist = GS_pan01_S
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = gs_pan01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = GS_pan01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_pointsinging01_wid = {
+S_PointSinging01_WID = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_pointsinging01
+		vocalist = S_pointsinging01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pointsinging01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointsinging01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_solo02_wid = {
+G_Solo02_WID = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_solo02
+		Guitarist = G_solo02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_solo02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo02_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_solo02_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_pointsinging02_wid = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = s_pointsinging02
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging02_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging02_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-b_jam2crowd01_wid = {
-	startnodes = {
-		BASSIST = 'bassist_start'
-	}
-	anims = {
-		BASSIST = b_jam2crowd01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_jam2crowd01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-gb_playjumping_wid = {
-	startnodes = {
-		BASSIST = 'guitarist_start'
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		BASSIST = gb_playjumping_b
-		GUITARIST = gb_playjumping_g
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = gb_playjumping_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-s_crazy_clap_grabmic_01_wid = {
+S_PointSinging02_WID = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_crazy_clap_grabmic_01
+		vocalist = S_PointSinging02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_clap_grabmic_01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pointsinging02_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_PointSinging02_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_singatmic_120_b_wid = {
+B_Jam2Crowd01_WID = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
-		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		GUITARIST = gsb_g_jump01
-		vocalist = s_pointsinging01
-		BASSIST = gsb_b_jump01
+		bassist = B_Jam2Crowd01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_120_b_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_Jam2Crowd01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_pretty_crossing01_wid = {
+GB_PlayJumping_WID = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		bassist = 'guitarist_start'
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		bassist = GB_PlayJumping_B
+		Guitarist = GB_PlayJumping_G
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = GB_PlayJumping_C01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+S_Crazy_clap_grabmic_01_WID = {
+	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_pretty_crossing01_b
+		vocalist = S_crazy_clap_grabmic_01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_clap_grabmic_01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+GSB_SingAtMic_120_B_WID = {
+	startnodes = {
+		Guitarist = 'vocalist_start'
+		vocalist = 'vocalist_start'
+		bassist = 'vocalist_start'
+	}
+	anims = {
+		Guitarist = GSB_G_Jump01
+		vocalist = S_pointsinging01
+		bassist = GSB_B_Jump01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pointsinging01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_120_B_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+GSB_Pretty_Crossing01_WID = {
+	startnodes = {
+		Guitarist = 'vocalist_start'
+		vocalist = 'vocalist_start'
+	}
+	anims = {
+		Guitarist = gsb_pretty_crossing01_b
 		vocalist = gsb_pretty_crossing01_s
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_pretty_crossing01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_pretty_crossing01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_pretty_crossing01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_pretty_crossing01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_pretty_jamming01_wid = {
+GSB_Pretty_Jamming01_WID = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_pretty_jamming01_g
+		Guitarist = gsb_pretty_jamming01_g
 		vocalist = gsb_pretty_jamming01_s
-		BASSIST = gsb_pretty_jamming01_b
+		bassist = gsb_pretty_jamming01_b
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_pretty_jamming01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_pretty_jamming01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_pretty_jamming01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_pretty_jamming01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_pointsinging03_wid = {
+S_PointSinging03_WID = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_pointsinging03
+		vocalist = S_PointSinging03
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging03_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pointsinging03_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging03_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointsinging03_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_notempo_begin_er = {
+GSB_NoTempo_Begin_ER = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		BASSIST = 'bassist_start'
-		GUITARIST = 'guitarist_start'
+		bassist = 'bassist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		vocalist = s_mountain_chillbignote01
-		BASSIST = gsb_b_notempo_uj_01
-		GUITARIST = gsb_g_notempo_uj_01
+		vocalist = S_Mountain_ChillBigNote01
+		bassist = GSB_B_NoTempo_UJ_01
+		Guitarist = GSB_G_NoTempo_UJ_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mountain_chillbignote01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_mountain_chillbignote01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mountain_chillbignote01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_mountain_chillbignote01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
-	arms = {
-		GUITARIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+	Arms = {
+		Guitarist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
-		BASSIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+		bassist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 	}
 }
-g_look01_er = {
+G_Look01_ER = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		GUITARIST = b_look01
-		vocalist = s_mountain_chillbignote01
-		BASSIST = gsb_b_notempo_uj_01
+		Guitarist = B_Look01
+		vocalist = S_Mountain_ChillBigNote01
+		bassist = GSB_B_NoTempo_UJ_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = b_look01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = B_Look01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_solo03_er = {
+G_Solo03_ER = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		GUITARIST = g_solo03
-		vocalist = s_mountain_chillbignote01
-		BASSIST = gsb_b_notempo_uj_01
+		Guitarist = G_solo03
+		vocalist = S_Mountain_ChillBigNote01
+		bassist = GSB_B_NoTempo_UJ_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo03_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo03_C01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_solo05_er = {
+G_Solo05_ER = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		GUITARIST = g_solo05
-		vocalist = s_mountain_chillbignote01
-		BASSIST = gsb_b_notempo_uj_01
+		Guitarist = G_Solo05
+		vocalist = S_Mountain_ChillBigNote01
+		bassist = GSB_B_NoTempo_UJ_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo05_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_solo05_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_areyou_headbang01_er = {
+S_AreYou_HeadBang01_ER = {
 	anims = {
 		vocalist = s_areyou_headbang01
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_areyou_headbang01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_areyou_headbang01_c01
 		}
 	]
 }
-s_areyou_hitbeatstand01_er = {
+S_AreYou_HitBeatStand01_ER = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
 		vocalist = s_areyou_hitbeatstand01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_areyou_hitbeatstand01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_areyou_hitbeatstand01_c01
 			weight = 1
 		}
 	]
 }
-s_tiger_intro01_er = {
+S_Tiger_Intro01_ER = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_intro01
+		vocalist = S_Intro01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_intro01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Intro01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_sam_super_robot_01_er = {
+S_Sam_Super_Robot_01_ER = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_sam_super_robot_01
+		vocalist = S_Sam_Super_Robot_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_sam_super_robot_01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Sam_Super_Robot_01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_sam_super_robot_02_er = {
+S_Sam_Super_Robot_02_ER = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_sam_super_robot_02
+		vocalist = S_Sam_Super_Robot_02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_sam_super_robot_02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Sam_Super_Robot_02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_lookheadbob_er = {
+G_LookHeadBob_ER = {
 	anims = {
-		GUITARIST = g_lookheadbob
+		Guitarist = G_LookHeadBob
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_lookheadbob_c01
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_lookheadbob_c01
 		}
 	]
 }
-g_look02_er = {
+G_Look02_ER = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = b_look02
+		Guitarist = B_Look02
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = b_look02_c01
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = b_look02_c01
 		}
 	]
 }
-s_pointsinging03_er = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = s_pointsinging03
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging03_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging03_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-s_electrorock_02a_er = {
+S_PointSinging03_ER = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_electrorock_02a
+		vocalist = S_PointSinging03
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_electrorock_02a_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pointsinging03_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointsinging03_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_electrorock_01a_er = {
+S_Electrorock_02a_ER = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_electrorock_01a
+		vocalist = S_Electrorock_02a
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_electrorock_01a_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Electrorock_02a_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_electrorock_02b_er = {
+S_Electrorock_01a_ER = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_electrorock_02b
+		vocalist = S_Electrorock_01a
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_electrorock_02b_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Electrorock_01a_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_electrorock_02e_er = {
+S_Electrorock_02b_ER = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_electrorock_02e
+		vocalist = S_Electrorock_02b
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_electrorock_02e_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_electrorock_02b_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_electrorock_02d_er = {
+S_Electrorock_02e_ER = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_electrorock_02d
+		vocalist = S_Electrorock_02e
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_electrorock_02d_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Electrorock_02e_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_solo01_hc = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_solo01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-s_mountain_chillbignote01_hc = {
+S_Electrorock_02d_ER = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_mountain_chillbignote01
+		vocalist = S_Electrorock_02d
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mountain_chillbignote01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mountain_chillbignote01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Electrorock_02d_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_loveme_pointing_hc = {
+G_Solo01_HC = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_solo01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+S_Mountain_ChillBigNote01_HC = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_loveme_pointing01
+		vocalist = S_Mountain_ChillBigNote01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_loveme_pointing01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_mountain_chillbignote01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_mountain_chillbignote01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_singatmic_075_hc = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-		GUITARIST = 'vocalist_start'
-	}
-	anims = {
-		vocalist = gsb_s_singatmic_075
-		BASSIST = gsb_b_singatmic_075
-		GUITARIST = gsb_g_singatmic_075
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_075_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_075_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-s_singtocam01_hc = {
+S_loveme_pointing_HC = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_singtocam01
+		vocalist = S_loveme_pointing01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_loveme_pointing01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_solo23_hc = {
+GSB_SingAtMic_075_HC = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_solo23
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo23_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-g_solo19_hc = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_solo19
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo19_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo19_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-gsb_singatmic_075_b_hc = {
-	startnodes = {
-		GUITARIST = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_g_singatmic_075_b
-		vocalist = gsb_s_singatmic_075_b
-		BASSIST = gsb_b_singatmic_075_b
+		vocalist = GSB_S_SingAtMic_075
+		bassist = GSB_B_SingAtMic_075
+		Guitarist = GSB_G_SingAtMic_075
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_075_b_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_075_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_075_b_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_075_b_c03
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_075_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_solo18_hc = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_solo18
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo18_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo18_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-s_singtocam03_hc = {
+S_SingToCam01_HC = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_singtocam03
+		vocalist = S_SingToCam01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam03_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCam01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_solo11_hc = {
+G_Solo23_HC = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_solo11
+		Guitarist = G_Solo23
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo11_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo11_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo23_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_solo17_hc = {
+G_Solo19_HC = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_solo17
+		Guitarist = G_Solo19
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo17_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo19_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo17_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo19_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
-	arms = {
-		GUITARIST = {
-			ik_targetl = guitar
-			ik_targetr = guitar
-			strum = On
-			fret = On
-			chord = On
-		}
-	}
 }
-s_hotelcalifornia_intro_hc = {
+GSB_singatmic_075_B_HC = {
+	startnodes = {
+		Guitarist = 'vocalist_start'
+		vocalist = 'vocalist_start'
+		bassist = 'vocalist_start'
+	}
+	anims = {
+		Guitarist = GSB_G_SingAtMic_075_B
+		vocalist = gsb_s_singatmic_075_B
+		bassist = gsb_b_singatmic_075_B
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_075_B_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_075_B_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_075_B_c03
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+G_Solo18_HC = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_Solo18
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo18_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo18_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+S_SingToCam03_HC = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_hotelcalifornia_intro
+		vocalist = S_SingToCam03
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_hotelcalifornia_intro_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCam03_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_hotelcalifornia_sing01_hc = {
+G_Solo11_HC = {
 	startnodes = {
-		vocalist = 'vocalist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		vocalist = s_hotelcalifornia_sing01
+		Guitarist = G_Solo11
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_hotelcalifornia_sing01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo11_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo11_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_hotelcalifornia_sing02_hc = {
+G_Solo17_HC = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_Solo17
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo17_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo17_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+	Arms = {
+		Guitarist = {
+			IK_TargetL = guitar
+			IK_TargetR = guitar
+			strum = on
+			fret = on
+			chord = on
+		}
+	}
+}
+S_HotelCalifornia_intro_HC = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_hotelcalifornia_sing02
+		vocalist = S_HotelCalifornia_intro
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_hotelcalifornia_sing02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_hotelcalifornia_intro_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_hotelcalifornia_sing03_hc = {
+S_HotelCalifornia_sing01_HC = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_hotelcalifornia_sing03
+		vocalist = S_HotelCalifornia_sing01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_hotelcalifornia_sing03_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_hotelcalifornia_sing01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_hotelcalifornia_sing07_hc = {
+S_HotelCalifornia_sing02_HC = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_hotelcalifornia_sing07
+		vocalist = S_HotelCalifornia_sing02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_hotelcalifornia_sing07_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_hotelcalifornia_sing02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_hotelcalifornia_jam01_hc = {
+S_HotelCalifornia_sing03_HC = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_hotelcalifornia_jam01
+		vocalist = S_HotelCalifornia_sing03
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_hotelcalifornia_jam01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_hotelcalifornia_sing03_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_hotelcalifornia_jam02_hc = {
+S_HotelCalifornia_sing07_HC = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_hotelcalifornia_jam02
+		vocalist = S_HotelCalifornia_sing07
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_hotelcalifornia_jam02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_hotelcalifornia_sing07_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_hotelcalifornia_jam03_hc = {
+S_HotelCalifornia_jam01_HC = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_hotelcalifornia_jam03
+		vocalist = S_HotelCalifornia_jam01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_hotelcalifornia_jam03_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_hotelcalifornia_jam01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_mountain_chillbignote01_ob = {
+S_HotelCalifornia_jam02_HC = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_mountain_chillbignote01
+		vocalist = S_HotelCalifornia_jam02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mountain_chillbignote01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mountain_chillbignote01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_hotelcalifornia_jam02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_american_01_ob = {
+S_HotelCalifornia_jam03_HC = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_american_01
+		vocalist = S_HotelCalifornia_jam03
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_HotelCalifornia_jam03_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gs_pretty_pan01_ob = {
+S_Mountain_ChillBigNote01_Ob = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gs_pretty_pan01_g
+		vocalist = S_Mountain_ChillBigNote01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_mountain_chillbignote01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_mountain_chillbignote01_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+S_American_01_Ob = {
+	startnodes = {
+		vocalist = 'vocalist_start'
+	}
+	anims = {
+		vocalist = S_American_01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_american_01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_American_01_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+GS_Pretty_Pan01_Ob = {
+	startnodes = {
+		Guitarist = 'vocalist_start'
+		vocalist = 'vocalist_start'
+	}
+	anims = {
+		Guitarist = gs_pretty_pan01_g
 		vocalist = gs_pretty_pan01_s
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gs_pretty_pan01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gs_pretty_pan01_c01
 			weight = 1
 		}
 	]
 }
-s_sing01_ob = {
+S_Sing01_Ob = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_sing01
+		vocalist = S_Sing01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_sing01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_sing01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_singatmic_075_ob = {
+GSB_SingAtMic_075_Ob = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-		GUITARIST = 'vocalist_start'
+		bassist = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = gsb_s_singatmic_075
-		BASSIST = gsb_b_singatmic_075
-		GUITARIST = gsb_g_singatmic_075
+		vocalist = GSB_S_SingAtMic_075
+		bassist = GSB_B_SingAtMic_075
+		Guitarist = GSB_G_SingAtMic_075
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_075_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_075_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_075_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_075_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_singtocam02_ob = {
+S_SingToCam02_Ob = {
 	anims = {
-		vocalist = s_singtocam02
+		vocalist = S_SingToCam02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_singtocam02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_startsing_pan01_ob = {
+GSB_StartSing_Pan01_Ob = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		GUITARIST = 'guitarist_start'
-		BASSIST = 'vocalist_start'
+		Guitarist = 'guitarist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = gsb_s_startsing_pan01
-		GUITARIST = gsb_g_startsing_pan01
-		BASSIST = gsb_b_sing2cam02
+		vocalist = GSB_S_StartSing_Pan01
+		Guitarist = GSB_G_StartSing_Pan01
+		bassist = GSB_B_Sing2Cam02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_startsing_pan01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_StartSing_Pan01_c01
 		}
 	]
 }
-g_solo15_ob = {
+G_Solo15_Ob = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_solo15
+		Guitarist = G_Solo15
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo15_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo15_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo15_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-gsb_singatmic_120_b_ob = {
-	startnodes = {
-		GUITARIST = 'vocalist_start'
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		GUITARIST = gsb_g_singatmic_120_b
-		vocalist = gsb_s_singatmic_120_b
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_120_b_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_120_b_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo15_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_sing2cam02_ob = {
+GSB_SingAtMic_120_B_Ob = {
 	startnodes = {
-		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-	}
-	anims = {
-		BASSIST = gsb_b_sing2cam02
-		vocalist = gsb_s_sing2cam02
-	}
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_sing2cam02_c01
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_sing2cam02_c02
-		}
-	]
-}
-b_jam2crowd01_ob = {
-	startnodes = {
-		BASSIST = 'bassist_start'
-	}
-	anims = {
-		BASSIST = b_jam2crowd01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_jam2crowd01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = s_norain_hippy_airjam01_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-s_pointcrowd02_ob = {
-	startnodes = {
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_pointcrowd02
+		Guitarist = GSB_G_SingAtMic_120_B
+		vocalist = GSB_S_SingAtMic_120_B
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointcrowd02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_singatmic_120_b_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_120_B_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_solo19_ob = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_solo19
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo19_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo19_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-s_singtocam01_ob = {
+GSB_Sing2Cam02_Ob = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_singtocam01
-		BASSIST = gsb_b_sing2cam02
+		bassist = GSB_B_Sing2Cam02
+		vocalist = GSB_S_Sing2Cam02
 	}
-	measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Sing2Cam02_c01
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Sing2Cam02_c02
+		}
+	]
+}
+B_Jam2Crowd01_Ob = {
+	startnodes = {
+		bassist = 'bassist_start'
+	}
+	anims = {
+		bassist = B_Jam2Crowd01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_Jam2Crowd01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = s_norain_hippy_airjam01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_pointsinging04_nstb = {
+S_PointCrowd02_Ob = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_pointsinging04
+		vocalist = S_PointCrowd02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging04_c01
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging04_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointcrowd02_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
 		}
 	]
 }
-b_jam2crowd02_nstb = {
+G_Solo19_Ob = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		BASSIST = b_jam2crowd02
+		Guitarist = G_Solo19
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_jam2crowd02_c01
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo19_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_jam2crowd02_c02
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo19_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
 		}
 	]
 }
-b_look02_nstb = {
+S_SingToCam01_Ob = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		vocalist = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		BASSIST = b_look02
+		vocalist = S_SingToCam01
+		bassist = GSB_B_Sing2Cam02
 	}
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_look02_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCam01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCam01_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
 		}
 	]
 }
-bs_pretty_singtogether01_nstb = {
+S_PointSinging04_NSTB = {
 	startnodes = {
-		BASSIST = 'vocalist_start'
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		BASSIST = bs_pretty_singtogether01_b
+		vocalist = S_pointsinging04
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointsinging04_c01
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointsinging04_c02
+		}
+	]
+}
+B_Jam2Crowd02_NSTB = {
+	startnodes = {
+		bassist = 'bassist_start'
+	}
+	anims = {
+		bassist = B_Jam2Crowd02
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_Jam2Crowd02_c01
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_Jam2Crowd02_c02
+		}
+	]
+}
+B_Look02_NSTB = {
+	startnodes = {
+		bassist = 'bassist_start'
+	}
+	anims = {
+		bassist = B_Look02
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = b_look02_c01
+		}
+	]
+}
+BS_Pretty_SingTogether01_NSTB = {
+	startnodes = {
+		bassist = 'vocalist_start'
+		vocalist = 'vocalist_start'
+	}
+	anims = {
+		bassist = bs_pretty_singtogether01_b
 		vocalist = bs_pretty_singtogether01_s
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = bs_pretty_singtogether01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = bs_pretty_singtogether01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = bs_pretty_singtogether01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = bs_pretty_singtogether01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_electrorock_01a_nstb = {
+S_Electrorock_01a_NSTB = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_electrorock_01a
+		vocalist = S_Electrorock_01a
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_electrorock_01a_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Electrorock_01a_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_loveme_pointing01_nstb = {
+S_loveme_pointing01_NSTB = {
 	anims = {
-		vocalist = s_loveme_pointing01
+		vocalist = S_loveme_pointing01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_loveme_pointing01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_loveme_pointing01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_pointsinging02_nstb = {
+S_PointSinging02_NSTB = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_pointsinging02
+		vocalist = S_PointSinging02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pointsinging02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging02_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_PointSinging02_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_singatmic_120_b_nstb = {
+GSB_SingAtMic_120_B_NSTB = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_g_singatmic_120_b
-		vocalist = gsb_s_singatmic_120_b
+		Guitarist = GSB_G_SingAtMic_120_B
+		vocalist = GSB_S_SingAtMic_120_B
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_120_b_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_singatmic_120_b_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_120_b_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_120_B_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_pretty_sing01_nstb = {
+S_Pretty_Sing01_NSTB = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
 		vocalist = s_pretty_sing01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pretty_sing01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pretty_sing01_c01
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pretty_sing01_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pretty_sing01_c02
 			weight = 1
 		}
 	]
 }
-g_metalsolo07_nstb = {
+G_MetalSolo07_NSTB = {
 	startnodes = {
-		GUITARIST = 'Guitarist_start'
+		Guitarist = 'Guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_metalsolo07
+		Guitarist = G_MetalSolo07
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo07_c01
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo07_c01
 		}
 	]
 }
-s_singtocam06_nstb = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = s_singtocam06
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam06_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-s_electrorock_02b_nstb = {
+S_SingToCam06_NSTB = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_electrorock_02b
+		vocalist = S_SingToCam06
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_electrorock_02b_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_singtocam06_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_mic2audience01_nstb = {
+S_Electrorock_02b_NSTB = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_mic2audience01
+		vocalist = S_Electrorock_02b
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mic2audience01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_electrorock_02b_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_solo10_nstb = {
-	anims = {
-		GUITARIST = g_solo10
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo10_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-g_solo14_nstb = {
-	anims = {
-		GUITARIST = g_solo14
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo14_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-gsb_jam02_nstb = {
-	startnodes = {
-		GUITARIST = 'vocalist_start'
-		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-	}
-	anims = {
-		vocalist = gsb_s_jam02
-		BASSIST = gsb_b_jam02
-		GUITARIST = gsb_g_jam02
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_jam02_c01
-		}
-	]
-}
-gsb_jam03_nstb = {
-	startnodes = {
-		GUITARIST = 'vocalist_start'
-		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-	}
-	anims = {
-		vocalist = gsb_s_jam03
-		BASSIST = gsb_b_jam03
-		GUITARIST = gsb_g_jam03
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_jam03_c01
-		}
-	]
-}
-s_mic2audience02_nstb = {
+S_Mic2Audience01_NSTB = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_mic2audience02
+		vocalist = S_Mic2Audience01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mic2audience02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Mic2Audience01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_notempo_begin_mon = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-		BASSIST = 'bassist_start'
-		GUITARIST = 'guitarist_start'
-	}
+G_Solo10_NSTB = {
 	anims = {
-		vocalist = s_mountain_chillbignote01
-		BASSIST = gsb_b_notempo_uj_01
-		GUITARIST = gsb_g_notempo_uj_01
+		Guitarist = G_Solo10
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mountain_chillbignote01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mountain_chillbignote01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo10_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
-	arms = {
-		GUITARIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+}
+G_Solo14_NSTB = {
+	anims = {
+		Guitarist = G_Solo14
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo14_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
 		}
-		BASSIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+	]
+}
+GSB_Jam02_NSTB = {
+	startnodes = {
+		Guitarist = 'vocalist_start'
+		vocalist = 'vocalist_start'
+		bassist = 'vocalist_start'
+	}
+	anims = {
+		vocalist = GSB_S_Jam02
+		bassist = GSB_B_Jam02
+		Guitarist = GSB_G_Jam02
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Jam02_c01
+		}
+	]
+}
+GSB_Jam03_NSTB = {
+	startnodes = {
+		Guitarist = 'vocalist_start'
+		vocalist = 'vocalist_start'
+		bassist = 'vocalist_start'
+	}
+	anims = {
+		vocalist = GSB_S_Jam03
+		bassist = GSB_B_Jam03
+		Guitarist = GSB_G_Jam03
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Jam03_c01
+		}
+	]
+}
+S_Mic2Audience02_NSTB = {
+	startnodes = {
+		vocalist = 'vocalist_start'
+	}
+	anims = {
+		vocalist = S_Mic2Audience02
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Mic2Audience02_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+GSB_NoTempo_Begin_Mon = {
+	startnodes = {
+		vocalist = 'vocalist_start'
+		bassist = 'bassist_start'
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		vocalist = S_Mountain_ChillBigNote01
+		bassist = GSB_B_NoTempo_UJ_01
+		Guitarist = GSB_G_NoTempo_UJ_01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_mountain_chillbignote01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_mountain_chillbignote01_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+	Arms = {
+		Guitarist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
+		}
+		bassist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 	}
 }
-s_mountain_chillbignote01_mon = {
+S_Mountain_ChillBigNote01_Mon = {
 	anims = {
-		vocalist = s_mountain_chillbignote01
+		vocalist = S_Mountain_ChillBigNote01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mountain_chillbignote01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_mountain_chillbignote01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mountain_chillbignote01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_mountain_chillbignote01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_sing01_mon = {
+S_Sing01_Mon = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_sing01
+		vocalist = S_Sing01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_sing01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_sing01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_solo18_mon = {
+G_Solo18_Mon = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_solo18
+		Guitarist = G_Solo18
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo18_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo18_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo18_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo18_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_eye_singtocam02_mon = {
+S_Eye_SingToCam02_Mon = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
 		vocalist = s_eye_sing2cam02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_eye_sing2cam02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_eye_sing2cam02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_solo15_mon = {
+G_Solo15_Mon = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_solo15
+		Guitarist = G_Solo15
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo15_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo15_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo15_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo15_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_singtocam03_mon = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = s_singtocam03
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam03_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-g_solo19_mon = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_solo19
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo19_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo19_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-b_jamhard01_mon = {
-	startnodes = {
-		BASSIST = 'bassist_start'
-	}
-	anims = {
-		BASSIST = b_jamhard01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_jamhard01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-s_pointup01_mon = {
+S_SingToCam03_Mon = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_pointup01
+		vocalist = S_SingToCam03
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointup01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCam03_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
 		}
 	]
 }
-s_pointsinging04_mon = {
+G_Solo19_Mon = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_Solo19
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo19_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo19_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+B_JamHard01_Mon = {
+	startnodes = {
+		bassist = 'bassist_start'
+	}
+	anims = {
+		bassist = B_JamHard01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_JamHard01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+S_PointUp01_Mon = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_pointsinging04
+		vocalist = S_PointUp01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging04_c01
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging04_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_PointUp01_c01
 		}
 	]
 }
-s_eye_karate01_mon = {
+S_PointSinging04_Mon = {
+	startnodes = {
+		vocalist = 'vocalist_start'
+	}
+	anims = {
+		vocalist = S_pointsinging04
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointsinging04_c01
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointsinging04_c02
+		}
+	]
+}
+S_Eye_Karate01_Mon = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
 		vocalist = s_eye_karate01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_eye_karate01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_eye_karate01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_metalsolo08_mon = {
+G_MetalSolo08_Mon = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_metalsolo08
+		Guitarist = G_Metalsolo08
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo08_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo08_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-b_jamstagger01_mon = {
+B_JamStagger01_Mon = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		BASSIST = b_jamstagger01
+		bassist = B_JamStagger01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_jamstagger01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_JamStagger01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_notempo_begin_asn = {
+GSB_NoTempo_Begin_ASN = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		BASSIST = 'bassist_start'
-		GUITARIST = 'guitarist_start'
+		bassist = 'bassist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		vocalist = s_mountain_chillbignote01
-		BASSIST = gsb_b_notempo_uj_01
-		GUITARIST = gsb_g_notempo_uj_01
+		vocalist = S_Mountain_ChillBigNote01
+		bassist = GSB_B_NoTempo_UJ_01
+		Guitarist = GSB_G_NoTempo_UJ_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mountain_chillbignote01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_mountain_chillbignote01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mountain_chillbignote01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_mountain_chillbignote01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
-	arms = {
-		GUITARIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+	Arms = {
+		Guitarist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
-		BASSIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+		bassist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 	}
 }
-s_electrorock_02a_asn = {
+S_Electrorock_02a_ASN = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_electrorock_02a
+		vocalist = S_Electrorock_02a
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_electrorock_02a_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Electrorock_02a_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_eye_singtocam02_asn = {
+S_Eye_SingToCam02_ASN = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
 		vocalist = s_eye_sing2cam02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_eye_sing2cam02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_eye_sing2cam02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_solo10_asn = {
+G_Solo10_ASN = {
 	anims = {
-		GUITARIST = g_solo10
+		Guitarist = G_Solo10
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo10_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo10_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_solo02_asn = {
+G_Solo02_ASN = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_solo02
+		Guitarist = G_solo02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_solo02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo02_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-s_singpunch01_asn = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = s_singpunch01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singpunch01_c01
-			weight = 1
-		}
-	]
-}
-b_quickkick01_asn = {
-	startnodes = {
-		BASSIST = 'bassist_start'
-	}
-	anims = {
-		BASSIST = b_quickkick01
-	}
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_quickkick01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_solo02_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_eye_pickupstand01_asn = {
+S_SingPunch01_ASN = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_eye_pickupstand01
+		vocalist = S_SingPunch01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_eye_pickupstand01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingPunch01_c01
+			weight = 1
+		}
+	]
+}
+B_QuickKick01_ASN = {
+	startnodes = {
+		bassist = 'bassist_start'
+	}
+	anims = {
+		bassist = B_QuickKick01
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_QuickKick01_C01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_loveme_pointing_asn = {
+S_Eye_PickUpStand01_ASN = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_loveme_pointing01
+		vocalist = S_Eye_PickUpStand01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_loveme_pointing01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_eye_pickupstand01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_metalsolo05_asn = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_metalsolo05
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo05_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-gsb_pretty_jamming01_asn = {
-	startnodes = {
-		BASSIST = 'vocalist_start'
-	}
-	anims = {
-		BASSIST = gsb_pretty_jamming01_b
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_pretty_jamming01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_pretty_jamming01_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-g_solo22_asn = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_solo22
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo22_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo22_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-g_solo19_asn = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_solo19
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo19_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo19_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-g_solo11_asn = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_solo11
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo11_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo11_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-gsb_singatmic_120_asn = {
-	startnodes = {
-		GUITARIST = 'vocalist_start'
-	}
-	anims = {
-		GUITARIST = gsb_g_singatmic_120
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_120_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_120_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-gsb_notempo_begin_botr = {
+S_loveme_pointing_ASN = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		BASSIST = 'bassist_start'
-		GUITARIST = 'guitarist_start'
 	}
 	anims = {
-		vocalist = gsb_s_notempo_uj_01
-		BASSIST = gsb_b_notempo_uj_01
-		GUITARIST = gsb_g_notempo_uj_01
+		vocalist = S_loveme_pointing01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mountain_chillbignote01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mountain_chillbignote01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_loveme_pointing01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
-	arms = {
-		GUITARIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+}
+G_MetalSolo05_ASN = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_MetalSolo05
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_metalsolo05_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
 		}
-		BASSIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+	]
+}
+GSB_Pretty_Jamming01_ASN = {
+	startnodes = {
+		bassist = 'vocalist_start'
+	}
+	anims = {
+		bassist = gsb_pretty_jamming01_b
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_pretty_jamming01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_pretty_jamming01_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+G_Solo22_ASN = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_Solo22
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo22_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo22_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+G_Solo19_ASN = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_Solo19
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo19_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo19_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+G_Solo11_ASN = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_Solo11
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo11_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo11_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+GSB_SingAtMic_120_ASN = {
+	startnodes = {
+		Guitarist = 'vocalist_start'
+	}
+	anims = {
+		Guitarist = gsb_g_singatmic_120
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_120_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_120_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+GSB_NoTempo_Begin_BOTR = {
+	startnodes = {
+		vocalist = 'vocalist_start'
+		bassist = 'bassist_start'
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		vocalist = GSB_S_NoTempo_UJ_01
+		bassist = GSB_B_NoTempo_UJ_01
+		Guitarist = GSB_G_NoTempo_UJ_01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_mountain_chillbignote01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_mountain_chillbignote01_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+	Arms = {
+		Guitarist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
+		}
+		bassist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 	}
 }
-gsb_notempo_botr = {
+GSB_NoTempo_BOTR = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = gsb_s_notempo_uj_01
+		vocalist = GSB_S_NoTempo_UJ_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mountain_chillbignote01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_mountain_chillbignote01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mountain_chillbignote01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_mountain_chillbignote01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
-	arms = {
+	Arms = {
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 	}
 }
-s_mountain_chillbignote01_botr = {
+S_Mountain_ChillBigNote01_BOTR = {
 	anims = {
-		vocalist = s_mountain_chillbignote01
+		vocalist = S_Mountain_ChillBigNote01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mountain_chillbignote01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_mountain_chillbignote01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mountain_chillbignote01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_mountain_chillbignote01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_singtocam02_botr = {
+S_SingToCam02_BOTR = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_singtocam02
+		vocalist = S_SingToCam02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_singtocam02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_eye_singtocam02_botr = {
+S_Eye_SingToCam02_BOTR = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
 		vocalist = s_eye_sing2cam02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_eye_sing2cam02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_eye_sing2cam02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_bigstrum04_botr = {
+G_BigStrum04_BOTR = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_bigstrum04
+		Guitarist = G_BigStrum04
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_bigstrum04_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_BigStrum04_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_bigstrum04_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_BigStrum04_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_solo18_botr = {
+G_Solo18_BOTR = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_solo18
+		Guitarist = G_Solo18
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo18_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo18_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo18_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo18_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_crazy_clap_grabmic_01_botr = {
+S_Crazy_clap_grabmic_01_BOTR = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_crazy_clap_grabmic_01
+		vocalist = S_crazy_clap_grabmic_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_clap_grabmic_01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_clap_grabmic_01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-bs_pretty_singtogether01_botr = {
+BS_Pretty_SingTogether01_BOTR = {
 	startnodes = {
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		BASSIST = bs_pretty_singtogether01_b
+		bassist = bs_pretty_singtogether01_b
 		vocalist = bs_pretty_singtogether01_s
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = bs_pretty_singtogether01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = bs_pretty_singtogether01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = bs_pretty_singtogether01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = bs_pretty_singtogether01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_solo22_botr = {
+G_Solo22_BOTR = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_solo22
+		Guitarist = G_Solo22
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo22_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo22_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo22_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo22_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-tiger_s_intro01_botr = {
+Tiger_S_Intro01_BOTR = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_intro01
+		vocalist = S_Intro01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_intro01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Intro01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_eye_sing2cam02_botr = {
+S_Eye_Sing2Cam02_BOTR = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
 		vocalist = s_eye_sing2cam02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_eye_sing2cam02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_eye_sing2cam02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_eye_pickupstand01_botr = {
+S_Eye_PickUpStand01_BOTR = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_eye_pickupstand01
+		vocalist = S_Eye_PickUpStand01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_eye_pickupstand01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_eye_pickupstand01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_singtocrowd01_botr = {
+S_SingToCrowd01_BOTR = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_singtocrowd01
+		vocalist = S_SingToCrowd01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocrowd01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCrowd01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocrowd01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCrowd01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_loveme_pointing_botr = {
+S_LoveMe_pointing_BOTR = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_loveme_pointing01
+		vocalist = S_loveme_pointing01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_loveme_pointing01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_loveme_pointing01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_crazy_motion_to_side_01_botr = {
+S_Crazy_motion_to_side_01_BOTR = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_crazy_motion_to_side_01
+		vocalist = S_crazy_motion_to_side_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_motion_to_side_01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_motion_to_side_01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_motion_to_side_01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_motion_to_side_01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_pointsinging01_botr = {
+S_PointSinging01_BOTR = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_pointsinging01
+		vocalist = S_pointsinging01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pointsinging01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointsinging01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-b_look02_botr = {
+B_Look02_BOTR = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		BASSIST = b_look02
+		bassist = B_Look02
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_look02_c01
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = b_look02_c01
 		}
 	]
 }
-gs_endstrum01_botr = {
+GS_EndStrum01_BOTR = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 		vocalist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = gs_endstrum01_g
-		vocalist = gs_endstrum01_s
+		Guitarist = GS_EndStrum01_G
+		vocalist = GS_EndStrum01_S
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = gs_endstrum01_c01
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = GS_EndStrum01_c01
 		}
 	]
 }
-gsb_notempo_begin_wcm = {
+GSB_NoTempo_Begin_WCM = {
 	startnodes = {
-		BASSIST = 'bassist_start'
-		GUITARIST = 'guitarist_start'
+		bassist = 'bassist_start'
+		Guitarist = 'guitarist_start'
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		BASSIST = gsb_b_notempo_uj_01
-		GUITARIST = gsb_g_notempo_uj_01
+		bassist = GSB_B_NoTempo_UJ_01
+		Guitarist = GSB_G_NoTempo_UJ_01
 		vocalist = g_jimi_win_01
 	}
-	arms = {
-		GUITARIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+	Arms = {
+		Guitarist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
-		BASSIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
-		}
-		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
-		}
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mountain_chillbignote01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mountain_chillbignote01_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-g_wind_cries_mary01_wcm = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = g_wind_cries_mary_01
-	}
-	measures = 3
-	arms = {
-		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = On
-		}
-	}
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_wind_cries_mary_01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-g_wind_cries_mary02_wcm = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = g_wind_cries_mary_02
-	}
-	arms = {
-		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = On
-		}
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_wind_cries_mary_02_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-g_wind_cries_mary03_wcm = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = g_wind_cries_mary_03
-	}
-	arms = {
-		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = On
-		}
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_wind_cries_mary_03_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-g_wind_cries_mary04_wcm = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = g_wind_cries_mary_04
-	}
-	arms = {
-		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
-		}
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_wind_cries_mary_04_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-gsb_notempo_begin_httf = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-		BASSIST = 'bassist_start'
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		vocalist = s_mountain_chillbignote01
-		BASSIST = gsb_b_notempo_uj_01
-		GUITARIST = gsb_g_notempo_uj_01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mountain_chillbignote01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mountain_chillbignote01_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-	arms = {
-		GUITARIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
-		}
-		BASSIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+		bassist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_mountain_chillbignote01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_mountain_chillbignote01_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
 }
-s_electrorock_02a_httf = {
+G_Wind_Cries_Mary01_WCM = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_electrorock_02a
+		vocalist = G_Wind_Cries_Mary_01
 	}
-	measures = 3
+	Measures = 3
+	Arms = {
+		vocalist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = on
+		}
+	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_electrorock_02a_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = G_Wind_Cries_Mary_01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_american_05_httf = {
+G_Wind_Cries_Mary02_WCM = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_american_05
+		vocalist = G_Wind_Cries_Mary_02
 	}
-	measures = 3
+	Arms = {
+		vocalist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = on
+		}
+	}
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_05_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_05_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = G_Wind_Cries_Mary_02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_american_08_httf = {
+G_Wind_Cries_Mary03_WCM = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_american_08
+		vocalist = G_Wind_Cries_Mary_03
 	}
-	measures = 3
+	Arms = {
+		vocalist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = on
+		}
+	}
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_08_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_08_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = G_Wind_Cries_Mary_03_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_american_02_httf = {
+G_Wind_Cries_Mary04_WCM = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_american_02
+		vocalist = G_Wind_Cries_Mary_04
 	}
-	measures = 3
+	Arms = {
+		vocalist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
+		}
+	}
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_02_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_02_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = G_Wind_Cries_Mary_04_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-bs_pretty_singtogether01a_httf = {
+GSB_NoTempo_Begin_HTTF = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		vocalist = 'vocalist_start'
+		bassist = 'bassist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		BASSIST = bs_pretty_singtogether01_b
+		vocalist = S_Mountain_ChillBigNote01
+		bassist = GSB_B_NoTempo_UJ_01
+		Guitarist = GSB_G_NoTempo_UJ_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = bs_pretty_singtogether01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_mountain_chillbignote01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = bs_pretty_singtogether01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_mountain_chillbignote01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
+	Arms = {
+		Guitarist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
+		}
+		bassist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
+		}
+		vocalist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
+		}
+	}
 }
-g_solo21_httf = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_solo21
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo21_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo21_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-gsb_pretty_jamming01_httf = {
-	startnodes = {
-		BASSIST = 'vocalist_start'
-	}
-	anims = {
-		BASSIST = gsb_pretty_jamming01_b
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_pretty_jamming01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_pretty_jamming01_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-s_pointsinging04_httf = {
+S_Electrorock_02a_HTTF = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_pointsinging04
+		vocalist = S_Electrorock_02a
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging04_c01
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging04_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Electrorock_02a_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
 		}
 	]
 }
-s_american_03_httf = {
+S_American_05_HTTF = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_american_03
+		vocalist = S_American_05
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_03_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_American_05_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_American_05_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_solo19_httf = {
+S_American_08_HTTF = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		vocalist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = g_solo19
+		vocalist = S_American_08
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo19_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_American_08_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo19_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_American_08_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_solo18_httf = {
+S_american_02_HTTF = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		vocalist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = g_solo18
+		vocalist = S_American_02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo18_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_american_02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo18_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_American_02_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_pretty_singersinging01_httf = {
+BS_Pretty_SingTogether01a_HTTF = {
+	startnodes = {
+		bassist = 'bassist_start'
+	}
+	anims = {
+		bassist = bs_pretty_singtogether01_b
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = bs_pretty_singtogether01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = bs_pretty_singtogether01_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+G_Solo21_HTTF = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_Solo21
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo21_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo21_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+GSB_Pretty_Jamming01_HTTF = {
+	startnodes = {
+		bassist = 'vocalist_start'
+	}
+	anims = {
+		bassist = gsb_pretty_jamming01_b
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_pretty_jamming01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_pretty_jamming01_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+S_PointSinging04_HTTF = {
+	startnodes = {
+		vocalist = 'vocalist_start'
+	}
+	anims = {
+		vocalist = S_pointsinging04
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointsinging04_c01
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointsinging04_c02
+		}
+	]
+}
+S_american_03_HTTF = {
+	startnodes = {
+		vocalist = 'vocalist_start'
+	}
+	anims = {
+		vocalist = S_american_03
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_american_03_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+G_Solo19_HTTF = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_Solo19
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo19_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo19_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+G_Solo18_HTTF = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_Solo18
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo18_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo18_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+S_Pretty_SingerSinging01_HTTF = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
 		vocalist = s_pretty_singersinging01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pretty_singersinging01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pretty_singersinging01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_pointsinging01_httf = {
+S_PointSinging01_HTTF = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_pointsinging01
+		vocalist = S_pointsinging01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pointsinging01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointsinging01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_metalsolo09_httf = {
+G_MetalSolo09_HTTF = {
 	startnodes = {
-		GUITARIST = 'Guitarist_start'
+		Guitarist = 'Guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_metalsolo09
+		Guitarist = G_MetalSolo09
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo09_c01
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_metalsolo09_c01
 		}
 	]
 }
-gsb_notempo_begin_edc = {
+GSB_NoTempo_Begin_EDC = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		BASSIST = 'bassist_start'
-		GUITARIST = 'guitarist_start'
+		bassist = 'bassist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		vocalist = s_mountain_chillbignote01
-		BASSIST = gsb_b_notempo_uj_01
-		GUITARIST = gsb_g_notempo_uj_01
+		vocalist = S_Mountain_ChillBigNote01
+		bassist = GSB_B_NoTempo_UJ_01
+		Guitarist = GSB_G_NoTempo_UJ_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mountain_chillbignote01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_mountain_chillbignote01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mountain_chillbignote01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_mountain_chillbignote01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
-	arms = {
-		GUITARIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+	Arms = {
+		Guitarist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
-		BASSIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+		bassist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 	}
 }
-s_american_01_edc = {
+S_American_01_EDC = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_american_01
+		vocalist = S_American_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_american_01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_American_01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_pointcrowd01_edc = {
+S_PointCrowd01_EDC = {
 	anims = {
-		vocalist = s_pointcrowd01
+		vocalist = S_PointCrowd01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointcrowd01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointcrowd01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointcrowd01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_PointCrowd01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_pointcrowd02_edc = {
+S_PointCrowd02_EDC = {
 	anims = {
-		vocalist = s_pointcrowd02
+		vocalist = S_PointCrowd02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointcrowd02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointcrowd02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointcrowd02_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointcrowd02_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_sing01_edc = {
+S_Sing01_EDC = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_sing01
+		vocalist = S_Sing01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_sing01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_sing01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_singatmic_120_b_edc = {
+GSB_SingAtMic_120_B_EDC = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_g_singatmic_120_b
-		vocalist = gsb_s_singatmic_120_b
-		BASSIST = gsb_b_singatmic_120_b
+		Guitarist = GSB_G_SingAtMic_120_B
+		vocalist = GSB_S_SingAtMic_120_B
+		bassist = GSB_B_SingAtMic_120_B
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_120_b_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_singatmic_120_b_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_120_b_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_120_B_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_loveme_pointing_edc = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = s_loveme_pointing01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_loveme_pointing01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-g_metalsolo04_edc = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_metalsolo04
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo04_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo04_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-s_singtocam03_edc = {
+S_loveme_pointing_EDC = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_singtocam03
+		vocalist = S_loveme_pointing01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam03_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_loveme_pointing01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
 		}
 	]
 }
-b_look02_edc = {
+G_MetalSolo04_EDC = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		BASSIST = b_look02
+		Guitarist = G_MetalSolo04
 	}
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_look02_c01
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo04_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo04_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
 		}
 	]
 }
-s_pretty_singersinging01_edc = {
+S_SingToCam03_EDC = {
+	startnodes = {
+		vocalist = 'vocalist_start'
+	}
+	anims = {
+		vocalist = S_SingToCam03
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCam03_c01
+		}
+	]
+}
+B_Look02_EDC = {
+	startnodes = {
+		bassist = 'bassist_start'
+	}
+	anims = {
+		bassist = B_Look02
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = b_look02_c01
+		}
+	]
+}
+S_Pretty_SingerSinging01_EDC = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
 		vocalist = s_pretty_singersinging01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pretty_singersinging01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pretty_singersinging01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-b_jam2crowd02_edc = {
+B_Jam2Crowd02_EDC = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		BASSIST = b_jam2crowd02
+		bassist = B_Jam2Crowd02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_jam2crowd02_c01
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_Jam2Crowd02_c01
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_jam2crowd02_c02
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_Jam2Crowd02_c02
 		}
 	]
 }
-gs_pretty_pan01_edc = {
+GS_Pretty_Pan01_EDC = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gs_pretty_pan01_g
+		Guitarist = gs_pretty_pan01_g
 		vocalist = gs_pretty_pan01_s
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gs_pretty_pan01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gs_pretty_pan01_c01
 			weight = 1
 		}
 	]
 }
-hotblooded_g_kick01 = {
+HotBlooded_G_Kick01 = {
 	anims = {
-		GUITARIST = g_kick01
+		Guitarist = G_kick01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_kick01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_kick01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_kick01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_kick01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-hotblooded_gs_pan01 = {
+HotBlooded_GS_Pan01 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 		vocalist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = hotblooded_gs_pan01_guit
-		vocalist = hotblooded_gs_pan01_sing
+		Guitarist = HotBlooded_GS_Pan01_GUIT
+		vocalist = HotBlooded_GS_Pan01_SING
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = hotblooded_gs_pan01_camera01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = HotBlooded_GS_Pan01_Camera01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-hotblooded_gsb_sing01 = {
+HotBlooded_GSB_sing01 = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = hotblooded_gsb_sing01_guit
-		vocalist = hotblooded_gsb_sing01_sing
-		BASSIST = hotblooded_gsb_sing01_bass
+		Guitarist = HotBlooded_GSB_sing01_GUIT
+		vocalist = HotBlooded_GSB_sing01_SING
+		bassist = HotBlooded_GSB_sing01_BASS
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = hotblooded_gsb_sing01_camera01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = HotBlooded_GSB_sing01_Camera01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-hotblooded_point01_sing = {
+HotBlooded_point01_SING = {
 	anims = {
-		vocalist = hotblooded_point01_sing
+		vocalist = HotBlooded_point01_SING
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = hotblooded_point01_sing_camera01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = HotBlooded_point01_SING_Camera01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-hotblooded_point02_sing = {
+HotBlooded_point02_SING = {
 	anims = {
-		vocalist = hotblooded_point02_sing
+		vocalist = HotBlooded_point02_SING
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = hotblooded_point02_sing_camera01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = HotBlooded_point02_SING_Camera01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-hotblooded_sg_pan01 = {
+HotBlooded_SG_pan01 = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = hotblooded_sg_pan01_guit
-		vocalist = hotblooded_sg_pan01_sing
+		Guitarist = HotBlooded_SG_pan01_GUIT
+		vocalist = HotBlooded_SG_pan01_SING
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = hotblooded_sg_pan01_camera01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = HotBlooded_SG_pan01_Camera01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-hotblooded_sing01_sing = {
+HotBlooded_sing01_SING = {
 	anims = {
-		vocalist = hotblooded_sing01_sing
+		vocalist = HotBlooded_sing01_SING
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = hotblooded_sing01_sing_camera01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = HotBlooded_sing01_SING_Camera01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-hotblooded_sing02_sing = {
+HotBlooded_sing02_SING = {
 	anims = {
-		vocalist = hotblooded_sing01_sing
+		vocalist = HotBlooded_sing01_SING
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = hotblooded_sing01_sing_camera02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = HotBlooded_sing01_SING_Camera02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-hotblooded_solo01_guit = {
+HotBlooded_solo01_GUIT = {
 	anims = {
-		GUITARIST = hotblooded_solo01_guit
+		Guitarist = HotBlooded_solo01_GUIT
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = hotblooded_solo01_guit_camera01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = HotBlooded_solo01_GUIT_Camera01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_areyou_headbang01_ayggmw = {
+s_areyou_headbang01_AYGGMW = {
 	anims = {
 		vocalist = s_areyou_headbang01
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_areyou_headbang01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_areyou_headbang01_c01
 		}
 	]
 }
-b_leandown01_ayggmw = {
+B_LeanDown01_AYGGMW = {
 	anims = {
-		BASSIST = b_leandown01
+		bassist = B_LeanDown01
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_leandown01_c01
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = b_leandown01_c01
 		}
 	]
 }
-gsb_sing2cam01_ayggmw = {
+GSB_Sing2Cam01_AYGGMW = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = b_underthestage01
-		vocalist = gsb_s_sing2cam01
-		BASSIST = gsb_b_sing2cam01
+		Guitarist = b_underthestage01
+		vocalist = GSB_S_Sing2Cam01
+		bassist = GSB_B_Sing2Cam01
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_sing2cam01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Sing2Cam01_c01
 		}
 	]
 }
-g_solo03_ayggmw = {
+G_Solo03_AYGGMW = {
 	anims = {
-		GUITARIST = g_solo03
+		Guitarist = G_solo03
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo03_c01
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo03_C01
 		}
 	]
 }
-s_areyou_standcircle01_ayggmw = {
+s_areyou_standcircle01_AYGGMW = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
@@ -8950,4317 +8950,4317 @@ s_areyou_standcircle01_ayggmw = {
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_areyou_standcircle01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_areyou_standcircle01_c01
 		}
 	]
 }
-g_bigstrum04_ayggmw = {
+G_BigStrum04_AYGGMW = {
 	anims = {
-		GUITARIST = gs_g_back2back02
+		Guitarist = GS_G_Back2Back02
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_bigstrum04_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = G_BigStrum04_c01
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_bigstrum04_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = G_BigStrum04_c02
 		}
 	]
 }
-s_pointup01_ayggmw = {
+S_PointUp01_AYGGMW = {
 	anims = {
-		vocalist = s_pointup01
+		vocalist = S_PointUp01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointup01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_PointUp01_c01
 		}
 	]
 }
-g_metalsolo03_ayggmw = {
+G_MetalSolo03_AYGGMW = {
 	anims = {
-		GUITARIST = g_metalsolo03
+		Guitarist = G_MetalSolo03
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo03_c01
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo03_c01
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo03_c02
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo03_c02
 		}
 	]
 }
-gsb_jump01_ayggmw = {
+GSB_Jump01_AYGGMW = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = gsb_s_jump01
-		BASSIST = gsb_b_jump01
-		GUITARIST = gsb_g_jump01
+		vocalist = GSB_S_Jump01
+		bassist = GSB_B_Jump01
+		Guitarist = GSB_G_Jump01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_jump01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Jump01_c01
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_jump01_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Jump01_c02
 		}
 	]
 }
-gs_endstrum01_ayggmw = {
+GS_EndStrum01_AYGGMW = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 		vocalist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = gs_endstrum01_g
-		vocalist = gs_endstrum01_s
+		Guitarist = GS_EndStrum01_G
+		vocalist = GS_EndStrum01_S
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = gs_endstrum01_c01
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = GS_EndStrum01_c01
 		}
 	]
 }
-g_metalsolo07_ayggmw = {
+G_MetalSolo07_AYGGMW = {
 	startnodes = {
-		GUITARIST = 'Guitarist_start'
+		Guitarist = 'Guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_metalsolo07
+		Guitarist = G_MetalSolo07
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo07_c01
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo07_c01
 		}
 	]
 }
-g_solo10_beatit = {
+G_Solo10_BeatIt = {
 	anims = {
-		GUITARIST = g_solo10
+		Guitarist = G_Solo10
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo10_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo10_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_kick01 = {
+G_kick01 = {
 	anims = {
-		GUITARIST = g_kick01
+		Guitarist = G_kick01
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_kick01_c01
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_kick01_c01
 		}
 	]
 }
-s_singtocam_beatit = {
+S_SingToCam_BeatIt = {
 	anims = {
-		vocalist = s_singtocam_beatit
+		vocalist = S_SingToCam_BeatIt
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam_beatit_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCam_BeatIt_C01
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam_beatit_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCam_BeatIt_C02
 		}
 	]
 }
-s_moonwalktosing = {
+S_MoonwalkToSing = {
 	anims = {
-		vocalist = s_moonwalktosing
+		vocalist = S_MoonwalkToSing
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_moonwalktosing_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_MoonwalkToSing_C01
 		}
 	]
 }
-gb_playjumping = {
+GB_PlayJumping = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
-		BASSIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
+		bassist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = gb_playjumping_g
-		BASSIST = gb_playjumping_b
+		Guitarist = GB_PlayJumping_G
+		bassist = GB_PlayJumping_B
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = gb_playjumping_c01
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = GB_PlayJumping_C01
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = gb_playjumping_c02
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = GB_PlayJumping_C02
 		}
 	]
 }
-s_dance_beatit = {
+S_Dance_BeatIt = {
 	anims = {
-		vocalist = s_dance_beatit
+		vocalist = S_Dance_BeatIt
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_dance_beatit_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Dance_BeatIt_C01
 		}
 	]
 }
-b_quickkick01 = {
+B_QuickKick01 = {
 	anims = {
-		BASSIST = b_quickkick01
+		bassist = B_QuickKick01
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_quickkick01_c01
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_QuickKick01_C01
 		}
 	]
 }
-b_look02 = {
+B_Look02 = {
 	anims = {
-		BASSIST = b_look02
+		bassist = B_Look02
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_look02_c01
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = b_look02_c01
 		}
 	]
 }
-g_lookheadbob = {
+G_LookHeadBob = {
 	anims = {
-		GUITARIST = g_lookheadbob
+		Guitarist = G_LookHeadBob
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_lookheadbob_c01
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_lookheadbob_c01
 		}
 	]
 }
-g_spinjumps01 = {
+G_SpinJumps01 = {
 	anims = {
-		GUITARIST = g_spinjumps01
+		Guitarist = G_SpinJumps01
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_spinjumps01_c01
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_SpinJumps01_C01
 		}
 	]
 }
-s_singcampush = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-	}
-	anims = {
-		vocalist = s_singcampush
-		BASSIST = s_singcampush_bass
-	}
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singcampush_c01
-		}
-	]
-}
-dammit_singingbounce_sing_beat = {
-	anims = {
-		vocalist = dammit_singingbounce_sing
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = dammit_singingbounce_sing_camera
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-animloop_cameras = {
-	guit_davidicus_joker_075_01 = [
-		guit_davidicus_joker_075_01_c01
-		guit_davidicus_joker_075_01_c02
-	]
-	guit_davidicus_joker_100_01 = [
-		guit_davidicus_joker_100_01_c01
-		guit_davidicus_joker_100_01_c02
-	]
-	guit_davidicus_joker_120_01 = [
-		guit_davidicus_joker_120_01_c01
-		guit_davidicus_joker_120_01_c02
-	]
-}
-jessiesgirl_gsb_singatmic1 = {
-	startnodes = {
-		GUITARIST = 'vocalist_start'
-		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-	}
-	anims = {
-		GUITARIST = gsb_g_singatmic_075
-		vocalist = gsb_s_singatmic_075
-		BASSIST = gsb_b_singatmic_075
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_075_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_075_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-jessiesgirl_s_singtocam = {
+S_SingCamPush = {
 	startnodes = {
 		vocalist = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_singtocam02
+		vocalist = S_SingCamPush
+		bassist = S_SingCamPush_Bass
 	}
-	measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingCamPush_C01
+		}
+	]
+}
+Dammit_SingingBounce_SING_beat = {
+	anims = {
+		vocalist = Dammit_SingingBounce_SING
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = Dammit_SingingBounce_SING_Camera
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-jessiesgirl_s_sing01 = {
+AnimLoop_Cameras = {
+	Guit_Davidicus_Joker_075_01 = [
+		Guit_Davidicus_Joker_075_01_c01
+		Guit_Davidicus_Joker_075_01_c02
+	]
+	Guit_Davidicus_Joker_100_01 = [
+		Guit_Davidicus_Joker_100_01_c01
+		Guit_Davidicus_Joker_100_01_c02
+	]
+	Guit_Davidicus_Joker_120_01 = [
+		Guit_Davidicus_Joker_120_01_c01
+		Guit_Davidicus_Joker_120_01_c02
+	]
+}
+JessiesGirl_GSB_singatmic1 = {
+	startnodes = {
+		Guitarist = 'vocalist_start'
+		vocalist = 'vocalist_start'
+		bassist = 'vocalist_start'
+	}
+	anims = {
+		Guitarist = GSB_G_SingAtMic_075
+		vocalist = GSB_S_SingAtMic_075
+		bassist = GSB_B_SingAtMic_075
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_075_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_075_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+JessiesGirl_S_SingToCam = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_sing01
+		vocalist = S_SingToCam02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_sing01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_singtocam02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-jessiesgirl_pointcrowd01 = {
+JessiesGirl_S_Sing01 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_pointcrowd01
+		vocalist = S_Sing01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointcrowd01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointcrowd01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_sing01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-jessiesgirl_gsb_singatmic = {
+JessiesGirl_PointCrowd01 = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_g_singatmic_075_b
-		vocalist = gsb_s_singatmic_075_b
-		BASSIST = gsb_b_singatmic_075_b
+		vocalist = S_PointCrowd01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_075_b_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointcrowd01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_075_b_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_075_b_c03
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_PointCrowd01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-jessiesgirl_positionfix = {
+JessiesGirl_GSB_singatmic = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'bassist_start'
+		bassist = 'vocalist_start'
+	}
+	anims = {
+		Guitarist = GSB_G_SingAtMic_075_B
+		vocalist = gsb_s_singatmic_075_B
+		bassist = gsb_b_singatmic_075_B
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_075_B_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_075_B_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_075_B_c03
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+JessiesGirl_PositionFix = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+		vocalist = 'vocalist_start'
+		bassist = 'bassist_start'
 	}
 }
-jessiesgirl_gs_jessies_singcopyguit01 = {
+JessiesGirl_GS_Jessies_SingCopyGuit01 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 		vocalist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = gs_jessies_singcopyguit01_g
-		vocalist = gs_jessies_singcopyguit01_s
+		Guitarist = GS_Jessies_SingCopyGuit01_G
+		vocalist = GS_Jessies_SingCopyGuit01_S
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = gs_jessies_singcopyguit01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = gs_jessies_singcopyguit01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = gs_jessies_singcopyguit01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = gs_jessies_singcopyguit01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-jessiesgirl_b_look02 = {
+JessiesGirl_B_Look02 = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		BASSIST = b_look02
+		bassist = B_Look02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_look02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = b_look02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-eyeofthetiger_s_pointup = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = s_pointup01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointup01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-eyeofthetiger_g_solo = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_solo06
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo06_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo06_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-eyeofthetiger_s_eye_grabmic01 = {
+EyeOfTheTiger_S_PointUp = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_eye_grabmic01
+		vocalist = S_PointUp01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_eye_grabmic01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_PointUp01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-eyeofthetiger_s_eye_throwstand01 = {
+EyeOfTheTiger_G_Solo = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_Solo06
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo06_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_solo06_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+EyeOfTheTiger_S_Eye_GrabMic01 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_eye_throwstand01
+		vocalist = S_Eye_GrabMic01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_eye_throwstand01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_eye_throwstand01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_eye_grabmic01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-eyeofthetiger_s_eye_pickupstand01 = {
+EyeOfTheTiger_S_Eye_ThrowStand01 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_eye_pickupstand01
+		vocalist = S_Eye_ThrowStand01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_eye_pickupstand01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_eye_throwstand01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_eye_throwstand01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-eyeofthetiger_s_eye_karate02 = {
+EyeOfTheTiger_S_Eye_PickUpStand01 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_eye_karate02
+		vocalist = S_Eye_PickUpStand01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_eye_karate02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_eye_pickupstand01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-eyeofthetiger_s_eye_pose4cam01 = {
+EyeOfTheTiger_S_Eye_Karate02 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_eye_pose4cam01
+		vocalist = S_Eye_Karate02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_eye_pose4cam01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_eye_karate02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-eyeofthetiger_gb_back2back = {
-	startnodes = {
-		GUITARIST = 'bassist_start'
-		BASSIST = 'bassist_start'
-	}
-	anims = {
-		GUITARIST = gb_back2back01_g
-		BASSIST = gb_back2back01_b
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = gb_back2back01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = gb_back2back01_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-eyeofthetiger_s_pointcrowd = {
+EyeOfTheTiger_S_Eye_Pose4Cam01 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_pointcrowd02
+		vocalist = S_Eye_Pose4Cam01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointcrowd02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_eye_pose4cam01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-eyeofthetiger_bs_riserjump = {
+EyeOfTheTiger_GB_Back2Back = {
 	startnodes = {
-		BASSIST = 'vocalist_start'
+		Guitarist = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		BASSIST = bs_riserjump01_b
+		Guitarist = GB_Back2Back01_G
+		bassist = GB_Back2Back01_B
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = bs_riserjump01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = GB_Back2Back01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = GB_Back2Back01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-eyeofthetiger_b_climbonriser = {
-	startnodes = {
-		BASSIST = 'bassist_start'
-	}
-	anims = {
-		BASSIST = b_climbonriser01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_climbonriser01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-eyeofthetiger_s_intro01 = {
+EyeOfTheTiger_S_PointCrowd = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_intro01
+		vocalist = S_PointCrowd02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_intro01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointcrowd02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-eyeofthetiger_s_eye_sing2cam02 = {
+EyeOfTheTiger_BS_RiserJump = {
+	startnodes = {
+		bassist = 'vocalist_start'
+	}
+	anims = {
+		bassist = BS_RiserJump01_B
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = BS_RiserJump01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+EyeOfTheTiger_B_ClimbOnRiser = {
+	startnodes = {
+		bassist = 'bassist_start'
+	}
+	anims = {
+		bassist = B_ClimbOnRiser01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_ClimbOnRiser01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+EyeOfTheTiger_S_Intro01 = {
+	startnodes = {
+		vocalist = 'vocalist_start'
+	}
+	anims = {
+		vocalist = S_Intro01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Intro01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+EyeOfTheTiger_S_Eye_Sing2Cam02 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
 		vocalist = s_eye_sing2cam02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_eye_sing2cam02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_eye_sing2cam02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-eyeofthetiger_s_eye_bignote01 = {
+EyeOfTheTiger_S_Eye_BigNote01 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_eye_bignote01
+		vocalist = S_Eye_BigNote01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_eye_bignote01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_eye_bignote01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-eyeofthetiger_s_eye_standonmonitor01 = {
+EyeOfTheTiger_S_Eye_StandOnMonitor01 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
 		vocalist = s_eye_standonmonitor01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_eye_standonmonitor01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_eye_standonmonitor01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-eyeofthetiger_s_eye_grabcam01 = {
+EyeOfTheTiger_S_Eye_GrabCam01 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_eye_grabcam01
+		vocalist = S_Eye_GrabCam01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_eye_grabcam01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_eye_grabcam01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-eyeofthetiger_gsb_finish01 = {
+EyeOfTheTiger_GSB_Finish01 = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
+		bassist = 'vocalist_start'
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_g_finish01
-		BASSIST = gsb_b_finish01
-		vocalist = gsb_s_finish01
+		Guitarist = GSB_G_Finish01
+		bassist = GSB_B_Finish01
+		vocalist = GSB_S_Finish01
 	}
-	measures = 3
-	arms = {
-		GUITARIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+	Measures = 3
+	Arms = {
+		Guitarist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
-		BASSIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+		bassist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_finish01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_finish01_c01
 		}
 	]
 }
-american_s_american_01 = {
+American_s_american_01 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_american_01
+		vocalist = S_American_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_american_01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_American_01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-american_g_solo05 = {
+American_g_solo05 = {
 	startnodes = {
-		guitairstist = 'guitarist_start'
+		Guitairstist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_solo05
+		Guitarist = G_Solo05
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo05_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_solo05_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-american_s_american_02 = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = s_american_02
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_02_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_02_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-american_s_american_04 = {
+American_s_american_02 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_american_04
+		vocalist = S_American_02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_04_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_american_02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_04_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_American_02_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-american_s_american_05 = {
+American_s_american_04 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_american_05
+		vocalist = S_American_04
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_05_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_American_04_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_05_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_american_04_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-american_s_american_06 = {
+American_s_american_05 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_american_06
+		vocalist = S_American_05
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_06_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_American_05_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_06_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_American_05_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-american_s_american_07 = {
+American_s_american_06 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_american_07
+		vocalist = S_American_06
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_07_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_american_06_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_07_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_American_06_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-american_s_american_08 = {
+American_s_american_07 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_american_08
+		vocalist = S_American_07
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_08_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_american_07_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_08_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_american_07_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-american_gs_pan_s2g01 = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-		GUITARIST = 'vocalist_start'
-	}
-	anims = {
-		vocalist = gs_s_pan_s2g01
-		GUITARIST = gs_g_pan_s2g01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gs_pan_s2g01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gs_pan_s2g01_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gs_pan_s2g01_c03
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-american_s_american_10 = {
+American_s_american_08 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_american_10
+		vocalist = S_American_08
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_10_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_American_08_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_10_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_American_08_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-mountain_g_metalsolo04 = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_metalsolo04
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo04_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo04_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-mountain_gsb_sing_hop01 = {
-	startnodes = {
-		GUITARIST = 'vocalist_start'
-		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-	}
-	anims = {
-		GUITARIST = gsb_g_sing_hop01
-		vocalist = gsb_s_sing_hop01
-		BASSIST = gsb_b_sing_hop01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_sing_hop01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-mountain_g_metalsolo01 = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_metalsolo01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo01_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-mountain_g_metalsolo02 = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_metalsolo02
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo02_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo02_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-s_mountain_chillbignote01 = {
-	anims = {
-		vocalist = s_mountain_chillbignote01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mountain_chillbignote01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mountain_chillbignote01_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-labamba_gsb_singatmic_120 = {
-	startnodes = {
-		GUITARIST = 'vocalist_start'
-		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-	}
-	anims = {
-		GUITARIST = gsb_g_singatmic_120
-		vocalist = gsb_s_singatmic_120
-		BASSIST = gsb_b_singatmic_120
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_120_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_120_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-labamba_g_orbitstrum = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_orbitstrum
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_orbitstrum_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_orbitstrum_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-sweethome_b_look02 = {
-	startnodes = {
-		BASSIST = 'bassist_start'
-	}
-	anims = {
-		BASSIST = b_look02
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_look02_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-sweethome_gsb_singatmic_075 = {
+American_GS_Pan_S2G01 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = gsb_s_singatmic_075
-		BASSIST = gsb_b_singatmic_075
-		GUITARIST = gsb_g_singatmic_075
+		vocalist = GS_S_Pan_S2G01
+		Guitarist = GS_G_Pan_S2G01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_075_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GS_Pan_S2G01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_075_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GS_Pan_S2G01_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GS_Pan_S2G01_c03
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-sweethome_s_singtocam01 = {
+American_s_american_10 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_singtocam01
+		vocalist = S_American_10
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_American_10_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_American_10_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-sweethome_gsb_jam01 = {
+Mountain_G_MetalSolo04 = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_MetalSolo04
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo04_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo04_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+Mountain_GSB_Sing_Hop01 = {
+	startnodes = {
+		Guitarist = 'vocalist_start'
+		vocalist = 'vocalist_start'
+		bassist = 'vocalist_start'
+	}
+	anims = {
+		Guitarist = GSB_G_Sing_Hop01
+		vocalist = GSB_S_Sing_Hop01
+		bassist = GSB_B_Sing_Hop01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Sing_Hop01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+Mountain_G_MetalSolo01 = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_MetalSolo01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo01_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+Mountain_G_MetalSolo02 = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_MetalSolo02
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo02_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo02_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+S_Mountain_ChillBigNote01 = {
+	anims = {
+		vocalist = S_Mountain_ChillBigNote01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_mountain_chillbignote01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_mountain_chillbignote01_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+LaBamba_GSB_SingAtMic_120 = {
+	startnodes = {
+		Guitarist = 'vocalist_start'
+		vocalist = 'vocalist_start'
+		bassist = 'vocalist_start'
+	}
+	anims = {
+		Guitarist = gsb_g_singatmic_120
+		vocalist = GSB_S_SingAtMic_120
+		bassist = GSB_B_SingAtMic_120
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_120_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_120_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+LaBamba_G_OrbitStrum = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_OrbitStrum
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_OrbitStrum_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_OrbitStrum_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+SweetHome_B_Look02 = {
+	startnodes = {
+		bassist = 'bassist_start'
+	}
+	anims = {
+		bassist = B_Look02
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = b_look02_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+SweetHome_GSB_SingAtMic_075 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		GUITARIST = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = gsb_s_jam01
-		GUITARIST = gsb_g_jam01
-		BASSIST = gsb_b_jam01
+		vocalist = GSB_S_SingAtMic_075
+		bassist = GSB_B_SingAtMic_075
+		Guitarist = GSB_G_SingAtMic_075
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_jam01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_075_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_075_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-sweethome_g_alabama_01 = {
+SweetHome_S_SingToCam01 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		vocalist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = g_alabama_01
+		vocalist = S_SingToCam01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_alabama_01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCam01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_alabama_01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCam01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-sweethome_g_alabama_03 = {
+SweetHome_GSB_Jam01 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		vocalist = 'vocalist_start'
+		Guitarist = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = g_alabama_03
+		vocalist = GSB_S_Jam01
+		Guitarist = GSB_G_Jam01
+		bassist = GSB_B_Jam01
 	}
-	measures = 3
-	arms = {
-		GUITARIST = {
-			ik_targetl = guitar
-			ik_targetr = slave
-			strum = OFF
-			fret = On
-			chord = On
-		}
-	}
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_alabama_03_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_alabama_03_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Jam01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-sweethome_g_alabama_04 = {
+SweetHome_G_Alabama_01 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_alabama_04
+		Guitarist = g_alabama_01
 	}
-	measures = 3
-	arms = {
-		GUITARIST = {
-			ik_targetl = guitar
-			ik_targetr = slave
-			strum = OFF
-			fret = On
-			chord = On
-		}
-	}
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_alabama_04_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_alabama_01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_alabama_04_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_alabama_01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-sweethome_g_alabama_06 = {
+SweetHome_G_Alabama_03 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_alabama_06
+		Guitarist = G_Alabama_03
 	}
-	measures = 3
-	arms = {
-		GUITARIST = {
-			ik_targetl = guitar
-			ik_targetr = slave
-			strum = OFF
-			fret = On
-			chord = On
+	Measures = 3
+	Arms = {
+		Guitarist = {
+			IK_TargetL = guitar
+			IK_TargetR = slave
+			strum = off
+			fret = on
+			chord = on
 		}
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_alabama_06_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_alabama_03_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_alabama_06_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Alabama_03_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-sweethome_g_alabama_07 = {
+SweetHome_G_Alabama_04 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_alabama_07
+		Guitarist = G_Alabama_04
 	}
-	measures = 3
-	arms = {
-		GUITARIST = {
-			ik_targetl = guitar
-			ik_targetr = slave
-			strum = OFF
-			fret = On
-			chord = On
+	Measures = 3
+	Arms = {
+		Guitarist = {
+			IK_TargetL = guitar
+			IK_TargetR = slave
+			strum = off
+			fret = on
+			chord = on
 		}
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_alabama_07_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_alabama_04_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_alabama_07_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_alabama_04_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-sweethome_g_alabama_08 = {
+SweetHome_G_Alabama_06 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_alabama_08
+		Guitarist = G_Alabama_06
 	}
-	measures = 3
-	arms = {
-		GUITARIST = {
-			ik_targetl = guitar
-			ik_targetr = slave
-			strum = OFF
-			fret = On
-			chord = On
+	Measures = 3
+	Arms = {
+		Guitarist = {
+			IK_TargetL = guitar
+			IK_TargetR = slave
+			strum = off
+			fret = on
+			chord = on
 		}
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_alabama_08_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_alabama_06_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_alabama_08_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_alabama_06_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-themiddle_g_jumpspin = {
+SweetHome_G_Alabama_07 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_spinjumps01
+		Guitarist = G_Alabama_07
 	}
-	measures = 3
+	Measures = 3
+	Arms = {
+		Guitarist = {
+			IK_TargetL = guitar
+			IK_TargetR = slave
+			strum = off
+			fret = on
+			chord = on
+		}
+	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_spinjumps01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_alabama_07_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_alabama_07_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-themiddle_g_metalsolo08 = {
+SweetHome_G_Alabama_08 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_metalsolo08
+		Guitarist = G_Alabama_08
 	}
-	measures = 3
+	Measures = 3
+	Arms = {
+		Guitarist = {
+			IK_TargetL = guitar
+			IK_TargetR = slave
+			strum = off
+			fret = on
+			chord = on
+		}
+	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo08_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_alabama_08_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo08_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_alabama_08_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-themiddle_g_solo03 = {
+TheMiddle_G_JumpSpin = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_solo03
+		Guitarist = G_SpinJumps01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo03_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_SpinJumps01_C01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-themiddle_gsb_solo2clap01 = {
+TheMiddle_G_MetalSolo08 = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_Metalsolo08
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo08_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo08_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+TheMiddle_G_Solo03 = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_solo03
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo03_C01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+TheMiddle_GSB_Solo2Clap01 = {
 	startnodes = {
 		vocalist = 'Vocalist_start'
 	}
 	anims = {
-		vocalist = gsb_s_solo2clap01
+		vocalist = GSB_s_Solo2Clap01
 	}
-	measures = 3
+	Measures = 3
 }
-themiddle_g_jump01 = {
+TheMiddle_G_Jump01 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_jump01
+		Guitarist = G_Jump01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_jump01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Jump01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-themiddle_b_look01 = {
+TheMiddle_B_Look01 = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		BASSIST = b_look01
+		bassist = B_Look01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_look01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_Look01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-themiddle_s_singtocam03 = {
+TheMiddle_S_SingToCam03 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_singtocam03
+		vocalist = S_SingToCam03
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam03_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCam03_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-themiddle_s_pointsinging03 = {
+TheMiddle_S_PointSinging03 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_pointsinging03
+		vocalist = S_PointSinging03
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging03_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pointsinging03_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging03_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-themiddle_b_quickkick01 = {
-	startnodes = {
-		BASSIST = 'bassist_start'
-	}
-	anims = {
-		BASSIST = b_quickkick01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_quickkick01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointsinging03_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-themiddle_g_jumpspin2 = {
+TheMiddle_B_QuickKick01 = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		BASSIST = g_spinjumps01
+		bassist = B_QuickKick01
 	}
-	measures = 3
-	cameras = [
-	]
-}
-s_kickmic01_rebelyell = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = s_kickmic01
-	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_kickmic01_c01
-		}
-	]
-}
-gsb_sologuit01_rebelyell = {
-	startnodes = {
-		GUITARIST = 'vocalist_start'
-	}
-	anims = {
-		GUITARIST = gsb_g_sologuit01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_sologuit01_c01
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_sologuit01_c02
-		}
-	]
-}
-b_climbonriser_rebelyell = {
-	startnodes = {
-		BASSIST = 'bassist_start'
-	}
-	anims = {
-		BASSIST = b_climbonriser01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_climbonriser01_c01
-		}
-	]
-}
-bs_riserjump_rebelyell = {
-	startnodes = {
-		BASSIST = 'bassist_start'
-	}
-	anims = {
-		BASSIST = bs_riserjump01_b
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = bs_riserjump01_c01
-		}
-	]
-}
-gsb_startsing_pan01_rebelyell = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = gsb_s_startsing_pan01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_startsing_pan01_c01
-		}
-	]
-}
-gsb_sing_hop01_rebelyell = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-		GUITARIST = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-	}
-	anims = {
-		vocalist = gsb_s_sing_hop01
-		GUITARIST = gsb_g_sing_hop01
-		BASSIST = gsb_b_sing_hop01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_sing_hop01_c01
-		}
-	]
-}
-g_kick01_rebelyell = {
-	anims = {
-		GUITARIST = g_kick01
-	}
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_kick01_c01
-		}
-	]
-}
-g_kick06_rebelyell = {
-	anims = {
-		GUITARIST = g_kick06
-	}
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_kick06_c01
-		}
-	]
-}
-gsb_clapjump01_rebelyell = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = gsb_s_clapjump01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_clapjump01_c01
-		}
-	]
-}
-s_singtocam02_rebelyell = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = s_singtocam02
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam02_c01
-		}
-	]
-}
-b_playstrut01_rebelyell = {
-	startnodes = {
-		BASSIST = 'bassist_start'
-	}
-	anims = {
-		BASSIST = b_playstrut01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_playstrut01_c01
-		}
-	]
-}
-gb_back2back_rebelyell = {
-	startnodes = {
-		GUITARIST = 'bassist_start'
-		BASSIST = 'bassist_start'
-	}
-	anims = {
-		GUITARIST = gb_back2back01_g
-		BASSIST = gb_back2back01_b
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = gb_back2back01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = gb_back2back01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_QuickKick01_C01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_finish01_rebelyell = {
+TheMiddle_G_JumpSpin2 = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'bassist_start'
+	}
+	anims = {
+		bassist = G_SpinJumps01
+	}
+	Measures = 3
+	cameras = [
+	]
+}
+S_KickMic01_RebelYell = {
+	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_g_finish01
-		BASSIST = gsb_b_finish01
-		vocalist = gsb_s_finish01
+		vocalist = S_KickMic01
 	}
-	arms = {
-		GUITARIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_KickMic01_c01
 		}
-		BASSIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+	]
+}
+GSB_SoloGuit01_RebelYell = {
+	startnodes = {
+		Guitarist = 'vocalist_start'
+	}
+	anims = {
+		Guitarist = GSB_G_SoloGuit01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SoloGuit01_c01
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SoloGuit01_c02
+		}
+	]
+}
+B_ClimbOnRiser_RebelYell = {
+	startnodes = {
+		bassist = 'bassist_start'
+	}
+	anims = {
+		bassist = B_ClimbOnRiser01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_ClimbOnRiser01_c01
+		}
+	]
+}
+BS_RiserJump_RebelYell = {
+	startnodes = {
+		bassist = 'bassist_start'
+	}
+	anims = {
+		bassist = BS_RiserJump01_B
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = BS_RiserJump01_c01
+		}
+	]
+}
+GSB_StartSing_Pan01_RebelYell = {
+	startnodes = {
+		vocalist = 'vocalist_start'
+	}
+	anims = {
+		vocalist = GSB_S_StartSing_Pan01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_StartSing_Pan01_c01
+		}
+	]
+}
+GSB_Sing_Hop01_RebelYell = {
+	startnodes = {
+		vocalist = 'vocalist_start'
+		Guitarist = 'vocalist_start'
+		bassist = 'vocalist_start'
+	}
+	anims = {
+		vocalist = GSB_S_Sing_Hop01
+		Guitarist = GSB_G_Sing_Hop01
+		bassist = GSB_B_Sing_Hop01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Sing_Hop01_c01
+		}
+	]
+}
+G_kick01_RebelYell = {
+	anims = {
+		Guitarist = G_kick01
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_kick01_c01
+		}
+	]
+}
+G_kick06_RebelYell = {
+	anims = {
+		Guitarist = G_kick06
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_kick06_c01
+		}
+	]
+}
+GSB_ClapJump01_RebelYell = {
+	startnodes = {
+		vocalist = 'vocalist_start'
+	}
+	anims = {
+		vocalist = GSB_S_ClapJump01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_ClapJump01_c01
+		}
+	]
+}
+S_SingToCam02_RebelYell = {
+	startnodes = {
+		vocalist = 'vocalist_start'
+	}
+	anims = {
+		vocalist = S_SingToCam02
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_singtocam02_c01
+		}
+	]
+}
+B_PlayStrut01_RebelYell = {
+	startnodes = {
+		bassist = 'bassist_start'
+	}
+	anims = {
+		bassist = B_PlayStrut01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_PlayStrut01_c01
+		}
+	]
+}
+GB_Back2Back_RebelYell = {
+	startnodes = {
+		Guitarist = 'bassist_start'
+		bassist = 'bassist_start'
+	}
+	anims = {
+		Guitarist = GB_Back2Back01_G
+		bassist = GB_Back2Back01_B
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = GB_Back2Back01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = GB_Back2Back01_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+GSB_Finish01_RebelYell = {
+	startnodes = {
+		Guitarist = 'vocalist_start'
+		bassist = 'vocalist_start'
+		vocalist = 'vocalist_start'
+	}
+	anims = {
+		Guitarist = GSB_G_Finish01
+		bassist = GSB_B_Finish01
+		vocalist = GSB_S_Finish01
+	}
+	Arms = {
+		Guitarist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
+		}
+		bassist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_finish01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_finish01_c01
 		}
 	]
 }
-s_singpunch01_rebelyell = {
+S_SingPunch01_RebelYell = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_singpunch01
+		vocalist = S_SingPunch01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singpunch01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingPunch01_c01
 		}
 	]
 }
-s_sing01_rebelyell = {
+S_Sing01_RebelYell = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_sing01
+		vocalist = S_Sing01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_sing01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_sing01_c01
 		}
 	]
 }
-s_sing02_rebelyell = {
+S_Sing02_RebelYell = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_sing02
+		vocalist = S_Sing02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_sing02_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_sing02_c01
 		}
 	]
 }
-s_sing03_rebelyell = {
+S_Sing03_RebelYell = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_sing03
+		vocalist = S_Sing03
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_sing03_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Sing03_c01
 		}
 	]
 }
-gsb_jump01_dammit = {
+GSB_Jump01_Dammit = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = gsb_s_jump01
-		BASSIST = gsb_b_jump01
-		GUITARIST = gsb_g_jump01
+		vocalist = GSB_S_Jump01
+		bassist = GSB_B_Jump01
+		Guitarist = GSB_G_Jump01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_jump01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Jump01_c01
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_jump01_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Jump01_c02
 		}
 	]
 }
-s_singtocam04_dammit = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = s_singtocam04
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam04_c01
-		}
-	]
-}
-gsb_sing_hop02_dammit = {
-	startnodes = {
-		GUITARIST = 'vocalist_start'
-		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-	}
-	anims = {
-		vocalist = gsb_s_sing_hop02
-		BASSIST = gsb_b_sing_hop02
-		GUITARIST = gsb_g_sing_hop02
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_sing_hop02_c01
-		}
-	]
-}
-gsb_startsing_pan01_dammit = {
+S_SingToCam04_Dammit = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-		GUITARIST = 'vocalist_start'
 	}
 	anims = {
-		vocalist = gsb_s_startsing_pan01
-		BASSIST = gsb_b_startsing_pan01
-		GUITARIST = gsb_g_startsing_pan01
+		vocalist = S_SingToCam04
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_startsing_pan01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_singtocam04_c01
 		}
 	]
 }
-b_jam2crowd02_c01_dammit = {
+GSB_Sing_Hop02_Dammit = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		Guitarist = 'vocalist_start'
+		vocalist = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		BASSIST = b_jam2crowd02
+		vocalist = GSB_S_Sing_Hop02
+		bassist = GSB_B_Sing_Hop02
+		Guitarist = GSB_G_Sing_Hop02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_jam2crowd02_c01
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_jam2crowd02_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Sing_Hop02_c01
 		}
 	]
 }
-g_solo03_dammit = {
-	anims = {
-		GUITARIST = g_solo03
-	}
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo03_c01
-		}
-	]
-}
-s_singtocam05_dammit = {
-	anims = {
-		vocalist = s_singtocam05
-	}
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam05_c01
-		}
-	]
-}
-g_kick06_dammit = {
-	anims = {
-		GUITARIST = g_kick06
-	}
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_kick06_c01
-		}
-	]
-}
-gs_endstrum01_dammit = {
+GSB_StartSing_Pan01_Dammit = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		vocalist = 'vocalist_start'
+		bassist = 'vocalist_start'
+		Guitarist = 'vocalist_start'
+	}
+	anims = {
+		vocalist = GSB_S_StartSing_Pan01
+		bassist = GSB_B_StartSing_Pan01
+		Guitarist = GSB_G_StartSing_Pan01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_StartSing_Pan01_c01
+		}
+	]
+}
+B_Jam2Crowd02_c01_Dammit = {
+	startnodes = {
+		bassist = 'bassist_start'
+	}
+	anims = {
+		bassist = B_Jam2Crowd02
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_Jam2Crowd02_c01
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_Jam2Crowd02_c02
+		}
+	]
+}
+G_Solo03_Dammit = {
+	anims = {
+		Guitarist = G_solo03
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo03_C01
+		}
+	]
+}
+S_SingToCam05_Dammit = {
+	anims = {
+		vocalist = S_SingToCam05
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCam05_c01
+		}
+	]
+}
+G_kick06_Dammit = {
+	anims = {
+		Guitarist = G_kick06
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_kick06_c01
+		}
+	]
+}
+GS_EndStrum01_Dammit = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
 		vocalist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = gs_endstrum01_g
-		vocalist = gs_endstrum01_s
+		Guitarist = GS_EndStrum01_G
+		vocalist = GS_EndStrum01_S
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = gs_endstrum01_c01
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = GS_EndStrum01_c01
 		}
 	]
 }
-s_pointsinging04_dammit = {
+S_pointsinging04_Dammit = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_pointsinging04
+		vocalist = S_pointsinging04
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging04_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointsinging04_c01
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging04_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointsinging04_c02
 		}
 	]
 }
-gsb_sing2cam02_dammit = {
+GSB_Sing2Cam02_Dammit = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		GUITARIST = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		BASSIST = gsb_b_sing2cam02
-		vocalist = gsb_s_sing2cam02
-		GUITARIST = gsb_g_sing2cam02
+		bassist = GSB_B_Sing2Cam02
+		vocalist = GSB_S_Sing2Cam02
+		Guitarist = GSB_G_Sing2Cam02
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_sing2cam02_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Sing2Cam02_c01
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_sing2cam02_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Sing2Cam02_c02
 		}
 	]
 }
-s_singtocam01_dammit = {
+S_SingToCam01_Dammit = {
 	anims = {
-		vocalist = s_singtocam01
+		vocalist = S_SingToCam01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCam01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCam01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-d_crash01_dammit = {
+D_Crash01_Dammit = {
 	anims = {
-		drummer = d_crash01
+		Drummer = D_Crash01
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_DRUM01'
-			anim = d_crash01_c01
+			name = 'TRG_Geo_Camera_Performance_DRUM01'
+			Anim = D_Crash01_c01
 		}
 	]
 }
-g_solo01 = {
+G_solo01 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_solo01
+		Guitarist = G_solo01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_pointsinging02 = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = s_pointsinging02
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging02_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging02_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-s_singtocam07 = {
+S_PointSinging02 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_singtocam07
+		vocalist = S_PointSinging02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam07_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pointsinging02_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_PointSinging02_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gb_endjam01 = {
+S_SingToCam07 = {
 	startnodes = {
-		GUITARIST = 'bassist_start'
-		BASSIST = 'bassist_start'
+		vocalist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gb_endjam01_g
-		BASSIST = gb_endjam01_b
+		vocalist = S_SingToCam07
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = gb_endjam01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCam07_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-bs_hifive01 = {
+GB_EndJam01 = {
+	startnodes = {
+		Guitarist = 'bassist_start'
+		bassist = 'bassist_start'
+	}
+	anims = {
+		Guitarist = GB_EndJam01_G
+		bassist = GB_EndJam01_B
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = GB_EndJam01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+BS_HiFive01 = {
 	startnodes = {
 		vocalist = 'bassist_start'
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		vocalist = bs_hifive01_s
-		BASSIST = bs_hifive01_b
+		vocalist = BS_HiFive01_S
+		bassist = BS_HiFive01_B
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = bs_hifive01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = BS_HiFive01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-b_quickkick01_satchboogie = {
+B_QuickKick01_SatchBoogie = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = b_quickkick01
+		Guitarist = B_QuickKick01
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = b_quickkick01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = B_QuickKick01_C01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_orbitguit01_satchboogie = {
+GSB_OrbitGuit01_SatchBoogie = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_g_orbitguit01
+		Guitarist = GSB_G_OrbitGuit01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_orbitguit01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_OrbitGuit01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_sologuit01_satchboogie = {
+GSB_SoloGuit01_SatchBoogie = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_g_sologuit01
+		Guitarist = GSB_G_SoloGuit01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_sologuit01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SoloGuit01_c01
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_sologuit01_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SoloGuit01_c02
 		}
 	]
 }
-gsb_singatmic_120_b = {
+GSB_SingAtMic_120_B = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_g_singatmic_120_b
-		vocalist = gsb_s_singatmic_120_b
-		BASSIST = gsb_b_singatmic_120_b
+		Guitarist = GSB_G_SingAtMic_120_B
+		vocalist = GSB_S_SingAtMic_120_B
+		bassist = GSB_B_SingAtMic_120_B
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_120_b_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_singatmic_120_b_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_120_b_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-gsb_gsjam01_ramblinman = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = gsb_g_gsjam01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = gsb_gsjam01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_120_B_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_sing_hop02_overkill = {
+GSB_GSJam01_RamblinMan = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
-		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		vocalist = gsb_s_sing_hop02
-		BASSIST = gsb_b_sing_hop02
-		GUITARIST = gsb_g_sing_hop02
+		Guitarist = GSB_G_GSJam01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_sing_hop02_c01
-		}
-	]
-}
-b_quickkick01_overkill = {
-	startnodes = {
-		BASSIST = 'Bassist_start'
-	}
-	anims = {
-		BASSIST = b_quickkick01
-	}
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_quickkick01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = GSB_GSJam01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_jam03_overkill = {
+GSB_Sing_Hop02_Overkill = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = gsb_s_jam03
-		BASSIST = gsb_b_jam03
-		GUITARIST = gsb_g_jam03
+		vocalist = GSB_S_Sing_Hop02
+		bassist = GSB_B_Sing_Hop02
+		Guitarist = GSB_G_Sing_Hop02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_jam03_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Sing_Hop02_c01
 		}
 	]
 }
-s_sing03_overkill = {
+B_QuickKick01_Overkill = {
 	startnodes = {
-		vocalist = 'vocalist_start'
+		bassist = 'Bassist_start'
 	}
 	anims = {
-		vocalist = s_sing03
+		bassist = B_QuickKick01
 	}
-	measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_sing03_c01
-		}
-	]
-}
-s_pointsinging03_overkill = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = s_pointsinging03
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging03_c01
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging03_c02
-		}
-	]
-}
-g_metalsolo04_overkill = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_metalsolo04
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo04_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo04_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_QuickKick01_C01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_sing02_overkill = {
+GSB_Jam03_Overkill = {
+	startnodes = {
+		Guitarist = 'vocalist_start'
+		vocalist = 'vocalist_start'
+		bassist = 'vocalist_start'
+	}
+	anims = {
+		vocalist = GSB_S_Jam03
+		bassist = GSB_B_Jam03
+		Guitarist = GSB_G_Jam03
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Jam03_c01
+		}
+	]
+}
+S_Sing03_Overkill = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_sing02
+		vocalist = S_Sing03
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_sing02_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Sing03_c01
 		}
 	]
 }
-s_singpunch01_overkill = {
+S_pointsinging03_Overkill = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_singpunch01
+		vocalist = S_PointSinging03
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singpunch01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pointsinging03_c01
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointsinging03_c02
 		}
 	]
 }
-s_singcampush_overkill = {
+G_MetalSolo04_Overkill = {
 	startnodes = {
-		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		vocalist = s_singcampush
-		BASSIST = s_singcampush_bass
+		Guitarist = G_MetalSolo04
 	}
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singcampush_c01
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo04_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
 		}
-	]
-}
-g_solo03_overkill = {
-	anims = {
-		GUITARIST = g_solo03
-	}
-	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo03_c01
-		}
-	]
-}
-g_jumpspin_overkill = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_spinjumps01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_spinjumps01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo04_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_kick06_overkill = {
-	anims = {
-		GUITARIST = g_kick06
-	}
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_kick06_c01
-		}
-	]
-}
-b_jamstagger01_overkill = {
-	anims = {
-		BASSIST = b_jamstagger01
-	}
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_jamstagger01_c01
-		}
-	]
-}
-gsb_jam02_overkill = {
+S_Sing02_Overkill = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
 	}
 	anims = {
-		vocalist = gsb_s_jam02
-		BASSIST = gsb_b_jam02
-		GUITARIST = gsb_g_jam02
+		vocalist = S_Sing02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_jam02_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_sing02_c01
 		}
 	]
 }
-gsb_orbitdrum01_overkill = {
+S_SingPunch01_Overkill = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
 	}
 	anims = {
-		vocalist = gsb_s_orbitdrum01
-		BASSIST = gsb_b_orbitdrum01
-		GUITARIST = gsb_g_orbitdrum01
+		vocalist = S_SingPunch01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_orbitdrum01_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingPunch01_c01
 		}
 	]
 }
-thejams_gsb_notempo_uj_01 = {
+S_SingCamPush_Overkill = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'bassist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_g_notempo_uj_01
-		vocalist = gsb_s_notempo_uj_01
-		BASSIST = gsb_b_notempo_uj_01
+		vocalist = S_SingCamPush
+		bassist = S_SingCamPush_Bass
 	}
-	measures = 3
-	arms = {
-		GUITARIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingCamPush_C01
 		}
-		BASSIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+	]
+}
+G_Solo03_Overkill = {
+	anims = {
+		Guitarist = G_solo03
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo03_C01
+		}
+	]
+}
+G_JumpSpin_Overkill = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_SpinJumps01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_SpinJumps01_C01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+G_kick06_Overkill = {
+	anims = {
+		Guitarist = G_kick06
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_kick06_c01
+		}
+	]
+}
+B_JamStagger01_Overkill = {
+	anims = {
+		bassist = B_JamStagger01
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_JamStagger01_c01
+		}
+	]
+}
+GSB_Jam02_Overkill = {
+	startnodes = {
+		Guitarist = 'vocalist_start'
+		vocalist = 'vocalist_start'
+		bassist = 'vocalist_start'
+	}
+	anims = {
+		vocalist = GSB_S_Jam02
+		bassist = GSB_B_Jam02
+		Guitarist = GSB_G_Jam02
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Jam02_c01
+		}
+	]
+}
+GSB_OrbitDrum01_Overkill = {
+	startnodes = {
+		Guitarist = 'vocalist_start'
+		vocalist = 'vocalist_start'
+		bassist = 'vocalist_start'
+	}
+	anims = {
+		vocalist = GSB_S_OrbitDrum01
+		bassist = GSB_B_OrbitDrum01
+		Guitarist = GSB_G_OrbitDrum01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_OrbitDrum01_c02
+		}
+	]
+}
+TheJams_GSB_NoTempo_UJ_01 = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+		vocalist = 'vocalist_start'
+		bassist = 'bassist_start'
+	}
+	anims = {
+		Guitarist = GSB_G_NoTempo_UJ_01
+		vocalist = GSB_S_NoTempo_UJ_01
+		bassist = GSB_B_NoTempo_UJ_01
+	}
+	Measures = 3
+	Arms = {
+		Guitarist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
+		}
+		bassist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 	}
 }
-gs_pan02 = {
+GS_Pan02 = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gs_pan02_g
-		vocalist = gs_pan02_s
+		Guitarist = GS_Pan02_G
+		vocalist = GS_Pan02_S
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gs_pan02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GS_pan02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_pointcrowd02_feelthepain = {
+S_PointCrowd02_FeelThePain = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_pointcrowd02
-		BASSIST = b_underthestage01
+		vocalist = S_PointCrowd02
+		bassist = b_underthestage01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointcrowd02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointcrowd02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_singcameragrab = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = s_singcameragrab
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singcameragrab_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-today_gsb_start02 = {
-	startnodes = {
-		BASSIST = 'vocalist_start'
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		BASSIST = gsb_b_start02
-		vocalist = gsb_s_start02
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = gsb_start02_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-today_b_start02 = {
-	startnodes = {
-		BASSIST = 'vocalist_start'
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		BASSIST = gsb_b_start02
-		vocalist = gsb_s_start02
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = gsb_start02_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-today_s_pointing01 = {
+S_SingCameraGrab = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_loveme_pointing01
+		vocalist = S_SingCameraGrab
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_loveme_pointing01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingCameraGrab_C01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-today_b_climbonriser = {
+Today_GSB_Start02 = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		bassist = 'vocalist_start'
+		vocalist = 'vocalist_start'
 	}
 	anims = {
-		BASSIST = b_climbonriser01
+		bassist = GSB_B_Start02
+		vocalist = GSB_S_Start02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_climbonriser01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = GSB_Start02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-today_b_jamonriser = {
+Today_B_Start02 = {
 	startnodes = {
-		BASSIST = 'drummer_start'
+		bassist = 'vocalist_start'
+		vocalist = 'vocalist_start'
 	}
 	anims = {
-		BASSIST = b_jamonriser01
+		bassist = GSB_B_Start02
+		vocalist = GSB_S_Start02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_DRUM01'
-			anim = b_jamonriser01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = GSB_Start02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-today_b_jamonriser2 = {
+Today_S_pointing01 = {
 	startnodes = {
-		BASSIST = 'drummer_start'
+		vocalist = 'vocalist_start'
+	}
+	anims = {
+		vocalist = S_loveme_pointing01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_loveme_pointing01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+Today_B_ClimbOnRiser = {
+	startnodes = {
+		bassist = 'bassist_start'
+	}
+	anims = {
+		bassist = B_ClimbOnRiser01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_ClimbOnRiser01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+Today_B_JamOnRiser = {
+	startnodes = {
+		bassist = 'drummer_start'
+	}
+	anims = {
+		bassist = B_JamOnRiser01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_DRUM01'
+			Anim = B_JamOnRiser01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+Today_B_JamOnRiser2 = {
+	startnodes = {
+		bassist = 'drummer_start'
 		vocalist = 'Guitarist_start'
 	}
 	anims = {
-		BASSIST = b_jamonriser01
-		vocalist = singer_chillin
+		bassist = B_JamOnRiser01
+		vocalist = Singer_Chillin
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_DRUM01'
-			anim = b_jamonriser01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_DRUM01'
+			Anim = B_JamOnRiser01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-today_g_solo1 = {
+Today_G_Solo1 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_solo01
+		Guitarist = G_solo01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-today_g_lookheadbob = {
+Today_G_LookHeadBob = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_lookheadbob
+		Guitarist = G_LookHeadBob
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_lookheadbob_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_lookheadbob_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-today_gsb_sing2cam01 = {
+Today_GSB_Sing2Cam01 = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_g_sing2cam01
-		BASSIST = gsb_b_sing2cam01
+		Guitarist = GSB_G_Sing2Cam01
+		bassist = GSB_B_Sing2Cam01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_sing2cam01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Sing2Cam01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_sing2cam01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Sing2Cam01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-today_gsb_sing2cam02 = {
+Today_GSB_Sing2Cam02 = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_g_sing2cam02
-		BASSIST = gsb_b_sing2cam02
+		Guitarist = GSB_G_Sing2Cam02
+		bassist = GSB_B_Sing2Cam02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_sing2cam02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Sing2Cam02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_sing2cam02_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Sing2Cam02_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-today_singer_chillin = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = singer_chillin
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = singer_chillin_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-today_s_hotelcalifornia_sing03 = {
+Today_Singer_Chillin = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_hotelcalifornia_sing03
+		vocalist = Singer_Chillin
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_hotelcalifornia_sing03_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = singer_chillin_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-today_s_hotelcalifornia_sing04 = {
+Today_S_HotelCalifornia_sing03 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_hotelcalifornia_sing04
+		vocalist = S_HotelCalifornia_sing03
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_hotelcalifornia_sing04_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_hotelcalifornia_sing03_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-today_s_hotelcalifornia_sing05 = {
+Today_S_HotelCalifornia_sing04 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_hotelcalifornia_sing05
+		vocalist = S_HotelCalifornia_sing04
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_hotelcalifornia_sing05_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_hotelcalifornia_sing04_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-today_s_hotelcalifornia_sing06 = {
+Today_S_HotelCalifornia_sing05 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_hotelcalifornia_sing06
+		vocalist = S_HotelCalifornia_sing05
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_hotelcalifornia_sing06_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_HotelCalifornia_sing05_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-today_g_today_01 = {
+Today_S_HotelCalifornia_sing06 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = g_today_01
+		vocalist = S_HotelCalifornia_sing06
 	}
-	arms = {
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_HotelCalifornia_sing06_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+Today_G_Today_01 = {
+	startnodes = {
+		vocalist = 'vocalist_start'
+	}
+	anims = {
+		vocalist = G_Today_01
+	}
+	Arms = {
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = On
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = on
 		}
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_today_01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = G_Today_01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_today_01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = G_Today_01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-today_g_today_02 = {
+Today_G_Today_02 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = g_today_02
+		vocalist = G_Today_02
 	}
-	arms = {
+	Arms = {
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = On
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = on
 		}
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_today_02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = G_Today_02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_today_02_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = G_Today_02_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-today_g_today_03 = {
+Today_G_Today_03 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = g_today_03
+		vocalist = G_Today_03
 	}
-	arms = {
+	Arms = {
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = On
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = on
 		}
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_today_03_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = G_Today_03_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_today_03_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = G_Today_03_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-antisocial_g_metalsolo04 = {
+Antisocial_G_MetalSolo04 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_metalsolo04
+		Guitarist = G_MetalSolo04
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo04_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo04_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo04_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo04_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-antisocial_g_sologround01 = {
+Antisocial_G_SoloGround01 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_sologround01
+		Guitarist = G_SoloGround01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_sologround01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_SoloGround01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_sologround01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_SoloGround01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-antisocial_s_sing01 = {
+Antisocial_S_Sing01 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_sing01
+		vocalist = S_Sing01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_sing01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_sing01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-antisocial_s_sing02 = {
+Antisocial_S_Sing02 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_sing02
+		vocalist = S_Sing02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_sing02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_sing02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-antisocial_s_mic2audience02 = {
+Antisocial_S_Mic2Audience02 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_mic2audience02
+		vocalist = S_Mic2Audience02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mic2audience02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Mic2Audience02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-antisocial_gsb_notempo_uj_01 = {
+Antisocial_GSB_NoTempo_UJ_01 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		BASSIST = 'bassist_start'
-		GUITARIST = 'guitarist_start'
+		bassist = 'bassist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		vocalist = gsb_s_notempo_uj_01
-		BASSIST = gsb_b_notempo_uj_01
-		GUITARIST = rt_guit_davidicus_joker
+		vocalist = GSB_S_NoTempo_UJ_01
+		bassist = GSB_B_NoTempo_UJ_01
+		Guitarist = RT_Guit_Davidicus_Joker
 	}
-	measures = 3
-	arms = {
-		GUITARIST = {
-			ik_targetl = guitar
-			ik_targetr = guitar
-			strum = On
-			fret = On
-			chord = On
+	Measures = 3
+	Arms = {
+		Guitarist = {
+			IK_TargetL = guitar
+			IK_TargetR = guitar
+			strum = on
+			fret = on
+			chord = on
 		}
-		BASSIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
-		}
-		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
-		}
-	}
-}
-antisocial_gsb_notempo_uj_02 = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-		BASSIST = 'bassist_start'
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		vocalist = gsb_s_notempo_uj_01
-		BASSIST = gsb_b_notempo_uj_01
-		GUITARIST = gsb_g_notempo_uj_01
-	}
-	measures = 3
-	arms = {
-		GUITARIST = {
-			ik_targetl = guitar
-			ik_targetr = guitar
-			strum = On
-			fret = On
-			chord = On
-		}
-		BASSIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+		bassist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 	}
 }
-antisocial_gsb_notempo_uj_03 = {
+Antisocial_GSB_NoTempo_UJ_02 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		vocalist = 'vocalist_start'
+		bassist = 'bassist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = rt_guit_davidicus_joker
+		vocalist = GSB_S_NoTempo_UJ_01
+		bassist = GSB_B_NoTempo_UJ_01
+		Guitarist = GSB_G_NoTempo_UJ_01
 	}
-	measures = 3
-	arms = {
-		GUITARIST = {
-			ik_targetl = guitar
-			ik_targetr = guitar
-			strum = On
-			fret = On
-			chord = On
+	Measures = 3
+	Arms = {
+		Guitarist = {
+			IK_TargetL = guitar
+			IK_TargetR = guitar
+			strum = on
+			fret = on
+			chord = on
+		}
+		bassist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
+		}
+		vocalist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 	}
 }
-antisocial_g_solo10 = {
+Antisocial_GSB_NoTempo_UJ_03 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_solo10
+		Guitarist = RT_Guit_Davidicus_Joker
 	}
-	measures = 3
+	Measures = 3
+	Arms = {
+		Guitarist = {
+			IK_TargetL = guitar
+			IK_TargetR = guitar
+			strum = on
+			fret = on
+			chord = on
+		}
+	}
+}
+Antisocial_G_Solo10 = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_Solo10
+	}
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo10_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo10_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo10_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo10_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-antisocial_g_solo11 = {
+Antisocial_G_Solo11 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_solo11
+		Guitarist = G_Solo11
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo11_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo11_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo11_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo11_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_singtocam02_joker = {
+S_SingToCam02_Joker = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_singtocam02
+		vocalist = S_SingToCam02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam02_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_singtocam02_c01
 		}
 	]
 }
-gsb_singatmic_075_b_joker = {
+GSB_SingAtMic_075_B_Joker = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_g_singatmic_075_b
-		vocalist = gsb_s_singatmic_075_b
-		BASSIST = gsb_b_singatmic_075_b
+		Guitarist = GSB_G_SingAtMic_075_B
+		vocalist = gsb_s_singatmic_075_B
+		bassist = gsb_b_singatmic_075_B
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_075_b_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_075_B_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_075_b_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_075_B_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_075_b_c03
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_075_B_c03
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_singtocam01_joker = {
+S_SingToCam01_Joker = {
 	anims = {
-		vocalist = s_singtocam01
+		vocalist = S_SingToCam01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCam01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam01_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-s_american_07_joker = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = s_american_07
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_07_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_07_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCam01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_solo01_joker = {
-	anims = {
-		GUITARIST = g_solo01
-	}
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo01_c01
-		}
-	]
-}
-g_solo02_joker = {
-	anims = {
-		GUITARIST = g_solo02
-	}
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo02_c01
-		}
-	]
-}
-s_singtocam03_joker = {
-	anims = {
-		vocalist = s_singtocam03
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam03_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-gsb_singatmic_075_joker = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-		GUITARIST = 'vocalist_start'
-	}
-	anims = {
-		vocalist = gsb_s_singatmic_075
-		BASSIST = gsb_b_singatmic_075
-		GUITARIST = gsb_g_singatmic_075
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_075_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-s_american_08_joker = {
+S_american_07_Joker = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_american_08
+		vocalist = S_American_07
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_08_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_american_07_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_08_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_american_07_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-b_playstrut01_joker = {
+G_Solo01_Joker = {
+	anims = {
+		Guitarist = G_solo01
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo01_c01
+		}
+	]
+}
+G_Solo02_Joker = {
+	anims = {
+		Guitarist = G_solo02
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_solo02_c01
+		}
+	]
+}
+S_SingToCam03_Joker = {
+	anims = {
+		vocalist = S_SingToCam03
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCam03_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+GSB_SingAtMic_075_Joker = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		vocalist = 'vocalist_start'
+		bassist = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = b_playstrut01
+		vocalist = GSB_S_SingAtMic_075
+		bassist = GSB_B_SingAtMic_075
+		Guitarist = GSB_G_SingAtMic_075
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_playstrut01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_075_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
 		}
 	]
 }
-gs_bigstrum01 = {
+S_American_08_Joker = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		vocalist = 'vocalist_start'
+	}
+	anims = {
+		vocalist = S_American_08
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_American_08_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_American_08_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+B_PlayStrut01_Joker = {
+	startnodes = {
+		bassist = 'bassist_start'
+	}
+	anims = {
+		vocalist = B_PlayStrut01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_PlayStrut01_c01
+		}
+	]
+}
+GS_BigStrum01 = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
 		vocalist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = gs_bigstrum01_g
-		vocalist = gs_bigstrum01_s
+		Guitarist = GS_BigStrum01_G
+		vocalist = GS_BigStrum01_S
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = gs_bigstrum01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = GS_BigStrum01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsbd_sgtpepper_01 = {
+GSBD_SgtPepper_01 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-		GUITARIST = 'vocalist_start'
-		drummer = 'drummer_start'
+		bassist = 'vocalist_start'
+		Guitarist = 'vocalist_start'
+		Drummer = 'drummer_start'
 	}
 	anims = {
-		vocalist = gsbd_sgtp_j_sing01
-		BASSIST = gsbd_sgtp_p_bass01
-		GUITARIST = gsbd_sgtp_g_guit01
-		drummer = gsbd_sgtp_r_drum01
+		vocalist = GSBD_SgtP_J_Sing01
+		bassist = GSBD_SgtP_P_Bass01
+		Guitarist = GSBD_SgtP_G_Guit01
+		Drummer = GSBD_SgtP_R_Drum01
 	}
-	disableik = true
+	DisableIK = true
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsbd_sgtp_01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSBD_SgtP_01_c01
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsbd_sgtp_01_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSBD_SgtP_01_c02
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsbd_sgtp_01_c03
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSBD_SgtP_01_c03
 		}
 	]
 }
-gsbd_sgtpepper_02 = {
+GSBD_SgtPepper_02 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-		GUITARIST = 'vocalist_start'
-		drummer = 'drummer_start'
+		bassist = 'vocalist_start'
+		Guitarist = 'vocalist_start'
+		Drummer = 'drummer_start'
 	}
 	anims = {
-		vocalist = gsbd_sgtp_j_sing02
-		BASSIST = gsbd_sgtp_p_bass02
-		GUITARIST = gsbd_sgtp_g_guit02
-		drummer = gsbd_sgtp_r_drum02
+		vocalist = GSBD_SgtP_J_Sing02
+		bassist = GSBD_SgtP_P_Bass02
+		Guitarist = GSBD_SgtP_G_Guit02
+		Drummer = GSBD_SgtP_R_Drum02
 	}
-	disableik = true
+	DisableIK = true
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsbd_sgtp_02_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSBD_SgtP_02_c01
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsbd_sgtp_02_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSBD_SgtP_02_c02
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsbd_sgtp_02_c03
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSBD_SgtP_02_c03
 		}
 	]
 }
-gsbd_sgtpepper_03 = {
+GSBD_SgtPepper_03 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-		GUITARIST = 'vocalist_start'
-		drummer = 'drummer_start'
+		bassist = 'vocalist_start'
+		Guitarist = 'vocalist_start'
+		Drummer = 'drummer_start'
 	}
 	anims = {
-		vocalist = gsbd_sgtp_j_sing03
-		BASSIST = gsbd_sgtp_p_bass03
-		GUITARIST = gsbd_sgtp_g_guit03
-		drummer = gsbd_sgtp_r_drum03
+		vocalist = GSBD_SgtP_J_Sing03
+		bassist = GSBD_SgtP_P_Bass03
+		Guitarist = GSBD_SgtP_G_Guit03
+		Drummer = GSBD_SgtP_R_Drum03
 	}
-	disableik = true
+	DisableIK = true
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsbd_sgtp_03_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSBD_SgtP_03_c01
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsbd_sgtp_03_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSBD_SgtP_03_c02
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsbd_sgtp_03_c03
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSBD_SgtP_03_c03
 		}
 	]
 }
-gsbd_revolution_01 = {
+GSBD_Revolution_01 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-		GUITARIST = 'vocalist_start'
-		drummer = 'drummer_start'
+		bassist = 'vocalist_start'
+		Guitarist = 'vocalist_start'
+		Drummer = 'drummer_start'
 	}
 	anims = {
-		vocalist = gsbd_rev_j_sing01
-		BASSIST = gsbd_rev_p_bass01
-		GUITARIST = gsbd_rev_g_guit01
-		drummer = gsbd_rev_r_drum01
+		vocalist = GSBD_Rev_J_Sing01
+		bassist = GSBD_Rev_P_Bass01
+		Guitarist = GSBD_Rev_G_Guit01
+		Drummer = GSBD_Rev_R_Drum01
 	}
-	disableik = true
+	DisableIK = true
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsbd_rev_01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSBD_Rev_01_c01
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsbd_rev_01_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSBD_Rev_01_c02
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsbd_rev_01_c03
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSBD_Rev_01_c03
 		}
 	]
 }
-gsbd_revolution_02 = {
+GSBD_Revolution_02 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-		GUITARIST = 'vocalist_start'
-		drummer = 'drummer_start'
+		bassist = 'vocalist_start'
+		Guitarist = 'vocalist_start'
+		Drummer = 'drummer_start'
 	}
 	anims = {
-		vocalist = gsbd_rev_j_sing02
-		BASSIST = gsbd_rev_p_bass02
-		GUITARIST = gsbd_rev_g_guit02
-		drummer = gsbd_rev_r_drum02
+		vocalist = GSBD_Rev_J_Sing02
+		bassist = GSBD_Rev_P_Bass02
+		Guitarist = GSBD_Rev_G_Guit02
+		Drummer = GSBD_Rev_R_Drum02
 	}
-	disableik = true
+	DisableIK = true
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsbd_rev_02_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSBD_Rev_02_c01
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsbd_rev_02_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSBD_Rev_02_c02
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsbd_rev_02_c03
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSBD_Rev_02_c03
 		}
 	]
 }
-gsbd_revolution_03 = {
+GSBD_Revolution_03 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-		GUITARIST = 'vocalist_start'
-		drummer = 'drummer_start'
+		bassist = 'vocalist_start'
+		Guitarist = 'vocalist_start'
+		Drummer = 'drummer_start'
 	}
 	anims = {
-		vocalist = gsbd_rev_j_sing03
-		BASSIST = gsbd_rev_p_bass03
-		GUITARIST = gsbd_rev_g_guit03
-		drummer = gsbd_rev_r_drum03
+		vocalist = GSBD_Rev_J_Sing03
+		bassist = GSBD_Rev_P_Bass03
+		Guitarist = GSBD_Rev_G_Guit03
+		Drummer = GSBD_Rev_R_Drum03
 	}
-	disableik = true
+	DisableIK = true
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsbd_rev_03_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSBD_Rev_03_c01
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsbd_rev_03_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSBD_Rev_03_c02
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsbd_rev_03_c03
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSBD_Rev_03_c03
 		}
 	]
 }
-gsbd_twist_01 = {
+GSBD_Twist_01 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-		GUITARIST = 'vocalist_start'
-		drummer = 'drummer_start'
+		bassist = 'vocalist_start'
+		Guitarist = 'vocalist_start'
+		Drummer = 'drummer_start'
 	}
 	anims = {
-		vocalist = gsbd_twist_j_sing01
-		BASSIST = gsbd_twist_p_bass01
-		GUITARIST = gsbd_twist_g_guit01
-		drummer = gsbd_twist_r_drum01
+		vocalist = GSBD_Twist_J_Sing01
+		bassist = GSBD_Twist_P_Bass01
+		Guitarist = GSBD_Twist_G_Guit01
+		Drummer = GSBD_Twist_R_Drum01
 	}
-	disableik = true
+	DisableIK = true
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsbd_twist_01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSBD_Twist_01_c01
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsbd_twist_01_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSBD_Twist_01_c02
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsbd_twist_01_c03
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSBD_Twist_01_c03
 		}
 	]
 }
-gsbd_twist_02 = {
+GSBD_Twist_02 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-		GUITARIST = 'vocalist_start'
-		drummer = 'drummer_start'
+		bassist = 'vocalist_start'
+		Guitarist = 'vocalist_start'
+		Drummer = 'drummer_start'
 	}
 	anims = {
-		vocalist = gsbd_twist_j_sing02
-		BASSIST = gsbd_twist_p_bass02
-		GUITARIST = gsbd_twist_g_guit02
-		drummer = gsbd_twist_r_drum02
+		vocalist = GSBD_Twist_J_Sing02
+		bassist = GSBD_Twist_P_Bass02
+		Guitarist = GSBD_Twist_G_Guit02
+		Drummer = GSBD_Twist_R_Drum02
 	}
-	disableik = true
+	DisableIK = true
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsbd_twist_02_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSBD_Twist_02_c01
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsbd_twist_02_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSBD_Twist_02_c02
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsbd_twist_02_c03
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSBD_Twist_02_c03
 		}
 	]
 }
-gsbd_twist_03 = {
+GSBD_Twist_03 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-		GUITARIST = 'vocalist_start'
-		drummer = 'drummer_start'
+		bassist = 'vocalist_start'
+		Guitarist = 'vocalist_start'
+		Drummer = 'drummer_start'
 	}
 	anims = {
-		vocalist = gsbd_twist_j_sing03
-		BASSIST = gsbd_twist_p_bass03
-		GUITARIST = gsbd_twist_g_guit03
-		drummer = gsbd_twist_r_drum03
+		vocalist = GSBD_Twist_J_Sing03
+		bassist = GSBD_Twist_P_Bass03
+		Guitarist = GSBD_Twist_G_Guit03
+		Drummer = GSBD_Twist_R_Drum03
 	}
-	disableik = true
+	DisableIK = true
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsbd_twist_03_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSBD_Twist_03_c01
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsbd_twist_03_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSBD_Twist_03_c02
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsbd_twist_03_c03
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSBD_Twist_03_c03
 		}
 	]
 }
-gs_pretty_pan01_weapon = {
+GS_Pretty_Pan01_Weapon = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gs_pretty_pan01_g
+		Guitarist = gs_pretty_pan01_g
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gs_pretty_pan01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gs_pretty_pan01_c01
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gs_pretty_pan01_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gs_pretty_pan01_c02
 			weight = 1
 		}
 	]
 }
-gsb_gsjam01 = {
+GSB_GSJam01 = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_g_gsjam01
-		vocalist = gsb_s_gsjam01
-		BASSIST = gsb_b_gsjam01
+		Guitarist = GSB_G_GSJam01
+		vocalist = GSB_S_GSJam01
+		bassist = GSB_B_GSJam01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_gsjam01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_GSJam01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_singtocam02_thekill = {
+S_SingToCam02_theKill = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_singtocam02
+		vocalist = S_SingToCam02
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam02_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_singtocam02_c01
 		}
 	]
 }
-g_kick04_thekill = {
+G_Kick04_theKill = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_kick04
+		Guitarist = G_kick04
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_kick04_c01
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_kick04_C01
 		}
 	]
 }
-pointcrowd01_thekill = {
+PointCrowd01_theKill = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_pointcrowd01
+		vocalist = S_PointCrowd01
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointcrowd01_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_PointCrowd01_c02
 		}
 	]
 }
-gsb_orbitguit01_thekill = {
+GSB_OrbitGuit01_theKill = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_g_orbitguit01
+		Guitarist = GSB_G_OrbitGuit01
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_orbitguit01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_OrbitGuit01_c01
 		}
 	]
 }
-g_jamjump01_thekill = {
+g_jamjump01_theKill = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_jamjump01
+		Guitarist = g_jamjump01
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_jamjump01_c01
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_jamjump01_c01
 		}
 	]
 }
-s_pretty_singersinging01_thekill = {
+S_Pretty_SingerSinging01_theKill = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
@@ -13269,391 +13269,391 @@ s_pretty_singersinging01_thekill = {
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pretty_singersinging01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pretty_singersinging01_c01
 		}
 	]
 }
-g_metalsolo04_thekill = {
+G_MetalSolo04_theKill = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_metalsolo04
+		Guitarist = G_MetalSolo04
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo04_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo04_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo04_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo04_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_pointsinging04_thekill = {
+S_pointsinging04_theKill = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_pointsinging04
+		vocalist = S_pointsinging04
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging04_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointsinging04_c01
 		}
 	]
 }
-s_loveme_pointing_thekill = {
+S_loveme_pointing_theKill = {
 	anims = {
-		vocalist = s_loveme_pointing01
+		vocalist = S_loveme_pointing01
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_loveme_pointing01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_loveme_pointing01_c01
 		}
 	]
 }
-gsb_pretty_jamming01_thekill = {
+GSB_Pretty_Jamming01_theKill = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_pretty_jamming01_g
+		Guitarist = gsb_pretty_jamming01_g
 		vocalist = gsb_pretty_jamming01_s
-		BASSIST = gsb_pretty_jamming01_b
+		bassist = gsb_pretty_jamming01_b
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_pretty_jamming01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_pretty_jamming01_c01
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_pretty_jamming01_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_pretty_jamming01_c02
 		}
 	]
 }
-s_pointup01_thekill = {
+S_PointUp01_theKill = {
 	anims = {
-		vocalist = s_pointup01
+		vocalist = S_PointUp01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointup01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_PointUp01_c01
 		}
 	]
 }
-gsb_jam02_thekill = {
+GSB_Jam02_theKill = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = gsb_s_jam02
-		BASSIST = gsb_b_jam02
-		GUITARIST = gsb_g_jam02
+		vocalist = GSB_S_Jam02
+		bassist = GSB_B_Jam02
+		Guitarist = GSB_G_Jam02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_jam02_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Jam02_c01
 		}
 	]
 }
-s_pretty_sing01_thekill = {
+S_Pretty_Sing01_theKill = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
 		vocalist = s_pretty_sing01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pretty_sing01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pretty_sing01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pretty_sing01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pretty_sing01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_bigstrum02_thekill = {
+G_BigStrum02_theKill = {
 	anims = {
-		GUITARIST = g_bigstrum02
+		Guitarist = G_BigStrum02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_bigstrum02_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_BigStrum02_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-b_quickkick01_thekill = {
+B_QuickKick01_theKill = {
 	startnodes = {
-		BASSIST = 'Bassist_start'
+		bassist = 'Bassist_start'
 	}
 	anims = {
-		BASSIST = b_quickkick01
+		bassist = B_QuickKick01
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_quickkick01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_QuickKick01_C01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_singtocam08 = {
+S_SingToCam08 = {
 	anims = {
-		vocalist = s_singtocam08
+		vocalist = S_SingToCam08
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam08_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_singtocam08_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_singtocam03_go = {
+S_SingToCam03_Go = {
 	anims = {
-		vocalist = s_singtocam03
+		vocalist = S_SingToCam03
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam03_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCam03_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_mic2audience02_go = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = s_mic2audience02
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mic2audience02_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-s_pointcrowd02_go = {
+S_Mic2Audience02_Go = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_pointcrowd02
+		vocalist = S_Mic2Audience02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointcrowd02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Mic2Audience02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_jump01_go = {
+S_PointCrowd02_Go = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_jump01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_jump01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-gsb_sing2cam01_go = {
-	startnodes = {
-		GUITARIST = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = b_underthestage01
-		vocalist = gsb_s_sing2cam01
-		BASSIST = gsb_b_sing2cam01
+		vocalist = S_PointCrowd02
 	}
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_sing2cam01_c01
-		}
-	]
-}
-g_solo05_go = {
-	startnodes = {
-		guitairstist = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_solo05
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo05_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointcrowd02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gb_back2back01_go = {
+G_Jump01_Go = {
 	startnodes = {
-		BASSIST = 'bassist_start'
-		GUITARIST = 'bassist_start'
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_Jump01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Jump01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+GSB_Sing2Cam01_Go = {
+	startnodes = {
+		Guitarist = 'vocalist_start'
+		vocalist = 'vocalist_start'
+		bassist = 'vocalist_start'
+	}
+	anims = {
+		Guitarist = b_underthestage01
+		vocalist = GSB_S_Sing2Cam01
+		bassist = GSB_B_Sing2Cam01
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Sing2Cam01_c01
+		}
+	]
+}
+G_solo05_Go = {
+	startnodes = {
+		Guitairstist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_Solo05
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_solo05_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+GB_Back2Back01_Go = {
+	startnodes = {
+		bassist = 'bassist_start'
+		Guitarist = 'bassist_start'
 		vocalist = 'guitarist_start'
 	}
 	anims = {
-		BASSIST = gb_back2back01_b
-		GUITARIST = gb_back2back01_g
+		bassist = GB_Back2Back01_B
+		Guitarist = GB_Back2Back01_G
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = gb_back2back01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = GB_Back2Back01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_kick05_go = {
+G_Kick05_Go = {
 	anims = {
-		GUITARIST = g_kick05
+		Guitarist = G_Kick05
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_kick05_c01
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Kick05_c01
 		}
 	]
 }
-g_metalsolo01_go = {
+G_MetalSolo01_Go = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_metalsolo01
+		Guitarist = G_MetalSolo01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-b_look02_go = {
+B_Look02_Go = {
 	anims = {
-		BASSIST = b_look02
+		bassist = B_Look02
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_look02_c01
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = b_look02_c01
 		}
 	]
 }
-s_areyou_standcircle01_go = {
+s_areyou_standcircle01_Go = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
@@ -13662,1340 +13662,1340 @@ s_areyou_standcircle01_go = {
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_areyou_standcircle01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_areyou_standcircle01_c01
 		}
 	]
 }
-b_pretty_jam01_theone = {
+B_Pretty_Jam01_TheOne = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = b_pretty_jam01
+		Guitarist = b_pretty_jam01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = b_pretty_jam01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = b_pretty_jam01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = b_pretty_jam01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = b_pretty_jam01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_crazy_grab_mic_beginning_01_crowley = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = s_crazy_grab_mic_beginning_01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_grab_mic_beginning_01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_grab_mic_beginning_01_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-s_crazy_hands_move_to_side_01_crowley = {
+S_crazy_grab_mic_beginning_01_Crowley = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_crazy_hands_move_to_side_01
+		vocalist = S_crazy_grab_mic_beginning_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_hands_move_to_side_01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_grab_mic_beginning_01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_hands_move_to_side_01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_grab_mic_beginning_01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-b_jamhard01_crowley = {
+S_crazy_hands_move_to_side_01_Crowley = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		vocalist = 'vocalist_start'
 	}
 	anims = {
-		BASSIST = b_jamhard01
+		vocalist = S_crazy_hands_move_to_side_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_jamhard01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_hands_move_to_side_01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_hands_move_to_side_01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_metalsolo04_crowley = {
+B_JamHard01_Crowley = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		GUITARIST = g_metalsolo04
+		bassist = B_JamHard01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo04_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo04_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_JamHard01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_mrcrowley_duckundermic01_crowley = {
+G_MetalSolo04_Crowley = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_MetalSolo04
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo04_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo04_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+S_mrcrowley_duckundermic01_Crowley = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
 		vocalist = s_mrcrowley_duckundermic01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_mrcrowley_duckundermic01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_mrcrowley_duckundermic01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_crazy_clap_grabmic_01_crowley = {
+S_crazy_clap_grabmic_01_Crowley = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_crazy_clap_grabmic_01
+		vocalist = S_crazy_clap_grabmic_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_clap_grabmic_01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_clap_grabmic_01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_crazy_look_to_side_low_01_crowley = {
+S_crazy_look_to_side_low_01_Crowley = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_crazy_look_to_side_low_01
+		vocalist = S_crazy_look_to_side_low_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_look_to_side_low_01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_look_to_side_low_01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_crazy_holdmic_side_to_side_01_crowley = {
+S_crazy_holdmic_side_to_side_01_Crowley = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_crazy_holdmic_sidetoside_01
+		vocalist = S_crazy_holdmic_sidetoside_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_holdmic_sidetoside_01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_holdmic_sidetoside_01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_holdmic_sidetoside_01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_holdmic_sidetoside_01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_metalsolo01_crowley = {
+G_MetalSolo01_Crowley = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_metalsolo01
+		Guitarist = G_MetalSolo01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_crazy_armsapart_clapping_01_crowley = {
+S_crazy_armsapart_clapping_01_Crowley = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_crazy_armsapart_clapping_01
+		vocalist = S_crazy_armsapart_clapping_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_armsapart_clapping_01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_armsapart_clapping_01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_crazy_armsapart_clapping_01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_crazy_armsapart_clapping_01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-b_jamstagger01_crowley = {
+B_JamStagger01_Crowley = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		BASSIST = b_jamstagger01
+		bassist = B_JamStagger01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_jamstagger01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_JamStagger01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_slowintro_crowley = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-		GUITARIST = 'guitarist_start'
-		BASSIST = 'bassist_start'
-	}
-	anims = {
-		vocalist = sing_jeff_lowkey_075_01
-		GUITARIST = g_jeff_lowkey_100_01
-		BASSIST = b_jeff_lowkey_075_01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = sing_jeff_lowkey_075_01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = sing_jeff_lowkey_075_01_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-gsb_slowintro_crowley_singlevocalbassist = {
+GSB_slowIntro_Crowley = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		vocalist = sing_jeff_lowkey_075_01
-		GUITARIST = g_jeff_lowkey_100_01
+		vocalist = SING_Jeff_Lowkey_075_01
+		Guitarist = G_Jeff_LowKey_100_01
+		bassist = B_Jeff_LowKey_075_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = sing_jeff_lowkey_075_01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = Sing_Jeff_LowKey_075_01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = sing_jeff_lowkey_075_01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = Sing_Jeff_LowKey_075_01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_areyou_singpoint01 = {
+GSB_slowIntro_Crowley_SingleVocalBassist = {
 	startnodes = {
 		vocalist = 'vocalist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		vocalist = s_areyou_singpoint01
+		vocalist = SING_Jeff_Lowkey_075_01
+		Guitarist = G_Jeff_LowKey_100_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_areyou_singpoint01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = Sing_Jeff_LowKey_075_01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = Sing_Jeff_LowKey_075_01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_areyou_micoffstand01 = {
+S_AreYou_SingPoint01 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_areyou_micoffstand01
+		vocalist = S_AreYou_SingPoint01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_areyou_micoffstand01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_areyou_singpoint01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_areyou_hitbignote01 = {
+S_AreYou_MicOffStand01 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_areyou_hitbignote01
+		vocalist = S_AreYou_MicOffStand01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_areyou_hitbignote01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_areyou_micoffstand01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-toomuch_gs_jam01 = {
+S_AreYou_HitBigNote01 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		GUITARIST = 'vocalist_start'
 	}
 	anims = {
-		vocalist = gsb_s_jam01
-		GUITARIST = gsb_g_jam01
+		vocalist = S_AreYou_HitBigNote01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_jam01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_jam01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_AreYou_HitBigNote01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_ted_stranglehold01_01 = {
+TooMuch_GS_Jam01 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		vocalist = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = g_ted_stranglehold01_01
+		vocalist = GSB_S_Jam01
+		Guitarist = GSB_G_Jam01
 	}
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_ted_stranglehold01_01_c01
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_ted_stranglehold01_01_c02
-		}
-	]
-}
-g_ted_stranglehold01_02 = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_ted_stranglehold01_02
-	}
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_ted_stranglehold01_02_c01
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_ted_stranglehold01_02_c02
-		}
-	]
-}
-g_ted_stranglehold01_03 = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_ted_stranglehold01_03
-	}
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_ted_stranglehold01_03_c01
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_ted_stranglehold01_03_c02
-		}
-	]
-}
-g_ted_stranglehold01_04 = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_ted_stranglehold01_04
-	}
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_ted_stranglehold01_04_c01
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_ted_stranglehold01_04_c02
-		}
-	]
-}
-g_ted_stranglehold01_05 = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_ted_stranglehold01_05
-	}
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_ted_stranglehold01_05_c01
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_ted_stranglehold01_05_c02
-		}
-	]
-}
-g_ted_stranglehold02_01 = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_ted_stranglehold02_01
-	}
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_ted_stranglehold02_01_c01
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_ted_stranglehold02_01_c02
-		}
-	]
-}
-g_ted_stranglehold02_02 = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_ted_stranglehold02_02
-	}
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_ted_stranglehold02_02_c01
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_ted_stranglehold02_02_c02
-		}
-	]
-}
-g_ted_stranglehold02_03 = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_ted_stranglehold02_03
-	}
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_ted_stranglehold02_03_c01
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_ted_stranglehold02_03_c02
-		}
-	]
-}
-scream_g_metalsolo02 = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_metalsolo02
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Jam01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo02_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Jam01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-scream_g_metalsolo03 = {
+G_Ted_Stranglehold01_01 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_Ted_Stranglehold01_01
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Ted_Stranglehold01_01_c01
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Ted_Stranglehold01_01_c02
+		}
+	]
+}
+G_Ted_Stranglehold01_02 = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_Ted_Stranglehold01_02
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Ted_Stranglehold01_02_c01
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Ted_Stranglehold01_02_c02
+		}
+	]
+}
+G_Ted_Stranglehold01_03 = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_Ted_Stranglehold01_03
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Ted_Stranglehold01_03_c01
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Ted_Stranglehold01_03_c02
+		}
+	]
+}
+G_Ted_Stranglehold01_04 = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_Ted_Stranglehold01_04
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Ted_Stranglehold01_04_c01
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Ted_Stranglehold01_04_c02
+		}
+	]
+}
+G_Ted_Stranglehold01_05 = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_Ted_Stranglehold01_05
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Ted_Stranglehold01_05_c01
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Ted_Stranglehold01_05_c02
+		}
+	]
+}
+G_Ted_Stranglehold02_01 = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_Ted_Stranglehold02_01
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Ted_Stranglehold02_01_c01
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Ted_Stranglehold02_01_c02
+		}
+	]
+}
+G_Ted_Stranglehold02_02 = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_Ted_Stranglehold02_02
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Ted_Stranglehold02_02_c01
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Ted_Stranglehold02_02_c02
+		}
+	]
+}
+G_Ted_Stranglehold02_03 = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_Ted_Stranglehold02_03
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Ted_Stranglehold02_03_c01
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Ted_Stranglehold02_03_c02
+		}
+	]
+}
+Scream_G_MetalSolo02 = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_MetalSolo02
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo02_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo02_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+Scream_G_MetalSolo03 = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
 		vocalist = 'Vocalist_start'
 	}
 	anims = {
-		GUITARIST = g_metalsolo03
-		vocalist = s_metalrockin01
+		Guitarist = G_MetalSolo03
+		vocalist = S_MetalRockin01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo03_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo03_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo03_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo03_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-scream_g_metalsolo04 = {
+Scream_G_MetalSolo04 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_metalsolo04
+		Guitarist = G_MetalSolo04
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo04_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo04_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo04_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo04_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-scream_g_metalsolo022 = {
+Scream_G_MetalSolo022 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 		vocalist = 'Vocalist_start'
 	}
 	anims = {
-		GUITARIST = g_metalsolo04
-		vocalist = s_metalrockin01
+		Guitarist = G_MetalSolo04
+		vocalist = S_MetalRockin01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo04_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo04_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo04_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo04_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-scream_s_metalrockin01 = {
+Scream_S_MetalRockin01 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_metalrockin01
+		vocalist = S_MetalRockin01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_metalrockin01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_metalrockin01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_metalrockin01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_MetalRockin01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-scream_g_bigstrum04 = {
+Scream_G_BigStrum04 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = g_bigstrum04
-		vocalist = s_metalrockin01
+		Guitarist = G_BigStrum04
+		vocalist = S_MetalRockin01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_bigstrum04_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_BigStrum04_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_bigstrum04_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_BigStrum04_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-scream_b_jamside2side01 = {
+Scream_B_JamSide2Side01 = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		BASSIST = b_jamside2side01
+		bassist = B_JamSide2Side01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_jamside2side01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_JamSide2Side01_C01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-scream_b_quickkick01 = {
+Scream_B_QuickKick01 = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		BASSIST = b_quickkick01
+		bassist = B_QuickKick01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_quickkick01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_QuickKick01_C01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-scream_g_attached02 = {
+Scream_G_Attached02 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_attached02
+		Guitarist = G_Attached02
 	}
-	measures = 3
+	Measures = 3
 }
-scream_gb_playjumping = {
+Scream_GB_PlayJumping = {
 	startnodes = {
-		BASSIST = 'guitarist_start'
-		GUITARIST = 'guitarist_start'
+		bassist = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		BASSIST = gb_playjumping_b
-		GUITARIST = gb_playjumping_g
+		bassist = GB_PlayJumping_B
+		Guitarist = GB_PlayJumping_G
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = gb_playjumping_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = GB_PlayJumping_C01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-scream_g_solo23 = {
+Scream_G_Solo23 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_solo23
+		Guitarist = G_Solo23
 	}
-	measures = 3
-	arms = {
-		GUITARIST = {
-			ik_targetl = guitar
-			ik_targetr = slave
-			strum = OFF
-			fret = On
-			chord = On
+	Measures = 3
+	Arms = {
+		Guitarist = {
+			IK_TargetL = guitar
+			IK_TargetR = slave
+			strum = off
+			fret = on
+			chord = on
 		}
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo23_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo23_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo23_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo23_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-another_g_jamjump01 = {
+Another_G_JamJump01 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_jamjump01
+		Guitarist = g_jamjump01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_jamjump01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_jamjump01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-another_g_attached02 = {
+Another_G_Attached02 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_attached02
+		Guitarist = G_Attached02
 	}
-	measures = 3
+	Measures = 3
 }
-another_gsjam01 = {
+Another_GSJam01 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 		vocalist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = gsb_g_gsjam01
-		vocalist = gsb_s_gsjam01
+		Guitarist = GSB_G_GSJam01
+		vocalist = GSB_S_GSJam01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = gsb_gsjam01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = GSB_GSJam01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_gsjam01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_GSJam01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-another_g_jump01 = {
+Another_G_Jump01 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_jump01
+		Guitarist = G_Jump01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_jump01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Jump01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-ourtruth_gsb_start02 = {
+OurTruth_GSB_Start02 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = g_lowkey01
-		BASSIST = gsb_b_start02
-		vocalist = gsb_s_start02
+		Guitarist = G_LowKey01
+		bassist = GSB_B_Start02
+		vocalist = GSB_S_Start02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_start02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Start02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-ourtruth_gs_start02 = {
+OurTruth_GS_Start02 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		GUITARIST = g_lowkey01
-		vocalist = gsb_s_start02
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_start02_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-ourtruth_gb_singatmic120 = {
-	startnodes = {
-		GUITARIST = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-	}
-	anims = {
-		GUITARIST = gsb_g_singatmic_120
-		BASSIST = gsb_b_singatmic_120
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_120_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_120_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-ourtruth_b_playstrut02 = {
-	startnodes = {
-		BASSIST = 'bassist_start'
-	}
-	anims = {
-		BASSIST = b_pretty_playstrut02
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_pretty_playstrut02_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-ourtruth_s_metalrockin01 = {
-	startnodes = {
+		Guitarist = 'guitarist_start'
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_metalrockin01
+		Guitarist = G_LowKey01
+		vocalist = GSB_S_Start02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_metalrockin01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_metalrockin01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Start02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-ourtruth_gsb_finish01 = {
+OurTruth_GB_SingAtMic120 = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
+		bassist = 'vocalist_start'
+	}
+	anims = {
+		Guitarist = gsb_g_singatmic_120
+		bassist = GSB_B_SingAtMic_120
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_120_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_120_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+OurTruth_B_PlayStrut02 = {
+	startnodes = {
+		bassist = 'bassist_start'
+	}
+	anims = {
+		bassist = b_pretty_playstrut02
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = b_pretty_playstrut02_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+OurTruth_S_MetalRockin01 = {
+	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_g_finish01
-		BASSIST = gsb_b_finish01
-		vocalist = gsb_s_finish01
+		vocalist = S_MetalRockin01
 	}
-	measures = 3
-	arms = {
-		GUITARIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_metalrockin01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
 		}
-		BASSIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_MetalRockin01_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+OurTruth_GSB_Finish01 = {
+	startnodes = {
+		Guitarist = 'vocalist_start'
+		bassist = 'vocalist_start'
+		vocalist = 'vocalist_start'
+	}
+	anims = {
+		Guitarist = GSB_G_Finish01
+		bassist = GSB_B_Finish01
+		vocalist = GSB_S_Finish01
+	}
+	Measures = 3
+	Arms = {
+		Guitarist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
+		}
+		bassist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_finish01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_finish01_c01
 		}
 	]
 }
-ourtruth_gsb_notempo_uj_01 = {
+OurTruth_GSB_NoTempo_UJ_01 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		GUITARIST = gsb_g_notempo_uj_01
-		vocalist = gsb_s_notempo_uj_01
-		BASSIST = gsb_b_notempo_uj_01
+		Guitarist = GSB_G_NoTempo_UJ_01
+		vocalist = GSB_S_NoTempo_UJ_01
+		bassist = GSB_B_NoTempo_UJ_01
 	}
-	measures = 3
-	arms = {
-		GUITARIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+	Measures = 3
+	Arms = {
+		Guitarist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
-		BASSIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+		bassist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 	}
 }
-s_misery_business_01 = {
+S_Misery_Business_01 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_misery_business_01
+		vocalist = S_Misery_Business_01
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_misery_business_01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Misery_Business_01_c01
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_misery_business_01_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Misery_Business_01_c02
 		}
 	]
 }
-s_misery_business_02 = {
+S_Misery_Business_02 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_misery_business_02
+		vocalist = S_Misery_Business_02
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_misery_business_02_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Misery_Business_02_c01
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_misery_business_02_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Misery_Business_02_c02
 		}
 	]
 }
-s_misery_business_03 = {
+S_Misery_Business_03 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_misery_business_03
+		vocalist = S_Misery_Business_03
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_misery_business_03_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Misery_Business_03_c01
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_misery_business_03_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Misery_Business_03_c02
 		}
 	]
 }
-gs_freak_leash_01 = {
+GS_Freak_Leash_01 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = gs_s_freak_leash_01
-		GUITARIST = gs_g_freak_leash_01
+		vocalist = GS_S_Freak_Leash_01
+		Guitarist = GS_G_Freak_Leash_01
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gs_freak_leash_01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GS_Freak_Leash_01_c01
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gs_freak_leash_01_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GS_Freak_Leash_01_c02
 		}
 	]
 }
-gs_freak_leash_02 = {
+GS_Freak_Leash_02 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = gs_s_freak_leash_02
-		GUITARIST = gs_g_freak_leash_02
+		vocalist = GS_S_Freak_Leash_02
+		Guitarist = GS_G_Freak_Leash_02
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gs_freak_leash_02_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GS_Freak_Leash_02_c01
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gs_freak_leash_02_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GS_Freak_Leash_02_c02
 		}
 	]
 }
-gs_freak_leash_03 = {
+GS_Freak_Leash_03 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = gs_s_freak_leash_03
-		GUITARIST = gs_g_freak_leash_03
+		vocalist = GS_S_Freak_Leash_03
+		Guitarist = GS_G_Freak_Leash_03
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gs_freak_leash_03_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GS_Freak_Leash_03_c01
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gs_freak_leash_03_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GS_Freak_Leash_03_c02
 		}
 	]
 }
-gs_freak_leash_04 = {
+GS_Freak_Leash_04 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = gs_s_freak_leash_04
-		GUITARIST = gs_g_freak_leash_04
+		vocalist = GS_S_Freak_Leash_04
+		Guitarist = GS_G_Freak_Leash_04
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gs_freak_leash_04_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GS_Freak_Leash_04_c01
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gs_freak_leash_04_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GS_Freak_Leash_04_c02
 		}
 	]
 }
-gsb_sing_hop02_byob = {
+GSB_Sing_Hop02_BYOB = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = gsb_s_sing_hop02
-		BASSIST = gsb_b_sing_hop02
-		GUITARIST = gsb_g_sing_hop02
+		vocalist = GSB_S_Sing_Hop02
+		bassist = GSB_B_Sing_Hop02
+		Guitarist = GSB_G_Sing_Hop02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_sing_hop02_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Sing_Hop02_c01
 		}
 	]
 }
-s_pretty_singersinging01_byob = {
+S_Pretty_SingerSinging01_BYOB = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
@@ -15004,1857 +15004,1857 @@ s_pretty_singersinging01_byob = {
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pretty_singersinging01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pretty_singersinging01_c01
 		}
 	]
 }
-g_metalsolo09_byob = {
+G_MetalSolo09_BYOB = {
 	startnodes = {
-		GUITARIST = 'Guitarist_start'
+		Guitarist = 'Guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_metalsolo09
+		Guitarist = G_MetalSolo09
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo09_c01
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_metalsolo09_c01
 		}
 	]
 }
-g_metalsolo07_byob = {
+G_MetalSolo07_BYOB = {
 	startnodes = {
-		GUITARIST = 'Guitarist_start'
+		Guitarist = 'Guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_metalsolo07
+		Guitarist = G_MetalSolo07
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo07_c01
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo07_c01
 		}
 	]
 }
-s_pretty_sing01_byob = {
+S_Pretty_Sing01_BYOB = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
 		vocalist = s_pretty_sing01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pretty_sing01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pretty_sing01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pretty_sing01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pretty_sing01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_pointsinging04_byob = {
+S_pointsinging04_BYOB = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_pointsinging04
+		vocalist = S_pointsinging04
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging04_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointsinging04_c01
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging04_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointsinging04_c02
 		}
 	]
 }
-gsb_pretty_jamming01_byob = {
+GSB_Pretty_Jamming01_BYOB = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_pretty_jamming01_g
+		Guitarist = gsb_pretty_jamming01_g
 		vocalist = gsb_pretty_jamming01_s
-		BASSIST = gsb_pretty_jamming01_b
+		bassist = gsb_pretty_jamming01_b
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_pretty_jamming01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_pretty_jamming01_c01
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_pretty_jamming01_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_pretty_jamming01_c02
 		}
 	]
 }
-b_jamstagger01_byob = {
+B_JamStagger01_BYOB = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		BASSIST = b_jamstagger01
+		bassist = B_JamStagger01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_jamstagger01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_JamStagger01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gs_pretty_sing02_byob = {
+GS_Pretty_Sing02_BYOB = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gs_pretty_sing02_g
+		Guitarist = gs_pretty_sing02_g
 		vocalist = gs_pretty_sing02_s
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gs_pretty_sing02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gs_pretty_sing02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gs_pretty_sing02_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-s_jeffs_hotforteacher_04_byob = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = s_jeffs_hotforteacher_04_small
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_jeffs_hotforteacher_04_c01_small
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gs_pretty_sing02_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_livinprayer_05_byob = {
+S_JeffS_HotForTeacher_04_BYOB = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_livinprayer_05
+		vocalist = S_JeffS_HotForTeacher_04_small
 	}
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_livinprayer_05_c01
-		}
-	]
-}
-gsb_floaton_01 = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-		GUITARIST = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-		drummer = 'drummer_start'
-	}
-	anims = {
-		vocalist = gsb_s_floaton01
-		GUITARIST = gsb_g_floaton01
-		BASSIST = gsb_b_floaton01
-		drummer = gsb_d_floaton01
-	}
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_floaton01_c01
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_floaton01_c02
-		}
-	]
-}
-gsb_floaton_02 = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-		GUITARIST = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-		drummer = 'drummer_start'
-	}
-	anims = {
-		vocalist = gsb_s_floaton02
-		GUITARIST = gsb_g_floaton02
-		BASSIST = gsb_b_floaton02
-		drummer = gsb_d_floaton02
-	}
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_floaton02_c01
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_floaton02_c02
-		}
-	]
-}
-gsb_floaton_03 = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-		GUITARIST = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-		drummer = 'drummer_start'
-	}
-	anims = {
-		vocalist = gsb_s_floaton03
-		GUITARIST = gsb_g_floaton03
-		BASSIST = gsb_b_floaton03
-		drummer = gsb_d_floaton03
-	}
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_floaton03_c01
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_floaton03_c02
-		}
-	]
-}
-gsb_floaton_04 = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-		GUITARIST = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-		drummer = 'drummer_start'
-	}
-	anims = {
-		vocalist = gsb_s_floaton04
-		GUITARIST = gsb_g_floaton04
-		BASSIST = gsb_b_floaton04
-		drummer = gsb_d_floaton04
-	}
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_floaton04_c01
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_floaton04_c02
-		}
-	]
-}
-gsb_singatmic_120_b_nevertoolate = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-		BASSIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = gsb_g_singatmic_120_b
-		BASSIST = gsb_b_singatmic_120_b
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = gsb_singatmic_120_b_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = gsb_singatmic_120_b_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_JeffS_HotForTeacher_04_c01_small
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gs_playtogether01 = {
+S_LivinPrayer_05_BYOB = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		vocalist = 'vocalist_start'
+	}
+	anims = {
+		vocalist = S_LivinPrayer_05
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_livinprayer_05_c01
+		}
+	]
+}
+GSB_FloatOn_01 = {
+	startnodes = {
+		vocalist = 'vocalist_start'
+		Guitarist = 'vocalist_start'
+		bassist = 'vocalist_start'
+		Drummer = 'drummer_start'
+	}
+	anims = {
+		vocalist = GSB_S_FloatOn01
+		Guitarist = GSB_G_FloatOn01
+		bassist = GSB_B_FloatOn01
+		Drummer = GSB_D_FloatOn01
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_FloatOn01_C01
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_FloatOn01_C02
+		}
+	]
+}
+GSB_FloatOn_02 = {
+	startnodes = {
+		vocalist = 'vocalist_start'
+		Guitarist = 'vocalist_start'
+		bassist = 'vocalist_start'
+		Drummer = 'drummer_start'
+	}
+	anims = {
+		vocalist = GSB_S_FloatOn02
+		Guitarist = GSB_G_FloatOn02
+		bassist = GSB_B_FloatOn02
+		Drummer = GSB_D_FloatOn02
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_FloatOn02_C01
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_FloatOn02_C02
+		}
+	]
+}
+GSB_FloatOn_03 = {
+	startnodes = {
+		vocalist = 'vocalist_start'
+		Guitarist = 'vocalist_start'
+		bassist = 'vocalist_start'
+		Drummer = 'drummer_start'
+	}
+	anims = {
+		vocalist = GSB_S_FloatOn03
+		Guitarist = GSB_G_FloatOn03
+		bassist = GSB_B_FloatOn03
+		Drummer = GSB_D_FloatOn03
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_FloatOn03_C01
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_FloatOn03_C02
+		}
+	]
+}
+GSB_FloatOn_04 = {
+	startnodes = {
+		vocalist = 'vocalist_start'
+		Guitarist = 'vocalist_start'
+		bassist = 'vocalist_start'
+		Drummer = 'drummer_start'
+	}
+	anims = {
+		vocalist = GSB_S_FloatOn04
+		Guitarist = GSB_G_FloatOn04
+		bassist = GSB_B_FloatOn04
+		Drummer = GSB_D_FloatOn04
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_FloatOn04_C01
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_FloatOn04_C02
+		}
+	]
+}
+GSB_SingAtMic_120_B_NeverTooLate = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+		bassist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = GSB_G_SingAtMic_120_B
+		bassist = GSB_B_SingAtMic_120_B
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = gsb_singatmic_120_b_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = GSB_SingAtMic_120_B_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+GS_PlayTogether01 = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
 		vocalist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = gs_g_playtogether01
-		vocalist = gs_s_playtogether01
+		Guitarist = GS_G_PlayTogether01
+		vocalist = GS_S_PlayTogether01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = gs_playtogether01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = GS_PlayTogether01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = gs_playtogether01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = GS_PlayTogether01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-heartbreaker_gsb_jam01 = {
+Heartbreaker_GSB_Jam01 = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_g_jam01
-		vocalist = gsb_s_jam01
+		Guitarist = GSB_G_Jam01
+		vocalist = GSB_S_Jam01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_jam01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Jam01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-heartbreaker_gsb_jam04 = {
+Heartbreaker_GSB_Jam04 = {
 	startnodes = {
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		BASSIST = gsb_jam04_b
+		bassist = GSB_Jam04_B
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_jam04_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Jam04_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_jam04_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Jam04_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-heartbreaker_gsb_sing_hop01 = {
+Heartbreaker_GSB_Sing_Hop01 = {
 	startnodes = {
-		BASSIST = 'vocalist_start'
-		GUITARIST = 'vocalist_start'
+		bassist = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		BASSIST = gsb_b_sing_hop01
-		GUITARIST = gsb_g_sing_hop01
-		vocalist = gsb_s_sing_hop01
+		bassist = GSB_B_Sing_Hop01
+		Guitarist = GSB_G_Sing_Hop01
+		vocalist = GSB_S_Sing_Hop01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_sing_hop01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Sing_Hop01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_sing_hop01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Sing_Hop01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_sing_hop01_c03
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Sing_Hop01_c03
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-heartbreaker_gsb_orbitguit01 = {
+Heartbreaker_GSB_OrbitGuit01 = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_g_orbitguit01
+		Guitarist = GSB_G_OrbitGuit01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_orbitguit01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_OrbitGuit01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-heartbreaker_s_eye_point2cam01 = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = s_eye_point2cam01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_eye_point2cam01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-heartbreaker_g_solo11 = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_solo11
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo11_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo11_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-heartbreaker_g_solo14 = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	disableik = FALSE
-	anims = {
-		GUITARIST = g_solo14
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo14_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo14_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-heartbreaker_g_solo18 = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_solo18
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo18_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo18_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-heartbreaker_g_solo25 = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_solo25
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo25_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo25_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-heartbreaker_g_solo26 = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_solo26
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo26_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo26_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-heartbreaker_g_solo22 = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_solo22
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo22_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo22_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-somemightsay_s_sing03 = {
+Heartbreaker_S_Eye_Point2Cam01 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_sing03
+		vocalist = S_Eye_Point2Cam01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_sing03_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_eye_point2cam01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
 		}
 	]
 }
-somemightsay_s_singtocrowd01 = {
+Heartbreaker_G_Solo11 = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_Solo11
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo11_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo11_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+Heartbreaker_G_Solo14 = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	DisableIK = false
+	anims = {
+		Guitarist = G_Solo14
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo14_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo14_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+Heartbreaker_G_Solo18 = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_Solo18
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo18_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo18_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+Heartbreaker_G_Solo25 = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_Solo25
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo25_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo25_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+Heartbreaker_G_Solo26 = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_Solo26
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo26_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo26_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+Heartbreaker_G_Solo22 = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_Solo22
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo22_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo22_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+SomeMightSay_S_Sing03 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_singtocrowd01
+		vocalist = S_Sing03
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocrowd01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocrowd01_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Sing03_c01
 		}
 	]
 }
-somemightsay_s_singtocam01 = {
+SomeMightSay_S_SingToCrowd01 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_singtocam01
+		vocalist = S_SingToCrowd01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCrowd01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCrowd01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-somemightsay_b_jam2crowd01 = {
+SomeMightSay_S_SingToCam01 = {
 	startnodes = {
-		BASSIST = 'bassist_start'
-	}
-	anims = {
-		BASSIST = b_jam2crowd01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_jam2crowd01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-somemightsay_g_solo13 = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_solo13
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo13_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo13_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-somemightsay_g_solo15 = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_solo15
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo15_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo15_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-somemightsay_g_solo17 = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_solo17
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo17_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo17_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-somemightsay_g_solo18 = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_solo18
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo18_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo18_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-somemightsay_gsb_finish01 = {
-	startnodes = {
-		GUITARIST = 'vocalist_start'
-		BASSIST = 'vocalist_start'
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_g_finish01
-		BASSIST = gsb_b_finish01
-		vocalist = gsb_s_finish01
+		vocalist = S_SingToCam01
 	}
-	measures = 3
-	arms = {
-		GUITARIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCam01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
 		}
-		BASSIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCam01_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+SomeMightSay_B_Jam2Crowd01 = {
+	startnodes = {
+		bassist = 'bassist_start'
+	}
+	anims = {
+		bassist = B_Jam2Crowd01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_Jam2Crowd01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+SomeMightSay_G_Solo13 = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_Solo13
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo13_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo13_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+SomeMightSay_G_Solo15 = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_Solo15
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo15_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo15_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+SomeMightSay_G_Solo17 = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_Solo17
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo17_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo17_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+SomeMightSay_G_Solo18 = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_Solo18
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo18_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo18_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+SomeMightSay_GSB_Finish01 = {
+	startnodes = {
+		Guitarist = 'vocalist_start'
+		bassist = 'vocalist_start'
+		vocalist = 'vocalist_start'
+	}
+	anims = {
+		Guitarist = GSB_G_Finish01
+		bassist = GSB_B_Finish01
+		vocalist = GSB_S_Finish01
+	}
+	Measures = 3
+	Arms = {
+		Guitarist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
+		}
+		bassist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_finish01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_finish01_c01
 		}
 	]
 }
-somemightsay_gsb_notempo_uj_01 = {
+SomeMightSay_GSB_NoTempo_UJ_01 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		GUITARIST = gsb_g_notempo_uj_01
-		vocalist = gsb_s_notempo_uj_01
-		BASSIST = gsb_b_notempo_uj_01
+		Guitarist = GSB_G_NoTempo_UJ_01
+		vocalist = GSB_S_NoTempo_UJ_01
+		bassist = GSB_B_NoTempo_UJ_01
 	}
-	measures = 3
-	arms = {
-		GUITARIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+	Measures = 3
+	Arms = {
+		Guitarist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
-		BASSIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+		bassist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 	}
 }
-somemightsay_s_hotelcalifornia_jam01 = {
+SomeMightSay_S_HotelCalifornia_jam01 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_hotelcalifornia_jam01
+		vocalist = S_HotelCalifornia_jam01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_hotelcalifornia_jam01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_hotelcalifornia_jam01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-sb_sing01 = {
+SB_Sing01 = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 		vocalist = 'bassist_start'
 	}
 	anims = {
-		BASSIST = sb_sing01_b
-		vocalist = sb_sing01_s
+		bassist = SB_Sing01_B
+		vocalist = SB_Sing01_S
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = sb_sing01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = SB_Sing01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_jump01_oas = {
+GSB_Jump01_OAS = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = gsb_s_jump01
-		BASSIST = gsb_b_jump01
-		GUITARIST = gsb_g_jump01
+		vocalist = GSB_S_Jump01
+		bassist = GSB_B_Jump01
+		Guitarist = GSB_G_Jump01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_jump01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Jump01_c01
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_jump01_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Jump01_c02
 		}
 	]
 }
-gsb_orbitdrum01_oas = {
+GSB_OrbitDrum01_OAS = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = gsb_s_orbitdrum01
-		BASSIST = gsb_b_orbitdrum01
-		GUITARIST = gsb_g_orbitdrum01
+		vocalist = GSB_S_OrbitDrum01
+		bassist = GSB_B_OrbitDrum01
+		Guitarist = GSB_G_OrbitDrum01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_orbitdrum01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_OrbitDrum01_c01
 		}
 	]
 }
-s_pointsinging04_oas = {
+S_pointsinging04_OAS = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_pointsinging04
+		vocalist = S_pointsinging04
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging04_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointsinging04_c02
 		}
 	]
 }
-b_quickkick01_oas = {
+B_QuickKick01_OAS = {
 	startnodes = {
-		BASSIST = 'Bassist_start'
+		bassist = 'Bassist_start'
 	}
 	anims = {
-		BASSIST = b_quickkick01
+		bassist = B_QuickKick01
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_quickkick01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_QuickKick01_C01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_metalsolo09_oas = {
+G_MetalSolo09_OAS = {
 	startnodes = {
-		GUITARIST = 'Guitarist_start'
+		Guitarist = 'Guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_metalsolo09
+		Guitarist = G_MetalSolo09
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo09_c01
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_metalsolo09_c01
 		}
 	]
 }
-gsb_jam02_oas = {
+GSB_Jam02_OAS = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_sing03
-		BASSIST = gsb_b_jam02
-		GUITARIST = gsb_g_jam02
+		vocalist = S_Sing03
+		bassist = GSB_B_Jam02
+		Guitarist = GSB_G_Jam02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_jam02_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Jam02_c01
 		}
 	]
 }
-s_singcampush_oas = {
+S_SingCamPush_OAS = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_singcampush
-		BASSIST = s_singcampush_bass
+		vocalist = S_SingCamPush
+		bassist = S_SingCamPush_Bass
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singcampush_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingCamPush_C01
 		}
 	]
 }
-gsb_pretty_jamming01_oas = {
+GSB_Pretty_Jamming01_OAS = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_pretty_jamming01_g
+		Guitarist = gsb_pretty_jamming01_g
 		vocalist = gsb_pretty_jamming01_s
-		BASSIST = gsb_pretty_jamming01_b
+		bassist = gsb_pretty_jamming01_b
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_pretty_jamming01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_pretty_jamming01_c01
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_pretty_jamming01_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_pretty_jamming01_c02
 		}
 	]
 }
-g_metalsolo07_oas = {
+G_MetalSolo07_OAS = {
 	startnodes = {
-		GUITARIST = 'Guitarist_start'
+		Guitarist = 'Guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_metalsolo07
+		Guitarist = G_MetalSolo07
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo07_c01
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo07_c01
 		}
 	]
 }
-g_spinjumps01_spiderwebs = {
+G_SpinJumps01_Spiderwebs = {
 	anims = {
-		GUITARIST = g_spinjumps01
+		Guitarist = G_SpinJumps01
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_spinjumps01_c01
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_SpinJumps01_C01
 		}
 	]
 }
-gsb_sing_hop01_spiderwebs = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-		GUITARIST = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-	}
-	anims = {
-		vocalist = gsb_s_sing_hop01
-		GUITARIST = gsb_g_sing_hop01
-		BASSIST = gsb_b_sing_hop01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_sing_hop01_c01
-		}
-	]
-}
-b_quickkick01_spiderwebs = {
-	startnodes = {
-		BASSIST = 'Bassist_start'
-	}
-	anims = {
-		BASSIST = b_quickkick01
-	}
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_quickkick01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-s_pointsinging02_spiderwebs = {
+GSB_Sing_Hop01_Spiderwebs = {
 	startnodes = {
 		vocalist = 'vocalist_start'
+		Guitarist = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_pointsinging02
+		vocalist = GSB_S_Sing_Hop01
+		Guitarist = GSB_G_Sing_Hop01
+		bassist = GSB_B_Sing_Hop01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging02_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging02_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Sing_Hop01_c01
 		}
 	]
 }
-g_metalsolo09_spiderwebs = {
+B_QuickKick01_Spiderwebs = {
 	startnodes = {
-		GUITARIST = 'Guitarist_start'
+		bassist = 'Bassist_start'
 	}
 	anims = {
-		GUITARIST = g_metalsolo09
+		bassist = B_QuickKick01
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo09_c01
-		}
-	]
-}
-s_singtocam03_spiderwebs = {
-	anims = {
-		vocalist = s_singtocam03
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam03_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_QuickKick01_C01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_american_03_spiderwebs = {
-	anims = {
-		vocalist = s_american_03
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_03_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_03_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-g_solo10_spiderwebs = {
-	anims = {
-		GUITARIST = g_solo10
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo10_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-s_sing03_spiderwebs = {
+S_PointSinging02_Spiderwebs = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_sing03
+		vocalist = S_PointSinging02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_sing03_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pointsinging02_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
 		}
-	]
-}
-b_jamside2side01_spiderwebs = {
-	startnodes = {
-		BASSIST = 'bassist_start'
-	}
-	anims = {
-		BASSIST = b_jamside2side01
-	}
-	measures = 3
-	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_jamside2side01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_PointSinging02_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_singtocam02_spiderwebs = {
+G_MetalSolo09_Spiderwebs = {
+	startnodes = {
+		Guitarist = 'Guitarist_start'
+	}
+	anims = {
+		Guitarist = G_MetalSolo09
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_metalsolo09_c01
+		}
+	]
+}
+S_SingToCam03_Spiderwebs = {
+	anims = {
+		vocalist = S_SingToCam03
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingToCam03_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+S_american_03_Spiderwebs = {
+	anims = {
+		vocalist = S_american_03
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_american_03_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_american_03_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+G_Solo10_Spiderwebs = {
+	anims = {
+		Guitarist = G_Solo10
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo10_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+S_Sing03_Spiderwebs = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_singtocam02
+		vocalist = S_Sing03
 	}
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam02_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Sing03_c01
 		}
 	]
 }
-gs_endstrum01_spiderwebs = {
+B_JamSide2Side01_Spiderwebs = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		bassist = 'bassist_start'
+	}
+	anims = {
+		bassist = B_JamSide2Side01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_JamSide2Side01_C01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+S_SingToCam02_Spiderwebs = {
+	startnodes = {
+		vocalist = 'vocalist_start'
+	}
+	anims = {
+		vocalist = S_SingToCam02
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_singtocam02_c01
+		}
+	]
+}
+GS_EndStrum01_Spiderwebs = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
 		vocalist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = gs_endstrum01_g
-		vocalist = gs_endstrum01_s
+		Guitarist = GS_EndStrum01_G
+		vocalist = GS_EndStrum01_S
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = gs_endstrum01_c01
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = GS_EndStrum01_c01
 		}
 	]
 }
-nuvole_b_look02 = {
+Nuvole_B_Look02 = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		BASSIST = b_look02
+		bassist = B_Look02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_look02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = b_look02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-nuvole_b_leandown01 = {
+Nuvole_B_LeanDown01 = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		BASSIST = b_leandown01
+		bassist = B_LeanDown01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_leandown01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = b_leandown01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-nuvole_s_pointsinging02 = {
+Nuvole_S_PointSinging02 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_pointsinging02
+		vocalist = S_PointSinging02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pointsinging02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging02_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_PointSinging02_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-nuvole_g_bigstrum03 = {
+Nuvole_G_BigStrum03 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_bigstrum03
+		Guitarist = G_BigStrum03
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_bigstrum03_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_BigStrum03_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_bigstrum03_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_BigStrum03_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-nuvole_gsb_finish01 = {
+Nuvole_GSB_Finish01 = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
+		bassist = 'vocalist_start'
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_g_finish01
-		BASSIST = gsb_b_finish01
-		vocalist = gsb_s_finish01
+		Guitarist = GSB_G_Finish01
+		bassist = GSB_B_Finish01
+		vocalist = GSB_S_Finish01
 	}
-	measures = 3
-	arms = {
-		GUITARIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+	Measures = 3
+	Arms = {
+		Guitarist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
-		BASSIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+		bassist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_finish01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_finish01_c01
 		}
 	]
 }
-g_metalsolo05 = {
+G_MetalSolo05 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_metalsolo05
+		Guitarist = G_MetalSolo05
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo05_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_metalsolo05_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_metalsolo06 = {
+G_MetalSolo06 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_metalsolo06
+		Guitarist = G_MetalSolo06
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo06_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo06_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gs_metalsolo06_hotforteacher = {
+GS_MetalSolo06_HotForTeacher = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 		vocalist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_metalsolo06
-		vocalist = s_jeffs_hotfor_metalsolo06
+		Guitarist = G_MetalSolo06
+		vocalist = S_JeffS_HotFor_MetalSolo06
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo06_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo06_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_metalsolo08 = {
+G_Metalsolo08 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_metalsolo08
+		Guitarist = G_Metalsolo08
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo08_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_MetalSolo08_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_hotforteacher_intro = {
+GSB_HotForTeacher_Intro = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_hotforteacher_intro_g
-		vocalist = gsb_hotforteacher_intro_s
-		BASSIST = gsb_hotforteacher_intro_b
+		Guitarist = GSB_HotForTeacher_Intro_G
+		vocalist = GSB_HotForTeacher_Intro_S
+		bassist = GSB_HotForTeacher_Intro_B
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_hotforteacher_intro_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_HotForTeacher_Intro_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_sing_hotforteacher01 = {
+GSB_Sing_HotForTeacher01 = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_sing_hotforteacher01_g
-		vocalist = gsb_sing_hotforteacher01_s
-		BASSIST = gsb_sing_hotforteacher01_b
+		Guitarist = GSB_Sing_HotForTeacher01_G
+		vocalist = GSB_Sing_HotForTeacher01_S
+		bassist = GSB_Sing_HotForTeacher01_B
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_sing_hotforteacher01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Sing_HotForTeacher01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_sing_hotforteacher02 = {
+GSB_Sing_HotForTeacher02 = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_sing_hotforteacher02_g
-		vocalist = gsb_sing_hotforteacher02_s
-		BASSIST = gsb_sing_hotforteacher02_b
+		Guitarist = GSB_Sing_HotForTeacher02_G
+		vocalist = GSB_Sing_HotForTeacher02_S
+		bassist = GSB_Sing_HotForTeacher02_B
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_sing_hotforteacher02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Sing_HotForTeacher02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_hotforteacher_01 = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = s_hotforteacher_01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_hotforteacher_01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-s_hotforteacher_02a = {
+S_HotForTeacher_01 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_hotforteacher_02a
+		vocalist = S_HotForTeacher_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_hotforteacher_02a_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_HotForTeacher_01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_hotforteacher_02b = {
+S_HotForTeacher_02A = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_hotforteacher_02b
+		vocalist = S_HotForTeacher_02A
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_hotforteacher_02b_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_HotForTeacher_02A_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_hotforteacher_03 = {
+S_HotForTeacher_02B = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_hotforteacher_03
+		vocalist = S_HotForTeacher_02B
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_hotforteacher_03_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_HotForTeacher_02B_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_hotforteacher_03a = {
+S_HotForTeacher_03 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_hotforteacher_03a
+		vocalist = S_HotForTeacher_03
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_hotforteacher_03a_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_HotForTeacher_03_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_hotforteacher_03b = {
+S_HotForTeacher_03A = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_hotforteacher_03b
+		vocalist = S_HotForTeacher_03A
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_hotforteacher_03b_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_HotForTeacher_03A_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_hotforteacher_04 = {
+S_HotForTeacher_03B = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_hotforteacher_04
+		vocalist = S_HotForTeacher_03B
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_hotforteacher_04_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_HotForTeacher_03B_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_hotforteacher_04a = {
+S_HotForTeacher_04 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_hotforteacher_04a
+		vocalist = S_HotForTeacher_04
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_hotforteacher_04a_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_HotForTeacher_04_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_hotforteacher_04b = {
+S_HotForTeacher_04A = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_hotforteacher_04b
+		vocalist = S_HotForTeacher_04A
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_hotforteacher_04b_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_HotForTeacher_04A_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_hotforteacher_04c = {
+S_HotForTeacher_04B = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_hotforteacher_04c
+		vocalist = S_HotForTeacher_04B
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_hotforteacher_04c_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_HotForTeacher_04B_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+S_HotForTeacher_04C = {
+	startnodes = {
+		vocalist = 'vocalist_start'
+	}
+	anims = {
+		vocalist = S_HotForTeacher_04C
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_HotForTeacher_04C_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
@@ -16867,14 +16867,14 @@ s_jeffs_hotforteacher_01 = {
 	anims = {
 		vocalist = s_jeffs_hotforteacher_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_jeffs_hotforteacher_01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_jeffs_hotforteacher_01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
@@ -16887,732 +16887,732 @@ s_jeffs_hotforteacher_02 = {
 	anims = {
 		vocalist = s_jeffs_hotforteacher_02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_jeffs_hotforteacher_02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_jeffs_hotforteacher_02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_jeffs_hotforteacher_03 = {
+S_JeffS_HotForTeacher_03 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_jeffs_hotforteacher_03
+		vocalist = S_JeffS_HotForTeacher_03
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_jeffs_hotforteacher_03_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_JeffS_HotForTeacher_03_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_jeffs_hotforteacher_04 = {
+S_JeffS_HotForTeacher_04 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_jeffs_hotforteacher_04
+		vocalist = S_JeffS_HotForTeacher_04
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_jeffs_hotforteacher_04_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_JeffS_HotForTeacher_04_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gs_pretty_sing02_trapped = {
+GS_Pretty_Sing02_Trapped = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gs_pretty_sing02_g
+		Guitarist = gs_pretty_sing02_g
 		vocalist = gs_pretty_sing02_s
-		BASSIST = b_underthestage01
+		bassist = b_underthestage01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gs_pretty_sing02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gs_pretty_sing02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gs_pretty_sing02_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gs_pretty_sing02_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-b_look02_livinprayer = {
+B_Look02_LivinPrayer = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		BASSIST = b_look02
+		bassist = B_Look02
 	}
-	arms = {
-		BASSIST = {
-			ik_targetl = guitar
-			ik_targetr = guitar
-			strum = On
-			fret = On
-			chord = On
+	Arms = {
+		bassist = {
+			IK_TargetL = guitar
+			IK_TargetR = guitar
+			strum = on
+			fret = on
+			chord = on
 		}
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_look02_c01
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = b_look02_c01
 		}
 	]
 }
-b_quickkick01_livinprayer = {
+B_QuickKick01_LivinPrayer = {
 	startnodes = {
-		BASSIST = 'Bassist_start'
+		bassist = 'Bassist_start'
 	}
 	anims = {
-		BASSIST = b_quickkick01
+		bassist = B_QuickKick01
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_quickkick01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_QuickKick01_C01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_sing01_hotblood_livinprayer = {
+GSB_sing01_HotBlood_LivinPrayer = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_sing01_hotblood_g
-		vocalist = gsb_sing01_hotblood_s
-		BASSIST = gsb_sing01_hotblood_b
+		Guitarist = GSB_sing01_HotBlood_G
+		vocalist = GSB_sing01_HotBlood_S
+		bassist = GSB_sing01_HotBlood_B
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_sing01_hotblood_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_sing01_HotBlood_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_pretty_crossing01_livinprayer = {
+GSB_Pretty_Crossing01_LivinPrayer = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_pretty_crossing01_b
+		Guitarist = gsb_pretty_crossing01_b
 		vocalist = gsb_pretty_crossing01_s
-		BASSIST = gsb_pretty_crossing01_g
+		bassist = gsb_pretty_crossing01_g
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_pretty_crossing01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_pretty_crossing01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_pretty_crossing01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_pretty_crossing01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_solo10_livinprayer = {
+G_Solo10_LivinPrayer = {
 	anims = {
-		GUITARIST = g_solo10
+		Guitarist = G_Solo10
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo10_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo10_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_solo12_livinprayer = {
+G_Solo12_LivinPrayer = {
 	anims = {
-		GUITARIST = g_solo12
+		Guitarist = G_Solo12
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo12_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo12_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_spinjumps01_livinprayer = {
+G_SpinJumps01_LivinPrayer = {
 	anims = {
-		GUITARIST = g_spinjumps01
+		Guitarist = G_SpinJumps01
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_spinjumps01_c01
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_SpinJumps01_C01
 		}
 	]
 }
-bs_pretty_singtogether01_livinprayer = {
+BS_Pretty_SingTogether01_LivinPrayer = {
 	startnodes = {
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		BASSIST = bs_pretty_singtogether01_b
+		bassist = bs_pretty_singtogether01_b
 		vocalist = bs_pretty_singtogether01_s
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = bs_pretty_singtogether01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = bs_pretty_singtogether01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = bs_pretty_singtogether01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = bs_pretty_singtogether01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_areyou_swingstand01_livinprayer = {
+s_areyou_swingstand01_LivinPrayer = {
 	anims = {
 		vocalist = s_areyou_swingstand01
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_areyou_swingstand01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_areyou_swingstand01_c01
 		}
 	]
 }
-g_kick04_livinprayer = {
+G_Kick04_LivinPrayer = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_kick04
+		Guitarist = G_kick04
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_kick04_c01
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_kick04_C01
 		}
 	]
 }
-gsb_singatmic_120_livinprayer = {
+GSB_SingAtMic_120_LivinPrayer = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_g_singatmic_120
-		vocalist = gsb_s_singatmic_120
-		BASSIST = gsb_b_singatmic_120
+		Guitarist = gsb_g_singatmic_120
+		vocalist = GSB_S_SingAtMic_120
+		bassist = GSB_B_SingAtMic_120
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_120_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_120_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_120_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_120_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_livinprayer_01_livinprayer = {
+S_LivinPrayer_01_LivinPrayer = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_livinprayer_01
+		vocalist = S_LivinPrayer_01
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_livinprayer_01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_LivinPrayer_01_c01
 		}
 	]
 }
-s_livinprayer_02_livinprayer = {
+S_LivinPrayer_02_LivinPrayer = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_livinprayer_02
+		vocalist = S_LivinPrayer_02
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_livinprayer_02_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_LivinPrayer_02_c01
 		}
 	]
 }
-s_livinprayer_03_livinprayer = {
+S_LivinPrayer_03_LivinPrayer = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_livinprayer_03
+		vocalist = S_LivinPrayer_03
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_livinprayer_03_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_livinprayer_03_c01
 		}
 	]
 }
-s_livinprayer_04_livinprayer = {
+S_LivinPrayer_04_LivinPrayer = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_livinprayer_04
+		vocalist = S_LivinPrayer_04
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_livinprayer_04_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_LivinPrayer_04_c01
 		}
 	]
 }
-s_livinprayer_05_livinprayer = {
+S_LivinPrayer_05_LivinPrayer = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_livinprayer_05
+		vocalist = S_LivinPrayer_05
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_livinprayer_05_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_livinprayer_05_c01
 		}
 	]
 }
-gsb_notempo_uj_01_livinprayer = {
+GSB_NoTempo_UJ_01_LivinPrayer = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = gsb_s_notempo_uj_01
-		BASSIST = gsb_b_notempo_uj_01
-		GUITARIST = gsb_g_notempo_uj_01
+		vocalist = GSB_S_NoTempo_UJ_01
+		bassist = GSB_B_NoTempo_UJ_01
+		Guitarist = GSB_G_NoTempo_UJ_01
 	}
-	arms = {
-		GUITARIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+	Arms = {
+		Guitarist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
-		BASSIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+		bassist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 	}
 }
-thejams_gs_pretty_sing02 = {
+TheJams_GS_Pretty_Sing02 = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gs_pretty_sing02_g
+		Guitarist = gs_pretty_sing02_g
 		vocalist = gs_pretty_sing02_s
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gs_pretty_sing02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gs_pretty_sing02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gs_pretty_sing02_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gs_pretty_sing02_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-thejams_gsb_pretty_jamming01 = {
+TheJams_GSB_Pretty_Jamming01 = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_pretty_jamming01_g
+		Guitarist = gsb_pretty_jamming01_g
 		vocalist = gsb_pretty_jamming01_s
-		BASSIST = gsb_pretty_jamming01_b
+		bassist = gsb_pretty_jamming01_b
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_pretty_jamming01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_pretty_jamming01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_pretty_jamming01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_pretty_jamming01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-thejams_bs_pretty_singtogether01 = {
+TheJams_BS_Pretty_SingTogether01 = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 		vocalist = 'bassist_start'
 	}
 	anims = {
-		BASSIST = bs_pretty_singtogether01_b
+		bassist = bs_pretty_singtogether01_b
 		vocalist = bs_pretty_singtogether01_s
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = bs_pretty_singtogether01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = bs_pretty_singtogether01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = bs_pretty_singtogether01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = bs_pretty_singtogether01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-thejams_gsb_pretty_crossing01 = {
+TheJams_GSB_Pretty_Crossing01 = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_pretty_crossing01_g
+		Guitarist = gsb_pretty_crossing01_g
 		vocalist = gsb_pretty_crossing01_s
-		BASSIST = gsb_pretty_crossing01_b
+		bassist = gsb_pretty_crossing01_b
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_pretty_crossing01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_pretty_crossing01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_pretty_crossing01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_pretty_crossing01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-thejams_gs_pretty_pan01 = {
+TheJams_GS_Pretty_Pan01 = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gs_pretty_pan01_g
+		Guitarist = gs_pretty_pan01_g
 		vocalist = gs_pretty_pan01_s
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gs_pretty_pan01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gs_pretty_pan01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-thejams_gs_pretty_pan02 = {
+TheJams_GS_Pretty_Pan02 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
 		vocalist = gs_pretty_pan01_s
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gs_pretty_pan01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gs_pretty_pan01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-thejams_g_solo10 = {
+TheJams_G_Solo10 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_solo10
+		Guitarist = G_Solo10
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo10_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo10_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo10_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo10_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-thejams_g_solo12 = {
+TheJams_G_Solo12 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_solo12
+		Guitarist = G_Solo12
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo12_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo12_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo12_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo12_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-thejams_g_rockin_150 = {
+TheJams_G_Rockin_150 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_rockin_150
+		Guitarist = G_Rockin_150
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_rockin_150_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Rockin_150_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-thejams_gsb_finish01 = {
+TheJams_GSB_Finish01 = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
+		bassist = 'vocalist_start'
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_g_finish01
-		BASSIST = gsb_b_finish01
-		vocalist = gsb_s_finish01
+		Guitarist = GSB_G_Finish01
+		bassist = GSB_B_Finish01
+		vocalist = GSB_S_Finish01
 	}
-	measures = 3
-	arms = {
-		GUITARIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+	Measures = 3
+	Arms = {
+		Guitarist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
-		BASSIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+		bassist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_finish01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_finish01_c01
 		}
 	]
 }
-thejams_singpoint01 = {
+TheJams_SingPoint01 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_areyou_singpoint01
+		vocalist = S_AreYou_SingPoint01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_areyou_singpoint01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_areyou_singpoint01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-thejams_s_areyou_standcircle01 = {
+TheJams_s_areyou_standcircle01 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
@@ -17621,3029 +17621,3029 @@ thejams_s_areyou_standcircle01 = {
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_areyou_standcircle01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_areyou_standcircle01_c01
 		}
 	]
 }
-labor_s_areyou_hitbignote01 = {
+Labor_S_AreYou_HitBigNote01 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_areyou_hitbignote01
+		vocalist = S_AreYou_HitBigNote01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_areyou_hitbignote01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_AreYou_HitBigNote01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_areyou_hitbignote01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_AreYou_HitBigNote01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-labor_gsb_pretty_jamming01 = {
+Labor_GSB_Pretty_Jamming01 = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_pretty_jamming01_g
+		Guitarist = gsb_pretty_jamming01_g
 		vocalist = gsb_pretty_jamming01_s
-		BASSIST = gsb_pretty_jamming01_b
+		bassist = gsb_pretty_jamming01_b
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_pretty_jamming01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_pretty_jamming01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_pretty_jamming01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_pretty_jamming01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-labor_g_rockin_150 = {
+Labor_G_Rockin_150 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_rockin_150
+		Guitarist = G_Rockin_150
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_rockin_150_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Rockin_150_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-labor_g_solo18 = {
+Labor_G_Solo18 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_solo18
+		Guitarist = G_Solo18
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo18_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo18_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo18_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo18_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-labor_gb_pretty_playwalk01 = {
+Labor_GB_Pretty_PlayWalk01 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
-		BASSIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
+		bassist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = gb_pretty_playwalk01_g
-		BASSIST = gb_pretty_playwalk01_b
+		Guitarist = gb_pretty_playwalk01_g
+		bassist = gb_pretty_playwalk01_b
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = gb_pretty_playwalk01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = gb_pretty_playwalk01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = gb_pretty_playwalk01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = gb_pretty_playwalk01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-labor_s_pointsinging01 = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = s_pointsinging01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging01_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-labor_s_livinprayer_02 = {
+Labor_S_PointSinging01 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_livinprayer_02
+		vocalist = S_pointsinging01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_livinprayer_02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pointsinging01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointsinging01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-labor_s_sing01 = {
+Labor_S_LivinPrayer_02 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_sing01
+		vocalist = S_LivinPrayer_02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_sing01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_LivinPrayer_02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-labor_gsb_finish01 = {
+Labor_S_Sing01 = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
-		BASSIST = 'vocalist_start'
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_g_finish01
-		BASSIST = gsb_b_finish01
-		vocalist = gsb_s_finish01
+		vocalist = S_Sing01
 	}
-	measures = 3
-	arms = {
-		GUITARIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_sing01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
 		}
-		BASSIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+	]
+}
+Labor_GSB_Finish01 = {
+	startnodes = {
+		Guitarist = 'vocalist_start'
+		bassist = 'vocalist_start'
+		vocalist = 'vocalist_start'
+	}
+	anims = {
+		Guitarist = GSB_G_Finish01
+		bassist = GSB_B_Finish01
+		vocalist = GSB_S_Finish01
+	}
+	Measures = 3
+	Arms = {
+		Guitarist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
+		}
+		bassist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_finish01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_finish01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-rooftops_slow_all = {
+Rooftops_Slow_All = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		GUITARIST = 'guitarist_start'
-		BASSIST = 'bassist_start'
+		Guitarist = 'guitarist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		vocalist = rt_sing_rockg_joker
-		GUITARIST = rt_guit_davidicus_joker
-		BASSIST = rt_guit_chrisvance_joker
+		vocalist = RT_Sing_RockG_Joker
+		Guitarist = RT_Guit_Davidicus_Joker
+		bassist = RT_Guit_ChrisVance_Joker
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = rt_sing_rockg_joker_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = RT_Sing_RockG_Joker_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = rt_sing_rockg_joker_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = RT_Sing_RockG_Joker_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = rt_guit_davidicus_joker_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = rt_guit_davidicus_joker_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = rt_guit_davidicus_joker_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = RT_Guit_Davidicus_Joker_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-rooftops_slow_sg = {
+Rooftops_Slow_SG = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		vocalist = rt_sing_rockg_joker
-		GUITARIST = rt_guit_davidicus_joker
+		vocalist = RT_Sing_RockG_Joker
+		Guitarist = RT_Guit_Davidicus_Joker
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = rt_sing_rockg_joker_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = RT_Sing_RockG_Joker_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = rt_sing_rockg_joker_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = RT_Sing_RockG_Joker_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = rt_guit_davidicus_joker_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = rt_guit_davidicus_joker_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = rt_guit_davidicus_joker_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = RT_Guit_Davidicus_Joker_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-rooftops_slow_singer = {
+Rooftops_Slow_Singer = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = rt_sing_rockg_joker
+		vocalist = RT_Sing_RockG_Joker
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = rt_sing_rockg_joker_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = RT_Sing_RockG_Joker_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = rt_sing_rockg_joker_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = RT_Sing_RockG_Joker_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-rooftops_b_look01 = {
+Rooftops_B_Look01 = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		BASSIST = b_look01
+		bassist = B_Look01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_look01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_Look01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-rooftops_b_look02 = {
+Rooftops_B_Look02 = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		BASSIST = b_look02
+		bassist = B_Look02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_look02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = b_look02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-rooftops_gsb_singatmic_075 = {
+Rooftops_GSB_SingAtMic_075 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-		GUITARIST = 'vocalist_start'
+		bassist = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = gsb_s_singatmic_075
-		BASSIST = gsb_b_singatmic_075
-		GUITARIST = gsb_g_singatmic_075
+		vocalist = GSB_S_SingAtMic_075
+		bassist = GSB_B_SingAtMic_075
+		Guitarist = GSB_G_SingAtMic_075
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_075_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_075_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_075_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_075_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-rooftops_g_singatmic = {
+Rooftops_G_SingAtMic = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_g_singatmic_075
+		Guitarist = GSB_G_SingAtMic_075
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_075_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_075_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-rooftops_gs_singcopyguit = {
+Rooftops_GS_SingCopyGuit = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 		vocalist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = gs_jessies_singcopyguit01_g
-		vocalist = gs_jessies_singcopyguit01_s
+		Guitarist = GS_Jessies_SingCopyGuit01_G
+		vocalist = GS_Jessies_SingCopyGuit01_S
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = gs_jessies_singcopyguit01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = gs_jessies_singcopyguit01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = gs_jessies_singcopyguit01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = gs_jessies_singcopyguit01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-rooftops_s_sing01 = {
+Rooftops_S_Sing01 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_sing01
+		vocalist = S_Sing01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_sing01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_sing01_c01
 		}
 	]
 }
-rooftops_s_sing03 = {
+Rooftops_S_Sing03 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_sing03
+		vocalist = S_Sing03
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_sing03_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Sing03_c01
 		}
 	]
 }
-rooftops_gsb_finish01 = {
+Rooftops_GSB_Finish01 = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
+		bassist = 'vocalist_start'
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_g_finish01
-		BASSIST = gsb_b_finish01
-		vocalist = gsb_s_finish01
+		Guitarist = GSB_G_Finish01
+		bassist = GSB_B_Finish01
+		vocalist = GSB_S_Finish01
 	}
-	measures = 3
-	arms = {
-		GUITARIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+	Measures = 3
+	Arms = {
+		Guitarist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
-		BASSIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+		bassist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_finish01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_finish01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-rooftops_g_metalsolo09 = {
+Rooftops_G_MetalSolo09 = {
 	startnodes = {
-		GUITARIST = 'Guitarist_start'
+		Guitarist = 'Guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_metalsolo09
+		Guitarist = G_MetalSolo09
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_metalsolo09_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_metalsolo09_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_singatmic_075_b = {
+GSB_singatmic_075_B = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = gsb_g_singatmic_075_b
-		vocalist = gsb_s_singatmic_075_b
-		BASSIST = gsb_b_singatmic_075_b
+		Guitarist = GSB_G_SingAtMic_075_B
+		vocalist = gsb_s_singatmic_075_B
+		bassist = gsb_b_singatmic_075_B
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_075_b_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_075_B_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_075_b_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_075_B_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_singatmic_075_b_c03
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_SingAtMic_075_B_c03
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_kick05_hollywood = {
+G_Kick05_Hollywood = {
 	anims = {
-		GUITARIST = g_kick05
+		Guitarist = G_Kick05
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_kick05_c01
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Kick05_c01
 		}
 	]
 }
-s_american_01_hollywood = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = s_american_01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_01_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-b_look02_hollywood = {
-	startnodes = {
-		BASSIST = 'bassist_start'
-	}
-	anims = {
-		BASSIST = b_look02
-	}
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_look02_c01
-		}
-	]
-}
-s_eye_grabmic01_hollywood = {
+S_American_01_Hollywood = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_eye_grabmic01
+		vocalist = S_American_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_eye_grabmic01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_american_01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_American_01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_sing01_hollywood = {
+B_Look02_Hollywood = {
+	startnodes = {
+		bassist = 'bassist_start'
+	}
+	anims = {
+		bassist = B_Look02
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = b_look02_c01
+		}
+	]
+}
+S_Eye_GrabMic01_Hollywood = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_sing01
+		vocalist = S_Eye_GrabMic01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_sing01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_eye_grabmic01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
 		}
 	]
 }
-s_livinprayer_03_hollywood = {
+S_Sing01_Hollywood = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_livinprayer_03
+		vocalist = S_Sing01
 	}
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_livinprayer_03_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_sing01_c01
 		}
 	]
 }
-s_american_05_hollywood = {
+S_LivinPrayer_03_Hollywood = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_american_05
+		vocalist = S_LivinPrayer_03
 	}
-	measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_05_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_05_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_livinprayer_03_c01
 		}
 	]
 }
-g_solo23_hollywood = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_solo23
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo23_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-g_solo10_hollywood = {
-	anims = {
-		GUITARIST = g_solo10
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo10_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-s_pointsinging02_hollywood = {
+s_american_05_Hollywood = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_pointsinging02
+		vocalist = S_American_05
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_American_05_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging02_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_American_05_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-bs_pretty_singtogether01_hollywood = {
+G_Solo23_Hollywood = {
 	startnodes = {
-		BASSIST = 'vocalist_start'
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_Solo23
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo23_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+G_Solo10_Hollywood = {
+	anims = {
+		Guitarist = G_Solo10
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo10_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+S_PointSinging02_Hollywood = {
+	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		BASSIST = bs_pretty_singtogether01_b
+		vocalist = S_PointSinging02
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pointsinging02_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_PointSinging02_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+BS_Pretty_SingTogether01_Hollywood = {
+	startnodes = {
+		bassist = 'vocalist_start'
+		vocalist = 'vocalist_start'
+	}
+	anims = {
+		bassist = bs_pretty_singtogether01_b
 		vocalist = bs_pretty_singtogether01_s
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = bs_pretty_singtogether01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = bs_pretty_singtogether01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = bs_pretty_singtogether01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = bs_pretty_singtogether01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_sing03_hollywood = {
+S_Sing03_Hollywood = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_sing03
+		vocalist = S_Sing03
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_sing03_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Sing03_c01
 		}
 	]
 }
-b_quickkick01_hollywood = {
+B_QuickKick01_Hollywood = {
 	startnodes = {
-		BASSIST = 'Bassist_start'
+		bassist = 'Bassist_start'
 	}
 	anims = {
-		BASSIST = b_quickkick01
+		bassist = B_QuickKick01
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_quickkick01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_QuickKick01_C01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-doitagain_b_quickkick01 = {
+DoItAgain_B_QuickKick01 = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		BASSIST = b_quickkick01
-		vocalist = s_jeff_lowkey_moment01_01
+		bassist = B_QuickKick01
+		vocalist = S_Jeff_LowKey_Moment01_01
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_quickkick01_c01
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_QuickKick01_C01
 		}
 	]
 }
-doitagain_g_solo13 = {
+DoItAgain_G_Solo13 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = g_solo13
-		vocalist = s_jeff_lowkey_moment01_01
+		Guitarist = G_Solo13
+		vocalist = S_Jeff_LowKey_Moment01_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo13_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo13_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo13_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo13_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_notempo_doitagain = {
+S_NoTempo_DoItAgain = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_jeff_lowkey_moment01_01
+		vocalist = S_Jeff_LowKey_Moment01_01
 	}
-	measures = 3
+	Measures = 3
 }
-g_solo16 = {
+G_Solo16 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_solo16
+		Guitarist = G_Solo16
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo16_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo16_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo16_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo16_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_solo20 = {
+G_Solo20 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_solo20
+		Guitarist = G_Solo20
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo20_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo20_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo20_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo20_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_lowkey_lvialviaquez = {
+GSB_LowKey_LViaLViaquez = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'Bassist_start'
+		bassist = 'Bassist_start'
 	}
 	anims = {
-		GUITARIST = g_dan_joker01
-		vocalist = s_jeff_lowkey_moment01_01
-		BASSIST = g_jeff_lowkey_moment01_02
+		Guitarist = G_Dan_Joker01
+		vocalist = S_Jeff_LowKey_Moment01_01
+		bassist = G_Jeff_LowKey_Moment01_02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_jeff_lowkey_moment01_01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Jeff_LowKey_Moment01_01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_dan_joker01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Dan_Joker01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = g_jeff_lowkey_moment01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = G_Jeff_LowKey_Moment01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_singpunch01_lvialviaquez = {
+GSB_SingPunch01_LViaLViaquez = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'Bassist_start'
+		bassist = 'Bassist_start'
 	}
 	anims = {
-		GUITARIST = g_dan_joker01
-		vocalist = s_singpunch01
-		BASSIST = g_jeff_lowkey_moment01_02
+		Guitarist = G_Dan_Joker01
+		vocalist = S_SingPunch01
+		bassist = G_Jeff_LowKey_Moment01_02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singpunch01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_SingPunch01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_singtocam02_lvialviaquez = {
+GSB_SingToCam02_LViaLViaquez = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'Bassist_start'
+		bassist = 'Bassist_start'
 	}
 	anims = {
-		GUITARIST = g_dan_joker01
-		vocalist = s_singtocam02
-		BASSIST = g_jeff_lowkey_moment01_02
+		Guitarist = G_Dan_Joker01
+		vocalist = S_SingToCam02
+		bassist = G_Jeff_LowKey_Moment01_02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_singtocam02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_singtocam02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_solo03_lvialviaquez = {
+GSB_Solo03_LViaLViaquez = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'Bassist_start'
+		bassist = 'Bassist_start'
 	}
 	anims = {
-		GUITARIST = g_solo03
-		vocalist = s_jeff_lowkey_moment01_01
-		BASSIST = g_jeff_lowkey_moment01_02
+		Guitarist = G_solo03
+		vocalist = S_Jeff_LowKey_Moment01_01
+		bassist = G_Jeff_LowKey_Moment01_02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo03_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo03_C01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_lowkey_lvialviaquez02 = {
+GSB_LowKey_LViaLViaquez02 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'Bassist_start'
+		bassist = 'Bassist_start'
 	}
 	anims = {
-		GUITARIST = g_dan_joker01
-		vocalist = s_rockg_joker01
-		BASSIST = g_jeff_lowkey_moment01_02
+		Guitarist = G_Dan_Joker01
+		vocalist = S_RockG_Joker01
+		bassist = G_Jeff_LowKey_Moment01_02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_rockg_joker01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_RockG_Joker01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_dan_joker01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Dan_Joker01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = g_jeff_lowkey_moment01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = G_Jeff_LowKey_Moment01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_lowkey_lvialviaquez03 = {
+GSB_LowKey_LViaLViaquez03 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'Bassist_start'
+		bassist = 'Bassist_start'
 	}
 	anims = {
-		GUITARIST = g_jeff_lowkey_moment01_01
-		vocalist = s_jeff_lowkey_moment01_01
-		BASSIST = g_jeff_lowkey_moment01_02
+		Guitarist = G_Jeff_LowKey_Moment01_01
+		vocalist = S_Jeff_LowKey_Moment01_01
+		bassist = G_Jeff_LowKey_Moment01_02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_jeff_lowkey_moment01_01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Jeff_LowKey_Moment01_01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_solo06_shiver = {
+G_Solo06_Shiver = {
 	anims = {
-		GUITARIST = g_solo06
+		Guitarist = G_Solo06
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo06_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo06_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gsb_jump01_shiver = {
+GSB_Jump01_Shiver = {
 	startnodes = {
-		GUITARIST = 'vocalist_start'
+		Guitarist = 'vocalist_start'
 		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
+		bassist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = gsb_s_jump01
-		BASSIST = gsb_b_jump01
-		GUITARIST = gsb_g_jump01
+		vocalist = GSB_S_Jump01
+		bassist = GSB_B_Jump01
+		Guitarist = GSB_G_Jump01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_jump01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Jump01_c01
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_jump01_c02
-		}
-	]
-}
-gsb_orbitguit01_shiver = {
-	startnodes = {
-		GUITARIST = 'vocalist_start'
-	}
-	anims = {
-		GUITARIST = gsb_g_orbitguit01
-	}
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_orbitguit01_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Jump01_c02
 		}
 	]
 }
-b_quickkick01_shiver = {
+GSB_OrbitGuit01_Shiver = {
 	startnodes = {
-		BASSIST = 'Bassist_start'
+		Guitarist = 'vocalist_start'
 	}
 	anims = {
-		BASSIST = b_quickkick01
+		Guitarist = GSB_G_OrbitGuit01
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_quickkick01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_OrbitGuit01_c01
+		}
+	]
+}
+B_QuickKick01_Shiver = {
+	startnodes = {
+		bassist = 'Bassist_start'
+	}
+	anims = {
+		bassist = B_QuickKick01
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_QuickKick01_C01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_solo12_shiver = {
+G_Solo12_Shiver = {
 	anims = {
-		GUITARIST = g_solo12
+		Guitarist = G_Solo12
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo12_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo12_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_eye_karate01_shiver = {
+S_Eye_Karate01_Shiver = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
 		vocalist = s_eye_karate01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_eye_karate01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_eye_karate01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_eye_crosspose01_shiver = {
+S_Eye_CrossPose01_Shiver = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
 		vocalist = s_eye_crosspose01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_eye_crosspose01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_eye_crosspose01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_loveme_pointing_shiver = {
+S_loveme_pointing_Shiver = {
 	anims = {
-		vocalist = s_loveme_pointing01
+		vocalist = S_loveme_pointing01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_loveme_pointing01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_loveme_pointing01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_solo23_shiver = {
+G_Solo23_Shiver = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_solo23
+		Guitarist = G_Solo23
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo23_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo23_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_pointsinging01_shiver = {
+S_PointSinging01_Shiver = {
 	startnodes = {
+		vocalist = 'vocalist_start'
+	}
+	anims = {
+		vocalist = S_pointsinging01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pointsinging01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointsinging01_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+G_Kick05_Shiver = {
+	anims = {
+		Guitarist = G_Kick05
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Kick05_c01
+		}
+	]
+}
+GSB_Sing2Cam01_Shiver = {
+	startnodes = {
+		Guitarist = 'vocalist_start'
+		vocalist = 'vocalist_start'
+		bassist = 'vocalist_start'
+	}
+	anims = {
+		Guitarist = b_underthestage01
+		vocalist = GSB_S_Sing2Cam01
+		bassist = GSB_B_Sing2Cam01
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = GSB_Sing2Cam01_c01
+		}
+	]
+}
+GSB_slowIntro_Shiver = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+		bassist = 'bassist_start'
+	}
+	anims = {
+		Guitarist = G_Jeff_LowKey_100_01
+		bassist = B_Jeff_LowKey_075_01
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = Sing_Jeff_LowKey_075_01_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = Sing_Jeff_LowKey_075_01_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+HeyMan_SG_Joker_100 = {
+	startnodes = {
+		vocalist = 'vocalist_start'
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		vocalist = Singer_Joker_100
+		Guitarist = Guitar_Joker_100
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = Singer_Joker_100_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = Singer_Joker_100_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = Guitar_Joker_100_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+	]
+}
+HeyMan_GSB_Finish01 = {
+	startnodes = {
+		Guitarist = 'vocalist_start'
+		bassist = 'vocalist_start'
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_pointsinging01
+		Guitarist = GSB_G_Finish01
+		bassist = GSB_B_Finish01
+		vocalist = GSB_S_Finish01
 	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
+	Measures = 3
+	Arms = {
+		Guitarist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging01_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-g_kick05_shiver = {
-	anims = {
-		GUITARIST = g_kick05
-	}
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_kick05_c01
-		}
-	]
-}
-gsb_sing2cam01_shiver = {
-	startnodes = {
-		GUITARIST = 'vocalist_start'
-		vocalist = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-	}
-	anims = {
-		GUITARIST = b_underthestage01
-		vocalist = gsb_s_sing2cam01
-		BASSIST = gsb_b_sing2cam01
-	}
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_sing2cam01_c01
-		}
-	]
-}
-gsb_slowintro_shiver = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-		BASSIST = 'bassist_start'
-	}
-	anims = {
-		GUITARIST = g_jeff_lowkey_100_01
-		BASSIST = b_jeff_lowkey_075_01
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = sing_jeff_lowkey_075_01_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = sing_jeff_lowkey_075_01_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-heyman_sg_joker_100 = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		vocalist = singer_joker_100
-		GUITARIST = guitar_joker_100
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = singer_joker_100_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = singer_joker_100_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = guitar_joker_100_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-heyman_gsb_finish01 = {
-	startnodes = {
-		GUITARIST = 'vocalist_start'
-		BASSIST = 'vocalist_start'
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		GUITARIST = gsb_g_finish01
-		BASSIST = gsb_b_finish01
-		vocalist = gsb_s_finish01
-	}
-	measures = 3
-	arms = {
-		GUITARIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
-		}
-		BASSIST = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+		bassist = {
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = OFF
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = off
 		}
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = gsb_finish01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = gsb_finish01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-heyman_s_pointsinging01 = {
+HeyMan_S_PointSinging01 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_pointsinging01
+		vocalist = S_pointsinging01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pointsinging01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointsinging01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-heyman_s_electrorock_02e = {
+HeyMan_S_Electrorock_02e = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_electrorock_02e
+		vocalist = S_Electrorock_02e
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_electrorock_02e_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Electrorock_02e_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-heyman_s_electrorock_02b = {
+HeyMan_S_Electrorock_02b = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_electrorock_02b
+		vocalist = S_Electrorock_02b
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_electrorock_02b_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_electrorock_02b_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-heymanb_jamhard01 = {
+HeyManB_JamHard01 = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		BASSIST = b_jamhard01
+		bassist = B_JamHard01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_jamhard01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_JamHard01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-heyman_g_solo12 = {
+HeyMan_G_Solo12 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = g_solo12
-		vocalist = singer_joker_10
+		Guitarist = G_Solo12
+		vocalist = Singer_Joker_10
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo12_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo12_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo12_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo12_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-heyman_g_solo13 = {
+HeyMan_G_Solo13 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		GUITARIST = g_solo13
-		vocalist = singer_joker_100
+		Guitarist = G_Solo13
+		vocalist = Singer_Joker_100
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo13_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo13_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo13_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo13_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-heyman_g_solo18 = {
+HeyMan_G_Solo18 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_solo18
+		Guitarist = G_Solo18
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo18_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo18_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo18_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo18_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-heyman_g_kick01 = {
+HeyMan_G_kick01 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_kick01
+		Guitarist = G_kick01
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_kick01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_kick01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_solo06_kent = {
+G_Solo06_Kent = {
 	anims = {
-		GUITARIST = g_solo06
+		Guitarist = G_Solo06
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo06_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo06_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-b_look02_kent = {
+B_Look02_Kent = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		BASSIST = b_look02
+		bassist = B_Look02
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_look02_c01
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = b_look02_c01
 		}
 	]
 }
-g_solo10_kent = {
+G_Solo10_Kent = {
 	anims = {
-		GUITARIST = g_solo10
+		Guitarist = G_Solo10
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo10_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo10_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo10_c02
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-	]
-}
-s_electrorock_02b_kent = {
-	startnodes = {
-		vocalist = 'vocalist_start'
-	}
-	anims = {
-		vocalist = s_electrorock_02b
-	}
-	measures = 3
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_electrorock_02b_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo10_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_american_08_kent = {
+S_Electrorock_02b_Kent = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_american_08
+		vocalist = S_Electrorock_02b
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_08_c01
-			venues = [
-				venue1
-				venue3
-			]
-			weight = 1
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_american_08_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_electrorock_02b_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_livinprayer_05_kent = {
+S_American_08_Kent = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_livinprayer_05
+		vocalist = S_American_08
 	}
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_livinprayer_05_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_American_08_c01
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_American_08_c02
+			Venues = [
+				Venue1
+				Venue3
+			]
+			weight = 1
 		}
 	]
 }
-g_kick04_kent = {
-	startnodes = {
-		GUITARIST = 'guitarist_start'
-	}
-	anims = {
-		GUITARIST = g_kick04
-	}
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_kick04_c01
-		}
-	]
-}
-g_solo01_kent = {
-	anims = {
-		GUITARIST = g_solo01
-	}
-	cameras = [
-		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo01_c01
-		}
-	]
-}
-s_pointsinging03_kent = {
+S_LivinPrayer_05_Kent = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_pointsinging03
+		vocalist = S_LivinPrayer_05
 	}
-	measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging03_c01
-		}
-		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_pointsinging03_c02
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_livinprayer_05_c01
 		}
 	]
 }
-g_lookheadbob_kent = {
+G_Kick04_Kent = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_lookheadbob
+		Guitarist = G_kick04
 	}
-	measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_lookheadbob_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_kick04_C01
+		}
+	]
+}
+G_Solo01_Kent = {
+	anims = {
+		Guitarist = G_solo01
+	}
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo01_c01
+		}
+	]
+}
+S_pointsinging03_Kent = {
+	startnodes = {
+		vocalist = 'vocalist_start'
+	}
+	anims = {
+		vocalist = S_PointSinging03
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = s_pointsinging03_c01
+		}
+		{
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_pointsinging03_c02
+		}
+	]
+}
+G_LookHeadBob_Kent = {
+	startnodes = {
+		Guitarist = 'guitarist_start'
+	}
+	anims = {
+		Guitarist = G_LookHeadBob
+	}
+	Measures = 3
+	cameras = [
+		{
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = g_lookheadbob_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-b_quickkick01_kent = {
+B_QuickKick01_Kent = {
 	startnodes = {
-		BASSIST = 'Bassist_start'
+		bassist = 'Bassist_start'
 	}
 	anims = {
-		BASSIST = b_quickkick01
+		bassist = B_QuickKick01
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_quickkick01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_QuickKick01_C01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-gs_endstrum01_kent = {
+GS_EndStrum01_Kent = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 		vocalist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = gs_endstrum01_g
-		vocalist = gs_endstrum01_s
+		Guitarist = GS_EndStrum01_G
+		vocalist = GS_EndStrum01_S
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = gs_endstrum01_c01
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = GS_EndStrum01_c01
 		}
 	]
 }
-dman_b_demolitionman_01_1 = {
+DMan_B_DemolitionMan_01_1 = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		BASSIST = b_demolitionman_01
+		bassist = B_DemolitionMan_01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_demolitionman_01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_DemolitionMan_01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_demolitionman_01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_DemolitionMan_01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-dman_b_demolitionman_02_2 = {
+DMan_B_DemolitionMan_02_2 = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		BASSIST = b_demolitionman_02
+		bassist = B_DemolitionMan_02
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_demolitionman_02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_DemolitionMan_02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_BASS01'
-			anim = b_demolitionman_02_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_BASS01'
+			Anim = B_DemolitionMan_02_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-dman_g_solo10 = {
+DMan_G_Solo10 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_solo10
+		Guitarist = G_Solo10
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo10_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo10_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo10_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo10_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-dman_g_solo12 = {
+DMan_G_Solo12 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_solo12
+		Guitarist = G_Solo12
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo12_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo12_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo12_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo12_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-dman_g_solo23 = {
+DMan_G_Solo23 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_solo23
+		Guitarist = G_Solo23
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo23_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo23_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo23_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo23_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-dman_g_solo26 = {
+DMan_G_Solo26 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_solo26
+		Guitarist = G_Solo26
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo26_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo26_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo26_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo26_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-dman_s_sing03 = {
+DMan_S_Sing03 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_sing03
+		vocalist = S_Sing03
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_sing03_c01
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_Sing03_c01
 		}
 	]
 }
-dmansting_b_demolitionman_01 = {
+DManSting_B_DemolitionMan_01 = {
 	startnodes = {
 		vocalist = 'Vocalist_start'
 	}
 	anims = {
-		vocalist = b_demolitionman_01
+		vocalist = B_DemolitionMan_01
 	}
-	arms = {
+	Arms = {
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = On
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = on
 		}
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = b_demolitionman_01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = B_DemolitionMan_01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = b_demolitionman_01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = B_DemolitionMan_01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-dmansting_b_demolitionman_02 = {
+DManSting_B_DemolitionMan_02 = {
 	startnodes = {
 		vocalist = 'Vocalist_start'
 	}
 	anims = {
-		vocalist = b_demolitionman_02
+		vocalist = B_DemolitionMan_02
 	}
-	arms = {
+	Arms = {
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = On
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = on
 		}
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = b_demolitionman_02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = B_DemolitionMan_02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = b_demolitionman_02_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = B_DemolitionMan_02_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-dmansting_b_demolitionman_03 = {
+DManSting_B_DemolitionMan_03 = {
 	startnodes = {
 		vocalist = 'Vocalist_start'
 	}
 	anims = {
-		vocalist = b_demolitionman_03
+		vocalist = B_DemolitionMan_03
 	}
-	arms = {
+	Arms = {
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = On
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = on
 		}
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = b_demolitionman_03_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = B_DemolitionMan_03_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = b_demolitionman_03_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = B_DemolitionMan_03_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-dmansting_g_solo12 = {
+DManSting_G_Solo12 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_solo12
+		Guitarist = G_Solo12
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo12_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo12_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo12_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo12_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-dmansting_g_solo23 = {
+DManSting_G_Solo23 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_solo23
+		Guitarist = G_Solo23
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo23_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo23_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo23_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo23_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-dmansting_g_solo26 = {
+DManSting_G_Solo26 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_solo26
+		Guitarist = G_Solo26
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo26_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo26_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_GUIT01'
-			anim = g_solo26_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_GUIT01'
+			Anim = G_Solo26_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_attached01 = {
+G_Attached01 = {
 	startnodes = {
-		GUITARIST = 'guitarist_start'
+		Guitarist = 'guitarist_start'
 	}
 	anims = {
-		GUITARIST = g_attached01
+		Guitarist = G_Attached01
 	}
 }
-b_attached01 = {
+B_Attached01 = {
 	startnodes = {
-		BASSIST = 'bassist_start'
+		bassist = 'bassist_start'
 	}
 	anims = {
-		BASSIST = g_attached01
+		bassist = G_Attached01
 	}
 }
-g_purplehaze_01 = {
+G_PurpleHaze_01 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = g_purplehaze_01
+		vocalist = G_PurpleHaze_01
 	}
-	arms = {
+	Arms = {
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = On
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = on
 		}
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_purplehaze_01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = g_purplehaze_01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_purplehaze_01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = g_purplehaze_01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_purplehaze_01_c03
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = g_purplehaze_01_c03
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_purplehaze_02 = {
+G_PurpleHaze_02 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = g_purplehaze_02
+		vocalist = G_PurpleHaze_02
 	}
-	arms = {
+	Arms = {
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = On
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = on
 		}
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_purplehaze_02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = g_purplehaze_02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_purplehaze_02_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = g_purplehaze_02_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_purplehaze_02_c03
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = g_purplehaze_02_c03
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_purplehaze_03 = {
+G_PurpleHaze_03 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = g_purplehaze_03
+		vocalist = G_PurpleHaze_03
 	}
-	arms = {
+	Arms = {
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = On
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = on
 		}
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_purplehaze_03_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = g_purplehaze_03_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_purplehaze_03_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = g_purplehaze_03_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_purplehaze_03_c03
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = g_purplehaze_03_c03
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_purplehaze_04 = {
+G_PurpleHaze_04 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = g_purplehaze_04
+		vocalist = G_PurpleHaze_04
 	}
-	arms = {
+	Arms = {
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = On
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = on
 		}
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_purplehaze_04_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = g_purplehaze_04_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_purplehaze_04_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = g_purplehaze_04_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_purplehaze_04_c03
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = g_purplehaze_04_c03
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_purplehaze_05 = {
+G_PurpleHaze_05 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = g_purplehaze_05
+		vocalist = G_PurpleHaze_05
 	}
-	arms = {
+	Arms = {
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = On
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = on
 		}
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_purplehaze_05_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = g_purplehaze_05_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_purplehaze_05_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = g_purplehaze_05_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_purplehaze_05_c03
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = g_purplehaze_05_c03
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_purplehaze_06 = {
+G_PurpleHaze_06 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = g_purplehaze_06
+		vocalist = G_PurpleHaze_06
 	}
-	arms = {
+	Arms = {
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = On
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = on
 		}
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_purplehaze_06_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = g_purplehaze_06_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_purplehaze_06_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = g_purplehaze_06_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_purplehaze_06_c03
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = g_purplehaze_06_c03
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_purplehaze_07 = {
+G_PurpleHaze_07 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = g_purplehaze_07
+		vocalist = G_PurpleHaze_07
 	}
-	arms = {
+	Arms = {
 		vocalist = {
-			ik_targetl = slave
-			ik_targetr = slave
-			strum = OFF
-			fret = OFF
-			chord = On
+			IK_TargetL = slave
+			IK_TargetR = slave
+			strum = off
+			fret = off
+			chord = on
 		}
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_purplehaze_07_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = g_purplehaze_07_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_purplehaze_07_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = g_purplehaze_07_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_purplehaze_07_c03
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = g_purplehaze_07_c03
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_stillborn_01 = {
+G_Stillborn_01 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = g_stillborn_01
+		vocalist = G_Stillborn_01
 	}
-	arms = {
+	Arms = {
 		vocalist = {
-			ik_targetl = guitar
-			ik_targetr = slave
-			strum = OFF
-			fret = On
-			chord = On
+			IK_TargetL = guitar
+			IK_TargetR = slave
+			strum = off
+			fret = on
+			chord = on
 		}
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_stillborn_01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = G_Stillborn_01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_stillborn_01_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = G_Stillborn_01_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_stillborn_01_c03
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = G_Stillborn_01_c03
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_stillborn_02 = {
+G_Stillborn_02 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = g_stillborn_02
+		vocalist = G_Stillborn_02
 	}
-	arms = {
+	Arms = {
 		vocalist = {
-			ik_targetl = guitar
-			ik_targetr = slave
-			strum = OFF
-			fret = On
-			chord = On
+			IK_TargetL = guitar
+			IK_TargetR = slave
+			strum = off
+			fret = on
+			chord = on
 		}
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_stillborn_02_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = G_Stillborn_02_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_stillborn_02_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = G_Stillborn_02_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_stillborn_02_c03
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = G_Stillborn_02_c03
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_stillborn_03 = {
+G_Stillborn_03 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = g_stillborn_03
+		vocalist = G_Stillborn_03
 	}
-	arms = {
+	Arms = {
 		vocalist = {
-			ik_targetl = guitar
-			ik_targetr = slave
-			strum = OFF
-			fret = On
-			chord = On
+			IK_TargetL = guitar
+			IK_TargetR = slave
+			strum = off
+			fret = on
+			chord = on
 		}
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_stillborn_03_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = G_Stillborn_03_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_stillborn_03_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = G_Stillborn_03_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_stillborn_03_c03
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = G_Stillborn_03_c03
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_stillborn_04 = {
+G_Stillborn_04 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = g_stillborn_04
+		vocalist = G_Stillborn_04
 	}
-	arms = {
+	Arms = {
 		vocalist = {
-			ik_targetl = guitar
-			ik_targetr = slave
-			strum = OFF
-			fret = On
-			chord = On
+			IK_TargetL = guitar
+			IK_TargetR = slave
+			strum = off
+			fret = on
+			chord = on
 		}
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_stillborn_04_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = G_Stillborn_04_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_stillborn_04_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = G_Stillborn_04_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_stillborn_04_c03
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = G_Stillborn_04_c03
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_stillborn_05 = {
+G_Stillborn_05 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = g_stillborn_05
+		vocalist = G_Stillborn_05
 	}
-	arms = {
+	Arms = {
 		vocalist = {
-			ik_targetl = guitar
-			ik_targetr = slave
-			strum = OFF
-			fret = On
-			chord = On
+			IK_TargetL = guitar
+			IK_TargetR = slave
+			strum = off
+			fret = on
+			chord = on
 		}
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_stillborn_05_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = G_Stillborn_05_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_stillborn_05_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = G_Stillborn_05_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_stillborn_05_c03
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = G_Stillborn_05_c03
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-g_stillborn_06 = {
+G_Stillborn_06 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = g_stillborn_06
+		vocalist = G_Stillborn_06
 	}
-	arms = {
+	Arms = {
 		vocalist = {
-			ik_targetl = guitar
-			ik_targetr = slave
-			strum = OFF
-			fret = On
-			chord = On
+			IK_TargetL = guitar
+			IK_TargetR = slave
+			strum = off
+			fret = on
+			chord = on
 		}
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_stillborn_06_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = G_Stillborn_06_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_stillborn_06_c02
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = G_Stillborn_06_c02
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = g_stillborn_06_c03
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = G_Stillborn_06_c03
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-s_endwave01 = {
+S_EndWave01 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	anims = {
-		vocalist = s_endwave01
+		vocalist = S_EndWave01
 	}
-	measures = 3
+	Measures = 3
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = s_endwave01_c01
-			venues = [
-				venue1
-				venue3
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = S_EndWave01_c01
+			Venues = [
+				Venue1
+				Venue3
 			]
 			weight = 1
 		}
 	]
 }
-b_singlevocalcareercam_01 = {
+B_SingleVocalCareerCam_01 = {
 	startnodes = {
 		vocalist = 'vocalist_start'
 	}
 	cameras = [
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = b_singlevocalcareercam
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = B_SingleVocalCareerCam
 		}
 		{
-			Name = 'TRG_Geo_Camera_Performance_SING01'
-			anim = b_singlevocalcareercam
+			name = 'TRG_Geo_Camera_Performance_SING01'
+			Anim = B_SingleVocalCareerCam
 		}
 	]
 }

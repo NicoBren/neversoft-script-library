@@ -1,6 +1,6 @@
 
 script ui_create_jam_publish_genre 
-	make_generic_menu \{title = qs(0x5f98cef0)
+	make_generic_menu \{title = qs("Select Genre")
 		vmenu_id = jam_publish_genre_vmenu}
 	GetArraySize ($jam_genre_list)
 	i = 0
@@ -11,11 +11,11 @@ script ui_create_jam_publish_genre
 		pad_choose_params = {genre = <i>}
 	}
 	i = (<i> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	menu_finish
 endscript
 
 script ui_destroy_jam_publish_genre 
-	StopRendering
+	stoprendering
 	destroy_generic_menu
 endscript

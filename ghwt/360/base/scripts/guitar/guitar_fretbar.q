@@ -39,13 +39,13 @@ fretbar_prefix_type = {
 	thick = 'thick'
 }
 
-script create_fretbar \{Scale = (40.0, 0.25)}
+script create_fretbar \{scale = (40.0, 0.25)}
 	Create2DFretbar <...>
 endscript
 
 script kill_fretbar2d 
 	if ScreenElementExists id = <fretbar_id>
-		DestroyGem Name = <fretbar_id> player_status = <player_status>
+		DestroyGem name = <fretbar_id> player_status = <player_status>
 	endif
 endscript
 
@@ -85,40 +85,40 @@ script create_debug_measure_text
 		return
 	endif
 	if NOT ScreenElementExists \{id = debug_measure_window}
-		CreateScreenElement \{Type = ContainerElement
+		CreateScreenElement \{type = ContainerElement
 			parent = hud_destroygroup_windowp1
 			id = debug_measure_window
-			Pos = (0.0, 0.0)
+			pos = (0.0, 0.0)
 			just = [
 				left
 				top
 			]}
 	endif
-	formatText TextName = measure_text qs(0xc31d83ea) i = <measure>
-	formatText checksumName = measure_checksum 'measuretext_%i' i = <measure>
+	FormatText TextName = measure_text qs("\L%i") i = <measure>
+	FormatText checksumname = measure_checksum 'measuretext_%i' i = <measure>
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = debug_measure_window
 		id = <measure_checksum>
 		font = debug
-		Pos = (2000.0, 32.0)
+		pos = (2000.0, 32.0)
 		just = [center top]
-		Scale = 1.0
+		scale = 1.0
 		rgba = [210 210 210 250]
 		text = <measure_text>
 		z_priority = 1.0
 	}
-	SpawnScriptNow move_debug_measure_text params = {<...>} id = debug_measure_text
+	spawnscriptnow move_debug_measure_text params = {<...>} id = debug_measure_text
 endscript
 
 script move_debug_measure_text 
 	begin
 	if CompositeObjectExists <fretbar_id>
 		<fretbar_id> :Obj_GetPosition
-		Pos = (<Pos> + (2.0, 0.0, 0.0))
-		GetViewport2DPosFrom3D viewport = 1 Pos = <Pos>
-		Pos = (<PosX> * (1.0, 0.0) + <PosY> * (0.0, 1.0))
-		<measure_checksum> :legacydomorph Pos = <Pos>
+		pos = (<pos> + (2.0, 0.0, 0.0))
+		GetViewport2DPosFrom3D viewport = 1 pos = <pos>
+		pos = (<posx> * (1.0, 0.0) + <posy> * (0.0, 1.0))
+		<measure_checksum> :LegacyDoMorph pos = <pos>
 		Wait \{1
 			gameframe}
 	else

@@ -2,14 +2,14 @@ online_band_num_results = 0
 
 script ui_create_net_career_join_popup 
 	create_popup_warning_menu {
-		title = qs(0x9b97c7b2)
+		title = qs("Searching")
 		textblock = {
-			text = qs(0xb8fc4cd1)
+			text = qs("Looking for a band.")
 		}
 		options = [
 			{
 				func = cancel_net_career_mode_search
-				text = qs(0xf7723015)
+				text = qs("CANCEL")
 			}
 		]
 		no_background
@@ -20,17 +20,17 @@ script ui_create_net_career_join_popup
 		player_device = <device_num>
 	}
 	change \{online_band_num_results = 0}
-	netoptions :pref_choose \{name = game_modes
+	NetOptions :Pref_Choose \{name = game_modes
 		checksum = p4_career}
-	netoptions :pref_choose \{name = ranked
+	NetOptions :Pref_Choose \{name = ranked
 		checksum = player}
 	set_network_preferences
-	netsessionfunc \{obj = match
+	NetSessionFunc \{obj = match
 		func = stop_server_list}
-	netsessionfunc \{obj = match
+	NetSessionFunc \{obj = match
 		func = free_server_list}
-	if ((iswinport) && ($gprivatematchid != 0))
-		netsessionfunc \{obj = match
+	if ((IsWinPort) && ($gPrivateMatchId != 0))
+		NetSessionFunc \{obj = match
 			func = set_search_params
 			params = {
 				difficulty = dont_care
@@ -40,10 +40,10 @@ script ui_create_net_career_join_popup
 				needed_drums = 1
 				needed_microphones = 1
 				scoring_mode = career
-				privatematchid = $gprivatematchid
+				privateMatchId = $gPrivateMatchId
 			}}
 	else
-		netsessionfunc \{obj = match
+		NetSessionFunc \{obj = match
 			func = set_search_params
 			params = {
 				difficulty = dont_care
@@ -55,12 +55,12 @@ script ui_create_net_career_join_popup
 				scoring_mode = career
 			}}
 	endif
-	netsessionfunc \{obj = match
+	NetSessionFunc \{obj = match
 		func = set_server_list_mode
 		params = {
 			quickmatch
 		}}
-	netsessionfunc {
+	NetSessionFunc {
 		obj = match
 		func = start_server_list
 		params = {
@@ -69,27 +69,27 @@ script ui_create_net_career_join_popup
 			controller = <device_num>
 		}
 	}
-	spawnscript check_for_new_players params = {device_num = <device_num>}
+	SpawnScript check_for_new_players params = {device_num = <device_num>}
 endscript
 
 script check_for_new_players 
-	printf \{qs(0x4921c565)}
+	printf \{qs("\Lcheck_for_new_players")}
 	begin
-	if (netsessionfunc obj = match func = get_num_matchmaking_players)
-		netsessionfunc \{obj = party
+	if (NetSessionFunc obj = match func = get_num_matchmaking_players)
+		NetSessionFunc \{obj = party
 			func = get_party_members}
-		getarraysize <connections>
+		GetArraySize <connections>
 		if (<array_size> < <num_matchmaking_players>)
 			destroy_popup_warning_menu
 			create_popup_warning_menu {
-				title = qs(0xd121e6da)
+				title = qs("Joining")
 				textblock = {
-					text = qs(0x352fb8a5)
+					text = qs("Band Found! Waiting for Host to begin the match.")
 				}
 				options = [
 					{
 						func = cancel_net_career_mode_search
-						text = qs(0xf7723015)
+						text = qs("CANCEL")
 					}
 				]
 				no_background
@@ -103,14 +103,14 @@ script check_for_new_players
 			break
 		endif
 	endif
-	wait \{1
+	Wait \{1
 		frame}
 	repeat
 endscript
 
 script ui_destroy_net_career_join_popup 
-	if scriptexists \{check_for_new_players}
-		killspawnedscript \{name = check_for_new_players}
+	if ScriptExists \{check_for_new_players}
+		KillSpawnedScript \{name = check_for_new_players}
 	endif
 	destroy_popup_warning_menu
 endscript
@@ -120,10 +120,10 @@ script ui_deinit_net_career_join_popup
 endscript
 
 script cancel_net_career_mode_search 
-	if netsessionfunc \{obj = match
+	if NetSessionFunc \{obj = match
 			func = cancel_join_server}
-		obj_getid
-		<objid> :se_setprops block_events
+		Obj_GetID
+		<ObjID> :SE_SetProps block_events
 		ui_destroy_net_career_join_popup
 		change \{num_players_in_band = 0}
 		ui_event_wait \{event = menu_refresh}
@@ -131,13 +131,13 @@ script cancel_net_career_mode_search
 endscript
 
 script online_band_search_item_add 
-	printf \{qs(0x9276d7e4)}
+	printf \{qs("\Lonline_band_search_item_add")}
 	change online_career_num_results = (($online_career_num_results) + 1)
 endscript
 
 script online_band_search_stop 
-	printf \{qs(0x161b5604)}
-	netsessionfunc \{obj = match
+	printf \{qs("\Lonline_band_search_stop")}
+	NetSessionFunc \{obj = match
 		func = stop_server_list}
 	if ($online_band_num_results = 0)
 		ui_event_get_top

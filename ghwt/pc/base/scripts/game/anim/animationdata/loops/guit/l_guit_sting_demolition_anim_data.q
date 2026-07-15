@@ -1,36 +1,36 @@
-l_guit_sting_demolition_anims_set = {
-	stance_a = {
-		idle = {
+L_GUIT_Sting_Demolition_anims_set = {
+	Stance_A = {
+		Idle = {
 			good = {
-				slow = [
+				Slow = [
 					guit_sting_demolition_075_01
 				]
-				med = [
+				Med = [
 					guit_sting_demolition_075_01
 				]
-				fast = [
-					guit_sting_demolition_075_01
-				]
-			}
-			normal = {
-				slow = [
-					guit_sting_demolition_075_01
-				]
-				med = [
-					guit_sting_demolition_075_01
-				]
-				fast = [
+				Fast = [
 					guit_sting_demolition_075_01
 				]
 			}
-			bad = {
-				slow = [
+			Normal = {
+				Slow = [
 					guit_sting_demolition_075_01
 				]
-				med = [
+				Med = [
 					guit_sting_demolition_075_01
 				]
-				fast = [
+				Fast = [
+					guit_sting_demolition_075_01
+				]
+			}
+			Bad = {
+				Slow = [
+					guit_sting_demolition_075_01
+				]
+				Med = [
+					guit_sting_demolition_075_01
+				]
+				Fast = [
 					guit_sting_demolition_075_01
 				]
 			}

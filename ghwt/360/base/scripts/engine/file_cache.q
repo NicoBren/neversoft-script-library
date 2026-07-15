@@ -3,13 +3,13 @@ enable_file_cache = 0
 script CacheFiles 
 	GetArraySize <cache_list>
 	i = 0
-	if (<array_Size> = 0)
+	if (<array_size> = 0)
 		return
 	endif
 	begin
 	cacheplatfile {file = (<cache_list> [<i>])}
 	i = (<i> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 endscript
 
 script CacheGameFiles 
@@ -36,7 +36,7 @@ script CacheGameFiles
 	ResizeFileCacheStreamBuff (768 * 1024)
 	CacheFiles \{cache_list = $zone_cache_files}
 	CacheGameFilesAsync
-	if isps3
+	if IsPs3
 		CacheFiles \{cache_list = $zone_cache_vram_files}
 		CacheFiles \{cache_list = $pak_cache_vram_files}
 	endif

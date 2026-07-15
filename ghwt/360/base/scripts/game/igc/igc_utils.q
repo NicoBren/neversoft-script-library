@@ -8,23 +8,23 @@ script fadetoblack \{time = 0.5
 			0
 			255
 		]
-		Scale = (600.0, 400.0)
+		scale = (600.0, 400.0)
 		texture = black
 		id = screenfader
-		Pos = (320.0, 240.0)
+		pos = (320.0, 240.0)
 		parent = root_window}
-	if GotParam \{On}
+	if GotParam \{on}
 		if NOT ScreenElementExists id = <id>
 			if NOT GotParam \{create_script}
 				CreateScreenElement {
-					Type = SpriteElement
+					type = SpriteElement
 					parent = <parent>
 					id = <id>
 					texture = <texture>
-					Pos = <Pos>
+					pos = <pos>
 					rgba = <rgba>
 					just = [center center]
-					Scale = <Scale>
+					scale = <scale>
 					alpha = 0
 					z_priority = <z_priority>
 					no_zwrite
@@ -36,16 +36,16 @@ script fadetoblack \{time = 0.5
 			TerminateObjectsScripts id = <id>
 			<id> :RemoveTags [waiting_to_die]
 		endif
-		legacydoscreenelementmorph id = <id> time = <time> alpha = <alpha>
-	elseif GotParam \{OFF}
+		LegacyDoScreenElementMorph id = <id> time = <time> alpha = <alpha>
+	elseif GotParam \{off}
 		if ScreenElementExists id = <id>
-			legacydoscreenelementmorph id = <id> time = <time> alpha = 0.0
+			LegacyDoScreenElementMorph id = <id> time = <time> alpha = 0.0
 			if GotParam \{no_wait}
 				RunScriptOnScreenElement id = <id> fadetoblack_wait_and_die params = {time = <time>}
 				return
 			endif
 			<id> :SetTags waiting_to_die
-			Wait <time> Seconds ignoreslomo
+			Wait <time> seconds ignoreslomo
 			if ScreenElementExists id = <id>
 				if <id> :GetSingleTag waiting_to_die
 					<id> :Die
@@ -56,15 +56,15 @@ script fadetoblack \{time = 0.5
 endscript
 
 script fadetoblack_wait_and_die \{time = 0.0}
-	Wait <time> Seconds ignoreslomo
+	Wait <time> seconds ignoreslomo
 	Die
 endscript
 
 script igc_fadeout \{time = 0.75}
-	fadetoblack On alpha = 1.0 time = <time>
-	Wait (<time> + 0.1) Seconds
+	fadetoblack on alpha = 1.0 time = <time>
+	Wait (<time> + 0.1) seconds
 endscript
 
 script igc_fadein \{time = 0.75}
-	fadetoblack OFF time = <time> no_wait
+	fadetoblack off time = <time> no_wait
 endscript

@@ -2,7 +2,7 @@
 script ui_create_cag_custom_head 
 	make_generic_menu \{vmenu_id = create_cag_custom_head_id
 		show_history
-		title = qs(0x3193a7ff)}
+		title = qs("Change Head")}
 	setup_cas_menu_handlers \{vmenu_id = create_cag_custom_head_id
 		camera_list = [
 			'cag_custom_head'
@@ -13,12 +13,12 @@ script ui_create_cag_custom_head
 		zoom_camera = 'customize_cag_Zoom'}
 	add_generic_menu_icon_item {
 		icon = icon_cag_head_type
-		text = qs(0xe8775204)
-		choose_state = uistate_cag_select_part_inclusion
+		text = qs("STYLE")
+		choose_state = UIstate_cag_select_part_inclusion
 		choose_state_data = {
 			part = <part>
 			body_part = <body_part>
-			text = qs(0x4e02295c)
+			text = qs("CHOOSE HEAD")
 			is_popup
 			hist_tex = icon_cag_head_type
 			color_wheel = ($guitar_colorwheel)
@@ -27,15 +27,15 @@ script ui_create_cag_custom_head
 			no_edit
 		}
 	}
-	get_section_index_from_desc_id part = <part> target_desc_id = finishes
-	if gotparam \{section_index}
+	get_section_index_from_desc_id part = <part> target_desc_id = Finishes
+	if GotParam \{section_index}
 		add_generic_menu_icon_item {
 			icon = icon_cag_head_finishes
-			text = qs(0x3f47b13d)
-			choose_state = uistate_cap_artist_layer_popout
+			text = qs("FINISHES")
+			choose_state = UIstate_cap_artist_layer_popout
 			choose_state_data = {
 				part = <part>
-				text = qs(0x6e23fd31)
+				text = qs("Finishes")
 				section_index = <section_index>
 				is_popup
 				hist_tex = icon_cag_head_finishes
@@ -44,17 +44,17 @@ script ui_create_cag_custom_head
 				zoom_camera = 'customize_cag_Zoom'
 			}
 		}
-		removeparameter \{section_index}
+		RemoveParameter \{section_index}
 	endif
-	get_section_index_from_desc_id part = <part> target_desc_id = details
-	if gotparam \{section_index}
+	get_section_index_from_desc_id part = <part> target_desc_id = Details
+	if GotParam \{section_index}
 		add_generic_menu_icon_item {
 			icon = icon_details
-			text = qs(0xe35a68c5)
-			choose_state = uistate_cap_artist_layer_popout
+			text = qs("DETAILS")
+			choose_state = UIstate_cap_artist_layer_popout
 			choose_state_data = {
 				part = <part>
-				text = qs(0x7f5a5c11)
+				text = qs("Details")
 				section_index = <section_index>
 				is_popup hist_tex = icon_details
 				color_wheel = ($guitar_colorwheel)
@@ -62,26 +62,26 @@ script ui_create_cag_custom_head
 				zoom_camera = 'customize_cag_Zoom'
 			}
 		}
-		removeparameter \{section_index}
+		RemoveParameter \{section_index}
 	endif
 	if is_part_capable part = <part>
 		add_generic_menu_icon_item {
 			icon = icon_graphics
-			text = qs(0xde6cb37a)
-			choose_state = uistate_cap_main
+			text = qs("GRAPHICS")
+			choose_state = UIstate_cap_main
 			choose_state_data = {
 				savegame = ($cas_current_savegame)
 				part = <part>
-				text = qs(0x8f08ff76)
+				text = qs("Graphics")
 				hist_tex = icon_graphics
-				return_stance = stance_select_guitar
+				return_stance = Stance_Select_Guitar
 				camera_list = ['cag_custom_head' 'cag_custom_head_R' 'cag_custom_head_B' 'cag_custom_head_L']
 				zoom_camera = 'customize_cag_Zoom'
 			}
 		}
 	endif
 	menu_finish \{car_helper_text}
-	launchevent type = focus target = create_cag_custom_head_id data = {child_index = <selected_index>}
+	LaunchEvent type = focus target = create_cag_custom_head_id data = {child_index = <selected_index>}
 endscript
 
 script ui_destroy_cag_custom_head 

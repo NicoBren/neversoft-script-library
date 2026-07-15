@@ -2,10 +2,10 @@
 script setup_sprites 
 	ScreenElementSystemInit
 	setup_main_button_event_mappings
-	CreateScreenElement \{Type = ContainerElement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = hud_window
-		Pos = (0.0, 0.0)
+		pos = (0.0, 0.0)
 		just = [
 			left
 			top
@@ -16,15 +16,15 @@ hide_hud_elements = 0
 hud_screen_elements = [
 	{
 		id = star_power_ready_text
-		text = qs(0x8ba36464)
-		Pos = (640.0, 230.0)
+		text = qs("Star Power Ready")
+		pos = (640.0, 230.0)
 		alpha = 0
 		just = [
 			center
 			top
 		]
 		yoff = 0
-		Shadow
+		shadow
 		shadow_offs = (2.0, 2.0)
 		shadow_rgba = [
 			0
@@ -35,9 +35,9 @@ hud_screen_elements = [
 	}
 	{
 		id = double_notes_text
-		text = qs(0xc9e18c30)
-		Pos = (640.0, 300.0)
-		Scale = 0.7
+		text = qs("Double Notes!")
+		pos = (640.0, 300.0)
+		scale = 0.7
 		just = [
 			center
 			top
@@ -46,9 +46,9 @@ hud_screen_elements = [
 	}
 	{
 		id = mine_attack_text
-		text = qs(0x7845a306)
-		Pos = (640.0, 300.0)
-		Scale = 0.7
+		text = qs("Mine Attack!")
+		pos = (640.0, 300.0)
+		scale = 0.7
 		just = [
 			center
 			top
@@ -57,9 +57,9 @@ hud_screen_elements = [
 	}
 	{
 		id = difficulty_up_text
-		text = qs(0x036cf8e4)
-		Pos = (640.0, 300.0)
-		Scale = 0.7
+		text = qs("Difficulty Up!")
+		pos = (640.0, 300.0)
+		scale = 0.7
 		just = [
 			center
 			top
@@ -68,9 +68,9 @@ hud_screen_elements = [
 	}
 	{
 		id = lefty_notes_text
-		text = qs(0x12a7e0d7)
-		Pos = (640.0, 300.0)
-		Scale = 0.7
+		text = qs("Lefty Notes!")
+		pos = (640.0, 300.0)
+		scale = 0.7
 		just = [
 			center
 			top
@@ -79,9 +79,9 @@ hud_screen_elements = [
 	}
 	{
 		id = broken_string_text
-		text = qs(0xa8804886)
-		Pos = (640.0, 300.0)
-		Scale = 0.7
+		text = qs("Broken String!")
+		pos = (640.0, 300.0)
+		scale = 0.7
 		just = [
 			center
 			top
@@ -90,9 +90,9 @@ hud_screen_elements = [
 	}
 	{
 		id = whammy_attack_text
-		text = qs(0x19d5c1c6)
-		Pos = (640.0, 300.0)
-		Scale = 0.7
+		text = qs("Whammy!")
+		pos = (640.0, 300.0)
+		scale = 0.7
 		just = [
 			center
 			top
@@ -101,9 +101,9 @@ hud_screen_elements = [
 	}
 	{
 		id = lightning_text
-		text = qs(0x5943e745)
-		Pos = (640.0, 300.0)
-		Scale = 0.7
+		text = qs("Amp Overload!")
+		pos = (640.0, 300.0)
+		scale = 0.7
 		just = [
 			center
 			top
@@ -112,9 +112,9 @@ hud_screen_elements = [
 	}
 	{
 		id = steal_text
-		text = qs(0xd00a7383)
-		Pos = (640.0, 300.0)
-		Scale = 0.7
+		text = qs("JACKED!")
+		pos = (640.0, 300.0)
+		scale = 0.7
 		just = [
 			center
 			top
@@ -123,9 +123,9 @@ hud_screen_elements = [
 	}
 	{
 		id = steal1_text
-		text = qs(0x6d9d4fac)
-		Pos = (640.0, 300.0)
-		Scale = 0.7
+		text = qs("THIEF!")
+		pos = (640.0, 300.0)
+		scale = 0.7
 		just = [
 			center
 			top
@@ -134,9 +134,9 @@ hud_screen_elements = [
 	}
 	{
 		id = steal2_text
-		text = qs(0x300eea49)
-		Pos = (640.0, 300.0)
-		Scale = 0.7
+		text = qs("Nothing to steal...")
+		pos = (640.0, 300.0)
+		scale = 0.7
 		just = [
 			center
 			top
@@ -145,9 +145,9 @@ hud_screen_elements = [
 	}
 	{
 		id = special_event_timer
-		text = qs(0x03ac90f0)
-		Pos = (640.0, 280.0)
-		Scale = 1
+		text = qs("\L")
+		pos = (640.0, 280.0)
+		scale = 1
 		just = [
 			center
 			top
@@ -155,9 +155,9 @@ hud_screen_elements = [
 	}
 	{
 		id = special_event_question_mark
-		text = qs(0xe6f8c73c)
-		Pos = (640.0, 250.0)
-		Scale = 10
+		text = qs("?")
+		pos = (640.0, 250.0)
+		scale = 10
 		just = [
 			center
 			top
@@ -165,9 +165,9 @@ hud_screen_elements = [
 	}
 	{
 		id = special_event_recording_text
-		text = qs(0x06dd362d)
-		Pos = (640.0, 220.0)
-		Scale = 1.5
+		text = qs("RECORDING..")
+		pos = (640.0, 220.0)
+		scale = 1.5
 		rgba = [
 			220
 			20
@@ -181,9 +181,9 @@ hud_screen_elements = [
 	}
 	{
 		id = special_event_missed_note_text
-		text = qs(0x03ac90f0)
-		Pos = (640.0, 180.0)
-		Scale = 1.2
+		text = qs("\L")
+		pos = (640.0, 180.0)
+		scale = 1.2
 		rgba = [
 			220
 			20
@@ -198,88 +198,88 @@ hud_screen_elements = [
 ]
 
 script setup_hud 
-	printf \{qs(0xdb07cbad)}
-	ExtendCrc hud_destroygroup_window <player_text> out = hud_destroygroup
+	printf \{qs("\Lsetup_hud")}
+	ExtendCRC hud_destroygroup_window <player_text> out = hud_destroygroup
 	CreateScreenElement {
-		Type = ContainerElement
+		type = ContainerElement
 		parent = hud_window
 		id = <hud_destroygroup>
-		Pos = (0.0, 0.0)
+		pos = (0.0, 0.0)
 		just = [left top]
 	}
 	GetArraySize \{$hud_screen_elements}
 	array_entry = 0
-	gamemode_getnumplayersshown
+	GameMode_GetNumPlayersShown
 	begin
 	id = ($hud_screen_elements [<array_entry>].id)
-	ExtendCrc <id> <player_text> out = id
-	Pos = ($hud_screen_elements [<array_entry>].Pos)
+	ExtendCRC <id> <player_text> out = id
+	pos = ($hud_screen_elements [<array_entry>].pos)
 	yoff = ($hud_screen_elements [<array_entry>].yoff)
 	if (<num_players_shown> = 2)
-		px = (<Pos>.(1.0, 0.0))
-		py = (<Pos>.(0.0, 1.0))
-		px = (<px> * 0.4 + (<Player> - 1) * 640)
+		px = (<pos>.(1.0, 0.0))
+		py = (<pos>.(0.0, 1.0))
+		px = (<px> * 0.4 + (<player> - 1) * 640)
 		py = (<py> - <yoff>)
-		Pos = (<px> * (1.0, 0.0) + <py> * (0.0, 1.0))
+		pos = (<px> * (1.0, 0.0) + <py> * (0.0, 1.0))
 	elseif (<num_players_shown> = 3)
-		px = (<Pos>.(1.0, 0.0))
-		py = (<Pos>.(0.0, 1.0))
-		px = (<px> * 0.4 + (<Player> - 1) * 640)
+		px = (<pos>.(1.0, 0.0))
+		py = (<pos>.(0.0, 1.0))
+		px = (<px> * 0.4 + (<player> - 1) * 640)
 		py = (<py> - <yoff>)
-		Pos = (<px> * (1.0, 0.0) + <py> * (0.0, 1.0))
+		pos = (<px> * (1.0, 0.0) + <py> * (0.0, 1.0))
 	elseif (<num_players_shown> = 4)
-		px = (<Pos>.(1.0, 0.0))
-		py = (<Pos>.(0.0, 1.0))
-		px = (<px> * 0.4 + (<Player> - 1) * 640)
+		px = (<pos>.(1.0, 0.0))
+		py = (<pos>.(0.0, 1.0))
+		px = (<px> * 0.4 + (<player> - 1) * 640)
 		py = (<py> - <yoff>)
-		Pos = (<px> * (1.0, 0.0) + <py> * (0.0, 1.0))
+		pos = (<px> * (1.0, 0.0) + <py> * (0.0, 1.0))
 	endif
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = <hud_destroygroup>
 		font = fontgrid_text_a6
 		just = [left top]
-		Scale = 1.0
+		scale = 1.0
 		rgba = [210 210 210 250]
 		z_priority = 80.0
 		($hud_screen_elements [<array_entry>])
-		Pos = <Pos>
+		pos = <pos>
 		id = <id>
 	}
 	array_entry = (<array_entry> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	if (($<player_status>.is_local_client) && ($<player_status>.highway_layout = solo_highway))
-		net_setup_solo_hud player_status = <player_status> hud_destroygroup = <hud_destroygroup> Player = <Player>
+		net_setup_solo_hud player_status = <player_status> hud_destroygroup = <hud_destroygroup> player = <player>
 	else
 		update_hud_layout
-		ExtendCrc HUD_2D_Container <player_text> out = new_2d_container
+		ExtendCRC HUD_2D_Container <player_text> out = new_2d_container
 		if NOT ScreenElementExists id = <new_2d_container>
 			CreateScreenElement {
-				Type = ContainerElement
+				type = ContainerElement
 				parent = root_window
-				Pos = (0.0, 0.0)
+				pos = (0.0, 0.0)
 				just = [left top]
 				id = <new_2d_container>
-				Scale = (($g_hud_2d_struct_used).Scale)
+				scale = (($g_hud_2d_struct_used).scale)
 			}
 		endif
 		create_2d_hud_elements parent = <new_2d_container> player_text = <player_text> elements_structure = $g_hud_2d_struct_used
 		if ($hide_hud_elements = 1)
-			SetScreenElementProps id = <new_2d_container> Hide
+			SetScreenElementProps id = <new_2d_container> hide
 		endif
 	endif
 	if ($display_debug_input = 1)
-		ExtendCrc input_text <player_text> out = input_id
+		ExtendCRC input_text <player_text> out = input_id
 		CreateScreenElement {
-			Type = TextElement
+			type = TextElement
 			parent = <hud_destroygroup>
 			font = debug
 			just = [left top]
-			Scale = 1.0
+			scale = 1.0
 			rgba = [210 210 210 250]
 			z_priority = 100.0
-			text = qs(0x8c30363c)
-			Pos = (64.0, 64.0)
+			text = qs("\LI111111111111111")
+			pos = (64.0, 64.0)
 			id = <input_id>
 		}
 	endif
@@ -290,18 +290,18 @@ script setup_band_hud \{force_layout = 0}
 	if (<force_layout> = 0)
 		update_hud_layout
 	endif
-	if StructureContains \{structure = $g_hud_2d_struct_used
+	if StructureContains \{Structure = $g_hud_2d_struct_used
 			desc_interface}
 		CreateScreenElement {
 			parent = root_window
 			id = hud_root
-			Type = descinterface
+			type = DescInterface
 			desc = ($g_hud_2d_struct_used.desc_interface)
-			Pos = (0.0, 0.0)
+			pos = (0.0, 0.0)
 			z_priority = 0
 			alpha = 0
 		}
-		if NOT ResolveScreenElementID \{id = {
+		if NOT ResolveScreenElementId \{id = {
 					hud_root
 					child = 0
 				}
@@ -312,97 +312,97 @@ script setup_band_hud \{force_layout = 0}
 				all}
 			return
 		endif
-		gamemode_gettype
-		if NOT (<Type> = faceoff || <Type> = pro_faceoff)
-			if hud_root :desc_resolvealias \{Name = alias_faceoff_meter
+		GameMode_GetType
+		if NOT (<type> = faceoff || <type> = pro_faceoff)
+			if hud_root :Desc_ResolveAlias \{name = alias_faceoff_meter
 					param = faceoff_meter}
 				<faceoff_meter> :Die
 			endif
 		else
-			if hud_root :desc_resolvealias \{Name = alias_band_meter
+			if hud_root :Desc_ResolveAlias \{name = alias_band_meter
 					param = band_meter}
 				<band_meter> :Die
 			endif
 		endif
-		if (<Type> = training)
-			if hud_root :desc_resolvealias \{Name = alias_band_meter
+		if (<type> = training)
+			if hud_root :Desc_ResolveAlias \{name = alias_band_meter
 					param = band_meter}
 				<band_meter> :Die
 			endif
 		endif
 		if ($boss_battle = 1)
-			if hud_root :desc_resolvealias \{Name = alias_faceoff_meter
+			if hud_root :Desc_ResolveAlias \{name = alias_faceoff_meter
 					param = faceoff_meter}
 				<faceoff_meter> :Die
 			endif
-			if hud_root :desc_resolvealias \{Name = alias_band_meter
+			if hud_root :Desc_ResolveAlias \{name = alias_band_meter
 					param = band_meter}
 				<band_meter> :Die
 			endif
 		else
-			if hud_root :desc_resolvealias \{Name = alias_boss_meter
+			if hud_root :Desc_ResolveAlias \{name = alias_boss_meter
 					param = boss_meter}
 				<boss_meter> :Die
 			endif
 		endif
-		gamemode_getnumplayersshown
+		GameMode_GetNumPlayersShown
 		<player_idx> = 1
 		begin
-		getplayerinfo <player_idx> hud_parent
+		GetPlayerInfo <player_idx> hud_parent
 		if ScreenElementExists \{id = hud_root}
-			if hud_root :desc_resolvealias Name = <hud_parent> param = parent_id
+			if hud_root :Desc_ResolveAlias name = <hud_parent> param = parent_id
 				if ScreenElementExists id = {<parent_id> child = player_meter}
-					hud_attach_widget_player_multiplier parent_id = {<parent_id> child = player_meter} Player = <player_idx>
-					ResolveScreenElementID id = [
+					HUD_attach_widget_player_multiplier parent_id = {<parent_id> child = player_meter} player = <player_idx>
+					ResolveScreenElementId id = [
 						{id = <parent_id>}
 						{local_id = player_meter}
 					]
-					if <resolved_id> :desc_resolvealias Name = alias_player_multiplier param = player_multiplier
-						if NOT (gamemode_isbandbattle)
-							if (<Type> = faceoff || <Type> = pro_faceoff || $boss_battle = 1)
+					if <resolved_id> :Desc_ResolveAlias name = alias_player_multiplier param = player_multiplier
+						if NOT (GameMode_IsBandBattle)
+							if (<type> = faceoff || <type> = pro_faceoff || $boss_battle = 1)
 								<player_multiplier> :Die
 							endif
 						endif
 					endif
 				else
 				endif
-				if ScreenElementExists id = {<parent_id> child = star_Power}
-					hud_attach_widget_player_star_power parent_id = {<parent_id> child = star_Power} Player = <player_idx>
+				if ScreenElementExists id = {<parent_id> child = star_power}
+					HUD_attach_widget_player_star_power parent_id = {<parent_id> child = star_power} player = <player_idx>
 				elseif ScreenElementExists id = {<parent_id> child = vocal_multiplier_star}
-					hud_attach_widget_player_star_power parent_id = {<parent_id> child = vocal_multiplier_star} Player = <player_idx>
+					HUD_attach_widget_player_star_power parent_id = {<parent_id> child = vocal_multiplier_star} player = <player_idx>
 				endif
 				if ScreenElementExists id = {<parent_id> child = gamertag}
 					if ($is_network_game = 1)
-						ResolveScreenElementID id = [
+						ResolveScreenElementId id = [
 							{id = <parent_id>}
 							{local_id = gamertag}
 						]
-						getplayerinfo \{1
+						GetPlayerInfo \{1
 							team}
 						yellow_team = <team>
-						getplayerinfo <player_idx> team
+						GetPlayerInfo <player_idx> team
 						gamertag_color = $online_player_slot_bg_team1
 						if (<team> != <yellow_team>)
 							<gamertag_color> = $online_player_slot_bg_team2
 						endif
-						getplayerinfo <player_idx> gamertag
-						<resolved_id> :se_setprops {
+						GetPlayerInfo <player_idx> gamertag
+						<resolved_id> :SE_SetProps {
 							gamertag_name_text = ($<gamertag>)
 							gamertag_bg_rgba = <gamertag_color>
 						}
 						if isXenon
-							getplayerinfo <player_idx> is_local_client
-							getplayerinfo <player_idx> net_id_first
-							getplayerinfo <player_idx> net_id_second
-							getplayerinfo <player_idx> controller
-							getplayerinfo <player_idx> bot_play
+							GetPlayerInfo <player_idx> is_local_client
+							GetPlayerInfo <player_idx> net_id_first
+							GetPlayerInfo <player_idx> net_id_second
+							GetPlayerInfo <player_idx> controller
+							GetPlayerInfo <player_idx> bot_play
 							xuid = [0 0]
-							SetArrayElement ArrayName = xuid index = 0 NewValue = (<net_id_first>)
-							SetArrayElement ArrayName = xuid index = 1 NewValue = (<net_id_second>)
+							SetArrayElement ArrayName = xuid index = 0 newvalue = (<net_id_first>)
+							SetArrayElement ArrayName = xuid index = 1 newvalue = (<net_id_second>)
 							if (<is_local_client> = 0)
 								<resolved_id> :Obj_SpawnScriptLater update_headset_status params = {obj_id = <resolved_id> uid = <xuid>}
 							elseif (<bot_play> = 0)
-								if NOT NetSessionFunc func = xenonisguest params = {controller_index = (<controller>)}
+								if NOT NetSessionFunc func = XenonIsGuest params = {controller_index = (<controller>)}
 									<resolved_id> :Obj_SpawnScriptLater update_headset_status params = {obj_id = <resolved_id> uid = <xuid>}
 								endif
 							endif
@@ -418,71 +418,71 @@ script setup_band_hud \{force_layout = 0}
 		endif
 		<player_idx> = (<player_idx> + 1)
 		repeat <num_players_shown>
-		if hud_root :desc_resolvealias \{Name = alias_band_meter
+		if hud_root :Desc_ResolveAlias \{name = alias_band_meter
 				param = band_meter}
-			hud_attach_widget_band_meter parent = <band_meter>
+			HUD_attach_widget_band_meter parent = <band_meter>
 		endif
-		if (<Type> = faceoff || <Type> = pro_faceoff)
-			if hud_root :desc_resolvealias \{Name = alias_faceoff_meter
+		if (<type> = faceoff || <type> = pro_faceoff)
+			if hud_root :Desc_ResolveAlias \{name = alias_faceoff_meter
 					param = faceoff_meter}
-				hud_attach_widget_band_faceoff_meter parent_id = <faceoff_meter>
+				HUD_attach_widget_band_faceoff_meter parent_id = <faceoff_meter>
 			endif
 		endif
 		if ($boss_battle = 1)
-			if hud_root :desc_resolvealias \{Name = alias_boss_meter
+			if hud_root :Desc_ResolveAlias \{name = alias_boss_meter
 					param = boss_meter}
-				hud_attach_widget_band_faceoff_meter parent_id = <boss_meter>
+				HUD_attach_widget_band_faceoff_meter parent_id = <boss_meter>
 			endif
 		endif
 		hud_hide_optional_vocals \{desc_id = hud_root}
 		if ($hide_hud_elements = 1 || $Cheat_PerformanceMode = 1)
-			hud_root :se_setprops \{Hide}
+			hud_root :SE_SetProps \{hide}
 		endif
 	else
 		if ($is_network_game = 1 && $game_mode = p2_battle)
-			gamemode_getnumplayersshown
+			GameMode_GetNumPlayersShown
 			<player_idx> = 1
 			begin
-			formatText checksumName = parent_id 'HUD2D_rock_containerp%d' d = <player_idx>
+			FormatText checksumname = parent_id 'HUD2D_rock_containerp%d' d = <player_idx>
 			if ScreenElementExists id = <parent_id>
-				formatText checksumName = id 'GamerTag_%d' d = <player_idx>
+				FormatText checksumname = id 'GamerTag_%d' d = <player_idx>
 				if (<player_idx> = 1)
-					Pos = (65.0, 315.0)
+					pos = (65.0, 315.0)
 				else
-					Pos = (-215.0, 315.0)
+					pos = (-215.0, 315.0)
 				endif
 				CreateScreenElement {
 					parent = <parent_id>
 					id = <id>
-					Type = descinterface
+					type = DescInterface
 					desc = 'hud_gamertag'
 					dims = (280.0, 80.0)
-					Scale = (1.4, 1.4)
-					Pos = <Pos>
+					scale = (1.4, 1.4)
+					pos = <pos>
 				}
-				getplayerinfo <player_idx> team
+				GetPlayerInfo <player_idx> team
 				gamertag_color = $online_player_slot_bg_team1
 				if (<team> = 1)
 					<gamertag_color> = $online_player_slot_bg_team2
 				endif
-				formatText checksumName = gamertag 'gamertag_%d' d = (<player_idx> - 1)
-				<id> :se_setprops {
+				FormatText checksumname = gamertag 'gamertag_%d' d = (<player_idx> - 1)
+				<id> :SE_SetProps {
 					gamertag_name_text = ($<gamertag>)
 					gamertag_bg_rgba = <gamertag_color>
 				}
 				if isXenon
-					getplayerinfo <player_idx> is_local_client
-					getplayerinfo <player_idx> net_id_first
-					getplayerinfo <player_idx> net_id_second
-					getplayerinfo <player_idx> controller
-					getplayerinfo <player_idx> bot_play
+					GetPlayerInfo <player_idx> is_local_client
+					GetPlayerInfo <player_idx> net_id_first
+					GetPlayerInfo <player_idx> net_id_second
+					GetPlayerInfo <player_idx> controller
+					GetPlayerInfo <player_idx> bot_play
 					xuid = [0 0]
-					SetArrayElement ArrayName = xuid index = 0 NewValue = (<net_id_first>)
-					SetArrayElement ArrayName = xuid index = 1 NewValue = (<net_id_second>)
+					SetArrayElement ArrayName = xuid index = 0 newvalue = (<net_id_first>)
+					SetArrayElement ArrayName = xuid index = 1 newvalue = (<net_id_second>)
 					if (<is_local_client> = 0)
 						<id> :Obj_SpawnScriptLater update_headset_status params = {obj_id = <id> uid = <xuid>}
 					elseif (<bot_play> = 0)
-						if NOT NetSessionFunc func = xenonisguest params = {controller_index = (<controller>)}
+						if NOT NetSessionFunc func = XenonIsGuest params = {controller_index = (<controller>)}
 							<id> :Obj_SpawnScriptLater update_headset_status params = {obj_id = <id> uid = <xuid>}
 						endif
 					endif
@@ -494,40 +494,40 @@ script setup_band_hud \{force_layout = 0}
 	endif
 	vocals_get_num_vocalists_onscreen
 	if (<num_vocalists_shown> <= 0)
-		Change \{sysnotify_ingame_position = topright}
+		change \{sysnotify_ingame_position = topright}
 	elseif (<num_vocalists_shown> = 1)
-		gamemode_getnumplayersshown
+		GameMode_GetNumPlayersShown
 		if (<num_players_shown> = 1)
-			Change \{sysnotify_ingame_position = topright}
+			change \{sysnotify_ingame_position = topright}
 		else
-			Change \{sysnotify_ingame_position = centerright}
+			change \{sysnotify_ingame_position = centerright}
 		endif
 	else
-		Change \{sysnotify_ingame_position = centerright}
+		change \{sysnotify_ingame_position = centerright}
 	endif
-	setsystemnotificationposition Pos = ($sysnotify_ingame_position)
+	SetSystemNotificationPosition pos = ($sysnotify_ingame_position)
 endscript
 g_debug_hud_layout = 0
 
 script debug_create_next_hud_layout 
-	Change g_debug_hud_layout = ($g_debug_hud_layout + 1)
+	change g_debug_hud_layout = ($g_debug_hud_layout + 1)
 	GetArraySize \{$debug_hud_layouts_list}
-	if ($g_debug_hud_layout >= <array_Size>)
-		Change \{g_debug_hud_layout = 0}
+	if ($g_debug_hud_layout >= <array_size>)
+		change \{g_debug_hud_layout = 0}
 	endif
 	<layout_info> = ($debug_hud_layouts_list [$g_debug_hud_layout])
-	Change game_mode = (<layout_info>.gamemode)
-	gamemode_getnumplayersshown
+	change game_mode = (<layout_info>.gamemode)
+	GameMode_GetNumPlayersShown
 	<p> = 1
 	begin
-	setplayerinfo <p> part = (<layout_info>.parts [<p> -1])
-	setplayerinfo <p> hud_parent = (<layout_info>.aliases [<p> -1])
+	SetPlayerInfo <p> part = (<layout_info>.parts [<p> -1])
+	SetPlayerInfo <p> hud_parent = (<layout_info>.aliases [<p> -1])
 	<p> = (<p> + 1)
 	repeat <num_players_shown>
-	formatText checksumName = layout_checksum '%s' s = (<layout_info>.layout)
-	Change g_hud_2d_struct_used = $<layout_checksum>
-	formatText TextName = layout_text qs(0x261cb979) s = (<layout_info>.layout)
-	create_panel_message z_priority = 10000 id = debug_hud_layout_text text = <layout_text> Pos = (640.0, 360.0) rgba = [255 255 0 255]
+	FormatText checksumname = layout_checksum '%s' s = (<layout_info>.layout)
+	change g_hud_2d_struct_used = $<layout_checksum>
+	FormatText TextName = layout_text qs("\LHUD layout: %s") s = (<layout_info>.layout)
+	create_panel_message z_priority = 10000 id = debug_hud_layout_text text = <layout_text> pos = (640.0, 360.0) rgba = [255 255 0 255]
 	debug_refresh_hud
 	begin
 	PauseGame
@@ -539,7 +539,7 @@ endscript
 script debug_refresh_hud 
 	destroy_band_hud
 	setup_band_hud \{force_layout = 1}
-	hud_root :se_setprops \{alpha = 1}
+	hud_root :SE_SetProps \{alpha = 1}
 endscript
 
 script count_players_by_part 
@@ -547,14 +547,14 @@ script count_players_by_part
 			part
 		]
 		all}
-	<Player> = 1
+	<player> = 1
 	<players_by_part> = 0
-	gamemode_getnumplayersshown
+	GameMode_GetNumPlayersShown
 	begin
-	if playerinfoequals <Player> part = <part>
+	if PlayerInfoEquals <player> part = <part>
 		<players_by_part> = (<players_by_part> + 1)
 	endif
-	<Player> = (<Player> + 1)
+	<player> = (<player> + 1)
 	repeat <num_players_shown>
 	return players_by_part = <players_by_part>
 endscript
@@ -564,18 +564,18 @@ script get_player_by_part
 			part
 		]
 		all}
-	<Player> = 1
+	<player> = 1
 	begin
-	if playerinfoequals <Player> part = <part>
-		return player_part = <Player>
+	if PlayerInfoEquals <player> part = <part>
+		return player_part = <player>
 	endif
-	<Player> = (<Player> + 1)
+	<player> = (<player> + 1)
 	repeat $current_num_players
 	return \{player_part = -1}
 endscript
 
 script update_hud_layout 
-	<desired_layout> = NULL
+	<desired_layout> = null
 	if ($game_mode = p2_battle)
 		<desired_layout> = battle_hud_2d_elements
 	else
@@ -583,12 +583,12 @@ script update_hud_layout
 		<num_guitar> = <players_by_part>
 		count_players_by_part \{part = drum}
 		<num_drum> = <players_by_part>
-		count_players_by_part \{part = vocals}
+		count_players_by_part \{part = Vocals}
 		<num_vocals> = <players_by_part>
-		count_players_by_part \{part = bass}
+		count_players_by_part \{part = Bass}
 		<num_bass> = <players_by_part>
 		<num_guitar> = (<num_guitar> + <num_bass>)
-		gamemode_getnumplayersshown
+		GameMode_GetNumPlayersShown
 		switch <num_players_shown>
 			case 4
 			<desired_layout> = hud_3g1v
@@ -624,46 +624,46 @@ script update_hud_layout
 			endif
 		endswitch
 	endif
-	printf 'HUD layout: %s' s = <desired_layout> donotresolve
-	if GlobalExists Name = <desired_layout>
-		Change g_hud_2d_struct_used = $<desired_layout>
+	printf 'HUD layout: %s' s = <desired_layout> DoNotResolve
+	if GlobalExists name = <desired_layout>
+		change g_hud_2d_struct_used = $<desired_layout>
 	else
 		printstruct <...>
 		SoftAssert 'Unknown hud layout %s' s = <desired_layout>
-		Change \{g_hud_2d_struct_used = $hud_3g1v}
+		change \{g_hud_2d_struct_used = $hud_3g1v}
 	endif
 endscript
 
 script destroy_hud 
 	RequireParams \{[
 			player_text
-			Player
+			player
 		]
 		all}
-	ExtendCrc hud_destroygroup_window <player_text> out = hud_destroygroup
+	ExtendCRC hud_destroygroup_window <player_text> out = hud_destroygroup
 	if ScreenElementExists id = <hud_destroygroup>
 		DestroyScreenElement id = <hud_destroygroup>
 	endif
-	formatText checksumName = new_2d_container 'HUD_2D_Container%p' p = <player_text>
+	FormatText checksumname = new_2d_container 'HUD_2D_Container%p' p = <player_text>
 	if ScreenElementExists id = <new_2d_container>
 		DestroyScreenElement id = <new_2d_container>
 	endif
-	formatText checksumName = player_container 'HUD_Note_Streak_Combo%d' d = <Player>
+	FormatText checksumname = player_container 'HUD_Note_Streak_Combo%d' d = <player>
 	destroy_menu menu_id = <player_container>
 endscript
 
 script destroy_band_hud 
-	detachhudwidget \{all}
+	DetachHudWidget \{all}
 	if ScreenElementExists \{id = hud_root}
 		DestroyScreenElement \{id = hud_root}
 	endif
-	Change sysnotify_ingame_position = ($sysnotify_menus_position)
-	setsystemnotificationposition Pos = ($sysnotify_ingame_position)
+	change sysnotify_ingame_position = ($sysnotify_menus_position)
+	SetSystemNotificationPosition pos = ($sysnotify_ingame_position)
 endscript
 
 script show_hud 
 	if ScreenElementExists \{id = hud_destroygroup_windowp1}
-		legacydoscreenelementmorph \{id = hud_destroygroup_windowp1
+		LegacyDoScreenElementMorph \{id = hud_destroygroup_windowp1
 			alpha = 1}
 	endif
 	if ScreenElementExists \{id = hud_root}
@@ -674,7 +674,7 @@ endscript
 
 script hide_hud 
 	if ScreenElementExists \{id = hud_destroygroup_windowp1}
-		legacydoscreenelementmorph \{id = hud_destroygroup_windowp1
+		LegacyDoScreenElementMorph \{id = hud_destroygroup_windowp1
 			alpha = 0}
 	endif
 	if ScreenElementExists \{id = hud_root}
@@ -691,11 +691,11 @@ script reset_hud_text
 	GetArraySize \{$hud_screen_elements}
 	<i> = 0
 	begin
-	Name = ($hud_screen_elements [<i>].id)
-	ExtendCrc <Name> <player_text> out = Name
-	SetScreenElementProps id = <Name> alpha = 0
+	name = ($hud_screen_elements [<i>].id)
+	ExtendCRC <name> <player_text> out = name
+	SetScreenElementProps id = <name> alpha = 0
 	<i> = (<i> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 endscript
 
 script reset_hud 
@@ -707,7 +707,7 @@ script reset_hud
 endscript
 
 script move_hud_to_default \{time = 0.01}
-	SpawnScriptNow move_2d_elements_to_default params = {morph_time = <time>}
+	spawnscriptnow move_2d_elements_to_default params = {morph_time = <time>}
 endscript
 
 script move_2d_elements_to_default 
@@ -728,7 +728,7 @@ script move_2d_elements_to_default
 		gameframe}
 	repeat
 	if ScreenElementExists \{id = hud_root}
-		hud_root :se_setprops \{alpha = 1
+		hud_root :SE_SetProps \{alpha = 1
 			time = 0.25}
 	endif
 	off_set_drop = (0.0, 0.0)
@@ -740,7 +740,7 @@ script move_2d_elements_to_default
 	time_to_move = 0.1
 	morph_2d_hud_elements <...>
 	Wait \{0.1
-		Seconds}
+		seconds}
 	<off_set> = (-25.0, 0.0)
 	if ($game_mode = p2_faceoff)
 		<off_set_drop> = (0.0, -25.0)
@@ -749,32 +749,32 @@ script move_2d_elements_to_default
 	<time_to_move> = 0.125
 	morph_2d_hud_elements <...>
 	Wait \{0.125
-		Seconds}
+		seconds}
 	<rot> = 0
 	<off_set_drop> = (0.0, 0.0)
 	<off_set> = (0.0, 0.0)
 	<time_to_move> = 0.1
 	morph_2d_hud_elements <...>
 	if ($is_network_game = 1)
-		if StructureContains \{structure = $g_hud_2d_struct_used
+		if StructureContains \{Structure = $g_hud_2d_struct_used
 				desc_interface}
-			gamemode_getnumplayersshown
-			Player = 1
+			GameMode_GetNumPlayersShown
+			player = 1
 			begin
-			getplayerinfo <Player> hud_parent
+			GetPlayerInfo <player> hud_parent
 			if ScreenElementExists \{id = hud_root}
-				if hud_root :desc_resolvealias Name = <hud_parent> param = parent_id
+				if hud_root :Desc_ResolveAlias name = <hud_parent> param = parent_id
 					if ScreenElementExists id = {<parent_id> child = gamertag}
-						ResolveScreenElementID param = obj_id id = [
+						ResolveScreenElementId param = obj_id id = [
 							{id = <parent_id>}
 							{local_id = gamertag}
 						]
-						ResolveScreenElementID param = container_id id = [
+						ResolveScreenElementId param = container_id id = [
 							{id = <parent_id>}
 							{local_id = gamertag}
 							{local_id = gamertag}
 						]
-						getplayerinfo <Player> is_local_client
+						GetPlayerInfo <player> is_local_client
 						if (<is_local_client> = 1)
 							<obj_id> :obj_spawnscript fadeout_local_gamertags params = {obj_id = <obj_id> gamertag_id = <container_id> alpha = 0}
 						else
@@ -783,16 +783,16 @@ script move_2d_elements_to_default
 					endif
 				endif
 			endif
-			<Player> = (<Player> + 1)
+			<player> = (<player> + 1)
 			repeat <num_players_shown>
 		endif
 	endif
 endscript
 
 script fadeout_local_gamertags 
-	<gamertag_id> :se_setprops alpha = <alpha> time = 1.5
+	<gamertag_id> :SE_SetProps alpha = <alpha> time = 1.5
 	Wait \{1.0
-		Seconds}
+		seconds}
 	if (<alpha> = 0)
 		if ScreenElementExists id = <obj_id>
 			<obj_id> :Die
@@ -843,7 +843,7 @@ script morph_2d_hud_elements \{off_set = (0.0, 0.0)
 		final_rock_pos = (($g_hud_2d_struct_used).<new_rock_pos>)
 		final_score_pos = (($g_hud_2d_struct_used).<new_score_pos>)
 		GetDisplaySettings
-		if (<widescreen> = FALSE)
+		if (<widescreen> = false)
 			if NOT ($game_mode = p2_battle)
 				<final_score_pos> = (<final_score_pos> + (($g_hud_2d_struct_used).offset4by3_score))
 			endif
@@ -853,35 +853,35 @@ script morph_2d_hud_elements \{off_set = (0.0, 0.0)
 		if NOT ($Cheat_PerformanceMode = 1)
 			if NOT ($end_credits = 1)
 				if NOT ($game_mode = training)
-					ExtendCrc \{HUD2D_rock_container
+					ExtendCRC \{HUD2D_rock_container
 						'p1'
 						out = new_container}
 					if ScreenElementExists id = <new_container>
-						SetScreenElementProps id = <new_container> Pos = <move_rock_pos> time = <time_to_move> rot_angle = <rot>
+						SetScreenElementProps id = <new_container> pos = <move_rock_pos> time = <time_to_move> rot_angle = <rot>
 					endif
 				endif
-				ExtendCrc \{HUD2D_score_container
+				ExtendCRC \{HUD2D_score_container
 					'p1'
 					out = new_container}
 				if ScreenElementExists id = <new_container>
 					move_score_pos = ((1.0 - <delta>) * (($g_hud_2d_struct_used).<intro_score_pos>) + (<delta> * (<final_score_pos> + <off_set>)))
-					SetScreenElementProps id = <new_container> Pos = <move_score_pos> time = <time_to_move>
+					SetScreenElementProps id = <new_container> pos = <move_score_pos> time = <time_to_move>
 				endif
 			endif
 			if NOT ($devil_finish = 1)
-				ExtendCrc \{HUD2D_rock_container
+				ExtendCRC \{HUD2D_rock_container
 					'p2'
 					out = new_container}
 				if ScreenElementExists id = <new_container>
 					move_rock_pos_p2 = ((1.0 - <delta>) * (($g_hud_2d_struct_used).offscreen_rock_pos_p2) + (<delta> * ((($g_hud_2d_struct_used).rock_pos_p2) + <off_set> + <off_set_drop>)))
-					SetScreenElementProps id = <new_container> Pos = <move_rock_pos_p2> time = <time_to_move> rot_angle = <rot>
+					SetScreenElementProps id = <new_container> pos = <move_rock_pos_p2> time = <time_to_move> rot_angle = <rot>
 				endif
-				ExtendCrc \{HUD2D_score_container
+				ExtendCRC \{HUD2D_score_container
 					'p2'
 					out = new_container}
 				if ScreenElementExists id = <new_container>
 					move_score_pos_p2 = ((1.0 - <delta>) * (($g_hud_2d_struct_used).offscreen_score_pos_p2) + (<delta> * ((($g_hud_2d_struct_used).score_pos_p2) + <off_set>)))
-					SetScreenElementProps id = <new_container> Pos = <move_score_pos_p2> time = <time_to_move>
+					SetScreenElementProps id = <new_container> pos = <move_score_pos_p2> time = <time_to_move>
 				endif
 			endif
 		endif
@@ -889,7 +889,7 @@ script morph_2d_hud_elements \{off_set = (0.0, 0.0)
 	morph_gamertags <...>
 endscript
 
-script split_text_into_array_elements \{text = qs(0x6df5a0fe)
+script split_text_into_array_elements \{text = qs("\LOOPS")
 		text_pos = (0.0, 0.0)
 		space_between = (0.0, 0.0)
 		flags = {
@@ -901,27 +901,27 @@ script split_text_into_array_elements \{text = qs(0x6df5a0fe)
 	endif
 	if GotParam \{id}
 		CreateScreenElement {
-			Type = ContainerElement
+			type = ContainerElement
 			parent = <parent>
-			Pos = (0.0, 0.0)
+			pos = (0.0, 0.0)
 			id = <id>
 		}
 	else
 		CreateScreenElement {
-			Type = ContainerElement
+			type = ContainerElement
 			parent = <parent>
-			Pos = (0.0, 0.0)
+			pos = (0.0, 0.0)
 		}
 	endif
 	parent_container = <id>
 	fit_scale = 1.0
 	if GotParam \{fit_dims}
 		CreateScreenElement {
-			Type = TextElement
+			type = TextElement
 			parent = <parent_container>
 			text = <text>
 			font = fontgrid_text_a3
-			Scale = (<flags>.Scale)
+			scale = (<flags>.scale)
 		}
 		GetScreenElementDims id = <id>
 		StringLength string = <text>
@@ -931,35 +931,35 @@ script split_text_into_array_elements \{text = qs(0x6df5a0fe)
 		destroy_menu menu_id = <id>
 	endif
 	if GotParam \{centered}
-		half_width = ((<array_Size> - 1) * (<space_between>.(1.0, 0.0)) * 0.5)
+		half_width = ((<array_size> - 1) * (<space_between>.(1.0, 0.0)) * 0.5)
 		<text_pos> = (<text_pos> - <half_width> * (1.0, 0.0))
 	endif
 	i = 0
 	begin
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = <parent_container>
-		Pos = <text_pos>
+		pos = <text_pos>
 		text = (<char_array> [<i>])
 		<flags>
-		Scale = (<flags>.Scale * <fit_scale>)
+		scale = (<flags>.scale * <fit_scale>)
 		alpha = (<flags>.alpha)
 	}
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = <parent_container>
 		text = (<char_array> [<i>])
 		<flags>
 		z_priority = (<flags>.z_priority - 1)
 		rgba = [0 0 0 255]
 		just = [center center]
-		Pos = <text_pos>
+		pos = <text_pos>
 		alpha = (<flags>.alpha)
-		Scale = (<flags>.Scale * (1.3, 1.2) * <fit_scale>)
+		scale = (<flags>.scale * (1.3, 1.2) * <fit_scale>)
 	}
 	<text_pos> = (<text_pos> + <space_between>)
 	<i> = (<i> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	return container_id = <parent_container>
 endscript
 
@@ -974,15 +974,15 @@ script jiggle_text_array_elements \{explode = 0}
 	begin
 	if ScreenElementExists id = (<children> [<i>])
 		GetScreenElementProps id = (<children> [<i>])
-		(<children> [<i>]) :SetTags Pos = <Pos> Scale = <Scale>
+		(<children> [<i>]) :SetTags pos = <pos> scale = <scale>
 	endif
 	<i> = (<i> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	GetStartTime
-	last_time = <starttime>
+	last_time = <StartTime>
 	begin
 	GetStartTime
-	if ((<starttime> - <last_time>) >= <wait_time>)
+	if ((<StartTime> - <last_time>) >= <wait_time>)
 		break
 	else
 		i = 0
@@ -991,31 +991,31 @@ script jiggle_text_array_elements \{explode = 0}
 			(<children> [<i>]) :GetTags
 			GetRandomValue \{a = -10
 				b = 10
-				Name = rand_x}
+				name = rand_x}
 			GetRandomValue \{a = -10
 				b = -10
-				Name = rand_y}
+				name = rand_y}
 			GetRandomValue \{a = 0
 				b = 3
-				Name = rand_rot}
+				name = rand_rot}
 			GetRandomValue \{a = 0.7
 				b = 1.3
-				Name = rand_scale}
+				name = rand_scale}
 			rand_pos = (<rand_x> * (1.0, 0.0) + <rand_y> * (0.0, 1.0))
-			SetScreenElementProps id = (<children> [<i>]) Pos = (<Pos> + <rand_pos>) rot_angle = <rand_rot> Scale = <rand_scale> relative_scale
+			SetScreenElementProps id = (<children> [<i>]) pos = (<pos> + <rand_pos>) rot_angle = <rand_rot> scale = <rand_scale> relative_scale
 		endif
 		<i> = (<i> + 1)
-		repeat <array_Size>
+		repeat <array_size>
 		Wait \{0.075
-			Seconds}
+			seconds}
 		<i> = 0
 		begin
 		if ScreenElementExists id = (<children> [<i>])
 			(<children> [<i>]) :GetTags
-			SetScreenElementProps id = (<children> [<i>]) Pos = <Pos> rot_angle = <rand_rot> Scale = <Scale>
+			SetScreenElementProps id = (<children> [<i>]) pos = <pos> rot_angle = <rand_rot> scale = <scale>
 		endif
 		<i> = (<i> + 1)
-		repeat <array_Size>
+		repeat <array_size>
 	endif
 	Wait \{1
 		gameframe}
@@ -1036,7 +1036,7 @@ script explode_text_array_elements
 	GetArraySize \{children}
 	i = 0
 	explode_dir = 1
-	if (<array_Size> < 2)
+	if (<array_size> < 2)
 		return
 	endif
 	begin
@@ -1045,31 +1045,31 @@ script explode_text_array_elements
 			case 1
 			GetRandomValue \{a = -2000
 				b = 0
-				Name = rand_x}
+				name = rand_x}
 			GetRandomValue \{a = -2000
 				b = -200
-				Name = rand_y}
+				name = rand_y}
 			case 2
 			GetRandomValue \{a = 1280
 				b = 3280
-				Name = rand_x}
+				name = rand_x}
 			GetRandomValue \{a = -2000
 				b = -200
-				Name = rand_y}
+				name = rand_y}
 			case 3
 			GetRandomValue \{a = 1280
 				b = 3280
-				Name = rand_x}
+				name = rand_x}
 			GetRandomValue \{a = 920
 				b = 2720
-				Name = rand_y}
+				name = rand_y}
 			case 4
 			GetRandomValue \{a = -2000
 				b = 0
-				Name = rand_x}
+				name = rand_x}
 			GetRandomValue \{a = 920
 				b = 2720
-				Name = rand_y}
+				name = rand_y}
 		endswitch
 		<explode_dir> = (<explode_dir> + 1)
 		if (<explode_dir> > 4)
@@ -1077,14 +1077,14 @@ script explode_text_array_elements
 		endif
 		GetRandomValue \{a = 0
 			b = 180
-			Name = rand_rot}
+			name = rand_rot}
 		rand_pos = (<rand_x> * (1.0, 0.0) + <rand_y> * (0.0, 1.0))
-		SetScreenElementProps id = (<children> [<i>]) Pos = <rand_pos> rot_angle = <rand_rot> time = <time> motion = ease_out
+		SetScreenElementProps id = (<children> [<i>]) pos = <rand_pos> rot_angle = <rand_rot> time = <time> motion = ease_out
 	endif
 	<i> = (<i> + 1)
 	if ScreenElementExists id = (<children> [<i>])
-		SetScreenElementProps id = (<children> [<i>]) Pos = <rand_pos> rot_angle = <rand_rot> time = <time>
+		SetScreenElementProps id = (<children> [<i>]) pos = <rand_pos> rot_angle = <rand_rot> time = <time>
 	endif
 	<i> = (<i> + 1)
-	repeat (<array_Size> / 2)
+	repeat (<array_size> / 2)
 endscript

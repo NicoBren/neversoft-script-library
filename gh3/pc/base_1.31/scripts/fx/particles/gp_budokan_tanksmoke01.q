@@ -1,60 +1,60 @@
-gp_budokan_tanksmoke01 = {
+GP_Budokan_TankSmoke01 = {
 	pos = (-0.39055103, 0.73120093, 0.016468998)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
+	CreatedAtStart
 	attach
-	align
-	applypositionoffset
-	emitrangedims = (0.1, 0.1, 0.1)
-	emit_target = (-1.0, 0.2, 0.0)
-	enablerotate
-	emitangle = (0.0, 0.0, 0.0)
+	Align
+	ApplyPositionOffset
+	EmitRangeDims = (0.1, 0.1, 0.1)
+	emit_Target = (-1.0, 0.2, 0.0)
+	EnableRotate
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, 0.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	radiate
-	elevspread = (90.0, 120.0)
-	sweepspread = (0.0, 360.0)
-	liferange = (1.0, 1.5)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	Radiate
+	ElevSpread = (90.0, 120.0)
+	SweepSpread = (0.0, 360.0)
+	LifeRange = (1.0, 1.5)
 	emit_rate = 24.0
 	max = 0
-	timeseed = 0.0
-	lifetime = 0.0
-	emitnum = 8
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 0.0
+	emitNum = 8
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(1.0, 1.0)
 		(2.0, 2.0)
 	]
-	speedrange = (0.5, 1.0)
-	rotvel = (-0.5, 0.5)
-	rotveltimescale = 1.0
-	emitdelaystart = 0.0
-	pathfollowtime = 1.0
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (0.5, 1.0)
+	RotVel = (-0.5, 0.5)
+	RotVelTimeScale = 1.0
+	EmitDelayStart = 0.0
+	PathFollowTime = 1.0
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -1
-	lod_distances = (20.0, 30.0)
-	novisibilitytest
-	quickmaterial = {
-		texturelayout = layout2x2
-		diffusetextureenabled
-		diffusetexture = jow_steam02
-		specularpower = 0
+	LOD_Distances = (20.0, 30.0)
+	NoVisibilityTest
+	QuickMaterial = {
+		TextureLayout = Layout2x2
+		DiffuseTextureEnabled
+		DiffuseTexture = JOW_Steam02
+		SpecularPower = 0
 		alphacutoff = 32
-		blendmode = blend
-		burn
-		burnvalue = 0.2
-		quadanimationfps = 0
+		blendMode = blend
+		Burn
+		BurnValue = 0.2
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-4.8371935, 0.0, -0.0)
 		(-4.8371935, 0.0, -0.0)
 		(-4.1530046, 0.0, -0.0)
@@ -65,7 +65,7 @@ gp_budokan_tanksmoke01 = {
 		(3.6677308, 0.0, -0.0)
 		(4.3137593, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-10142721
 		-7470961
 		926365695
@@ -73,7 +73,7 @@ gp_budokan_tanksmoke01 = {
 		926365440
 		1667457792
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.41760302
 		1.0
 	]

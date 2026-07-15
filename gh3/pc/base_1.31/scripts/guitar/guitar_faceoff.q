@@ -8,7 +8,7 @@ script faceoff_init
 	printf "Faceoff Iterator started with time %d" d = <time_offset>
 	change \{faceoff_enabled = 1}
 	if ($is_network_game)
-		if NOT ishost
+		if NOT IsHost
 			if (<player_text> = 'p1')
 				<player_text> = 'p2'
 			else
@@ -17,8 +17,8 @@ script faceoff_init
 		endif
 	endif
 	get_song_prefix song = <song_name>
-	formattext checksumname = note_array '%s_faceoff%p' s = <song_prefix> p = <player_text> addtostringlookup
-	getarraysize $<note_array>
+	FormatText checksumname = note_array '%s_faceoff%p' s = <song_prefix> p = <player_text> AddToStringLookup
+	GetArraySize $<note_array>
 	if (<array_size> = 0)
 		time = 1000000
 	else
@@ -48,8 +48,8 @@ script faceoff_volumes_init
 	endif
 	printf "Faceoff Volume Iterator started with time %d" d = <time_offset>
 	get_song_prefix song = <song_name>
-	formattext checksumname = note_array '%s_faceoff%p' s = <song_prefix> p = <player_text> addtostringlookup
-	getarraysize $<note_array>
+	FormatText checksumname = note_array '%s_faceoff%p' s = <song_prefix> p = <player_text> AddToStringLookup
+	GetArraySize $<note_array>
 	if (<array_size> = 0)
 		time = 1000000
 	else
@@ -89,7 +89,7 @@ script faceoff_volumes_init
 		change \{structurename = player2_status
 			last_faceoff_note = 100}
 	endif
-	updateguitarvolume
+	UpdateGuitarVolume
 endscript
 
 script faceoff_volumes_deinit 

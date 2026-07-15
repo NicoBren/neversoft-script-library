@@ -1,48 +1,48 @@
-gp_buttonstar01 = {
+GP_ButtonStar01 = {
 	pos = (-0.001997, 0.016713, -0.020172)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	emitrangedims = (0.05, 0.0, 0.05)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	EmitRangeDims = (0.05, 0.0, 0.05)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, 0.0, 0.0)
-	emittervelocityweight = 0.0
-	anglespread = 45.0
-	liferange = (0.2, 0.3)
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 45.0
+	LifeRange = (0.2, 0.3)
 	emit_rate = 6.0
 	max = 0
-	timeseed = 0.0
-	lifetime = 0.0
-	emitnum = 1
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 0.0
+	emitNum = 1
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.8, 0.8)
 		(1.6, 1.6)
 	]
-	speedrange = (0.0, 0.0)
-	rotvel = (0.4, 1.0)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	pathfollowtime = 0.0
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (0.0, 0.0)
+	RotVel = (0.4, 1.0)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.0
+	History = 2
+	HistoryListCoordinateSpace = world
 	align_to = (0.0, 1.0, 0.0)
 	color = -7658497
-	lod_default
-	material = buttonstar01_buttonstar01
-	quickmaterial = {
-		specularpower = 0
+	LOD_Default
+	material = ButtonStar01_ButtonStar01
+	QuickMaterial = {
+		SpecularPower = 0
 		alphacutoff = 1
-		blendmode = blend
-		quadanimationfps = 0
+		blendMode = blend
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.508085, 0.0, -0.0)
 		(-0.508085, 0.0, -0.0)
 		(-0.36291802, 0.0, -0.0)
@@ -53,7 +53,7 @@ gp_buttonstar01 = {
 		(0.580668, 0.0, -0.0)
 		(0.580668, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-1
 		-1
 		-1
@@ -61,7 +61,7 @@ gp_buttonstar01 = {
 		-256
 		-256
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.685017
 		1.0
 	]

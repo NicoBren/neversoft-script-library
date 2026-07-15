@@ -6,14 +6,14 @@ next_level_script = nullscript
 dont_call_zone_init_hack = 0
 
 script zone_init 
-	printf qs(0x24c35764) s = <zone_string_name>
+	printf qs("\Lzone_init: %s") s = <zone_string_name>
 	if (<zone_string_name> = 'z_viewer')
-		printf \{qs(0xae81ca89)}
-		Change \{AssertOnMissingScripts = 0}
+		printf \{qs("\LAssertOnMissingScripts = 0")}
+		change \{AssertOnMissingScripts = 0}
 	endif
 	MemPushContext \{TopDownHeap}
-	formatText TextName = zone_editable_text checksumName = zone_editable_list '%a%b' a = <zone_string_name> b = '_editable_list'
-	if GlobalExists Name = <zone_editable_list> Type = array
+	FormatText TextName = zone_editable_text checksumname = zone_editable_list '%a%b' a = <zone_string_name> b = '_editable_list'
+	if GlobalExists name = <zone_editable_list> type = array
 		AddEditableList <zone_editable_list>
 	endif
 	MemPopContext
@@ -59,9 +59,9 @@ script zone_init
 	endif
 	MemPopContext
 	if NOT InFrontend
-		formatText checksumName = zone_setup_script '%a_Setup' a = <zone_string_name>
+		FormatText checksumname = zone_setup_script '%a_Setup' a = <zone_string_name>
 		if ScriptExists <zone_setup_script>
-			SpawnScriptNow zone_init_wait_run_setup params = {zone_setup_script = <zone_setup_script>}
+			spawnscriptnow zone_init_wait_run_setup params = {zone_setup_script = <zone_setup_script>}
 		endif
 	endif
 endscript
@@ -80,7 +80,7 @@ script zone_init_wait_run_setup
 endscript
 
 script zone_deinit 
-	printf qs(0xb9052920) s = <zone_string_name>
+	printf qs("\Lzone_deinit: %s") s = <zone_string_name>
 	ParseNodeArray abort array_name = <array_name>
 	if GotParam \{sfx_array_name}
 		ParseNodeArray abort array_name = <sfx_array_name>
@@ -94,8 +94,8 @@ script zone_deinit
 	if GotParam \{mfx_array_name}
 		ParseNodeArray abort array_name = <mfx_array_name>
 	endif
-	formatText TextName = zone_editable_text checksumName = zone_editable_list '%a%b' a = <zone_string_name> b = '_editable_list'
-	if GlobalExists Name = <zone_editable_list> Type = array
+	FormatText TextName = zone_editable_text checksumname = zone_editable_list '%a%b' a = <zone_string_name> b = '_editable_list'
+	if GlobalExists name = <zone_editable_list> type = array
 		RemoveEditableList <zone_editable_list>
 	endif
 endscript

@@ -54,8 +54,8 @@ endscript
 
 script get_current_first_play 
 	get_band_game_mode_name
-	formattext checksumname = bandname_id 'band%i_info_%g' i = ($current_band) g = <game_mode_name>
-	getglobaltags <bandname_id>
+	FormatText checksumname = bandname_id 'band%i_info_%g' i = ($current_band) g = <game_mode_name>
+	GetGlobalTags <bandname_id>
 	return first_play = <first_play>
 endscript
 career_no_band_fs = {
@@ -95,14 +95,14 @@ script career_select_difficulty_flow_state_func
 	progression_pop_current
 	if ($game_mode = p1_career)
 		index = ($difficulty_list_props.($current_difficulty).index)
-		setprogressiondifficulty difficulty = <index>
-		deregisteratoms
+		SetProgressionDifficulty difficulty = <index>
+		DeRegisterAtoms
 		get_progression_globals game_mode = ($game_mode)
 		if NOT (<progression_global> = none)
-			registeratoms name = progression $<progression_global>
-			registeratoms \{name = achievement
-				$achievement_atoms}
-			updateatoms \{name = progression}
+			RegisterAtoms name = Progression $<progression_global>
+			RegisterAtoms \{name = achievement
+				$Achievement_Atoms}
+			UpdateAtoms \{name = Progression}
 		endif
 	endif
 	get_current_first_play
@@ -308,11 +308,11 @@ career_boss_wuss_out_fs = {
 script wuss_out_transition 
 	change \{structurename = player1_status
 		score = 1}
-	progression_songwon
+	Progression_SongWon
 	end_song
-	unpausegame
+	UnPauseGame
 	change \{current_transition = none}
-	pausegame
+	PauseGame
 endscript
 
 script career_fail_song_fs_decider 
@@ -322,15 +322,15 @@ script career_fail_song_fs_decider
 			"Boss Wuss Out %s"
 			s = $boss_wuss_out}
 		if ($current_song = bosstom)
-			formattext \{checksumname = song_checksum
+			FormatText \{checksumname = song_checksum
 				'career_song6_tier2'
-				addtostringlookup = true}
+				AddToStringLookup = true}
 		elseif ($current_song = bossslash)
-			formattext \{checksumname = song_checksum
+			FormatText \{checksumname = song_checksum
 				'career_song6_tier5'
-				addtostringlookup = true}
+				AddToStringLookup = true}
 		endif
-		getglobaltags <song_checksum> param = score
+		GetGlobalTags <song_checksum> param = score
 		if ($boss_wuss_out > 6)
 			if NOT (<score> > 0)
 				printf \{channel = trchen
@@ -433,7 +433,7 @@ career_pause_options_fs = {
 script end_credits_quit_fs_decider 
 	if ($end_credits = 1)
 		change \{end_credits = 0}
-		progression_endcredits_done
+		Progression_EndCredits_Done
 		career_song_ended_select_quit
 		spawnscriptnow \{menu_music_on}
 		return \{flow_state = main_menu_fs}
@@ -530,7 +530,7 @@ career_lefty_flip_warning = {
 }
 
 script lefty_flip_func 
-	getglobaltags \{user_options}
+	GetGlobalTags \{user_options}
 	change structurename = player1_status lefthanded_gems = <lefty_flip_p1>
 	change structurename = player1_status lefthanded_button_ups = <lefty_flip_p1>
 	if (<lefty_flip_p1>)
@@ -544,7 +544,7 @@ script lefty_flip_func
 endscript
 
 script career_restart_song 
-	killspawnedscript \{name = guitarevent_songwon_spawned}
+	KillSpawnedScript \{name = GuitarEvent_SongWon_Spawned}
 	destroy_menu \{menu_id = yourock_text}
 	destroy_menu \{menu_id = yourock_text_2}
 	destroy_menu \{menu_id = yourock_text_legend}
@@ -666,7 +666,7 @@ script career_fail_song_select_quit
 	change \{structurename = player1_status
 		new_cash = 0}
 	progression_push_current
-	gh3_sfx_fail_song_stop_sounds
+	GH3_SFX_fail_song_stop_sounds
 	kill_gem_scroller
 endscript
 career_song_ended_fs = {
@@ -820,7 +820,7 @@ script career_find_newspaper_successor
 	elseif (<got_cash>)
 		return \{flow_state = career_cash_reward_fs}
 	else
-		getglobaltags \{user_options}
+		GetGlobalTags \{user_options}
 		if (<autosave> = 1)
 			return \{flow_state = career_autosave_fs}
 		else
@@ -847,16 +847,16 @@ script career_autosave_or_setlist
 	destroy_sponsored_menu
 	if ($progression_play_completion_movie = 1)
 		get_progression_globals game_mode = ($game_mode)
-		formattext checksumname = tiername 'tier%i' i = ($progression_completion_tier)
-		if structurecontains structure = ($<tier_global>.<tiername>) completion_movie
-			menu_music_off
-			playmovieandwait movie = ($<tier_global>.<tiername>.completion_movie)
+		FormatText checksumname = tiername 'tier%i' i = ($progression_completion_tier)
+		if StructureContains Structure = ($<tier_global>.<tiername>) completion_movie
+			Menu_Music_Off
+			PlayMovieAndWait movie = ($<tier_global>.<tiername>.completion_movie)
 			get_movie_id_by_name movie = ($<tier_global>.<tiername>.completion_movie)
-			setglobaltags <id> params = {unlocked = 1}
+			SetGlobalTags <id> params = {unlocked = 1}
 		endif
 		change \{progression_play_completion_movie = 0}
 	endif
-	getglobaltags \{user_options}
+	GetGlobalTags \{user_options}
 	if (<autosave> = 1)
 		return \{flow_state = career_autosave_fs}
 	else
@@ -960,7 +960,7 @@ script find_career_unlock_successor
 	elseif (<got_cash>)
 		return \{flow_state = career_cash_reward_fs}
 	else
-		getglobaltags \{user_options}
+		GetGlobalTags \{user_options}
 		if (<autosave> = 1)
 			return \{flow_state = career_autosave_fs}
 		else
@@ -1031,12 +1031,12 @@ script start_encore
 		xenon_singleplayer_session_init
 	endif
 	change \{current_transition = encore}
-	getglobaltags \{progression
+	GetGlobalTags \{Progression
 		params = encore_song}
-	setglobaltags progression params = {current_tier = <next_tier>}
-	setglobaltags progression params = {current_song_count = <next_song_count>}
+	SetGlobalTags Progression params = {current_tier = <next_tier>}
+	SetGlobalTags Progression params = {current_song_count = <next_song_count>}
 	prepare_bassist_for_encore song = <encore_song>
-	restart_gem_scroller song_name = <encore_song> difficulty = ($current_difficulty) difficulty2 = ($current_difficulty2) starttime = ($current_starttime) device_num = ($player1_status.controller)
+	restart_gem_scroller song_name = <encore_song> difficulty = ($current_difficulty) difficulty2 = ($current_difficulty2) StartTime = ($current_starttime) device_num = ($player1_status.controller)
 endscript
 
 script prepare_bassist_for_encore 
@@ -1052,8 +1052,8 @@ script prepare_bassist_for_encore
 		return
 	endif
 	get_musician_profile_struct index = <index>
-	formattext checksumname = default_characterguitartag1 'character_%c_player_%p_guitar_tags' c = (<profile_struct>.name) p = ($<player_status>.player)
-	if getglobaltags <default_characterguitartag1> noassert = 1
+	FormatText checksumname = default_characterguitartag1 'character_%c_player_%p_guitar_tags' c = (<profile_struct>.name) p = ($<player_status>.player)
+	if GetGlobalTags <default_characterguitartag1> noassert = 1
 		current_guitar = <current_selected_guitar>
 		current_bass = <current_selected_bass>
 	else
@@ -1062,10 +1062,10 @@ script prepare_bassist_for_encore
 	get_song_rhythm_track song = <song>
 	if (<rhythm_track> = 1)
 		change structurename = <player_status> instrument_id = <current_guitar>
-		setglobaltags <default_characterguitartag1> params = {current_instrument = guitar}
+		SetGlobalTags <default_characterguitartag1> params = {current_instrument = guitar}
 	else
 		change structurename = <player_status> instrument_id = <current_bass>
-		setglobaltags <default_characterguitartag1> params = {current_instrument = bass}
+		SetGlobalTags <default_characterguitartag1> params = {current_instrument = Bass}
 	endif
 endscript
 default_loading_screen = {
@@ -1108,11 +1108,11 @@ career_battle_help_boss_confirmation_fs = {
 }
 
 script should_play_boss_intro 
-	if NOT gotparam \{song}
+	if NOT GotParam \{song}
 		song = ($current_song)
 	endif
 	return_val = false
-	getpakmancurrent \{map = zones}
+	GetPakManCurrent \{map = zones}
 	switch <pak>
 		case z_dive
 		if (<song> = bosstom)
@@ -1134,10 +1134,10 @@ script start_boss
 	kill_start_key_binding
 	destroy_loading_screen
 	create_loading_screen \{mode = play_boss}
-	getglobaltags \{progression
+	GetGlobalTags \{Progression
 		params = boss_song}
-	setglobaltags progression params = {current_tier = <next_tier>}
-	setglobaltags progression params = {current_song_count = <next_song_count>}
+	SetGlobalTags Progression params = {current_tier = <next_tier>}
+	SetGlobalTags Progression params = {current_song_count = <next_song_count>}
 	if ($show_boss_helper_screen = 1)
 		change \{current_transition = boss}
 	else
@@ -1145,19 +1145,19 @@ script start_boss
 	endif
 	change \{boss_battle = 1}
 	change \{current_num_players = 2}
-	spawnscriptnow restart_gem_scroller params = {song_name = <boss_song> difficulty = ($current_difficulty) difficulty2 = ($current_difficulty2) starttime = ($current_starttime) device_num = ($player1_status.controller)}
+	spawnscriptnow restart_gem_scroller params = {song_name = <boss_song> difficulty = ($current_difficulty) difficulty2 = ($current_difficulty2) StartTime = ($current_starttime) device_num = ($player1_status.controller)}
 endscript
 
 script get_current_battle_first_play 
 	get_band_game_mode_name
-	formattext checksumname = bandname_id 'band%i_info_%g' i = ($current_band) g = <game_mode_name>
-	getglobaltags <bandname_id>
+	FormatText checksumname = bandname_id 'band%i_info_%g' i = ($current_band) g = <game_mode_name>
+	GetGlobalTags <bandname_id>
 	return first_battle_play = <first_battle_play>
 endscript
 
 script set_current_battle_first_play \{first_play = 0}
 	get_band_game_mode_name
-	formattext checksumname = bandname_id 'band%i_info_%g' i = ($current_band) g = <game_mode_name>
-	setglobaltags <bandname_id> params = {first_battle_play = <first_play>}
-	getglobaltags <bandname_id>
+	FormatText checksumname = bandname_id 'band%i_info_%g' i = ($current_band) g = <game_mode_name>
+	SetGlobalTags <bandname_id> params = {first_battle_play = <first_play>}
+	GetGlobalTags <bandname_id>
 endscript

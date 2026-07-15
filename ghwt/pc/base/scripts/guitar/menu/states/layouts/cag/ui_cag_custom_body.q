@@ -2,7 +2,7 @@
 script ui_create_cag_custom_body 
 	part = (<instrument_info>.body_part)
 	make_generic_menu \{vmenu_id = create_cag_custom_body_vmenu
-		title = qs(0x427efa62)
+		title = qs("Body")
 		show_history}
 	setup_cas_menu_handlers \{vmenu_id = create_cag_custom_body_vmenu
 		camera_list = [
@@ -14,7 +14,7 @@ script ui_create_cag_custom_body
 		zoom_camera = 'customize_cag_Zoom'}
 	add_generic_menu_icon_item {
 		icon = icon_cag_type
-		text = qs(0xe8775204)
+		text = qs("STYLE")
 		pad_choose_script = continue_to_type
 		pad_choose_params = {
 			part = <part>
@@ -24,15 +24,15 @@ script ui_create_cag_custom_body
 			zoom_camera = 'customize_cag_Zoom'
 		}
 	}
-	get_section_index_from_desc_id part = <part> target_desc_id = finishes
-	if gotparam \{section_index}
+	get_section_index_from_desc_id part = <part> target_desc_id = Finishes
+	if GotParam \{section_index}
 		add_generic_menu_icon_item {
 			icon = icon_cag_finishes
-			text = qs(0xcc83e9d0)
+			text = qs("FINISH")
 			pad_choose_script = continue_to_finishes
 			pad_choose_params = {
 				part = <part>
-				text = qs(0x6e23fd31)
+				text = qs("Finishes")
 				section_index = <section_index>
 				is_popup
 				hist_tex = icon_cag_finishes
@@ -42,17 +42,17 @@ script ui_create_cag_custom_body
 				zoom_camera = 'customize_cag_Zoom'
 			}
 		}
-		removeparameter \{section_index}
+		RemoveParameter \{section_index}
 	endif
-	get_section_index_from_desc_id part = <part> target_desc_id = details
-	if gotparam \{section_index}
+	get_section_index_from_desc_id part = <part> target_desc_id = Details
+	if GotParam \{section_index}
 		add_generic_menu_icon_item {
 			icon = icon_details
-			text = qs(0xe35a68c5)
+			text = qs("DETAILS")
 			pad_choose_script = continue_to_finishes
 			pad_choose_params = {
 				part = <part>
-				text = qs(0x7f5a5c11)
+				text = qs("Details")
 				section_index = <section_index>
 				is_popup
 				hist_tex = icon_details
@@ -62,28 +62,28 @@ script ui_create_cag_custom_body
 				zoom_camera = 'customize_cag_Zoom'
 			}
 		}
-		removeparameter \{section_index}
+		RemoveParameter \{section_index}
 	endif
 	if is_part_capable part = <part>
 		add_generic_menu_icon_item {
 			icon = icon_graphics
-			text = qs(0xde6cb37a)
-			choose_state = uistate_cap_main
+			text = qs("GRAPHICS")
+			choose_state = UIstate_cap_main
 			choose_state_data = {
 				savegame = ($cas_current_savegame)
 				part = <part>
-				text = qs(0x8f08ff76)
+				text = qs("Graphics")
 				hist_tex = icon_graphics
 				cam_name = 'cag_custom_body'
 				camera_list = ['cag_custom_body' 'cag_custom_body_R' 'cag_custom_body_B' 'cag_custom_body_L']
 				zoom_camera = 'customize_cag_Zoom'
-				return_stance = stance_select_guitar
+				return_stance = Stance_Select_Guitar
 			}
 		}
 	endif
 	change \{generic_menu_block_input = 0}
 	menu_finish \{car_helper_text}
-	launchevent type = focus target = create_cag_custom_body_vmenu data = {child_index = <selected_index>}
+	LaunchEvent type = focus target = create_cag_custom_body_vmenu data = {child_index = <selected_index>}
 endscript
 
 script ui_destroy_cag_custom_body 
@@ -99,15 +99,15 @@ script ui_return_cag_custom_body
 endscript
 
 script continue_to_finishes 
-	if is_ui_event_running
+	if Is_ui_event_running
 		return \{false}
 	endif
-	ui_event_block event = menu_change data = {state = uistate_cap_artist_layer_popout <...>}
+	ui_event_block event = menu_change data = {state = UIstate_cap_artist_layer_popout <...>}
 endscript
 
 script continue_to_type 
-	if is_ui_event_running
+	if Is_ui_event_running
 		return \{false}
 	endif
-	ui_event_block event = menu_change data = {state = uistate_cag_custom_body_types <...>}
+	ui_event_block event = menu_change data = {state = UIstate_cag_custom_body_types <...>}
 endscript

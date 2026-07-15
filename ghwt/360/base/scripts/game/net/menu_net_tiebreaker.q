@@ -1,22 +1,22 @@
 
-script create_select_tie_breaker_menu \{menu_title = qs(0x4d968017)
-		menu_subtitle = qs(0x402907af)
+script create_select_tie_breaker_menu \{menu_title = qs("CREATE MATCH")
+		menu_subtitle = qs("TIE BREAKER")
 		menu_id = create_tie_breaker_menu
 		vmenu_id = create_tie_breaker_vmenu}
 	CreateScreenElement {
-		Type = VScrollingMenu
+		type = VScrollingMenu
 		parent = root_window
 		id = <menu_id>
 		just = [center top]
 		dims = (256.0, 350.0)
-		Pos = (($online_general_menu_pos) + (0.0, 182.0))
+		pos = (($online_general_menu_pos) + (0.0, 182.0))
 		z_priority = 1
 	}
 	CreateScreenElement {
-		Type = VMenu
+		type = VMenu
 		parent = <menu_id>
 		id = <vmenu_id>
-		Pos = ((128.0, 0.0) + (-8.0, 0.0))
+		pos = ((128.0, 0.0) + (-8.0, 0.0))
 		just = [center top]
 		internal_just = [center center]
 		dims = (256.0, 350.0)
@@ -30,85 +30,85 @@ script create_select_tie_breaker_menu \{menu_title = qs(0x4d968017)
 		exclusive_device = ($primary_controller)
 	}
 	create_menu_backdrop \{texture = xb_online_bg}
-	CreateScreenElement \{Type = ContainerElement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = online_menu_ui_container
-		Pos = (0.0, 0.0)}
+		pos = (0.0, 0.0)}
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = online_menu_ui_container
 		font = fontgrid_text_a8
-		Scale = (0.65000004, 0.75)
+		scale = (0.65000004, 0.75)
 		rgba = ($online_medium_blue)
 		text = <menu_title>
 		just = [center top]
-		Pos = (($online_general_menu_pos) + (0.0, 32.0))
+		pos = (($online_general_menu_pos) + (0.0, 32.0))
 		z_priority = 3.0
 	}
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = online_menu_ui_container
 		font = fontgrid_title_a1
-		Scale = (0.7, 0.75)
+		scale = (0.7, 0.75)
 		rgba = ($online_dark_purple)
 		text = <menu_subtitle>
 		just = [center top]
-		Pos = (($online_general_menu_pos) + (0.0, 115.0))
+		pos = (($online_general_menu_pos) + (0.0, 115.0))
 		z_priority = 4.0
 	}
 	selectable_menu_items = 0
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = <vmenu_id>
 		font = fontgrid_title_a1
-		Scale = (0.65000004, 0.75)
+		scale = (0.65000004, 0.75)
 		rgba = ($online_light_blue)
-		text = qs(0x99c4796b)
+		text = qs("HOST")
 		just = [left top]
 		z_priority = 4.0
 	}
 	<id> :SetTags menu_item = <selectable_menu_items>
-	<id> :se_setprops event_handlers = [
+	<id> :SE_SetProps event_handlers = [
 		{focus online_general_menu_focus params = {id = <id>}}
 		{unfocus retail_menu_unfocus}
-		{pad_choose select_tie_breaker params = {Type = HOST}}
+		{pad_choose select_tie_breaker params = {type = HOST}}
 	]
 	<selectable_menu_items> = (<selectable_menu_items> + 1)
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = <vmenu_id>
 		font = fontgrid_title_a1
-		Scale = (0.65000004, 0.75)
+		scale = (0.65000004, 0.75)
 		rgba = ($online_light_blue)
-		text = qs(0x8b0a4ef9)
+		text = qs("CLIENT")
 		just = [left top]
 		z_priority = 4.0
 	}
 	<id> :SetTags menu_item = <selectable_menu_items>
-	<id> :se_setprops event_handlers = [
+	<id> :SE_SetProps event_handlers = [
 		{focus online_general_menu_focus params = {id = <id>}}
 		{unfocus retail_menu_unfocus}
-		{pad_choose select_tie_breaker params = {Type = CLIENT}}
+		{pad_choose select_tie_breaker params = {type = CLIENT}}
 	]
 	<selectable_menu_items> = (<selectable_menu_items> + 1)
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = <vmenu_id>
 		font = fontgrid_title_a1
-		Scale = (0.65000004, 0.75)
+		scale = (0.65000004, 0.75)
 		rgba = ($online_light_blue)
-		text = qs(0x0b6c701b)
+		text = qs("RANDOM")
 		just = [left top]
 		z_priority = 4.0
 	}
 	<id> :SetTags menu_item = <selectable_menu_items>
-	<id> :se_setprops event_handlers = [
+	<id> :SE_SetProps event_handlers = [
 		{focus online_general_menu_focus params = {id = <id>}}
 		{unfocus retail_menu_unfocus}
-		{pad_choose select_tie_breaker params = {Type = HOST}}
+		{pad_choose select_tie_breaker params = {type = HOST}}
 	]
 	<selectable_menu_items> = (<selectable_menu_items> + 1)
-	set_online_menu_highlight_pos menu_items = <selectable_menu_items>
+	set_online_menu_highlight_pos Menu_items = <selectable_menu_items>
 	set_focus_color rgba = ($online_dark_purple)
 	set_unfocus_color rgba = ($online_light_blue)
 	set_user_control_color \{text_rgba = [
@@ -123,13 +123,13 @@ script create_select_tie_breaker_menu \{menu_title = qs(0x4d968017)
 			0
 			200
 		]}
-	add_user_control_helper \{text = qs(0xc18d5e76)
+	add_user_control_helper \{text = qs("SELECT")
 		button = green
 		z = 100}
-	add_user_control_helper \{text = qs(0xaf4d5dd2)
+	add_user_control_helper \{text = qs("BACK")
 		button = red
 		z = 100}
-	LaunchEvent Type = focus target = <vmenu_id>
+	LaunchEvent type = focus target = <vmenu_id>
 endscript
 
 script destroy_select_tie_breaker_menu 
@@ -144,6 +144,6 @@ script destroy_select_tie_breaker_menu
 endscript
 
 script select_tie_breaker 
-	Change tie_breaker = <Type>
+	change tie_breaker = <type>
 	ui_flow_manager_respond_to_action \{action = continue}
 endscript

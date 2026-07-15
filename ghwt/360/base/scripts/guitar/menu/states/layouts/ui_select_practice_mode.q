@@ -1,19 +1,19 @@
 practice_enabled = 0
 
 script ui_init_select_practice_mode 
-	Change \{practice_enabled = 1}
-	Change \{came_to_practice_from = main_menu}
-	Change \{game_mode = training}
-	Change \{respond_to_signin_changed = 1}
-	Change \{respond_to_signin_changed_func = None}
-	SpawnScriptNow \{do_training_loading}
+	change \{practice_enabled = 1}
+	change \{came_to_practice_from = main_menu}
+	change \{game_mode = training}
+	change \{respond_to_signin_changed = 1}
+	change \{respond_to_signin_changed_func = none}
+	spawnscriptnow \{do_training_loading}
 endscript
 g_training_loading_done = 0
 
 script do_training_loading 
-	Change \{g_training_loading_done = 0}
+	change \{g_training_loading_done = 0}
 	create_loading_screen
-	Change \{current_progression_flag = None}
+	change \{current_progression_flag = none}
 	destroy_band
 	StopSoundsByBuss \{Encore_Events}
 	apply_band_logo_to_venue \{step = build}
@@ -22,10 +22,10 @@ script do_training_loading
 	else
 		tutorial_setup_band \{players = 4}
 	endif
-	Change \{current_level = load_z_studio}
+	change \{current_level = load_z_studio}
 	Load_Venue \{block_scripts = 0}
 	create_band \{async = 1}
-	bandmanager_allchangestance \{stance = Stance_A
+	BandManager_AllChangeStance \{stance = Stance_A
 		no_wait}
 	apply_band_logo_to_venue \{step = apply}
 	create_bandname_viewport
@@ -33,18 +33,18 @@ script do_training_loading
 		gameframes}
 	destroy_bg_viewport
 	setup_bg_viewport
-	Change \{current_num_players = 1}
-	gamemode_updatenumplayers \{num_players = 1}
-	Change \{g_training_loading_done = 1}
-	Hide_Band
+	change \{current_num_players = 1}
+	GameMode_UpdateNumPlayers \{num_players = 1}
+	change \{g_training_loading_done = 1}
+	hide_band
 endscript
 
 script ui_create_select_practice_mode 
-	SpawnScriptNow \{new_create_select_practice_mode}
+	spawnscriptnow \{new_create_select_practice_mode}
 endscript
 
 script new_create_select_practice_mode 
-	menu_music_off
+	Menu_Music_Off
 	BG_Crowd_Front_End_Silence
 	begin
 	if ($g_training_loading_done = 1)
@@ -55,23 +55,23 @@ script new_create_select_practice_mode
 	repeat
 	disable_pause
 	UnPauseGame
-	make_generic_menu \{title = qs(0xd093953b)
+	make_generic_menu \{title = qs("TRAINING")
 		pad_back_script = menu_select_practice_back}
-	add_generic_menu_text_item \{text = qs(0x3ea7dec9)
+	add_generic_menu_text_item \{text = qs("PRACTICE")
 		pad_choose_script = ui_select_practice_mode_choose
 		pad_choose_params = {
 			practice
 		}}
-	add_generic_menu_text_item \{text = qs(0xc6510dd1)
+	add_generic_menu_text_item \{text = qs("TUTORIALS")
 		pad_choose_script = ui_select_practice_mode_choose}
 	menu_finish
 	destroy_loading_screen
-	StartRendering
-	LaunchEvent Type = focus target = current_menu data = {child_index = <selected_index>}
+	startrendering
+	LaunchEvent type = focus target = current_menu data = {child_index = <selected_index>}
 endscript
 
 script menu_select_practice_back 
-	LaunchEvent \{Type = unfocus
+	LaunchEvent \{type = unfocus
 		target = current_menu}
 	create_loading_screen
 	generic_ui_destroy
@@ -91,22 +91,22 @@ script ui_deinit_select_practice_mode
 	destroy_band
 	destroy_bandname_viewport
 	tutorial_disable_botplay
-	Change \{practice_enabled = 0}
+	change \{practice_enabled = 0}
 endscript
 
 script ui_select_practice_mode_choose 
-	printf \{qs(0xdfc3e245)}
+	printf \{qs("\Lui_select_practice_mode_choose")}
 	if GotParam \{practice}
-		Change \{training_mode = practice}
-		Change \{game_mode = training}
+		change \{training_mode = practice}
+		change \{game_mode = training}
 	else
-		Change \{training_mode = tutorials}
+		change \{training_mode = tutorials}
 	endif
 	if ($training_mode = tutorials)
 		generic_event_choose \{state = uistate_select_tutorial}
 	else
-		Change \{current_num_players = 1}
-		gamemode_updatenumplayers \{num_players = 1}
+		change \{current_num_players = 1}
+		GameMode_UpdateNumPlayers \{num_players = 1}
 		generic_event_choose \{state = uistate_setlist
 			data = {
 				no_jamsession
@@ -114,24 +114,24 @@ script ui_select_practice_mode_choose
 	endif
 endscript
 
-script check_tutorial_allowances \{allow_rb_drums = 1}
+script check_tutorial_allowances \{allow_RB_drums = 1}
 	if ($allow_controller_for_all_instruments = 1)
 		return \{allowances = all}
 	endif
 	if IsGuitarController \{controller = $primary_controller}
 		<allowances> = guitar
-	elseif isrbdrum \{controller = $primary_controller}
-		if (<allow_rb_drums> = 1)
+	elseif isRBDrum \{controller = $primary_controller}
+		if (<allow_RB_drums> = 1)
 			<allowances> = drum
 		else
 			<allowances> = not_specific
 		endif
-	elseif isdrumcontroller \{controller = $primary_controller}
+	elseif IsDrumController \{controller = $primary_controller}
 		<allowances> = drum
 	else
 		ui_get_controller_parts_allowed \{controller = $primary_controller}
-		if StructureContains structure = <allowed> vocals
-			<allowances> = vocals
+		if StructureContains Structure = <allowed> Vocals
+			<allowances> = Vocals
 		else
 			<allowances> = not_specific
 		endif

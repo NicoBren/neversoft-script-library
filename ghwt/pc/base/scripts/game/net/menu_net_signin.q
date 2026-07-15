@@ -1,69 +1,69 @@
-logintextcolor = [
+loginTextColor = [
 	255
 	200
 	0
 	255
 ]
-gprivatematchid = 0
+gPrivateMatchId = 0
 
 script create_winport_account_create_screen 
-	create_winport_account_management_screen \{mode = createaccount
+	create_winport_account_management_screen \{mode = createAccount
 		title = qs(0x47f8b9ab)
-		container = accountcreatecontainer}
+		container = accountCreateContainer}
 endscript
 
 script destroy_winport_account_create_screen 
-	destroy_winport_account_management_screen \{container = accountcreatecontainer}
+	destroy_winport_account_management_screen \{container = accountCreateContainer}
 endscript
 
-script 0x58e55ccb 
+script ui_create_winport_account_reset_screen 
 	printf \{qs(0x32860a8e)}
 	ui_event_wait \{event = menu_replace
 		data = {
-			state = 0xe4d2b7e7
-			mode = resetaccount
+			state = UIstate_winport_account_management_screen
+			mode = resetAccount
 			title = qs(0xaebdb73e)
-			container = accountresetcontainer
-			yellowbuttontext = qs(0x34db5bf4)
-			yellowbuttonaction = start_winport_account_delete_screen
+			container = accountResetContainer
+			yellowButtonText = qs(0x34db5bf4)
+			yellowButtonAction = start_winport_account_delete_screen
 		}}
 endscript
 
-script 0x327eda2e 
-	destroy_winport_account_management_screen \{container = accountresetcontainer}
+script ui_destroy_winport_account_reset_screen 
+	destroy_winport_account_management_screen \{container = accountResetContainer}
 endscript
 
 script start_winport_account_reset_screen 
 	printf \{qs(0xcbe75dc0)}
 	ui_event_wait \{event = menu_replace
-		state = 0xd4b24034}
+		state = UIstate_winport_account_reset_screen}
 endscript
 
-script 0xe374ed28 
+script ui_create_winport_account_delete_screen 
 	ui_event_wait \{event = menu_replace
 		data = {
-			state = 0xe4d2b7e7
-			mode = deleteaccount
+			state = UIstate_winport_account_management_screen
+			mode = deleteAccount
 			title = qs(0x16fd5b13)
-			container = accountdeletecontainer
+			container = accountDeleteContainer
 		}}
 endscript
 
-script 0x337e6059 
-	destroy_winport_account_management_screen \{container = accountdeletecontainer}
+script ui_destroy_winport_account_delete_screen 
+	destroy_winport_account_management_screen \{container = accountDeleteContainer}
 endscript
 
 script start_winport_account_delete_screen 
 	ui_event_wait \{event = menu_replace
-		state = 0xcefa55b9}
+		state = UIstate_winport_account_delete_screen}
 endscript
 
-script 0x307fc0a1 
+script ui_create_change_password_submenu 
 	printf \{'--- ui_create_change_password_submenu'}
 	create_change_password_submenu
 endscript
 
-script 0x579c18f9 
+script ui_destroy_change_password_submenu 
 	destroy_change_password_submenu
 endscript
 
@@ -72,68 +72,68 @@ script create_change_password_submenu
 	printscriptinfo \{qs(0xafaba2ee)}
 	ui_event_wait \{event = menu_replace
 		data = {
-			state = 0xe4d2b7e7
-			mode = changeaccount
+			state = UIstate_winport_account_management_screen
+			mode = changeAccount
 			title = qs(0x95ad3a57)
-			container = accountchangecontainer
-			yellowbuttontext = qs(0x1cb97731)
-			yellowbuttonaction = 0x8d6911b3
-			0x2d99b7cf
+			container = accountChangeContainer
+			yellowButtonText = qs(0x1cb97731)
+			yellowButtonAction = create_account_reset_submenu
+			AccountManagementScreen
 		}}
 endscript
 
 script destroy_change_password_submenu 
-	destroy_winport_account_management_screen \{container = accountchangecontainer}
+	destroy_winport_account_management_screen \{container = accountChangeContainer}
 endscript
 
-script 0x4c81dad6 
+script ui_create_account_delete_submenu 
 	printf \{'--- ui_create_account_delete_submenu'}
 	create_account_delete_submenu
 endscript
 
-script 0x72134e4d 
+script ui_destroy_account_delete_submenu 
 	destroy_account_delete_submenu
 endscript
 
 script create_account_delete_submenu 
 	ui_event_wait \{event = menu_replace
 		data = {
-			state = 0xe4d2b7e7
-			mode = deleteaccount
+			state = UIstate_winport_account_management_screen
+			mode = deleteAccount
 			title = qs(0x16fd5b13)
-			container = accountdeletesubmenucontainer
-			yellowbuttonaction = winport_null_action
-			0x2d99b7cf
+			container = accountDeleteSubmenuContainer
+			yellowButtonAction = winport_null_action
+			AccountManagementScreen
 		}}
 endscript
 
 script destroy_account_delete_submenu 
-	destroy_winport_account_management_screen \{container = accountdeletesubmenucontainer}
+	destroy_winport_account_management_screen \{container = accountDeleteSubmenuContainer}
 endscript
 
-script 0xe64e2445 
+script ui_create_account_reset_submenu 
 	printf \{'--- ui_create_account_reset_submenu'}
-	0x8d6911b3
+	create_account_reset_submenu
 endscript
 
-script 0x1aad64a2 
-	0x4e1814be
+script ui_destroy_account_reset_submenu 
+	destroy_account_reset_submenu
 endscript
 
-script 0x8d6911b3 
+script create_account_reset_submenu 
 	ui_event_wait \{event = menu_replace
 		data = {
-			state = 0xe4d2b7e7
-			mode = resetaccount
+			state = UIstate_winport_account_management_screen
+			mode = resetAccount
 			title = qs(0x63f382d1)
-			container = 0xa9aeb3f5
-			yellowbuttonaction = winport_null_action
-			0x2d99b7cf
+			container = accountResetSubmenuContainer
+			yellowButtonAction = winport_null_action
+			AccountManagementScreen
 		}}
 endscript
 
-script 0x4e1814be 
-	destroy_winport_account_management_screen \{container = 0xa9aeb3f5}
+script destroy_account_reset_submenu 
+	destroy_winport_account_management_screen \{container = accountResetSubmenuContainer}
 endscript
 
 script winport_null_action 
@@ -190,8 +190,8 @@ endscript
 script create_join_private_menu 
 	printf \{qs(0xba36d6a6)}
 	z = 110
-	create_menu_backdrop \{texture = online_background}
-	createscreenelement \{type = containerelement
+	create_menu_backdrop \{texture = Online_Background}
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = private_menu_container
 		pos = (0.0, 0.0)
@@ -206,7 +206,7 @@ script create_join_private_menu
 			}
 			{
 				pad_choose
-				executejoinattempt
+				executeJoinAttempt
 			}
 			{
 				pad_back
@@ -216,12 +216,12 @@ script create_join_private_menu
 				}
 			}
 		]}
-	netsessionfunc \{func = initializeloginfields
+	NetSessionFunc \{func = InitializeLoginFields
 		params = {
-			loginmode = matchusername
+			loginMode = matchUsername
 		}}
-	displaysprite \{parent = private_menu_container
-		tex = dialog_title_bg
+	displaySprite \{parent = private_menu_container
+		tex = Dialog_Title_BG
 		dims = (300.0, 250.0)
 		z = 9
 		pos = (640.0, 50.0)
@@ -230,8 +230,8 @@ script create_join_private_menu
 			top
 		]
 		flip_v}
-	displaysprite \{parent = private_menu_container
-		tex = dialog_title_bg
+	displaySprite \{parent = private_menu_container
+		tex = Dialog_Title_BG
 		dims = (300.0, 250.0)
 		z = 9
 		pos = (640.0, 50.0)
@@ -239,7 +239,7 @@ script create_join_private_menu
 			left
 			top
 		]}
-	createscreenelement \{type = textelement
+	CreateScreenElement \{type = TextElement
 		parent = private_menu_container
 		font = fontgrid_title_a1
 		scale = 1.0
@@ -265,9 +265,9 @@ script create_join_private_menu
 			255
 		]}
 	fit_text_in_rectangle id = <id> dims = (400.0, 75.0) pos = (640.0, 145.0) only_if_larger_x = 1 only_if_larger_y = 1 just = center
-	createscreenelement \{type = textelement
+	CreateScreenElement \{type = TextElement
 		parent = private_menu_container
-		font = 0x5f855b0b
+		font = fontgrid_text_a4
 		scale = 1.0
 		rgba = [
 			180
@@ -292,7 +292,7 @@ script create_join_private_menu
 		]}
 	fit_text_in_rectangle id = <id> dims = (600.0, 25.0) pos = (640.0, 590.0) only_if_larger_x = 1 only_if_larger_y = 1 just = center keep_ar = 1
 	<pos> = (375.0, 320.0)
-	create_winport_login_field container = private_menu_container pos = <pos> label = qs(0x3be57438) labelid = usernamelabelid prefixid = usernameprefixid cursorid = usernamecursorid suffixid = usernamesuffixid ang = -2.0
+	create_winport_login_field container = private_menu_container pos = <pos> label = qs(0x3be57438) labelId = usernameLabelId prefixId = usernamePrefixId cursorId = usernameCursorId suffixId = usernameSuffixId ang = -2.0
 	change \{user_control_pill_text_color = [
 			0
 			0
@@ -305,64 +305,64 @@ script create_join_private_menu
 			180
 			255
 		]}
-	add_user_control_helper \{text = qs(0xb73cb78f)
+	add_user_control_helper \{text = qs("ACCEPT")
 		button = green
 		z = 100}
-	add_user_control_helper \{text = qs(0xaf4d5dd2)
+	add_user_control_helper \{text = qs("BACK")
 		button = red
 		z = 100}
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = private_menu_container}
 	begin
-	update_winport_login_field \{field = matchusername
-		labelid = usernamelabelid
-		prefixid = usernameprefixid
-		cursorid = usernamecursorid
-		suffixid = usernamesuffixid}
-	wait \{1
+	update_winport_login_field \{field = matchUsername
+		labelId = usernameLabelId
+		prefixId = usernamePrefixId
+		cursorId = usernameCursorId
+		suffixId = usernameSuffixId}
+	Wait \{1
 		frame}
-	if NOT (screenelementexists id = private_menu_container)
+	if NOT (ScreenElementExists id = private_menu_container)
 		return
 	endif
-	netsessionfunc \{func = getloginentry}
-	if ((<loginentry> = loginaccepted) || (<loginentry> = loginaborted))
+	NetSessionFunc \{func = GetLoginEntry}
+	if ((<loginEntry> = loginAccepted) || (<loginEntry> = loginAborted))
 		break
 	endif
 	repeat
-	switch <loginentry>
-		case loginaccepted
-		executejoinattempt
-		case loginaborted
+	switch <loginEntry>
+		case loginAccepted
+		executeJoinAttempt
+		case loginAborted
 		ui_flow_manager_respond_to_action \{action = back}
 	endswitch
 endscript
 
-script executejoinattempt 
-	netsessionfunc \{func = generateprivatematchid}
-	change gprivatematchid = <privatematchid>
+script executeJoinAttempt 
+	NetSessionFunc \{func = GeneratePrivateMatchId}
+	change gPrivateMatchId = <privateMatchId>
 	ui_flow_manager_respond_to_action \{action = attempt_join}
 endscript
 
 script destroy_join_private_menu 
-	netsessionfunc \{func = destroyloginfields}
-	destroyscreenelement \{id = private_menu_container}
+	NetSessionFunc \{func = DestroyLoginFields}
+	DestroyScreenElement \{id = private_menu_container}
 	clean_up_user_control_helpers
 	destroy_menu_backdrop
 endscript
 
-script 0xe613141d 
+script ui_create_logout_submenu 
 	printf \{'--- ui_create_logout_submenu'}
 	create_logout_submenu params = <...>
 endscript
 
-script 0x5a50ea25 
+script ui_destroy_logout_submenu 
 	destroy_logout_submenu params = <...>
 endscript
 
 script create_logout_submenu 
 	printf \{qs(0xfba89727)}
 	create_popup_warning_menu \{textblock = {
-			title = qs(0x5ee56993)
+			title = qs("LOG OUT")
 			text = qs(0xdad8f88c)
 			dims = (800.0, 400.0)
 			scale = 0.5
@@ -371,11 +371,11 @@ script create_logout_submenu
 		dialog_dims = (600.0, 80.0)
 		options = [
 			{
-				func = executelogout
-				text = qs(0x5ee56993)
+				func = executeLogout
+				text = qs("LOG OUT")
 			}
 			{
-				func = 0xb7080153
+				func = main_menu_select_account
 				text = qs(0x7979158a)
 			}
 		]}
@@ -387,14 +387,14 @@ script destroy_logout_submenu
 	destroy_menu_backdrop
 endscript
 
-script executelogout 
-	netsessionfunc \{func = resetnetwork}
-	wait \{1.0
+script executeLogout 
+	NetSessionFunc \{func = ResetNetwork}
+	Wait \{1.0
 		second}
 	destroy_logout_submenu
 	ui_event_block \{event = menu_replace
 		data = {
-			state = uistate_mainmenu
+			state = UIstate_mainmenu
 			base_name = 'mainmenu'
 			selected_index = 3
 			clear_previous_stack
@@ -405,12 +405,12 @@ script create_account_submenu \{menu_title = qs(0xf66be5f9)
 		menu_id = online_account_menu
 		vmenu_id = online_account_vmenu}
 	change \{online_main_menu_pos = (640.0, 110.0)}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = account_submenu_anchor
 		pos = (0.0, 0.0)}
-	createscreenelement {
-		type = vscrollingmenu
+	CreateScreenElement {
+		type = VScrollingMenu
 		parent = account_submenu_anchor
 		id = <menu_id>
 		just = [center top]
@@ -418,8 +418,8 @@ script create_account_submenu \{menu_title = qs(0xf66be5f9)
 		pos = (($online_main_menu_pos) + (0.0, 75.0))
 		z_priority = 1
 	}
-	createscreenelement {
-		type = vmenu
+	CreateScreenElement {
+		type = VMenu
 		parent = <menu_id>
 		id = <vmenu_id>
 		pos = (47.5, 0.0)
@@ -433,23 +433,23 @@ script create_account_submenu \{menu_title = qs(0xf66be5f9)
 			{pad_down generic_menu_up_or_down_sound params = {down}}
 		]
 	}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = account_submenu_anchor
 		id = online_account_submenu_container
 		pos = (0.0, 0.0)}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = online_account_submenu_container
 		id = online_account_submenu_text_container
 		pos = (0.0, 0.0)}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = account_submenu_anchor
 		id = online_info_pane_container
 		pos = (0.0, 0.0)}
-	create_menu_backdrop \{texture = online_background}
-	displaysprite id = online_frame parent = online_account_submenu_container tex = online_frame_large pos = ($online_main_menu_pos) dims = (660.0, 480.0) just = [center top] z = 2
-	displaysprite id = online_frame_crown parent = online_account_submenu_container tex = online_frame_crown pos = (($online_main_menu_pos) + (0.0, -62.0)) dims = (256.0, 105.0) just = [center top] z = 3
-	createscreenelement {
-		type = textelement
+	create_menu_backdrop \{texture = Online_Background}
+	displaySprite id = online_frame parent = online_account_submenu_container tex = Online_Frame_Large pos = ($online_main_menu_pos) dims = (660.0, 480.0) just = [center top] z = 2
+	displaySprite id = online_frame_crown parent = online_account_submenu_container tex = online_frame_crown pos = (($online_main_menu_pos) + (0.0, -62.0)) dims = (256.0, 105.0) just = [center top] z = 3
+	CreateScreenElement {
+		type = TextElement
 		parent = online_account_submenu_text_container
 		id = online_title
 		font = fontgrid_title_a1
@@ -460,34 +460,34 @@ script create_account_submenu \{menu_title = qs(0xf66be5f9)
 		just = [center top]
 		z_priority = 4.0
 	}
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	if (<width> > 420)
-		setscreenelementprops {
+		SetScreenElementProps {
 			id = <id>
 			scale = 1.0
 		}
 		scale_element_to_size {
 			id = <id>
 			target_width = 420
-			target_height = <height>
+			target_height = <Height>
 		}
 	endif
 	net_add_item_to_main_menu {
-		vmenu = <vmenu_id>
+		VMenu = <vmenu_id>
 		text = qs(0x3c3f3a27)
 		pad_choose_script = ui_flow_manager_respond_to_action
 		choose_script_params = {action = execute_logout}
 		line_spacing = 50
 	}
 	net_add_item_to_main_menu {
-		vmenu = <vmenu_id>
+		VMenu = <vmenu_id>
 		text = qs(0x95ad3a57)
 		pad_choose_script = ui_flow_manager_respond_to_action
 		choose_script_params = {action = execute_change_password}
 		line_spacing = 50
 	}
 	net_add_item_to_main_menu {
-		vmenu = <vmenu_id>
+		VMenu = <vmenu_id>
 		text = qs(0x16fd5b13)
 		pad_choose_script = ui_flow_manager_respond_to_action
 		choose_script_params = {action = execute_delete_account}
@@ -496,13 +496,13 @@ script create_account_submenu \{menu_title = qs(0xf66be5f9)
 	set_focus_color rgba = ($online_dark_purple)
 	set_unfocus_color rgba = ($online_light_blue)
 	create_online_main_menu_helper_buttons
-	launchevent type = focus target = <vmenu_id>
+	LaunchEvent type = focus target = <vmenu_id>
 endscript
 
 script destroy_account_submenu 
 	clean_up_user_control_helpers
 	destroy_menu_backdrop
-	if screenelementexists \{id = account_submenu_anchor}
-		destroyscreenelement \{id = account_submenu_anchor}
+	if ScreenElementExists \{id = account_submenu_anchor}
+		DestroyScreenElement \{id = account_submenu_anchor}
 	endif
 endscript

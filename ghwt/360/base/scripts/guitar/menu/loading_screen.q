@@ -1,75 +1,75 @@
 loading_screen_tips = [
-	qs(0xc9b742d3)
-	qs(0xc9b742d3)
-	qs(0x55128c42)
-	qs(0x55128c42)
-	qs(0x1b249d67)
-	qs(0x1b249d67)
-	qs(0x09a5513a)
-	qs(0x50f3ec61)
-	qs(0x1d11ae73)
-	qs(0x9ad8451e)
-	qs(0x2b5609ae)
-	qs(0x3b41774c)
-	qs(0x1b1be91b)
-	qs(0xc2870c9f)
-	qs(0xd56dca0d)
-	qs(0xaba1c872)
-	qs(0xbbd1accf)
-	qs(0x3ae22a18)
-	qs(0x4b04862b)
-	qs(0x95c81309)
-	qs(0x8a63941b)
+	qs("Having trouble?  Check out the tutorials in the training menu.")
+	qs("Having trouble?  Check out the tutorials in the training menu.")
+	qs("Go to Rock Star Creator to purchase new clothing and instruments with the money you earn.")
+	qs("Go to Rock Star Creator to purchase new clothing and instruments with the money you earn.")
+	qs("Going into practice can help you nail those tricky solos.")
+	qs("Going into practice can help you nail those tricky solos.")
+	qs("When using Dolby Pro Logic® II, switch your receiver to Music Mode for the best sound quality.")
+	qs("Get your personal Guitar Hero stats on the web.  Visit community.guitarhero.com to find out how!")
+	qs("Need new songs?  Check the 'Daily Message' to see if new content is available!")
+	qs("Win stuff by playing Guitar Hero!  Check the 'Daily Message' for info on tournaments.")
+	qs("Link to your game stats, earn groupies, and form an online band at community.guitarhero.com!")
+	qs("Want to play in a band but don't have any friends?  Play online to hook up and jam!")
+	qs("Who's a Guitar God?  Check the leaderboards or go to community.guitarhero.com on the web.")
+	qs("When in doubt, blame the singer's girlfriend.")
+	qs("Don't hide those years of partying - adjust your rocker's age in the 'Rock Star Creator' 'Edit Face' menu.")
+	qs("Is your bassist too loud?  You can change the mix of instruments in the 'Set Audio' menu!")
+	qs("Born as a lefty?  No prob, just turn on lefty flip in the options menu!")
+	qs("Wanna create your own epic song?  Check out the 'Music Studio' from the main menu!")
+	qs("Unlocked a cool new piece of clothing?  Go into the 'Rock Star Creator' to buy new stuff.")
+	qs("If it's illegal to Rock and Roll, then throw my @#$ in jail!")
+	qs("Head to GHTunes to download new user created tracks to play in the game!")
 ]
 loading_screen_tips_guitar = [
-	qs(0x5b00d2a3)
-	qs(0x3fbe71a3)
-	qs(0x72a1a04b)
-	qs(0x68314f9c)
-	qs(0x2b35e0ea)
-	qs(0xf1b5a49c)
-	qs(0x61524e4f)
+	qs("Try holding down the button before the note reaches the strike line.")
+	qs("For a long string of notes, try alternating the strum bar up and down.")
+	qs("You can look even cooler tap strumming with the neck slider.")
+	qs("Use a combination of tap wah and whammy to earn maximum cash.")
+	qs("If you see a purple rope connecting notes it means you can use the neck slider to tap or slide.")
+	qs("Slide your hand on the neck slider during long sustained notes to make a wah effect.")
+	qs("It's cool to use both hands on the fret buttons during complex parts.  It's even cooler to use your feet!")
 ]
 loading_screen_tips_drum = [
-	qs(0xbb46c108)
-	qs(0x066bfa3d)
-	qs(0x2957d847)
-	qs(0x02ffd37d)
-	qs(0xad313cae)
-	qs(0x713f15be)
-	qs(0xcccdd663)
+	qs("If you're having trouble finding the beat, start with the kick and snare and then add in your other hand.")
+	qs("If your foot starts cramping, try resting it on the kick pedal.")
+	qs("Instead of whaling on the pads, try using softer hits.  Using your wrists will give you more accuracy and speed.")
+	qs("For fast repeated notes, try not to tense up.")
+	qs("The silver topped notes are accents.  Hit them harder for extra points.")
+	qs("Start moving your hand before the note, so that you can hit it on time, and not late.")
+	qs("Improvise! At the start of songs or when the drum highway looks wavy, play anything you want - there's no penalty.")
 ]
 loading_screen_tips_vocals = [
-	qs(0xf074447f)
-	qs(0x63dc2c6a)
-	qs(0xdb4cd2d0)
-	qs(0x7490e0eb)
-	qs(0x6f12a948)
-	qs(0x2f945279)
+	qs("Deep voice?  No problem.  Sing the song in any octave and you will be scored the same.")
+	qs("Tip: Move away from the mic to breathe.")
+	qs("Feel free to freestyle your own lyrics as long as they're on-time and on-pitch.")
+	qs("Just like a real rock singer, enunciation doesn't really matter.  Pitch and timing are the most important things.")
+	qs("Watch for glowing freeform sections - sing anything you want to the song's beat and pitch to earn bonus points.")
+	qs("Bring the hype! When you see hands appear on the vocal highway, shout out to the crowd to boost your rock meter!")
 ]
 loading_screen_tips_bass = [
-	qs(0xf87cba75)
-	qs(0x5b00d2a3)
-	qs(0x3fbe71a3)
+	qs("Have you seen that bar in the middle of the highway?  That's an open strum.  Hit it by strumming without holding buttons.")
+	qs("Try holding down the button before the note reaches the strike line.")
+	qs("For a long string of notes, try alternating the strum bar up and down.")
 ]
 loading_screen_tips_band = [
-	qs(0x118abab2)
-	qs(0x25ed2967)
-	qs(0x268feb71)
-	qs(0x8dd90fa9)
+	qs("You're all in this together.  Once Star Power is ready, anybody in your band can activate it.")
+	qs("Hitting note streaks together as a band will give the band a score bonus.")
+	qs("If one of your bandmates is struggling they can pull from the Star Power meter to help themselves.")
+	qs("When your highway edges glow brighter you're on a note streak. If your bandmates join you, you'll score bonus points.")
 ]
 loading_screen_tips_jam = [
-	qs(0xc91035c7)
-	qs(0xaeb20c39)
-	qs(0x10950ffe)
-	qs(0xc39546e9)
-	qs(0xae0cbb04)
+	qs("In GHMix, Step Recording is the easiest way to keep notes on beat.")
+	qs("Play to the beat of your own drum.  Plug your GH Drum Kit into the Music Studio and jam away.")
+	qs("You don't have to rip to play ripping solos.  Try the 'Lead Machine'.")
+	qs("Spit some rhymes with a Drum Machine and Mic in the recording studio.")
+	qs("When you've finished your masterpiece, select the Publish option to send it up to GHTunes!")
 ]
 loading_screen_tips_leaderboard = [
-	qs(0xd65e620a)
-	qs(0xe32a76ac)
-	qs(0x91158596)
-	qs(0x2bd8629d)
+	qs("Are you the best around?  Is nothing gonna ever keep you down?")
+	qs("Each song in the game has a leaderboard for each instrument, and for band play.")
+	qs("Any time you download a new song you will be able to post a score onto that song's leaderboard.")
+	qs("Get your personal Guitar Hero stats on the web. Visit community.guitarhero.com to find out how!")
 ]
 loading_screen_destroy_state = 'none'
 
@@ -80,7 +80,7 @@ script create_loading_screen \{mode = play_song
 	if ($is_changing_levels = 1)
 		return
 	endif
-	Change \{is_changing_levels = 1}
+	change \{is_changing_levels = 1}
 	if ($guitar_motion_enable_test = 1)
 		return
 	endif
@@ -92,17 +92,17 @@ script create_loading_screen \{mode = play_song
 	movie_path = ('movies\\bik\\' + <movie> + '.bik.xen')
 	desc = 'loading'
 	buffer_slot = 0
-	textureSlot = 2
-	loading_text = qs(0xfab8f6e7)
+	TextureSlot = 2
+	loading_text = qs("LOADING...")
 	if (($game_mode) = p4_pro_faceoff)
 		movie = 'loading_online'
 		movie_path = ('movies\\bik\\' + <movie> + '.bik.xen')
 		desc = 'loading_online'
 	endif
-	GetRandomValue \{Name = global_or_not
+	GetRandomValue \{name = global_or_not
 		a = 0
 		b = 2
-		integer}
+		Integer}
 	if (<global_or_not> = 1)
 		<tips_array> = ($loading_screen_tips)
 	else
@@ -117,9 +117,9 @@ script create_loading_screen \{mode = play_song
 				<tips_array> = ($loading_screen_tips_guitar)
 				case drum
 				<tips_array> = ($loading_screen_tips_drum)
-				case vocals
+				case Vocals
 				<tips_array> = ($loading_screen_tips_vocals)
-				case bass
+				case Bass
 				<tips_array> = ($loading_screen_tips_bass)
 				default
 				<tips_array> = ($loading_screen_tips_guitar)
@@ -133,13 +133,13 @@ script create_loading_screen \{mode = play_song
 		endif
 	endif
 	if GotParam \{leaderboard}
-		loading_text = qs(0x10ce7efd)
+		loading_text = qs("SEARCHING...")
 	endif
 	GetArraySize <tips_array>
-	GetRandomValue Name = rand_num a = 0 b = (<array_Size> - 1) integer
+	GetRandomValue name = rand_num a = 0 b = (<array_size> - 1) Integer
 	rand_tip = (<tips_array> [<rand_num>])
 	CreateScreenElement {
-		Type = descinterface
+		type = DescInterface
 		parent = root_window
 		desc = <desc>
 		id = loading_screen_container
@@ -148,17 +148,17 @@ script create_loading_screen \{mode = play_song
 			movie = <movie>
 			movie_path = <movie_path>
 			buffer_slot = <buffer_slot>
-			textureSlot = <textureSlot>
+			TextureSlot = <TextureSlot>
 			loading_text = <loading_text>
 			tip_text = <rand_tip>
 		}
-		loading_text = qs(0x03ac90f0)
-		tip_text = qs(0x03ac90f0)
+		loading_text = qs("\L")
+		tip_text = qs("\L")
 	}
 	if GotParam \{destroy_state}
-		Change loading_screen_destroy_state = <destroy_state>
+		change loading_screen_destroy_state = <destroy_state>
 	else
-		Change \{loading_screen_destroy_state = 'none'}
+		change \{loading_screen_destroy_state = 'none'}
 	endif
 	if GotParam \{spawn}
 		loading_screen_container :obj_spawnscript \{create_loading_screen_spawned}
@@ -169,23 +169,23 @@ endscript
 
 script create_loading_screen_spawned 
 	loading_screen_container :GetTags
-	killallmovies
-	if NOT ismovieinbuffer movie = <movie>
-		freemoviebuffer buffer_slot = <buffer_slot>
+	KillAllMovies
+	if NOT IsMovieInBuffer movie = <movie>
+		FreeMovieBuffer buffer_slot = <buffer_slot>
 		MemPushContext \{loadingscreen}
-		allocatemoviebuffer buffer_slot = <buffer_slot> movie = <movie_path>
+		AllocateMovieBuffer buffer_slot = <buffer_slot> movie = <movie_path>
 		MemPopContext
-		loadmovieintobuffer buffer_slot = <buffer_slot> movie = <movie>
+		LoadMovieIntoBuffer buffer_slot = <buffer_slot> movie = <movie>
 	endif
-	playmoviefrombuffer {
+	PlayMovieFromBuffer {
 		buffer_slot = <buffer_slot>
-		textureSlot = <textureSlot>
+		TextureSlot = <TextureSlot>
 		TexturePri = 200000
 		no_hold
 		wait_until_rendered
 	}
 	begin
-	if IsMoviePlaying textureSlot = <textureSlot>
+	if IsMoviePlaying TextureSlot = <TextureSlot>
 		break
 	endif
 	Wait \{1
@@ -193,7 +193,7 @@ script create_loading_screen_spawned
 		ignoreslomo}
 	repeat
 	if ScreenElementExists \{id = loading_screen_container}
-		loading_screen_container :se_setprops {
+		loading_screen_container :SE_SetProps {
 			loading_text = <loading_text>
 			tip_text = <tip_text>
 		}
@@ -204,12 +204,12 @@ script create_loading_screen_empty \{mode = play_song
 		jam_mode = 0}
 	printscriptinfo \{'create_loading_screen'}
 	mark_unsafe_for_shutdown
-	StopRendering
+	stoprendering
 	disable_pause
 	if ($is_changing_levels = 1)
 		return
 	endif
-	Change \{is_changing_levels = 1}
+	change \{is_changing_levels = 1}
 	if ($guitar_motion_enable_test = 1)
 		return
 	endif
@@ -217,15 +217,15 @@ script create_loading_screen_empty \{mode = play_song
 		return
 	endif
 	if GotParam \{destroy_state}
-		Change loading_screen_destroy_state = <destroy_state>
+		change loading_screen_destroy_state = <destroy_state>
 	else
-		Change \{loading_screen_destroy_state = 'none'}
+		change \{loading_screen_destroy_state = 'none'}
 	endif
 endscript
 
-script destroy_loading_screen \{Force = 0}
+script destroy_loading_screen \{force = 0}
 	printscriptinfo \{'destroy_loading_screen'}
-	if (<Force> = 0)
+	if (<force> = 0)
 		if NOT ($loading_screen_destroy_state = 'none')
 			ui_event_get_top
 			if NOT ($loading_screen_destroy_state = <base_name>)
@@ -234,29 +234,29 @@ script destroy_loading_screen \{Force = 0}
 		endif
 	endif
 	if ScreenElementExists \{id = loading_screen_container}
-		printf \{qs(0x2f19aa97)
+		printf \{qs("\LHit")
 			channel = movie}
 		if NOT ScriptIsRunning \{destroy_loading_screen_spawned}
 			loading_screen_container :obj_spawnscript destroy_loading_screen_spawned params = <...>
 		endif
 	endif
-	HideLoadingScreen
+	Hideloadingscreen
 	if ($playing_song = 0 || $end_credits = 1)
-		Change \{is_changing_levels = 0}
+		change \{is_changing_levels = 0}
 	endif
 	mark_safe_for_shutdown
 endscript
 
 script destroy_loading_screen_spawned \{time = 0.1}
 	GetTags
-	StopRendering \{reason = loading_screen}
-	se_setprops \{alpha = 0}
-	if GotParam \{textureSlot}
-		if IsMoviePlaying textureSlot = <textureSlot>
-			KillMovie textureSlot = <textureSlot>
+	stoprendering \{reason = loading_screen}
+	SE_SetProps \{alpha = 0}
+	if GotParam \{TextureSlot}
+		if IsMoviePlaying TextureSlot = <TextureSlot>
+			KillMovie TextureSlot = <TextureSlot>
 		endif
 	endif
-	StartRendering \{reason = loading_screen}
+	startrendering \{reason = loading_screen}
 	Die
 endscript
 
@@ -273,16 +273,16 @@ script refresh_screen
 endscript
 
 script show_page_flip_loading_screen 
-	SpawnScriptNow show_page_flip_loading_screen_spawned params = <...>
+	spawnscriptnow show_page_flip_loading_screen_spawned params = <...>
 endscript
 
 script show_page_flip_loading_screen_spawned 
-	killallmovies \{blocking}
-	freemoviebuffer \{buffer_slot = 0}
+	KillAllMovies \{blocking}
+	FreeMovieBuffer \{buffer_slot = 0}
 	DisplayLoadingScreen \{'boot_copyright_BG_1'
 		spin3d_texture = 'load_wheel'
 		spin_x = 800
 		spin_y = 554
-		Scale = 0.055
-		speed = -2}
+		scale = 0.055
+		Speed = -2}
 endscript

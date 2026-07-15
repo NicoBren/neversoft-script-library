@@ -1,177 +1,177 @@
 button_up_models = [
 	{
 		green = {
-			Name = button_g
+			name = button_g
 			name_string = 'button_g'
-			Scale = 1.0
+			scale = 1.0
 			scale_5d = -1.0
 			scale_4d = -1.0
-			material_lip = mat_nb_green_rim_pos1
-			material_mid = mat_nb_green_cup_pos1
-			material_head = mat_nb_green_cap_pos1
-			material_head_lit = mat_nb_green_cap_lit_pos1
-			material_neck = mat_nb_neck
-			material_down = mat_nb_green_cup_dwn_pos1
-			material_5d_lip = mat_nb_5d_green_rim_pos1
-			material_5d_mid = mat_nb_5d_green_cup_pos1
-			material_5d_head = mat_nb_5d_green_cap_pos1
-			material_5d_head_lit = mat_nb_5d_green_cap_lit_pos1
-			material_5d_neck = mat_nb_neck
-			material_5d_down = mat_nb_5d_green_cup_dwn_pos1
-			material_4d_lip = mat_nb_4d_green_rim_pos1
-			material_4d_mid = mat_nb_4d_green_cup_pos1
-			material_4d_head = mat_nb_4d_green_cap_pos1
-			material_4d_head_lit = mat_nb_4d_green_cap_lit_pos1
-			material_4d_neck = mat_nb_neck
-			material_4d_down = mat_nb_4d_green_cup_dwn_pos1
-			material_open_lit = mat_nb_purple_cap_lit_pos1
-			material_5d_open_lit = mat_nb_purple_cap_lit_pos1
-			material_4d_open_lit = mat_nb_purple_cap_lit_pos1
+			material_lip = Mat_NB_Green_rim_POS1
+			material_mid = Mat_NB_Green_Cup_POS1
+			material_head = Mat_NB_Green_Cap_POS1
+			material_head_lit = Mat_NB_Green_Cap_LIT_POS1
+			material_neck = Mat_NB_Neck
+			material_down = Mat_NB_Green_Cup_DWN_POS1
+			material_5d_lip = Mat_NB_5D_Green_rim_POS1
+			material_5d_mid = Mat_NB_5D_Green_Cup_POS1
+			material_5d_head = Mat_NB_5D_Green_Cap_POS1
+			material_5d_head_lit = Mat_NB_5D_Green_Cap_LIT_POS1
+			material_5d_neck = Mat_NB_Neck
+			material_5d_down = Mat_NB_5D_Green_Cup_DWN_POS1
+			material_4d_lip = Mat_NB_4D_Green_rim_POS1
+			material_4d_mid = Mat_NB_4D_Green_Cup_POS1
+			material_4d_head = Mat_NB_4D_Green_Cap_POS1
+			material_4d_head_lit = Mat_NB_4D_Green_Cap_LIT_POS1
+			material_4d_neck = Mat_NB_Neck
+			material_4d_down = Mat_NB_4D_Green_Cup_DWN_POS1
+			material_open_lit = Mat_NB_Purple_Cap_LIT_POS1
+			material_5d_open_lit = Mat_NB_Purple_Cap_LIT_POS1
+			material_4d_open_lit = Mat_NB_Purple_Cap_LIT_POS1
 		}
 		red = {
-			Name = button_r
+			name = button_r
 			name_string = 'button_r'
-			Scale = 1.0
+			scale = 1.0
 			scale_5d = 1.0
 			scale_4d = 1.0
-			material_lip = mat_nb_red_rim_pos2
-			material_mid = mat_nb_red_cup_pos2
-			material_head = mat_nb_red_cap_pos2
-			material_head_lit = mat_nb_red_cap_lit_pos2
-			material_neck = mat_nb_neck
-			material_down = mat_nb_red_cup_dwn_pos2
-			material_5d_lip = mat_nb_5d_red_rim_pos1
-			material_5d_mid = mat_nb_5d_red_cup_pos1
-			material_5d_head = mat_nb_5d_red_cap_pos1
-			material_5d_head_lit = mat_nb_5d_red_cap_lit_pos1
-			material_5d_neck = mat_nb_neck
-			material_5d_down = mat_nb_5d_red_cup_dwn_pos1
-			material_4d_lip = mat_nb_4d_red_rim_pos1
-			material_4d_mid = mat_nb_4d_red_cup_pos1
-			material_4d_head = mat_nb_4d_red_cap_pos1
-			material_4d_head_lit = mat_nb_4d_red_cap_lit_pos1
-			material_4d_neck = mat_nb_neck
-			material_4d_down = mat_nb_4d_red_cup_dwn_pos1
-			material_open_lit = mat_nb_purple_cap_lit_pos2
-			material_5d_open_lit = mat_nb_purple_cap_lit_pos1
-			material_4d_open_lit = mat_nb_purple_cap_lit_pos1
+			material_lip = Mat_NB_Red_rim_POS2
+			material_mid = Mat_NB_Red_Cup_POS2
+			material_head = Mat_NB_Red_Cap_POS2
+			material_head_lit = Mat_NB_Red_Cap_LIT_POS2
+			material_neck = Mat_NB_Neck
+			material_down = Mat_NB_Red_Cup_DWN_POS2
+			material_5d_lip = Mat_NB_5D_Red_rim_POS1
+			material_5d_mid = Mat_NB_5D_Red_Cup_POS1
+			material_5d_head = Mat_NB_5D_Red_Cap_POS1
+			material_5d_head_lit = Mat_NB_5D_Red_Cap_LIT_POS1
+			material_5d_neck = Mat_NB_Neck
+			material_5d_down = Mat_NB_5D_Red_Cup_DWN_POS1
+			material_4d_lip = Mat_NB_4D_Red_rim_POS1
+			material_4d_mid = Mat_NB_4D_Red_Cup_POS1
+			material_4d_head = Mat_NB_4D_Red_Cap_POS1
+			material_4d_head_lit = Mat_NB_4D_Red_Cap_LIT_POS1
+			material_4d_neck = Mat_NB_Neck
+			material_4d_down = Mat_NB_4D_Red_Cup_DWN_POS1
+			material_open_lit = Mat_NB_Purple_Cap_LIT_POS2
+			material_5d_open_lit = Mat_NB_Purple_Cap_LIT_POS1
+			material_4d_open_lit = Mat_NB_Purple_Cap_LIT_POS1
 		}
-		yellow = {
-			Name = button_y
+		Yellow = {
+			name = button_y
 			name_string = 'button_y'
-			Scale = 1.0
+			scale = 1.0
 			scale_5d = 1.0
 			scale_4d = 1.0
-			material_lip = mat_nb_yellow_rim_pos3
-			material_mid = mat_nb_yellow_cup_pos3
-			material_head = mat_nb_yellow_cap_pos3
-			material_head_lit = mat_nb_yellow_cap_lit_pos3
-			material_neck = mat_nb_neck
-			material_down = mat_nb_yellow_cup_dwn_pos3
-			material_5d_lip = mat_nb_5d_yellow_rim_pos2
-			material_5d_mid = mat_nb_5d_yellow_cup_pos2
-			material_5d_head = mat_nb_5d_yellow_cap_pos2
-			material_5d_head_lit = mat_nb_5d_yellow_cap_lit_pos2
-			material_5d_neck = mat_nb_neck
-			material_5d_down = mat_nb_5d_yellow_cup_dwn_pos2
-			material_4d_lip = mat_nb_4d_yellow_rim_pos2
-			material_4d_mid = mat_nb_4d_yellow_cup_pos2
-			material_4d_head = mat_nb_4d_yellow_cap_pos2
-			material_4d_head_lit = mat_nb_4d_yellow_cap_lit_pos2
-			material_4d_neck = mat_nb_neck
-			material_4d_down = mat_nb_4d_yellow_cup_dwn_pos2
-			material_open_lit = mat_nb_purple_cap_lit_pos3
-			material_5d_open_lit = mat_nb_purple_cap_lit_pos2
-			material_4d_open_lit = mat_nb_purple_cap_lit_pos2
+			material_lip = Mat_NB_Yellow_rim_POS3
+			material_mid = Mat_NB_Yellow_Cup_POS3
+			material_head = Mat_NB_Yellow_Cap_POS3
+			material_head_lit = Mat_NB_Yellow_Cap_LIT_POS3
+			material_neck = Mat_NB_Neck
+			material_down = Mat_NB_Yellow_Cup_DWN_POS3
+			material_5d_lip = Mat_NB_5D_Yellow_rim_POS2
+			material_5d_mid = Mat_NB_5D_Yellow_Cup_POS2
+			material_5d_head = Mat_NB_5D_Yellow_Cap_POS2
+			material_5d_head_lit = Mat_NB_5D_Yellow_Cap_LIT_POS2
+			material_5d_neck = Mat_NB_Neck
+			material_5d_down = Mat_NB_5D_Yellow_Cup_DWN_POS2
+			material_4d_lip = Mat_NB_4D_Yellow_rim_POS2
+			material_4d_mid = Mat_NB_4D_Yellow_Cup_POS2
+			material_4d_head = Mat_NB_4D_Yellow_Cap_POS2
+			material_4d_head_lit = Mat_NB_4D_Yellow_Cap_LIT_POS2
+			material_4d_neck = Mat_NB_Neck
+			material_4d_down = Mat_NB_4D_Yellow_Cup_DWN_POS2
+			material_open_lit = Mat_NB_Purple_Cap_LIT_POS3
+			material_5d_open_lit = Mat_NB_Purple_Cap_LIT_POS2
+			material_4d_open_lit = Mat_NB_Purple_Cap_LIT_POS2
 		}
-		blue = {
-			Name = button_b
+		Blue = {
+			name = button_b
 			name_string = 'button_b'
-			Scale = -1.0
+			scale = -1.0
 			scale_5d = 1.0
 			scale_4d = -1.0
-			material_lip = mat_nb_blue_rim_pos2
-			material_mid = mat_nb_blue_cup_pos2
-			material_head = mat_nb_blue_cap_pos2
-			material_head_lit = mat_nb_blue_cap_lit_pos2
-			material_neck = mat_nb_neck
-			material_down = mat_nb_blue_cup_dwn_pos2
-			material_5d_lip = mat_nb_5d_blue_rim_pos3
-			material_5d_mid = mat_nb_5d_blue_cup_pos3
-			material_5d_head = mat_nb_5d_blue_cap_pos3
-			material_5d_head_lit = mat_nb_5d_blue_cap_lit_pos3
-			material_5d_neck = mat_nb_neck
-			material_5d_down = mat_nb_5d_blue_cup_dwn_pos3
-			material_4d_lip = mat_nb_4d_blue_rim_pos2
-			material_4d_mid = mat_nb_4d_blue_cup_pos2
-			material_4d_head = mat_nb_4d_blue_cap_pos2
-			material_4d_head_lit = mat_nb_4d_blue_cap_lit_pos2
-			material_4d_neck = mat_nb_neck
-			material_4d_down = mat_nb_4d_blue_cup_dwn_pos2
-			material_open_lit = mat_nb_purple_cap_lit_pos2
-			material_5d_open_lit = mat_nb_purple_cap_lit_pos3
-			material_4d_open_lit = mat_nb_purple_cap_lit_pos2
+			material_lip = Mat_NB_Blue_rim_POS2
+			material_mid = Mat_NB_Blue_Cup_POS2
+			material_head = Mat_NB_Blue_Cap_POS2
+			material_head_lit = Mat_NB_Blue_Cap_LIT_POS2
+			material_neck = Mat_NB_Neck
+			material_down = Mat_NB_Blue_Cup_DWN_POS2
+			material_5d_lip = Mat_NB_5D_Blue_rim_POS3
+			material_5d_mid = Mat_NB_5D_Blue_Cup_POS3
+			material_5d_head = Mat_NB_5D_Blue_Cap_POS3
+			material_5d_head_lit = Mat_NB_5D_Blue_Cap_LIT_POS3
+			material_5d_neck = Mat_NB_Neck
+			material_5d_down = Mat_NB_5D_Blue_Cup_DWN_POS3
+			material_4d_lip = Mat_NB_4D_Blue_rim_POS2
+			material_4d_mid = Mat_NB_4D_Blue_Cup_POS2
+			material_4d_head = Mat_NB_4D_Blue_Cap_POS2
+			material_4d_head_lit = Mat_NB_4D_Blue_Cap_LIT_POS2
+			material_4d_neck = Mat_NB_Neck
+			material_4d_down = Mat_NB_4D_Blue_Cup_DWN_POS2
+			material_open_lit = Mat_NB_Purple_Cap_LIT_POS2
+			material_5d_open_lit = Mat_NB_Purple_Cap_LIT_POS3
+			material_4d_open_lit = Mat_NB_Purple_Cap_LIT_POS2
 		}
-		orange = {
-			Name = button_o
+		Orange = {
+			name = button_o
 			name_string = 'button_o'
-			Scale = -1.0
+			scale = -1.0
 			scale_5d = -1.0
 			scale_4d = -1.0
-			material_lip = mat_nb_orange_rim_pos1
-			material_mid = mat_nb_orange_cup_pos1
-			material_head = mat_nb_orange_cap_pos1
-			material_head_lit = mat_nb_orange_cap_lit_pos1
-			material_neck = mat_nb_neck
-			material_down = mat_nb_orange_cup_dwn_pos1
-			material_5d_lip = mat_nb_5d_orange_rim_pos2
-			material_5d_mid = mat_nb_5d_orange_cup_pos2
-			material_5d_head = mat_nb_5d_orange_cap_pos2
-			material_5d_head_lit = mat_nb_5d_orange_cap_lit_pos2
-			material_5d_neck = mat_nb_neck
-			material_5d_down = mat_nb_5d_orange_cup_dwn_pos2
-			material_4d_lip = mat_nb_4d_green_rim_pos1
-			material_4d_mid = mat_nb_4d_green_cup_pos1
-			material_4d_head = mat_nb_4d_green_cap_pos1
-			material_4d_head_lit = mat_nb_4d_green_cap_lit_pos1
-			material_4d_neck = mat_nb_neck
-			material_4d_down = mat_nb_4d_green_cup_dwn_pos1
-			material_open_lit = mat_nb_purple_cap_lit_pos1
-			material_5d_open_lit = mat_nb_purple_cap_lit_pos2
-			material_4d_open_lit = mat_nb_purple_cap_lit_pos1
+			material_lip = Mat_NB_Orange_rim_POS1
+			material_mid = Mat_NB_Orange_Cup_POS1
+			material_head = Mat_NB_Orange_Cap_POS1
+			material_head_lit = Mat_NB_Orange_Cap_LIT_POS1
+			material_neck = Mat_NB_Neck
+			material_down = Mat_NB_Orange_Cup_DWN_POS1
+			material_5d_lip = Mat_NB_5D_Orange_rim_POS2
+			material_5d_mid = Mat_NB_5D_Orange_Cup_POS2
+			material_5d_head = Mat_NB_5D_Orange_Cap_POS2
+			material_5d_head_lit = Mat_NB_5D_Orange_Cap_LIT_POS2
+			material_5d_neck = Mat_NB_Neck
+			material_5d_down = Mat_NB_5D_Orange_Cup_DWN_POS2
+			material_4d_lip = Mat_NB_4D_Green_rim_POS1
+			material_4d_mid = Mat_NB_4D_Green_Cup_POS1
+			material_4d_head = Mat_NB_4D_Green_Cap_POS1
+			material_4d_head_lit = Mat_NB_4D_Green_Cap_LIT_POS1
+			material_4d_neck = Mat_NB_Neck
+			material_4d_down = Mat_NB_4D_Green_Cup_DWN_POS1
+			material_open_lit = Mat_NB_Purple_Cap_LIT_POS1
+			material_5d_open_lit = Mat_NB_Purple_Cap_LIT_POS2
+			material_4d_open_lit = Mat_NB_Purple_Cap_LIT_POS1
 		}
 		white = {
-			Name = button_w
+			name = button_w
 			name_string = 'button_w'
-			Scale = 1.0
+			scale = 1.0
 			scale_5d = 1.0
 			scale_4d = 1.0
-			material_lip = mat_placeholder
-			material_mid = mat_placeholder
-			material_head = mat_placeholder
-			material_head_lit = mat_placeholder
-			material_neck = mat_placeholder
-			material_down = mat_placeholder
-			material_5d_lip = mat_placeholder
-			material_5d_mid = mat_placeholder
-			material_5d_head = mat_placeholder
-			material_5d_head_lit = mat_placeholder
-			material_5d_neck = mat_placeholder
-			material_5d_down = mat_placeholder
-			material_4d_lip = mat_placeholder
-			material_4d_mid = mat_placeholder
-			material_4d_head = mat_placeholder
-			material_4d_head_lit = mat_placeholder
-			material_4d_neck = mat_placeholder
-			material_4d_down = mat_placeholder
-			material_open_lit = mat_placeholder
-			material_5d_open_lit = mat_placeholder
-			material_4d_open_lit = mat_placeholder
+			material_lip = Mat_Placeholder
+			material_mid = Mat_Placeholder
+			material_head = Mat_Placeholder
+			material_head_lit = Mat_Placeholder
+			material_neck = Mat_Placeholder
+			material_down = Mat_Placeholder
+			material_5d_lip = Mat_Placeholder
+			material_5d_mid = Mat_Placeholder
+			material_5d_head = Mat_Placeholder
+			material_5d_head_lit = Mat_Placeholder
+			material_5d_neck = Mat_Placeholder
+			material_5d_down = Mat_Placeholder
+			material_4d_lip = Mat_Placeholder
+			material_4d_mid = Mat_Placeholder
+			material_4d_head = Mat_Placeholder
+			material_4d_head_lit = Mat_Placeholder
+			material_4d_neck = Mat_Placeholder
+			material_4d_down = Mat_Placeholder
+			material_open_lit = Mat_Placeholder
+			material_5d_open_lit = Mat_Placeholder
+			material_4d_open_lit = Mat_Placeholder
 		}
 		extra = {
-			Name = button_x
+			name = button_x
 			name_string = 'button_x'
-			Scale = 1.0
+			scale = 1.0
 			scale_5d = 1.0
 			scale_4d = 1.0
 			material_lip = sys_NowBar_Button01_Blue_Lip_sys_NowBar_Button01_Blue_Lip
@@ -199,177 +199,177 @@ button_up_models = [
 	}
 	{
 		green = {
-			Name = button_g
+			name = button_g
 			name_string = 'button_g'
-			Scale = 1.0
+			scale = 1.0
 			scale_5d = -1.0
 			scale_4d = -1.0
-			material_lip = mat_nb_green_rim_pos1
-			material_mid = mat_nb_green_cup_pos1
-			material_head = mat_nb_green_cap_pos1
-			material_head_lit = mat_nb_green_cap_lit_pos1
-			material_neck = mat_nb_neck
-			material_down = mat_nb_green_cup_dwn_pos1
-			material_5d_lip = mat_nb_5d_green_rim_pos1
-			material_5d_mid = mat_nb_5d_green_cup_pos1
-			material_5d_head = mat_nb_5d_green_cap_pos1
-			material_5d_head_lit = mat_nb_5d_green_cap_lit_pos1
-			material_5d_neck = mat_nb_neck
-			material_5d_down = mat_nb_5d_green_cup_dwn_pos1
-			material_4d_lip = mat_nb_4d_green_rim_pos1
-			material_4d_mid = mat_nb_4d_green_cup_pos1
-			material_4d_head = mat_nb_4d_green_cap_pos1
-			material_4d_head_lit = mat_nb_4d_green_cap_lit_pos1
-			material_4d_neck = mat_nb_neck
-			material_4d_down = mat_nb_4d_green_cup_dwn_pos1
-			material_open_lit = mat_nb_purple_cap_lit_pos1
-			material_5d_open_lit = mat_nb_purple_cap_lit_pos1
-			material_4d_open_lit = mat_nb_purple_cap_lit_pos1
+			material_lip = Mat_NB_Green_rim_POS1
+			material_mid = Mat_NB_Green_Cup_POS1
+			material_head = Mat_NB_Green_Cap_POS1
+			material_head_lit = Mat_NB_Green_Cap_LIT_POS1
+			material_neck = Mat_NB_Neck
+			material_down = Mat_NB_Green_Cup_DWN_POS1
+			material_5d_lip = Mat_NB_5D_Green_rim_POS1
+			material_5d_mid = Mat_NB_5D_Green_Cup_POS1
+			material_5d_head = Mat_NB_5D_Green_Cap_POS1
+			material_5d_head_lit = Mat_NB_5D_Green_Cap_LIT_POS1
+			material_5d_neck = Mat_NB_Neck
+			material_5d_down = Mat_NB_5D_Green_Cup_DWN_POS1
+			material_4d_lip = Mat_NB_4D_Green_rim_POS1
+			material_4d_mid = Mat_NB_4D_Green_Cup_POS1
+			material_4d_head = Mat_NB_4D_Green_Cap_POS1
+			material_4d_head_lit = Mat_NB_4D_Green_Cap_LIT_POS1
+			material_4d_neck = Mat_NB_Neck
+			material_4d_down = Mat_NB_4D_Green_Cup_DWN_POS1
+			material_open_lit = Mat_NB_Purple_Cap_LIT_POS1
+			material_5d_open_lit = Mat_NB_Purple_Cap_LIT_POS1
+			material_4d_open_lit = Mat_NB_Purple_Cap_LIT_POS1
 		}
 		red = {
-			Name = button_r
+			name = button_r
 			name_string = 'button_r'
-			Scale = 1.0
+			scale = 1.0
 			scale_5d = 1.0
 			scale_4d = 1.0
-			material_lip = mat_nb_red_rim_pos2
-			material_mid = mat_nb_red_cup_pos2
-			material_head = mat_nb_red_cap_pos2
-			material_head_lit = mat_nb_red_cap_lit_pos2
-			material_neck = mat_nb_neck
-			material_down = mat_nb_red_cup_dwn_pos2
-			material_5d_lip = mat_nb_5d_red_rim_pos1
-			material_5d_mid = mat_nb_5d_red_cup_pos1
-			material_5d_head = mat_nb_5d_red_cap_pos1
-			material_5d_head_lit = mat_nb_5d_red_cap_lit_pos1
-			material_5d_neck = mat_nb_neck
-			material_5d_down = mat_nb_5d_red_cup_dwn_pos1
-			material_4d_lip = mat_nb_4d_red_rim_pos1
-			material_4d_mid = mat_nb_4d_red_cup_pos1
-			material_4d_head = mat_nb_4d_red_cap_pos1
-			material_4d_head_lit = mat_nb_4d_red_cap_lit_pos1
-			material_4d_neck = mat_nb_neck
-			material_4d_down = mat_nb_4d_red_cup_dwn_pos1
-			material_open_lit = mat_nb_purple_cap_lit_pos2
-			material_5d_open_lit = mat_nb_purple_cap_lit_pos1
-			material_4d_open_lit = mat_nb_purple_cap_lit_pos1
+			material_lip = Mat_NB_Red_rim_POS2
+			material_mid = Mat_NB_Red_Cup_POS2
+			material_head = Mat_NB_Red_Cap_POS2
+			material_head_lit = Mat_NB_Red_Cap_LIT_POS2
+			material_neck = Mat_NB_Neck
+			material_down = Mat_NB_Red_Cup_DWN_POS2
+			material_5d_lip = Mat_NB_5D_Red_rim_POS1
+			material_5d_mid = Mat_NB_5D_Red_Cup_POS1
+			material_5d_head = Mat_NB_5D_Red_Cap_POS1
+			material_5d_head_lit = Mat_NB_5D_Red_Cap_LIT_POS1
+			material_5d_neck = Mat_NB_Neck
+			material_5d_down = Mat_NB_5D_Red_Cup_DWN_POS1
+			material_4d_lip = Mat_NB_4D_Red_rim_POS1
+			material_4d_mid = Mat_NB_4D_Red_Cup_POS1
+			material_4d_head = Mat_NB_4D_Red_Cap_POS1
+			material_4d_head_lit = Mat_NB_4D_Red_Cap_LIT_POS1
+			material_4d_neck = Mat_NB_Neck
+			material_4d_down = Mat_NB_4D_Red_Cup_DWN_POS1
+			material_open_lit = Mat_NB_Purple_Cap_LIT_POS2
+			material_5d_open_lit = Mat_NB_Purple_Cap_LIT_POS1
+			material_4d_open_lit = Mat_NB_Purple_Cap_LIT_POS1
 		}
-		yellow = {
-			Name = button_y
+		Yellow = {
+			name = button_y
 			name_string = 'button_y'
-			Scale = 1.0
+			scale = 1.0
 			scale_5d = 1.0
 			scale_4d = 1.0
-			material_lip = mat_nb_yellow_rim_pos3
-			material_mid = mat_nb_yellow_cup_pos3
-			material_head = mat_nb_yellow_cap_pos3
-			material_head_lit = mat_nb_yellow_cap_lit_pos3
-			material_neck = mat_nb_neck
-			material_down = mat_nb_yellow_cup_dwn_pos3
-			material_5d_lip = mat_nb_5d_yellow_rim_pos2
-			material_5d_mid = mat_nb_5d_yellow_cup_pos2
-			material_5d_head = mat_nb_5d_yellow_cap_pos2
-			material_5d_head_lit = mat_nb_5d_yellow_cap_lit_pos2
-			material_5d_neck = mat_nb_neck
-			material_5d_down = mat_nb_5d_yellow_cup_dwn_pos2
-			material_4d_lip = mat_nb_4d_yellow_rim_pos2
-			material_4d_mid = mat_nb_4d_yellow_cup_pos2
-			material_4d_head = mat_nb_4d_yellow_cap_pos2
-			material_4d_head_lit = mat_nb_4d_yellow_cap_lit_pos2
-			material_4d_neck = mat_nb_neck
-			material_4d_down = mat_nb_4d_yellow_cup_dwn_pos2
-			material_open_lit = mat_nb_purple_cap_lit_pos3
-			material_5d_open_lit = mat_nb_purple_cap_lit_pos2
-			material_4d_open_lit = mat_nb_purple_cap_lit_pos2
+			material_lip = Mat_NB_Yellow_rim_POS3
+			material_mid = Mat_NB_Yellow_Cup_POS3
+			material_head = Mat_NB_Yellow_Cap_POS3
+			material_head_lit = Mat_NB_Yellow_Cap_LIT_POS3
+			material_neck = Mat_NB_Neck
+			material_down = Mat_NB_Yellow_Cup_DWN_POS3
+			material_5d_lip = Mat_NB_5D_Yellow_rim_POS2
+			material_5d_mid = Mat_NB_5D_Yellow_Cup_POS2
+			material_5d_head = Mat_NB_5D_Yellow_Cap_POS2
+			material_5d_head_lit = Mat_NB_5D_Yellow_Cap_LIT_POS2
+			material_5d_neck = Mat_NB_Neck
+			material_5d_down = Mat_NB_5D_Yellow_Cup_DWN_POS2
+			material_4d_lip = Mat_NB_4D_Yellow_rim_POS2
+			material_4d_mid = Mat_NB_4D_Yellow_Cup_POS2
+			material_4d_head = Mat_NB_4D_Yellow_Cap_POS2
+			material_4d_head_lit = Mat_NB_4D_Yellow_Cap_LIT_POS2
+			material_4d_neck = Mat_NB_Neck
+			material_4d_down = Mat_NB_4D_Yellow_Cup_DWN_POS2
+			material_open_lit = Mat_NB_Purple_Cap_LIT_POS3
+			material_5d_open_lit = Mat_NB_Purple_Cap_LIT_POS2
+			material_4d_open_lit = Mat_NB_Purple_Cap_LIT_POS2
 		}
-		blue = {
-			Name = button_b
+		Blue = {
+			name = button_b
 			name_string = 'button_b'
-			Scale = -1.0
+			scale = -1.0
 			scale_5d = 1.0
 			scale_4d = -1.0
-			material_lip = mat_nb_blue_rim_pos2
-			material_mid = mat_nb_blue_cup_pos2
-			material_head = mat_nb_blue_cap_pos2
-			material_head_lit = mat_nb_blue_cap_lit_pos2
-			material_neck = mat_nb_neck
-			material_down = mat_nb_blue_cup_dwn_pos2
-			material_5d_lip = mat_nb_5d_blue_rim_pos3
-			material_5d_mid = mat_nb_5d_blue_cup_pos3
-			material_5d_head = mat_nb_5d_blue_cap_pos3
-			material_5d_head_lit = mat_nb_5d_blue_cap_lit_pos3
-			material_5d_neck = mat_nb_neck
-			material_5d_down = mat_nb_5d_blue_cup_dwn_pos3
-			material_4d_lip = mat_nb_4d_blue_rim_pos2
-			material_4d_mid = mat_nb_4d_blue_cup_pos2
-			material_4d_head = mat_nb_4d_blue_cap_pos2
-			material_4d_head_lit = mat_nb_4d_blue_cap_lit_pos2
-			material_4d_neck = mat_nb_neck
-			material_4d_down = mat_nb_4d_blue_cup_dwn_pos2
-			material_open_lit = mat_nb_purple_cap_lit_pos2
-			material_5d_open_lit = mat_nb_purple_cap_lit_pos3
-			material_4d_open_lit = mat_nb_purple_cap_lit_pos2
+			material_lip = Mat_NB_Blue_rim_POS2
+			material_mid = Mat_NB_Blue_Cup_POS2
+			material_head = Mat_NB_Blue_Cap_POS2
+			material_head_lit = Mat_NB_Blue_Cap_LIT_POS2
+			material_neck = Mat_NB_Neck
+			material_down = Mat_NB_Blue_Cup_DWN_POS2
+			material_5d_lip = Mat_NB_5D_Blue_rim_POS3
+			material_5d_mid = Mat_NB_5D_Blue_Cup_POS3
+			material_5d_head = Mat_NB_5D_Blue_Cap_POS3
+			material_5d_head_lit = Mat_NB_5D_Blue_Cap_LIT_POS3
+			material_5d_neck = Mat_NB_Neck
+			material_5d_down = Mat_NB_5D_Blue_Cup_DWN_POS3
+			material_4d_lip = Mat_NB_4D_Blue_rim_POS2
+			material_4d_mid = Mat_NB_4D_Blue_Cup_POS2
+			material_4d_head = Mat_NB_4D_Blue_Cap_POS2
+			material_4d_head_lit = Mat_NB_4D_Blue_Cap_LIT_POS2
+			material_4d_neck = Mat_NB_Neck
+			material_4d_down = Mat_NB_4D_Blue_Cup_DWN_POS2
+			material_open_lit = Mat_NB_Purple_Cap_LIT_POS2
+			material_5d_open_lit = Mat_NB_Purple_Cap_LIT_POS3
+			material_4d_open_lit = Mat_NB_Purple_Cap_LIT_POS2
 		}
-		orange = {
-			Name = button_o
+		Orange = {
+			name = button_o
 			name_string = 'button_o'
-			Scale = -1.0
+			scale = -1.0
 			scale_5d = -1.0
 			scale_4d = -1.0
-			material_lip = mat_nb_orange_rim_pos1
-			material_mid = mat_nb_orange_cup_pos1
-			material_head = mat_nb_orange_cap_pos1
-			material_head_lit = mat_nb_orange_cap_lit_pos1
-			material_neck = mat_nb_neck
-			material_down = mat_nb_orange_cup_dwn_pos1
-			material_5d_lip = mat_nb_5d_orange_rim_pos2
-			material_5d_mid = mat_nb_5d_orange_cup_pos2
-			material_5d_head = mat_nb_5d_orange_cap_pos2
-			material_5d_head_lit = mat_nb_5d_orange_cap_lit_pos2
-			material_5d_neck = mat_nb_neck
-			material_5d_down = mat_nb_5d_orange_cup_dwn_pos2
-			material_4d_lip = mat_nb_4d_green_rim_pos1
-			material_4d_mid = mat_nb_4d_green_cup_pos1
-			material_4d_head = mat_nb_4d_green_cap_pos1
-			material_4d_head_lit = mat_nb_4d_green_cap_lit_pos1
-			material_4d_neck = mat_nb_neck
-			material_4d_down = mat_nb_4d_green_cup_dwn_pos1
-			material_open_lit = mat_nb_purple_cap_lit_pos1
-			material_5d_open_lit = mat_nb_purple_cap_lit_pos2
-			material_4d_open_lit = mat_nb_purple_cap_lit_pos1
+			material_lip = Mat_NB_Orange_rim_POS1
+			material_mid = Mat_NB_Orange_Cup_POS1
+			material_head = Mat_NB_Orange_Cap_POS1
+			material_head_lit = Mat_NB_Orange_Cap_LIT_POS1
+			material_neck = Mat_NB_Neck
+			material_down = Mat_NB_Orange_Cup_DWN_POS1
+			material_5d_lip = Mat_NB_5D_Orange_rim_POS2
+			material_5d_mid = Mat_NB_5D_Orange_Cup_POS2
+			material_5d_head = Mat_NB_5D_Orange_Cap_POS2
+			material_5d_head_lit = Mat_NB_5D_Orange_Cap_LIT_POS2
+			material_5d_neck = Mat_NB_Neck
+			material_5d_down = Mat_NB_5D_Orange_Cup_DWN_POS2
+			material_4d_lip = Mat_NB_4D_Green_rim_POS1
+			material_4d_mid = Mat_NB_4D_Green_Cup_POS1
+			material_4d_head = Mat_NB_4D_Green_Cap_POS1
+			material_4d_head_lit = Mat_NB_4D_Green_Cap_LIT_POS1
+			material_4d_neck = Mat_NB_Neck
+			material_4d_down = Mat_NB_4D_Green_Cup_DWN_POS1
+			material_open_lit = Mat_NB_Purple_Cap_LIT_POS1
+			material_5d_open_lit = Mat_NB_Purple_Cap_LIT_POS2
+			material_4d_open_lit = Mat_NB_Purple_Cap_LIT_POS1
 		}
 		white = {
-			Name = button_w
+			name = button_w
 			name_string = 'button_w'
-			Scale = 1.0
+			scale = 1.0
 			scale_5d = 1.0
 			scale_4d = 1.0
-			material_lip = mat_placeholder
-			material_mid = mat_placeholder
-			material_head = mat_placeholder
-			material_head_lit = mat_placeholder
-			material_neck = mat_placeholder
-			material_down = mat_placeholder
-			material_5d_lip = mat_placeholder
-			material_5d_mid = mat_placeholder
-			material_5d_head = mat_placeholder
-			material_5d_head_lit = mat_placeholder
-			material_5d_neck = mat_placeholder
-			material_5d_down = mat_placeholder
-			material_4d_lip = mat_placeholder
-			material_4d_mid = mat_placeholder
-			material_4d_head = mat_placeholder
-			material_4d_head_lit = mat_placeholder
-			material_4d_neck = mat_placeholder
-			material_4d_down = mat_placeholder
-			material_open_lit = mat_placeholder
-			material_5d_open_lit = mat_placeholder
-			material_4d_open_lit = mat_placeholder
+			material_lip = Mat_Placeholder
+			material_mid = Mat_Placeholder
+			material_head = Mat_Placeholder
+			material_head_lit = Mat_Placeholder
+			material_neck = Mat_Placeholder
+			material_down = Mat_Placeholder
+			material_5d_lip = Mat_Placeholder
+			material_5d_mid = Mat_Placeholder
+			material_5d_head = Mat_Placeholder
+			material_5d_head_lit = Mat_Placeholder
+			material_5d_neck = Mat_Placeholder
+			material_5d_down = Mat_Placeholder
+			material_4d_lip = Mat_Placeholder
+			material_4d_mid = Mat_Placeholder
+			material_4d_head = Mat_Placeholder
+			material_4d_head_lit = Mat_Placeholder
+			material_4d_neck = Mat_Placeholder
+			material_4d_down = Mat_Placeholder
+			material_open_lit = Mat_Placeholder
+			material_5d_open_lit = Mat_Placeholder
+			material_4d_open_lit = Mat_Placeholder
 		}
 		extra = {
-			Name = button_x
+			name = button_x
 			name_string = 'button_x'
-			Scale = 1.0
+			scale = 1.0
 			scale_5d = 1.0
 			scale_4d = 1.0
 			material_lip = sys_NowBar_Button01_Blue_Lip_sys_NowBar_Button01_Blue_Lip
@@ -397,177 +397,177 @@ button_up_models = [
 	}
 	{
 		green = {
-			Name = button_g
+			name = button_g
 			name_string = 'button_g'
-			Scale = 1.0
+			scale = 1.0
 			scale_5d = -1.0
 			scale_4d = -1.0
-			material_lip = mat_nb_green_rim_pos1
-			material_mid = mat_nb_green_cup_pos1
-			material_head = mat_nb_green_cap_pos1
-			material_head_lit = mat_nb_green_cap_lit_pos1
-			material_neck = mat_nb_neck
-			material_down = mat_nb_green_cup_dwn_pos1
-			material_5d_lip = mat_nb_5d_green_rim_pos1
-			material_5d_mid = mat_nb_5d_green_cup_pos1
-			material_5d_head = mat_nb_5d_green_cap_pos1
-			material_5d_head_lit = mat_nb_5d_green_cap_lit_pos1
-			material_5d_neck = mat_nb_neck
-			material_5d_down = mat_nb_5d_green_cup_dwn_pos1
-			material_4d_lip = mat_nb_4d_green_rim_pos1
-			material_4d_mid = mat_nb_4d_green_cup_pos1
-			material_4d_head = mat_nb_4d_green_cap_pos1
-			material_4d_head_lit = mat_nb_4d_green_cap_lit_pos1
-			material_4d_neck = mat_nb_neck
-			material_4d_down = mat_nb_4d_green_cup_dwn_pos1
-			material_open_lit = mat_nb_purple_cap_lit_pos1
-			material_5d_open_lit = mat_nb_purple_cap_lit_pos1
-			material_4d_open_lit = mat_nb_purple_cap_lit_pos1
+			material_lip = Mat_NB_Green_rim_POS1
+			material_mid = Mat_NB_Green_Cup_POS1
+			material_head = Mat_NB_Green_Cap_POS1
+			material_head_lit = Mat_NB_Green_Cap_LIT_POS1
+			material_neck = Mat_NB_Neck
+			material_down = Mat_NB_Green_Cup_DWN_POS1
+			material_5d_lip = Mat_NB_5D_Green_rim_POS1
+			material_5d_mid = Mat_NB_5D_Green_Cup_POS1
+			material_5d_head = Mat_NB_5D_Green_Cap_POS1
+			material_5d_head_lit = Mat_NB_5D_Green_Cap_LIT_POS1
+			material_5d_neck = Mat_NB_Neck
+			material_5d_down = Mat_NB_5D_Green_Cup_DWN_POS1
+			material_4d_lip = Mat_NB_4D_Green_rim_POS1
+			material_4d_mid = Mat_NB_4D_Green_Cup_POS1
+			material_4d_head = Mat_NB_4D_Green_Cap_POS1
+			material_4d_head_lit = Mat_NB_4D_Green_Cap_LIT_POS1
+			material_4d_neck = Mat_NB_Neck
+			material_4d_down = Mat_NB_4D_Green_Cup_DWN_POS1
+			material_open_lit = Mat_NB_Purple_Cap_LIT_POS1
+			material_5d_open_lit = Mat_NB_Purple_Cap_LIT_POS1
+			material_4d_open_lit = Mat_NB_Purple_Cap_LIT_POS1
 		}
 		red = {
-			Name = button_r
+			name = button_r
 			name_string = 'button_r'
-			Scale = 1.0
+			scale = 1.0
 			scale_5d = 1.0
 			scale_4d = 1.0
-			material_lip = mat_nb_red_rim_pos2
-			material_mid = mat_nb_red_cup_pos2
-			material_head = mat_nb_red_cap_pos2
-			material_head_lit = mat_nb_red_cap_lit_pos2
-			material_neck = mat_nb_neck
-			material_down = mat_nb_red_cup_dwn_pos2
-			material_5d_lip = mat_nb_5d_red_rim_pos1
-			material_5d_mid = mat_nb_5d_red_cup_pos1
-			material_5d_head = mat_nb_5d_red_cap_pos1
-			material_5d_head_lit = mat_nb_5d_red_cap_lit_pos1
-			material_5d_neck = mat_nb_neck
-			material_5d_down = mat_nb_5d_red_cup_dwn_pos1
-			material_4d_lip = mat_nb_4d_red_rim_pos1
-			material_4d_mid = mat_nb_4d_red_cup_pos1
-			material_4d_head = mat_nb_4d_red_cap_pos1
-			material_4d_head_lit = mat_nb_4d_red_cap_lit_pos1
-			material_4d_neck = mat_nb_neck
-			material_4d_down = mat_nb_4d_red_cup_dwn_pos1
-			material_open_lit = mat_nb_purple_cap_lit_pos2
-			material_5d_open_lit = mat_nb_purple_cap_lit_pos1
-			material_4d_open_lit = mat_nb_purple_cap_lit_pos1
+			material_lip = Mat_NB_Red_rim_POS2
+			material_mid = Mat_NB_Red_Cup_POS2
+			material_head = Mat_NB_Red_Cap_POS2
+			material_head_lit = Mat_NB_Red_Cap_LIT_POS2
+			material_neck = Mat_NB_Neck
+			material_down = Mat_NB_Red_Cup_DWN_POS2
+			material_5d_lip = Mat_NB_5D_Red_rim_POS1
+			material_5d_mid = Mat_NB_5D_Red_Cup_POS1
+			material_5d_head = Mat_NB_5D_Red_Cap_POS1
+			material_5d_head_lit = Mat_NB_5D_Red_Cap_LIT_POS1
+			material_5d_neck = Mat_NB_Neck
+			material_5d_down = Mat_NB_5D_Red_Cup_DWN_POS1
+			material_4d_lip = Mat_NB_4D_Red_rim_POS1
+			material_4d_mid = Mat_NB_4D_Red_Cup_POS1
+			material_4d_head = Mat_NB_4D_Red_Cap_POS1
+			material_4d_head_lit = Mat_NB_4D_Red_Cap_LIT_POS1
+			material_4d_neck = Mat_NB_Neck
+			material_4d_down = Mat_NB_4D_Red_Cup_DWN_POS1
+			material_open_lit = Mat_NB_Purple_Cap_LIT_POS2
+			material_5d_open_lit = Mat_NB_Purple_Cap_LIT_POS1
+			material_4d_open_lit = Mat_NB_Purple_Cap_LIT_POS1
 		}
-		yellow = {
-			Name = button_y
+		Yellow = {
+			name = button_y
 			name_string = 'button_y'
-			Scale = 1.0
+			scale = 1.0
 			scale_5d = 1.0
 			scale_4d = 1.0
-			material_lip = mat_nb_yellow_rim_pos3
-			material_mid = mat_nb_yellow_cup_pos3
-			material_head = mat_nb_yellow_cap_pos3
-			material_head_lit = mat_nb_yellow_cap_lit_pos3
-			material_neck = mat_nb_neck
-			material_down = mat_nb_yellow_cup_dwn_pos3
-			material_5d_lip = mat_nb_5d_yellow_rim_pos2
-			material_5d_mid = mat_nb_5d_yellow_cup_pos2
-			material_5d_head = mat_nb_5d_yellow_cap_pos2
-			material_5d_head_lit = mat_nb_5d_yellow_cap_lit_pos2
-			material_5d_neck = mat_nb_neck
-			material_5d_down = mat_nb_5d_yellow_cup_dwn_pos2
-			material_4d_lip = mat_nb_4d_yellow_rim_pos2
-			material_4d_mid = mat_nb_4d_yellow_cup_pos2
-			material_4d_head = mat_nb_4d_yellow_cap_pos2
-			material_4d_head_lit = mat_nb_4d_yellow_cap_lit_pos2
-			material_4d_neck = mat_nb_neck
-			material_4d_down = mat_nb_4d_yellow_cup_dwn_pos2
-			material_open_lit = mat_nb_purple_cap_lit_pos3
-			material_5d_open_lit = mat_nb_purple_cap_lit_pos2
-			material_4d_open_lit = mat_nb_purple_cap_lit_pos2
+			material_lip = Mat_NB_Yellow_rim_POS3
+			material_mid = Mat_NB_Yellow_Cup_POS3
+			material_head = Mat_NB_Yellow_Cap_POS3
+			material_head_lit = Mat_NB_Yellow_Cap_LIT_POS3
+			material_neck = Mat_NB_Neck
+			material_down = Mat_NB_Yellow_Cup_DWN_POS3
+			material_5d_lip = Mat_NB_5D_Yellow_rim_POS2
+			material_5d_mid = Mat_NB_5D_Yellow_Cup_POS2
+			material_5d_head = Mat_NB_5D_Yellow_Cap_POS2
+			material_5d_head_lit = Mat_NB_5D_Yellow_Cap_LIT_POS2
+			material_5d_neck = Mat_NB_Neck
+			material_5d_down = Mat_NB_5D_Yellow_Cup_DWN_POS2
+			material_4d_lip = Mat_NB_4D_Yellow_rim_POS2
+			material_4d_mid = Mat_NB_4D_Yellow_Cup_POS2
+			material_4d_head = Mat_NB_4D_Yellow_Cap_POS2
+			material_4d_head_lit = Mat_NB_4D_Yellow_Cap_LIT_POS2
+			material_4d_neck = Mat_NB_Neck
+			material_4d_down = Mat_NB_4D_Yellow_Cup_DWN_POS2
+			material_open_lit = Mat_NB_Purple_Cap_LIT_POS3
+			material_5d_open_lit = Mat_NB_Purple_Cap_LIT_POS2
+			material_4d_open_lit = Mat_NB_Purple_Cap_LIT_POS2
 		}
-		blue = {
-			Name = button_b
+		Blue = {
+			name = button_b
 			name_string = 'button_b'
-			Scale = -1.0
+			scale = -1.0
 			scale_5d = 1.0
 			scale_4d = -1.0
-			material_lip = mat_nb_blue_rim_pos2
-			material_mid = mat_nb_blue_cup_pos2
-			material_head = mat_nb_blue_cap_pos2
-			material_head_lit = mat_nb_blue_cap_lit_pos2
-			material_neck = mat_nb_neck
-			material_down = mat_nb_blue_cup_dwn_pos2
-			material_5d_lip = mat_nb_5d_blue_rim_pos3
-			material_5d_mid = mat_nb_5d_blue_cup_pos3
-			material_5d_head = mat_nb_5d_blue_cap_pos3
-			material_5d_head_lit = mat_nb_5d_blue_cap_lit_pos3
-			material_5d_neck = mat_nb_neck
-			material_5d_down = mat_nb_5d_blue_cup_dwn_pos3
-			material_4d_lip = mat_nb_4d_blue_rim_pos2
-			material_4d_mid = mat_nb_4d_blue_cup_pos2
-			material_4d_head = mat_nb_4d_blue_cap_pos2
-			material_4d_head_lit = mat_nb_4d_blue_cap_lit_pos2
-			material_4d_neck = mat_nb_neck
-			material_4d_down = mat_nb_4d_blue_cup_dwn_pos2
-			material_open_lit = mat_nb_purple_cap_lit_pos2
-			material_5d_open_lit = mat_nb_purple_cap_lit_pos3
-			material_4d_open_lit = mat_nb_purple_cap_lit_pos2
+			material_lip = Mat_NB_Blue_rim_POS2
+			material_mid = Mat_NB_Blue_Cup_POS2
+			material_head = Mat_NB_Blue_Cap_POS2
+			material_head_lit = Mat_NB_Blue_Cap_LIT_POS2
+			material_neck = Mat_NB_Neck
+			material_down = Mat_NB_Blue_Cup_DWN_POS2
+			material_5d_lip = Mat_NB_5D_Blue_rim_POS3
+			material_5d_mid = Mat_NB_5D_Blue_Cup_POS3
+			material_5d_head = Mat_NB_5D_Blue_Cap_POS3
+			material_5d_head_lit = Mat_NB_5D_Blue_Cap_LIT_POS3
+			material_5d_neck = Mat_NB_Neck
+			material_5d_down = Mat_NB_5D_Blue_Cup_DWN_POS3
+			material_4d_lip = Mat_NB_4D_Blue_rim_POS2
+			material_4d_mid = Mat_NB_4D_Blue_Cup_POS2
+			material_4d_head = Mat_NB_4D_Blue_Cap_POS2
+			material_4d_head_lit = Mat_NB_4D_Blue_Cap_LIT_POS2
+			material_4d_neck = Mat_NB_Neck
+			material_4d_down = Mat_NB_4D_Blue_Cup_DWN_POS2
+			material_open_lit = Mat_NB_Purple_Cap_LIT_POS2
+			material_5d_open_lit = Mat_NB_Purple_Cap_LIT_POS3
+			material_4d_open_lit = Mat_NB_Purple_Cap_LIT_POS2
 		}
-		orange = {
-			Name = button_o
+		Orange = {
+			name = button_o
 			name_string = 'button_o'
-			Scale = -1.0
+			scale = -1.0
 			scale_5d = -1.0
 			scale_4d = -1.0
-			material_lip = mat_nb_orange_rim_pos1
-			material_mid = mat_nb_orange_cup_pos1
-			material_head = mat_nb_orange_cap_pos1
-			material_head_lit = mat_nb_orange_cap_lit_pos1
-			material_neck = mat_nb_neck
-			material_down = mat_nb_orange_cup_dwn_pos1
-			material_5d_lip = mat_nb_5d_orange_rim_pos2
-			material_5d_mid = mat_nb_5d_orange_cup_pos2
-			material_5d_head = mat_nb_5d_orange_cap_pos2
-			material_5d_head_lit = mat_nb_5d_orange_cap_lit_pos2
-			material_5d_neck = mat_nb_neck
-			material_5d_down = mat_nb_5d_orange_cup_dwn_pos2
-			material_4d_lip = mat_nb_4d_green_rim_pos1
-			material_4d_mid = mat_nb_4d_green_cup_pos1
-			material_4d_head = mat_nb_4d_green_cap_pos1
-			material_4d_head_lit = mat_nb_4d_green_cap_lit_pos1
-			material_4d_neck = mat_nb_neck
-			material_4d_down = mat_nb_4d_green_cup_dwn_pos1
-			material_open_lit = mat_nb_purple_cap_lit_pos1
-			material_5d_open_lit = mat_nb_purple_cap_lit_pos2
-			material_4d_open_lit = mat_nb_purple_cap_lit_pos1
+			material_lip = Mat_NB_Orange_rim_POS1
+			material_mid = Mat_NB_Orange_Cup_POS1
+			material_head = Mat_NB_Orange_Cap_POS1
+			material_head_lit = Mat_NB_Orange_Cap_LIT_POS1
+			material_neck = Mat_NB_Neck
+			material_down = Mat_NB_Orange_Cup_DWN_POS1
+			material_5d_lip = Mat_NB_5D_Orange_rim_POS2
+			material_5d_mid = Mat_NB_5D_Orange_Cup_POS2
+			material_5d_head = Mat_NB_5D_Orange_Cap_POS2
+			material_5d_head_lit = Mat_NB_5D_Orange_Cap_LIT_POS2
+			material_5d_neck = Mat_NB_Neck
+			material_5d_down = Mat_NB_5D_Orange_Cup_DWN_POS2
+			material_4d_lip = Mat_NB_4D_Green_rim_POS1
+			material_4d_mid = Mat_NB_4D_Green_Cup_POS1
+			material_4d_head = Mat_NB_4D_Green_Cap_POS1
+			material_4d_head_lit = Mat_NB_4D_Green_Cap_LIT_POS1
+			material_4d_neck = Mat_NB_Neck
+			material_4d_down = Mat_NB_4D_Green_Cup_DWN_POS1
+			material_open_lit = Mat_NB_Purple_Cap_LIT_POS1
+			material_5d_open_lit = Mat_NB_Purple_Cap_LIT_POS2
+			material_4d_open_lit = Mat_NB_Purple_Cap_LIT_POS1
 		}
 		white = {
-			Name = button_w
+			name = button_w
 			name_string = 'button_w'
-			Scale = 1.0
+			scale = 1.0
 			scale_5d = 1.0
 			scale_4d = 1.0
-			material_lip = mat_placeholder
-			material_mid = mat_placeholder
-			material_head = mat_placeholder
-			material_head_lit = mat_placeholder
-			material_neck = mat_placeholder
-			material_down = mat_placeholder
-			material_5d_lip = mat_placeholder
-			material_5d_mid = mat_placeholder
-			material_5d_head = mat_placeholder
-			material_5d_head_lit = mat_placeholder
-			material_5d_neck = mat_placeholder
-			material_5d_down = mat_placeholder
-			material_4d_lip = mat_placeholder
-			material_4d_mid = mat_placeholder
-			material_4d_head = mat_placeholder
-			material_4d_head_lit = mat_placeholder
-			material_4d_neck = mat_placeholder
-			material_4d_down = mat_placeholder
-			material_open_lit = mat_placeholder
-			material_5d_open_lit = mat_placeholder
-			material_4d_open_lit = mat_placeholder
+			material_lip = Mat_Placeholder
+			material_mid = Mat_Placeholder
+			material_head = Mat_Placeholder
+			material_head_lit = Mat_Placeholder
+			material_neck = Mat_Placeholder
+			material_down = Mat_Placeholder
+			material_5d_lip = Mat_Placeholder
+			material_5d_mid = Mat_Placeholder
+			material_5d_head = Mat_Placeholder
+			material_5d_head_lit = Mat_Placeholder
+			material_5d_neck = Mat_Placeholder
+			material_5d_down = Mat_Placeholder
+			material_4d_lip = Mat_Placeholder
+			material_4d_mid = Mat_Placeholder
+			material_4d_head = Mat_Placeholder
+			material_4d_head_lit = Mat_Placeholder
+			material_4d_neck = Mat_Placeholder
+			material_4d_down = Mat_Placeholder
+			material_open_lit = Mat_Placeholder
+			material_5d_open_lit = Mat_Placeholder
+			material_4d_open_lit = Mat_Placeholder
 		}
 		extra = {
-			Name = button_x
+			name = button_x
 			name_string = 'button_x'
-			Scale = 1.0
+			scale = 1.0
 			scale_5d = 1.0
 			scale_4d = 1.0
 			material_lip = sys_NowBar_Button01_Blue_Lip_sys_NowBar_Button01_Blue_Lip
@@ -595,177 +595,177 @@ button_up_models = [
 	}
 	{
 		green = {
-			Name = button_g
+			name = button_g
 			name_string = 'button_g'
-			Scale = 1.0
+			scale = 1.0
 			scale_5d = -1.0
 			scale_4d = -1.0
-			material_lip = mat_nb_green_rim_pos1
-			material_mid = mat_nb_green_cup_pos1
-			material_head = mat_nb_green_cap_pos1
-			material_head_lit = mat_nb_green_cap_lit_pos1
-			material_neck = mat_nb_neck
-			material_down = mat_nb_green_cup_dwn_pos1
-			material_5d_lip = mat_nb_5d_green_rim_pos1
-			material_5d_mid = mat_nb_5d_green_cup_pos1
-			material_5d_head = mat_nb_5d_green_cap_pos1
-			material_5d_head_lit = mat_nb_5d_green_cap_lit_pos1
-			material_5d_neck = mat_nb_neck
-			material_5d_down = mat_nb_5d_green_cup_dwn_pos1
-			material_4d_lip = mat_nb_4d_green_rim_pos1
-			material_4d_mid = mat_nb_4d_green_cup_pos1
-			material_4d_head = mat_nb_4d_green_cap_pos1
-			material_4d_head_lit = mat_nb_4d_green_cap_lit_pos1
-			material_4d_neck = mat_nb_neck
-			material_4d_down = mat_nb_4d_green_cup_dwn_pos1
-			material_open_lit = mat_nb_purple_cap_lit_pos1
-			material_5d_open_lit = mat_nb_purple_cap_lit_pos1
-			material_4d_open_lit = mat_nb_purple_cap_lit_pos1
+			material_lip = Mat_NB_Green_rim_POS1
+			material_mid = Mat_NB_Green_Cup_POS1
+			material_head = Mat_NB_Green_Cap_POS1
+			material_head_lit = Mat_NB_Green_Cap_LIT_POS1
+			material_neck = Mat_NB_Neck
+			material_down = Mat_NB_Green_Cup_DWN_POS1
+			material_5d_lip = Mat_NB_5D_Green_rim_POS1
+			material_5d_mid = Mat_NB_5D_Green_Cup_POS1
+			material_5d_head = Mat_NB_5D_Green_Cap_POS1
+			material_5d_head_lit = Mat_NB_5D_Green_Cap_LIT_POS1
+			material_5d_neck = Mat_NB_Neck
+			material_5d_down = Mat_NB_5D_Green_Cup_DWN_POS1
+			material_4d_lip = Mat_NB_4D_Green_rim_POS1
+			material_4d_mid = Mat_NB_4D_Green_Cup_POS1
+			material_4d_head = Mat_NB_4D_Green_Cap_POS1
+			material_4d_head_lit = Mat_NB_4D_Green_Cap_LIT_POS1
+			material_4d_neck = Mat_NB_Neck
+			material_4d_down = Mat_NB_4D_Green_Cup_DWN_POS1
+			material_open_lit = Mat_NB_Purple_Cap_LIT_POS1
+			material_5d_open_lit = Mat_NB_Purple_Cap_LIT_POS1
+			material_4d_open_lit = Mat_NB_Purple_Cap_LIT_POS1
 		}
 		red = {
-			Name = button_r
+			name = button_r
 			name_string = 'button_r'
-			Scale = 1.0
+			scale = 1.0
 			scale_5d = 1.0
 			scale_4d = 1.0
-			material_lip = mat_nb_red_rim_pos2
-			material_mid = mat_nb_red_cup_pos2
-			material_head = mat_nb_red_cap_pos2
-			material_head_lit = mat_nb_red_cap_lit_pos2
-			material_neck = mat_nb_neck
-			material_down = mat_nb_red_cup_dwn_pos2
-			material_5d_lip = mat_nb_5d_red_rim_pos1
-			material_5d_mid = mat_nb_5d_red_cup_pos1
-			material_5d_head = mat_nb_5d_red_cap_pos1
-			material_5d_head_lit = mat_nb_5d_red_cap_lit_pos1
-			material_5d_neck = mat_nb_neck
-			material_5d_down = mat_nb_5d_red_cup_dwn_pos1
-			material_4d_lip = mat_nb_4d_red_rim_pos1
-			material_4d_mid = mat_nb_4d_red_cup_pos1
-			material_4d_head = mat_nb_4d_red_cap_pos1
-			material_4d_head_lit = mat_nb_4d_red_cap_lit_pos1
-			material_4d_neck = mat_nb_neck
-			material_4d_down = mat_nb_4d_red_cup_dwn_pos1
-			material_open_lit = mat_nb_purple_cap_lit_pos2
-			material_5d_open_lit = mat_nb_purple_cap_lit_pos1
-			material_4d_open_lit = mat_nb_purple_cap_lit_pos1
+			material_lip = Mat_NB_Red_rim_POS2
+			material_mid = Mat_NB_Red_Cup_POS2
+			material_head = Mat_NB_Red_Cap_POS2
+			material_head_lit = Mat_NB_Red_Cap_LIT_POS2
+			material_neck = Mat_NB_Neck
+			material_down = Mat_NB_Red_Cup_DWN_POS2
+			material_5d_lip = Mat_NB_5D_Red_rim_POS1
+			material_5d_mid = Mat_NB_5D_Red_Cup_POS1
+			material_5d_head = Mat_NB_5D_Red_Cap_POS1
+			material_5d_head_lit = Mat_NB_5D_Red_Cap_LIT_POS1
+			material_5d_neck = Mat_NB_Neck
+			material_5d_down = Mat_NB_5D_Red_Cup_DWN_POS1
+			material_4d_lip = Mat_NB_4D_Red_rim_POS1
+			material_4d_mid = Mat_NB_4D_Red_Cup_POS1
+			material_4d_head = Mat_NB_4D_Red_Cap_POS1
+			material_4d_head_lit = Mat_NB_4D_Red_Cap_LIT_POS1
+			material_4d_neck = Mat_NB_Neck
+			material_4d_down = Mat_NB_4D_Red_Cup_DWN_POS1
+			material_open_lit = Mat_NB_Purple_Cap_LIT_POS2
+			material_5d_open_lit = Mat_NB_Purple_Cap_LIT_POS1
+			material_4d_open_lit = Mat_NB_Purple_Cap_LIT_POS1
 		}
-		yellow = {
-			Name = button_y
+		Yellow = {
+			name = button_y
 			name_string = 'button_y'
-			Scale = 1.0
+			scale = 1.0
 			scale_5d = 1.0
 			scale_4d = 1.0
-			material_lip = mat_nb_yellow_rim_pos3
-			material_mid = mat_nb_yellow_cup_pos3
-			material_head = mat_nb_yellow_cap_pos3
-			material_head_lit = mat_nb_yellow_cap_lit_pos3
-			material_neck = mat_nb_neck
-			material_down = mat_nb_yellow_cup_dwn_pos3
-			material_5d_lip = mat_nb_5d_yellow_rim_pos2
-			material_5d_mid = mat_nb_5d_yellow_cup_pos2
-			material_5d_head = mat_nb_5d_yellow_cap_pos2
-			material_5d_head_lit = mat_nb_5d_yellow_cap_lit_pos2
-			material_5d_neck = mat_nb_neck
-			material_5d_down = mat_nb_5d_yellow_cup_dwn_pos2
-			material_4d_lip = mat_nb_4d_yellow_rim_pos2
-			material_4d_mid = mat_nb_4d_yellow_cup_pos2
-			material_4d_head = mat_nb_4d_yellow_cap_pos2
-			material_4d_head_lit = mat_nb_4d_yellow_cap_lit_pos2
-			material_4d_neck = mat_nb_neck
-			material_4d_down = mat_nb_4d_yellow_cup_dwn_pos2
-			material_open_lit = mat_nb_purple_cap_lit_pos3
-			material_5d_open_lit = mat_nb_purple_cap_lit_pos2
-			material_4d_open_lit = mat_nb_purple_cap_lit_pos2
+			material_lip = Mat_NB_Yellow_rim_POS3
+			material_mid = Mat_NB_Yellow_Cup_POS3
+			material_head = Mat_NB_Yellow_Cap_POS3
+			material_head_lit = Mat_NB_Yellow_Cap_LIT_POS3
+			material_neck = Mat_NB_Neck
+			material_down = Mat_NB_Yellow_Cup_DWN_POS3
+			material_5d_lip = Mat_NB_5D_Yellow_rim_POS2
+			material_5d_mid = Mat_NB_5D_Yellow_Cup_POS2
+			material_5d_head = Mat_NB_5D_Yellow_Cap_POS2
+			material_5d_head_lit = Mat_NB_5D_Yellow_Cap_LIT_POS2
+			material_5d_neck = Mat_NB_Neck
+			material_5d_down = Mat_NB_5D_Yellow_Cup_DWN_POS2
+			material_4d_lip = Mat_NB_4D_Yellow_rim_POS2
+			material_4d_mid = Mat_NB_4D_Yellow_Cup_POS2
+			material_4d_head = Mat_NB_4D_Yellow_Cap_POS2
+			material_4d_head_lit = Mat_NB_4D_Yellow_Cap_LIT_POS2
+			material_4d_neck = Mat_NB_Neck
+			material_4d_down = Mat_NB_4D_Yellow_Cup_DWN_POS2
+			material_open_lit = Mat_NB_Purple_Cap_LIT_POS3
+			material_5d_open_lit = Mat_NB_Purple_Cap_LIT_POS2
+			material_4d_open_lit = Mat_NB_Purple_Cap_LIT_POS2
 		}
-		blue = {
-			Name = button_b
+		Blue = {
+			name = button_b
 			name_string = 'button_b'
-			Scale = -1.0
+			scale = -1.0
 			scale_5d = 1.0
 			scale_4d = -1.0
-			material_lip = mat_nb_blue_rim_pos2
-			material_mid = mat_nb_blue_cup_pos2
-			material_head = mat_nb_blue_cap_pos2
-			material_head_lit = mat_nb_blue_cap_lit_pos2
-			material_neck = mat_nb_neck
-			material_down = mat_nb_blue_cup_dwn_pos2
-			material_5d_lip = mat_nb_5d_blue_rim_pos3
-			material_5d_mid = mat_nb_5d_blue_cup_pos3
-			material_5d_head = mat_nb_5d_blue_cap_pos3
-			material_5d_head_lit = mat_nb_5d_blue_cap_lit_pos3
-			material_5d_neck = mat_nb_neck
-			material_5d_down = mat_nb_5d_blue_cup_dwn_pos3
-			material_4d_lip = mat_nb_4d_blue_rim_pos2
-			material_4d_mid = mat_nb_4d_blue_cup_pos2
-			material_4d_head = mat_nb_4d_blue_cap_pos2
-			material_4d_head_lit = mat_nb_4d_blue_cap_lit_pos2
-			material_4d_neck = mat_nb_neck
-			material_4d_down = mat_nb_4d_blue_cup_dwn_pos2
-			material_open_lit = mat_nb_purple_cap_lit_pos2
-			material_5d_open_lit = mat_nb_purple_cap_lit_pos3
-			material_4d_open_lit = mat_nb_purple_cap_lit_pos2
+			material_lip = Mat_NB_Blue_rim_POS2
+			material_mid = Mat_NB_Blue_Cup_POS2
+			material_head = Mat_NB_Blue_Cap_POS2
+			material_head_lit = Mat_NB_Blue_Cap_LIT_POS2
+			material_neck = Mat_NB_Neck
+			material_down = Mat_NB_Blue_Cup_DWN_POS2
+			material_5d_lip = Mat_NB_5D_Blue_rim_POS3
+			material_5d_mid = Mat_NB_5D_Blue_Cup_POS3
+			material_5d_head = Mat_NB_5D_Blue_Cap_POS3
+			material_5d_head_lit = Mat_NB_5D_Blue_Cap_LIT_POS3
+			material_5d_neck = Mat_NB_Neck
+			material_5d_down = Mat_NB_5D_Blue_Cup_DWN_POS3
+			material_4d_lip = Mat_NB_4D_Blue_rim_POS2
+			material_4d_mid = Mat_NB_4D_Blue_Cup_POS2
+			material_4d_head = Mat_NB_4D_Blue_Cap_POS2
+			material_4d_head_lit = Mat_NB_4D_Blue_Cap_LIT_POS2
+			material_4d_neck = Mat_NB_Neck
+			material_4d_down = Mat_NB_4D_Blue_Cup_DWN_POS2
+			material_open_lit = Mat_NB_Purple_Cap_LIT_POS2
+			material_5d_open_lit = Mat_NB_Purple_Cap_LIT_POS3
+			material_4d_open_lit = Mat_NB_Purple_Cap_LIT_POS2
 		}
-		orange = {
-			Name = button_o
+		Orange = {
+			name = button_o
 			name_string = 'button_o'
-			Scale = -1.0
+			scale = -1.0
 			scale_5d = -1.0
 			scale_4d = -1.0
-			material_lip = mat_nb_orange_rim_pos1
-			material_mid = mat_nb_orange_cup_pos1
-			material_head = mat_nb_orange_cap_pos1
-			material_head_lit = mat_nb_orange_cap_lit_pos1
-			material_neck = mat_nb_neck
-			material_down = mat_nb_orange_cup_dwn_pos1
-			material_5d_lip = mat_nb_5d_orange_rim_pos2
-			material_5d_mid = mat_nb_5d_orange_cup_pos2
-			material_5d_head = mat_nb_5d_orange_cap_pos2
-			material_5d_head_lit = mat_nb_5d_orange_cap_lit_pos2
-			material_5d_neck = mat_nb_neck
-			material_5d_down = mat_nb_5d_orange_cup_dwn_pos2
-			material_4d_lip = mat_nb_4d_green_rim_pos1
-			material_4d_mid = mat_nb_4d_green_cup_pos1
-			material_4d_head = mat_nb_4d_green_cap_pos1
-			material_4d_head_lit = mat_nb_4d_green_cap_lit_pos1
-			material_4d_neck = mat_nb_neck
-			material_4d_down = mat_nb_4d_green_cup_dwn_pos1
-			material_open_lit = mat_nb_purple_cap_lit_pos1
-			material_5d_open_lit = mat_nb_purple_cap_lit_pos2
-			material_4d_open_lit = mat_nb_purple_cap_lit_pos1
+			material_lip = Mat_NB_Orange_rim_POS1
+			material_mid = Mat_NB_Orange_Cup_POS1
+			material_head = Mat_NB_Orange_Cap_POS1
+			material_head_lit = Mat_NB_Orange_Cap_LIT_POS1
+			material_neck = Mat_NB_Neck
+			material_down = Mat_NB_Orange_Cup_DWN_POS1
+			material_5d_lip = Mat_NB_5D_Orange_rim_POS2
+			material_5d_mid = Mat_NB_5D_Orange_Cup_POS2
+			material_5d_head = Mat_NB_5D_Orange_Cap_POS2
+			material_5d_head_lit = Mat_NB_5D_Orange_Cap_LIT_POS2
+			material_5d_neck = Mat_NB_Neck
+			material_5d_down = Mat_NB_5D_Orange_Cup_DWN_POS2
+			material_4d_lip = Mat_NB_4D_Green_rim_POS1
+			material_4d_mid = Mat_NB_4D_Green_Cup_POS1
+			material_4d_head = Mat_NB_4D_Green_Cap_POS1
+			material_4d_head_lit = Mat_NB_4D_Green_Cap_LIT_POS1
+			material_4d_neck = Mat_NB_Neck
+			material_4d_down = Mat_NB_4D_Green_Cup_DWN_POS1
+			material_open_lit = Mat_NB_Purple_Cap_LIT_POS1
+			material_5d_open_lit = Mat_NB_Purple_Cap_LIT_POS2
+			material_4d_open_lit = Mat_NB_Purple_Cap_LIT_POS1
 		}
 		white = {
-			Name = button_w
+			name = button_w
 			name_string = 'button_w'
-			Scale = 1.0
+			scale = 1.0
 			scale_5d = 1.0
 			scale_4d = 1.0
-			material_lip = mat_placeholder
-			material_mid = mat_placeholder
-			material_head = mat_placeholder
-			material_head_lit = mat_placeholder
-			material_neck = mat_placeholder
-			material_down = mat_placeholder
-			material_5d_lip = mat_placeholder
-			material_5d_mid = mat_placeholder
-			material_5d_head = mat_placeholder
-			material_5d_head_lit = mat_placeholder
-			material_5d_neck = mat_placeholder
-			material_5d_down = mat_placeholder
-			material_4d_lip = mat_placeholder
-			material_4d_mid = mat_placeholder
-			material_4d_head = mat_placeholder
-			material_4d_head_lit = mat_placeholder
-			material_4d_neck = mat_placeholder
-			material_4d_down = mat_placeholder
-			material_open_lit = mat_placeholder
-			material_5d_open_lit = mat_placeholder
-			material_4d_open_lit = mat_placeholder
+			material_lip = Mat_Placeholder
+			material_mid = Mat_Placeholder
+			material_head = Mat_Placeholder
+			material_head_lit = Mat_Placeholder
+			material_neck = Mat_Placeholder
+			material_down = Mat_Placeholder
+			material_5d_lip = Mat_Placeholder
+			material_5d_mid = Mat_Placeholder
+			material_5d_head = Mat_Placeholder
+			material_5d_head_lit = Mat_Placeholder
+			material_5d_neck = Mat_Placeholder
+			material_5d_down = Mat_Placeholder
+			material_4d_lip = Mat_Placeholder
+			material_4d_mid = Mat_Placeholder
+			material_4d_head = Mat_Placeholder
+			material_4d_head_lit = Mat_Placeholder
+			material_4d_neck = Mat_Placeholder
+			material_4d_down = Mat_Placeholder
+			material_open_lit = Mat_Placeholder
+			material_5d_open_lit = Mat_Placeholder
+			material_4d_open_lit = Mat_Placeholder
 		}
 		extra = {
-			Name = button_x
+			name = button_x
 			name_string = 'button_x'
-			Scale = 1.0
+			scale = 1.0
 			scale_5d = 1.0
 			scale_4d = 1.0
 			material_lip = sys_NowBar_Button01_Blue_Lip_sys_NowBar_Button01_Blue_Lip
@@ -812,7 +812,7 @@ layout_combos = [
 	{
 		players = 1
 		parts = [
-			vocals
+			Vocals
 		]
 	}
 	{
@@ -840,14 +840,14 @@ layout_combos = [
 		players = 2
 		parts = [
 			guitar
-			vocals
+			Vocals
 		]
 	}
 	{
 		players = 2
 		parts = [
 			drum
-			vocals
+			Vocals
 		]
 	}
 	{
@@ -879,7 +879,7 @@ layout_combos = [
 		parts = [
 			guitar
 			drum
-			vocals
+			Vocals
 		]
 	}
 	{
@@ -887,7 +887,7 @@ layout_combos = [
 		parts = [
 			guitar
 			guitar
-			vocals
+			Vocals
 		]
 	}
 	{
@@ -896,7 +896,7 @@ layout_combos = [
 			guitar
 			guitar
 			drum
-			vocals
+			Vocals
 		]
 	}
 ]
@@ -904,21 +904,21 @@ layout_combos = [
 script toggle_debug_highways \{combo = -1}
 	GetArraySize \{$layout_combos}
 	if NOT (<combo> = -1)
-		Change current_layout_combo = <combo>
-		if ($current_layout_combo > (<array_Size> -1))
-			Change \{current_layout_combo = 0}
+		change current_layout_combo = <combo>
+		if ($current_layout_combo > (<array_size> -1))
+			change \{current_layout_combo = 0}
 		endif
 		if ($current_layout_combo < 0)
-			Change \{current_layout_combo = 0}
+			change \{current_layout_combo = 0}
 		endif
 	endif
 	<players> = ($layout_combos [$current_layout_combo].players)
 	<parts> = ($layout_combos [$current_layout_combo].parts)
 	create_debug_highways <...>
 	if (<combo> = -1)
-		Change current_layout_combo = ($current_layout_combo + 1)
-		if ($current_layout_combo > (<array_Size> -1))
-			Change \{current_layout_combo = 0}
+		change current_layout_combo = ($current_layout_combo + 1)
+		if ($current_layout_combo > (<array_size> -1))
+			change \{current_layout_combo = 0}
 		endif
 	endif
 endscript
@@ -938,245 +938,245 @@ script create_debug_highways \{players = 4
 		if (<players> <= 4)
 			old_parts = [guitar guitar guitar guitar]
 			<old_num_players> = $current_num_players
-			Change current_num_players = <players>
-			<Player> = 1
+			change current_num_players = <players>
+			<player> = 1
 			begin
-			getplayerinfo <Player> part
-			SetArrayElement ArrayName = old_parts index = (<Player> -1) NewValue = <part>
-			<new_part> = (<parts> [(<Player> -1)])
-			setplayerinfo <Player> part = <new_part>
-			<Player> = (<Player> + 1)
+			GetPlayerInfo <player> part
+			SetArrayElement ArrayName = old_parts index = (<player> -1) newvalue = <part>
+			<new_part> = (<parts> [(<player> -1)])
+			SetPlayerInfo <player> part = <new_part>
+			<player> = (<player> + 1)
 			repeat <players>
 			update_hud_layout
 			debug_refresh_hud
-			<Player> = 1
+			<player> = 1
 			begin
-			<part> = (<parts> [(<Player> -1)])
-			if checksumequals a = <part> b = vocals
-				setup_debug_vocals_highway Player = <Player>
+			<part> = (<parts> [(<player> -1)])
+			if ChecksumEquals a = <part> b = Vocals
+				setup_debug_vocals_highway player = <player>
 			else
 				get_num_non_vocals_players_onscreen
-				setup_debug_highway Player = <Player> total_players = <num_non_vocals_players>
+				setup_debug_highway player = <player> total_players = <num_non_vocals_players>
 			endif
-			<Player> = (<Player> + 1)
+			<player> = (<player> + 1)
 			repeat <players>
-			Change current_num_players = <old_num_players>
-			<Player> = 1
+			change current_num_players = <old_num_players>
+			<player> = 1
 			begin
-			setplayerinfo <Player> part = (<old_parts> [(<Player> -1)])
-			<Player> = (<Player> + 1)
+			SetPlayerInfo <player> part = (<old_parts> [(<player> -1)])
+			<player> = (<player> + 1)
 			repeat <players>
 		endif
 	endif
 endscript
 
-script setup_debug_highway \{Player = 1
+script setup_debug_highway \{player = 1
 		total_players = 3}
 	SetScreenElementLock \{id = root_window
-		OFF}
-	generate_pos_table Player = <Player> debug
-	get_highway_struct Player = <Player>
+		off}
+	generate_pos_table player = <player> debug
+	get_highway_struct player = <player>
 	pos_table = <struct>
-	get_highway_pos_and_scale num_non_vocals_players = <total_players> non_vocalist_player = <Player> Player = <Player>
-	formatText checksumName = container_id 'debug_gem_container%p' p = <Player> AddToStringLookup = true
+	get_highway_pos_and_scale num_non_vocals_players = <total_players> non_vocalist_player = <player> player = <player>
+	FormatText checksumname = container_id 'debug_gem_container%p' p = <player> AddToStringLookup = true
 	DestroyScreenElement id = <container_id>
 	CreateScreenElement {
-		Type = ContainerElement
+		type = ContainerElement
 		id = <container_id>
 		parent = root_window
-		Pos = <Pos>
+		pos = <pos>
 		just = [left top]
-		Scale = <Scale>
+		scale = <scale>
 		z_priority = 0
 	}
 	hpos = ((640.0 - ((<pos_table>.highway_top_width) / 2.0)) * (1.0, 0.0))
-	hDims = ((<pos_table>.highway_top_width) * (1.0, 0.0))
+	hdims = ((<pos_table>.highway_top_width) * (1.0, 0.0))
 	<highway_material> = $debug_highway_material
-	formatText checksumName = highway_name 'Debug_Highway_2D%p' p = <Player> AddToStringLookup = true
+	FormatText checksumname = highway_name 'Debug_Highway_2D%p' p = <player> AddToStringLookup = true
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		id = <highway_name>
 		parent = <container_id>
 		clonematerial = <highway_material>
 		rgba = $highway_normal
-		Pos = <hpos>
-		dims = <hDims>
+		pos = <hpos>
+		dims = <hdims>
 		just = [left left]
 		z_priority = 0.1
 	}
 	SetScreenElementProps id = <highway_name> MaterialProps = [
-		{Name = m_velocityV property = 0.0}
-		{Name = m_width property = (<pos_table>.widthOffsetFactor)}
-		{Name = m_tiling property = (<pos_table>.gHighwayTiling)}
+		{name = m_velocityV Property = 0.0}
+		{name = m_width Property = (<pos_table>.widthOffsetFactor)}
+		{name = m_tiling Property = (<pos_table>.gHighwayTiling)}
 	]
-	getprojectspecificspriteparams
+	GetProjectSpecificSpriteParams
 	SetScreenElementProps id = <highway_name> MaterialProps = [
-		{Name = m_startFade property = <highwaystartfade>}
-		{Name = m_endFade property = <highwayendfade>}
-		{Name = m_playerIndex property = (<Player> + 4)}
+		{name = m_startFade Property = <HighwayStartFade>}
+		{name = m_endFade Property = <HighwayEndFade>}
+		{name = m_playerIndex Property = (<player> + 4)}
 	]
 	SetScreenElementLock \{id = root_window
-		On}
+		on}
 endscript
 
-script setup_debug_vocals_highway \{Player = 1}
-	formatText checksumName = container_id 'debug_gem_container%p' p = <Player> AddToStringLookup = true
+script setup_debug_vocals_highway \{player = 1}
+	FormatText checksumname = container_id 'debug_gem_container%p' p = <player> AddToStringLookup = true
 	DestroyScreenElement id = <container_id>
 	CreateScreenElement {
-		Type = ContainerElement
+		type = ContainerElement
 		id = <container_id>
 		parent = root_window
-		Pos = (0.0, 0.0)
+		pos = (0.0, 0.0)
 		just = [left top]
 		z_priority = 0
 	}
-	vocals_create_highway parent = <container_id> Player = <Player> vocals_highway_view = static
-	vocals_highway_slide_in Player = <Player>
+	vocals_create_highway parent = <container_id> player = <player> vocals_highway_view = static
+	vocals_highway_slide_in player = <player>
 endscript
 
 script get_highway_pos_and_scale 
 	switch <num_non_vocals_players>
 		case 1
-		<Scale> = (1.0, 1.0)
-		<Pos> = (0.0, 0.0)
-		setplayerinfo <Player> hud_parent = alias_g1
-		setplayerinfo <Player> highway_position = center
+		<scale> = (1.0, 1.0)
+		<pos> = (0.0, 0.0)
+		SetPlayerInfo <player> hud_parent = alias_g1
+		SetPlayerInfo <player> highway_position = center
 		case 2
-		<Scale> = (1.0, 1.0)
+		<scale> = (1.0, 1.0)
 		switch <non_vocalist_player>
 			case 1
-			<Pos> = ((0 - $x_offset_p2) * (1.0, 0.0))
-			setplayerinfo <Player> hud_parent = alias_g1
-			setplayerinfo <Player> highway_position = left
+			<pos> = ((0 - $x_offset_p2) * (1.0, 0.0))
+			SetPlayerInfo <player> hud_parent = alias_g1
+			SetPlayerInfo <player> highway_position = left
 			case 2
-			<Pos> = ($x_offset_p2 * (1.0, 0.0))
-			setplayerinfo <Player> hud_parent = alias_g2
-			setplayerinfo <Player> highway_position = right
+			<pos> = ($x_offset_p2 * (1.0, 0.0))
+			SetPlayerInfo <player> hud_parent = alias_g2
+			SetPlayerInfo <player> highway_position = right
 		endswitch
 		case 3
-		<Scale> = (1.0, 1.0)
-		getplayerinfo <Player> part
+		<scale> = (1.0, 1.0)
+		GetPlayerInfo <player> part
 		if (<part> = drum)
-			printf 'Highway - Player %p, drum center.' p = <Player>
-			<Pos> = (0.0, 0.0)
-			setplayerinfo <Player> hud_parent = alias_g2
-			setplayerinfo <Player> highway_position = center
-		elseif player_is_lowest_numbered_guitar_or_bass Player = <Player>
-			printf 'Highway - Player %p, guitarist left.' p = <Player>
-			<Pos> = ((0 - $x_offset_p3) * (1.8, 0.0))
-			setplayerinfo <Player> hud_parent = alias_g1
-			setplayerinfo <Player> highway_position = left
+			printf 'Highway - Player %p, drum center.' p = <player>
+			<pos> = (0.0, 0.0)
+			SetPlayerInfo <player> hud_parent = alias_g2
+			SetPlayerInfo <player> highway_position = center
+		elseif player_is_lowest_numbered_guitar_or_bass player = <player>
+			printf 'Highway - Player %p, guitarist left.' p = <player>
+			<pos> = ((0 - $x_offset_p3) * (1.8, 0.0))
+			SetPlayerInfo <player> hud_parent = alias_g1
+			SetPlayerInfo <player> highway_position = left
 		else
-			printf 'Highway - Player %p, guitarist right.' p = <Player>
-			<Pos> = ($x_offset_p3 * (1.8, 0.0))
-			setplayerinfo <Player> hud_parent = alias_g3
-			setplayerinfo <Player> highway_position = right
+			printf 'Highway - Player %p, guitarist right.' p = <player>
+			<pos> = ($x_offset_p3 * (1.8, 0.0))
+			SetPlayerInfo <player> hud_parent = alias_g3
+			SetPlayerInfo <player> highway_position = right
 		endif
 		default
 		ScriptAssert 'did not expect %n non-vocals highways' n = <num_non_vocals_players>
 	endswitch
-	return Pos = <Pos> Scale = <Scale>
+	return pos = <pos> scale = <scale>
 endscript
 
-script setup_highway \{Player = 1}
-	generate_pos_table Player = <Player>
+script setup_highway \{player = 1}
+	generate_pos_table player = <player>
 	SetScreenElementLock \{id = root_window
-		OFF}
+		off}
 	get_num_non_vocals_players_onscreen
-	get_non_vocalist_player_number Player = <Player>
-	get_highway_pos_and_scale num_non_vocals_players = <num_non_vocals_players> non_vocalist_player = <non_vocalist_player> Player = <Player>
-	<container_pos> = (<Pos> + (0.0, 720.0))
-	formatText checksumName = container_id 'gem_container%p' p = <player_text> AddToStringLookup = true
+	get_non_vocalist_player_number player = <player>
+	get_highway_pos_and_scale num_non_vocals_players = <num_non_vocals_players> non_vocalist_player = <non_vocalist_player> player = <player>
+	<container_pos> = (<pos> + (0.0, 720.0))
+	FormatText checksumname = container_id 'gem_container%p' p = <player_text> AddToStringLookup = true
 	CreateScreenElement {
-		Type = ContainerElement
+		type = ContainerElement
 		id = <container_id>
 		parent = root_window
-		Pos = <container_pos>
+		pos = <container_pos>
 		just = [left top]
-		Scale = <Scale>
+		scale = <scale>
 		z_priority = 0
 	}
-	pos_table = ($highway_pos_table [(<Player> -1)])
+	pos_table = ($highway_pos_table [(<player> -1)])
 	hpos = ((640.0 - ((<pos_table>.highway_top_width) / 2.0)) * (1.0, 0.0))
-	hDims = ((<pos_table>.highway_top_width) * (1.0, 0.0))
+	hdims = ((<pos_table>.highway_top_width) * (1.0, 0.0))
 	<highway_texture> = ($<player_status>.highway_texture)
-	create_highway_material Player = <Player> texture = <highway_texture>
-	formatText checksumName = highway_name 'Highway_2D%p' p = <player_text> AddToStringLookup = true
+	create_highway_material player = <player> texture = <highway_texture>
+	FormatText checksumname = highway_name 'Highway_2D%p' p = <player_text> AddToStringLookup = true
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		id = <highway_name>
 		parent = <container_id>
 		clonematerial = <highway_material>
 		rgba = $highway_normal
-		Pos = <hpos>
-		dims = <hDims>
+		pos = <hpos>
+		dims = <hdims>
 		just = [left left]
 		z_priority = 0.1
 	}
 	highway_speed = (0.0 - ((<pos_table>.gHighwayTiling) / ($<player_status>.scroll_time - $destroy_time)))
-	printf qs(0x2e358b62) h = <highway_speed>
-	Set2DHighwaySpeed speed = <highway_speed> id = <highway_name> player_status = <player_status> Player = <Player>
-	if ($<player_status>.band_member = drummer)
-		setmaterialproperty mat = 'Mat_Drum_Fill' prop = 'm_velocityV' X = <highway_speed> y = 0.0 z = 0.0 w = 0.0
+	printf qs("\LSetting highway speed to: %h") h = <highway_speed>
+	Set2DHighwaySpeed Speed = <highway_speed> id = <highway_name> player_status = <player_status> player = <player>
+	if ($<player_status>.band_member = Drummer)
+		SetMaterialProperty mat = 'Mat_Drum_Fill' prop = 'm_velocityV' x = <highway_speed> y = 0.0 z = 0.0 w = 0.0
 	elseif ($<player_status>.band_member = drummer2)
-		setmaterialproperty mat = 'Mat_Drum_Fill2' prop = 'm_velocityV' X = <highway_speed> y = 0.0 z = 0.0 w = 0.0
+		SetMaterialProperty mat = 'Mat_Drum_Fill2' prop = 'm_velocityV' x = <highway_speed> y = 0.0 z = 0.0 w = 0.0
 	endif
 	fe = ((<pos_table>.highway_playline) - (<pos_table>.highway_height))
 	fs = (<fe> + (<pos_table>.highway_fade))
-	Set2DHighwayFade start = <fs> end = <fe> id = <highway_name> Player = <Player>
-	Pos = ((640 * (1.0, 0.0)) + ((<pos_table>.highway_playline) * (0.0, 1.0)))
+	Set2DHighwayFade start = <fs> end = <fe> id = <highway_name> player = <player>
+	pos = ((640 * (1.0, 0.0)) + ((<pos_table>.highway_playline) * (0.0, 1.0)))
 	now_scale = (((<pos_table>.nowbar_scale_x) * (1.0, 0.0)) + ((<pos_table>.nowbar_scale_y) * (0.0, 1.0)))
-	lpos = (($sidebar_x [(<Player> -1)] * (1.0, 0.0)) + ($sidebar_y [(<Player> -1)] * (0.0, 1.0)))
-	langle = ($sidebar_angle [(<Player> -1)])
-	rpos = ((((640.0 - $sidebar_x [(<Player> -1)]) + 640.0) * (1.0, 0.0)) + ($sidebar_y [(<Player> -1)] * (0.0, 1.0)))
-	rangle = (0.0 - ($sidebar_angle [(<Player> -1)]))
-	Scale = (((<pos_table>.sidebar_x_scale) * (1.0, 0.0)) + ((<pos_table>.sidebar_y_scale) * (0.0, 1.0)))
+	lpos = (($sidebar_x [(<player> -1)] * (1.0, 0.0)) + ($sidebar_y [(<player> -1)] * (0.0, 1.0)))
+	langle = ($sidebar_angle [(<player> -1)])
+	rpos = ((((640.0 - $sidebar_x [(<player> -1)]) + 640.0) * (1.0, 0.0)) + ($sidebar_y [(<player> -1)] * (0.0, 1.0)))
+	rangle = (0.0 - ($sidebar_angle [(<player> -1)]))
+	scale = (((<pos_table>.sidebar_x_scale) * (1.0, 0.0)) + ((<pos_table>.sidebar_y_scale) * (0.0, 1.0)))
 	rscale = (((0 - (<pos_table>.sidebar_x_scale)) * (1.0, 0.0)) + ((<pos_table>.sidebar_y_scale) * (0.0, 1.0)))
-	nsgscale = (((<pos_table>.sidebar_x_scale) * (8.0, 0.0)) + ((<pos_table>.sidebar_y_scale) * (0.0, 2.25)))
-	ngsrscale = (((0 - (<pos_table>.sidebar_x_scale)) * (8.0, 0.0)) + ((<pos_table>.sidebar_y_scale) * (0.0, 2.25)))
-	formatText checksumName = cont 'sidebar_container_left%p' p = <player_text> AddToStringLookup = true
+	NSGscale = (((<pos_table>.sidebar_x_scale) * (8.0, 0.0)) + ((<pos_table>.sidebar_y_scale) * (0.0, 2.25)))
+	NGSrscale = (((0 - (<pos_table>.sidebar_x_scale)) * (8.0, 0.0)) + ((<pos_table>.sidebar_y_scale) * (0.0, 2.25)))
+	FormatText checksumname = cont 'sidebar_container_left%p' p = <player_text> AddToStringLookup = true
 	CreateScreenElement {
-		Type = ContainerElement
+		type = ContainerElement
 		id = <cont>
 		parent = <container_id>
-		Pos = <lpos>
+		pos = <lpos>
 		rot_angle = <langle>
 		just = [center bottom]
 		z_priority = 3
 	}
-	formatText checksumName = Name 'Sidebar_NSGLOW_left%p' p = <player_text> AddToStringLookup = true
+	FormatText checksumname = name 'Sidebar_NSGLOW_left%p' p = <player_text> AddToStringLookup = true
 	CreateScreenElement {
-		Type = SpriteElement
-		id = <Name>
+		type = SpriteElement
+		id = <name>
 		parent = <cont>
-		material = mat_sidebar_glow_01
+		material = Mat_sidebar_GLOW_01
 		rgba = [255 255 255 255]
 		rot_angle = -1
-		Pos = (0.0, 0.0)
-		Scale = <nsgscale>
+		pos = (0.0, 0.0)
+		scale = <NSGscale>
 		just = [center bottom]
 		z_priority = 6
-		Hide
+		hide
 	}
-	formatText checksumName = Name 'sidebar_left%p' p = <player_text> AddToStringLookup = true
+	FormatText checksumname = name 'sidebar_left%p' p = <player_text> AddToStringLookup = true
 	CreateScreenElement {
-		Type = SpriteElement
-		id = <Name>
+		type = SpriteElement
+		id = <name>
 		parent = <cont>
 		material = sys_sidebar2D_sys_sidebar2D
 		rgba = [255 255 255 255]
-		Pos = (0.0, 0.0)
-		Scale = <Scale>
+		pos = (0.0, 0.0)
+		scale = <scale>
 		just = [center bottom]
 		z_priority = 3
 	}
-	Set2DHighwayFade start = <fs> end = <fe> id = <Name> Player = <Player>
-	formatText checksumName = cont 'starpower_container_left%p' p = <player_text> AddToStringLookup = true
+	Set2DHighwayFade start = <fs> end = <fe> id = <name> player = <player>
+	FormatText checksumname = cont 'starpower_container_left%p' p = <player_text> AddToStringLookup = true
 	CreateScreenElement {
-		Type = ContainerElement
+		type = ContainerElement
 		id = <cont>
 		parent = <container_id>
-		Pos = <lpos>
+		pos = <lpos>
 		rot_angle = <langle>
 		just = [center bottom]
 		z_priority = 3
@@ -1186,161 +1186,161 @@ script setup_highway \{Player = 1}
 	lightning_material = sys_Big_Bolt01_sys_Big_Bolt01
 	starpower_pos = (((-55.0 * <starpower_fx_scale>) * (1.0, 0.0)) + ((55.0 * <starpower_fx_scale>) * (0.0, 1.0)))
 	starpower_scale = (((1.0 * <starpower_fx_scale>) * (1.0, 0.0)) + ((1.1 * <starpower_fx_scale>) * (0.0, 1.0)))
-	formatText checksumName = Name 'sidebar_left_glow%p' p = <player_text> AddToStringLookup = true
+	FormatText checksumname = name 'sidebar_left_glow%p' p = <player_text> AddToStringLookup = true
 	CreateScreenElement {
-		Type = SpriteElement
-		id = <Name>
+		type = SpriteElement
+		id = <name>
 		parent = <cont>
 		material = sys_Starpower_SDGLOW_sys_Starpower_SDGLOW
 		rgba = [255 255 255 255]
-		Pos = <starpower_pos>
-		Scale = <starpower_scale>
+		pos = <starpower_pos>
+		scale = <starpower_scale>
 		just = [center bottom]
 		z_priority = 0
 	}
 	starpower_pos = (((0.0 * <starpower_fx_scale>) * (1.0, 0.0)) + ((0.0 * <starpower_fx_scale>) * (0.0, 1.0)))
 	starpower_scale = (((2.0 * <starpower_fx_scale>) * (1.0, 0.0)) + ((0.9 * <starpower_fx_scale>) * (0.0, 1.0)))
-	formatText checksumName = Name 'sidebar_left_Lightning02%p' p = <player_text> AddToStringLookup = true
+	FormatText checksumname = name 'sidebar_left_Lightning02%p' p = <player_text> AddToStringLookup = true
 	CreateScreenElement {
-		Type = SpriteElement
-		id = <Name>
+		type = SpriteElement
+		id = <name>
 		parent = <cont>
 		material = <lightning_material>
 		rgba = [255 255 255 255]
-		Pos = <starpower_pos>
+		pos = <starpower_pos>
 		rot_angle = (180)
-		Scale = <starpower_scale>
+		scale = <starpower_scale>
 		just = [center top]
 		z_priority = 0.02
 	}
-	formatText checksumName = cont 'sidebar_container_right%p' p = <player_text> AddToStringLookup = true
+	FormatText checksumname = cont 'sidebar_container_right%p' p = <player_text> AddToStringLookup = true
 	CreateScreenElement {
-		Type = ContainerElement
+		type = ContainerElement
 		id = <cont>
 		parent = <container_id>
-		Pos = <rpos>
+		pos = <rpos>
 		rot_angle = <rangle>
 		just = [center bottom]
 		z_priority = 3
 	}
-	formatText checksumName = Name 'Sidebar_NSGLOW_right%p' p = <player_text> AddToStringLookup = true
+	FormatText checksumname = name 'Sidebar_NSGLOW_right%p' p = <player_text> AddToStringLookup = true
 	CreateScreenElement {
-		Type = SpriteElement
-		id = <Name>
+		type = SpriteElement
+		id = <name>
 		parent = <cont>
-		material = mat_sidebar_glow_01
+		material = Mat_sidebar_GLOW_01
 		rgba = [255 255 255 255]
 		rot_angle = 1
-		Pos = (0.0, 0.0)
-		Scale = <ngsrscale>
+		pos = (0.0, 0.0)
+		scale = <NGSrscale>
 		just = [center bottom]
 		z_priority = 6
-		Hide
+		hide
 	}
-	formatText checksumName = Name 'sidebar_right%p' p = <player_text> AddToStringLookup = true
+	FormatText checksumname = name 'sidebar_right%p' p = <player_text> AddToStringLookup = true
 	CreateScreenElement {
-		Type = SpriteElement
-		id = <Name>
+		type = SpriteElement
+		id = <name>
 		parent = <cont>
 		material = sys_sidebar2D_sys_sidebar2D
 		rgba = [255 255 255 255]
-		Pos = (0.0, 0.0)
-		Scale = <rscale>
+		pos = (0.0, 0.0)
+		scale = <rscale>
 		just = [center bottom]
 		z_priority = 3
 	}
-	Set2DHighwayFade start = <fs> end = <fe> id = <Name> Player = <Player>
-	formatText checksumName = cont 'starpower_container_right%p' p = <player_text> AddToStringLookup = true
+	Set2DHighwayFade start = <fs> end = <fe> id = <name> player = <player>
+	FormatText checksumname = cont 'starpower_container_right%p' p = <player_text> AddToStringLookup = true
 	CreateScreenElement {
-		Type = ContainerElement
+		type = ContainerElement
 		id = <cont>
 		parent = <container_id>
-		Pos = <rpos>
+		pos = <rpos>
 		rot_angle = <rangle>
 		just = [center bottom]
 		z_priority = 3
 	}
 	starpower_pos = (((55.0 * <starpower_fx_scale>) * (1.0, 0.0)) + ((55.0 * <starpower_fx_scale>) * (0.0, 1.0)))
 	starpower_scale = (((-1.0 * <starpower_fx_scale>) * (1.0, 0.0)) + ((1.1 * <starpower_fx_scale>) * (0.0, 1.0)))
-	formatText checksumName = Name 'sidebar_Right_glow%p' p = <player_text> AddToStringLookup = true
+	FormatText checksumname = name 'sidebar_Right_glow%p' p = <player_text> AddToStringLookup = true
 	CreateScreenElement {
-		Type = SpriteElement
-		id = <Name>
+		type = SpriteElement
+		id = <name>
 		parent = <cont>
 		material = sys_Starpower_SDGLOW_sys_Starpower_SDGLOW
 		rgba = [255 255 255 255]
-		Pos = <starpower_pos>
-		Scale = <starpower_scale>
+		pos = <starpower_pos>
+		scale = <starpower_scale>
 		just = [center bottom]
 		z_priority = 0
 	}
 	starpower_pos = (((0.0 * <starpower_fx_scale>) * (1.0, 0.0)) + ((0.0 * <starpower_fx_scale>) * (0.0, 1.0)))
 	starpower_scale = (((2.0 * <starpower_fx_scale>) * (1.0, 0.0)) + ((0.9 * <starpower_fx_scale>) * (0.0, 1.0)))
-	formatText checksumName = Name 'sidebar_Right_Lightning02%p' p = <player_text> AddToStringLookup = true
+	FormatText checksumname = name 'sidebar_Right_Lightning02%p' p = <player_text> AddToStringLookup = true
 	CreateScreenElement {
-		Type = SpriteElement
-		id = <Name>
+		type = SpriteElement
+		id = <name>
 		parent = <cont>
 		material = <lightning_material>
 		rgba = [255 255 255 255]
-		Pos = <starpower_pos>
+		pos = <starpower_pos>
 		rot_angle = (180)
-		Scale = <starpower_scale>
+		scale = <starpower_scale>
 		just = [center top]
 		z_priority = 0.02
 	}
-	formatText checksumName = cont 'starpower_container_left%p' p = <player_text> AddToStringLookup = true
-	legacydoscreenelementmorph id = <cont> alpha = 0
-	formatText checksumName = cont 'starpower_container_right%p' p = <player_text> AddToStringLookup = true
-	legacydoscreenelementmorph id = <cont> alpha = 0
-	getplayerinfo <Player> part
+	FormatText checksumname = cont 'starpower_container_left%p' p = <player_text> AddToStringLookup = true
+	LegacyDoScreenElementMorph id = <cont> alpha = 0
+	FormatText checksumname = cont 'starpower_container_right%p' p = <player_text> AddToStringLookup = true
+	LegacyDoScreenElementMorph id = <cont> alpha = 0
+	GetPlayerInfo <player> part
 	GetArraySize \{$gem_colors}
 	array_count = 0
 	begin
-	Color = ($gem_colors [<array_count>])
-	if StructureContains structure = (($button_up_models [(<Player> -1)]).<Color>) Name = Name
+	color = ($gem_colors [<array_count>])
+	if StructureContains Structure = (($button_up_models [(<player> -1)]).<color>) name = name
 		if NOT (<part> = drum)
 			if ($<player_status>.lefthanded_button_ups = 1)
-				<pos2d> = (($button_up_models [(<Player> -1)]).<Color>.left_pos_2d)
+				<pos2d> = (($button_up_models [(<player> -1)]).<color>.left_pos_2d)
 				<playline_scale> = (((0 - <now_scale>.(1.0, 0.0)) * (1.0, 0.0)) + (<now_scale>.(0.0, 1.0) * (0.0, 1.0)))
 			else
-				<pos2d> = (($button_up_models [(<Player> -1)]).<Color>.pos_2d)
+				<pos2d> = (($button_up_models [(<player> -1)]).<color>.pos_2d)
 				<playline_scale> = <now_scale>
 			endif
 		else
-			<pos2d> = (($button_up_models [(<Player> -1)]).<Color>.pos_2d)
+			<pos2d> = (($button_up_models [(<player> -1)]).<color>.pos_2d)
 			<playline_scale> = <now_scale>
 		endif
-		Pos = (640.0, 643.0)
-		<Pos> = (((<pos2d>.(1.0, 0.0)) * (1.0, 0.0)) + (1024 * (0.0, 1.0)))
+		pos = (640.0, 643.0)
+		<pos> = (((<pos2d>.(1.0, 0.0)) * (1.0, 0.0)) + (1024 * (0.0, 1.0)))
 		if (<part> = drum)
-			if usefourlanehighway Player = <Player>
-				<flip_scale> = (($button_up_models [(<Player> -1)]).<Color>.scale_4d)
+			if UseFourLaneHighway player = <player>
+				<flip_scale> = (($button_up_models [(<player> -1)]).<color>.scale_4d)
 			else
-				<flip_scale> = (($button_up_models [(<Player> -1)]).<Color>.scale_5d)
+				<flip_scale> = (($button_up_models [(<player> -1)]).<color>.scale_5d)
 			endif
 		else
-			<flip_scale> = (($button_up_models [(<Player> -1)]).<Color>.Scale)
+			<flip_scale> = (($button_up_models [(<player> -1)]).<color>.scale)
 		endif
 		<playline_scale> = (((<playline_scale>.(1.0, 0.0) * <flip_scale>) * (1.0, 0.0)) + (<playline_scale>.(0.0, 1.0) * (0.0, 1.0)))
-		<color_string> = (($button_up_models [(<Player> -1)]).<Color>.name_string)
-		formatText checksumName = name_base '%s_base%p' s = <color_string> p = <player_text> AddToStringLookup = true
-		formatText checksumName = name_string '%s_string%p' s = <color_string> p = <player_text> AddToStringLookup = true
-		formatText checksumName = name_lip '%s_lip%p' s = <color_string> p = <player_text> AddToStringLookup = true
-		formatText checksumName = name_mid '%s_mid%p' s = <color_string> p = <player_text> AddToStringLookup = true
-		formatText checksumName = name_neck '%s_neck%p' s = <color_string> p = <player_text> AddToStringLookup = true
-		formatText checksumName = name_head '%s_head%p' s = <color_string> p = <player_text> AddToStringLookup = true
-		formatText checksumName = name_touch_glow '%s_touch_glow%p' s = <color_string> p = <player_text> AddToStringLookup = true
+		<color_string> = (($button_up_models [(<player> -1)]).<color>.name_string)
+		FormatText checksumname = name_base '%s_base%p' s = <color_string> p = <player_text> AddToStringLookup = true
+		FormatText checksumname = name_string '%s_string%p' s = <color_string> p = <player_text> AddToStringLookup = true
+		FormatText checksumname = name_lip '%s_lip%p' s = <color_string> p = <player_text> AddToStringLookup = true
+		FormatText checksumname = name_mid '%s_mid%p' s = <color_string> p = <player_text> AddToStringLookup = true
+		FormatText checksumname = name_neck '%s_neck%p' s = <color_string> p = <player_text> AddToStringLookup = true
+		FormatText checksumname = name_head '%s_head%p' s = <color_string> p = <player_text> AddToStringLookup = true
+		FormatText checksumname = name_touch_glow '%s_touch_glow%p' s = <color_string> p = <player_text> AddToStringLookup = true
 		CreateScreenElement {
-			Type = ContainerElement
+			type = ContainerElement
 			id = <name_base>
 			parent = <container_id>
-			Pos = (0.0, 0.0)
+			pos = (0.0, 0.0)
 			just = [center bottom]
 		}
-		if (<Color> = white)
-			pos_right = (($button_up_models [(<Player> -1)]).extra.left_pos_2d)
-			pos_left = (($button_up_models [(<Player> -1)]).extra.pos_2d)
+		if (<color> = white)
+			pos_right = (($button_up_models [(<player> -1)]).extra.left_pos_2d)
+			pos_left = (($button_up_models [(<player> -1)]).extra.pos_2d)
 			pos_right = (<pos_right> + (-10.0, 20.0))
 			pos_left = (<pos_left> + (10.0, 20.0))
 			dist = (<pos_right>.(1.0, 0.0) - <pos_left>.(1.0, 0.0))
@@ -1348,142 +1348,142 @@ script setup_highway \{Player = 1}
 			mid_scale = (<mid_scale_x> * (1.0, 0.0))
 			highlight_scale = (<mid_scale> + (0.1, 0.5))
 			mid_scale = (<mid_scale> + (0.0, 1.0))
-			formatText checksumName = cont 'Drum_Kick_container_%p' p = <player_text> AddToStringLookup = true
+			FormatText checksumname = cont 'Drum_Kick_container_%p' p = <player_text> AddToStringLookup = true
 			CreateScreenElement {
-				Type = ContainerElement
+				type = ContainerElement
 				id = <cont>
 				parent = <container_id>
-				Pos = (0.0, 0.0)
+				pos = (0.0, 0.0)
 				rot_angle = 0
 				just = [center bottom]
 				z_priority = 3.1
 			}
 		else
 			if (<part> = drum)
-				if usefourlanehighway Player = <Player>
-					material_lip = (($button_up_models [(<Player> -1)]).<Color>.material_4d_lip)
-					material_mid = (($button_up_models [(<Player> -1)]).<Color>.material_4d_mid)
-					material_neck = (($button_up_models [(<Player> -1)]).<Color>.material_4d_neck)
-					material_head = (($button_up_models [(<Player> -1)]).<Color>.material_4d_head)
+				if UseFourLaneHighway player = <player>
+					material_lip = (($button_up_models [(<player> -1)]).<color>.material_4d_lip)
+					material_mid = (($button_up_models [(<player> -1)]).<color>.material_4d_mid)
+					material_neck = (($button_up_models [(<player> -1)]).<color>.material_4d_neck)
+					material_head = (($button_up_models [(<player> -1)]).<color>.material_4d_head)
 				else
-					material_lip = (($button_up_models [(<Player> -1)]).<Color>.material_5d_lip)
-					material_mid = (($button_up_models [(<Player> -1)]).<Color>.material_5d_mid)
-					material_neck = (($button_up_models [(<Player> -1)]).<Color>.material_5d_neck)
-					material_head = (($button_up_models [(<Player> -1)]).<Color>.material_5d_head)
+					material_lip = (($button_up_models [(<player> -1)]).<color>.material_5d_lip)
+					material_mid = (($button_up_models [(<player> -1)]).<color>.material_5d_mid)
+					material_neck = (($button_up_models [(<player> -1)]).<color>.material_5d_neck)
+					material_head = (($button_up_models [(<player> -1)]).<color>.material_5d_head)
 				endif
 			else
-				material_lip = (($button_up_models [(<Player> -1)]).<Color>.material_lip)
-				material_mid = (($button_up_models [(<Player> -1)]).<Color>.material_mid)
-				material_neck = (($button_up_models [(<Player> -1)]).<Color>.material_neck)
-				material_head = (($button_up_models [(<Player> -1)]).<Color>.material_head)
+				material_lip = (($button_up_models [(<player> -1)]).<color>.material_lip)
+				material_mid = (($button_up_models [(<player> -1)]).<color>.material_mid)
+				material_neck = (($button_up_models [(<player> -1)]).<color>.material_neck)
+				material_head = (($button_up_models [(<player> -1)]).<color>.material_head)
 			endif
 			CreateScreenElement {
-				Type = SpriteElement
+				type = SpriteElement
 				id = <name_lip>
 				parent = <name_base>
 				material = <material_lip>
 				rgba = [255 255 255 255]
-				Pos = <pos2d>
-				Scale = <playline_scale>
+				pos = <pos2d>
+				scale = <playline_scale>
 				just = [center bottom]
 				z_priority = 3.9
 			}
 			CreateScreenElement {
-				Type = SpriteElement
+				type = SpriteElement
 				id = <name_mid>
 				parent = <name_base>
 				material = <material_mid>
 				rgba = [255 255 255 255]
-				Pos = <pos2d>
-				Scale = <playline_scale>
+				pos = <pos2d>
+				scale = <playline_scale>
 				just = [center bottom]
 				z_priority = 3.6
 			}
 			<y_scale> = ($neck_lip_add / $neck_sprite_size)
-			<Pos> = (<pos2d> - ($neck_lip_base * (0.0, 1.0)))
+			<pos> = (<pos2d> - ($neck_lip_base * (0.0, 1.0)))
 			<neck_scale> = (((<playline_scale>.(1.0, 0.0)) * (1.0, 0.0)) + (<y_scale> * (0.0, 1.0)))
 			CreateScreenElement {
-				Type = SpriteElement
+				type = SpriteElement
 				id = <name_neck>
 				parent = <name_base>
 				material = <material_neck>
 				rgba = [255 255 255 255]
-				Pos = <Pos>
-				Scale = <neck_scale>
+				pos = <pos>
+				scale = <neck_scale>
 				just = [center bottom]
 				z_priority = 3.7
 			}
 			CreateScreenElement {
-				Type = SpriteElement
+				type = SpriteElement
 				id = <name_head>
 				parent = <name_base>
 				material = <material_head>
 				rgba = [255 255 255 255]
-				Pos = <pos2d>
-				Scale = <playline_scale>
+				pos = <pos2d>
+				scale = <playline_scale>
 				just = [center bottom]
 				z_priority = 3.8
 			}
 			<string_scale> = (((<pos_table>.string_scale_x) * (1.0, 0.0)) + ((<pos_table>.string_scale_y) * (0.0, 1.0)))
-			if NOT playerinfoequals <Player> part = drum
-				if (<array_count> < <array_Size>)
-					string_pos2d = (($button_up_models [(<Player> -1)]).<Color>.pos_2d)
+			if NOT PlayerInfoEquals <player> part = drum
+				if (<array_count> < <array_size>)
+					string_pos2d = (($button_up_models [(<player> -1)]).<color>.pos_2d)
 					CreateScreenElement {
-						Type = SpriteElement
+						type = SpriteElement
 						id = <name_string>
 						parent = <container_id>
 						material = sys_String01_sys_String01
 						rgba = [200 200 200 200]
-						Scale = <string_scale>
-						rot_angle = (($button_models [(<Player> -1)]).<Color>.angle)
-						Pos = <string_pos2d>
+						scale = <string_scale>
+						rot_angle = (($button_models [(<player> -1)]).<color>.Angle)
+						pos = <string_pos2d>
 						just = [center bottom]
 						z_priority = 2
 					}
 				endif
 			else
-				formatText checksumName = name_challenge 'challenge_drum%i_%p' i = <array_count> p = <player_text> AddToStringLookup = true
-				formatText TextName = challenge_text qs(0xfd68af01) i = <array_count>
+				FormatText checksumname = name_challenge 'challenge_drum%i_%p' i = <array_count> p = <player_text> AddToStringLookup = true
+				FormatText TextName = challenge_text qs("%i") i = <array_count>
 				CreateScreenElement {
-					Type = TextElement
+					type = TextElement
 					text = <challenge_text>
 					id = <name_challenge>
 					parent = <name_lip>
 					font = fontgrid_text_a3
 					rgba = [255 255 255 255]
-					Pos = (55.0, 0.0)
-					Scale = 2.0
+					pos = (55.0, 0.0)
+					scale = 2.0
 					just = [center bottom]
 					z_priority = 14.0
 				}
-				<name_challenge> :se_setprops Hide
+				<name_challenge> :SE_SetProps hide
 			endif
-			if (<array_count> < <array_Size>)
+			if (<array_count> < <array_size>)
 				touch_glow_gem_count = <array_count>
-				touch_glow_color = <Color>
-				if NOT playerinfoequals <Player> part = drum
+				touch_glow_color = <color>
+				if NOT PlayerInfoEquals <player> part = drum
 					props = $touch_glow_props
 				else
-					if usefourlanehighway Player = <Player>
+					if UseFourLaneHighway player = <player>
 						props = $touch_glow_props_rb_drum
 					else
 						props = $touch_glow_props_drum
 					endif
 				endif
-				if StructureContains structure = (<props> [<touch_glow_gem_count>]) Name = flip_v
+				if StructureContains Structure = (<props> [<touch_glow_gem_count>]) name = flip_v
 					flip_v = flip_v
 				else
 					RemoveParameter \{flip_v}
 				endif
 				CreateScreenElement {
-					Type = SpriteElement
+					type = SpriteElement
 					id = <name_touch_glow>
 					parent = <container_id>
 					material = (<props> [<touch_glow_gem_count>].mat)
 					rgba = (<props> [<array_count>].rgba)
-					Scale = <string_scale>
-					rot_angle = ((($button_models [(<Player> -1)]).<touch_glow_color>.angle) + (<props> [<touch_glow_gem_count>].rot_offset))
-					Pos = (($button_up_models [(<Player> -1)]).<touch_glow_color>.pos_2d)
+					scale = <string_scale>
+					rot_angle = ((($button_models [(<player> -1)]).<touch_glow_color>.Angle) + (<props> [<touch_glow_gem_count>].rot_offset))
+					pos = (($button_up_models [(<player> -1)]).<touch_glow_color>.pos_2d)
 					just = [center bottom]
 					alpha = 0.0
 					z_priority = 3
@@ -1493,44 +1493,44 @@ script setup_highway \{Player = 1}
 		endif
 	endif
 	array_count = (<array_count> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	setup_highway_move <...>
 	create_highway_prepass <...>
 	SetScreenElementLock \{id = root_window
-		On}
+		on}
 endscript
 
 script setup_highway_move 
-	SpawnScriptNow move_highway_2d params = {<...>}
+	spawnscriptnow move_highway_2d params = {<...>}
 endscript
 
 script destroy_highway 
-	KillSpawnedScript \{Name = MoveGem}
+	KillSpawnedScript \{name = MoveGem}
 	destroy_highway_prepass <...>
-	formatText checksumName = Name 'Highway_2D%p' p = <player_text> AddToStringLookup = true
-	if ScreenElementExists id = <Name>
-		DestroyScreenElement id = <Name>
+	FormatText checksumname = name 'Highway_2D%p' p = <player_text> AddToStringLookup = true
+	if ScreenElementExists id = <name>
+		DestroyScreenElement id = <name>
 	endif
-	formatText checksumName = Name 'gem_container%p' p = <player_text> AddToStringLookup = true
-	if ScreenElementExists id = <Name>
-		DestroyScreenElement id = <Name>
+	FormatText checksumname = name 'gem_container%p' p = <player_text> AddToStringLookup = true
+	if ScreenElementExists id = <name>
+		DestroyScreenElement id = <name>
 	endif
-	formatText checksumName = Name 'Gem_basebar%p' p = <player_text> AddToStringLookup = true
-	if ScreenElementExists id = <Name>
-		DestroyScreenElement id = <Name>
+	FormatText checksumname = name 'Gem_basebar%p' p = <player_text> AddToStringLookup = true
+	if ScreenElementExists id = <name>
+		DestroyScreenElement id = <name>
 	endif
 	GetArraySize \{$gem_colors}
 	array_count = 0
 	begin
-	Color = ($gem_colors [<array_count>])
-	if StructureContains structure = (($button_up_models [(<Player> -1)]).<Color>) Name = name_string
-		formatText checksumName = Name '%s%p' s = (($button_up_models [(<Player> -1)]).<Color>.name_string) p = <player_text> AddToStringLookup = true
-		if ScreenElementExists id = <Name>
-			DestroyScreenElement id = <Name>
+	color = ($gem_colors [<array_count>])
+	if StructureContains Structure = (($button_up_models [(<player> -1)]).<color>) name = name_string
+		FormatText checksumname = name '%s%p' s = (($button_up_models [(<player> -1)]).<color>.name_string) p = <player_text> AddToStringLookup = true
+		if ScreenElementExists id = <name>
+			DestroyScreenElement id = <name>
 		endif
 	endif
 	array_count = (<array_count> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 endscript
 prepass_camera_pos = (500.0, -100.0, -100.0)
 prepass_border = 8
@@ -1539,7 +1539,7 @@ script calculate_prepass_poly_params \{x_offset = 0}
 	prepass_mdl_top_width = 1
 	prepass_mdl_bottom_width = 3.5
 	prepass_mdl_height = 1
-	pos_table = ($highway_pos_table [(<Player> -1)])
+	pos_table = ($highway_pos_table [(<player> -1)])
 	w0 = (<pos_table>.highway_top_width)
 	highway_slope = (<w0> * (<pos_table>.widthOffsetFactor) / (<pos_table>.highway_height))
 	highway_start = ((<pos_table>.highway_playline) - (<pos_table>.highway_height))
@@ -1554,19 +1554,19 @@ script calculate_prepass_poly_params \{x_offset = 0}
 endscript
 
 script create_highway_prepass_object \{roty = 0}
-	formatText checksumName = highway_prepass_name 'highway_prepass%p' p = <player_text> AddToStringLookup = true
-	formatText checksumName = container_id 'gem_container%p' p = <player_text> AddToStringLookup = true
+	FormatText checksumname = highway_prepass_name 'highway_prepass%p' p = <player_text> AddToStringLookup = true
+	FormatText checksumname = container_id 'gem_container%p' p = <player_text> AddToStringLookup = true
 	calculate_prepass_poly_params <...>
 	CreateCompositeObjectInstance {
-		Priority = $COIM_Priority_Permanent
-		Heap = Generic
-		components = [
-			{component = Model LightGroup = highway}
+		priority = $COIM_Priority_Permanent
+		heap = generic
+		Components = [
+			{Component = Model lightgroup = highway}
 		]
 		params = {
-			Name = <highway_prepass_name>
+			name = <highway_prepass_name>
 			Model = 'Props\\highway\\highway_prepass\\highway_prepass.mdl'
-			Pos = (<cam_pos> + <prepass_offset>)
+			pos = (<cam_pos> + <prepass_offset>)
 			SuspendDistance = 60
 			lod_dist1 = 10
 			lod_dist2 = 100
@@ -1576,7 +1576,7 @@ script create_highway_prepass_object \{roty = 0}
 	}
 	<highway_prepass_name> :Obj_SetOrientation y = 180
 	<highway_prepass_name> :Obj_EnableScaling
-	<highway_prepass_name> :Obj_ApplyScaling Scale = <prepass_scale>
+	<highway_prepass_name> :Obj_ApplyScaling scale = <prepass_scale>
 	<highway_prepass_name> :Obj_SetBoundingSphere 100.0
 	<highway_prepass_name> :Obj_SetNoSizeCull
 endscript
@@ -1588,66 +1588,66 @@ script create_highway_prepass
 		create_highway_prepass_object <...>
 	else
 		<style> = highway_prepass_rendering_1p
-		if (<Player> = 1)
+		if (<player> = 1)
 			create_highway_prepass_object <...> player_text = 'p1' x_offset = (<container_pos>.(1.0, 0.0))
-		elseif (<Player> = 2)
+		elseif (<player> = 2)
 			create_highway_prepass_object <...> player_text = 'p2' x_offset = (<container_pos>.(1.0, 0.0))
-		elseif (<Player> = 3)
+		elseif (<player> = 3)
 			create_highway_prepass_object <...> player_text = 'p3' x_offset = (<container_pos>.(1.0, 0.0))
-		elseif (<Player> = 4)
+		elseif (<player> = 4)
 			create_highway_prepass_object <...> player_text = 'p4' x_offset = (<container_pos>.(1.0, 0.0))
 		endif
 	endif
-	formatText \{checksumName = Camera
+	FormatText \{checksumname = camera
 		'highway_prepass_camera'
 		AddToStringLookup = true}
-	if NOT CompositeObjectExists Name = <Camera>
+	if NOT CompositeObjectExists name = <camera>
 		<highway_cam> = {
-			LockTo = World
-			Pos = <cam_pos>
+			LockTo = world
+			pos = <cam_pos>
 			facing = (0.0, 0.0, 1.0)
 			FOV = 68.0
 		}
 		AddPrepassViewport viewport = bg_viewport style = <style>
 		CreateCompositeObjectInstance {
-			Priority = $COIM_Priority_Permanent
-			Heap = Generic
-			components = [
+			priority = $COIM_Priority_Permanent
+			heap = generic
+			Components = [
 				{
-					component = CinematicCamera
+					Component = CinematicCamera
 					UpdateWhenCameraInactive = true
-					Enabled = true
+					enabled = true
 				}
 				{
-					component = Camera
+					Component = camera
 				}
 			]
 			params = {
-				Name = <Camera>
+				name = <camera>
 				object_type = highway
 				profilebudget = 20
 				use_jq
 			}
 		}
-		SetPrepassViewportCamera viewport = bg_viewport id = <Camera> prepass = 0
-		<Camera> :Unpause
-		<Camera> :CCam_DoMorph <highway_cam>
-		<Camera> :Obj_ForceUpdate
+		SetPrepassViewportCamera viewport = bg_viewport id = <camera> prepass = 0
+		<camera> :UnPause
+		<camera> :CCam_DoMorph <highway_cam>
+		<camera> :Obj_ForceUpdate
 		enable_highway_prepass
 	endif
 endscript
 
 script destroy_highway_prepass 
-	formatText checksumName = Name 'highway_prepass%p' p = <player_text> AddToStringLookup = true
-	if CompositeObjectExists Name = <Name>
-		<Name> :Die
+	FormatText checksumname = name 'highway_prepass%p' p = <player_text> AddToStringLookup = true
+	if CompositeObjectExists name = <name>
+		<name> :Die
 	endif
-	formatText \{checksumName = Name
+	FormatText \{checksumname = name
 		'highway_prepass_camera'
 		AddToStringLookup = true}
-	if CompositeObjectExists Name = <Name>
+	if CompositeObjectExists name = <name>
 		RemovePrepassViewport \{viewport = bg_viewport}
-		<Name> :Die
+		<name> :Die
 	endif
 	SetViewportProperties \{viewport = bg_viewport
 		clear_colorbuffer = true}
@@ -1664,10 +1664,10 @@ script disable_highway_prepass
 				clear_depthstencilbuffer = true}
 			SetViewportProperties \{viewport = bg_viewport
 				prepass = 0
-				Active = FALSE}
+				active = false}
 			SetViewportProperties \{viewport = bg_viewport
 				prepass = 1
-				Active = FALSE}
+				active = false}
 		endif
 	endif
 endscript
@@ -1676,34 +1676,34 @@ script enable_highway_prepass
 	if ViewportExists \{id = bg_viewport}
 		if PrepassViewportExists \{viewport = bg_viewport}
 			SetViewportProperties \{viewport = bg_viewport
-				clear_colorbuffer = FALSE}
+				clear_colorbuffer = false}
 			SetViewportProperties \{viewport = bg_viewport
-				clear_depthstencilbuffer = FALSE}
+				clear_depthstencilbuffer = false}
 			SetViewportProperties \{viewport = bg_viewport
 				prepass = 0
-				Active = true}
+				active = true}
 			SetViewportProperties \{viewport = bg_viewport
 				prepass = 1
-				Active = true}
+				active = true}
 		endif
 	endif
 endscript
 start_2d_move = 0
 
 script move_highway_2d 
-	formatText checksumName = container_id 'gem_container%p' p = <player_text> AddToStringLookup = true
+	FormatText checksumname = container_id 'gem_container%p' p = <player_text> AddToStringLookup = true
 	get_num_non_vocals_players_onscreen
-	get_non_vocalist_player_number Player = <Player>
-	get_highway_pos_and_scale num_non_vocals_players = <num_non_vocals_players> non_vocalist_player = <non_vocalist_player> Player = <Player>
-	<container_pos> = (<Pos> + (0.0, 720.0))
+	get_non_vocalist_player_number player = <player>
+	get_highway_pos_and_scale num_non_vocals_players = <num_non_vocals_players> non_vocalist_player = <non_vocalist_player> player = <player>
+	<container_pos> = (<pos> + (0.0, 720.0))
 	highway_start_y = 720
 	pos_start_orig = 0
 	pos_add = -720
 	pos_sub = 1.0
 	pos_sub_add = -0.00044
-	<Pos> = (((<container_pos>.(1.0, 0.0)) * (1.0, 0.0)) + (<highway_start_y> * (0.0, 1.0)))
-	SetScreenElementProps id = <container_id> Pos = <Pos>
-	Change \{start_2d_move = 0}
+	<pos> = (((<container_pos>.(1.0, 0.0)) * (1.0, 0.0)) + (<highway_start_y> * (0.0, 1.0)))
+	SetScreenElementProps id = <container_id> pos = <pos>
+	change \{start_2d_move = 0}
 	begin
 	if ($start_2d_move = 1)
 		break
@@ -1711,17 +1711,17 @@ script move_highway_2d
 	Wait \{1
 		gameframe}
 	repeat
-	getfps
+	GetFPS
 	delta_time = (1.0 / <fps>)
 	begin
-	<Pos> = (((<container_pos>.(1.0, 0.0)) * (1.0, 0.0)) + (<highway_start_y> * (0.0, 1.0)))
-	SetScreenElementProps id = <container_id> Pos = <Pos>
+	<pos> = (((<container_pos>.(1.0, 0.0)) * (1.0, 0.0)) + (<highway_start_y> * (0.0, 1.0)))
+	SetScreenElementProps id = <container_id> pos = <pos>
 	<highway_start_y> = (<highway_start_y> + (<pos_add> * <delta_time>))
 	<pos_add> = (<pos_add> * <pos_sub>)
 	<pos_sub> = (<pos_sub> + <pos_sub_add>)
 	if (<highway_start_y> <= <pos_start_orig>)
-		<Pos> = (((<container_pos>.(1.0, 0.0)) * (1.0, 0.0)) + (<pos_start_orig> * (0.0, 1.0)))
-		SetScreenElementProps id = <container_id> Pos = <Pos>
+		<pos> = (((<container_pos>.(1.0, 0.0)) * (1.0, 0.0)) + (<pos_start_orig> * (0.0, 1.0)))
+		SetScreenElementProps id = <container_id> pos = <pos>
 		break
 	endif
 	Wait \{1
@@ -1729,8 +1729,8 @@ script move_highway_2d
 	repeat
 endscript
 
-script move_highway_camera_to_default \{Player = 1}
-	Change \{start_2d_move = 1}
+script move_highway_camera_to_default \{player = 1}
+	change \{start_2d_move = 1}
 endscript
 
 script disable_bg_viewport_properties 
@@ -1741,10 +1741,10 @@ script disable_bg_viewport_properties
 	if PrepassViewportExists \{viewport = bg_viewport}
 		SetViewportProperties \{viewport = bg_viewport
 			prepass = 0
-			Active = FALSE}
+			active = false}
 		SetViewportProperties \{viewport = bg_viewport
 			prepass = 1
-			Active = FALSE}
+			active = false}
 	endif
 endscript
 
@@ -1779,13 +1779,13 @@ script disable_highway
 			alpha = 0
 			time = 0.4}
 	endif
-	if ScreenElementExists \{id = hud_2d_containerp3}
-		SetScreenElementProps \{id = hud_2d_containerp3
+	if ScreenElementExists \{id = HUD_2D_Containerp3}
+		SetScreenElementProps \{id = HUD_2D_Containerp3
 			alpha = 0
 			time = 0.4}
 	endif
-	if ScreenElementExists \{id = hud_2d_containerp4}
-		SetScreenElementProps \{id = hud_2d_containerp4
+	if ScreenElementExists \{id = HUD_2D_Containerp4}
+		SetScreenElementProps \{id = HUD_2D_Containerp4
 			alpha = 0
 			time = 0.4}
 	endif
@@ -1815,7 +1815,7 @@ script disable_bg_viewport
 	disable_highway <...>
 	kill_dummy_bg_camera
 	if ScreenElementExists \{id = ui_clip_root}
-		ui_clip_root :se_setprops \{Hide}
+		ui_clip_root :SE_SetProps \{hide}
 	endif
 	disable_bg_viewport_properties
 	SetActiveCamera \{id = viewer_cam
@@ -1827,19 +1827,19 @@ script enable_bg_viewport_properties
 		SetViewportProperties \{viewport = bg_viewport
 			allow_view_dependent_intramesh_sort = 1}
 		SetViewportProperties \{viewport = bg_viewport
-			clear_colorbuffer = FALSE}
+			clear_colorbuffer = false}
 		SetViewportProperties \{viewport = bg_viewport
-			clear_depthstencilbuffer = FALSE}
+			clear_depthstencilbuffer = false}
 		SetViewportProperties \{viewport = bg_viewport
 			no_resolve_depthstencilbuffer = true}
 		SetViewportProperties \{viewport = bg_viewport
 			no_resolve_colorbuffer = true}
 		SetViewportProperties \{viewport = bg_viewport
 			prepass = 0
-			Active = true}
+			active = true}
 		SetViewportProperties \{viewport = bg_viewport
 			prepass = 1
-			Active = true}
+			active = true}
 	else
 		SetViewportProperties \{viewport = bg_viewport
 			allow_view_dependent_intramesh_sort = 1}
@@ -1852,58 +1852,58 @@ script enable_bg_viewport_properties
 		SetViewportProperties \{viewport = bg_viewport
 			no_resolve_colorbuffer = true}
 	endif
-	TOD_Proxim_Update_LightFX_Viewport \{fxParam = $Default_TOD_Manager
+	TOD_Proxim_Update_LightFX_Viewport \{fxParam = $Default_tod_manager
 		viewport = bg_viewport
 		time = 0}
 endscript
 
 script enable_highway 
 	if ScreenElementExists \{id = gem_containerp1}
-		legacydoscreenelementmorph \{id = gem_containerp1
+		LegacyDoScreenElementMorph \{id = gem_containerp1
 			alpha = 1}
 	endif
 	if ScreenElementExists \{id = gem_containerp2}
-		legacydoscreenelementmorph \{id = gem_containerp2
+		LegacyDoScreenElementMorph \{id = gem_containerp2
 			alpha = 1}
 	endif
 	if ScreenElementExists \{id = gem_containerp3}
-		legacydoscreenelementmorph \{id = gem_containerp3
+		LegacyDoScreenElementMorph \{id = gem_containerp3
 			alpha = 1}
 	endif
 	if ScreenElementExists \{id = gem_containerp4}
-		legacydoscreenelementmorph \{id = gem_containerp4
+		LegacyDoScreenElementMorph \{id = gem_containerp4
 			alpha = 1}
 	endif
 	if ScreenElementExists \{id = HUD_2D_Containerp1}
-		legacydoscreenelementmorph \{id = HUD_2D_Containerp1
+		LegacyDoScreenElementMorph \{id = HUD_2D_Containerp1
 			alpha = 1}
 	endif
 	if ScreenElementExists \{id = HUD_2D_Containerp2}
-		legacydoscreenelementmorph \{id = HUD_2D_Containerp2
+		LegacyDoScreenElementMorph \{id = HUD_2D_Containerp2
 			alpha = 1}
 	endif
-	if ScreenElementExists \{id = hud_2d_containerp3}
-		legacydoscreenelementmorph \{id = hud_2d_containerp3
+	if ScreenElementExists \{id = HUD_2D_Containerp3}
+		LegacyDoScreenElementMorph \{id = HUD_2D_Containerp3
 			alpha = 1}
 	endif
-	if ScreenElementExists \{id = hud_2d_containerp4}
-		legacydoscreenelementmorph \{id = hud_2d_containerp4
+	if ScreenElementExists \{id = HUD_2D_Containerp4}
+		LegacyDoScreenElementMorph \{id = HUD_2D_Containerp4
 			alpha = 1}
 	endif
 	if ScreenElementExists \{id = battle_alert_containerp1}
-		legacydoscreenelementmorph \{id = battle_alert_containerp1
+		LegacyDoScreenElementMorph \{id = battle_alert_containerp1
 			alpha = 1}
 	endif
 	if ScreenElementExists \{id = battle_alert_containerp2}
-		legacydoscreenelementmorph \{id = battle_alert_containerp2
+		LegacyDoScreenElementMorph \{id = battle_alert_containerp2
 			alpha = 1}
 	endif
 	if ScreenElementExists \{id = battle_alert_containerp3}
-		legacydoscreenelementmorph \{id = battle_alert_containerp3
+		LegacyDoScreenElementMorph \{id = battle_alert_containerp3
 			alpha = 1}
 	endif
 	if ScreenElementExists \{id = battle_alert_containerp4}
-		legacydoscreenelementmorph \{id = battle_alert_containerp4
+		LegacyDoScreenElementMorph \{id = battle_alert_containerp4
 			alpha = 1}
 	endif
 endscript
@@ -1911,14 +1911,14 @@ endscript
 script enable_bg_viewport 
 	enable_highway <...>
 	enable_bg_viewport_properties
-	ui_clip_root :se_setprops \{unhide}
+	ui_clip_root :SE_SetProps \{unhide}
 endscript
 
 script destroy_bg_viewport 
-	<rendering_enabled> = FALSE
+	<rendering_enabled> = false
 	if RenderingEnabled
 		<rendering_enabled> = true
-		StopRendering
+		stoprendering
 	endif
 	kill_dummy_bg_camera
 	if ScreenElementExists \{id = ui_clip_root}
@@ -1928,9 +1928,9 @@ script destroy_bg_viewport
 	SetViewportProperties \{viewport = 0
 		clear_colorbuffer = true}
 	SetViewportProperties \{viewport = 0
-		no_resolve_depthstencilbuffer = FALSE}
+		no_resolve_depthstencilbuffer = false}
 	if (<rendering_enabled> = true)
-		StartRendering
+		startrendering
 	endif
 endscript
 Highway_Fader_Params = {
@@ -1967,7 +1967,7 @@ Highway_Fader_Params_2p_ps3 = {
 }
 
 script setup_bg_viewport 
-	printf \{qs(0x0fea7055)}
+	printf \{qs("\LSetting bg viewport")}
 	destroy_bg_viewport
 	if isXenon
 		if ($current_num_players = 1)
@@ -1982,17 +1982,17 @@ script setup_bg_viewport
 			AddParams \{$Highway_Fader_Params_2p_ps3}
 		endif
 	endif
-	Pos = (2000.0, 300.0)
-	Pos = (<Pos> + <clip_offset>)
+	pos = (2000.0, 300.0)
+	pos = (<pos> + <clip_offset>)
 	mask_pos = (<clip_dims> * 0.5 - <clip_offset>)
-	bg_pos = (<clip_dims> * 0.5 - <Pos> + <rt_offset>)
+	bg_pos = (<clip_dims> * 0.5 - <pos> + <rt_offset>)
 	if NOT ScreenElementExists \{id = ui_clip_root}
 		CreateScreenElement {
 			parent = root_window
-			Type = WindowElement
+			type = WindowElement
 			id = ui_clip_root
 			just = [center center]
-			Pos = <Pos>
+			pos = <pos>
 			dims = <clip_dims>
 		}
 		CreateMaskedScreenElements {
@@ -2000,8 +2000,8 @@ script setup_bg_viewport
 			mask_element = {
 				id = viewport_mask_sprite
 				parent = ui_clip_root
-				Type = SpriteElement
-				Pos = <mask_pos>
+				type = SpriteElement
+				pos = <mask_pos>
 				just = [center center]
 				dims = <mask_dims>
 				rgba = [255 255 255 255]
@@ -2013,10 +2013,10 @@ script setup_bg_viewport
 			elements = [
 				{
 					parent = ui_clip_root
-					Type = ViewportElement
+					type = ViewportElement
 					id = bg_viewport
 					texture = viewport0
-					Pos = <bg_pos>
+					pos = <bg_pos>
 					just = [left top]
 					dims = <rt_size>
 					rgba = [128 128 128 255]
@@ -2029,7 +2029,7 @@ script setup_bg_viewport
 		}
 	endif
 	enable_bg_viewport_properties
-	printf \{qs(0xbf065090)}
+	printf \{qs("\LSetting bg viewport end")}
 endscript
 
 script highway_pulse_multiplier_loss \{player_text = 'p1'
@@ -2060,7 +2060,7 @@ script highway_pulse_multiplier_loss \{player_text = 'p1'
 	else
 		<push_pos> = (<push_pos> * 0.6)
 	endif
-	ExtendCrc gem_container <player_text> out = container_id
+	ExtendCRC gem_container <player_text> out = container_id
 	if ScreenElementExists id = <container_id>
 		if <container_id> :GetSingleTag doing_pulse
 		else
@@ -2068,37 +2068,37 @@ script highway_pulse_multiplier_loss \{player_text = 'p1'
 			OnExitRun highway_pulse_multiplier_loss_cleanup params = {container_id = <container_id>}
 			GetScreenElementPosition id = <container_id>
 			original_position = <screenelementpos>
-			GetRandomValue \{Name = random_x
+			GetRandomValue \{name = random_x
 				a = -7
 				b = 7
-				integer}
-			legacydoscreenelementmorph {id = <container_id> Pos = (<original_position> + <push_pos> + ((1.0, 0.0) * <random_x>)) just = [center bottom] time = <time>}
-			Wait <time> Seconds
-			GetRandomValue \{Name = random_x
+				Integer}
+			LegacyDoScreenElementMorph {id = <container_id> pos = (<original_position> + <push_pos> + ((1.0, 0.0) * <random_x>)) just = [center bottom] time = <time>}
+			Wait <time> seconds
+			GetRandomValue \{name = random_x
 				a = -7
 				b = 7
-				integer}
-			legacydoscreenelementmorph {id = <container_id> Pos = (<original_position> - ((1.0, 0.0) * <random_x>)) just = [center bottom] time = <time>}
-			Wait <time> Seconds
-			GetRandomValue \{Name = random_x
+				Integer}
+			LegacyDoScreenElementMorph {id = <container_id> pos = (<original_position> - ((1.0, 0.0) * <random_x>)) just = [center bottom] time = <time>}
+			Wait <time> seconds
+			GetRandomValue \{name = random_x
 				a = -5
 				b = 5
-				integer}
-			legacydoscreenelementmorph {id = <container_id> Pos = (<original_position> + (<push_pos> * 0.4) + ((1.0, 0.0) * <random_x>)) just = [center bottom] time = <time>}
-			Wait <time> Seconds
-			GetRandomValue \{Name = random_x
+				Integer}
+			LegacyDoScreenElementMorph {id = <container_id> pos = (<original_position> + (<push_pos> * 0.4) + ((1.0, 0.0) * <random_x>)) just = [center bottom] time = <time>}
+			Wait <time> seconds
+			GetRandomValue \{name = random_x
 				a = -5
 				b = 5
-				integer}
-			legacydoscreenelementmorph {id = <container_id> Pos = (<original_position> - ((1.0, 0.0) * <random_x>)) just = [center bottom] time = <time>}
-			Wait <time> Seconds
-			GetRandomValue \{Name = random_x
+				Integer}
+			LegacyDoScreenElementMorph {id = <container_id> pos = (<original_position> - ((1.0, 0.0) * <random_x>)) just = [center bottom] time = <time>}
+			Wait <time> seconds
+			GetRandomValue \{name = random_x
 				a = -3
 				b = 3
-				integer}
-			legacydoscreenelementmorph {id = <container_id> Pos = (<original_position> + (<push_pos> * 0.2) + ((1.0, 0.0) * <random_x>)) just = [center bottom] time = <time>}
-			Wait <time> Seconds
-			legacydoscreenelementmorph {id = <container_id> Pos = <original_position> just = [center bottom] time = <time>}
+				Integer}
+			LegacyDoScreenElementMorph {id = <container_id> pos = (<original_position> + (<push_pos> * 0.2) + ((1.0, 0.0) * <random_x>)) just = [center bottom] time = <time>}
+			Wait <time> seconds
+			LegacyDoScreenElementMorph {id = <container_id> pos = <original_position> just = [center bottom] time = <time>}
 		endif
 	endif
 endscript
@@ -2108,23 +2108,23 @@ script highway_pulse_multiplier_loss_cleanup
 endscript
 
 script highway_visible 
-	Change \{highwayvisible = On}
+	change \{highwayvisible = on}
 endscript
 
 script highway_invisible 
-	Change \{highwayvisible = OFF}
+	change \{highwayvisible = off}
 endscript
 
 script get_non_vocalist_player_number 
-	gamemode_getnumplayersshown
+	GameMode_GetNumPlayersShown
 	<non_vocalist_player> = 0
 	<i> = 1
 	begin
-	if NOT playerinfoequals <i> part = vocals
+	if NOT PlayerInfoEquals <i> part = Vocals
 		<non_vocalist_player> = (<non_vocalist_player> + 1)
 	endif
-	if (<i> = <Player>)
-		if playerinfoequals <i> part = vocals
+	if (<i> = <player>)
+		if PlayerInfoEquals <i> part = Vocals
 			ScriptAssert 'player %i is vocals' i = <i>
 		endif
 		return non_vocalist_player = <non_vocalist_player>
@@ -2136,17 +2136,17 @@ endscript
 
 script player_is_lowest_numbered_guitar_or_bass 
 	RequireParams \{[
-			Player
+			player
 		]
 		all}
-	if (<Player> > 1)
+	if (<player> > 1)
 		<i> = 1
 		begin
-		if ((playerinfoequals <i> part = guitar) || (playerinfoequals <i> part = bass))
-			return \{FALSE}
+		if ((PlayerInfoEquals <i> part = guitar) || (PlayerInfoEquals <i> part = Bass))
+			return \{false}
 		endif
 		<i> = (<i> + 1)
-		repeat (<Player> - 1)
+		repeat (<player> - 1)
 	endif
 	return \{true}
 endscript
@@ -2154,29 +2154,29 @@ endscript
 script tempo_light_on 
 endscript
 
-script highway_streak_glow \{Enabled = 1}
-	if playerinfoequals <Player> part = vocals
-		vocalshighway_getid Player = <Player>
-		if (<Enabled> = 1)
-			<vocals_highway_id> :se_setprops band_streak_lines_alpha = 1.0
+script highway_streak_glow \{enabled = 1}
+	if PlayerInfoEquals <player> part = Vocals
+		VocalsHighway_GetId player = <player>
+		if (<enabled> = 1)
+			<vocals_highway_id> :SE_SetProps band_streak_lines_alpha = 1.0
 		else
-			<vocals_highway_id> :se_setprops band_streak_lines_alpha = 0.0
+			<vocals_highway_id> :SE_SetProps band_streak_lines_alpha = 0.0
 		endif
 	else
-		formatText checksumName = left_glow 'Sidebar_NSGLOW_leftp%p' p = <Player> AddToStringLookup = true
-		formatText checksumName = right_glow 'Sidebar_NSGLOW_rightp%p' p = <Player> AddToStringLookup = true
+		FormatText checksumname = left_glow 'Sidebar_NSGLOW_leftp%p' p = <player> AddToStringLookup = true
+		FormatText checksumname = right_glow 'Sidebar_NSGLOW_rightp%p' p = <player> AddToStringLookup = true
 		if ScreenElementExists id = <left_glow>
-			if (<Enabled> = 1)
-				<left_glow> :se_setprops unhide
+			if (<enabled> = 1)
+				<left_glow> :SE_SetProps unhide
 			else
-				<left_glow> :se_setprops Hide
+				<left_glow> :SE_SetProps hide
 			endif
 		endif
 		if ScreenElementExists id = <right_glow>
-			if (<Enabled> = 1)
-				<right_glow> :se_setprops unhide
+			if (<enabled> = 1)
+				<right_glow> :SE_SetProps unhide
 			else
-				<right_glow> :se_setprops Hide
+				<right_glow> :SE_SetProps hide
 			endif
 		endif
 	endif

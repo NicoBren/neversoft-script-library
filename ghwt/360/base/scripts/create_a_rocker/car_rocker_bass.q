@@ -1,33 +1,33 @@
-cas_bass_body = [
+CAS_Bass_Body = [
 	{
-		desc_id = cab_body_b2a
-		frontend_desc = qs(0x482450b9)
+		desc_id = CAB_Body_B2A
+		frontend_desc = qs("\LGedulus Arcos")
 		mesh = 'models/CAR_Instruments/Bass/CAB_Body_B2A.skin'
 		pak_num = 0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
-				material = cab_body_arcos_primary
-				mask = $cab_body_b2a_finishes
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
+				material = CAB_Body_Arcos_Primary
+				mask = $CAB_Body_B2A_Finishes
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_b1a_d_mls.dds'
 				diffuse
 				pre_userlayer
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x7f5a5c11)
+				desc_id = Details
+				frontend_desc = qs("Details")
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_b1a_d_mls.dds'
-				material = cab_body_arcos_primary
-				mask = $cab_body_b2a_details
+				material = CAB_Body_Arcos_Primary
+				mask = $CAB_Body_B2A_Details
 				diffuse
 				pre_userlayer
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_b1a_d_mls.dds'
-				material = cab_body_arcos_primary
+				material = CAB_Body_Arcos_Primary
 				mask = $car_basic_primitives_1
 				initial_values = {
 					x_trans = -29
@@ -40,9 +40,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_b1a_d_mls.dds'
-				material = cab_body_arcos_primary
+				material = CAB_Body_Arcos_Primary
 				mask = $car_basic_primitives_2
 				initial_values = {
 					x_trans = -29
@@ -55,9 +55,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_b1a_d_mls.dds'
-				material = cab_body_arcos_primary
+				material = CAB_Body_Arcos_Primary
 				mask = $car_gradiant_shapes
 				initial_values = {
 					x_trans = -29
@@ -70,9 +70,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_b1a_d_mls.dds'
-				material = cab_body_arcos_primary
+				material = CAB_Body_Arcos_Primary
 				mask = $car_icons
 				initial_values = {
 					x_trans = -29
@@ -85,9 +85,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_b1a_d_mls.dds'
-				material = cab_body_arcos_primary
+				material = CAB_Body_Arcos_Primary
 				mask = $car_living_shapes
 				initial_values = {
 					x_trans = -29
@@ -100,9 +100,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_b1a_d_mls.dds'
-				material = cab_body_arcos_primary
+				material = CAB_Body_Arcos_Primary
 				mask = $car_graphics
 				initial_values = {
 					x_trans = -29
@@ -115,9 +115,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_b1a_d_mls.dds'
-				material = cab_body_arcos_primary
+				material = CAB_Body_Arcos_Primary
 				mask = $car_sponsors
 				initial_values = {
 					x_trans = -29
@@ -129,10 +129,10 @@ cas_bass_body = [
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_b1a_d_mls.dds'
-				material = cab_body_arcos_primary
+				material = CAB_Body_Arcos_Primary
 				mask = $car_fontgrid_title_a1
 				initial_values = {
 					x_trans = -29
@@ -144,10 +144,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_b1a_d_mls.dds'
-				material = cab_body_arcos_primary
+				material = CAB_Body_Arcos_Primary
 				mask = $car_fontgrid_text_a3
 				initial_values = {
 					x_trans = -29
@@ -159,10 +159,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_b1a_d_mls.dds'
-				material = cab_body_arcos_primary
+				material = CAB_Body_Arcos_Primary
 				mask = $car_fontgrid_text_a6
 				initial_values = {
 					x_trans = -29
@@ -174,10 +174,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_b1a_d_mls.dds'
-				material = cab_body_arcos_primary
+				material = CAB_Body_Arcos_Primary
 				mask = $car_fontgrid_text_a8
 				initial_values = {
 					x_trans = -29
@@ -191,55 +191,55 @@ cas_bass_body = [
 		]
 		inclusion = [
 			{
-				part = cas_bass_neck
+				part = CAS_Bass_Neck
 				valid = [
-					cab_neck_bn1a
-					cab_neck_bn1b
-					cab_neck_bnebony
-					cab_neck_bfretlss01
-					cab_neck_bfretlss02
-					cab_neck_bfretlss03
+					CAB_Neck_BN1A
+					CAB_Neck_BN1B
+					CAB_Neck_BNEbony
+					CAB_Neck_BFretlss01
+					CAB_Neck_BFretlss02
+					CAB_Neck_BFretlss03
 				]
 			}
 			{
-				part = cas_bass_pickguards
+				part = CAS_Bass_Pickguards
 				valid = [
-					None
-					cab_pickg_bp1
-					cab_pickg_bp2
-					cab_pickg_bp3
-					cab_pickg_e1
+					none
+					CAB_PickG_BP1
+					CAB_PickG_BP2
+					CAB_PickG_BP3
+					CAB_PickG_E1
 				]
 			}
 			{
-				part = cas_bass_pickups
+				part = CAS_Bass_Pickups
 				valid = [
-					cab_pickups_emg01
-					cab_pickups_emg02
-					cab_pickups_emg03
-					cab_pickup_hack01
-					cab_pickup_hack02
-					cab_pickup_hack03
-					cab_pickups_bp1a
-					cab_pickups_bp1a2
-					cab_pickups_bp1a3
-					cab_jbass_pickup_01
-					cab_jp_pickup_b
-					cab_pbass_pickup_a
-					cab_jp_pickup_a
-					cab_bumbl_pickup_a1
-					cab_bumbl_pickup_a2
-					cab_bumbl_pickup_a3
-					cab_hbuck_pickup_a1
-					cab_hbuck_pickup_a2
-					cab_hbuck_pickup_a3
+					CAB_pickups_EMG01
+					CAB_pickups_EMG02
+					CAB_pickups_EMG03
+					CAB_pickup_Hack01
+					CAB_pickup_Hack02
+					CAB_pickup_Hack03
+					CAB_Pickups_BP1A
+					CAB_Pickups_BP1A2
+					CAB_Pickups_BP1A3
+					CAB_Jbass_pickup_01
+					CAB_JP_Pickup_B
+					CAB_PBass_Pickup_A
+					CAB_JP_Pickup_A
+					CAB_Bumbl_pickup_A1
+					CAB_Bumbl_pickup_A2
+					CAB_Bumbl_pickup_A3
+					CAB_HBuck_pickup_A1
+					CAB_HBuck_pickup_A2
+					CAB_HBuck_pickup_A3
 				]
 			}
 			{
-				part = cas_bass_knobs
+				part = CAS_Bass_Knobs
 				valid = [
-					cab_knob_unos01
-					cab_knob_unos02
+					CAB_Knob_Unos01
+					CAB_Knob_Unos02
 					cab_knob_unos03
 					cab_knob_unos04
 					cab_knob_unos05
@@ -251,69 +251,69 @@ cas_bass_body = [
 				]
 			}
 			{
-				part = cas_bass_bridges
+				part = CAS_Bass_Bridges
 				valid = [
-					cab_bridge_bb2a
-					cab_bridge_bb1a
-					cab_bridge_bb3a
-					cab_bridge_mls
-					cab_bridge_hack
+					CAB_Bridge_BB2A
+					CAB_Bridge_BB1A
+					CAB_Bridge_BB3A
+					CAB_Bridge_MLS
+					CAB_Bridge_Hack
 				]
 			}
 			{
-				part = cas_bass_head
+				part = CAS_Bass_Head
 				valid = [
-					cab_head_guppy
-					cab_head_predikt
-					cab_head_skull
-					cab_head_radex
-					cab_head_flay_rev
-					cab_head_mnemonic
-					cab_head_foots01
-					cab_head_bh5a
-					cab_head_bhphnq01
-					cab_head_mlsplit
-					cab_head_grumbel01
-					cab_head_bh4a
-					cab_head_bh6a
-					cab_head_bh6b
-					cab_head_bh7a
-					cab_head_bh1a
-					cab_head_sixtease
-					cab_head_foots01
+					CAB_Head_Guppy
+					CAB_Head_Predikt
+					CAB_Head_Skull
+					CAB_Head_RadEx
+					CAB_Head_Flay_rev
+					CAB_Head_Mnemonic
+					CAB_Head_Foots01
+					CAB_Head_BH5A
+					CAB_Head_BHPhnq01
+					CAB_Head_MLSplit
+					CAB_Head_Grumbel01
+					CAB_Head_BH4A
+					CAB_Head_BH6A
+					CAB_Head_BH6B
+					CAB_Head_BH7A
+					CAB_Head_BH1A
+					CAB_Head_SixTease
+					CAB_Head_Foots01
 				]
 			}
 		]
 	}
 	{
-		desc_id = bass_body_b1b
-		frontend_desc = qs(0x4f1e36ed)
+		desc_id = Bass_Body_B1B
+		frontend_desc = qs("\LGedulus Unos")
 		mesh = 'models/CAR_Instruments/Bass/CAB_Body_B1B.skin'
 		pak_num = 0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
-				material = cab_body_unos_primary
-				mask = $cab_body_unos_finishes
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
+				material = CAB_Body_UNOS_Primary
+				mask = $CAB_Body_UNOS_Finishes
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_b1f_d_mls.dds'
 				pre_userlayer
 				diffuse
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x7f5a5c11)
+				desc_id = Details
+				frontend_desc = qs("Details")
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_b1f_d_mls.dds'
-				material = cab_body_unos_primary
-				mask = $cab_body_unos_details
+				material = CAB_Body_UNOS_Primary
+				mask = $CAB_Body_UNOS_Details
 				pre_userlayer
 				diffuse
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_b1f_d_mls.dds'
-				material = cab_body_unos_primary
+				material = CAB_Body_UNOS_Primary
 				mask = $car_basic_primitives_1
 				initial_values = {
 					x_trans = -23
@@ -326,9 +326,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_b1f_d_mls.dds'
-				material = cab_body_unos_primary
+				material = CAB_Body_UNOS_Primary
 				mask = $car_basic_primitives_2
 				initial_values = {
 					x_trans = -23
@@ -341,9 +341,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_b1f_d_mls.dds'
-				material = cab_body_unos_primary
+				material = CAB_Body_UNOS_Primary
 				mask = $car_gradiant_shapes
 				initial_values = {
 					x_trans = -23
@@ -356,9 +356,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_b1f_d_mls.dds'
-				material = cab_body_unos_primary
+				material = CAB_Body_UNOS_Primary
 				initial_values = {
 					x_trans = -23
 					y_trans = 2
@@ -371,9 +371,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_b1f_d_mls.dds'
-				material = cab_body_unos_primary
+				material = CAB_Body_UNOS_Primary
 				initial_values = {
 					x_trans = -23
 					y_trans = 2
@@ -386,9 +386,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_b1f_d_mls.dds'
-				material = cab_body_unos_primary
+				material = CAB_Body_UNOS_Primary
 				initial_values = {
 					x_trans = -23
 					y_trans = 2
@@ -401,9 +401,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_b1f_d_mls.dds'
-				material = cab_body_unos_primary
+				material = CAB_Body_UNOS_Primary
 				initial_values = {
 					x_trans = -23
 					y_trans = 2
@@ -415,10 +415,10 @@ cas_bass_body = [
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_b1f_d_mls.dds'
-				material = cab_body_unos_primary
+				material = CAB_Body_UNOS_Primary
 				initial_values = {
 					x_trans = -23
 					y_trans = 2
@@ -430,10 +430,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_b1f_d_mls.dds'
-				material = cab_body_unos_primary
+				material = CAB_Body_UNOS_Primary
 				initial_values = {
 					x_trans = -23
 					y_trans = 2
@@ -445,10 +445,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_b1f_d_mls.dds'
-				material = cab_body_unos_primary
+				material = CAB_Body_UNOS_Primary
 				initial_values = {
 					x_trans = -23
 					y_trans = 2
@@ -460,10 +460,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_b1f_d_mls.dds'
-				material = cab_body_unos_primary
+				material = CAB_Body_UNOS_Primary
 				initial_values = {
 					x_trans = -23
 					y_trans = 2
@@ -477,55 +477,55 @@ cas_bass_body = [
 		]
 		inclusion = [
 			{
-				part = cas_bass_neck
+				part = CAS_Bass_Neck
 				valid = [
-					cab_neck_bn1a
-					cab_neck_bn1b
-					cab_neck_bnebony
-					cab_neck_bfretlss01
-					cab_neck_bfretlss02
-					cab_neck_bfretlss03
+					CAB_Neck_BN1A
+					CAB_Neck_BN1B
+					CAB_Neck_BNEbony
+					CAB_Neck_BFretlss01
+					CAB_Neck_BFretlss02
+					CAB_Neck_BFretlss03
 				]
 			}
 			{
-				part = cas_bass_pickguards
+				part = CAS_Bass_Pickguards
 				valid = [
-					None
-					cab_pickg_b_unos02
-					cab_pickg_b_unos01
-					cab_pickg_b_unos03
-					cab_pickg_e1
+					none
+					CAB_PickG_B_Unos02
+					CAB_PickG_B_Unos01
+					CAB_PickG_B_Unos03
+					CAB_PickG_E1
 				]
 			}
 			{
-				part = cas_bass_pickups
+				part = CAS_Bass_Pickups
 				valid = [
-					cab_pickups_emg01
-					cab_pickups_emg02
-					cab_pickups_emg03
-					cab_pickup_hack03
-					cab_pickup_hack02
-					cab_pickup_hack01
-					cab_pickups_bp1a
-					cab_pickups_bp1a2
-					cab_pickups_bp1a3
-					cab_jbass_pickup_01
-					cab_jp_pickup_b
-					cab_pbass_pickup_a
-					cab_jp_pickup_a
-					cab_bumbl_pickup_a1
-					cab_bumbl_pickup_a2
-					cab_bumbl_pickup_a3
-					cab_hbuck_pickup_a1
-					cab_hbuck_pickup_a2
-					cab_hbuck_pickup_a3
+					CAB_pickups_EMG01
+					CAB_pickups_EMG02
+					CAB_pickups_EMG03
+					CAB_pickup_Hack03
+					CAB_pickup_Hack02
+					CAB_pickup_Hack01
+					CAB_Pickups_BP1A
+					CAB_Pickups_BP1A2
+					CAB_Pickups_BP1A3
+					CAB_Jbass_pickup_01
+					CAB_JP_Pickup_B
+					CAB_PBass_Pickup_A
+					CAB_JP_Pickup_A
+					CAB_Bumbl_pickup_A1
+					CAB_Bumbl_pickup_A2
+					CAB_Bumbl_pickup_A3
+					CAB_HBuck_pickup_A1
+					CAB_HBuck_pickup_A2
+					CAB_HBuck_pickup_A3
 				]
 			}
 			{
-				part = cas_bass_knobs
+				part = CAS_Bass_Knobs
 				valid = [
-					cab_knob_unos01
-					cab_knob_unos02
+					CAB_Knob_Unos01
+					CAB_Knob_Unos02
 					cab_knob_unos03
 					cab_knob_unos04
 					cab_knob_unos05
@@ -537,69 +537,69 @@ cas_bass_body = [
 				]
 			}
 			{
-				part = cas_bass_bridges
+				part = CAS_Bass_Bridges
 				valid = [
-					cab_bridge_bb2a
-					cab_bridge_bb1a
-					cab_bridge_bb3a
-					cab_bridge_mls
-					cab_bridge_hack
+					CAB_Bridge_BB2A
+					CAB_Bridge_BB1A
+					CAB_Bridge_BB3A
+					CAB_Bridge_MLS
+					CAB_Bridge_Hack
 				]
 			}
 			{
-				part = cas_bass_head
+				part = CAS_Bass_Head
 				valid = [
-					cab_head_guppy
-					cab_head_predikt
-					cab_head_skull
-					cab_head_radex
-					cab_head_flay_rev
-					cab_head_mnemonic
-					cab_head_foots01
-					cab_head_bh5a
-					cab_head_bhphnq01
-					cab_head_mlsplit
-					cab_head_grumbel01
-					cab_head_bh4a
-					cab_head_bh6a
-					cab_head_bh6b
-					cab_head_bh7a
-					cab_head_bh1a
-					cab_head_sixtease
-					cab_head_foots01
+					CAB_Head_Guppy
+					CAB_Head_Predikt
+					CAB_Head_Skull
+					CAB_Head_RadEx
+					CAB_Head_Flay_rev
+					CAB_Head_Mnemonic
+					CAB_Head_Foots01
+					CAB_Head_BH5A
+					CAB_Head_BHPhnq01
+					CAB_Head_MLSplit
+					CAB_Head_Grumbel01
+					CAB_Head_BH4A
+					CAB_Head_BH6A
+					CAB_Head_BH6B
+					CAB_Head_BH7A
+					CAB_Head_BH1A
+					CAB_Head_SixTease
+					CAB_Head_Foots01
 				]
 			}
 		]
 	}
 	{
-		desc_id = cab_body_chunder01
-		frontend_desc = qs(0xb70b0351)
+		desc_id = CAB_Body_Chunder01
+		frontend_desc = qs("\LChunder Trad DeLuxe")
 		mesh = 'models/CAR_Instruments/Bass/CAB_Body_Chunder01.skin'
 		pak_num = 0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
-				material = cab_body_chunder01_primary
-				mask = $cab_body_chunder01_finishes
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
+				material = CAB_Body_Chunder01_Primary
+				mask = $CAB_Body_Chunder01_Finishes
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_chndra_d_mls.dds'
 				pre_userlayer
 				diffuse
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x7f5a5c11)
-				material = cab_body_chunder01_primary
-				mask = $cab_body_chunder01_details
+				desc_id = Details
+				frontend_desc = qs("Details")
+				material = CAB_Body_Chunder01_Primary
+				mask = $CAB_Body_Chunder01_Details
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_chndra_d_mls.dds'
 				pre_userlayer
 				diffuse
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\CAB_Body_chndra_d_mls.dds'
-				material = cab_body_chunder01_primary
+				material = CAB_Body_Chunder01_Primary
 				mask = $car_basic_primitives_1
 				initial_values = {
 					x_trans = -19
@@ -611,9 +611,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\CAB_Body_chndra_d_mls.dds'
-				material = cab_body_chunder01_primary
+				material = CAB_Body_Chunder01_Primary
 				mask = $car_basic_primitives_2
 				initial_values = {
 					x_trans = -19
@@ -625,9 +625,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\CAB_Body_chndra_d_mls.dds'
-				material = cab_body_chunder01_primary
+				material = CAB_Body_Chunder01_Primary
 				mask = $car_gradiant_shapes
 				initial_values = {
 					x_trans = -19
@@ -639,9 +639,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\CAB_Body_chndra_d_mls.dds'
-				material = cab_body_chunder01_primary
+				material = CAB_Body_Chunder01_Primary
 				mask = $car_icons
 				initial_values = {
 					x_trans = -19
@@ -653,9 +653,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\CAB_Body_chndra_d_mls.dds'
-				material = cab_body_chunder01_primary
+				material = CAB_Body_Chunder01_Primary
 				mask = $car_living_shapes
 				initial_values = {
 					x_trans = -19
@@ -667,9 +667,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\CAB_Body_chndra_d_mls.dds'
-				material = cab_body_chunder01_primary
+				material = CAB_Body_Chunder01_Primary
 				mask = $car_graphics
 				initial_values = {
 					x_trans = -19
@@ -681,9 +681,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\CAB_Body_chndra_d_mls.dds'
-				material = cab_body_chunder01_primary
+				material = CAB_Body_Chunder01_Primary
 				mask = $car_sponsors
 				initial_values = {
 					x_trans = -19
@@ -694,10 +694,10 @@ cas_bass_body = [
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\CAB_Body_chndra_d_mls.dds'
-				material = cab_body_chunder01_primary
+				material = CAB_Body_Chunder01_Primary
 				mask = $car_fontgrid_title_a1
 				initial_values = {
 					x_trans = -19
@@ -708,10 +708,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\CAB_Body_chndra_d_mls.dds'
-				material = cab_body_chunder01_primary
+				material = CAB_Body_Chunder01_Primary
 				mask = $car_fontgrid_text_a3
 				initial_values = {
 					x_trans = -19
@@ -722,10 +722,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\CAB_Body_chndra_d_mls.dds'
-				material = cab_body_chunder01_primary
+				material = CAB_Body_Chunder01_Primary
 				mask = $car_fontgrid_text_a6
 				initial_values = {
 					x_trans = -19
@@ -736,10 +736,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\CAB_Body_chndra_d_mls.dds'
-				material = cab_body_chunder01_primary
+				material = CAB_Body_Chunder01_Primary
 				mask = $car_fontgrid_text_a8
 				initial_values = {
 					x_trans = -19
@@ -752,58 +752,58 @@ cas_bass_body = [
 		]
 		inclusion = [
 			{
-				part = cas_bass_neck
+				part = CAS_Bass_Neck
 				valid = [
-					cab_neck_bn1a
-					cab_neck_bn1b
-					cab_neck_bnebony
-					cab_neck_bfretlss01
-					cab_neck_bfretlss02
-					cab_neck_bfretlss03
+					CAB_Neck_BN1A
+					CAB_Neck_BN1B
+					CAB_Neck_BNEbony
+					CAB_Neck_BFretlss01
+					CAB_Neck_BFretlss02
+					CAB_Neck_BFretlss03
 				]
 			}
 			{
-				part = cas_bass_pickguards
+				part = CAS_Bass_Pickguards
 				valid = [
-					None
-					cab_pguardchndr07
-					cab_pguardchndr06
-					cab_pguardchndr04
-					cab_pguardchndr01
+					none
+					CAB_PGuardChndr07
+					CAB_PGuardChndr06
+					CAB_PGuardChndr04
+					CAB_PGuardChndr01
 					cab_pguard_sting
 				]
 			}
 			{
-				part = cas_bass_pickups
+				part = CAS_Bass_Pickups
 				valid = [
-					cab_pickups_emg01
-					cab_pickups_emg02
-					cab_pickups_emg03
-					cab_pickup_hack03
-					cab_pickup_hack02
-					cab_pickup_hack01
-					cab_pickups_bp1a
-					cab_pickups_bp1a2
-					cab_pickups_bp1a3
-					cab_jbass_pickup_01
-					cab_jp_pickup_b
-					cab_pbass_pickup_a
-					cab_jp_pickup_a
-					cab_bumbl_pickup_a1
-					cab_bumbl_pickup_a2
-					cab_bumbl_pickup_a3
-					cab_hbuck_pickup_a1
-					cab_hbuck_pickup_a2
-					cab_hbuck_pickup_a3
+					CAB_pickups_EMG01
+					CAB_pickups_EMG02
+					CAB_pickups_EMG03
+					CAB_pickup_Hack03
+					CAB_pickup_Hack02
+					CAB_pickup_Hack01
+					CAB_Pickups_BP1A
+					CAB_Pickups_BP1A2
+					CAB_Pickups_BP1A3
+					CAB_Jbass_pickup_01
+					CAB_JP_Pickup_B
+					CAB_PBass_Pickup_A
+					CAB_JP_Pickup_A
+					CAB_Bumbl_pickup_A1
+					CAB_Bumbl_pickup_A2
+					CAB_Bumbl_pickup_A3
+					CAB_HBuck_pickup_A1
+					CAB_HBuck_pickup_A2
+					CAB_HBuck_pickup_A3
 					cab_pickup_sting
 				]
 			}
 			{
-				part = cas_bass_knobs
+				part = CAS_Bass_Knobs
 				valid = [
 					cab_knob_chndr01
 					cab_knob_chndr02
-					cab_knob_chndr03
+					CAB_Knob_Chndr03
 					cab_knob_chndr04
 					cab_knob_chndr05
 					cab_knob_chndr06
@@ -815,69 +815,69 @@ cas_bass_body = [
 				]
 			}
 			{
-				part = cas_bass_bridges
+				part = CAS_Bass_Bridges
 				valid = [
-					cab_bridge_bb2a
-					cab_bridge_bb1a
-					cab_bridge_bb3a
-					cab_bridge_mls
-					cab_bridge_hack
+					CAB_Bridge_BB2A
+					CAB_Bridge_BB1A
+					CAB_Bridge_BB3A
+					CAB_Bridge_MLS
+					CAB_Bridge_Hack
 				]
 			}
 			{
-				part = cas_bass_head
+				part = CAS_Bass_Head
 				valid = [
-					cab_head_guppy
-					cab_head_predikt
-					cab_head_skull
-					cab_head_radex
-					cab_head_flay_rev
-					cab_head_mnemonic
-					cab_head_foots01
-					cab_head_bh5a
-					cab_head_bhphnq01
-					cab_head_mlsplit
-					cab_head_grumbel01
-					cab_head_bh4a
-					cab_head_bh6a
-					cab_head_bh6b
-					cab_head_bh7a
-					cab_head_bh1a
-					cab_head_sixtease
-					cab_head_foots01
+					CAB_Head_Guppy
+					CAB_Head_Predikt
+					CAB_Head_Skull
+					CAB_Head_RadEx
+					CAB_Head_Flay_rev
+					CAB_Head_Mnemonic
+					CAB_Head_Foots01
+					CAB_Head_BH5A
+					CAB_Head_BHPhnq01
+					CAB_Head_MLSplit
+					CAB_Head_Grumbel01
+					CAB_Head_BH4A
+					CAB_Head_BH6A
+					CAB_Head_BH6B
+					CAB_Head_BH7A
+					CAB_Head_BH1A
+					CAB_Head_SixTease
+					CAB_Head_Foots01
 				]
 			}
 		]
 	}
 	{
-		desc_id = cab_body_prediktor
-		frontend_desc = qs(0x960d23f4)
+		desc_id = CAB_Body_Prediktor
+		frontend_desc = qs("\LPrediktor")
 		mesh = 'models/CAR_Instruments/Bass/CAB_Body_Prediktor.skin'
 		pak_num = 0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
-				material = guitar_body_prediktor_primary
-				mask = $cab_body_prediktor_finishes
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
+				material = Guitar_Body_Prediktor_Primary
+				mask = $CAB_Body_Prediktor_Finishes
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\gtr_predikt_body01_d_mls.dds'
 				pre_userlayer
 				diffuse
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x7f5a5c11)
-				material = guitar_body_prediktor_primary
-				mask = $cab_body_prediktor_details
+				desc_id = Details
+				frontend_desc = qs("Details")
+				material = Guitar_Body_Prediktor_Primary
+				mask = $CAB_Body_Prediktor_Details
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\gtr_predikt_body01_d_mls.dds'
 				pre_userlayer
 				diffuse
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\gtr_predikt_body01_D_MLS.dds'
-				material = guitar_body_prediktor_primary
+				material = Guitar_Body_Prediktor_Primary
 				mask = $car_basic_primitives_1
 				initial_values = {
 					x_trans = -24
@@ -890,9 +890,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\gtr_predikt_body01_D_MLS.dds'
-				material = guitar_body_prediktor_primary
+				material = Guitar_Body_Prediktor_Primary
 				mask = $car_basic_primitives_2
 				initial_values = {
 					x_trans = -24
@@ -905,9 +905,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\gtr_predikt_body01_D_MLS.dds'
-				material = guitar_body_prediktor_primary
+				material = Guitar_Body_Prediktor_Primary
 				mask = $car_gradiant_shapes
 				initial_values = {
 					x_trans = -24
@@ -920,9 +920,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\gtr_predikt_body01_D_MLS.dds'
-				material = guitar_body_prediktor_primary
+				material = Guitar_Body_Prediktor_Primary
 				mask = $car_icons
 				initial_values = {
 					x_trans = -24
@@ -935,9 +935,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\gtr_predikt_body01_D_MLS.dds'
-				material = guitar_body_prediktor_primary
+				material = Guitar_Body_Prediktor_Primary
 				mask = $car_living_shapes
 				initial_values = {
 					x_trans = -24
@@ -950,9 +950,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\gtr_predikt_body01_D_MLS.dds'
-				material = guitar_body_prediktor_primary
+				material = Guitar_Body_Prediktor_Primary
 				mask = $car_graphics
 				initial_values = {
 					x_trans = -24
@@ -965,9 +965,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\gtr_predikt_body01_D_MLS.dds'
-				material = guitar_body_prediktor_primary
+				material = Guitar_Body_Prediktor_Primary
 				mask = $car_sponsors
 				initial_values = {
 					x_trans = -24
@@ -979,10 +979,10 @@ cas_bass_body = [
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\gtr_predikt_body01_D_MLS.dds'
-				material = guitar_body_prediktor_primary
+				material = Guitar_Body_Prediktor_Primary
 				mask = $car_fontgrid_title_a1
 				initial_values = {
 					x_trans = -24
@@ -994,10 +994,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\gtr_predikt_body01_D_MLS.dds'
-				material = guitar_body_prediktor_primary
+				material = Guitar_Body_Prediktor_Primary
 				mask = $car_fontgrid_text_a3
 				initial_values = {
 					x_trans = -24
@@ -1009,10 +1009,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\gtr_predikt_body01_D_MLS.dds'
-				material = guitar_body_prediktor_primary
+				material = Guitar_Body_Prediktor_Primary
 				mask = $car_fontgrid_text_a6
 				initial_values = {
 					x_trans = -24
@@ -1024,10 +1024,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\gtr_predikt_body01_D_MLS.dds'
-				material = guitar_body_prediktor_primary
+				material = Guitar_Body_Prediktor_Primary
 				mask = $car_fontgrid_text_a8
 				initial_values = {
 					x_trans = -24
@@ -1041,127 +1041,127 @@ cas_bass_body = [
 		]
 		inclusion = [
 			{
-				part = cas_bass_neck
+				part = CAS_Bass_Neck
 				valid = [
-					cab_neck_bn1a
-					cab_neck_bn1b
-					cab_neck_bnebony
-					cab_neck_bfretlss01
-					cab_neck_bfretlss02
-					cab_neck_bfretlss03
+					CAB_Neck_BN1A
+					CAB_Neck_BN1B
+					CAB_Neck_BNEbony
+					CAB_Neck_BFretlss01
+					CAB_Neck_BFretlss02
+					CAB_Neck_BFretlss03
 				]
 			}
 			{
-				part = cas_bass_pickguards
+				part = CAS_Bass_Pickguards
 				valid = [
-					None
-					cab_pg_pred01
-					cab_pg_pred02
-					cab_pg_pred03
+					none
+					CAB_PG_Pred01
+					CAB_PG_Pred02
+					CAB_PG_Pred03
 				]
 			}
 			{
-				part = cas_bass_pickups
+				part = CAS_Bass_Pickups
 				valid = [
-					cab_pickups_emg01
-					cab_pickups_emg02
-					cab_pickups_emg03
-					cab_pickup_hack03
-					cab_pickup_hack02
-					cab_pickup_hack01
-					cab_pickups_bp1a
-					cab_pickups_bp1a2
-					cab_pickups_bp1a3
-					cab_jbass_pickup_01
-					cab_jp_pickup_b
-					cab_pbass_pickup_a
-					cab_jp_pickup_a
-					cab_bumbl_pickup_a1
-					cab_bumbl_pickup_a2
-					cab_bumbl_pickup_a3
-					cab_hbuck_pickup_a1
-					cab_hbuck_pickup_a2
-					cab_hbuck_pickup_a3
+					CAB_pickups_EMG01
+					CAB_pickups_EMG02
+					CAB_pickups_EMG03
+					CAB_pickup_Hack03
+					CAB_pickup_Hack02
+					CAB_pickup_Hack01
+					CAB_Pickups_BP1A
+					CAB_Pickups_BP1A2
+					CAB_Pickups_BP1A3
+					CAB_Jbass_pickup_01
+					CAB_JP_Pickup_B
+					CAB_PBass_Pickup_A
+					CAB_JP_Pickup_A
+					CAB_Bumbl_pickup_A1
+					CAB_Bumbl_pickup_A2
+					CAB_Bumbl_pickup_A3
+					CAB_HBuck_pickup_A1
+					CAB_HBuck_pickup_A2
+					CAB_HBuck_pickup_A3
 				]
 			}
 			{
-				part = cas_bass_knobs
+				part = CAS_Bass_Knobs
 				valid = [
 					cab_knob_phunq01
 					cab_knob_phunq02
 					cab_knob_phunq03
 					cab_knob_phunq04
-					cab_knob_phunq05
+					CAB_Knob_Phunq05
 					cab_knob_phunq06
 					cab_knob_phunq07
-					cab_knob_phunq08
+					CAB_Knob_Phunq08
 					cab_knob_phunq09
 					cab_knob_phunq10
 				]
 			}
 			{
-				part = cas_bass_bridges
+				part = CAS_Bass_Bridges
 				valid = [
-					cab_bridge_bb2a
-					cab_bridge_bb1a
-					cab_bridge_bb3a
-					cab_bridge_mls
+					CAB_Bridge_BB2A
+					CAB_Bridge_BB1A
+					CAB_Bridge_BB3A
+					CAB_Bridge_MLS
 				]
 			}
 			{
-				part = cas_bass_head
+				part = CAS_Bass_Head
 				valid = [
-					cab_head_guppy
-					cab_head_predikt
-					cab_head_skull
-					cab_head_radex
-					cab_head_flay_rev
-					cab_head_mnemonic
-					cab_head_foots01
-					cab_head_bh5a
-					cab_head_bhphnq01
-					cab_head_mlsplit
-					cab_head_grumbel01
-					cab_head_bh4a
-					cab_head_bh6a
-					cab_head_bh6b
-					cab_head_bh7a
-					cab_head_bh1a
-					cab_head_sixtease
-					cab_head_foots01
+					CAB_Head_Guppy
+					CAB_Head_Predikt
+					CAB_Head_Skull
+					CAB_Head_RadEx
+					CAB_Head_Flay_rev
+					CAB_Head_Mnemonic
+					CAB_Head_Foots01
+					CAB_Head_BH5A
+					CAB_Head_BHPhnq01
+					CAB_Head_MLSplit
+					CAB_Head_Grumbel01
+					CAB_Head_BH4A
+					CAB_Head_BH6A
+					CAB_Head_BH6B
+					CAB_Head_BH7A
+					CAB_Head_BH1A
+					CAB_Head_SixTease
+					CAB_Head_Foots01
 				]
 			}
 		]
 	}
 	{
-		desc_id = cab_body_kelly
-		frontend_desc = qs(0x18c18d5f)
+		desc_id = CAB_Body_Kelly
+		frontend_desc = qs("\LCeilidh 9")
 		mesh = 'models/CAR_Instruments/Bass/CAB_Body_Kelly.skin'
 		pak_num = 0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
-				material = cab_kelly_primary
-				mask = $cab_body_kelly_finishes
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
+				material = CAB_Kelly_Primary
+				mask = $CAB_Body_Kelly_Finishes
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\cab_body_kelly_d_mls.dds'
 				pre_userlayer
 				diffuse
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x7f5a5c11)
-				material = cab_kelly_primary
-				mask = $cab_body_kelly_details
+				desc_id = Details
+				frontend_desc = qs("Details")
+				material = CAB_Kelly_Primary
+				mask = $CAB_Body_Kelly_Details
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\cab_body_kelly_d_mls.dds'
 				pre_userlayer
 				diffuse
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_Kelly_D_MLS.dds'
-				material = cab_kelly_primary
+				material = CAB_Kelly_Primary
 				mask = $car_basic_primitives_1
 				initial_values = {
 					x_trans = -24
@@ -1174,9 +1174,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_Kelly_D_MLS.dds'
-				material = cab_kelly_primary
+				material = CAB_Kelly_Primary
 				mask = $car_basic_primitives_2
 				initial_values = {
 					x_trans = -24
@@ -1189,9 +1189,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_Kelly_D_MLS.dds'
-				material = cab_kelly_primary
+				material = CAB_Kelly_Primary
 				initial_values = {
 					x_trans = -24
 					y_trans = -3
@@ -1204,9 +1204,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_Kelly_D_MLS.dds'
-				material = cab_kelly_primary
+				material = CAB_Kelly_Primary
 				mask = $car_icons
 				initial_values = {
 					x_trans = -24
@@ -1219,9 +1219,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_Kelly_D_MLS.dds'
-				material = cab_kelly_primary
+				material = CAB_Kelly_Primary
 				mask = $car_living_shapes
 				initial_values = {
 					x_trans = -24
@@ -1234,9 +1234,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_Kelly_D_MLS.dds'
-				material = cab_kelly_primary
+				material = CAB_Kelly_Primary
 				mask = $car_graphics
 				initial_values = {
 					x_trans = -24
@@ -1249,9 +1249,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_Kelly_D_MLS.dds'
-				material = cab_kelly_primary
+				material = CAB_Kelly_Primary
 				mask = $car_sponsors
 				initial_values = {
 					x_trans = -24
@@ -1263,10 +1263,10 @@ cas_bass_body = [
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_Kelly_D_MLS.dds'
-				material = cab_kelly_primary
+				material = CAB_Kelly_Primary
 				mask = $car_fontgrid_title_a1
 				initial_values = {
 					x_trans = -24
@@ -1278,10 +1278,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_Kelly_D_MLS.dds'
-				material = cab_kelly_primary
+				material = CAB_Kelly_Primary
 				mask = $car_fontgrid_text_a3
 				initial_values = {
 					x_trans = -24
@@ -1293,10 +1293,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_Kelly_D_MLS.dds'
-				material = cab_kelly_primary
+				material = CAB_Kelly_Primary
 				mask = $car_fontgrid_text_a6
 				initial_values = {
 					x_trans = -24
@@ -1308,10 +1308,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_Kelly_D_MLS.dds'
-				material = cab_kelly_primary
+				material = CAB_Kelly_Primary
 				mask = $car_fontgrid_text_a8
 				initial_values = {
 					x_trans = -24
@@ -1325,51 +1325,51 @@ cas_bass_body = [
 		]
 		inclusion = [
 			{
-				part = cas_bass_neck
+				part = CAS_Bass_Neck
 				valid = [
-					cab_neck_bn1a
-					cab_neck_bn1b
-					cab_neck_bnebony
-					cab_neck_bfretlss01
-					cab_neck_bfretlss02
-					cab_neck_bfretlss03
+					CAB_Neck_BN1A
+					CAB_Neck_BN1B
+					CAB_Neck_BNEbony
+					CAB_Neck_BFretlss01
+					CAB_Neck_BFretlss02
+					CAB_Neck_BFretlss03
 				]
 			}
 			{
-				part = cas_bass_pickguards
+				part = CAS_Bass_Pickguards
 				valid = [
-					None
-					cab_phnq_pg001
-					cab_phnq_pg002
-					cab_pguardchndr06
+					none
+					CAB_Phnq_PG001
+					CAB_Phnq_PG002
+					CAB_PGuardChndr06
 				]
 			}
 			{
-				part = cas_bass_pickups
+				part = CAS_Bass_Pickups
 				valid = [
-					cab_pickups_emg01
-					cab_pickups_emg02
-					cab_pickups_emg03
-					cab_pickup_hack03
-					cab_pickup_hack02
-					cab_pickup_hack01
-					cab_pickups_bp1a
-					cab_pickups_bp1a2
-					cab_pickups_bp1a3
-					cab_jbass_pickup_01
-					cab_jp_pickup_b
-					cab_pbass_pickup_a
-					cab_jp_pickup_a
-					cab_bumbl_pickup_a1
-					cab_bumbl_pickup_a2
-					cab_bumbl_pickup_a3
-					cab_hbuck_pickup_a1
-					cab_hbuck_pickup_a2
-					cab_hbuck_pickup_a3
+					CAB_pickups_EMG01
+					CAB_pickups_EMG02
+					CAB_pickups_EMG03
+					CAB_pickup_Hack03
+					CAB_pickup_Hack02
+					CAB_pickup_Hack01
+					CAB_Pickups_BP1A
+					CAB_Pickups_BP1A2
+					CAB_Pickups_BP1A3
+					CAB_Jbass_pickup_01
+					CAB_JP_Pickup_B
+					CAB_PBass_Pickup_A
+					CAB_JP_Pickup_A
+					CAB_Bumbl_pickup_A1
+					CAB_Bumbl_pickup_A2
+					CAB_Bumbl_pickup_A3
+					CAB_HBuck_pickup_A1
+					CAB_HBuck_pickup_A2
+					CAB_HBuck_pickup_A3
 				]
 			}
 			{
-				part = cas_bass_knobs
+				part = CAS_Bass_Knobs
 				valid = [
 					cab_knob_grmbl01
 					cab_knob_grmbl02
@@ -1378,77 +1378,77 @@ cas_bass_body = [
 					cab_knob_grmbl05
 					cab_knob_grmbl06
 					cab_knob_grmbl07
-					cab_knob_grmbl08
-					cab_knob_grmbl09
-					cab_knob_grmbl10
+					CAB_Knob_Grmbl08
+					CAB_Knob_Grmbl09
+					CAB_Knob_Grmbl10
 				]
 			}
 			{
-				part = cas_bass_bridges
+				part = CAS_Bass_Bridges
 				valid = [
-					cab_bridge_bb2a
-					cab_bridge_bb1a
-					cab_bridge_bb3a
-					cab_bridge_mls
+					CAB_Bridge_BB2A
+					CAB_Bridge_BB1A
+					CAB_Bridge_BB3A
+					CAB_Bridge_MLS
 				]
 			}
 			{
-				part = cas_bass_head
+				part = CAS_Bass_Head
 				valid = [
-					cab_head_guppy
-					cab_head_predikt
-					cab_head_skull
-					cab_head_radex
-					cab_head_flay_rev
-					cab_head_mnemonic
-					cab_head_foots01
-					cab_head_bh5a
-					cab_head_bhphnq01
-					cab_head_mlsplit
-					cab_head_grumbel01
-					cab_head_bh4a
-					cab_head_bh6a
-					cab_head_bh6b
-					cab_head_bh7a
-					cab_head_bh1a
-					cab_head_sixtease
-					cab_head_foots01
+					CAB_Head_Guppy
+					CAB_Head_Predikt
+					CAB_Head_Skull
+					CAB_Head_RadEx
+					CAB_Head_Flay_rev
+					CAB_Head_Mnemonic
+					CAB_Head_Foots01
+					CAB_Head_BH5A
+					CAB_Head_BHPhnq01
+					CAB_Head_MLSplit
+					CAB_Head_Grumbel01
+					CAB_Head_BH4A
+					CAB_Head_BH6A
+					CAB_Head_BH6B
+					CAB_Head_BH7A
+					CAB_Head_BH1A
+					CAB_Head_SixTease
+					CAB_Head_Foots01
 				]
 			}
 		]
 	}
 	{
-		desc_id = cab_body_rubyat
-		frontend_desc = qs(0xdb62ac41)
+		desc_id = CAB_Body_Rubyat
+		frontend_desc = qs("\LThe Rubaiyat")
 		locked
 		price = 5000
-		polaroid = bass_rward_body_rubaiyat
+		polaroid = Bass_Rward_Body_Rubaiyat
 		mesh = 'models/CAR_Instruments/Bass/CAB_Body_Rubyat.skin'
 		pak_num = 0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
-				material = cab_rubyat_primary
-				mask = $cab_body_rubaiyat_finishes
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
+				material = CAB_Rubyat_Primary
+				mask = $CAB_Body_Rubaiyat_Finishes
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\cab_body_rubyat_d_mls.dds'
 				pre_userlayer
 				diffuse
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x7f5a5c11)
-				material = cab_rubyat_primary
-				mask = $cab_body_rubaiyat_details
+				desc_id = Details
+				frontend_desc = qs("Details")
+				material = CAB_Rubyat_Primary
+				mask = $CAB_Body_Rubaiyat_Details
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\cab_body_rubyat_d_mls.dds'
 				pre_userlayer
 				diffuse
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_Rubyat_D_MLS.dds'
-				material = cab_rubyat_primary
+				material = CAB_Rubyat_Primary
 				mask = $car_basic_primitives_1
 				initial_values = {
 					x_trans = -23
@@ -1460,9 +1460,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_Rubyat_D_MLS.dds'
-				material = cab_rubyat_primary
+				material = CAB_Rubyat_Primary
 				mask = $car_basic_primitives_2
 				initial_values = {
 					x_trans = -23
@@ -1474,9 +1474,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_Rubyat_D_MLS.dds'
-				material = cab_rubyat_primary
+				material = CAB_Rubyat_Primary
 				mask = $car_gradiant_shapes
 				initial_values = {
 					x_trans = -23
@@ -1488,9 +1488,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_Rubyat_D_MLS.dds'
-				material = cab_rubyat_primary
+				material = CAB_Rubyat_Primary
 				mask = $car_icons
 				initial_values = {
 					x_trans = -23
@@ -1502,9 +1502,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_Rubyat_D_MLS.dds'
-				material = cab_rubyat_primary
+				material = CAB_Rubyat_Primary
 				mask = $car_living_shapes
 				initial_values = {
 					x_trans = -23
@@ -1516,9 +1516,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_Rubyat_D_MLS.dds'
-				material = cab_rubyat_primary
+				material = CAB_Rubyat_Primary
 				mask = $car_graphics
 				initial_values = {
 					x_trans = -23
@@ -1530,9 +1530,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_Rubyat_D_MLS.dds'
-				material = cab_rubyat_primary
+				material = CAB_Rubyat_Primary
 				mask = $car_sponsors
 				initial_values = {
 					x_trans = -23
@@ -1543,10 +1543,10 @@ cas_bass_body = [
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_Rubyat_D_MLS.dds'
-				material = cab_rubyat_primary
+				material = CAB_Rubyat_Primary
 				mask = $car_fontgrid_title_a1
 				initial_values = {
 					x_trans = -23
@@ -1557,10 +1557,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_Rubyat_D_MLS.dds'
-				material = cab_rubyat_primary
+				material = CAB_Rubyat_Primary
 				mask = $car_fontgrid_text_a3
 				initial_values = {
 					x_trans = -23
@@ -1571,10 +1571,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_Rubyat_D_MLS.dds'
-				material = cab_rubyat_primary
+				material = CAB_Rubyat_Primary
 				mask = $car_fontgrid_text_a6
 				initial_values = {
 					x_trans = -23
@@ -1585,10 +1585,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_Rubyat_D_MLS.dds'
-				material = cab_rubyat_primary
+				material = CAB_Rubyat_Primary
 				initial_values = {
 					x_trans = -23
 					y_trans = -7
@@ -1601,48 +1601,48 @@ cas_bass_body = [
 		]
 		inclusion = [
 			{
-				part = cas_bass_neck
+				part = CAS_Bass_Neck
 				valid = [
-					cab_neck_bn1a
-					cab_neck_bn1b
-					cab_neck_bnebony
-					cab_neck_bfretlss01
-					cab_neck_bfretlss02
-					cab_neck_bfretlss03
+					CAB_Neck_BN1A
+					CAB_Neck_BN1B
+					CAB_Neck_BNEbony
+					CAB_Neck_BFretlss01
+					CAB_Neck_BFretlss02
+					CAB_Neck_BFretlss03
 				]
 			}
 			{
-				part = cas_bass_pickguards
+				part = CAS_Bass_Pickguards
 				valid = [
-					None
+					none
 				]
 			}
 			{
-				part = cas_bass_pickups
+				part = CAS_Bass_Pickups
 				valid = [
-					cab_pickups_emg01
-					cab_pickups_emg02
-					cab_pickups_emg03
-					cab_pickup_hack03
-					cab_pickup_hack02
-					cab_pickup_hack01
-					cab_pickups_bp1a
-					cab_pickups_bp1a2
-					cab_pickups_bp1a3
-					cab_jbass_pickup_01
-					cab_jp_pickup_b
-					cab_pbass_pickup_a
-					cab_jp_pickup_a
-					cab_bumbl_pickup_a1
-					cab_bumbl_pickup_a2
-					cab_bumbl_pickup_a3
-					cab_hbuck_pickup_a1
-					cab_hbuck_pickup_a2
-					cab_hbuck_pickup_a3
+					CAB_pickups_EMG01
+					CAB_pickups_EMG02
+					CAB_pickups_EMG03
+					CAB_pickup_Hack03
+					CAB_pickup_Hack02
+					CAB_pickup_Hack01
+					CAB_Pickups_BP1A
+					CAB_Pickups_BP1A2
+					CAB_Pickups_BP1A3
+					CAB_Jbass_pickup_01
+					CAB_JP_Pickup_B
+					CAB_PBass_Pickup_A
+					CAB_JP_Pickup_A
+					CAB_Bumbl_pickup_A1
+					CAB_Bumbl_pickup_A2
+					CAB_Bumbl_pickup_A3
+					CAB_HBuck_pickup_A1
+					CAB_HBuck_pickup_A2
+					CAB_HBuck_pickup_A3
 				]
 			}
 			{
-				part = cas_bass_knobs
+				part = CAS_Bass_Knobs
 				valid = [
 					cab_knob_rubyat01
 					cab_knob_rubyat02
@@ -1657,68 +1657,68 @@ cas_bass_body = [
 				]
 			}
 			{
-				part = cas_bass_bridges
+				part = CAS_Bass_Bridges
 				valid = [
-					cab_bridge_bb2a
-					cab_bridge_bb1a
-					cab_bridge_bb3a
-					cab_bridge_mls
+					CAB_Bridge_BB2A
+					CAB_Bridge_BB1A
+					CAB_Bridge_BB3A
+					CAB_Bridge_MLS
 				]
 			}
 			{
-				part = cas_bass_head
+				part = CAS_Bass_Head
 				valid = [
-					cab_head_guppy
-					cab_head_predikt
-					cab_head_skull
-					cab_head_radex
-					cab_head_flay_rev
-					cab_head_mnemonic
-					cab_head_rubyat
-					cab_head_foots01
-					cab_head_bh5a
-					cab_head_bhphnq01
-					cab_head_mlsplit
-					cab_head_grumbel01
-					cab_head_bh4a
-					cab_head_bh6a
-					cab_head_bh6b
-					cab_head_bh7a
-					cab_head_bh1a
-					cab_head_foots01
+					CAB_Head_Guppy
+					CAB_Head_Predikt
+					CAB_Head_Skull
+					CAB_Head_RadEx
+					CAB_Head_Flay_rev
+					CAB_Head_Mnemonic
+					CAB_HEAD_Rubyat
+					CAB_Head_Foots01
+					CAB_Head_BH5A
+					CAB_Head_BHPhnq01
+					CAB_Head_MLSplit
+					CAB_Head_Grumbel01
+					CAB_Head_BH4A
+					CAB_Head_BH6A
+					CAB_Head_BH6B
+					CAB_Head_BH7A
+					CAB_Head_BH1A
+					CAB_Head_Foots01
 				]
 			}
 		]
 	}
 	{
-		desc_id = cab_body_bandera
-		frontend_desc = qs(0x066a5e9c)
+		desc_id = CAB_Body_Bandera
+		frontend_desc = qs("\LMLS Bandera")
 		mesh = 'models/CAR_Instruments/Bass/CAB_Body_Bandera.skin'
 		pak_num = 0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
-				material = guitar_body_bandera_primary
-				mask = $cab_body_bandera_finishes
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
+				material = Guitar_Body_Bandera_Primary
+				mask = $CAB_Body_Bandera_Finishes
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\gtr_body_style17_d.dds'
 				pre_userlayer
 				diffuse
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x7f5a5c11)
-				material = guitar_body_bandera_primary
-				mask = $cab_body_bandera_details
+				desc_id = Details
+				frontend_desc = qs("Details")
+				material = Guitar_Body_Bandera_Primary
+				mask = $CAB_Body_Bandera_Details
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\gtr_body_style17_d.dds'
 				pre_userlayer
 				diffuse
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\gtr_body_style17_d.dds'
-				material = guitar_body_bandera_primary
+				material = Guitar_Body_Bandera_Primary
 				mask = $car_basic_primitives_1
 				initial_values = {
 					x_trans = -26
@@ -1731,9 +1731,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\gtr_body_style17_d.dds'
-				material = guitar_body_bandera_primary
+				material = Guitar_Body_Bandera_Primary
 				mask = $car_basic_primitives_2
 				initial_values = {
 					x_trans = -26
@@ -1746,9 +1746,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\gtr_body_style17_d.dds'
-				material = guitar_body_bandera_primary
+				material = Guitar_Body_Bandera_Primary
 				mask = $car_gradiant_shapes
 				initial_values = {
 					x_trans = -26
@@ -1761,9 +1761,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\gtr_body_style17_d.dds'
-				material = guitar_body_bandera_primary
+				material = Guitar_Body_Bandera_Primary
 				mask = $car_icons
 				initial_values = {
 					x_trans = -26
@@ -1776,9 +1776,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\gtr_body_style17_d.dds'
-				material = guitar_body_bandera_primary
+				material = Guitar_Body_Bandera_Primary
 				mask = $car_living_shapes
 				initial_values = {
 					x_trans = -26
@@ -1791,9 +1791,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\gtr_body_style17_d.dds'
-				material = guitar_body_bandera_primary
+				material = Guitar_Body_Bandera_Primary
 				mask = $car_graphics
 				initial_values = {
 					x_trans = -26
@@ -1806,9 +1806,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\gtr_body_style17_d.dds'
-				material = guitar_body_bandera_primary
+				material = Guitar_Body_Bandera_Primary
 				mask = $car_sponsors
 				initial_values = {
 					x_trans = -26
@@ -1820,10 +1820,10 @@ cas_bass_body = [
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\gtr_body_style17_d.dds'
-				material = guitar_body_bandera_primary
+				material = Guitar_Body_Bandera_Primary
 				mask = $car_fontgrid_title_a1
 				initial_values = {
 					x_trans = -26
@@ -1835,10 +1835,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\gtr_body_style17_d.dds'
-				material = guitar_body_bandera_primary
+				material = Guitar_Body_Bandera_Primary
 				mask = $car_fontgrid_text_a3
 				initial_values = {
 					x_trans = -26
@@ -1850,10 +1850,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\gtr_body_style17_d.dds'
-				material = guitar_body_bandera_primary
+				material = Guitar_Body_Bandera_Primary
 				mask = $car_fontgrid_text_a6
 				initial_values = {
 					x_trans = -26
@@ -1865,10 +1865,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\gtr_body_style17_d.dds'
-				material = guitar_body_bandera_primary
+				material = Guitar_Body_Bandera_Primary
 				mask = $car_fontgrid_text_a8
 				initial_values = {
 					x_trans = -26
@@ -1882,128 +1882,128 @@ cas_bass_body = [
 		]
 		inclusion = [
 			{
-				part = cas_bass_neck
+				part = CAS_Bass_Neck
 				valid = [
-					cab_neck_bn1a
-					cab_neck_bn1b
-					cab_neck_bnebony
-					cab_neck_bfretlss01
-					cab_neck_bfretlss02
-					cab_neck_bfretlss03
+					CAB_Neck_BN1A
+					CAB_Neck_BN1B
+					CAB_Neck_BNEbony
+					CAB_Neck_BFretlss01
+					CAB_Neck_BFretlss02
+					CAB_Neck_BFretlss03
 				]
 			}
 			{
-				part = cas_bass_pickguards
+				part = CAS_Bass_Pickguards
 				valid = [
-					None
-					cab_phnq_pg003
-					cab_pickg_e1
-					cab_phnq_pg002
+					none
+					CAB_Phnq_PG003
+					CAB_PickG_E1
+					CAB_Phnq_PG002
 				]
 			}
 			{
-				part = cas_bass_pickups
+				part = CAS_Bass_Pickups
 				valid = [
-					cab_pickups_emg01
-					cab_pickups_emg02
-					cab_pickups_emg03
-					cab_pickup_hack03
-					cab_pickup_hack02
-					cab_pickup_hack01
-					cab_pickups_bp1a
-					cab_pickups_bp1a2
-					cab_pickups_bp1a3
-					cab_jbass_pickup_01
-					cab_jp_pickup_b
-					cab_pbass_pickup_a
-					cab_jp_pickup_a
-					cab_bumbl_pickup_a1
-					cab_bumbl_pickup_a2
-					cab_bumbl_pickup_a3
-					cab_hbuck_pickup_a1
-					cab_hbuck_pickup_a2
-					cab_hbuck_pickup_a3
+					CAB_pickups_EMG01
+					CAB_pickups_EMG02
+					CAB_pickups_EMG03
+					CAB_pickup_Hack03
+					CAB_pickup_Hack02
+					CAB_pickup_Hack01
+					CAB_Pickups_BP1A
+					CAB_Pickups_BP1A2
+					CAB_Pickups_BP1A3
+					CAB_Jbass_pickup_01
+					CAB_JP_Pickup_B
+					CAB_PBass_Pickup_A
+					CAB_JP_Pickup_A
+					CAB_Bumbl_pickup_A1
+					CAB_Bumbl_pickup_A2
+					CAB_Bumbl_pickup_A3
+					CAB_HBuck_pickup_A1
+					CAB_HBuck_pickup_A2
+					CAB_HBuck_pickup_A3
 				]
 			}
 			{
-				part = cas_bass_knobs
+				part = CAS_Bass_Knobs
 				valid = [
 					cab_knob_phunq01
 					cab_knob_phunq02
 					cab_knob_phunq03
 					cab_knob_phunq04
-					cab_knob_phunq05
+					CAB_Knob_Phunq05
 					cab_knob_phunq06
 					cab_knob_phunq07
-					cab_knob_phunq08
+					CAB_Knob_Phunq08
 					cab_knob_phunq09
 					cab_knob_phunq10
 				]
 			}
 			{
-				part = cas_bass_head
+				part = CAS_Bass_Head
 				valid = [
-					cab_head_guppy
-					cab_head_predikt
-					cab_head_skull
-					cab_head_flay_rev
-					cab_head_radex
-					cab_head_mnemonic
-					cab_head_foots01
-					cab_head_bh5a
-					cab_head_bhphnq01
-					cab_head_mlsplit
-					cab_head_grumbel01
-					cab_head_bh4a
-					cab_head_bh6a
-					cab_head_bh6b
-					cab_head_bh7a
-					cab_head_bh1a
-					cab_head_sixtease
-					cab_head_foots01
+					CAB_Head_Guppy
+					CAB_Head_Predikt
+					CAB_Head_Skull
+					CAB_Head_Flay_rev
+					CAB_Head_RadEx
+					CAB_Head_Mnemonic
+					CAB_Head_Foots01
+					CAB_Head_BH5A
+					CAB_Head_BHPhnq01
+					CAB_Head_MLSplit
+					CAB_Head_Grumbel01
+					CAB_Head_BH4A
+					CAB_Head_BH6A
+					CAB_Head_BH6B
+					CAB_Head_BH7A
+					CAB_Head_BH1A
+					CAB_Head_SixTease
+					CAB_Head_Foots01
 				]
 			}
 			{
-				part = cas_bass_bridges
+				part = CAS_Bass_Bridges
 				valid = [
-					cab_bridge_hack
-					cab_bridge_bb2a
-					cab_bridge_bb1a
-					cab_bridge_bb3a
-					cab_bridge_mls
+					CAB_Bridge_Hack
+					CAB_Bridge_BB2A
+					CAB_Bridge_BB1A
+					CAB_Bridge_BB3A
+					CAB_Bridge_MLS
 				]
 			}
 		]
 	}
 	{
-		desc_id = cab_body_grmbl_a
-		frontend_desc = qs(0xfb105a09)
+		desc_id = CAB_Body_Grmbl_A
+		frontend_desc = qs("\LGrumbel Machete")
 		mesh = 'models/CAR_Instruments/Bass/CAB_Body_Grmbl_A.skin'
 		pak_num = 1
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
-				material = cab_body_grmbl_a_primary
-				mask = $cab_body_grmbl_a_finishes
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
+				material = CAB_Body_Grmbl_A_Primary
+				mask = $CAB_Body_Grmbl_A_Finishes
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_grumbel01_d_mls.dds'
 				pre_userlayer
 				diffuse
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x7f5a5c11)
-				material = cab_body_grmbl_a_primary
-				mask = $cab_body_grmbl_details
+				desc_id = Details
+				frontend_desc = qs("Details")
+				material = CAB_Body_Grmbl_A_Primary
+				mask = $CAB_Body_GRMBL_Details
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_grumbel01_d_mls.dds'
 				pre_userlayer
 				diffuse
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_grumbel01_D_MLS.dds'
-				material = cab_body_grmbl_a_primary
+				material = CAB_Body_Grmbl_A_Primary
 				mask = $car_basic_primitives_1
 				initial_values = {
 					x_trans = -23
@@ -2015,9 +2015,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_grumbel01_D_MLS.dds'
-				material = cab_body_grmbl_a_primary
+				material = CAB_Body_Grmbl_A_Primary
 				mask = $car_basic_primitives_2
 				initial_values = {
 					x_trans = -23
@@ -2029,9 +2029,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_grumbel01_D_MLS.dds'
-				material = cab_body_grmbl_a_primary
+				material = CAB_Body_Grmbl_A_Primary
 				mask = $car_gradiant_shapes
 				initial_values = {
 					x_trans = -23
@@ -2043,9 +2043,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_grumbel01_D_MLS.dds'
-				material = cab_body_grmbl_a_primary
+				material = CAB_Body_Grmbl_A_Primary
 				mask = $car_icons
 				initial_values = {
 					x_trans = -23
@@ -2057,9 +2057,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_grumbel01_D_MLS.dds'
-				material = cab_body_grmbl_a_primary
+				material = CAB_Body_Grmbl_A_Primary
 				mask = $car_living_shapes
 				initial_values = {
 					x_trans = -23
@@ -2071,9 +2071,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_grumbel01_D_MLS.dds'
-				material = cab_body_grmbl_a_primary
+				material = CAB_Body_Grmbl_A_Primary
 				mask = $car_graphics
 				initial_values = {
 					x_trans = -23
@@ -2085,9 +2085,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_grumbel01_D_MLS.dds'
-				material = cab_body_grmbl_a_primary
+				material = CAB_Body_Grmbl_A_Primary
 				mask = $car_sponsors
 				initial_values = {
 					x_trans = -23
@@ -2098,10 +2098,10 @@ cas_bass_body = [
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_grumbel01_D_MLS.dds'
-				material = cab_body_grmbl_a_primary
+				material = CAB_Body_Grmbl_A_Primary
 				mask = $car_fontgrid_title_a1
 				initial_values = {
 					x_trans = -23
@@ -2112,10 +2112,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_grumbel01_D_MLS.dds'
-				material = cab_body_grmbl_a_primary
+				material = CAB_Body_Grmbl_A_Primary
 				mask = $car_fontgrid_text_a3
 				initial_values = {
 					x_trans = -23
@@ -2126,10 +2126,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_grumbel01_D_MLS.dds'
-				material = cab_body_grmbl_a_primary
+				material = CAB_Body_Grmbl_A_Primary
 				mask = $car_fontgrid_text_a6
 				initial_values = {
 					x_trans = -23
@@ -2140,10 +2140,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_grumbel01_D_MLS.dds'
-				material = cab_body_grmbl_a_primary
+				material = CAB_Body_Grmbl_A_Primary
 				mask = $car_fontgrid_text_a8
 				initial_values = {
 					x_trans = -23
@@ -2156,51 +2156,51 @@ cas_bass_body = [
 		]
 		inclusion = [
 			{
-				part = cas_bass_neck
+				part = CAS_Bass_Neck
 				valid = [
-					cab_stnek_bnst01
-					cab_stnek_maple
-					cab_stnek_ebony
-					cab_stnekf_rosewood
-					cab_stnekf_maple
-					cab_stnekf_ebony
+					CAB_StNek_BNSt01
+					CAB_StNek_Maple
+					CAB_StNek_Ebony
+					CAB_StNekF_Rosewood
+					CAB_StNekF_Maple
+					CAB_StNekF_Ebony
 				]
 			}
 			{
-				part = cas_bass_pickguards
+				part = CAS_Bass_Pickguards
 				valid = [
-					cab_pgard_grmbl01
-					cab_pgard_grmbl02
-					cab_pgard_grmbl03
-					None
+					CAB_PGard_Grmbl01
+					CAB_PGard_Grmbl02
+					CAB_PGard_Grmbl03
+					none
 				]
 			}
 			{
-				part = cas_bass_pickups
+				part = CAS_Bass_Pickups
 				valid = [
-					cab_pickups_emg01
-					cab_pickups_emg02
-					cab_pickups_emg03
-					cab_pickup_hack03
-					cab_pickup_hack02
-					cab_pickup_hack01
-					cab_pickups_bp1a
-					cab_pickups_bp1a2
-					cab_pickups_bp1a3
-					cab_jbass_pickup_01
-					cab_jp_pickup_b
-					cab_pbass_pickup_a
-					cab_jp_pickup_a
-					cab_bumbl_pickup_a1
-					cab_bumbl_pickup_a2
-					cab_bumbl_pickup_a3
-					cab_hbuck_pickup_a1
-					cab_hbuck_pickup_a2
-					cab_hbuck_pickup_a3
+					CAB_pickups_EMG01
+					CAB_pickups_EMG02
+					CAB_pickups_EMG03
+					CAB_pickup_Hack03
+					CAB_pickup_Hack02
+					CAB_pickup_Hack01
+					CAB_Pickups_BP1A
+					CAB_Pickups_BP1A2
+					CAB_Pickups_BP1A3
+					CAB_Jbass_pickup_01
+					CAB_JP_Pickup_B
+					CAB_PBass_Pickup_A
+					CAB_JP_Pickup_A
+					CAB_Bumbl_pickup_A1
+					CAB_Bumbl_pickup_A2
+					CAB_Bumbl_pickup_A3
+					CAB_HBuck_pickup_A1
+					CAB_HBuck_pickup_A2
+					CAB_HBuck_pickup_A3
 				]
 			}
 			{
-				part = cas_bass_knobs
+				part = CAS_Bass_Knobs
 				valid = [
 					cab_knob_grmbl01
 					cab_knob_grmbl02
@@ -2209,75 +2209,75 @@ cas_bass_body = [
 					cab_knob_grmbl05
 					cab_knob_grmbl06
 					cab_knob_grmbl07
-					cab_knob_grmbl08
-					cab_knob_grmbl09
-					cab_knob_grmbl10
+					CAB_Knob_Grmbl08
+					CAB_Knob_Grmbl09
+					CAB_Knob_Grmbl10
 				]
 			}
 			{
-				part = cas_bass_bridges
+				part = CAS_Bass_Bridges
 				valid = [
-					cab_bridge_bb2a
-					cab_bridge_bb1a
-					cab_bridge_bb3a
-					cab_bridge_mls
-					cab_bridge_hack
+					CAB_Bridge_BB2A
+					CAB_Bridge_BB1A
+					CAB_Bridge_BB3A
+					CAB_Bridge_MLS
+					CAB_Bridge_Hack
 				]
 			}
 			{
-				part = cas_bass_head
+				part = CAS_Bass_Head
 				valid = [
-					cab_head_guppy
-					cab_head_predikt
-					cab_head_skull
-					cab_head_radex
-					cab_head_flay_rev
-					cab_head_mnemonic
-					cab_head_foots01
-					cab_head_bh5a
-					cab_head_bhphnq01
-					cab_head_mlsplit
-					cab_head_grumbel01
-					cab_head_bh4a
-					cab_head_bh6a
-					cab_head_bh6b
-					cab_head_bh7a
-					cab_head_bh1a
-					cab_head_sixtease
-					cab_head_foots01
+					CAB_Head_Guppy
+					CAB_Head_Predikt
+					CAB_Head_Skull
+					CAB_Head_RadEx
+					CAB_Head_Flay_rev
+					CAB_Head_Mnemonic
+					CAB_Head_Foots01
+					CAB_Head_BH5A
+					CAB_Head_BHPhnq01
+					CAB_Head_MLSplit
+					CAB_Head_Grumbel01
+					CAB_Head_BH4A
+					CAB_Head_BH6A
+					CAB_Head_BH6B
+					CAB_Head_BH7A
+					CAB_Head_BH1A
+					CAB_Head_SixTease
+					CAB_Head_Foots01
 				]
 			}
 		]
 	}
 	{
-		desc_id = cab_body_phunq01
-		frontend_desc = qs(0x4deedd41)
+		desc_id = CAB_Body_Phunq01
+		frontend_desc = qs("\LPhunquie DanzKlas")
 		mesh = 'models/CAR_Instruments/Bass/CAB_Body_Phunq01.skin'
 		pak_num = 1
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
-				material = cab_body_bubinga01_primary
-				mask = $cab_body_phunq01_finishes
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
+				material = CAB_Body_Bubinga01_Primary
+				mask = $CAB_Body_Phunq01_Finishes
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_beech01_b1_d_mls.dds'
 				pre_userlayer
 				diffuse
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x7f5a5c11)
-				material = cab_body_bubinga01_primary
-				mask = $cab_body_phunq01_details
+				desc_id = Details
+				frontend_desc = qs("Details")
+				material = CAB_Body_Bubinga01_Primary
+				mask = $CAB_Body_PHUNQ01_Details
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_beech01_b1_d_mls.dds'
 				pre_userlayer
 				diffuse
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\cab_body_beech01_b1_d_mls.dds'
-				material = cab_body_bubinga01_primary
+				material = CAB_Body_Bubinga01_Primary
 				mask = $car_basic_primitives_1
 				initial_values = {
 					x_trans = -24
@@ -2290,9 +2290,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\cab_body_beech01_b1_d_mls.dds'
-				material = cab_body_bubinga01_primary
+				material = CAB_Body_Bubinga01_Primary
 				mask = $car_basic_primitives_2
 				initial_values = {
 					x_trans = -24
@@ -2305,9 +2305,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\cab_body_beech01_b1_d_mls.dds'
-				material = cab_body_bubinga01_primary
+				material = CAB_Body_Bubinga01_Primary
 				mask = $car_gradiant_shapes
 				initial_values = {
 					x_trans = -24
@@ -2320,9 +2320,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\cab_body_beech01_b1_d_mls.dds'
-				material = cab_body_bubinga01_primary
+				material = CAB_Body_Bubinga01_Primary
 				mask = $car_icons
 				initial_values = {
 					x_trans = -24
@@ -2335,9 +2335,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\cab_body_beech01_b1_d_mls.dds'
-				material = cab_body_bubinga01_primary
+				material = CAB_Body_Bubinga01_Primary
 				mask = $car_living_shapes
 				initial_values = {
 					x_trans = -24
@@ -2350,9 +2350,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\cab_body_beech01_b1_d_mls.dds'
-				material = cab_body_bubinga01_primary
+				material = CAB_Body_Bubinga01_Primary
 				mask = $car_graphics
 				initial_values = {
 					x_trans = -24
@@ -2365,9 +2365,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\cab_body_beech01_b1_d_mls.dds'
-				material = cab_body_bubinga01_primary
+				material = CAB_Body_Bubinga01_Primary
 				mask = $car_sponsors
 				initial_values = {
 					x_trans = -24
@@ -2379,10 +2379,10 @@ cas_bass_body = [
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\cab_body_beech01_b1_d_mls.dds'
-				material = cab_body_bubinga01_primary
+				material = CAB_Body_Bubinga01_Primary
 				mask = $car_fontgrid_title_a1
 				iinitial_values = {
 					x_trans = -24
@@ -2394,10 +2394,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\cab_body_beech01_b1_d_mls.dds'
-				material = cab_body_bubinga01_primary
+				material = CAB_Body_Bubinga01_Primary
 				mask = $car_fontgrid_text_a3
 				initial_values = {
 					x_trans = -24
@@ -2409,10 +2409,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\cab_body_beech01_b1_d_mls.dds'
-				material = cab_body_bubinga01_primary
+				material = CAB_Body_Bubinga01_Primary
 				mask = $car_fontgrid_text_a6
 				initial_values = {
 					x_trans = -24
@@ -2424,10 +2424,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\cab_body_beech01_b1_d_mls.dds'
-				material = cab_body_bubinga01_primary
+				material = CAB_Body_Bubinga01_Primary
 				mask = $car_fontgrid_text_a8
 				initial_values = {
 					x_trans = -24
@@ -2441,128 +2441,128 @@ cas_bass_body = [
 		]
 		inclusion = [
 			{
-				part = cas_bass_neck
+				part = CAS_Bass_Neck
 				valid = [
-					cab_stnek_bnst01
-					cab_stnek_maple
-					cab_stnek_ebony
-					cab_stnekf_rosewood
-					cab_stnekf_maple
-					cab_stnekf_ebony
+					CAB_StNek_BNSt01
+					CAB_StNek_Maple
+					CAB_StNek_Ebony
+					CAB_StNekF_Rosewood
+					CAB_StNekF_Maple
+					CAB_StNekF_Ebony
 				]
 			}
 			{
-				part = cas_bass_pickguards
+				part = CAS_Bass_Pickguards
 				valid = [
-					None
-					cab_phnq_pg001
-					cab_phnq_pg002
-					cab_phnq_pg003
+					none
+					CAB_Phnq_PG001
+					CAB_Phnq_PG002
+					CAB_Phnq_PG003
 				]
 			}
 			{
-				part = cas_bass_pickups
+				part = CAS_Bass_Pickups
 				valid = [
-					cab_pickups_emg01
-					cab_pickups_emg02
-					cab_pickups_emg03
-					cab_pickup_hack03
-					cab_pickup_hack02
-					cab_pickup_hack01
-					cab_pickups_bp1a
-					cab_pickups_bp1a2
-					cab_pickups_bp1a3
-					cab_jbass_pickup_01
-					cab_jp_pickup_b
-					cab_pbass_pickup_a
-					cab_jp_pickup_a
-					cab_bumbl_pickup_a1
-					cab_bumbl_pickup_a2
-					cab_bumbl_pickup_a3
-					cab_hbuck_pickup_a1
-					cab_hbuck_pickup_a2
-					cab_hbuck_pickup_a3
+					CAB_pickups_EMG01
+					CAB_pickups_EMG02
+					CAB_pickups_EMG03
+					CAB_pickup_Hack03
+					CAB_pickup_Hack02
+					CAB_pickup_Hack01
+					CAB_Pickups_BP1A
+					CAB_Pickups_BP1A2
+					CAB_Pickups_BP1A3
+					CAB_Jbass_pickup_01
+					CAB_JP_Pickup_B
+					CAB_PBass_Pickup_A
+					CAB_JP_Pickup_A
+					CAB_Bumbl_pickup_A1
+					CAB_Bumbl_pickup_A2
+					CAB_Bumbl_pickup_A3
+					CAB_HBuck_pickup_A1
+					CAB_HBuck_pickup_A2
+					CAB_HBuck_pickup_A3
 				]
 			}
 			{
-				part = cas_bass_knobs
+				part = CAS_Bass_Knobs
 				valid = [
 					cab_knob_phunq01
 					cab_knob_phunq02
 					cab_knob_phunq03
 					cab_knob_phunq04
-					cab_knob_phunq05
+					CAB_Knob_Phunq05
 					cab_knob_phunq06
 					cab_knob_phunq07
-					cab_knob_phunq08
+					CAB_Knob_Phunq08
 					cab_knob_phunq09
 					cab_knob_phunq10
 				]
 			}
 			{
-				part = cas_bass_bridges
+				part = CAS_Bass_Bridges
 				valid = [
-					cab_bridge_bb2a
-					cab_bridge_bb1a
-					cab_bridge_bb3a
-					cab_bridge_mls
-					cab_bridge_hack
+					CAB_Bridge_BB2A
+					CAB_Bridge_BB1A
+					CAB_Bridge_BB3A
+					CAB_Bridge_MLS
+					CAB_Bridge_Hack
 				]
 			}
 			{
-				part = cas_bass_head
+				part = CAS_Bass_Head
 				valid = [
-					cab_head_guppy
-					cab_head_predikt
-					cab_head_skull
-					cab_head_radex
-					cab_head_flay_rev
-					cab_head_mnemonic
-					cab_head_foots01
-					cab_head_bh5a
-					cab_head_bhphnq01
-					cab_head_mlsplit
-					cab_head_grumbel01
-					cab_head_bh4a
-					cab_head_bh6a
-					cab_head_bh6b
-					cab_head_bh7a
-					cab_head_bh1a
-					cab_head_sixtease
-					cab_head_foots01
+					CAB_Head_Guppy
+					CAB_Head_Predikt
+					CAB_Head_Skull
+					CAB_Head_RadEx
+					CAB_Head_Flay_rev
+					CAB_Head_Mnemonic
+					CAB_Head_Foots01
+					CAB_Head_BH5A
+					CAB_Head_BHPhnq01
+					CAB_Head_MLSplit
+					CAB_Head_Grumbel01
+					CAB_Head_BH4A
+					CAB_Head_BH6A
+					CAB_Head_BH6B
+					CAB_Head_BH7A
+					CAB_Head_BH1A
+					CAB_Head_SixTease
+					CAB_Head_Foots01
 				]
 			}
 		]
 	}
 	{
-		desc_id = cab_body_bb3a
-		frontend_desc = qs(0x3cc2b304)
+		desc_id = CAB_Body_BB3A
+		frontend_desc = qs("\LBachenhacker 2008")
 		mesh = 'models/CAR_Instruments/Bass/CAB_Body_BB3A.skin'
 		pak_num = 1
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
-				material = cab_body_bb3a_primary
-				mask = $cab_body_bb3a_finishes
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
+				material = CAB_Body_BB3A_Primary
+				mask = $CAB_Body_BB3A_Finishes
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_bodywood_b3a_e_mls.dds'
 				pre_userlayer
 				diffuse
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x7f5a5c11)
-				material = cab_body_bb3a_primary
-				mask = $cab_body_bb3a_details
+				desc_id = Details
+				frontend_desc = qs("Details")
+				material = CAB_Body_BB3A_Primary
+				mask = $CAB_Body_BB3A_Details
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_bodywood_b3a_e_mls.dds'
 				pre_userlayer
 				diffuse
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Bodywood_b3a_e_mls.dds'
-				material = cab_body_bb3a_primary
+				material = CAB_Body_BB3A_Primary
 				mask = $car_basic_primitives_1
 				initial_values = {
 					x_trans = -23
@@ -2573,9 +2573,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Bodywood_b3a_e_mls.dds'
-				material = cab_body_bb3a_primary
+				material = CAB_Body_BB3A_Primary
 				mask = $car_basic_primitives_2
 				initial_values = {
 					x_trans = -23
@@ -2586,9 +2586,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Bodywood_b3a_e_mls.dds'
-				material = cab_body_bb3a_primary
+				material = CAB_Body_BB3A_Primary
 				mask = $car_gradiant_shapes
 				initial_values = {
 					x_trans = -23
@@ -2599,9 +2599,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Bodywood_b3a_e_mls.dds'
-				material = cab_body_bb3a_primary
+				material = CAB_Body_BB3A_Primary
 				mask = $car_icons
 				initial_values = {
 					x_trans = -23
@@ -2612,9 +2612,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Bodywood_b3a_e_mls.dds'
-				material = cab_body_bb3a_primary
+				material = CAB_Body_BB3A_Primary
 				mask = $car_living_shapes
 				initial_values = {
 					x_trans = -23
@@ -2625,9 +2625,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Bodywood_b3a_e_mls.dds'
-				material = cab_body_bb3a_primary
+				material = CAB_Body_BB3A_Primary
 				mask = $car_graphics
 				initial_values = {
 					x_trans = -23
@@ -2638,9 +2638,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Bodywood_b3a_e_mls.dds'
-				material = cab_body_bb3a_primary
+				material = CAB_Body_BB3A_Primary
 				mask = $car_sponsors
 				initial_values = {
 					x_trans = -23
@@ -2650,10 +2650,10 @@ cas_bass_body = [
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Bodywood_b3a_e_mls.dds'
-				material = cab_body_bb3a_primary
+				material = CAB_Body_BB3A_Primary
 				mask = $car_fontgrid_title_a1
 				initial_values = {
 					x_trans = -23
@@ -2663,10 +2663,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Bodywood_b3a_e_mls.dds'
-				material = cab_body_bb3a_primary
+				material = CAB_Body_BB3A_Primary
 				mask = $car_fontgrid_text_a3
 				initial_values = {
 					x_trans = -23
@@ -2676,10 +2676,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Bodywood_b3a_e_mls.dds'
-				material = cab_body_bb3a_primary
+				material = CAB_Body_BB3A_Primary
 				mask = $car_fontgrid_text_a6
 				initial_values = {
 					x_trans = -23
@@ -2689,10 +2689,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Bodywood_b3a_e_mls.dds'
-				material = cab_body_bb3a_primary
+				material = CAB_Body_BB3A_Primary
 				mask = $car_fontgrid_text_a8
 				initial_values = {
 					x_trans = -23
@@ -2704,52 +2704,52 @@ cas_bass_body = [
 		]
 		inclusion = [
 			{
-				part = cas_bass_neck
+				part = CAS_Bass_Neck
 				valid = [
-					cab_neck_bn1a
-					cab_neck_bn1b
-					cab_neck_bnebony
-					cab_neck_bfretlss01
-					cab_neck_bfretlss02
-					cab_neck_bfretlss03
+					CAB_Neck_BN1A
+					CAB_Neck_BN1B
+					CAB_Neck_BNEbony
+					CAB_Neck_BFretlss01
+					CAB_Neck_BFretlss02
+					CAB_Neck_BFretlss03
 				]
 			}
 			{
-				part = cas_bass_pickguards
+				part = CAS_Bass_Pickguards
 				valid = [
-					None
-					cab_pickg_f1
-					cab_pickg_f2
-					cab_pickg_f3
-					None
+					none
+					CAB_PickG_F1
+					CAB_PickG_F2
+					CAB_PickG_F3
+					none
 				]
 			}
 			{
-				part = cas_bass_pickups
+				part = CAS_Bass_Pickups
 				valid = [
-					cab_pickups_emg01
-					cab_pickups_emg02
-					cab_pickups_emg03
-					cab_pickup_hack03
-					cab_pickup_hack02
-					cab_pickup_hack01
-					cab_pickups_bp1a
-					cab_pickups_bp1a2
-					cab_pickups_bp1a3
-					cab_jbass_pickup_01
-					cab_jp_pickup_b
-					cab_pbass_pickup_a
-					cab_jp_pickup_a
-					cab_bumbl_pickup_a1
-					cab_bumbl_pickup_a2
-					cab_bumbl_pickup_a3
-					cab_hbuck_pickup_a1
-					cab_hbuck_pickup_a2
-					cab_hbuck_pickup_a3
+					CAB_pickups_EMG01
+					CAB_pickups_EMG02
+					CAB_pickups_EMG03
+					CAB_pickup_Hack03
+					CAB_pickup_Hack02
+					CAB_pickup_Hack01
+					CAB_Pickups_BP1A
+					CAB_Pickups_BP1A2
+					CAB_Pickups_BP1A3
+					CAB_Jbass_pickup_01
+					CAB_JP_Pickup_B
+					CAB_PBass_Pickup_A
+					CAB_JP_Pickup_A
+					CAB_Bumbl_pickup_A1
+					CAB_Bumbl_pickup_A2
+					CAB_Bumbl_pickup_A3
+					CAB_HBuck_pickup_A1
+					CAB_HBuck_pickup_A2
+					CAB_HBuck_pickup_A3
 				]
 			}
 			{
-				part = cas_bass_knobs
+				part = CAS_Bass_Knobs
 				valid = [
 					cab_knob_hack01
 					cab_knob_hack02
@@ -2759,77 +2759,77 @@ cas_bass_body = [
 					cab_knob_hack06
 					cab_knob_hack07
 					cab_knob_hack08
-					cab_knob_hack09
+					CAB_Knob_Hack09
 					cab_knob_hack10
 				]
 			}
 			{
-				part = cas_bass_bridges
+				part = CAS_Bass_Bridges
 				valid = [
-					cab_bridge_bb2a
-					cab_bridge_bb1a
-					cab_bridge_bb3a
-					cab_bridge_mls
-					cab_bridge_hack
+					CAB_Bridge_BB2A
+					CAB_Bridge_BB1A
+					CAB_Bridge_BB3A
+					CAB_Bridge_MLS
+					CAB_Bridge_Hack
 				]
 			}
 			{
-				part = cas_bass_head
+				part = CAS_Bass_Head
 				valid = [
-					cab_head_guppy
-					cab_head_predikt
-					cab_head_skull
-					cab_head_radex
-					cab_head_flay_rev
-					cab_head_mnemonic
-					cab_head_foots01
-					cab_head_bh5a
-					cab_head_bhphnq01
-					cab_head_mlsplit
-					cab_head_grumbel01
-					cab_head_bh4a
-					cab_head_bh6a
-					cab_head_bh6b
-					cab_head_bh7a
-					cab_head_bh1a
-					cab_head_sixtease
-					cab_head_foots01
+					CAB_Head_Guppy
+					CAB_Head_Predikt
+					CAB_Head_Skull
+					CAB_Head_RadEx
+					CAB_Head_Flay_rev
+					CAB_Head_Mnemonic
+					CAB_Head_Foots01
+					CAB_Head_BH5A
+					CAB_Head_BHPhnq01
+					CAB_Head_MLSplit
+					CAB_Head_Grumbel01
+					CAB_Head_BH4A
+					CAB_Head_BH6A
+					CAB_Head_BH6B
+					CAB_Head_BH7A
+					CAB_Head_BH1A
+					CAB_Head_SixTease
+					CAB_Head_Foots01
 				]
 			}
 		]
 	}
 	{
-		desc_id = cab_bodyfoots01
-		frontend_desc = qs(0xa4da62d3)
+		desc_id = CAB_BodyFoots01
+		frontend_desc = qs("\LThe Footsie!")
 		locked
 		price = 2000
-		polaroid = bass_rward_body_footsie
+		polaroid = Bass_Rward_Body_Footsie
 		mesh = 'models/CAR_Instruments/Bass/CAB_BodyFoots01.skin'
 		pak_num = 1
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
-				material = cab_bodyfoots01_primary
-				mask = $cab_bodyfoots01_finishes
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
+				material = CAB_BodyFoots01_Primary
+				mask = $CAB_BodyFoots01_Finishes
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_footsy01_d_mls.dds'
 				pre_userlayer
 				diffuse
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x7f5a5c11)
-				material = cab_bodyfoots01_primary
-				mask = $cab_bodyfoots01_details
+				desc_id = Details
+				frontend_desc = qs("Details")
+				material = CAB_BodyFoots01_Primary
+				mask = $CAB_BodyFoots01_Details
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_footsy01_d_mls.dds'
 				pre_userlayer
 				diffuse
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_footsy01_d_mls.dds'
-				material = cab_bodyfoots01_primary
+				material = CAB_BodyFoots01_Primary
 				mask = $car_basic_primitives_1
 				initial_values = {
 					x_trans = -25
@@ -2841,9 +2841,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_footsy01_d_mls.dds'
-				material = cab_bodyfoots01_primary
+				material = CAB_BodyFoots01_Primary
 				mask = $car_basic_primitives_2
 				initial_values = {
 					x_trans = -25
@@ -2855,9 +2855,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_footsy01_d_mls.dds'
-				material = cab_bodyfoots01_primary
+				material = CAB_BodyFoots01_Primary
 				mask = $car_gradiant_shapes
 				initial_values = {
 					x_trans = -25
@@ -2869,9 +2869,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_footsy01_d_mls.dds'
-				material = cab_bodyfoots01_primary
+				material = CAB_BodyFoots01_Primary
 				mask = $car_icons
 				initial_values = {
 					x_trans = -25
@@ -2883,9 +2883,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_footsy01_d_mls.dds'
-				material = cab_bodyfoots01_primary
+				material = CAB_BodyFoots01_Primary
 				mask = $car_living_shapes
 				initial_values = {
 					x_trans = -25
@@ -2897,9 +2897,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_footsy01_d_mls.dds'
-				material = cab_bodyfoots01_primary
+				material = CAB_BodyFoots01_Primary
 				mask = $car_graphics
 				initial_values = {
 					x_trans = -25
@@ -2911,9 +2911,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_footsy01_d_mls.dds'
-				material = cab_bodyfoots01_primary
+				material = CAB_BodyFoots01_Primary
 				mask = $car_sponsors
 				initial_values = {
 					x_trans = -25
@@ -2924,10 +2924,10 @@ cas_bass_body = [
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_footsy01_d_mls.dds'
-				material = cab_bodyfoots01_primary
+				material = CAB_BodyFoots01_Primary
 				mask = $car_fontgrid_title_a1
 				initial_values = {
 					x_trans = -25
@@ -2938,10 +2938,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_footsy01_d_mls.dds'
-				material = cab_bodyfoots01_primary
+				material = CAB_BodyFoots01_Primary
 				mask = $car_fontgrid_text_a3
 				initial_values = {
 					x_trans = -25
@@ -2952,10 +2952,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_footsy01_d_mls.dds'
-				material = cab_bodyfoots01_primary
+				material = CAB_BodyFoots01_Primary
 				mask = $car_fontgrid_text_a6
 				initial_values = {
 					x_trans = -25
@@ -2966,10 +2966,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_footsy01_d_mls.dds'
-				material = cab_bodyfoots01_primary
+				material = CAB_BodyFoots01_Primary
 				mask = $car_fontgrid_text_a8
 				initial_values = {
 					x_trans = -25
@@ -2982,51 +2982,51 @@ cas_bass_body = [
 		]
 		inclusion = [
 			{
-				part = cas_bass_neck
+				part = CAS_Bass_Neck
 				valid = [
-					cab_stnek_bnst01
-					cab_stnek_maple
-					cab_stnek_ebony
-					cab_stnekf_rosewood
-					cab_stnekf_maple
-					cab_stnekf_ebony
+					CAB_StNek_BNSt01
+					CAB_StNek_Maple
+					CAB_StNek_Ebony
+					CAB_StNekF_Rosewood
+					CAB_StNekF_Maple
+					CAB_StNekF_Ebony
 				]
 			}
 			{
-				part = cas_bass_pickguards
+				part = CAS_Bass_Pickguards
 				valid = [
-					None
-					cab_pgrdfts001
-					cab_pgrdftsb
-					cab_pgrdftsc
+					none
+					CAB_PGrdFts001
+					CAB_PGrdFtsB
+					CAB_PGrdFtsC
 				]
 			}
 			{
-				part = cas_bass_pickups
+				part = CAS_Bass_Pickups
 				valid = [
-					cab_pickups_emg01
-					cab_pickups_emg02
-					cab_pickups_emg03
-					cab_pickup_hack03
-					cab_pickup_hack02
-					cab_pickup_hack01
-					cab_pickups_bp1a
-					cab_pickups_bp1a2
-					cab_pickups_bp1a3
-					cab_jbass_pickup_01
-					cab_jp_pickup_b
-					cab_pbass_pickup_a
-					cab_jp_pickup_a
-					cab_bumbl_pickup_a1
-					cab_bumbl_pickup_a2
-					cab_bumbl_pickup_a3
-					cab_hbuck_pickup_a1
-					cab_hbuck_pickup_a2
-					cab_hbuck_pickup_a3
+					CAB_pickups_EMG01
+					CAB_pickups_EMG02
+					CAB_pickups_EMG03
+					CAB_pickup_Hack03
+					CAB_pickup_Hack02
+					CAB_pickup_Hack01
+					CAB_Pickups_BP1A
+					CAB_Pickups_BP1A2
+					CAB_Pickups_BP1A3
+					CAB_Jbass_pickup_01
+					CAB_JP_Pickup_B
+					CAB_PBass_Pickup_A
+					CAB_JP_Pickup_A
+					CAB_Bumbl_pickup_A1
+					CAB_Bumbl_pickup_A2
+					CAB_Bumbl_pickup_A3
+					CAB_HBuck_pickup_A1
+					CAB_HBuck_pickup_A2
+					CAB_HBuck_pickup_A3
 				]
 			}
 			{
-				part = cas_bass_knobs
+				part = CAS_Bass_Knobs
 				valid = [
 					cab_knob_foots01
 					cab_knob_foots02
@@ -3041,71 +3041,71 @@ cas_bass_body = [
 				]
 			}
 			{
-				part = cas_bass_head
+				part = CAS_Bass_Head
 				valid = [
-					cab_head_predikt
-					cab_head_skull
-					cab_head_radex
-					cab_head_flay_rev
-					cab_head_mnemonic
-					cab_head_foots01
-					cab_head_bh5a
-					cab_head_bhphnq01
-					cab_head_mlsplit
-					cab_head_grumbel01
-					cab_head_bh4a
-					cab_head_bh6a
-					cab_head_bh6b
-					cab_head_bh7a
-					cab_head_bh1a
-					cab_head_sixtease
-					cab_head_foots01
+					CAB_Head_Predikt
+					CAB_Head_Skull
+					CAB_Head_RadEx
+					CAB_Head_Flay_rev
+					CAB_Head_Mnemonic
+					CAB_Head_Foots01
+					CAB_Head_BH5A
+					CAB_Head_BHPhnq01
+					CAB_Head_MLSplit
+					CAB_Head_Grumbel01
+					CAB_Head_BH4A
+					CAB_Head_BH6A
+					CAB_Head_BH6B
+					CAB_Head_BH7A
+					CAB_Head_BH1A
+					CAB_Head_SixTease
+					CAB_Head_Foots01
 				]
 			}
 			{
-				part = cas_bass_bridges
+				part = CAS_Bass_Bridges
 				valid = [
-					cab_bridge_bb2a
-					cab_bridge_bb1a
-					cab_bridge_bb3a
-					cab_bridge_mls
-					cab_bridge_hack
+					CAB_Bridge_BB2A
+					CAB_Bridge_BB1A
+					CAB_Bridge_BB3A
+					CAB_Bridge_MLS
+					CAB_Bridge_Hack
 				]
 			}
 		]
 	}
 	{
-		desc_id = cab_body_laurenz_bba
-		frontend_desc = qs(0xde190591)
+		desc_id = CAB_Body_Laurenz_BBA
+		frontend_desc = qs("\LLaurenz Spyter 3")
 		mesh = 'models/CAR_Instruments/Bass/CAB_Body_Laurenz_BBA.skin'
 		locked
 		price = 3000
-		polaroid = bass_rward_body_spyter
+		polaroid = Bass_Rward_Body_SPYTER
 		pak_num = 1
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
-				material = cab_body_laurenz_bba_primary
-				mask = $cab_body_laurenz_bba_finishes
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
+				material = CAB_Body_Laurenz_BBA_Primary
+				mask = $CAB_Body_Laurenz_BBA_Finishes
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_spyter02_d_mls.dds'
 				pre_userlayer
 				diffuse
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x7f5a5c11)
-				material = cab_body_laurenz_bba_primary
-				mask = $cab_body_laurenz_bba_details
+				desc_id = Details
+				frontend_desc = qs("Details")
+				material = CAB_Body_Laurenz_BBA_Primary
+				mask = $CAB_Body_Laurenz_BBA_Details
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_spyter02_d_mls.dds'
 				pre_userlayer
 				diffuse
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_spyter02_D_mls.dds'
-				material = cab_body_laurenz_bba_primary
+				material = CAB_Body_Laurenz_BBA_Primary
 				mask = $car_basic_primitives_1
 				initial_values = {
 					x_trans = -17
@@ -3116,9 +3116,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_spyter02_D_mls.dds'
-				material = cab_body_laurenz_bba_primary
+				material = CAB_Body_Laurenz_BBA_Primary
 				mask = $car_basic_primitives_2
 				initial_values = {
 					x_trans = -17
@@ -3129,9 +3129,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_spyter02_D_mls.dds'
-				material = cab_body_laurenz_bba_primary
+				material = CAB_Body_Laurenz_BBA_Primary
 				mask = $car_gradiant_shapes
 				initial_values = {
 					x_trans = -17
@@ -3142,9 +3142,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_spyter02_D_mls.dds'
-				material = cab_body_laurenz_bba_primary
+				material = CAB_Body_Laurenz_BBA_Primary
 				mask = $car_icons
 				initial_values = {
 					x_trans = -17
@@ -3155,9 +3155,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_spyter02_D_mls.dds'
-				material = cab_body_laurenz_bba_primary
+				material = CAB_Body_Laurenz_BBA_Primary
 				mask = $car_living_shapes
 				initial_values = {
 					x_trans = -17
@@ -3168,9 +3168,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_spyter02_D_mls.dds'
-				material = cab_body_laurenz_bba_primary
+				material = CAB_Body_Laurenz_BBA_Primary
 				mask = $car_graphics
 				initial_values = {
 					x_trans = -17
@@ -3181,9 +3181,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_spyter02_D_mls.dds'
-				material = cab_body_laurenz_bba_primary
+				material = CAB_Body_Laurenz_BBA_Primary
 				mask = $car_sponsors
 				initial_values = {
 					x_trans = -17
@@ -3193,10 +3193,10 @@ cas_bass_body = [
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_spyter02_D_mls.dds'
-				material = cab_body_laurenz_bba_primary
+				material = CAB_Body_Laurenz_BBA_Primary
 				mask = $car_fontgrid_title_a1
 				initial_values = {
 					x_trans = -17
@@ -3206,10 +3206,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_spyter02_D_mls.dds'
-				material = cab_body_laurenz_bba_primary
+				material = CAB_Body_Laurenz_BBA_Primary
 				mask = $car_fontgrid_text_a3
 				initial_values = {
 					x_trans = -17
@@ -3219,10 +3219,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_spyter02_D_mls.dds'
-				material = cab_body_laurenz_bba_primary
+				material = CAB_Body_Laurenz_BBA_Primary
 				mask = $car_fontgrid_text_a6
 				initial_values = {
 					x_trans = -17
@@ -3232,10 +3232,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_spyter02_D_mls.dds'
-				material = cab_body_laurenz_bba_primary
+				material = CAB_Body_Laurenz_BBA_Primary
 				mask = $car_fontgrid_text_a8
 				initial_values = {
 					x_trans = -17
@@ -3247,52 +3247,52 @@ cas_bass_body = [
 		]
 		inclusion = [
 			{
-				part = cas_bass_neck
+				part = CAS_Bass_Neck
 				valid = [
-					cab_neck_bn1a
-					cab_neck_bn1b
-					cab_neck_bnebony
-					cab_neck_bfretlss01
-					cab_neck_bfretlss02
-					cab_neck_bfretlss03
+					CAB_Neck_BN1A
+					CAB_Neck_BN1B
+					CAB_Neck_BNEbony
+					CAB_Neck_BFretlss01
+					CAB_Neck_BFretlss02
+					CAB_Neck_BFretlss03
 				]
 			}
 			{
-				part = cas_bass_pickguards
+				part = CAS_Bass_Pickguards
 				valid = [
-					None
-					cab_pg_spyt001
-					cab_pg_spyt002
-					cab_pg_spyt003
-					cab_pg_spyt004
+					none
+					CAB_PG_Spyt001
+					CAB_PG_Spyt002
+					CAB_PG_Spyt003
+					CAB_PG_Spyt004
 				]
 			}
 			{
-				part = cas_bass_pickups
+				part = CAS_Bass_Pickups
 				valid = [
-					cab_pickups_emg01
-					cab_pickups_emg02
-					cab_pickups_emg03
-					cab_pickup_hack03
-					cab_pickup_hack02
-					cab_pickup_hack01
-					cab_pickups_bp1a
-					cab_pickups_bp1a2
-					cab_pickups_bp1a3
-					cab_jbass_pickup_01
-					cab_jp_pickup_b
-					cab_pbass_pickup_a
-					cab_jp_pickup_a
-					cab_bumbl_pickup_a1
-					cab_bumbl_pickup_a2
-					cab_bumbl_pickup_a3
-					cab_hbuck_pickup_a1
-					cab_hbuck_pickup_a2
-					cab_hbuck_pickup_a3
+					CAB_pickups_EMG01
+					CAB_pickups_EMG02
+					CAB_pickups_EMG03
+					CAB_pickup_Hack03
+					CAB_pickup_Hack02
+					CAB_pickup_Hack01
+					CAB_Pickups_BP1A
+					CAB_Pickups_BP1A2
+					CAB_Pickups_BP1A3
+					CAB_Jbass_pickup_01
+					CAB_JP_Pickup_B
+					CAB_PBass_Pickup_A
+					CAB_JP_Pickup_A
+					CAB_Bumbl_pickup_A1
+					CAB_Bumbl_pickup_A2
+					CAB_Bumbl_pickup_A3
+					CAB_HBuck_pickup_A1
+					CAB_HBuck_pickup_A2
+					CAB_HBuck_pickup_A3
 				]
 			}
 			{
-				part = cas_bass_knobs
+				part = CAS_Bass_Knobs
 				valid = [
 					cab_knob_spyt01
 					cab_knob_spyt02
@@ -3307,70 +3307,70 @@ cas_bass_body = [
 				]
 			}
 			{
-				part = cas_bass_head
+				part = CAS_Bass_Head
 				valid = [
-					cab_head_predikt
-					cab_head_skull
-					cab_head_radex
-					cab_head_flay_rev
-					cab_head_mnemonic
-					cab_head_foots01
-					cab_head_bh5a
-					cab_head_bhphnq01
-					cab_head_mlsplit
-					cab_head_grumbel01
-					cab_head_bh4a
-					cab_head_bh6a
-					cab_head_bh6b
-					cab_head_bh7a
-					cab_head_bh1a
-					cab_head_sixtease
-					cab_head_foots01
+					CAB_Head_Predikt
+					CAB_Head_Skull
+					CAB_Head_RadEx
+					CAB_Head_Flay_rev
+					CAB_Head_Mnemonic
+					CAB_Head_Foots01
+					CAB_Head_BH5A
+					CAB_Head_BHPhnq01
+					CAB_Head_MLSplit
+					CAB_Head_Grumbel01
+					CAB_Head_BH4A
+					CAB_Head_BH6A
+					CAB_Head_BH6B
+					CAB_Head_BH7A
+					CAB_Head_BH1A
+					CAB_Head_SixTease
+					CAB_Head_Foots01
 				]
 			}
 			{
-				part = cas_bass_bridges
+				part = CAS_Bass_Bridges
 				valid = [
-					cab_bridge_bb2a
-					cab_bridge_bb1a
-					cab_bridge_bb3a
-					cab_bridge_mls
+					CAB_Bridge_BB2A
+					CAB_Bridge_BB1A
+					CAB_Bridge_BB3A
+					CAB_Bridge_MLS
 				]
 			}
 		]
 	}
 	{
-		desc_id = cab_skull
-		frontend_desc = qs(0x2a26573d)
+		desc_id = CAB_Skull
+		frontend_desc = qs("\LSkull")
 		mesh = 'models/CAR_Instruments/Bass/CAB_Skull.skin'
 		locked
 		price = 1500
-		polaroid = bass_rward_body_skull
+		polaroid = Bass_Rward_Body_Skull
 		pak_num = 2
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
-				material = cab_skull_primary
-				mask = $cab_skull_finishes
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
+				material = CAB_SKULL_Primary
+				mask = $CAB_Skull_finishes
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\cab_special_skull_01.dds'
 				pre_userlayer
 				diffuse
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x7f5a5c11)
+				desc_id = Details
+				frontend_desc = qs("Details")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\cab_special_skull_01.dds'
-				material = cab_skull_primary
-				mask = $cab_skull_details
+				material = CAB_SKULL_Primary
+				mask = $CAB_Skull_Details
 				pre_userlayer
 				diffuse
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_special_skull_01.dds'
-				material = cab_skull_primary
+				material = CAB_SKULL_Primary
 				mask = $car_basic_primitives_1
 				initial_values = {
 					y_trans = 9
@@ -3383,9 +3383,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_special_skull_01.dds'
-				material = cab_skull_primary
+				material = CAB_SKULL_Primary
 				mask = $car_basic_primitives_2
 				initial_values = {
 					y_trans = 9
@@ -3398,9 +3398,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_special_skull_01.dds'
-				material = cab_skull_primary
+				material = CAB_SKULL_Primary
 				mask = $car_gradiant_shapes
 				initial_values = {
 					y_trans = 9
@@ -3413,9 +3413,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_special_skull_01.dds'
-				material = cab_skull_primary
+				material = CAB_SKULL_Primary
 				mask = $car_icons
 				initial_values = {
 					y_trans = 9
@@ -3428,9 +3428,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_special_skull_01.dds'
-				material = cab_skull_primary
+				material = CAB_SKULL_Primary
 				mask = $car_living_shapes
 				initial_values = {
 					y_trans = 9
@@ -3443,9 +3443,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_special_skull_01.dds'
-				material = cab_skull_primary
+				material = CAB_SKULL_Primary
 				mask = $car_graphics
 				initial_values = {
 					y_trans = 9
@@ -3458,9 +3458,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_special_skull_01.dds'
-				material = cab_skull_primary
+				material = CAB_SKULL_Primary
 				mask = $car_sponsors
 				initial_values = {
 					y_trans = 9
@@ -3472,10 +3472,10 @@ cas_bass_body = [
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_special_skull_01.dds'
-				material = cab_skull_primary
+				material = CAB_SKULL_Primary
 				mask = $car_fontgrid_title_a1
 				initial_values = {
 					y_trans = 9
@@ -3487,10 +3487,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_special_skull_01.dds'
-				material = cab_skull_primary
+				material = CAB_SKULL_Primary
 				mask = $car_fontgrid_text_a3
 				initial_values = {
 					y_trans = 9
@@ -3502,10 +3502,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_special_skull_01.dds'
-				material = cab_skull_primary
+				material = CAB_SKULL_Primary
 				mask = $car_fontgrid_text_a6
 				initial_values = {
 					y_trans = 9
@@ -3517,10 +3517,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_special_skull_01.dds'
-				material = cab_skull_primary
+				material = CAB_SKULL_Primary
 				mask = $car_fontgrid_text_a8
 				initial_values = {
 					y_trans = 9
@@ -3534,48 +3534,48 @@ cas_bass_body = [
 		]
 		inclusion = [
 			{
-				part = cas_bass_neck
+				part = CAS_Bass_Neck
 				valid = [
-					cab_neck_bn1a
-					cab_neck_bn1b
-					cab_neck_bnebony
-					cab_neck_bfretlss01
-					cab_neck_bfretlss02
-					cab_neck_bfretlss03
+					CAB_Neck_BN1A
+					CAB_Neck_BN1B
+					CAB_Neck_BNEbony
+					CAB_Neck_BFretlss01
+					CAB_Neck_BFretlss02
+					CAB_Neck_BFretlss03
 				]
 			}
 			{
-				part = cas_bass_pickguards
+				part = CAS_Bass_Pickguards
 				valid = [
-					None
+					none
 				]
 			}
 			{
-				part = cas_bass_pickups
+				part = CAS_Bass_Pickups
 				valid = [
-					cab_pickups_emg01
-					cab_pickups_emg02
-					cab_pickups_emg03
-					cab_pickup_hack03
-					cab_pickup_hack02
-					cab_pickup_hack01
-					cab_pickups_bp1a
-					cab_pickups_bp1a2
-					cab_pickups_bp1a3
-					cab_jbass_pickup_01
-					cab_jp_pickup_b
-					cab_pbass_pickup_a
-					cab_jp_pickup_a
-					cab_bumbl_pickup_a1
-					cab_bumbl_pickup_a2
-					cab_bumbl_pickup_a3
-					cab_hbuck_pickup_a1
-					cab_hbuck_pickup_a2
-					cab_hbuck_pickup_a3
+					CAB_pickups_EMG01
+					CAB_pickups_EMG02
+					CAB_pickups_EMG03
+					CAB_pickup_Hack03
+					CAB_pickup_Hack02
+					CAB_pickup_Hack01
+					CAB_Pickups_BP1A
+					CAB_Pickups_BP1A2
+					CAB_Pickups_BP1A3
+					CAB_Jbass_pickup_01
+					CAB_JP_Pickup_B
+					CAB_PBass_Pickup_A
+					CAB_JP_Pickup_A
+					CAB_Bumbl_pickup_A1
+					CAB_Bumbl_pickup_A2
+					CAB_Bumbl_pickup_A3
+					CAB_HBuck_pickup_A1
+					CAB_HBuck_pickup_A2
+					CAB_HBuck_pickup_A3
 				]
 			}
 			{
-				part = cas_bass_knobs
+				part = CAS_Bass_Knobs
 				valid = [
 					cab_knob_skull01
 					cab_knob_skull02
@@ -3590,68 +3590,68 @@ cas_bass_body = [
 				]
 			}
 			{
-				part = cas_bass_head
+				part = CAS_Bass_Head
 				valid = [
-					cab_head_predikt
-					cab_head_skull
-					cab_head_radex
-					cab_head_flay_rev
-					cab_head_mnemonic
-					cab_head_foots01
-					cab_head_bh5a
-					cab_head_bhphnq01
-					cab_head_mlsplit
-					cab_head_grumbel01
-					cab_head_bh4a
-					cab_head_bh6a
-					cab_head_bh6b
-					cab_head_bh7a
-					cab_head_bh1a
-					cab_head_sixtease
-					cab_head_foots01
+					CAB_Head_Predikt
+					CAB_Head_Skull
+					CAB_Head_RadEx
+					CAB_Head_Flay_rev
+					CAB_Head_Mnemonic
+					CAB_Head_Foots01
+					CAB_Head_BH5A
+					CAB_Head_BHPhnq01
+					CAB_Head_MLSplit
+					CAB_Head_Grumbel01
+					CAB_Head_BH4A
+					CAB_Head_BH6A
+					CAB_Head_BH6B
+					CAB_Head_BH7A
+					CAB_Head_BH1A
+					CAB_Head_SixTease
+					CAB_Head_Foots01
 				]
 			}
 			{
-				part = cas_bass_bridges
+				part = CAS_Bass_Bridges
 				valid = [
-					cab_bridge_bb2a
-					cab_bridge_bb1a
-					cab_bridge_bb3a
-					cab_bridge_mls
-					cab_bridge_hack
+					CAB_Bridge_BB2A
+					CAB_Bridge_BB1A
+					CAB_Bridge_BB3A
+					CAB_Bridge_MLS
+					CAB_Bridge_Hack
 				]
 			}
 		]
 	}
 	{
-		desc_id = cab_body_sixtease
-		frontend_desc = qs(0x687db4f9)
+		desc_id = CAB_Body_SixTease
+		frontend_desc = qs("\LMLS Six Tease")
 		mesh = 'models/CAR_Instruments/Bass/CAB_Body_SixTease.skin'
 		pak_num = 2
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
-				material = cab_body_sixtease_primary
-				mask = $cab_body_sixtease_finishes
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
+				material = CAB_Body_SixTease_Primary
+				mask = $CAB_Body_SixTease_Finishes
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_sixtease01_d_mls.dds'
 				pre_userlayer
 				diffuse
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x7f5a5c11)
-				material = cab_body_sixtease_primary
-				mask = $cab_body_sixtease_details
+				desc_id = Details
+				frontend_desc = qs("Details")
+				material = CAB_Body_SixTease_Primary
+				mask = $CAB_Body_SixTease_Details
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_sixtease01_d_mls.dds'
 				pre_userlayer
 				diffuse
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_SixTease01_D_mls.dds'
-				material = cab_body_sixtease_primary
+				material = CAB_Body_SixTease_Primary
 				mask = $car_basic_primitives_1
 				initial_values = {
 					y_trans = -1
@@ -3664,9 +3664,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_SixTease01_D_mls.dds'
-				material = cab_body_sixtease_primary
+				material = CAB_Body_SixTease_Primary
 				mask = $car_basic_primitives_2
 				initial_values = {
 					y_trans = -1
@@ -3679,9 +3679,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_SixTease01_D_mls.dds'
-				material = cab_body_sixtease_primary
+				material = CAB_Body_SixTease_Primary
 				mask = $car_gradiant_shapes
 				initial_values = {
 					y_trans = -1
@@ -3694,9 +3694,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_SixTease01_D_mls.dds'
-				material = cab_body_sixtease_primary
+				material = CAB_Body_SixTease_Primary
 				mask = $car_icons
 				initial_values = {
 					y_trans = -1
@@ -3709,9 +3709,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_SixTease01_D_mls.dds'
-				material = cab_body_sixtease_primary
+				material = CAB_Body_SixTease_Primary
 				mask = $car_living_shapes
 				initial_values = {
 					y_trans = -1
@@ -3724,9 +3724,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_SixTease01_D_mls.dds'
-				material = cab_body_sixtease_primary
+				material = CAB_Body_SixTease_Primary
 				mask = $car_graphics
 				initial_values = {
 					y_trans = -1
@@ -3739,9 +3739,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_SixTease01_D_mls.dds'
-				material = cab_body_sixtease_primary
+				material = CAB_Body_SixTease_Primary
 				mask = $car_sponsors
 				initial_values = {
 					y_trans = -1
@@ -3753,10 +3753,10 @@ cas_bass_body = [
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_SixTease01_D_mls.dds'
-				material = cab_body_sixtease_primary
+				material = CAB_Body_SixTease_Primary
 				mask = $car_fontgrid_title_a1
 				initial_values = {
 					y_trans = -1
@@ -3768,10 +3768,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_SixTease01_D_mls.dds'
-				material = cab_body_sixtease_primary
+				material = CAB_Body_SixTease_Primary
 				mask = $car_fontgrid_text_a3
 				initial_values = {
 					y_trans = -1
@@ -3783,10 +3783,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_SixTease01_D_mls.dds'
-				material = cab_body_sixtease_primary
+				material = CAB_Body_SixTease_Primary
 				mask = $car_fontgrid_text_a6
 				initial_values = {
 					y_trans = -1
@@ -3798,10 +3798,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_SixTease01_D_mls.dds'
-				material = cab_body_sixtease_primary
+				material = CAB_Body_SixTease_Primary
 				mask = $car_fontgrid_text_a8
 				initial_values = {
 					y_trans = -1
@@ -3815,51 +3815,51 @@ cas_bass_body = [
 		]
 		inclusion = [
 			{
-				part = cas_bass_neck
+				part = CAS_Bass_Neck
 				valid = [
-					cab_neck_bn1a
-					cab_neck_bn1b
-					cab_neck_bnebony
-					cab_neck_bfretlss01
-					cab_neck_bfretlss02
-					cab_neck_bfretlss03
+					CAB_Neck_BN1A
+					CAB_Neck_BN1B
+					CAB_Neck_BNEbony
+					CAB_Neck_BFretlss01
+					CAB_Neck_BFretlss02
+					CAB_Neck_BFretlss03
 				]
 			}
 			{
-				part = cas_bass_pickguards
+				part = CAS_Bass_Pickguards
 				valid = [
-					None
-					cab_pg_6tz001
-					cab_pg_6tz002
-					cab_pg_6tz004
+					none
+					CAB_PG_6TZ001
+					CAB_PG_6TZ002
+					CAB_PG_6TZ004
 				]
 			}
 			{
-				part = cas_bass_pickups
+				part = CAS_Bass_Pickups
 				valid = [
-					cab_pickups_emg01
-					cab_pickups_emg02
-					cab_pickups_emg03
-					cab_pickup_hack03
-					cab_pickup_hack02
-					cab_pickup_hack01
-					cab_pickups_bp1a
-					cab_pickups_bp1a2
-					cab_pickups_bp1a3
-					cab_jbass_pickup_01
-					cab_jp_pickup_b
-					cab_pbass_pickup_a
-					cab_jp_pickup_a
-					cab_bumbl_pickup_a1
-					cab_bumbl_pickup_a2
-					cab_bumbl_pickup_a3
-					cab_hbuck_pickup_a1
-					cab_hbuck_pickup_a2
-					cab_hbuck_pickup_a3
+					CAB_pickups_EMG01
+					CAB_pickups_EMG02
+					CAB_pickups_EMG03
+					CAB_pickup_Hack03
+					CAB_pickup_Hack02
+					CAB_pickup_Hack01
+					CAB_Pickups_BP1A
+					CAB_Pickups_BP1A2
+					CAB_Pickups_BP1A3
+					CAB_Jbass_pickup_01
+					CAB_JP_Pickup_B
+					CAB_PBass_Pickup_A
+					CAB_JP_Pickup_A
+					CAB_Bumbl_pickup_A1
+					CAB_Bumbl_pickup_A2
+					CAB_Bumbl_pickup_A3
+					CAB_HBuck_pickup_A1
+					CAB_HBuck_pickup_A2
+					CAB_HBuck_pickup_A3
 				]
 			}
 			{
-				part = cas_bass_knobs
+				part = CAS_Bass_Knobs
 				valid = [
 					cab_knobs_6tz01
 					cab_knobs_6tz02
@@ -3870,75 +3870,75 @@ cas_bass_body = [
 					cab_knobs_6tz07
 					cab_knobs_6tz08
 					cab_knobs_6tz09
-					cab_knobs_6tz10
+					CAB_Knobs_6TZ10
 				]
 			}
 			{
-				part = cas_bass_head
+				part = CAS_Bass_Head
 				valid = [
-					cab_head_predikt
-					cab_head_skull
-					cab_head_radex
-					cab_head_flay_rev
-					cab_head_mnemonic
-					cab_head_foots01
-					cab_head_bh5a
-					cab_head_bhphnq01
-					cab_head_mlsplit
-					cab_head_grumbel01
-					cab_head_bh4a
-					cab_head_bh6a
-					cab_head_bh6b
-					cab_head_bh7a
-					cab_head_bh1a
-					cab_head_sixtease
-					cab_head_foots01
+					CAB_Head_Predikt
+					CAB_Head_Skull
+					CAB_Head_RadEx
+					CAB_Head_Flay_rev
+					CAB_Head_Mnemonic
+					CAB_Head_Foots01
+					CAB_Head_BH5A
+					CAB_Head_BHPhnq01
+					CAB_Head_MLSplit
+					CAB_Head_Grumbel01
+					CAB_Head_BH4A
+					CAB_Head_BH6A
+					CAB_Head_BH6B
+					CAB_Head_BH7A
+					CAB_Head_BH1A
+					CAB_Head_SixTease
+					CAB_Head_Foots01
 				]
 			}
 			{
-				part = cas_bass_bridges
+				part = CAS_Bass_Bridges
 				valid = [
-					cab_bridge_bb2a
-					cab_bridge_bb1a
-					cab_bridge_bb3a
-					cab_bridge_mls
-					cab_bridge_hack
+					CAB_Bridge_BB2A
+					CAB_Bridge_BB1A
+					CAB_Bridge_BB3A
+					CAB_Bridge_MLS
+					CAB_Bridge_Hack
 				]
 			}
 		]
 	}
 	{
-		desc_id = cab_body_xrend01
-		frontend_desc = qs(0x841dc6fa)
+		desc_id = CAB_Body_XRend01
+		frontend_desc = qs("\LLaurenz X-Rend")
 		mesh = 'models/CAR_Instruments/Bass/CAB_Body_XRend01.skin'
 		locked
 		price = 2000
-		polaroid = bass_rward_body_xrend
+		polaroid = Bass_Rward_Body_XREND
 		pak_num = 2
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
-				material = cab_body_xrend01_primary
-				mask = $cab_body_xrend01_finishes
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
+				material = CAB_Body_XRend01_Primary
+				mask = $CAB_Body_XRend01_Finishes
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_xrend01_d_mls.dds'
 				pre_userlayer
 				diffuse
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x7f5a5c11)
-				material = cab_body_xrend01_primary
-				mask = $cab_body_xrend01_details
+				desc_id = Details
+				frontend_desc = qs("Details")
+				material = CAB_Body_XRend01_Primary
+				mask = $CAB_Body_xrend01_Details
 				base_tex = 'tex\\models\\CAR_Instruments\\Bass\\cab_body_xrend01_d_mls.dds'
 				pre_userlayer
 				diffuse
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_xrend01_d_mls.dds'
-				material = cab_body_xrend01_primary
+				material = CAB_Body_XRend01_Primary
 				mask = $car_basic_primitives_1
 				initial_values = {
 					x_scale = 35
@@ -3950,9 +3950,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_xrend01_d_mls.dds'
-				material = cab_body_xrend01_primary
+				material = CAB_Body_XRend01_Primary
 				mask = $car_basic_primitives_2
 				initial_values = {
 					x_scale = 35
@@ -3964,9 +3964,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_xrend01_d_mls.dds'
-				material = cab_body_xrend01_primary
+				material = CAB_Body_XRend01_Primary
 				mask = $car_gradiant_shapes
 				initial_values = {
 					x_scale = 35
@@ -3978,9 +3978,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_xrend01_d_mls.dds'
-				material = cab_body_xrend01_primary
+				material = CAB_Body_XRend01_Primary
 				mask = $car_icons
 				initial_values = {
 					x_scale = 35
@@ -3992,9 +3992,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_xrend01_d_mls.dds'
-				material = cab_body_xrend01_primary
+				material = CAB_Body_XRend01_Primary
 				mask = $car_living_shapes
 				initial_values = {
 					x_scale = 35
@@ -4006,9 +4006,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_xrend01_d_mls.dds'
-				material = cab_body_xrend01_primary
+				material = CAB_Body_XRend01_Primary
 				mask = $car_graphics
 				initial_values = {
 					x_scale = 35
@@ -4020,9 +4020,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_xrend01_d_mls.dds'
-				material = cab_body_xrend01_primary
+				material = CAB_Body_XRend01_Primary
 				mask = $car_sponsors
 				initial_values = {
 					x_scale = 35
@@ -4033,10 +4033,10 @@ cas_bass_body = [
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_xrend01_d_mls.dds'
-				material = cab_body_xrend01_primary
+				material = CAB_Body_XRend01_Primary
 				mask = $car_fontgrid_title_a1
 				initial_values = {
 					x_scale = 35
@@ -4047,10 +4047,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_xrend01_d_mls.dds'
-				material = cab_body_xrend01_primary
+				material = CAB_Body_XRend01_Primary
 				mask = $car_fontgrid_text_a3
 				initial_values = {
 					x_scale = 35
@@ -4061,10 +4061,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_xrend01_d_mls.dds'
-				material = cab_body_xrend01_primary
+				material = CAB_Body_XRend01_Primary
 				mask = $car_fontgrid_text_a6
 				initial_values = {
 					x_scale = 35
@@ -4075,10 +4075,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\Cab_Body_xrend01_d_mls.dds'
-				material = cab_body_xrend01_primary
+				material = CAB_Body_XRend01_Primary
 				mask = $car_fontgrid_text_a8
 				initial_values = {
 					x_scale = 35
@@ -4091,51 +4091,51 @@ cas_bass_body = [
 		]
 		inclusion = [
 			{
-				part = cas_bass_neck
+				part = CAS_Bass_Neck
 				valid = [
-					cab_neck_bn1a
-					cab_neck_bn1b
-					cab_neck_bnebony
-					cab_neck_bfretlss01
-					cab_neck_bfretlss02
-					cab_neck_bfretlss03
+					CAB_Neck_BN1A
+					CAB_Neck_BN1B
+					CAB_Neck_BNEbony
+					CAB_Neck_BFretlss01
+					CAB_Neck_BFretlss02
+					CAB_Neck_BFretlss03
 				]
 			}
 			{
-				part = cas_bass_pickguards
+				part = CAS_Bass_Pickguards
 				valid = [
-					None
-					cab_pg_xrend003
-					cab_pg_xrend002
-					cab_pg_xrend001
+					none
+					CAB_PG_Xrend003
+					CAB_PG_Xrend002
+					CAB_PG_Xrend001
 				]
 			}
 			{
-				part = cas_bass_pickups
+				part = CAS_Bass_Pickups
 				valid = [
-					cab_pickups_emg01
-					cab_pickups_emg02
-					cab_pickups_emg03
-					cab_pickup_hack03
-					cab_pickup_hack02
-					cab_pickup_hack01
-					cab_pickups_bp1a
-					cab_pickups_bp1a2
-					cab_pickups_bp1a3
-					cab_jbass_pickup_01
-					cab_jp_pickup_b
-					cab_pbass_pickup_a
-					cab_jp_pickup_a
-					cab_bumbl_pickup_a1
-					cab_bumbl_pickup_a2
-					cab_bumbl_pickup_a3
-					cab_hbuck_pickup_a1
-					cab_hbuck_pickup_a2
-					cab_hbuck_pickup_a3
+					CAB_pickups_EMG01
+					CAB_pickups_EMG02
+					CAB_pickups_EMG03
+					CAB_pickup_Hack03
+					CAB_pickup_Hack02
+					CAB_pickup_Hack01
+					CAB_Pickups_BP1A
+					CAB_Pickups_BP1A2
+					CAB_Pickups_BP1A3
+					CAB_Jbass_pickup_01
+					CAB_JP_Pickup_B
+					CAB_PBass_Pickup_A
+					CAB_JP_Pickup_A
+					CAB_Bumbl_pickup_A1
+					CAB_Bumbl_pickup_A2
+					CAB_Bumbl_pickup_A3
+					CAB_HBuck_pickup_A1
+					CAB_HBuck_pickup_A2
+					CAB_HBuck_pickup_A3
 				]
 			}
 			{
-				part = cas_bass_knobs
+				part = CAS_Bass_Knobs
 				valid = [
 					cab_knob_xrend01
 					cab_knob_xrend02
@@ -4150,70 +4150,70 @@ cas_bass_body = [
 				]
 			}
 			{
-				part = cas_bass_head
+				part = CAS_Bass_Head
 				valid = [
-					cab_head_predikt
-					cab_head_skull
-					cab_head_radex
-					cab_head_flay_rev
-					cab_head_mnemonic
-					cab_head_foots01
-					cab_head_bh5a
-					cab_head_bhphnq01
-					cab_head_mlsplit
-					cab_head_grumbel01
-					cab_head_bh4a
-					cab_head_bh6a
-					cab_head_bh6b
-					cab_head_bh7a
-					cab_head_bh1a
-					cab_head_sixtease
-					cab_head_foots01
+					CAB_Head_Predikt
+					CAB_Head_Skull
+					CAB_Head_RadEx
+					CAB_Head_Flay_rev
+					CAB_Head_Mnemonic
+					CAB_Head_Foots01
+					CAB_Head_BH5A
+					CAB_Head_BHPhnq01
+					CAB_Head_MLSplit
+					CAB_Head_Grumbel01
+					CAB_Head_BH4A
+					CAB_Head_BH6A
+					CAB_Head_BH6B
+					CAB_Head_BH7A
+					CAB_Head_BH1A
+					CAB_Head_SixTease
+					CAB_Head_Foots01
 				]
 			}
 			{
-				part = cas_bass_bridges
+				part = CAS_Bass_Bridges
 				valid = [
-					cab_bridge_bb2a
-					cab_bridge_bb1a
-					cab_bridge_bb3a
-					cab_bridge_mls
+					CAB_Bridge_BB2A
+					CAB_Bridge_BB1A
+					CAB_Bridge_BB3A
+					CAB_Bridge_MLS
 				]
 			}
 		]
 	}
 	{
-		desc_id = cab_body_x_battleaxe
-		frontend_desc = qs(0x37173988)
+		desc_id = CAB_Body_X_Battleaxe
+		frontend_desc = qs("\LBattle Bass")
 		mesh = 'models/CAR_Instruments/Bass/CAB_X_Battleaxe.skin'
 		locked
 		price = 2000
-		polaroid = bass_rward_body_batlax
+		polaroid = Bass_Rward_Body_BatlAx
 		pak_num = 2
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
-				material = gtr_body_x_battleaxe_primary
-				mask = $cab_body_battleaxe_finishes
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
+				material = GTR_Body_X_Battleaxe_Primary
+				mask = $CAB_Body_Battleaxe_Finishes
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\guitar_special_battle_axe_d_05.dds'
 				pre_userlayer
 				diffuse
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x7f5a5c11)
+				desc_id = Details
+				frontend_desc = qs("Details")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\guitar_special_battle_axe_d_05.dds'
-				material = gtr_body_x_battleaxe_primary
-				mask = $cab_body_battleaxe_details
+				material = GTR_Body_X_Battleaxe_Primary
+				mask = $CAB_Body_Battleaxe_Details
 				pre_userlayer
 				diffuse
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\guitar_special_battle_axe_d_05.dds'
-				material = gtr_body_x_battleaxe_primary
+				material = GTR_Body_X_Battleaxe_Primary
 				mask = $car_basic_primitives_1
 				initial_values = {
 					x_trans = -12
@@ -4226,9 +4226,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\guitar_special_battle_axe_d_05.dds'
-				material = gtr_body_x_battleaxe_primary
+				material = GTR_Body_X_Battleaxe_Primary
 				mask = $car_basic_primitives_2
 				initial_values = {
 					x_trans = -12
@@ -4241,9 +4241,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\guitar_special_battle_axe_d_05.dds'
-				material = gtr_body_x_battleaxe_primary
+				material = GTR_Body_X_Battleaxe_Primary
 				mask = $car_gradiant_shapes
 				initial_values = {
 					x_trans = -12
@@ -4256,9 +4256,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\guitar_special_battle_axe_d_05.dds'
-				material = gtr_body_x_battleaxe_primary
+				material = GTR_Body_X_Battleaxe_Primary
 				mask = $car_icons
 				initial_values = {
 					x_trans = -12
@@ -4271,9 +4271,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\guitar_special_battle_axe_d_05.dds'
-				material = gtr_body_x_battleaxe_primary
+				material = GTR_Body_X_Battleaxe_Primary
 				mask = $car_living_shapes
 				initial_values = {
 					x_trans = -12
@@ -4286,9 +4286,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\guitar_special_battle_axe_d_05.dds'
-				material = gtr_body_x_battleaxe_primary
+				material = GTR_Body_X_Battleaxe_Primary
 				mask = $car_graphics
 				initial_values = {
 					x_trans = -12
@@ -4301,9 +4301,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\guitar_special_battle_axe_d_05.dds'
-				material = gtr_body_x_battleaxe_primary
+				material = GTR_Body_X_Battleaxe_Primary
 				mask = $car_sponsors
 				initial_values = {
 					x_trans = -12
@@ -4315,10 +4315,10 @@ cas_bass_body = [
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\guitar_special_battle_axe_d_05.dds'
-				material = gtr_body_x_battleaxe_primary
+				material = GTR_Body_X_Battleaxe_Primary
 				mask = $car_fontgrid_title_a1
 				initial_values = {
 					x_trans = -12
@@ -4330,10 +4330,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\guitar_special_battle_axe_d_05.dds'
-				material = gtr_body_x_battleaxe_primary
+				material = GTR_Body_X_Battleaxe_Primary
 				mask = $car_fontgrid_text_a3
 				initial_values = {
 					x_trans = -12
@@ -4345,10 +4345,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\guitar_special_battle_axe_d_05.dds'
-				material = gtr_body_x_battleaxe_primary
+				material = GTR_Body_X_Battleaxe_Primary
 				mask = $car_fontgrid_text_a6
 				initial_values = {
 					x_trans = -12
@@ -4360,10 +4360,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\guitar_special_battle_axe_d_05.dds'
-				material = gtr_body_x_battleaxe_primary
+				material = GTR_Body_X_Battleaxe_Primary
 				mask = $car_fontgrid_text_a8
 				initial_values = {
 					x_trans = -12
@@ -4377,48 +4377,48 @@ cas_bass_body = [
 		]
 		inclusion = [
 			{
-				part = cas_bass_neck
+				part = CAS_Bass_Neck
 				valid = [
-					cab_neck_bn1a
-					cab_neck_bn1b
-					cab_neck_bnebony
-					cab_neck_bfretlss01
-					cab_neck_bfretlss02
-					cab_neck_bfretlss03
+					CAB_Neck_BN1A
+					CAB_Neck_BN1B
+					CAB_Neck_BNEbony
+					CAB_Neck_BFretlss01
+					CAB_Neck_BFretlss02
+					CAB_Neck_BFretlss03
 				]
 			}
 			{
-				part = cas_bass_pickguards
+				part = CAS_Bass_Pickguards
 				valid = [
-					None
+					none
 				]
 			}
 			{
-				part = cas_bass_pickups
+				part = CAS_Bass_Pickups
 				valid = [
-					cab_pickups_emg01
-					cab_pickups_emg02
-					cab_pickups_emg03
-					cab_pickup_hack03
-					cab_pickup_hack02
-					cab_pickup_hack01
-					cab_pickups_bp1a
-					cab_pickups_bp1a2
-					cab_pickups_bp1a3
-					cab_jbass_pickup_01
-					cab_jp_pickup_b
-					cab_pbass_pickup_a
-					cab_jp_pickup_a
-					cab_bumbl_pickup_a1
-					cab_bumbl_pickup_a2
-					cab_bumbl_pickup_a3
-					cab_hbuck_pickup_a1
-					cab_hbuck_pickup_a2
-					cab_hbuck_pickup_a3
+					CAB_pickups_EMG01
+					CAB_pickups_EMG02
+					CAB_pickups_EMG03
+					CAB_pickup_Hack03
+					CAB_pickup_Hack02
+					CAB_pickup_Hack01
+					CAB_Pickups_BP1A
+					CAB_Pickups_BP1A2
+					CAB_Pickups_BP1A3
+					CAB_Jbass_pickup_01
+					CAB_JP_Pickup_B
+					CAB_PBass_Pickup_A
+					CAB_JP_Pickup_A
+					CAB_Bumbl_pickup_A1
+					CAB_Bumbl_pickup_A2
+					CAB_Bumbl_pickup_A3
+					CAB_HBuck_pickup_A1
+					CAB_HBuck_pickup_A2
+					CAB_HBuck_pickup_A3
 				]
 			}
 			{
-				part = cas_bass_knobs
+				part = CAS_Bass_Knobs
 				valid = [
 					cab_knob_icross01
 					cab_knob_icross02
@@ -4433,71 +4433,71 @@ cas_bass_body = [
 				]
 			}
 			{
-				part = cas_bass_head
+				part = CAS_Bass_Head
 				valid = [
-					cab_head_predikt
-					cab_head_skull
-					cab_head_radex
-					cab_head_flay_rev
-					cab_head_mnemonic
-					cab_head_foots01
-					cab_head_bh5a
-					cab_head_bhphnq01
-					cab_head_mlsplit
-					cab_head_grumbel01
-					cab_head_bh4a
-					cab_head_bh6a
-					cab_head_bh6b
-					cab_head_bh7a
-					cab_head_bh1a
-					cab_head_sixtease
-					cab_head_foots01
+					CAB_Head_Predikt
+					CAB_Head_Skull
+					CAB_Head_RadEx
+					CAB_Head_Flay_rev
+					CAB_Head_Mnemonic
+					CAB_Head_Foots01
+					CAB_Head_BH5A
+					CAB_Head_BHPhnq01
+					CAB_Head_MLSplit
+					CAB_Head_Grumbel01
+					CAB_Head_BH4A
+					CAB_Head_BH6A
+					CAB_Head_BH6B
+					CAB_Head_BH7A
+					CAB_Head_BH1A
+					CAB_Head_SixTease
+					CAB_Head_Foots01
 				]
 			}
 			{
-				part = cas_bass_bridges
+				part = CAS_Bass_Bridges
 				valid = [
-					cab_bridge_bb2a
-					cab_bridge_bb1a
-					cab_bridge_bb3a
-					cab_bridge_mls
-					cab_bridge_hack
+					CAB_Bridge_BB2A
+					CAB_Bridge_BB1A
+					CAB_Bridge_BB3A
+					CAB_Bridge_MLS
+					CAB_Bridge_Hack
 				]
 			}
 		]
 	}
 	{
-		desc_id = cab_body_x_icross
-		frontend_desc = qs(0xa57bf63d)
+		desc_id = CAB_Body_X_ICross
+		frontend_desc = qs("\LICross")
 		mesh = 'models/CAR_Instruments/Bass/CAB_Body_X_ICross.skin'
 		locked
-		polaroid = bass_rward_body_icross
+		polaroid = Bass_Rward_Body_ICross
 		price = 1500
 		pak_num = 2
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
-				material = gtr_body_x_icross_primary
-				mask = $cab_body_icross_finishes
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
+				material = GTR_Body_X_ICross_Primary
+				mask = $CAB_Body_Icross_Finishes
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\guitar_special_icross_d_04.dds'
 				pre_userlayer
 				diffuse
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x7f5a5c11)
+				desc_id = Details
+				frontend_desc = qs("Details")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\guitar_special_icross_d_04.dds'
-				material = gtr_body_x_icross_primary
-				mask = $cab_body_icross_details
+				material = GTR_Body_X_ICross_Primary
+				mask = $CAB_Body_Icross_Details
 				pre_userlayer
 				diffuse
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\guitar_special_icross_d_04.dds'
-				material = gtr_body_x_icross_primary
+				material = GTR_Body_X_ICross_Primary
 				mask = $car_basic_primitives_1
 				initial_values = {
 					y_trans = 29
@@ -4510,9 +4510,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\guitar_special_icross_d_04.dds'
-				material = gtr_body_x_icross_primary
+				material = GTR_Body_X_ICross_Primary
 				mask = $car_basic_primitives_2
 				initial_values = {
 					y_trans = 29
@@ -4525,9 +4525,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\guitar_special_icross_d_04.dds'
-				material = gtr_body_x_icross_primary
+				material = GTR_Body_X_ICross_Primary
 				mask = $car_gradiant_shapes
 				initial_values = {
 					y_trans = 29
@@ -4540,9 +4540,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\guitar_special_icross_d_04.dds'
-				material = gtr_body_x_icross_primary
+				material = GTR_Body_X_ICross_Primary
 				mask = $car_icons
 				initial_values = {
 					y_trans = 29
@@ -4555,9 +4555,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\guitar_special_icross_d_04.dds'
-				material = gtr_body_x_icross_primary
+				material = GTR_Body_X_ICross_Primary
 				mask = $car_living_shapes
 				initial_values = {
 					y_trans = 29
@@ -4570,9 +4570,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\guitar_special_icross_d_04.dds'
-				material = gtr_body_x_icross_primary
+				material = GTR_Body_X_ICross_Primary
 				mask = $car_graphics
 				initial_values = {
 					y_trans = 29
@@ -4585,9 +4585,9 @@ cas_bass_body = [
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\guitar_special_icross_d_04.dds'
-				material = gtr_body_x_icross_primary
+				material = GTR_Body_X_ICross_Primary
 				mask = $car_sponsors
 				initial_values = {
 					y_trans = 29
@@ -4599,10 +4599,10 @@ cas_bass_body = [
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\guitar_special_icross_d_04.dds'
-				material = gtr_body_x_icross_primary
+				material = GTR_Body_X_ICross_Primary
 				mask = $car_fontgrid_title_a1
 				initial_values = {
 					y_trans = 29
@@ -4614,10 +4614,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\guitar_special_icross_d_04.dds'
-				material = gtr_body_x_icross_primary
+				material = GTR_Body_X_ICross_Primary
 				mask = $car_fontgrid_text_a3
 				initial_values = {
 					y_trans = 29
@@ -4629,10 +4629,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\guitar_special_icross_d_04.dds'
-				material = gtr_body_x_icross_primary
+				material = GTR_Body_X_ICross_Primary
 				mask = $car_fontgrid_text_a6
 				initial_values = {
 					y_trans = 29
@@ -4644,10 +4644,10 @@ cas_bass_body = [
 				userlayer
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex\\models\\CAR_Instruments\\guitars\\guitar_special_icross_d_04.dds'
-				material = gtr_body_x_icross_primary
+				material = GTR_Body_X_ICross_Primary
 				mask = $car_fontgrid_text_a8
 				initial_values = {
 					y_trans = 29
@@ -4661,48 +4661,48 @@ cas_bass_body = [
 		]
 		inclusion = [
 			{
-				part = cas_bass_neck
+				part = CAS_Bass_Neck
 				valid = [
-					cab_neck_bn1a
-					cab_neck_bn1b
-					cab_neck_bnebony
-					cab_neck_bfretlss01
-					cab_neck_bfretlss02
-					cab_neck_bfretlss03
+					CAB_Neck_BN1A
+					CAB_Neck_BN1B
+					CAB_Neck_BNEbony
+					CAB_Neck_BFretlss01
+					CAB_Neck_BFretlss02
+					CAB_Neck_BFretlss03
 				]
 			}
 			{
-				part = cas_bass_pickguards
+				part = CAS_Bass_Pickguards
 				valid = [
-					None
+					none
 				]
 			}
 			{
-				part = cas_bass_pickups
+				part = CAS_Bass_Pickups
 				valid = [
-					cab_pickups_emg01
-					cab_pickups_emg02
-					cab_pickups_emg03
-					cab_pickup_hack03
-					cab_pickup_hack02
-					cab_pickup_hack01
-					cab_pickups_bp1a
-					cab_pickups_bp1a2
-					cab_pickups_bp1a3
-					cab_jbass_pickup_01
-					cab_jp_pickup_b
-					cab_pbass_pickup_a
-					cab_jp_pickup_a
-					cab_bumbl_pickup_a1
-					cab_bumbl_pickup_a2
-					cab_bumbl_pickup_a3
-					cab_hbuck_pickup_a1
-					cab_hbuck_pickup_a2
-					cab_hbuck_pickup_a3
+					CAB_pickups_EMG01
+					CAB_pickups_EMG02
+					CAB_pickups_EMG03
+					CAB_pickup_Hack03
+					CAB_pickup_Hack02
+					CAB_pickup_Hack01
+					CAB_Pickups_BP1A
+					CAB_Pickups_BP1A2
+					CAB_Pickups_BP1A3
+					CAB_Jbass_pickup_01
+					CAB_JP_Pickup_B
+					CAB_PBass_Pickup_A
+					CAB_JP_Pickup_A
+					CAB_Bumbl_pickup_A1
+					CAB_Bumbl_pickup_A2
+					CAB_Bumbl_pickup_A3
+					CAB_HBuck_pickup_A1
+					CAB_HBuck_pickup_A2
+					CAB_HBuck_pickup_A3
 				]
 			}
 			{
-				part = cas_bass_knobs
+				part = CAS_Bass_Knobs
 				valid = [
 					cab_knob_icross01
 					cab_knob_icross02
@@ -4717,55 +4717,55 @@ cas_bass_body = [
 				]
 			}
 			{
-				part = cas_bass_head
+				part = CAS_Bass_Head
 				valid = [
-					cab_head_predikt
-					cab_head_skull
-					cab_head_radex
-					cab_head_radex
-					cab_head_flay_rev
-					cab_head_mnemonic
-					cab_head_foots01
-					cab_head_bh5a
-					cab_head_bhphnq01
-					cab_head_mlsplit
-					cab_head_grumbel01
-					cab_head_bh4a
-					cab_head_bh6a
-					cab_head_bh6b
-					cab_head_bh7a
-					cab_head_bh1a
-					cab_head_sixtease
-					cab_head_foots01
+					CAB_Head_Predikt
+					CAB_Head_Skull
+					CAB_Head_RadEx
+					CAB_Head_RadEx
+					CAB_Head_Flay_rev
+					CAB_Head_Mnemonic
+					CAB_Head_Foots01
+					CAB_Head_BH5A
+					CAB_Head_BHPhnq01
+					CAB_Head_MLSplit
+					CAB_Head_Grumbel01
+					CAB_Head_BH4A
+					CAB_Head_BH6A
+					CAB_Head_BH6B
+					CAB_Head_BH7A
+					CAB_Head_BH1A
+					CAB_Head_SixTease
+					CAB_Head_Foots01
 				]
 			}
 			{
-				part = cas_bass_bridges
+				part = CAS_Bass_Bridges
 				valid = [
-					cab_bridge_bb2a
-					cab_bridge_bb1a
-					cab_bridge_bb3a
-					cab_bridge_mls
-					cab_bridge_hack
+					CAB_Bridge_BB2A
+					CAB_Bridge_BB1A
+					CAB_Bridge_BB3A
+					CAB_Bridge_MLS
+					CAB_Bridge_Hack
 				]
 			}
 		]
 	}
 ]
-cas_bass_neck = [
+CAS_Bass_Neck = [
 	{
-		desc_id = cab_neck_bn1a
-		frontend_desc = qs(0x639f49db)
+		desc_id = CAB_Neck_BN1A
+		frontend_desc = qs("\LMaple with Maple")
 		mesh = 'models/CAR_Instruments/bass/CAB_Neck_BN1A.skin'
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_neck_01_maple_d_mls.dds'
-				material = cab_neck_bn1a_neck
-				mask = $cab_neck_01_finishes
+				material = CAB_NECK_BN1A_Neck
+				mask = $CAB_Neck_01_Finishes
 				initial_values = {
-					Color = grey_3
+					color = grey_3
 				}
 				diffuse
 				pre_userlayer
@@ -4773,42 +4773,42 @@ cas_bass_neck = [
 		]
 		default_cap = [
 			{
-				base_tex = `tex/models/car_instruments/bass/cab_neck_01_maple_d_mls.dds`
-				material = cab_neck_bn1a_neck
+				base_tex = `tex/models/Car_Instruments/Bass/cab_neck_01_maple_d_mls.dds`
+				material = CAB_NECK_BN1A_Neck
 				diffuse
 				pre_layer = [
 					{
-						texture = `tex/models/characters/layers/cab/cab_nek_lyrmpl_blk_wht.img`
+						texture = `tex/models/Characters/Layers/CAB/cab_nek_lyrmpl_blk_wht.img`
 						flags = 4
-						Color = grey_1
+						color = grey_1
 					}
 				]
 			}
 		]
 	}
 	{
-		desc_id = cab_neck_bn1b
-		frontend_desc = qs(0x0f9d656e)
+		desc_id = CAB_Neck_BN1B
+		frontend_desc = qs("\LMaple with Rosewood")
 		mesh = 'models/CAR_Instruments/bass/CAB_Neck_BN1B.skin'
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_neck_01b_rosewood_d_mls.dds'
-				material = cab_neck_bn1b_neck
-				mask = $cab_neck_01_finishes
+				material = CAB_NECK_BN1B_Neck
+				mask = $CAB_Neck_01_Finishes
 				diffuse
 				pre_userlayer
 			}
 		]
 		default_cap = [
 			{
-				base_tex = `tex/models/car_instruments/bass/cab_neck_01b_rosewood_d_mls.dds`
-				material = cab_neck_bn1b_neck
+				base_tex = `tex/models/Car_Instruments/Bass/cab_neck_01b_rosewood_d_mls.dds`
+				material = CAB_NECK_BN1B_Neck
 				diffuse
 				pre_layer = [
 					{
-						texture = `tex/models/characters/layers/cab/cab_nek_lyrmpl_blk_wht.img`
+						texture = `tex/models/Characters/Layers/CAB/cab_nek_lyrmpl_blk_wht.img`
 						flags = 4
 					}
 				]
@@ -4816,28 +4816,28 @@ cas_bass_neck = [
 		]
 	}
 	{
-		desc_id = cab_neck_bnebony
-		frontend_desc = qs(0x40392b54)
+		desc_id = CAB_Neck_BNEbony
+		frontend_desc = qs("\LMaple with Ebony")
 		mesh = 'models/CAR_Instruments/bass/CAB_Neck_BNEbony.skin'
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_nek_ebony01.dds'
-				material = cab_neck_ebony_neck
-				mask = $cab_neck_01_finishes
+				material = CAB_Neck_Ebony_Neck
+				mask = $CAB_Neck_01_Finishes
 				diffuse
 				pre_userlayer
 			}
 		]
 		default_cap = [
 			{
-				base_tex = `tex/models/car_instruments/bass/cab_nek_ebony01.dds`
-				material = cab_neck_ebony_neck
+				base_tex = `tex/models/Car_Instruments/Bass/cab_nek_ebony01.dds`
+				material = CAB_Neck_Ebony_Neck
 				diffuse
 				pre_layer = [
 					{
-						texture = `tex/models/characters/layers/cab/cab_nek_lyrmpl_wht_dot.img`
+						texture = `tex/models/Characters/Layers/CAB/CAB_Nek_LyrMpl_Wht_Dot.img`
 						flags = 4
 					}
 				]
@@ -4845,18 +4845,18 @@ cas_bass_neck = [
 		]
 	}
 	{
-		desc_id = cab_stnek_maple
-		frontend_desc = qs(0x88d2d629)
+		desc_id = CAB_StNek_Maple
+		frontend_desc = qs("\LSet Neck Maple")
 		mesh = 'models/CAR_Instruments/Bass/CAB_StNek_Maple.skin'
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_neck_01_maple_d_mls.dds'
-				material = cab_stnek_maple_neck
-				mask = $cab_neck_01_finishes
+				material = CAB_StNek_Maple_Neck
+				mask = $CAB_Neck_01_Finishes
 				initial_values = {
-					Color = grey_3
+					color = grey_3
 				}
 				diffuse
 				pre_userlayer
@@ -4864,42 +4864,42 @@ cas_bass_neck = [
 		]
 		default_cap = [
 			{
-				base_tex = `tex/models/car_instruments/bass/cab_neck_01_maple_d_mls.dds`
-				material = cab_stnek_maple_neck
+				base_tex = `tex/models/Car_Instruments/Bass/cab_neck_01_maple_d_mls.dds`
+				material = CAB_StNek_Maple_Neck
 				diffuse
 				pre_layer = [
 					{
-						texture = `tex/models/characters/layers/cab/cab_nek_lyrmpl_wht_dot.img`
+						texture = `tex/models/Characters/Layers/CAB/CAB_Nek_LyrMpl_Wht_Dot.img`
 						flags = 4
-						Color = grey_1
+						color = grey_1
 					}
 				]
 			}
 		]
 	}
 	{
-		desc_id = cab_stnek_bnst01
-		frontend_desc = qs(0xc858d21c)
+		desc_id = CAB_StNek_BNSt01
+		frontend_desc = qs("\LSet Neck Rosewood")
 		mesh = 'models/CAR_Instruments/Bass/CAB_StNek_BNSt01.skin'
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_neck_01b_rosewood_d_mls.dds'
-				material = cab_tneck_bnt01_neck
-				mask = $cab_neck_01_finishes
+				material = CAB_TNeck_BNT01_neck
+				mask = $CAB_Neck_01_Finishes
 				diffuse
 				pre_userlayer
 			}
 		]
 		default_cap = [
 			{
-				base_tex = `tex/models/car_instruments/bass/cab_neck_01b_rosewood_d_mls.dds`
-				material = cab_tneck_bnt01_neck
+				base_tex = `tex/models/Car_Instruments/Bass/cab_neck_01b_rosewood_d_mls.dds`
+				material = CAB_TNeck_BNT01_neck
 				diffuse
 				pre_layer = [
 					{
-						texture = `tex/models/characters/layers/cab/cab_nek_lyrmpl_wht_dot.img`
+						texture = `tex/models/Characters/Layers/CAB/CAB_Nek_LyrMpl_Wht_Dot.img`
 						flags = 4
 					}
 				]
@@ -4907,28 +4907,28 @@ cas_bass_neck = [
 		]
 	}
 	{
-		desc_id = cab_stnek_ebony
-		frontend_desc = qs(0xab74b4a6)
+		desc_id = CAB_StNek_Ebony
+		frontend_desc = qs("\LSet Neck Ebony")
 		mesh = 'models/CAR_Instruments/Bass/CAB_StNek_Ebony.skin'
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_nek_ebony01.dds'
-				material = cab_stnek_ebony_neck
-				mask = $cab_neck_01_finishes
+				material = CAB_StNek_Ebony_Neck
+				mask = $CAB_Neck_01_Finishes
 				diffuse
 				pre_userlayer
 			}
 		]
 		default_cap = [
 			{
-				base_tex = `tex/models/car_instruments/bass/cab_nek_ebony01.dds`
-				material = cab_stnek_ebony_neck
+				base_tex = `tex/models/Car_Instruments/Bass/cab_nek_ebony01.dds`
+				material = CAB_StNek_Ebony_Neck
 				diffuse
 				pre_layer = [
 					{
-						texture = `tex/models/characters/layers/cab/cab_nek_lyrmpl_wht_dot.img`
+						texture = `tex/models/Characters/Layers/CAB/CAB_Nek_LyrMpl_Wht_Dot.img`
 						flags = 4
 					}
 				]
@@ -4936,18 +4936,18 @@ cas_bass_neck = [
 		]
 	}
 	{
-		desc_id = cab_stnekf_maple
-		frontend_desc = qs(0x61bef1d7)
+		desc_id = CAB_StNekF_Maple
+		frontend_desc = qs("\LFretless Set Neck Maple")
 		mesh = 'models/CAR_Instruments/Bass/CAB_StNekF_Mpale.skin'
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_nekf_maple01.dds'
-				material = cab_stnekf_maple_neck
-				mask = $cab_neck_fretless01_finishes
+				material = CAB_StNekF_Maple_Neck
+				mask = $CAB_Neck_Fretless01_Finishes
 				initial_values = {
-					Color = grey_3
+					color = grey_3
 				}
 				diffuse
 				pre_userlayer
@@ -4955,42 +4955,42 @@ cas_bass_neck = [
 		]
 		default_cap = [
 			{
-				base_tex = `tex/models/car_instruments/bass/cab_nekf_maple01.dds`
-				material = cab_stnekf_maple_neck
+				base_tex = `tex/models/Car_Instruments/Bass/cab_nekf_maple01.dds`
+				material = CAB_StNekF_Maple_Neck
 				diffuse
 				pre_layer = [
 					{
-						texture = `tex/models/characters/layers/cab/cab_nek_tribal2_f.img`
+						texture = `tex/models/Characters/Layers/CAB/CAB_Nek_tribal2_F.img`
 						flags = 4
-						Color = grey_1
+						color = grey_1
 					}
 				]
 			}
 		]
 	}
 	{
-		desc_id = cab_stnekf_rosewood
-		frontend_desc = qs(0x43e2faf5)
+		desc_id = CAB_StNekF_Rosewood
+		frontend_desc = qs("\LFretless Set Neck Rosewood")
 		mesh = 'models/CAR_Instruments/Bass/CAB_StNekF_Rosewood.skin'
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_neck_fretlss01_d.dds'
-				material = cab_stnekf_rosewood_neck
-				mask = $cab_neck_fretless01_finishes
+				material = CAB_StNekF_Rosewood_neck
+				mask = $CAB_Neck_Fretless01_Finishes
 				diffuse
 				pre_userlayer
 			}
 		]
 		default_cap = [
 			{
-				base_tex = `tex/models/car_instruments/bass/cab_neck_fretlss01_d.dds`
-				material = cab_stnekf_rosewood_neck
+				base_tex = `tex/models/Car_Instruments/Bass/cab_neck_fretlss01_d.dds`
+				material = CAB_StNekF_Rosewood_neck
 				diffuse
 				pre_layer = [
 					{
-						texture = `tex/models/characters/layers/cab/cab_nek_pumpkins.img`
+						texture = `tex/models/Characters/Layers/CAB/CAB_Nek_pumpkins.img`
 						flags = 4
 					}
 				]
@@ -4998,28 +4998,28 @@ cas_bass_neck = [
 		]
 	}
 	{
-		desc_id = cab_stnekf_ebony
-		frontend_desc = qs(0x42189358)
+		desc_id = CAB_StNekF_Ebony
+		frontend_desc = qs("\LFretless Set Neck Ebony")
 		mesh = 'models/CAR_Instruments/Bass/CAB_StNekF_Ebony.skin'
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_nekf_ebony01.dds'
-				material = cab_stnekf_ebony_neck
-				mask = $cab_neck_fretless01_finishes
+				material = CAB_StNekF_Ebony_Neck
+				mask = $CAB_Neck_Fretless01_Finishes
 				diffuse
 				pre_userlayer
 			}
 		]
 		default_cap = [
 			{
-				base_tex = `tex/models/car_instruments/bass/cab_nekf_ebony01.dds`
-				material = cab_stnekf_ebony_neck
+				base_tex = `tex/models/Car_Instruments/Bass/cab_nekf_ebony01.dds`
+				material = CAB_StNekF_Ebony_Neck
 				diffuse
 				pre_layer = [
 					{
-						texture = `tex/models/characters/layers/cab/cab_nek_tribal_f.img`
+						texture = `tex/models/Characters/Layers/CAB/CAB_Nek_tribal_F.img`
 						flags = 4
 					}
 				]
@@ -5027,18 +5027,18 @@ cas_bass_neck = [
 		]
 	}
 	{
-		desc_id = cab_neck_bfretlss03
-		frontend_desc = qs(0x44d6f411)
+		desc_id = CAB_Neck_BFretlss03
+		frontend_desc = qs("\LFretless Maple")
 		mesh = 'models/CAR_Instruments/Bass/CAB_Neck_BFretlss03.skin'
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_nekf_maple01.dds'
-				material = cab_neck_fretless03_neck
-				mask = $cab_neck_fretless01_finishes
+				material = CAB_Neck_Fretless03_neck
+				mask = $CAB_Neck_Fretless01_Finishes
 				initial_values = {
-					Color = grey_3
+					color = grey_3
 				}
 				diffuse
 				pre_userlayer
@@ -5046,44 +5046,44 @@ cas_bass_neck = [
 		]
 		default_cap = [
 			{
-				base_tex = `tex/models/car_instruments/bass/cab_nekf_maple01.dds`
-				material = cab_neck_fretless03_neck
+				base_tex = `tex/models/Car_Instruments/Bass/cab_nekf_maple01.dds`
+				material = CAB_Neck_Fretless03_neck
 				diffuse
 				pre_layer = [
 					{
-						texture = `tex/models/characters/layers/cab/cab_nek_tribal_f.img`
+						texture = `tex/models/Characters/Layers/CAB/CAB_Nek_tribal_F.img`
 						flags = 4
-						Color = grey_1
+						color = grey_1
 					}
 				]
 			}
 		]
 	}
 	{
-		desc_id = cab_neck_bfretlss01
-		frontend_desc = qs(0x8ca7d3cb)
+		desc_id = CAB_Neck_BFretlss01
+		frontend_desc = qs("\LFretless Rosewood")
 		mesh = 'models/CAR_Instruments/Bass/CAB_Neck_BFretlss01.skin'
 		locked
-		polaroid = bass_rwds_nek_frtls_rose
+		polaroid = Bass_Rwds_Nek_Frtls_Rose
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_neck_fretlss01_d.dds'
-				material = cab_neck_fretless01_neck
-				mask = $cab_neck_fretless01_finishes
+				material = CAB_Neck_Fretless01_neck
+				mask = $CAB_Neck_Fretless01_Finishes
 				diffuse
 				pre_userlayer
 			}
 		]
 		default_cap = [
 			{
-				base_tex = `tex/models/car_instruments/bass/cab_neck_fretlss01_d.dds`
-				material = cab_neck_fretless01_neck
+				base_tex = `tex/models/Car_Instruments/Bass/cab_neck_fretlss01_d.dds`
+				material = CAB_Neck_Fretless01_neck
 				diffuse
 				pre_layer = [
 					{
-						texture = `tex/models/characters/layers/cab/cab_nek_tribal2_f.img`
+						texture = `tex/models/Characters/Layers/CAB/CAB_Nek_tribal2_F.img`
 						flags = 4
 					}
 				]
@@ -5091,28 +5091,28 @@ cas_bass_neck = [
 		]
 	}
 	{
-		desc_id = cab_neck_bfretlss02
-		frontend_desc = qs(0x6770969e)
+		desc_id = CAB_Neck_BFretlss02
+		frontend_desc = qs("\LFretless Ebony")
 		mesh = 'models/CAR_Instruments/Bass/CAB_Neck_BFretlss02.skin'
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_nekf_ebony01.dds'
-				material = cab_neck_fretless02_neck
-				mask = $cab_neck_fretless01_finishes
+				material = CAB_Neck_Fretless02_neck
+				mask = $CAB_Neck_Fretless01_Finishes
 				diffuse
 				pre_userlayer
 			}
 		]
 		default_cap = [
 			{
-				base_tex = `tex/models/car_instruments/bass/cab_nekf_ebony01.dds`
-				material = cab_neck_fretless02_neck
+				base_tex = `tex/models/Car_Instruments/Bass/cab_nekf_ebony01.dds`
+				material = CAB_Neck_Fretless02_neck
 				diffuse
 				pre_layer = [
 					{
-						texture = `tex/models/characters/layers/cab/cab_nek_vinef_d_ds.img`
+						texture = `tex/models/Characters/Layers/CAB/CAB_Nek_vineF_D_DS.img`
 						flags = 4
 					}
 				]
@@ -5120,38 +5120,38 @@ cas_bass_neck = [
 		]
 	}
 ]
-cas_bass_head = [
+CAS_Bass_Head = [
 	{
-		desc_id = cab_head_radex
-		frontend_desc = qs(0x6f3ac614)
+		desc_id = CAB_Head_RadEx
+		frontend_desc = qs("\LRadEx")
 		mesh = 'models/CAR_Instruments/bass/CAB_Head_Radex.skin'
 		materials = [
-			cab_head_radex_hardware
+			CAB_Head_RadEx_Hardware
 		]
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_RadEx.dds'
-				material = cab_head_radex_headstock
-				mask = $cab_head_13_finishes
+				material = CAB_Head_RadEx_Headstock
+				mask = $CAB_Head_13_Finishes
 				diffuse
 				pre_userlayer
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x7f5a5c11)
+				desc_id = Details
+				frontend_desc = qs("Details")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_RadEx.dds'
-				material = cab_head_radex_headstock
-				mask = $cab_head_13_details
+				material = CAB_Head_RadEx_Headstock
+				mask = $CAB_Head_13_Details
 				diffuse
 				pre_userlayer
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_RadEx.dds'
-				material = cab_head_radex_headstock
+				material = CAB_Head_RadEx_Headstock
 				mask = $car_basic_primitives_1
 				initial_values = {
 					x_trans = 5
@@ -5164,10 +5164,10 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\cab_body_beech01_b1_d_mls.dds'
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_RadEx.dds'
-				material = cab_head_radex_headstock
+				material = CAB_Head_RadEx_Headstock
 				mask = $car_basic_primitives_2
 				initial_values = {
 					x_trans = 5
@@ -5180,9 +5180,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_RadEx.dds'
-				material = cab_head_radex_headstock
+				material = CAB_Head_RadEx_Headstock
 				mask = $car_gradiant_shapes
 				initial_values = {
 					x_trans = 5
@@ -5195,9 +5195,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_RadEx.dds'
-				material = cab_head_radex_headstock
+				material = CAB_Head_RadEx_Headstock
 				mask = $car_icons
 				initial_values = {
 					x_trans = 5
@@ -5210,9 +5210,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_RadEx.dds'
-				material = cab_head_radex_headstock
+				material = CAB_Head_RadEx_Headstock
 				mask = $car_living_shapes
 				initial_values = {
 					x_trans = 5
@@ -5225,9 +5225,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_RadEx.dds'
-				material = cab_head_radex_headstock
+				material = CAB_Head_RadEx_Headstock
 				mask = $car_graphics
 				initial_values = {
 					x_trans = 5
@@ -5240,9 +5240,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_RadEx.dds'
-				material = cab_head_radex_headstock
+				material = CAB_Head_RadEx_Headstock
 				mask = $car_sponsors
 				initial_values = {
 					x_trans = 5
@@ -5254,10 +5254,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_RadEx.dds'
-				material = cab_head_radex_headstock
+				material = CAB_Head_RadEx_Headstock
 				mask = $car_fontgrid_title_a1
 				initial_values = {
 					x_trans = 5
@@ -5269,10 +5269,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_RadEx.dds'
-				material = cab_head_radex_headstock
+				material = CAB_Head_RadEx_Headstock
 				mask = $car_fontgrid_text_a3
 				initial_values = {
 					x_trans = 5
@@ -5284,10 +5284,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_RadEx.dds'
-				material = cab_head_radex_headstock
+				material = CAB_Head_RadEx_Headstock
 				mask = $car_fontgrid_text_a6
 				initial_values = {
 					x_trans = 5
@@ -5299,10 +5299,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_RadEx.dds'
-				material = cab_head_radex_headstock
+				material = CAB_Head_RadEx_Headstock
 				mask = $car_fontgrid_text_a8
 				initial_values = {
 					x_trans = 5
@@ -5316,36 +5316,36 @@ cas_bass_head = [
 		]
 	}
 	{
-		desc_id = cab_head_bh1a
-		frontend_desc = qs(0xd7a9261e)
+		desc_id = CAB_Head_BH1A
+		frontend_desc = qs("\LGedulus IV")
 		mesh = 'models/CAR_Instruments/bass/Cab_Head_BH1A.skin'
 		materials = [
-			cab_head_bh2a_hardware
+			CAB_Head_BH2A_Hardware
 		]
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_01_maple_d_mls.dds'
-				material = cab_head_bh2a_headstock
-				mask = $cab_head_01_finishes
+				material = CAB_Head_BH2A_Headstock
+				mask = $CAB_Head_01_Finishes
 				diffuse
 				pre_userlayer
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x7f5a5c11)
+				desc_id = Details
+				frontend_desc = qs("Details")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_01_maple_d_mls.dds'
-				material = cab_head_bh2a_headstock
-				mask = $cab_head_01_details
+				material = CAB_Head_BH2A_Headstock
+				mask = $CAB_Head_01_Details
 				diffuse
 				pre_userlayer
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_01_maple_d_mls.dds'
-				material = cab_head_bh2a_headstock
+				material = CAB_Head_BH2A_Headstock
 				mask = $car_basic_primitives_1
 				initial_values = {
 					y_trans = -7
@@ -5359,10 +5359,10 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex\\models\\CAR_Instruments\\bass\\cab_body_beech01_b1_d_mls.dds'
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_01_maple_d_mls.dds'
-				material = cab_head_bh2a_headstock
+				material = CAB_Head_BH2A_Headstock
 				mask = $car_basic_primitives_2
 				initial_values = {
 					y_trans = -7
@@ -5376,9 +5376,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_01_maple_d_mls.dds'
-				material = cab_head_bh2a_headstock
+				material = CAB_Head_BH2A_Headstock
 				mask = $car_gradiant_shapes
 				initial_values = {
 					y_trans = -7
@@ -5392,9 +5392,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_01_maple_d_mls.dds'
-				material = cab_head_bh2a_headstock
+				material = CAB_Head_BH2A_Headstock
 				mask = $car_icons
 				initial_values = {
 					y_trans = -7
@@ -5408,9 +5408,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_01_maple_d_mls.dds'
-				material = cab_head_bh2a_headstock
+				material = CAB_Head_BH2A_Headstock
 				mask = $car_living_shapes
 				initial_values = {
 					y_trans = -7
@@ -5424,9 +5424,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_01_maple_d_mls.dds'
-				material = cab_head_bh2a_headstock
+				material = CAB_Head_BH2A_Headstock
 				mask = $car_graphics
 				initial_values = {
 					y_trans = -7
@@ -5440,9 +5440,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_01_maple_d_mls.dds'
-				material = cab_head_bh2a_headstock
+				material = CAB_Head_BH2A_Headstock
 				mask = $car_sponsors
 				initial_values = {
 					y_trans = -7
@@ -5455,10 +5455,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_01_maple_d_mls.dds'
-				material = cab_head_bh2a_headstock
+				material = CAB_Head_BH2A_Headstock
 				mask = $car_fontgrid_title_a1
 				initial_values = {
 					y_trans = -7
@@ -5471,10 +5471,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_01_maple_d_mls.dds'
-				material = cab_head_bh2a_headstock
+				material = CAB_Head_BH2A_Headstock
 				mask = $car_fontgrid_text_a3
 				initial_values = {
 					y_trans = -7
@@ -5487,10 +5487,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_01_maple_d_mls.dds'
-				material = cab_head_bh2a_headstock
+				material = CAB_Head_BH2A_Headstock
 				mask = $car_fontgrid_text_a6
 				initial_values = {
 					y_trans = -7
@@ -5503,10 +5503,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_01_maple_d_mls.dds'
-				material = cab_head_bh2a_headstock
+				material = CAB_Head_BH2A_Headstock
 				mask = $car_fontgrid_text_a8
 				initial_values = {
 					y_trans = -7
@@ -5521,36 +5521,36 @@ cas_bass_head = [
 		]
 	}
 	{
-		desc_id = cab_head_bh6a
-		frontend_desc = qs(0x51e118f0)
+		desc_id = CAB_Head_BH6A
+		frontend_desc = qs("\LChunder Trad")
 		mesh = 'models/CAR_Instruments/bass/CAB_Head_BH6A.skin'
 		materials = [
-			cab_head_chunder02_hardware
+			CAB_Head_Chunder02_Hardware
 		]
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh6a.dds'
-				material = cab_head_chunder02_primary
-				mask = $cab_head_02_finishes
+				material = CAB_Head_Chunder02_Primary
+				mask = $CAB_Head_02_Finishes
 				diffuse
 				pre_userlayer
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x7f5a5c11)
+				desc_id = Details
+				frontend_desc = qs("Details")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh6a.dds'
-				material = cab_head_chunder02_primary
-				mask = $cab_head_02_details
+				material = CAB_Head_Chunder02_Primary
+				mask = $CAB_Head_02_Details
 				diffuse
 				pre_userlayer
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh6a.dds'
-				material = cab_head_chunder02_primary
+				material = CAB_Head_Chunder02_Primary
 				mask = $car_basic_primitives_1
 				initial_values = {
 					x_trans = -33
@@ -5564,9 +5564,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh6a.dds'
-				material = cab_head_chunder02_primary
+				material = CAB_Head_Chunder02_Primary
 				mask = $car_basic_primitives_2
 				initial_values = {
 					x_trans = -33
@@ -5580,9 +5580,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh6a.dds'
-				material = cab_head_chunder02_primary
+				material = CAB_Head_Chunder02_Primary
 				mask = $car_gradiant_shapes
 				initial_values = {
 					x_trans = -33
@@ -5596,9 +5596,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh6a.dds'
-				material = cab_head_chunder02_primary
+				material = CAB_Head_Chunder02_Primary
 				mask = $car_icons
 				initial_values = {
 					x_trans = -33
@@ -5612,9 +5612,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh6a.dds'
-				material = cab_head_chunder02_primary
+				material = CAB_Head_Chunder02_Primary
 				mask = $car_living_shapes
 				initial_values = {
 					x_trans = -33
@@ -5628,9 +5628,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh6a.dds'
-				material = cab_head_chunder02_primary
+				material = CAB_Head_Chunder02_Primary
 				mask = $car_graphics
 				initial_values = {
 					x_trans = -33
@@ -5644,9 +5644,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh6a.dds'
-				material = cab_head_chunder02_primary
+				material = CAB_Head_Chunder02_Primary
 				mask = $car_sponsors
 				initial_values = {
 					x_trans = -33
@@ -5659,10 +5659,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh6a.dds'
-				material = cab_head_chunder02_primary
+				material = CAB_Head_Chunder02_Primary
 				mask = $car_fontgrid_title_a1
 				initial_values = {
 					x_trans = -33
@@ -5675,10 +5675,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh6a.dds'
-				material = cab_head_chunder02_primary
+				material = CAB_Head_Chunder02_Primary
 				mask = $car_fontgrid_text_a3
 				initial_values = {
 					x_trans = -33
@@ -5691,10 +5691,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh6a.dds'
-				material = cab_head_chunder02_primary
+				material = CAB_Head_Chunder02_Primary
 				mask = $car_fontgrid_text_a6
 				initial_values = {
 					x_trans = -33
@@ -5707,10 +5707,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh6a.dds'
-				material = cab_head_chunder02_primary
+				material = CAB_Head_Chunder02_Primary
 				mask = $car_fontgrid_text_a8
 				initial_values = {
 					x_trans = -33
@@ -5725,55 +5725,55 @@ cas_bass_head = [
 		]
 	}
 	{
-		desc_id = cab_head_rubyat
-		frontend_desc = qs(0x15dc01bd)
+		desc_id = CAB_HEAD_Rubyat
+		frontend_desc = qs("\LRubaiyat Headless")
 		mesh = 'models/CAR_Instruments/bass/CAB_HEAD_Rubyat.skin'
 		materials = [
-			cab_head_rubyat_hardware
+			CAB_Head_Rubyat_Hardware
 		]
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_machine_rubyat_d.dds'
-				material = cab_head_rubyat_hardware
-				mask = $cab_head_rubyat_finishes
+				material = CAB_Head_Rubyat_Hardware
+				mask = $CAB_Head_Rubyat_Finishes
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_head_bh6b
-		frontend_desc = qs(0xb70b0351)
+		desc_id = CAB_Head_BH6B
+		frontend_desc = qs("\LChunder Trad DeLuxe")
 		mesh = 'models/CAR_Instruments/bass/CAB_Head_BH6B.skin'
 		materials = [
-			cab_head_chunder01_hardware
+			CAB_Head_Chunder01_Hardware
 		]
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_trad_delx_d.dds'
-				material = cab_head_chunder01_headstock
-				mask = $cab_head_03_finishes
+				material = CAB_Head_Chunder01_Headstock
+				mask = $CAB_Head_03_Finishes
 				diffuse
 				pre_userlayer
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x7f5a5c11)
+				desc_id = Details
+				frontend_desc = qs("Details")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_trad_delx_d.dds'
-				material = cab_head_chunder01_headstock
-				mask = $cab_head_03_details
+				material = CAB_Head_Chunder01_Headstock
+				mask = $CAB_Head_03_Details
 				diffuse
 				pre_userlayer
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_trad_delx_d.dds'
-				material = cab_head_chunder01_headstock
+				material = CAB_Head_Chunder01_Headstock
 				mask = $car_basic_primitives_1
 				initial_values = {
 					y_trans = -5
@@ -5787,9 +5787,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_trad_delx_d.dds'
-				material = cab_head_chunder01_headstock
+				material = CAB_Head_Chunder01_Headstock
 				mask = $car_basic_primitives_2
 				initial_values = {
 					y_trans = -5
@@ -5803,9 +5803,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_trad_delx_d.dds'
-				material = cab_head_chunder01_headstock
+				material = CAB_Head_Chunder01_Headstock
 				mask = $car_gradiant_shapes
 				initial_values = {
 					y_trans = -5
@@ -5819,9 +5819,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_trad_delx_d.dds'
-				material = cab_head_chunder01_headstock
+				material = CAB_Head_Chunder01_Headstock
 				mask = $car_icons
 				initial_values = {
 					y_trans = -5
@@ -5835,9 +5835,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_trad_delx_d.dds'
-				material = cab_head_chunder01_headstock
+				material = CAB_Head_Chunder01_Headstock
 				mask = $car_living_shapes
 				initial_values = {
 					y_trans = -5
@@ -5851,9 +5851,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_trad_delx_d.dds'
-				material = cab_head_chunder01_headstock
+				material = CAB_Head_Chunder01_Headstock
 				mask = $car_graphics
 				initial_values = {
 					y_trans = -5
@@ -5867,9 +5867,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_trad_delx_d.dds'
-				material = cab_head_chunder01_headstock
+				material = CAB_Head_Chunder01_Headstock
 				mask = $car_sponsors
 				initial_values = {
 					y_trans = -5
@@ -5882,10 +5882,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_trad_delx_d.dds'
-				material = cab_head_chunder01_headstock
+				material = CAB_Head_Chunder01_Headstock
 				mask = $car_fontgrid_title_a1
 				initial_values = {
 					y_trans = -5
@@ -5898,10 +5898,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_trad_delx_d.dds'
-				material = cab_head_chunder01_headstock
+				material = CAB_Head_Chunder01_Headstock
 				mask = $car_fontgrid_text_a3
 				initial_values = {
 					y_trans = -5
@@ -5914,10 +5914,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_trad_delx_d.dds'
-				material = cab_head_chunder01_headstock
+				material = CAB_Head_Chunder01_Headstock
 				mask = $car_fontgrid_text_a6
 				initial_values = {
 					y_trans = -5
@@ -5930,10 +5930,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_trad_delx_d.dds'
-				material = cab_head_chunder01_headstock
+				material = CAB_Head_Chunder01_Headstock
 				mask = $car_fontgrid_text_a8
 				initial_values = {
 					y_trans = -5
@@ -5948,36 +5948,36 @@ cas_bass_head = [
 		]
 	}
 	{
-		desc_id = cab_head_bh7a
-		frontend_desc = qs(0x3cc2b304)
+		desc_id = CAB_Head_BH7A
+		frontend_desc = qs("\LBachenhacker 2008")
 		mesh = 'models/CAR_Instruments/bass/CAB_Head_BH7A.skin'
 		materials = [
-			cab_head_bh7a_hardware
+			CAB_Head_BH7A_Hardware
 		]
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh7a.dds'
-				material = cab_head_bh7a_primary
-				mask = $cab_head_05_finishes
+				material = CAB_Head_BH7A_Primary
+				mask = $CAB_Head_05_Finishes
 				diffuse
 				pre_userlayer
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x7f5a5c11)
+				desc_id = Details
+				frontend_desc = qs("Details")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh7a.dds'
-				material = cab_head_bh7a_primary
-				mask = $cab_head_05_details
+				material = CAB_Head_BH7A_Primary
+				mask = $CAB_Head_05_Details
 				diffuse
 				pre_userlayer
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh7a.dds'
-				material = cab_head_bh7a_primary
+				material = CAB_Head_BH7A_Primary
 				mask = $car_basic_primitives_1
 				initial_values = {
 					y_trans = -5
@@ -5991,9 +5991,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh7a.dds'
-				material = cab_head_bh7a_primary
+				material = CAB_Head_BH7A_Primary
 				mask = $car_basic_primitives_2
 				initial_values = {
 					y_trans = -5
@@ -6007,9 +6007,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh7a.dds'
-				material = cab_head_bh7a_primary
+				material = CAB_Head_BH7A_Primary
 				mask = $car_gradiant_shapes
 				initial_values = {
 					y_trans = -5
@@ -6023,9 +6023,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh7a.dds'
-				material = cab_head_bh7a_primary
+				material = CAB_Head_BH7A_Primary
 				mask = $car_icons
 				initial_values = {
 					y_trans = -5
@@ -6039,9 +6039,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh7a.dds'
-				material = cab_head_bh7a_primary
+				material = CAB_Head_BH7A_Primary
 				mask = $car_living_shapes
 				initial_values = {
 					y_trans = -5
@@ -6055,9 +6055,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh7a.dds'
-				material = cab_head_bh7a_primary
+				material = CAB_Head_BH7A_Primary
 				mask = $car_graphics
 				initial_values = {
 					y_trans = -5
@@ -6071,9 +6071,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh7a.dds'
-				material = cab_head_bh7a_primary
+				material = CAB_Head_BH7A_Primary
 				mask = $car_sponsors
 				initial_values = {
 					y_trans = -5
@@ -6086,10 +6086,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh7a.dds'
-				material = cab_head_bh7a_primary
+				material = CAB_Head_BH7A_Primary
 				mask = $car_fontgrid_title_a1
 				initial_values = {
 					y_trans = -5
@@ -6102,10 +6102,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh7a.dds'
-				material = cab_head_bh7a_primary
+				material = CAB_Head_BH7A_Primary
 				mask = $car_fontgrid_text_a3
 				initial_values = {
 					y_trans = -5
@@ -6118,10 +6118,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh7a.dds'
-				material = cab_head_bh7a_primary
+				material = CAB_Head_BH7A_Primary
 				mask = $car_fontgrid_text_a6
 				initial_values = {
 					y_trans = -5
@@ -6134,10 +6134,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh7a.dds'
-				material = cab_head_bh7a_primary
+				material = CAB_Head_BH7A_Primary
 				mask = $car_fontgrid_text_a8
 				initial_values = {
 					y_trans = -5
@@ -6152,36 +6152,36 @@ cas_bass_head = [
 		]
 	}
 	{
-		desc_id = cab_head_bh4a
-		frontend_desc = qs(0x64b61dec)
+		desc_id = CAB_Head_BH4A
+		frontend_desc = qs("\LDarker Flay I")
 		mesh = 'models/CAR_Instruments/bass/CAB_Head_BH4A.skin'
 		materials = [
-			cab_head_bh1a_hardware
+			CAB_Head_BH1A_Hardware
 		]
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_flay001.dds'
-				material = cab_head_bh1a_headstock
-				mask = $cab_head_06_finishes
+				material = CAB_Head_BH1A_Headstock
+				mask = $CAB_Head_06_Finishes
 				diffuse
 				pre_userlayer
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x7f5a5c11)
+				desc_id = Details
+				frontend_desc = qs("Details")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_flay001.dds'
-				material = cab_head_bh1a_headstock
-				mask = $cab_head_06_details
+				material = CAB_Head_BH1A_Headstock
+				mask = $CAB_Head_06_Details
 				diffuse
 				pre_userlayer
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_flay001.dds'
-				material = cab_head_bh1a_headstock
+				material = CAB_Head_BH1A_Headstock
 				mask = $car_basic_primitives_1
 				initial_values = {
 					x_trans = -41
@@ -6194,9 +6194,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_flay001.dds'
-				material = cab_head_bh1a_headstock
+				material = CAB_Head_BH1A_Headstock
 				mask = $car_basic_primitives_2
 				initial_values = {
 					x_trans = -41
@@ -6209,9 +6209,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_flay001.dds'
-				material = cab_head_bh1a_headstock
+				material = CAB_Head_BH1A_Headstock
 				mask = $car_gradiant_shapes
 				initial_values = {
 					x_trans = -41
@@ -6224,9 +6224,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_flay001.dds'
-				material = cab_head_bh1a_headstock
+				material = CAB_Head_BH1A_Headstock
 				mask = $car_icons
 				initial_values = {
 					x_trans = -41
@@ -6239,9 +6239,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_flay001.dds'
-				material = cab_head_bh1a_headstock
+				material = CAB_Head_BH1A_Headstock
 				mask = $car_living_shapes
 				initial_values = {
 					x_trans = -41
@@ -6254,9 +6254,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_flay001.dds'
-				material = cab_head_bh1a_headstock
+				material = CAB_Head_BH1A_Headstock
 				mask = $car_graphics
 				initial_values = {
 					x_trans = -41
@@ -6269,9 +6269,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_flay001.dds'
-				material = cab_head_bh1a_headstock
+				material = CAB_Head_BH1A_Headstock
 				mask = $car_sponsors
 				initial_values = {
 					x_trans = -41
@@ -6283,10 +6283,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_flay001.dds'
-				material = cab_head_bh1a_headstock
+				material = CAB_Head_BH1A_Headstock
 				mask = $car_fontgrid_title_a1
 				initial_values = {
 					x_trans = -41
@@ -6298,10 +6298,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_flay001.dds'
-				material = cab_head_bh1a_headstock
+				material = CAB_Head_BH1A_Headstock
 				mask = $car_fontgrid_text_a3
 				initial_values = {
 					x_trans = -41
@@ -6313,10 +6313,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_flay001.dds'
-				material = cab_head_bh1a_headstock
+				material = CAB_Head_BH1A_Headstock
 				mask = $car_fontgrid_text_a6
 				initial_values = {
 					x_trans = -41
@@ -6328,10 +6328,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_flay001.dds'
-				material = cab_head_bh1a_headstock
+				material = CAB_Head_BH1A_Headstock
 				mask = $car_fontgrid_text_a8
 				initial_values = {
 					x_trans = -41
@@ -6345,36 +6345,36 @@ cas_bass_head = [
 		]
 	}
 	{
-		desc_id = cab_head_flay_rev
-		frontend_desc = qs(0x775797b0)
+		desc_id = CAB_Head_Flay_rev
+		frontend_desc = qs("\LDarker Flay Reverse")
 		mesh = 'models/CAR_Instruments/bass/CAB_Head_Flay_rev.skin'
 		materials = [
-			cab_head_bh1a_hardware
+			CAB_Head_BH1A_Hardware
 		]
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_flay001.dds'
-				material = cab_head_bh1a_headstock
-				mask = $cab_head_06_finishes
+				material = CAB_Head_BH1A_Headstock
+				mask = $CAB_Head_06_Finishes
 				diffuse
 				pre_userlayer
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x7f5a5c11)
+				desc_id = Details
+				frontend_desc = qs("Details")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_flay001.dds'
-				material = cab_head_bh1a_headstock
-				mask = $cab_head_06_details
+				material = CAB_Head_BH1A_Headstock
+				mask = $CAB_Head_06_Details
 				diffuse
 				pre_userlayer
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_flay001.dds'
-				material = cab_head_bh1a_headstock
+				material = CAB_Head_BH1A_Headstock
 				mask = $car_basic_primitives_1
 				initial_values = {
 					x_trans = -41
@@ -6387,9 +6387,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_flay001.dds'
-				material = cab_head_bh1a_headstock
+				material = CAB_Head_BH1A_Headstock
 				mask = $car_basic_primitives_2
 				initial_values = {
 					x_trans = -41
@@ -6402,9 +6402,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_flay001.dds'
-				material = cab_head_bh1a_headstock
+				material = CAB_Head_BH1A_Headstock
 				mask = $car_gradiant_shapes
 				initial_values = {
 					x_trans = -41
@@ -6417,9 +6417,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_flay001.dds'
-				material = cab_head_bh1a_headstock
+				material = CAB_Head_BH1A_Headstock
 				mask = $car_icons
 				initial_values = {
 					x_trans = -41
@@ -6432,9 +6432,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_flay001.dds'
-				material = cab_head_bh1a_headstock
+				material = CAB_Head_BH1A_Headstock
 				mask = $car_living_shapes
 				initial_values = {
 					x_trans = -41
@@ -6447,9 +6447,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_flay001.dds'
-				material = cab_head_bh1a_headstock
+				material = CAB_Head_BH1A_Headstock
 				mask = $car_graphics
 				initial_values = {
 					x_trans = -41
@@ -6462,9 +6462,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_flay001.dds'
-				material = cab_head_bh1a_headstock
+				material = CAB_Head_BH1A_Headstock
 				mask = $car_sponsors
 				initial_values = {
 					x_trans = -41
@@ -6476,10 +6476,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_flay001.dds'
-				material = cab_head_bh1a_headstock
+				material = CAB_Head_BH1A_Headstock
 				mask = $car_fontgrid_title_a1
 				initial_values = {
 					x_trans = -41
@@ -6491,10 +6491,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_flay001.dds'
-				material = cab_head_bh1a_headstock
+				material = CAB_Head_BH1A_Headstock
 				mask = $car_fontgrid_text_a3
 				initial_values = {
 					x_trans = -41
@@ -6506,10 +6506,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_flay001.dds'
-				material = cab_head_bh1a_headstock
+				material = CAB_Head_BH1A_Headstock
 				mask = $car_fontgrid_text_a6
 				initial_values = {
 					x_trans = -41
@@ -6521,10 +6521,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_flay001.dds'
-				material = cab_head_bh1a_headstock
+				material = CAB_Head_BH1A_Headstock
 				mask = $car_fontgrid_text_a8
 				initial_values = {
 					x_trans = -41
@@ -6538,36 +6538,36 @@ cas_bass_head = [
 		]
 	}
 	{
-		desc_id = cab_head_bh5a
-		frontend_desc = qs(0x1e6af2e4)
+		desc_id = CAB_Head_BH5A
+		frontend_desc = qs("\LLaurenz Spyter")
 		mesh = 'models/CAR_Instruments/bass/CAB_Head_BH5A.skin'
 		materials = [
-			cab_head_bh5a_hardware
+			CAB_Head_BH5A_Hardware
 		]
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh5a.dds'
-				material = cab_head_bh5a_headstock
-				mask = $cab_head_07_finishes
+				material = CAB_Head_BH5A_Headstock
+				mask = $CAB_Head_07_Finishes
 				diffuse
 				pre_userlayer
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x7f5a5c11)
+				desc_id = Details
+				frontend_desc = qs("Details")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh5a.dds'
-				material = cab_head_bh5a_headstock
-				mask = $cab_head_07_details
+				material = CAB_Head_BH5A_Headstock
+				mask = $CAB_Head_07_Details
 				diffuse
 				pre_userlayer
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh5a.dds'
-				material = cab_head_bh5a_headstock
+				material = CAB_Head_BH5A_Headstock
 				mask = $car_basic_primitives_1
 				initial_values = {
 					y_trans = -1
@@ -6581,9 +6581,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh5a.dds'
-				material = cab_head_bh5a_headstock
+				material = CAB_Head_BH5A_Headstock
 				mask = $car_basic_primitives_2
 				initial_values = {
 					y_trans = -1
@@ -6597,9 +6597,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh5a.dds'
-				material = cab_head_bh5a_headstock
+				material = CAB_Head_BH5A_Headstock
 				mask = $car_gradiant_shapes
 				initial_values = {
 					y_trans = -1
@@ -6613,9 +6613,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh5a.dds'
-				material = cab_head_bh5a_headstock
+				material = CAB_Head_BH5A_Headstock
 				mask = $car_icons
 				initial_values = {
 					y_trans = -1
@@ -6629,9 +6629,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh5a.dds'
-				material = cab_head_bh5a_headstock
+				material = CAB_Head_BH5A_Headstock
 				mask = $car_living_shapes
 				initial_values = {
 					y_trans = -1
@@ -6645,9 +6645,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh5a.dds'
-				material = cab_head_bh5a_headstock
+				material = CAB_Head_BH5A_Headstock
 				mask = $car_graphics
 				initial_values = {
 					y_trans = -1
@@ -6661,9 +6661,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh5a.dds'
-				material = cab_head_bh5a_headstock
+				material = CAB_Head_BH5A_Headstock
 				mask = $car_sponsors
 				initial_values = {
 					y_trans = -1
@@ -6676,10 +6676,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh5a.dds'
-				material = cab_head_bh5a_headstock
+				material = CAB_Head_BH5A_Headstock
 				mask = $car_fontgrid_title_a1
 				initial_values = {
 					y_trans = -1
@@ -6692,10 +6692,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh5a.dds'
-				material = cab_head_bh5a_headstock
+				material = CAB_Head_BH5A_Headstock
 				mask = $car_fontgrid_text_a3
 				initial_values = {
 					y_trans = -1
@@ -6708,10 +6708,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh5a.dds'
-				material = cab_head_bh5a_headstock
+				material = CAB_Head_BH5A_Headstock
 				mask = $car_fontgrid_text_a6
 				initial_values = {
 					y_trans = -1
@@ -6724,10 +6724,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh5a.dds'
-				material = cab_head_bh5a_headstock
+				material = CAB_Head_BH5A_Headstock
 				mask = $car_fontgrid_text_a8
 				initial_values = {
 					y_trans = -1
@@ -6742,36 +6742,36 @@ cas_bass_head = [
 		]
 	}
 	{
-		desc_id = cab_head_bhphnq01
-		frontend_desc = qs(0x8484b961)
+		desc_id = CAB_Head_BHPhnq01
+		frontend_desc = qs("\LPhunquie DanzKlas ")
 		mesh = 'models/CAR_Instruments/bass/CAB_Head_BHPhnq01.skin'
 		materials = [
-			cab_head_phunquie01_hardware
+			CAB_Head_Phunquie01_Hardware
 		]
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh8a.dds'
-				material = cab_head_phunquie01_headstock
-				mask = $cab_head_08_finishes
+				material = CAB_Head_Phunquie01_Headstock
+				mask = $CAB_Head_08_Finishes
 				diffuse
 				pre_userlayer
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x7f5a5c11)
+				desc_id = Details
+				frontend_desc = qs("Details")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh8a.dds'
-				material = cab_head_phunquie01_headstock
-				mask = $cab_head_08_details
+				material = CAB_Head_Phunquie01_Headstock
+				mask = $CAB_Head_08_Details
 				diffuse
 				pre_userlayer
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh8a.dds'
-				material = cab_head_phunquie01_headstock
+				material = CAB_Head_Phunquie01_Headstock
 				mask = $car_basic_primitives_1
 				initial_values = {
 					x_trans = -26
@@ -6784,9 +6784,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh8a.dds'
-				material = cab_head_phunquie01_headstock
+				material = CAB_Head_Phunquie01_Headstock
 				mask = $car_basic_primitives_2
 				initial_values = {
 					x_trans = -26
@@ -6799,9 +6799,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh8a.dds'
-				material = cab_head_phunquie01_headstock
+				material = CAB_Head_Phunquie01_Headstock
 				mask = $car_gradiant_shapes
 				initial_values = {
 					x_trans = -26
@@ -6814,9 +6814,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh8a.dds'
-				material = cab_head_phunquie01_headstock
+				material = CAB_Head_Phunquie01_Headstock
 				mask = $car_icons
 				initial_values = {
 					x_trans = -26
@@ -6829,9 +6829,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh8a.dds'
-				material = cab_head_phunquie01_headstock
+				material = CAB_Head_Phunquie01_Headstock
 				mask = $car_living_shapes
 				initial_values = {
 					x_trans = -26
@@ -6844,9 +6844,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh8a.dds'
-				material = cab_head_phunquie01_headstock
+				material = CAB_Head_Phunquie01_Headstock
 				mask = $car_graphics
 				initial_values = {
 					x_trans = -26
@@ -6859,9 +6859,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh8a.dds'
-				material = cab_head_phunquie01_headstock
+				material = CAB_Head_Phunquie01_Headstock
 				mask = $car_sponsors
 				initial_values = {
 					x_trans = -26
@@ -6873,10 +6873,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh8a.dds'
-				material = cab_head_phunquie01_headstock
+				material = CAB_Head_Phunquie01_Headstock
 				mask = $car_fontgrid_title_a1
 				initial_values = {
 					x_trans = -26
@@ -6888,10 +6888,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh8a.dds'
-				material = cab_head_phunquie01_headstock
+				material = CAB_Head_Phunquie01_Headstock
 				mask = $car_fontgrid_text_a3
 				initial_values = {
 					x_trans = -26
@@ -6903,10 +6903,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh8a.dds'
-				material = cab_head_phunquie01_headstock
+				material = CAB_Head_Phunquie01_Headstock
 				mask = $car_fontgrid_text_a6
 				initial_values = {
 					x_trans = -26
@@ -6918,10 +6918,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_bh8a.dds'
-				material = cab_head_phunquie01_headstock
+				material = CAB_Head_Phunquie01_Headstock
 				mask = $car_fontgrid_text_a8
 				initial_values = {
 					x_trans = -26
@@ -6935,38 +6935,38 @@ cas_bass_head = [
 		]
 	}
 	{
-		desc_id = cab_head_mnemonic
-		frontend_desc = qs(0x9707fdc2)
+		desc_id = CAB_Head_Mnemonic
+		frontend_desc = qs("\LMnemonic")
 		mesh = 'models/CAR_Instruments/bass/CAB_Head_Mnemonic.skin'
 		locked
-		polaroid = bass_rward_head_mnemonic
+		polaroid = Bass_Rward_Head_Mnemonic
 		materials = [
-			cab_head_mnemonic_hardware
+			CAB_Head_Mnemonic_Hardware
 		]
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_mnemonic_d.dds'
-				material = cab_head_mnemonic_headstock
-				mask = $cab_head_14_finishes
+				material = CAB_Head_mnemonic_Headstock
+				mask = $CAB_Head_14_Finishes
 				diffuse
 				pre_userlayer
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x7f5a5c11)
+				desc_id = Details
+				frontend_desc = qs("Details")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_mnemonic_d.dds'
-				material = cab_head_mnemonic_headstock
-				mask = $cab_head_14_details
+				material = CAB_Head_mnemonic_Headstock
+				mask = $CAB_Head_14_Details
 				diffuse
 				pre_userlayer
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_Mnemonic_d.dds'
-				material = cab_head_mnemonic_headstock
+				material = CAB_Head_mnemonic_Headstock
 				mask = $car_basic_primitives_1
 				initial_values = {
 					y_trans = 13
@@ -6979,9 +6979,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_Mnemonic_d.dds'
-				material = cab_head_mnemonic_headstock
+				material = CAB_Head_mnemonic_Headstock
 				mask = $car_basic_primitives_2
 				initial_values = {
 					y_trans = 13
@@ -6994,9 +6994,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_Mnemonic_d.dds'
-				material = cab_head_mnemonic_headstock
+				material = CAB_Head_mnemonic_Headstock
 				mask = $car_gradiant_shapes
 				initial_values = {
 					y_trans = 13
@@ -7009,9 +7009,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_Mnemonic_d.dds'
-				material = cab_head_mnemonic_headstock
+				material = CAB_Head_mnemonic_Headstock
 				mask = $car_icons
 				initial_values = {
 					y_trans = 13
@@ -7024,9 +7024,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_Mnemonic_d.dds'
-				material = cab_head_mnemonic_headstock
+				material = CAB_Head_mnemonic_Headstock
 				mask = $car_living_shapes
 				initial_values = {
 					y_trans = 13
@@ -7039,9 +7039,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_Mnemonic_d.dds'
-				material = cab_head_mnemonic_headstock
+				material = CAB_Head_mnemonic_Headstock
 				mask = $car_graphics
 				initial_values = {
 					y_trans = 13
@@ -7054,9 +7054,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_Mnemonic_d.dds'
-				material = cab_head_mnemonic_headstock
+				material = CAB_Head_mnemonic_Headstock
 				mask = $car_sponsors
 				initial_values = {
 					y_trans = 13
@@ -7068,10 +7068,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_Mnemonic_d.dds'
-				material = cab_head_mnemonic_headstock
+				material = CAB_Head_mnemonic_Headstock
 				mask = $car_fontgrid_title_a1
 				initial_values = {
 					y_trans = 13
@@ -7083,10 +7083,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_Mnemonic_d.dds'
-				material = cab_head_mnemonic_headstock
+				material = CAB_Head_mnemonic_Headstock
 				mask = $car_fontgrid_text_a3
 				initial_values = {
 					y_trans = 13
@@ -7098,10 +7098,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_Mnemonic_d.dds'
-				material = cab_head_mnemonic_headstock
+				material = CAB_Head_mnemonic_Headstock
 				mask = $car_fontgrid_text_a6
 				initial_values = {
 					y_trans = 13
@@ -7113,10 +7113,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_Mnemonic_d.dds'
-				material = cab_head_mnemonic_headstock
+				material = CAB_Head_mnemonic_Headstock
 				mask = $car_fontgrid_text_a8
 				initial_values = {
 					y_trans = 13
@@ -7130,38 +7130,38 @@ cas_bass_head = [
 		]
 	}
 	{
-		desc_id = cab_head_foots01
-		frontend_desc = qs(0x06037cc1)
+		desc_id = CAB_Head_Foots01
+		frontend_desc = qs("\LFootsie StarHead I ")
 		mesh = 'models/CAR_Instruments/bass/CAB_Head_Foots01.skin'
 		locked
-		polaroid = bass_rewards_head_star
+		polaroid = Bass_Rewards_Head_Star
 		materials = [
-			cab_head_star01_hardware
+			CAB_Head_Star01_Hardware
 		]
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_star01_d.dds'
-				material = cab_head_star01_headstock
-				mask = $cab_head_09_finishes
+				material = CAB_Head_Star01_Headstock
+				mask = $CAB_Head_09_Finishes
 				diffuse
 				pre_userlayer
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x7f5a5c11)
+				desc_id = Details
+				frontend_desc = qs("Details")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_star01_d.dds'
-				material = cab_head_star01_headstock
-				mask = $cab_head_09_details
+				material = CAB_Head_Star01_Headstock
+				mask = $CAB_Head_09_Details
 				diffuse
 				pre_userlayer
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_Star01_D.dds'
-				material = cab_head_star01_headstock
+				material = CAB_Head_Star01_Headstock
 				mask = $car_basic_primitives_1
 				initial_values = {
 					y_trans = 13
@@ -7174,9 +7174,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_Star01_D.dds'
-				material = cab_head_star01_headstock
+				material = CAB_Head_Star01_Headstock
 				mask = $car_basic_primitives_2
 				initial_values = {
 					y_trans = 13
@@ -7189,9 +7189,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_Star01_D.dds'
-				material = cab_head_star01_headstock
+				material = CAB_Head_Star01_Headstock
 				mask = $car_gradiant_shapes
 				initial_values = {
 					y_trans = 13
@@ -7204,9 +7204,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_Star01_D.dds'
-				material = cab_head_star01_headstock
+				material = CAB_Head_Star01_Headstock
 				mask = $car_icons
 				initial_values = {
 					y_trans = 13
@@ -7219,9 +7219,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_Star01_D.dds'
-				material = cab_head_star01_headstock
+				material = CAB_Head_Star01_Headstock
 				mask = $car_living_shapes
 				initial_values = {
 					y_trans = 13
@@ -7234,9 +7234,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_Star01_D.dds'
-				material = cab_head_star01_headstock
+				material = CAB_Head_Star01_Headstock
 				mask = $car_graphics
 				initial_values = {
 					y_trans = 13
@@ -7249,9 +7249,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_Star01_D.dds'
-				material = cab_head_star01_headstock
+				material = CAB_Head_Star01_Headstock
 				mask = $car_sponsors
 				initial_values = {
 					y_trans = 13
@@ -7263,10 +7263,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_Star01_D.dds'
-				material = cab_head_star01_headstock
+				material = CAB_Head_Star01_Headstock
 				mask = $car_fontgrid_title_a1
 				initial_values = {
 					y_trans = 13
@@ -7278,10 +7278,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_Star01_D.dds'
-				material = cab_head_star01_headstock
+				material = CAB_Head_Star01_Headstock
 				mask = $car_fontgrid_text_a3
 				initial_values = {
 					y_trans = 13
@@ -7293,10 +7293,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_Star01_D.dds'
-				material = cab_head_star01_headstock
+				material = CAB_Head_Star01_Headstock
 				mask = $car_fontgrid_text_a6
 				initial_values = {
 					y_trans = 13
@@ -7308,10 +7308,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_Star01_D.dds'
-				material = cab_head_star01_headstock
+				material = CAB_Head_Star01_Headstock
 				mask = $car_fontgrid_text_a8
 				initial_values = {
 					y_trans = 13
@@ -7325,36 +7325,36 @@ cas_bass_head = [
 		]
 	}
 	{
-		desc_id = cab_head_grumbel01
-		frontend_desc = qs(0xcff8dc11)
+		desc_id = CAB_Head_Grumbel01
+		frontend_desc = qs("\LGrumbel Machete ")
 		mesh = 'models/CAR_Instruments/bass/CAB_Head_Grumbel01.skin'
 		materials = [
-			cab_head_grumbel01_hardware
+			CAB_Head_Grumbel01_Hardware
 		]
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_grumbel01.dds'
-				material = cab_head_grumbel01_headstock
-				mask = $cab_head_04_finishes
+				material = CAB_Head_Grumbel01_Headstock
+				mask = $CAB_Head_04_Finishes
 				diffuse
 				pre_userlayer
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x7f5a5c11)
+				desc_id = Details
+				frontend_desc = qs("Details")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_grumbel01.dds'
-				material = cab_head_grumbel01_headstock
-				mask = $cab_head_04_details
+				material = CAB_Head_Grumbel01_Headstock
+				mask = $CAB_Head_04_Details
 				diffuse
 				pre_userlayer
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_Grumbel01.dds'
-				material = cab_head_grumbel01_headstock
+				material = CAB_Head_Grumbel01_Headstock
 				mask = $car_basic_primitives_1
 				initial_values = {
 					x_trans = -18
@@ -7368,9 +7368,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_Grumbel01.dds'
-				material = cab_head_grumbel01_headstock
+				material = CAB_Head_Grumbel01_Headstock
 				mask = $car_basic_primitives_2
 				initial_values = {
 					x_trans = -18
@@ -7383,9 +7383,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_Grumbel01.dds'
-				material = cab_head_grumbel01_headstock
+				material = CAB_Head_Grumbel01_Headstock
 				mask = $car_gradiant_shapes
 				initial_values = {
 					x_trans = -18
@@ -7398,9 +7398,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_Grumbel01.dds'
-				material = cab_head_grumbel01_headstock
+				material = CAB_Head_Grumbel01_Headstock
 				mask = $car_icons
 				initial_values = {
 					x_trans = -18
@@ -7413,9 +7413,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_Grumbel01.dds'
-				material = cab_head_grumbel01_headstock
+				material = CAB_Head_Grumbel01_Headstock
 				mask = $car_living_shapes
 				initial_values = {
 					x_trans = -18
@@ -7428,9 +7428,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_Grumbel01.dds'
-				material = cab_head_grumbel01_headstock
+				material = CAB_Head_Grumbel01_Headstock
 				mask = $car_graphics
 				initial_values = {
 					x_trans = -18
@@ -7443,9 +7443,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_Grumbel01.dds'
-				material = cab_head_grumbel01_headstock
+				material = CAB_Head_Grumbel01_Headstock
 				mask = $car_sponsors
 				initial_values = {
 					x_trans = -18
@@ -7457,10 +7457,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_Grumbel01.dds'
-				material = cab_head_grumbel01_headstock
+				material = CAB_Head_Grumbel01_Headstock
 				mask = $car_fontgrid_title_a1
 				initial_values = {
 					x_trans = -18
@@ -7472,10 +7472,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_Grumbel01.dds'
-				material = cab_head_grumbel01_headstock
+				material = CAB_Head_Grumbel01_Headstock
 				mask = $car_fontgrid_text_a3
 				initial_values = {
 					x_trans = -18
@@ -7487,10 +7487,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_Grumbel01.dds'
-				material = cab_head_grumbel01_headstock
+				material = CAB_Head_Grumbel01_Headstock
 				mask = $car_fontgrid_text_a6
 				initial_values = {
 					x_trans = -18
@@ -7502,10 +7502,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_Grumbel01.dds'
-				material = cab_head_grumbel01_headstock
+				material = CAB_Head_Grumbel01_Headstock
 				mask = $car_fontgrid_text_a8
 				initial_values = {
 					x_trans = -18
@@ -7519,36 +7519,36 @@ cas_bass_head = [
 		]
 	}
 	{
-		desc_id = cab_head_sixtease
-		frontend_desc = qs(0xe68acf2e)
+		desc_id = CAB_Head_SixTease
+		frontend_desc = qs("\LSix Tease")
 		mesh = 'models/CAR_Instruments/bass/CAB_Head_SixTease.skin'
 		materials = [
-			cab_head_sixtease_hardware
+			CAB_Head_Sixtease_Hardware
 		]
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_sixtease_d_mls.dds'
-				material = cab_head_sixtease_headstock
-				mask = $cab_head_10_finishes
+				material = CAB_Head_SixTease_Headstock
+				mask = $CAB_Head_10_Finishes
 				diffuse
 				pre_userlayer
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x7f5a5c11)
+				desc_id = Details
+				frontend_desc = qs("Details")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_sixtease_d_mls.dds'
-				material = cab_head_sixtease_headstock
-				mask = $cab_head_10_details
+				material = CAB_Head_SixTease_Headstock
+				mask = $CAB_Head_10_Details
 				diffuse
 				pre_userlayer
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_sixtease_d_mls.dds'
-				material = cab_head_sixtease_headstock
+				material = CAB_Head_SixTease_Headstock
 				mask = $car_basic_primitives_1
 				initial_values = {
 					x_trans = -29
@@ -7561,9 +7561,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_sixtease_d_mls.dds'
-				material = cab_head_sixtease_headstock
+				material = CAB_Head_SixTease_Headstock
 				mask = $car_basic_primitives_2
 				initial_values = {
 					x_trans = -29
@@ -7576,9 +7576,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_sixtease_d_mls.dds'
-				material = cab_head_sixtease_headstock
+				material = CAB_Head_SixTease_Headstock
 				mask = $car_gradiant_shapes
 				initial_values = {
 					x_trans = -29
@@ -7591,9 +7591,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_sixtease_d_mls.dds'
-				material = cab_head_sixtease_headstock
+				material = CAB_Head_SixTease_Headstock
 				mask = $car_icons
 				initial_values = {
 					x_trans = -29
@@ -7606,9 +7606,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_sixtease_d_mls.dds'
-				material = cab_head_sixtease_headstock
+				material = CAB_Head_SixTease_Headstock
 				mask = $car_living_shapes
 				initial_values = {
 					y_trans = 13
@@ -7621,9 +7621,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_sixtease_d_mls.dds'
-				material = cab_head_sixtease_headstock
+				material = CAB_Head_SixTease_Headstock
 				mask = $car_graphics
 				initial_values = {
 					y_trans = 13
@@ -7636,9 +7636,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_sixtease_d_mls.dds'
-				material = cab_head_sixtease_headstock
+				material = CAB_Head_SixTease_Headstock
 				mask = $car_sponsors
 				initial_values = {
 					x_trans = -29
@@ -7650,10 +7650,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_sixtease_d_mls.dds'
-				material = cab_head_sixtease_headstock
+				material = CAB_Head_SixTease_Headstock
 				mask = $car_fontgrid_title_a1
 				initial_values = {
 					x_trans = -29
@@ -7665,10 +7665,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_sixtease_d_mls.dds'
-				material = cab_head_sixtease_headstock
+				material = CAB_Head_SixTease_Headstock
 				mask = $car_fontgrid_text_a3
 				initial_values = {
 					x_trans = -29
@@ -7680,10 +7680,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_sixtease_d_mls.dds'
-				material = cab_head_sixtease_headstock
+				material = CAB_Head_SixTease_Headstock
 				mask = $car_fontgrid_text_a6
 				initial_values = {
 					x_trans = -29
@@ -7695,10 +7695,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_sixtease_d_mls.dds'
-				material = cab_head_sixtease_headstock
+				material = CAB_Head_SixTease_Headstock
 				mask = $car_fontgrid_text_a8
 				initial_values = {
 					x_trans = -29
@@ -7712,36 +7712,36 @@ cas_bass_head = [
 		]
 	}
 	{
-		desc_id = cab_head_predikt
-		frontend_desc = qs(0xa9624079)
+		desc_id = CAB_Head_Predikt
+		frontend_desc = qs("\LThe Ladder")
 		mesh = 'models/CAR_Instruments/bass/CAB_Head_Predikt.skin'
 		materials = [
-			cab_head_predikt_hardware
+			CAB_Head_Predikt_Hardware
 		]
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_predikt_hstock_d.dds'
-				material = cab_head_predikt_primary
-				mask = $cab_head_predikt_finishes
+				material = CAB_Head_Predikt_Primary
+				mask = $CAB_Head_Predikt_Finishes
 				diffuse
 				pre_userlayer
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x7f5a5c11)
+				desc_id = Details
+				frontend_desc = qs("Details")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_predikt_hstock_d.dds'
-				material = cab_head_predikt_primary
-				mask = $cab_head_predikt_details
+				material = CAB_Head_Predikt_Primary
+				mask = $CAB_Head_Predikt_Details
 				diffuse
 				pre_userlayer
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_predikt_hstock_d.dds'
-				material = cab_head_predikt_primary
+				material = CAB_Head_Predikt_Primary
 				mask = $car_basic_primitives_1
 				initial_values = {
 					x_trans = -25
@@ -7754,9 +7754,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_predikt_hstock_d.dds'
-				material = cab_head_predikt_primary
+				material = CAB_Head_Predikt_Primary
 				mask = $car_basic_primitives_2
 				initial_values = {
 					x_trans = -25
@@ -7769,9 +7769,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_predikt_hstock_d.dds'
-				material = cab_head_predikt_primary
+				material = CAB_Head_Predikt_Primary
 				mask = $car_gradiant_shapes
 				initial_values = {
 					x_trans = -25
@@ -7784,9 +7784,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_predikt_hstock_d.dds'
-				material = cab_head_predikt_primary
+				material = CAB_Head_Predikt_Primary
 				mask = $car_icons
 				initial_values = {
 					x_trans = -25
@@ -7799,9 +7799,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_predikt_hstock_d.dds'
-				material = cab_head_predikt_primary
+				material = CAB_Head_Predikt_Primary
 				mask = $car_living_shapes
 				initial_values = {
 					x_trans = -25
@@ -7814,9 +7814,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_predikt_hstock_d.dds'
-				material = cab_head_predikt_primary
+				material = CAB_Head_Predikt_Primary
 				mask = $car_graphics
 				initial_values = {
 					x_trans = -25
@@ -7829,9 +7829,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_predikt_hstock_d.dds'
-				material = cab_head_predikt_primary
+				material = CAB_Head_Predikt_Primary
 				mask = $car_sponsors
 				initial_values = {
 					x_trans = -25
@@ -7843,10 +7843,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_predikt_hstock_d.dds'
-				material = cab_head_predikt_primary
+				material = CAB_Head_Predikt_Primary
 				mask = $car_fontgrid_title_a1
 				initial_values = {
 					x_trans = -25
@@ -7858,10 +7858,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_predikt_hstock_d.dds'
-				material = cab_head_predikt_primary
+				material = CAB_Head_Predikt_Primary
 				mask = $car_fontgrid_text_a3
 				initial_values = {
 					x_trans = -25
@@ -7873,10 +7873,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_predikt_hstock_d.dds'
-				material = cab_head_predikt_primary
+				material = CAB_Head_Predikt_Primary
 				mask = $car_fontgrid_text_a6
 				initial_values = {
 					x_trans = -25
@@ -7888,10 +7888,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_predikt_hstock_d.dds'
-				material = cab_head_predikt_primary
+				material = CAB_Head_Predikt_Primary
 				mask = $car_fontgrid_text_a8
 				initial_values = {
 					x_trans = -25
@@ -7905,36 +7905,36 @@ cas_bass_head = [
 		]
 	}
 	{
-		desc_id = cab_head_guppy
-		frontend_desc = qs(0xf4ee30a1)
+		desc_id = CAB_Head_Guppy
+		frontend_desc = qs("\LThe Guppy")
 		mesh = 'models/CAR_Instruments/bass/CAB_Head_Guppy.skin'
 		materials = [
-			cab_head_guppy_hardware
+			CAB_Head_Guppy_Hardware
 		]
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_guppy_d.dds'
-				material = cab_head_guppy_headstock
-				mask = $cab_head_12_finishes
+				material = CAB_Head_Guppy_Headstock
+				mask = $CAB_Head_12_Finishes
 				diffuse
 				pre_userlayer
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x7f5a5c11)
+				desc_id = Details
+				frontend_desc = qs("Details")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_guppy_d.dds'
-				material = cab_head_guppy_headstock
-				mask = $cab_head_12_details
+				material = CAB_Head_Guppy_Headstock
+				mask = $CAB_Head_12_Details
 				diffuse
 				pre_userlayer
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_guppy_d.dds'
-				material = cab_head_guppy_headstock
+				material = CAB_Head_Guppy_Headstock
 				mask = $car_basic_primitives_1
 				initial_values = {
 					x_trans = -38
@@ -7947,9 +7947,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_guppy_d.dds'
-				material = cab_head_guppy_headstock
+				material = CAB_Head_Guppy_Headstock
 				mask = $car_basic_primitives_2
 				initial_values = {
 					x_trans = -38
@@ -7962,9 +7962,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_guppy_d.dds'
-				material = cab_head_guppy_headstock
+				material = CAB_Head_Guppy_Headstock
 				mask = $car_gradiant_shapes
 				initial_values = {
 					x_trans = -38
@@ -7977,9 +7977,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_guppy_d.dds'
-				material = cab_head_guppy_headstock
+				material = CAB_Head_Guppy_Headstock
 				mask = $car_icons
 				initial_values = {
 					x_trans = -38
@@ -7992,9 +7992,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_guppy_d.dds'
-				material = cab_head_guppy_headstock
+				material = CAB_Head_Guppy_Headstock
 				mask = $car_living_shapes
 				initial_values = {
 					y_trans = 13
@@ -8007,9 +8007,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_guppy_d.dds'
-				material = cab_head_guppy_headstock
+				material = CAB_Head_Guppy_Headstock
 				mask = $car_graphics
 				initial_values = {
 					y_trans = 13
@@ -8022,9 +8022,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_guppy_d.dds'
-				material = cab_head_guppy_headstock
+				material = CAB_Head_Guppy_Headstock
 				mask = $car_sponsors
 				initial_values = {
 					x_trans = -38
@@ -8036,10 +8036,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_guppy_d.dds'
-				material = cab_head_guppy_headstock
+				material = CAB_Head_Guppy_Headstock
 				mask = $car_fontgrid_title_a1
 				initial_values = {
 					x_trans = -38
@@ -8051,10 +8051,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_guppy_d.dds'
-				material = cab_head_guppy_headstock
+				material = CAB_Head_Guppy_Headstock
 				mask = $car_fontgrid_text_a3
 				initial_values = {
 					x_trans = -38
@@ -8066,10 +8066,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_guppy_d.dds'
-				material = cab_head_guppy_headstock
+				material = CAB_Head_Guppy_Headstock
 				mask = $car_fontgrid_text_a6
 				initial_values = {
 					x_trans = -38
@@ -8081,10 +8081,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex/models/Car_Instruments/Bass/CAB_Head_guppy_d.dds'
-				material = cab_head_guppy_headstock
+				material = CAB_Head_Guppy_Headstock
 				mask = $car_fontgrid_text_a8
 				initial_values = {
 					x_trans = -38
@@ -8098,48 +8098,48 @@ cas_bass_head = [
 		]
 	}
 	{
-		desc_id = cab_head_mlsplit
-		frontend_desc = qs(0x62191b93)
+		desc_id = CAB_Head_MLSplit
+		frontend_desc = qs("\LMLS Aluminum")
 		locked
-		polaroid = bass_rewards_head_mls
+		polaroid = Bass_Rewards_Head_MLS
 		mesh = 'models/CAR_Instruments/bass/CAB_Head_MLSplit.skin'
 		materials = [
-			cab_head_mlsplit_hardware
+			CAB_Head_MLSplit_Hardware
 		]
 	}
 	{
-		desc_id = cab_head_skull
-		frontend_desc = qs(0xbcb6decb)
+		desc_id = CAB_Head_Skull
+		frontend_desc = qs("\LSkullstock")
 		mesh = 'models/CAR_Instruments/bass/CAB_Head_Skull.skin'
 		locked
-		polaroid = bass_rward_head_skull
+		polaroid = Bass_Rward_Head_Skull
 		materials = [
-			cab_head_skull_hardware
+			CAB_Head_Skull_Hardware
 		]
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_Skull_d.dds'
-				material = cab_head_skull_headstock
-				mask = $cab_head_11_finishes
+				material = CAB_Head_Skull_Headstock
+				mask = $CAB_Head_11_Finishes
 				diffuse
 				pre_userlayer
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x7f5a5c11)
+				desc_id = Details
+				frontend_desc = qs("Details")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_Skull_d.dds'
-				material = cab_head_skull_headstock
-				mask = $cab_head_11_details
+				material = CAB_Head_Skull_Headstock
+				mask = $CAB_Head_11_Details
 				diffuse
 				pre_userlayer
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_skull_d.dds'
-				material = cab_head_skull_headstock
+				material = CAB_Head_Skull_Headstock
 				mask = $car_basic_primitives_1
 				initial_values = {
 					x_trans = -21
@@ -8152,9 +8152,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_skull_d.dds'
-				material = cab_head_skull_headstock
+				material = CAB_Head_Skull_Headstock
 				mask = $car_basic_primitives_2
 				initial_values = {
 					x_trans = -21
@@ -8167,9 +8167,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_skull_d.dds'
-				material = cab_head_skull_headstock
+				material = CAB_Head_Skull_Headstock
 				mask = $car_gradiant_shapes
 				initial_values = {
 					x_trans = -21
@@ -8182,9 +8182,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_skull_d.dds'
-				material = cab_head_skull_headstock
+				material = CAB_Head_Skull_Headstock
 				mask = $car_icons
 				initial_values = {
 					x_trans = -21
@@ -8197,9 +8197,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_skull_d.dds'
-				material = cab_head_skull_headstock
+				material = CAB_Head_Skull_Headstock
 				mask = $car_living_shapes
 				initial_values = {
 					x_trans = -21
@@ -8212,9 +8212,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_skull_d.dds'
-				material = cab_head_skull_headstock
+				material = CAB_Head_Skull_Headstock
 				mask = $car_graphics
 				initial_values = {
 					x_trans = -21
@@ -8227,9 +8227,9 @@ cas_bass_head = [
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_skull_d.dds'
-				material = cab_head_skull_headstock
+				material = CAB_Head_Skull_Headstock
 				mask = $car_sponsors
 				initial_values = {
 					x_trans = -21
@@ -8241,10 +8241,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_skull_d.dds'
-				material = cab_head_skull_headstock
+				material = CAB_Head_Skull_Headstock
 				mask = $car_fontgrid_title_a1
 				initial_values = {
 					x_trans = -21
@@ -8256,10 +8256,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_skull_d.dds'
-				material = cab_head_skull_headstock
+				material = CAB_Head_Skull_Headstock
 				mask = $car_fontgrid_text_a3
 				initial_values = {
 					x_trans = -21
@@ -8271,10 +8271,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_skull_d.dds'
-				material = cab_head_skull_headstock
+				material = CAB_Head_Skull_Headstock
 				mask = $car_fontgrid_text_a6
 				initial_values = {
 					x_trans = -21
@@ -8286,10 +8286,10 @@ cas_bass_head = [
 				diffuse
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_head_skull_d.dds'
-				material = cab_head_skull_headstock
+				material = CAB_Head_Skull_Headstock
 				mask = $car_fontgrid_text_a8
 				initial_values = {
 					x_trans = -21
@@ -8303,53 +8303,53 @@ cas_bass_head = [
 		]
 	}
 ]
-cas_bass_pickguards = [
+CAS_Bass_Pickguards = [
 	{
-		desc_id = cab_pickg_bp1
-		frontend_desc = qs(0x47d8ebde)
+		desc_id = CAB_PickG_BP1
+		frontend_desc = qs("\LGedulus Arcos Psychic Turtle")
 		mesh = 'models/CAR_Instruments/bass/CAB_PickG_BP1.skin'
 		random_weight = 4.0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_pickg_dark001.dds'
-				material = cab_pickg_unos03_primary
-				mask = $cab_arcos_pgrd01
+				material = CAB_PickG_Unos03_Primary
+				mask = $CAB_ARCOS_PGrd01
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_pickg_bp2
-		frontend_desc = qs(0x4b734591)
+		desc_id = CAB_PickG_BP2
+		frontend_desc = qs("\LGedulus Arcos Splendid Turtle")
 		mesh = 'models/CAR_Instruments/bass/CAB_PickG_BP2.skin'
 		random_weight = 4.0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_pickg_dark001.dds'
-				material = cab_pickg_unos03_primary
-				mask = $cab_arcos_pgrd01
+				material = CAB_PickG_Unos03_Primary
+				mask = $CAB_ARCOS_PGrd01
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_pickg_bp3
-		frontend_desc = qs(0xb0d455bb)
+		desc_id = CAB_PickG_BP3
+		frontend_desc = qs("\LGedulus Arcos Visceral")
 		mesh = 'models/CAR_Instruments/bass/CAB_PickG_BP3.skin'
 		random_weight = 2.0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_pickg02_bp1b.dds'
-				material = cab_pickg_bp3_primary
-				mask = $cab_arcos_pgrd01
+				material = CAB_PickG_BP3_Primary
+				mask = $CAB_ARCOS_PGrd01
 				diffuse
 				pre_userlayer
 			}
@@ -8357,1757 +8357,1757 @@ cas_bass_pickguards = [
 	}
 	{
 		desc_id = cab_pguard_sting
-		frontend_desc = qs(0x3456e0d6)
+		frontend_desc = qs("\LSting's Pickguard")
 		mesh = 'models/CAR_Instruments/bass/Cab_PGuard_Sting.skin'
 		hidden
 		random_weight = 4.0
 	}
 	{
-		desc_id = cab_pickg_e1
-		frontend_desc = qs(0xb54cc0ea)
+		desc_id = CAB_PickG_E1
+		frontend_desc = qs("\LMLS Music Ova Plate")
 		mesh = 'models/CAR_Instruments/bass/CAB_PickG_E1.skin'
 		random_weight = 10.0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_pickg02_bp1b.dds'
-				material = cab_pickg_bp3_primary
-				mask = $cab_arcos_pgrd01
+				material = CAB_PickG_BP3_Primary
+				mask = $CAB_ARCOS_PGrd01
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_phnq_pg001
-		frontend_desc = qs(0x3996c51e)
+		desc_id = CAB_Phnq_PG001
+		frontend_desc = qs("\LPhunquie Break")
 		mesh = 'models/CAR_Instruments/bass/CAB_Phnq_PG001.skin'
 		random_weight = 3.0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_phnq_pg002.dds'
-				material = cab_phnq_pg001_primary
-				mask = $cab_pg_phunq01
+				material = CAB_Phnq_PG001_Primary
+				mask = $CAB_PG_Phunq01
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_phnq_pg002
-		frontend_desc = qs(0xc7e308c6)
+		desc_id = CAB_Phnq_PG002
+		frontend_desc = qs("\LPhunquie Punk")
 		mesh = 'models/CAR_Instruments/bass/CAB_Phnq_PG002.skin'
 		random_weight = 5.0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_phnq_pg001b.dds'
-				material = cab_phnq_pg002_primary
-				mask = $cab_pg_phunq02
+				material = CAB_Phnq_PG002_Primary
+				mask = $CAB_PG_Phunq02
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_phnq_pg003
-		frontend_desc = qs(0x609a910e)
+		desc_id = CAB_Phnq_PG003
+		frontend_desc = qs("\LPhunquie Chunk")
 		mesh = 'models/CAR_Instruments/bass/CAB_Phnq_PG003.skin'
 		random_weight = 7.0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_phnq_pg003.dds'
-				material = cab_phnq_pg003_primary
-				mask = $cab_pg_phunq03
+				material = CAB_Phnq_PG003_Primary
+				mask = $CAB_PG_Phunq03
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_pgard_grmbl01
-		frontend_desc = qs(0xfd07865b)
+		desc_id = CAB_PGard_Grmbl01
+		frontend_desc = qs("\LGrumbel Machete I")
 		mesh = 'models/CAR_Instruments/bass/CAB_PGard_Grmbl01.skin'
 		random_weight = 4.0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_pickg_grmbl01.dds'
-				material = cab_pgard_grmbl01_primary
-				mask = $cab_pgrd_grumbel01
+				material = CAB_PGard_Grmbl01_Primary
+				mask = $CAB_PGrd_Grumbel01
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_pgard_grmbl02
-		frontend_desc = qs(0x7c2fabc1)
+		desc_id = CAB_PGard_Grmbl02
+		frontend_desc = qs("\LGrumbel Machete II")
 		mesh = 'models/CAR_Instruments/bass/CAB_PGard_Grmbl04.skin'
 		random_weight = 7.0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_pickg_grmbl04.dds'
-				material = cab_pgard_grmbl04_primary
-				mask = $cab_pgrd_grumbel02
+				material = CAB_PGard_Grmbl04_Primary
+				mask = $CAB_PGrd_Grumbel02
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_pgard_grmbl03
-		frontend_desc = qs(0xb25e140c)
+		desc_id = CAB_PGard_Grmbl03
+		frontend_desc = qs("\LGrumbel Machete III")
 		mesh = 'models/CAR_Instruments/bass/CAB_PGard_Grmbl05.skin'
 		random_weight = 2.0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_pickg_grmbl05.dds'
-				material = cab_pgard_grmbl05_primary
-				mask = $cab_pgrd_grumbel03
+				material = CAB_PGard_Grmbl05_Primary
+				mask = $CAB_PGrd_Grumbel03
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_pickg_f1
-		frontend_desc = qs(0xde96e992)
+		desc_id = CAB_PickG_F1
+		frontend_desc = qs("\LBachenhacker Kex")
 		mesh = 'models/CAR_Instruments/bass/CAB_PickG_F3.skin'
 		random_weight = 10.0
 		random_weight = 5.0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_pickg_f3_d_mls.dds'
-				material = cab_pickg_f3_primary
-				mask = $cab_hack_pgrd01
+				material = CAB_PickG_F3_Primary
+				mask = $CAB_HACK_PGrd01
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_pickg_f2
-		frontend_desc = qs(0xcf3fb507)
+		desc_id = CAB_PickG_F2
+		frontend_desc = qs("\LBachenhacker Simpleton")
 		mesh = 'models/CAR_Instruments/bass/CAB_PickG_F2.skin'
 		random_weight = 10.0
 		random_weight = 5.0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_pickg_f1_d_mls.dds'
-				material = cab_pickg_f1_primary
-				mask = $cab_hack_pgrd02
+				material = CAB_PickG_F1_Primary
+				mask = $CAB_HACK_PGrd02
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_pickg_f3
-		frontend_desc = qs(0x0786e899)
+		desc_id = CAB_PickG_F3
+		frontend_desc = qs("\LBachenhacker DeLuxe Dark")
 		mesh = 'models/CAR_Instruments/bass/CAB_PickG_F1.skin'
 		random_weight = 10.0
 		random_weight = 5.0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_pickg_f1_d_mls.dds'
-				material = cab_pickg_f1_primary
-				mask = $cab_hack_pgrd01
+				material = CAB_PickG_F1_Primary
+				mask = $CAB_HACK_PGrd01
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_pg_pred01
-		frontend_desc = qs(0x1572e7a0)
+		desc_id = CAB_PG_Pred01
+		frontend_desc = qs("\LI KNEW IT!")
 		mesh = 'models/CAR_Instruments/bass/CAB_PG_Pred01.skin'
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Guitars/gtr_predikt_pickg01_d_mls.dds'
-				material = gtr_body16_pickgrd_01_primary
-				mask = $cag_gtr16_pickgrd01
+				material = GTR_Body16_Pickgrd_01_Primary
+				mask = $CAG_GTR16_PickGrd01
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_pg_pred02
-		frontend_desc = qs(0x4f69a6d4)
+		desc_id = CAB_PG_Pred02
+		frontend_desc = qs("\LTold You So!")
 		mesh = 'models/CAR_Instruments/Bass/CAB_PG_Pred02.skin'
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Guitars/gtr_predikt_pickg02_d_mls.dds'
-				material = gtr_body16_pickgrd_02_primary
-				mask = $cag_gtr16_pickgrd02
+				material = GTR_Body16_Pickgrd_02_Primary
+				mask = $CAG_GTR16_PickGrd02
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_pg_pred03
-		frontend_desc = qs(0xcc7fc4ba)
+		desc_id = CAB_PG_Pred03
+		frontend_desc = qs("\LPsychic Fool")
 		mesh = 'models/CAR_Instruments/Bass/CAB_PG_Pred03.skin'
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Guitars/gtr_predikt_pickg03_d_mls.dds'
-				material = gtr_body16_pickgrd_03_primary
-				mask = $cag_gtr16_pickgrd03
+				material = GTR_Body16_Pickgrd_03_Primary
+				mask = $CAG_GTR16_PickGrd03
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = gtr_body16_pickg04
-		frontend_desc = qs(0x9c1b5214)
+		desc_id = GTR_Body16_PickG04
+		frontend_desc = qs("None")
 		mesh = 'models/CAR_Instruments/Guitar/CAG_PGard_Prdiktr04.skin'
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Guitars/gtr_predikt_pickg01_d_mls.dds'
-				material = gtr_body16_pickgrd_01_primary
-				mask = $cag_gtr16_pickgrd01
+				material = GTR_Body16_Pickgrd_01_Primary
+				mask = $CAG_GTR16_PickGrd01
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_pguardchndr01
-		frontend_desc = qs(0xd17772f8)
+		desc_id = CAB_PGuardChndr01
+		frontend_desc = qs("\LChunder Ancient Black")
 		mesh = 'models/CAR_Instruments/bass/CAB_PGuardChndr01.skin'
 		random_weight = 5.0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_pickg_grmbl02.dds'
-				material = cab_pickg_chndblk_primary
-				mask = $cab_pguardchndr01
+				material = CAB_PickG_ChndBlk_Primary
+				mask = $CAB_PGuardChndr01
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_pguardchndr04
-		frontend_desc = qs(0x51e118f0)
+		desc_id = CAB_PGuardChndr04
+		frontend_desc = qs("\LChunder Trad")
 		mesh = 'models/CAR_Instruments/bass/CAB_PGuardChndr04.skin'
 		random_weight = 5.0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_pickgchndr02_d_mls.dds'
-				material = cab_pguardchndr05_primary
-				mask = $cab_pguardchndr05
+				material = CAB_PGuardChndr05_Primary
+				mask = $CAB_PGuardChndr05
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_pguardchndr06
-		frontend_desc = qs(0xded717ce)
+		desc_id = CAB_PGuardChndr06
+		frontend_desc = qs("\LChunder New")
 		mesh = 'models/CAR_Instruments/bass/CAB_PGARD_Chnder06.skin'
 		random_weight = 5.0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_pguardchndr06.dds'
-				material = cab_pguardchndr06_primary
-				mask = $cab_pguardchndr06
+				material = CAB_PGuardChndr06_Primary
+				mask = $CAB_PGuardChndr06
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_pguardchndr07
-		frontend_desc = qs(0xa617e9c4)
+		desc_id = CAB_PGuardChndr07
+		frontend_desc = qs("\LChunder Bold")
 		mesh = 'models/CAR_Instruments/bass/CAB_PGARD_Chnder07.skin'
 		random_weight = 5.0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_pguardchndr07.dds'
-				material = cab_pgard_chundr_07_primary
-				mask = $cab_pguardchndr07
+				material = CAB_PGARD_Chundr_07_Primary
+				mask = $CAB_PGuardChndr07
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_pickg_b_unos01
-		frontend_desc = qs(0x69436617)
+		desc_id = CAB_PickG_B_Unos01
+		frontend_desc = qs("\LUnos spunoS")
 		mesh = 'models/CAR_Instruments/bass/CAB_PickG_B_Unos01.skin'
 		random_weight = 5.0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_pickg_dark001.dds'
-				material = cab_pickg_unos02_primary
-				mask = $cab_unos_pgrd01
+				material = CAB_PickG_Unos02_Primary
+				mask = $CAB_UNOS_PGrd01
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_pickg_b_unos02
-		frontend_desc = qs(0x39e71cf0)
+		desc_id = CAB_PickG_B_Unos02
+		frontend_desc = qs("\LUnos standarD")
 		mesh = 'models/CAR_Instruments/bass/CAB_PickG_B_Unos02.skin'
 		random_weight = 5.0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_pickg_dark001.dds'
-				material = cab_pickg_unos02_primary
-				mask = $cab_unos_pgrd01
+				material = CAB_PickG_Unos02_Primary
+				mask = $CAB_UNOS_PGrd01
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_pickg_b_unos03
-		frontend_desc = qs(0x9915e856)
+		desc_id = CAB_PickG_B_Unos03
+		frontend_desc = qs("\LUnos ominoS")
 		mesh = 'models/CAR_Instruments/bass/CAB_PickG_B_Unos03.skin'
 		random_weight = 5.0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_pickg_dark001.dds'
-				material = cab_pickg_unos02_primary
-				mask = $cab_unos_pgrd01
+				material = CAB_PickG_Unos02_Primary
+				mask = $CAB_UNOS_PGrd01
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_pickg_b_unos05
-		frontend_desc = qs(0xa1890d48)
+		desc_id = CAB_PickG_B_Unos05
+		frontend_desc = qs("\LUnos ludicruS")
 		mesh = 'models/CAR_Instruments/bass/CAB_PickG_B_Unos05.skin'
 		random_weight = 5.0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_pickg_dark001.dds'
-				material = cab_pickg_unos02_primary
-				mask = $cab_unos_pgrd01
+				material = CAB_PickG_Unos02_Primary
+				mask = $CAB_UNOS_PGrd01
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_pgrdfts001
-		frontend_desc = qs(0x50fb590b)
+		desc_id = CAB_PGrdFts001
+		frontend_desc = qs("\LFootsie Plate A")
 		mesh = 'models/CAR_Instruments/bass/CAB_PGrdFts001.skin'
 		random_weight = 3.0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_pgrdfts005b.dds'
-				material = cab_pgrdfts001b_primary
-				mask = $cab_fts_pickguard01
+				material = CAB_PGrdFts001b_Primary
+				mask = $CAB_FTS_PickGuard01
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_pgrdftsb
-		frontend_desc = qs(0x7bd60ac8)
+		desc_id = CAB_PGrdFtsB
+		frontend_desc = qs("\LFootsie Plate B")
 		mesh = 'models/CAR_Instruments/bass/CAB_PGrdFtsB.skin'
 		random_weight = 5.0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_pgrdftsb001b.dds'
-				material = cab_pgrdftsb002b_primary
-				mask = $cab_fts_pickguard02
+				material = CAB_PGrdFtsB002b_Primary
+				mask = $CAB_FTS_PickGuard02
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_pgrdftsc
-		frontend_desc = qs(0x62cd3b89)
+		desc_id = CAB_PGrdFtsC
+		frontend_desc = qs("\LFootsie Plate C")
 		mesh = 'models/CAR_Instruments/bass/CAB_PGrdFtsC.skin'
 		random_weight = 2.0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_pgrdftsc001b.dds'
-				material = cab_pgrdftsb001b_primary
-				mask = $cab_fts_pickguard03
+				material = CAB_PGrdFtsB001b_Primary
+				mask = $CAB_FTS_PickGuard03
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_pg_spyt001
-		frontend_desc = qs(0x6a75bd8d)
+		desc_id = CAB_PG_Spyt001
+		frontend_desc = qs("\LLightning Bolt!")
 		mesh = 'models/CAR_Instruments/bass/CAB_PG_Spyt001.skin'
 		random_weight = 5.0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_pg_spyt001c.dds'
-				material = cab_pg_spyt001c_primary
-				mask = $cab_pg_spyt01
+				material = CAB_PG_Spyt001c_Primary
+				mask = $CAB_PG_SPYT01
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_pg_spyt002
-		frontend_desc = qs(0x5d63ae7f)
+		desc_id = CAB_PG_Spyt002
+		frontend_desc = qs("\LEpic Level Paladin")
 		mesh = 'models/CAR_Instruments/bass/CAB_PG_Spyt002.skin'
 		random_weight = 5.0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_pg_spyt002b.dds'
-				material = cab_pg_spyt002b_primary
-				mask = $cab_pg_spyt02
+				material = CAB_PG_Spyt002b_Primary
+				mask = $CAB_PG_SPYT02
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_pg_spyt003
-		frontend_desc = qs(0x5e220d48)
+		desc_id = CAB_PG_Spyt003
+		frontend_desc = qs("\LFrostburn")
 		mesh = 'models/CAR_Instruments/bass/CAB_PG_Spyt003.skin'
 		random_weight = 5.0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_pg_spyt003.dds'
-				material = cab_pg_spyt003_primary
-				mask = $cab_pg_spyt03
+				material = CAB_PG_Spyt003_Primary
+				mask = $CAB_PG_SPYT03
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_pg_spyt004
-		frontend_desc = qs(0xb2f9833f)
+		desc_id = CAB_PG_Spyt004
+		frontend_desc = qs("\LAfflux")
 		mesh = 'models/CAR_Instruments/bass/CAB_PG_Spyt004.skin'
 		random_weight = 5.0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_pg_spyt004.dds'
-				material = cab_pg_spyt004_primary
-				mask = $cab_pg_spyt04
+				material = CAB_PG_Spyt004_Primary
+				mask = $CAB_PG_SPYT04
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_pg_6tz001
-		frontend_desc = qs(0xe7bea1ac)
+		desc_id = CAB_PG_6TZ001
+		frontend_desc = qs("\LThe Jean-Paul")
 		mesh = 'models/CAR_Instruments/bass/CAB_PG_6TZ001.skin'
 		random_weight = 5.0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_pg_6tz005.dds'
-				material = cab_pickg_6tz005_primary
-				mask = $cab_pg_6tz001
+				material = CAB_PickG_6TZ005_Primary
+				mask = $CAB_PG_6TZ001
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_pg_6tz002
-		frontend_desc = qs(0x90bd7d30)
+		desc_id = CAB_PG_6TZ002
+		frontend_desc = qs("\LThe Georgian Ringeau")
 		mesh = 'models/CAR_Instruments/bass/CAB_PG_6TZ002.skin'
 		random_weight = 5.0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_pg_6tz006.dds'
-				material = cab_pg_6tz006_primary
-				mask = $cab_pg_6tz002
+				material = CAB_PG_6TZ006_Primary
+				mask = $CAB_PG_6TZ002
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_pg_6tz004
-		frontend_desc = qs(0x308171a6)
+		desc_id = CAB_PG_6TZ004
+		frontend_desc = qs("\LSwitchivator")
 		mesh = 'models/CAR_Instruments/bass/CAB_PG_6TZ004.skin'
 		random_weight = 5.0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_pg_6tz008.dds'
-				material = cab_pg_6tz008_primary
-				mask = $cab_pg_6tz003
+				material = CAB_PG_6TZ008_Primary
+				mask = $CAB_PG_6TZ003
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_pg_xrend001
-		frontend_desc = qs(0x47dd37dc)
+		desc_id = CAB_PG_Xrend001
+		frontend_desc = qs("\LCIA")
 		mesh = 'models/CAR_Instruments/bass/CAB_PG_Xrend001.skin'
 		random_weight = 5.0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_pg_xrend004.dds'
-				material = cab_pg_xrend004_primary
-				mask = $cab_pg_xrend01
+				material = CAB_PG_Xrend004_Primary
+				mask = $CAB_PG_XREND01
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_pg_xrend002
-		frontend_desc = qs(0x3af7e76a)
+		desc_id = CAB_PG_Xrend002
+		frontend_desc = qs("\LPrivate Army")
 		mesh = 'models/CAR_Instruments/bass/CAB_PG_Xrend002.skin'
 		random_weight = 5.0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_pg_xrend005.dds'
-				material = cab_pg_xrend005_primary
-				mask = $cab_pg_xrend02
+				material = CAB_PG_Xrend005_Primary
+				mask = $CAB_PG_XREND02
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = cab_pg_xrend003
-		frontend_desc = qs(0x90c5f15f)
+		desc_id = CAB_PG_Xrend003
+		frontend_desc = qs("\LPolice Action")
 		mesh = 'models/CAR_Instruments/bass/CAB_PG_Xrend003.skin'
 		random_weight = 5.0
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x6e23fd31)
+				desc_id = Finishes
+				frontend_desc = qs("Finishes")
 				base_tex = 'tex/models/Car_Instruments/Bass/cab_pg_xrend006.dds'
-				material = cab_pg_xrend006_primary
-				mask = $cab_pg_xrend03
+				material = CAB_PG_Xrend006_Primary
+				mask = $CAB_PG_XREND03
 				diffuse
 				pre_userlayer
 			}
 		]
 	}
 	{
-		desc_id = None
-		frontend_desc = qs(0x656d3042)
+		desc_id = none
+		frontend_desc = qs("none")
 		random_weight = 10.0
 	}
 ]
-cas_bass_pickups = [
+CAS_Bass_Pickups = [
 	{
-		desc_id = cab_pickups_bp1a
-		frontend_desc = qs(0x56a34bc3)
+		desc_id = CAB_Pickups_BP1A
+		frontend_desc = qs("\LKaChunka 2")
 		mesh = 'models/CAR_Instruments/Bass/CAB_Pickups_BP1A.skin'
 	}
 	{
-		desc_id = cab_pickups_bp1a2
-		frontend_desc = qs(0x4fb87a82)
+		desc_id = CAB_Pickups_BP1A2
+		frontend_desc = qs("\LKaChunka 3")
 		mesh = 'models/CAR_Instruments/Bass/CAB_Pickups_BP1A2.skin'
 	}
 	{
-		desc_id = cab_pickups_bp1a3
-		frontend_desc = qs(0x7d8e1800)
+		desc_id = CAB_Pickups_BP1A3
+		frontend_desc = qs("\LKaChunka 1")
 		mesh = 'models/CAR_Instruments/Bass/CAB_Pickups_BP1A3.skin'
 	}
 	{
-		desc_id = cab_jbass_pickup_01
-		frontend_desc = qs(0x00530560)
+		desc_id = CAB_Jbass_pickup_01
+		frontend_desc = qs("\LChunder Jazzmongous")
 		mesh = 'models/CAR_Instruments/Bass/CAB_Jbass_pickup_01.skin'
 	}
 	{
-		desc_id = cab_pbass_pickup_a
-		frontend_desc = qs(0xadaf92c1)
+		desc_id = CAB_PBass_Pickup_A
+		frontend_desc = qs("\LChunder Splitter")
 		mesh = 'models/CAR_Instruments/Bass/CAB_PBass_Pickup_A.skin'
 	}
 	{
-		desc_id = cab_jp_pickup_a
-		frontend_desc = qs(0xfe1af80f)
+		desc_id = CAB_JP_Pickup_A
+		frontend_desc = qs("\LJazz Splitter")
 		mesh = 'models/CAR_Instruments/Bass/CAB_JP_Pickup_A.skin'
 	}
 	{
-		desc_id = cab_jp_pickup_b
-		frontend_desc = qs(0xc58df42c)
+		desc_id = CAB_JP_Pickup_B
+		frontend_desc = qs("\LChunder Jazz Rocker")
 		mesh = 'models/CAR_Instruments/Bass/CAB_JP_Pickup_B.skin'
 	}
 	{
-		desc_id = cab_bumbl_pickup_a1
-		frontend_desc = qs(0xd5c68f57)
+		desc_id = CAB_Bumbl_pickup_A1
+		frontend_desc = qs("\LBumbelini Mono")
 		mesh = 'models/CAR_Instruments/Bass/CAB_Bumbl_pickup_A1.skin'
 	}
 	{
-		desc_id = cab_bumbl_pickup_a2
-		frontend_desc = qs(0x735492b8)
+		desc_id = CAB_Bumbl_pickup_A2
+		frontend_desc = qs("\LBumbelini Duo")
 		mesh = 'models/CAR_Instruments/Bass/CAB_Bumbl_pickup_A2.skin'
 	}
 	{
-		desc_id = cab_bumbl_pickup_a3
-		frontend_desc = qs(0x94ad8cab)
+		desc_id = CAB_Bumbl_pickup_A3
+		frontend_desc = qs("\LBumbelini Trio")
 		mesh = 'models/CAR_Instruments/Bass/CAB_Bumbl_pickup_A3.skin'
 	}
 	{
-		desc_id = cab_pickups_emg01
-		frontend_desc = qs(0x87a3a2db)
+		desc_id = CAB_pickups_EMG01
+		frontend_desc = qs("\LEMG-35CS Single")
 		mesh = 'models/CAR_Instruments/Bass/CAB_pickups_EMG01.skin'
 	}
 	{
-		desc_id = cab_pickups_emg02
-		frontend_desc = qs(0x83216a21)
+		desc_id = CAB_pickups_EMG02
+		frontend_desc = qs("\LEMG-35CS Double")
 		mesh = 'models/CAR_Instruments/Bass/CAB_pickups_EMG02.skin'
 	}
 	{
-		desc_id = cab_pickups_emg03
-		frontend_desc = qs(0x38630a71)
+		desc_id = CAB_pickups_EMG03
+		frontend_desc = qs("\LEMG-35CS Triple")
 		mesh = 'models/CAR_Instruments/Bass/CAB_pickups_EMG03.skin'
 	}
 	{
-		desc_id = cab_hbuck_pickup_a1
-		frontend_desc = qs(0x16ec1303)
+		desc_id = CAB_HBuck_pickup_A1
+		frontend_desc = qs("\LThrumbucker Ace")
 		mesh = 'models/CAR_Instruments/Bass/CAB_HBuck_pickup_A1.skin'
 		locked
-		polaroid = bass_rwds_pckp_thrum1
+		polaroid = Bass_Rwds_pckp_thrum1
 	}
 	{
-		desc_id = cab_hbuck_pickup_a2
-		frontend_desc = qs(0x1843bc21)
+		desc_id = CAB_HBuck_pickup_A2
+		frontend_desc = qs("\LThrumbucker Deuce")
 		mesh = 'models/CAR_Instruments/Bass/CAB_HBuck_pickup_A2.skin'
 		locked
-		polaroid = bass_rwds_pckp_thrum2
+		polaroid = Bass_Rwds_pckp_thrum2
 	}
 	{
-		desc_id = cab_hbuck_pickup_a3
-		frontend_desc = qs(0x21117e0a)
+		desc_id = CAB_HBuck_pickup_A3
+		frontend_desc = qs("\LThrumbucker Thrice")
 		mesh = 'models/CAR_Instruments/Bass/CAB_HBuck_pickup_A3.skin'
 		locked
-		polaroid = bass_rwds_pckp_thrum3
+		polaroid = Bass_Rwds_pckp_thrum3
 	}
 	{
-		desc_id = cab_pickup_hack01
-		frontend_desc = qs(0x6b38cdfd)
+		desc_id = CAB_pickup_Hack01
+		frontend_desc = qs("\LBach-O-Sound Inova")
 		mesh = 'models/CAR_Instruments/Bass/CAB_pickup_Hack01.skin'
 	}
 	{
-		desc_id = cab_pickup_hack02
-		frontend_desc = qs(0x98f69ecd)
+		desc_id = CAB_pickup_Hack02
+		frontend_desc = qs("\LBach-O-Sound Renova")
 		mesh = 'models/CAR_Instruments/Bass/CAB_pickup_Hack02.skin'
 	}
 	{
-		desc_id = cab_pickup_hack03
-		frontend_desc = qs(0x71042d73)
+		desc_id = CAB_pickup_Hack03
+		frontend_desc = qs("\LBach-O-Sound Enova")
 		mesh = 'models/CAR_Instruments/Bass/CAB_pickup_Hack03.skin'
 	}
 	{
 		desc_id = cab_pickup_sting
-		frontend_desc = qs(0x692d8f73)
+		frontend_desc = qs("\LSting pickup")
 		mesh = 'models/CAR_Instruments/Bass/CAB_pickup_Sting.skin'
 		hidden
 	}
 ]
-cas_bass_knobs = [
+CAS_Bass_Knobs = [
 	{
 		desc_id = cab_knobs_6tz01
-		frontend_desc = qs(0x43e25eb2)
+		frontend_desc = qs("\LSix Tease Knobset A")
 		mesh = 'models/CAR_Instruments/bass/CAB_Knobs_6TZ01.skin'
 		materials = [
-			cab_knobs_6tz01_primary
+			CAB_Knobs_6TZ01_Primary
 		]
 	}
 	{
 		desc_id = cab_knobs_6tz02
-		frontend_desc = qs(0x68cf0d71)
+		frontend_desc = qs("\LSix Tease Knobset B")
 		mesh = 'models/CAR_Instruments/bass/CAB_Knobs_6TZ02.skin'
 		materials = [
-			cab_knob_star01_primary
+			CAB_Knob_Star01_Primary
 		]
 	}
 	{
 		desc_id = cab_knobs_6tz03
-		frontend_desc = qs(0x71d43c30)
+		frontend_desc = qs("\LSix Tease Knobset C")
 		mesh = 'models/CAR_Instruments/bass/CAB_Knobs_6TZ03.skin'
 		materials = [
-			cab_knobs_spd_blak_primary
+			CAB_Knobs_Spd_Blak_Primary
 		]
 	}
 	{
 		desc_id = cab_knobs_6tz04
-		frontend_desc = qs(0x3e95aaf7)
+		frontend_desc = qs("\LSix Tease Knobset D")
 		mesh = 'models/CAR_Instruments/bass/CAB_Knobs_6TZ04.skin'
 		materials = [
-			cab_knobs_knurl01_primary
+			CAB_Knobs_Knurl01_Primary
 		]
 	}
 	{
 		desc_id = cab_knobs_6tz05
-		frontend_desc = qs(0x278e9bb6)
+		frontend_desc = qs("\LSix Tease Knobset E")
 		mesh = 'models/CAR_Instruments/bass/CAB_Knobs_6TZ05.skin'
 		materials = [
-			cab_knobs_jbass01_primary
+			CAB_Knobs_JBASS01_Primary
 		]
 	}
 	{
 		desc_id = cab_knobs_6tz06
-		frontend_desc = qs(0x0ca3c875)
+		frontend_desc = qs("\LSix Tease Knobset F")
 		mesh = 'models/CAR_Instruments/bass/CAB_Knobs_6TZ06.skin'
 		materials = [
-			cab_knobs_hack001_primary
+			CAB_Knobs_HACK001_Primary
 		]
 	}
 	{
 		desc_id = cab_knobs_6tz07
-		frontend_desc = qs(0x15b8f934)
+		frontend_desc = qs("\LSix Tease Knobset G")
 		mesh = 'models/CAR_Instruments/bass/CAB_Knobs_6TZ07.skin'
 		materials = [
-			gtr_knob_type6_01_primary
+			GTR_Knob_Type6_01_Primary
 		]
 	}
 	{
 		desc_id = cab_knobs_6tz08
-		frontend_desc = qs(0x9220e5fb)
+		frontend_desc = qs("\LSix Tease Knobset H")
 		mesh = 'models/CAR_Instruments/bass/CAB_Knobs_6TZ08.skin'
 		materials = [
-			gtr_knob_type1_01_primary
+			GTR_Knob_Type1_01_Primary
 		]
 	}
 	{
 		desc_id = cab_knobs_6tz09
-		frontend_desc = qs(0xa0168779)
+		frontend_desc = qs("\LSix Tease Knobset J")
 		mesh = 'models/CAR_Instruments/bass/CAB_Knobs_6TZ09.skin'
 		materials = [
-			gtr_knob_type10_01_primary
+			GTR_Knob_Type10_01_Primary
 		]
 	}
 	{
-		desc_id = cab_knobs_6tz10
-		frontend_desc = qs(0xb90db638)
+		desc_id = CAB_Knobs_6TZ10
+		frontend_desc = qs("\LSix Tease Knobset K")
 		mesh = 'models/CAR_Instruments/bass/CAB_Knobs_6TZ10.skin'
 		materials = [
-			gtr_knob_type2_01_primary
+			GTR_Knob_Type2_01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_spyt01
-		frontend_desc = qs(0x15d5ae59)
+		frontend_desc = qs("\LStar Spyter")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Spyt01.skin'
 		materials = [
-			cab_knob_star01_primary
+			CAB_Knob_Star01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_spyt02
-		frontend_desc = qs(0xfb65ed9e)
+		frontend_desc = qs("\LSpeed Spyter")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Spyt02.skin'
 		materials = [
-			cab_knobs_spd_blak_primary
+			CAB_Knobs_Spd_Blak_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_spyt03
-		frontend_desc = qs(0xc9dd4fa1)
+		frontend_desc = qs("\LHack Spyter")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Spyt03.skin'
 		materials = [
-			cab_knobs_hack001_primary
+			CAB_Knobs_HACK001_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_spyt04
-		frontend_desc = qs(0xdcfc89d2)
+		frontend_desc = qs("\LKnurled Spyter A")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Spyt04.skin'
 		materials = [
-			cab_knobs_knurl01_primary
+			CAB_Knobs_Knurl01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_spyt05
-		frontend_desc = qs(0xe2ffc82e)
+		frontend_desc = qs("\LSixties Spyter")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Spyt05.skin'
 		materials = [
-			cab_knobs_6tz01_primary
+			CAB_Knobs_6TZ01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_spyt06
-		frontend_desc = qs(0xa433a9e0)
+		frontend_desc = qs("\LLucky Die")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Spyt06.skin'
 		materials = [
-			gtr_knob_type6_01_primary
+			GTR_Knob_Type6_01_Primary
 		]
 		locked
-		polaroid = bass_rewards_knobs_dice
+		polaroid = Bass_Rewards_knobs_Dice
 	}
 	{
 		desc_id = cab_knob_spyt07
-		frontend_desc = qs(0xf7d1da11)
+		frontend_desc = qs("\LKnurled Spyter B")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Spyt07.skin'
 		materials = [
-			gtr_knob_type10_01_primary
+			GTR_Knob_Type10_01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_spyt08
-		frontend_desc = qs(0x33b69b11)
+		frontend_desc = qs("\LSpyter Jazzy")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Spyt08.skin'
 		materials = [
-			cab_knobs_jbass01_primary
+			CAB_Knobs_JBASS01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_spyt09
-		frontend_desc = qs(0x4938994c)
+		frontend_desc = qs("\LVintage Spyter 2")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Spyt09.skin'
 		materials = [
-			gtr_knob_type1_01_primary
+			GTR_Knob_Type1_01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_spyt10
-		frontend_desc = qs(0xd7a6d9b7)
+		frontend_desc = qs("\LSpyter Tone Zones")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Spyt10.skin'
 		materials = [
-			gtr_knob_type2_01_primary
+			GTR_Knob_Type2_01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_xrend01
-		frontend_desc = qs(0xaf972615)
+		frontend_desc = qs("\LHack")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_XRend01.skin'
 		materials = [
-			cab_knobs_hack001_primary
+			CAB_Knobs_HACK001_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_xrend02
-		frontend_desc = qs(0xec54f9d3)
+		frontend_desc = qs("\LStar")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_XRend02.skin'
 		materials = [
-			cab_knob_star01_primary
+			CAB_Knob_Star01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_xrend03
-		frontend_desc = qs(0xbdf0bd59)
+		frontend_desc = qs("\LSpeed")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_XRend03.skin'
 		materials = [
-			cab_knobs_spd_blak_primary
+			CAB_Knobs_Spd_Blak_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_xrend04
-		frontend_desc = qs(0xd3ccbd55)
+		frontend_desc = qs("\LJazzy")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_XRend04.skin'
 		materials = [
-			cab_knobs_jbass01_primary
+			CAB_Knobs_JBASS01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_xrend05
-		frontend_desc = qs(0x9efef592)
+		frontend_desc = qs("\LKnurl A")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_XRend05.skin'
 		materials = [
-			cab_knobs_knurl01_primary
+			CAB_Knobs_Knurl01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_xrend06
-		frontend_desc = qs(0x9d6bd1bd)
+		frontend_desc = qs("\LSixties")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_XRend06.skin'
 		materials = [
-			cab_knobs_6tz01_primary
+			CAB_Knobs_6TZ01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_xrend07
-		frontend_desc = qs(0xa433a9e0)
+		frontend_desc = qs("\LLucky Die")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_XRend07.skin'
 		materials = [
-			gtr_knob_type6_01_primary
+			GTR_Knob_Type6_01_Primary
 		]
 		locked
-		polaroid = bass_rewards_knobs_dice
+		polaroid = Bass_Rewards_knobs_Dice
 	}
 	{
 		desc_id = cab_knob_xrend08
-		frontend_desc = qs(0xb5d3a651)
+		frontend_desc = qs("\LKnurl B")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_XRend08.skin'
 		materials = [
-			gtr_knob_type10_01_primary
+			GTR_Knob_Type10_01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_xrend09
-		frontend_desc = qs(0x69bab14e)
+		frontend_desc = qs("\LVintage")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_XRend09.skin'
 		materials = [
-			gtr_knob_type1_01_primary
+			GTR_Knob_Type1_01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_xrend10
-		frontend_desc = qs(0x8f2cae0b)
+		frontend_desc = qs("\LTone Zones")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_XRend10.skin'
 		materials = [
-			gtr_knob_type2_01_primary
+			GTR_Knob_Type2_01_Primary
 		]
 	}
 	{
-		desc_id = cab_knob_unos01
-		frontend_desc = qs(0xaf972615)
+		desc_id = CAB_Knob_Unos01
+		frontend_desc = qs("\LHack")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Unos01.skin'
 		materials = [
-			cab_knobs_hack001_primary
+			CAB_Knobs_HACK001_Primary
 		]
 	}
 	{
-		desc_id = cab_knob_unos02
-		frontend_desc = qs(0xec54f9d3)
+		desc_id = CAB_Knob_Unos02
+		frontend_desc = qs("\LStar")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Unos02.skin'
 		materials = [
-			cab_knob_star01_primary
+			CAB_Knob_Star01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_unos03
-		frontend_desc = qs(0xbdf0bd59)
+		frontend_desc = qs("\LSpeed")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Unos03.skin'
 		materials = [
-			cab_knobs_spd_blak_primary
+			CAB_Knobs_Spd_Blak_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_unos04
-		frontend_desc = qs(0xd3ccbd55)
+		frontend_desc = qs("\LJazzy")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Unos04.skin'
 		materials = [
-			cab_knobs_jbass01_primary
+			CAB_Knobs_JBASS01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_unos05
-		frontend_desc = qs(0x9efef592)
+		frontend_desc = qs("\LKnurl A")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Unos05.skin'
 		materials = [
-			cab_knobs_knurl01_primary
+			CAB_Knobs_Knurl01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_unos06
-		frontend_desc = qs(0x9d6bd1bd)
+		frontend_desc = qs("\LSixties")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Unos06.skin'
 		materials = [
-			cab_knobs_6tz01_primary
+			CAB_Knobs_6TZ01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_unos07
-		frontend_desc = qs(0xa433a9e0)
+		frontend_desc = qs("\LLucky Die")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Unos07.skin'
 		materials = [
-			gtr_knob_type6_01_primary
+			GTR_Knob_Type6_01_Primary
 		]
 		locked
-		polaroid = bass_rewards_knobs_dice
+		polaroid = Bass_Rewards_knobs_Dice
 	}
 	{
 		desc_id = cab_knob_unos08
-		frontend_desc = qs(0xb5d3a651)
+		frontend_desc = qs("\LKnurl B")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Unos08.skin'
 		materials = [
-			gtr_knob_type10_01_primary
+			GTR_Knob_Type10_01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_unos09
-		frontend_desc = qs(0x69bab14e)
+		frontend_desc = qs("\LVintage")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Unos09.skin'
 		materials = [
-			gtr_knob_type1_01_primary
+			GTR_Knob_Type1_01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_unos10
-		frontend_desc = qs(0x8f2cae0b)
+		frontend_desc = qs("\LTone Zones")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Unos10.skin'
 		materials = [
-			gtr_knob_type2_01_primary
+			GTR_Knob_Type2_01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_hack01
-		frontend_desc = qs(0xaf972615)
+		frontend_desc = qs("\LHack")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Hack01.skin'
 		materials = [
-			cab_knobs_hack001_primary
+			CAB_Knobs_HACK001_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_hack02
-		frontend_desc = qs(0xec54f9d3)
+		frontend_desc = qs("\LStar")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Hack02.skin'
 		materials = [
-			cab_knob_star01_primary
+			CAB_Knob_Star01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_hack03
-		frontend_desc = qs(0x20545663)
+		frontend_desc = qs("\LSpeedy")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Hack03.skin'
 		materials = [
-			cab_knobs_spd_blak_primary
+			CAB_Knobs_Spd_Blak_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_hack04
-		frontend_desc = qs(0xd3ccbd55)
+		frontend_desc = qs("\LJazzy")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Hack04.skin'
 		materials = [
-			cab_knobs_jbass01_primary
+			CAB_Knobs_JBASS01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_hack05
-		frontend_desc = qs(0x9efef592)
+		frontend_desc = qs("\LKnurl A")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Hack05.skin'
 		materials = [
-			cab_knobs_knurl01_primary
+			CAB_Knobs_Knurl01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_hack06
-		frontend_desc = qs(0x9d6bd1bd)
+		frontend_desc = qs("\LSixties")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Hack06.skin'
 		materials = [
-			cab_knobs_6tz01_primary
+			CAB_Knobs_6TZ01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_hack07
-		frontend_desc = qs(0xa433a9e0)
+		frontend_desc = qs("\LLucky Die")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Hack07.skin'
 		materials = [
-			gtr_knob_type6_01_primary
+			GTR_Knob_Type6_01_Primary
 		]
 		locked
-		polaroid = bass_rewards_knobs_dice
+		polaroid = Bass_Rewards_knobs_Dice
 	}
 	{
 		desc_id = cab_knob_hack08
-		frontend_desc = qs(0xb5d3a651)
+		frontend_desc = qs("\LKnurl B")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Hack08.skin'
 		materials = [
-			gtr_knob_type10_01_primary
+			GTR_Knob_Type10_01_Primary
 		]
 	}
 	{
-		desc_id = cab_knob_hack09
-		frontend_desc = qs(0x69bab14e)
+		desc_id = CAB_Knob_Hack09
+		frontend_desc = qs("\LVintage")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Hack09.skin'
 		materials = [
-			gtr_knob_type1_01_primary
+			GTR_Knob_Type1_01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_hack10
-		frontend_desc = qs(0x8f2cae0b)
+		frontend_desc = qs("\LTone Zones")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Hack10.skin'
 		materials = [
-			gtr_knob_type2_01_primary
+			GTR_Knob_Type2_01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_chndr01
-		frontend_desc = qs(0xaf972615)
+		frontend_desc = qs("\LHack")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Chndr01.skin'
 		materials = [
-			cab_knobs_hack001_primary
+			CAB_Knobs_HACK001_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_chndr02
-		frontend_desc = qs(0xec54f9d3)
+		frontend_desc = qs("\LStar")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Chndr02.skin'
 		materials = [
-			cab_knob_star01_primary
+			CAB_Knob_Star01_Primary
 		]
 	}
 	{
-		desc_id = cab_knob_chndr03
-		frontend_desc = qs(0x20545663)
+		desc_id = CAB_Knob_Chndr03
+		frontend_desc = qs("\LSpeedy")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Chndr03.skin'
 		materials = [
-			cab_knobs_spd_blak_primary
+			CAB_Knobs_Spd_Blak_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_chndr04
-		frontend_desc = qs(0xd3ccbd55)
+		frontend_desc = qs("\LJazzy")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Chndr04.skin'
 		materials = [
-			cab_knobs_jbass01_primary
+			CAB_Knobs_JBASS01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_chndr05
-		frontend_desc = qs(0x9efef592)
+		frontend_desc = qs("\LKnurl A")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Chndr05.skin'
 		materials = [
-			cab_knobs_knurl01_primary
+			CAB_Knobs_Knurl01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_chndr06
-		frontend_desc = qs(0x9d6bd1bd)
+		frontend_desc = qs("\LSixties")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Chndr06.skin'
 		materials = [
-			cab_knobs_6tz01_primary
+			CAB_Knobs_6TZ01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_chndr07
-		frontend_desc = qs(0xa433a9e0)
+		frontend_desc = qs("\LLucky Die")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Chndr07.skin'
 		materials = [
-			gtr_knob_type6_01_primary
+			GTR_Knob_Type6_01_Primary
 		]
 		locked
-		polaroid = bass_rewards_knobs_dice
+		polaroid = Bass_Rewards_knobs_Dice
 	}
 	{
 		desc_id = cab_knob_chndr08
-		frontend_desc = qs(0xb5d3a651)
+		frontend_desc = qs("\LKnurl B")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Chndr08.skin'
 		materials = [
-			gtr_knob_type10_01_primary
+			GTR_Knob_Type10_01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_chndr09
-		frontend_desc = qs(0x69bab14e)
+		frontend_desc = qs("\LVintage")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Chndr09.skin'
 		materials = [
-			gtr_knob_type1_01_primary
+			GTR_Knob_Type1_01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_chndr10
-		frontend_desc = qs(0x8f2cae0b)
+		frontend_desc = qs("\LTone Zones")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Chndr10.skin'
 		materials = [
-			gtr_knob_type2_01_primary
+			GTR_Knob_Type2_01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_foots01
-		frontend_desc = qs(0xaf972615)
+		frontend_desc = qs("\LHack")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Foots01.skin'
 		materials = [
-			cab_knobs_hack001_primary
+			CAB_Knobs_HACK001_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_foots02
-		frontend_desc = qs(0xec54f9d3)
+		frontend_desc = qs("\LStar")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Foots02.skin'
 		materials = [
-			cab_knob_star01_primary
+			CAB_Knob_Star01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_foots03
-		frontend_desc = qs(0x20545663)
+		frontend_desc = qs("\LSpeedy")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Foots03.skin'
 		materials = [
-			cab_knobs_spd_blak_primary
+			CAB_Knobs_Spd_Blak_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_foots04
-		frontend_desc = qs(0xd3ccbd55)
+		frontend_desc = qs("\LJazzy")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Foots04.skin'
 		materials = [
-			cab_knobs_jbass01_primary
+			CAB_Knobs_JBASS01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_foots05
-		frontend_desc = qs(0x9efef592)
+		frontend_desc = qs("\LKnurl A")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Foots05.skin'
 		materials = [
-			cab_knobs_knurl01_primary
+			CAB_Knobs_Knurl01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_foots06
-		frontend_desc = qs(0x9d6bd1bd)
+		frontend_desc = qs("\LSixties")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Foots06.skin'
 		materials = [
-			cab_knobs_6tz01_primary
+			CAB_Knobs_6TZ01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_foots07
-		frontend_desc = qs(0xa433a9e0)
+		frontend_desc = qs("\LLucky Die")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Foots07.skin'
 		materials = [
-			gtr_knob_type6_01_primary
+			GTR_Knob_Type6_01_Primary
 		]
 		locked
-		polaroid = bass_rewards_knobs_dice
+		polaroid = Bass_Rewards_knobs_Dice
 	}
 	{
 		desc_id = cab_knob_foots08
-		frontend_desc = qs(0xb5d3a651)
+		frontend_desc = qs("\LKnurl B")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Foots08.skin'
 		materials = [
-			gtr_knob_type10_01_primary
+			GTR_Knob_Type10_01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_foots09
-		frontend_desc = qs(0x69bab14e)
+		frontend_desc = qs("\LVintage")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Foots09.skin'
 		materials = [
-			gtr_knob_type1_01_primary
+			GTR_Knob_Type1_01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_foots10
-		frontend_desc = qs(0x8f2cae0b)
+		frontend_desc = qs("\LTone Zones")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Foots10.skin'
 		materials = [
-			gtr_knob_type2_01_primary
+			GTR_Knob_Type2_01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_grmbl01
-		frontend_desc = qs(0xaf972615)
+		frontend_desc = qs("\LHack")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Grmbl01.skin'
 		materials = [
-			cab_knobs_hack001_primary
+			CAB_Knobs_HACK001_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_grmbl02
-		frontend_desc = qs(0xec54f9d3)
+		frontend_desc = qs("\LStar")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Grmbl02.skin'
 		materials = [
-			cab_knob_star01_primary
+			CAB_Knob_Star01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_grmbl03
-		frontend_desc = qs(0x20545663)
+		frontend_desc = qs("\LSpeedy")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Grmbl03.skin'
 		materials = [
-			cab_knobs_spd_blak_primary
+			CAB_Knobs_Spd_Blak_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_grmbl04
-		frontend_desc = qs(0xd3ccbd55)
+		frontend_desc = qs("\LJazzy")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Grmbl04.skin'
 		materials = [
-			cab_knobs_jbass01_primary
+			CAB_Knobs_JBASS01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_grmbl05
-		frontend_desc = qs(0x9efef592)
+		frontend_desc = qs("\LKnurl A")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Grmbl05.skin'
 		materials = [
-			cab_knobs_knurl01_primary
+			CAB_Knobs_Knurl01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_grmbl06
-		frontend_desc = qs(0x9d6bd1bd)
+		frontend_desc = qs("\LSixties")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Grmbl06.skin'
 		materials = [
-			cab_knobs_6tz01_primary
+			CAB_Knobs_6TZ01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_grmbl07
-		frontend_desc = qs(0xa433a9e0)
+		frontend_desc = qs("\LLucky Die")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Grmbl07.skin'
 		materials = [
-			gtr_knob_type6_01_primary
+			GTR_Knob_Type6_01_Primary
 		]
 		locked
-		polaroid = bass_rewards_knobs_dice
+		polaroid = Bass_Rewards_knobs_Dice
 	}
 	{
-		desc_id = cab_knob_grmbl08
-		frontend_desc = qs(0xb5d3a651)
+		desc_id = CAB_Knob_Grmbl08
+		frontend_desc = qs("\LKnurl B")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Grmbl08.skin'
 		materials = [
-			gtr_knob_type10_01_primary
+			GTR_Knob_Type10_01_Primary
 		]
 	}
 	{
-		desc_id = cab_knob_grmbl09
-		frontend_desc = qs(0x69bab14e)
+		desc_id = CAB_Knob_Grmbl09
+		frontend_desc = qs("\LVintage")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Grmbl09.skin'
 		materials = [
-			gtr_knob_type1_01_primary
+			GTR_Knob_Type1_01_Primary
 		]
 	}
 	{
-		desc_id = cab_knob_grmbl10
-		frontend_desc = qs(0x8f2cae0b)
+		desc_id = CAB_Knob_Grmbl10
+		frontend_desc = qs("\LTone Zones")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Grmbl10.skin'
 		materials = [
-			gtr_knob_type2_01_primary
+			GTR_Knob_Type2_01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_phunq01
-		frontend_desc = qs(0xaf972615)
+		frontend_desc = qs("\LHack")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Phunq01.skin'
 		materials = [
-			cab_knobs_hack001_primary
+			CAB_Knobs_HACK001_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_phunq02
-		frontend_desc = qs(0xec54f9d3)
+		frontend_desc = qs("\LStar")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_phunq02.skin'
 		materials = [
-			cab_knob_star01_primary
+			CAB_Knob_Star01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_phunq03
-		frontend_desc = qs(0x20545663)
+		frontend_desc = qs("\LSpeedy")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_phunq03.skin'
 		materials = [
-			cab_knobs_spd_blak_primary
+			CAB_Knobs_Spd_Blak_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_phunq04
-		frontend_desc = qs(0xd3ccbd55)
+		frontend_desc = qs("\LJazzy")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_phunq04.skin'
 		materials = [
-			cab_knobs_jbass01_primary
+			CAB_Knobs_JBASS01_Primary
 		]
 	}
 	{
-		desc_id = cab_knob_phunq05
-		frontend_desc = qs(0x9efef592)
+		desc_id = CAB_Knob_Phunq05
+		frontend_desc = qs("\LKnurl A")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_phunq05.skin'
 		materials = [
-			cab_knobs_knurl01_primary
+			CAB_Knobs_Knurl01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_phunq06
-		frontend_desc = qs(0x9d6bd1bd)
+		frontend_desc = qs("\LSixties")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_phunq06.skin'
 		materials = [
-			cab_knobs_6tz01_primary
+			CAB_Knobs_6TZ01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_phunq07
-		frontend_desc = qs(0xa433a9e0)
+		frontend_desc = qs("\LLucky Die")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_phunq07.skin'
 		materials = [
-			gtr_knob_type6_01_primary
+			GTR_Knob_Type6_01_Primary
 		]
 		locked
-		polaroid = bass_rewards_knobs_dice
+		polaroid = Bass_Rewards_knobs_Dice
 	}
 	{
-		desc_id = cab_knob_phunq08
-		frontend_desc = qs(0xb5d3a651)
+		desc_id = CAB_Knob_Phunq08
+		frontend_desc = qs("\LKnurl B")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_phunq08.skin'
 		materials = [
-			gtr_knob_type10_01_primary
+			GTR_Knob_Type10_01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_phunq09
-		frontend_desc = qs(0x69bab14e)
+		frontend_desc = qs("\LVintage")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_phunq09.skin'
 		materials = [
-			gtr_knob_type1_01_primary
+			GTR_Knob_Type1_01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_phunq10
-		frontend_desc = qs(0x8f2cae0b)
+		frontend_desc = qs("\LTone Zones")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_phunq10.skin'
 		materials = [
-			gtr_knob_type2_01_primary
+			GTR_Knob_Type2_01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_skull01
-		frontend_desc = qs(0xaf972615)
+		frontend_desc = qs("\LHack")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_skull01.skin'
 		materials = [
-			cab_knobs_hack001_primary
+			CAB_Knobs_HACK001_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_skull02
-		frontend_desc = qs(0xec54f9d3)
+		frontend_desc = qs("\LStar")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_skull02.skin'
 		materials = [
-			cab_knob_star01_primary
+			CAB_Knob_Star01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_skull03
-		frontend_desc = qs(0x20545663)
+		frontend_desc = qs("\LSpeedy")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_skull03.skin'
 		materials = [
-			cab_knobs_spd_blak_primary
+			CAB_Knobs_Spd_Blak_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_skull04
-		frontend_desc = qs(0xd3ccbd55)
+		frontend_desc = qs("\LJazzy")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_skull04.skin'
 		materials = [
-			cab_knobs_jbass01_primary
+			CAB_Knobs_JBASS01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_skull05
-		frontend_desc = qs(0x9efef592)
+		frontend_desc = qs("\LKnurl A")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_skull05.skin'
 		materials = [
-			cab_knobs_knurl01_primary
+			CAB_Knobs_Knurl01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_skull06
-		frontend_desc = qs(0x9d6bd1bd)
+		frontend_desc = qs("\LSixties")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_skull06.skin'
 		materials = [
-			cab_knobs_6tz01_primary
+			CAB_Knobs_6TZ01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_skull07
-		frontend_desc = qs(0xa433a9e0)
+		frontend_desc = qs("\LLucky Die")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_skull07.skin'
 		materials = [
-			gtr_knob_type6_01_primary
+			GTR_Knob_Type6_01_Primary
 		]
 		locked
-		polaroid = bass_rewards_knobs_dice
+		polaroid = Bass_Rewards_knobs_Dice
 	}
 	{
 		desc_id = cab_knob_skull08
-		frontend_desc = qs(0xb5d3a651)
+		frontend_desc = qs("\LKnurl B")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_skull08.skin'
 		materials = [
-			gtr_knob_type10_01_primary
+			GTR_Knob_Type10_01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_skull09
-		frontend_desc = qs(0x69bab14e)
+		frontend_desc = qs("\LVintage")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_skull09.skin'
 		materials = [
-			gtr_knob_type1_01_primary
+			GTR_Knob_Type1_01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_skull10
-		frontend_desc = qs(0x8f2cae0b)
+		frontend_desc = qs("\LTone Zones")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_skull10.skin'
 		materials = [
-			gtr_knob_type2_01_primary
+			GTR_Knob_Type2_01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_rubyat01
-		frontend_desc = qs(0xaf972615)
+		frontend_desc = qs("\LHack")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Rubyat01.skin'
 		materials = [
-			cab_knobs_hack001_primary
+			CAB_Knobs_HACK001_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_rubyat02
-		frontend_desc = qs(0xec54f9d3)
+		frontend_desc = qs("\LStar")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Rubyat02.skin'
 		materials = [
-			cab_knob_star01_primary
+			CAB_Knob_Star01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_rubyat03
-		frontend_desc = qs(0x20545663)
+		frontend_desc = qs("\LSpeedy")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Rubyat03.skin'
 		materials = [
-			cab_knobs_spd_blak_primary
+			CAB_Knobs_Spd_Blak_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_rubyat04
-		frontend_desc = qs(0xd3ccbd55)
+		frontend_desc = qs("\LJazzy")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Rubyat04.skin'
 		materials = [
-			cab_knobs_jbass01_primary
+			CAB_Knobs_JBASS01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_rubyat05
-		frontend_desc = qs(0x9efef592)
+		frontend_desc = qs("\LKnurl A")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Rubyat05.skin'
 		materials = [
-			cab_knobs_knurl01_primary
+			CAB_Knobs_Knurl01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_rubyat06
-		frontend_desc = qs(0x9d6bd1bd)
+		frontend_desc = qs("\LSixties")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Rubyat06.skin'
 		materials = [
-			cab_knobs_6tz01_primary
+			CAB_Knobs_6TZ01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_rubyat07
-		frontend_desc = qs(0xa433a9e0)
+		frontend_desc = qs("\LLucky Die")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Rubyat07.skin'
 		materials = [
-			gtr_knob_type6_01_primary
+			GTR_Knob_Type6_01_Primary
 		]
 		locked
-		polaroid = bass_rewards_knobs_dice
+		polaroid = Bass_Rewards_knobs_Dice
 	}
 	{
 		desc_id = cab_knob_rubyat08
-		frontend_desc = qs(0xb5d3a651)
+		frontend_desc = qs("\LKnurl B")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Rubyat08.skin'
 		materials = [
-			gtr_knob_type10_01_primary
+			GTR_Knob_Type10_01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_rubyat09
-		frontend_desc = qs(0x69bab14e)
+		frontend_desc = qs("\LVintage")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Rubyat09.skin'
 		materials = [
-			gtr_knob_type1_01_primary
+			GTR_Knob_Type1_01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_rubyat10
-		frontend_desc = qs(0x8f2cae0b)
+		frontend_desc = qs("\LTone Zones")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Rubyat10.skin'
 		materials = [
-			gtr_knob_type2_01_primary
+			GTR_Knob_Type2_01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_icross01
-		frontend_desc = qs(0xaf972615)
+		frontend_desc = qs("\LHack")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_ICross01.skin'
 		materials = [
-			cab_knobs_hack001_primary
+			CAB_Knobs_HACK001_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_icross02
-		frontend_desc = qs(0xec54f9d3)
+		frontend_desc = qs("\LStar")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_ICross02.skin'
 		materials = [
-			cab_knob_star01_primary
+			CAB_Knob_Star01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_icross03
-		frontend_desc = qs(0x20545663)
+		frontend_desc = qs("\LSpeedy")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_ICross03.skin'
 		materials = [
-			cab_knobs_spd_blak_primary
+			CAB_Knobs_Spd_Blak_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_icross04
-		frontend_desc = qs(0xd3ccbd55)
+		frontend_desc = qs("\LJazzy")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_ICross04.skin'
 		materials = [
-			cab_knobs_jbass01_primary
+			CAB_Knobs_JBASS01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_icross05
-		frontend_desc = qs(0x9efef592)
+		frontend_desc = qs("\LKnurl A")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_ICross05.skin'
 		materials = [
-			cab_knobs_knurl01_primary
+			CAB_Knobs_Knurl01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_icross06
-		frontend_desc = qs(0x9d6bd1bd)
+		frontend_desc = qs("\LSixties")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_ICross06.skin'
 		materials = [
-			cab_knobs_6tz01_primary
+			CAB_Knobs_6TZ01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_icross07
-		frontend_desc = qs(0xa433a9e0)
+		frontend_desc = qs("\LLucky Die")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_ICross07.skin'
 		materials = [
-			gtr_knob_type6_01_primary
+			GTR_Knob_Type6_01_Primary
 		]
 		locked
-		polaroid = bass_rewards_knobs_dice
+		polaroid = Bass_Rewards_knobs_Dice
 	}
 	{
 		desc_id = cab_knob_icross08
-		frontend_desc = qs(0xb5d3a651)
+		frontend_desc = qs("\LKnurl B")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_ICross08.skin'
 		materials = [
-			gtr_knob_type10_01_primary
+			GTR_Knob_Type10_01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_icross09
-		frontend_desc = qs(0x69bab14e)
+		frontend_desc = qs("\LVintage")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_ICross09.skin'
 		materials = [
-			gtr_knob_type1_01_primary
+			GTR_Knob_Type1_01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_icross10
-		frontend_desc = qs(0x8f2cae0b)
+		frontend_desc = qs("\LTone Zones")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_ICross10.skin'
 		materials = [
-			gtr_knob_type2_01_primary
+			GTR_Knob_Type2_01_Primary
 		]
 	}
 	{
 		desc_id = cab_knob_sting
-		frontend_desc = qs(0x3f91596b)
+		frontend_desc = qs("\LSting Knobs")
 		mesh = 'models/CAR_Instruments/bass/Cab_Knob_Sting.skin'
 		hidden
 		materials = [
-			cab_knobs_knurl01_primary
+			CAB_Knobs_Knurl01_Primary
 		]
 	}
 	{
-		desc_id = None
-		frontend_desc = qs(0x9c1b5214)
+		desc_id = none
+		frontend_desc = qs("None")
 		random_weight = 10.0
 	}
 ]
-cas_bass_bridges = [
+CAS_Bass_Bridges = [
 	{
-		desc_id = cab_bridge_bb1a
-		frontend_desc = qs(0xd7cbdc94)
+		desc_id = CAB_Bridge_BB1A
+		frontend_desc = qs("\LSuperTuning")
 		mesh = 'models/CAR_Instruments/bass/CAB_Bridge_BB1A.skin'
 		materials = [
-			cab_bridge_bb1a_primary
+			CAB_Bridge_BB1A_Primary
 		]
 	}
 	{
-		desc_id = cab_bridge_bb3a
-		frontend_desc = qs(0x53dfc87e)
+		desc_id = CAB_Bridge_BB3A
+		frontend_desc = qs("\LChunder Classic")
 		mesh = 'models/CAR_Instruments/bass/CAB_Bridge_BB3A.skin'
 		materials = [
-			cab_bridge_bb3a_primary
+			CAB_Bridge_BB3A_Primary
 		]
 	}
 	{
-		desc_id = cab_bridge_hack
-		frontend_desc = qs(0x5a1a5daa)
+		desc_id = CAB_Bridge_Hack
+		frontend_desc = qs("\LBachenhacker")
 		mesh = 'models/CAR_Instruments/bass/CAB_Bridge_Hack.skin'
 		materials = [
-			cab_bridge_hack_primary
+			CAB_Bridge_Hack_Primary
 		]
 	}
 	{
-		desc_id = cab_bridge_bb2a
-		frontend_desc = qs(0xe8f34bec)
+		desc_id = CAB_Bridge_BB2A
+		frontend_desc = qs("\LModular")
 		mesh = 'models/CAR_Instruments/bass/CAB_Bridge_BB2A.skin'
 		materials = [
-			cab_bridge_bb2a_primary
+			CAB_Bridge_BB2A_Primary
 		]
 	}
 	{
-		desc_id = cab_bridge_mls
-		frontend_desc = qs(0x32fdd64d)
+		desc_id = CAB_Bridge_MLS
+		frontend_desc = qs("\LMLS")
 		mesh = 'models/CAR_Instruments/bass/CAB_Bridge_MLS.skin'
 		materials = [
-			cab_bridge_mls_primary
+			CAB_Bridge_MLS_Primary
 		]
 	}
 ]

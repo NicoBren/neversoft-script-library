@@ -1,50 +1,50 @@
-gp_fx_fe_fireworks_sparklerocket_top_01 = {
+GP_FX_FE_Fireworks_SparkleRocket_Top_01 = {
 	pos = (-33.8104, 0.0, -8.274302)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	emitrangedims = (0.0, 0.0, 0.0)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	EmitRangeDims = (0.0, 0.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, 0.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 45.0
-	liferange = (1.0, 1.0)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 45.0
+	LifeRange = (1.0, 1.0)
 	emit_rate = 1.0
 	max = 0
-	timeseed = 0.0
-	lifetime = 1.0
-	emitnum = 1
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 1.0
+	emitNum = 1
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(5.0, 5.0)
 		(7.0, 7.0)
 	]
-	speedrange = (0.0, 0.0)
-	rotvel = (0.0, 0.0)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	pathfollowtime = 0.0
-	history = 2
-	historylistcoordinatespace = object
+	SpeedRange = (0.0, 0.0)
+	RotVel = (0.0, 0.0)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.0
+	History = 2
+	HistoryListCoordinateSpace = object
 	color = -7518977
-	lod_default
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = jow_flare02
-		specularpower = 0
+	LOD_Default
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = JOW_Flare02
+		SpecularPower = 0
 		alphacutoff = 1
-		blendmode = add
-		quadanimationfps = 0
+		blendMode = Add
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(0.751185, 0.0, -0.22818701)
 		(0.751185, 0.0, -0.22818701)
 		(0.35745603, 0.0, -0.106036)
@@ -55,7 +55,7 @@ gp_fx_fe_fireworks_sparklerocket_top_01 = {
 		(-0.751184, 0.0, 0.22818701)
 		(-0.751184, 0.0, 0.22818701)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-1
 		-1
 		-1
@@ -63,7 +63,7 @@ gp_fx_fe_fireworks_sparklerocket_top_01 = {
 		-256
 		-256
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.78759503
 		1.0
 	]

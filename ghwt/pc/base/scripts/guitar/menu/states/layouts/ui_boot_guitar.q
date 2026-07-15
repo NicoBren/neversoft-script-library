@@ -1,19 +1,19 @@
-0xeb875706 = 0
-0xc5d252f0 = null
+WinPort_CurrentKeyLayout = 0
+WinPort_PrevLayout = null
 
 script ui_create_boot_guitar 
 	if ($invite_controller != -1)
 		spawnscriptnow \{ui_boot_guitar_follow_invite}
 		return
 	endif
-	getenterbuttonassignment
+	GetEnterButtonAssignment
 	switch <assignment>
 		case circle
-		green_button_text = qs(0xaf4d5dd2)
-		red_button_text = qs(0x182f0173)
+		green_button_text = qs("BACK")
+		red_button_text = qs("CONTINUE")
 		default
-		green_button_text = qs(0x182f0173)
-		red_button_text = qs(0xaf4d5dd2)
+		green_button_text = qs("CONTINUE")
+		red_button_text = qs("BACK")
 	endswitch
 	fadetoblack \{on
 		alpha = 1.0
@@ -21,47 +21,47 @@ script ui_create_boot_guitar
 		no_wait}
 	ui_get_controller_parts_allowed controller = ($primary_controller)
 	instrument = mic
-	if isxenon
+	if isXenon
 		desc = 'boot_usingMic_360'
 	else
 		desc = 'boot_usingMic_PS3'
 	endif
-	if structurecontains structure = <allowed> guitar
+	if StructureContains Structure = <allowed> guitar
 		instrument = guitar
 		desc = 'boot_usingGuitar'
 	endif
-	if structurecontains structure = <allowed> drum
+	if StructureContains Structure = <allowed> drum
 		instrument = drum
 		desc = 'boot_usingDrum'
 	endif
-	if 0x1c708d82 controller = ($primary_controller)
+	if WinPortIsKeyboardController controller = ($primary_controller)
 		instrument = guitar
 		desc = 'boot_usingKeyboard'
 	endif
-	if structurecontains structure = <allowed> vocals
-		if ismicrophonepluggedin
+	if StructureContains Structure = <allowed> Vocals
+		if IsMicrophonePluggedIn
 			instrument = mic
-			if isxenon
+			if isXenon
 				desc = 'boot_usingMic_360'
 			else
 				desc = 'boot_usingMic_PS3'
 			endif
 		elseif is_regular_controller controller = ($primary_controller)
 			instrument = mic
-			if isxenon
+			if isXenon
 				desc = 'boot_usingMic_360'
 			else
 				desc = 'boot_usingMic_PS3'
 			endif
 		endif
 	endif
-	if 0x1c708d82 controller = ($primary_controller)
+	if WinPortIsKeyboardController controller = ($primary_controller)
 		event_handlers = [
 			{pad_start ui_boot_guitar_sound params = {instrument = <instrument>}}
 			{pad_choose ui_boot_guitar_sound params = {instrument = <instrument>}}
 			{pad_start ui_event params = {event = menu_replace data = {state = uistate_mainmenu_intro}}}
 			{pad_choose ui_event params = {event = menu_replace data = {state = uistate_mainmenu_intro}}}
-			{pad_option2 0x446746c0}
+			{pad_option2 WinPortToggleKeyLayout}
 		]
 	else
 		event_handlers = [
@@ -71,10 +71,10 @@ script ui_create_boot_guitar
 			{pad_choose ui_event params = {event = menu_replace data = {state = uistate_mainmenu_intro}}}
 		]
 	endif
-	createscreenelement {
+	CreateScreenElement {
 		parent = root_window
 		id = current_menu
-		type = descinterface
+		type = DescInterface
 		desc = <desc>
 		exclusive_device = ($primary_controller)
 		event_handlers = <event_handlers>
@@ -82,72 +82,72 @@ script ui_create_boot_guitar
 		green_button_text = <green_button_text>
 		red_button_text = <red_button_text>
 	}
-	if 0x1c708d82 controller = ($primary_controller)
-		if notismacport
-			if french
-				current_menu :setprops \{instrument_texture = boot_usingkeyboard_f}
-			elseif spanish
-				current_menu :setprops \{instrument_texture = boot_usingkeyboard_s}
-			elseif german
-				current_menu :setprops \{instrument_texture = boot_usingkeyboard_g}
-			elseif italian
-				current_menu :setprops \{instrument_texture = boot_usingkeyboard_i}
+	if WinPortIsKeyboardController controller = ($primary_controller)
+		if NotIsMacPort
+			if French
+				current_menu :SetProps \{instrument_texture = boot_usingKeyboard_f}
+			elseif Spanish
+				current_menu :SetProps \{instrument_texture = boot_usingKeyboard_s}
+			elseif German
+				current_menu :SetProps \{instrument_texture = boot_usingKeyboard_g}
+			elseif Italian
+				current_menu :SetProps \{instrument_texture = boot_usingKeyboard_i}
 			else
-				current_menu :setprops \{instrument_texture = boot_usingkeyboard}
+				current_menu :SetProps \{instrument_texture = boot_usingKeyboard}
 			endif
 		else
-			if french
-				current_menu :setprops \{instrument_texture = boot_usingmackeyboard_f}
-			elseif spanish
-				current_menu :setprops \{instrument_texture = boot_usingmackeyboard_s}
-			elseif german
-				current_menu :setprops \{instrument_texture = boot_usingmackeyboard_g}
-			elseif italian
-				current_menu :setprops \{instrument_texture = boot_usingmackeyboard_i}
+			if French
+				current_menu :SetProps \{instrument_texture = boot_usingMacKeyboard_f}
+			elseif Spanish
+				current_menu :SetProps \{instrument_texture = boot_usingMacKeyboard_s}
+			elseif German
+				current_menu :SetProps \{instrument_texture = boot_usingMacKeyboard_g}
+			elseif Italian
+				current_menu :SetProps \{instrument_texture = boot_usingMacKeyboard_i}
 			else
-				current_menu :setprops \{instrument_texture = boot_usingmackeyboard}
+				current_menu :SetProps \{instrument_texture = boot_usingMacKeyboard}
 			endif
 		endif
 	endif
-	if iswinport
+	if IsWinPort
 		if ((<instrument>) = mic)
-			if notismacport
-				if french
-					current_menu :setprops \{instrument_texture = 0xefcb971f}
-				elseif spanish
-					current_menu :setprops \{instrument_texture = 0x821673f4}
-				elseif german
-					current_menu :setprops \{instrument_texture = 0x98cca789}
-				elseif italian
-					current_menu :setprops \{instrument_texture = 0x7f748a8e}
+			if NotIsMacPort
+				if French
+					current_menu :SetProps \{instrument_texture = instrument_keyboard_mic_f}
+				elseif Spanish
+					current_menu :SetProps \{instrument_texture = instrument_keyboard_mic_s}
+				elseif German
+					current_menu :SetProps \{instrument_texture = instrument_keyboard_mic_g}
+				elseif Italian
+					current_menu :SetProps \{instrument_texture = instrument_keyboard_mic_i}
 				else
-					current_menu :setprops \{instrument_texture = 0x86c74dcd}
+					current_menu :SetProps \{instrument_texture = instrument_keyboard_mic}
 				endif
 			else
-				if french
-					current_menu :setprops \{instrument_texture = 0xbc495227}
-				elseif spanish
-					current_menu :setprops \{instrument_texture = 0xd194b6cc}
-				elseif german
-					current_menu :setprops \{instrument_texture = 0xcb4e62b1}
-				elseif italian
-					current_menu :setprops \{instrument_texture = 0x2cf64fb6}
+				if French
+					current_menu :SetProps \{instrument_texture = instrument_MacKeyboard_mic_f}
+				elseif Spanish
+					current_menu :SetProps \{instrument_texture = instrument_MacKeyboard_mic_s}
+				elseif German
+					current_menu :SetProps \{instrument_texture = instrument_MacKeyboard_mic_g}
+				elseif Italian
+					current_menu :SetProps \{instrument_texture = instrument_MacKeyboard_mic_i}
 				else
-					current_menu :setprops \{instrument_texture = 0xbe415063}
+					current_menu :SetProps \{instrument_texture = instrument_MacKeyboard_mic}
 				endif
 			endif
 		endif
 	endif
-	if isrbdrum controller = ($primary_controller)
+	if isRBDrum controller = ($primary_controller)
 		spawnscriptnow \{create_rb_drum_notification}
 	endif
-	add_user_control_helper \{text = qs(0x182f0173)
+	add_user_control_helper \{text = qs("CONTINUE")
 		button = green
 		z = 100000}
-	if 0x1c708d82 controller = ($primary_controller)
-		if NOT ismicrophonepluggedin
+	if WinPortIsKeyboardController controller = ($primary_controller)
+		if NOT IsMicrophonePluggedIn
 			add_user_control_helper \{text = qs(0x987a30cd)
-				button = yellow
+				button = Yellow
 				z = 100000}
 		endif
 	endif
@@ -155,23 +155,23 @@ endscript
 
 script ui_boot_guitar_follow_invite 
 	ui_create_mainmenu_intro_spawned
-	wait \{1
+	Wait \{1
 		gameframe}
 	spawnscriptnow invite_accepted params = {controllerid = ($invite_controller)}
 endscript
 
 script create_rb_drum_notification 
-	createscreenelement \{parent = root_window
+	CreateScreenElement \{parent = root_window
 		id = notification_box
-		type = descinterface
+		type = DescInterface
 		desc = 'notification_box'}
-	wait \{3
+	Wait \{3
 		seconds}
-	destroyscreenelement \{id = notification_box}
+	DestroyScreenElement \{id = notification_box}
 endscript
 
 script ui_destroy_boot_guitar 
-	destroyscreenelement \{id = current_menu}
+	DestroyScreenElement \{id = current_menu}
 	clean_up_user_control_helpers
 endscript
 
@@ -187,56 +187,56 @@ script ui_boot_guitar_sound
 endscript
 
 script is_regular_controller 
-	if isguitarcontroller controller = <controller>
+	if IsGuitarController controller = <controller>
 		return \{false}
-	elseif isdrumcontroller controller = <controller>
+	elseif IsDrumController controller = <controller>
 		return \{false}
 	endif
 	return \{true}
 endscript
 
-script 0x446746c0 
-	if screenelementexists \{id = current_menu}
-		if ($0xeb875706 = 0)
-			current_menu :se_getprops
-			change 0xc5d252f0 = <instrument_texture>
-			if notismacport
-				if french
-					current_menu :se_setprops \{instrument_texture = 0x6925e65c}
-				elseif spanish
-					current_menu :se_setprops \{instrument_texture = 0x04f802b7}
-				elseif german
-					current_menu :se_setprops \{instrument_texture = 0x1e22d6ca}
-				elseif italian
-					current_menu :se_setprops \{instrument_texture = 0xf99afbcd}
+script WinPortToggleKeyLayout 
+	if ScreenElementExists \{id = current_menu}
+		if ($WinPort_CurrentKeyLayout = 0)
+			current_menu :SE_GetProps
+			change WinPort_PrevLayout = <instrument_texture>
+			if NotIsMacPort
+				if French
+					current_menu :SE_SetProps \{instrument_texture = instrument_keyboard_drums_f}
+				elseif Spanish
+					current_menu :SE_SetProps \{instrument_texture = instrument_keyboard_drums_s}
+				elseif German
+					current_menu :SE_SetProps \{instrument_texture = instrument_keyboard_drums_g}
+				elseif Italian
+					current_menu :SE_SetProps \{instrument_texture = instrument_keyboard_drums_i}
 				else
-					current_menu :se_setprops \{instrument_texture = 0xfdc54aa8}
+					current_menu :SE_SetProps \{instrument_texture = instrument_keyboard_drums}
 				endif
 			else
-				if french
-					current_menu :se_setprops \{instrument_texture = 0x95b43f1a}
-				elseif spanish
-					current_menu :se_setprops \{instrument_texture = 0xf869dbf1}
-				elseif german
-					current_menu :se_setprops \{instrument_texture = 0xe2b30f8c}
-				elseif italian
-					current_menu :se_setprops \{instrument_texture = 0x050b228b}
+				if French
+					current_menu :SE_SetProps \{instrument_texture = instrument_MacKeyboard_drums_f}
+				elseif Spanish
+					current_menu :SE_SetProps \{instrument_texture = instrument_MacKeyboard_drums_s}
+				elseif German
+					current_menu :SE_SetProps \{instrument_texture = instrument_MacKeyboard_drums_g}
+				elseif Italian
+					current_menu :SE_SetProps \{instrument_texture = instrument_MacKeyboard_drums_i}
 				else
-					current_menu :se_setprops \{instrument_texture = 0xae478f90}
+					current_menu :SE_SetProps \{instrument_texture = instrument_MacKeyboard_drums}
 				endif
 			endif
-			current_menu :se_setprops \{0x49d7b13b = drumset}
-			current_menu :se_setprops \{0xf4b8a723 = (512.0, 512.0)}
-			current_menu :se_setprops \{0xe676000e = (0.6, 0.6)}
-			current_menu :se_setprops \{0xf4b53ff4 = -5.0}
-			change \{0xeb875706 = 1}
+			current_menu :SE_SetProps \{bg_guitar_texture = drumset}
+			current_menu :SE_SetProps \{bg_guitar_dims = (512.0, 512.0)}
+			current_menu :SE_SetProps \{bg_guitar_scale = (0.6, 0.6)}
+			current_menu :SE_SetProps \{bg_guitar_rotation = -5.0}
+			change \{WinPort_CurrentKeyLayout = 1}
 		else
-			current_menu :se_setprops \{instrument_texture = $0xc5d252f0}
-			current_menu :se_setprops \{0x49d7b13b = guitar}
-			current_menu :se_setprops \{0xf4b8a723 = (1024.0, 256.0)}
-			current_menu :se_setprops \{0xe676000e = (0.4, 0.4)}
-			current_menu :se_setprops \{0xf4b53ff4 = 120.0}
-			change \{0xeb875706 = 0}
+			current_menu :SE_SetProps \{instrument_texture = $WinPort_PrevLayout}
+			current_menu :SE_SetProps \{bg_guitar_texture = guitar}
+			current_menu :SE_SetProps \{bg_guitar_dims = (1024.0, 256.0)}
+			current_menu :SE_SetProps \{bg_guitar_scale = (0.4, 0.4)}
+			current_menu :SE_SetProps \{bg_guitar_rotation = 120.0}
+			change \{WinPort_CurrentKeyLayout = 0}
 		endif
 	endif
 endscript

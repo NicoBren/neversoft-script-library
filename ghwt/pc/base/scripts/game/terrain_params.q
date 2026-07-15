@@ -1,1046 +1,1046 @@
-terrain_actions = [
+Terrain_Actions = [
 ]
 
-script setterraindefault 
-	loadterrainsounds \{terrain = terrain_default}
+script SetTerrainDefault 
+	LoadTerrainSounds \{terrain = TERRAIN_DEFAULT}
 endscript
-standard_terrain_default = {
-	soundactions = {
-		soundassets = terrain_default_soundassets
+STANDARD_TERRAIN_DEFAULT = {
+	SoundActions = {
+		SoundAssets = TERRAIN_DEFAULT_SoundAssets
 	}
 	physicsactions = {
-		skate_roll_friction = $default_friction
-		skate_grind_friction = $default_rail_friction
+		SKATE_ROLL_FRICTION = $default_friction
+		SKATE_GRIND_FRICTION = $default_rail_friction
 	}
-	treadactions = {
-		skatergrindparticleparms = [
+	treadActions = {
+		SkaterGrindParticleParms = [
 			{
-				$gp_ter_grind_metal_sparks01
+				$GP_TER_Grind_Metal_Sparks01
 			}
 			{
-				$gp_ter_grind_metal_sparks_burst01
+				$GP_TER_Grind_Metal_Sparks_Burst01
 			}
 			{
-				$gp_ter_grind_rocks_bits01
-			}
-		]
-		skaterslideparticleparms = [
-			{
-				$gp_ter_slide_paintchips_burst01
-			}
-			{
-				$gp_ter_slide_rocks_bits01
+				$GP_TER_Grind_Rocks_Bits01
 			}
 		]
-		skaterjumplandparticleparms = [
+		SkaterSlideParticleParms = [
 			{
-				$gp_ter_jumpland_default_dust01
+				$GP_TER_Slide_PaintChips_Burst01
+			}
+			{
+				$GP_TER_Slide_Rocks_Bits01
 			}
 		]
-		skaternatasparticleparms = [
+		SkaterJumpLandParticleParms = [
 			{
-				$gp_ter_natas_default_rocks01
+				$GP_TER_JumpLand_Default_Dust01
 			}
 		]
-		skaterrunparticleparms = [
+		SkaterNatasParticleParms = [
 			{
-				$gp_ter_run_default_dust01
+				$GP_TER_Natas_Default_Rocks01
 			}
 		]
-		skaterskatingparticleparms = [
+		SkaterRunParticleParms = [
 			{
-				$gp_ter_skating_default_rocks01
+				$GP_TER_Run_Default_Dust01
 			}
 		]
-	}
-}
-standard_terrain_concsmooth = {
-	soundactions = {
-		soundassets = terrain_concsmooth_soundassets
-	}
-	treadactions = {
-		skatergrindparticleparms = [
+		SkaterSkatingParticleParms = [
 			{
-				$gp_ter_grind_metal_sparks01
-			}
-			{
-				$gp_ter_grind_metal_sparks_burst01
-			}
-			{
-				$gp_ter_grind_rocks_bits01
-			}
-		]
-		skaterslideparticleparms = [
-			{
-				$gp_ter_slide_paintchips_burst01
-			}
-			{
-				$gp_ter_slide_rocks_bits01
-			}
-		]
-		skaterjumplandparticleparms = [
-			{
-				$gp_ter_jumpland_default_dust01
-			}
-		]
-		skaternatasparticleparms = [
-			{
-				$gp_ter_natas_default_rocks01
-			}
-		]
-		skaterrunparticleparms = [
-			{
-				$gp_ter_run_default_dust01
-			}
-		]
-		skaterskatingparticleparms = [
-			{
-				$gp_ter_skating_default_dust01
+				$GP_TER_Skating_Default_Rocks01
 			}
 		]
 	}
 }
-standard_terrain_concrough = {
-	soundactions = {
-		soundassets = terrain_concrough_soundassets
+STANDARD_TERRAIN_CONCSMOOTH = {
+	SoundActions = {
+		SoundAssets = TERRAIN_CONCSMOOTH_SoundAssets
 	}
-	treadactions = {
-		skatergrindparticleparms = [
+	treadActions = {
+		SkaterGrindParticleParms = [
 			{
-				$gp_ter_grind_metal_sparks01
+				$GP_TER_Grind_Metal_Sparks01
 			}
 			{
-				$gp_ter_grind_metal_sparks_burst01
+				$GP_TER_Grind_Metal_Sparks_Burst01
 			}
 			{
-				$gp_ter_grind_rocks_bits01
-			}
-		]
-		skaterslideparticleparms = [
-			{
-				$gp_ter_slide_paintchips_burst01
-			}
-			{
-				$gp_ter_slide_rocks_bits01
+				$GP_TER_Grind_Rocks_Bits01
 			}
 		]
-		skaterjumplandparticleparms = [
+		SkaterSlideParticleParms = [
 			{
-				$gp_ter_jumpland_default_dust01
+				$GP_TER_Slide_PaintChips_Burst01
+			}
+			{
+				$GP_TER_Slide_Rocks_Bits01
 			}
 		]
-		skaternatasparticleparms = [
+		SkaterJumpLandParticleParms = [
 			{
-				$gp_ter_natas_default_rocks01
+				$GP_TER_JumpLand_Default_Dust01
 			}
 		]
-		skaterrunparticleparms = [
+		SkaterNatasParticleParms = [
 			{
-				$gp_ter_run_default_dust01
+				$GP_TER_Natas_Default_Rocks01
 			}
 		]
-		skaterskatingparticleparms = [
+		SkaterRunParticleParms = [
 			{
-				$gp_ter_skating_default_dust01
+				$GP_TER_Run_Default_Dust01
 			}
 		]
-	}
-}
-standard_terrain_concroughtraining = {
-	soundactions = {
-		soundassets = terrain_concrough_soundassets
-	}
-	treadactions = {
-		skatergrindparticleparms = [
+		SkaterSkatingParticleParms = [
 			{
-				$gp_ter_grind_metal_sparks01
-			}
-			{
-				$gp_ter_grind_metal_sparks_burst01
-			}
-			{
-				$gp_ter_grind_rocks_bits01
-			}
-		]
-		skaterslideparticleparms = [
-			{
-				$gp_ter_slide_paintchips_burst01
-			}
-			{
-				$gp_ter_slide_rocks_bits01
-			}
-		]
-		skaterjumplandparticleparms = [
-			{
-				$gp_ter_jumpland_concsmoothtraining_dust01
-			}
-		]
-		skaternatasparticleparms = [
-			{
-				$gp_ter_natas_default_rocks01
-			}
-		]
-		skaterrunparticleparms = [
-			{
-				$gp_ter_run_concsmoothtraining_dust01
-			}
-		]
-		skaterskatingparticleparms = [
-			{
-				$gp_ter_skating_concsmoothtraining_dust01
+				$GP_TER_Skating_Default_Dust01
 			}
 		]
 	}
 }
-standard_terrain_concsmoothtraining = {
-	soundactions = {
-		soundassets = terrain_concsmooth_soundassets
+STANDARD_TERRAIN_CONCROUGH = {
+	SoundActions = {
+		SoundAssets = TERRAIN_CONCROUGH_SoundAssets
 	}
-	treadactions = {
-		skatergrindparticleparms = [
+	treadActions = {
+		SkaterGrindParticleParms = [
 			{
-				$gp_ter_grind_metal_sparks01
+				$GP_TER_Grind_Metal_Sparks01
 			}
 			{
-				$gp_ter_grind_metal_sparks_burst01
+				$GP_TER_Grind_Metal_Sparks_Burst01
 			}
 			{
-				$gp_ter_grind_rocks_bits01
-			}
-		]
-		skaterslideparticleparms = [
-			{
-				$gp_ter_slide_paintchips_burst01
-			}
-			{
-				$gp_ter_slide_rocks_bits01
+				$GP_TER_Grind_Rocks_Bits01
 			}
 		]
-		skaterjumplandparticleparms = [
+		SkaterSlideParticleParms = [
 			{
-				$gp_ter_jumpland_concsmoothtraining_dust01
+				$GP_TER_Slide_PaintChips_Burst01
+			}
+			{
+				$GP_TER_Slide_Rocks_Bits01
 			}
 		]
-		skaternatasparticleparms = [
+		SkaterJumpLandParticleParms = [
 			{
-				$gp_ter_natas_default_rocks01
+				$GP_TER_JumpLand_Default_Dust01
 			}
 		]
-		skaterrunparticleparms = [
+		SkaterNatasParticleParms = [
 			{
-				$gp_ter_run_concsmoothtraining_dust01
+				$GP_TER_Natas_Default_Rocks01
 			}
 		]
-		skaterskatingparticleparms = [
+		SkaterRunParticleParms = [
 			{
-				$gp_ter_skating_concsmoothtraining_dust01
+				$GP_TER_Run_Default_Dust01
 			}
 		]
-	}
-}
-standard_terrain_brick = {
-	soundactions = {
-		soundassets = terrain_default_soundassets
-	}
-	treadactions = {
-		skatergrindparticleparms = [
+		SkaterSkatingParticleParms = [
 			{
-				$gp_ter_grind_metal_sparks01
-			}
-			{
-				$gp_ter_grind_metal_sparks_burst01
-			}
-			{
-				$gp_ter_grind_default_brick
-			}
-		]
-		skaterslideparticleparms = [
-			{
-				$gp_ter_slide_paintchips_burst01
-			}
-			{
-				$gp_ter_slide_rocks_bits01
-			}
-		]
-		skaterjumplandparticleparms = [
-			{
-				$gp_ter_jumpland_default_dust01
-			}
-		]
-		skaternatasparticleparms = [
-			{
-				$gp_ter_natas_brick_bits01
-			}
-		]
-		skaterrunparticleparms = [
-			{
-				$gp_ter_run_default_dust01
-			}
-		]
-		skaterskatingparticleparms = [
-			{
-				$gp_ter_skating_default_dust01
+				$GP_TER_Skating_Default_Dust01
 			}
 		]
 	}
 }
-standard_terrain_sidewalk = {
-	soundactions = {
-		soundassets = terrain_sidewalk_soundassets
+STANDARD_TERRAIN_CONCROUGHTRAINING = {
+	SoundActions = {
+		SoundAssets = TERRAIN_CONCROUGH_SoundAssets
 	}
-	treadactions = {
-		skatergrindparticleparms = [
+	treadActions = {
+		SkaterGrindParticleParms = [
 			{
-				$gp_ter_grind_metal_sparks01
+				$GP_TER_Grind_Metal_Sparks01
 			}
 			{
-				$gp_ter_grind_metal_sparks_burst01
+				$GP_TER_Grind_Metal_Sparks_Burst01
 			}
 			{
-				$gp_ter_grind_rocks_bits01
-			}
-		]
-		skaterslideparticleparms = [
-			{
-				$gp_ter_slide_paintchips_burst01
-			}
-			{
-				$gp_ter_slide_rocks_bits01
+				$GP_TER_Grind_Rocks_Bits01
 			}
 		]
-		skaterjumplandparticleparms = [
+		SkaterSlideParticleParms = [
 			{
-				$gp_ter_jumpland_default_dust01
+				$GP_TER_Slide_PaintChips_Burst01
+			}
+			{
+				$GP_TER_Slide_Rocks_Bits01
 			}
 		]
-		skaterrunparticleparms = [
+		SkaterJumpLandParticleParms = [
 			{
-				$gp_ter_run_default_dust01
+				$GP_TER_JumpLand_ConcSmoothTraining_Dust01
 			}
 		]
-		skaterskatingparticleparms = [
+		SkaterNatasParticleParms = [
 			{
-				$gp_ter_skating_default_dust01
+				$GP_TER_Natas_Default_Rocks01
 			}
 		]
-	}
-}
-standard_terrain_asphalt = {
-	soundactions = {
-		soundassets = terrain_asphalt_soundassets
-	}
-	treadactions = {
-		skatergrindparticleparms = [
+		SkaterRunParticleParms = [
 			{
-				$gp_ter_grind_metal_sparks01
-			}
-			{
-				$gp_ter_grind_metal_sparks_burst01
-			}
-			{
-				$gp_ter_grind_rocks_bits01
+				$GP_TER_Run_ConcSmoothTraining_Dust01
 			}
 		]
-		skaterslideparticleparms = [
+		SkaterSkatingParticleParms = [
 			{
-				$gp_ter_slide_paintchips_burst01
-			}
-			{
-				$gp_ter_slide_rocks_bits01
-			}
-		]
-		skaterjumplandparticleparms = [
-			{
-				$gp_ter_jumpland_asphalt_dust01
-			}
-		]
-		skaterrunparticleparms = [
-			{
-				$gp_ter_run_asphalt_dust01
-			}
-		]
-		skaterskatingparticleparms = [
-			{
-				$gp_ter_skating_asphalt_rocks01
-			}
-			{
-				$gp_ter_skating_default_dust01
+				$GP_TER_Skating_ConcSmoothTraining_Dust01
 			}
 		]
 	}
 }
-standard_terrain_goldcoins = {
-	soundactions = {
-		soundassets = terrain_metal_soundassets
+STANDARD_TERRAIN_CONCSMOOTHTRAINING = {
+	SoundActions = {
+		SoundAssets = TERRAIN_CONCSMOOTH_SoundAssets
 	}
-	treadactions = {
-		skaterjumplandparticleparms = [
+	treadActions = {
+		SkaterGrindParticleParms = [
 			{
-				$gp_ter_jumpland_goldcoins_dust01
+				$GP_TER_Grind_Metal_Sparks01
 			}
 			{
-				$gp_ter_jumpland_goldcoins_glitter01
+				$GP_TER_Grind_Metal_Sparks_Burst01
 			}
 			{
-				$gp_ter_jumpland_goldcoins_coins01
-			}
-		]
-		skaterrunparticleparms = [
-			{
-				$gp_ter_run_goldcoins_dust01
-			}
-			{
-				$gp_ter_run_goldcoins_glitter01
-			}
-			{
-				$gp_ter_run_goldcoins_coins01
+				$GP_TER_Grind_Rocks_Bits01
 			}
 		]
-		skaterskatingparticleparms = [
+		SkaterSlideParticleParms = [
 			{
-				$gp_ter_skating_goldcoins_coins01
+				$GP_TER_Slide_PaintChips_Burst01
+			}
+			{
+				$GP_TER_Slide_Rocks_Bits01
 			}
 		]
-	}
-}
-standard_terrain_flowerbed = {
-	soundactions = {
-		soundassets = terrain_dirt_soundassets
-	}
-	treadactions = {
-		skaterjumplandparticleparms = [
+		SkaterJumpLandParticleParms = [
 			{
-				$gp_ter_jumpland_dirt_dust01
-			}
-			{
-				$gp_ter_jumpland_flowerbed_petals01
+				$GP_TER_JumpLand_ConcSmoothTraining_Dust01
 			}
 		]
-		skaterrunparticleparms = [
+		SkaterNatasParticleParms = [
 			{
-				$gp_ter_run_dirt_dust01
-			}
-			{
-				$gp_ter_run_flowerbed_petals01
+				$GP_TER_Natas_Default_Rocks01
 			}
 		]
-		skaterskatingparticleparms = [
+		SkaterRunParticleParms = [
 			{
-				$gp_ter_skating_flowerbed_petals01
+				$GP_TER_Run_ConcSmoothTraining_Dust01
 			}
+		]
+		SkaterSkatingParticleParms = [
 			{
-				$gp_ter_skating_default_dust01
+				$GP_TER_Skating_ConcSmoothTraining_Dust01
 			}
 		]
 	}
 }
-standard_terrain_leaves = {
-	soundactions = {
-		soundassets = terrain_default_soundassets
+STANDARD_TERRAIN_BRICK = {
+	SoundActions = {
+		SoundAssets = TERRAIN_DEFAULT_SoundAssets
 	}
-	treadactions = {
-		skaterjumplandparticleparms = [
+	treadActions = {
+		SkaterGrindParticleParms = [
 			{
-				$gp_ter_jumpland_default_dust01
+				$GP_TER_Grind_Metal_Sparks01
 			}
 			{
-				$gp_ter_jumpland_leaves_leaves01
-			}
-		]
-		skaterrunparticleparms = [
-			{
-				$gp_ter_run_default_dust01
+				$GP_TER_Grind_Metal_Sparks_Burst01
 			}
 			{
-				$gp_ter_run_leaves_leaves01
+				$GP_TER_Grind_Default_Brick
 			}
 		]
-		skaterskatingparticleparms = [
+		SkaterSlideParticleParms = [
 			{
-				$gp_ter_skating_leaves_leaves01
+				$GP_TER_Slide_PaintChips_Burst01
 			}
 			{
-				$gp_ter_skating_default_dust01
-			}
-		]
-	}
-}
-standard_terrain_sand = {
-	soundactions = {
-		soundassets = terrain_dirt_soundassets
-	}
-	treadactions = {
-		skaterjumplandparticleparms = [
-			{
-				$gp_ter_jumpland_default_dust01
-			}
-			{
-				$gp_ter_jumpland_sand_bits01
+				$GP_TER_Slide_Rocks_Bits01
 			}
 		]
-		skaterrunparticleparms = [
+		SkaterJumpLandParticleParms = [
 			{
-				$gp_ter_run_default_dust01
-			}
-			{
-				$gp_ter_run_sand_bits01
+				$GP_TER_JumpLand_Default_Dust01
 			}
 		]
-		skaterskatingparticleparms = [
+		SkaterNatasParticleParms = [
 			{
-				$gp_ter_skating_sand_sand01
+				$GP_TER_Natas_Brick_Bits01
 			}
+		]
+		SkaterRunParticleParms = [
 			{
-				$gp_ter_skating_sand_dust01
+				$GP_TER_Run_Default_Dust01
+			}
+		]
+		SkaterSkatingParticleParms = [
+			{
+				$GP_TER_Skating_Default_Dust01
 			}
 		]
 	}
 }
-standard_terrain_metal = {
-	soundactions = {
-		soundassets = terrain_metal_soundassets
+STANDARD_TERRAIN_SIDEWALK = {
+	SoundActions = {
+		SoundAssets = TERRAIN_SIDEWALK_SoundAssets
 	}
-	treadactions = {
-		skatergrindparticleparms = [
+	treadActions = {
+		SkaterGrindParticleParms = [
 			{
-				$gp_ter_grind_metal_sparks01
+				$GP_TER_Grind_Metal_Sparks01
 			}
 			{
-				$gp_ter_grind_metal_sparks_burst01
+				$GP_TER_Grind_Metal_Sparks_Burst01
 			}
-		]
-		skaterslideparticleparms = [
 			{
-				$gp_ter_slide_paintchips_burst01
+				$GP_TER_Grind_Rocks_Bits01
 			}
 		]
-		skaterjumplandparticleparms = [
+		SkaterSlideParticleParms = [
 			{
-				$gp_ter_jumpland_default_dust01
+				$GP_TER_Slide_PaintChips_Burst01
+			}
+			{
+				$GP_TER_Slide_Rocks_Bits01
 			}
 		]
-		skaternatasparticleparms = [
+		SkaterJumpLandParticleParms = [
 			{
-				$gp_ter_natas_metal_sparks01
+				$GP_TER_JumpLand_Default_Dust01
 			}
 		]
-		skaterrunparticleparms = [
+		SkaterRunParticleParms = [
 			{
-				$gp_ter_run_default_dust01
+				$GP_TER_Run_Default_Dust01
 			}
 		]
-		skaterskatingparticleparms = [
+		SkaterSkatingParticleParms = [
 			{
-				$gp_ter_skating_default_dust01
-			}
-		]
-	}
-}
-standard_terrain_wood = {
-	soundactions = {
-		soundassets = terrain_wood_soundassets
-	}
-	treadactions = {
-		skatergrindparticleparms = [
-			{
-				$gp_ter_grind_wood_bits01
-			}
-			{
-				$gp_ter_grind_wood_burst
-			}
-		]
-		skaterslideparticleparms = [
-			{
-				$gp_ter_slide_paintchips_burst01
-			}
-		]
-		skaterjumplandparticleparms = [
-			{
-				$gp_ter_jumpland_default_dust01
-			}
-		]
-		skaternatasparticleparms = [
-			{
-				$gp_ter_natas_wood_bits01
-			}
-		]
-		skaterrunparticleparms = [
-			{
-				$gp_ter_run_default_dust01
-			}
-		]
-		skaterskatingparticleparms = [
-			{
-				$gp_ter_skating_default_dust01
+				$GP_TER_Skating_Default_Dust01
 			}
 		]
 	}
 }
-standard_terrain_wood_painted_w = {
-	soundactions = {
-		soundassets = terrain_wood_soundassets
+STANDARD_TERRAIN_ASPHALT = {
+	SoundActions = {
+		SoundAssets = TERRAIN_ASPHALT_SoundAssets
 	}
-	treadactions = {
-		skatergrindparticleparms = [
+	treadActions = {
+		SkaterGrindParticleParms = [
 			{
-				$gp_ter_grind_woodpaint_bits
+				$GP_TER_Grind_Metal_Sparks01
 			}
 			{
-				$gp_ter_grind_woodpaint_burst
+				$GP_TER_Grind_Metal_Sparks_Burst01
 			}
-		]
-		skaterslideparticleparms = [
 			{
-				$gp_ter_slide_paintchips_burst01
+				$GP_TER_Grind_Rocks_Bits01
 			}
 		]
-		skaterjumplandparticleparms = [
+		SkaterSlideParticleParms = [
 			{
-				$gp_ter_jumpland_default_dust01
+				$GP_TER_Slide_PaintChips_Burst01
+			}
+			{
+				$GP_TER_Slide_Rocks_Bits01
 			}
 		]
-		skaternatasparticleparms = [
+		SkaterJumpLandParticleParms = [
 			{
-				$gp_ter_natas_wood_bits01
+				$GP_TER_JumpLand_Asphalt_Dust01
 			}
 		]
-		skaterrunparticleparms = [
+		SkaterRunParticleParms = [
 			{
-				$gp_ter_run_default_dust01
+				$GP_TER_Run_Asphalt_Dust01
 			}
 		]
-		skaterskatingparticleparms = [
+		SkaterSkatingParticleParms = [
 			{
-				$gp_ter_skating_default_dust01
-			}
-		]
-	}
-}
-standard_terrain_grass_dried = {
-	soundactions = {
-		soundassets = terrain_grass_soundassets
-	}
-	treadactions = {
-		skaterjumplandparticleparms = [
-			{
-				$gp_ter_jumpland_grass_dust01
+				$GP_TER_Skating_Asphalt_Rocks01
 			}
 			{
-				$gp_ter_jumpland_grass_bits01
-			}
-		]
-		skaterrunparticleparms = [
-			{
-				$gp_ter_run_default_dust01
-			}
-			{
-				$gp_ter_run_grass_bits01
-			}
-		]
-		skaterskatingparticleparms = [
-			{
-				$gp_ter_skating_grass_grass01
-			}
-			{
-				$gp_ter_skating_dirt_dust01
+				$GP_TER_Skating_Default_Dust01
 			}
 		]
 	}
 }
-standard_terrain_grass = {
-	soundactions = {
-		soundassets = terrain_grass_soundassets
+STANDARD_TERRAIN_GOLDCOINS = {
+	SoundActions = {
+		SoundAssets = TERRAIN_METAL_SoundAssets
 	}
-	treadactions = {
-		skaterjumplandparticleparms = [
+	treadActions = {
+		SkaterJumpLandParticleParms = [
 			{
-				$gp_ter_jumpland_grass_dust01
+				$GP_TER_JumpLand_GoldCoins_Dust01
 			}
 			{
-				$gp_ter_jumpland_grass_bits01
-			}
-		]
-		skaterrunparticleparms = [
-			{
-				$gp_ter_run_default_dust01
+				$GP_TER_JumpLand_GoldCoins_Glitter01
 			}
 			{
-				$gp_ter_run_grass_bits01
+				$GP_TER_JumpLand_GoldCoins_Coins01
 			}
 		]
-		skaterskatingparticleparms = [
+		SkaterRunParticleParms = [
 			{
-				$gp_ter_skating_grass_grass01
+				$GP_TER_Run_GoldCoins_Dust01
 			}
 			{
-				$gp_ter_skating_default_dust01
+				$GP_TER_Run_GoldCoins_Glitter01
 			}
-		]
-	}
-}
-standard_terrain_grass_hf = {
-	$standard_terrain_highfriction_houses
-	$standard_terrain_grass
-}
-standard_terrain_dirt = {
-	soundactions = {
-		soundassets = terrain_dirt_soundassets
-	}
-	treadactions = {
-		skaterjumplandparticleparms = [
 			{
-				$gp_ter_jumpland_dirt_dust01
+				$GP_TER_Run_GoldCoins_Coins01
 			}
 		]
-		skaterrunparticleparms = [
+		SkaterSkatingParticleParms = [
 			{
-				$gp_ter_run_dirt_dust01
-			}
-		]
-		skaterskatingparticleparms = [
-			{
-				$gp_ter_skating_dirt_bits01
-			}
-			{
-				$gp_ter_skating_dirt_dust01
+				$GP_TER_Skating_GoldCoins_Coins01
 			}
 		]
 	}
 }
-standard_terrain_water = {
-	soundactions = {
-		soundassets = terrain_water_soundassets
+STANDARD_TERRAIN_FLOWERBED = {
+	SoundActions = {
+		SoundAssets = TERRAIN_DIRT_SoundAssets
 	}
-	treadactions = {
-		skaterjumplandparticleparms = [
+	treadActions = {
+		SkaterJumpLandParticleParms = [
 			{
-				$gp_ter_jumpland_water_splash01
+				$GP_TER_JumpLand_Dirt_Dust01
+			}
+			{
+				$GP_TER_JumpLand_FlowerBed_Petals01
 			}
 		]
-		skaterrunparticleparms = [
+		SkaterRunParticleParms = [
 			{
-				$gp_watersplash_small01
+				$GP_TER_Run_Dirt_Dust01
+			}
+			{
+				$GP_TER_Run_FlowerBed_Petals01
 			}
 		]
-		skaterskatingparticleparms = [
+		SkaterSkatingParticleParms = [
 			{
-				$gp_ter_skating_water_splash01
-			}
-		]
-	}
-}
-standard_terrain_metalpole = {
-	soundactions = {
-		soundassets = terrain_metalpole_soundassets
-	}
-	treadactions = {
-		skatergrindparticleparms = [
-			{
-				$gp_ter_grind_metal_sparks01
+				$GP_TER_Skating_FlowerBed_Petals01
 			}
 			{
-				$gp_ter_grind_metal_sparks_burst01
-			}
-		]
-		skaterslideparticleparms = [
-			{
-				$gp_ter_slide_paintchips_burst01
-			}
-		]
-		skaternatasparticleparms = [
-			{
-				$gp_ter_natas_metal_sparks01
+				$GP_TER_Skating_Default_Dust01
 			}
 		]
 	}
 }
-standard_terrain_electricwire = {
-	soundactions = {
-		soundassets = terrain_electricwire_soundassets
+STANDARD_TERRAIN_LEAVES = {
+	SoundActions = {
+		SoundAssets = TERRAIN_DEFAULT_SoundAssets
 	}
-	treadactions = {
-		skatergrindparticleparms = [
+	treadActions = {
+		SkaterJumpLandParticleParms = [
 			{
-				$gp_ter_grind_electricwire_sparks01
+				$GP_TER_JumpLand_Default_Dust01
+			}
+			{
+				$GP_TER_JumpLand_Leaves_Leaves01
 			}
 		]
-	}
-}
-standard_terrain_bamboo = {
-	soundactions = {
-		soundassets = terrain_water_soundassets
-	}
-	treadactions = {
-		skatergrindparticleparms = [
+		SkaterRunParticleParms = [
 			{
-				$gp_ter_grind_wood_bits01
+				$GP_TER_Run_Default_Dust01
+			}
+			{
+				$GP_TER_Run_Leaves_Leaves01
 			}
 		]
-		skaterslideparticleparms = [
+		SkaterSkatingParticleParms = [
 			{
-				$gp_ter_slide_paintchips_burst01
+				$GP_TER_Skating_Leaves_Leaves01
 			}
 			{
-				$gp_ter_grind_wood_bits01
-			}
-		]
-		skaterjumplandparticleparms = [
-			{
-				$gp_ter_jumpland_default_dust01
-			}
-		]
-		skaternatasparticleparms = [
-			{
-				$gp_ter_natas_wood_bits01
-			}
-		]
-		skaterrunparticleparms = [
-			{
-				$gp_ter_run_default_dust01
-			}
-		]
-		skaterskatingparticleparms = [
-			{
-				$gp_ter_skating_default_dust01
+				$GP_TER_Skating_Default_Dust01
 			}
 		]
 	}
 }
-standard_terrain_tile_4ft = {
-	soundactions = {
-		soundassets = terrain_water_soundassets
+STANDARD_TERRAIN_SAND = {
+	SoundActions = {
+		SoundAssets = TERRAIN_DIRT_SoundAssets
 	}
-	treadactions = {
-		skatergrindparticleparms = [
+	treadActions = {
+		SkaterJumpLandParticleParms = [
 			{
-				$gp_ter_grind_metal_sparks01
+				$GP_TER_JumpLand_Default_Dust01
 			}
 			{
-				$gp_ter_grind_metal_sparks_burst01
-			}
-			{
-				$gp_ter_grind_rocks_bits01
+				$GP_TER_JumpLand_Sand_Bits01
 			}
 		]
-		skaterslideparticleparms = [
+		SkaterRunParticleParms = [
 			{
-				$gp_ter_slide_paintchips_burst01
+				$GP_TER_Run_Default_Dust01
 			}
 			{
-				$gp_ter_slide_rocks_bits01
-			}
-		]
-		skaterjumplandparticleparms = [
-			{
-				$gp_ter_jumpland_default_dust01
+				$GP_TER_Run_Sand_Bits01
 			}
 		]
-		skaternatasparticleparms = [
+		SkaterSkatingParticleParms = [
 			{
-				$gp_ter_natas_tile_bits01
+				$GP_TER_Skating_Sand_Sand01
 			}
-		]
-		skaterrunparticleparms = [
 			{
-				$gp_ter_run_default_dust01
-			}
-		]
-		skaterskatingparticleparms = [
-			{
-				$gp_ter_skating_default_dust01
+				$GP_TER_Skating_Sand_Dust01
 			}
 		]
 	}
 }
-standard_terrain_arcade = {
-	soundactions = {
-		soundassets = terrain_default_soundassets
+STANDARD_TERRAIN_METAL = {
+	SoundActions = {
+		SoundAssets = TERRAIN_METAL_SoundAssets
+	}
+	treadActions = {
+		SkaterGrindParticleParms = [
+			{
+				$GP_TER_Grind_Metal_Sparks01
+			}
+			{
+				$GP_TER_Grind_Metal_Sparks_Burst01
+			}
+		]
+		SkaterSlideParticleParms = [
+			{
+				$GP_TER_Slide_PaintChips_Burst01
+			}
+		]
+		SkaterJumpLandParticleParms = [
+			{
+				$GP_TER_JumpLand_Default_Dust01
+			}
+		]
+		SkaterNatasParticleParms = [
+			{
+				$GP_TER_Natas_Metal_Sparks01
+			}
+		]
+		SkaterRunParticleParms = [
+			{
+				$GP_TER_Run_Default_Dust01
+			}
+		]
+		SkaterSkatingParticleParms = [
+			{
+				$GP_TER_Skating_Default_Dust01
+			}
+		]
+	}
+}
+STANDARD_TERRAIN_WOOD = {
+	SoundActions = {
+		SoundAssets = TERRAIN_WOOD_SoundAssets
+	}
+	treadActions = {
+		SkaterGrindParticleParms = [
+			{
+				$GP_TER_Grind_Wood_Bits01
+			}
+			{
+				$GP_TER_Grind_Wood_Burst
+			}
+		]
+		SkaterSlideParticleParms = [
+			{
+				$GP_TER_Slide_PaintChips_Burst01
+			}
+		]
+		SkaterJumpLandParticleParms = [
+			{
+				$GP_TER_JumpLand_Default_Dust01
+			}
+		]
+		SkaterNatasParticleParms = [
+			{
+				$GP_TER_Natas_Wood_Bits01
+			}
+		]
+		SkaterRunParticleParms = [
+			{
+				$GP_TER_Run_Default_Dust01
+			}
+		]
+		SkaterSkatingParticleParms = [
+			{
+				$GP_TER_Skating_Default_Dust01
+			}
+		]
+	}
+}
+STANDARD_TERRAIN_WOOD_PAINTED_W = {
+	SoundActions = {
+		SoundAssets = TERRAIN_WOOD_SoundAssets
+	}
+	treadActions = {
+		SkaterGrindParticleParms = [
+			{
+				$GP_TER_Grind_WoodPaint_Bits
+			}
+			{
+				$GP_TER_Grind_WoodPaint_Burst
+			}
+		]
+		SkaterSlideParticleParms = [
+			{
+				$GP_TER_Slide_PaintChips_Burst01
+			}
+		]
+		SkaterJumpLandParticleParms = [
+			{
+				$GP_TER_JumpLand_Default_Dust01
+			}
+		]
+		SkaterNatasParticleParms = [
+			{
+				$GP_TER_Natas_Wood_Bits01
+			}
+		]
+		SkaterRunParticleParms = [
+			{
+				$GP_TER_Run_Default_Dust01
+			}
+		]
+		SkaterSkatingParticleParms = [
+			{
+				$GP_TER_Skating_Default_Dust01
+			}
+		]
+	}
+}
+STANDARD_TERRAIN_GRASS_DRIED = {
+	SoundActions = {
+		SoundAssets = TERRAIN_GRASS_SoundAssets
+	}
+	treadActions = {
+		SkaterJumpLandParticleParms = [
+			{
+				$GP_TER_JumpLand_Grass_Dust01
+			}
+			{
+				$GP_TER_JumpLand_Grass_Bits01
+			}
+		]
+		SkaterRunParticleParms = [
+			{
+				$GP_TER_Run_Default_Dust01
+			}
+			{
+				$GP_TER_Run_Grass_Bits01
+			}
+		]
+		SkaterSkatingParticleParms = [
+			{
+				$GP_TER_Skating_Grass_Grass01
+			}
+			{
+				$GP_TER_Skating_Dirt_Dust01
+			}
+		]
+	}
+}
+STANDARD_TERRAIN_GRASS = {
+	SoundActions = {
+		SoundAssets = TERRAIN_GRASS_SoundAssets
+	}
+	treadActions = {
+		SkaterJumpLandParticleParms = [
+			{
+				$GP_TER_JumpLand_Grass_Dust01
+			}
+			{
+				$GP_TER_JumpLand_Grass_Bits01
+			}
+		]
+		SkaterRunParticleParms = [
+			{
+				$GP_TER_Run_Default_Dust01
+			}
+			{
+				$GP_TER_Run_Grass_Bits01
+			}
+		]
+		SkaterSkatingParticleParms = [
+			{
+				$GP_TER_Skating_Grass_Grass01
+			}
+			{
+				$GP_TER_Skating_Default_Dust01
+			}
+		]
+	}
+}
+STANDARD_TERRAIN_GRASS_HF = {
+	$STANDARD_TERRAIN_HIGHFRICTION_HOUSES
+	$STANDARD_TERRAIN_GRASS
+}
+STANDARD_TERRAIN_DIRT = {
+	SoundActions = {
+		SoundAssets = TERRAIN_DIRT_SoundAssets
+	}
+	treadActions = {
+		SkaterJumpLandParticleParms = [
+			{
+				$GP_TER_JumpLand_Dirt_Dust01
+			}
+		]
+		SkaterRunParticleParms = [
+			{
+				$GP_TER_Run_Dirt_Dust01
+			}
+		]
+		SkaterSkatingParticleParms = [
+			{
+				$GP_TER_Skating_Dirt_Bits01
+			}
+			{
+				$GP_TER_Skating_Dirt_Dust01
+			}
+		]
+	}
+}
+STANDARD_TERRAIN_WATER = {
+	SoundActions = {
+		SoundAssets = TERRAIN_WATER_SoundAssets
+	}
+	treadActions = {
+		SkaterJumpLandParticleParms = [
+			{
+				$GP_TER_JumpLand_Water_Splash01
+			}
+		]
+		SkaterRunParticleParms = [
+			{
+				$GP_WaterSplash_Small01
+			}
+		]
+		SkaterSkatingParticleParms = [
+			{
+				$GP_TER_Skating_Water_Splash01
+			}
+		]
+	}
+}
+STANDARD_TERRAIN_METALPOLE = {
+	SoundActions = {
+		SoundAssets = TERRAIN_METALPOLE_SoundAssets
+	}
+	treadActions = {
+		SkaterGrindParticleParms = [
+			{
+				$GP_TER_Grind_Metal_Sparks01
+			}
+			{
+				$GP_TER_Grind_Metal_Sparks_Burst01
+			}
+		]
+		SkaterSlideParticleParms = [
+			{
+				$GP_TER_Slide_PaintChips_Burst01
+			}
+		]
+		SkaterNatasParticleParms = [
+			{
+				$GP_TER_Natas_Metal_Sparks01
+			}
+		]
+	}
+}
+STANDARD_TERRAIN_ELECTRICWIRE = {
+	SoundActions = {
+		SoundAssets = TERRAIN_ELECTRICWIRE_SoundAssets
+	}
+	treadActions = {
+		SkaterGrindParticleParms = [
+			{
+				$GP_TER_Grind_ElectricWire_Sparks01
+			}
+		]
+	}
+}
+STANDARD_TERRAIN_BAMBOO = {
+	SoundActions = {
+		SoundAssets = TERRAIN_WATER_SoundAssets
+	}
+	treadActions = {
+		SkaterGrindParticleParms = [
+			{
+				$GP_TER_Grind_Wood_Bits01
+			}
+		]
+		SkaterSlideParticleParms = [
+			{
+				$GP_TER_Slide_PaintChips_Burst01
+			}
+			{
+				$GP_TER_Grind_Wood_Bits01
+			}
+		]
+		SkaterJumpLandParticleParms = [
+			{
+				$GP_TER_JumpLand_Default_Dust01
+			}
+		]
+		SkaterNatasParticleParms = [
+			{
+				$GP_TER_Natas_Wood_Bits01
+			}
+		]
+		SkaterRunParticleParms = [
+			{
+				$GP_TER_Run_Default_Dust01
+			}
+		]
+		SkaterSkatingParticleParms = [
+			{
+				$GP_TER_Skating_Default_Dust01
+			}
+		]
+	}
+}
+STANDARD_TERRAIN_TILE_4FT = {
+	SoundActions = {
+		SoundAssets = TERRAIN_WATER_SoundAssets
+	}
+	treadActions = {
+		SkaterGrindParticleParms = [
+			{
+				$GP_TER_Grind_Metal_Sparks01
+			}
+			{
+				$GP_TER_Grind_Metal_Sparks_Burst01
+			}
+			{
+				$GP_TER_Grind_Rocks_Bits01
+			}
+		]
+		SkaterSlideParticleParms = [
+			{
+				$GP_TER_Slide_PaintChips_Burst01
+			}
+			{
+				$GP_TER_Slide_Rocks_Bits01
+			}
+		]
+		SkaterJumpLandParticleParms = [
+			{
+				$GP_TER_JumpLand_Default_Dust01
+			}
+		]
+		SkaterNatasParticleParms = [
+			{
+				$GP_TER_Natas_Tile_Bits01
+			}
+		]
+		SkaterRunParticleParms = [
+			{
+				$GP_TER_Run_Default_Dust01
+			}
+		]
+		SkaterSkatingParticleParms = [
+			{
+				$GP_TER_Skating_Default_Dust01
+			}
+		]
+	}
+}
+STANDARD_TERRAIN_ARCADE = {
+	SoundActions = {
+		SoundAssets = TERRAIN_DEFAULT_SoundAssets
 	}
 	physicsactions = {
-		skate_roll_friction = $default_friction
-		skate_grind_friction = $default_rail_friction
+		SKATE_ROLL_FRICTION = $default_friction
+		SKATE_GRIND_FRICTION = $default_rail_friction
 	}
-	treadactions = {
-		skatergrindparticleparms = [
+	treadActions = {
+		SkaterGrindParticleParms = [
 			{
-				$gp_ter_grind_metal_sparks01
+				$GP_TER_Grind_Metal_Sparks01
 			}
 			{
-				$gp_ter_grind_metal_sparks_burst01
+				$GP_TER_Grind_Metal_Sparks_Burst01
 			}
 			{
-				$gp_ter_grind_rocks_bits01
-			}
-		]
-		skaterslideparticleparms = [
-			{
-				$gp_ter_slide_paintchips_burst01
-			}
-			{
-				$gp_ter_slide_rocks_bits01
+				$GP_TER_Grind_Rocks_Bits01
 			}
 		]
-		skaterjumplandparticleparms = [
+		SkaterSlideParticleParms = [
 			{
-				$gp_ter_jumpland_default_dust01
+				$GP_TER_Slide_PaintChips_Burst01
+			}
+			{
+				$GP_TER_Slide_Rocks_Bits01
 			}
 		]
-		skaternatasparticleparms = [
+		SkaterJumpLandParticleParms = [
 			{
-				$gp_ter_natas_default_rocks01
+				$GP_TER_JumpLand_Default_Dust01
 			}
 		]
-		skaterrunparticleparms = [
+		SkaterNatasParticleParms = [
 			{
-				$gp_ter_run_default_dust01
+				$GP_TER_Natas_Default_Rocks01
 			}
 		]
-		skaterskatingparticleparms = [
+		SkaterRunParticleParms = [
 			{
-				$gp_ter_skating_default_dust01
+				$GP_TER_Run_Default_Dust01
+			}
+		]
+		SkaterSkatingParticleParms = [
+			{
+				$GP_TER_Skating_Default_Dust01
 			}
 		]
 	}
 }
-standard_terrain_zerofriction = {
-	soundactions = {
-		soundassets = terrain_default_soundassets
+STANDARD_TERRAIN_ZEROFRICTION = {
+	SoundActions = {
+		SoundAssets = TERRAIN_DEFAULT_SoundAssets
 	}
 	physicsactions = {
-		skate_roll_friction = 0
-		skate_grind_friction = 0
+		SKATE_ROLL_FRICTION = 0
+		SKATE_GRIND_FRICTION = 0
 	}
-	treadactions = {
-		skatergrindparticleparms = [
+	treadActions = {
+		SkaterGrindParticleParms = [
 			{
-				$gp_ter_grind_metal_sparks01
+				$GP_TER_Grind_Metal_Sparks01
 			}
 			{
-				$gp_ter_grind_metal_sparks_burst01
+				$GP_TER_Grind_Metal_Sparks_Burst01
 			}
 			{
-				$gp_ter_grind_rocks_bits01
-			}
-		]
-		skaterslideparticleparms = [
-			{
-				$gp_ter_slide_paintchips_burst01
-			}
-			{
-				$gp_ter_slide_rocks_bits01
+				$GP_TER_Grind_Rocks_Bits01
 			}
 		]
-		skaterjumplandparticleparms = [
+		SkaterSlideParticleParms = [
 			{
-				$gp_ter_jumpland_default_dust01
+				$GP_TER_Slide_PaintChips_Burst01
+			}
+			{
+				$GP_TER_Slide_Rocks_Bits01
 			}
 		]
-		skaternatasparticleparms = [
+		SkaterJumpLandParticleParms = [
 			{
-				$gp_ter_natas_default_rocks01
+				$GP_TER_JumpLand_Default_Dust01
 			}
 		]
-		skaterrunparticleparms = [
+		SkaterNatasParticleParms = [
 			{
-				$gp_ter_run_default_dust01
+				$GP_TER_Natas_Default_Rocks01
 			}
 		]
-		skaterskatingparticleparms = [
+		SkaterRunParticleParms = [
 			{
-				$gp_ter_skating_default_dust01
+				$GP_TER_Run_Default_Dust01
+			}
+		]
+		SkaterSkatingParticleParms = [
+			{
+				$GP_TER_Skating_Default_Dust01
 			}
 		]
 	}
 }
-standard_terrain_highfriction = {
-	soundactions = {
-		soundassets = terrain_default_soundassets
+STANDARD_TERRAIN_HIGHFRICTION = {
+	SoundActions = {
+		SoundAssets = TERRAIN_DEFAULT_SoundAssets
 	}
 	physicsactions = {
-		skate_roll_friction = 0.15
-		skate_grind_friction = 0
+		SKATE_ROLL_FRICTION = 0.15
+		SKATE_GRIND_FRICTION = 0
 	}
-	treadactions = {
-		skatergrindparticleparms = [
+	treadActions = {
+		SkaterGrindParticleParms = [
 			{
-				$gp_ter_grind_metal_sparks01
+				$GP_TER_Grind_Metal_Sparks01
 			}
 			{
-				$gp_ter_grind_metal_sparks_burst01
+				$GP_TER_Grind_Metal_Sparks_Burst01
 			}
 			{
-				$gp_ter_grind_rocks_bits01
-			}
-		]
-		skaterslideparticleparms = [
-			{
-				$gp_ter_slide_paintchips_burst01
-			}
-			{
-				$gp_ter_slide_rocks_bits01
+				$GP_TER_Grind_Rocks_Bits01
 			}
 		]
-		skaterjumplandparticleparms = [
+		SkaterSlideParticleParms = [
 			{
-				$gp_ter_jumpland_default_dust01
+				$GP_TER_Slide_PaintChips_Burst01
+			}
+			{
+				$GP_TER_Slide_Rocks_Bits01
 			}
 		]
-		skaternatasparticleparms = [
+		SkaterJumpLandParticleParms = [
 			{
-				$gp_ter_natas_default_rocks01
+				$GP_TER_JumpLand_Default_Dust01
 			}
 		]
-		skaterrunparticleparms = [
+		SkaterNatasParticleParms = [
 			{
-				$gp_ter_run_default_dust01
+				$GP_TER_Natas_Default_Rocks01
 			}
 		]
-		skaterskatingparticleparms = [
+		SkaterRunParticleParms = [
 			{
-				$gp_ter_skating_default_dust01
+				$GP_TER_Run_Default_Dust01
+			}
+		]
+		SkaterSkatingParticleParms = [
+			{
+				$GP_TER_Skating_Default_Dust01
 			}
 		]
 	}
 }
-standard_terrain_highfriction_houses = {
-	$standard_terrain_default
+STANDARD_TERRAIN_HIGHFRICTION_HOUSES = {
+	$STANDARD_TERRAIN_DEFAULT
 	physicsactions = {
-		skate_roll_friction = 0.05
+		SKATE_ROLL_FRICTION = 0.05
 	}
 }
-terrain_default = standard_terrain_default
-terrain_arcade = standard_terrain_arcade
-terrain_asphalt = standard_terrain_asphalt
-terrain_asphaltsmooth_hf = standard_terrain_highfriction_houses
-terrain_bamboo = standard_terrain_bamboo
-terrain_brick = standard_terrain_brick
-terrain_concrough = standard_terrain_concrough
-terrain_concroughtraining = standard_terrain_concroughtraining
-terrain_concsmooth = standard_terrain_concsmooth
-terrain_concsmoothtraining = standard_terrain_concsmoothtraining
-terrain_dirt = standard_terrain_dirt
-terrain_electricwire = standard_terrain_electricwire
-terrain_flowerbed = standard_terrain_flowerbed
-terrain_goldcoins = standard_terrain_goldcoins
-terrain_grass = standard_terrain_grass
-terrain_grass_hf = standard_terrain_grass_hf
-terrain_grassdried = standard_terrain_grassdried
-terrain_highfriction = standard_terrain_highfriction
-terrain_leaves = standard_terrain_leaves
-terrain_metal = standard_terrain_metal
-terrain_metalpole = standard_terrain_metalpole
-terrain_sand = standard_terrain_sand
-terrain_shallowwaterpooltile = standard_terrain_water
-terrain_sidewalk = standard_terrain_sidewalk
-terrain_sidewalk_4ft_hf = standard_terrain_highfriction_houses
-terrain_sidewalk_8ft = standard_terrain_sidewalk
-terrain_tile_4ft = standard_terrain_tile_4ft
-terrain_water = standard_terrain_water
-terrain_waterpuddle = standard_terrain_water
-terrain_watershallow = standard_terrain_water
-terrain_wood_painted_w = standard_terrain_wood_painted_w
-terrain_wood = standard_terrain_wood
-terrain_wood_4ft = standard_terrain_wood
-terrain_wood_8ft = standard_terrain_wood
-terrain_woodbamboopillons = standard_terrain_bamboo
-terrain_zerofriction = standard_terrain_zerofriction
+TERRAIN_DEFAULT = STANDARD_TERRAIN_DEFAULT
+TERRAIN_ARCADE = STANDARD_TERRAIN_ARCADE
+TERRAIN_ASPHALT = STANDARD_TERRAIN_ASPHALT
+TERRAIN_ASPHALTSMOOTH_HF = STANDARD_TERRAIN_HIGHFRICTION_HOUSES
+TERRAIN_BAMBOO = STANDARD_TERRAIN_BAMBOO
+TERRAIN_BRICK = STANDARD_TERRAIN_BRICK
+TERRAIN_CONCROUGH = STANDARD_TERRAIN_CONCROUGH
+TERRAIN_CONCROUGHTRAINING = STANDARD_TERRAIN_CONCROUGHTRAINING
+TERRAIN_CONCSMOOTH = STANDARD_TERRAIN_CONCSMOOTH
+TERRAIN_CONCSMOOTHTRAINING = STANDARD_TERRAIN_CONCSMOOTHTRAINING
+TERRAIN_DIRT = STANDARD_TERRAIN_DIRT
+TERRAIN_ELECTRICWIRE = STANDARD_TERRAIN_ELECTRICWIRE
+TERRAIN_FLOWERBED = STANDARD_TERRAIN_FLOWERBED
+TERRAIN_GOLDCOINS = STANDARD_TERRAIN_GOLDCOINS
+TERRAIN_GRASS = STANDARD_TERRAIN_GRASS
+TERRAIN_GRASS_HF = STANDARD_TERRAIN_GRASS_HF
+TERRAIN_GRASSDRIED = STANDARD_TERRAIN_GRASSDRIED
+TERRAIN_HIGHFRICTION = STANDARD_TERRAIN_HIGHFRICTION
+TERRAIN_LEAVES = STANDARD_TERRAIN_LEAVES
+TERRAIN_METAL = STANDARD_TERRAIN_METAL
+TERRAIN_METALPOLE = STANDARD_TERRAIN_METALPOLE
+TERRAIN_SAND = STANDARD_TERRAIN_SAND
+TERRAIN_SHALLOWWATERPOOLTILE = STANDARD_TERRAIN_WATER
+TERRAIN_SIDEWALK = STANDARD_TERRAIN_SIDEWALK
+TERRAIN_SIDEWALK_4FT_HF = STANDARD_TERRAIN_HIGHFRICTION_HOUSES
+TERRAIN_SIDEWALK_8FT = STANDARD_TERRAIN_SIDEWALK
+TERRAIN_TILE_4FT = STANDARD_TERRAIN_TILE_4FT
+TERRAIN_WATER = STANDARD_TERRAIN_WATER
+TERRAIN_WATERPUDDLE = STANDARD_TERRAIN_WATER
+TERRAIN_WATERSHALLOW = STANDARD_TERRAIN_WATER
+TERRAIN_WOOD_PAINTED_W = STANDARD_TERRAIN_WOOD_PAINTED_W
+TERRAIN_WOOD = STANDARD_TERRAIN_WOOD
+TERRAIN_WOOD_4FT = STANDARD_TERRAIN_WOOD
+TERRAIN_WOOD_8FT = STANDARD_TERRAIN_WOOD
+TERRAIN_WOODBAMBOOPILLONS = STANDARD_TERRAIN_BAMBOO
+TERRAIN_ZEROFRICTION = STANDARD_TERRAIN_ZEROFRICTION

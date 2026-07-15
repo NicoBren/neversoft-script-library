@@ -1,8 +1,8 @@
 debug_igc_camera = 0
 igc_camera_show_frame_info = 0
 cinematic_camera_default_lerp_params = {
-	Type = all
-	On = 1
+	type = all
+	on = 1
 	slow_lerp_factor = 0.6
 	fast_lerp_factor = 0.0
 	lerp_dropoff = 16.0
@@ -72,28 +72,28 @@ script IGC_RunCameraScript
 	if GotParam \{controlscript}
 		<controlscript> <params>
 	else
-		CCam_SetSmoothing \{Type = all
-			On = 1
+		CCam_SetSmoothing \{type = all
+			on = 1
 			fast_lerp_factor = 0.6}
 		<cam_params> = <...>
 		RemoveComponent \{structure_name = cam_params
-			Name = time}
+			name = time}
 		CCam_DoMorph <cam_params>
 		if GotParam \{frames}
-			ScriptAssert \{qs(0xcfb468af)}
+			ScriptAssert \{qs("\LPlayIGCCam frames is deprecated; please use time= in seconds instead")}
 		endif
 		if GotParam \{time}
-			Wait <time> Seconds
+			Wait <time> seconds
 		endif
 	endif
-	if GotParam \{play_hold}
-		play_hold_value = <play_hold>
+	if GotParam \{Play_hold}
+		play_hold_value = <Play_hold>
 		if GotParam \{play_hold_value}
 			if NOT (<play_hold_value> = 1)
-				RemoveParameter \{play_hold}
+				RemoveParameter \{Play_hold}
 			endif
 		endif
-		if GotParam \{play_hold}
+		if GotParam \{Play_hold}
 			begin
 			Wait \{1
 				gameframes}
@@ -105,45 +105,45 @@ endscript
 script igc_camera_update_frame_count 
 	if NOT ScreenElementExists \{id = igc_camera_frame_info}
 		SetScreenElementLock \{id = root_window
-			OFF}
-		getdebugfont
+			off}
+		GetDebugFont
 		CreateScreenElement \{parent = root_window
 			id = igc_camera_frame_info
-			Type = ContainerElement
+			type = ContainerElement
 			z_priority = 10000}
 		CreateScreenElement {
-			Type = TextElement
+			type = TextElement
 			parent = igc_camera_frame_info
 			local_id = counter1
-			Pos = (25.0, 400.0)
-			text = qs(0x03ac90f0)
+			pos = (25.0, 400.0)
+			text = qs("\L")
 			font = <debug_font>
 			rgba = [60 60 100 100]
 			just = [left center]
-			Scale = 0.8
+			scale = 0.8
 		}
 		CreateScreenElement {
-			Type = TextElement
+			type = TextElement
 			parent = igc_camera_frame_info
 			local_id = counter2
-			Pos = (25.0, 418.0)
-			text = qs(0x03ac90f0)
+			pos = (25.0, 418.0)
+			text = qs("\L")
 			font = <debug_font>
 			rgba = [60 60 100 100]
 			just = [left center]
-			Scale = 0.8
+			scale = 0.8
 		}
 	endif
-	formatText {
+	FormatText {
 		TextName = text1
-		qs(0x8aba2455)
+		qs("\LFrame %f")
 		f = <frames>
 	}
-	formatText {
+	FormatText {
 		TextName = text2
-		qs(0x6e90806a)
+		qs("\L%m:%s:%p")
 		m = <minutes>
-		s = <Seconds>
+		s = <seconds>
 		p = <pct>
 		integer_width = 2
 	}

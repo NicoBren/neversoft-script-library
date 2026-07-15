@@ -1,28 +1,28 @@
 jam_current_marker = 0
 jam_markers = [
 	{
-		name_text = qs(0x085b59c2)
+		name_text = qs("Intro")
 	}
 	{
-		name_text = qs(0x8fcfee41)
+		name_text = qs("Riff")
 	}
 	{
-		name_text = qs(0xe26cd97e)
+		name_text = qs("Fill")
 	}
 	{
-		name_text = qs(0x179ef303)
+		name_text = qs("Verse")
 	}
 	{
-		name_text = qs(0x4874e3de)
+		name_text = qs("Bridge")
 	}
 	{
-		name_text = qs(0x2b4356ef)
+		name_text = qs("Solo")
 	}
 	{
-		name_text = qs(0x16357c52)
+		name_text = qs("Chorus")
 	}
 	{
-		name_text = qs(0x249404f8)
+		name_text = qs("Outro")
 	}
 ]
 jam_current_lightshow = 0
@@ -30,47 +30,47 @@ jam_lightshow = [
 	{
 		note = 75
 		change = 1
-		name_text = qs(0x34c6706f)
+		name_text = qs("Verse Slow")
 	}
 	{
 		note = 75
 		change = 2
-		name_text = qs(0x696cc970)
+		name_text = qs("Verse Med")
 	}
 	{
 		note = 75
 		change = 4
-		name_text = qs(0x8de1e71a)
+		name_text = qs("Verse Fast")
 	}
 	{
 		note = 74
 		change = 1
-		name_text = qs(0x8aaca2e9)
+		name_text = qs("Chorus Slow")
 	}
 	{
 		note = 74
 		change = 2
-		name_text = qs(0xc00568ae)
+		name_text = qs("Chorus Med")
 	}
 	{
 		note = 74
 		change = 4
-		name_text = qs(0x338b359c)
+		name_text = qs("Chorus Fast")
 	}
 	{
 		note = 73
 		change = 1
-		name_text = qs(0x45f0f6d8)
+		name_text = qs("Solo Slow")
 	}
 	{
 		note = 73
 		change = 2
-		name_text = qs(0x62f15fe1)
+		name_text = qs("Solo Med")
 	}
 	{
 		note = 73
 		change = 4
-		name_text = qs(0xfcd761ad)
+		name_text = qs("Solo Fast")
 	}
 ]
 
@@ -78,20 +78,20 @@ script create_menu_jam_marker \{controller = 0}
 	change \{jam_current_marker = 0}
 	change \{jam_current_lightshow = 0}
 	change \{jam_current_marker_bpm = $jam_current_bpm}
-	if jam_studio_element :desc_resolvealias \{name = marker_box}
-		<resolved_id> :setprops pos = (-27.0, 800.0) time = 0.0
-		<resolved_id> :se_waitprops
+	if jam_studio_element :Desc_ResolveAlias \{name = marker_box}
+		<resolved_id> :SetProps pos = (-27.0, 800.0) time = 0.0
+		<resolved_id> :SE_WaitProps
 	endif
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <resolved_id>
 		id = jam_marker_container
 		pos = (23.0, 55.0)
 		scale = 0.75
 	}
-	text_params = {type = textelement font = fontgrid_text_a3 just = [center center] scale = 0.5 rgba = [0 0 0 255]}
-	text_params = {type = textelement font = fontgrid_text_a3 just = [right center] scale = 0.6 rgba = [0 0 0 255]}
-	createscreenelement \{type = textblockelement
+	text_params = {type = TextElement font = fontgrid_text_a3 just = [center center] scale = 0.5 rgba = [0 0 0 255]}
+	text_params = {type = TextElement font = fontgrid_text_a3 just = [right center] scale = 0.6 rgba = [0 0 0 255]}
+	CreateScreenElement \{type = TextBlockElement
 		parent = jam_marker_container
 		font = fontgrid_text_a3
 		just = [
@@ -111,13 +111,13 @@ script create_menu_jam_marker \{controller = 0}
 			255
 		]
 		dims = (120.0, 30.0)
-		text = qs(0xa86be03a)
+		text = qs("Marker:")
 		z_priority = 300
 		fit_width = `scale each line if larger`
 		fit_height = `scale down if larger`
 		scale_mode = proportional
-		text_case = original}
-	createscreenelement \{type = textblockelement
+		text_case = Original}
+	CreateScreenElement \{type = TextBlockElement
 		parent = jam_marker_container
 		font = fontgrid_text_a3
 		just = [
@@ -137,15 +137,15 @@ script create_menu_jam_marker \{controller = 0}
 			255
 		]
 		dims = (110.0, 30.0)
-		text = qs(0x61cf0912)
+		text = qs("Lightshow:")
 		z_priority = 300
 		fit_width = `scale each line if larger`
 		fit_height = `scale down if larger`
 		scale_mode = proportional
-		text_case = original}
+		text_case = Original}
 	event_handlers = [
-		{pad_up ghmix_pad_up_down params = {up}}
-		{pad_down ghmix_pad_up_down params = {down}}
+		{pad_up GhMix_Pad_Up_Down params = {up}}
+		{pad_down GhMix_Pad_Up_Down params = {down}}
 		{pad_back menu_jam_marker_back}
 	]
 	new_menu {
@@ -170,8 +170,8 @@ script create_menu_jam_marker \{controller = 0}
 			0
 			255
 		]}
-	text_params = {type = textelement font = fontgrid_text_a11 just = [left center] scale = 0.6 rgba = [0 0 0 255] z_priority = 300}
-	createscreenelement \{type = containerelement
+	text_params = {type = TextElement font = fontgrid_text_a11 just = [left center] scale = 0.6 rgba = [0 0 0 255] z_priority = 300}
+	CreateScreenElement \{type = ContainerElement
 		parent = vmenu_marker
 		dims = (100.0, 47.0)
 		event_handlers = [
@@ -200,8 +200,8 @@ script create_menu_jam_marker \{controller = 0}
 				}
 			}
 		]}
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = <id>
 		id = marker_name_text
 		font = fontgrid_text_a3
@@ -216,9 +216,9 @@ script create_menu_jam_marker \{controller = 0}
 		fit_width = `scale each line if larger`
 		fit_height = `scale down if larger`
 		scale_mode = proportional
-		text_case = original
+		text_case = Original
 	}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = vmenu_marker
 		dims = (100.0, 55.0)
 		event_handlers = [
@@ -247,8 +247,8 @@ script create_menu_jam_marker \{controller = 0}
 				}
 			}
 		]}
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = <id>
 		id = marker_mood_text
 		font = fontgrid_text_a3
@@ -263,9 +263,9 @@ script create_menu_jam_marker \{controller = 0}
 		fit_width = `scale each line if larger`
 		fit_height = `scale down if larger`
 		scale_mode = proportional
-		text_case = original
+		text_case = Original
 	}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = vmenu_marker
 		dims = (100.0, 80.0)
 		event_handlers = [
@@ -288,8 +288,8 @@ script create_menu_jam_marker \{controller = 0}
 				jam_highway_add_marker
 			}
 		]}
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = <id>
 		id = marker_done_text
 		font = fontgrid_text_a3
@@ -299,33 +299,33 @@ script create_menu_jam_marker \{controller = 0}
 		pos = (157.0, 130.0)
 		rgba = [0 0 0 255]
 		dims = (180.0, 50.0)
-		text = qs(0x619cf5cd)
+		text = qs("Add Marker")
 		z_priority = 300
 		fit_width = `scale each line if larger`
 		fit_height = `scale down if larger`
 		scale_mode = proportional
-		text_case = original
+		text_case = Original
 	}
 	clean_up_user_control_helpers
-	add_user_control_helper \{text = qs(0xc18d5e76)
+	add_user_control_helper \{text = qs("SELECT")
 		button = green
 		z = 100}
-	add_user_control_helper \{text = qs(0xaf4d5dd2)
+	add_user_control_helper \{text = qs("BACK")
 		button = red
 		z = 100}
-	if jam_studio_element :desc_resolvealias \{name = marker_box}
-		<resolved_id> :setprops pos = (-27.0, -200.0) time = 0.2
-		<resolved_id> :se_waitprops
+	if jam_studio_element :Desc_ResolveAlias \{name = marker_box}
+		<resolved_id> :SetProps pos = (-27.0, -200.0) time = 0.2
+		<resolved_id> :SE_WaitProps
 	endif
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = vmenu_marker}
 endscript
 
 script change_marker_option 
-	setscreenelementprops \{id = vmenu_marker
+	SetScreenElementProps \{id = vmenu_marker
 		block_events}
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = root_window
 		id = change_marker_option_event_handler
 		z_priority = 10000
@@ -337,14 +337,14 @@ script change_marker_option
 			{pad_start change_marker_option_back}
 		]
 	}
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = change_marker_option_event_handler}
-	ghmix_pad_choose_sound
-	if screenelementexists \{id = change_marker_option_up_arrow}
-		destroyscreenelement \{id = change_marker_option_up_arrow}
+	GhMix_Pad_Choose_Sound
+	if ScreenElementExists \{id = change_marker_option_up_arrow}
+		DestroyScreenElement \{id = change_marker_option_up_arrow}
 	endif
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		id = change_marker_option_up_arrow
 		parent = <text_id>
 		texture = up_arrow
@@ -353,11 +353,11 @@ script change_marker_option
 		rgba = [0 0 0 255]
 		scale = 0.6
 	}
-	if screenelementexists \{id = change_marker_option_down_arrow}
-		destroyscreenelement \{id = change_marker_option_down_arrow}
+	if ScreenElementExists \{id = change_marker_option_down_arrow}
+		DestroyScreenElement \{id = change_marker_option_down_arrow}
 	endif
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		id = change_marker_option_down_arrow
 		parent = <text_id>
 		texture = down_arrow
@@ -369,10 +369,10 @@ script change_marker_option
 endscript
 
 script change_marker_option_up 
-	soundevent \{event = ghmix_scroll_up_down}
+	SoundEvent \{event = GhMix_Scroll_Up_Down}
 	if (<numeric> = 0)
 		new_option = ($<select_global> - 1)
-		getarraysize ($<select_array>)
+		GetArraySize ($<select_array>)
 		if (<new_option> < 0)
 			<new_option> = (<array_size> - 1)
 		endif
@@ -384,23 +384,23 @@ script change_marker_option_up
 			<new_option> = <min>
 		endif
 		change globalname = <select_global> newvalue = <new_option>
-		formattext textname = text qs(0x73307931) s = ($<select_global>)
+		FormatText TextName = text qs("\L%s") s = ($<select_global>)
 	endif
-	setscreenelementprops id = <text_id> text = <text>
-	legacydoscreenelementmorph \{id = change_marker_option_up_arrow
+	SetScreenElementProps id = <text_id> text = <text>
+	LegacyDoScreenElementMorph \{id = change_marker_option_up_arrow
 		scale = 1.5
 		relative_scale}
-	legacydoscreenelementmorph \{id = change_marker_option_up_arrow
+	LegacyDoScreenElementMorph \{id = change_marker_option_up_arrow
 		scale = 1.0
 		relative_scale
 		time = 0.15}
 endscript
 
 script change_marker_option_down 
-	soundevent \{event = ghmix_scroll_up_down}
+	SoundEvent \{event = GhMix_Scroll_Up_Down}
 	if (<numeric> = 0)
 		new_option = ($<select_global> + 1)
-		getarraysize ($<select_array>)
+		GetArraySize ($<select_array>)
 		if (<new_option> >= <array_size>)
 			<new_option> = 0
 		endif
@@ -412,44 +412,44 @@ script change_marker_option_down
 			<new_option> = <max>
 		endif
 		change globalname = <select_global> newvalue = <new_option>
-		formattext textname = text qs(0x73307931) s = ($<select_global>)
+		FormatText TextName = text qs("\L%s") s = ($<select_global>)
 	endif
-	setscreenelementprops id = <text_id> text = <text>
-	legacydoscreenelementmorph \{id = change_marker_option_down_arrow
+	SetScreenElementProps id = <text_id> text = <text>
+	LegacyDoScreenElementMorph \{id = change_marker_option_down_arrow
 		scale = 1.5
 		relative_scale}
-	legacydoscreenelementmorph \{id = change_marker_option_down_arrow
+	LegacyDoScreenElementMorph \{id = change_marker_option_down_arrow
 		scale = 1.0
 		relative_scale
 		time = 0.15}
 endscript
 
 script menu_jam_marker_back 
-	ghmix_pad_back_sound
+	GhMix_Pad_Back_Sound
 	destroy_menu_jam_marker
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = jam_control_container}
 endscript
 
 script change_marker_option_back 
-	setscreenelementprops \{id = vmenu_marker
+	SetScreenElementProps \{id = vmenu_marker
 		unblock_events}
-	destroyscreenelement \{id = change_marker_option_event_handler}
-	ghmix_pad_back_sound
-	if screenelementexists \{id = change_marker_option_up_arrow}
-		destroyscreenelement \{id = change_marker_option_up_arrow}
+	DestroyScreenElement \{id = change_marker_option_event_handler}
+	GhMix_Pad_Back_Sound
+	if ScreenElementExists \{id = change_marker_option_up_arrow}
+		DestroyScreenElement \{id = change_marker_option_up_arrow}
 	endif
-	if screenelementexists \{id = change_marker_option_down_arrow}
-		destroyscreenelement \{id = change_marker_option_down_arrow}
+	if ScreenElementExists \{id = change_marker_option_down_arrow}
+		DestroyScreenElement \{id = change_marker_option_down_arrow}
 	endif
 endscript
 
 script destroy_menu_jam_marker 
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = vmenu_marker}
-	if jam_studio_element :desc_resolvealias \{name = marker_box}
-		<resolved_id> :setprops pos = (-27.0, 800.0) time = 0.2
-		<resolved_id> :se_waitprops
+	if jam_studio_element :Desc_ResolveAlias \{name = marker_box}
+		<resolved_id> :SetProps pos = (-27.0, 800.0) time = 0.2
+		<resolved_id> :SE_WaitProps
 	endif
 	set_focus_color \{rgba = [
 			220
@@ -464,14 +464,14 @@ script destroy_menu_jam_marker
 			255
 		]}
 	clean_up_user_control_helpers
-	add_user_control_helper \{text = qs(0xc18d5e76)
+	add_user_control_helper \{text = qs("SELECT")
 		button = green
 		z = 100}
-	add_user_control_helper \{text = qs(0x48a351fa)
+	add_user_control_helper \{text = qs("PAUSE")
 		button = start
 		z = 100}
 	destroy_menu \{menu_id = scrolling_marker}
-	if screenelementexists \{id = jam_marker_container}
-		destroyscreenelement \{id = jam_marker_container}
+	if ScreenElementExists \{id = jam_marker_container}
+		DestroyScreenElement \{id = jam_marker_container}
 	endif
 endscript

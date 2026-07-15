@@ -1,58 +1,58 @@
-gp_artdeco_encore_breaksparks01 = {
+GP_ArtDeco_Encore_BreakSparks01 = {
 	pos = (-0.22558299, 3.18797, -3.3728569)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
+	CreatedAtStart
 	attach
-	emitrangedims = (0.2, 0.2, 0.0)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	EmitRangeDims = (0.2, 0.2, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, -7.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 180.0
-	bounceheight = 0.0
-	bouncecoeff = 0.2
-	bouncecallbackrate = 0.0
-	liferange = (1.5, 2.5)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 180.0
+	BounceHeight = 0.0
+	BounceCoeff = 0.2
+	BounceCallbackRate = 0.0
+	LifeRange = (1.5, 2.5)
 	emit_rate = 200.0
 	max = 0
-	timeseed = 1.0
-	lifetime = 0.3
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 1.0
+	lifeTime = 0.3
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.07, 0.1)
 		(0.0, 0.1)
 	]
-	speedrange = (4.0, 6.0)
-	rotvel = (0.0, 0.0)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	alignwithpath
-	pathfollowtime = 0.04
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (4.0, 6.0)
+	RotVel = (0.0, 0.0)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	AlignWithPath
+	PathFollowTime = 0.04
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -9568001
-	lod_default
-	novisibilitytest
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = jow_spark01
-		specularpower = 0
+	LOD_Default
+	NoVisibilityTest
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = JOW_Spark01
+		SpecularPower = 0
 		alphacutoff = 16
-		blendmode = add
-		burn
-		burnvalue = 0.7
-		quadanimationfps = 0
+		blendMode = Add
+		Burn
+		BurnValue = 0.7
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(0.0, 0.0, -0.204028)
 		(0.0, 0.0, -0.204028)
 		(0.0, 0.0, -0.128626)
@@ -63,7 +63,7 @@ gp_artdeco_encore_breaksparks01 = {
 		(0.0, 0.0, 0.181851)
 		(0.0, 0.0, 0.181851)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-1
 		-1
 		-1
@@ -71,7 +71,7 @@ gp_artdeco_encore_breaksparks01 = {
 		-256
 		-256
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.5862069
 		1.0
 	]

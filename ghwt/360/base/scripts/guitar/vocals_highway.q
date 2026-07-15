@@ -106,10 +106,10 @@ vocal_slide_length_tweak_px = 6.0
 vocal_pitch_indicator_hide_time = 16
 vocal_enable_static_view = 1
 vocal_highway_no_background = 0
-vocalhighwaywaveprops = [
+VocalHighwayWaveProps = [
 	{
-		controlpointcount = 0
-		controlpoints = [
+		ControlPointCount = 0
+		ControlPoints = [
 			0.0
 			0.0
 			0.0
@@ -303,14 +303,14 @@ vocalhighwaywaveprops = [
 			0.0
 			0.0
 		]
-		currx = 0.0
-		wavefadestart = 200.0
-		wavefadeend = 500.0
-		wavefadealpha = 0.0
+		CurrX = 0.0
+		WaveFadeStart = 200.0
+		WaveFadeEnd = 500.0
+		WaveFadeAlpha = 0.0
 	}
 	{
-		controlpointcount = 0
-		controlpoints = [
+		ControlPointCount = 0
+		ControlPoints = [
 			0.0
 			0.0
 			0.0
@@ -504,10 +504,10 @@ vocalhighwaywaveprops = [
 			0.0
 			0.0
 		]
-		currx = 0.0
-		wavefadestart = 200.0
-		wavefadeend = 500.0
-		wavefadealpha = 0.0
+		CurrX = 0.0
+		WaveFadeStart = 200.0
+		WaveFadeEnd = 500.0
+		WaveFadeAlpha = 0.0
 	}
 ]
 vocals_static_fade_start = 300.0
@@ -520,54 +520,54 @@ vocal_enable_material_paint = 1
 
 script vocals_create_highway \{parent = root_window}
 	RequireParams \{[
-			Player
+			player
 			vocals_highway_view
 		]
 		all}
-	printf 'vocals_create_highway - player %p' p = <Player>
-	vocalshighway_getid Player = <Player>
+	printf 'vocals_create_highway - player %p' p = <player>
+	VocalsHighway_GetId player = <player>
 	DestroyScreenElement id = <vocals_highway_id>
-	gamemode_gettype
-	if ((<Type> = faceoff) || (<Type> = pro_faceoff))
-		vocals_getvocalistnum Player = <Player>
+	GameMode_GetType
+	if ((<type> = faceoff) || (<type> = pro_faceoff))
+		Vocals_GetVocalistNum player = <player>
 		if (<vocalist_num> = 1)
-			setplayerinfo <Player> hud_parent = alias_v1
-			setplayerinfo <Player> highway_position = vocal1
-			<Pos> = (0.0, 0.0)
+			SetPlayerInfo <player> hud_parent = alias_v1
+			SetPlayerInfo <player> highway_position = vocal1
+			<pos> = (0.0, 0.0)
 		else
-			setplayerinfo <Player> hud_parent = alias_v2
-			setplayerinfo <Player> highway_position = vocal2
-			<Pos> = (0.0, 450.0)
+			SetPlayerInfo <player> hud_parent = alias_v2
+			SetPlayerInfo <player> highway_position = vocal2
+			<pos> = (0.0, 450.0)
 		endif
 	else
-		setplayerinfo <Player> hud_parent = alias_v1
-		setplayerinfo <Player> highway_position = vocal1
-		gamemode_getnumplayers
+		SetPlayerInfo <player> hud_parent = alias_v1
+		SetPlayerInfo <player> highway_position = vocal1
+		GameMode_GetNumPlayers
 		if (<num_players> = 1)
-			<Pos> = (0.0, 430.0)
+			<pos> = (0.0, 430.0)
 		else
-			<Pos> = (0.0, 0.0)
+			<pos> = (0.0, 0.0)
 		endif
 	endif
 	CreateScreenElement {
 		parent = <parent>
 		id = <vocals_highway_id>
-		Type = descinterface
+		type = DescInterface
 		desc = 'vocals_highway'
-		Pos = <Pos>
+		pos = <pos>
 		z_priority = 0
 		just = [left top]
 		internal_just = [left top]
 		alpha = 0
-		Hide
+		hide
 	}
-	SpawnScriptLater vocals_create_highway_bg params = {Player = <Player>}
-	<vocals_highway_id> :desc_resolvealias Name = alias_note_scale param = lyrics_container
+	SpawnScriptLater vocals_create_highway_bg params = {player = <player>}
+	<vocals_highway_id> :Desc_ResolveAlias name = alias_note_scale param = lyrics_container
 	CreateScreenElement {
 		local_id = vocals_current_phrase_lyrics
 		parent = <lyrics_container>
-		Type = ContainerElement
-		Pos = (0.0, 0.0)
+		type = ContainerElement
+		pos = (0.0, 0.0)
 		just = [left center]
 		internal_just = [left center]
 		z_priority = 10
@@ -576,8 +576,8 @@ script vocals_create_highway \{parent = root_window}
 	CreateScreenElement {
 		local_id = vocals_next_phrase_lyrics
 		parent = <lyrics_container>
-		Type = ContainerElement
-		Pos = (0.0, 0.0)
+		type = ContainerElement
+		pos = (0.0, 0.0)
 		just = [left center]
 		internal_just = [left center]
 		z_priority = 10
@@ -586,12 +586,12 @@ script vocals_create_highway \{parent = root_window}
 	if ($vocal_debug_hud = 1)
 		CreateScreenElement {
 			local_id = vocalist_hud_debug_pitch
-			Type = TextBlockElement
+			type = TextBlockElement
 			parent = <vocals_highway_id>
 			font = fontgrid_text_a8
-			Pos = (200.0, 0.0)
+			pos = (200.0, 0.0)
 			dims = (300.0, 0.0)
-			text = qs(0x03ac90f0)
+			text = qs("\L")
 			internal_scale = 0.4
 			just = [left top]
 			z_priority = 15
@@ -602,28 +602,28 @@ endscript
 
 script vocals_destroy_highway 
 	vocals_mute_all_mics \{mute = true}
-	vocalshighway_getid Player = <Player>
+	VocalsHighway_GetId player = <player>
 	DestroyScreenElement id = <vocals_highway_id>
 endscript
 
 script vocals_highway_slide_in 
 	RequireParams \{[
-			Player
+			player
 		]
 		all}
-	vocalshighway_getid Player = <Player>
+	VocalsHighway_GetId player = <player>
 	if ScreenElementExists id = <vocals_highway_id>
-		ResolveScreenElementID id = {<vocals_highway_id> child = 0} param = root
+		ResolveScreenElementId id = {<vocals_highway_id> child = 0} param = root
 		if ScreenElementExists id = <root>
-			<root> :se_setprops alpha = 0 motion = ease_out time = 0
-			<root> :se_setprops alpha = 1 motion = ease_out time = 0.5
+			<root> :SE_SetProps alpha = 0 motion = ease_out time = 0
+			<root> :SE_SetProps alpha = 1 motion = ease_out time = 0.5
 		endif
-		<vocals_highway_id> :se_setprops alpha = 1 time = 0 unhide
+		<vocals_highway_id> :SE_SetProps alpha = 1 time = 0 unhide
 	endif
-	vocals_mute_all_mics \{mute = FALSE}
+	vocals_mute_all_mics \{mute = false}
 endscript
 
-script vocals_create_note \{spacer = FALSE}
+script vocals_create_note \{spacer = false}
 	if (<spacer> = true)
 		<texture> = vocal_highway_note_space
 	elseif (<spoken_word> = 1)
@@ -631,17 +631,17 @@ script vocals_create_note \{spacer = FALSE}
 	else
 		<texture> = vocal_highway_note_sung
 	endif
-	vocalshighway_getid Player = <Player>
-	vocals_get_highway_view Player = <Player>
+	VocalsHighway_GetId player = <player>
+	vocals_get_highway_view player = <player>
 	if (<highway_view> = scrolling)
-		<vocals_highway_id> :desc_resolvealias Name = alias_note_scale param = note_container
+		<vocals_highway_id> :Desc_ResolveAlias name = alias_note_scale param = note_container
 	else
-		<vocals_highway_id> :desc_resolvealias Name = alias_static_note_scale param = note_container
+		<vocals_highway_id> :Desc_ResolveAlias name = alias_static_note_scale param = note_container
 	endif
 	CreateScreenElement {
 		parent = <note_container>
-		Type = ContainerElement
-		Pos = <start_pos>
+		type = ContainerElement
+		pos = <start_pos>
 		just = [left center]
 		z_priority = 3
 	}
@@ -654,16 +654,16 @@ script vocals_create_note \{spacer = FALSE}
 		<slope> = 0
 	endif
 	<skew> = [0.0 0.0]
-	SetArrayElement ArrayName = skew index = 1 NewValue = <slope>
+	SetArrayElement ArrayName = skew index = 1 newvalue = <slope>
 	CreateScreenElement {
 		local_id = borders
 		parent = <container_id>
-		Type = SpriteElement
+		type = SpriteElement
 		just = [left center]
 		pos_anchor = [left center]
 		texture = <texture>
 		rgba = [255 255 255 255]
-		Pos = (0.0, 0.0)
+		pos = (0.0, 0.0)
 		dims = ((1.0, 0.0) * <run> + (0.0, 32.0))
 		skew = <skew>
 	}
@@ -673,30 +673,30 @@ endscript
 script vocals_scrolling_create_lyric 
 	RequireParams \{[
 			lyric
-			Pos
-			Player
+			pos
+			player
 		]
 		all}
-	vocalshighway_getid Player = <Player>
-	<vocals_highway_id> :desc_resolvealias Name = alias_note_scale param = note_container
-	<vocals_highway_id> :desc_resolvealias Name = alias_lyrics param = lyrics_container
+	VocalsHighway_GetId player = <player>
+	<vocals_highway_id> :Desc_ResolveAlias name = alias_note_scale param = note_container
+	<vocals_highway_id> :Desc_ResolveAlias name = alias_lyrics param = lyrics_container
 	GetScreenElementPosition id = <lyrics_container>
 	<desired_y_pos> = (<screenelementpos> [1])
-	<text_y_offset> = (<desired_y_pos> - <Pos> [1])
-	<text_pos> = (<Pos> + <text_y_offset> * (0.0, 1.0) + $vocal_lyric_font_offset)
+	<text_y_offset> = (<desired_y_pos> - <pos> [1])
+	<text_pos> = (<pos> + <text_y_offset> * (0.0, 1.0) + $vocal_lyric_font_offset)
 	<rgba> = $vocal_scrolling_lyric_rgba
 	CreateScreenElement {
 		parent = <note_container>
-		Type = TextBlockElement
+		type = TextBlockElement
 		font = $vocal_lyric_font
 		text = <lyric>
 		rgba = <rgba>
 		dims = (0.0, 0.0)
-		fit_width = `expand	dims`
-		fit_height = `expand	dims`
-		Pos = <text_pos>
+		fit_width = `expand dims`
+		fit_height = `expand dims`
+		pos = <text_pos>
 		just = [left top]
-		Scale = $vocal_lyric_font_scale
+		scale = $vocal_lyric_font_scale
 		z_priority = 4
 	}
 	GetScreenElementDims id = <id>
@@ -705,54 +705,54 @@ endscript
 
 script vocals_create_highway_bg 
 	RequireParams \{[
-			Player
+			player
 		]
 		all}
-	vocalshighway_getid Player = <Player>
-	vocals_get_highway_view Player = <Player>
-	<vocals_highway_id> :se_setprops fireball_bg_rgba = $vocal_fireball_color
+	VocalsHighway_GetId player = <player>
+	vocals_get_highway_view player = <player>
+	<vocals_highway_id> :SE_SetProps fireball_bg_rgba = $vocal_fireball_color
 	if (<highway_view> = scrolling)
-		<vocals_highway_id> :se_setprops static_next_phrase_bg_alpha = 0
-		<vocals_highway_id> :desc_resolvealias Name = alias_static_phrase_start param = phrase_start
-		<phrase_start> :se_setprops alpha = 0
-		<vocals_highway_id> :desc_resolvealias Name = alias_static_phrase_end param = phrase_end
-		<phrase_end> :se_setprops alpha = 0
+		<vocals_highway_id> :SE_SetProps static_next_phrase_bg_alpha = 0
+		<vocals_highway_id> :Desc_ResolveAlias name = alias_static_phrase_start param = phrase_start
+		<phrase_start> :SE_SetProps alpha = 0
+		<vocals_highway_id> :Desc_ResolveAlias name = alias_static_phrase_end param = phrase_end
+		<phrase_end> :SE_SetProps alpha = 0
 	else
-		<vocals_highway_id> :se_setprops static_next_phrase_bg_alpha = 1
+		<vocals_highway_id> :SE_SetProps static_next_phrase_bg_alpha = 1
 	endif
 	if ($vocal_highway_no_background = 1)
-		if <vocals_highway_id> :desc_resolvealias Name = alias_bg_container param = bg_container
-			<bg_container> :se_setprops Hide
+		if <vocals_highway_id> :Desc_ResolveAlias name = alias_bg_container param = bg_container
+			<bg_container> :SE_SetProps hide
 		endif
 	endif
 endscript
 
-script vocals_create_freeform_section \{Type = melodic}
+script vocals_create_freeform_section \{type = melodic}
 	RequireParams \{[
-			Pos
+			pos
 			dims
-			Player
+			player
 		]
 		all}
-	vocalshighway_getid Player = <Player>
-	<vocals_highway_id> :desc_resolvealias Name = alias_note_scale param = note_scale
+	VocalsHighway_GetId player = <player>
+	<vocals_highway_id> :Desc_ResolveAlias name = alias_note_scale param = note_scale
 	CreateScreenElement {
 		parent = <note_scale>
-		Type = WindowElement
-		Pos = <Pos>
+		type = WindowElement
+		pos = <pos>
 		dims = <dims>
 		just = [left top]
 		internal_just = [left top]
 		z_priority = 2
 	}
 	<container_id> = <id>
-	if (<Type> = melodic)
-		<material> = vh_ff_fx01
+	if (<type> = melodic)
+		<material> = VH_FF_FX01
 		<texture_to_hwy_ratio> = (100.0 / 64.0)
 		<mat_dims> = ((512.0, 64.0) * <texture_to_hwy_ratio>)
 		<step> = ((512.0, 0.0) * <texture_to_hwy_ratio>)
 	else
-		<material> = vh_crowd_noise
+		<material> = VH_Crowd_Noise
 		<texture_to_hwy_ratio> = (100.0 / 32)
 		<mat_dims> = ((256.0, 128.0) * <texture_to_hwy_ratio>)
 		<step> = ((128.0, 0.0) * <texture_to_hwy_ratio>)
@@ -761,13 +761,13 @@ script vocals_create_freeform_section \{Type = melodic}
 	begin
 	CreateScreenElement {
 		parent = <container_id>
-		Type = SpriteElement
-		Pos = <curr_pos>
+		type = SpriteElement
+		pos = <curr_pos>
 		dims = <mat_dims>
 		clonematerial = <material>
 		just = [left top]
 		rgba = [255 255 255 255]
-		blend = add
+		blend = Add
 		z_priority = -10
 	}
 	<curr_pos> = (<curr_pos> + <step>)
@@ -779,21 +779,21 @@ script vocals_create_freeform_section \{Type = melodic}
 endscript
 
 script vocals_create_paint 
-	vocalshighway_getid Player = <Player>
-	<vocals_highway_id> :desc_resolvealias Name = alias_note_scale param = note_scale
+	VocalsHighway_GetId player = <player>
+	<vocals_highway_id> :Desc_ResolveAlias name = alias_note_scale param = note_scale
 	<rgba> = ($vocal_paint_colors.<hit>)
 	CreateScreenElement {
 		parent = <note_scale>
-		Type = ContainerElement
+		type = ContainerElement
 		just = [left center]
-		Pos = <Pos>
+		pos = <pos>
 		z_priority = 6
 	}
 	<container_id> = <id>
 	CreateScreenElement {
 		parent = <container_id>
 		local_id = note_left
-		Type = SpriteElement
+		type = SpriteElement
 		just = [left center]
 		texture = lyric_blip_right
 		flip_v
@@ -802,7 +802,7 @@ script vocals_create_paint
 	CreateScreenElement {
 		parent = <container_id>
 		local_id = note_middle
-		Type = SpriteElement
+		type = SpriteElement
 		just = [left center]
 		texture = lyric_blip_middle
 		rgba = <rgba>
@@ -811,7 +811,7 @@ script vocals_create_paint
 	CreateScreenElement {
 		parent = <container_id>
 		local_id = note_right
-		Type = SpriteElement
+		type = SpriteElement
 		just = [left center]
 		texture = lyric_blip_right
 		rgba = <rgba>
@@ -821,18 +821,18 @@ endscript
 
 script vocals_create_phrase_marker 
 	RequireParams \{[
-			Player
+			player
 		]
 		all}
-	vocalshighway_getid Player = <Player>
-	<vocals_highway_id> :desc_resolvealias Name = alias_note_scale param = note_scale
+	VocalsHighway_GetId player = <player>
+	<vocals_highway_id> :Desc_ResolveAlias name = alias_note_scale param = note_scale
 	GetScreenElementDims id = <note_scale>
 	CreateScreenElement {
 		parent = <note_scale>
-		Type = SpriteElement
+		type = SpriteElement
 		just = [center top]
-		dims = ((7.0, 30.0) + (0.0, 1.0) * <height>)
-		Pos = (0.0, 0.0)
+		dims = ((7.0, 30.0) + (0.0, 1.0) * <Height>)
+		pos = (0.0, 0.0)
 		texture = white
 		rgba = [110 110 110 160]
 		z_priority = 2
@@ -842,20 +842,20 @@ endscript
 
 script vocals_create_phrase_lyrics \{lyrics = [
 		]}
-	vocalshighway_getid Player = <Player>
-	<vocals_highway_id> :desc_resolvealias Name = alias_note_scale param = lyrics_container
-	<vocals_highway_id> :desc_resolvealias Name = alias_static_phrase_start param = phrase_start
-	<vocals_highway_id> :desc_resolvealias Name = alias_static_phrase_end param = phrase_end
+	VocalsHighway_GetId player = <player>
+	<vocals_highway_id> :Desc_ResolveAlias name = alias_note_scale param = lyrics_container
+	<vocals_highway_id> :Desc_ResolveAlias name = alias_static_phrase_start param = phrase_start
+	<vocals_highway_id> :Desc_ResolveAlias name = alias_static_phrase_end param = phrase_end
 	GetScreenElementPosition id = <phrase_start> absolute
 	<phrase_start_x> = (<screenelementpos> [0])
 	GetScreenElementPosition id = <phrase_end> absolute
 	<phrase_end_x> = (<screenelementpos> [0])
 	<phrase_center_x> = ((<phrase_start_x> + <phrase_end_x>) * (0.5, 0.0))
 	GetScreenElementDims id = <phrase_start>
-	<highway_height> = <height>
+	<highway_height> = <Height>
 	<desired_y_pos> = (<highway_height> + $vocal_highway_text_offset * 4)
 	<text_pos> = (0.0, 0.0)
-	if (<next_phrase> = FALSE)
+	if (<next_phrase> = false)
 		<lyrics_id> = vocals_current_phrase_lyrics
 		<text_line> = ((0.0, 1.0) * $vocal_highway_text_height)
 		<rgba> = [160 160 160 255]
@@ -866,32 +866,32 @@ script vocals_create_phrase_lyrics \{lyrics = [
 	endif
 	DestroyScreenElement id = {<lyrics_container> child = <lyrics_id>} preserve_parent
 	GetArraySize <lyrics>
-	if (<array_Size> > 0)
+	if (<array_size> > 0)
 		<i> = 0
 		<total_w> = 0
 		begin
 		<lyric> = (<lyrics> [<i>])
 		CreateScreenElement {
 			parent = {<lyrics_container> child = <lyrics_id>}
-			Type = TextElement
+			type = TextElement
 			font = $vocal_lyric_font
 			rgba = <rgba>
 			text = <lyric>
-			Pos = ((1.0, 0.0) * <total_w> + $vocal_lyric_font_offset)
-			Scale = $vocal_lyric_font_scale
+			pos = ((1.0, 0.0) * <total_w> + $vocal_lyric_font_offset)
+			scale = $vocal_lyric_font_scale
 			just = [left center]
 			internal_just = [left center]
 			z_priority = 10
 			allow_expansion
-			Shadow
+			shadow
 			shadow_offs = (1.0, 1.0)
 		}
 		GetScreenElementDims id = <id>
 		<total_w> = (<width> + <total_w>)
 		<i> = (<i> + 1)
-		repeat <array_Size>
+		repeat <array_size>
 		<text_pos> = ((-0.5, 0.0) * <total_w> + <phrase_center_x> + <desired_y_pos> * (0.0, 1.0) + <text_line>)
-		SetScreenElementProps id = {<lyrics_container> child = <lyrics_id>} Pos = <text_pos>
+		SetScreenElementProps id = {<lyrics_container> child = <lyrics_id>} pos = <text_pos>
 	endif
 endscript
 
@@ -904,16 +904,16 @@ script vocals_phrase_lyrics_shift_up
 	else
 		<start_alpha> = 1
 	endif
-	se_setprops Pos = <Pos> alpha = <start_alpha> time = 0
-	se_setprops Pos = {<pos_offs> relative} alpha = 1 motion = ease_out time = <time>
+	SE_SetProps pos = <pos> alpha = <start_alpha> time = 0
+	SE_SetProps pos = {<pos_offs> relative} alpha = 1 motion = ease_out time = <time>
 endscript
 
 script vocals_get_highway_view 
 	RequireParams \{[
-			Player
+			player
 		]
 		all}
-	getplayerinfo <Player> vocals_highway_view
+	GetPlayerInfo <player> vocals_highway_view
 	if (($current_song) = jamsession)
 		vocals_highway_view = scrolling
 	endif
@@ -922,11 +922,11 @@ endscript
 
 script vocals_set_highway_view 
 	RequireParams \{[
-			Player
+			player
 			view
 		]
 		all}
-	setplayerinfo <Player> vocals_highway_view = <view>
+	SetPlayerInfo <player> vocals_highway_view = <view>
 	get_savegame_from_controller controller = <controller>
 	SetGlobalTags savegame = <savegame> user_options params = {vocals_highway_view_save = <view>}
 endscript
@@ -937,27 +937,27 @@ script vocals_get_highway_view_text
 		]
 		all}
 	if (<view> = static)
-		return \{vocals_view_text = qs(0x305014bd)}
+		return \{vocals_view_text = qs("STATIC")}
 	else
-		return \{vocals_view_text = qs(0x737839f5)}
+		return \{vocals_view_text = qs("SCROLLING")}
 	endif
 endscript
 
 script vocals_freeform_melodic_message 
-	formatText TextName = text qs(0x2e7f32bb) b = <base_score> m = <multiplier>
-	vocals_message Player = <Player> text = <text> rgba = [220 220 0 255]
+	FormatText TextName = text qs("\L%b\_x\_%m") b = <base_score> m = <multiplier>
+	vocals_message player = <player> text = <text> rgba = [220 220 0 255]
 endscript
 
 script vocals_message 
-	vocalshighway_getid Player = <Player>
+	VocalsHighway_GetId player = <player>
 	if ScreenElementExists id = {<vocals_highway_id> child = vocalist_phrase_status}
 		DestroyScreenElement id = {<vocals_highway_id> child = vocalist_phrase_status}
 	endif
 	CreateScreenElement {
 		local_id = vocalist_phrase_status
 		parent = <vocals_highway_id>
-		Type = TextBlockElement
-		Pos = (343.0, 31.0)
+		type = TextBlockElement
+		pos = (343.0, 31.0)
 		dims = (350.0, 160.0)
 		just = [left top]
 		internal_just = [left top]
@@ -967,44 +967,44 @@ script vocals_message
 		z_priority = 16
 		internal_scale = 0.35000002
 		alpha = 1.0
-		Shadow
+		shadow
 		shadow_offs = (1.0, 1.0)
 	}
-	RunScriptOnScreenElement id = <id> vocals_message_wait_and_die
+	RunScriptOnScreenElement id = <id> vocals_message_wait_and_DIE
 endscript
 
-script vocals_message_wait_and_die 
+script vocals_message_wait_and_DIE 
 	Wait \{1
-		Second}
-	se_setprops \{alpha = 0.0
+		second}
+	SE_SetProps \{alpha = 0.0
 		time = 0.4}
-	se_waitprops
+	SE_WaitProps
 	Die
 endscript
 
 script vocals_freeform_score_message 
-	formatText TextName = text qs(0x00ce9d08) d = <points>
+	FormatText TextName = text qs("%d Points") d = <points>
 	vocals_message {
-		Player = <Player>
+		player = <player>
 		text = <text>
 		rgba = [32 240 32 255]
 	}
 endscript
 
 script vocals_end_phrase 
-	if <vocals_highway_id> :desc_resolvealias Name = alias_pitch_indicator param = pitch_indicator
+	if <vocals_highway_id> :Desc_ResolveAlias name = alias_pitch_indicator param = pitch_indicator
 		RunScriptOnScreenElement {
 			id = <pitch_indicator>
 			<fx_script>
-			params = {Player = <Player> rgba = <rgba>}
+			params = {player = <player> rgba = <rgba>}
 		}
 	endif
 	RunScriptOnScreenElement id = <vocals_highway_id> vocals_highway_border_flash_spawned params = {rgba = <rgba>}
 endscript
 
 script vocals_lightning_alert 
-	vocalshighway_getid Player = <Player>
-	if <vocals_highway_id> :desc_resolvealias Name = alias_top_lightning param = parent
+	VocalsHighway_GetId player = <player>
+	if <vocals_highway_id> :Desc_ResolveAlias name = alias_top_lightning param = parent
 		RunScriptOnScreenElement id = <parent> vocals_lightning_alert_spawned
 	endif
 endscript
@@ -1012,53 +1012,53 @@ endscript
 script vocals_lightning_alert_spawned 
 	Obj_GetID
 	lightning_time = 0.2
-	ResolveScreenElementID id = {<objID> child = lightning0} param = streak_lightning_01
-	ResolveScreenElementID id = {<objID> child = lightning1} param = streak_lightning_03
-	ResolveScreenElementID id = {<objID> child = lightning2} param = streak_lightning_05
-	ResolveScreenElementID id = {<objID> child = lightning3} param = streak_lightning_07
+	ResolveScreenElementId id = {<ObjID> child = lightning0} param = streak_lightning_01
+	ResolveScreenElementId id = {<ObjID> child = lightning1} param = streak_lightning_03
+	ResolveScreenElementId id = {<ObjID> child = lightning2} param = streak_lightning_05
+	ResolveScreenElementId id = {<ObjID> child = lightning3} param = streak_lightning_07
 	vocals_lightning_hide
 	SetScreenElementProps id = <streak_lightning_01> alpha = 1 time = <lightning_time>
-	Wait <lightning_time> Seconds
+	Wait <lightning_time> seconds
 	SetScreenElementProps id = <streak_lightning_01> alpha = 0 time = <lightning_time>
 	SetScreenElementProps id = <streak_lightning_03> alpha = 1 time = <lightning_time>
-	Wait <lightning_time> Seconds
+	Wait <lightning_time> seconds
 	SetScreenElementProps id = <streak_lightning_03> alpha = 0 time = <lightning_time>
 	SetScreenElementProps id = <streak_lightning_05> alpha = 1 time = <lightning_time>
-	Wait <lightning_time> Seconds
+	Wait <lightning_time> seconds
 	SetScreenElementProps id = <streak_lightning_05> alpha = 0 time = <lightning_time>
 	SetScreenElementProps id = <streak_lightning_07> alpha = 1 time = <lightning_time>
-	Wait <lightning_time> Seconds
+	Wait <lightning_time> seconds
 	SetScreenElementProps id = <streak_lightning_07> alpha = 0 time = <lightning_time>
-	Wait <lightning_time> Seconds
+	Wait <lightning_time> seconds
 endscript
 
 script vocals_lightning_hide 
 	Obj_GetID
-	if GetScreenElementChildren id = <objID>
+	if GetScreenElementChildren id = <ObjID>
 		GetArraySize <children>
 		<i> = 0
 		begin
 		SetScreenElementProps id = (<children> [<i>]) alpha = 0
 		<i> = (<i> + 1)
-		repeat <array_Size>
+		repeat <array_size>
 	endif
 endscript
 
 script vocals_star_power_changed 
 	if (<enable> = 1)
-		vocals_paint_star_power_on Player = <Player>
+		vocals_paint_star_power_on player = <player>
 	else
-		vocals_paint_star_power_off Player = <Player>
+		vocals_paint_star_power_off player = <player>
 	endif
 endscript
 
 script vocals_lightning_starpower_spawned 
 	Obj_SpawnScriptNow \{vocals_lightning_starpower_spawned_b}
 	Obj_GetID
-	ResolveScreenElementID id = {<objID> child = lightning0} param = lightning0
-	ResolveScreenElementID id = {<objID> child = lightning1} param = lightning1
-	ResolveScreenElementID id = {<objID> child = lightning2} param = lightning2
-	ResolveScreenElementID id = {<objID> child = lightning3} param = lightning3
+	ResolveScreenElementId id = {<ObjID> child = lightning0} param = lightning0
+	ResolveScreenElementId id = {<ObjID> child = lightning1} param = lightning1
+	ResolveScreenElementId id = {<ObjID> child = lightning2} param = lightning2
+	ResolveScreenElementId id = {<ObjID> child = lightning3} param = lightning3
 	<alpha> = 0.7
 	begin
 	<lightning_time> = RandomFloat (0.02, 0.07)
@@ -1066,25 +1066,25 @@ script vocals_lightning_starpower_spawned
 	SetScreenElementProps id = <lightning1> alpha = 0 time = <lightning_time>
 	SetScreenElementProps id = <lightning2> alpha = 0 time = <lightning_time>
 	SetScreenElementProps id = <lightning3> alpha = 0 time = <lightning_time>
-	waitscreenelementprops id = <lightning3>
+	WaitScreenElementProps id = <lightning3>
 	SetScreenElementProps id = <lightning0> alpha = 0 time = <lightning_time>
 	SetScreenElementProps id = <lightning1> alpha = <alpha> time = <lightning_time>
-	waitscreenelementprops id = <lightning1>
+	WaitScreenElementProps id = <lightning1>
 	SetScreenElementProps id = <lightning1> alpha = 0 time = <lightning_time>
 	SetScreenElementProps id = <lightning2> alpha = <alpha> time = <lightning_time>
-	waitscreenelementprops id = <lightning2>
+	WaitScreenElementProps id = <lightning2>
 	SetScreenElementProps id = <lightning2> alpha = 0 time = <lightning_time>
 	SetScreenElementProps id = <lightning3> alpha = <alpha> time = <lightning_time>
-	waitscreenelementprops id = <lightning3>
+	WaitScreenElementProps id = <lightning3>
 	repeat
 endscript
 
 script vocals_lightning_starpower_spawned_b 
 	Obj_GetID
-	ResolveScreenElementID id = {<objID> child = lightning0b} param = lightning0
-	ResolveScreenElementID id = {<objID> child = lightning1b} param = lightning1
-	ResolveScreenElementID id = {<objID> child = lightning2b} param = lightning2
-	ResolveScreenElementID id = {<objID> child = lightning3b} param = lightning3
+	ResolveScreenElementId id = {<ObjID> child = lightning0b} param = lightning0
+	ResolveScreenElementId id = {<ObjID> child = lightning1b} param = lightning1
+	ResolveScreenElementId id = {<ObjID> child = lightning2b} param = lightning2
+	ResolveScreenElementId id = {<ObjID> child = lightning3b} param = lightning3
 	<alpha> = 0.7
 	begin
 	<lightning_time> = RandomFloat (0.05, 0.09)
@@ -1092,25 +1092,25 @@ script vocals_lightning_starpower_spawned_b
 	SetScreenElementProps id = <lightning1> alpha = 0 time = <lightning_time>
 	SetScreenElementProps id = <lightning2> alpha = 0 time = <lightning_time>
 	SetScreenElementProps id = <lightning3> alpha = 0 time = <lightning_time>
-	waitscreenelementprops id = <lightning3>
+	WaitScreenElementProps id = <lightning3>
 	SetScreenElementProps id = <lightning0> alpha = 0 time = <lightning_time>
 	SetScreenElementProps id = <lightning1> alpha = <alpha> time = <lightning_time>
-	waitscreenelementprops id = <lightning1>
+	WaitScreenElementProps id = <lightning1>
 	SetScreenElementProps id = <lightning1> alpha = 0 time = <lightning_time>
 	SetScreenElementProps id = <lightning2> alpha = <alpha> time = <lightning_time>
-	waitscreenelementprops id = <lightning2>
+	WaitScreenElementProps id = <lightning2>
 	SetScreenElementProps id = <lightning2> alpha = 0 time = <lightning_time>
 	SetScreenElementProps id = <lightning3> alpha = <alpha> time = <lightning_time>
-	waitscreenelementprops id = <lightning3>
+	WaitScreenElementProps id = <lightning3>
 	repeat
 endscript
 
 script vocals_lightning_starpower_spawned_c 
 	Obj_GetID
-	ResolveScreenElementID id = {<objID> child = star_001} param = lightning0
-	ResolveScreenElementID id = {<objID> child = star_002} param = lightning1
-	ResolveScreenElementID id = {<objID> child = star_003} param = lightning2
-	ResolveScreenElementID id = {<objID> child = star_004} param = lightning3
+	ResolveScreenElementId id = {<ObjID> child = star_001} param = lightning0
+	ResolveScreenElementId id = {<ObjID> child = star_002} param = lightning1
+	ResolveScreenElementId id = {<ObjID> child = star_003} param = lightning2
+	ResolveScreenElementId id = {<ObjID> child = star_004} param = lightning3
 	<alpha> = 0.7
 	<lightning_time> = 0.07
 	begin
@@ -1118,16 +1118,16 @@ script vocals_lightning_starpower_spawned_c
 	SetScreenElementProps id = <lightning1> alpha = 0 time = <lightning_time>
 	SetScreenElementProps id = <lightning2> alpha = 0 time = <lightning_time>
 	SetScreenElementProps id = <lightning3> alpha = 0 time = <lightning_time>
-	waitscreenelementprops id = <lightning3>
+	WaitScreenElementProps id = <lightning3>
 	SetScreenElementProps id = <lightning0> alpha = 0 time = <lightning_time>
 	SetScreenElementProps id = <lightning1> alpha = <alpha> time = <lightning_time>
-	waitscreenelementprops id = <lightning1>
+	WaitScreenElementProps id = <lightning1>
 	SetScreenElementProps id = <lightning1> alpha = 0 time = <lightning_time>
 	SetScreenElementProps id = <lightning2> alpha = <alpha> time = <lightning_time>
-	waitscreenelementprops id = <lightning2>
+	WaitScreenElementProps id = <lightning2>
 	SetScreenElementProps id = <lightning2> alpha = 0 time = <lightning_time>
 	SetScreenElementProps id = <lightning3> alpha = <alpha> time = <lightning_time>
-	waitscreenelementprops id = <lightning3>
+	WaitScreenElementProps id = <lightning3>
 	repeat 1
 	SetScreenElementProps id = <lightning0> alpha = 0 time = <lightning_time>
 	SetScreenElementProps id = <lightning1> alpha = 0 time = <lightning_time>
@@ -1142,22 +1142,22 @@ script vocals_highway_border_flash \{rgba = [
 			255
 		]}
 	RequireParams \{[
-			Player
+			player
 		]
 		all}
-	vocalshighway_getid Player = <Player>
+	VocalsHighway_GetId player = <player>
 	RunScriptOnScreenElement id = <vocals_highway_id> vocals_highway_border_flash_spawned params = {rgba = <rgba>}
 endscript
 
 script vocals_highway_border_flash_spawned 
-	se_setprops border_rgba = <rgba> time = 0.1
-	se_waitprops
-	se_setprops \{border_rgba = [
+	SE_SetProps border_rgba = <rgba> time = 0.1
+	SE_WaitProps
+	SE_SetProps \{border_rgba = [
 			255
 			255
 			255
 			255
 		]
 		time = 0.35000002}
-	se_waitprops
+	SE_WaitProps
 endscript

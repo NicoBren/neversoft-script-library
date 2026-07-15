@@ -1,57 +1,57 @@
-gp_artdeco_encore_dragonpoof01 = {
+GP_ArtDeco_Encore_DragonPoof01 = {
 	pos = (1.735265, 0.80188, -0.054213)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	emitrangedims = (2.0, 0.5, 3.0)
-	docircularemit
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	EmitRangeDims = (2.0, 0.5, 3.0)
+	DoCircularEmit
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, -1.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	radiate
-	elevspread = (90.0, 120.0)
-	sweepspread = (0.0, 360.0)
-	liferange = (1.0, 2.0)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	Radiate
+	ElevSpread = (90.0, 120.0)
+	SweepSpread = (0.0, 360.0)
+	LifeRange = (1.0, 2.0)
 	emit_rate = 128.0
 	max = 0
-	timeseed = 0.5
-	lifetime = 0.0
-	emitnum = 128
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.5
+	lifeTime = 0.0
+	emitNum = 128
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(1.0, 1.0)
 		(2.5, 2.5)
 	]
-	speedrange = (1.0, 3.0)
-	rotvel = (-0.5, 0.5)
-	rotveltimescale = 1.0
-	emitdelaystart = 0.0
-	pathfollowtime = 0.2
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (1.0, 3.0)
+	RotVel = (-0.5, 0.5)
+	RotVelTimeScale = 1.0
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.2
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -1
-	lod_default
-	quickmaterial = {
-		texturelayout = layout2x2
-		diffusetextureenabled
-		diffusetexture = jow_steam02
-		specularpower = 0
-		lighting
+	LOD_Default
+	QuickMaterial = {
+		TextureLayout = Layout2x2
+		DiffuseTextureEnabled
+		DiffuseTexture = JOW_Steam02
+		SpecularPower = 0
+		Lighting
 		alphacutoff = 16
-		blendmode = blend
-		softedge
-		softedgescale = 1.0
-		quadanimationfps = 0
+		blendMode = blend
+		SoftEdge
+		SoftedgeScale = 1.0
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.48496202, 0.0, -0.0)
 		(-0.48496202, 0.0, -0.0)
 		(-0.46225402, 0.0, -0.0)
@@ -65,7 +65,7 @@ gp_artdeco_encore_dragonpoof01 = {
 		(1.051219, 0.0, -0.0)
 		(1.051219, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		1917271552
 		1730948096
 		1580798719
@@ -75,7 +75,7 @@ gp_artdeco_encore_dragonpoof01 = {
 		488447232
 		623191296
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.314324
 		0.67167693
 		1.0

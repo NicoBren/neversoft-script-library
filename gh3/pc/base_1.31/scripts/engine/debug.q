@@ -1,53 +1,53 @@
-metric_time = 1
-metric_arenausage = 2
-metric_totalpolys = 4
-metric_polysproc = 8
-metric_verts = 16
-metric_resourceallocs = 32
-metric_textureuploads = 64
-metric_vu1 = 128
-metric_dma1 = 256
-metric_dma2 = 512
-metric_vblanks = 1024
-metric_drawtime = 2048
-metric_ihandlertime = 4096
-metric_skycache = 8192
-metric_videomode = 16384
-metric_vramusage = 32768
-metric_memused = 65536
-metric_memfree = 131072
-metric_regioninfo = 262144
-show_warnings = 1
-show_zone_budget_warnings = 1
+METRIC_TIME = 1
+METRIC_ARENAUSAGE = 2
+METRIC_TOTALPOLYS = 4
+METRIC_POLYSPROC = 8
+METRIC_VERTS = 16
+METRIC_RESOURCEALLOCS = 32
+METRIC_TEXTUREUPLOADS = 64
+METRIC_VU1 = 128
+METRIC_DMA1 = 256
+METRIC_DMA2 = 512
+METRIC_VBLANKS = 1024
+METRIC_DRAWTIME = 2048
+METRIC_IHANDLERTIME = 4096
+METRIC_SKYCACHE = 8192
+METRIC_VIDEOMODE = 16384
+METRIC_VRAMUSAGE = 32768
+METRIC_MEMUSED = 65536
+METRIC_MEMFREE = 131072
+METRIC_REGIONINFO = 262144
+Show_Warnings = 1
+Show_Zone_budget_Warnings = 1
 no_render_metrics = 0
-debugscriptprintf = 0
-debugpausedobjects = 0
-debugpausedobjectscomponenttocheck = model
-debuggaps = 0
-assertwhenglobalschangetype = 0
+DebugScriptPrintf = 0
+DebugPausedObjects = 0
+DebugPausedObjectsComponentToCheck = Model
+DebugGaps = 0
+AssertWhenGlobalsChangeType = 0
 
 script controlpadmotion_debug_create 
-	if NOT screenelementexists \{id = controlpadmotion_debug}
-		createscreenelement \{type = element3d
+	if NOT ScreenElementExists \{id = controlpadmotion_debug}
+		CreateScreenElement \{type = Element3d
 			parent = root_window
 			id = controlpadmotion_debug
-			model = 'HUD_arrow/HUD_Arrow.mdl'
-			cameraz = -1
+			Model = 'HUD_arrow/HUD_Arrow.mdl'
+			CameraZ = -1
 			scale = 1.0
-			active_viewport = 0
+			Active_Viewport = 0
 			pos = (120.0, 360.0)}
 	endif
 endscript
 
 script controlpadmotion_debug_kill 
-	if screenelementexists \{id = controlpadmotion_debug}
-		destroyscreenelement \{id = controlpadmotion_debug}
+	if ScreenElementExists \{id = controlpadmotion_debug}
+		DestroyScreenElement \{id = controlpadmotion_debug}
 	endif
 endscript
 
-script printvec 
-	if gotparam \{vec}
-		getvectorcomponents <vec>
+script PrintVec 
+	if GotParam \{vec}
+		GetVectorComponents <vec>
 		printf "(%x, %y, %z)" x = <x> y = <y> z = <z>
 	endif
 endscript

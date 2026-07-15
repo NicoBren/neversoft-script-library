@@ -1,42 +1,42 @@
-ragdollcollisiongroups_rocker_female = [
+RagdollCollisionGroups_Rocker_Female = [
 	[
 		Bone_Stomach_Upper
-		bone_chest
+		Bone_Chest
 		Bone_Bicep_L
 		Bone_Bicep_R
 		Bone_Thigh_L
 		Bone_Thigh_R
 	]
 	[
-		bone_acc_head_01
-		bone_acc_head_03
-		bone_acc_head_05
-		bone_acc_head_07
-		bone_acc_head_09
+		Bone_ACC_Head_01
+		Bone_ACC_Head_03
+		Bone_ACC_Head_05
+		Bone_ACC_Head_07
+		Bone_ACC_Head_09
 	]
 	[
-		bone_acc_torso_01
-		bone_acc_torso_02
-		bone_acc_torso_03
-		bone_acc_torso_04
+		Bone_ACC_Torso_01
+		Bone_ACC_Torso_02
+		Bone_ACC_Torso_03
+		Bone_ACC_Torso_04
 		Bone_Collar_L
 		Bone_Collar_R
-		bone_acc_legs_01
-		bone_acc_legs_02
-		bone_acc_legs_03
-		bone_acc_legs_04
+		Bone_ACC_Legs_01
+		Bone_ACC_Legs_02
+		Bone_ACC_Legs_03
+		Bone_ACC_Legs_04
 		Bone_Stomach_Lower
 		Bone_Knee_L
 		Bone_Knee_R
 		Bone_Forearm_L
 		Bone_Forearm_R
-		BONE_PELVIS
+		Bone_Pelvis
 		Bone_Neck
-		bone_head
-		bone_acc_head_02
-		bone_acc_head_04
-		bone_acc_head_06
-		bone_acc_head_08
+		Bone_Head
+		Bone_ACC_Head_02
+		Bone_ACC_Head_04
+		Bone_ACC_Head_06
+		Bone_ACC_Head_08
 	]
 	[
 	]
@@ -69,28 +69,28 @@ RagdollCollisionGroups = [
 	[
 	]
 	[
-		bone_acc_head_01
-		bone_acc_head_02
-		bone_acc_head_03
-		bone_acc_head_04
-		bone_acc_head_05
-		bone_acc_head_06
-		bone_acc_head_07
-		bone_acc_head_08
-		bone_acc_head_09
-		bone_acc_torso_01
-		bone_acc_torso_02
-		bone_acc_torso_03
-		bone_acc_torso_04
-		bone_acc_legs_01
-		bone_acc_legs_02
-		bone_acc_legs_03
-		bone_acc_legs_04
-		bone_head
-		BONE_PELVIS
+		Bone_ACC_Head_01
+		Bone_ACC_Head_02
+		Bone_ACC_Head_03
+		Bone_ACC_Head_04
+		Bone_ACC_Head_05
+		Bone_ACC_Head_06
+		Bone_ACC_Head_07
+		Bone_ACC_Head_08
+		Bone_ACC_Head_09
+		Bone_ACC_Torso_01
+		Bone_ACC_Torso_02
+		Bone_ACC_Torso_03
+		Bone_ACC_Torso_04
+		Bone_ACC_Legs_01
+		Bone_ACC_Legs_02
+		Bone_ACC_Legs_03
+		Bone_ACC_Legs_04
+		Bone_Head
+		Bone_Pelvis
 		Bone_Stomach_Lower
 		Bone_Stomach_Upper
-		bone_chest
+		Bone_Chest
 		Bone_Neck
 		Bone_Collar_L
 		Bone_Bicep_L
@@ -108,7 +108,7 @@ RagdollCollisionGroups = [
 		Bone_Ankle_R
 	]
 ]
-guitarist_accessory_bones = [
+Guitarist_accessory_bones = [
 	Bone_ACC_01
 	Bone_ACC_02
 	Bone_ACC_03
@@ -125,22 +125,22 @@ guitarist_accessory_bones = [
 	Bone_ACC_14
 	Bone_ACC_15
 ]
-rocker_accessory_bones = [
-	bone_acc_head_01
-	bone_acc_head_02
-	bone_acc_head_03
-	bone_acc_head_04
-	bone_acc_head_05
-	bone_acc_head_06
-	bone_acc_head_07
-	bone_acc_head_08
-	bone_acc_head_09
-	bone_acc_torso_01
-	bone_acc_torso_02
-	bone_acc_torso_03
-	bone_acc_torso_04
-	bone_acc_legs_01
-	bone_acc_legs_02
-	bone_acc_legs_03
-	bone_acc_legs_04
+Rocker_accessory_bones = [
+	Bone_ACC_Head_01
+	Bone_ACC_Head_02
+	Bone_ACC_Head_03
+	Bone_ACC_Head_04
+	Bone_ACC_Head_05
+	Bone_ACC_Head_06
+	Bone_ACC_Head_07
+	Bone_ACC_Head_08
+	Bone_ACC_Head_09
+	Bone_ACC_Torso_01
+	Bone_ACC_Torso_02
+	Bone_ACC_Torso_03
+	Bone_ACC_Torso_04
+	Bone_ACC_Legs_01
+	Bone_ACC_Legs_02
+	Bone_ACC_Legs_03
+	Bone_ACC_Legs_04
 ]

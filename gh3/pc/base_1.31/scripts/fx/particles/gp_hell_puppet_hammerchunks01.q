@@ -1,52 +1,52 @@
-gp_hell_puppet_hammerchunks01 = {
+GP_Hell_Puppet_HammerChunks01 = {
 	pos = (3.3996792, 0.430176, -4.1570773)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	emitrangedims = (1.0, 0.0, 1.0)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	EmitRangeDims = (1.0, 0.0, 1.0)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, -7.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	radiate
-	anglespread = 45.0
-	liferange = (2.0, 2.5)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	Radiate
+	AngleSpread = 45.0
+	LifeRange = (2.0, 2.5)
 	emit_rate = 64.0
 	max = 0
-	timeseed = 0.0
-	lifetime = 0.2
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 0.2
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.2, 0.2)
 		(0.0, 0.0)
 	]
-	speedrange = (2.0, 6.0)
-	rotvel = (-1.5, 1.5)
-	rotveltimescale = 1.0
-	emitdelaystart = 0.0
-	pathfollowtime = 0.0
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (2.0, 6.0)
+	RotVel = (-1.5, 1.5)
+	RotVelTimeScale = 1.0
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.0
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -475677185
-	lod_default
-	quickmaterial = {
-		texturelayout = layout2x2
-		diffusetextureenabled
-		diffusetexture = hj_factory_broken_brick
-		specularpower = 0
+	LOD_Default
+	QuickMaterial = {
+		TextureLayout = Layout2x2
+		DiffuseTextureEnabled
+		DiffuseTexture = hj_factory_broken_brick
+		SpecularPower = 0
 		alphacutoff = 1
-		blendmode = diffuse
-		quadanimationfps = 0
+		blendMode = diffuse
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(0.0, 0.0, -0.209545)
 		(0.0, 0.0, -0.209545)
 		(0.0, 0.0, -0.126301)
@@ -57,7 +57,7 @@ gp_hell_puppet_hammerchunks01 = {
 		(0.0, 0.0, 0.169358)
 		(0.0, 0.0, 0.169358)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-1
 		-1
 		-1
@@ -65,7 +65,7 @@ gp_hell_puppet_hammerchunks01 = {
 		-256
 		-256
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.65909207
 		1.0
 	]

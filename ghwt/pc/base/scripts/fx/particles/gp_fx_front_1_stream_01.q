@@ -1,51 +1,51 @@
-gp_fx_front_1_stream_01 = {
+GP_FX_Front_1_Stream_01 = {
 	pos = (-5.12282, 0.878575, 5.5816946)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	emitrangedims = (0.0, 0.0, 0.0)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	EmitRangeDims = (0.0, 0.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, 0.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 1.0
-	liferange = (0.1, 0.2)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 1.0
+	LifeRange = (0.1, 0.2)
 	emit_rate = 10.0
 	max = 2
-	timeseed = 0.0
-	lifetime = 0.4
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 0.4
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.9, 20.0)
 		(0.3, 5.0)
 	]
-	speedrange = (0.0, 0.0)
-	rotvel = (0.0, 0.0)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	pathfollowtime = 1.0
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (0.0, 0.0)
+	RotVel = (0.0, 0.0)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	PathFollowTime = 1.0
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -2074533123
-	lod_default
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = ph_radialglow_01
-		specularpower = 0
+	LOD_Default
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = PH_RadialGlow_01
+		SpecularPower = 0
 		bloom
 		alphacutoff = 1
-		blendmode = add
-		quadanimationfps = 0
+		blendMode = Add
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-1.611511, 0.0, -0.0)
 		(-1.611511, 0.0, -0.0)
 		(-1.279175, 0.0, -0.0)
@@ -56,7 +56,7 @@ gp_fx_front_1_stream_01 = {
 		(2.2260282, 0.0, -0.0)
 		(2.2260282, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-1
 		-1
 		-1
@@ -64,7 +64,7 @@ gp_fx_front_1_stream_01 = {
 		-1
 		-1
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.259804
 		1.0
 	]

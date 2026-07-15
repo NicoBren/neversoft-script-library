@@ -1,9 +1,9 @@
 fake_net = 0
-assertonmissingscripts = 0
-assertonmissingassets = 1
-alwaysdump = 0
+AssertOnMissingScripts = 0
+AssertOnMissingAssets = 1
+AlwaysDump = 0
 next_level_script = nullscript
-classicmodenavmeshloaded = 0
+ClassicModeNavMeshLoaded = 0
 dont_call_zone_init_hack = 0
 levels_initialize_goals = 1
 
@@ -11,158 +11,158 @@ script zone_init
 	printf "zone_init: %s" s = <zone_string_name>
 	if (<zone_string_name> = 'z_viewer')
 		printf \{"AssertOnMissingScripts = 0"}
-		change \{assertonmissingscripts = 0}
+		change \{AssertOnMissingScripts = 0}
 	endif
-	mempushcontext \{topdownheap}
-	formattext textname = zone_editable_text checksumname = zone_editable_list '%a%b' a = <zone_string_name> b = '_editable_list'
-	if globalexists name = <zone_editable_list> type = array
-		addeditablelist <zone_editable_list>
+	MemPushContext \{TopDownHeap}
+	FormatText TextName = zone_editable_text checksumname = zone_editable_list '%a%b' a = <zone_string_name> b = '_editable_list'
+	if GlobalExists name = <zone_editable_list> type = array
+		AddEditableList <zone_editable_list>
 	endif
-	mempopcontext
-	mempushcontext \{bottomupheap}
-	parsenodearray {
+	MemPopContext
+	MemPushContext \{BottomUpHeap}
+	ParseNodeArray {
 		queue
 		zone_name = <zone_name>
 		array_name = <array_name>
 	}
-	if gotparam \{sfx_array_name}
-		parsenodearray {
+	if GotParam \{sfx_array_name}
+		ParseNodeArray {
 			queue
 			zone_name = <sfx_zone_name>
 			array_name = <sfx_array_name>
 		}
 	endif
-	if gotparam \{gfx_array_name}
-		parsenodearray {
+	if GotParam \{gfx_array_name}
+		ParseNodeArray {
 			queue
 			zone_name = <gfx_zone_name>
 			array_name = <gfx_array_name>
 		}
 	endif
-	if gotparam \{lfx_array_name}
-		parsenodearray {
+	if GotParam \{lfx_array_name}
+		ParseNodeArray {
 			queue
 			zone_name = <lfx_zone_name>
 			array_name = <lfx_array_name>
 		}
 	endif
-	if gotparam \{mfx_array_name}
-		parsenodearray {
+	if GotParam \{mfx_array_name}
+		ParseNodeArray {
 			queue
 			zone_name = <mfx_zone_name>
 			array_name = <mfx_array_name>
 		}
 	endif
 	if NOT ($disable_global_pedestrians = 1)
-		if NOT innetgame
-			if iscoiminited
+		if NOT InNetGame
+			if IsCOIMInited
 			endif
 		endif
 	endif
-	mempopcontext
+	MemPopContext
 endscript
 
 script zone_init_wait_run_setup 
 	begin
-	if NOT nodearraybusy
+	if NOT NodeArrayBusy
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
-	if scriptexists <zone_setup_script>
+	if ScriptExists <zone_setup_script>
 		<zone_setup_script>
 	endif
 endscript
 
 script goal_pak_init 
 	printf "goal_pak_init: %s" s = <goal_pak_string_name>
-	mempushcontext \{topdownheap}
-	formattext textname = goal_pak_editable_text checksumname = goal_pak_editable_list '%a%b' a = <goal_pak_string_name> b = '_editable_list'
-	if globalexists name = <goal_pak_editable_list> type = array
-		addeditablelist <goal_pak_editable_list>
+	MemPushContext \{TopDownHeap}
+	FormatText TextName = goal_pak_editable_text checksumname = goal_pak_editable_list '%a%b' a = <goal_pak_string_name> b = '_editable_list'
+	if GlobalExists name = <goal_pak_editable_list> type = array
+		AddEditableList <goal_pak_editable_list>
 	endif
-	mempopcontext
-	mempushcontext <heap_name>
-	parsenodearray {
+	MemPopContext
+	MemPushContext <heap_name>
+	ParseNodeArray {
 		queue
 		zone_name = <goal_pak_name>
 		array_name = <array_name>
 		heap = <heap_name>
 	}
-	if gotparam \{sfx_array_name}
-		parsenodearray {
+	if GotParam \{sfx_array_name}
+		ParseNodeArray {
 			queue
 			zone_name = <sfx_goal_pak_name>
 			array_name = <sfx_array_name>
 			heap = <heap_name>
 		}
 	endif
-	if gotparam \{gfx_array_name}
-		parsenodearray {
+	if GotParam \{gfx_array_name}
+		ParseNodeArray {
 			queue
 			zone_name = <gfx_goal_pak_name>
 			array_name = <gfx_array_name>
 			heap = <heap_name>
 		}
 	endif
-	if gotparam \{lfx_array_name}
-		parsenodearray {
+	if GotParam \{lfx_array_name}
+		ParseNodeArray {
 			queue
 			zone_name = <lfx_goal_pak_name>
 			array_name = <lfx_array_name>
 			heap = <heap_name>
 		}
 	endif
-	if gotparam \{mfx_array_name}
-		parsenodearray {
+	if GotParam \{mfx_array_name}
+		ParseNodeArray {
 			queue
 			zone_name = <mfx_goal_pak_name>
 			array_name = <mfx_array_name>
 			heap = <heap_name>
 		}
 	endif
-	mempopcontext
+	MemPopContext
 endscript
 
 script zone_deinit 
 	printf "zone_deinit: %s" s = <zone_string_name>
-	parsenodearray abort array_name = <array_name>
-	if gotparam \{sfx_array_name}
-		parsenodearray abort array_name = <sfx_array_name>
+	ParseNodeArray abort array_name = <array_name>
+	if GotParam \{sfx_array_name}
+		ParseNodeArray abort array_name = <sfx_array_name>
 	endif
-	if gotparam \{gfx_array_name}
-		parsenodearray abort array_name = <gfx_array_name>
+	if GotParam \{gfx_array_name}
+		ParseNodeArray abort array_name = <gfx_array_name>
 	endif
-	if gotparam \{lfx_array_name}
-		parsenodearray abort array_name = <lfx_array_name>
+	if GotParam \{lfx_array_name}
+		ParseNodeArray abort array_name = <lfx_array_name>
 	endif
-	if gotparam \{mfx_array_name}
-		parsenodearray abort array_name = <mfx_array_name>
+	if GotParam \{mfx_array_name}
+		ParseNodeArray abort array_name = <mfx_array_name>
 	endif
-	formattext textname = zone_editable_text checksumname = zone_editable_list '%a%b' a = <zone_string_name> b = '_editable_list'
-	if globalexists name = <zone_editable_list> type = array
-		removeeditablelist <zone_editable_list>
+	FormatText TextName = zone_editable_text checksumname = zone_editable_list '%a%b' a = <zone_string_name> b = '_editable_list'
+	if GlobalExists name = <zone_editable_list> type = array
+		RemoveEditableList <zone_editable_list>
 	endif
 endscript
 
-script setupcoim 
-	pushmemprofile \{'COIM'}
-	initcoim {
+script SetupCOIM 
+	PushMemProfile \{'COIM'}
+	InitCOIM {
 		size = <size>
-		blockalign = $generic_coim_blockalign
-		coim_min_scratch_blocks
-		$generic_coim_params
+		BlockAlign = $Generic_COIM_BlockAlign
+		COIM_Min_Scratch_Blocks
+		$Generic_COIM_Params
 	}
-	popmemprofile
+	PopMemProfile
 endscript
 
-script lod_inlevellist 
-	getarraysize <level_list>
+script LOD_InLevelList 
+	GetArraySize <level_list>
 	<index> = 0
 	begin
-	formattext checksumname = nameone '%s' s = <name>
-	formattext checksumname = nametwo '%s' s = (<level_list> [<index>])
+	FormatText checksumname = nameone '%s' s = <name>
+	FormatText checksumname = nametwo '%s' s = (<level_list> [<index>])
 	if (<nameone> = <nametwo>)
 		printf "Found %s in LOD list! So using lods..." s = <name>
 		return \{true}
@@ -172,39 +172,39 @@ script lod_inlevellist
 	return \{false}
 endscript
 
-script loadlodpaks 
-	mempushcontext \{bottomupheap}
+script LoadLODPaks 
+	MemPushContext \{BottomUpHeap}
 	printf "LoadLODPaks - %s" s = <name>
-	getuppercasestring <name>
-	if lod_inlevellist name = <uppercasestring> level_list = <level_list>
-		getarraysize <level_list>
+	GetUpperCaseString <name>
+	if LOD_InLevelList name = <UpperCaseString> level_list = <level_list>
+		GetArraySize <level_list>
 		<index> = 0
 		begin
 		level = (<level_list> [<index>])
-		formattext textname = lod_pak 'zones/%s_lod/%s_lod.pak' s = <level>
+		FormatText TextName = lod_pak 'zones/%s_lod/%s_lod.pak' s = <level>
 		printf "Loading - %s" s = <lod_pak>
-		formattext checksumname = lod_name '%s_lod' s = <level>
-		loadpak <lod_pak>
-		parsenodearray
+		FormatText checksumname = lod_name '%s_lod' s = <level>
+		LoadPak <lod_pak>
+		ParseNodeArray
 		<index> = (<index> + 1)
 		repeat <array_size>
-		change lod_loadedpaks = <level_list>
+		change LOD_LoadedPaks = <level_list>
 	endif
-	mempopcontext
+	MemPopContext
 endscript
 
-script unloadlodpaks 
-	getarraysize \{$lod_loadedpaks}
+script UnloadLODPaks 
+	GetArraySize \{$LOD_LoadedPaks}
 	if NOT (<array_size> = 0)
 		<index> = 0
 		begin
-		level = ($lod_loadedpaks [<index>])
-		formattext textname = lod_pak 'zones/%s_lod/%s_lod.pak' s = <level>
+		level = ($LOD_LoadedPaks [<index>])
+		FormatText TextName = lod_pak 'zones/%s_lod/%s_lod.pak' s = <level>
 		printf "Unloading - %s" s = <lod_pak>
-		unloadpak <lod_pak>
+		UnloadPak <lod_pak>
 		<index> = (<index> + 1)
 		repeat <array_size>
-		change \{lod_loadedpaks = [
+		change \{LOD_LoadedPaks = [
 			]}
 	endif
 endscript

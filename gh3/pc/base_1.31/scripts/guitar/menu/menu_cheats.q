@@ -1,8 +1,8 @@
 guitar_hero_cheats = [
 	{
-		name = airguitar
+		name = AirGuitar
 		name_text = "air guitar"
-		var = cheat_airguitar
+		var = Cheat_AirGuitar
 		unlock_pattern = [
 			272
 			65792
@@ -25,9 +25,9 @@ guitar_hero_cheats = [
 		]
 	}
 	{
-		name = performancemode
+		name = PerformanceMode
 		name_text = "performance mode"
-		var = cheat_performancemode
+		var = Cheat_PerformanceMode
 		unlock_pattern = [
 			4352
 			4112
@@ -42,7 +42,7 @@ guitar_hero_cheats = [
 	{
 		name = hyperspeed
 		name_text = "hyperspeed"
-		var = cheat_hyperspeed
+		var = Cheat_Hyperspeed
 		unlock_pattern = [
 			1
 			16
@@ -55,9 +55,9 @@ guitar_hero_cheats = [
 		]
 	}
 	{
-		name = nofail
+		name = NoFail
 		name_text = "no fail"
-		var = cheat_nofail
+		var = Cheat_NoFail
 		unlock_pattern = [
 			69632
 			16
@@ -75,9 +75,9 @@ guitar_hero_cheats = [
 		]
 	}
 	{
-		name = easyexpert
+		name = EasyExpert
 		name_text = "easy expert"
-		var = cheat_easyexpert
+		var = Cheat_EasyExpert
 		unlock_pattern = [
 			69632
 			65792
@@ -90,9 +90,9 @@ guitar_hero_cheats = [
 		]
 	}
 	{
-		name = precisionmode
+		name = PrecisionMode
 		name_text = "precision mode"
-		var = cheat_precisionmode
+		var = Cheat_PrecisionMode
 		unlock_pattern = [
 			69632
 			69632
@@ -117,9 +117,9 @@ guitar_hero_cheats = [
 		]
 	}
 	{
-		name = bretmichaels
+		name = BretMichaels
 		name_text = "bret micheals"
-		var = cheat_bretmichaels
+		var = Cheat_BretMichaels
 		unlock_pattern = [
 			69632
 			69632
@@ -144,7 +144,7 @@ guitar_hero_cheats = [
 	{
 		name = unlockall
 		name_text = "unlocked all songs"
-		var = cheat_unlockall
+		var = Cheat_UnlockAll
 		unlock_pattern = [
 			257
 			4112
@@ -170,9 +170,9 @@ guitar_hero_cheats = [
 		]
 	}
 	{
-		name = unlockalleverything
+		name = UnlockAllEverything
 		name_text = "unlocked everything"
-		var = cheat_unlockall_everything
+		var = Cheat_UnlockAll_Everything
 		unlock_pattern = [
 			69649
 			69904
@@ -203,24 +203,24 @@ guitar_hero_cheats_completed = [
 ]
 
 script clear_cheats 
-	change \{cheat_airguitar = -1}
-	change \{cheat_hyperspeed = -1}
-	change \{cheat_performancemode = -1}
-	change \{cheat_nofail = -1}
-	change \{cheat_easyexpert = -1}
-	change \{cheat_precisionmode = -1}
-	change \{cheat_bretmichaels = -1}
+	change \{Cheat_AirGuitar = -1}
+	change \{Cheat_Hyperspeed = -1}
+	change \{Cheat_PerformanceMode = -1}
+	change \{Cheat_NoFail = -1}
+	change \{Cheat_EasyExpert = -1}
+	change \{Cheat_PrecisionMode = -1}
+	change \{Cheat_BretMichaels = -1}
 endscript
 
 script create_cheats_menu 
 	disable_pause
 	if ($entering_cheat = 0)
-		createscreenelement \{type = containerelement
+		CreateScreenElement \{type = ContainerElement
 			id = cheats_container
 			parent = root_window
 			pos = (0.0, 0.0)}
-		create_menu_backdrop \{texture = venue_bg}
-		displaysprite \{parent = cheats_container
+		create_menu_backdrop \{texture = Venue_BG}
+		displaySprite \{parent = cheats_container
 			tex = options_video_poster
 			rot_angle = 1
 			pos = (640.0, 215.0)
@@ -231,7 +231,7 @@ script create_cheats_menu
 			]
 			z = 1
 			font = $video_settings_menu_font}
-		displaytext \{parent = cheats_container
+		displayText \{parent = cheats_container
 			pos = (910.0, 402.0)
 			just = [
 				right
@@ -247,39 +247,39 @@ script create_cheats_menu
 			]
 			font = text_a5
 			noshadow}
-		displaysprite \{parent = cheats_container
-			tex = tape_h_03
+		displaySprite \{parent = cheats_container
+			tex = tape_H_03
 			pos = (270.0, 185.0)
 			rot_angle = -50
 			scale = 0.5
 			z = 20}
-		displaysprite {
+		displaySprite {
 			parent = <id>
-			tex = tape_h_03
+			tex = tape_H_03
 			pos = (5.0, 5.0)
 			rgba = [0 0 0 128]
 			z = 19
 		}
-		displaysprite \{parent = cheats_container
-			tex = tape_h_04
+		displaySprite \{parent = cheats_container
+			tex = tape_H_04
 			pos = (930.0, 380.0)
 			rot_angle = -120
 			scale = 0.5
 			z = 20}
-		displaysprite {
+		displaySprite {
 			parent = <id>
-			tex = tape_h_04
+			tex = tape_H_04
 			pos = (5.0, 5.0)
 			rgba = [0 0 0 128]
 			z = 19
 		}
-		createscreenelement \{type = containerelement
+		CreateScreenElement \{type = ContainerElement
 			id = cheats_warning_container
 			parent = root_window
 			alpha = 0
 			scale = 0.5
 			pos = (640.0, 540.0)}
-		displaysprite \{parent = cheats_warning_container
+		displaySprite \{parent = cheats_warning_container
 			id = cheats_warning
 			tex = control_pill_body
 			pos = (0.0, 0.0)
@@ -294,7 +294,7 @@ script create_cheats_menu
 				255
 			]
 			z = 100}
-		getplatform
+		GetPlatform
 		switch <platform>
 			case xenon
 			warning = "WARNING: Some active cheats do not work in career modes and online."
@@ -302,16 +302,16 @@ script create_cheats_menu
 			case ps3
 			warning = "WARNING: Some active cheats do not work in career modes and online."
 			warning_cont = "Also, leaderboard posts are turned off."
-			case ps2
+			case Ps2
 			warning = "WARNING: Some active cheats do not work in career modes."
 			warning_cont = ""
 			default
 			warning = "WARNING: Some active cheats do not work in career modes and online."
 			warning_cont = "Also, leaderboard posts are turned off."
 		endswitch
-		formattext textname = warning_text "%a %b" a = <warning> b = <warning_cont>
-		createscreenelement {
-			type = textblockelement
+		FormatText TextName = warning_text "%a %b" a = <warning> b = <warning_cont>
+		CreateScreenElement {
+			type = TextBlockElement
 			id = first_warning
 			parent = cheats_warning_container
 			font = text_a6
@@ -324,32 +324,32 @@ script create_cheats_menu
 			dims = (1400.0, 100.0)
 			allow_expansion
 		}
-		getscreenelementdims \{id = first_warning}
-		bg_dims = (<width> * (1.0, 0.0) + (<height> * (0.0, 1.0) + (0.0, 40.0)))
-		cheats_warning :setprops dims = <bg_dims>
-		displaysprite {
+		GetScreenElementDims \{id = first_warning}
+		bg_dims = (<width> * (1.0, 0.0) + (<Height> * (0.0, 1.0) + (0.0, 40.0)))
+		cheats_warning :SetProps dims = <bg_dims>
+		displaySprite {
 			parent = cheats_warning_container
 			tex = control_pill_end
 			pos = (-1 * <width> * (0.5, 0.0))
 			rgba = [96 0 0 255]
-			dims = ((64.0, 0.0) + (<height> * (0.0, 1.0) + (0.0, 40.0)))
+			dims = ((64.0, 0.0) + (<Height> * (0.0, 1.0) + (0.0, 40.0)))
 			just = [right center]
 			flip_v
 			z = 100
 		}
-		displaysprite {
+		displaySprite {
 			parent = cheats_warning_container
 			tex = control_pill_end
 			pos = (<width> * (0.5, 0.0))
 			rgba = [96 0 0 255]
-			dims = ((64.0, 0.0) + (<height> * (0.0, 1.0) + (0.0, 40.0)))
+			dims = ((64.0, 0.0) + (<Height> * (0.0, 1.0) + (0.0, 40.0)))
 			just = [left center]
 			z = 100
 		}
 		cheats_create_guitar
 	endif
 	show_cheat_warning
-	displaysprite \{parent = cheats_container
+	displaySprite \{parent = cheats_container
 		id = cheats_hilite
 		tex = white
 		rgba = [
@@ -368,156 +368,156 @@ script create_cheats_menu
 		text_left
 		spacing = -12
 		rot_angle = 1}
-	text_params = {parent = cheats_vmenu type = textelement font = text_a3 rgba = [255 245 225 255] z_priority = 50 rot_angle = 0 scale = 1}
-	text_params2 = {parent = cheats_vmenu type = textelement font = text_a5 rgba = [255 245 225 255] z_priority = 50 rot_angle = 0 scale = 0.63}
-	getglobaltags \{user_options}
+	text_params = {parent = cheats_vmenu type = TextElement font = text_a3 rgba = [255 245 225 255] z_priority = 50 rot_angle = 0 scale = 1}
+	text_params2 = {parent = cheats_vmenu type = TextElement font = text_a5 rgba = [255 245 225 255] z_priority = 50 rot_angle = 0 scale = 0.63}
+	GetGlobalTags \{user_options}
 	<text> = "locked"
-	if (<unlock_cheat_nofail> > 0)
-		if ($cheat_nofail = 1)
-			formattext textname = text "%c : ON" c = ($guitar_hero_cheats [3].name_text)
+	if (<unlock_Cheat_NoFail> > 0)
+		if ($Cheat_NoFail = 1)
+			FormatText TextName = text "%c : ON" c = ($guitar_hero_cheats [3].name_text)
 		else
-			if ($cheat_nofail < 0)
-				change \{cheat_nofail = 2}
+			if ($Cheat_NoFail < 0)
+				change \{Cheat_NoFail = 2}
 			endif
-			formattext textname = text "%c : OFF" c = ($guitar_hero_cheats [3].name_text)
+			FormatText TextName = text "%c : OFF" c = ($guitar_hero_cheats [3].name_text)
 		endif
 	endif
-	createscreenelement {
+	CreateScreenElement {
 		<text_params2>
 		text = <text>
-		id = cheat_nofail_text
+		id = Cheat_NoFail_Text
 		event_handlers = [
-			{focus cheats_morph_hilite params = {pos = (349.0, 206.0) id = cheat_nofail_text}}
-			{pad_choose toggle_cheat params = {cheat = cheat_nofail id = cheat_nofail_text index = 3}}
+			{focus cheats_morph_hilite params = {pos = (349.0, 206.0) id = Cheat_NoFail_Text}}
+			{pad_choose toggle_cheat params = {cheat = Cheat_NoFail id = Cheat_NoFail_Text index = 3}}
 		]
 	}
 	<text> = "locked"
-	if (<unlock_cheat_airguitar> > 0)
-		if ($cheat_airguitar = 1)
-			formattext textname = text "%c : ON" c = ($guitar_hero_cheats [0].name_text)
+	if (<unlock_Cheat_AirGuitar> > 0)
+		if ($Cheat_AirGuitar = 1)
+			FormatText TextName = text "%c : ON" c = ($guitar_hero_cheats [0].name_text)
 		else
-			if ($cheat_airguitar < 0)
-				change \{cheat_airguitar = 2}
+			if ($Cheat_AirGuitar < 0)
+				change \{Cheat_AirGuitar = 2}
 			endif
-			formattext textname = text "%c : OFF" c = ($guitar_hero_cheats [0].name_text)
+			FormatText TextName = text "%c : OFF" c = ($guitar_hero_cheats [0].name_text)
 		endif
 	endif
-	createscreenelement {
+	CreateScreenElement {
 		<text_params2>
 		text = <text>
-		id = cheat_airguitar_text
+		id = Cheat_AirGuitar_Text
 		event_handlers = [
-			{focus cheats_morph_hilite params = {pos = (349.0, 229.0) id = cheat_airguitar_text}}
-			{pad_choose toggle_cheat params = {cheat = cheat_airguitar id = cheat_airguitar_text index = 0}}
+			{focus cheats_morph_hilite params = {pos = (349.0, 229.0) id = Cheat_AirGuitar_Text}}
+			{pad_choose toggle_cheat params = {cheat = Cheat_AirGuitar id = Cheat_AirGuitar_Text index = 0}}
 		]
 	}
 	<text> = "locked"
-	if (<unlock_cheat_hyperspeed> > 0)
-		if ($cheat_hyperspeed > 0)
-			formattext textname = text "%c : ON" c = ($guitar_hero_cheats [2].name_text)
-			formattext textname = text "%c, %d" c = <text> d = ($cheat_hyperspeed)
+	if (<unlock_Cheat_Hyperspeed> > 0)
+		if ($Cheat_Hyperspeed > 0)
+			FormatText TextName = text "%c : ON" c = ($guitar_hero_cheats [2].name_text)
+			FormatText TextName = text "%c, %d" c = <text> d = ($Cheat_Hyperspeed)
 		else
-			if ($cheat_hyperspeed < 0)
-				change \{cheat_hyperspeed = 0}
+			if ($Cheat_Hyperspeed < 0)
+				change \{Cheat_Hyperspeed = 0}
 			endif
-			formattext textname = text "%c : OFF" c = ($guitar_hero_cheats [2].name_text)
+			FormatText TextName = text "%c : OFF" c = ($guitar_hero_cheats [2].name_text)
 		endif
 	endif
-	createscreenelement {
+	CreateScreenElement {
 		<text_params2>
 		text = <text>
-		id = cheat_hyperspeed_text
+		id = Cheat_Hyperspeed_Text
 		event_handlers = [
-			{focus cheats_morph_hilite params = {pos = (349.0, 252.0) id = cheat_hyperspeed_text}}
-			{pad_choose toggle_hyperspeed params = {cheat = cheat_hyperspeed id = cheat_hyperspeed_text index = 2}}
+			{focus cheats_morph_hilite params = {pos = (349.0, 252.0) id = Cheat_Hyperspeed_Text}}
+			{pad_choose toggle_hyperspeed params = {cheat = Cheat_Hyperspeed id = Cheat_Hyperspeed_Text index = 2}}
 		]
 	}
 	<text> = "locked"
-	if (<unlock_cheat_performancemode> > 0)
-		if ($cheat_performancemode = 1)
-			formattext textname = text "%c : ON" c = ($guitar_hero_cheats [1].name_text)
+	if (<unlock_Cheat_PerformanceMode> > 0)
+		if ($Cheat_PerformanceMode = 1)
+			FormatText TextName = text "%c : ON" c = ($guitar_hero_cheats [1].name_text)
 		else
-			if ($cheat_performancemode < 0)
-				change \{cheat_performancemode = 2}
+			if ($Cheat_PerformanceMode < 0)
+				change \{Cheat_PerformanceMode = 2}
 			endif
-			formattext textname = text "%c : OFF" c = ($guitar_hero_cheats [1].name_text)
+			FormatText TextName = text "%c : OFF" c = ($guitar_hero_cheats [1].name_text)
 		endif
 	endif
-	createscreenelement {
+	CreateScreenElement {
 		<text_params2>
 		text = <text>
-		id = cheat_performancemode_text
+		id = Cheat_PerformanceMode_Text
 		event_handlers = [
-			{focus cheats_morph_hilite params = {pos = (349.0, 275.0) id = cheat_performancemode_text}}
-			{pad_choose toggle_cheat params = {cheat = cheat_performancemode id = cheat_performancemode_text index = 1}}
+			{focus cheats_morph_hilite params = {pos = (349.0, 275.0) id = Cheat_PerformanceMode_Text}}
+			{pad_choose toggle_cheat params = {cheat = Cheat_PerformanceMode id = Cheat_PerformanceMode_Text index = 1}}
 		]
 	}
 	<text> = "locked"
-	if (<unlock_cheat_easyexpert> > 0)
-		if ($cheat_easyexpert = 1)
-			formattext textname = text "%c : ON" c = ($guitar_hero_cheats [4].name_text)
+	if (<unlock_Cheat_EasyExpert> > 0)
+		if ($Cheat_EasyExpert = 1)
+			FormatText TextName = text "%c : ON" c = ($guitar_hero_cheats [4].name_text)
 		else
-			if ($cheat_easyexpert < 0)
-				change \{cheat_easyexpert = 2}
+			if ($Cheat_EasyExpert < 0)
+				change \{Cheat_EasyExpert = 2}
 			endif
-			formattext textname = text "%c : OFF" c = ($guitar_hero_cheats [4].name_text)
+			FormatText TextName = text "%c : OFF" c = ($guitar_hero_cheats [4].name_text)
 		endif
 	endif
-	createscreenelement {
+	CreateScreenElement {
 		<text_params2>
 		text = <text>
-		id = cheat_easyexpert_text
+		id = Cheat_EasyExpert_Text
 		event_handlers = [
-			{focus cheats_morph_hilite params = {pos = (349.0, 298.0) id = cheat_easyexpert_text}}
-			{pad_choose toggle_cheat params = {cheat = cheat_easyexpert id = cheat_easyexpert_text index = 4}}
+			{focus cheats_morph_hilite params = {pos = (349.0, 298.0) id = Cheat_EasyExpert_Text}}
+			{pad_choose toggle_cheat params = {cheat = Cheat_EasyExpert id = Cheat_EasyExpert_Text index = 4}}
 		]
 	}
 	<text> = "locked"
-	if (<unlock_cheat_precisionmode> > 0)
-		if ($cheat_precisionmode = 1)
-			formattext textname = text "%c : ON" c = ($guitar_hero_cheats [5].name_text)
+	if (<unlock_Cheat_PrecisionMode> > 0)
+		if ($Cheat_PrecisionMode = 1)
+			FormatText TextName = text "%c : ON" c = ($guitar_hero_cheats [5].name_text)
 		else
-			if ($cheat_precisionmode < 0)
-				change \{cheat_precisionmode = 2}
+			if ($Cheat_PrecisionMode < 0)
+				change \{Cheat_PrecisionMode = 2}
 			endif
-			formattext textname = text "%c : OFF" c = ($guitar_hero_cheats [5].name_text)
+			FormatText TextName = text "%c : OFF" c = ($guitar_hero_cheats [5].name_text)
 		endif
 	endif
-	createscreenelement {
+	CreateScreenElement {
 		<text_params2>
 		text = <text>
-		id = cheat_precisionmode_text
+		id = Cheat_PrecisionMode_Text
 		event_handlers = [
-			{focus cheats_morph_hilite params = {pos = (349.0, 321.0) id = cheat_precisionmode_text}}
-			{pad_choose toggle_cheat params = {cheat = cheat_precisionmode id = cheat_precisionmode_text index = 5}}
+			{focus cheats_morph_hilite params = {pos = (349.0, 321.0) id = Cheat_PrecisionMode_Text}}
+			{pad_choose toggle_cheat params = {cheat = Cheat_PrecisionMode id = Cheat_PrecisionMode_Text index = 5}}
 		]
 	}
 	<text> = "locked"
-	if (<unlock_cheat_bretmichaels> > 0)
-		if ($cheat_bretmichaels = 1)
-			formattext textname = text "%c : ON" c = ($guitar_hero_cheats [6].name_text)
+	if (<unlock_Cheat_BretMichaels> > 0)
+		if ($Cheat_BretMichaels = 1)
+			FormatText TextName = text "%c : ON" c = ($guitar_hero_cheats [6].name_text)
 		else
-			if ($cheat_bretmichaels < 0)
-				change \{cheat_bretmichaels = 2}
+			if ($Cheat_BretMichaels < 0)
+				change \{Cheat_BretMichaels = 2}
 			endif
-			formattext textname = text "%c : OFF" c = ($guitar_hero_cheats [6].name_text)
+			FormatText TextName = text "%c : OFF" c = ($guitar_hero_cheats [6].name_text)
 		endif
 	endif
-	createscreenelement {
+	CreateScreenElement {
 		<text_params2>
 		text = <text>
-		id = cheat_bretmichaels_text
+		id = Cheat_BretMichaels_Text
 		event_handlers = [
-			{focus cheats_morph_hilite params = {pos = (349.0, 344.0) id = cheat_bretmichaels_text}}
-			{pad_choose toggle_cheat params = {cheat = cheat_bretmichaels id = cheat_bretmichaels_text index = 6}}
+			{focus cheats_morph_hilite params = {pos = (349.0, 344.0) id = Cheat_BretMichaels_Text}}
+			{pad_choose toggle_cheat params = {cheat = Cheat_BretMichaels id = Cheat_BretMichaels_Text index = 6}}
 		]
 	}
-	createscreenelement {
+	CreateScreenElement {
 		<text_params>
 		text = "enter cheat"
-		id = cheat_entercheat_text
+		id = Cheat_EnterCheat_Text
 		event_handlers = [
-			{focus cheats_morph_hilite params = {pos = (349.0, 375.0) id = cheat_entercheat_text}}
+			{focus cheats_morph_hilite params = {pos = (349.0, 375.0) id = Cheat_EnterCheat_Text}}
 			{pad_choose enter_new_cheat}
 		]
 	}
@@ -558,12 +558,12 @@ script create_cheats_menu
 endscript
 
 script show_cheat_warning 
-	if (cheat_nofail = 1 || cheat_easyexpert = 1)
-		doscreenelementmorph \{id = cheats_warning_container
+	if (Cheat_NoFail = 1 || Cheat_EasyExpert = 1)
+		doScreenElementMorph \{id = cheats_warning_container
 			alpha = 1
 			time = 0.1}
 	else
-		doscreenelementmorph \{id = cheats_warning_container
+		doScreenElementMorph \{id = cheats_warning_container
 			alpha = 0
 			time = 0.1}
 	endif
@@ -576,33 +576,33 @@ script enter_new_cheat
 endscript
 
 script cheats_morph_hilite \{time = 0.025}
-	getscreenelementdims id = <id>
-	cheats_hilite :setprops dims = ((<width> * (1.0, 0.0)) + (22.0, 30.0))
-	cheats_hilite :domorph pos = <pos> time = <time>
+	GetScreenElementDims id = <id>
+	cheats_hilite :SetProps dims = ((<width> * (1.0, 0.0)) + (22.0, 30.0))
+	cheats_hilite :DoMorph pos = <pos> time = <time>
 endscript
 entering_cheat = 0
 
 script destroy_cheats_menu 
 	clean_up_user_control_helpers
 	destroy_menu \{menu_id = cheats_scroll}
-	if screenelementexists \{id = cheats_hilite}
-		destroyscreenelement \{id = cheats_hilite}
+	if ScreenElementExists \{id = cheats_hilite}
+		DestroyScreenElement \{id = cheats_hilite}
 	endif
 	if ($entering_cheat = 0)
-		killspawnedscript \{name = cheats_watch_buttons}
-		if screenelementexists \{id = cheats_container}
-			destroyscreenelement \{id = cheats_container}
+		KillSpawnedScript \{name = cheats_watch_buttons}
+		if ScreenElementExists \{id = cheats_container}
+			DestroyScreenElement \{id = cheats_container}
 		endif
-		if screenelementexists \{id = cheats_warning_container}
-			destroyscreenelement \{id = cheats_warning_container}
+		if ScreenElementExists \{id = cheats_warning_container}
+			DestroyScreenElement \{id = cheats_warning_container}
 		endif
 		cheats_destroy_pressed_notes
 	endif
 endscript
 
 script cheats_create_guitar 
-	createscreenelement \{parent = cheats_container
-		type = spriteelement
+	CreateScreenElement \{parent = cheats_container
+		type = SpriteElement
 		id = guitar_sprite
 		just = [
 			left
@@ -628,9 +628,9 @@ script cheats_create_pressed_notes
 	yellow_pos = (<red_pos> + ((1.0, 0.0) * <x_offset>))
 	blue_pos = (<yellow_pos> + ((1.0, 0.0) * <x_offset>))
 	orange_pos = (<blue_pos> + ((1.0, 0.0) * <x_offset>))
-	createscreenelement {
+	CreateScreenElement {
 		parent = cheats_container
-		type = spriteelement
+		type = SpriteElement
 		id = green_pressed_sprite
 		just = [center center]
 		texture = training_guitar_button_down
@@ -640,9 +640,9 @@ script cheats_create_pressed_notes
 		scale = (0.36, 0.36)
 		z_priority = 3
 	}
-	createscreenelement {
+	CreateScreenElement {
 		parent = cheats_container
-		type = spriteelement
+		type = SpriteElement
 		id = red_pressed_sprite
 		just = [center center]
 		texture = training_guitar_button_down
@@ -652,9 +652,9 @@ script cheats_create_pressed_notes
 		scale = (0.36, 0.36)
 		z_priority = 3
 	}
-	createscreenelement {
+	CreateScreenElement {
 		parent = cheats_container
-		type = spriteelement
+		type = SpriteElement
 		id = yellow_pressed_sprite
 		just = [center center]
 		texture = training_guitar_button_down
@@ -664,9 +664,9 @@ script cheats_create_pressed_notes
 		scale = (0.36, 0.36)
 		z_priority = 3
 	}
-	createscreenelement {
+	CreateScreenElement {
 		parent = cheats_container
-		type = spriteelement
+		type = SpriteElement
 		id = blue_pressed_sprite
 		just = [center center]
 		texture = training_guitar_button_down
@@ -676,9 +676,9 @@ script cheats_create_pressed_notes
 		scale = (0.36, 0.36)
 		z_priority = 3
 	}
-	createscreenelement {
+	CreateScreenElement {
 		parent = cheats_container
-		type = spriteelement
+		type = SpriteElement
 		id = orange_pressed_sprite
 		just = [center center]
 		texture = training_guitar_button_down
@@ -700,11 +700,11 @@ script cheats_destroy_pressed_notes
 endscript
 
 script cheats_watch_buttons 
-	wait \{0.75
+	Wait \{0.75
 		seconds}
 	cheats_create_pressed_notes
 	begin
-	getheldpattern controller = ($player1_status.controller) nobrokenstring
+	GetHeldPattern controller = ($player1_status.controller) nobrokenstring
 	hide_pressed_notes
 	check_button = 65536
 	array_count = 0
@@ -715,13 +715,13 @@ script cheats_watch_buttons
 	<check_button> = (<check_button> / 16)
 	array_count = (<array_count> + 1)
 	repeat 5
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
 script cheats_zoomin_guitar 
-	doscreenelementmorph \{id = cheats_warning_container
+	doScreenElementMorph \{id = cheats_warning_container
 		alpha = 0
 		time = 1}
 	event_handlers = [
@@ -736,8 +736,8 @@ script cheats_zoomin_guitar
 		use_backdrop = 0
 		event_handlers = <event_handlers>
 	}
-	menu_music_off
-	setmenuautorepeattimes \{(60.0, 60.0)}
+	Menu_Music_Off
+	SetMenuAutoRepeatTimes \{(60.0, 60.0)}
 	clean_up_user_control_helpers
 	change \{user_control_pill_text_color = [
 			0
@@ -760,8 +760,8 @@ script cheats_zoomin_guitar
 		z = 100
 		fit_to_rectangle = 0}
 	spawnscriptnow \{cheats_watch_buttons}
-	if screenelementexists \{id = guitar_sprite}
-		guitar_sprite :domorph \{scale = (1.0, 1.0)
+	if ScreenElementExists \{id = guitar_sprite}
+		guitar_sprite :DoMorph \{scale = (1.0, 1.0)
 			pos = (140.0, 545.0)
 			time = 0.75}
 	endif
@@ -769,13 +769,13 @@ endscript
 
 script cheats_zoomout_guitar 
 	spawnscriptnow \{menu_music_on}
-	setmenuautorepeattimes \{(0.3, 0.05)}
-	killspawnedscript \{name = cheats_watch_buttons}
+	SetMenuAutoRepeatTimes \{(0.3, 0.05)}
+	KillSpawnedScript \{name = cheats_watch_buttons}
 	cheats_destroy_pressed_notes
-	if screenelementexists \{id = awardtext}
-		destroyscreenelement \{id = awardtext}
+	if ScreenElementExists \{id = awardtext}
+		DestroyScreenElement \{id = awardtext}
 	endif
-	killspawnedscript \{name = cheat_award_text}
+	KillSpawnedScript \{name = cheat_award_text}
 	destroy_menu \{menu_id = menu_new_cheat}
 	change \{entering_cheat = 0}
 	destroy_cheats_menu
@@ -786,76 +786,76 @@ script stop_guitar_strum
 	change \{new_cheat_strum = 0}
 	begin
 	if ($new_cheat_strum = 1)
-		stopsoundevent <event>
+		StopSoundEvent <event>
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
 script create_cheat_guitar_strum 
 	change \{new_cheat_strum = 1}
-	wait \{2
+	Wait \{2
 		gameframes}
-	getheldpattern controller = ($player1_status.controller) nobrokenstring
+	GetHeldPattern controller = ($player1_status.controller) nobrokenstring
 	check_button = 65536
 	array_count = 0
 	switch <hold_pattern>
 		case 65536
-		soundevent \{event = cheat_single_strum_note_1}
-		spawnscriptnow stop_guitar_strum params = {event = cheat_single_strum_note_1 pattern_to_stop = <hold_pattern>}
+		SoundEvent \{event = Cheat_Single_Strum_Note_1}
+		spawnscriptnow stop_guitar_strum params = {event = Cheat_Single_Strum_Note_1 pattern_to_stop = <hold_pattern>}
 		case 4096
-		soundevent \{event = cheat_single_strum_note_2}
-		spawnscriptnow stop_guitar_strum params = {event = cheat_single_strum_note_2 pattern_to_stop = <hold_pattern>}
+		SoundEvent \{event = Cheat_Single_Strum_Note_2}
+		spawnscriptnow stop_guitar_strum params = {event = Cheat_Single_Strum_Note_2 pattern_to_stop = <hold_pattern>}
 		case 256
-		soundevent \{event = cheat_single_strum_note_3}
-		spawnscriptnow stop_guitar_strum params = {event = cheat_single_strum_note_3 pattern_to_stop = <hold_pattern>}
+		SoundEvent \{event = Cheat_Single_Strum_Note_3}
+		spawnscriptnow stop_guitar_strum params = {event = Cheat_Single_Strum_Note_3 pattern_to_stop = <hold_pattern>}
 		case 16
-		soundevent \{event = cheat_single_strum_note_4}
-		spawnscriptnow stop_guitar_strum params = {event = cheat_single_strum_note_4 pattern_to_stop = <hold_pattern>}
+		SoundEvent \{event = Cheat_Single_Strum_Note_4}
+		spawnscriptnow stop_guitar_strum params = {event = Cheat_Single_Strum_Note_4 pattern_to_stop = <hold_pattern>}
 		case 1
-		soundevent \{event = cheat_single_strum_note_5}
-		spawnscriptnow stop_guitar_strum params = {event = cheat_single_strum_note_5 pattern_to_stop = <hold_pattern>}
+		SoundEvent \{event = Cheat_Single_Strum_Note_5}
+		spawnscriptnow stop_guitar_strum params = {event = Cheat_Single_Strum_Note_5 pattern_to_stop = <hold_pattern>}
 		case 69632
-		soundevent \{event = cheat_chord_strum_1}
-		spawnscriptnow stop_guitar_strum params = {event = cheat_chord_strum_1 pattern_to_stop = <hold_pattern>}
+		SoundEvent \{event = Cheat_Chord_Strum_1}
+		spawnscriptnow stop_guitar_strum params = {event = Cheat_Chord_Strum_1 pattern_to_stop = <hold_pattern>}
 		case 65792
-		soundevent \{event = cheat_chord_strum_10}
-		spawnscriptnow stop_guitar_strum params = {event = cheat_chord_strum_10 pattern_to_stop = <hold_pattern>}
+		SoundEvent \{event = Cheat_Chord_Strum_10}
+		spawnscriptnow stop_guitar_strum params = {event = Cheat_Chord_Strum_10 pattern_to_stop = <hold_pattern>}
 		case 65552
-		soundevent \{event = cheat_chord_strum_4}
-		spawnscriptnow stop_guitar_strum params = {event = cheat_chord_strum_4 pattern_to_stop = <hold_pattern>}
+		SoundEvent \{event = Cheat_Chord_Strum_4}
+		spawnscriptnow stop_guitar_strum params = {event = Cheat_Chord_Strum_4 pattern_to_stop = <hold_pattern>}
 		case 4352
-		soundevent \{event = cheat_chord_strum_2}
-		spawnscriptnow stop_guitar_strum params = {event = cheat_chord_strum_2 pattern_to_stop = <hold_pattern>}
+		SoundEvent \{event = Cheat_Chord_Strum_2}
+		spawnscriptnow stop_guitar_strum params = {event = Cheat_Chord_Strum_2 pattern_to_stop = <hold_pattern>}
 		case 4112
-		soundevent \{event = cheat_chord_strum_3}
-		spawnscriptnow stop_guitar_strum params = {event = cheat_chord_strum_3 pattern_to_stop = <hold_pattern>}
+		SoundEvent \{event = Cheat_Chord_Strum_3}
+		spawnscriptnow stop_guitar_strum params = {event = Cheat_Chord_Strum_3 pattern_to_stop = <hold_pattern>}
 		case 4097
-		soundevent \{event = cheat_chord_strum_6}
-		spawnscriptnow stop_guitar_strum params = {event = cheat_chord_strum_6 pattern_to_stop = <hold_pattern>}
+		SoundEvent \{event = Cheat_Chord_Strum_6}
+		spawnscriptnow stop_guitar_strum params = {event = Cheat_Chord_Strum_6 pattern_to_stop = <hold_pattern>}
 		case 272
-		soundevent \{event = cheat_chord_strum_5}
-		spawnscriptnow stop_guitar_strum params = {event = cheat_chord_strum_5 pattern_to_stop = <hold_pattern>}
+		SoundEvent \{event = Cheat_Chord_Strum_5}
+		spawnscriptnow stop_guitar_strum params = {event = Cheat_Chord_Strum_5 pattern_to_stop = <hold_pattern>}
 		case 257
-		soundevent \{event = cheat_chord_strum_7}
-		spawnscriptnow stop_guitar_strum params = {event = cheat_chord_strum_7 pattern_to_stop = <hold_pattern>}
+		SoundEvent \{event = Cheat_Chord_Strum_7}
+		spawnscriptnow stop_guitar_strum params = {event = Cheat_Chord_Strum_7 pattern_to_stop = <hold_pattern>}
 		case 17
-		soundevent \{event = cheat_chord_strum_8}
-		spawnscriptnow stop_guitar_strum params = {event = cheat_chord_strum_8 pattern_to_stop = <hold_pattern>}
+		SoundEvent \{event = Cheat_Chord_Strum_8}
+		spawnscriptnow stop_guitar_strum params = {event = Cheat_Chord_Strum_8 pattern_to_stop = <hold_pattern>}
 		case 69888
-		soundevent \{event = cheat_chord_strum_9}
-		spawnscriptnow stop_guitar_strum params = {event = cheat_chord_strum_9 pattern_to_stop = <hold_pattern>}
+		SoundEvent \{event = Cheat_Chord_Strum_9}
+		spawnscriptnow stop_guitar_strum params = {event = Cheat_Chord_Strum_9 pattern_to_stop = <hold_pattern>}
 		case 4368
-		soundevent \{event = cheat_chord_strum_11}
-		spawnscriptnow stop_guitar_strum params = {event = cheat_chord_strum_11 pattern_to_stop = <hold_pattern>}
+		SoundEvent \{event = Cheat_Chord_Strum_11}
+		spawnscriptnow stop_guitar_strum params = {event = Cheat_Chord_Strum_11 pattern_to_stop = <hold_pattern>}
 		case 273
-		soundevent \{event = cheat_chord_strum_12}
-		spawnscriptnow stop_guitar_strum params = {event = cheat_chord_strum_12 pattern_to_stop = <hold_pattern>}
+		SoundEvent \{event = Cheat_Chord_Strum_12}
+		spawnscriptnow stop_guitar_strum params = {event = Cheat_Chord_Strum_12 pattern_to_stop = <hold_pattern>}
 		default
 	endswitch
-	getarraysize \{$guitar_hero_cheats}
+	GetArraySize \{$guitar_hero_cheats}
 	num_of_cheats = <array_size>
 	<index> = 0
 	begin
@@ -863,19 +863,19 @@ script create_cheat_guitar_strum
 	completed_index = ($guitar_hero_cheats_completed [<index>])
 	if (<hold_pattern> = (<pattern_array> [<completed_index>]))
 		printf channel = trchen "MATCH CHEAT: %s, STEP: %l" s = <index> l = <completed_index>
-		setarrayelement arrayname = guitar_hero_cheats_completed globalarray index = <index> newvalue = (<completed_index> + 1)
-		getarraysize \{pattern_array}
+		SetArrayElement ArrayName = guitar_hero_cheats_completed GlobalArray index = <index> newvalue = (<completed_index> + 1)
+		GetArraySize \{pattern_array}
 		if (<array_size> = ($guitar_hero_cheats_completed [<index>]))
 			printf channel = trchen "CHEAT %s UNLOCKED!" s = <index>
 			unlock_cheat cheat = ($guitar_hero_cheats [<index>].var) index = <index>
-			setarrayelement arrayname = guitar_hero_cheats_completed globalarray index = <index> newvalue = 0
+			SetArrayElement ArrayName = guitar_hero_cheats_completed GlobalArray index = <index> newvalue = 0
 		endif
 	else
 		if (<hold_pattern> = (<pattern_array> [0]))
 			printf channel = trchen "MATCH CHEAT: %s, STEP: 0" s = <index>
-			setarrayelement arrayname = guitar_hero_cheats_completed globalarray index = <index> newvalue = 1
+			SetArrayElement ArrayName = guitar_hero_cheats_completed GlobalArray index = <index> newvalue = 1
 		else
-			setarrayelement arrayname = guitar_hero_cheats_completed globalarray index = <index> newvalue = 0
+			SetArrayElement ArrayName = guitar_hero_cheats_completed GlobalArray index = <index> newvalue = 0
 		endif
 	endif
 	<index> = (<index> + 1)
@@ -883,12 +883,12 @@ script create_cheat_guitar_strum
 endscript
 
 script cheat_award_text \{show_unlock = 1}
-	if screenelementexists \{id = awardtext}
-		destroyscreenelement \{id = awardtext}
+	if ScreenElementExists \{id = awardtext}
+		DestroyScreenElement \{id = awardtext}
 	endif
 	award_text = ($guitar_hero_cheats [<index>].name_text)
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		id = awardtext
 		parent = cheats_container
 		pos = (360.0, 360.0)
@@ -901,7 +901,7 @@ script cheat_award_text \{show_unlock = 1}
 		z_priority = 25
 	}
 	if (<show_unlock> = 1)
-		createscreenelement \{type = textelement
+		CreateScreenElement \{type = TextElement
 			id = awardtext_sub
 			parent = awardtext
 			pos = (1.0, 57.0)
@@ -920,106 +920,106 @@ script cheat_award_text \{show_unlock = 1}
 			]
 			z_priority = 25}
 	endif
-	wait \{1.5
+	Wait \{1.5
 		seconds}
-	doscreenelementmorph \{id = awardtext
+	doScreenElementMorph \{id = awardtext
 		alpha = 0
 		time = 1}
 endscript
 
 script unlock_cheat 
-	if (<cheat> = cheat_unlockall)
-		globaltags_unlockall \{songlist = gh3_general_songs
+	if (<cheat> = Cheat_UnlockAll)
+		GlobalTags_UnlockAll \{songlist = GH3_General_Songs
 			songs_only = 1}
-		globaltags_unlockall \{songlist = gh3_generalp2_songs
+		GlobalTags_UnlockAll \{songlist = GH3_GeneralP2_Songs
 			songs_only = 1}
-		globaltags_unlockall \{songlist = gh3_bonus_songs
+		GlobalTags_UnlockAll \{songlist = GH3_Bonus_Songs
 			songs_only = 1}
-		getarraysize ($gh3_bonus_songs.tier1.songs)
+		GetArraySize ($GH3_Bonus_Songs.tier1.songs)
 		i = 0
 		begin
-		setglobaltags ($gh3_bonus_songs.tier1.songs [<i>]) params = {unlocked = 1}
+		SetGlobalTags ($GH3_Bonus_Songs.tier1.songs [<i>]) params = {unlocked = 1}
 		<i> = (<i> + 1)
 		repeat <array_size>
-		soundevent \{event = crowd_oneshots_cheer_close}
+		SoundEvent \{event = Crowd_OneShots_Cheer_Close}
 		spawnscriptnow cheat_award_text params = {index = <index> show_unlock = 0}
 		return
 	endif
-	if (<cheat> = cheat_unlockall_everything)
-		globaltags_unlockall \{songlist = gh3_general_songs}
-		globaltags_unlockall \{songlist = gh3_generalp2_songs}
-		globaltags_unlockall \{songlist = gh3_bonus_songs}
-		getarraysize ($gh3_bonus_songs.tier1.songs)
+	if (<cheat> = Cheat_UnlockAll_Everything)
+		GlobalTags_UnlockAll \{songlist = GH3_General_Songs}
+		GlobalTags_UnlockAll \{songlist = GH3_GeneralP2_Songs}
+		GlobalTags_UnlockAll \{songlist = GH3_Bonus_Songs}
+		GetArraySize ($GH3_Bonus_Songs.tier1.songs)
 		i = 0
 		begin
-		setglobaltags ($gh3_bonus_songs.tier1.songs [<i>]) params = {unlocked = 1}
+		SetGlobalTags ($GH3_Bonus_Songs.tier1.songs [<i>]) params = {unlocked = 1}
 		<i> = (<i> + 1)
 		repeat <array_size>
-		soundevent \{event = crowd_oneshots_cheer_close}
+		SoundEvent \{event = Crowd_OneShots_Cheer_Close}
 		spawnscriptnow cheat_award_text params = {index = <index> show_unlock = 0}
 		return
 	endif
-	if (<cheat> = cheat_easyexpert)
-		if NOT ($cheat_precisionmode = 1)
+	if (<cheat> = Cheat_EasyExpert)
+		if NOT ($Cheat_PrecisionMode = 1)
 			change \{check_time_early = $original_check_time_early}
 			change \{check_time_late = $original_check_time_late}
 		endif
 	endif
-	if (<cheat> = cheat_precisionmode)
-		if NOT ($cheat_easyexpert = 1)
+	if (<cheat> = Cheat_PrecisionMode)
+		if NOT ($Cheat_EasyExpert = 1)
 			change \{check_time_early = $original_check_time_early}
 			change \{check_time_late = $original_check_time_late}
 		endif
 	endif
 	if NOT (<cheat> > 0)
-		soundevent \{event = crowd_oneshots_cheer_close}
+		SoundEvent \{event = Crowd_OneShots_Cheer_Close}
 		change globalname = <cheat> newvalue = 2
-		updateunlockedcheats
+		updateUnlockedCheats
 		spawnscriptnow cheat_award_text params = {index = <index>}
 	endif
 endscript
 
-script updateunlockedcheats 
-	if ($cheat_airguitar > 0)
-		setglobaltags \{user_options
+script updateUnlockedCheats 
+	if ($Cheat_AirGuitar > 0)
+		SetGlobalTags \{user_options
 			params = {
-				unlock_cheat_airguitar = 1
+				unlock_Cheat_AirGuitar = 1
 			}}
 	endif
-	if ($cheat_performancemode > 0)
-		setglobaltags \{user_options
+	if ($Cheat_PerformanceMode > 0)
+		SetGlobalTags \{user_options
 			params = {
-				unlock_cheat_performancemode = 1
+				unlock_Cheat_PerformanceMode = 1
 			}}
 	endif
-	if ($cheat_hyperspeed > 0)
-		setglobaltags \{user_options
+	if ($Cheat_Hyperspeed > 0)
+		SetGlobalTags \{user_options
 			params = {
-				unlock_cheat_hyperspeed = 1
+				unlock_Cheat_Hyperspeed = 1
 			}}
 	endif
-	if ($cheat_nofail > 0)
-		setglobaltags \{user_options
+	if ($Cheat_NoFail > 0)
+		SetGlobalTags \{user_options
 			params = {
-				unlock_cheat_nofail = 1
+				unlock_Cheat_NoFail = 1
 			}}
 	endif
-	if ($cheat_easyexpert > 0)
-		setglobaltags \{user_options
+	if ($Cheat_EasyExpert > 0)
+		SetGlobalTags \{user_options
 			params = {
-				unlock_cheat_easyexpert = 1
+				unlock_Cheat_EasyExpert = 1
 			}}
 	endif
-	if ($cheat_precisionmode > 0)
-		setglobaltags \{user_options
+	if ($Cheat_PrecisionMode > 0)
+		SetGlobalTags \{user_options
 			params = {
-				unlock_cheat_precisionmode = 1
+				unlock_Cheat_PrecisionMode = 1
 			}}
 	endif
-	if ($cheat_bretmichaels > 0)
-		setglobaltags \{user_options
+	if ($Cheat_BretMichaels > 0)
+		SetGlobalTags \{user_options
 			params = {
-				unlock_cheat_bretmichaels = 1
+				unlock_Cheat_BretMichaels = 1
 			}}
 	endif
 endscript
@@ -1030,13 +1030,13 @@ script toggle_hyperspeed
 	if ($<cheat> >= 0)
 		if ($<cheat> = 5)
 			change globalname = <cheat> newvalue = 0
-			formattext textname = text "%c : OFF" c = ($guitar_hero_cheats [<index>].name_text)
-			setscreenelementprops id = <id> text = <text>
+			FormatText TextName = text "%c : OFF" c = ($guitar_hero_cheats [<index>].name_text)
+			SetScreenElementProps id = <id> text = <text>
 		else
 			change globalname = <cheat> newvalue = ($<cheat> + 1)
-			formattext textname = text "%c : ON" c = ($guitar_hero_cheats [<index>].name_text)
-			formattext textname = text "%c, %d" c = <text> d = ($cheat_hyperspeed)
-			setscreenelementprops id = <id> text = <text>
+			FormatText TextName = text "%c : ON" c = ($guitar_hero_cheats [<index>].name_text)
+			FormatText TextName = text "%c, %d" c = <text> d = ($Cheat_Hyperspeed)
+			SetScreenElementProps id = <id> text = <text>
 		endif
 	endif
 endscript
@@ -1045,40 +1045,40 @@ script toggle_cheat
 	if ($<cheat> > 0)
 		if ($<cheat> = 1)
 			change globalname = <cheat> newvalue = 2
-			formattext textname = text "%c : OFF" c = ($guitar_hero_cheats [<index>].name_text)
-			setscreenelementprops id = <id> text = <text>
-			if ($cheat_easyexpert = 2 || $cheat_precisionmode = 2)
+			FormatText TextName = text "%c : OFF" c = ($guitar_hero_cheats [<index>].name_text)
+			SetScreenElementProps id = <id> text = <text>
+			if ($Cheat_EasyExpert = 2 || $Cheat_PrecisionMode = 2)
 				change \{check_time_early = $original_check_time_early}
 				change \{check_time_late = $original_check_time_late}
 			endif
 		else
 			change globalname = <cheat> newvalue = 1
-			formattext textname = text "%c : ON" c = ($guitar_hero_cheats [<index>].name_text)
-			turnon_cheat = ($guitar_hero_cheats [<index>].name)
-			setscreenelementprops id = <id> text = <text>
-			if (<turnon_cheat> = easyexpert)
+			FormatText TextName = text "%c : ON" c = ($guitar_hero_cheats [<index>].name_text)
+			turnOn_cheat = ($guitar_hero_cheats [<index>].name)
+			SetScreenElementProps id = <id> text = <text>
+			if (<turnOn_cheat> = EasyExpert)
 				change check_time_early = ($original_check_time_early * 2)
 				change check_time_late = ($original_check_time_late * 2)
-				if ($cheat_precisionmode = 1)
-					formattext textname = text "%c : OFF" c = ($guitar_hero_cheats [5].name_text)
-					change \{globalname = cheat_precisionmode
+				if ($Cheat_PrecisionMode = 1)
+					FormatText TextName = text "%c : OFF" c = ($guitar_hero_cheats [5].name_text)
+					change \{globalname = Cheat_PrecisionMode
 						newvalue = 2}
-					setscreenelementprops id = cheat_precisionmode_text text = <text>
+					SetScreenElementProps id = Cheat_PrecisionMode_Text text = <text>
 				endif
 			endif
-			if (<turnon_cheat> = precisionmode)
+			if (<turnOn_cheat> = PrecisionMode)
 				change check_time_early = ($original_check_time_early / 2)
 				change check_time_late = ($original_check_time_late / 2)
-				if ($cheat_easyexpert = 1)
-					formattext textname = text "%c : OFF" c = ($guitar_hero_cheats [4].name_text)
-					change \{globalname = cheat_easyexpert
+				if ($Cheat_EasyExpert = 1)
+					FormatText TextName = text "%c : OFF" c = ($guitar_hero_cheats [4].name_text)
+					change \{globalname = Cheat_EasyExpert
 						newvalue = 2}
-					setscreenelementprops id = cheat_easyexpert_text text = <text>
+					SetScreenElementProps id = Cheat_EasyExpert_Text text = <text>
 				endif
 			endif
 		endif
 	else
-		setscreenelementprops id = <id> text = "locked"
+		SetScreenElementProps id = <id> text = "locked"
 	endif
 	show_cheat_warning
 endscript

@@ -56,16 +56,16 @@ script new_menu \{menu_pos = $menu_pos
 			center
 			top
 		]}
-	if screenelementexists id = <scrollid>
+	if ScreenElementExists id = <scrollid>
 		printf "script new_menu - %s Already exists." s = <scrollid>
 		return
 	endif
-	if screenelementexists id = <vmenuid>
+	if ScreenElementExists id = <vmenuid>
 		printf "script new_menu - %s Already exists." s = <vmenuid>
 		return
 	endif
-	createscreenelement {
-		type = vscrollingmenu
+	CreateScreenElement {
+		type = VScrollingMenu
 		parent = root_window
 		id = <scrollid>
 		just = <just>
@@ -76,9 +76,9 @@ script new_menu \{menu_pos = $menu_pos
 	if (<use_backdrop>)
 		create_generic_backdrop
 	endif
-	if gotparam \{name}
-		createscreenelement {
-			type = textelement
+	if GotParam \{name}
+		CreateScreenElement {
+			type = TextElement
 			parent = <scrollid>
 			font = <font>
 			pos = (0.0, -45.0)
@@ -91,8 +91,8 @@ script new_menu \{menu_pos = $menu_pos
 			shadow_rgba [0 0 0 255]
 		}
 	endif
-	createscreenelement {
-		type = vmenu
+	CreateScreenElement {
+		type = VMenu
 		parent = <scrollid>
 		id = <vmenuid>
 		pos = (0.0, 0.0)
@@ -100,57 +100,57 @@ script new_menu \{menu_pos = $menu_pos
 		internal_just = <internal_just>
 		event_handlers = <event_handlers>
 	}
-	if gotparam \{rot_angle}
-		setscreenelementprops id = <vmenuid> rot_angle = <rot_angle>
+	if GotParam \{rot_angle}
+		SetScreenElementProps id = <vmenuid> rot_angle = <rot_angle>
 	endif
-	if gotparam \{no_wrap}
-		setscreenelementprops id = <vmenuid> dont_allow_wrap
+	if GotParam \{no_wrap}
+		SetScreenElementProps id = <vmenuid> dont_allow_wrap
 	endif
-	if gotparam \{spacing}
-		setscreenelementprops id = <vmenuid> spacing_between = <spacing>
+	if GotParam \{spacing}
+		SetScreenElementProps id = <vmenuid> spacing_between = <spacing>
 	endif
-	if gotparam \{text_left}
-		setscreenelementprops id = <vmenuid> internal_just = [left top]
+	if GotParam \{text_left}
+		SetScreenElementProps id = <vmenuid> internal_just = [left top]
 	endif
-	if gotparam \{text_right}
-		setscreenelementprops id = <vmenuid> internal_just = [right top]
+	if GotParam \{text_right}
+		SetScreenElementProps id = <vmenuid> internal_just = [right top]
 	endif
-	if NOT gotparam \{exclusive_device}
+	if NOT GotParam \{exclusive_device}
 		exclusive_device = ($primary_controller)
 	endif
 	if NOT (<exclusive_device> = none)
-		setscreenelementprops {
+		SetScreenElementProps {
 			id = <scrollid>
 			exclusive_device = <exclusive_device>
 		}
-		setscreenelementprops {
+		SetScreenElementProps {
 			id = <vmenuid>
 			exclusive_device = <exclusive_device>
 		}
 	endif
-	if gotparam \{tierlist}
+	if GotParam \{tierlist}
 		tier = 0
 		begin
 		<tier> = (<tier> + 1)
 		setlist_prefix = ($<tierlist>.prefix)
-		formattext checksumname = tiername '%ptier%i' p = <setlist_prefix> i = (<tier>)
-		formattext checksumname = tier_checksum 'tier%s' s = (<tier>)
+		FormatText checksumname = tiername '%ptier%i' p = <setlist_prefix> i = (<tier>)
+		FormatText checksumname = tier_checksum 'tier%s' s = (<tier>)
 		<unlocked> = 1
-		getglobaltags <tiername> param = unlocked
+		GetGlobalTags <tiername> param = unlocked
 		if ((<unlocked> = 1) || ($is_network_game))
-			getarraysize ($<tierlist>.<tier_checksum>.songs)
+			GetArraySize ($<tierlist>.<tier_checksum>.songs)
 			song_count = 0
 			if (<array_size> > 0)
 				begin
-				formattext checksumname = song_checksum '%p_song%i_tier%s' p = <setlist_prefix> i = (<song_count> + 1) s = (<tier>) addtostringlookup = true
+				FormatText checksumname = song_checksum '%p_song%i_tier%s' p = <setlist_prefix> i = (<song_count> + 1) s = (<tier>) AddToStringLookup = true
 				for_bonus = 0
 				if ($current_tab = tab_bonus)
 					<for_bonus> = 1
 				endif
-				if issongavailable song_checksum = <song_checksum> song = ($g_gh3_setlist.<tier_checksum>.songs [<song_count>]) for_bonus = <for_bonus>
+				if IsSongAvailable song_checksum = <song_checksum> song = ($g_gh3_setlist.<tier_checksum>.songs [<song_count>]) for_bonus = <for_bonus>
 					get_song_title song = ($<tierlist>.<tier_checksum>.songs [<song_count>])
-					createscreenelement {
-						type = textelement
+					CreateScreenElement {
+						type = TextElement
 						parent = <vmenuid>
 						font = <font>
 						scale = <font_size>
@@ -178,14 +178,14 @@ script new_menu \{menu_pos = $menu_pos
 		set_unfocus_color rgba = ($default_menu_unfocus_color)
 	endif
 	if (<no_focus> = 0)
-		launchevent type = focus target = <vmenuid>
+		LaunchEvent type = focus target = <vmenuid>
 	endif
 endscript
 
 script destroy_menu 
-	if gotparam \{menu_id}
-		if screenelementexists id = <menu_id>
-			destroyscreenelement id = <menu_id>
+	if GotParam \{menu_id}
+		if ScreenElementExists id = <menu_id>
+			DestroyScreenElement id = <menu_id>
 		endif
 		destroy_generic_backdrop
 	endif
@@ -193,10 +193,10 @@ endscript
 
 script create_main_menu_backdrop 
 	change \{coop_dlc_active = 0}
-	create_menu_backdrop \{texture = gh3_main_menu_bg}
+	create_menu_backdrop \{texture = GH3_Main_Menu_BG}
 	base_menu_pos = (730.0, 90.0)
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		id = main_menu_text_container
 		parent = root_window
 		pos = (<base_menu_pos>)
@@ -204,16 +204,16 @@ script create_main_menu_backdrop
 		z_priority = 3
 		scale = 0.8
 	}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		id = main_menu_bg_container
 		parent = root_window
 		pos = (0.0, 0.0)
 		z_priority = 3}
-	winportgetappfullversion
-	formattext textname = version_string_display "VERSION %s" s = <version_string>
+	WinPortGetAppFullVersion
+	FormatText TextName = version_string_display "VERSION %s" s = <version_string>
 	main_menu_font = fontgrid_title_gh3
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		id = version_text
 		parent = main_menu_bg_container
 		text = <version_string_display>
@@ -228,7 +228,7 @@ script create_main_menu_backdrop
 		shadow_rgba = [0 0 0 255]
 		z_priority = 60
 	}
-	createscreenelement \{type = spriteelement
+	CreateScreenElement \{type = SpriteElement
 		id = main_menu_bg2
 		parent = main_menu_bg_container
 		texture = main_menu_bg2
@@ -239,8 +239,8 @@ script create_main_menu_backdrop
 			top
 		]
 		z_priority = 1}
-	runscriptonscreenelement id = main_menu_bg2 glow_menu_element params = {time = 1 id = <id>}
-	createscreenelement \{type = spriteelement
+	RunScriptOnScreenElement id = main_menu_bg2 glow_menu_element params = {time = 1 id = <id>}
+	CreateScreenElement \{type = SpriteElement
 		parent = main_menu_bg_container
 		texture = main_menu_illustrations
 		pos = (0.0, 0.0)
@@ -250,10 +250,10 @@ script create_main_menu_backdrop
 			top
 		]
 		z_priority = 2}
-	createscreenelement \{type = spriteelement
-		id = eyes_bl
+	CreateScreenElement \{type = SpriteElement
+		id = eyes_BL
 		parent = main_menu_bg_container
-		texture = main_menu_eyesbl
+		texture = main_menu_eyesBL
 		pos = (93.0, 676.0)
 		dims = (128.0, 64.0)
 		just = [
@@ -261,11 +261,11 @@ script create_main_menu_backdrop
 			center
 		]
 		z_priority = 3}
-	runscriptonscreenelement id = eyes_bl glow_menu_element params = {time = 1.0 id = <id>}
-	createscreenelement \{type = spriteelement
-		id = eyes_br
+	RunScriptOnScreenElement id = eyes_BL glow_menu_element params = {time = 1.0 id = <id>}
+	CreateScreenElement \{type = SpriteElement
+		id = eyes_BR
 		parent = main_menu_bg_container
-		texture = main_menu_eyesbr
+		texture = main_menu_eyesBR
 		pos = (1176.0, 659.0)
 		dims = (128.0, 64.0)
 		just = [
@@ -273,11 +273,11 @@ script create_main_menu_backdrop
 			center
 		]
 		z_priority = 3}
-	runscriptonscreenelement id = eyes_br glow_menu_element params = {time = 1.0 id = <id>}
-	createscreenelement \{type = spriteelement
-		id = eyes_c
+	RunScriptOnScreenElement id = eyes_BR glow_menu_element params = {time = 1.0 id = <id>}
+	CreateScreenElement \{type = SpriteElement
+		id = eyes_C
 		parent = main_menu_bg_container
-		texture = main_menu_eyesc
+		texture = main_menu_eyesC
 		pos = (406.0, 398.0)
 		dims = (128.0, 64.0)
 		just = [
@@ -285,11 +285,11 @@ script create_main_menu_backdrop
 			center
 		]
 		z_priority = 3}
-	runscriptonscreenelement id = eyes_c glow_menu_element params = {time = 1.5 id = <id>}
-	createscreenelement \{type = spriteelement
-		id = eyes_tl
+	RunScriptOnScreenElement id = eyes_C glow_menu_element params = {time = 1.5 id = <id>}
+	CreateScreenElement \{type = SpriteElement
+		id = eyes_TL
 		parent = main_menu_bg_container
-		texture = main_menu_eyestl
+		texture = main_menu_eyesTL
 		pos = (271.0, 215.0)
 		dims = (128.0, 64.0)
 		just = [
@@ -297,11 +297,11 @@ script create_main_menu_backdrop
 			center
 		]
 		z_priority = 3}
-	runscriptonscreenelement id = eyes_tl glow_menu_element params = {time = 1.7 id = <id>}
-	createscreenelement \{type = spriteelement
-		id = eyes_tr
+	RunScriptOnScreenElement id = eyes_TL glow_menu_element params = {time = 1.7 id = <id>}
+	CreateScreenElement \{type = SpriteElement
+		id = eyes_TR
 		parent = main_menu_bg_container
-		texture = main_menu_eyestr
+		texture = main_menu_eyesTR
 		pos = (995.0, 71.0)
 		dims = (128.0, 64.0)
 		just = [
@@ -309,14 +309,14 @@ script create_main_menu_backdrop
 			center
 		]
 		z_priority = 3}
-	runscriptonscreenelement id = eyes_tr glow_menu_element params = {time = 1.0 id = <id>}
+	RunScriptOnScreenElement id = eyes_TR glow_menu_element params = {time = 1.0 id = <id>}
 endscript
 
-script winportcreatelaptopui 
+script WinPortCreateLaptopUi 
 	z = 1000000
-	createscreenelement {
-		type = spriteelement
-		id = batteryelem
+	CreateScreenElement {
+		type = SpriteElement
+		id = batteryElem
 		parent = root_window
 		texture = battery_charging
 		pos = (65.0, 721.0)
@@ -325,9 +325,9 @@ script winportcreatelaptopui
 		z_priority = <z>
 		hide
 	}
-	createscreenelement {
-		type = spriteelement
-		id = batterylevelelem
+	CreateScreenElement {
+		type = SpriteElement
+		id = batteryLevelElem
 		parent = root_window
 		texture = battery_level0
 		pos = (65.0, 721.0)
@@ -336,9 +336,9 @@ script winportcreatelaptopui
 		z_priority = (<z> - 1)
 		hide
 	}
-	createscreenelement {
-		type = spriteelement
-		id = wirelesselem
+	CreateScreenElement {
+		type = SpriteElement
+		id = wirelessElem
 		parent = root_window
 		texture = wifi_bar0
 		pos = (1201.0, 716.0)
@@ -347,40 +347,40 @@ script winportcreatelaptopui
 		z_priority = <z>
 		hide
 	}
-	spawnscriptnow \{winportupdatelaptopui}
+	spawnscriptnow \{WinPortUpdateLaptopUi}
 endscript
 
-script winportupdatelaptopui 
+script WinPortUpdateLaptopUi 
 	begin
-	winportgetlaptopinfo
-	if (<batterypercent> > -1)
-		if (<batterycharging> = 1)
-			setscreenelementprops \{id = batteryelem
+	WinPortGetLaptopInfo
+	if (<batteryPercent> > -1)
+		if (<batteryCharging> = 1)
+			SetScreenElementProps \{id = batteryElem
 				unhide
 				texture = battery_charging}
 		else
-			setscreenelementprops \{id = batteryelem
+			SetScreenElementProps \{id = batteryElem
 				unhide
 				texture = battery}
 		endif
-		mathfloor ((<batterypercent> + 1) / 12.5)
-		formattext checksumname = batterylevelimage 'battery_level%a' a = <floor>
-		setscreenelementprops id = batterylevelelem unhide texture = <batterylevelimage>
+		MathFloor ((<batteryPercent> + 1) / 12.5)
+		FormatText checksumname = batteryLevelImage 'battery_level%a' a = <floor>
+		SetScreenElementProps id = batteryLevelElem unhide texture = <batteryLevelImage>
 	else
-		setscreenelementprops \{id = batteryelem
+		SetScreenElementProps \{id = batteryElem
 			hide}
-		setscreenelementprops \{id = batterylevelelem
+		SetScreenElementProps \{id = batteryLevelElem
 			hide}
 	endif
-	if (<wirelesspercent> > -1)
-		mathfloor ((<wirelesspercent> + 1) / 20)
-		formattext checksumname = wirelessimage 'wifi_bar%a' a = <floor>
-		setscreenelementprops id = wirelesselem unhide texture = <wirelessimage>
+	if (<wirelessPercent> > -1)
+		MathFloor ((<wirelessPercent> + 1) / 20)
+		FormatText checksumname = wirelessImage 'wifi_bar%a' a = <floor>
+		SetScreenElementProps id = wirelessElem unhide texture = <wirelessImage>
 	else
-		setscreenelementprops \{id = wirelesselem
+		SetScreenElementProps \{id = wirelessElem
 			hide}
 	endif
-	wait \{5
+	Wait \{5
 		seconds}
 	repeat
 endscript
@@ -388,42 +388,42 @@ main_menu_movie_first_time = 1
 main_menu_created = 0
 
 script create_main_menu 
-	if iswinport
+	if IsWinPort
 		shut_down_net_play
 		if ($main_menu_created = 0)
-			if winportsioiskeyboard \{devicenum = $primary_controller}
-				setglobaltags \{user_options
+			if WinPortSioIsKeyboard \{deviceNum = $primary_controller}
+				SetGlobalTags \{user_options
 					params = {
 						lefty_flip_p1 = 1
 					}}
 			else
-				guitarcount = 0
-				if isguitarcontroller \{controller = 0}
-					guitarcount = (<guitarcount> + 1)
+				guitarCount = 0
+				if IsGuitarController \{controller = 0}
+					guitarCount = (<guitarCount> + 1)
 				endif
-				if isguitarcontroller \{controller = 1}
-					guitarcount = (<guitarcount> + 1)
+				if IsGuitarController \{controller = 1}
+					guitarCount = (<guitarCount> + 1)
 				endif
-				if isguitarcontroller \{controller = 2}
-					guitarcount = (<guitarcount> + 1)
+				if IsGuitarController \{controller = 2}
+					guitarCount = (<guitarCount> + 1)
 				endif
-				if (<guitarcount> < 2)
-					setglobaltags \{user_options
+				if (<guitarCount> < 2)
+					SetGlobalTags \{user_options
 						params = {
 							lefty_flip_p2 = 1
 						}}
 				endif
 			endif
-			winportcreatelaptopui
+			WinPortCreateLaptopUi
 		endif
 	endif
 	change \{winport_is_in_online_menu_system = 0}
 	change \{main_menu_created = 1}
-	getglobaltags \{user_options}
+	GetGlobalTags \{user_options}
 	menu_audio_settings_update_guitar_volume vol = <guitar_volume>
 	menu_audio_settings_update_band_volume vol = <band_volume>
 	menu_audio_settings_update_sfx_volume vol = <sfx_volume>
-	setsoundbussparams {crowd = {vol = ($default_bussset.crowd.vol)}}
+	SetSoundBussParams {Crowd = {vol = ($Default_BussSet.Crowd.vol)}}
 	if ($main_menu_movie_first_time = 0)
 		fadetoblack \{on
 			time = 0
@@ -432,16 +432,16 @@ script create_main_menu
 	endif
 	create_main_menu_backdrop
 	if ($main_menu_movie_first_time = 0 && $invite_controller = -1)
-		playmovieandwait \{movie = 'GH3_Intro'
+		PlayMovieAndWait \{movie = 'GH3_Intro'
 			noblack
 			noletterbox}
 		change \{main_menu_movie_first_time = 1}
 		fadetoblack \{off
 			time = 0}
 	endif
-	setmenuautorepeattimes \{(0.3, 0.05)}
+	SetMenuAutoRepeatTimes \{(0.3, 0.05)}
 	kill_start_key_binding
-	unpausegame
+	UnPauseGame
 	change \{current_num_players = 1}
 	change structurename = player1_status controller = ($primary_controller)
 	change \{player_controls_valid = 0}
@@ -452,9 +452,9 @@ script create_main_menu
 	else
 		demo_mode_disable = {}
 	endif
-	deregisteratoms
-	registeratoms \{name = achievement
-		$achievement_atoms}
+	DeRegisterAtoms
+	RegisterAtoms \{name = achievement
+		$Achievement_Atoms}
 	change \{setlist_previous_tier = 1}
 	change \{setlist_previous_song = 0}
 	change \{setlist_previous_tab = tab_setlist}
@@ -495,8 +495,8 @@ script create_main_menu
 	exit_text_scale = (1.1, 1.0)
 	debug_menu_text_off = (<exit_text_off> + (0.0, 160.0))
 	debug_menu_text_scale = 0.8
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		id = main_menu_career_text
 		parent = main_menu_text_container
 		text = "CAREER"
@@ -512,13 +512,13 @@ script create_main_menu
 		z_priority = 60
 		<demo_mode_disable>
 	}
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	if (<width> > 420)
-		setscreenelementprops id = <id> scale = 1
-		fit_text_in_rectangle id = <id> dims = ((420.0, 0.0) + <height> * (0.0, 1.0))
+		SetScreenElementProps id = <id> scale = 1
+		fit_text_in_rectangle id = <id> dims = ((420.0, 0.0) + <Height> * (0.0, 1.0))
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		id = main_menu_coop_career_text
 		parent = main_menu_text_container
 		text = "CO-OP CAREER"
@@ -534,13 +534,13 @@ script create_main_menu
 		z_priority = 60
 		<demo_mode_disable>
 	}
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	if (<width> > 400)
-		setscreenelementprops id = <id> scale = 1
-		fit_text_in_rectangle id = <id> dims = ((400.0, 0.0) + <height> * (0.0, 1.0))
+		SetScreenElementProps id = <id> scale = 1
+		fit_text_in_rectangle id = <id> dims = ((400.0, 0.0) + <Height> * (0.0, 1.0))
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		id = main_menu_quickplay_text
 		parent = main_menu_text_container
 		font = <main_menu_font>
@@ -555,13 +555,13 @@ script create_main_menu
 		shadow_rgba = [0 0 0 255]
 		z_priority = 60
 	}
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	if (<width> > 400)
-		setscreenelementprops id = <id> scale = 1
-		fit_text_in_rectangle id = <id> dims = ((400.0, 0.0) + <height> * (0.0, 1.0))
+		SetScreenElementProps id = <id> scale = 1
+		fit_text_in_rectangle id = <id> dims = ((400.0, 0.0) + <Height> * (0.0, 1.0))
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		id = main_menu_multiplayer_text
 		parent = main_menu_text_container
 		font = <main_menu_font>
@@ -576,13 +576,13 @@ script create_main_menu
 		shadow_rgba = [0 0 0 255]
 		z_priority = 60
 	}
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	if (<width> > 460)
-		setscreenelementprops id = <id> scale = 1
-		fit_text_in_rectangle id = <id> dims = ((460.0, 0.0) + <height> * (0.0, 1.0))
+		SetScreenElementProps id = <id> scale = 1
+		fit_text_in_rectangle id = <id> dims = ((460.0, 0.0) + <Height> * (0.0, 1.0))
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		id = main_menu_training_text
 		parent = main_menu_text_container
 		font = <main_menu_font>
@@ -597,21 +597,21 @@ script create_main_menu
 		shadow_rgba = [0 0 0 255]
 		z_priority = 60
 	}
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	if (<width> > 345)
-		setscreenelementprops id = <id> scale = 1
-		fit_text_in_rectangle id = <id> dims = ((345.0, 0.0) + <height> * (0.0, 1.0))
+		SetScreenElementProps id = <id> scale = 1
+		fit_text_in_rectangle id = <id> dims = ((345.0, 0.0) + <Height> * (0.0, 1.0))
 	endif
-	getscreenelementdims \{id = main_menu_training_text}
-	old_height = <height>
+	GetScreenElementDims \{id = main_menu_training_text}
+	old_height = <Height>
 	fit_text_in_rectangle id = main_menu_training_text dims = (350.0, 100.0) pos = {(<training_text_off>) relative} start_x_scale = (<training_text_scale>.(1.0, 0.0)) start_y_scale = (<training_text_scale>.(0.0, 1.0)) only_if_larger_x = 1 keep_ar = 1
-	getscreenelementdims \{id = main_menu_training_text}
-	offset = ((<old_height> * ((<old_height> -24.0) / <old_height>)) - (<height> * ((<height> - (24.0 * ((1.0 * <height>) / <old_height>))) / <height>)))
+	GetScreenElementDims \{id = main_menu_training_text}
+	offset = ((<old_height> * ((<old_height> -24.0) / <old_height>)) - (<Height> * ((<Height> - (24.0 * ((1.0 * <Height>) / <old_height>))) / <Height>)))
 	leaderboards_text_off = (<leaderboards_text_off> - <offset> * (0.0, 1.0))
 	options_text_off = (<options_text_off> - <offset> * (0.0, 1.0))
-	if isxenon
-		createscreenelement {
-			type = textelement
+	if isXenon
+		CreateScreenElement {
+			type = TextElement
 			id = main_menu_leaderboards_text
 			parent = main_menu_text_container
 			font = <main_menu_font>
@@ -627,14 +627,14 @@ script create_main_menu
 			z_priority = 60
 			<demo_mode_disable>
 		}
-		getscreenelementdims id = <id>
+		GetScreenElementDims id = <id>
 		if (<width> > 360)
-			setscreenelementprops id = <id> scale = 1
-			fit_text_in_rectangle id = <id> dims = ((360.0, 0.0) + <height> * (0.0, 1.0))
+			SetScreenElementProps id = <id> scale = 1
+			fit_text_in_rectangle id = <id> dims = ((360.0, 0.0) + <Height> * (0.0, 1.0))
 		endif
 	else
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			id = main_menu_leaderboards_text
 			parent = main_menu_text_container
 			font = <main_menu_font>
@@ -650,14 +650,14 @@ script create_main_menu
 			z_priority = 60
 			<demo_mode_disable>
 		}
-		getscreenelementdims id = <id>
+		GetScreenElementDims id = <id>
 		if (<width> > 360)
-			setscreenelementprops id = <id> scale = 1
-			fit_text_in_rectangle id = <id> dims = ((360.0, 0.0) + <height> * (0.0, 1.0))
+			SetScreenElementProps id = <id> scale = 1
+			fit_text_in_rectangle id = <id> dims = ((360.0, 0.0) + <Height> * (0.0, 1.0))
 		endif
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		id = main_menu_options_text
 		parent = main_menu_text_container
 		font = <main_menu_font>
@@ -672,13 +672,13 @@ script create_main_menu
 		shadow_rgba = [0 0 0 255]
 		z_priority = 60
 	}
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	if (<width> > 420)
-		setscreenelementprops id = <id> scale = 1
-		fit_text_in_rectangle id = <id> dims = ((420.0, 0.0) + <height> * (0.0, 1.0))
+		SetScreenElementProps id = <id> scale = 1
+		fit_text_in_rectangle id = <id> dims = ((420.0, 0.0) + <Height> * (0.0, 1.0))
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		id = main_menu_exit_text
 		parent = main_menu_text_container
 		font = <main_menu_font>
@@ -693,14 +693,14 @@ script create_main_menu
 		shadow_rgba = [0 0 0 255]
 		z_priority = 60
 	}
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	if (<width> > 420)
-		setscreenelementprops id = <id> scale = 1
-		fit_text_in_rectangle id = <id> dims = ((420.0, 0.0) + <height> * (0.0, 1.0))
+		SetScreenElementProps id = <id> scale = 1
+		fit_text_in_rectangle id = <id> dims = ((420.0, 0.0) + <Height> * (0.0, 1.0))
 	endif
 	if ($enable_button_cheats = 1)
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			id = main_menu_debug_menu_text
 			parent = main_menu_text_container
 			font = <main_menu_font>
@@ -717,294 +717,294 @@ script create_main_menu
 	endif
 	offwhite = [255 255 205 255]
 	hilite_off = (5.0, 0.0)
-	gm_hlinfolist = [
+	gm_hlInfoList = [
 		{
-			posl = (<career_text_off> + <hilite_off> + (-40.0, 9.0))
-			posr = (<career_text_off> + <hilite_off> + (218.0, 9.0))
-			bedims = (40.0, 40.0)
-			posh = (<career_text_off> + <hilite_off> + (-14.0, -2.0))
+			posL = (<career_text_off> + <hilite_off> + (-40.0, 9.0))
+			posR = (<career_text_off> + <hilite_off> + (218.0, 9.0))
+			beDims = (40.0, 40.0)
+			posH = (<career_text_off> + <hilite_off> + (-14.0, -2.0))
 			hdims = (240.0, 57.0)
 		} ,
 		{
-			posl = (<coop_career_text_off> + <hilite_off> + (-33.0, 3.0))
-			posr = (<coop_career_text_off> + <hilite_off> + (281.0, 3.0))
-			bedims = (32.0, 32.0)
-			posh = (<coop_career_text_off> + <hilite_off> + (-14.0, -1.0))
+			posL = (<coop_career_text_off> + <hilite_off> + (-33.0, 3.0))
+			posR = (<coop_career_text_off> + <hilite_off> + (281.0, 3.0))
+			beDims = (32.0, 32.0)
+			posH = (<coop_career_text_off> + <hilite_off> + (-14.0, -1.0))
 			hdims = (300.0, 37.0)
 		} ,
 		{
-			posl = (<quickplay_text_off> + <hilite_off> + (-34.0, 4.0))
-			posr = (<quickplay_text_off> + <hilite_off> + (251.0, 4.0))
-			bedims = (40.0, 40.0)
-			posh = (<quickplay_text_off> + <hilite_off> + (-14.0, -2.0))
+			posL = (<quickplay_text_off> + <hilite_off> + (-34.0, 4.0))
+			posR = (<quickplay_text_off> + <hilite_off> + (251.0, 4.0))
+			beDims = (40.0, 40.0)
+			posH = (<quickplay_text_off> + <hilite_off> + (-14.0, -2.0))
 			hdims = (267.0, 47.0)
 		} ,
 		{
-			posl = (<multiplayer_text_off> + <hilite_off> + (-37.0, 4.0))
-			posr = (<multiplayer_text_off> + <hilite_off> + (301.0, 4.0))
-			bedims = (38.0, 38.0)
-			posh = (<multiplayer_text_off> + <hilite_off> + (-14.0, -1.0))
+			posL = (<multiplayer_text_off> + <hilite_off> + (-37.0, 4.0))
+			posR = (<multiplayer_text_off> + <hilite_off> + (301.0, 4.0))
+			beDims = (38.0, 38.0)
+			posH = (<multiplayer_text_off> + <hilite_off> + (-14.0, -1.0))
 			hdims = (320.0, 43.0)
 		} ,
 		{
-			posl = (<training_text_off> + <hilite_off> + (-31.0, 9.0))
-			posr = (<training_text_off> + <hilite_off> + (282.0, 9.0))
-			bedims = (42.0, 42.0)
-			posh = (<training_text_off> + <hilite_off> + (-13.0, -2.0))
+			posL = (<training_text_off> + <hilite_off> + (-31.0, 9.0))
+			posR = (<training_text_off> + <hilite_off> + (282.0, 9.0))
+			beDims = (42.0, 42.0)
+			posH = (<training_text_off> + <hilite_off> + (-13.0, -2.0))
 			hdims = (295.0, 61.0)
 		} ,
 		{
-			posl = (<leaderboards_text_off> + <hilite_off> + (-33.0, 3.0))
-			posr = (<leaderboards_text_off> + <hilite_off> + (213.0, 3.0))
-			bedims = (34.0, 34.0)
-			posh = (<leaderboards_text_off> + <hilite_off> + (-13.0, -2.0))
+			posL = (<leaderboards_text_off> + <hilite_off> + (-33.0, 3.0))
+			posR = (<leaderboards_text_off> + <hilite_off> + (213.0, 3.0))
+			beDims = (34.0, 34.0)
+			posH = (<leaderboards_text_off> + <hilite_off> + (-13.0, -2.0))
 			hdims = (232.0, 40.0)
 		} ,
 		{
-			posl = (<options_text_off> + <hilite_off> + (-36.0, 5.0))
-			posr = (<options_text_off> + <hilite_off> + (183.0, 5.0))
-			bedims = (36.0, 36.0)
-			posh = (<options_text_off> + <hilite_off> + (-14.0, 0.0))
+			posL = (<options_text_off> + <hilite_off> + (-36.0, 5.0))
+			posR = (<options_text_off> + <hilite_off> + (183.0, 5.0))
+			beDims = (36.0, 36.0)
+			posH = (<options_text_off> + <hilite_off> + (-14.0, 0.0))
 			hdims = (205.0, 43.0)
 		} ,
 		{
-			posl = (<exit_text_off> + <hilite_off> + (-36.0, 5.0))
-			posr = (<exit_text_off> + <hilite_off> + (183.0, 5.0))
-			bedims = (36.0, 36.0)
-			posh = (<exit_text_off> + <hilite_off> + (-12.0, 0.0))
+			posL = (<exit_text_off> + <hilite_off> + (-36.0, 5.0))
+			posR = (<exit_text_off> + <hilite_off> + (183.0, 5.0))
+			beDims = (36.0, 36.0)
+			posH = (<exit_text_off> + <hilite_off> + (-12.0, 0.0))
 			hdims = (205.0, 43.0)
 		}
 	]
-	<gm_hlindex> = 0
-	displaysprite {
+	<gm_hlIndex> = 0
+	displaySprite {
 		parent = main_menu_text_container
 		tex = character_hub_hilite_bookend
-		pos = ((<gm_hlinfolist> [<gm_hlindex>]).posl)
-		dims = ((<gm_hlinfolist> [<gm_hlindex>]).bedims)
+		pos = ((<gm_hlInfoList> [<gm_hlIndex>]).posL)
+		dims = ((<gm_hlInfoList> [<gm_hlIndex>]).beDims)
 		rgba = <offwhite>
 		z = 2
 	}
-	<bookend1id> = <id>
-	displaysprite {
+	<bookEnd1ID> = <id>
+	displaySprite {
 		parent = main_menu_text_container
 		tex = character_hub_hilite_bookend
-		pos = ((<gm_hlinfolist> [<gm_hlindex>]).posr)
-		dims = ((<gm_hlinfolist> [<gm_hlindex>]).bedims)
+		pos = ((<gm_hlInfoList> [<gm_hlIndex>]).posR)
+		dims = ((<gm_hlInfoList> [<gm_hlIndex>]).beDims)
 		rgba = <offwhite>
 		z = 2
 	}
-	<bookend2id> = <id>
-	displaysprite {
+	<bookEnd2ID> = <id>
+	displaySprite {
 		parent = main_menu_text_container
 		tex = white
 		rgba = <offwhite>
-		pos = ((<gm_hlinfolist> [<gm_hlindex>]).posh)
-		dims = ((<gm_hlinfolist> [<gm_hlindex>]).hdims)
+		pos = ((<gm_hlInfoList> [<gm_hlIndex>]).posH)
+		dims = ((<gm_hlInfoList> [<gm_hlIndex>]).hdims)
 		z = 2
 	}
-	<whitetexhighlightid> = <id>
-	createscreenelement {
-		type = textelement
+	<whiteTexHighlightID> = <id>
+	CreateScreenElement {
+		type = TextElement
 		parent = vmenu_main_menu
 		font = <main_menu_font>
 		text = ""
 		event_handlers = [
 			{focus retail_menu_focus params = {id = main_menu_career_text}}
-			{focus setscreenelementprops params = {id = main_menu_career_text no_shadow}}
+			{focus SetScreenElementProps params = {id = main_menu_career_text no_shadow}}
 			{focus guitar_menu_highlighter params = {
-					hlindex = 0
-					hlinfolist = <gm_hlinfolist>
-					be1id = <bookend1id>
-					be2id = <bookend2id>
-					wthlid = <whitetexhighlightid>
+					hlIndex = 0
+					hlInfoList = <gm_hlInfoList>
+					be1ID = <bookEnd1ID>
+					be2ID = <bookEnd2ID>
+					wthlID = <whiteTexHighlightID>
 					text_id = main_menu_career_text
 				}
 			}
-			{unfocus setscreenelementprops params = {id = main_menu_career_text shadow shadow_offs = (3.0, 3.0) shadow_rgba = [0 0 0 255]}}
+			{unfocus SetScreenElementProps params = {id = main_menu_career_text shadow shadow_offs = (3.0, 3.0) shadow_rgba = [0 0 0 255]}}
 			{unfocus retail_menu_unfocus params = {id = main_menu_career_text}}
 			{pad_choose main_menu_select_career}
 		]
 		z_priority = -1
 		<demo_mode_disable>
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = vmenu_main_menu
 		font = <main_menu_font>
 		text = ""
 		event_handlers = [
 			{focus retail_menu_focus params = {id = main_menu_coop_career_text}}
-			{focus setscreenelementprops params = {id = main_menu_coop_career_text no_shadow}}
+			{focus SetScreenElementProps params = {id = main_menu_coop_career_text no_shadow}}
 			{focus guitar_menu_highlighter params = {
-					hlindex = 1
-					hlinfolist = <gm_hlinfolist>
-					be1id = <bookend1id>
-					be2id = <bookend2id>
-					wthlid = <whitetexhighlightid>
+					hlIndex = 1
+					hlInfoList = <gm_hlInfoList>
+					be1ID = <bookEnd1ID>
+					be2ID = <bookEnd2ID>
+					wthlID = <whiteTexHighlightID>
 					text_id = main_menu_coop_career_text
 				}
 			}
-			{unfocus setscreenelementprops params = {id = main_menu_coop_career_text shadow shadow_offs = (3.0, 3.0) shadow_rgba = [0 0 0 255]}}
+			{unfocus SetScreenElementProps params = {id = main_menu_coop_career_text shadow shadow_offs = (3.0, 3.0) shadow_rgba = [0 0 0 255]}}
 			{unfocus retail_menu_unfocus params = {id = main_menu_coop_career_text}}
 			{pad_choose main_menu_select_coop_career}
 		]
 		z_priority = -1
 		<demo_mode_disable>
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = vmenu_main_menu
 		font = <main_menu_font>
 		text = ""
 		event_handlers = [
 			{focus retail_menu_focus params = {id = main_menu_quickplay_text}}
-			{focus setscreenelementprops params = {id = main_menu_quickplay_text no_shadow}}
+			{focus SetScreenElementProps params = {id = main_menu_quickplay_text no_shadow}}
 			{focus guitar_menu_highlighter params = {
-					hlindex = 2
-					hlinfolist = <gm_hlinfolist>
-					be1id = <bookend1id>
-					be2id = <bookend2id>
-					wthlid = <whitetexhighlightid>
+					hlIndex = 2
+					hlInfoList = <gm_hlInfoList>
+					be1ID = <bookEnd1ID>
+					be2ID = <bookEnd2ID>
+					wthlID = <whiteTexHighlightID>
 					text_id = main_menu_quickplay_text
 				}
 			}
-			{unfocus setscreenelementprops params = {id = main_menu_quickplay_text shadow shadow_offs = (3.0, 3.0) shadow_rgba = [0 0 0 255]}}
+			{unfocus SetScreenElementProps params = {id = main_menu_quickplay_text shadow shadow_offs = (3.0, 3.0) shadow_rgba = [0 0 0 255]}}
 			{unfocus retail_menu_unfocus params = {id = main_menu_quickplay_text}}
 			{pad_choose main_menu_select_quickplay}
 		]
 		z_priority = -1
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = vmenu_main_menu
 		font = <main_menu_font>
 		text = ""
 		event_handlers = [
 			{focus retail_menu_focus params = {id = main_menu_multiplayer_text}}
-			{focus setscreenelementprops params = {id = main_menu_multiplayer_text no_shadow}}
+			{focus SetScreenElementProps params = {id = main_menu_multiplayer_text no_shadow}}
 			{focus guitar_menu_highlighter params = {
-					hlindex = 3
-					hlinfolist = <gm_hlinfolist>
-					be1id = <bookend1id>
-					be2id = <bookend2id>
-					wthlid = <whitetexhighlightid>
+					hlIndex = 3
+					hlInfoList = <gm_hlInfoList>
+					be1ID = <bookEnd1ID>
+					be2ID = <bookEnd2ID>
+					wthlID = <whiteTexHighlightID>
 					text_id = main_menu_multiplayer_text
 				}
 			}
-			{unfocus setscreenelementprops params = {id = main_menu_multiplayer_text shadow shadow_offs = (3.0, 3.0) shadow_rgba = [0 0 0 255]}}
+			{unfocus SetScreenElementProps params = {id = main_menu_multiplayer_text shadow shadow_offs = (3.0, 3.0) shadow_rgba = [0 0 0 255]}}
 			{unfocus retail_menu_unfocus params = {id = main_menu_multiplayer_text}}
 			{pad_choose main_menu_select_multiplayer}
 		]
 		z_priority = -1
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = vmenu_main_menu
 		font = <main_menu_font>
 		text = ""
 		event_handlers = [
 			{focus retail_menu_focus params = {id = main_menu_training_text}}
-			{focus setscreenelementprops params = {id = main_menu_training_text no_shadow}}
+			{focus SetScreenElementProps params = {id = main_menu_training_text no_shadow}}
 			{focus guitar_menu_highlighter params = {
-					hlindex = 4
-					hlinfolist = <gm_hlinfolist>
-					be1id = <bookend1id>
-					be2id = <bookend2id>
-					wthlid = <whitetexhighlightid>
+					hlIndex = 4
+					hlInfoList = <gm_hlInfoList>
+					be1ID = <bookEnd1ID>
+					be2ID = <bookEnd2ID>
+					wthlID = <whiteTexHighlightID>
 					text_id = main_menu_training_text
 				}
 			}
-			{unfocus setscreenelementprops params = {id = main_menu_training_text shadow shadow_offs = (3.0, 3.0) shadow_rgba = [0 0 0 255]}}
+			{unfocus SetScreenElementProps params = {id = main_menu_training_text shadow shadow_offs = (3.0, 3.0) shadow_rgba = [0 0 0 255]}}
 			{unfocus retail_menu_unfocus params = {id = main_menu_training_text}}
 			{pad_choose main_menu_select_training}
 		]
 		z_priority = -1
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = vmenu_main_menu
 		font = <main_menu_font>
 		text = ""
 		event_handlers = [
 			{focus retail_menu_focus params = {id = main_menu_options_text}}
-			{focus setscreenelementprops params = {id = main_menu_options_text no_shadow}}
+			{focus SetScreenElementProps params = {id = main_menu_options_text no_shadow}}
 			{focus guitar_menu_highlighter params = {
-					hlindex = 6
-					hlinfolist = <gm_hlinfolist>
-					be1id = <bookend1id>
-					be2id = <bookend2id>
-					wthlid = <whitetexhighlightid>
+					hlIndex = 6
+					hlInfoList = <gm_hlInfoList>
+					be1ID = <bookEnd1ID>
+					be2ID = <bookEnd2ID>
+					wthlID = <whiteTexHighlightID>
 					text_id = main_menu_options_text
 				}
 			}
-			{unfocus setscreenelementprops params = {id = main_menu_options_text shadow shadow_offs = (3.0, 3.0) shadow_rgba = [0 0 0 255]}}
+			{unfocus SetScreenElementProps params = {id = main_menu_options_text shadow shadow_offs = (3.0, 3.0) shadow_rgba = [0 0 0 255]}}
 			{unfocus retail_menu_unfocus params = {id = main_menu_options_text}}
 			{pad_choose main_menu_select_options}
 		]
 		z_priority = -1
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = vmenu_main_menu
 		font = <main_menu_font>
 		text = ""
 		event_handlers = [
 			{focus retail_menu_focus params = {id = main_menu_leaderboards_text}}
-			{focus setscreenelementprops params = {id = main_menu_leaderboards_text no_shadow}}
+			{focus SetScreenElementProps params = {id = main_menu_leaderboards_text no_shadow}}
 			{focus guitar_menu_highlighter params = {
-					hlindex = 5
-					hlinfolist = <gm_hlinfolist>
-					be1id = <bookend1id>
-					be2id = <bookend2id>
-					wthlid = <whitetexhighlightid>
+					hlIndex = 5
+					hlInfoList = <gm_hlInfoList>
+					be1ID = <bookEnd1ID>
+					be2ID = <bookEnd2ID>
+					wthlID = <whiteTexHighlightID>
 					text_id = main_menu_leaderboards_text
 				}
 			}
-			{unfocus setscreenelementprops params = {id = main_menu_leaderboards_text shadow shadow_offs = (3.0, 3.0) shadow_rgba = [0 0 0 255]}}
+			{unfocus SetScreenElementProps params = {id = main_menu_leaderboards_text shadow shadow_offs = (3.0, 3.0) shadow_rgba = [0 0 0 255]}}
 			{unfocus retail_menu_unfocus params = {id = main_menu_leaderboards_text}}
 			{pad_choose main_menu_select_winport_online}
 		]
 		z_priority = -1
 		<demo_mode_disable>
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = vmenu_main_menu
 		font = <main_menu_font>
 		text = "Exit placeholder"
 		event_handlers = [
 			{focus retail_menu_focus params = {id = main_menu_exit_text}}
-			{focus setscreenelementprops params = {id = main_menu_exit_text no_shadow}}
+			{focus SetScreenElementProps params = {id = main_menu_exit_text no_shadow}}
 			{focus guitar_menu_highlighter params = {
-					hlindex = 7
-					hlinfolist = <gm_hlinfolist>
-					be1id = <bookend1id>
-					be2id = <bookend2id>
-					wthlid = <whitetexhighlightid>
+					hlIndex = 7
+					hlInfoList = <gm_hlInfoList>
+					be1ID = <bookEnd1ID>
+					be2ID = <bookEnd2ID>
+					wthlID = <whiteTexHighlightID>
 					text_id = main_menu_exit_text
 				}
 			}
-			{unfocus setscreenelementprops params = {id = main_menu_exit_text shadow shadow_offs = (3.0, 3.0) shadow_rgba = [0 0 0 255]}}
+			{unfocus SetScreenElementProps params = {id = main_menu_exit_text shadow shadow_offs = (3.0, 3.0) shadow_rgba = [0 0 0 255]}}
 			{unfocus retail_menu_unfocus params = {id = main_menu_exit_text}}
 			{pad_choose main_menu_select_exit}
 		]
 		z_priority = -1
 	}
 	if ($enable_button_cheats = 1)
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = vmenu_main_menu
 			font = <main_menu_font>
 			text = ""
 			event_handlers = [
 				{focus retail_menu_focus params = {id = main_menu_debug_menu_text}}
 				{focus guitar_menu_highlighter params = {
-						zpri = -2
-						hlindex = 0
-						hlinfolist = <gm_hlinfolist>
-						be1id = <bookend1id>
-						be2id = <bookend2id>
-						wthlid = <whitetexhighlightid>
+						zPri = -2
+						hlIndex = 0
+						hlInfoList = <gm_hlInfoList>
+						be1ID = <bookEnd1ID>
+						be2ID = <bookEnd2ID>
+						wthlID = <whiteTexHighlightID>
 					}
 				}
 				{unfocus retail_menu_unfocus params = {id = main_menu_debug_menu_text}}
@@ -1040,79 +1040,79 @@ script create_main_menu
 		fadetoblack \{off
 			time = 0}
 	else
-		launchevent \{type = focus
+		LaunchEvent \{type = focus
 			target = vmenu_main_menu}
 	endif
 endscript
 
-script guitar_menu_highlighter \{zpri = 50}
-	if gotparam \{text_id}
-		getscreenelementdims id = <text_id>
-		hilite_dims = (<width> * (1.0, 0.0) + <height> * (0.0, 0.7) + (20.0, -1.0))
-		bookend_dims = (<height> * (0.5, 0.5))
-		hilite_pos = ((<hlinfolist> [<hlindex>]).posh - (5.0, 0.0))
-		setscreenelementprops {
-			id = <wthlid>
+script guitar_menu_highlighter \{zPri = 50}
+	if GotParam \{text_id}
+		GetScreenElementDims id = <text_id>
+		hilite_dims = (<width> * (1.0, 0.0) + <Height> * (0.0, 0.7) + (20.0, -1.0))
+		bookend_dims = (<Height> * (0.5, 0.5))
+		hilite_pos = ((<hlInfoList> [<hlIndex>]).posH - (5.0, 0.0))
+		SetScreenElementProps {
+			id = <wthlID>
 			pos = <hilite_pos>
 			dims = <hilite_dims>
-			z_priority = <zpri>
+			z_priority = <zPri>
 		}
-		setscreenelementprops {
-			id = <be1id>
-			pos = (<hilite_pos> - <bookend_dims>.(1.0, 0.0) * (0.6, 0.0) + <height> * (0.0, 0.1))
+		SetScreenElementProps {
+			id = <be1ID>
+			pos = (<hilite_pos> - <bookend_dims>.(1.0, 0.0) * (0.6, 0.0) + <Height> * (0.0, 0.1))
 			dims = <bookend_dims>
-			z_priority = <zpri>
+			z_priority = <zPri>
 		}
-		setscreenelementprops {
-			id = <be2id>
-			pos = (<hilite_pos> + (<hilite_dims>.(1.0, 0.0) * (1.0, 0.0)) + <height> * (0.0, 0.1) - (<bookend_dims>.(1.0, 0.0) * (0.1, 0.0)))
+		SetScreenElementProps {
+			id = <be2ID>
+			pos = (<hilite_pos> + (<hilite_dims>.(1.0, 0.0) * (1.0, 0.0)) + <Height> * (0.0, 0.1) - (<bookend_dims>.(1.0, 0.0) * (0.1, 0.0)))
 			dims = <bookend_dims>
-			z_priority = <zpri>
+			z_priority = <zPri>
 			flip_h
 		}
 	else
-		setscreenelementprops {
-			id = <be1id>
-			pos = ((<hlinfolist> [<hlindex>]).posl)
-			dims = ((<hlinfolist> [<hlindex>]).bedims)
-			z_priority = <zpri>
+		SetScreenElementProps {
+			id = <be1ID>
+			pos = ((<hlInfoList> [<hlIndex>]).posL)
+			dims = ((<hlInfoList> [<hlIndex>]).beDims)
+			z_priority = <zPri>
 		}
-		setscreenelementprops {
-			id = <be2id>
-			pos = ((<hlinfolist> [<hlindex>]).posr)
-			dims = ((<hlinfolist> [<hlindex>]).bedims)
-			z_priority = <zpri>
+		SetScreenElementProps {
+			id = <be2ID>
+			pos = ((<hlInfoList> [<hlIndex>]).posR)
+			dims = ((<hlInfoList> [<hlIndex>]).beDims)
+			z_priority = <zPri>
 		}
-		setscreenelementprops {
-			id = <wthlid>
-			pos = ((<hlinfolist> [<hlindex>]).posh)
-			dims = ((<hlinfolist> [<hlindex>]).hdims)
-			z_priority = <zpri>
+		SetScreenElementProps {
+			id = <wthlID>
+			pos = ((<hlInfoList> [<hlIndex>]).posH)
+			dims = ((<hlInfoList> [<hlIndex>]).hdims)
+			z_priority = <zPri>
 		}
 	endif
 endscript
 
 script glow_new_downloads_text 
 	begin
-	if screenelementexists \{id = new_downloads_text_glow}
-		new_downloads_text_glow :domorph alpha = 0 time = <time>
+	if ScreenElementExists \{id = new_downloads_text_glow}
+		new_downloads_text_glow :DoMorph alpha = 0 time = <time>
 	endif
-	if screenelementexists \{id = new_downloads_text_glow}
-		new_downloads_text_glow :domorph alpha = 1 time = <time>
+	if ScreenElementExists \{id = new_downloads_text_glow}
+		new_downloads_text_glow :DoMorph alpha = 1 time = <time>
 	endif
 	repeat
 endscript
 
 script pop_in_new_downloads_notifier \{time = 0.5}
-	wait \{0.5
+	Wait \{0.5
 		second}
-	if NOT screenelementexists \{id = main_menu_text_container}
+	if NOT ScreenElementExists \{id = main_menu_text_container}
 		return
 	endif
 	pos = (100.0, 390.0)
 	text = "NEW  DOWNLOADABLE  CONTENT!"
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = main_menu_text_container
 		text = <text>
 		scale = 0.5
@@ -1124,14 +1124,14 @@ script pop_in_new_downloads_notifier \{time = 0.5}
 		z_priority = 5
 		alpha = 0
 	}
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	if (<width> >= 500)
-		setscreenelementprops id = <id> scale = 1
-		fit_text_in_rectangle id = <id> only_if_larger_x = 1 dims = ((500.0, 0.0) + <height> * (0.0, 1.0)) keep_ar = 1
+		SetScreenElementProps id = <id> scale = 1
+		fit_text_in_rectangle id = <id> only_if_larger_x = 1 dims = ((500.0, 0.0) + <Height> * (0.0, 1.0)) keep_ar = 1
 	endif
-	doscreenelementmorph id = <id> alpha = 1 time = <time>
-	createscreenelement {
-		type = textelement
+	doScreenElementMorph id = <id> alpha = 1 time = <time>
+	CreateScreenElement {
+		type = TextElement
 		parent = main_menu_text_container
 		id = new_downloads_text_glow
 		text = <text>
@@ -1144,46 +1144,46 @@ script pop_in_new_downloads_notifier \{time = 0.5}
 		z_priority = 6
 		alpha = 0
 	}
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	if (<width> >= 500)
-		setscreenelementprops id = <id> scale = 1
-		fit_text_in_rectangle id = <id> only_if_larger_x = 1 dims = ((500.0, 0.0) + <height> * (0.0, 1.0)) keep_ar = 1
+		SetScreenElementProps id = <id> scale = 1
+		fit_text_in_rectangle id = <id> only_if_larger_x = 1 dims = ((500.0, 0.0) + <Height> * (0.0, 1.0)) keep_ar = 1
 	endif
-	doscreenelementmorph id = <id> alpha = 1 time = <time>
-	displaysprite {
+	doScreenElementMorph id = <id> alpha = 1 time = <time>
+	displaySprite {
 		parent = main_menu_text_container
 		tex = white
 		pos = (<pos>)
 		just = [center center]
 		rgba = [170 90 35 255]
 		z = 4
-		dims = ((<width> + 20) * (1.0, 0.0) + (0.0, 1.0) * (<height> + 10))
+		dims = ((<width> + 20) * (1.0, 0.0) + (0.0, 1.0) * (<Height> + 10))
 		alpha = 0
 	}
-	doscreenelementmorph id = <id> alpha = 1 time = <time>
-	displaysprite {
+	doScreenElementMorph id = <id> alpha = 1 time = <time>
+	displaySprite {
 		parent = main_menu_text_container
 		tex = character_hub_hilite_bookend
 		just = [right center]
 		rgba = [170 90 35 255]
 		z = 4
 		pos = ((<pos>) - <width> * (0.5, 0.0) - (6.0, 1.0))
-		dims = (<height> * (1.0, 1.0))
+		dims = (<Height> * (1.0, 1.0))
 		flip_v
 		alpha = 0
 	}
-	doscreenelementmorph id = <id> alpha = 1 time = <time>
-	displaysprite {
+	doScreenElementMorph id = <id> alpha = 1 time = <time>
+	displaySprite {
 		parent = main_menu_text_container
 		tex = character_hub_hilite_bookend
 		just = [left center]
 		rgba = [170 90 35 255]
 		z = 4
 		pos = ((<pos>) + <width> * (0.5, 0.0) + (6.0, 1.0))
-		dims = (<height> * (1.0, 1.0))
+		dims = (<Height> * (1.0, 1.0))
 		alpha = 0
 	}
-	doscreenelementmorph id = <id> alpha = 1 time = <time>
+	doScreenElementMorph id = <id> alpha = 1 time = <time>
 	spawnscriptnow \{glow_new_downloads_text
 		params = {
 			time = 0.75
@@ -1191,19 +1191,19 @@ script pop_in_new_downloads_notifier \{time = 0.5}
 endscript
 
 script glow_menu_element \{time = 1}
-	if NOT screenelementexists id = <id>
+	if NOT ScreenElementExists id = <id>
 		return
 	endif
-	wait RandomRange (0.0, 2.0) seconds
+	Wait RandomRange (0.0, 2.0) seconds
 	begin
-	<id> :domorph alpha = 1 time = <time> motion = smooth
-	<id> :domorph alpha = 0 time = <time> motion = smooth
+	<id> :DoMorph alpha = 1 time = <time> motion = smooth
+	<id> :DoMorph alpha = 0 time = <time> motion = smooth
 	repeat
 endscript
 
 script destroy_main_menu 
-	killspawnedscript \{name = pop_in_new_downloads_notifier}
-	killspawnedscript \{name = glow_new_downloads_text}
+	KillSpawnedScript \{name = pop_in_new_downloads_notifier}
+	KillSpawnedScript \{name = glow_new_downloads_text}
 	clean_up_user_control_helpers
 	change \{default_menu_focus_color = [
 			210
@@ -1221,7 +1221,7 @@ script destroy_main_menu
 	destroy_menu \{menu_id = main_menu_scrolling_menu}
 	destroy_menu \{menu_id = main_menu_text_container}
 	destroy_menu_backdrop
-	destroyscreenelement \{id = main_menu_bg_container}
+	DestroyScreenElement \{id = main_menu_bg_container}
 endscript
 
 script main_menu_select_career 
@@ -1295,7 +1295,7 @@ endscript
 script destroy_play_song_menu 
 endscript
 
-script issingleplayergame 
+script isSinglePlayerGame 
 	if ($game_mode = p1_career || $game_mode = p1_quickplay || $game_mode = training)
 		return \{true}
 	else
@@ -1337,7 +1337,7 @@ script create_pause_menu \{player = 1
 			{pad_back ui_flow_manager_respond_to_action params = {action = go_back}}
 		]
 	endif
-	if iswinport
+	if IsWinPort
 		change \{winport_in_top_pause_menu = 1}
 	endif
 	change \{bunny_flame_index = 1}
@@ -1351,8 +1351,8 @@ script create_pause_menu \{player = 1
 		endif
 	else
 		<spacing> = -65
-		if isguitarcontroller controller = <player_device>
-			if winportsioiskeyboard devicenum = <player_device>
+		if IsGuitarController controller = <player_device>
+			if WinPortSioIsKeyboard deviceNum = <player_device>
 				menu_pos = (640.0, 260.0)
 			else
 				menu_pos = (640.0, 225.0)
@@ -1373,17 +1373,17 @@ script create_pause_menu \{player = 1
 	}
 	create_pause_menu_frame z = (<pause_z> - 10)
 	if ($is_network_game = 0)
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			parent = pause_menu_frame_container
 			texture = menu_pause_frame_banner
 			pos = (640.0, 540.0)
 			just = [center center]
 			z_priority = (<pause_z> + 100)
 		}
-		if gotparam \{banner_text}
+		if GotParam \{banner_text}
 			pause_player_text = <banner_text>
-			if gotparam \{banner_scale}
+			if GotParam \{banner_scale}
 				pause_player_scale = <banner_scale>
 			else
 				pause_player_scale = (1.0, 1.0)
@@ -1393,8 +1393,8 @@ script create_pause_menu \{player = 1
 				if (<for_practice> = 1)
 					<pause_player_text> = "PAUSED"
 				else
-					if NOT issingleplayergame
-						formattext textname = pause_player_text "P%d PAUSED" d = <player>
+					if NOT isSinglePlayerGame
+						FormatText TextName = pause_player_text "P%d PAUSED" d = <player>
 					else
 						<pause_player_text> = "PAUSED"
 					endif
@@ -1406,8 +1406,8 @@ script create_pause_menu \{player = 1
 			endif
 		endif
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <id>
 		text = <pause_player_text>
 		font = text_a6
@@ -1418,8 +1418,8 @@ script create_pause_menu \{player = 1
 	}
 	text_scale = (0.9, 0.9)
 	if (<for_options> = 0 && <for_practice> = 0)
-		createscreenelement {
-			type = containerelement
+		CreateScreenElement {
+			type = ContainerElement
 			parent = pause_menu_frame_container
 			id = bunny_container
 			pos = (380.0, 170.0)
@@ -1428,10 +1428,10 @@ script create_pause_menu \{player = 1
 		}
 		i = 1
 		begin
-		formattext checksumname = bunny_id 'pause_bunny_flame_%d' d = <i>
-		formattext checksumname = bunny_tex 'GH3_Pause_Bunny_Flame%d' d = <i>
-		createscreenelement {
-			type = spriteelement
+		FormatText checksumname = bunny_id 'pause_bunny_flame_%d' d = <i>
+		FormatText checksumname = bunny_tex 'GH3_Pause_Bunny_Flame%d' d = <i>
+		CreateScreenElement {
+			type = SpriteElement
 			id = <bunny_id>
 			parent = bunny_container
 			pos = (160.0, 170.0)
@@ -1443,46 +1443,46 @@ script create_pause_menu \{player = 1
 			rot_angle = 5
 		}
 		if (<i> > 1)
-			doscreenelementmorph id = <bunny_id> alpha = 0
+			doScreenElementMorph id = <bunny_id> alpha = 0
 		endif
 		<i> = (<i> + 1)
 		repeat 7
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			id = pause_bunny_shadow
 			parent = bunny_container
-			texture = gh3_pause_bunny
+			texture = GH3_Pause_bunny
 			rgba = [0 0 0 128]
 			pos = (20.0, -110.0)
 			dims = (550.0, 550.0)
 			just = [center top]
 			z_priority = (<pause_z> + 4)
 		}
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			id = pause_bunny
 			parent = bunny_container
-			texture = gh3_pause_bunny
+			texture = GH3_Pause_bunny
 			rgba = [255 255 255 255]
 			pos = (0.0, -130.0)
 			dims = (550.0, 550.0)
 			just = [center top]
 			z_priority = (<pause_z> + 5)
 		}
-		runscriptonscreenelement \{id = bunny_container
+		RunScriptOnScreenElement \{id = bunny_container
 			bunny_hover
 			params = {
 				hover_origin = (380.0, 170.0)
 			}}
 	endif
-	container_params = {type = containerelement parent = vmenu_pause dims = (0.0, 100.0)}
+	container_params = {type = ContainerElement parent = vmenu_pause dims = (0.0, 100.0)}
 	if (<for_options> = 0)
 		if (<for_practice> = 1)
-			if english
+			if English
 			else
 				text_scale = (0.71999997, 0.71999997)
 			endif
-			createscreenelement {
+			CreateScreenElement {
 				<container_params>
 				event_handlers = [
 					{focus retail_menu_focus params = {id = pause_resume}}
@@ -1490,8 +1490,8 @@ script create_pause_menu \{player = 1
 					{pad_choose gh3_start_pressed}
 				]
 			}
-			createscreenelement {
-				type = textelement
+			CreateScreenElement {
+				type = TextElement
 				parent = <id>
 				font = fontgrid_title_gh3
 				scale = <text_scale>
@@ -1505,9 +1505,9 @@ script create_pause_menu \{player = 1
 				z_priority = <pause_z>
 				exclusive_device = <player_device>
 			}
-			getscreenelementdims id = <id>
-			fit_text_in_rectangle id = <id> dims = ((300.0, 0.0) + <height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
-			createscreenelement {
+			GetScreenElementDims id = <id>
+			fit_text_in_rectangle id = <id> dims = ((300.0, 0.0) + <Height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
+			CreateScreenElement {
 				<container_params>
 				event_handlers = [
 					{focus retail_menu_focus params = {id = pause_restart}}
@@ -1515,8 +1515,8 @@ script create_pause_menu \{player = 1
 					{pad_choose ui_flow_manager_respond_to_action params = {action = select_restart}}
 				]
 			}
-			createscreenelement {
-				type = textelement
+			CreateScreenElement {
+				type = TextElement
 				parent = <id>
 				font = fontgrid_title_gh3
 				scale = <text_scale>
@@ -1530,9 +1530,9 @@ script create_pause_menu \{player = 1
 				z_priority = <pause_z>
 				exclusive_device = <player_device>
 			}
-			getscreenelementdims id = <id>
-			fit_text_in_rectangle id = <id> dims = ((300.0, 0.0) + <height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
-			createscreenelement {
+			GetScreenElementDims id = <id>
+			fit_text_in_rectangle id = <id> dims = ((300.0, 0.0) + <Height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
+			CreateScreenElement {
 				<container_params>
 				event_handlers = [
 					{focus retail_menu_focus params = {id = pause_options}}
@@ -1540,8 +1540,8 @@ script create_pause_menu \{player = 1
 					{pad_choose ui_flow_manager_respond_to_action params = {action = select_options create_params = {player_device = <player_device>}}}
 				]
 			}
-			createscreenelement {
-				type = textelement
+			CreateScreenElement {
+				type = TextElement
 				parent = <id>
 				font = fontgrid_title_gh3
 				scale = <text_scale>
@@ -1555,9 +1555,9 @@ script create_pause_menu \{player = 1
 				z_priority = <pause_z>
 				exclusive_device = <player_device>
 			}
-			getscreenelementdims id = <id>
-			fit_text_in_rectangle id = <id> dims = ((300.0, 0.0) + <height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
-			createscreenelement {
+			GetScreenElementDims id = <id>
+			fit_text_in_rectangle id = <id> dims = ((300.0, 0.0) + <Height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
+			CreateScreenElement {
 				<container_params>
 				event_handlers = [
 					{focus retail_menu_focus params = {id = pause_change_speed}}
@@ -1565,8 +1565,8 @@ script create_pause_menu \{player = 1
 					{pad_choose ui_flow_manager_respond_to_action params = {action = select_change_speed}}
 				]
 			}
-			createscreenelement {
-				type = textelement
+			CreateScreenElement {
+				type = TextElement
 				parent = <id>
 				font = fontgrid_title_gh3
 				scale = <text_scale>
@@ -1580,9 +1580,9 @@ script create_pause_menu \{player = 1
 				z_priority = <pause_z>
 				exclusive_device = <player_device>
 			}
-			getscreenelementdims id = <id>
-			fit_text_in_rectangle id = <id> dims = ((300.0, 0.0) + <height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
-			createscreenelement {
+			GetScreenElementDims id = <id>
+			fit_text_in_rectangle id = <id> dims = ((300.0, 0.0) + <Height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
+			CreateScreenElement {
 				<container_params>
 				event_handlers = [
 					{focus retail_menu_focus params = {id = pause_change_section}}
@@ -1590,8 +1590,8 @@ script create_pause_menu \{player = 1
 					{pad_choose ui_flow_manager_respond_to_action params = {action = select_change_section}}
 				]
 			}
-			createscreenelement {
-				type = textelement
+			CreateScreenElement {
+				type = TextElement
 				parent = <id>
 				font = fontgrid_title_gh3
 				scale = <text_scale>
@@ -1605,10 +1605,10 @@ script create_pause_menu \{player = 1
 				z_priority = <pause_z>
 				exclusive_device = <player_device>
 			}
-			getscreenelementdims id = <id>
-			fit_text_in_rectangle id = <id> dims = ((300.0, 0.0) + <height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
+			GetScreenElementDims id = <id>
+			fit_text_in_rectangle id = <id> dims = ((300.0, 0.0) + <Height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
 			if ($came_to_practice_from = main_menu)
-				createscreenelement {
+				CreateScreenElement {
 					<container_params>
 					event_handlers = [
 						{focus retail_menu_focus params = {id = pause_new_song}}
@@ -1616,8 +1616,8 @@ script create_pause_menu \{player = 1
 						{pad_choose ui_flow_manager_respond_to_action params = {action = select_new_song}}
 					]
 				}
-				createscreenelement {
-					type = textelement
+				CreateScreenElement {
+					type = TextElement
 					parent = <id>
 					font = fontgrid_title_gh3
 					scale = <text_scale>
@@ -1631,10 +1631,10 @@ script create_pause_menu \{player = 1
 					z_priority = <pause_z>
 					exclusive_device = <player_device>
 				}
-				getscreenelementdims id = <id>
-				fit_text_in_rectangle id = <id> dims = ((300.0, 0.0) + <height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
+				GetScreenElementDims id = <id>
+				fit_text_in_rectangle id = <id> dims = ((300.0, 0.0) + <Height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
 			endif
-			createscreenelement {
+			CreateScreenElement {
 				<container_params>
 				event_handlers = [
 					{focus retail_menu_focus params = {id = pause_quit}}
@@ -1642,8 +1642,8 @@ script create_pause_menu \{player = 1
 					{pad_choose ui_flow_manager_respond_to_action params = {action = select_quit}}
 				]
 			}
-			createscreenelement {
-				type = textelement
+			CreateScreenElement {
+				type = TextElement
 				parent = <id>
 				font = fontgrid_title_gh3
 				scale = <text_scale>
@@ -1657,8 +1657,8 @@ script create_pause_menu \{player = 1
 				z_priority = <pause_z>
 				exclusive_device = <player_device>
 			}
-			getscreenelementdims id = <id>
-			fit_text_in_rectangle id = <id> dims = ((300.0, 0.0) + <height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
+			GetScreenElementDims id = <id>
+			fit_text_in_rectangle id = <id> dims = ((300.0, 0.0) + <Height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
 			add_user_control_helper \{text = "SELECT"
 				button = green
 				z = 100000}
@@ -1666,12 +1666,12 @@ script create_pause_menu \{player = 1
 				button = strumbar
 				z = 100000}
 		else
-			if english
+			if English
 			else
-				container_params = {type = containerelement parent = vmenu_pause dims = (0.0, 105.0)}
+				container_params = {type = ContainerElement parent = vmenu_pause dims = (0.0, 105.0)}
 				text_scale = (0.8, 0.8)
 			endif
-			createscreenelement {
+			CreateScreenElement {
 				<container_params>
 				event_handlers = [
 					{focus retail_menu_focus params = {id = pause_resume}}
@@ -1679,8 +1679,8 @@ script create_pause_menu \{player = 1
 					{pad_choose gh3_start_pressed}
 				]
 			}
-			createscreenelement {
-				type = textelement
+			CreateScreenElement {
+				type = TextElement
 				parent = <id>
 				font = fontgrid_title_gh3
 				scale = <text_scale>
@@ -1694,11 +1694,11 @@ script create_pause_menu \{player = 1
 				z_priority = <pause_z>
 				exclusive_device = <player_device>
 			}
-			getscreenelementdims id = <id>
-			fit_text_in_rectangle id = <id> dims = ((250.0, 0.0) + <height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
+			GetScreenElementDims id = <id>
+			fit_text_in_rectangle id = <id> dims = ((250.0, 0.0) + <Height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
 			if ($is_network_game = 0)
 				if NOT ($end_credits = 1)
-					createscreenelement {
+					CreateScreenElement {
 						<container_params>
 						event_handlers = [
 							{focus retail_menu_focus params = {id = pause_restart}}
@@ -1706,8 +1706,8 @@ script create_pause_menu \{player = 1
 							{pad_choose ui_flow_manager_respond_to_action params = {action = select_restart}}
 						]
 					}
-					createscreenelement {
-						type = textelement
+					CreateScreenElement {
+						type = TextElement
 						parent = <id>
 						font = fontgrid_title_gh3
 						scale = <text_scale>
@@ -1721,15 +1721,15 @@ script create_pause_menu \{player = 1
 						z_priority = <pause_z>
 						exclusive_device = <player_device>
 					}
-					getscreenelementdims id = <id>
-					fit_text_in_rectangle id = <id> dims = ((250.0, 0.0) + <height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
+					GetScreenElementDims id = <id>
+					fit_text_in_rectangle id = <id> dims = ((250.0, 0.0) + <Height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
 					if ($is_demo_mode = 1)
 						demo_mode_disable = {rgba = [80 80 80 255] not_focusable}
 					else
 						demo_mode_disable = {}
 					endif
 					if (($game_mode = p1_career && $boss_battle = 0) || ($game_mode = p1_quickplay))
-						createscreenelement {
+						CreateScreenElement {
 							<container_params>
 							event_handlers = [
 								{focus retail_menu_focus params = {id = pause_practice}}
@@ -1737,8 +1737,8 @@ script create_pause_menu \{player = 1
 								{pad_choose ui_flow_manager_respond_to_action params = {action = select_practice}}
 							]
 						}
-						createscreenelement {
-							type = textelement
+						CreateScreenElement {
+							type = TextElement
 							parent = <id>
 							font = fontgrid_title_gh3
 							scale = <text_scale>
@@ -1752,10 +1752,10 @@ script create_pause_menu \{player = 1
 							z_priority = <pause_z>
 							exclusive_device = <player_device>
 						}
-						getscreenelementdims id = <id>
-						fit_text_in_rectangle id = <id> dims = ((260.0, 0.0) + <height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
+						GetScreenElementDims id = <id>
+						fit_text_in_rectangle id = <id> dims = ((260.0, 0.0) + <Height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
 					endif
-					createscreenelement {
+					CreateScreenElement {
 						<container_params>
 						event_handlers = [
 							{focus retail_menu_focus params = {id = pause_options}}
@@ -1763,8 +1763,8 @@ script create_pause_menu \{player = 1
 							{pad_choose ui_flow_manager_respond_to_action params = {action = select_options create_params = {player_device = <player_device>}}}
 						]
 					}
-					createscreenelement {
-						type = textelement
+					CreateScreenElement {
+						type = TextElement
 						parent = <id>
 						font = fontgrid_title_gh3
 						scale = <text_scale>
@@ -1778,8 +1778,8 @@ script create_pause_menu \{player = 1
 						z_priority = <pause_z>
 						exclusive_device = <player_device>
 					}
-					getscreenelementdims id = <id>
-					fit_text_in_rectangle id = <id> dims = ((260.0, 0.0) + <height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
+					GetScreenElementDims id = <id>
+					fit_text_in_rectangle id = <id> dims = ((260.0, 0.0) + <Height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
 				endif
 			endif
 			quit_script = ui_flow_manager_respond_to_action
@@ -1793,7 +1793,7 @@ script create_pause_menu \{player = 1
 					z = 300
 				}
 			endif
-			createscreenelement {
+			CreateScreenElement {
 				<container_params>
 				event_handlers = [
 					{focus retail_menu_focus params = {id = pause_quit}}
@@ -1801,8 +1801,8 @@ script create_pause_menu \{player = 1
 					{pad_choose <quit_script> params = <quit_script_params>}
 				]
 			}
-			createscreenelement {
-				type = textelement
+			CreateScreenElement {
+				type = TextElement
 				parent = <id>
 				font = fontgrid_title_gh3
 				scale = <text_scale>
@@ -1816,10 +1816,10 @@ script create_pause_menu \{player = 1
 				z_priority = <pause_z>
 				exclusive_device = <player_device>
 			}
-			getscreenelementdims id = <id>
-			fit_text_in_rectangle id = <id> dims = ((270.0, 0.0) + <height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
+			GetScreenElementDims id = <id>
+			fit_text_in_rectangle id = <id> dims = ((270.0, 0.0) + <Height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
 			if ($enable_button_cheats = 1)
-				createscreenelement {
+				CreateScreenElement {
 					<container_params>
 					event_handlers = [
 						{focus retail_menu_focus params = {id = pause_debug_menu}}
@@ -1827,8 +1827,8 @@ script create_pause_menu \{player = 1
 						{pad_choose ui_flow_manager_respond_to_action params = {action = select_debug_menu}}
 					]
 				}
-				createscreenelement {
-					type = textelement
+				CreateScreenElement {
+					type = TextElement
 					parent = <id>
 					font = fontgrid_title_gh3
 					scale = <text_scale>
@@ -1852,8 +1852,8 @@ script create_pause_menu \{player = 1
 		endif
 	else
 		<fit_dims> = (400.0, 0.0)
-		createscreenelement {
-			type = containerelement
+		CreateScreenElement {
+			type = ContainerElement
 			parent = vmenu_pause
 			dims = (0.0, 100.0)
 			event_handlers = [
@@ -1863,8 +1863,8 @@ script create_pause_menu \{player = 1
 				{pad_choose ui_flow_manager_respond_to_action params = {action = select_audio_settings create_params = {player = <player>}}}
 			]
 		}
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = <id>
 			font = fontgrid_title_gh3
 			scale = <text_scale>
@@ -1878,10 +1878,10 @@ script create_pause_menu \{player = 1
 			z_priority = <pause_z>
 			exclusive_device = <player_device>
 		}
-		getscreenelementdims id = <id>
-		fit_text_in_rectangle id = <id> dims = (<fit_dims> + <height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
-		createscreenelement {
-			type = containerelement
+		GetScreenElementDims id = <id>
+		fit_text_in_rectangle id = <id> dims = (<fit_dims> + <Height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
+		CreateScreenElement {
+			type = ContainerElement
 			parent = vmenu_pause
 			dims = (0.0, 100.0)
 			event_handlers = [
@@ -1891,8 +1891,8 @@ script create_pause_menu \{player = 1
 				{pad_choose ui_flow_manager_respond_to_action params = {action = select_calibrate_lag create_params = {player = <player>}}}
 			]
 		}
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = <id>
 			font = fontgrid_title_gh3
 			scale = <text_scale>
@@ -1906,10 +1906,10 @@ script create_pause_menu \{player = 1
 			z_priority = <pause_z>
 			exclusive_device = <player_device>
 		}
-		getscreenelementdims id = <id>
-		fit_text_in_rectangle id = <id> dims = (<fit_dims> + <height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
-		createscreenelement {
-			type = containerelement
+		GetScreenElementDims id = <id>
+		fit_text_in_rectangle id = <id> dims = (<fit_dims> + <Height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
+		CreateScreenElement {
+			type = ContainerElement
 			parent = vmenu_pause
 			dims = (0.0, 100.0)
 			event_handlers = [
@@ -1919,8 +1919,8 @@ script create_pause_menu \{player = 1
 				{pad_choose ui_flow_manager_respond_to_action params = {action = winport_select_calibrate_lag create_params = {player = <player>}}}
 			]
 		}
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = <id>
 			font = fontgrid_title_gh3
 			scale = <text_scale>
@@ -1934,12 +1934,12 @@ script create_pause_menu \{player = 1
 			z_priority = <pause_z>
 			exclusive_device = <player_device>
 		}
-		getscreenelementdims id = <id>
-		fit_text_in_rectangle id = <id> dims = (<fit_dims> + <height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
-		if isguitarcontroller controller = <player_device>
-			if NOT winportsioiskeyboard devicenum = <player_device>
-				createscreenelement {
-					type = containerelement
+		GetScreenElementDims id = <id>
+		fit_text_in_rectangle id = <id> dims = (<fit_dims> + <Height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
+		if IsGuitarController controller = <player_device>
+			if NOT WinPortSioIsKeyboard deviceNum = <player_device>
+				CreateScreenElement {
+					type = ContainerElement
 					parent = vmenu_pause
 					dims = (0.0, 100.0)
 					event_handlers = [
@@ -1949,8 +1949,8 @@ script create_pause_menu \{player = 1
 						{pad_choose ui_flow_manager_respond_to_action params = {action = select_calibrate_whammy_bar create_params = {player = <player> popup = 1}}}
 					]
 				}
-				createscreenelement {
-					type = textelement
+				CreateScreenElement {
+					type = TextElement
 					parent = <id>
 					font = fontgrid_title_gh3
 					scale = <text_scale>
@@ -1964,11 +1964,11 @@ script create_pause_menu \{player = 1
 					z_priority = <pause_z>
 					exclusive_device = <player_device>
 				}
-				getscreenelementdims id = <id>
-				fit_text_in_rectangle id = <id> dims = (<fit_dims> + <height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
+				GetScreenElementDims id = <id>
+				fit_text_in_rectangle id = <id> dims = (<fit_dims> + <Height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
 			endif
 		endif
-		if issingleplayergame
+		if isSinglePlayerGame
 			lefty_flip_text = "LEFTY FLIP:"
 		else
 			if (<player> = 1)
@@ -1977,8 +1977,8 @@ script create_pause_menu \{player = 1
 				lefty_flip_text = "P2 LEFTY FLIP:"
 			endif
 		endif
-		createscreenelement {
-			type = containerelement
+		CreateScreenElement {
+			type = ContainerElement
 			parent = vmenu_pause
 			dims = (0.0, 100.0)
 			event_handlers = [
@@ -1989,8 +1989,8 @@ script create_pause_menu \{player = 1
 			]
 		}
 		<lefty_container> = <id>
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = <lefty_container>
 			id = pause_options_lefty
 			font = fontgrid_title_gh3
@@ -2004,9 +2004,9 @@ script create_pause_menu \{player = 1
 			z_priority = <pause_z>
 			exclusive_device = <player_device>
 		}
-		getscreenelementdims id = <id>
-		fit_text_in_rectangle id = <id> dims = (<fit_dims> + <height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
-		createscreenelement \{type = containerelement
+		GetScreenElementDims id = <id>
+		fit_text_in_rectangle id = <id> dims = (<fit_dims> + <Height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
+		CreateScreenElement \{type = ContainerElement
 			parent = vmenu_pause
 			dims = (0.0, 100.0)
 			event_handlers = [
@@ -2036,8 +2036,8 @@ script create_pause_menu \{player = 1
 					}
 				}
 			]}
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = <id>
 			font = fontgrid_title_gh3
 			scale = <text_scale>
@@ -2051,30 +2051,30 @@ script create_pause_menu \{player = 1
 			z_priority = <pause_z>
 			exclusive_device = <player_device>
 		}
-		getscreenelementdims id = <id>
-		fit_text_in_rectangle id = <id> dims = (<fit_dims> + <height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
-		getglobaltags \{user_options}
+		GetScreenElementDims id = <id>
+		fit_text_in_rectangle id = <id> dims = (<fit_dims> + <Height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = (<text_scale>.(1.0, 0.0)) start_y_scale = (<text_scale>.(0.0, 1.0))
+		GetGlobalTags \{user_options}
 		if (<player> = 1)
 			if (<lefty_flip_p1> = 1)
-				lefty_tex = options_controller_check
+				lefty_tex = Options_Controller_Check
 			else
-				lefty_tex = options_controller_x
+				lefty_tex = Options_Controller_X
 			endif
 		else
 			if (<lefty_flip_p2> = 1)
-				lefty_tex = options_controller_check
+				lefty_tex = Options_Controller_Check
 			else
-				lefty_tex = options_controller_x
+				lefty_tex = Options_Controller_X
 			endif
 		endif
-		displaysprite {
+		displaySprite {
 			parent = <lefty_container>
 			tex = <lefty_tex>
 			just = [center center]
 			z = (<pause_z> + 10)
 		}
-		getscreenelementdims \{id = pause_options_lefty}
-		<id> :setprops pos = (<width> * (0.5, 0.0) + (22.0, 0.0))
+		GetScreenElementDims \{id = pause_options_lefty}
+		<id> :SetProps pos = (<width> * (0.5, 0.0) + (22.0, 0.0))
 		add_user_control_helper \{text = "SELECT"
 			button = green
 			z = 100000}
@@ -2086,10 +2086,10 @@ script create_pause_menu \{player = 1
 			z = 100000}
 	endif
 	if ($is_network_game = 0)
-		if NOT issingleplayergame
+		if NOT isSinglePlayerGame
 			if (<for_practice> = 0)
-				formattext textname = player_paused_text "PLAYER %d PAUSED. ONLY PLAYER %d OPTIONS ARE AVAILABLE." d = <player>
-				displaysprite {
+				FormatText TextName = player_paused_text "PLAYER %d PAUSED. ONLY PLAYER %d OPTIONS ARE AVAILABLE." d = <player>
+				displaySprite {
 					parent = pause_menu_frame_container
 					id = pause_helper_text_bg
 					tex = control_pill_body
@@ -2098,7 +2098,7 @@ script create_pause_menu \{player = 1
 					rgba = [96 0 0 255]
 					z = (<pause_z> + 10)
 				}
-				displaytext {
+				displayText {
 					parent = pause_menu_frame_container
 					pos = (640.0, 604.0)
 					just = [center center]
@@ -2108,10 +2108,10 @@ script create_pause_menu \{player = 1
 					z = (<pause_z> + 11)
 					font = text_a6
 				}
-				getscreenelementdims id = <id>
+				GetScreenElementDims id = <id>
 				bg_dims = (<width> * (1.0, 0.0) + (0.0, 32.0))
-				pause_helper_text_bg :setprops dims = <bg_dims>
-				displaysprite {
+				pause_helper_text_bg :SetProps dims = <bg_dims>
+				displaySprite {
 					parent = pause_menu_frame_container
 					tex = control_pill_end
 					pos = ((640.0, 600.0) - <width> * (0.5, 0.0))
@@ -2120,7 +2120,7 @@ script create_pause_menu \{player = 1
 					flip_v
 					z = (<pause_z> + 10)
 				}
-				displaysprite {
+				displaySprite {
 					parent = pause_menu_frame_container
 					tex = control_pill_end
 					pos = ((640.0, 601.0) + <width> * (0.5, 0.0))
@@ -2140,42 +2140,42 @@ endscript
 script animate_bunny_flame 
 	begin
 	swap_bunny_flame
-	wait \{0.1
+	Wait \{0.1
 		second}
 	repeat
 endscript
 
 script bunny_hover 
-	if NOT screenelementexists \{id = bunny_container}
+	if NOT ScreenElementExists \{id = bunny_container}
 		return
 	endif
 	i = 1
 	begin
-	formattext checksumname = bunnyid 'pause_bunny_flame_%d' d = <i>
-	if NOT screenelementexists id = <bunnyid>
+	FormatText checksumname = bunnyid 'pause_bunny_flame_%d' d = <i>
+	if NOT ScreenElementExists id = <bunnyid>
 		return
 	else
-		setscreenelementprops id = <bunnyid> pos = <flame_origin>
+		SetScreenElementProps id = <bunnyid> pos = <flame_origin>
 	endif
 	<i> = (<i> + 1)
 	repeat 7
 	begin
-	bunny_container :domorph \{pos = (360.0, 130.0)
+	bunny_container :DoMorph \{pos = (360.0, 130.0)
 		time = 1
 		rot_angle = -25
 		scale = 1.05
 		motion = ease_out}
-	bunny_container :domorph \{pos = (390.0, 170.0)
+	bunny_container :DoMorph \{pos = (390.0, 170.0)
 		time = 1
 		rot_angle = -20
 		scale = 0.95
 		motion = ease_in}
-	bunny_container :domorph \{pos = (360.0, 130.0)
+	bunny_container :DoMorph \{pos = (360.0, 130.0)
 		time = 1
 		rot_angle = -15
 		scale = 1.05
 		motion = ease_out}
-	bunny_container :domorph \{pos = (390.0, 170.0)
+	bunny_container :DoMorph \{pos = (390.0, 170.0)
 		time = 1
 		rot_angle = -20
 		scale = 0.95
@@ -2189,24 +2189,24 @@ script destroy_pause_menu
 	destroy_pause_menu_frame
 	destroy_menu \{menu_id = scrolling_pause}
 	destroy_menu \{menu_id = pause_menu_frame_container}
-	killspawnedscript \{name = animate_bunny_flame}
-	if screenelementexists \{id = warning_message_container}
-		destroyscreenelement \{id = warning_message_container}
+	KillSpawnedScript \{name = animate_bunny_flame}
+	if ScreenElementExists \{id = warning_message_container}
+		DestroyScreenElement \{id = warning_message_container}
 	endif
-	if screenelementexists \{id = leaving_lobby_dialog_menu}
-		destroyscreenelement \{id = leaving_lobby_dialog_menu}
+	if ScreenElementExists \{id = leaving_lobby_dialog_menu}
+		DestroyScreenElement \{id = leaving_lobby_dialog_menu}
 	endif
 	destroy_pause_menu_frame \{container_id = net_quit_warning}
-	if iswinport
+	if IsWinPort
 		change \{winport_in_top_pause_menu = 0}
 	endif
 endscript
 
 script swap_bunny_flame 
-	if gotparam \{up}
+	if GotParam \{up}
 		generic_menu_up_or_down_sound \{up}
 		change \{g_anim_flame = -1}
-	elseif gotparam \{down}
+	elseif GotParam \{down}
 		generic_menu_up_or_down_sound \{down}
 		change \{g_anim_flame = 1}
 	endif
@@ -2218,36 +2218,36 @@ script swap_bunny_flame
 		change \{bunny_flame_index = 7}
 	endif
 	reset_bunny_alpha
-	formattext \{checksumname = bunnyid
+	FormatText \{checksumname = bunnyid
 		'pause_bunny_flame_%d'
 		d = $bunny_flame_index}
-	if screenelementexists id = <bunnyid>
-		doscreenelementmorph id = <bunnyid> alpha = 1
+	if ScreenElementExists id = <bunnyid>
+		doScreenElementMorph id = <bunnyid> alpha = 1
 	endif
 endscript
 
 script reset_bunny_alpha 
 	i = 1
 	begin
-	formattext checksumname = bunnyid 'pause_bunny_flame_%d' d = <i>
-	if screenelementexists id = <bunnyid>
-		doscreenelementmorph id = <bunnyid> alpha = 0
+	FormatText checksumname = bunnyid 'pause_bunny_flame_%d' d = <i>
+	if ScreenElementExists id = <bunnyid>
+		doScreenElementMorph id = <bunnyid> alpha = 0
 	endif
 	<i> = (<i> + 1)
 	repeat 7
 endscript
 
-script create_menu_backdrop \{texture = venue_bg
+script create_menu_backdrop \{texture = Venue_BG
 		rgba = [
 			255
 			255
 			255
 			255
 		]}
-	if screenelementexists \{id = menu_backdrop_container}
-		destroyscreenelement \{id = menu_backdrop_container}
+	if ScreenElementExists \{id = menu_backdrop_container}
+		DestroyScreenElement \{id = menu_backdrop_container}
 	endif
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = menu_backdrop_container
 		pos = (0.0, 0.0)
@@ -2255,8 +2255,8 @@ script create_menu_backdrop \{texture = venue_bg
 			left
 			top
 		]}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = menu_backdrop_container
 		id = menu_backdrop
 		texture = <texture>
@@ -2269,8 +2269,8 @@ script create_menu_backdrop \{texture = venue_bg
 endscript
 
 script destroy_menu_backdrop 
-	if screenelementexists \{id = menu_backdrop_container}
-		destroyscreenelement \{id = menu_backdrop_container}
+	if ScreenElementExists \{id = menu_backdrop_container}
+		DestroyScreenElement \{id = menu_backdrop_container}
 	endif
 endscript
 
@@ -2281,8 +2281,8 @@ script create_pause_menu_frame \{x_scale = 1
 		z = 0
 		gradient = 1
 		parent = root_window}
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <parent>
 		id = <container_id>
 		pos = (0.0, 0.0)
@@ -2297,8 +2297,8 @@ script create_pause_menu_frame \{x_scale = 1
 	scale_4 = ((1.575, 0.0) * <x_scale> + (0.0, 1.5) * <y_scale>)
 	scale_5 = ((1.5, 0.0) * <x_scale> + (0.0, 1.4) * <y_scale>)
 	if (<gradient> = 1)
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			parent = <container_id>
 			texture = gradient_128
 			rgba = [0 0 0 180]
@@ -2309,8 +2309,8 @@ script create_pause_menu_frame \{x_scale = 1
 		}
 	endif
 	if (<tile_sprite> = 1)
-		createscreenelement {
-			type = windowelement
+		CreateScreenElement {
+			type = WindowElement
 			parent = <container_id>
 			pos = (642.0, 360.0)
 			dims = ((508.0, 0.0) * <x_scale> + (0.0, 340.0) * <y_scale>)
@@ -2318,11 +2318,11 @@ script create_pause_menu_frame \{x_scale = 1
 			z_priority = (<z> - 1)
 		}
 		pause_menu_scrolling_bg_01 = <id>
-		tilesprite parent = <pause_menu_scrolling_bg_01> tile_dims = (980.0, 910.0) pos = (0.0, 0.0) texture = gh3_pause_bg_tile
-		runscriptonscreenelement tilespriteloop id = <id> params = {move_x = -2 move_y = -2}
+		TileSprite parent = <pause_menu_scrolling_bg_01> tile_dims = (980.0, 910.0) pos = (0.0, 0.0) texture = GH3_Pause_bg_tile
+		RunScriptOnScreenElement TileSpriteLoop id = <id> params = {move_x = -2 move_y = -2}
 	else
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			id = frame_background
 			parent = <container_id>
 			rgba = [0 0 0 255]
@@ -2332,20 +2332,20 @@ script create_pause_menu_frame \{x_scale = 1
 			z_priority = (<z> - 1)
 		}
 	endif
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <container_id>
-		texture = gh3_pause_frame_02
+		texture = GH3_Pause_Frame_02
 		rgba = [255 255 255 255]
 		pos = (<center_pos>)
 		scale = <scale_3>
 		just = [bottom right]
 		z_priority = (<z> + 2)
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <container_id>
-		texture = gh3_pause_frame_02
+		texture = GH3_Pause_Frame_02
 		rgba = [255 255 255 255]
 		pos = (<center_pos>)
 		scale = <scale_3>
@@ -2353,10 +2353,10 @@ script create_pause_menu_frame \{x_scale = 1
 		z_priority = (<z> + 2)
 		flip_v
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <container_id>
-		texture = gh3_pause_frame_02
+		texture = GH3_Pause_Frame_02
 		rgba = [255 255 255 255]
 		pos = (<center_pos>)
 		scale = <scale_3>
@@ -2365,10 +2365,10 @@ script create_pause_menu_frame \{x_scale = 1
 		flip_v
 		flip_h
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <container_id>
-		texture = gh3_pause_frame_02
+		texture = GH3_Pause_Frame_02
 		rgba = [255 255 255 255]
 		pos = (<center_pos>)
 		scale = <scale_3>
@@ -2376,20 +2376,20 @@ script create_pause_menu_frame \{x_scale = 1
 		z_priority = (<z> + 2)
 		flip_h
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <container_id>
-		texture = gh3_pause_frame_01
+		texture = GH3_Pause_Frame_01
 		rgba = [255 255 255 255]
 		pos = (<center_pos>)
 		scale = <scale_4>
 		just = [bottom right]
 		z_priority = (<z> + 2)
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <container_id>
-		texture = gh3_pause_frame_01
+		texture = GH3_Pause_Frame_01
 		rgba = [255 255 255 255]
 		pos = (<center_pos>)
 		scale = <scale_4>
@@ -2397,10 +2397,10 @@ script create_pause_menu_frame \{x_scale = 1
 		z_priority = (<z> + 2)
 		flip_v
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <container_id>
-		texture = gh3_pause_frame_01
+		texture = GH3_Pause_Frame_01
 		rgba = [255 255 255 255]
 		pos = (<center_pos>)
 		scale = <scale_4>
@@ -2409,10 +2409,10 @@ script create_pause_menu_frame \{x_scale = 1
 		flip_v
 		flip_h
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <container_id>
-		texture = gh3_pause_frame_01
+		texture = GH3_Pause_Frame_01
 		rgba = [255 255 255 255]
 		pos = (<center_pos>)
 		scale = <scale_4>
@@ -2420,20 +2420,20 @@ script create_pause_menu_frame \{x_scale = 1
 		z_priority = (<z> + 2)
 		flip_h
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <container_id>
-		texture = gh3_pause_frame_01
+		texture = GH3_Pause_Frame_01
 		rgba = [0 0 0 255]
 		pos = (<center_pos>)
 		scale = <scale_5>
 		just = [bottom right]
 		z_priority = (<z> + 2)
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <container_id>
-		texture = gh3_pause_frame_01
+		texture = GH3_Pause_Frame_01
 		rgba = [0 0 0 255]
 		pos = (<center_pos>)
 		scale = <scale_5>
@@ -2441,10 +2441,10 @@ script create_pause_menu_frame \{x_scale = 1
 		z_priority = (<z> + 2)
 		flip_v
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <container_id>
-		texture = gh3_pause_frame_01
+		texture = GH3_Pause_Frame_01
 		rgba = [0 0 0 255]
 		pos = (<center_pos>)
 		scale = <scale_5>
@@ -2453,10 +2453,10 @@ script create_pause_menu_frame \{x_scale = 1
 		flip_v
 		flip_h
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <container_id>
-		texture = gh3_pause_frame_01
+		texture = GH3_Pause_Frame_01
 		rgba = [0 0 0 255]
 		pos = (<center_pos>)
 		scale = <scale_5>
@@ -2513,25 +2513,25 @@ script set_unfocus_color \{rgba = [
 endscript
 
 script retail_menu_focus 
-	if gotparam \{id}
-		if screenelementexists id = <id>
-			setscreenelementprops id = <id> rgba = ($menu_focus_color)
+	if GotParam \{id}
+		if ScreenElementExists id = <id>
+			SetScreenElementProps id = <id> rgba = ($menu_focus_color)
 		endif
 	else
-		gettags
+		GetTags
 		printstruct <...>
-		setscreenelementprops id = <id> rgba = ($menu_focus_color)
+		SetScreenElementProps id = <id> rgba = ($menu_focus_color)
 	endif
 endscript
 
 script retail_menu_unfocus 
-	if gotparam \{id}
-		if screenelementexists id = <id>
-			setscreenelementprops id = <id> rgba = ($menu_unfocus_color)
+	if GotParam \{id}
+		if ScreenElementExists id = <id>
+			SetScreenElementProps id = <id> rgba = ($menu_unfocus_color)
 		endif
 	else
-		gettags
-		setscreenelementprops id = <id> rgba = ($menu_unfocus_color)
+		GetTags
+		SetScreenElementProps id = <id> rgba = ($menu_unfocus_color)
 	endif
 endscript
 
@@ -2542,19 +2542,19 @@ script fit_text_in_rectangle \{dims = (100.0, 100.0)
 		only_if_larger_y = 0
 		start_x_scale = 1.0
 		start_y_scale = 1.0}
-	if NOT gotparam \{id}
-		scriptassert \{"No id passed to fit_text_in_rectangle!"}
+	if NOT GotParam \{id}
+		ScriptAssert \{"No id passed to fit_text_in_rectangle!"}
 	endif
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	x_dim = (<dims>.(1.0, 0.0))
 	y_dim = (<dims>.(0.0, 1.0))
 	x_scale = (<x_dim> / <width>)
 	if (<keep_ar> = 1)
 		y_scale = <x_scale>
 	else
-		y_scale = (<y_dim> / <height>)
+		y_scale = (<y_dim> / <Height>)
 	endif
-	if gotparam \{debug_me}
+	if GotParam \{debug_me}
 		printstruct <...>
 	endif
 	if (<only_if_larger_x> = 1)
@@ -2567,16 +2567,16 @@ script fit_text_in_rectangle \{dims = (100.0, 100.0)
 		endif
 	endif
 	if (<just> = center)
-		if gotparam \{pos}
+		if GotParam \{pos}
 		endif
 	endif
 	scale_pair = ((1.0, 0.0) * <x_scale> * <start_x_scale> + (0.0, 1.0) * <y_scale> * <start_y_scale>)
-	setscreenelementprops {
+	SetScreenElementProps {
 		id = <id>
 		scale = <scale_pair>
 	}
-	if gotparam \{pos}
-		setscreenelementprops id = <id> pos = <pos>
+	if GotParam \{pos}
+		SetScreenElementProps id = <id> pos = <pos>
 	endif
 endscript
 num_user_control_helpers = 0
@@ -2603,8 +2603,8 @@ user_control_super_pill_gap = 0.4
 pill_helper_max_width = 100
 
 script clean_up_user_control_helpers 
-	if screenelementexists \{id = user_control_container}
-		destroyscreenelement \{id = user_control_container}
+	if ScreenElementExists \{id = user_control_container}
+		DestroyScreenElement \{id = user_control_container}
 	endif
 	change \{user_control_pill_gap = 150}
 	change \{pill_helper_max_width = 100}
@@ -2633,23 +2633,23 @@ script add_user_control_helper \{z = 10
 	scale = ($user_control_pill_scale)
 	pos = ((0.0, 1.0) * ($user_control_pill_y_position))
 	buttonoff = (0.0, 0.0)
-	if NOT screenelementexists \{id = user_control_container}
-		createscreenelement \{id = user_control_container
-			type = containerelement
+	if NOT ScreenElementExists \{id = user_control_container}
+		CreateScreenElement \{id = user_control_container
+			type = ContainerElement
 			parent = root_window
 			pos = (0.0, 0.0)}
 	endif
-	if gotparam \{button}
+	if GotParam \{button}
 		switch (<button>)
 			case green
 			buttonchar = "\\m0"
 			case red
 			buttonchar = "\\m1"
-			case yellow
+			case Yellow
 			buttonchar = "\\b6"
-			case blue
+			case Blue
 			buttonchar = "\\b7"
-			case orange
+			case Orange
 			buttonchar = "\\b8"
 			case strumbar
 			buttonchar = "\\bb"
@@ -2662,8 +2662,8 @@ script add_user_control_helper \{z = 10
 		buttonchar = ""
 	endif
 	if (<pill> = 0)
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = user_control_container
 			text = <buttonchar>
 			pos = (<pos> + (-10.0, 8.0) * <scale> + <buttonoff>)
@@ -2673,8 +2673,8 @@ script add_user_control_helper \{z = 10
 			just = [left top]
 			z_priority = (<z> + 0.1)
 		}
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = user_control_container
 			text = <text>
 			rgba = $user_control_pill_text_color
@@ -2685,16 +2685,16 @@ script add_user_control_helper \{z = 10
 			just = [left top]
 		}
 		if (<fit_to_rectangle> = 1)
-			setscreenelementprops id = <id> scale = (1.1 * <scale>)
-			getscreenelementdims id = <id>
+			SetScreenElementProps id = <id> scale = (1.1 * <scale>)
+			GetScreenElementDims id = <id>
 			if (<width> > $pill_helper_max_width)
-				fit_text_in_rectangle id = <id> dims = ($pill_helper_max_width * (0.5, 0.0) + <height> * (0.0, 1.0) * $user_control_pill_scale)
+				fit_text_in_rectangle id = <id> dims = ($pill_helper_max_width * (0.5, 0.0) + <Height> * (0.0, 1.0) * $user_control_pill_scale)
 			endif
 		endif
 	else
 		if (($user_control_super_pill = 0) && ($user_control_auto_center = 0))
-			createscreenelement {
-				type = textelement
+			CreateScreenElement {
+				type = TextElement
 				parent = user_control_container
 				text = <text>
 				id = <textid>
@@ -2707,14 +2707,14 @@ script add_user_control_helper \{z = 10
 			}
 			textid = <id>
 			if (<fit_to_rectangle> = 1)
-				setscreenelementprops id = <id> scale = (1.1 * <scale>)
-				getscreenelementdims id = <id>
+				SetScreenElementProps id = <id> scale = (1.1 * <scale>)
+				GetScreenElementDims id = <id>
 				if (<width> > $pill_helper_max_width)
-					fit_text_in_rectangle id = <id> dims = ($pill_helper_max_width * (0.5, 0.0) + <height> * (0.0, 1.0) * $user_control_pill_scale)
+					fit_text_in_rectangle id = <id> dims = ($pill_helper_max_width * (0.5, 0.0) + <Height> * (0.0, 1.0) * $user_control_pill_scale)
 				endif
 			endif
-			createscreenelement {
-				type = textelement
+			CreateScreenElement {
+				type = TextElement
 				parent = user_control_container
 				id = <buttonid>
 				text = <buttonchar>
@@ -2726,25 +2726,25 @@ script add_user_control_helper \{z = 10
 				z_priority = (<z> + 0.1)
 			}
 			buttonid = <id>
-			if gotparam \{offset_for_strumbar}
-				<textid> :settags is_strumbar = 1
+			if GotParam \{offset_for_strumbar}
+				<textid> :SetTags is_strumbar = 1
 				fastscreenelementpos id = <textid> absolute
-				setscreenelementprops id = <textid> pos = (<screenelementpos> + (50.0, 0.0) * <scale>)
+				SetScreenElementProps id = <textid> pos = (<screenelementpos> + (50.0, 0.0) * <scale>)
 			else
 			endif
 			fastscreenelementpos id = <buttonid> absolute
 			top_left = <screenelementpos>
 			fastscreenelementpos id = <textid> absolute
 			bottom_right = <screenelementpos>
-			getscreenelementdims id = <textid>
-			bottom_right = (<bottom_right> + (1.0, 0.0) * <width> + (0.0, 1.0) * <height>)
+			GetScreenElementDims id = <textid>
+			bottom_right = (<bottom_right> + (1.0, 0.0) * <width> + (0.0, 1.0) * <Height>)
 			pill_width = ((1.0, 0.0).<bottom_right> - (1.0, 0.0).<top_left>)
 			pill_height = ((0.0, 1.0).<bottom_right> - (0.0, 1.0).<top_left>)
 			pill_y_offset = (<pill_height> * 0.2)
 			pill_height = (<pill_height> + <pill_y_offset>)
 			<pos> = (<pos> + (0.0, 1.0) * (<scale> * 3))
-			createscreenelement {
-				type = spriteelement
+			CreateScreenElement {
+				type = SpriteElement
 				parent = user_control_container
 				texture = control_pill_body
 				dims = ((1.0, 0.0) * <pill_width> + (0.0, 1.0) * <pill_height>)
@@ -2753,8 +2753,8 @@ script add_user_control_helper \{z = 10
 				just = [left top]
 				z_priority = <z>
 			}
-			createscreenelement {
-				type = spriteelement
+			CreateScreenElement {
+				type = SpriteElement
 				parent = user_control_container
 				texture = control_pill_end
 				dims = ((1.0, 0.0) * (<scale> * $user_control_pill_end_width) + (0.0, 1.0) * <pill_height>)
@@ -2764,8 +2764,8 @@ script add_user_control_helper \{z = 10
 				z_priority = <z>
 				flip_v
 			}
-			createscreenelement {
-				type = spriteelement
+			CreateScreenElement {
+				type = SpriteElement
 				parent = user_control_container
 				texture = control_pill_end
 				dims = ((1.0, 0.0) * (<scale> * $user_control_pill_end_width) + (0.0, 1.0) * <pill_height>)
@@ -2775,9 +2775,9 @@ script add_user_control_helper \{z = 10
 				z_priority = <z>
 			}
 		else
-			formattext checksumname = textid 'uc_text_%d' d = ($num_user_control_helpers)
-			createscreenelement {
-				type = textelement
+			FormatText checksumname = textid 'uc_text_%d' d = ($num_user_control_helpers)
+			CreateScreenElement {
+				type = TextElement
 				parent = user_control_container
 				text = <text>
 				id = <textid>
@@ -2789,15 +2789,15 @@ script add_user_control_helper \{z = 10
 				just = [left top]
 			}
 			if (<fit_to_rectangle> = 1)
-				setscreenelementprops id = <id> scale = (1.1 * <scale>)
-				getscreenelementdims id = <id>
+				SetScreenElementProps id = <id> scale = (1.1 * <scale>)
+				GetScreenElementDims id = <id>
 				if (<width> > $pill_helper_max_width)
-					fit_text_in_rectangle id = <id> dims = ($pill_helper_max_width * (0.5, 0.0) + <height> * (0.0, 1.0) * $user_control_pill_scale)
+					fit_text_in_rectangle id = <id> dims = ($pill_helper_max_width * (0.5, 0.0) + <Height> * (0.0, 1.0) * $user_control_pill_scale)
 				endif
 			endif
-			formattext checksumname = buttonid 'uc_button_%d' d = ($num_user_control_helpers)
-			createscreenelement {
-				type = textelement
+			FormatText checksumname = buttonid 'uc_button_%d' d = ($num_user_control_helpers)
+			CreateScreenElement {
+				type = TextElement
 				parent = user_control_container
 				id = <buttonid>
 				text = <buttonchar>
@@ -2808,10 +2808,10 @@ script add_user_control_helper \{z = 10
 				just = [left top]
 				z_priority = (<z> + 0.1)
 			}
-			if gotparam \{offset_for_strumbar}
-				<textid> :settags is_strumbar = 1
+			if GotParam \{offset_for_strumbar}
+				<textid> :SetTags is_strumbar = 1
 				fastscreenelementpos id = <textid> absolute
-				setscreenelementprops id = <textid> pos = (<screenelementpos> + (50.0, 0.0) * <scale>)
+				SetScreenElementProps id = <textid> pos = (<screenelementpos> + (50.0, 0.0) * <scale>)
 			endif
 			change num_user_control_helpers = ($num_user_control_helpers + 1)
 		endif
@@ -2830,17 +2830,17 @@ script user_control_cleanup_pills
 	index = 0
 	if NOT ($num_user_control_helpers = 0)
 		begin
-		formattext checksumname = pill_id 'uc_pill_%d' d = <index>
-		if screenelementexists id = <pill_id>
-			destroyscreenelement id = <pill_id>
+		FormatText checksumname = pill_id 'uc_pill_%d' d = <index>
+		if ScreenElementExists id = <pill_id>
+			DestroyScreenElement id = <pill_id>
 		endif
-		formattext checksumname = pill_l_id 'uc_pill_l_%d' d = <index>
-		if screenelementexists id = <pill_l_id>
-			destroyscreenelement id = <pill_l_id>
+		FormatText checksumname = pill_l_id 'uc_pill_l_%d' d = <index>
+		if ScreenElementExists id = <pill_l_id>
+			DestroyScreenElement id = <pill_l_id>
 		endif
-		formattext checksumname = pill_r_id 'uc_pill_r_%d' d = <index>
-		if screenelementexists id = <pill_r_id>
-			destroyscreenelement id = <pill_r_id>
+		FormatText checksumname = pill_r_id 'uc_pill_r_%d' d = <index>
+		if ScreenElementExists id = <pill_r_id>
+			DestroyScreenElement id = <pill_r_id>
 		endif
 		<index> = (<index> + 1)
 		repeat ($num_user_control_helpers)
@@ -2855,14 +2855,14 @@ script user_control_build_pills
 	max_pill_width = 0
 	if NOT ($num_user_control_helpers = 0)
 		begin
-		formattext checksumname = textid 'uc_text_%d' d = <index>
-		formattext checksumname = buttonid 'uc_button_%d' d = <index>
+		FormatText checksumname = textid 'uc_text_%d' d = <index>
+		FormatText checksumname = buttonid 'uc_button_%d' d = <index>
 		fastscreenelementpos id = <buttonid> absolute
 		top_left = <screenelementpos>
 		fastscreenelementpos id = <textid> absolute
 		bottom_right = <screenelementpos>
-		getscreenelementdims id = <textid>
-		bottom_right = (<bottom_right> + (1.0, 0.0) * <width> + (0.0, 1.0) * <height>)
+		GetScreenElementDims id = <textid>
+		bottom_right = (<bottom_right> + (1.0, 0.0) * <width> + (0.0, 1.0) * <Height>)
 		pill_width = ((1.0, 0.0).<bottom_right> - (1.0, 0.0).<top_left>)
 		if (<pill_width> > <max_pill_width>)
 			<max_pill_width> = (<pill_width>)
@@ -2879,23 +2879,23 @@ script user_control_build_pills
 	pos = ((1.0, 0.0) * <initial_pill_x> + (0.0, 1.0) * ($user_control_pill_y_position) + (0.0, 0.8) * (<scale>))
 	if NOT ($num_user_control_helpers = 0)
 		begin
-		formattext checksumname = pill_id 'uc_pill_%d' d = <index>
-		formattext checksumname = pill_l_id 'uc_pill_l_%d' d = <index>
-		formattext checksumname = pill_r_id 'uc_pill_r_%d' d = <index>
-		formattext checksumname = textid 'uc_text_%d' d = <index>
-		formattext checksumname = buttonid 'uc_button_%d' d = <index>
+		FormatText checksumname = pill_id 'uc_pill_%d' d = <index>
+		FormatText checksumname = pill_l_id 'uc_pill_l_%d' d = <index>
+		FormatText checksumname = pill_r_id 'uc_pill_r_%d' d = <index>
+		FormatText checksumname = textid 'uc_text_%d' d = <index>
+		FormatText checksumname = buttonid 'uc_button_%d' d = <index>
 		fastscreenelementpos id = <buttonid> absolute
 		top_left = <screenelementpos>
 		fastscreenelementpos id = <textid> absolute
 		bottom_right = <screenelementpos>
-		getscreenelementdims id = <textid>
-		bottom_right = (<bottom_right> + (1.0, 0.0) * <width> + (0.0, 1.0) * <height>)
+		GetScreenElementDims id = <textid>
+		bottom_right = (<bottom_right> + (1.0, 0.0) * <width> + (0.0, 1.0) * <Height>)
 		pill_width = (<max_pill_width>)
 		pill_height = ((0.0, 1.0).<bottom_right> - (0.0, 1.0).<top_left>)
 		pill_y_offset = (<pill_height> * 0.2)
 		pill_height = (<pill_height> + <pill_y_offset>)
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			parent = user_control_container
 			id = <pill_id>
 			texture = control_pill_body
@@ -2905,8 +2905,8 @@ script user_control_build_pills
 			just = [left top]
 			z_priority = <z>
 		}
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			parent = user_control_container
 			id = <pill_l_id>
 			texture = control_pill_end
@@ -2917,8 +2917,8 @@ script user_control_build_pills
 			z_priority = <z>
 			flip_v
 		}
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			parent = user_control_container
 			id = <pill_r_id>
 			texture = control_pill_end
@@ -2942,31 +2942,31 @@ script user_control_build_pills
 endscript
 
 script align_user_control_with_pill 
-	formattext checksumname = pill_id 'uc_pill_%d' d = <pill_index>
+	FormatText checksumname = pill_id 'uc_pill_%d' d = <pill_index>
 	fastscreenelementpos id = <pill_id> absolute
-	getscreenelementdims id = <pill_id>
+	GetScreenElementDims id = <pill_id>
 	pill_midpoint_x = (<screenelementpos>.(1.0, 0.0) + 0.5 * <width>)
 	align_user_control_with_x x = <pill_midpoint_x> pill_index = <pill_index>
 endscript
 
 script align_user_control_with_x 
-	formattext checksumname = textid 'uc_text_%d' d = <pill_index>
-	formattext checksumname = buttonid 'uc_button_%d' d = <pill_index>
+	FormatText checksumname = textid 'uc_text_%d' d = <pill_index>
+	FormatText checksumname = buttonid 'uc_button_%d' d = <pill_index>
 	fastscreenelementpos id = <buttonid> absolute
 	top_left = <screenelementpos>
 	button_pos = <screenelementpos>
 	fastscreenelementpos id = <textid> absolute
 	bottom_right = <screenelementpos>
 	text_pos = <screenelementpos>
-	getscreenelementdims id = <textid>
-	bottom_right = (<bottom_right> + (1.0, 0.0) * <width> + (0.0, 1.0) * <height>)
+	GetScreenElementDims id = <textid>
+	bottom_right = (<bottom_right> + (1.0, 0.0) * <width> + (0.0, 1.0) * <Height>)
 	pill_width = ((1.0, 0.0).<bottom_right> - (1.0, 0.0).<top_left>)
 	text_button_midpoint = (<top_left>.(1.0, 0.0) + 0.5 * <pill_width>)
 	midpoint_diff = (<text_button_midpoint> - <x>)
 	new_button_pos = (<button_pos> - (1.0, 0.0) * <midpoint_diff>)
 	new_text_pos = (<text_pos> - (1.0, 0.0) * <midpoint_diff>)
-	setscreenelementprops id = <textid> pos = <new_text_pos>
-	setscreenelementprops id = <buttonid> pos = <new_button_pos>
+	SetScreenElementProps id = <textid> pos = <new_text_pos>
+	SetScreenElementProps id = <buttonid> pos = <new_button_pos>
 endscript
 
 script user_control_build_super_pill 
@@ -2978,14 +2978,14 @@ script user_control_build_super_pill
 	rightmost = -9999.0
 	if NOT ($num_user_control_helpers = 0)
 		begin
-		formattext checksumname = textid 'uc_text_%d' d = <index>
-		formattext checksumname = buttonid 'uc_button_%d' d = <index>
+		FormatText checksumname = textid 'uc_text_%d' d = <index>
+		FormatText checksumname = buttonid 'uc_button_%d' d = <index>
 		fastscreenelementpos id = <buttonid> absolute
 		top_left = <screenelementpos>
 		fastscreenelementpos id = <textid> absolute
 		bottom_right = <screenelementpos>
-		getscreenelementdims id = <textid>
-		bottom_right = (<bottom_right> + (1.0, 0.0) * <width> + (0.0, 1.0) * <height>)
+		GetScreenElementDims id = <textid>
+		bottom_right = (<bottom_right> + (1.0, 0.0) * <width> + (0.0, 1.0) * <Height>)
 		button_text_width = ((1.0, 0.0).<bottom_right> - (1.0, 0.0).<top_left>)
 		left_x = ((1.0, 0.0).<pos>)
 		right_x = ((1.0, 0.0).<pos> + <button_text_width>)
@@ -2996,8 +2996,8 @@ script user_control_build_super_pill
 			<rightmost> = (<right_x>)
 		endif
 		pill_width = ((1.0, 0.0).<bottom_right> - (1.0, 0.0).<top_left>)
-		<buttonid> :settags calc_width = <pill_width>
-		<buttonid> :settags calc_pos = <pos>
+		<buttonid> :SetTags calc_width = <pill_width>
+		<buttonid> :SetTags calc_pos = <pos>
 		pos = (<pos> + (1.0, 0.0) * ($user_control_pill_gap * <scale> * $user_control_super_pill_gap + <pill_width>))
 		<index> = (<index> + 1)
 		repeat ($num_user_control_helpers)
@@ -3008,16 +3008,16 @@ script user_control_build_super_pill
 	index = 0
 	if NOT ($num_user_control_helpers = 0)
 		begin
-		formattext checksumname = textid 'uc_text_%d' d = <index>
-		formattext checksumname = buttonid 'uc_button_%d' d = <index>
-		<buttonid> :gettags
+		FormatText checksumname = textid 'uc_text_%d' d = <index>
+		FormatText checksumname = buttonid 'uc_button_%d' d = <index>
+		<buttonid> :GetTags
 		<calc_pos> = (<calc_pos> - (1.0, 0.0) * <midpoint_diff>)
-		setscreenelementprops id = <buttonid> pos = (<calc_pos>)
+		SetScreenElementProps id = <buttonid> pos = (<calc_pos>)
 		istextstrumbar id = <textid>
 		if (<is_strumbar> = 0)
-			setscreenelementprops id = <textid> pos = (<calc_pos> + (50.0, 7.0) * <scale>)
+			SetScreenElementProps id = <textid> pos = (<calc_pos> + (50.0, 7.0) * <scale>)
 		else
-			setscreenelementprops id = <textid> pos = (<calc_pos> + (100.0, 7.0) * <scale>)
+			SetScreenElementProps id = <textid> pos = (<calc_pos> + (100.0, 7.0) * <scale>)
 		endif
 		<index> = (<index> + 1)
 		repeat ($num_user_control_helpers)
@@ -3026,8 +3026,8 @@ script user_control_build_super_pill
 	pill_y_offset = (<pill_height> * 0.2)
 	pill_height = (<pill_height> + <pill_y_offset>)
 	pos = ((1.0, 0.0) * (<leftmost> - <midpoint_diff>) + (0.0, 1.0) * $user_control_pill_y_position)
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = user_control_container
 		id = user_control_super_pill_object_main
 		texture = control_pill_body
@@ -3037,8 +3037,8 @@ script user_control_build_super_pill
 		just = [left top]
 		z_priority = <z>
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = user_control_container
 		id = user_control_super_pill_object_l
 		texture = control_pill_end
@@ -3049,8 +3049,8 @@ script user_control_build_super_pill
 		z_priority = <z>
 		flip_v
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = user_control_container
 		id = user_control_super_pill_object_r
 		texture = control_pill_end
@@ -3063,13 +3063,13 @@ script user_control_build_super_pill
 endscript
 
 script fastscreenelementpos 
-	getscreenelementprops id = <id>
+	GetScreenElementProps id = <id>
 	return screenelementpos = <pos>
 endscript
 
 script istextstrumbar 
-	<id> :gettags
-	if gotparam \{is_strumbar}
+	<id> :GetTags
+	if GotParam \{is_strumbar}
 		return \{is_strumbar = 1}
 	else
 		return \{is_strumbar = 0}
@@ -3097,19 +3097,19 @@ script get_diff_completion_text \{for_p2_career = 0}
 	diff_num_songs = 0
 	diff_songs_completed = 0
 	change current_difficulty = (<difficulty_array> [<diff_index>])
-	progression_pop_current \{updateatoms = 0}
+	progression_pop_current \{UpdateAtoms = 0}
 	tier_index = 1
 	begin
 	setlist_prefix = ($g_gh3_setlist.prefix)
-	formattext checksumname = tiername '%ptier%i' p = <setlist_prefix> i = <tier_index>
-	formattext checksumname = tier_checksum 'tier%s' s = <tier_index>
-	getarraysize ($g_gh3_setlist.<tier_checksum>.songs)
+	FormatText checksumname = tiername '%ptier%i' p = <setlist_prefix> i = <tier_index>
+	FormatText checksumname = tier_checksum 'tier%s' s = <tier_index>
+	GetArraySize ($g_gh3_setlist.<tier_checksum>.songs)
 	num_songs = <array_size>
 	diff_num_songs = (<diff_num_songs> + <num_songs>)
 	song_count = 0
 	begin
-	formattext checksumname = song_checksum '%p_song%i_tier%s' p = <setlist_prefix> i = (<song_count> + 1) s = <tier_index> addtostringlookup = true
-	getglobaltags <song_checksum> params = {stars score}
+	FormatText checksumname = song_checksum '%p_song%i_tier%s' p = <setlist_prefix> i = (<song_count> + 1) s = <tier_index> AddToStringLookup = true
+	GetGlobalTags <song_checksum> params = {stars score}
 	if NOT (<stars> = 0)
 		<diff_songs_completed> = (<diff_songs_completed> + 1)
 	endif
@@ -3118,11 +3118,11 @@ script get_diff_completion_text \{for_p2_career = 0}
 	<tier_index> = (<tier_index> + 1)
 	repeat <num_tiers>
 	if NOT (<for_p2_career>)
-		formattext textname = diff_completion_string "%a OF %b SONGS" a = <diff_songs_completed> b = <diff_num_songs>
-		setarrayelement arrayname = diff_completion_text index = (<diff_index>) newvalue = (<diff_completion_string>)
+		FormatText TextName = diff_completion_string "%a OF %b SONGS" a = <diff_songs_completed> b = <diff_num_songs>
+		SetArrayElement ArrayName = diff_completion_text index = (<diff_index>) newvalue = (<diff_completion_string>)
 	else
-		formattext textname = diff_completion_string "%a of %b songs completed" a = <diff_songs_completed> b = <diff_num_songs>
-		setarrayelement arrayname = diff_completion_text index = (<diff_index>) newvalue = (<diff_completion_string>)
+		FormatText TextName = diff_completion_string "%a of %b songs completed" a = <diff_songs_completed> b = <diff_num_songs>
+		SetArrayElement ArrayName = diff_completion_text index = (<diff_index>) newvalue = (<diff_completion_string>)
 	endif
 	progression_push_current
 	<diff_index> = (<diff_index> + 1)
@@ -3132,7 +3132,7 @@ script get_diff_completion_text \{for_p2_career = 0}
 		change current_difficulty2 = <stored_difficulty2>
 	endif
 	if (<pop_progression> = 1)
-		progression_pop_current \{updateatoms = 0}
+		progression_pop_current \{UpdateAtoms = 0}
 	endif
 	return diff_completion_text = <diff_completion_text>
 endscript
@@ -3161,19 +3161,19 @@ script get_diff_completion_percentage \{for_p2_career = 0}
 	diff_songs_completed = 0
 	diff_songs_score = 0
 	change current_difficulty = (<difficulty_array> [<diff_index>])
-	progression_pop_current \{updateatoms = 0}
+	progression_pop_current \{UpdateAtoms = 0}
 	tier_index = 1
 	begin
 	setlist_prefix = ($g_gh3_setlist.prefix)
-	formattext checksumname = tiername '%ptier%i' p = <setlist_prefix> i = <tier_index>
-	formattext checksumname = tier_checksum 'tier%s' s = <tier_index>
-	getarraysize ($g_gh3_setlist.<tier_checksum>.songs)
+	FormatText checksumname = tiername '%ptier%i' p = <setlist_prefix> i = <tier_index>
+	FormatText checksumname = tier_checksum 'tier%s' s = <tier_index>
+	GetArraySize ($g_gh3_setlist.<tier_checksum>.songs)
 	num_songs = <array_size>
 	diff_num_songs = (<diff_num_songs> + <num_songs>)
 	song_count = 0
 	begin
-	formattext checksumname = song_checksum '%p_song%i_tier%s' p = <setlist_prefix> i = (<song_count> + 1) s = <tier_index> addtostringlookup = true
-	getglobaltags <song_checksum> params = {stars score}
+	FormatText checksumname = song_checksum '%p_song%i_tier%s' p = <setlist_prefix> i = (<song_count> + 1) s = <tier_index> AddToStringLookup = true
+	GetGlobalTags <song_checksum> params = {stars score}
 	if NOT (<stars> = 0)
 		<diff_songs_completed> = (<diff_songs_completed> + 1)
 		<diff_songs_score> = (<diff_songs_score> + <score>)
@@ -3183,8 +3183,8 @@ script get_diff_completion_percentage \{for_p2_career = 0}
 	<tier_index> = (<tier_index> + 1)
 	repeat <num_tiers>
 	percentage_complete = (<percentage_complete> + (100 * <diff_songs_completed>) / <diff_num_songs>)
-	setarrayelement arrayname = diff_completion_percentage index = (<diff_index>) newvalue = ((100 * <diff_songs_completed>) / <diff_num_songs>)
-	setarrayelement arrayname = diff_completion_score index = (<diff_index>) newvalue = <diff_songs_score>
+	SetArrayElement ArrayName = diff_completion_percentage index = (<diff_index>) newvalue = ((100 * <diff_songs_completed>) / <diff_num_songs>)
+	SetArrayElement ArrayName = diff_completion_score index = (<diff_index>) newvalue = <diff_songs_score>
 	progression_push_current
 	<diff_index> = (<diff_index> + 1)
 	repeat 4
@@ -3193,7 +3193,7 @@ script get_diff_completion_percentage \{for_p2_career = 0}
 		change current_difficulty2 = <stored_difficulty2>
 	endif
 	if (<pop_progression> = 1)
-		progression_pop_current \{updateatoms = 0}
+		progression_pop_current \{UpdateAtoms = 0}
 	endif
 	return diff_completion_percentage = <diff_completion_percentage> total_percentage_complete = (<percentage_complete> / 4) diff_completion_score = <diff_completion_score>
 endscript

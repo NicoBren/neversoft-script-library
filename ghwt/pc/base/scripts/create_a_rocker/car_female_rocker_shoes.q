@@ -1,589 +1,589 @@
-cas_female_shoes = [
+CAS_Female_Shoes = [
 	{
 		desc_id = f_flipflops
-		frontend_desc = qs(0x4fcc1639)
+		frontend_desc = qs("\LFlip Flops")
 		mesh = 'models/CAR/Female/F_Flipflops.skin'
 		mesh1 = 'models/CAR/Female/F_FlipflopsLOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		materials = [
-			f_flipflops_primary
-			f_flipflops_secondary
+			F_Flipflops_Primary
+			F_Flipflops_Secondary
 		]
 		genre = [
-			`classic rock`
-			pop
+			`Classic Rock`
+			Pop
 		]
 		random_weight = 0.1
 		random_weight_cpu = 0.0
 	}
 	{
-		desc_id = f_shoe_uggs
-		frontend_desc = qs(0x657acf9e)
+		desc_id = F_Shoe_Uggs
+		frontend_desc = qs("\LFuzzy Warm")
 		mesh = 'models/CAR/Female/F_Shoe_Uggs.skin'
 		mesh1 = 'models/CAR/Female/F_Shoe_UggsLOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		materials = [
-			f_shoe_uggs_primary
-			f_shoe_uggs_secondary
+			F_Shoe_Uggs_Primary
+			F_Shoe_Uggs_Secondary
 		]
 		genre = [
-			pop
+			Pop
 		]
 		price = 75
 		random_weight = 0.0
 	}
 	{
-		desc_id = f_shoe_ninja
-		frontend_desc = qs(0x2eb17c31)
+		desc_id = F_Shoe_Ninja
+		frontend_desc = qs("\LNinja Tabi")
 		mesh = 'models/CAR/Female/F_Shoe_Ninja.skin'
 		mesh1 = 'models/CAR/Female/F_Shoe_NinjaLOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		materials = [
-			f_shoe_ninja_primary
+			F_Shoe_Ninja_Primary
 		]
 		genre = [
-			goth
+			Goth
 		]
 		price = 200
 		random_weight = 0.0
 	}
 	{
-		desc_id = f_pop_shoes_sneakers
-		frontend_desc = qs(0x120cfee9)
+		desc_id = F_Pop_Shoes_Sneakers
+		frontend_desc = qs("\LSneaker Pops")
 		mesh = 'models/CAR/Female/F_Pop_Shoe_Sneakers.skin'
 		mesh1 = 'models/CAR/Female/F_Pop_Shoe_SneakersLOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		genre = [
-			pop
+			Pop
 		]
 		materials = [
-			m_pop_shoe_sneakers_primary
-			m_pop_shoe_sneakers_secondary
+			M_Pop_Shoe_Sneakers_Primary
+			M_Pop_Shoe_Sneakers_Secondary
 		]
 	}
 	{
-		desc_id = f_pop_shoes_sparkleheels
-		frontend_desc = qs(0xc437fd4d)
+		desc_id = F_Pop_Shoes_SparkleHeels
+		frontend_desc = qs("\LNo Place Like Gold")
 		mesh = 'models/CAR/Female/F_Pop_Shoes_SparkleHeels.skin'
 		mesh1 = 'models/CAR/Female/F_Pop_Shoes_SparkleHeelsLOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		diff_anim = 'female_heels_high_d'
 		materials = [
-			f_pop_sparkleheels_primary
+			F_Pop_SparkleHeels_Primary
 		]
 		genre = [
-			pop
+			Pop
 		]
 		price = 110
 		random_weight = 0.25
 	}
 	{
-		desc_id = f_pop_shoe_platforms
-		frontend_desc = qs(0x13038d3b)
+		desc_id = F_Pop_Shoe_Platforms
+		frontend_desc = qs("\LCat Bells")
 		mesh = 'models/CAR/Female/F_Pop_Shoe_Platforms.skin'
 		mesh1 = 'models/CAR/Female/F_Pop_Shoe_PlatformsLOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		diff_anim = 'female_heels_highplat_d'
 		materials = [
-			f_pop_shoe_platforms_primary
+			F_Pop_Shoe_Platforms_Primary
 		]
 		genre = [
-			pop
+			Pop
 		]
 		random_weight = 0.0
 	}
 	{
 		desc_id = f_pop_shoes_hayleyshoes
-		frontend_desc = qs(0xe7047321)
+		frontend_desc = qs("\LCasual Rocker")
 		mesh = 'models/CAR/Female/F_Pop_Shoes_HayleyShoes.skin'
 		mesh1 = 'models/CAR/Female/F_Pop_Shoes_HayleyShoesLOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		genre = [
-			pop
+			Pop
 		]
 	}
 	{
-		desc_id = f_punk_shoes_combat
-		frontend_desc = qs(0x4b35a73c)
+		desc_id = F_Punk_Shoes_Combat
+		frontend_desc = qs("\LSwashbucklers")
 		mesh = 'models/CAR/Female/F_Punk_Shoe_Combat.skin'
 		mesh1 = 'models/CAR/Female/F_Punk_Shoe_CombatLOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		materials = [
-			f_punk_shoe_combat_primary
+			F_Punk_Shoe_Combat_Primary
 		]
 		diff_anim = 'female_heels_med_d'
 		genre = [
-			punk
+			Punk
 		]
 		price = 75
 	}
 	{
 		desc_id = f_punk_shoe_canvas
-		frontend_desc = qs(0xd3cf0956)
+		frontend_desc = qs("\LSport Heels")
 		mesh = 'models/CAR/Female/F_Punk_Shoe_Canvas.skin'
 		mesh1 = 'models/CAR/Female/F_Punk_Shoe_CanvasLOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		materials = [
-			f_punk_shoe_canvas_primary
+			F_Punk_Shoe_Canvas_Primary
 		]
 		diff_anim = 'female_heels_high_d'
 		genre = [
-			punk
+			Punk
 		]
 	}
 	{
 		desc_id = f_punk_shoe_army
-		frontend_desc = qs(0x32f046fc)
+		frontend_desc = qs("\LRed Riding Boots")
 		mesh = 'models/CAR/Female/F_Punk_Shoe_Army.skin'
 		mesh1 = 'models/CAR/Female/F_Punk_Shoe_ArmyLOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		materials = [
-			f_punk_shoe_army_primary
-			f_punk_shoe_army_secondary
+			F_Punk_Shoe_Army_Primary
+			F_Punk_Shoe_Army_Secondary
 		]
 		diff_anim = 'female_heels_med_d'
 		genre = [
-			punk
+			Punk
 		]
 	}
 	{
-		desc_id = f_punk_shoes_judy01
-		frontend_desc = qs(0xc18378f6)
+		desc_id = F_Punk_Shoes_Judy01
+		frontend_desc = qs("\LPlaid Conspiracy")
 		mesh = 'models/CAR/Female/F_Punk_Shoes_Judy01.skin'
 		mesh1 = 'models/CAR/Female/F_Punk_Shoes_Judy01LOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		materials = [
-			f_punk_shoes_judy01_primary
+			F_Punk_Shoes_Judy01_Primary
 		]
 		diff_anim = 'female_heels_highplat_d'
 		genre = [
-			punk
+			Punk
 		]
 	}
 	{
 		desc_id = f_rock_shoe_cowboy
-		frontend_desc = qs(0x195e8eeb)
+		frontend_desc = qs("\LCountry Stars")
 		mesh = 'models/CAR/Female/F_Rock_Shoe_Cowboy.skin'
 		mesh1 = 'models/CAR/Female/F_Rock_Shoe_CowboyLOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		genre = [
-			rock
+			Rock
 		]
 		price = 175
 		random_weight = 0.0
 	}
 	{
 		desc_id = f_rock_shoe_kneehigh
-		frontend_desc = qs(0x523e1e30)
+		frontend_desc = qs("\LVixen Boots")
 		mesh = 'models/CAR/Female/F_Rock_Shoe_Kneehigh.skin'
 		mesh1 = 'models/CAR/Female/F_Rock_Shoe_KneehighLOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		diff_anim = 'female_heels_high_d'
 		materials = [
-			f_rock_shoe_kneehigh_primary
+			F_Rock_Shoe_Kneehigh_Primary
 		]
 		genre = [
-			rock
+			Rock
 		]
 	}
 	{
-		desc_id = f_rock_shoe_canvas
-		frontend_desc = qs(0x74b1e3a7)
+		desc_id = F_Rock_Shoe_Canvas
+		frontend_desc = qs("\LRunners")
 		mesh = 'models/CAR/Female/F_Rock_Shoe_Canvas.skin'
 		mesh1 = 'models/CAR/Female/F_Rock_Shoe_CanvasLOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		genre = [
-			rock
+			Rock
 		]
 	}
 	{
 		desc_id = f_rock_shoe_canvas_d1
-		frontend_desc = qs(0xc49c3f73)
+		frontend_desc = qs("\LPolka Dot Tops")
 		mesh = 'models/CAR/Female/F_Rock_Shoe_Canvas_D1.skin'
 		mesh1 = 'models/CAR/Female/F_Rock_Shoe_Canvas_D1LOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		genre = [
-			rock
+			Rock
 		]
 		random_weight = 0.5
 	}
 	{
 		desc_id = f_rock_shoe_canvas_d2
-		frontend_desc = qs(0x516f7b20)
+		frontend_desc = qs("\LPink Tops")
 		mesh = 'models/CAR/Female/F_Rock_Shoe_Canvas_D2.skin'
 		mesh1 = 'models/CAR/Female/F_Rock_Shoe_Canvas_D2LOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		genre = [
-			rock
+			Rock
 		]
 	}
 	{
 		desc_id = f_rock_shoe_canvas_d3
-		frontend_desc = qs(0x343bc93e)
+		frontend_desc = qs("\LRed Tops")
 		mesh = 'models/CAR/Female/F_Rock_Shoe_Canvas_D3.skin'
 		mesh1 = 'models/CAR/Female/F_Rock_Shoe_Canvas_D3LOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		genre = [
-			rock
+			Rock
 		]
 	}
 	{
 		desc_id = f_rock_shoe_canvas_d4
-		frontend_desc = qs(0xc617dfe8)
+		frontend_desc = qs("\LAqua Tops")
 		mesh = 'models/CAR/Female/F_Rock_Shoe_Canvas_D4.skin'
 		mesh1 = 'models/CAR/Female/F_Rock_Shoe_Canvas_D4LOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		genre = [
-			rock
+			Rock
 		]
 		random_weight = 0.5
 	}
 	{
-		desc_id = f_rock_shoe_buckles
-		frontend_desc = qs(0x4839b3fa)
+		desc_id = F_Rock_Shoe_Buckles
+		frontend_desc = qs("\LStrap-ons")
 		mesh = 'models/CAR/Female/F_Rock_Shoe_Buckles.skin'
 		mesh1 = 'models/CAR/Female/F_Rock_Shoe_BucklesLOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		diff_anim = 'female_heels_high_d'
 		genre = [
-			rock
+			Rock
 		]
 		price = 215
 	}
 	{
 		desc_id = f_rock_shoe_wingtip
-		frontend_desc = qs(0xddb88f0b)
+		frontend_desc = qs("\LThe Swing Set")
 		mesh = 'models/CAR/Female/F_Rock_Shoe_Wingtip.skin'
 		mesh1 = 'models/CAR/Female/F_Rock_Shoe_WingtipLOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		genre = [
-			rock
+			Rock
 		]
 		price = 100
 		random_weight = 0.0
 	}
 	{
-		desc_id = f_glam_shoes_velvetbaggyboots
-		frontend_desc = qs(0x76585e26)
+		desc_id = F_Glam_Shoes_VelvetBaggyBoots
+		frontend_desc = qs("\LVelvet Vixens")
 		mesh = 'models/CAR/Female/F_Glam_Shoes_VelvetBaggyBoots.skin'
 		mesh1 = 'models/CAR/Female/F_Glam_Shoes_VelvetBaggyBootsLOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		diff_anim = 'female_heels_high_d'
 		genre = [
-			`glam rock`
+			`Glam Rock`
 		]
 		materials = [
-			f_glam_shoes_velvetbaggyboots_primary
-			f_glam_shoes_velvetbaggyboots_secondary
+			F_Glam_Shoes_VelvetBaggyBoots_Primary
+			F_Glam_Shoes_VelvetBaggyBoots_Secondary
 		]
 		price = 150
 		random_weight = 0.0
 	}
 	{
 		desc_id = f_glam_shoes_sneakers
-		frontend_desc = qs(0xc64dc94a)
+		frontend_desc = qs("\LWork It On Out")
 		mesh = 'models/CAR/Female/F_Glam_Shoes_sneakers.skin'
 		mesh1 = 'models/CAR/Female/F_Glam_Shoes_sneakersLOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		genre = [
-			`glam rock`
+			`Glam Rock`
 		]
 	}
 	{
 		desc_id = f_glam_shoe_wrinkleboot
-		frontend_desc = qs(0xd3cf190e)
+		frontend_desc = qs("\LVinyl Fetish")
 		mesh = 'models/CAR/Female/F_Glam_shoe_WrinkleBoot.skin'
 		mesh1 = 'models/CAR/Female/F_Glam_shoe_WrinkleBootLOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		diff_anim = 'female_heels_high_d'
 		genre = [
-			`glam rock`
+			`Glam Rock`
 		]
 		materials = [
-			f_glam_shoe_wrinkleboot_primary
+			F_Glam_shoe_WrinkleBoot_Primary
 		]
 		price = 195
 	}
 	{
 		desc_id = f_glam_shoe_platformheel
-		frontend_desc = qs(0xd859b053)
+		frontend_desc = qs("\LHeel 80's")
 		mesh = 'models/CAR/Female/F_Glam_shoe_PlatformHeel.skin'
 		mesh1 = 'models/CAR/Female/F_Glam_shoe_PlatformHeelLOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		diff_anim = 'female_heels_highplat_d'
 		genre = [
-			`glam rock`
+			`Glam Rock`
 		]
 		price = 275
 	}
 	{
-		desc_id = f_goth_shoe_buckleb
-		frontend_desc = qs(0xb94a8887)
+		desc_id = F_Goth_Shoe_BuckleB
+		frontend_desc = qs("\LSimply Studding")
 		mesh = 'models/CAR/Female/F_Goth_Shoe_BuckleB.skin'
 		mesh1 = 'models/CAR/Female/F_Goth_Shoe_BuckleBLOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		diff_anim = 'female_heels_highplat_d'
 		genre = [
-			goth
+			Goth
 		]
 		price = 200
 	}
 	{
 		desc_id = f_goth_shoes_maryjanes
-		frontend_desc = qs(0xaa08c478)
+		frontend_desc = qs("\LEscalators")
 		mesh = 'models/CAR/Female/F_Goth_Shoes_Maryjanes.skin'
 		mesh1 = 'models/CAR/Female/F_Goth_Shoes_MaryjanesLOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		material_groups = [
 			{
 				materials = [
-					f_goth_shoes_maryjanes_shoe
-					f_goth_shoes_maryjanes_sole
+					F_Goth_Shoes_Maryjanes_shoe
+					F_Goth_Shoes_Maryjanes_sole
 				]
 			}
 		]
 		diff_anim = 'female_heels_highplat_d'
 		genre = [
-			goth
+			Goth
 		]
 	}
 	{
-		desc_id = f_goth_shoe_cyberb
-		frontend_desc = qs(0x7cdca4fa)
+		desc_id = F_Goth_Shoe_CyberB
+		frontend_desc = qs("\LStraps-n-Zippers")
 		mesh = 'models/CAR/Female/F_Goth_Shoes_CyberB.skin'
 		mesh1 = 'models/CAR/Female/F_Goth_Shoes_CyberBLOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		materials = [
-			f_goth_shoes_cyberb_primary
-			f_goth_shoes_cyberb_secondary
-			f_goth_shoes_cyberb_sole
+			F_Goth_Shoes_CyberB_Primary
+			F_Goth_Shoes_CyberB_Secondary
+			F_Goth_Shoes_CyberB_sole
 		]
 		diff_anim = 'female_heels_highplat_d'
 		genre = [
-			goth
+			Goth
 		]
 		price = 450
 		random_weight = 0.1
 		random_weight_cpu = 0.1
 	}
 	{
-		desc_id = f_goth_shoe_witchb
-		frontend_desc = qs(0x47b64ca9)
+		desc_id = F_Goth_Shoe_WitchB
+		frontend_desc = qs("\LWicked Witchers")
 		mesh = 'models/CAR/Female/F_Goth_Shoes_WitchB.skin'
 		mesh1 = 'models/CAR/Female/F_Goth_Shoes_WitchBLOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		materials = [
-			f_goth_shoes_witchb_primary
-			f_goth_shoes_witchb_secondary
+			F_Goth_Shoes_WitchB_Primary
+			F_Goth_Shoes_WitchB_Secondary
 		]
 		diff_anim = 'female_heels_high_d'
 		genre = [
-			goth
+			Goth
 		]
 	}
 	{
-		desc_id = f_goth_shoe_pumps
-		frontend_desc = qs(0x86a299fe)
+		desc_id = F_Goth_Shoe_Pumps
+		frontend_desc = qs("\LVeronica Dee's")
 		mesh = 'models/CAR/Female/F_Goth_Shoes_Pumps.skin'
 		mesh1 = 'models/CAR/Female/F_Goth_Shoes_PumpsLOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		genre = [
-			goth
+			Goth
 		]
 		diff_anim = 'female_heels_med_d'
 	}
 	{
-		desc_id = f_mtl_shoes_axel1
-		frontend_desc = qs(0x35993379)
+		desc_id = F_Mtl_Shoes_Axel1
+		frontend_desc = qs("\LAxel Kickers")
 		mesh = 'models/CAR/Female/F_Mtl_Shoes_Axel1.skin'
 		diff_anim = 'female_heels_med_d'
 		materials = [
-			f_metl_shoes_axel1_primary
-			f_metl_shoes_axel1_laces
-			f_metl_shoes_axel1_sock
+			F_Metl_Shoes_Axel1_Primary
+			F_Metl_Shoes_Axel1_Laces
+			F_Metl_Shoes_Axel1_Sock
 		]
 		random_weight = 1.0
 		genre = [
-			`heavy metal`
-			`glam rock`
+			`Heavy Metal`
+			`Glam Rock`
 		]
 	}
 	{
 		desc_id = f_metl_shoes_studs01
-		frontend_desc = qs(0x543d6880)
+		frontend_desc = qs("\LLace-up Kickers")
 		mesh = 'models/CAR/Female/F_Metl_Shoes_Studs01.skin'
 		mesh1 = 'models/CAR/Female/F_Metl_Shoes_Studs01LOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		materials = [
-			f_metl_shoes_studs01_primary
+			F_Metl_shoes_Studs01_Primary
 		]
 		genre = [
-			`heavy metal`
-			`black metal`
+			`Heavy Metal`
+			`Black Metal`
 		]
 		price = 250
 	}
 	{
 		desc_id = f_metl_shoe_ltrring
-		frontend_desc = qs(0x2f0aeb4a)
+		frontend_desc = qs("\LBiker Boots")
 		mesh = 'models/CAR/Female/F_Metl_Shoe_LtrRing.skin'
 		mesh1 = 'models/CAR/Female/F_Metl_Shoe_LtrRingLOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		genre = [
-			`heavy metal`
-			`black metal`
+			`Heavy Metal`
+			`Black Metal`
 		]
 		price = 150
 	}
 	{
-		desc_id = f_metl_shoe_platform
-		frontend_desc = qs(0x5c7ecc3e)
+		desc_id = F_Metl_Shoe_Platform
+		frontend_desc = qs("\LLeathery Lacers")
 		mesh = 'models/CAR/Female/F_Metl_Shoe_Platform.skin'
 		mesh1 = 'models/CAR/Female/F_Metl_Shoe_PlatformLOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		genre = [
-			`heavy metal`
-			`black metal`
+			`Heavy Metal`
+			`Black Metal`
 		]
 		price = 150
 	}
 	{
-		desc_id = f_metl_shoe_combat
-		frontend_desc = qs(0x456ba563)
+		desc_id = F_Metl_Shoe_Combat
+		frontend_desc = qs("\LJungle Kicks")
 		mesh = 'models/CAR/Female/F_Metl_Shoe_Combat.skin'
 		mesh1 = 'models/CAR/Female/F_Metl_Shoe_CombatLOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		genre = [
-			`heavy metal`
-			`black metal`
+			`Heavy Metal`
+			`Black Metal`
 		]
 	}
 	{
 		desc_id = f_clsc_shoe_ltrsndl
-		frontend_desc = qs(0xc651a219)
+		frontend_desc = qs("\LOpen Toe Chic")
 		mesh = 'models/CAR/Female/F_Clsc_Shoe_LtrSndl.skin'
 		genre = [
-			`classic rock`
+			`Classic Rock`
 		]
 		diff_anim = 'female_heels_high_d'
 		random_weight = 0.25
 	}
 	{
 		desc_id = f_clsc_shoe_wtboot
-		frontend_desc = qs(0x20c64505)
+		frontend_desc = qs("\LCowbooties")
 		mesh = 'models/CAR/Female/F_Clsc_Shoe_WtBoot.skin'
 		mesh1 = 'models/CAR/Female/F_Clsc_Shoe_WtBootLOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		materials = [
-			f_clsc_shoe_wtboot_primary
+			F_Clsc_Shoe_WtBoot_Primary
 		]
 		diff_anim = 'female_heels_med_d'
 		genre = [
-			`classic rock`
+			`Classic Rock`
 		]
 		price = 150
 	}
 	{
 		desc_id = f_clsc_shoe_pvc
-		frontend_desc = qs(0xf86ae6c4)
+		frontend_desc = qs("\LLove Takers")
 		mesh = 'models/CAR/Female/F_Clsc_Shoe_Pvc.skin'
 		mesh1 = 'models/CAR/Female/F_Clsc_Shoe_PvcLOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		genre = [
-			`classic rock`
+			`Classic Rock`
 		]
 		materials = [
-			f_clsc_shoe_pvc_primary
+			F_Clsc_Shoe_Pvc_Primary
 		]
 		diff_anim = 'female_heels_high_d'
 		price = 150
 	}
 	{
-		desc_id = f_clsc_shoe_mcsin
-		frontend_desc = qs(0xa4730d8c)
+		desc_id = F_Clsc_Shoe_Mcsin
+		frontend_desc = qs("\LHippy Loafers")
 		mesh = 'models/CAR/Female/F_Clsc_Shoe_Mcsin.skin'
 		mesh1 = 'models/CAR/Female/F_Clsc_Shoe_McsinLOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		materials = [
-			f_clsc_shoe_mcsin_primary
-			f_clsc_shoe_mcsin_secondary
+			F_Clsc_Shoe_Mcsin_Primary
+			F_Clsc_Shoe_Mcsin_Secondary
 		]
 		genre = [
-			`classic rock`
+			`Classic Rock`
 		]
 		random_weight = 0.0
 	}
 	{
-		desc_id = f_clsc_shoe_platboot
-		frontend_desc = qs(0xdce393a1)
+		desc_id = F_Clsc_Shoe_Platboot
+		frontend_desc = qs("\LFlower Go-Go's")
 		mesh = 'models/CAR/Female/F_Clsc_Shoe_Platboot.skin'
 		mesh1 = 'models/CAR/Female/F_Clsc_Shoe_PlatbootLOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		genre = [
-			`classic rock`
+			`Classic Rock`
 		]
 		materials = [
-			f_clsc_shoe_platboot_primary
-			f_clsc_shoe_platboot_secondary
+			F_Clsc_Shoe_Platboot_Primary
+			F_Clsc_Shoe_Platboot_Secondary
 		]
 		diff_anim = 'female_heels_highplat_d'
 		price = 550
 	}
 	{
 		desc_id = f_bmtl_shoes_boots01
-		frontend_desc = qs(0x9a54fc52)
+		frontend_desc = qs("\LSpikey Stilettos")
 		mesh = 'models/CAR/Female/F_bmtl_Shoes_Boots01.skin'
 		mesh1 = 'models/CAR/Female/F_bmtl_Shoes_Boots01LOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		genre = [
-			`black metal`
+			`Black Metal`
 		]
 		diff_anim = 'female_heels_highplat_d'
 		price = 450
 	}
 	{
 		desc_id = f_bmtl_shoes_combatboots
-		frontend_desc = qs(0xec54c044)
+		frontend_desc = qs("\LRoad Furies")
 		mesh = 'models/CAR/Female/F_Bmtl_Shoes_Combatboots.skin'
 		mesh1 = 'models/CAR/Female/F_Bmtl_Shoes_CombatbootsLOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		diff_anim = 'female_heels_med_d'
 		genre = [
-			`black metal`
+			`Black Metal`
 		]
 	}
 	{
 		desc_id = f_bmtl_shoes_fur
-		frontend_desc = qs(0x7fd2cf3a)
+		frontend_desc = qs("\LVillage Pillagers")
 		mesh = 'models/CAR/Female/F_Bmtl_Shoes_Fur.skin'
 		mesh1 = 'models/CAR/Female/F_Bmtl_Shoes_FurLOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		genre = [
-			`black metal`
+			`Black Metal`
 		]
 		price = 450
 		random_weight = 0.25
 	}
 	{
 		desc_id = f_bmtl_shoes_boots04
-		frontend_desc = qs(0x77eeb987)
+		frontend_desc = qs("\LShin Grin")
 		mesh = 'models/CAR/Female/F_bmtl_Shoes_Boots04.skin'
 		mesh1 = 'models/CAR/Female/F_bmtl_Shoes_Boots04LOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		genre = [
-			`black metal`
+			`Black Metal`
 		]
 		diff_anim = 'female_heels_high_d'
 		price = 350
 	}
 	{
 		desc_id = f_bmtl_shoes_boots05
-		frontend_desc = qs(0x61483148)
+		frontend_desc = qs("\LPlated")
 		mesh = 'models/CAR/Female/F_bmtl_Shoes_Boots05.skin'
 		mesh1 = 'models/CAR/Female/F_bmtl_Shoes_Boots05LOD.skin'
-		0x56504ac4 = 1
+		mesh_lod = 1
 		genre = [
-			`black metal`
+			`Black Metal`
 		]
 		diff_anim = 'female_heels_highplat_d'
 		price = 350

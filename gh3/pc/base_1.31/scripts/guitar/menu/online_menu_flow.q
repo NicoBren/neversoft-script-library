@@ -258,7 +258,7 @@ online_match_stats_fs = {
 }
 
 script check_if_ranked_game 
-	if isxenon
+	if isXenon
 		if ($match_type = ranked)
 			return \{flow_state = online_end_ranked_game_save_fs}
 		endif
@@ -564,7 +564,7 @@ custom_match_joining_game_fs = {
 }
 
 script setup_and_post_game 
-	killspawnedscript \{name = coop_fail_song}
+	KillSpawnedScript \{name = coop_fail_song}
 	set_character_hub_dirty
 	change \{structurename = player2_status
 		character_id = axel}
@@ -573,22 +573,22 @@ script setup_and_post_game
 	change \{structurename = player2_status
 		style = 1}
 	change \{structurename = player2_status
-		instrument_id = instrument_les_paul_black}
+		instrument_id = Instrument_Les_Paul_Black}
 	change \{character_select_highlighted_character_p2_dirty = 1}
 	change \{current_num_players = 2}
 	<rand> = 0
-	getrandomvalue \{name = rand
-		integer
+	GetRandomValue \{name = rand
+		Integer
 		a = 0
 		b = 1}
 	get_number_of_songs
 	if ((<rand> = 0) || ($game_mode = p2_coop) || (<num_songs> = 1))
-		change \{tie_breaker = host}
+		change \{tie_breaker = HOST}
 	else
-		change \{tie_breaker = client}
+		change \{tie_breaker = CLIENT}
 	endif
-	if ishost
-		resethubstates
+	if IsHost
+		ResetHubStates
 	endif
 	post_network_game
 endscript
@@ -1061,7 +1061,7 @@ online_winport_start_account_create_fs = {
 	destroy = destroy_winport_account_create_screen
 	actions = [
 		{
-			action = executelogin
+			action = executeLogin
 			flow_state = online_winport_start_account_create_status_fs
 		}
 		{
@@ -1083,15 +1083,15 @@ online_winport_start_account_login_fs = {
 			flow_state = online_winport_start_account_change_fs
 		}
 		{
-			action = executelogin
+			action = executeLogin
 			flow_state = online_winport_start_account_login_status_fs
 		}
 		{
-			action = executeoption1
+			action = executeOption1
 			flow_state = online_winport_start_account_change_fs
 		}
 		{
-			action = executeoption2
+			action = executeOption2
 			flow_state = online_winport_start_account_create_fs
 		}
 		{
@@ -1113,11 +1113,11 @@ online_winport_start_account_change_fs = {
 			flow_state = online_winport_start_account_reset_fs
 		}
 		{
-			action = executelogin
+			action = executeLogin
 			flow_state = online_winport_start_account_change_status_fs
 		}
 		{
-			action = executeoption1
+			action = executeOption1
 			flow_state = online_winport_start_account_reset_fs
 		}
 		{
@@ -1135,11 +1135,11 @@ online_winport_start_account_reset_fs = {
 			flow_state = online_winport_start_account_delete_fs
 		}
 		{
-			action = executelogin
+			action = executeLogin
 			flow_state = online_winport_start_account_reset_status_fs
 		}
 		{
-			action = executeoption1
+			action = executeOption1
 			flow_state = online_winport_start_account_delete_fs
 		}
 		{
@@ -1153,7 +1153,7 @@ online_winport_start_account_delete_fs = {
 	destroy = destroy_winport_account_delete_screen
 	actions = [
 		{
-			action = executelogin
+			action = executeLogin
 			flow_state = online_winport_start_account_delete_status_fs
 		}
 		{
@@ -1167,11 +1167,11 @@ online_winport_start_account_create_status_fs = {
 	destroy = destroy_winport_account_create_status_screen
 	actions = [
 		{
-			action = successaction
+			action = successAction
 			flow_state_func = whats_after_login_complete
 		}
 		{
-			action = erroraction
+			action = errorAction
 			flow_state = online_winport_start_account_create_fs
 		}
 		{
@@ -1185,11 +1185,11 @@ online_winport_start_account_login_status_fs = {
 	destroy = destroy_winport_account_login_status_screen
 	actions = [
 		{
-			action = successaction
+			action = successAction
 			flow_state_func = whats_after_login_complete
 		}
 		{
-			action = erroraction
+			action = errorAction
 			flow_state = online_winport_start_account_login_fs
 		}
 		{
@@ -1203,11 +1203,11 @@ online_winport_start_account_change_status_fs = {
 	destroy = destroy_winport_account_change_status_screen
 	actions = [
 		{
-			action = successaction
+			action = successAction
 			flow_state_func = whats_after_login_complete
 		}
 		{
-			action = erroraction
+			action = errorAction
 			flow_state = online_winport_start_account_change_fs
 		}
 		{
@@ -1221,11 +1221,11 @@ online_winport_start_account_reset_status_fs = {
 	destroy = destroy_winport_account_reset_status_screen
 	actions = [
 		{
-			action = successaction
+			action = successAction
 			flow_state_func = whats_after_login_complete
 		}
 		{
-			action = erroraction
+			action = errorAction
 			flow_state = online_winport_start_account_reset_fs
 		}
 		{
@@ -1239,11 +1239,11 @@ online_winport_start_account_delete_status_fs = {
 	destroy = destroy_winport_account_delete_status_screen
 	actions = [
 		{
-			action = successaction
+			action = successAction
 			flow_state = online_winport_start_account_create_fs
 		}
 		{
-			action = erroraction
+			action = errorAction
 			flow_state = online_winport_start_account_delete_fs
 		}
 		{
@@ -1303,7 +1303,7 @@ account_change_password_fs = {
 	destroy = destroy_change_password_submenu
 	actions = [
 		{
-			action = executelogin
+			action = executeLogin
 			flow_state = online_start_account_change_submenu_status_fs
 		}
 		{
@@ -1317,11 +1317,11 @@ online_start_account_change_submenu_status_fs = {
 	destroy = destroy_account_change_submenu_status_screen
 	actions = [
 		{
-			action = successaction
+			action = successAction
 			flow_state = account_management_fs
 		}
 		{
-			action = erroraction
+			action = errorAction
 			flow_state = account_change_password_fs
 		}
 	]
@@ -1331,7 +1331,7 @@ account_delete_fs = {
 	destroy = destroy_account_delete_submenu
 	actions = [
 		{
-			action = executelogin
+			action = executeLogin
 			flow_state = online_start_account_delete_submenu_status_fs
 		}
 		{
@@ -1345,23 +1345,23 @@ online_start_account_delete_submenu_status_fs = {
 	destroy = destroy_account_delete_submenu_status_screen
 	actions = [
 		{
-			action = successaction
+			action = successAction
 			flow_state = online_return_to_main_menu_fs
 		}
 		{
-			action = erroraction
+			action = errorAction
 			flow_state = account_delete_fs
 		}
 	]
 }
 online_return_to_main_menu_fs = {
-	create = processaccountdeletesuccess
+	create = processAccountDeleteSuccess
 	destroy = null_script
 }
 
-script processaccountdeletesuccess 
+script processAccountDeleteSuccess 
 	destroy_account_delete_submenu_status_screen
-	netsessionfunc \{func = resetnetwork}
+	NetSessionFunc \{func = ResetNetwork}
 	start_flow_manager \{flow_state = main_menu_fs}
 endscript
 
@@ -1375,8 +1375,8 @@ endscript
 
 script whats_after_login_complete 
 	if ($main_menu_created = 0)
-		netsessionfunc \{func = getautologinsetting}
-		if (<autologinsetting> = autologinunknown)
+		NetSessionFunc \{func = GetAutoLoginSetting}
+		if (<autoLoginSetting> = autoLoginUnknown)
 			return \{flow_state = bootup_autologin_save_fs}
 		endif
 		process_signin_complete

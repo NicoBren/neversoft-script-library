@@ -3,21 +3,21 @@ attract_wait_time = 110
 invalid_controller_lock = 0
 
 script ui_init_boot_iis 
-	reacquirecontrollers
+	ReAcquireControllers
 	change \{primary_controller_assigned = 0}
 	change \{respond_to_signin_changed = 0}
-	soundevent \{event = menu_guitar_lick_sfx}
+	SoundEvent \{event = Menu_Guitar_Lick_SFX}
 	spawnscriptnow \{menu_music_on
 		params = {
 			waitforguitarlick = 1
 		}}
-	unpausegame
+	UnPauseGame
 endscript
 
 script ui_create_boot_iis 
 	clean_up_user_control_helpers
 	dumpcompactpoolprofile \{0}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = current_menu
 		pos = (0.0, 0.0)
@@ -28,9 +28,9 @@ script ui_create_boot_iis
 		z_priority = 0
 		event_handlers = [
 		]}
-	createscreenelement \{type = spriteelement
+	CreateScreenElement \{type = SpriteElement
 		parent = current_menu
-		id = bg
+		id = bG
 		texture = boot_copyright_bg_1
 		pos = (0.0, 0.0)
 		dims = (1280.0, 720.0)
@@ -39,7 +39,7 @@ script ui_create_boot_iis
 			top
 		]
 		z_priority = 0}
-	createscreenelement \{type = spriteelement
+	CreateScreenElement \{type = SpriteElement
 		parent = current_menu
 		id = bg2
 		texture = boot_copyright_bg_2
@@ -51,11 +51,11 @@ script ui_create_boot_iis
 		]
 		z_priority = 0.5
 		alpha = 1}
-	runscriptonscreenelement boot_bg_swap id = <id>
-	createscreenelement \{type = textblockelement
+	RunScriptOnScreenElement boot_bg_swap id = <id>
+	CreateScreenElement \{type = TextBlockElement
 		parent = current_menu
 		font = fontgrid_text_a6
-		text = qs(0x71da7fc7)
+		text = qs("PRESS ANY BUTTON TO ROCK...")
 		dims = (450.0, 240.0)
 		pos = (755.0, 450.0)
 		just = [
@@ -79,22 +79,22 @@ script ui_create_boot_iis
 		time = 0.0
 		no_wait}
 	if ($attract_disabled = 0)
-		runscriptonscreenelement \{ui_boot_iis_attract_wait
+		RunScriptOnScreenElement \{ui_boot_iis_attract_wait
 			id = current_menu}
 	endif
-	runscriptonscreenelement \{ui_boot_iis_input
+	RunScriptOnScreenElement \{ui_boot_iis_input
 		id = current_menu}
 endscript
 
 script boot_bg_swap 
 	begin
-	se_setprops \{alpha = 0
+	SE_SetProps \{alpha = 0
 		time = 0}
-	wait \{0.25
+	Wait \{0.25
 		seconds}
-	se_setprops \{alpha = 1
+	SE_SetProps \{alpha = 1
 		time = 0}
-	wait \{0.4
+	Wait \{0.4
 		seconds}
 	repeat
 endscript
@@ -105,8 +105,8 @@ script ui_destroy_boot_iis
 		time = 0.0
 		z_priority = -100
 		no_wait}
-	if screenelementexists \{id = current_menu}
-		current_menu :die
+	if ScreenElementExists \{id = current_menu}
+		current_menu :Die
 	endif
 	kill_notify_box \{container_id = notify_invalid_device}
 endscript
@@ -114,11 +114,11 @@ endscript
 script ui_boot_iis_attract_wait 
 	wait_time = ($attract_wait_time)
 	begin
-	printf qs(0x1ef1103f) i = <wait_time> channel = attract
+	printf qs("\LWait_time for begin attract %i") i = <wait_time> channel = attract
 	if (<wait_time> = 0)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		second
 		ignoreslomo}
 	wait_time = (<wait_time> - 1)
@@ -128,14 +128,14 @@ script ui_boot_iis_attract_wait
 		if ($invalid_controller_lock = 0)
 			break
 		endif
-		wait \{1
+		Wait \{1
 			gameframe}
 		repeat
 	endif
-	killspawnedscript \{name = ui_boot_iis_input}
+	KillSpawnedScript \{name = ui_boot_iis_input}
 	ui_event \{event = menu_change
 		data = {
-			state = uistate_boot_attract
+			state = UIstate_boot_attract
 		}}
 endscript
 
@@ -143,31 +143,31 @@ script ui_boot_iis_input \{button1 = {
 		}
 		button2 = {
 		}}
-	wait \{30
+	Wait \{30
 		gameframes}
 	get_handlers_for_all_buttons \{event_script = ui_boot_iis_continue}
 	begin
-	removeparameter \{makes}
-	removeparameter \{device_num}
-	current_menu :setprops event_handlers = <event_handlers> replace_handlers
-	wait \{1
+	RemoveParameter \{makes}
+	RemoveParameter \{device_num}
+	current_menu :SetProps event_handlers = <event_handlers> replace_handlers
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
 script ui_boot_iis_continue 
-	setspawninstancelimits \{max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
 	if ($invalid_controller_lock = 0)
-		stopsoundevent \{menu_guitar_lick_sfx}
+		StopSoundEvent \{Menu_Guitar_Lick_SFX}
 		generic_menu_pad_choose_sound
 		get_handlers_for_all_buttons
-		current_menu :setprops event_handlers = <event_handlers> replace_handlers
-		killspawnedscript \{name = ui_boot_iis_input}
+		current_menu :SetProps event_handlers = <event_handlers> replace_handlers
+		KillSpawnedScript \{name = ui_boot_iis_input}
 		frontend_load_soundcheck \{loadingscreen
 			async = 0}
-		z_soundcheck_uiresetpos
-		z_soundcheck_uianimationpre
+		z_soundcheck_UIResetPos
+		z_soundcheck_UIAnimationPre
 		ui_event event = menu_replace data = {state = uistate_signin device_num = <device_num> boot = 1}
 	endif
 endscript

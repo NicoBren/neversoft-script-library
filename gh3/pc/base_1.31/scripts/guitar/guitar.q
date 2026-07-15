@@ -89,14 +89,14 @@ player1_status = {
 	character_id = axel
 	outfit = 1
 	style = 1
-	instrument_id = instrument_les_paul_black
-	band_member = guitarist
-	cash = 0
+	instrument_id = Instrument_Les_Paul_Black
+	band_member = Guitarist
+	Cash = 0
 	new_cash = 0
-	fourx_fingerfxid01 = jow_nil
-	fourx_fingerfxid02 = jow_nil
-	fourx_fingerfxid03 = jow_nil
-	fourx_fingerfxid04 = jow_nil
+	FourX_FingerFXID01 = JOW_NIL
+	FourX_FingerFXID02 = JOW_NIL
+	FourX_FingerFXID03 = JOW_NIL
+	FourX_FingerFXID04 = JOW_NIL
 	button_checker_up_time = -1.0
 	last_playline_song_beat_time = 1.0
 	last_playline_song_beat_change_time = 1.0
@@ -191,14 +191,14 @@ player2_status = {
 	character_id = axel
 	outfit = 1
 	style = 1
-	instrument_id = instrument_les_paul_black
+	instrument_id = Instrument_Les_Paul_Black
 	band_member = bassist
-	cash = 0
+	Cash = 0
 	new_cash = 0
-	fourx_fingerfxid01 = jow_nil
-	fourx_fingerfxid02 = jow_nil
-	fourx_fingerfxid03 = jow_nil
-	fourx_fingerfxid04 = jow_nil
+	FourX_FingerFXID01 = JOW_NIL
+	FourX_FingerFXID02 = JOW_NIL
+	FourX_FingerFXID03 = JOW_NIL
+	FourX_FingerFXID04 = JOW_NIL
 	button_checker_up_time = -1.0
 	last_playline_song_beat_time = 1.0
 	last_playline_song_beat_change_time = 1.0
@@ -246,7 +246,7 @@ is_demo_mode = 0
 downloadcontent_enabled = 1
 input_mode = record
 replay_suspend = 1
-current_boss = boss_tommorello_props
+current_boss = Boss_TomMorello_Props
 boss_battle = 0
 boss_controller = 0
 boss_oldcontroller = 0
@@ -328,13 +328,13 @@ save_current_powerups_p2 = [
 	0
 ]
 battle_sudden_death = 0
-cheat_airguitar = -1
-cheat_performancemode = -1
-cheat_hyperspeed = -1
-cheat_nofail = -1
-cheat_easyexpert = -1
-cheat_precisionmode = -1
-cheat_bretmichaels = -1
+Cheat_AirGuitar = -1
+Cheat_PerformanceMode = -1
+Cheat_Hyperspeed = -1
+Cheat_NoFail = -1
+Cheat_EasyExpert = -1
+Cheat_PrecisionMode = -1
+Cheat_BretMichaels = -1
 boss_wuss_out = 0
 crowd_model_array = none
 p1_last_song_detailed_stats = [
@@ -748,34 +748,34 @@ enable_button_cheats = 0
 whammy_mania_achievement_invalidated = 0
 
 script guitar_startup 
-	change \{assertonmissingscripts = 1}
-	if iswinport
-		if notismacport
-			displayloadingscreen \{'boot_legal'
+	change \{AssertOnMissingScripts = 1}
+	if IsWinPort
+		if NotIsMacPort
+			DisplayLoadingScreen \{'boot_legal'
 				spin_texture = 'load_wheel'
 				spin_x = 318
 				spin_y = 380
 				localized}
 		else
-			displayloadingscreen \{'boot_legal_mac'
+			DisplayLoadingScreen \{'boot_legal_mac'
 				spin_texture = 'load_wheel'
 				spin_x = 318
 				spin_y = 380
 				localized}
 		endif
 	else
-		displayloadingscreen \{'boot_legal'
+		DisplayLoadingScreen \{'boot_legal'
 			spin_texture = 'load_wheel'
 			spin_x = 410
 			spin_y = 500
 			localized}
 	endif
-	gettruestarttime
+	GetTrueStartTime
 	change \{legal_timer = 0}
-	legal_start_time = <starttime>
+	legal_start_time = <StartTime>
 	stoprendering
 	printf \{"Initializing Heaps"}
-	getplatform
+	GetPlatform
 	switch <platform>
 		case xenon
 		<heap_size_globalpak> = (74 * 1024 * 1024)
@@ -820,202 +820,202 @@ script guitar_startup
 		<heap_size_downloads> = (256 * 1024)
 		<heap_size_downloads_vram> = (768 * 1024)
 		default
-		scriptassert \{"Unrecognized platform for heap setup"}
+		ScriptAssert \{"Unrecognized platform for heap setup"}
 	endswitch
-	pushmemprofile \{'Global Pak Heap'}
-	meminitheap name = 'heap_global_pak' size = <heap_size_globalpak> vram_size = <heap_size_globalpak_vram>
-	popmemprofile
-	pushmemprofile \{'Characters'}
-	meminitheap name = 'heap_musician1' size = <heap_size_musician> vram_size = <heap_size_musician_vram>
-	meminitheap name = 'heap_musician2' size = <heap_size_musician> vram_size = <heap_size_musician_vram>
-	meminitheap name = 'heap_musician3' size = <heap_size_musician> vram_size = <heap_size_musician_vram>
-	meminitheap name = 'heap_musician4' size = <heap_size_musician> vram_size = <heap_size_musician_vram>
-	meminitheap name = 'heap_musician1_anim' size = <heap_size_guitarist_anim> vram_size = <heap_size_guitarist_anim_vram>
-	meminitheap name = 'heap_musician2_anim' size = <heap_size_guitarist_anim> vram_size = <heap_size_guitarist_anim_vram>
-	meminitheap name = 'heap_musician3_anim' size = <heap_size_drummer_anim> vram_size = <heap_size_drummer_anim_vram>
-	meminitheap name = 'heap_musician4_anim' size = <heap_size_vocalist_anim> vram_size = <heap_size_vocalist_anim_vram>
-	meminitheap name = 'heap_instrument1' size = <heap_size_instrument> vram_size = <heap_size_instrument_vram>
-	meminitheap name = 'heap_instrument2' size = <heap_size_instrument> vram_size = <heap_size_instrument_vram>
-	meminitheap name = 'heap_instrument3' size = <heap_size_instrument> vram_size = <heap_size_instrument_vram>
-	meminitheap name = 'heap_instrument4' size = <heap_size_instrument> vram_size = <heap_size_instrument_vram>
-	meminitheap name = 'heap_zones' size = <heap_size_zones> vram_size = <heap_size_zones_vram>
-	meminitheap name = 'heap_downloads' size = <heap_size_downloads> vram_size = <heap_size_downloads_vram>
-	meminitheap name = 'heap_song' size = <heap_size_song> vram_size = <heap_size_song_vram>
-	if isfmodenabled
-		meminitheap name = 'heap_audio' size = <heap_size_audio> vram_size = <heap_size_audio_vram>
+	PushMemProfile \{'Global Pak Heap'}
+	MemInitHeap name = 'heap_global_pak' size = <heap_size_globalpak> vram_size = <heap_size_globalpak_vram>
+	PopMemProfile
+	PushMemProfile \{'Characters'}
+	MemInitHeap name = 'heap_musician1' size = <heap_size_musician> vram_size = <heap_size_musician_vram>
+	MemInitHeap name = 'heap_musician2' size = <heap_size_musician> vram_size = <heap_size_musician_vram>
+	MemInitHeap name = 'heap_musician3' size = <heap_size_musician> vram_size = <heap_size_musician_vram>
+	MemInitHeap name = 'heap_musician4' size = <heap_size_musician> vram_size = <heap_size_musician_vram>
+	MemInitHeap name = 'heap_musician1_anim' size = <heap_size_guitarist_anim> vram_size = <heap_size_guitarist_anim_vram>
+	MemInitHeap name = 'heap_musician2_anim' size = <heap_size_guitarist_anim> vram_size = <heap_size_guitarist_anim_vram>
+	MemInitHeap name = 'heap_musician3_anim' size = <heap_size_drummer_anim> vram_size = <heap_size_drummer_anim_vram>
+	MemInitHeap name = 'heap_musician4_anim' size = <heap_size_vocalist_anim> vram_size = <heap_size_vocalist_anim_vram>
+	MemInitHeap name = 'heap_instrument1' size = <heap_size_instrument> vram_size = <heap_size_instrument_vram>
+	MemInitHeap name = 'heap_instrument2' size = <heap_size_instrument> vram_size = <heap_size_instrument_vram>
+	MemInitHeap name = 'heap_instrument3' size = <heap_size_instrument> vram_size = <heap_size_instrument_vram>
+	MemInitHeap name = 'heap_instrument4' size = <heap_size_instrument> vram_size = <heap_size_instrument_vram>
+	MemInitHeap name = 'heap_zones' size = <heap_size_zones> vram_size = <heap_size_zones_vram>
+	MemInitHeap name = 'heap_downloads' size = <heap_size_downloads> vram_size = <heap_size_downloads_vram>
+	MemInitHeap name = 'heap_song' size = <heap_size_song> vram_size = <heap_size_song_vram>
+	if IsFmodEnabled
+		MemInitHeap name = 'heap_audio' size = <heap_size_audio> vram_size = <heap_size_audio_vram>
 	endif
-	popmemprofile
+	PopMemProfile
 	printf \{"Initializing COIM"}
-	pushmemprofile \{'COIM'}
-	initcoim \{size = $generic_coim_size
-		blockalign = $generic_coim_blockalign
-		coim_min_scratch_blocks
-		$generic_coim_params}
-	popmemprofile
-	compositeobjectmanager_startup
+	PushMemProfile \{'COIM'}
+	InitCOIM \{size = $Generic_COIM_Size
+		BlockAlign = $Generic_COIM_BlockAlign
+		COIM_Min_Scratch_Blocks
+		$Generic_COIM_Params}
+	PopMemProfile
+	CompositeObjectManager_startup
 	printf \{"Initializing memory card system"}
-	memcardsysteminitialize
+	MemCardSystemInitialize
 	printf \{"Initializing Anim Cache"}
-	initanimcompresstable \{'anims\\standardkeyq.bin'
+	InitAnimCompressTable \{'anims\\standardkeyq.bin'
 		q48}
-	initanimcompresstable \{'anims\\standardkeyt.bin'
+	InitAnimCompressTable \{'anims\\standardkeyt.bin'
 		t48}
-	pushmemprofile \{'Animation Cache'}
-	initanimsystem {
-		animheapsize = 7335936
-		cacheblockalign = 3072
-		animnxbuffersize = (2 * 1024 * 1024)
-		defcachetype = fullres
-		maxanimstages = 2
-		maxanimsubsets = 4
-		maxdegenerateanims = 3
+	PushMemProfile \{'Animation Cache'}
+	InitAnimSystem {
+		AnimHeapSize = 7335936
+		CacheBlockAlign = 3072
+		AnimNxBufferSize = (2 * 1024 * 1024)
+		DefCacheType = fullres
+		MaxAnimStages = 2
+		MaxAnimSubsets = 4
+		MaxDegenerateAnims = 3
 	}
-	popmemprofile
-	initlightmanager \{max_lights = 128
+	PopMemProfile
+	InitLightManager \{max_lights = 128
 		max_model_lights = 350
 		max_groups = 30
 		max_render_verts_per_geom = 4096}
-	lightshow_addnodeflags
-	lightshow_init \{notes = $lightshow_notemapping
-		nodeflags = $lightshow_statenodeflags
-		coloroverrideexclusions = $lightshow_coloroverrideexcludelights}
-	lightshow_setprocessors \{shared = $lightshow_sharedprocessors}
+	LightShow_AddNodeFlags
+	LightShow_Init \{notes = $LightShow_NoteMapping
+		nodeflags = $LightShow_StateNodeFlags
+		ColorOverrideExclusions = $LightShow_ColorOverrideExcludeLights}
+	LightShow_SetProcessors \{shared = $LightShow_SharedProcessors}
 	create_node_flags
 	printf \{"Initializing Replay buffer"}
-	getplatform
+	GetPlatform
 	switch <platform>
 		case xenon
 		<replay_buffer_size> = (1024 * 5)
 		case ps3
 		<replay_buffer_size> = (1024 * 1)
 		default
-		scriptassert \{"Unrecognized platform for replay buffer setup"}
+		ScriptAssert \{"Unrecognized platform for replay buffer setup"}
 	endswitch
-	allocatedatabuffer name = replay kb = <replay_buffer_size>
+	AllocateDataBuffer name = replay kb = <replay_buffer_size>
 	printf \{"Initializing Cutscenes"}
-	loadpak \{'pak/cutscene_infos/cutscene_infos.pak'
+	LoadPak \{'pak/cutscene_infos/cutscene_infos.pak'
 		no_vram}
 	engineconfig \{particlelod = 0}
-	loadpak \{'pak/global_ad_tex/global_ad_tex.pak'
+	LoadPak \{'pak/global_ad_tex/global_ad_tex.pak'
 		heap = heap_massive_ads}
 	if ($is_demo_mode = 1)
 		change \{enable_button_cheats = 0}
-		change \{musician_profiles = $demo_musician_profiles}
+		change \{Musician_Profiles = $Demo_Musician_Profiles}
 	endif
 	if ($enable_button_cheats = 1)
-		launchviewer
+		LaunchViewer
 		change \{select_shift = 1}
 	endif
 	printf \{"Creating sound busses"}
-	master_sfx_adding_sound_busses
+	Master_SFX_Adding_Sound_Busses
 	printf \{"Calling user startup script"}
-	if scriptexists \{startup}
+	if ScriptExists \{startup}
 		startup
 	endif
 	printf \{"Loading Paks"}
-	loadpak \{'zones/global/global.pak'
+	LoadPak \{'zones/global/global.pak'
 		heap = heap_global_pak
 		splitfile}
-	parsenodearray \{queue
+	ParseNodeArray \{queue
 		zone_name = global
 		array_name = global_nodearray}
-	loadpak \{'pak/perm_anims/perm_anims.pak'
-		heap = bottomupheap
+	LoadPak \{'pak/perm_anims/perm_anims.pak'
+		heap = BottomUpHeap
 		no_vram}
-	if NOT isps3
-		if gotextramemory
-			mempushcontext \{debugheap}
+	if NOT IsPs3
+		if GotExtraMemory
+			MemPushContext \{DebugHeap}
 		endif
 	endif
-	loadpak \{'fonts/debug.pak'}
-	if NOT isps3
-		if gotextramemory
-			mempopcontext
+	LoadPak \{'fonts/debug.pak'}
+	if NOT IsPs3
+		if GotExtraMemory
+			MemPopContext
 		endif
 	endif
-	setfontproperties \{'debug'
-		color_tab = $default_font_colors
+	SetFontProperties \{'debug'
+		color_tab = $Default_Font_Colors
 		debug_font}
-	setfontnonproportionalnumbers \{'debug'}
-	loadpak \{'fonts/text_a1.pak'}
-	setfontproperties \{'text_A1'
-		color_tab = $default_font_colors}
+	SetFontNonProportionalNumbers \{'debug'}
+	LoadPak \{'fonts/text_a1.pak'}
+	SetFontProperties \{'text_A1'
+		color_tab = $Default_Font_Colors}
 	buttons_font = 'ButtonsXenon'
-	setfontproperties <buttons_font> buttons_font
-	setfontproperties \{'text_a3'
-		color_tab = $default_font_colors}
-	setfontproperties \{'text_a4'
-		color_tab = $default_font_colors}
-	setfontproperties \{'text_a5'
-		color_tab = $default_font_colors}
-	setfontproperties \{'text_a6'
-		color_tab = $default_font_colors}
-	setfontproperties \{'num_a7'
-		color_tab = $default_font_colors}
-	setfontproperties \{'text_a8'
-		color_tab = $default_font_colors}
-	setfontproperties \{'num_a9'
-		color_tab = $default_font_colors}
-	setfontproperties \{'text_a10'
-		color_tab = $default_font_colors}
-	setfontproperties \{'text_a11'
-		color_tab = $default_font_colors}
-	setfontproperties \{'text_a11_Large'
-		color_tab = $default_font_colors}
-	setfontproperties \{'fontgrid_title_gh3'
-		color_tab = $default_font_colors}
-	if isfmodenabled
-		loadfsb \{filename = 'streams/streamall'
+	SetFontProperties <buttons_font> buttons_font
+	SetFontProperties \{'text_a3'
+		color_tab = $Default_Font_Colors}
+	SetFontProperties \{'text_a4'
+		color_tab = $Default_Font_Colors}
+	SetFontProperties \{'text_a5'
+		color_tab = $Default_Font_Colors}
+	SetFontProperties \{'text_a6'
+		color_tab = $Default_Font_Colors}
+	SetFontProperties \{'num_a7'
+		color_tab = $Default_Font_Colors}
+	SetFontProperties \{'text_a8'
+		color_tab = $Default_Font_Colors}
+	SetFontProperties \{'num_a9'
+		color_tab = $Default_Font_Colors}
+	SetFontProperties \{'text_a10'
+		color_tab = $Default_Font_Colors}
+	SetFontProperties \{'text_a11'
+		color_tab = $Default_Font_Colors}
+	SetFontProperties \{'text_a11_Large'
+		color_tab = $Default_Font_Colors}
+	SetFontProperties \{'fontgrid_title_gh3'
+		color_tab = $Default_Font_Colors}
+	if IsFmodEnabled
+		LoadFSB \{filename = 'streams/streamall'
 			numstreams = 4
 			nowait}
 		change streamall_fsb_index = <fsb_index>
-		enableremovesoundentry \{enable}
-		loadpak \{'zones/global/global_sfx.pak'
+		EnableRemoveSoundEntry \{enable}
+		LoadPak \{'zones/global/global_sfx.pak'
 			heap = heap_audio}
 	endif
-	setscenepermanent \{scene = 'zones/global/global_gfx.scn'
+	SetScenePermanent \{scene = 'zones/global/global_gfx.scn'
 		permanent}
 	setup_models
 	printf \{"Loading Zone"}
-	mempushcontext \{heap_zones}
-	createpakmanmap \{map = zones
-		links = gh3zones
+	MemPushContext \{heap_zones}
+	CreatePakManMap \{map = zones
+		links = GH3Zones
 		folder = 'zones/'
 		uselinkslots}
-	mempopcontext
+	MemPopContext
 	printf \{"current_level = %s"
 		s = $current_level}
-	setpakmancurrentblock \{map = zones
+	SetPakManCurrentBlock \{map = zones
 		pak = none
 		block_scripts = 1}
-	setpakmancurrentblock \{map = zones
+	SetPakManCurrentBlock \{map = zones
 		pak = z_soundcheck
 		block_scripts = 1}
-	addeditablelist \{ped_editable_list}
-	if NOT cd
+	AddEditableList \{ped_editable_list}
+	if NOT CD
 		startkeyboardhandler \{max_length = 128}
 	endif
 	printf \{"Done initializing - into game..."}
-	initatoms
-	setprogressionmaxdifficulty \{difficulty = 3}
+	InitAtoms
+	SetProgressionMaxDifficulty \{difficulty = 3}
 	setup_globaltags
 	setup_sprites
 	kill_start_key_binding
-	setshadowrenderingflags \{enable = 'true'
+	SetShadowRenderingFlags \{enable = 'true'
 		object = 'skin'}
-	setshadowmapparams \{far = 16.0}
-	if NOT iswinport
+	SetShadowMapParams \{far = 16.0}
+	if NOT IsWinPort
 		setup_bg_viewport
 		restore_dummy_bg_camera
 	endif
 	player = 1
 	begin
-	formattext checksumname = player_status 'player%i_status' i = <player> addtostringlookup
-	formattext textname = player_text 'p%i' i = <player> addtostringlookup
-	spawnscriptlater create_guitar_events params = {<...>}
+	FormatText checksumname = player_status 'player%i_status' i = <player> AddToStringLookup
+	FormatText TextName = player_text 'p%i' i = <player> AddToStringLookup
+	SpawnScriptLater create_guitar_events params = {<...>}
 	player = (<player> + 1)
 	repeat $max_num_players
-	setshadowprojectiontexture \{texture = white}
+	SetShadowProjectionTexture \{texture = white}
 	if ($autolaunch_startnow = 0)
 		if ($skip_boot_menu = 1)
 			spawnscriptnow \{gh3_start_pressed
@@ -1029,16 +1029,16 @@ script guitar_startup
 		endif
 	else
 		startrendering
-		spawnscriptlater \{autolaunch_spawned}
+		SpawnScriptLater \{autolaunch_spawned}
 	endif
 	create_guitarist
 	create_guitarist \{name = bassist}
 	change \{tutorial_disable_hud = 0}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		id = dead_particle_container
 		parent = root_window
 		pos = (0.0, 0.0)}
-	init2dparticles \{parent = dead_particle_container}
+	Init2DParticles \{parent = dead_particle_container}
 	<profile_gpu> = 0
 	if ($show_gpu_time = 1)
 		<profile_gpu> = 1
@@ -1047,8 +1047,8 @@ script guitar_startup
 		<profile_gpu> = 1
 	endif
 	if (<profile_gpu> = 1)
-		togglemetrics \{mode = 5}
-		if isps3
+		ToggleMetrics \{mode = 5}
+		if IsPs3
 			change \{current_cpu = 2}
 		else
 			change \{current_cpu = 6}
@@ -1056,72 +1056,72 @@ script guitar_startup
 	else
 		if ($show_cpu_time = 1)
 			change \{current_cpu = 0}
-			togglemetrics \{mode = 5}
+			ToggleMetrics \{mode = 5}
 		else
-			togglemetrics \{mode = 0}
+			ToggleMetrics \{mode = 0}
 		endif
 	endif
 	begin
-	gettrueelapsedtime starttime = <legal_start_time>
-	if (<elapsedtime> >= 6000)
+	GetTrueElapsedTime StartTime = <legal_start_time>
+	if (<ElapsedTime> >= 6000)
 		change \{legal_timer = 1}
 		break
 	endif
 	repeat
-	hideloadingscreen
+	Hideloadingscreen
 endscript
 
 script autolaunch_spawned 
-	newshowstorageselector
+	NewShowStorageSelector
 	start_flow_manager \{flow_state = quickplay_play_song_fs}
 	if ($autolaunch_startnow = 2)
-		spawnscriptlater \{select_venue
+		SpawnScriptLater \{select_venue
 			params = {
 				norestart
 			}}
 	else
-		spawnscriptlater start_song params = {device_num = ($player1_status.controller)}
+		SpawnScriptLater start_song params = {device_num = ($player1_status.controller)}
 	endif
 endscript
 
 script kill_dummy_bg_camera 
-	killcamanim \{name = dummy_cam_bg}
+	KillCamAnim \{name = dummy_cam_bg}
 endscript
 
 script restore_dummy_bg_camera 
 	kill_dummy_bg_camera
-	playigccam \{name = dummy_cam_bg
+	PlayIGCCam \{name = dummy_cam_bg
 		viewport = bg_viewport
 		pos = (-2.391084, 1.860994, 9.406317)
-		quat = (0.001788, 0.993925, -0.016326997)
-		fov = 72.0
-		play_hold}
+		Quat = (0.001788, 0.993925, -0.016326997)
+		FOV = 72.0
+		Play_hold}
 endscript
 
-script get_levelzonearray_size 
-	getarraysize \{$levelzonearray}
+script get_LevelZoneArray_size 
+	GetArraySize \{$LevelZoneArray}
 	size = (<array_size>)
-	if globalexists \{name = download_levelzonearray
+	if GlobalExists \{name = download_LevelZoneArray
 			type = array}
-		getarraysize \{$download_levelzonearray}
+		GetArraySize \{$download_LevelZoneArray}
 		size = (<array_size> + <size>)
 	endif
 	return array_size = <size>
 endscript
 
-script get_levelzonearray_checksum 
-	getarraysize \{$levelzonearray}
+script get_LevelZoneArray_checksum 
+	GetArraySize \{$LevelZoneArray}
 	if (<index> < <array_size>)
-		return level_checksum = ($levelzonearray [<index>])
+		return level_checksum = ($LevelZoneArray [<index>])
 	else
-		return level_checksum = ($download_levelzonearray [(<index> - <array_size>)])
+		return level_checksum = ($download_LevelZoneArray [(<index> - <array_size>)])
 	endif
 endscript
 
-script is_levelzone_downloaded \{level_checksum = load_z_artdeco}
-	if arraycontains array = ($download_levelzonearray) contains = <level_checksum>
-		formattext textname = filename '%s.pak' s = (($download_levelzones.<level_checksum>).name)
-		getcontentfolderindexfromfile <filename>
+script Is_LevelZone_Downloaded \{level_checksum = load_z_artdeco}
+	if ArrayContains array = ($download_LevelZoneArray) contains = <level_checksum>
+		FormatText TextName = filename '%s.pak' s = (($download_LevelZones.<level_checksum>).name)
+		GetContentFolderIndexFromFile <filename>
 		if (<device> = content)
 			return \{download = 1
 				true}
@@ -1134,11 +1134,11 @@ script is_levelzone_downloaded \{level_checksum = load_z_artdeco}
 			true}
 	endif
 endscript
-download_levelzonearray = [
+download_LevelZoneArray = [
 ]
-download_levelzones = {
+download_LevelZones = {
 }
-levelzonearray = [
+LevelZoneArray = [
 	load_z_party
 	load_z_dive
 	load_z_video
@@ -1151,55 +1151,55 @@ levelzonearray = [
 	load_z_credits
 	load_z_soundcheck
 ]
-levelzones = {
-	$download_levelzones
+LevelZones = {
+	$download_LevelZones
 	load_z_artdeco = {
 		zone = z_artdeco
 		name = 'z_artdeco'
 		title = "Ye olde Royal Odeon"
-		bg = venue_poster_odeon
+		bG = Venue_Poster_Odeon
 	}
 	load_z_budokan = {
 		zone = z_budokan
 		name = 'z_budokan'
 		title = "Kaiju Megadome"
-		bg = venue_poster_megadome
+		bG = Venue_Poster_Megadome
 	}
 	load_z_dive = {
 		zone = z_dive
 		name = 'z_dive'
 		title = "Mitch's Moose Lounge"
-		bg = venue_poster_moose
+		bG = Venue_Poster_Moose
 	}
 	load_z_hell = {
 		zone = z_hell
 		name = 'z_hell'
 		title = "Lou's Inferno"
-		bg = menu_venue_poster_hell
+		bG = menu_venue_poster_hell
 	}
 	load_z_party = {
 		zone = z_party
 		name = 'z_party'
 		title = "Backyard Bash"
-		bg = venue_poster_backyard
+		bG = Venue_Poster_Backyard
 	}
 	load_z_prison = {
 		zone = z_prison
 		name = 'z_prison'
 		title = "Shanker's Island"
-		bg = venue_poster_prison
+		bG = Venue_Poster_Prison
 	}
 	load_z_video = {
 		zone = z_video
 		name = 'z_video'
 		title = "Video Shoot"
-		bg = menu_venue_poster_videoshoot
+		bG = menu_venue_poster_videoShoot
 	}
 	load_z_wikker = {
 		zone = z_wikker
 		name = 'z_wikker'
 		title = "Desert Rock Festival"
-		bg = venue_poster_desert
+		bG = Venue_Poster_Desert
 	}
 	load_z_soundcheck = {
 		zone = z_soundcheck
@@ -1227,14 +1227,14 @@ levelzones = {
 	}
 }
 
-script getcurrentlevel 
+script GetCurrentLevel 
 	return level = ($current_level)
 endscript
 
 script get_level_prefix 
-	if structurecontains \{structure = $levelzones
+	if StructureContains \{Structure = $LevelZones
 			$current_level}
-		return prefix = ($levelzones.($current_level).name) prefix_crc = ($levelzones.($current_level).zone)
+		return prefix = ($LevelZones.($current_level).name) prefix_crc = ($LevelZones.($current_level).zone)
 	endif
 	printf \{"!!!!!!!!!!!!!!!!!!!!!!!!!!!!"}
 	printf \{"!!!!!!!!!!!!!!!!!!!!!!!!!!!"}
@@ -1250,19 +1250,19 @@ script preqbromid
 endscript
 
 script postqbromid 
-	restart_gem_scroller song_name = ($current_song) difficulty = ($current_difficulty) difficulty2 = ($current_difficulty2) starttime = ($current_starttime) device_num = ($player1_status.controller)
+	restart_gem_scroller song_name = ($current_song) difficulty = ($current_difficulty) difficulty2 = ($current_difficulty2) StartTime = ($current_starttime) device_num = ($player1_status.controller)
 endscript
 
-script infrontend 
+script InFrontend 
 	return \{false}
 endscript
 
 script startrendering 
-	startrendering_c
+	StartRendering_C
 	change \{pause_no_render = 0}
 endscript
 
 script stoprendering 
-	stoprendering_c
+	StopRendering_C
 	change \{pause_no_render = 1}
 endscript

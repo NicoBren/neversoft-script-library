@@ -1,11 +1,11 @@
 
 script net_setup_solo_hud 
-	getarraysize \{$hud_screen_elements}
+	GetArraySize \{$hud_screen_elements}
 	array_entry = 0
 	get_num_players_by_gamemode
 	begin
 	id = ($hud_screen_elements [<array_entry>].id)
-	extendcrc <id> ($player2_status.text) out = id
+	ExtendCRC <id> ($player2_status.text) out = id
 	pos = ($hud_screen_elements [<array_entry>].pos)
 	yoff = ($hud_screen_elements [<array_entry>].yoff)
 	if (<num_players> = 2)
@@ -15,8 +15,8 @@ script net_setup_solo_hud
 		py = (<py> - <yoff>)
 		pos = (<px> * (1.0, 0.0) + <py> * (0.0, 1.0))
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <hud_destroygroup>
 		font = text_a6
 		just = [left top]
@@ -39,10 +39,10 @@ script net_setup_solo_hud
 	else
 		change \{g_hud_2d_struct_used = career_hud_2d_elements}
 	endif
-	extendcrc hud_2d_container ($<player_status>.text) out = new_2d_container
-	if NOT screenelementexists id = <new_2d_container>
-		createscreenelement {
-			type = containerelement
+	ExtendCRC HUD_2D_Container ($<player_status>.text) out = new_2d_container
+	if NOT ScreenElementExists id = <new_2d_container>
+		CreateScreenElement {
+			type = ContainerElement
 			parent = root_window
 			pos = (0.0, 0.0)
 			just = [left top]
@@ -51,12 +51,12 @@ script net_setup_solo_hud
 		}
 	endif
 	create_2d_hud_elements parent = <new_2d_container> player_text = ($<player_status>.text) elements_structure = $g_hud_2d_struct_used
-	extendcrc \{hud_2d_container
+	ExtendCRC \{HUD_2D_Container
 		'p2'
 		out = new_2d_container}
-	if NOT screenelementexists id = <new_2d_container>
-		createscreenelement {
-			type = containerelement
+	if NOT ScreenElementExists id = <new_2d_container>
+		CreateScreenElement {
+			type = ContainerElement
 			parent = root_window
 			pos = (0.0, 0.0)
 			just = [left top]

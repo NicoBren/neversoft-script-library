@@ -2,20 +2,20 @@
 script TileSprite \{parent = root_window
 		container_type = ContainerElement
 		tile_dims = (1280.0, 720.0)
-		Pos = (0.0, 0.0)
+		pos = (0.0, 0.0)
 		sprite_props = {
 		}
 		container_props = {
 		}}
 	if NOT GotParam \{texture}
-		printf \{qs(0x49b2d7d0)}
+		printf \{qs("\LTileSprite needs a texture")}
 		return
 	endif
 	CreateScreenElement {
-		Type = <container_type>
+		type = <container_type>
 		parent = <parent>
 		dims = <tile_dims>
-		Pos = <Pos>
+		pos = <pos>
 		just = [left top]
 		child_anchor = [left top]
 		<container_props>
@@ -23,25 +23,25 @@ script TileSprite \{parent = root_window
 	<container_id> = <id>
 	if NOT GotParam \{dims}
 		CreateScreenElement {
-			Type = SpriteElement
+			type = SpriteElement
 			parent = <parent>
 			texture = <texture>
 		}
 		GetScreenElementDims id = <id>
-		if ((<width> < 1) || (<height> < 1))
-			printf \{qs(0xd26c6605)}
+		if ((<width> < 1) || (<Height> < 1))
+			printf \{qs("\Lwhy is the width or height not positive?")}
 			DestroyScreenElement id = <container_id>
 			return
 		endif
 		DestroyScreenElement id = <id>
 	else
 		<width> = (<dims> [0])
-		<height> = (<dims> [1])
+		<Height> = (<dims> [1])
 	endif
 	<container_id> :SetTags {
 		width = <width>
-		height = <height>
-		Pos = <Pos>
+		Height = <Height>
+		pos = <pos>
 	}
 	if GotParam \{flip_h}
 		<container_id> :SetTags {
@@ -53,41 +53,41 @@ script TileSprite \{parent = root_window
 			flip_v
 		}
 	endif
-	<X> = 0
+	<x> = 0
 	<y> = 0
 	<row> = 0
 	<column> = 0
 	<count> = 0
 	begin
-	<Flip> = {}
+	<flip> = {}
 	if GotParam \{flip_h}
 		Mod a = <row> b = (2)
 		if (<Mod> = 0)
-			<Flip> = {flip_h}
+			<flip> = {flip_h}
 		endif
 	endif
 	if GotParam \{flip_v}
 		Mod a = <column> b = (2)
 		if (<Mod> = 0)
-			<Flip> = {<Flip> flip_v}
+			<flip> = {<flip> flip_v}
 		endif
 	endif
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = <container_id>
 		texture = <texture>
 		dims = <dims>
 		just = [left top]
-		Pos = (((1.0, 0.0) * <X>) + ((0.0, 1.0) * <y>))
+		pos = (((1.0, 0.0) * <x>) + ((0.0, 1.0) * <y>))
 		<sprite_props>
-		<Flip>
+		<flip>
 	}
 	<count> = (<count> + 1)
-	<X> = (<X> + <width>)
+	<x> = (<x> + <width>)
 	<column> = (<column> + 1)
-	if (<X> > (<tile_dims> [0]))
-		<X> = 0
-		<y> = (<y> + <height>)
+	if (<x> > (<tile_dims> [0]))
+		<x> = 0
+		<y> = (<y> + <Height>)
 		<row> = (<row> + 1)
 		<column> = 0
 		if (<y> > (<tile_dims> [1]))
@@ -101,52 +101,52 @@ script TileSpriteLoop \{move_x = 1
 		move_y = 0}
 	GetTags
 	Obj_GetID
-	<id> = <objID>
+	<id> = <ObjID>
 	if GotParam \{flip_v}
 		<width> = (<width> * 2)
 	endif
 	if GotParam \{flip_h}
-		<height> = (<height> * 2)
+		<Height> = (<Height> * 2)
 	endif
 	if ((<move_x> > <width>) || (<move_x> < (<width> * -1)))
-		printf \{qs(0xb1db5e53)}
+		printf \{qs("\Lmove_x is greater then the width of the image")}
 		return
 	endif
-	if ((<move_y> > <height>) || (<move_y> < (<height> * -1)))
-		printf \{qs(0x352c22c3)}
+	if ((<move_y> > <Height>) || (<move_y> < (<Height> * -1)))
+		printf \{qs("\Lmove_y is greater then the height of the image")}
 		return
 	endif
-	<X> = 0
+	<x> = 0
 	<y> = 0
 	begin
-	<X> = (<X> + <move_x>)
+	<x> = (<x> + <move_x>)
 	<y> = (<y> + <move_y>)
-	if (<X> > <width>)
-		<X> = (<X> - <width>)
-		legacydomorph {
-			Pos = {((-1.0, 0.0) * <width>) relative}
+	if (<x> > <width>)
+		<x> = (<x> - <width>)
+		LegacyDoMorph {
+			pos = {((-1.0, 0.0) * <width>) relative}
 		}
 	endif
-	if (<X> < (<width> * -1))
-		<X> = (<width> + <X>)
-		legacydomorph {
-			Pos = {((1.0, 0.0) * <width>) relative}
+	if (<x> < (<width> * -1))
+		<x> = (<width> + <x>)
+		LegacyDoMorph {
+			pos = {((1.0, 0.0) * <width>) relative}
 		}
 	endif
-	if (<y> > <height>)
-		<y> = (<y> - <height>)
-		legacydomorph {
-			Pos = {((0.0, -1.0) * <height>) relative}
+	if (<y> > <Height>)
+		<y> = (<y> - <Height>)
+		LegacyDoMorph {
+			pos = {((0.0, -1.0) * <Height>) relative}
 		}
 	endif
-	if (<y> < (<height> * -1))
-		<y> = (<height> + <y>)
-		legacydomorph {
-			Pos = {((0.0, 1.0) * <height>) relative}
+	if (<y> < (<Height> * -1))
+		<y> = (<Height> + <y>)
+		LegacyDoMorph {
+			pos = {((0.0, 1.0) * <Height>) relative}
 		}
 	endif
-	legacydomorph {
-		Pos = (((1.0, 0.0) * ((<Pos> [0]) + <X>)) + ((0.0, 1.0) * ((<Pos> [1]) + <y>)))
+	LegacyDoMorph {
+		pos = (((1.0, 0.0) * ((<pos> [0]) + <x>)) + ((0.0, 1.0) * ((<pos> [1]) + <y>)))
 		time = 0.1
 	}
 	repeat

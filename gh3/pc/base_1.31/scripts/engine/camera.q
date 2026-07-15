@@ -24,11 +24,11 @@ walk_camera_parameters = {
 	focus_pos_max_offset_up = 0.508
 	focus_pos_max_offset_down = 0.76199996
 }
-skater_cam_behind = 0.35560003
-skater_cam_above = 0.101600006
-skater_cam_tilt = 0.18
-skater_cam_slerp = 0.08
-skater_cam_vert_air_slerp = 0.025
+Skater_Cam_Behind = 0.35560003
+Skater_Cam_Above = 0.101600006
+Skater_Cam_Tilt = 0.18
+Skater_Cam_Slerp = 0.08
+Skater_Cam_Vert_Air_Slerp = 0.025
 skater_cam_focus_pos_max_vert_dist = 1.5
 skater_cam_focus_pos_max_offset_up = 1.0
 skater_cam_focus_pos_max_offset_down = 0.5
@@ -36,14 +36,14 @@ skater_cam_pos_lerp = 0.05
 skater_cam_end_ollie_pos_lerp = 0.1
 skater_cam_end_ollie_focus_lerp = 0.1
 skater_cam_end_ollie_frame_count = 7
-skater_cam_grind_lerp = 4.0
+Skater_Cam_Grind_Lerp = 4.0
 focus_mode_cam_height_multiplier = 0.4
 focus_mode_cam_vert_air_override = 0.6
 camera_lock_button_pressed_time = 300
 skater_walking_camera_target_zoom = 1.1
 skater_walking_camera_above_val = 1.651
 skater_cam_lean_out_transition_time = 1.0
-swc_run_cam_tracked_bone = control_root
+swc_run_cam_tracked_bone = Control_Root
 swc_default_focus_height_offset = 1.0
 swc_in_air_cam_above_target = 0.5
 swc_max_cam_height_above_target = 0.5
@@ -82,7 +82,7 @@ swc_cam_offset_look_down = (0.1, 1.4, -0.3)
 swc_focus_offset_look_down = (0.1, -0.5, 0.3)
 swc_cam_offset_look_up = (0.1, 0.0, -0.5)
 swc_focus_offset_look_up = (0.1, 0.8, 0.1)
-skater_camera_undefined = {
+Skater_Camera_Undefined = {
 	horiz_fov = 0.0
 	behind = 0.0
 	above = 0.0
@@ -98,7 +98,7 @@ skater_camera_undefined = {
 	wallride_offset_angle = 0.5
 	name = "undefined"
 }
-skater_camera_standard_medium = {
+Skater_Camera_Standard_Medium = {
 	horiz_fov = 81.0
 	behind = 2.5
 	above = 1.1
@@ -123,7 +123,7 @@ skater_camera_standard_medium = {
 	wallride_offset_angle = 0.5
 	name = "standard"
 }
-skater_camera_standard_far = {
+Skater_Camera_Standard_Far = {
 	horiz_fov = 72.0
 	behind = 1.0
 	above = 0.45000002
@@ -148,7 +148,7 @@ skater_camera_standard_far = {
 	wallride_offset_angle = 0.5
 	name = "far"
 }
-skater_camera_standard_near = {
+Skater_Camera_Standard_Near = {
 	horiz_fov = 88.0
 	behind = 2.1
 	above = 1.2
@@ -173,7 +173,7 @@ skater_camera_standard_near = {
 	wallride_offset_angle = 0.5
 	name = "near"
 }
-skater_camera_standard_medium_ltg = {
+Skater_Camera_Standard_Medium_LTG = {
 	horiz_fov = 72.0
 	behind = 4.2
 	above = 0.6
@@ -198,7 +198,7 @@ skater_camera_standard_medium_ltg = {
 	wallride_offset_angle = 0.5
 	name = "standard ltg"
 }
-skater_camera_2p_vert_medium = {
+Skater_Camera_2P_Vert_Medium = {
 	horiz_fov = 88.0
 	behind = 3.1
 	above = 1.2
@@ -223,7 +223,7 @@ skater_camera_2p_vert_medium = {
 	wallride_offset_angle = 0.5
 	name = "standard"
 }
-skater_camera_2p_vert_far = {
+Skater_Camera_2P_Vert_Far = {
 	horiz_fov = 72.0
 	behind = 6.7
 	above = 1.8
@@ -248,7 +248,7 @@ skater_camera_2p_vert_far = {
 	wallride_offset_angle = 0.5
 	name = "far"
 }
-skater_camera_2p_vert_near = {
+Skater_Camera_2P_Vert_Near = {
 	horiz_fov = 72.0
 	behind = 1.8
 	above = 0.6
@@ -273,7 +273,7 @@ skater_camera_2p_vert_near = {
 	wallride_offset_angle = 0.5
 	name = "near"
 }
-skater_camera_2p_vert_medium_ltg = {
+Skater_Camera_2P_Vert_Medium_LTG = {
 	horiz_fov = 72.0
 	behind = 4.2
 	above = 0.9
@@ -298,7 +298,7 @@ skater_camera_2p_vert_medium_ltg = {
 	wallride_offset_angle = 0.5
 	name = "standard ltg"
 }
-skater_camera_2p_horiz_medium = {
+Skater_Camera_2P_Horiz_Medium = {
 	horiz_fov = 88.0
 	behind = 4.5
 	above = 0.8
@@ -323,7 +323,7 @@ skater_camera_2p_horiz_medium = {
 	wallride_offset_angle = 0.5
 	name = "standard"
 }
-skater_camera_2p_horiz_far = {
+Skater_Camera_2P_Horiz_Far = {
 	horiz_fov = 72.0
 	behind = 7.6
 	above = 1.0
@@ -348,7 +348,7 @@ skater_camera_2p_horiz_far = {
 	wallride_offset_angle = 0.5
 	name = "far"
 }
-skater_camera_2p_horiz_near = {
+Skater_Camera_2P_Horiz_Near = {
 	horiz_fov = 72.0
 	behind = 2.4
 	above = 1.0
@@ -373,7 +373,7 @@ skater_camera_2p_horiz_near = {
 	wallride_offset_angle = 0.5
 	name = "near"
 }
-skater_camera_2p_horiz_medium_ltg = {
+Skater_Camera_2P_Horiz_Medium_LTG = {
 	horiz_fov = 72.0
 	behind = 4.5
 	above = 0.9
@@ -398,54 +398,54 @@ skater_camera_2p_horiz_medium_ltg = {
 	wallride_offset_angle = 0.5
 	name = "standard ltg"
 }
-skater_camera_array = [
-	skater_camera_undefined
-	skater_camera_standard_near
-	skater_camera_standard_medium
-	skater_camera_standard_far
-	skater_camera_standard_medium_ltg
+Skater_Camera_Array = [
+	Skater_Camera_Undefined
+	Skater_Camera_Standard_Near
+	Skater_Camera_Standard_Medium
+	Skater_Camera_Standard_Far
+	Skater_Camera_Standard_Medium_LTG
 ]
-skater_camera_2p_vert_array = [
-	skater_camera_undefined
-	skater_camera_2p_vert_near
-	skater_camera_2p_vert_medium
-	skater_camera_2p_vert_far
-	skater_camera_2p_vert_medium_ltg
+Skater_Camera_2P_Vert_Array = [
+	Skater_Camera_Undefined
+	Skater_Camera_2P_Vert_Near
+	Skater_Camera_2P_Vert_Medium
+	Skater_Camera_2P_Vert_Far
+	Skater_Camera_2P_Vert_Medium_LTG
 ]
-skater_camera_2p_horiz_array = [
-	skater_camera_undefined
-	skater_camera_2p_horiz_near
-	skater_camera_2p_horiz_medium
-	skater_camera_2p_horiz_far
-	skater_camera_2p_horiz_medium_ltg
+Skater_Camera_2P_Horiz_Array = [
+	Skater_Camera_Undefined
+	Skater_Camera_2P_Horiz_Near
+	Skater_Camera_2P_Horiz_Medium
+	Skater_Camera_2P_Horiz_Far
+	Skater_Camera_2P_Horiz_Medium_LTG
 ]
 
 script screen_setup_standard 
-	setscreen \{aspect = 1.3333334
-		angle = camera_fov
+	SetScreen \{Aspect = 1.3333334
+		Angle = camera_fov
 		letterbox = 0}
 	change \{current_screen_mode = standard_screen_mode}
 	printf \{"change to standard"}
 endscript
 
 script screen_setup_widescreen 
-	setscreen \{aspect = 1.7777778
-		angle = $widescreen_camera_fov
+	SetScreen \{Aspect = 1.7777778
+		Angle = $widescreen_camera_fov
 		letterbox = 0}
 	change \{current_screen_mode = widescreen_screen_mode}
 	printf \{"change to widescreen"}
 endscript
 
 script screen_setup_letterbox 
-	setscreen \{aspect = 1.7777778
-		angle = $widescreen_camera_fov
+	SetScreen \{Aspect = 1.7777778
+		Angle = $widescreen_camera_fov
 		letterbox = 1}
 	change \{current_screen_mode = letterbox_screen_mode}
 	printf \{"change to letterbox"}
 endscript
 
 script fake_letterboxing 
-	if NOT gotparam \{remove}
+	if NOT GotParam \{remove}
 		switch ($current_screen_mode)
 			case standard_screen_mode
 			fake_letterboxing_elements
@@ -480,20 +480,20 @@ script fake_letterboxing
 endscript
 
 script fake_letterboxing_elements 
-	if screenelementexists \{id = letterbox_anchor}
-		destroyscreenelement \{id = letterbox_anchor}
+	if ScreenElementExists \{id = letterbox_anchor}
+		DestroyScreenElement \{id = letterbox_anchor}
 	endif
-	if gotparam \{remove}
-		setscreen \{angle = 72.0
-			aspect = 1.3333334}
+	if GotParam \{remove}
+		SetScreen \{Angle = 72.0
+			Aspect = 1.3333334}
 		return
 	else
-		setscreen \{angle = 72.0
-			aspect = 1.3333334}
+		SetScreen \{Angle = 72.0
+			Aspect = 1.3333334}
 	endif
-	setscreenelementlock \{id = root_window
+	SetScreenElementLock \{id = root_window
 		off}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		id = letterbox_anchor
 		parent = root_window
 		z_priority = 999
@@ -505,7 +505,7 @@ script fake_letterboxing_elements
 			left
 			top
 		]}
-	createscreenelement \{type = spriteelement
+	CreateScreenElement \{type = SpriteElement
 		parent = letterbox_anchor
 		texture = white2
 		scale = (100.0, 9.5)
@@ -521,7 +521,7 @@ script fake_letterboxing_elements
 			top
 		]
 		z_priority = 15}
-	createscreenelement \{type = spriteelement
+	CreateScreenElement \{type = SpriteElement
 		parent = letterbox_anchor
 		texture = white2
 		scale = (100.0, 12.0)

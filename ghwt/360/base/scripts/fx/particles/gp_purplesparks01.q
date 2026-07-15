@@ -1,27 +1,27 @@
-gp_purplesparks01 = {
-	Pos = (0.801432, 0.0, 0.257512)
-	Angles = (0.0, 0.0, 0.0)
+GP_PurpleSparks01 = {
+	pos = (0.801432, 0.0, 0.257512)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
-	Attach
-	bone = bone_head
+	attach
+	bone = Bone_Head
 	EmitRangeDims = (0.2, 0.2, 0.0)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, -9.8, 0.0)
+	force = (0.0, -9.8, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	AngleSpread = 360.0
 	LifeRange = (0.5, 1.0)
-	Emit_Rate = 200.0
-	Max = 0
+	emit_rate = 200.0
+	max = 0
 	TimeSeed = 0.0
-	LifeTime = 0.5
-	EmitNum = 0
+	lifeTime = 0.5
+	emitNum = 0
 	FollowEmitter = 0.0
 	FillPath
 	AlwaysEmit
@@ -38,9 +38,9 @@ gp_purplesparks01 = {
 	AlignWithPath
 	PathFollowTime = 0.0
 	History = 2
-	HistoryListCoordinateSpace = World
+	HistoryListCoordinateSpace = world
 	align_to = (1.0, 0.0, 0.0)
-	Color = -1
+	color = -1
 	LOD_Default
 	NoVisibilityTest
 	QuickMaterial = {
@@ -48,8 +48,8 @@ gp_purplesparks01 = {
 		DiffuseTexture = JOW_Spark01
 		SpecularPower = 0
 		TwoSide
-		AlphaCutoff = 16
-		BlendMode = add
+		alphacutoff = 16
+		blendMode = Add
 		Burn
 		BurnValue = 0.7
 		QuadAnimationFPS = 0

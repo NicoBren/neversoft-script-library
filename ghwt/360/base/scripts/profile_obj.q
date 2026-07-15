@@ -1,10 +1,10 @@
 Object_Default_RigidBody = {
 	Bouncy
-	sound_type = Default
+	sound_type = `default`
 }
 Object_Skateable_RigidBody = {
 	Bouncy
-	Tier = interactive
+	tier = interactive
 }
 profile_GO_Aluminum_Can = {
 	Model = 'Props\\GO_Aluminum_Can\\GO_Aluminum_Can.mdl'
@@ -217,7 +217,7 @@ profile_GO_Wreath = {
 }
 profile_GO_SchoolBanner = {
 	Model = 'peds\\props\\school_banner_01.skin'
-	skeletonname = school_banner
+	SkeletonName = school_banner
 	Tree = $GameObj_AnimTree
 	AnimTargets = [
 		Body
@@ -226,123 +226,123 @@ profile_GO_SchoolBanner = {
 }
 profile_GO_SchoolFlag = {
 	Model = 'Props\\default_flag\\flag_diagonal.skin'
-	skeletonname = flag_diagonal
+	SkeletonName = flag_diagonal
 	Tree = $GameObj_AnimTree
 	AnimTargets = [
 		Body
 		BodyTimer
 	]
-	Scale = (6.0, 6.0, 6.0)
+	scale = (6.0, 6.0, 6.0)
 }
 profile_GO_shopsFlag = {
 	Model = 'Props\\default_flag\\flag_vertical.skin'
-	skeletonname = flag_vertical
+	SkeletonName = flag_vertical
 	Tree = $GameObj_AnimTree
 	AnimTargets = [
 		Body
 		BodyTimer
 	]
-	Scale = (4.0, 4.0, 4.0)
+	scale = (4.0, 4.0, 4.0)
 }
 profile_GO_centerFlag01 = {
 	Model = 'Props\\default_flag\\flag_diagonal.skin'
-	skeletonname = flag_diagonal
+	SkeletonName = flag_diagonal
 	Tree = $GameObj_AnimTree
 	AnimTargets = [
 		Body
 		BodyTimer
 	]
-	Scale = (6.0, 6.0, 6.0)
+	scale = (6.0, 6.0, 6.0)
 }
 profile_GO_centerFlag02 = {
 	Model = 'Props\\default_flag\\flag_vertical.skin'
-	skeletonname = flag_vertical
+	SkeletonName = flag_vertical
 	Tree = $GameObj_AnimTree
 	AnimTargets = [
 		Body
 		BodyTimer
 	]
-	Scale = (6.0, 6.0, 6.0)
+	scale = (6.0, 6.0, 6.0)
 }
 profile_GO_centerFlag03 = {
 	Model = 'Props\\default_flag\\flag_vertical.skin'
-	skeletonname = flag_vertical
+	SkeletonName = flag_vertical
 	Tree = $GameObj_AnimTree
 	AnimTargets = [
 		Body
 		BodyTimer
 	]
-	Scale = (6.0, 6.0, 6.0)
+	scale = (6.0, 6.0, 6.0)
 }
 profile_SO_Ball = {
 	Model = 'Props\\SO_Ball\\SO_Ball.mdl'
 	CollisionMode = Geometry
 	mass = 40.0
-	Tier = interactive
+	tier = interactive
 }
 profile_SO_Box = {
 	Model = 'Props\\SO_Box\\SO_Box.mdl'
 	CollisionMode = Geometry
 	mass = 40.0
-	Tier = interactive
+	tier = interactive
 }
 profile_SO_Leaner = {
 	Model = 'Props\\SO_Leaner\\SO_Leaner.mdl'
 	CollisionMode = Geometry
 	mass = 40.0
-	Tier = interactive
+	tier = interactive
 }
 profile_SO_Wedge = {
 	Model = 'Props\\SO_Wedge\\SO_Wedge.mdl'
 	CollisionMode = Geometry
 	mass = 40.0
-	Tier = interactive
+	tier = interactive
 }
 profile_SO_Teter = {
 	Model = 'Props\\SO_Teter\\SO_Teter.mdl'
 	CollisionMode = Geometry
 	mass = 40.0
-	Tier = interactive
+	tier = interactive
 }
 profile_SO_Wall = {
 	Model = 'Props\\SO_Wall\\SO_Wall.mdl'
 	CollisionMode = Geometry
 	mass = 40.0
-	Tier = interactive
+	tier = interactive
 }
 profile_SO_Low_Grind = {
 	Model = 'Props\\SO_Low_Grind\\SO_Low_Grind.mdl'
 	CollisionMode = Geometry
 	mass = 40.0
-	Tier = interactive
+	tier = interactive
 }
 profile_SO_MED_QP = {
 	Model = 'Props\\SO_MED_QP\\SO_MED_QP.mdl'
 	CollisionMode = Geometry
 	mass = 40.0
-	Tier = interactive
+	tier = interactive
 }
 profile_SO_Nata_Pyramid = {
 	Model = 'Props\\SO_Nata_Pyramid\\SO_Nata_Pyramid.mdl'
 	CollisionMode = Geometry
 	mass = 40.0
-	Tier = interactive
+	tier = interactive
 }
 profile_SO_Small_Kicker = {
 	Model = 'Props\\SO_Small_Kicker\\SO_Small_Kicker.mdl'
 	CollisionMode = Geometry
 	mass = 40.0
-	Tier = interactive
+	tier = interactive
 }
 profile_SO_WallPlant = {
 	Model = 'Props\\SO_WallPlant\\SO_WallPlant.mdl'
 	CollisionMode = Geometry
 	mass = 40.0
-	Tier = interactive
+	tier = interactive
 }
 profile_SO_WallRide = {
 	Model = 'Props\\SO_WallRide\\SO_WallRide.mdl'
 	CollisionMode = Geometry
 	mass = 40.0
-	Tier = interactive
+	tier = interactive
 }

@@ -10,7 +10,7 @@ script ui_create_generic_alert_popup pad_choose_script = generic_event_back play
 			{
 				func = <pad_choose_script>
 				func_params = <pad_choose_params>
-				text = qs(0x494b4d7f)
+				text = qs("Continue")
 			}
 		]
 		player_device = <player_device>

@@ -1,23 +1,23 @@
 
 script ui_create_net_signin_popup 
-	if isxenon
-		if netsessionfunc \{func = iscableunplugged}
-			text = qs(0xab79bf04)
+	if isXenon
+		if NetSessionFunc \{func = IsCableUnplugged}
+			text = qs("You are not currently connected to Xbox LIVE. Please connect and try again.")
 		else
-			text = qs(0x43c1068a)
+			text = qs("The current gamer profile is not Xbox LIVE multiplayer enabled. Please sign into an Xbox LIVE multiplayer enabled gamer profile to continue.")
 		endif
 	else
-		text = qs(0x808a0d79)
+		text = qs("You must be signed in to access PLAYSTATION®Network features.")
 	endif
 	create_popup_warning_menu {
-		title = qs(0x2c41c7cf)
+		title = qs("Sign In")
 		textblock = {
 			text = <text>
 		}
 		options = [
 			{
 				func = generic_event_back
-				text = qs(0x494b4d7f)
+				text = qs("Continue")
 			}
 		]
 		no_background
@@ -25,7 +25,7 @@ script ui_create_net_signin_popup
 			{pad_back generic_event_back}
 		]
 	}
-	assignalias id = <menu_id> alias = net_signin_popup
+	AssignAlias id = <menu_id> alias = net_signin_popup
 endscript
 
 script ui_destroy_net_signin_popup 

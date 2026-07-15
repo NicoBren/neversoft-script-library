@@ -29,7 +29,7 @@ default_bass_string_end_properties = {
 	end_move_up_dist = 0.016999999
 }
 string_vibration_table = {
-	gh3_hnd_guit_chord_male_bar1 = [
+	GH3_Hnd_Guit_Chord_male_Bar1 = [
 		1
 		1
 		2
@@ -37,7 +37,7 @@ string_vibration_table = {
 		2
 		1
 	]
-	gh3_hnd_guit_chord_male_bar2 = [
+	GH3_Hnd_Guit_Chord_male_Bar2 = [
 		0
 		1
 		1
@@ -45,7 +45,7 @@ string_vibration_table = {
 		1
 		2
 	]
-	gh3_hnd_guit_chord_male_bar3 = [
+	GH3_Hnd_Guit_Chord_male_Bar3 = [
 		0
 		0
 		2
@@ -53,7 +53,7 @@ string_vibration_table = {
 		1
 		1
 	]
-	gh3_hnd_guit_chord_male_bar4 = [
+	GH3_Hnd_Guit_Chord_male_Bar4 = [
 		1
 		1
 		1
@@ -61,7 +61,7 @@ string_vibration_table = {
 		0
 		0
 	]
-	gh3_hnd_guit_chord_male_bar5 = [
+	GH3_Hnd_Guit_Chord_male_Bar5 = [
 		1
 		2
 		1
@@ -69,7 +69,7 @@ string_vibration_table = {
 		0
 		0
 	]
-	gh3_hnd_guit_chord_male_roll3_1 = [
+	GH3_Hnd_Guit_Chord_male_Roll3_1 = [
 		0
 		0
 		0
@@ -77,7 +77,7 @@ string_vibration_table = {
 		0
 		0
 	]
-	gh3_hnd_guit_chord_male_roll3_2 = [
+	GH3_Hnd_Guit_Chord_male_Roll3_2 = [
 		0
 		0
 		0
@@ -85,7 +85,7 @@ string_vibration_table = {
 		0
 		0
 	]
-	gh3_hnd_guit_chord_male_roll3_3 = [
+	GH3_Hnd_Guit_Chord_male_Roll3_3 = [
 		0
 		0
 		0
@@ -93,7 +93,7 @@ string_vibration_table = {
 		0
 		0
 	]
-	gh3_hnd_guit_chord_male_roll3_4 = [
+	GH3_Hnd_Guit_Chord_male_Roll3_4 = [
 		0
 		0
 		0
@@ -101,7 +101,7 @@ string_vibration_table = {
 		0
 		0
 	]
-	gh3_hnd_guit_chord_fmale_bar1 = [
+	GH3_Hnd_Guit_Chord_fmale_Bar1 = [
 		1
 		1
 		2
@@ -109,7 +109,7 @@ string_vibration_table = {
 		2
 		1
 	]
-	gh3_hnd_guit_chord_fmale_bar2 = [
+	GH3_Hnd_Guit_Chord_fmale_Bar2 = [
 		0
 		1
 		1
@@ -117,7 +117,7 @@ string_vibration_table = {
 		1
 		2
 	]
-	gh3_hnd_guit_chord_fmale_bar3 = [
+	GH3_Hnd_Guit_Chord_fmale_Bar3 = [
 		0
 		0
 		2
@@ -125,7 +125,7 @@ string_vibration_table = {
 		1
 		1
 	]
-	gh3_hnd_guit_chord_fmale_bar4 = [
+	GH3_Hnd_Guit_Chord_fmale_Bar4 = [
 		1
 		1
 		1
@@ -133,7 +133,7 @@ string_vibration_table = {
 		0
 		0
 	]
-	gh3_hnd_guit_chord_fmale_bar5 = [
+	GH3_Hnd_Guit_Chord_fmale_Bar5 = [
 		1
 		2
 		1
@@ -141,7 +141,7 @@ string_vibration_table = {
 		0
 		0
 	]
-	gh3_hnd_guit_chord_fmale_roll3_1 = [
+	GH3_Hnd_Guit_Chord_fmale_Roll3_1 = [
 		0
 		0
 		0
@@ -149,7 +149,7 @@ string_vibration_table = {
 		0
 		0
 	]
-	gh3_hnd_guit_chord_fmale_roll3_2 = [
+	GH3_Hnd_Guit_Chord_fmale_Roll3_2 = [
 		0
 		0
 		0
@@ -157,7 +157,7 @@ string_vibration_table = {
 		0
 		0
 	]
-	gh3_hnd_guit_chord_fmale_roll3_3 = [
+	GH3_Hnd_Guit_Chord_fmale_Roll3_3 = [
 		0
 		0
 		0
@@ -165,7 +165,7 @@ string_vibration_table = {
 		0
 		0
 	]
-	gh3_hnd_guit_chord_fmale_roll3_4 = [
+	GH3_Hnd_Guit_Chord_fmale_Roll3_4 = [
 		0
 		0
 		0
@@ -173,7 +173,7 @@ string_vibration_table = {
 		0
 		0
 	]
-	gh3_hnd_guit_chord_jimi_bar1 = [
+	GH3_Hnd_Guit_Chord_Jimi_Bar1 = [
 		1
 		2
 		2
@@ -181,7 +181,7 @@ string_vibration_table = {
 		1
 		1
 	]
-	gh3_hnd_guit_chord_jimi_bar2 = [
+	GH3_Hnd_Guit_Chord_Jimi_Bar2 = [
 		2
 		1
 		2
@@ -189,7 +189,7 @@ string_vibration_table = {
 		1
 		0
 	]
-	gh3_hnd_guit_chord_jimi_bar3 = [
+	GH3_Hnd_Guit_Chord_Jimi_Bar3 = [
 		1
 		1
 		1
@@ -197,7 +197,7 @@ string_vibration_table = {
 		0
 		0
 	]
-	gh3_hnd_guit_chord_jimi_bar4 = [
+	GH3_Hnd_Guit_Chord_Jimi_Bar4 = [
 		0
 		0
 		0
@@ -205,7 +205,7 @@ string_vibration_table = {
 		1
 		1
 	]
-	gh3_hnd_guit_chord_jimi_bar5 = [
+	GH3_Hnd_Guit_Chord_Jimi_Bar5 = [
 		0
 		0
 		0
@@ -213,7 +213,7 @@ string_vibration_table = {
 		2
 		1
 	]
-	gh3_hnd_guit_chord_jimi_roll3_1 = [
+	GH3_Hnd_Guit_Chord_Jimi_Roll3_1 = [
 		0
 		0
 		1
@@ -221,7 +221,7 @@ string_vibration_table = {
 		0
 		0
 	]
-	gh3_hnd_guit_chord_jimi_roll3_2 = [
+	GH3_Hnd_Guit_Chord_Jimi_Roll3_2 = [
 		0
 		0
 		1
@@ -229,7 +229,7 @@ string_vibration_table = {
 		0
 		0
 	]
-	gh3_hnd_guit_chord_jimi_roll3_3 = [
+	GH3_Hnd_Guit_Chord_Jimi_Roll3_3 = [
 		0
 		0
 		1
@@ -237,7 +237,7 @@ string_vibration_table = {
 		0
 		0
 	]
-	gh3_hnd_guit_chord_jimi_roll3_4 = [
+	GH3_Hnd_Guit_Chord_Jimi_Roll3_4 = [
 		0
 		0
 		1
@@ -245,7 +245,7 @@ string_vibration_table = {
 		0
 		0
 	]
-	gh3_hnd_guit_chord_jimi_empty = [
+	Gh3_hnd_guit_chord_Jimi_Empty = [
 		2
 		2
 		2
@@ -253,7 +253,7 @@ string_vibration_table = {
 		2
 		2
 	]
-	gh3_hnd_guit_chord_male_empty = [
+	Gh3_hnd_guit_chord_male_Empty = [
 		2
 		2
 		2

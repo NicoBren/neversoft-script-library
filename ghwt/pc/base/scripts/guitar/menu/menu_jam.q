@@ -1,95 +1,95 @@
 
 script do_jam_loading 
 	printf \{channel = jam_mode
-		qs(0x983f859b)}
-	setsoundbussparams {crowd_beds = {vol = (($default_bussset.crowd_beds.vol) - 100)} time = 3}
+		qs("\LSTART JAM LOADING")}
+	SetSoundBussParams {Crowd_Beds = {vol = (($Default_BussSet.Crowd_Beds.vol) - 100)} time = 3}
 	if ($jam_view_cam_created = 0)
 		unload_songqpak
 		create_loading_screen \{jam_mode = 1}
 		destroy_band
 		change \{current_level = load_z_studio}
-		load_venue \{block_scripts = 0}
-		if NOT gotparam \{no_band}
+		Load_Venue \{block_scripts = 0}
+		if NOT GotParam \{no_band}
 			change \{jam_mode_band = 1}
 			change \{structurename = player1_status
-				character_id = guitarist}
+				character_id = Guitarist}
 			change \{structurename = player1_status
 				part = guitar}
 			create_band \{async = 1}
 			change \{jam_mode_band = 0}
 		endif
 		apply_band_logo_to_venue \{step = build}
-		wait \{2
+		Wait \{2
 			gameframes}
 		apply_band_logo_to_venue \{step = apply}
 		create_bandname_viewport
-		bandmanager_allchangestance \{stance = stance_a
+		BandManager_AllChangeStance \{stance = Stance_A
 			no_wait}
-		band_setarmanimstrength \{name = guitarist
+		Band_SetArmAnimStrength \{name = Guitarist
 			target = fret_anim_mod
 			strength = 1.0}
-		band_setarmanimstrength \{name = bassist
+		Band_SetArmAnimStrength \{name = bassist
 			target = fret_anim_mod
 			strength = 1.0}
-		band_setarmanimstrength \{name = vocalist
+		Band_SetArmAnimStrength \{name = vocalist
 			target = fret_anim_mod
 			strength = 1.0}
-		drummer :anim_command \{target = drumkit
-			command = applydrumkitdifference_prepareanims
+		Drummer :Anim_Command \{target = DrumKit
+			command = ApplyDrumKitDifference_PrepareAnims
 			params = {
 				anims = [
-					gh_drum_tom_1
-					gh_drum_tom_2
-					gh_drum_snare
-					gh_drum_cymbal_1
-					gh_drum_cymbal_2
-					gh_drum_cymbal_3
-					gh_drum_kick
-					gh_drum_cymbal_hh_open
-					gh_drum_cymbal_hh_closed
+					GH_Drum_Tom_1
+					GH_Drum_Tom_2
+					GH_Drum_Snare
+					GH_Drum_Cymbal_1
+					GH_Drum_Cymbal_2
+					GH_Drum_Cymbal_3
+					GH_Drum_Kick
+					GH_Drum_Cymbal_HH_Open
+					GH_Drum_Cymbal_HH_Closed
 				]
 				hold_list = [
-					gh_drum_cymbal_hh_closed
+					GH_Drum_Cymbal_HH_Closed
 				]
 			}}
 		change \{target_jam_camera_prop = jam_look_at_mixer}
-		wait \{2
+		Wait \{2
 			gameframes}
-		if NOT gotparam \{no_band}
-			if objectexists \{id = drummer}
-				drummer :anim_command \{target = body
-					command = degenerateblend_addbranch
+		if NOT GotParam \{no_band}
+			if ObjectExists \{id = Drummer}
+				Drummer :Anim_Command \{target = Body
+					command = DegenerateBlend_AddBranch
 					params = {
-						tree = $faceoff_drummer_notempo
-						blendduration = 0.0
+						Tree = $faceoff_drummer_notempo
+						BlendDuration = 0.0
 						params = {
-							anim = drum_andy_standardlp_hs_100_01
+							Anim = Drum_Andy_StandardLP_HS_100_01
 						}
 					}}
 			endif
 		endif
 		destroy_bg_viewport
 		setup_bg_viewport
-		playigccam \{name = jam_view_cam
+		PlayIGCCam \{name = jam_view_cam
 			viewport = bg_viewport
 			controlscript = jam_camera_script
-			play_hold = 1}
+			Play_hold = 1}
 		change \{jam_view_cam_created = 1}
 	endif
 	printf \{channel = jam_mode
-		qs(0xbd55d6cd)}
-	wait \{0.5
+		qs("\LDONE JAM LOADING")}
+	Wait \{0.5
 		seconds}
-	setsoundbussparams {crowd_beds = {vol = ($default_bussset.crowd_beds.vol)} time = 1}
+	SetSoundBussParams {Crowd_Beds = {vol = ($Default_BussSet.Crowd_Beds.vol)} time = 1}
 endscript
 
 script jam_init_menu_light_show 
-	lightshow_initeventmappings \{force_pakname = 'z_studio'}
-	lightshow_dummyloop
-	lightshow_settime \{time = 0.0}
-	lightshow_playsnapshot \{save = true
-		usesnapshotpositions = true
-		name = flare_01}
+	LightShow_InitEventMappings \{force_pakname = 'z_studio'}
+	LightShow_DummyLoop
+	LightShow_SetTime \{time = 0.0}
+	LightShow_PlaySnapshot \{save = true
+		UseSnapshotPositions = true
+		name = Flare_01}
 endscript
 
 script create_jam_menu 
@@ -99,85 +99,85 @@ script create_jam_menu
 	if ($jam_view_cam_created = 1)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	jam_init_menu_light_show
 	destroy_all_exploding_text
 	printf \{channel = jam_mode
-		qs(0xca3cd2d6)}
+		qs("\LCREATE JAM MENU")}
 	change \{signin_jam_mode = 0}
-	killcamanim \{name = ch_view_cam}
-	killcamanim \{name = menu_view_cam}
+	KillCamAnim \{name = ch_view_cam}
+	KillCamAnim \{name = menu_view_cam}
 	directorylisting = $jam_curr_directory_listing
 	disable_pause
-	unpausegame
-	menu_music_off
-	bg_crowd_front_end_silence
+	UnPauseGame
+	Menu_Music_Off
+	BG_Crowd_Front_End_Silence
 	if NOT ($target_jam_camera_prop = jam_look_at_mixer)
 		change \{target_jam_camera_prop = jam_look_at_mixer}
 		jam_camera_wait
 	endif
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = jam_container}
-	make_generic_menu \{title = qs(0x67c266fb)
+	make_generic_menu \{title = qs("STUDIO")
 		pad_back_script = menu_jam_back
 		vmenu_id = jam_menu
 		dims = (400.0, 400.0)}
 	add_generic_menu_icon_item \{icon = icon_jam_recording
-		text = qs(0x3a7c1e04)
-		choose_state = uistate_jam_select_song
+		text = qs("Recording Studio")
+		choose_state = UIstate_jam_select_song
 		choose_state_data = {
 			curr_tab = 0
 		}}
 	normal_controller = 0
-	if NOT isdrumcontroller controller = ($primary_controller)
-		if NOT isguitarcontroller controller = ($primary_controller)
+	if NOT IsDrumController controller = ($primary_controller)
+		if NOT IsGuitarController controller = ($primary_controller)
 			<normal_controller> = 1
 		endif
 	endif
 	add_generic_menu_icon_item \{icon = icon_jam_ghmix
-		text = qs(0x886500cd)
-		choose_state = uistate_jam_select_song
+		text = qs("GHMix")
+		choose_state = UIstate_jam_select_song
 		choose_state_data = {
 			curr_tab = 0
 			advanced_record = 1
 		}}
 	add_generic_menu_icon_item \{icon = icon_jam_tutorial
-		text = qs(0x800a3aa0)
+		text = qs("Tutorials")
 		pad_choose_script = jam_goto_tutorials}
 	clean_up_user_control_helpers
-	add_user_control_helper \{text = qs(0xc18d5e76)
+	add_user_control_helper \{text = qs("SELECT")
 		button = green
 		z = 100}
-	add_user_control_helper \{text = qs(0xaf4d5dd2)
+	add_user_control_helper \{text = qs("BACK")
 		button = red
 		z = 100}
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = current_menu}
 	destroy_loading_screen
 	startrendering
 endscript
 
 script jam_picked_ghtunes 
-	generic_event_choose state = uistate_signin data = {device_num = ($primary_controller) allow_back = 1 new_state = uistate_jam_ghtunes jam = 2 require_live = 1}
+	generic_event_choose state = uistate_signin data = {device_num = ($primary_controller) allow_back = 1 new_state = UIstate_jam_ghtunes jam = 2 require_live = 1}
 endscript
 
 script jam_ghmix_failed_dialog 
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = current_menu}
 	clean_up_user_control_helpers
 	destroy_popup_warning_menu
-	if isxenon
-		formattext \{textname = dialog_txt
-			qs(0x8acdea9d)}
-	elseif isps3
-		formattext \{textname = dialog_txt
-			qs(0x8acdea9d)}
+	if isXenon
+		FormatText \{TextName = dialog_txt
+			qs("You must be using a Guitar or Drum controller to access GHMix.")}
+	elseif IsPs3
+		FormatText \{TextName = dialog_txt
+			qs("You must be using a Guitar or Drum controller to access GHMix.")}
 	endif
 	create_popup_warning_menu {
-		title = qs(0x886500cd)
+		title = qs("GHMix")
 		textblock = {
 			text = <dialog_txt>
 			pos = (640.0, 370.0)
@@ -186,7 +186,7 @@ script jam_ghmix_failed_dialog
 		options = [
 			{
 				func = {jam_ghmix_refresh}
-				text = qs(0x320a8d1c)
+				text = qs("GO BACK")
 			}
 		]
 	}
@@ -206,15 +206,15 @@ endscript
 
 script jam_goto_tutorials 
 	<wrong_controller> = 0
-	if NOT isguitarcontroller controller = ($primary_controller)
-		if NOT isdrumcontroller controller = ($primary_controller)
+	if NOT IsGuitarController controller = ($primary_controller)
+		if NOT IsDrumController controller = ($primary_controller)
 			if NOT ($allow_controller_for_all_instruments = 1)
-				launchevent \{type = unfocus
+				LaunchEvent \{type = unfocus
 					target = current_menu}
 				create_popup_warning_menu \{no_background
-					title = qs(0xaa163738)
+					title = qs("WARNING")
 					textblock = {
-						text = qs(0x456d03e4)
+						text = qs("These tutorials require you to be using a Guitar controller or Drum Kit.")
 					}
 					options = [
 						{
@@ -223,7 +223,7 @@ script jam_goto_tutorials
 							}
 							func_params = {
 							}
-							text = qs(0x0e41fe46)
+							text = qs("OK")
 						}
 					]}
 				<wrong_controller> = 1
@@ -238,35 +238,35 @@ endscript
 
 script jam_return_to_jam 
 	destroy_popup_warning_menu
-	add_user_control_helper \{text = qs(0xc18d5e76)
+	add_user_control_helper \{text = qs("SELECT")
 		button = green
 		z = 100}
-	add_user_control_helper \{text = qs(0xaf4d5dd2)
+	add_user_control_helper \{text = qs("BACK")
 		button = red
 		z = 100}
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = current_menu}
 endscript
 
 script menu_jam_back 
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = current_menu}
 	create_loading_screen
-	killcamanim \{name = jam_view_cam}
+	KillCamAnim \{name = jam_view_cam}
 	generic_event_back \{nosound}
 endscript
 
 script destroy_jam_menu 
 	set_focus_color
 	set_unfocus_color
-	if screenelementexists \{id = jam_tutorial_select_container}
-		destroyscreenelement \{id = jam_tutorial_select_container}
+	if ScreenElementExists \{id = jam_tutorial_select_container}
+		DestroyScreenElement \{id = jam_tutorial_select_container}
 	endif
-	if screenelementexists \{id = jam_container}
-		destroyscreenelement \{id = jam_container}
+	if ScreenElementExists \{id = jam_container}
+		DestroyScreenElement \{id = jam_container}
 	endif
 	destroy_generic_menu
-	killspawnedscript \{id = jam_spawns}
+	KillSpawnedScript \{id = jam_spawns}
 	destroy_menu_backdrop
 	destroy_viewport_ui
 endscript
@@ -276,7 +276,7 @@ script jam_menu_get_lefty
 		return \{lefty = 0}
 	endif
 	lefty = 0
-	getplayerinfo <player> lefty_flip
+	GetPlayerInfo <player> lefty_flip
 	return lefty = <lefty_flip>
 endscript
 
@@ -284,21 +284,21 @@ script has_lefty_adj_control_press
 	jam_menu_get_lefty player = <player>
 	if (<lefty> = 0)
 		if (<dir> = up)
-			if controllerpressed up <controller>
+			if ControllerPressed up <controller>
 				return \{true}
 			endif
 		else
-			if controllerpressed down <controller>
+			if ControllerPressed down <controller>
 				return \{true}
 			endif
 		endif
 	else
 		if (<dir> = down)
-			if controllerpressed up <controller>
+			if ControllerPressed up <controller>
 				return \{true}
 			endif
 		else
-			if controllerpressed down <controller>
+			if ControllerPressed down <controller>
 				return \{true}
 			endif
 		endif

@@ -1,53 +1,53 @@
-gp_fx_airstream_01 = {
+GP_FX_Airstream_01 = {
 	pos = (0.0, -0.793325, -0.0)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = textureribbontrail
 	active
 	attach
-	applypositionoffset
-	emitrangedims = (0.0, 0.0, 0.0)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	ApplyPositionOffset
+	EmitRangeDims = (0.0, 0.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, 0.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	radiate
-	anglespread = 80.0
-	liferange = (0.2, 1.0)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	Radiate
+	AngleSpread = 80.0
+	LifeRange = (0.2, 1.0)
 	emit_rate = 10.0
 	max = 0
-	timeseed = 0.0
-	lifetime = 0.0
-	emitnum = 0
-	followemitter = 1.0
-	fillpath
-	emitfunction = onoff
-	emitperiod = 0.1
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 0.0
+	emitNum = 0
+	FollowEmitter = 1.0
+	FillPath
+	EmitFunction = onoff
+	EmitPeriod = 0.1
+	SizeRange = [
 		(0.15, 1.0)
 		(0.05, 1.0)
 	]
-	speedrange = (0.0, 0.0)
-	rotvel = (0.0, 0.0)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	pathfollowtime = 0.01
-	history = 20
-	historylistcoordinatespace = world
+	SpeedRange = (0.0, 0.0)
+	RotVel = (0.0, 0.0)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.01
+	History = 20
+	HistoryListCoordinateSpace = world
 	color = -211
-	lod_default
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = ph_radialglow_01
-		specularpower = 0
+	LOD_Default
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = PH_RadialGlow_01
+		SpecularPower = 0
 		alphacutoff = 1
-		blendmode = add
-		quadanimationfps = 0
+		blendMode = Add
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.72312903, 0.0, -0.0)
 		(-0.72312903, 0.0, -0.0)
 		(-0.54905903, 0.0, -0.0)
@@ -61,7 +61,7 @@ gp_fx_airstream_01 = {
 		(0.64449805, 0.0, -0.0)
 		(0.64449805, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-1
 		-1
 		-1
@@ -71,7 +71,7 @@ gp_fx_airstream_01 = {
 		-256
 		-256
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.38183704
 		0.733153
 		1.0

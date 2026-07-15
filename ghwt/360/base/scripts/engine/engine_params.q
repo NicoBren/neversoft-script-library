@@ -4,15 +4,15 @@ control_pelvis_render_offset = 0
 
 script ToggleControlPelvisRender 
 	if ($control_pelvis_render_offset = 0)
-		Change \{control_pelvis_render_offset = 1}
+		change \{control_pelvis_render_offset = 1}
 	else
-		Change \{control_pelvis_render_offset = 0}
+		change \{control_pelvis_render_offset = 0}
 	endif
 endscript
-qspakmarginforotherlanguages = 100
+QSPakMarginForOtherLanguages = 100
 engine_startup_params = [
 	{
-		Platform = Xenon
+		platform = xenon
 		target_ntsc_framerate = 60
 		gpu_vsync_time_interval = 30
 		pool_text_instances = 1024
@@ -53,13 +53,13 @@ engine_startup_params = [
 		node_statics_buff = 150
 		node_sort_buff = 119
 		node_misc_buff = 700
-		node_2d_buff = 320
+		node_2D_buff = 320
 		node_particle_buff = 2048
 		node_prim_buff = 1024
 		node_light_buff = 100
 	}
 	{
-		Platform = PS3
+		platform = ps3
 		target_ntsc_framerate = 60
 		gpu_vsync_time_interval = 30
 		pool_text_instances = 1024
@@ -105,7 +105,7 @@ engine_startup_params = [
 		node_statics_buff = 150
 		node_sort_buff = 119
 		node_misc_buff = 700
-		node_2d_buff = 320
+		node_2D_buff = 320
 		node_particle_buff = 1300
 		node_prim_buff = 1024
 		node_light_buff = 100
@@ -113,7 +113,7 @@ engine_startup_params = [
 ]
 memory_startup_params = [
 	{
-		Platform = Xenon
+		platform = xenon
 		pool_sizes = [
 			1500
 			2000
@@ -150,7 +150,7 @@ memory_startup_params = [
 		]
 	}
 	{
-		Platform = PS3
+		platform = ps3
 		pool_sizes = [
 			1500
 			2000

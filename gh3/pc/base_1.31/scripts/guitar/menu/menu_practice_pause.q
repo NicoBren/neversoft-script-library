@@ -3,12 +3,12 @@ script create_practice_pause_menu
 	if ($view_mode)
 		return
 	endif
-	if iswinport
+	if IsWinPort
 		change \{winport_in_top_pause_menu = 1}
 	endif
 	safe_create_gh3_pause_menu
 	new_menu scrollid = scrolling_pause vmenuid = vmenu_pause menu_pos = (0.0, 245.0) spacing = -12 use_backdrop = (0)
-	setscreenelementprops \{id = vmenu_pause
+	SetScreenElementProps \{id = vmenu_pause
 		internal_just = [
 			center
 			top
@@ -17,8 +17,8 @@ script create_practice_pause_menu
 	z = 100
 	create_pause_menu_frame x_scale = 1.2 z = (<z> - 10)
 	scale = 1
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = vmenu_pause
 		font = fontgrid_title_gh3
 		scale = <scale>
@@ -35,8 +35,8 @@ script create_practice_pause_menu
 			{pad_choose gh3_start_pressed}
 		]
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = vmenu_pause
 		font = fontgrid_title_gh3
 		scale = <scale>
@@ -53,8 +53,8 @@ script create_practice_pause_menu
 			{pad_choose ui_flow_manager_respond_to_action params = {action = select_restart}}
 		]
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = vmenu_pause
 		font = fontgrid_title_gh3
 		scale = <scale>
@@ -71,8 +71,8 @@ script create_practice_pause_menu
 			{pad_choose ui_flow_manager_respond_to_action params = {action = select_change_speed}}
 		]
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = vmenu_pause
 		font = fontgrid_title_gh3
 		scale = <scale>
@@ -89,8 +89,8 @@ script create_practice_pause_menu
 			{pad_choose ui_flow_manager_respond_to_action params = {action = select_change_section}}
 		]
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = vmenu_pause
 		font = fontgrid_title_gh3
 		scale = <scale>
@@ -107,8 +107,8 @@ script create_practice_pause_menu
 			{pad_choose ui_flow_manager_respond_to_action params = {action = select_new_song}}
 		]
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = vmenu_pause
 		font = fontgrid_title_gh3
 		scale = <scale>
@@ -128,16 +128,16 @@ script create_practice_pause_menu
 	}
 	switch ($came_to_practice_from)
 		case career
-		quit_id :setprops \{text = "QUIT TO CAREER SETLIST"}
+		quit_id :SetProps \{text = "QUIT TO CAREER SETLIST"}
 		case quickplay
-		quit_id :setprops \{text = "QUIT TO QUICKPLAY SETLIST"}
+		quit_id :SetProps \{text = "QUIT TO QUICKPLAY SETLIST"}
 	endswitch
 endscript
 
 script destroy_practice_pause_menu 
 	destroy_menu \{menu_id = scrolling_pause}
 	destroy_menu \{menu_id = pause_menu_frame_container}
-	if iswinport
+	if IsWinPort
 		change \{winport_in_top_pause_menu = 1}
 	endif
 endscript

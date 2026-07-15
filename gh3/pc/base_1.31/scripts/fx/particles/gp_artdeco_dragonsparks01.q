@@ -1,58 +1,58 @@
-gp_artdeco_dragonsparks01 = {
+GP_ArtDeco_DragonSparks01 = {
 	pos = (0.003022, 0.730469, -0.788721)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
+	CreatedAtStart
 	attach
-	align
-	applypositionoffset
-	attachobject = z_artdeco_trg_geo_dragon
-	bone = bone_dragon_jaw
-	emitrangedims = (0.2, 0.2, 0.2)
-	emit_target = (0.0, 0.0, -1.0)
-	enablerotate
-	emitangle = (40.0, 0.0, 0.0)
+	Align
+	ApplyPositionOffset
+	AttachObject = Z_ArtDeco_TRG_Geo_Dragon
+	bone = Bone_Dragon_Jaw
+	EmitRangeDims = (0.2, 0.2, 0.2)
+	emit_Target = (0.0, 0.0, -1.0)
+	EnableRotate
+	EmitAngle = (40.0, 0.0, 0.0)
 	force = (0.0, 3.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 25.0
-	liferange = (0.8, 1.1)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 25.0
+	LifeRange = (0.8, 1.1)
 	emit_rate = 64.0
 	max = 0
-	timeseed = 0.0
-	lifetime = 0.0
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 0.0
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.05, 0.05)
 		(0.05, 0.05)
 	]
-	speedrange = (4.0, 6.0)
-	rotvel = (0.0, 0.0)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	pathfollowtime = 0.2
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (4.0, 6.0)
+	RotVel = (0.0, 0.0)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.2
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -1
-	lod_default
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = jow_spark02
-		specularpower = 0
+	LOD_Default
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = JOW_Spark02
+		SpecularPower = 0
 		alphacutoff = 1
-		blendmode = add
-		sortgroup = 3
-		draworder = 20.0
-		quadanimationfps = 0
+		blendMode = Add
+		SortGroup = 3
+		DrawOrder = 20.0
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.48496202, 0.0, -0.0)
 		(-0.48496202, 0.0, -0.0)
 		(-0.441017, 0.0, -0.0)
@@ -63,7 +63,7 @@ gp_artdeco_dragonsparks01 = {
 		(1.051219, 0.0, -0.0)
 		(1.051219, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-8126209
 		-5242625
 		-12517121
@@ -71,7 +71,7 @@ gp_artdeco_dragonsparks01 = {
 		-16777216
 		-600834048
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.585781
 		1.0
 	]

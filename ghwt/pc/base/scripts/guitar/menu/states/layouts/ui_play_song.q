@@ -1,11 +1,11 @@
 
 script ui_create_play_song \{type = quickplay}
 	printf \{'ui_create_play_song'}
-	menu_music_off
+	Menu_Music_Off
 	change \{unknown_drum_type = 0}
 	i = 1
 	begin
-	usefourlanehighway {player = <i> reset}
+	UseFourLaneHighway {player = <i> reset}
 	i = (<i> + 1)
 	repeat ($current_num_players)
 	change \{band_builder_current_gig_genre = none}
@@ -15,36 +15,36 @@ script ui_create_play_song \{type = quickplay}
 		spawn_player_drop_listeners \{drop_player_script = play_song_drop_player
 			end_game_script = play_song_game_over}
 	endif
-	if gotparam \{progression_flag}
+	if GotParam \{progression_flag}
 		change current_progression_flag = <progression_flag>
 		change current_gig_number = <gig_num>
 		get_progression_globals <progression_flag>
-		formattext checksumname = tiername 'tier%d' d = <gig_num>
-		if gotparam \{song_checksum}
-			setglobaltags progression params = {current_tier = <gig_num> current_song_count = <song_index>}
+		FormatText checksumname = tiername 'tier%d' d = <gig_num>
+		if GotParam \{song_checksum}
+			SetGlobalTags Progression params = {current_tier = <gig_num> current_song_count = <song_index>}
 			change current_song = <song_checksum>
 		else
-			setglobaltags progression params = {current_tier = <gig_num> current_song_count = 0}
+			SetGlobalTags Progression params = {current_tier = <gig_num> current_song_count = 0}
 			change current_song = ($<tier_global>.<tiername>.songs [0])
 		endif
-		if gotparam \{selected_level}
+		if GotParam \{selected_level}
 			change current_level = <selected_level>
 		else
 			change current_level = ($<tier_global>.<tiername>.level)
 		endif
 		printstruct ($<tier_global>.<tiername>)
-		if structurecontains structure = ($<tier_global>.<tiername>) genre
+		if StructureContains Structure = ($<tier_global>.<tiername>) genre
 			change band_builder_current_gig_genre = ($<tier_global>.<tiername>.genre)
 		endif
-		progression_cashmilestonesclear
-		progression_cleardetailedstatsforgig
+		Progression_CashMilestonesClear
+		Progression_ClearDetailedStatsForGig
 		progression_reset_new_unlocks
 		ui_gig_cash_clear_gig_earnings
 	else
-		if gotparam \{selected_level}
+		if GotParam \{selected_level}
 			change current_level = <selected_level>
 		endif
-		progression_cashmilestonesclear
+		Progression_CashMilestonesClear
 		ui_gig_cash_clear_gig_earnings
 	endif
 	spawnscriptnow ui_create_play_song_spawned params = <...>
@@ -114,7 +114,7 @@ script ui_create_play_song_spawned
 endscript
 
 script play_song_drop_player 
-	printf \{qs(0xea85de59)}
+	printf \{qs("\L---play_song_drop_player")}
 	spawnscriptnow play_song_drop_player_spawned params = {<...>}
 endscript
 
@@ -130,7 +130,7 @@ script play_song_game_over
 endscript
 
 script play_song_game_over_spawned 
-	printf \{qs(0x849a0785)}
+	printf \{qs("\L---play_song_game_over_spawned")}
 	change \{net_ready_to_start = 1}
 	wait_for_safe_shutdown
 	gameplay_end_game <...>

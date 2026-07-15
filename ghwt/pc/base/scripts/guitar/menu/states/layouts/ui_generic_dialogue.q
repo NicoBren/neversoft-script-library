@@ -10,12 +10,12 @@ script ui_create_generic_dialogue \{choose_yes_func = nullscript
 			{
 				func = <choose_no_func>
 				func_params = <choose_no_params>
-				text = qs(0x47157885)
+				text = qs("No")
 			}
 			{
 				func = <choose_yes_func>
 				func_params = <choose_yes_params>
-				text = qs(0x6d562a67)
+				text = qs("Yes")
 			}
 		]
 		no_background
@@ -25,22 +25,22 @@ script ui_create_generic_dialogue \{choose_yes_func = nullscript
 			{pad_back generic_event_back}]
 	}
 	clean_up_user_control_helpers
-	if gotparam \{highlight_no}
-		launchevent \{type = unfocus
+	if GotParam \{highlight_no}
+		LaunchEvent \{type = unfocus
 			target = pu_warning_vmenu}
-		launchevent \{type = focus
+		LaunchEvent \{type = focus
 			target = pu_warning_vmenu
 			data = {
 				child_index = 0
 			}}
 	endif
-	add_user_control_helper \{text = qs(0xc18d5e76)
+	add_user_control_helper \{text = qs("SELECT")
 		button = green
 		z = 100000}
-	add_user_control_helper \{text = qs(0xaf4d5dd2)
+	add_user_control_helper \{text = qs("BACK")
 		button = red
 		z = 100000}
-	soundevent \{event = ui_sfx_select}
+	SoundEvent \{event = ui_sfx_select}
 endscript
 
 script ui_destroy_generic_dialogue 

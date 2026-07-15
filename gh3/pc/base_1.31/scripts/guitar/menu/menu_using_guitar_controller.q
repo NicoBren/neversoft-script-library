@@ -3,48 +3,48 @@ menu_using_guitar_controller_kb = 0
 
 script create_using_guitar_controller_menu \{keyboard = 0}
 	change menu_using_guitar_controller_kb = <keyboard>
-	create_menu_backdrop \{texture = boot_usingguitar_bg}
-	createscreenelement \{type = containerelement
+	create_menu_backdrop \{texture = boot_usingGuitar_BG}
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = ugc_container
 		pos = (0.0, 0.0)}
-	guitar_tex = boot_usingguitar_gtr_lespaul
-	getplatform
+	guitar_tex = boot_usingGuitar_gtr_LesPaul
+	GetPlatform
 	switch <platform>
 		case ps3
-		<guitar_tex> = boot_usingguitar_gtr_lespaul_ps3
+		<guitar_tex> = boot_usingGuitar_gtr_LesPaul_PS3
 	endswitch
 	if ($menu_using_guitar_controller_kb = 1)
-		if notismacport
-			guitar_tex = boot_usingkeyboard
-			if german
-				guitar_tex = boot_usingkeyboard_g
-			elseif french
-				guitar_tex = boot_usingkeyboard_f
-			elseif italian
-				guitar_tex = boot_usingkeyboard_i
-			elseif spanish
-				guitar_tex = boot_usingkeyboard_s
-			elseif korean
-				guitar_tex = boot_usingkeyboard_k
+		if NotIsMacPort
+			guitar_tex = boot_usingKeyboard
+			if German
+				guitar_tex = boot_usingKeyboard_g
+			elseif French
+				guitar_tex = boot_usingKeyboard_f
+			elseif Italian
+				guitar_tex = boot_usingKeyboard_i
+			elseif Spanish
+				guitar_tex = boot_usingKeyboard_s
+			elseif Korean
+				guitar_tex = boot_usingKeyboard_k
 			endif
 		else
-			guitar_tex = boot_usingmackeyboard
-			if german
-				guitar_tex = boot_usingmackeyboard_g
-			elseif french
-				guitar_tex = boot_usingmackeyboard_f
-			elseif italian
-				guitar_tex = boot_usingmackeyboard_i
-			elseif spanish
-				guitar_tex = boot_usingmackeyboard_s
+			guitar_tex = boot_usingMacKeyboard
+			if German
+				guitar_tex = boot_usingMacKeyboard_g
+			elseif French
+				guitar_tex = boot_usingMacKeyboard_f
+			elseif Italian
+				guitar_tex = boot_usingMacKeyboard_i
+			elseif Spanish
+				guitar_tex = boot_usingMacKeyboard_s
 			endif
 		endif
 	endif
 	if ($menu_using_guitar_controller_kb = 1)
-		displaysprite parent = ugc_container tex = <guitar_tex> pos = (665.0, 510.0) just = [center center] z = 1 scale = (1.2, 1.2)
-		displaysprite \{parent = ugc_container
-			tex = boot_usingkeyboard_illo
+		displaySprite parent = ugc_container tex = <guitar_tex> pos = (665.0, 510.0) just = [center center] z = 1 scale = (1.2, 1.2)
+		displaySprite \{parent = ugc_container
+			tex = boot_usingKeyboard_illo
 			pos = (640.0, 240.0)
 			just = [
 				center
@@ -52,9 +52,9 @@ script create_using_guitar_controller_menu \{keyboard = 0}
 			]
 			z = 1}
 	else
-		displaysprite parent = ugc_container tex = <guitar_tex> pos = (660.0, 530.0) just = [center center] z = 1
-		displaysprite \{parent = ugc_container
-			tex = boot_usingguitar_illo
+		displaySprite parent = ugc_container tex = <guitar_tex> pos = (660.0, 530.0) just = [center center] z = 1
+		displaySprite \{parent = ugc_container
+			tex = boot_usingGuitar_illo
 			pos = (640.0, 270.0)
 			just = [
 				center
@@ -62,7 +62,7 @@ script create_using_guitar_controller_menu \{keyboard = 0}
 			]
 			z = 1}
 	endif
-	displaysprite \{parent = ugc_container
+	displaySprite \{parent = ugc_container
 		id = bg_helper
 		tex = white
 		rgba = [
@@ -77,7 +77,7 @@ script create_using_guitar_controller_menu \{keyboard = 0}
 			top
 		]
 		z = 0.5}
-	displaytext \{parent = ugc_container
+	displayText \{parent = ugc_container
 		id = bg_helper_text
 		font = text_a4
 		rgba = [
@@ -114,78 +114,78 @@ endscript
 script destroy_using_guitar_controller_menu 
 	destroy_menu \{menu_id = ugc_container}
 	destroy_menu_backdrop
-	killspawnedscript \{name = go_through_using_guitar_text}
-	killspawnedscript \{name = check_for_any_input}
+	KillSpawnedScript \{name = go_through_using_guitar_text}
+	KillSpawnedScript \{name = check_for_any_input}
 endscript
 
 script go_through_using_guitar_text 
 	max_width = 200
 	begin
-	if screenelementexists \{id = bg_helper}
-		setscreenelementprops \{id = bg_helper
+	if ScreenElementExists \{id = bg_helper}
+		SetScreenElementProps \{id = bg_helper
 			pos = (406.0, 135.0)}
 	endif
-	if screenelementexists \{id = bg_helper_text}
+	if ScreenElementExists \{id = bg_helper_text}
 		if ($menu_using_guitar_controller_kb = 1)
-			setscreenelementprops \{id = bg_helper_text
+			SetScreenElementProps \{id = bg_helper_text
 				pos = (407.0, 130.0)
 				text = "1) BOOT UP"}
 		else
-			setscreenelementprops \{id = bg_helper_text
+			SetScreenElementProps \{id = bg_helper_text
 				pos = (407.0, 130.0)
 				text = "1) STRAP ON"}
 		endif
-		getscreenelementdims \{id = bg_helper_text}
-		setscreenelementprops \{id = bg_helper_text
+		GetScreenElementDims \{id = bg_helper_text}
+		SetScreenElementProps \{id = bg_helper_text
 			scale = 1}
 		if (<width> > <max_width>)
-			fit_text_in_rectangle id = bg_helper_text dims = (<max_width> * (1.0, 0.0) + <height> * (0.0, 1.0))
+			fit_text_in_rectangle id = bg_helper_text dims = (<max_width> * (1.0, 0.0) + <Height> * (0.0, 1.0))
 		else
-			setscreenelementprops \{id = bg_helper_text
+			SetScreenElementProps \{id = bg_helper_text
 				scale = 0.5}
 		endif
 	endif
-	wait \{2
+	Wait \{2
 		seconds}
-	if screenelementexists \{id = bg_helper}
-		setscreenelementprops \{id = bg_helper
+	if ScreenElementExists \{id = bg_helper}
+		SetScreenElementProps \{id = bg_helper
 			pos = (639.0, 135.0)}
 	endif
-	if screenelementexists \{id = bg_helper_text}
-		setscreenelementprops \{id = bg_helper_text
+	if ScreenElementExists \{id = bg_helper_text}
+		SetScreenElementProps \{id = bg_helper_text
 			pos = (640.0, 130.0)
 			text = "2) BANG HEAD"}
-		getscreenelementdims \{id = bg_helper_text}
-		setscreenelementprops \{id = bg_helper_text
+		GetScreenElementDims \{id = bg_helper_text}
+		SetScreenElementProps \{id = bg_helper_text
 			scale = 1}
 		if (<width> > <max_width>)
-			fit_text_in_rectangle id = bg_helper_text dims = (<max_width> * (1.0, 0.0) + <height> * (0.0, 1.0))
+			fit_text_in_rectangle id = bg_helper_text dims = (<max_width> * (1.0, 0.0) + <Height> * (0.0, 1.0))
 		else
-			setscreenelementprops \{id = bg_helper_text
+			SetScreenElementProps \{id = bg_helper_text
 				scale = 0.5}
 		endif
 	endif
-	wait \{2
+	Wait \{2
 		seconds}
-	if screenelementexists \{id = bg_helper}
-		setscreenelementprops \{id = bg_helper
+	if ScreenElementExists \{id = bg_helper}
+		SetScreenElementProps \{id = bg_helper
 			pos = (872.0, 135.0)}
 	endif
-	if screenelementexists \{id = bg_helper_text}
-		setscreenelementprops \{id = bg_helper_text
+	if ScreenElementExists \{id = bg_helper_text}
+		SetScreenElementProps \{id = bg_helper_text
 			pos = (873.0, 130.0)
 			text = "3) LOSE CONTROL"}
-		getscreenelementdims \{id = bg_helper_text}
-		setscreenelementprops \{id = bg_helper_text
+		GetScreenElementDims \{id = bg_helper_text}
+		SetScreenElementProps \{id = bg_helper_text
 			scale = 1}
 		if (<width> > <max_width>)
-			fit_text_in_rectangle id = bg_helper_text dims = (<max_width> * (1.0, 0.0) + <height> * (0.0, 1.0))
+			fit_text_in_rectangle id = bg_helper_text dims = (<max_width> * (1.0, 0.0) + <Height> * (0.0, 1.0))
 		else
-			setscreenelementprops \{id = bg_helper_text
+			SetScreenElementProps \{id = bg_helper_text
 				scale = 0.5}
 		endif
 	endif
-	wait \{2
+	Wait \{2
 		seconds}
 	repeat
 endscript
@@ -195,8 +195,8 @@ script menu_using_guitar_controller_add_text_start
 	text1_pos = (785.0, 594.0)
 	text2 = "button"
 	text2_pos = (785.0, 627.0)
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		text = <text1>
 		pos = <text1_pos>
 		parent = ugc_container
@@ -205,14 +205,14 @@ script menu_using_guitar_controller_add_text_start
 		just = [right top]
 		scale = (0.7, 0.7)
 	}
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	if (<width> > 80)
 		extra_space = (<width> - 80)
-		getscreenelementprops id = <id>
-		setscreenelementprops id = <id> pos = (<pos> - <extra_space> * (0.5, 0.0))
+		GetScreenElementProps id = <id>
+		SetScreenElementProps id = <id> pos = (<pos> - <extra_space> * (0.5, 0.0))
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		text = <text2>
 		pos = <text2_pos>
 		parent = ugc_container
@@ -228,15 +228,15 @@ script menu_using_guitar_controller_add_text_back
 	text1_pos = (459.0, 592.0)
 	text2 = "Red Button"
 	text2_pos = (459.0, 625.0)
-	getenterbuttonassignment
+	GetEnterButtonAssignment
 	if (<assignment> = circle)
 		text1 = "CONTINUE"
 		text1_pos = (459.0, 592.0)
 		text2 = "Red Button"
 		text2_pos = (459.0, 625.0)
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		text = <text1>
 		pos = <text1_pos>
 		parent = ugc_container
@@ -245,8 +245,8 @@ script menu_using_guitar_controller_add_text_back
 		just = [left top]
 		scale = (0.7, 0.7)
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		text = <text2>
 		pos = <text2_pos>
 		parent = ugc_container
@@ -262,15 +262,15 @@ script menu_using_guitar_controller_add_text_continue
 	text1_pos = (397.0, 592.0)
 	text2 = "Green Button"
 	text2_pos = (397.0, 625.0)
-	getenterbuttonassignment
+	GetEnterButtonAssignment
 	if (<assignment> = circle)
 		text1 = "BACK"
 		text1_pos = (397.0, 592.0)
 		text2 = "Green Button"
 		text2_pos = (397.0, 625.0)
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		text = <text1>
 		pos = <text1_pos>
 		parent = ugc_container
@@ -279,14 +279,14 @@ script menu_using_guitar_controller_add_text_continue
 		just = [right top]
 		scale = (0.7, 0.7)
 	}
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	if (<width> > 125)
 		extra_space = (<width> - 125)
-		getscreenelementprops id = <id>
-		setscreenelementprops id = <id> pos = (<pos> - <extra_space> * (0.5, 0.0))
+		GetScreenElementProps id = <id>
+		SetScreenElementProps id = <id> pos = (<pos> - <extra_space> * (0.5, 0.0))
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		text = <text2>
 		pos = <text2_pos>
 		parent = ugc_container
@@ -302,8 +302,8 @@ script menu_using_guitar_controller_add_text_up_down
 	text1_pos = (565.0, 409.0)
 	text2 = "Strum Bar"
 	text2_pos = (565.0, 442.0)
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		text = <text1>
 		pos = <text1_pos>
 		parent = ugc_container
@@ -312,13 +312,13 @@ script menu_using_guitar_controller_add_text_up_down
 		just = [center top]
 		scale = (0.7, 0.7)
 	}
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	if (<width> > 180)
-		setscreenelementprops id = <id> scale = 1
-		fit_text_in_rectangle id = <id> only_if_larger_x = 1 dims = ((180.0, 0.0) + <height> * (0.0, 1.0))
+		SetScreenElementProps id = <id> scale = 1
+		fit_text_in_rectangle id = <id> only_if_larger_x = 1 dims = ((180.0, 0.0) + <Height> * (0.0, 1.0))
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		text = <text2>
 		pos = <text2_pos>
 		parent = ugc_container
@@ -327,10 +327,10 @@ script menu_using_guitar_controller_add_text_up_down
 		just = [center top]
 		scale = 0.6
 	}
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	if (<width> > 180)
-		setscreenelementprops id = <id> scale = 1
-		fit_text_in_rectangle id = <id> only_if_larger_x = 1 dims = ((180.0, 0.0) + <height> * (0.0, 1.0))
+		SetScreenElementProps id = <id> scale = 1
+		fit_text_in_rectangle id = <id> only_if_larger_x = 1 dims = ((180.0, 0.0) + <Height> * (0.0, 1.0))
 	endif
 endscript
 
@@ -339,8 +339,8 @@ script menu_using_guitar_controller_add_text_tilt_starpower
 	text1_pos = (290.0, 390.0)
 	text2 = "for Star Power"
 	text2_pos = (290.0, 423.0)
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		text = <text1>
 		pos = <text1_pos>
 		parent = ugc_container
@@ -349,13 +349,13 @@ script menu_using_guitar_controller_add_text_tilt_starpower
 		just = [left top]
 		scale = (0.7, 0.7)
 	}
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	if (<width> > 180)
-		setscreenelementprops id = <id> scale = 1
-		fit_text_in_rectangle id = <id> only_if_larger_x = 1 dims = ((180.0, 0.0) + <height> * (0.0, 1.0))
+		SetScreenElementProps id = <id> scale = 1
+		fit_text_in_rectangle id = <id> only_if_larger_x = 1 dims = ((180.0, 0.0) + <Height> * (0.0, 1.0))
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		text = <text2>
 		pos = <text2_pos>
 		parent = ugc_container
@@ -364,14 +364,14 @@ script menu_using_guitar_controller_add_text_tilt_starpower
 		just = [left top]
 		scale = 0.6
 	}
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	if (<width> > 180)
-		setscreenelementprops id = <id> scale = 1
-		fit_text_in_rectangle id = <id> only_if_larger_x = 1 dims = ((180.0, 0.0) + <height> * (0.0, 1.0))
+		SetScreenElementProps id = <id> scale = 1
+		fit_text_in_rectangle id = <id> only_if_larger_x = 1 dims = ((180.0, 0.0) + <Height> * (0.0, 1.0))
 	endif
-	createscreenelement \{type = spriteelement
+	CreateScreenElement \{type = SpriteElement
 		parent = ugc_container
-		texture = boot_usingguitar_arrow
+		texture = boot_usingGuitar_arrow
 		pos = (275.0, 480.0)
 		just = [
 			right
@@ -388,8 +388,8 @@ script menu_using_guitar_controller_add_text_header
 		text2 = "USING THE GUITAR CONTROLLER"
 	endif
 	text2_pos = (660.0, 95.0)
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		text = <text1>
 		pos = <text1_pos>
 		parent = ugc_container
@@ -398,8 +398,8 @@ script menu_using_guitar_controller_add_text_header
 		just = [center top]
 		scale = (1.4, 1.0)
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		text = <text2>
 		pos = <text2_pos>
 		parent = ugc_container

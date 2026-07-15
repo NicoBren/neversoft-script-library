@@ -1,51 +1,51 @@
-gp_fx_firereflections_rotated = {
+GP_FX_FireReflections_Rotated = {
 	pos = (0.086252, 3.072762, -5.58696)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	emitrangedims = (3.0, 3.0, 0.0)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	EmitRangeDims = (3.0, 3.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, 0.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 45.0
-	liferange = (0.4, 0.7)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 45.0
+	LifeRange = (0.4, 0.7)
 	emit_rate = 10.0
 	max = 2
-	timeseed = 0.0
-	lifetime = 0.0
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 0.0
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(8.0, 8.0)
 		(8.0, 8.0)
 	]
-	speedrange = (0.0, 0.0)
-	rotvel = (0.0, 0.0)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	pathfollowtime = 0.0
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (0.0, 0.0)
+	RotVel = (0.0, 0.0)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.0
+	History = 2
+	HistoryListCoordinateSpace = world
 	align_to = (0.0, 0.0, 1.0)
 	color = -5242625
-	lod_default
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = ph_firetendrils_rotated
-		specularpower = 0
+	LOD_Default
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = PH_FireTendrils_rotated
+		SpecularPower = 0
 		alphacutoff = 1
-		blendmode = brighten
-		quadanimationfps = 1
+		blendMode = brighten
+		QuadAnimationFPS = 1
 	}
-	knot = [
+	Knot = [
 		(0.0, 0.0, 2.1315458)
 		(0.0, 0.0, 2.1315458)
 		(0.0, 0.0, 1.7969402)
@@ -59,7 +59,7 @@ gp_fx_firereflections_rotated = {
 		(0.0, 0.0, -2.30867)
 		(0.0, 0.0, -2.30867)
 	]
-	particlecolor = [
+	ParticleColor = [
 		0
 		0
 		-1
@@ -69,7 +69,7 @@ gp_fx_firereflections_rotated = {
 		0
 		0
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.226074
 		0.6684111
 		1.0

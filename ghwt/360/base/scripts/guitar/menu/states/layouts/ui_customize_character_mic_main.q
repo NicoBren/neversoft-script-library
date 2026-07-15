@@ -1,10 +1,10 @@
 
 script ui_create_customize_character_mic_main 
 	make_generic_menu \{vmenu_id = create_customize_character_mic_vmenu
-		title = qs(0x3490b188)
+		title = qs("CHOOSE MIC")
 		show_history
 		hist_tex = icon_customize}
-	spawnscript \{generic_menu_animate_in}
+	SpawnScript \{generic_menu_animate_in}
 	setup_cas_menu_handlers \{vmenu_id = create_customize_character_mic_vmenu
 		camera_list = [
 			'customize_character_mic'
@@ -14,11 +14,11 @@ script ui_create_customize_character_mic_main
 		]
 		zoom_camera = 'customize_mic_Zoom'}
 	add_generic_menu_icon_item \{icon = icon_mic
-		text = qs(0xc0b34c9f)
-		choose_state = uistate_popout_select_part
+		text = qs("MIC")
+		choose_state = UIstate_popout_select_part
 		choose_state_data = {
-			text = qs(0xc0b34c9f)
-			part = cas_mic
+			text = qs("MIC")
+			part = CAS_Mic
 			hist_tex = icon_mic
 			is_popup
 			cam_name = 'customize_microphone'
@@ -29,15 +29,15 @@ script ui_create_customize_character_mic_main
 				'customize_microphone_L'
 			]
 			zoom_camera = 'customize_mic_Zoom'
-			stance = stance_select_microphone
-			return_stance = stance_select_mic
+			stance = Stance_Select_Microphone
+			return_stance = Stance_Select_Mic
 		}}
 	add_generic_menu_icon_item \{icon = icon_mic_stand
-		text = qs(0xafbbc27e)
-		choose_state = uistate_popout_select_part
+		text = qs("MIC STAND")
+		choose_state = UIstate_popout_select_part
 		choose_state_data = {
-			text = qs(0xafbbc27e)
-			part = cas_mic_stand
+			text = qs("MIC STAND")
+			part = CAS_Mic_Stand
 			hist_tex = icon_mic_stand
 			is_popup
 			cam_name = 'customize_character_mic'
@@ -48,14 +48,14 @@ script ui_create_customize_character_mic_main
 				'customize_character_mic_L'
 			]
 			zoom_camera = 'customize_mic_Zoom'
-			stance = stance_select_mic
-			return_stance = stance_select_mic
+			stance = Stance_Select_Mic
+			return_stance = Stance_Select_Mic
 		}}
 	menu_finish \{car_helper_text}
-	getcurrentcasobject
-	printf \{qs(0xcb0dee4f)}
-	bandmanager_changestance Name = <cas_object> stance = stance_select_mic no_wait
-	LaunchEvent Type = focus target = create_customize_character_mic_vmenu data = {child_index = <selected_index>}
+	GetCurrentCASObject
+	printf \{qs("\L---------------------------------Mic-------------------------------------------")}
+	BandManager_ChangeStance name = <cas_object> stance = Stance_Select_Mic no_wait
+	LaunchEvent type = focus target = create_customize_character_mic_vmenu data = {child_index = <selected_index>}
 endscript
 
 script ui_destroy_customize_character_mic_main 

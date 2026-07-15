@@ -60,13 +60,13 @@ meta_array = [
 script debug_show_buttons \{scale = 0.8
 		z_priority = 100
 		padding_scale = 1.5}
-	setscreenelementlock \{off
+	SetScreenElementLock \{off
 		id = root_window}
-	if screenelementexists \{id = button_container}
-		destroyscreenelement \{id = button_container}
+	if ScreenElementExists \{id = button_container}
+		DestroyScreenElement \{id = button_container}
 		return
 	endif
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = button_container
 		pos = (320.0, 240.0)
@@ -79,7 +79,7 @@ script debug_show_buttons \{scale = 0.8
 				}
 			}
 		]}
-	createscreenelement \{type = spriteelement
+	CreateScreenElement \{type = SpriteElement
 		parent = button_container
 		texture = white2
 		rgba = [
@@ -90,15 +90,15 @@ script debug_show_buttons \{scale = 0.8
 		]
 		scale = (80.0, 30.0)
 		pos = (320.0, 210.0)}
-	createscreenelement \{type = textelement
+	CreateScreenElement \{type = TextElement
 		parent = button_container
 		text = "buttons"
 		font = text_a1
 		scale = 1
 		pos = (320.0, 120.0)
 		z_priority = 101}
-	createscreenelement {
-		type = hmenu
+	CreateScreenElement {
+		type = HMenu
 		parent = button_container
 		id = debug_buttons
 		pos = (320.0, 160.0)
@@ -109,23 +109,23 @@ script debug_show_buttons \{scale = 0.8
 		scale = <scale>
 		z_priority = <z_priority>
 	}
-	getarraysize \{button_array}
+	GetArraySize \{button_array}
 	index = 0
 	begin
-	formattext textname = text "%i" i = (button_array [<index>])
-	formattext textname = button "\\b%i" i = (button_array [<index>])
+	FormatText TextName = text "%i" i = (button_array [<index>])
+	FormatText TextName = button "\\b%i" i = (button_array [<index>])
 	create_debug_button_item text = <text> button = <button> parent = debug_buttons
 	index = (<index> + 1)
 	repeat <array_size>
-	createscreenelement \{type = textelement
+	CreateScreenElement \{type = TextElement
 		parent = button_container
 		text = "meta chars"
 		font = text_a1
 		scale = 1
 		pos = (320.0, 200.0)
 		z_priority = 101}
-	createscreenelement {
-		type = hmenu
+	CreateScreenElement {
+		type = HMenu
 		parent = button_container
 		id = debug_meta1
 		pos = (320.0, 240.0)
@@ -136,16 +136,16 @@ script debug_show_buttons \{scale = 0.8
 		scale = <scale>
 		z_priority = <z_priority>
 	}
-	getarraysize \{meta_array}
+	GetArraySize \{meta_array}
 	index = 0
 	begin
-	formattext textname = text "%i" i = (meta_array [<index>])
-	formattext textname = button "\\m%i" i = (meta_array [<index>])
+	FormatText TextName = text "%i" i = (meta_array [<index>])
+	FormatText TextName = button "\\m%i" i = (meta_array [<index>])
 	create_debug_button_item text = <text> button = <button> parent = debug_meta1
 	index = (<index> + 1)
 	repeat 16
-	createscreenelement {
-		type = hmenu
+	CreateScreenElement {
+		type = HMenu
 		parent = button_container
 		id = debug_meta2
 		pos = (320.0, 280.0)
@@ -157,18 +157,18 @@ script debug_show_buttons \{scale = 0.8
 		z_priority = <z_priority>
 	}
 	begin
-	formattext textname = text "%i" i = (meta_array [<index>])
-	formattext textname = button "\\m%i" i = (meta_array [<index>])
+	FormatText TextName = text "%i" i = (meta_array [<index>])
+	FormatText TextName = button "\\m%i" i = (meta_array [<index>])
 	create_debug_button_item text = <text> button = <button> parent = debug_meta2
 	index = (<index> + 1)
 	repeat (<array_size> -16)
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = button_container}
 endscript
 
 script create_debug_button_item 
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <parent>
 		pos = (0.0, 0.0)
 		dims = (20.0, 20.0)
@@ -176,34 +176,34 @@ script create_debug_button_item
 		just = [center center]
 	}
 	parent_id = <id>
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <parent_id>
 		text = <text>
 		font = text_a1
 		pos = (0.0, 0.0)
 		just = [center center]
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <parent_id>
 		text = <button>
 		font = text_a1
 		pos = (0.0, 15.0)
 		just = [center center]
 	}
-	getscreenelementdims id = <id>
-	if gotparam \{width}
+	GetScreenElementDims id = <id>
+	if GotParam \{width}
 		if (<width> > 30)
-			setscreenelementprops id = <parent_id> dims = (55.0, 20.0)
-			setscreenelementprops id = <id> pos = (15.0, 15.0)
+			SetScreenElementProps id = <parent_id> dims = (55.0, 20.0)
+			SetScreenElementProps id = <id> pos = (15.0, 15.0)
 		endif
 	endif
 endscript
 
 script debug_kill_buttons 
-	if screenelementexists \{id = button_container}
-		destroyscreenelement \{id = button_container}
+	if ScreenElementExists \{id = button_container}
+		DestroyScreenElement \{id = button_container}
 	endif
 endscript
 

@@ -4,16 +4,16 @@ script create_quickmatch_searching_dialog {
 		vmenu_id = quickmatch_searching_dialog_vmenu
 		pos = (($menu_pos) + (-400.0, 100.0))
 	}
-	if screenelementexists \{id = quickmatch_options_menu}
+	if ScreenElementExists \{id = quickmatch_options_menu}
 		destroy_menu \{menu_id = quickmatch_options_menu}
 	endif
-	if screenelementexists \{id = online_main_menu}
+	if ScreenElementExists \{id = online_main_menu}
 		destroy_menu \{menu_id = online_main_menu}
 	endif
 	new_menu scrollid = <menu_id> vmenuid = <vmenu_id> use_backdrop = (1) menu_pos = <pos>
-	if isxenon
-		createscreenelement {
-			type = textelement
+	if isXenon
+		CreateScreenElement {
+			type = TextElement
 			parent = <vmenu_id>
 			font = text_a1
 			scale = 0.5
@@ -24,8 +24,8 @@ script create_quickmatch_searching_dialog {
 			block_events
 		}
 	else
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = <vmenu_id>
 			font = text_a1
 			scale = 0.5
@@ -36,8 +36,8 @@ script create_quickmatch_searching_dialog {
 			block_events
 		}
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <vmenu_id>
 		font = text_a1
 		scale = 0.5
@@ -47,8 +47,8 @@ script create_quickmatch_searching_dialog {
 		z_priority = 100.0
 		block_events
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <vmenu_id>
 		font = text_a1
 		scale = 0.5
@@ -62,17 +62,17 @@ script create_quickmatch_searching_dialog {
 			{pad_choose quickmatch_searching_dialog_select_cancel}
 		]
 	}
-	launchevent type = focus target = <vmenu_id>
-	netsessionfunc \{obj = match
+	LaunchEvent type = focus target = <vmenu_id>
+	NetSessionFunc \{obj = match
 		func = stop_server_list}
-	netsessionfunc \{obj = match
+	NetSessionFunc \{obj = match
 		func = free_server_list}
-	netsessionfunc \{obj = match
+	NetSessionFunc \{obj = match
 		func = set_server_list_mode
 		params = {
 			quickmatch
 		}}
-	netsessionfunc \{obj = match
+	NetSessionFunc \{obj = match
 		func = start_server_list}
 endscript
 
@@ -91,9 +91,9 @@ script create_quickmatch_create_match_dialog {
 		pos = (($menu_pos) + (-400.0, 100.0))
 	}
 	new_menu scrollid = <menu_id> vmenuid = <vmenu_id> use_backdrop = (1) menu_pos = <pos>
-	if isxenon
-		createscreenelement {
-			type = textelement
+	if isXenon
+		CreateScreenElement {
+			type = TextElement
 			parent = <vmenu_id>
 			font = text_a1
 			scale = 0.5
@@ -104,8 +104,8 @@ script create_quickmatch_create_match_dialog {
 			block_events
 		}
 	else
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = <vmenu_id>
 			font = text_a1
 			scale = 0.5
@@ -116,8 +116,8 @@ script create_quickmatch_create_match_dialog {
 			block_events
 		}
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <vmenu_id>
 		font = text_a1
 		scale = 0.5
@@ -127,8 +127,8 @@ script create_quickmatch_create_match_dialog {
 		z_priority = 100.0
 		block_events
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <vmenu_id>
 		font = text_a1
 		scale = 0.5
@@ -142,8 +142,8 @@ script create_quickmatch_create_match_dialog {
 			{pad_choose quickmatch_dialog_select_create}
 		]
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <vmenu_id>
 		font = text_a1
 		scale = 0.5
@@ -157,7 +157,7 @@ script create_quickmatch_create_match_dialog {
 			{pad_choose quickmatch_dialog_select_cancel}
 		]
 	}
-	launchevent type = focus target = <vmenu_id>
+	LaunchEvent type = focus target = <vmenu_id>
 endscript
 
 script destroy_quickmatch_create_match_dialog 

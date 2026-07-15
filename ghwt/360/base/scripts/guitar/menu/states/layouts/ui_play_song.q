@@ -1,66 +1,66 @@
 
-script ui_create_play_song \{Type = quickplay}
+script ui_create_play_song \{type = quickplay}
 	printf \{'ui_create_play_song'}
-	menu_music_off
-	Change \{unknown_drum_type = 0}
+	Menu_Music_Off
+	change \{unknown_drum_type = 0}
 	i = 1
 	begin
-	usefourlanehighway {Player = <i> reset}
+	UseFourLaneHighway {player = <i> reset}
 	i = (<i> + 1)
 	repeat ($current_num_players)
-	Change \{band_builder_current_gig_genre = None}
+	change \{band_builder_current_gig_genre = none}
 	band_anim_reset_loading
 	if ($is_network_game = 1)
-		Change \{net_ready_to_start = 0}
+		change \{net_ready_to_start = 0}
 		spawn_player_drop_listeners \{drop_player_script = play_song_drop_player
 			end_game_script = play_song_game_over}
 	endif
 	if GotParam \{progression_flag}
-		Change current_progression_flag = <progression_flag>
-		Change current_gig_number = <gig_num>
+		change current_progression_flag = <progression_flag>
+		change current_gig_number = <gig_num>
 		get_progression_globals <progression_flag>
-		formatText checksumName = tiername 'tier%d' d = <gig_num>
+		FormatText checksumname = tiername 'tier%d' d = <gig_num>
 		if GotParam \{song_checksum}
 			SetGlobalTags Progression params = {current_tier = <gig_num> current_song_count = <song_index>}
-			Change current_song = <song_checksum>
+			change current_song = <song_checksum>
 		else
 			SetGlobalTags Progression params = {current_tier = <gig_num> current_song_count = 0}
-			Change current_song = ($<tier_global>.<tiername>.songs [0])
+			change current_song = ($<tier_global>.<tiername>.songs [0])
 		endif
 		if GotParam \{selected_level}
-			Change current_level = <selected_level>
+			change current_level = <selected_level>
 		else
-			Change current_level = ($<tier_global>.<tiername>.level)
+			change current_level = ($<tier_global>.<tiername>.level)
 		endif
 		printstruct ($<tier_global>.<tiername>)
-		if StructureContains structure = ($<tier_global>.<tiername>) genre
-			Change band_builder_current_gig_genre = ($<tier_global>.<tiername>.genre)
+		if StructureContains Structure = ($<tier_global>.<tiername>) genre
+			change band_builder_current_gig_genre = ($<tier_global>.<tiername>.genre)
 		endif
-		progression_cashmilestonesclear
-		progression_cleardetailedstatsforgig
+		Progression_CashMilestonesClear
+		Progression_ClearDetailedStatsForGig
 		progression_reset_new_unlocks
 		ui_gig_cash_clear_gig_earnings
 	else
 		if GotParam \{selected_level}
-			Change current_level = <selected_level>
+			change current_level = <selected_level>
 		endif
-		progression_cashmilestonesclear
+		Progression_CashMilestonesClear
 		ui_gig_cash_clear_gig_earnings
 	endif
-	SpawnScriptNow ui_create_play_song_spawned params = <...>
+	spawnscriptnow ui_create_play_song_spawned params = <...>
 endscript
 
 script ui_destroy_play_song 
 	if ($is_network_game = 0)
-		($default_loading_screen.Destroy)
+		($default_loading_screen.destroy)
 	endif
 	destroy_player_drop_events
 endscript
 
 script ui_create_play_song_spawned 
-	StartRendering
+	startrendering
 	($default_loading_screen.create)
-	Change \{agora_failed_attempts = 0}
+	change \{agora_failed_attempts = 0}
 	if ($practice_enabled)
 		practice_start_song <...>
 	else
@@ -79,12 +79,12 @@ script ui_create_play_song_spawned
 					if (<jam_directory_index> >= 1000)
 						<jam_directory_index> = (<jam_directory_index> - 1000)
 						<example_song> = 1
-						<FileName> = (($jam_song_assets) [<jam_directory_index>].FileName)
+						<filename> = (($jam_song_assets) [<jam_directory_index>].filename)
 					else
-						<FileName> = ($jam_curr_directory_listing [<jam_directory_index>].FileName)
+						<filename> = ($jam_curr_directory_listing [<jam_directory_index>].filename)
 					endif
 					quickplay_choose_random_venue <...>
-					($default_loading_screen.Destroy)
+					($default_loading_screen.destroy)
 					jam_start_song_from_quickplay <...>
 					return
 				else
@@ -102,10 +102,10 @@ script ui_create_play_song_spawned
 		endif
 	endif
 	if ($is_network_game = 0)
-		($default_loading_screen.Destroy)
+		($default_loading_screen.destroy)
 		ui_event_wait \{event = menu_replace
 			data = {
-				state = Uistate_gameplay
+				state = uistate_gameplay
 			}}
 	endif
 	if ($is_network_game = 1)
@@ -114,8 +114,8 @@ script ui_create_play_song_spawned
 endscript
 
 script play_song_drop_player 
-	printf \{qs(0xea85de59)}
-	SpawnScriptNow play_song_drop_player_spawned params = {<...>}
+	printf \{qs("\L---play_song_drop_player")}
+	spawnscriptnow play_song_drop_player_spawned params = {<...>}
 endscript
 
 script play_song_drop_player_spawned 
@@ -126,12 +126,12 @@ script play_song_drop_player_spawned
 endscript
 
 script play_song_game_over 
-	SpawnScriptNow play_song_game_over_spawned params = {<...>}
+	spawnscriptnow play_song_game_over_spawned params = {<...>}
 endscript
 
 script play_song_game_over_spawned 
-	printf \{qs(0x849a0785)}
-	Change \{net_ready_to_start = 1}
+	printf \{qs("\L---play_song_game_over_spawned")}
+	change \{net_ready_to_start = 1}
 	wait_for_safe_shutdown
 	gameplay_end_game <...>
 endscript

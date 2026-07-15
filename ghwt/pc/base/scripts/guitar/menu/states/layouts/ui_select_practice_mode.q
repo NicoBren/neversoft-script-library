@@ -15,26 +15,26 @@ script do_training_loading
 	create_loading_screen
 	change \{current_progression_flag = none}
 	destroy_band
-	stopsoundsbybuss \{encore_events}
+	StopSoundsByBuss \{Encore_Events}
 	apply_band_logo_to_venue \{step = build}
-	if gotparam \{part}
+	if GotParam \{part}
 		tutorial_setup_band players = 4 part = <part>
 	else
 		tutorial_setup_band \{players = 4}
 	endif
 	change \{current_level = load_z_studio}
-	load_venue \{block_scripts = 0}
+	Load_Venue \{block_scripts = 0}
 	create_band \{async = 1}
-	bandmanager_allchangestance \{stance = stance_a
+	BandManager_AllChangeStance \{stance = Stance_A
 		no_wait}
 	apply_band_logo_to_venue \{step = apply}
 	create_bandname_viewport
-	wait \{2
+	Wait \{2
 		gameframes}
 	destroy_bg_viewport
 	setup_bg_viewport
 	change \{current_num_players = 1}
-	gamemode_updatenumplayers \{num_players = 1}
+	GameMode_UpdateNumPlayers \{num_players = 1}
 	change \{g_training_loading_done = 1}
 	hide_band
 endscript
@@ -44,34 +44,34 @@ script ui_create_select_practice_mode
 endscript
 
 script new_create_select_practice_mode 
-	menu_music_off
-	bg_crowd_front_end_silence
+	Menu_Music_Off
+	BG_Crowd_Front_End_Silence
 	begin
 	if ($g_training_loading_done = 1)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	disable_pause
-	unpausegame
-	make_generic_menu \{title = qs(0xd093953b)
+	UnPauseGame
+	make_generic_menu \{title = qs("TRAINING")
 		pad_back_script = menu_select_practice_back}
-	add_generic_menu_text_item \{text = qs(0x3ea7dec9)
+	add_generic_menu_text_item \{text = qs("PRACTICE")
 		pad_choose_script = ui_select_practice_mode_choose
 		pad_choose_params = {
 			practice
 		}}
-	add_generic_menu_text_item \{text = qs(0xc6510dd1)
+	add_generic_menu_text_item \{text = qs("TUTORIALS")
 		pad_choose_script = ui_select_practice_mode_choose}
 	menu_finish
 	destroy_loading_screen
 	startrendering
-	launchevent type = focus target = current_menu data = {child_index = <selected_index>}
+	LaunchEvent type = focus target = current_menu data = {child_index = <selected_index>}
 endscript
 
 script menu_select_practice_back 
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = current_menu}
 	create_loading_screen
 	generic_ui_destroy
@@ -95,8 +95,8 @@ script ui_deinit_select_practice_mode
 endscript
 
 script ui_select_practice_mode_choose 
-	printf \{qs(0xdfc3e245)}
-	if gotparam \{practice}
+	printf \{qs("\Lui_select_practice_mode_choose")}
+	if GotParam \{practice}
 		change \{training_mode = practice}
 		change \{game_mode = training}
 	else
@@ -106,7 +106,7 @@ script ui_select_practice_mode_choose
 		generic_event_choose \{state = uistate_select_tutorial}
 	else
 		change \{current_num_players = 1}
-		gamemode_updatenumplayers \{num_players = 1}
+		GameMode_UpdateNumPlayers \{num_players = 1}
 		generic_event_choose \{state = uistate_setlist
 			data = {
 				no_jamsession
@@ -114,37 +114,37 @@ script ui_select_practice_mode_choose
 	endif
 endscript
 
-script check_tutorial_allowances \{allow_rb_drums = 1}
-	if NOT iswinport
+script check_tutorial_allowances \{allow_RB_drums = 1}
+	if NOT IsWinPort
 		if ($allow_controller_for_all_instruments = 1)
 			return \{allowances = all}
 		endif
 	endif
-	if isguitarcontroller \{controller = $primary_controller}
+	if IsGuitarController \{controller = $primary_controller}
 		<allowances> = guitar
-	elseif isrbdrum \{controller = $primary_controller}
-		if (<allow_rb_drums> = 1)
+	elseif isRBDrum \{controller = $primary_controller}
+		if (<allow_RB_drums> = 1)
 			<allowances> = drum
 		else
 			<allowances> = not_specific
 		endif
-	elseif isdrumcontroller \{controller = $primary_controller}
+	elseif IsDrumController \{controller = $primary_controller}
 		<allowances> = drum
 	else
 		ui_get_controller_parts_allowed \{controller = $primary_controller}
-		if iswinport
-			if ((structurecontains structure = <allowed> guitar) && (structurecontains structure = <allowed> drum) && (structurecontains structure = <allowed> vocals))
+		if IsWinPort
+			if ((StructureContains Structure = <allowed> guitar) && (StructureContains Structure = <allowed> drum) && (StructureContains Structure = <allowed> Vocals))
 				<allowances> = all
-			elseif ((structurecontains structure = <allowed> guitar) && (structurecontains structure = <allowed> drum))
-				<allowances> = 0x185498cf
-			elseif ((structurecontains structure = <allowed> vocals))
-				<allowances> = vocals
+			elseif ((StructureContains Structure = <allowed> guitar) && (StructureContains Structure = <allowed> drum))
+				<allowances> = keyboard_guitarAndDrum
+			elseif ((StructureContains Structure = <allowed> Vocals))
+				<allowances> = Vocals
 			else
 				<allowances> = not_specific
 			endif
 		else
-			if structurecontains structure = <allowed> vocals
-				<allowances> = vocals
+			if StructureContains Structure = <allowed> Vocals
+				<allowances> = Vocals
 			else
 				<allowances> = not_specific
 			endif

@@ -1,56 +1,56 @@
-gp_fx_sf_front_2_01 = {
+GP_FX_SF_Front_2_01 = {
 	pos = (0.42683905, 0.0, 0.121521)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	align
-	applypositionoffset
-	emitrangedims = (0.0, 0.0, 0.0)
-	emit_target = (1.0, 0.0, 0.0)
-	enablerotate
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	Align
+	ApplyPositionOffset
+	EmitRangeDims = (0.0, 0.0, 0.0)
+	emit_Target = (1.0, 0.0, 0.0)
+	EnableRotate
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, -5.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 10.0
-	liferange = (1.0, 1.5)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 10.0
+	LifeRange = (1.0, 1.5)
 	emit_rate = 300.0
 	max = 0
-	timeseed = 0.0
-	lifetime = 3.0
-	emitnum = 0
-	followemitter = 0.0
-	alwaysemit
-	emitfunction = constant
-	emitperiod = 0.3
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 3.0
+	emitNum = 0
+	FollowEmitter = 0.0
+	AlwaysEmit
+	EmitFunction = constant
+	EmitPeriod = 0.3
+	SizeRange = [
 		(0.05, 0.1)
 		(0.0, 0.1)
 	]
-	speedrange = (2.0, 4.0)
-	rotvel = (0.0, 0.0)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	alignwithpath
-	pathfollowtime = 0.1
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (2.0, 4.0)
+	RotVel = (0.0, 0.0)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	AlignWithPath
+	PathFollowTime = 0.1
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -1
-	lod_default
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = jow_spark01
-		specularpower = 0
+	LOD_Default
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = JOW_Spark01
+		SpecularPower = 0
 		bloom
 		alphacutoff = 1
-		blendmode = add
-		quadanimationfps = 0
+		blendMode = Add
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.35884103, 0.0, -0.0)
 		(-0.35884103, 0.0, -0.0)
 		(-0.343704, 0.0, -0.0)
@@ -64,7 +64,7 @@ gp_fx_sf_front_2_01 = {
 		(0.42289704, 0.0, -0.0)
 		(0.42289704, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-10263808
 		1820589824
 		-10263808
@@ -74,7 +74,7 @@ gp_fx_sf_front_2_01 = {
 		-10263808
 		1820589824
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.058089003
 		0.608878
 		1.0

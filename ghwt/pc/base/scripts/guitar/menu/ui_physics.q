@@ -4,15 +4,15 @@ ui_physics_struct = {
 	bottom = 720
 	left = 0
 }
-g_gravity = 1000.0
-g_drag_force = -20.0
+g_GRAVITY = 1000.0
+g_DRAG_FORCE = -20.0
 doing_you_rock_test = 0
 physics_test_type = 1
 
 script create_ui_physics_test 
 	change \{doing_you_rock_test = 0}
 	check_screen_for_physics
-	if gotparam \{debug}
+	if GotParam \{debug}
 		destroy_debugging_menu
 		create_menu_backdrop \{texture = white
 			rgba = [
@@ -50,11 +50,11 @@ script create_ui_physics_test
 				}
 			}
 		]}
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = vmenu_ui_physics_test}
 	switch $physics_test_type
 		case 1
-		createscreenelement \{type = textelement
+		CreateScreenElement \{type = TextElement
 			parent = root_window
 			id = test_type_text
 			font = debug
@@ -66,9 +66,9 @@ script create_ui_physics_test
 				250
 			]
 			pos = (320.0, 100.0)
-			text = qs(0x2bb2acfd)
+			text = qs("\LGRAVITY & DRAG")
 			z_priority = 100.0}
-		createscreenelement \{type = physicselement
+		CreateScreenElement \{type = PhysicsElement
 			id = slime_container
 			parent = root_window
 			pos = (450.0, 50.0)
@@ -79,7 +79,7 @@ script create_ui_physics_test
 			check_screen_collision
 			apply_gravity
 			apply_drag}
-		createscreenelement \{type = spriteelement
+		CreateScreenElement \{type = SpriteElement
 			id = slime
 			parent = slime_container
 			texture = test_texture_slime_128
@@ -89,7 +89,7 @@ script create_ui_physics_test
 				top
 			]
 			z_priority = 30}
-		createscreenelement \{type = physicselement
+		CreateScreenElement \{type = PhysicsElement
 			id = weight_container
 			parent = root_window
 			pos = (650.0, 50.0)
@@ -100,7 +100,7 @@ script create_ui_physics_test
 			check_screen_collision
 			apply_gravity
 			apply_drag}
-		createscreenelement \{type = spriteelement
+		CreateScreenElement \{type = SpriteElement
 			id = weight
 			parent = weight_container
 			texture = test_texture_weight_128
@@ -111,7 +111,7 @@ script create_ui_physics_test
 			]
 			z_priority = 30}
 		case 2
-		createscreenelement \{type = textelement
+		CreateScreenElement \{type = TextElement
 			parent = root_window
 			id = test_type_text
 			font = debug
@@ -123,9 +123,9 @@ script create_ui_physics_test
 				250
 			]
 			pos = (460.0, 100.0)
-			text = qs(0x5e46da1d)
+			text = qs("\LINITIAL FORCE WITH FANS ON CORNERS")
 			z_priority = 100.0}
-		createscreenelement \{type = physicselement
+		CreateScreenElement \{type = PhysicsElement
 			id = snake_test_container
 			parent = root_window
 			pos = (550.0, 100.0)
@@ -135,8 +135,8 @@ script create_ui_physics_test
 			elasticity = 0.75
 			initial_force = (-2000000.0, -1500000.0)
 			apply_gravity}
-		runscriptonscreenelement id = <id> check_screen_collisions params = {id = <id>}
-		createscreenelement \{type = spriteelement
+		RunScriptOnScreenElement id = <id> check_screen_collisions params = {id = <id>}
+		CreateScreenElement \{type = SpriteElement
 			id = snake_head
 			parent = snake_test_container
 			texture = test_texture_slime_128
@@ -146,7 +146,7 @@ script create_ui_physics_test
 				top
 			]
 			z_priority = 30}
-		runscriptonscreenelement \{id = snake_test_container
+		RunScriptOnScreenElement \{id = snake_test_container
 			apply_positional_force
 			params = {
 				id = snake_test_container
@@ -155,7 +155,7 @@ script create_ui_physics_test
 				dist = 40
 				horizontal
 			}}
-		runscriptonscreenelement \{id = snake_test_container
+		RunScriptOnScreenElement \{id = snake_test_container
 			apply_positional_force
 			params = {
 				id = snake_test_container
@@ -164,7 +164,7 @@ script create_ui_physics_test
 				dist = 40
 				vertical
 			}}
-		runscriptonscreenelement \{id = snake_test_container
+		RunScriptOnScreenElement \{id = snake_test_container
 			apply_positional_force
 			params = {
 				id = snake_test_container
@@ -173,7 +173,7 @@ script create_ui_physics_test
 				dist = 40
 				horizontal
 			}}
-		runscriptonscreenelement \{id = snake_test_container
+		RunScriptOnScreenElement \{id = snake_test_container
 			apply_positional_force
 			params = {
 				id = snake_test_container
@@ -182,7 +182,7 @@ script create_ui_physics_test
 				dist = 40
 				vertical
 			}}
-		runscriptonscreenelement \{id = snake_test_container
+		RunScriptOnScreenElement \{id = snake_test_container
 			apply_positional_force
 			params = {
 				id = snake_test_container
@@ -191,7 +191,7 @@ script create_ui_physics_test
 				dist = 40
 				horizontal
 			}}
-		runscriptonscreenelement \{id = snake_test_container
+		RunScriptOnScreenElement \{id = snake_test_container
 			apply_positional_force
 			params = {
 				id = snake_test_container
@@ -200,7 +200,7 @@ script create_ui_physics_test
 				dist = 40
 				vertical
 			}}
-		runscriptonscreenelement \{id = snake_test_container
+		RunScriptOnScreenElement \{id = snake_test_container
 			apply_positional_force
 			params = {
 				id = snake_test_container
@@ -209,7 +209,7 @@ script create_ui_physics_test
 				dist = 40
 				horizontal
 			}}
-		runscriptonscreenelement \{id = snake_test_container
+		RunScriptOnScreenElement \{id = snake_test_container
 			apply_positional_force
 			params = {
 				id = snake_test_container
@@ -219,7 +219,7 @@ script create_ui_physics_test
 				vertical
 			}}
 		case 3
-		createscreenelement \{type = textelement
+		CreateScreenElement \{type = TextElement
 			parent = root_window
 			id = test_type_text
 			font = debug
@@ -231,20 +231,20 @@ script create_ui_physics_test
 				250
 			]
 			pos = (320.0, 100.0)
-			text = qs(0x9811007d)
+			text = qs("\LYOU ROCK TEST")
 			z_priority = 100.0}
-		launchevent \{type = unfocus
+		LaunchEvent \{type = unfocus
 			target = vmenu_ui_physics_test}
 		change \{doing_you_rock_test = 1}
 		create_exploding_text \{parent = 'you_rock_physics'
-			text = qs(0x6f6d143d)
+			text = qs("You Rock!")
 			debug}
 	endswitch
-	if gotparam \{debug}
-		add_user_control_helper \{text = qs(0xaf4d5dd2)
+	if GotParam \{debug}
+		add_user_control_helper \{text = qs("BACK")
 			button = red
 			z = 100}
-		launchevent \{type = focus
+		LaunchEvent \{type = focus
 			target = vmenu_ui_physics_test}
 	endif
 endscript
@@ -255,7 +255,7 @@ script ui_physics_scroll_up
 		change \{physics_test_type = 3}
 	endif
 	destroy_ui_physics_test
-	if gotparam \{debug}
+	if GotParam \{debug}
 		create_ui_physics_test \{debug}
 	endif
 endscript
@@ -266,7 +266,7 @@ script ui_physics_scroll_down
 		change \{physics_test_type = 1}
 	endif
 	destroy_ui_physics_test
-	if gotparam \{debug}
+	if GotParam \{debug}
 		create_ui_physics_test \{debug}
 	endif
 endscript
@@ -275,29 +275,29 @@ script destroy_ui_physics_test
 	clean_up_user_control_helpers
 	destroy_menu \{menu_id = scrolling_ui_physics_test}
 	destroy_menu_backdrop
-	destroyscreenelement \{id = test_type_text}
-	if screenelementexists \{id = snake_test_container}
-		destroyscreenelement \{id = snake_test_container}
+	DestroyScreenElement \{id = test_type_text}
+	if ScreenElementExists \{id = snake_test_container}
+		DestroyScreenElement \{id = snake_test_container}
 	endif
-	if screenelementexists \{id = slime_container}
-		destroyscreenelement \{id = slime_container}
+	if ScreenElementExists \{id = slime_container}
+		DestroyScreenElement \{id = slime_container}
 	endif
-	if screenelementexists \{id = weight_container}
-		destroyscreenelement \{id = weight_container}
+	if ScreenElementExists \{id = weight_container}
+		DestroyScreenElement \{id = weight_container}
 	endif
 	if ($doing_you_rock_test)
 		destroy_exploding_text
 	endif
-	if gotparam \{debug}
+	if GotParam \{debug}
 		create_debugging_menu
 	endif
 endscript
 
 script apply_continuous_force \{force = (0.0, 0.0)}
 	begin
-	<id> :applyforce force = <force>
-	getscreenelementprops id = <id>
-	wait \{1
+	<id> :ApplyForce force = <force>
+	GetScreenElementProps id = <id>
+	Wait \{1
 		gameframe}
 	repeat
 endscript
@@ -306,21 +306,21 @@ script apply_positional_force \{force_pos = (0.0, 0.0)
 		force = (0.0, 0.0)
 		dist = 0}
 	begin
-	getscreenelementprops id = <id>
-	if gotparam \{horizontal}
+	GetScreenElementProps id = <id>
+	if GotParam \{horizontal}
 		<y_pos> = ((<pos>.(0.0, 1.0)) + (<center>.(0.0, 1.0)))
 		if (<y_pos> > ((<force_pos>.(0.0, 1.0)) - <dist>) &&
 				<y_pos> < ((<force_pos>.(0.0, 1.0)) + <dist>))
-			<id> :applyforce force = <force>
+			<id> :ApplyForce force = <force>
 		endif
-	elseif gotparam \{vertical}
+	elseif GotParam \{vertical}
 		<x_pos> = ((<pos>.(1.0, 0.0)) + (<center>.(1.0, 0.0)))
 		if (<x_pos> > ((<force_pos>.(1.0, 0.0)) - <dist>) &&
 				<x_pos> < ((<force_pos>.(1.0, 0.0)) + <dist>))
-			<id> :applyforce force = <force>
+			<id> :ApplyForce force = <force>
 		endif
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
@@ -330,8 +330,8 @@ script vector_magnitude \{vect = (0.0, 0.0)}
 	<vect_y> = (<vect>.(0.0, 1.0))
 	<vect_x> = (<vect_x> * <vect_x>)
 	<vect_y> = (<vect_y> * <vect_y>)
-	sqrt (<vect_x> + <vect_y>)
-	return magnitude = <sqrt>
+	Sqrt (<vect_x> + <vect_y>)
+	return magnitude = <Sqrt>
 endscript
 
 script normalize_vector \{vect = (0.0, 0.0)}
@@ -357,17 +357,17 @@ script check_screen_collisions {
 	<left> = (<left> + <left_offset>)
 	<bottom> = (<bottom> + <bottom_offset>)
 	<right> = (<right> + <right_offset>)
-	<tl> = ((<top> * (0.0, 1.0)) + (<left> * (1.0, 0.0)))
-	<br> = ((<bottom> * (0.0, 1.0)) + (<right> * (1.0, 0.0)))
+	<TL> = ((<top> * (0.0, 1.0)) + (<left> * (1.0, 0.0)))
+	<bR> = ((<bottom> * (0.0, 1.0)) + (<right> * (1.0, 0.0)))
 	begin
-	<id> :circleaabbcollisioncheck tl = <tl> br = <br>
-	wait \{1
+	<id> :CircleAABBCollisionCheck TL = <TL> bR = <bR>
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
 script check_screen_for_physics 
-	getdisplaysettings
+	GetDisplaySettings
 	printstruct <...>
 	if (<widescreen> = false)
 		change \{structurename = ui_physics_struct

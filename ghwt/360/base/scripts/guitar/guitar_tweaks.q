@@ -237,21 +237,21 @@ strum_before_forming = 0.033999998
 form_before_strumming = 0.025
 ignore_strums_after_hammers = 0.05
 default_lag_settings = {
-	Xenon = {
+	xenon = {
 		audio_lag_ms = 0
 		gem_lag_ms = -45
 		input_lag_ms = -61
 		drum_midi_lag_ms = 53
 		prefretbar_time = 0.25
 	}
-	PS3 = {
+	ps3 = {
 		audio_lag_ms = 0
 		gem_lag_ms = -100
 		input_lag_ms = -112
 		drum_midi_lag_ms = 54
 		prefretbar_time = 0.4
 	}
-	PS2 = {
+	Ps2 = {
 		audio_lag_ms = 0
 		gem_lag_ms = -41
 		input_lag_ms = -41
@@ -260,123 +260,123 @@ default_lag_settings = {
 	}
 }
 practice_slow_lag_settings = {
-	Xenon = {
+	xenon = {
 		audio_lag_ms = 0
 		gem_lag_ms = -40
 		input_lag_ms = -32
 		drum_midi_lag_ms = -32
 	}
-	PS3 = {
+	ps3 = {
 		audio_lag_ms = 32
 		gem_lag_ms = 0
 		input_lag_ms = 0
 	}
-	PS2 = {
+	Ps2 = {
 		gem_lag_ms = 0
 		input_lag_ms = 0
 	}
 }
 practice_slower_lag_settings = {
-	Xenon = {
+	xenon = {
 		audio_lag_ms = 0
 		gem_lag_ms = -20
 		input_lag_ms = -16
 		drum_midi_lag_ms = -16
 	}
-	PS3 = {
+	ps3 = {
 		audio_lag_ms = 32
 		gem_lag_ms = 0
 		input_lag_ms = 0
 	}
-	PS2 = {
+	Ps2 = {
 		gem_lag_ms = 0
 		input_lag_ms = 0
 	}
 }
 practice_slowest_lag_settings = {
-	Xenon = {
+	xenon = {
 		audio_lag_ms = 0
 		gem_lag_ms = -15
 		input_lag_ms = 10
 		drum_midi_lag_ms = -10
 	}
-	PS3 = {
+	ps3 = {
 		audio_lag_ms = -32
 		gem_lag_ms = 0
 		input_lag_ms = 0
 	}
-	PS2 = {
+	Ps2 = {
 		gem_lag_ms = 0
 		input_lag_ms = 0
 	}
 }
 practice_drum_slow_lag_settings = {
-	Xenon = {
+	xenon = {
 		audio_lag_ms = 0
 		gem_lag_ms = 0
 		input_lag_ms = 0
 		drum_midi_lag_ms = 0
 	}
-	PS3 = {
+	ps3 = {
 		audio_lag_ms = 0
 		gem_lag_ms = 0
 		input_lag_ms = 0
 	}
-	PS2 = {
+	Ps2 = {
 		gem_lag_ms = 0
 		input_lag_ms = 0
 	}
 }
 practice_drum_slower_lag_settings = {
-	Xenon = {
+	xenon = {
 		audio_lag_ms = 0
 		gem_lag_ms = 0
 		input_lag_ms = 0
 		drum_midi_lag_ms = 0
 	}
-	PS3 = {
+	ps3 = {
 		audio_lag_ms = 0
 		gem_lag_ms = 0
 		input_lag_ms = 0
 	}
-	PS2 = {
+	Ps2 = {
 		gem_lag_ms = 0
 		input_lag_ms = 0
 	}
 }
 practice_drum_slowest_lag_settings = {
-	Xenon = {
+	xenon = {
 		audio_lag_ms = 0
 		gem_lag_ms = 0
 		input_lag_ms = 0
 		drum_midi_lag_ms = 0
 	}
-	PS3 = {
+	ps3 = {
 		audio_lag_ms = 0
 		gem_lag_ms = 0
 		input_lag_ms = 0
 	}
-	PS2 = {
+	Ps2 = {
 		gem_lag_ms = 0
 		input_lag_ms = 0
 	}
 }
 default_lag_settings_dolbydigital = {
-	Xenon = {
+	xenon = {
 		audio_lag_ms = 0
 		gem_lag_ms = -30
 		input_lag_ms = -30
 		drum_midi_lag_ms = -30
 		prefretbar_time = 0
 	}
-	PS3 = {
+	ps3 = {
 		audio_lag_ms = 0
 		gem_lag_ms = 0
 		input_lag_ms = 0
 		drum_midi_lag_ms = 0
 		prefretbar_time = 0
 	}
-	PS2 = {
+	Ps2 = {
 		audio_lag_ms = 0
 		gem_lag_ms = 0
 		input_lag_ms = 0
@@ -408,7 +408,7 @@ health_change_bad = {
 		-0.0374
 		-0.048
 	]
-	bass = [
+	Bass = [
 		-0.01
 		-0.053
 		-0.0267
@@ -422,7 +422,7 @@ health_change_bad = {
 		-0.029
 		-0.039
 	]
-	vocals = [
+	Vocals = [
 		-0.025
 		-0.035
 		-0.041699998
@@ -438,7 +438,7 @@ health_change_good = {
 		0.013499999
 		0.012
 	]
-	bass = [
+	Bass = [
 		0.029
 		0.029
 		0.0145
@@ -452,7 +452,7 @@ health_change_good = {
 		0.013499999
 		0.012
 	]
-	vocals = [
+	Vocals = [
 		0.035
 		0.035
 		0.041699998
@@ -468,7 +468,7 @@ health_change_star_bad = {
 		-0.0374
 		-0.048
 	]
-	bass = [
+	Bass = [
 		-0.01
 		-0.053
 		-0.0267
@@ -482,7 +482,7 @@ health_change_star_bad = {
 		-0.029
 		-0.039
 	]
-	vocals = [
+	Vocals = [
 		-0.012999999
 		-0.018
 		-0.021
@@ -498,7 +498,7 @@ health_change_star = {
 		0.058000002
 		0.058000002
 	]
-	bass = [
+	Bass = [
 		0.058000002
 		0.058000002
 		0.058000002
@@ -512,7 +512,7 @@ health_change_star = {
 		0.058000002
 		0.058000002
 	]
-	vocals = [
+	Vocals = [
 		0.07
 		0.07
 		0.084
@@ -528,7 +528,7 @@ health_change_bad_battle = {
 		-0.0374
 		-0.048
 	]
-	bass = [
+	Bass = [
 		-0.015
 		-0.053
 		-0.0267
@@ -542,7 +542,7 @@ health_change_bad_battle = {
 		-0.027999999
 		-0.036
 	]
-	vocals = [
+	Vocals = [
 		-0.035
 		-0.035
 		-0.041699998
@@ -558,7 +558,7 @@ health_change_good_battle = {
 		0.013499999
 		0.012
 	]
-	bass = [
+	Bass = [
 		0.029
 		0.029
 		0.0145
@@ -572,7 +572,7 @@ health_change_good_battle = {
 		0.013499999
 		0.012
 	]
-	vocals = [
+	Vocals = [
 		0.035
 		0.035
 		0.041699998
@@ -588,7 +588,7 @@ health_change_bad_boss = {
 		-0.0374
 		-0.048
 	]
-	bass = [
+	Bass = [
 		-0.015
 		-0.053
 		-0.0267
@@ -602,7 +602,7 @@ health_change_bad_boss = {
 		-0.027999999
 		-0.036
 	]
-	vocals = [
+	Vocals = [
 		-0.015
 		-0.053
 		-0.0267
@@ -618,7 +618,7 @@ health_change_good_boss = {
 		0.013499999
 		0.012
 	]
-	bass = [
+	Bass = [
 		0.029
 		0.029
 		0.0145
@@ -632,7 +632,7 @@ health_change_good_boss = {
 		0.013499999
 		0.012
 	]
-	vocals = [
+	Vocals = [
 		0.029
 		0.029
 		0.0145
@@ -648,7 +648,7 @@ health_change_red_multi = {
 		1.3499999
 		1.3499999
 	]
-	bass = [
+	Bass = [
 		1.3499999
 		1.3499999
 		1.3499999
@@ -662,7 +662,7 @@ health_change_red_multi = {
 		1.3499999
 		1.3499999
 	]
-	vocals = [
+	Vocals = [
 		1.3499999
 		1.3499999
 		1.3499999
@@ -678,7 +678,7 @@ health_change_green_multi = {
 		0.85
 		0.85
 	]
-	bass = [
+	Bass = [
 		0.85
 		0.85
 		0.85
@@ -692,7 +692,7 @@ health_change_green_multi = {
 		0.85
 		0.85
 	]
-	vocals = [
+	Vocals = [
 		0.85
 		0.85
 		0.85
@@ -728,8 +728,8 @@ battle_do_or_die_attack_scale_increase = 1.0
 battle_do_or_die_attack_scale_max = 10.0
 battle_do_or_die_speed_scale_percent = 50.0
 battle_mine_health_decrease_count = 10.0
-hyperspeed_slowest = 1.0
-hyperspeed_fastest = 0.68
+Hyperspeed_Slowest = 1.0
+Hyperspeed_Fastest = 0.68
 health_invincible_time_percentage_easy_rhythm = 30.0
 health_invincible_time_percentage_easy = 20.0
 health_invincible_time_percentage_medium = 10.0

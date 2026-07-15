@@ -1,51 +1,51 @@
 jam_quantize = [
 	{
 		value = 1
-		name_text = qs(0x897495f1)
+		name_text = qs("Marker")
 		marker = 1
 	}
 	{
 		value = 0.25
-		name_text = qs(0xf65f8830)
+		name_text = qs("Measure")
 	}
 	{
 		value = 0.5
-		name_text = qs(0xbee028a9)
+		name_text = qs("1/2 Measure")
 	}
 	{
 		value = 1
-		name_text = qs(0x4fa20572)
+		name_text = qs("1/4 note")
 	}
 	{
 		value = 2
-		name_text = qs(0x4aa848f3)
+		name_text = qs("1/8 note")
 	}
 	{
 		value = 4
-		name_text = qs(0xdf02ece5)
+		name_text = qs("1/16 note")
 	}
 	{
 		value = 8
-		name_text = qs(0x3d6a1337)
+		name_text = qs("1/32 note")
 	}
 	{
 		value = 16
-		name_text = qs(0xe66ff4a0)
+		name_text = qs("Precise")
 	}
 	{
 		value = 32
-		name_text = qs(0x64bcab52)
+		name_text = qs("live")
 	}
 ]
 
-script jam_input_add_player_server \{Player = 1}
-	formatText checksumName = player_status 'player%p_status' p = <Player>
-	createplayerserver id = <player_status> Player = <Player>
-	addplayerserverjaminput id = <player_status> Player = <Player> controller = ($<player_status>.controller) spawn_id = <spawn_id>
+script jam_input_add_player_server \{player = 1}
+	FormatText checksumname = player_status 'player%p_status' p = <player>
+	CreatePlayerServer id = <player_status> player = <player>
+	AddPlayerServerJamInput id = <player_status> player = <player> controller = ($<player_status>.controller) spawn_id = <spawn_id>
 endscript
 
-script jam_input_whammy \{Player = 1}
-	getplayerinfo <Player> resting_whammy_position
+script jam_input_whammy \{player = 1}
+	GetPlayerInfo <player> resting_whammy_position
 	if GuitarGetAnalogueInfo controller = <controller>
 		if IsGuitarController controller = <controller>
 			rightx_unscaled = (<rightx_unscaled> / 128.0)
@@ -65,24 +65,24 @@ script jam_input_whammy \{Player = 1}
 			endif
 		endif
 		new_pitch = ((-1 * (<len> * 2)) * 1.0539999)
-		getplayerinfo <Player> jam_instrument
+		GetPlayerInfo <player> jam_instrument
 		switch (<jam_instrument>)
 			case 0
-			setsoundbussparams {jammode_rhythmguitar = {pitch = <new_pitch>}}
+			SetSoundBussParams {JamMode_RhythmGuitar = {pitch = <new_pitch>}}
 			case 1
-			setsoundbussparams {jammode_leadguitar = {pitch = <new_pitch>}}
+			SetSoundBussParams {JamMode_LeadGuitar = {pitch = <new_pitch>}}
 			case 2
-			setsoundbussparams {jammode_bass = {pitch = <new_pitch>}}
+			SetSoundBussParams {JamMode_Bass = {pitch = <new_pitch>}}
 			case 4
-			setsoundbussparams {jammode_vox = {pitch = <new_pitch>}}
+			SetSoundBussParams {JamMode_Vox = {pitch = <new_pitch>}}
 		endswitch
 	endif
 endscript
 
-script jam_input_whammy_spawned \{Player = 1}
-	getplayerinfo <Player> controller
+script jam_input_whammy_spawned \{player = 1}
+	GetPlayerInfo <player> controller
 	begin
-	jam_input_whammy Player = <Player> controller = <controller>
+	jam_input_whammy player = <player> controller = <controller>
 	Wait \{1
 		gameframe}
 	repeat
@@ -94,19 +94,19 @@ script jam_stop_all_sound
 	begin
 	jam_stop_sound jam_instrument = <index>
 	<index> = (<index> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 endscript
 
 script jam_stop_sound \{jam_instrument = 0}
 	switch (<jam_instrument>)
 		case 0
-		stopsound unique_id = ($jam_input_current_chord)
+		StopSound unique_id = ($jam_input_current_chord)
 		case 1
-		stopsound unique_id = ($jam_input_current_lead)
+		StopSound unique_id = ($jam_input_current_lead)
 		case 2
-		stopsound unique_id = ($jam_input_current_bass)
+		StopSound unique_id = ($jam_input_current_bass)
 		case 4
-		stopsound unique_id = ($jam_input_current_melody)
+		StopSound unique_id = ($jam_input_current_melody)
 	endswitch
 endscript
 
@@ -124,14 +124,14 @@ script jam_record_note \{sustain = 0
 			return
 		endif
 	endif
-	formatText checksumName = update_note_length_spawn 'update_note_length_spawn_%s' s = <select_player>
+	FormatText checksumname = update_note_length_spawn 'update_note_length_spawn_%s' s = <select_player>
 	KillSpawnedScript id = <update_note_length_spawn>
 	new_note_string = <note_string>
 	new_note_fret = <note_fret>
 	new_note_type = <note_type>
 	new_note_chord_type = <chord_type>
 	new_velocity = <velocity>
-	getplayerinfo <select_player> jam_instrument
+	GetPlayerInfo <select_player> jam_instrument
 	if (<jam_instrument> > -1)
 		curr_track = <jam_instrument>
 	endif
@@ -169,7 +169,7 @@ script jam_record_note \{sustain = 0
 		new_length = 60
 		if ($jam_highway_step_recording = 1)
 			<new_length> = <quantize>
-			printf channel = jam_mode qs(0x7ee72ed9) s = <quantize>
+			printf channel = jam_mode qs("\Lquantize %s") s = <quantize>
 			if (<new_length> < 60)
 				<new_length> = 60
 			endif
@@ -180,19 +180,19 @@ script jam_record_note \{sustain = 0
 		CastToInteger \{new_length}
 	endif
 	effect_on = ($jam_current_active_effects [<jam_instrument>])
-	getplayerinfo <select_player> jam_instrument
-	getjamsessionsize track = ($jam_tracks [<jam_instrument>].id)
+	GetPlayerInfo <select_player> jam_instrument
+	GetJamSessionSize track = ($jam_tracks [<jam_instrument>].id)
 	if ((<track_size> + 1) >= ($gemarraysize))
 		if ($jam_advanced_record = 1)
 			if NOT ScriptIsRunning \{show_warning_message}
-				SpawnScriptNow \{show_warning_message
+				spawnscriptnow \{show_warning_message
 					id = jam_recording_spawns
 					params = {
-						warning_text = qs(0xdd331019)
+						warning_text = qs("Maximum Note Limit Reached!")
 					}}
 			endif
 		else
-			SpawnScriptNow jam_note_limit_hit id = <limit_msg> params = {Player = <select_player>}
+			spawnscriptnow jam_note_limit_hit id = <limit_msg> params = {player = <select_player>}
 		endif
 		return
 	endif
@@ -201,16 +201,16 @@ script jam_record_note \{sustain = 0
 	AppendSuffixToChecksum Base = <gem_array> SuffixString = <suffix>
 	<gem_array_size> = <appended_id>
 	index = -1
-	findjamsessionsound track = ($jam_tracks [<curr_track>].id) time = (<new_time> - 2)
+	FindJamSessionSound track = ($jam_tracks [<curr_track>].id) time = (<new_time> - 2)
 	if (<index> >= 0)
-		getjamsessionsound track = ($jam_tracks [<curr_track>].id) index = <index>
+		GetJamSessionSound track = ($jam_tracks [<curr_track>].id) index = <index>
 		if (<time> >= (<new_time> - 2) && <time> <= (<new_time> + 2))
-			deletejamsessionsound track = ($jam_tracks [<curr_track>].id) index = <index>
-			deletenotetrackitem Name = <gem_array> index = (<index> * 2)
-			Change \{guitar_jam_playback_recordng_increment_track_index = 1}
+			DeleteJamSessionSound track = ($jam_tracks [<curr_track>].id) index = <index>
+			DeleteNoteTrackItem name = <gem_array> index = (<index> * 2)
+			change \{guitar_jam_playback_recordng_increment_track_index = 1}
 		endif
 	endif
-	addjamsessionsound track = ($jam_tracks [<curr_track>].id) time = <new_time> string = <new_note_string> fret = <new_note_fret> Type = <new_note_type> effect = <effect_on> chord_type = <new_note_chord_type> velocity = <new_velocity>
+	AddJamSessionSound track = ($jam_tracks [<curr_track>].id) time = <new_time> string = <new_note_string> fret = <new_note_fret> type = <new_note_type> effect = <effect_on> chord_type = <new_note_chord_type> velocity = <new_velocity>
 	gem = 0
 	if (<hold_pattern> && 65536)
 		<gem> = (<gem> + 1)
@@ -231,27 +231,27 @@ script jam_record_note \{sustain = 0
 		<gem> = 32
 	endif
 	if (<sustain> = 1)
-		addnotetrackitem Name = <gem_array> time = <new_time> length = <new_length> pattern = <gem>
+		AddNoteTrackItem name = <gem_array> time = <new_time> length = <new_length> pattern = <gem>
 		if ($jam_highway_step_recording = 1)
 			if (<index> < (($<gem_array_size>) -2))
-				getnotetrackitem Name = <gem_array> index = (<index> + 2)
+				GetNoteTrackItem name = <gem_array> index = (<index> + 2)
 				<next_note_time> = <gem_time>
-				getnotetrackitem Name = <gem_array> index = <index>
+				GetNoteTrackItem name = <gem_array> index = <index>
 				if ((<gem_time> + <gem_length>) > <next_note_time>)
 					<new_length> = (<next_note_time> - <gem_time>)
 					CastToInteger \{new_length}
-					addnotetrackitem Name = <gem_array> time = <gem_time> length = <new_length> pattern = <gem_pattern>
+					AddNoteTrackItem name = <gem_array> time = <gem_time> length = <new_length> pattern = <gem_pattern>
 					<sustain> = 0
 				endif
 			endif
 		endif
 	else
-		addnotetrackitem Name = <gem_array> time = <new_time> length = 60 pattern = <gem>
+		AddNoteTrackItem name = <gem_array> time = <new_time> length = 60 pattern = <gem>
 	endif
 	new_note_index = <index>
 	if (<new_note_index> > 0)
 		previous_note_index = (<new_note_index> - 2)
-		getnotetrackitem Name = <gem_array> index = <previous_note_index>
+		GetNoteTrackItem name = <gem_array> index = <previous_note_index>
 		previous_time = <gem_time>
 		previous_gem_length = <gem_length>
 		previous_gem_pattern = <gem_pattern>
@@ -267,20 +267,20 @@ script jam_record_note \{sustain = 0
 			if (<new_note_length> <= <sustain_min>)
 				<new_note_length> = <sustain_min>
 			endif
-			addnotetrackitem Name = <gem_array> time = <previous_time> length = <new_note_length> pattern = <previous_gem_pattern>
+			AddNoteTrackItem name = <gem_array> time = <previous_time> length = <new_note_length> pattern = <previous_gem_pattern>
 		endif
 	endif
 	if (<sustain> = 1)
-		SpawnScriptNow jam_input_update_note_length id = <update_note_length_spawn> params = {curr_track = <curr_track> new_note_index = <new_note_index> effect_on = <effect_on> gem_array = <gem_array> sample = <final_note_sample> start_time = <new_time> gem = <gem> melody = <melody>}
+		spawnscriptnow jam_input_update_note_length id = <update_note_length_spawn> params = {curr_track = <curr_track> new_note_index = <new_note_index> effect_on = <effect_on> gem_array = <gem_array> sample = <final_note_sample> start_time = <new_time> gem = <gem> melody = <melody>}
 	endif
-	getjamsessionsize track = ($jam_tracks [<jam_instrument>].id)
+	GetJamSessionSize track = ($jam_tracks [<jam_instrument>].id)
 	if NOT ((($<gem_array_size>) / 2) = <track_size>)
-		SoftAssert qs(0x85fb0482) a = (($<gem_array_size>) / 2) b = <track_size>
+		SoftAssert qs("\LJAM: Num gems and num session sounds don't match, gems: %a, sounds %b") a = (($<gem_array_size>) / 2) b = <track_size>
 	endif
 endscript
 
-script jam_kill_update_note_length \{Player = 1}
-	formatText checksumName = update_note_length_spawn 'update_note_length_spawn_%s' s = <Player>
+script jam_kill_update_note_length \{player = 1}
+	FormatText checksumname = update_note_length_spawn 'update_note_length_spawn_%s' s = <player>
 	KillSpawnedScript id = <update_note_length_spawn>
 endscript
 
@@ -297,7 +297,7 @@ script jam_input_update_note_length
 	CastToInteger \{note_length}
 	visual_note_length = (<note_length> - <sustain_trim>)
 	if (<visual_note_length> > <sustain_min>)
-		addnotetrackitem Name = <gem_array> time = <start_time> length = <visual_note_length> pattern = <gem>
+		AddNoteTrackItem name = <gem_array> time = <start_time> length = <visual_note_length> pattern = <gem>
 	endif
 	if (<note_length> > <sustain_min>)
 		suffix = '_size'
@@ -305,7 +305,7 @@ script jam_input_update_note_length
 		<gem_array_size> = <appended_id>
 		if (<new_note_index> <= (($<gem_array_size>) - 4))
 			next_note_index = (<new_note_index> + 2)
-			getnotetrackitem Name = <gem_array> index = <next_note_index>
+			GetNoteTrackItem name = <gem_array> index = <next_note_index>
 			next_time = <gem_time>
 			next_gem_length = <gem_length>
 			next_gem_pattern = <gem_pattern>
@@ -316,10 +316,10 @@ script jam_input_update_note_length
 	endif
 	if (<melody> = 1)
 		<playing_one> = 0
-		if issoundplayingbyid ($jam_input_current_melody_atk)
+		if IsSoundPlayingByID ($jam_input_current_melody_atk)
 			<playing_one> = 1
 		endif
-		if issoundplayingbyid ($jam_input_current_melody)
+		if IsSoundPlayingByID ($jam_input_current_melody)
 			<playing_one> = 1
 		endif
 		if (<playing_one> = 0)

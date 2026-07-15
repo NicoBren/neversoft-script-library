@@ -1,48 +1,48 @@
-gp_buttonstar01c = {
+GP_ButtonStar01c = {
 	pos = (1.4995879, -99.976906, 4.703488)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	emitrangedims = (0.05, 0.0, 0.05)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	EmitRangeDims = (0.05, 0.0, 0.05)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, 0.0, 0.0)
-	emittervelocityweight = 0.0
-	anglespread = 45.0
-	liferange = (0.4, 0.5)
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 45.0
+	LifeRange = (0.4, 0.5)
 	emit_rate = 6.0
 	max = 0
-	timeseed = 0.0
-	lifetime = 0.0
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 0.0
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.8, 0.8)
 		(1.8, 1.8)
 	]
-	speedrange = (0.0, 0.0)
-	rotvel = (0.4, 1.0)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	pathfollowtime = 0.0
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (0.0, 0.0)
+	RotVel = (0.4, 1.0)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.0
+	History = 2
+	HistoryListCoordinateSpace = world
 	align_to = (0.0, 1.0, 0.0)
 	color = -7658497
-	lod_default
-	material = buttonstar01_buttonstar01
-	quickmaterial = {
-		specularpower = 0
+	LOD_Default
+	material = ButtonStar01_ButtonStar01
+	QuickMaterial = {
+		SpecularPower = 0
 		alphacutoff = 1
-		blendmode = blend
-		quadanimationfps = 0
+		blendMode = blend
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.508085, 0.0, -0.0)
 		(-0.508085, 0.0, -0.0)
 		(-0.36291802, 0.0, -0.0)
@@ -53,7 +53,7 @@ gp_buttonstar01c = {
 		(0.580668, 0.0, -0.0)
 		(0.580668, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-1
 		-1
 		-1
@@ -61,7 +61,7 @@ gp_buttonstar01c = {
 		-256
 		-256
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.685017
 		1.0
 	]

@@ -1,24 +1,24 @@
 
 script ui_create_tutorial_prompt_easy 
 	switch ($current_progression_flag)
-		case career_guitar
-		text = qs(0xb2850a7d)
-		case career_bass
-		text = qs(0xb2850a7d)
-		case career_drum
-		text = qs(0x2a7104c0)
-		case career_vocals
-		text = qs(0x3dce49dd)
+		case Career_Guitar
+		text = qs("You have selected Beginner difficulty. In this difficulty you will need to strum in time for each note, but do not need to hit any fret buttons to succeed.")
+		case Career_Bass
+		text = qs("You have selected Beginner difficulty. In this difficulty you will need to strum in time for each note, but do not need to hit any fret buttons to succeed.")
+		case Career_Drum
+		text = qs("You have selected Beginner difficulty. In this difficulty you will need to hit any drum pad in time with each note, but do not need to hit any particular drum to succeed.")
+		case Career_Vocals
+		text = qs("You have selected Beginner difficulty. In this difficulty you only need to sing in time with the words of the song, but do not need to worry about matching the pitch.")
 	endswitch
 	create_popup_warning_menu {
-		title = qs(0x3add9c72)
+		title = qs("Beginner Note:")
 		textblock = {
 			text = <text>
 		}
 		options = [
 			{
 				func = tutorial_prompt_easy_continue
-				text = qs(0x182f0173)
+				text = qs("CONTINUE")
 			}
 		]
 		no_background
@@ -28,7 +28,7 @@ script ui_create_tutorial_prompt_easy
 			{pad_back tutorial_prompt_easy_continue}]
 	}
 	clean_up_user_control_helpers
-	add_user_control_helper \{text = qs(0xc18d5e76)
+	add_user_control_helper \{text = qs("SELECT")
 		button = green
 		z = 100000}
 	SetGlobalTags \{training

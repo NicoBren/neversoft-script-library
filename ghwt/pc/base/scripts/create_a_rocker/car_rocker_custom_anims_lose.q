@@ -1,26 +1,26 @@
-cas_female_lose_anim = [
+CAS_Female_Lose_Anim = [
 	{
-		desc_id = lose_angryatcrowd
-		frontend_desc = qs(0xc39484fc)
-		frontend_anim_name = car_female_lose_angryatcrowd
-		headtohead_anim_name = car_female_lose_angryatcrowd
-		guitarist_anim_name = g_kris_lose_angryatcrowd
-		bassist_anim_name = b_kris_lose_angryatcrowd
-		drummer_anim_name = d_kris_lose_angryatcrowd
-		singer_anim_name = s_kris_lose_angryatcrowd
+		desc_id = Lose_AngryAtCrowd
+		frontend_desc = qs("\LNo Way Bro!")
+		frontend_anim_name = CAR_Female_Lose_AngryAtCrowd
+		headtohead_anim_name = CAR_Female_Lose_AngryAtCrowd
+		guitarist_anim_name = G_Kris_Lose_AngryAtCrowd
+		bassist_anim_name = B_Kris_Lose_AngryAtCrowd
+		drummer_anim_name = D_Kris_Lose_AngryAtCrowd
+		singer_anim_name = S_Kris_Lose_AngryAtCrowd
 	}
 	{
-		desc_id = lose_depressed
-		frontend_desc = qs(0x7dff2ae0)
-		frontend_anim_name = car_female_lose_depressed
-		guitarist_anim_name = g_kris_lose_depressed
-		bassist_anim_name = b_kris_lose_depressed
-		drummer_anim_name = d_kris_lose_depressed
-		singer_anim_name = s_kris_lose_depressed
+		desc_id = Lose_Depressed
+		frontend_desc = qs("\LAww C'mon")
+		frontend_anim_name = CAR_Female_Lose_Depressed
+		guitarist_anim_name = G_Kris_Lose_Depressed
+		bassist_anim_name = B_Kris_Lose_Depressed
+		drummer_anim_name = D_Kris_Lose_Depressed
+		singer_anim_name = S_Kris_Lose_Depressed
 	}
 	{
-		desc_id = lose_fearful
-		frontend_desc = qs(0x5fef2e54)
+		desc_id = Lose_Fearful
+		frontend_desc = qs("\LOops")
 		frontend_anim_name = car_female_lose_fearful
 		guitarist_anim_name = g_jeff_lose_fearful
 		bassist_anim_name = b_jeff_lose_fearful
@@ -28,8 +28,8 @@ cas_female_lose_anim = [
 		singer_anim_name = s_jeff_lose_fearful
 	}
 	{
-		desc_id = lose_pretentious
-		frontend_desc = qs(0xbd0064c8)
+		desc_id = Lose_Pretentious
+		frontend_desc = qs("\LNuh uh!")
 		frontend_anim_name = car_female_lose_pretentious
 		guitarist_anim_name = g_kris_lose_pretentious
 		bassist_anim_name = b_kris_lose_pretentious
@@ -37,35 +37,35 @@ cas_female_lose_anim = [
 		singer_anim_name = s_kris_lose_pretentious
 	}
 	{
-		desc_id = lose_generic
-		frontend_desc = qs(0x93d32098)
-		frontend_anim_name = car_female_lose_generic
-		guitarist_anim_name = g_kris_lose_pointguit
-		bassist_anim_name = b_kris_lose_pointbass
-		drummer_anim_name = d_kris_lose_pointdrum
-		singer_anim_name = s_kris_lose_pointsing
+		desc_id = Lose_Generic
+		frontend_desc = qs("\LYou Gotta Be Kidding")
+		frontend_anim_name = CAR_female_lose_generic
+		guitarist_anim_name = G_Kris_Lose_PointGuit
+		bassist_anim_name = B_Kris_Lose_PointBass
+		drummer_anim_name = D_Kris_Lose_PointDrum
+		singer_anim_name = S_Kris_Lose_PointSing
 	}
 	{
-		desc_id = lose_kick
-		frontend_desc = qs(0x60798122)
-		frontend_anim_name = car_female_lose_kickinstrument
+		desc_id = Lose_kick
+		frontend_desc = qs("\LKick Out")
+		frontend_anim_name = CAR_female_Lose_KickInstrument
 		guitarist_anim_name = g_jeff_lose_kickinstrument
 		bassist_anim_name = b_jeff_lose_kickinstrument
 		drummer_anim_name = d_jeff_lose_kickinstrument
 		singer_anim_name = s_jeff_lose_kickinstrument
 	}
 	{
-		desc_id = lose_smash
-		frontend_desc = qs(0x144a10b1)
+		desc_id = Lose_Smash
+		frontend_desc = qs("\LRockstar Smash")
 		frontend_anim_name = car_female_lose_smash
 		guitarist_anim_name = g_jeff_lose_smash
-		bassist_anim_name = s_billy_lose_boss_guitsmash
+		bassist_anim_name = S_Billy_Lose_Boss_GuitSmash
 		drummer_anim_name = d_jeff_lose_kickinstrument
 		singer_anim_name = s_jeff_lose_smash
 	}
 	{
-		desc_id = lose_tantrum
-		frontend_desc = qs(0x39536634)
+		desc_id = Lose_Tantrum
+		frontend_desc = qs("\LTantrum")
 		frontend_anim_name = car_female_lose_tantrum
 		guitarist_anim_name = g_kris_lose_tantrum
 		bassist_anim_name = b_kris_lose_tantrum
@@ -73,9 +73,9 @@ cas_female_lose_anim = [
 		singer_anim_name = s_kris_lose_tantrum
 	}
 	{
-		desc_id = lose_walkoff
-		frontend_desc = qs(0x6ea3bec2)
-		frontend_anim_name = car_female_lose_walkoff
+		desc_id = Lose_WalkOff
+		frontend_desc = qs("\LLate, Suckas")
+		frontend_anim_name = CAR_female_Lose_WalkOff
 		guitarist_anim_name = g_jeff_lose_walkoff
 		bassist_anim_name = b_jeff_lose_walkoff
 		drummer_anim_name = d_jeff_lose_walkoff
@@ -85,15 +85,15 @@ cas_female_lose_anim = [
 		desc_id = s_haley_lose
 		hidden
 		singer_anim_name = s_haley_lose_01
-		guitarist_anim_name = g_kris_lose_pointguit
-		bassist_anim_name = b_kris_lose_pointbass
-		drummer_anim_name = d_kris_lose_pointdrum
+		guitarist_anim_name = G_Kris_Lose_PointGuit
+		bassist_anim_name = B_Kris_Lose_PointBass
+		drummer_anim_name = D_Kris_Lose_PointDrum
 	}
 ]
-cas_male_lose_anim = [
+CAS_Male_Lose_Anim = [
 	{
-		desc_id = lose_angryatcrowd
-		frontend_desc = qs(0xc39484fc)
+		desc_id = Lose_AngryAtCrowd
+		frontend_desc = qs("\LNo Way Bro!")
 		frontend_anim_name = car_lose_angryatcrowd
 		headtohead_anim_name = car_lose_angryatcrowd
 		guitarist_anim_name = gsbd_g_lose_angryatcrowd01
@@ -102,8 +102,8 @@ cas_male_lose_anim = [
 		singer_anim_name = gsbd_s_lose_angryatcrowd01
 	}
 	{
-		desc_id = lose_depressed
-		frontend_desc = qs(0x7dff2ae0)
+		desc_id = Lose_Depressed
+		frontend_desc = qs("\LAww C'mon")
 		frontend_anim_name = car_lose_depressed
 		guitarist_anim_name = g_jeff_lose_depressed
 		bassist_anim_name = b_jeff_lose_depressed
@@ -111,8 +111,8 @@ cas_male_lose_anim = [
 		singer_anim_name = s_jeff_lose_depressed
 	}
 	{
-		desc_id = lose_fearful
-		frontend_desc = qs(0x5fef2e54)
+		desc_id = Lose_Fearful
+		frontend_desc = qs("\LOops")
 		frontend_anim_name = car_lose_fearful
 		guitarist_anim_name = g_jeff_lose_fearful
 		bassist_anim_name = b_jeff_lose_fearful
@@ -120,8 +120,8 @@ cas_male_lose_anim = [
 		singer_anim_name = s_jeff_lose_fearful
 	}
 	{
-		desc_id = lose_generic
-		frontend_desc = qs(0x93d32098)
+		desc_id = Lose_Generic
+		frontend_desc = qs("\LYou Gotta Be Kidding")
 		frontend_anim_name = car_lose_generic
 		guitarist_anim_name = bdgs_g_guitarist_lose_01
 		bassist_anim_name = bdgs_b_bassist_lose_01
@@ -129,8 +129,8 @@ cas_male_lose_anim = [
 		singer_anim_name = bdgs_s_singer_lose_01
 	}
 	{
-		desc_id = lose_kick
-		frontend_desc = qs(0x60798122)
+		desc_id = Lose_kick
+		frontend_desc = qs("\LKick Out")
 		frontend_anim_name = car_lose_kickinstrument
 		guitarist_anim_name = g_jeff_lose_kickinstrument
 		bassist_anim_name = b_jeff_lose_kickinstrument
@@ -138,8 +138,8 @@ cas_male_lose_anim = [
 		singer_anim_name = s_jeff_lose_kickinstrument
 	}
 	{
-		desc_id = lose_pretentious
-		frontend_desc = qs(0xbaac61fe)
+		desc_id = Lose_Pretentious
+		frontend_desc = qs("\LNuh Uh!")
 		frontend_anim_name = car_lose_pretentious
 		guitarist_anim_name = g_jeff_lose_pretentious
 		bassist_anim_name = b_jeff_lose_pretentious
@@ -147,17 +147,17 @@ cas_male_lose_anim = [
 		singer_anim_name = s_jeff_lose_pretentious
 	}
 	{
-		desc_id = lose_smash
-		frontend_desc = qs(0x144a10b1)
+		desc_id = Lose_Smash
+		frontend_desc = qs("\LRockstar Smash")
 		frontend_anim_name = car_lose_smash
 		guitarist_anim_name = g_jeff_lose_smash
-		bassist_anim_name = s_billy_lose_boss_guitsmash
+		bassist_anim_name = S_Billy_Lose_Boss_GuitSmash
 		drummer_anim_name = d_jeff_lose_kickinstrument
 		singer_anim_name = s_jeff_lose_smash
 	}
 	{
-		desc_id = lose_tantrum
-		frontend_desc = qs(0x39536634)
+		desc_id = Lose_Tantrum
+		frontend_desc = qs("\LTantrum")
 		frontend_anim_name = car_lose_tantrum
 		guitarist_anim_name = gsbd_g_lose_tantrum01
 		bassist_anim_name = gsbd_b_lose_tantrum01
@@ -165,8 +165,8 @@ cas_male_lose_anim = [
 		singer_anim_name = gsbd_s_lose_tantrum01
 	}
 	{
-		desc_id = lose_walkoff
-		frontend_desc = qs(0x6ea3bec2)
+		desc_id = Lose_WalkOff
+		frontend_desc = qs("\LLate, Suckas")
 		frontend_anim_name = car_lose_walkoff
 		guitarist_anim_name = g_jeff_lose_walkoff
 		bassist_anim_name = b_jeff_lose_walkoff
@@ -225,7 +225,7 @@ cas_male_lose_anim = [
 		drummer_anim_name = bdgs_d_drummer_lose_01
 	}
 	{
-		desc_id = g_jimi_lose
+		desc_id = G_Jimi_lose
 		hidden
 		singer_anim_name = g_jimi_loss_01
 		guitarist_anim_name = g_jimi_loss_01

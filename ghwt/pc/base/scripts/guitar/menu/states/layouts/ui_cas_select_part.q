@@ -4,13 +4,13 @@ script ui_create_cas_select_part
 endscript
 
 script ui_create_cas_select_part_spawned 
-	requireparams \{[
+	RequireParams \{[
 			part
 			text
 		]
 		all}
 	ui_event_add_params hist_tex = <hist_tex>
-	if gotparam \{cam_name}
+	if GotParam \{cam_name}
 		task_menu_default_anim_in base_name = <cam_name>
 	endif
 	make_generic_menu \{vmenu_id = create_cas_select_part_vmenu
@@ -18,19 +18,19 @@ script ui_create_cas_select_part_spawned
 		scrolling
 		scroll_bar_offeset = (425.0, 0.0)}
 	create_ui_history_header text = <text> num_icons = <num_icons>
-	if gotparam \{camera_list}
+	if GotParam \{camera_list}
 		setup_cas_menu_handlers vmenu_id = create_cas_select_part_vmenu camera_list = <camera_list>
 	else
 		setup_cas_menu_handlers \{vmenu_id = create_cas_select_part_vmenu}
 	endif
-	if NOT gotparam \{choose_script}
+	if NOT GotParam \{choose_script}
 		choose_script = select_part_decide_action
 	endif
-	resolvebodyspecificpartinappearance part = <part>
+	ResolveBodySpecificPartInAppearance part = <part>
 	current_part = 0
 	get_part_current_desc_id part = <part>
 	num_parts_added = 0
-	getarraysize ($<part>)
+	GetArraySize ($<part>)
 	i = 0
 	begin
 	if cas_item_is_visible part = <part> part_index = <i>
@@ -49,7 +49,7 @@ script ui_create_cas_select_part_spawned
 	i = (<i> + 1)
 	repeat <array_size>
 	menu_finish \{car_helper_text_extra}
-	launchevent type = focus target = create_cas_select_part_vmenu data = {child_index = <current_part>}
+	LaunchEvent type = focus target = create_cas_select_part_vmenu data = {child_index = <current_part>}
 endscript
 
 script ui_destroy_cas_select_part 
@@ -58,36 +58,36 @@ endscript
 
 script ui_init_cas_select_part 
 	ui_load_cas_rawpak part = <part>
-	pushtemporarycasappearance
+	PushTemporaryCASAppearance
 endscript
 
 script ui_deinit_cas_select_part 
-	flushallcompositetextures
-	poptemporarycasappearance
+	FlushAllCompositeTextures
+	PopTemporaryCASAppearance
 endscript
 
 script select_part_decide_action 
-	if scriptisrunning \{select_part_focus_change_spawned}
-		killspawnedscript \{name = select_part_focus_change_spawned}
+	if ScriptIsRunning \{select_part_focus_change_spawned}
+		KillSpawnedScript \{name = select_part_focus_change_spawned}
 	endif
-	requireparams \{[
+	RequireParams \{[
 			part
 		]
 		all}
 	if is_part_capable part = <part>
-		if getcaspartmaterials part = <part>
-			generic_event_choose state = uistate_cas_select_part_options data = {part_materials = <part_materials> part = <part>}
+		if GetCASPartMaterials part = <part>
+			generic_event_choose state = UIstate_cas_select_part_options data = {part_materials = <part_materials> part = <part>}
 			return
 		endif
-		get_section_index_from_desc_id part = <part> target_desc_id = finishes
-		if gotparam \{section_index}
-			generic_event_choose state = uistate_cap_artist_layer data = {part = <part> text = qs(0x3f47b13d) section_index = <section_index> back_steps = 3}
+		get_section_index_from_desc_id part = <part> target_desc_id = Finishes
+		if GotParam \{section_index}
+			generic_event_choose state = UIstate_cap_artist_layer data = {part = <part> text = qs("FINISHES") section_index = <section_index> back_steps = 3}
 			return
 		else
-			generic_event_choose state = uistate_cap_main data = {savegame = ($cas_current_savegame) part = <part> text = qs(0x541bd475) back_steps = 2}
+			generic_event_choose state = UIstate_cap_main data = {savegame = ($cas_current_savegame) part = <part> text = qs("DESIGN") back_steps = 2}
 		endif
-	elseif getcaspartmaterials part = <part>
-		ui_event event = menu_change data = {state = uistate_cas_color_edit part = <part> part_materials = <part_materials> hist_tex = menu_history_color_edit}
-		printf \{qs(0x15f83e1d)}
+	elseif GetCASPartMaterials part = <part>
+		ui_event event = menu_change data = {state = UIstate_cas_color_edit part = <part> part_materials = <part_materials> hist_tex = menu_history_color_edit}
+		printf \{qs("\LGO TO COLOR MENU")}
 	endif
 endscript

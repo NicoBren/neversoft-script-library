@@ -1,37 +1,37 @@
-l_guit_chrisvance_joker_anims_set = {
-	stance_a = {
-		idle = {
+L_GUIT_ChrisVance_Joker_anims_set = {
+	Stance_A = {
+		Idle = {
 			good = {
-				slow = [
-					guit_chrisvance_joker_075_01
+				Slow = [
+					Guit_ChrisVance_Joker_075_01
 				]
-				med = [
-					guit_chrisvance_joker_100_01
+				Med = [
+					Guit_ChrisVance_Joker_100_01
 				]
-				fast = [
-					guit_chrisvance_joker_120_01
-				]
-			}
-			normal = {
-				slow = [
-					guit_chrisvance_joker_075_01
-				]
-				med = [
-					guit_chrisvance_joker_100_01
-				]
-				fast = [
-					guit_chrisvance_joker_120_01
+				Fast = [
+					Guit_ChrisVance_Joker_120_01
 				]
 			}
-			bad = {
-				slow = [
-					guit_chrisvance_joker_075_01
+			Normal = {
+				Slow = [
+					Guit_ChrisVance_Joker_075_01
 				]
-				med = [
-					guit_chrisvance_joker_100_01
+				Med = [
+					Guit_ChrisVance_Joker_100_01
 				]
-				fast = [
-					guit_chrisvance_joker_120_01
+				Fast = [
+					Guit_ChrisVance_Joker_120_01
+				]
+			}
+			Bad = {
+				Slow = [
+					Guit_ChrisVance_Joker_075_01
+				]
+				Med = [
+					Guit_ChrisVance_Joker_100_01
+				]
+				Fast = [
+					Guit_ChrisVance_Joker_120_01
 				]
 			}
 		}

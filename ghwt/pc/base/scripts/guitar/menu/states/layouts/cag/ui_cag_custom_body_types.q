@@ -1,6 +1,6 @@
 
 script ui_create_cag_custom_body_types 
-	requireparams \{[
+	RequireParams \{[
 			part
 		]
 		all}
@@ -14,7 +14,7 @@ script ui_create_cag_custom_body_types
 	get_part_current_desc_id part = <part>
 	current_part = 0
 	num_parts_added = 0
-	getarraysize ($<part>)
+	GetArraySize ($<part>)
 	i = 0
 	begin
 	if cas_item_is_visible part = <part> part_index = <i>
@@ -24,7 +24,7 @@ script ui_create_cag_custom_body_types
 			endif
 			if NOT is_part_purchased part = <part> desc_id = ((($<part>) [<i>]).desc_id) savegame = ($cas_current_savegame)
 				price = ((($<part>) [<i>]).price)
-				formattext textname = pad_choose_dialogue qs(0x50618374) s = ((($<part>) [<i>]).frontend_desc)
+				FormatText TextName = pad_choose_dialogue qs("Would you like to purchase this %s?") s = ((($<part>) [<i>]).frontend_desc)
 			endif
 			add_list_item {
 				text = (($<part> [<i>]).frontend_desc)
@@ -37,14 +37,14 @@ script ui_create_cag_custom_body_types
 				price = <price>
 				pad_choose_dialogue = <pad_choose_dialogue>
 			}
-			if gotparam \{price}
-				removeparameter \{price}
+			if GotParam \{price}
+				RemoveParameter \{price}
 			endif
-			if gotparam \{pad_choose_dialogue}
-				removeparameter \{pad_choose_dialogue}
+			if GotParam \{pad_choose_dialogue}
+				RemoveParameter \{pad_choose_dialogue}
 			endif
-			if gotparam \{pad_back_dialogue}
-				removeparameter \{pad_back_dialogue}
+			if GotParam \{pad_back_dialogue}
+				RemoveParameter \{pad_back_dialogue}
 			endif
 			num_parts_added = (<num_parts_added> + 1)
 		endif
@@ -53,7 +53,7 @@ script ui_create_cag_custom_body_types
 	repeat <array_size>
 	clean_up_user_control_helpers
 	menu_finish \{car_helper_text_cancel}
-	launchevent type = focus target = create_cag_custom_body_types_vmenu data = {child_index = <current_part>}
+	LaunchEvent type = focus target = create_cag_custom_body_types_vmenu data = {child_index = <current_part>}
 endscript
 
 script ui_destroy_cag_custom_body_types 
@@ -61,30 +61,30 @@ script ui_destroy_cag_custom_body_types
 endscript
 
 script ui_init_cag_custom_body_types 
-	pushtemporarycasappearance
+	PushTemporaryCASAppearance
 	ui_load_cas_rawpak part = <part>
 endscript
 
 script ui_deinit_cag_custom_body_types 
-	flushallcompositetextures
-	poptemporarycasappearance
+	FlushAllCompositeTextures
+	PopTemporaryCASAppearance
 	cleanup_cas_menu_handlers
 endscript
 
 script add_cag_part 
-	requireparams \{[
+	RequireParams \{[
 			part
 			index
 		]
 		all}
-	killallcompositetextures
-	dumpcompositescratchtextures
+	KillAllCompositeTextures
+	DumpCompositeScratchTextures
 	get_part_current_desc_id part = <part>
 	if NOT (((($<part>) [<index>]).desc_id) = <current_desc_id>)
 		cas_part_will_conflict part_name = <part> part_desc_id = ($<part> [<index>].desc_id)
-		if gotparam \{change_parts}
-			printf \{qs(0xb3a58f0c)}
-			getarraysize \{change_parts}
+		if GotParam \{change_parts}
+			printf \{qs("\L~~~~~~CONFLICTED PART~~~~~")}
+			GetArraySize \{change_parts}
 			if (<array_size> > 0)
 				i = 0
 				begin
@@ -98,10 +98,10 @@ script add_cag_part
 endscript
 
 script add_cag_part_spin_guitar 
-	getcurrentcasobject
+	GetCurrentCASObject
 	if is_female_char
-		band_playsimpleanim name = <cas_object> anim = car_female_select_guitar_turn_flip blendduration = 1.0
+		Band_PlaysimpleAnim name = <cas_object> Anim = car_female_select_guitar_turn_flip BlendDuration = 1.0
 	else
-		band_playsimpleanim name = <cas_object> anim = car_male_select_guitar_turn_flip blendduration = 1.0
+		Band_PlaysimpleAnim name = <cas_object> Anim = CAR_male_Select_guitar_turn_flip BlendDuration = 1.0
 	endif
 endscript

@@ -1,7 +1,7 @@
 
 script ui_create_customize_character_stage_presence 
 	make_generic_menu \{vmenu_id = stage_presence_vmenu
-		title = qs(0xe67f295f)
+		title = qs("Presence")
 		num_icons = 2
 		show_history}
 	setup_cas_menu_handlers \{vmenu_id = stage_presence_vmenu
@@ -12,12 +12,12 @@ script ui_create_customize_character_stage_presence
 			'customize_character_stage_presence_L'
 		]
 		zoom_camera = 'customize_Presence_Zoom'}
-	add_generic_menu_icon_item \{icon = presence_intro
-		text = qs(0xef697ef2)
-		choose_state = uistate_popout_select_part
+	add_generic_menu_icon_item \{icon = Presence_Intro
+		text = qs("Intros")
+		choose_state = UIstate_popout_select_part
 		choose_state_data = {
-			text = qs(0xef697ef2)
-			part = cas_intro_anim
+			text = qs("Intros")
+			part = CAS_Intro_Anim
 			camera_list = [
 				'customize_character_stage_presence'
 				'customize_character_stage_presence_R'
@@ -25,18 +25,18 @@ script ui_create_customize_character_stage_presence
 				'customize_character_stage_presence_L'
 			]
 			zoom_camera = 'customize_Presence_Zoom'
-			hist_tex = presence_intro
-			hist_name = qs(0x7c308eb8)
+			hist_tex = Presence_Intro
+			hist_name = qs("\LIntros")
 			is_popup
 			play_current_anim = true
 			disable_rotation_zoom = 1
 		}}
-	add_generic_menu_icon_item \{text = qs(0x352e2ede)
-		icon = presence_wins
-		choose_state = uistate_popout_select_part
+	add_generic_menu_icon_item \{text = qs("Wins")
+		icon = Presence_Wins
+		choose_state = UIstate_popout_select_part
 		choose_state_data = {
-			text = qs(0x352e2ede)
-			part = cas_win_anim
+			text = qs("Wins")
+			part = CAS_Win_Anim
 			camera_list = [
 				'customize_character_stage_presence'
 				'customize_character_stage_presence_R'
@@ -44,18 +44,18 @@ script ui_create_customize_character_stage_presence
 				'customize_character_stage_presence_L'
 			]
 			zoom_camera = 'customize_Presence_Zoom'
-			hist_tex = presence_wins
-			hist_name = qs(0x962ec77b)
+			hist_tex = Presence_Wins
+			hist_name = qs("\LWins")
 			is_popup
 			play_current_anim = true
 			disable_rotation_zoom = 1
 		}}
-	add_generic_menu_icon_item \{text = qs(0x362c5804)
-		icon = presence_loses
-		choose_state = uistate_popout_select_part
+	add_generic_menu_icon_item \{text = qs("Losses")
+		icon = Presence_Loses
+		choose_state = UIstate_popout_select_part
 		choose_state_data = {
-			text = qs(0x362c5804)
-			part = cas_lose_anim
+			text = qs("Losses")
+			part = CAS_Lose_Anim
 			camera_list = [
 				'customize_character_stage_presence'
 				'customize_character_stage_presence_R'
@@ -63,8 +63,8 @@ script ui_create_customize_character_stage_presence
 				'customize_character_stage_presence_L'
 			]
 			zoom_camera = 'customize_Presence_Zoom'
-			hist_tex = presence_loses
-			hist_name = qs(0xa575a84e)
+			hist_tex = Presence_Loses
+			hist_name = qs("\LLosses")
 			is_popup
 			play_current_anim = true
 			disable_rotation_zoom = 1

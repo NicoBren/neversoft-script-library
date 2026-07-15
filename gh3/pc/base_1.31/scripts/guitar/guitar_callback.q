@@ -1,6 +1,6 @@
 
 script timer_callback_script 
-	if ($input_mode = play)
+	if ($input_mode = Play)
 		playback_timer
 	endif
 endscript
@@ -10,24 +10,24 @@ script script_callback_script
 endscript
 
 script script_postcallback_script 
-	updateguitarfuncs
-	if NOT gameispaused
-		getdeltatime
-		update2dparticlesystems delta_time = <delta_time>
-		runqueuedpulseevents
-		checkbosscutoff
+	UpdateGuitarFuncs
+	if NOT GameIsPaused
+		GetDeltaTime
+		Update2DParticleSystems delta_time = <delta_time>
+		RunQueuedPulseEvents
+		CheckBossCutoff
 		if ($output_gpu_log = 1)
-			if isps3
-				getprofiledata \{cpu = 2
+			if IsPs3
+				GetProfileData \{cpu = 2
 					name = gpu}
 			else
-				getprofiledata \{cpu = 6
+				GetProfileData \{cpu = 6
 					name = gpu}
 			endif
 			milliseconds = (<microseconds> / 1000.0)
-			getsongtime
-			formattext textname = text "GPU Time; %s; %m" s = <songtime> m = <milliseconds> dontassertforchecksums
-			textoutput text = <text>
+			GetSongTime
+			FormatText TextName = text "GPU Time; %s; %m" s = <songtime> m = <milliseconds> DontAssertForChecksums
+			TextOutput text = <text>
 		endif
 	endif
 endscript

@@ -1,251 +1,251 @@
-uipaks = {
+UIPaks = {
 	music_store = {
-		Name = 'music_store'
+		name = 'music_store'
 		zones = [
 		]
 	}
 	top_rockers = {
-		Name = 'top_rockers'
+		name = 'top_rockers'
 		zones = [
 		]
 	}
 	guitarhero_com = {
-		Name = 'guitarhero_com'
+		name = 'guitarhero_com'
 		zones = [
 		]
 	}
 	bonus_videos_credits = {
-		Name = 'bonus_videos_credits'
+		name = 'bonus_videos_credits'
 		zones = [
 		]
 	}
 	att_ballpark = {
-		Name = 'att_ballpark'
+		name = 'att_ballpark'
 		zones = [
 		]
 	}
 	top_5_rockers = {
-		Name = 'top_5_rockers'
+		name = 'top_5_rockers'
 		zones = [
 		]
 	}
 	battle_helper = {
-		Name = 'battle_helper'
+		name = 'battle_helper'
 		zones = [
 		]
 	}
 	band_name_logo = {
-		Name = 'band_name_logo'
+		name = 'band_name_logo'
 		zones = [
 		]
 	}
 	gig_posters = {
-		Name = 'gig_posters'
+		name = 'gig_posters'
 		zones = [
 		]
 	}
 	gig_cash_summary = {
-		Name = 'gig_cash_summary'
+		name = 'gig_cash_summary'
 		zones = [
 		]
 	}
 	magazine_cover = {
-		Name = 'magazine_cover'
+		name = 'magazine_cover'
 		zones = [
 		]
 	}
 	song_breakdown = {
-		Name = 'song_breakdown'
+		name = 'song_breakdown'
 		zones = [
 		]
 	}
 	calibrate_lag = {
-		Name = 'calibrate_lag'
+		name = 'calibrate_lag'
 		zones = [
 		]
 	}
 	cash_milestones = {
-		Name = 'cash_milestones'
+		name = 'cash_milestones'
 		zones = [
 		]
 	}
 	cash_rewards_3 = {
-		Name = 'cash_rewards_3'
+		name = 'cash_rewards_3'
 		zones = [
 		]
 	}
 	special_events = {
-		Name = 'special_events'
+		name = 'special_events'
 		zones = [
 		]
 	}
 	cash_rewards = {
-		Name = 'cash_rewards'
+		name = 'cash_rewards'
 		zones = [
 		]
 	}
 	sponsor_new = {
-		Name = 'sponsor_new'
+		name = 'sponsor_new'
 		zones = [
 		]
 	}
 	song_summary_details = {
-		Name = 'song_summary_details'
+		name = 'song_summary_details'
 		zones = [
 		]
 	}
 	cheats = {
-		Name = 'cheats'
+		name = 'cheats'
 		zones = [
 		]
 	}
 	rewards = {
-		Name = 'rewards'
+		name = 'rewards'
 		zones = [
 		]
 	}
 	select_song_section = {
-		Name = 'select_song_section'
+		name = 'select_song_section'
 		zones = [
 		]
 	}
 	cash_reward = {
-		Name = 'cash_reward'
+		name = 'cash_reward'
 		zones = [
 		]
 	}
 	song_summary = {
-		Name = 'song_summary'
+		name = 'song_summary'
 		zones = [
 		]
 	}
 	song_unpause = {
-		Name = 'song_unpause'
+		name = 'song_unpause'
 		zones = [
 		]
 	}
 	select_controller = {
-		Name = 'select_controller'
+		name = 'select_controller'
 		zones = [
 		]
 	}
 	song_statistic = {
-		Name = 'song_statistic'
+		name = 'song_statistic'
 		zones = [
 		]
 	}
 	jam_ghtunes = {
-		Name = 'jam_ghtunes'
+		name = 'jam_ghtunes'
 		zones = [
 		]
 	}
 	jam_wizard = {
-		Name = 'jam_wizard'
+		name = 'jam_wizard'
 		zones = [
 		]
 	}
 	jam_band = {
-		Name = 'jam_band'
+		name = 'jam_band'
 		zones = [
 		]
 	}
 	jam_advanced = {
-		Name = 'jam_advanced'
+		name = 'jam_advanced'
 		zones = [
 		]
 	}
 	cas_ui = {
-		Name = 'cas_ui'
+		name = 'cas_ui'
 		zones = [
 		]
 	}
 	band_info = {
-		Name = 'band_info'
+		name = 'band_info'
 		zones = [
 		]
 	}
 	guitar_tutorials = {
-		Name = 'guitar_tutorials'
+		name = 'guitar_tutorials'
 		zones = [
 		]
 	}
 	fail_song = {
-		Name = 'fail_song'
+		name = 'fail_song'
 		zones = [
 		]
 	}
 	options_audio = {
-		Name = 'options_audio'
+		name = 'options_audio'
 		zones = [
 		]
 	}
 	leaderboard = {
-		Name = 'leaderboard'
+		name = 'leaderboard'
 		zones = [
 		]
 	}
-	setlist = {
-		Name = 'setlist'
+	SetList = {
+		name = 'setlist'
 		zones = [
 		]
 	}
 	rockout = {
-		Name = 'rockout'
+		name = 'rockout'
 		zones = [
 		]
 	}
 	motd = {
-		Name = 'motd'
+		name = 'motd'
 		zones = [
 		]
 	}
 	sponsor = {
-		Name = 'sponsor'
+		name = 'sponsor'
 		zones = [
 		]
 	}
 	win_song = {
-		Name = 'win_song'
+		name = 'win_song'
 		zones = [
 		]
 	}
 	band_mode = {
-		Name = 'band_mode'
+		name = 'band_mode'
 		zones = [
 		]
 	}
 	testpak = {
-		Name = 'testpak'
+		name = 'testpak'
 		zones = [
 		]
 	}
 	jam = {
-		Name = 'jam'
+		name = 'jam'
 		zones = [
 		]
 	}
 	usingguitar = {
-		Name = 'usingguitar'
+		name = 'usingguitar'
 		zones = [
 		]
 	}
 	characterselect = {
-		Name = 'characterselect'
+		name = 'characterselect'
 		zones = [
 		]
 	}
 	gh_tunes_share = {
-		Name = 'gh_tunes_share'
+		name = 'gh_tunes_share'
 		zones = [
 		]
 	}
 	online_lobby = {
-		Name = 'online_lobby'
+		name = 'online_lobby'
 		zones = [
 		]
 	}
 	jam_songwriter = {
-		Name = 'jam_songwriter'
+		name = 'jam_songwriter'
 		zones = [
 		]
 	}

@@ -1,28 +1,28 @@
-gp_purpleflare01 = {
-	Pos = (-0.54124, 0.0, 0.257512)
-	Angles = (0.0, 0.0, 0.0)
+GP_PurpleFlare01 = {
+	pos = (-0.54124, 0.0, 0.257512)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
-	Attach
-	bone = bone_head
+	attach
+	bone = Bone_Head
 	EmitRangeDims = (0.2, 0.2, 0.0)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, 0.0, 0.0)
+	force = (0.0, 0.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	ElevSpread = (90.0, 270.0)
 	SweepSpread = (0.0, 360.0)
 	LifeRange = (0.5, 0.5)
-	Emit_Rate = 200.0
-	Max = 1
+	emit_rate = 200.0
+	max = 1
 	TimeSeed = 0.0
-	LifeTime = 0.5
-	EmitNum = 0
+	lifeTime = 0.5
+	emitNum = 0
 	FollowEmitter = 1.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -36,16 +36,16 @@ gp_purpleflare01 = {
 	EmitDelayStart = 0.0
 	PathFollowTime = 0.0
 	History = 2
-	HistoryListCoordinateSpace = World
-	Color = -389349377
+	HistoryListCoordinateSpace = world
+	color = -389349377
 	LOD_Default
 	NoVisibilityTest
 	QuickMaterial = {
 		DiffuseTextureEnabled
-		DiffuseTexture = jow_flare02
+		DiffuseTexture = JOW_Flare02
 		SpecularPower = 0
-		AlphaCutoff = 16
-		BlendMode = add
+		alphacutoff = 16
+		blendMode = Add
 		QuadAnimationFPS = 0
 	}
 	Knot = [

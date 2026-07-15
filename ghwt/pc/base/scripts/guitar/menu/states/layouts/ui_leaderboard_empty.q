@@ -1,10 +1,10 @@
 
 script ui_create_leaderboard_empty 
 	<text> = qs(0xf8ff983c)
-	<title> = qs(0x93f14ddd)
-	if NOT netsessionfunc \{func = is_lobby_available}
-		<text> = qs(0x0f686da5)
-		<title> = qs(0xaa163738)
+	<title> = qs("ATTENTION")
+	if NOT NetSessionFunc \{func = is_lobby_available}
+		<text> = qs("The game servers are currently unavailable. Please try again later.")
+		<title> = qs("WARNING")
 	endif
 	create_popup_warning_menu {
 		exclusive_device = ($lb_controller)
@@ -15,7 +15,7 @@ script ui_create_leaderboard_empty
 		options = [
 			{
 				func = generic_event_back
-				text = qs(0x182f0173)
+				text = qs("CONTINUE")
 				sound_func = nullscript
 			}
 		]

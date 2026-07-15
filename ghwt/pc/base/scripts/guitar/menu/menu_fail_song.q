@@ -15,7 +15,7 @@ script create_fail_song_menu
 	change \{last_start_pressed_device = $primary_controller}
 	menu_font = fontgrid_title_a1
 	get_song_struct song = ($current_song)
-	if structurecontains structure = <song_struct> boss
+	if StructureContains Structure = <song_struct> boss
 		change \{is_boss_song = 1}
 	else
 		change \{is_boss_song = 0}
@@ -29,7 +29,7 @@ script create_fail_song_menu
 			completion = 99
 		endif
 	endif
-	casttointeger \{completion}
+	CastToInteger \{completion}
 	if (($game_mode = p1_career))
 		if ($is_boss_song = 1)
 			<menu_pos> = (640.0, 420.0)
@@ -38,18 +38,18 @@ script create_fail_song_menu
 	<menu_pos> = (<menu_pos> + (0.0, 45.0))
 	if ($game_mode = p2_career || $game_mode = p2_coop || $game_mode = p2_quickplay)
 		min = ($difficulty_list_props.($player1_status.difficulty).index)
-		mathmin a = <min> b = ($difficulty_list_props.($player2_status.difficulty).index)
-		casttointeger \{min}
+		MathMin a = <min> b = ($difficulty_list_props.($player2_status.difficulty).index)
+		CastToInteger \{min}
 		difficulty_index = <min>
 		get_difficulty_text_upper difficulty = ($difficulty_list [<difficulty_index>])
 	else
 		get_difficulty_text_upper difficulty = ($player1_status.difficulty)
 	endif
 	get_song_title song = ($current_song)
-	getuppercasestring <song_title>
-	formattext textname = completion_text qs(0x76b3fda7) d = <completion>
+	GetUpperCaseString <song_title>
+	FormatText TextName = completion_text qs("\L%d") d = <completion>
 	z = 100.0
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = fail_song_static_text_container
 		internal_just = [
@@ -59,18 +59,18 @@ script create_fail_song_menu
 		pos = (0.0, 0.0)
 		z_priority = 2}
 	if ($is_boss_song = 1)
-		title = qs(0x6b3bb27e)
+		title = qs("BATTLE LOST")
 	elseif ($special_event_stage != 0)
-		title = qs(0x37e6a69e)
+		title = qs("EVENT FAILED")
 	else
-		title = qs(0x5c9b76c1)
+		title = qs("FAILED")
 	endif
 	if ($is_network_game = 1)
-		if ishost
+		if IsHost
 			popup_options = [
 				{
 					func = fail_song_menu_select_retry_song
-					text = qs(0x647b5a84)
+					text = qs("RETRY SONG")
 				}
 			]
 		else
@@ -80,20 +80,20 @@ script create_fail_song_menu
 		popup_options = [
 			{
 				func = fail_song_menu_select_retry_song
-				text = qs(0x647b5a84)
+				text = qs("RETRY SONG")
 			}
 		]
 	endif
 	if ($current_song = bosstom || $current_song = bossslash || $current_song = bossdevil)
 		final_blow_powerup = -1
 		<final_blow_powerup> = ($player2_status.final_blow_powerup)
-		printf channel = trchen qs(0x67427292) s = <final_blow_powerup>
+		printf channel = trchen qs("\LFINAL BLOW %s") s = <final_blow_powerup>
 		if (<final_blow_powerup> > -1)
 			<completion_text_pos> = (420.0, 360.0)
 			<completion_text_just> = [left center]
 			<completion_fit_dims> = (400.0, 400.0)
-			createscreenelement {
-				type = hmenu
+			CreateScreenElement {
+				type = HMenu
 				parent = fail_song_static_text_container
 				id = final_blow_stacker
 				just = [right center]
@@ -102,8 +102,8 @@ script create_fail_song_menu
 				scale = <completion_text_scale>
 			}
 			<finalblow_scale> = 0.7
-			createscreenelement {
-				type = textelement
+			CreateScreenElement {
+				type = TextElement
 				font = <menu_font>
 				parent = final_blow_stacker
 				just = [center center]
@@ -113,7 +113,7 @@ script create_fail_song_menu
 				shadow_rgba = [0 0 0 255]
 				z_priority = (<z> + 0.1)
 				scale = <finalblow_scale>
-				text = qs(0x1be693f8)
+				text = qs("FINAL BLOW:")
 				rgba = [223 223 223 255]
 			}
 			fit_text_in_rectangle {
@@ -124,12 +124,12 @@ script create_fail_song_menu
 				start_x_scale = <finalblow_scale>
 				start_y_scale = <finalblow_scale>
 			}
-			createscreenelement \{type = containerelement
+			CreateScreenElement \{type = ContainerElement
 				parent = final_blow_stacker
 				dims = (64.0, 64.0)}
 			final_blow_attack_icon = ($battlemode_powerups [<final_blow_powerup>].card_texture)
-			createscreenelement {
-				type = spriteelement
+			CreateScreenElement {
+				type = SpriteElement
 				parent = <id>
 				texture = <final_blow_attack_icon>
 				rgba = [255 255 255 255]
@@ -143,8 +143,8 @@ script create_fail_song_menu
 			<completion_text_just> = [center center]
 			<completion_fit_dims> = (425.0, 400.0)
 		endif
-		createscreenelement {
-			type = hmenu
+		CreateScreenElement {
+			type = HMenu
 			parent = fail_song_static_text_container
 			id = fail_completion_stacker
 			just = <completion_text_just>
@@ -153,7 +153,7 @@ script create_fail_song_menu
 			scale = <completion_text_scale>
 		}
 		<completion_text_params> = {
-			type = textelement
+			type = TextElement
 			font = <menu_font>
 			parent = fail_completion_stacker
 			just = [center center]
@@ -164,19 +164,19 @@ script create_fail_song_menu
 			z_priority = (<z> + 0.1)
 		}
 		if ($current_song = bosstom)
-			lost_text = qs(0x89ab6e2f)
+			lost_text = qs("\LTOM MORELLO ")
 		elseif ($current_song = bossslash)
-			lost_text = qs(0x7c194a52)
+			lost_text = qs("\LSLASH ")
 		elseif ($current_song = bossdevil)
-			lost_text = qs(0xd0b67d1a)
+			lost_text = qs("\LLOU ")
 		endif
-		createscreenelement <completion_text_params> scale = 2 text = <lost_text> rgba = [223 223 223 255]
-		createscreenelement <completion_text_params> scale = 2 text = qs(0x0734a074) rgba = [223 223 223 255]
-		createscreenelement <completion_text_params> scale = 1 text = qs(0x713755f7)
-		createscreenelement <completion_text_params> scale = 1 text = qs(0x73360a03)
-		createscreenelement <completion_text_params> scale = 1 text = qs(0x713755f7)
-		createscreenelement <completion_text_params> scale = 1 text = <difficulty_text>
-		setscreenelementlock \{id = fail_completion_stacker
+		CreateScreenElement <completion_text_params> scale = 2 text = <lost_text> rgba = [223 223 223 255]
+		CreateScreenElement <completion_text_params> scale = 2 text = qs("WINS") rgba = [223 223 223 255]
+		CreateScreenElement <completion_text_params> scale = 1 text = qs("\L ")
+		CreateScreenElement <completion_text_params> scale = 1 text = qs("ON")
+		CreateScreenElement <completion_text_params> scale = 1 text = qs("\L ")
+		CreateScreenElement <completion_text_params> scale = 1 text = <difficulty_text>
+		SetScreenElementLock \{id = fail_completion_stacker
 			on}
 		fit_text_in_rectangle {
 			id = fail_completion_stacker
@@ -202,96 +202,96 @@ script create_fail_song_menu
 			255
 		]}
 	text_scale = (0.9, 0.95)
-	if NOT english
+	if NOT English
 		text_scale = (0.9, 0.85)
 	endif
-	if NOT gotparam \{exclusive_device}
+	if NOT GotParam \{exclusive_device}
 		exclusive_device = ($primary_controller)
 	endif
 	demo_mode_disable = {}
-	gamemode_gettype
+	GameMode_GetType
 	if (<type> = quickplay)
 		if NOT ui_event_exists_in_stack \{name = 'jam'}
 			if ($num_quickplay_song_list > 1)
 				<quickplay_skip_song_option> = {
 					func = quickplay_skip_song
 					func_params = {failed_song}
-					text = qs(0xef74f7d2)
+					text = qs("SKIP SONG")
 				}
-				addarrayelement array = <popup_options> element = <quickplay_skip_song_option>
+				AddArrayElement array = <popup_options> element = <quickplay_skip_song_option>
 				<popup_options> = <array>
 			endif
 		endif
 	endif
 	if NOT (($current_song = jamsession) || ($is_network_game = 1))
-		if NOT gamemode_isbandscoring
+		if NOT GameMode_IsBandScoring
 			<change_diff_option> = {
 				func = fail_song_menu_select_change_diff
-				text = qs(0xa717ca5b)
+				text = qs("CHANGE DIFFICULTY")
 			}
-			addarrayelement array = <popup_options> element = <change_diff_option>
+			AddArrayElement array = <popup_options> element = <change_diff_option>
 			<popup_options> = <array>
 		endif
 	endif
 	change \{is_guitar_controller = 0}
 	player_device = ($primary_controller)
-	if isguitarcontroller controller = <player_device>
+	if IsGuitarController controller = <player_device>
 		change \{is_guitar_controller = 1}
 	endif
 	if NOT ($current_song = jamsession)
 		if ((($game_mode = p1_career && $is_boss_song = 0) && $special_event_stage = 0) || $game_mode = p1_quickplay)
 			<practice_option> = {
 				func = fail_song_menu_select_practice
-				text = qs(0x3ea7dec9)
+				text = qs("PRACTICE")
 			}
-			addarrayelement array = <popup_options> element = <practice_option>
+			AddArrayElement array = <popup_options> element = <practice_option>
 			<popup_options> = <array>
 		endif
 	endif
-	gamemode_gettype
+	GameMode_GetType
 	if (<type> = career)
 		if ($is_network_game = 1)
-			if ishost
+			if IsHost
 				<new_song_option> = {
 					func = fail_song_menu_select_new_song
-					text = qs(0x79e7750b)
+					text = qs("QUIT GIG")
 				}
 			else
 				<new_song_option> = {
 					func = empty_script
-					text = qs(0xf40ad470)
+					text = qs("WAITING FOR BAND LEADER")
 					not_focusable
 				}
 			endif
 		else
 			<new_song_option> = {
 				func = fail_song_menu_select_new_song
-				text = qs(0xe561ef6f)
+				text = qs("NEW GIG")
 			}
 		endif
 	else
 		<new_song_option> = {
 			func = fail_song_menu_select_new_song
-			text = qs(0x3e482764)
+			text = qs("NEW SONG")
 		}
 	endif
-	if gotparam \{new_song_option}
-		addarrayelement array = <popup_options> element = <new_song_option>
+	if GotParam \{new_song_option}
+		AddArrayElement array = <popup_options> element = <new_song_option>
 		<popup_options> = <array>
 	endif
 	if ($is_network_game = 1)
 		<quit_option> = {
 			func = select_quit_network_game
 			func_params = {from_fail_menu = 1}
-			text = qs(0x67d9c56d)
+			text = qs("QUIT")
 		}
 	else
 		<quit_option> = {
 			func = fail_song_menu_select_quit
-			text = qs(0x793e4d21)
+			text = qs("MAIN MENU")
 		}
 	endif
-	addarrayelement array = <popup_options> element = <quit_option>
+	AddArrayElement array = <popup_options> element = <quit_option>
 	<popup_options> = <array>
 	if (($is_network_game = 1 && $net_popup_active = 0) || ($is_network_game = 0))
 		create_popup_warning_menu {
@@ -300,19 +300,19 @@ script create_fail_song_menu
 			no_background
 			options = <popup_options>
 			fail_song_props = {
-				song_title = <uppercasestring>
+				song_title = <UpperCaseString>
 				percent_text = <completion_text>
 				difficulty_text = <difficulty_text>
 			}
 		}
 	endif
-	pausegame
+	PauseGame
 	disable_pause
 endscript
 
 script fail_song_menu_select_tutorial 
 	player_device = ($primary_controller)
-	if isguitarcontroller controller = <player_device>
+	if IsGuitarController controller = <player_device>
 		kill_gem_scroller
 		generic_event_choose \{state = uistate_select_practice_mode}
 	endif
@@ -330,7 +330,7 @@ script fail_song_menu_select_practice
 endscript
 
 script fail_song_menu_select_retry_song 
-	gh3_sfx_fail_song_stop_sounds
+	GH3_SFX_fail_song_stop_sounds
 	if ($special_event_stage != 0)
 		reset_current_special_event_percentages
 		change \{special_event_stage = 1}
@@ -340,7 +340,7 @@ script fail_song_menu_select_retry_song
 	endif
 	if ($is_network_game = 1)
 		change agora_failed_attempts = ($agora_failed_attempts + 1)
-		sendstructure \{callback = net_career_retry_song
+		SendStructure \{callback = net_career_retry_song
 			data_to_send = {
 				none
 			}}
@@ -349,7 +349,7 @@ script fail_song_menu_select_retry_song
 		if NOT ($game_mode = training)
 			change agora_failed_attempts = ($agora_failed_attempts + 1)
 			change \{gameplay_restart_song = 1}
-			if NOT iswinport
+			if NOT IsWinPort
 				xenon_singleplayer_session_init
 			endif
 		else
@@ -360,8 +360,8 @@ script fail_song_menu_select_retry_song
 endscript
 
 script fail_song_menu_select_new_song 
-	gh3_sfx_fail_song_stop_sounds
-	if NOT cd
+	GH3_SFX_fail_song_stop_sounds
+	if NOT CD
 		if ($is_in_debug = 1)
 			generic_event_back \{state = uistate_debug}
 			return
@@ -380,25 +380,25 @@ script fail_song_menu_select_new_song
 			if NOT ($jam_view_cam_created = 1)
 				destroy_bg_viewport
 				setup_bg_viewport
-				playigccam \{name = jam_view_cam
+				PlayIGCCam \{name = jam_view_cam
 					viewport = bg_viewport
 					controlscript = jam_camera_script
 					params = {
 						start_camera = jam_song_select
 					}
-					play_hold = 1}
+					Play_hold = 1}
 				change \{jam_view_cam_created = 1}
 				change \{target_jam_camera_prop = failed_song_cam}
 			endif
-			generic_event_back state = uistate_jam_select_song player = <player> data = {show_popup = 0}
+			generic_event_back state = UIstate_jam_select_song player = <player> data = {show_popup = 0}
 		elseif ui_event_exists_in_stack \{name = 'setlist'}
 			generic_event_back state = uistate_setlist player = <player>
 		endif
 	else
-		gamemode_gettype
+		GameMode_GetType
 		if (<type> = career)
 			if ($is_network_game = 1)
-				sendstructure \{callback = net_career_goto_band_lobby
+				SendStructure \{callback = net_career_goto_band_lobby
 					data_to_send = {
 						none
 					}}
@@ -414,7 +414,7 @@ endscript
 
 script fail_song_menu_select_quit 
 	if ($special_event_stage != 0)
-		gamemode_gettype
+		GameMode_GetType
 		if (<type> = career)
 			career_song_ended_select_quit
 		endif
@@ -433,11 +433,11 @@ script fail_song_menu_select_quit
 endscript
 
 script fail_song_menu_select_change_diff 
-	generic_event_choose state = uistate_pausemenu_change_difficulty data = {<...> no_warning}
+	generic_event_choose state = UIstate_pausemenu_change_difficulty data = {<...> no_warning}
 endscript
 
 script quickplay_skip_song 
-	gh3_sfx_fail_song_stop_sounds
+	GH3_SFX_fail_song_stop_sounds
 	if quickplay_set_new_song_in_gig_list
 		<current_song> = ($quickplay_song_list [($quickplay_song_list_current)])
 		if (<current_song> = jamsession)
@@ -455,7 +455,7 @@ script net_career_retry_song
 	change \{gameplay_restart_song = 1}
 	change \{net_ready_to_start = 0}
 	($default_loading_screen.create)
-	if NOT iswinport
+	if NOT IsWinPort
 		xenon_singleplayer_session_init
 	endif
 	ui_event \{event = menu_back

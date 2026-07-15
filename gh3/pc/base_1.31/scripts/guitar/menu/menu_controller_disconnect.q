@@ -2,7 +2,7 @@
 script create_controller_disconnect_menu 
 	kill_start_key_binding
 	destroy_menu \{menu_id = cd_static_text_container}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = cd_static_text_container
 		pos = (0.0, 0.0)}
@@ -16,7 +16,7 @@ script create_controller_disconnect_menu
 		please_reconnect_off = (640.0, 270.0)
 		please_reconnect_dims = (550.0, 300.0)
 		offwhite = [223 223 223 255]
-		formattext \{textname = please_reconnect_text
+		FormatText \{TextName = please_reconnect_text
 			"Please ensure a controller is connected properly"}
 		menu_font = fontgrid_title_gh3
 		new_menu {
@@ -28,8 +28,8 @@ script create_controller_disconnect_menu
 			spacing = -20
 		}
 		create_pause_menu_frame x_scale = 1.2 y_scale = 1.2 z = (<menu_z> - 10)
-		createscreenelement {
-			type = textblockelement
+		CreateScreenElement {
+			type = TextBlockElement
 			parent = cd_static_text_container
 			font = <menu_font>
 			text = <rocking_out_text>
@@ -40,8 +40,8 @@ script create_controller_disconnect_menu
 			rgba = [150 0 0 250]
 			z_priority = <menu_z>
 		}
-		createscreenelement {
-			type = textblockelement
+		CreateScreenElement {
+			type = TextBlockElement
 			parent = cd_static_text_container
 			font = <menu_font>
 			text = <please_reconnect_text>
@@ -52,13 +52,13 @@ script create_controller_disconnect_menu
 			rgba = [210 210 210 250]
 			z_priority = <menu_z>
 		}
-		displaysprite parent = cd_static_text_container tex = dialog_bg pos = (448.0, 470.0) scale = (1.5, 1.5) z = <menu_z>
-		displaysprite parent = cd_static_text_container tex = dialog_bg flip_h pos = (448.0, 550.0) scale = (1.5, 1.5) z = <menu_z>
-		displaysprite parent = cd_static_text_container tex = white pos = (462.0, 550.0) scale = (89.0, 7.5) z = (<menu_z> + 0.1) rgba = <offwhite>
-		displaysprite parent = cd_static_text_container tex = dialog_frame_joiner pos = (448.0, 540.0) rot_angle = 5 scale = (1.89, 1.875) z = (<menu_z> + 0.2)
-		displaysprite parent = cd_static_text_container tex = dialog_frame_joiner pos = (770.0, 547.0) flip_v rot_angle = -5 scale = (1.89, 1.875) z = (<menu_z> + 0.2)
-		displaysprite id = hi_right parent = cd_static_text_container tex = dialog_highlight pos = (770.0, 553.0) scale = (1.25, 1.25) z = (<menu_z> + 0.3)
-		displaysprite id = hi_left parent = cd_static_text_container tex = dialog_highlight flip_v pos = (500.0, 553.0) scale = (1.25, 1.25) z = (<menu_z> + 0.3)
+		displaySprite parent = cd_static_text_container tex = dialog_bg pos = (448.0, 470.0) scale = (1.5, 1.5) z = <menu_z>
+		displaySprite parent = cd_static_text_container tex = dialog_bg flip_h pos = (448.0, 550.0) scale = (1.5, 1.5) z = <menu_z>
+		displaySprite parent = cd_static_text_container tex = white pos = (462.0, 550.0) scale = (89.0, 7.5) z = (<menu_z> + 0.1) rgba = <offwhite>
+		displaySprite parent = cd_static_text_container tex = dialog_frame_joiner pos = (448.0, 540.0) rot_angle = 5 scale = (1.89, 1.875) z = (<menu_z> + 0.2)
+		displaySprite parent = cd_static_text_container tex = dialog_frame_joiner pos = (770.0, 547.0) flip_v rot_angle = -5 scale = (1.89, 1.875) z = (<menu_z> + 0.2)
+		displaySprite id = hi_right parent = cd_static_text_container tex = Dialog_Highlight pos = (770.0, 553.0) scale = (1.25, 1.25) z = (<menu_z> + 0.3)
+		displaySprite id = hi_left parent = cd_static_text_container tex = Dialog_Highlight flip_v pos = (500.0, 553.0) scale = (1.25, 1.25) z = (<menu_z> + 0.3)
 		set_focus_color \{rgba = [
 				180
 				50
@@ -72,8 +72,8 @@ script create_controller_disconnect_menu
 				255
 			]}
 		text_scale = (1.2, 1.25)
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = cd_vmenu
 			font = <menu_font>
 			scale = <text_scale>
@@ -87,8 +87,8 @@ script create_controller_disconnect_menu
 				{pad_choose controller_disconnect_menu_select_resume}
 			]
 		}
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = cd_vmenu
 			font = <menu_font>
 			scale = <text_scale>
@@ -104,17 +104,17 @@ script create_controller_disconnect_menu
 		}
 	else
 		blinker_pos = (750.0, 80.0)
-		displaysprite {
+		displaySprite {
 			parent = cd_static_text_container
 			id = controller_disconnect_pill
-			tex = control_pill_fill
+			tex = Control_Pill_Fill
 			dims = (384.0, 80.0)
 			just = [center center]
 			pos = <blinker_pos>
 			rgba = [50 50 50 212]
 			z = 100
 		}
-		displaytext {
+		displayText {
 			parent = cd_static_text_container
 			id = controller_disconnect_text
 			text = "PLEASE RECONNECT CONTROLLER"
@@ -131,36 +131,36 @@ endscript
 
 script menu_controller_disconnect_wait_for_reconnect 
 	begin
-	if guitargetanalogueinfo \{controller = $unplugged_controller}
+	if GuitarGetAnalogueInfo \{controller = $unplugged_controller}
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
-	if screenelementexists \{id = controller_disconnect_pill}
-		doscreenelementmorph \{id = controller_disconnect_pill
+	if ScreenElementExists \{id = controller_disconnect_pill}
+		doScreenElementMorph \{id = controller_disconnect_pill
 			scale = 0
 			time = 0.25
 			relative_scale}
 	endif
-	if screenelementexists \{id = controller_disconnect_text}
-		doscreenelementmorph \{id = controller_disconnect_text
+	if ScreenElementExists \{id = controller_disconnect_text}
+		doScreenElementMorph \{id = controller_disconnect_text
 			scale = 0
 			time = 0.25}
 	endif
-	wait \{0.25
+	Wait \{0.25
 		seconds}
 	controller_disconnect_menu_select_resume
 endscript
 
 script controller_disconnect_resume_focus 
 	retail_menu_focus
-	if screenelementexists \{id = hi_left}
-		if screenelementexists \{id = hi_right}
-			setscreenelementprops \{id = hi_left
+	if ScreenElementExists \{id = hi_left}
+		if ScreenElementExists \{id = hi_right}
+			SetScreenElementProps \{id = hi_left
 				pos = (470.0, 505.0)
 				flip_v}
-			setscreenelementprops \{id = hi_right
+			SetScreenElementProps \{id = hi_right
 				pos = (735.0, 505.0)}
 		endif
 	endif
@@ -168,12 +168,12 @@ endscript
 
 script controller_disconnect_quit_focus 
 	retail_menu_focus
-	if screenelementexists \{id = hi_left}
-		if screenelementexists \{id = hi_right}
-			setscreenelementprops \{id = hi_left
+	if ScreenElementExists \{id = hi_left}
+		if ScreenElementExists \{id = hi_right}
+			SetScreenElementProps \{id = hi_left
 				pos = (510.0, 565.0)
 				flip_v}
-			setscreenelementprops \{id = hi_right
+			SetScreenElementProps \{id = hi_right
 				pos = (690.0, 565.0)}
 		endif
 	endif

@@ -1,25 +1,25 @@
-gp_fx_scifi_elecexplo_smoke_01 = {
-	Pos = (4.697287, 2.0851018, 0.51167595)
-	Angles = (0.0, 0.0, 0.0)
+GP_FX_SciFi_ElecExplo_Smoke_01 = {
+	pos = (4.697287, 2.0851018, 0.51167595)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
 	EmitRangeDims = (0.1, 0.1, 0.1)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, 0.0, 0.0)
+	force = (0.0, 0.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	AngleSpread = 10.0
 	LifeRange = (4.0, 6.0)
-	Emit_Rate = 5.0
-	Max = 5
+	emit_rate = 5.0
+	max = 5
 	TimeSeed = 0.5
-	LifeTime = 4.0
-	EmitNum = 0
+	lifeTime = 4.0
+	emitNum = 0
 	FollowEmitter = 0.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -33,17 +33,17 @@ gp_fx_scifi_elecexplo_smoke_01 = {
 	EmitDelayStart = 0.3
 	PathFollowTime = 0.0
 	History = 2
-	HistoryListCoordinateSpace = World
-	Color = -123
+	HistoryListCoordinateSpace = world
+	color = -123
 	LOD_Default
 	QuickMaterial = {
 		DiffuseTextureEnabled
-		DiffuseTexture = ph_smoke_singlepuff_blend_02
+		DiffuseTexture = PH_Smoke_SinglePuff_Blend_02
 		SpecularPower = 0
 		Lighting
-		fakeambientocclusion
-		AlphaCutoff = 1
-		BlendMode = blend
+		FakeAmbientOcclusion
+		alphacutoff = 1
+		blendMode = blend
 		SoftEdge
 		SoftedgeScale = 0.2
 		Burn

@@ -2,11 +2,11 @@ jam_signin_upload = 0
 jam_signin_manage = 0
 
 script create_jam_publish_song_menu \{new_genre = -1}
-	printf channel = jam_publish qs(0x6924c21a) s = <filename>
-	netsessionfunc \{func = stats_init}
+	printf channel = jam_publish qs("\Lcreate_jam_publish_song_menu %s") s = <filename>
+	NetSessionFunc \{func = stats_init}
 	change \{target_jam_camera_prop = jam_publish}
 	jam_camera_wait
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = jam_publish_song_container}
 	back_drop_color = [50 50 50 255]
@@ -15,32 +15,32 @@ script create_jam_publish_song_menu \{new_genre = -1}
 	header_y = 80
 	header_foreground_color = <back_drop_color>
 	header_background_color = [255 255 255 255]
-	if (iswinport)
+	if (IsWinPort)
 		make_generic_menu {
-			title = qs(0xb5e46821)
+			title = qs("Song Details")
 			pad_back_script = jam_publish_song_back_warning
 			pad_back_params = {genre = <new_genre> filename = <filename> newfilename = <newfilename>}
 			vmenu_id = create_publish_song_menu
 		}
 	else
 		make_generic_menu {
-			title = qs(0x7ba7b302)
+			title = qs("Publish Song")
 			pad_back_script = jam_publish_song_back_warning
 			pad_back_params = {genre = <new_genre> filename = <filename> newfilename = <newfilename>}
 			vmenu_id = create_publish_song_menu
 		}
 	endif
 	<new_song> = 0
-	getsonginfo
+	GetSongInfo
 	if ((<file_id>.file_id [0]) = 0 && (<file_id>.file_id [1]) = 0)
 		<new_song> = 1
 	endif
 	<unmodifiable_color> = [50 50 50 255]
-	formattext textname = name qs(0x25c86621) s = <newfilename>
+	FormatText TextName = name qs("Name:     %s") s = <newfilename>
 	if (<new_song> = 1)
 		add_generic_menu_text_item {
 			text = <name>
-			choose_state = uistate_jam_publish_text_entry
+			choose_state = UIstate_jam_publish_text_entry
 			choose_state_data = {choose_script = jam_name_choose_script text = <newfilename> choose_params = {filename = <filename>}}
 		}
 	else
@@ -49,21 +49,21 @@ script create_jam_publish_song_menu \{new_genre = -1}
 			additional_unfocus_script = unfocus_published_data
 			additional_unfocus_params = {color = <unmodifiable_color>}
 		}
-		<item_container_id> :setprops generic_menu_smenu_textitem_text_rgba = <unmodifiable_color>
+		<item_container_id> :SetProps generic_menu_smenu_textitem_text_rgba = <unmodifiable_color>
 	endif
-	printf channel = jam_mode qs(0x63bb92f7) s = <new_genre>
-	getarraysize \{$jam_genre_list}
+	printf channel = jam_mode qs("\LNew Genre %s") s = <new_genre>
+	GetArraySize \{$jam_genre_list}
 	if ((<new_genre> >= 0) && (<new_genre> < <array_size>))
-		formattext textname = genre qs(0x99c0ce9f) s = ($jam_genre_list [<new_genre>].name_text)
+		FormatText TextName = genre qs("Genre:        %s") s = ($jam_genre_list [<new_genre>].name_text)
 	else
-		formattext \{textname = genre
-			qs(0x99c0ce9f)
-			s = qs(0xd0ef7f05)}
+		FormatText \{TextName = genre
+			qs("Genre:        %s")
+			s = qs("No Genre")}
 	endif
 	if (<new_song> = 1)
 		add_generic_menu_text_item {
 			text = <genre>
-			choose_state = uistate_jam_publish_genre
+			choose_state = UIstate_jam_publish_genre
 			choose_state_data = {choose_script = jam_genre_choose_script}
 		}
 	else
@@ -72,57 +72,57 @@ script create_jam_publish_song_menu \{new_genre = -1}
 			additional_unfocus_script = unfocus_published_data
 			additional_unfocus_params = {color = <unmodifiable_color>}
 		}
-		<item_container_id> :setprops generic_menu_smenu_textitem_text_rgba = <unmodifiable_color>
+		<item_container_id> :SetProps generic_menu_smenu_textitem_text_rgba = <unmodifiable_color>
 	endif
 	jam_publish_update_playback_track \{guitar_num = 1}
 	jam_publish_update_playback_track \{guitar_num = 2}
 	jam_publish_update_playback_drumvocal_track
-	getsonginfo
+	GetSongInfo
 	if (<playback_track1> >= 0)
-		formattext textname = guitar_playback_text qs(0x3a56fb5a) s = ($jam_tracks [<playback_track1>].name_text)
+		FormatText TextName = guitar_playback_text qs("Guitar Track:     %s") s = ($jam_tracks [<playback_track1>].name_text)
 	else
-		formattext \{textname = guitar_playback_text
-			qs(0x3f30bfe2)}
+		FormatText \{TextName = guitar_playback_text
+			qs("Guitar Track:     NONE")}
 	endif
 	if (<playback_track2> >= 0)
-		formattext textname = bass_playback_text qs(0xc9fbd4ab) s = ($jam_tracks [<playback_track2>].name_text)
+		FormatText TextName = bass_playback_text qs("Bass Track:     %s") s = ($jam_tracks [<playback_track2>].name_text)
 	else
-		formattext \{textname = bass_playback_text
-			qs(0x0de6aeff)}
+		FormatText \{TextName = bass_playback_text
+			qs("Bass Track:     NONE")}
 	endif
 	add_generic_menu_text_item {
 		text = <guitar_playback_text>
-		choose_state = uistate_jam_publish_track_select
+		choose_state = UIstate_jam_publish_track_select
 		choose_state_data = {choose_script = jam_track_select_choose_script guitar_num = 1 playback_track1 = <playback_track1> playback_track2 = <playback_track2>}
 	}
 	add_generic_menu_text_item {
 		text = <bass_playback_text>
-		choose_state = uistate_jam_publish_track_select
+		choose_state = UIstate_jam_publish_track_select
 		choose_state_data = {choose_script = jam_track_select_choose_script guitar_num = 2 playback_track1 = <playback_track1> playback_track2 = <playback_track2>}
 	}
 	add_generic_menu_icon_item {
 		icon = icon_jam_preview
-		text = qs(0x23e0b711)
+		text = qs("Preview Song")
 		pad_choose_script = jam_preview_song_choose_script
 		pad_choose_params = {filename = <newfilename>}
 	}
 	add_generic_menu_icon_item \{icon = icon_graphics
-		text = qs(0x110cf5a6)
+		text = qs("Album Art")
 		pad_choose_script = jam_album_art_choose_script}
 	add_generic_menu_icon_item {
 		icon = icon_save
-		text = qs(0x2e843138)
+		text = qs("Save and Quit")
 		pad_choose_script = jam_save_and_quit_choose_script
 		pad_choose_params = {genre = <new_genre> filename = <filename> newfilename = <newfilename>}
 	}
 	jam_publish_draw_album_cover
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = current_menu}
 	clean_up_user_control_helpers
-	add_user_control_helper \{text = qs(0xc18d5e76)
+	add_user_control_helper \{text = qs("SELECT")
 		button = green
 		z = 100}
-	add_user_control_helper \{text = qs(0xaf4d5dd2)
+	add_user_control_helper \{text = qs("BACK")
 		button = red
 		z = 100}
 	if ($jam_signin_upload = 1)
@@ -136,87 +136,87 @@ script create_jam_publish_song_menu \{new_genre = -1}
 endscript
 
 script unfocus_published_data 
-	<id> :setprops generic_menu_smenu_textitem_text_rgba = <color>
+	<id> :SetProps generic_menu_smenu_textitem_text_rgba = <color>
 endscript
 
 script jam_publish_draw_album_cover 
 	stoprendering
 	cas_update_band_logo \{album_art}
 	ensure_band_logo_object_created
-	setcasappearance \{appearance = {
-			cas_band_logo = {
-				desc_id = cas_band_logo_id
+	SetCASAppearance \{appearance = {
+			CAS_Band_Logo = {
+				desc_id = CAS_Band_Logo_id
 			}
 		}}
-	change \{cas_override_object = bandlogoobject}
-	bandlogoobject :obj_setposition \{position = (-0.89, 0.76, 16.68)}
-	bandlogoobject :obj_setorientation \{dir = (0.0, 0.0, -1.0)}
-	bandlogoobject :switchonatomic \{cas_band_logo}
-	bandlogoobject :obj_applyscaling \{scale = 1.0}
-	bandlogoobject :obj_setboundingsphere \{10.0}
-	wait \{1
+	change \{cas_override_object = BandLogoObject}
+	BandLogoObject :Obj_SetPosition \{position = (-0.89, 0.76, 16.68)}
+	BandLogoObject :Obj_SetOrientation \{dir = (0.0, 0.0, -1.0)}
+	BandLogoObject :SwitchOnAtomic \{CAS_Band_Logo}
+	BandLogoObject :Obj_ApplyScaling \{scale = 1.0}
+	BandLogoObject :Obj_SetBoundingSphere \{10.0}
+	Wait \{1
 		gameframe}
 	startrendering
 endscript
 
 script jam_preview_song_choose_script 
 	printf \{channel = jam_publish
-		qs(0xc66e5c95)}
+		qs("\LPreview Song")}
 	create_song_preview_menu filename = <filename>
 endscript
 
 script jam_album_art_choose_script 
 	if ($cas_heap_state = in_cas)
-		scriptassert \{'Should in in_game heap state!'}
+		ScriptAssert \{'Should in in_game heap state!'}
 	endif
-	casblockforloading
+	CASBlockForLoading
 	cas_load_and_setup_resources \{album_art}
 	change \{cas_editing_new_character = false}
 	ensure_band_logo_object_created
-	if structurecontains structure = (($editable_jam_album_cover) [0]) base_tex
-		setcasappearance appearance = {
-			cas_band_logo = {
-				desc_id = cas_band_logo_id
+	if StructureContains Structure = (($editable_jam_album_cover) [0]) base_tex
+		SetCASAppearance appearance = {
+			CAS_Band_Logo = {
+				desc_id = CAS_Band_Logo_id
 				cap = ($editable_jam_album_cover)
 			}
 		}
 	else
-		setcasappearance \{appearance = {
-				cas_band_logo = {
-					desc_id = cas_band_logo_id
+		SetCASAppearance \{appearance = {
+				CAS_Band_Logo = {
+					desc_id = CAS_Band_Logo_id
 				}
 			}}
 	endif
-	change \{cas_override_object = bandlogoobject}
-	bandlogoobject :obj_setposition \{position = (-0.89, 0.76, 16.68)}
-	bandlogoobject :obj_setorientation \{dir = (0.0, 0.0, -1.0)}
-	bandlogoobject :switchonatomic \{cas_band_logo}
-	bandlogoobject :obj_applyscaling \{scale = 1.0}
-	bandlogoobject :obj_setboundingsphere \{10.0}
+	change \{cas_override_object = BandLogoObject}
+	BandLogoObject :Obj_SetPosition \{position = (-0.89, 0.76, 16.68)}
+	BandLogoObject :Obj_SetOrientation \{dir = (0.0, 0.0, -1.0)}
+	BandLogoObject :SwitchOnAtomic \{CAS_Band_Logo}
+	BandLogoObject :Obj_ApplyScaling \{scale = 1.0}
+	BandLogoObject :Obj_SetBoundingSphere \{10.0}
 	get_savegame_from_controller controller = ($primary_controller)
-	ui_event event = menu_change data = {state = uistate_cap_main text = qs(0xdbb8277f) savegame = <savegame> part = cas_band_logo num_icons = 0 album_cover = 1}
+	ui_event event = menu_change data = {state = UIstate_cap_main text = qs("Edit Album Art") savegame = <savegame> part = CAS_Band_Logo num_icons = 0 album_cover = 1}
 	printf \{channel = jam_publish
-		qs(0xbeabca70)}
+		qs("\LAlbum Art")}
 endscript
 
 script jam_go_back_from_album_art 
-	killcamanim \{all}
+	KillCamAnim \{all}
 	change \{target_jam_camera_prop = jam_publish}
 	destroy_bg_viewport
 	setup_bg_viewport
-	playigccam \{name = jam_view_cam
+	PlayIGCCam \{name = jam_view_cam
 		viewport = bg_viewport
 		controlscript = jam_camera_script
 		params = {
 			start_camera = jam_publish
 		}
-		play_hold = 1}
+		Play_hold = 1}
 	change \{jam_view_cam_created = 1}
-	if NOT getcasappearance
-		scriptassert \{qs(0xd09a342c)}
+	if NOT GetCASAppearance
+		ScriptAssert \{qs("\LUnable to retrieve appearance in band logo management")}
 	endif
-	if structurecontains structure = (<appearance>.cas_band_logo) cap
-		change editable_jam_album_cover = ((<appearance>.cas_band_logo).cap)
+	if StructureContains Structure = (<appearance>.CAS_Band_Logo) cap
+		change editable_jam_album_cover = ((<appearance>.CAS_Band_Logo).cap)
 		change \{editable_jam_album_cover_size = 1}
 	endif
 	change \{cas_override_object = none}
@@ -224,16 +224,16 @@ script jam_go_back_from_album_art
 endscript
 
 script jam_genre_choose_script 
-	printf channel = jam_publish qs(0xb4298068) s = <genre>
-	setsonginfo genre = <genre>
+	printf channel = jam_publish qs("\LGenre %s") s = <genre>
+	SetSongInfo genre = <genre>
 	ui_event event = menu_back data = {new_genre = <genre>}
 endscript
 
 script jam_track_select_choose_script 
 	if (<guitar_num> = 1)
-		setsonginfo playback_track1 = <track>
+		SetSongInfo playback_track1 = <track>
 	else
-		setsonginfo playback_track2 = <track>
+		SetSongInfo playback_track2 = <track>
 	endif
 	ui_event \{event = menu_back}
 endscript
@@ -243,43 +243,43 @@ script jam_upload_song_choose_script
 		jam_upload_song_failed \{dialog = 16}
 		return
 	endif
-	if NOT netsessionfunc \{func = isoldenoughforonline}
+	if NOT NetSessionFunc \{func = IsOldEnoughForOnline}
 		jam_upload_song_failed \{dialog = 6}
 		return
 	endif
 	show_ghtunes_connecting_popup
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = current_menu}
-	netsessionfunc \{func = stats_init}
-	if NOT checkforsignin controller_index = ($primary_controller)
-		if isps3
-			generic_event_choose state = uistate_signin data = {device_num = ($primary_controller) allow_back = 1 new_state = uistate_jam_publish_signin require_live = 1 jam = 1}
+	NetSessionFunc \{func = stats_init}
+	if NOT CheckForSignIn controller_index = ($primary_controller)
+		if IsPs3
+			generic_event_choose state = uistate_signin data = {device_num = ($primary_controller) allow_back = 1 new_state = UIstate_jam_publish_signin require_live = 1 jam = 1}
 			return \{false}
 		endif
-		if NOT checkforsignin network_platform_only controller_index = ($primary_controller)
+		if NOT CheckForSignIn network_platform_only controller_index = ($primary_controller)
 			jam_upload_song_failed \{dialog = 5}
 			return \{false}
 		endif
-		if checkforsignin local controller_index = ($primary_controller)
-			if netsessionfunc \{func = iscableunplugged}
+		if CheckForSignIn local controller_index = ($primary_controller)
+			if NetSessionFunc \{func = IsCableUnplugged}
 				destroy_popup_warning_menu
 				jam_upload_song_failed \{dialog = 5}
 				return
 			endif
 		else
 			destroy_popup_warning_menu
-			generic_event_choose state = uistate_signin data = {device_num = ($primary_controller) allow_back = 1 new_state = uistate_jam_publish_signin require_live = 1 jam = 1}
+			generic_event_choose state = uistate_signin data = {device_num = ($primary_controller) allow_back = 1 new_state = UIstate_jam_publish_signin require_live = 1 jam = 1}
 			return
 		endif
 	endif
-	if NOT netsessionfunc \{func = isoldenoughforonline}
+	if NOT NetSessionFunc \{func = IsOldEnoughForOnline}
 		jam_upload_song_failed \{dialog = 6}
 		return
 	endif
 	if NOT jam_do_lobby_check_upload
 		return
 	endif
-	if NOT netsessionfunc \{func = can_view_user_content}
+	if NOT NetSessionFunc \{func = can_view_user_content}
 		jam_upload_song_failed \{dialog = 6}
 		return
 	endif
@@ -288,32 +288,32 @@ script jam_upload_song_choose_script
 		return
 	endif
 	if ($ghtunes_verified = 0)
-		verifyjamusercontent controller = ($primary_controller)
-		block \{type = verify_jam_user_content}
+		VerifyJamUserContent controller = ($primary_controller)
+		Block \{type = verify_jam_user_content}
 		printf \{channel = jam_mode
-			qs(0x3ba11da7)}
+			qs("\LGHTUNES VERIFIED")}
 		change \{ghtunes_verified = 1}
 	endif
-	if netsessionfunc \{func = iscableunplugged}
+	if NetSessionFunc \{func = IsCableUnplugged}
 		destroy_popup_warning_menu
 		jam_upload_song_failed \{dialog = 5}
 		return
 	endif
-	if NOT isacceptablestring string = <newfilename>
-		if netsessionfunc \{func = iscableunplugged}
+	if NOT IsAcceptableString string = <newfilename>
+		if NetSessionFunc \{func = IsCableUnplugged}
 			destroy_popup_warning_menu
 			jam_upload_song_failed \{dialog = 5}
 			return
 		endif
-		printf channel = jam_publish qs(0x9b3a53e4) s = <newfilename>
+		printf channel = jam_publish qs("\LUNACCEPTABLE NAME %s") s = <newfilename>
 		jam_upload_song_failed dialog = 10 filename = <newfilename>
 		return
 	else
-		printf channel = jam_publish qs(0x2fb2f934) s = <newfilename>
+		printf channel = jam_publish qs("\LACCEPTABLE NAME %s") s = <newfilename>
 	endif
 	jam_upload_song_dialog \{dialog = 3}
-	jamusercanupload controller = ($primary_controller)
-	block \{type = jam_user_can_upload}
+	JamUserCanUpload controller = ($primary_controller)
+	Block \{type = jam_user_can_upload}
 	if (<event_data>.failed = 1)
 		if (<event_data>.fail_type = 1)
 			jam_upload_song_failed \{dialog = 14}
@@ -322,25 +322,25 @@ script jam_upload_song_choose_script
 		endif
 		return
 	endif
-	getjamusercontentlist controller = ($primary_controller)
-	block \{type = get_jam_user_content_list}
+	GetJamUserContentList controller = ($primary_controller)
+	Block \{type = get_jam_user_content_list}
 	if (<event_data>.failed = 1)
 		jam_upload_song_failed \{dialog = 16}
 	else
-		getsonginfo
+		GetSongInfo
 		<file_id> = (<file_id>.file_id)
 		if (((<file_id> [0]) = 0) && ((<file_id> [1]) = 0))
 			slot_array = $jam_curr_slot_array
 			stoprendering
-			generic_event_choose state = uistate_jam_publish_slot data = {choose_script = jam_upload_song_legal_check
+			generic_event_choose state = UIstate_jam_publish_slot data = {choose_script = jam_upload_song_legal_check
 				genre = <genre>
 				filename = <filename>
 				newfilename = <newfilename>
 				slot_array = <slot_array>}
 			jam_upload_song_dialog_destroy
 		else
-			updatejamusercontent controller = ($primary_controller)
-			block \{type = update_jam_user_content}
+			UpdateJamUserContent controller = ($primary_controller)
+			Block \{type = update_jam_user_content}
 			jam_upload_song_dialog_destroy
 			if (<event_data>.failed = 0)
 				jam_upload_song_success dialog = 2 filename = <filename> newfilename = <newfilename> genre = <genre>
@@ -358,29 +358,29 @@ script jam_delete_song_choose_script
 		jam_upload_song_failed \{dialog = 16}
 		return
 	endif
-	if NOT netsessionfunc \{func = isoldenoughforonline}
+	if NOT NetSessionFunc \{func = IsOldEnoughForOnline}
 		jam_upload_song_failed \{dialog = 6}
 		return
 	endif
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = current_menu}
-	netsessionfunc \{func = stats_init}
-	if NOT checkforsignin controller_index = ($primary_controller)
-		if isps3
-			generic_event_choose state = uistate_signin data = {device_num = ($primary_controller) allow_back = 1 new_state = uistate_jam_publish_signin require_live = 1 jam = 1 new_data = {manage = 1}}
+	NetSessionFunc \{func = stats_init}
+	if NOT CheckForSignIn controller_index = ($primary_controller)
+		if IsPs3
+			generic_event_choose state = uistate_signin data = {device_num = ($primary_controller) allow_back = 1 new_state = UIstate_jam_publish_signin require_live = 1 jam = 1 new_data = {manage = 1}}
 			return \{false}
 		endif
-		if NOT checkforsignin network_platform_only controller_index = ($primary_controller)
+		if NOT CheckForSignIn network_platform_only controller_index = ($primary_controller)
 			jam_upload_song_failed \{dialog = 5}
 			return \{false}
 		endif
-		if checkforsignin local controller_index = ($primary_controller)
-			if netsessionfunc \{func = iscableunplugged}
+		if CheckForSignIn local controller_index = ($primary_controller)
+			if NetSessionFunc \{func = IsCableUnplugged}
 				jam_upload_song_failed \{dialog = 5}
 				return
 			endif
 		else
-			generic_event_choose state = uistate_signin data = {device_num = ($primary_controller) allow_back = 1 new_state = uistate_jam_publish_signin require_live = 1 jam = 1 new_data = {manage = 1}}
+			generic_event_choose state = uistate_signin data = {device_num = ($primary_controller) allow_back = 1 new_state = UIstate_jam_publish_signin require_live = 1 jam = 1 new_data = {manage = 1}}
 			return
 		endif
 	endif
@@ -388,19 +388,19 @@ script jam_delete_song_choose_script
 	if NOT jam_do_lobby_check_upload
 		return
 	endif
-	if NOT netsessionfunc \{func = can_view_user_content}
+	if NOT NetSessionFunc \{func = can_view_user_content}
 		jam_upload_song_failed \{dialog = 6}
 		return
 	endif
 	jam_upload_song_dialog \{dialog = 3}
-	getjamusercontentlist controller = ($primary_controller)
-	block \{type = get_jam_user_content_list}
+	GetJamUserContentList controller = ($primary_controller)
+	Block \{type = get_jam_user_content_list}
 	if (<event_data>.failed = 1)
 		jam_upload_song_failed \{dialog = 5}
 	else
 		slot_array = $jam_curr_slot_array
 		stoprendering
-		generic_event_choose state = uistate_jam_publish_slot data = {choose_script = jam_upload_song_legal_check
+		generic_event_choose state = UIstate_jam_publish_slot data = {choose_script = jam_upload_song_legal_check
 			genre = <genre>
 			filename = <filename>
 			newfilename = <newfilename>
@@ -410,34 +410,34 @@ script jam_delete_song_choose_script
 	endif
 endscript
 
-script updatejamusercontent_callback 
-	broadcastevent type = update_jam_user_content data = {failed = <fail_type>}
+script UpdateJamUserContent_callback 
+	BroadcastEvent type = update_jam_user_content data = {failed = <fail_type>}
 endscript
 
-script updatejamusercontent_failed_callback 
-	broadcastevent type = update_jam_user_content data = {failed = <fail_type>}
+script UpdateJamUserContent_failed_callback 
+	BroadcastEvent type = update_jam_user_content data = {failed = <fail_type>}
 endscript
 
 script jam_remove_song_from_slot_check \{slot = 0}
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = current_menu}
 	jam_upload_check_dialog dialog = 1 slot = <slot> genre_chk = <genre_chk>
 endscript
 
 script jam_remove_song_from_slot \{slot = 0}
 	destroy_popup_warning_menu
-	netsessionfunc \{func = stats_init}
-	if NOT checkforsignin controller_index = ($primary_controller)
-		if isps3
+	NetSessionFunc \{func = stats_init}
+	if NOT CheckForSignIn controller_index = ($primary_controller)
+		if IsPs3
 			jam_upload_song_failed \{dialog = 8}
 			return \{false}
 		endif
-		if NOT checkforsignin network_platform_only controller_index = ($primary_controller)
+		if NOT CheckForSignIn network_platform_only controller_index = ($primary_controller)
 			jam_upload_song_failed \{dialog = 5}
 			return \{false}
 		endif
-		if checkforsignin local controller_index = ($primary_controller)
-			if netsessionfunc \{func = iscableunplugged}
+		if CheckForSignIn local controller_index = ($primary_controller)
+			if NetSessionFunc \{func = IsCableUnplugged}
 				jam_upload_song_failed \{dialog = 5}
 				return
 			endif
@@ -450,18 +450,18 @@ script jam_remove_song_from_slot \{slot = 0}
 	if NOT jam_do_lobby_check_upload
 		return
 	endif
-	if NOT netsessionfunc \{func = can_view_user_content}
+	if NOT NetSessionFunc \{func = can_view_user_content}
 		jam_upload_song_failed \{dialog = 6}
 		return
 	endif
 	jam_upload_song_dialog \{dialog = 1}
-	removejamusercontent controller = ($primary_controller) slot = <slot> genre = <genre_chk>
-	block \{type = remove_jam_user_content}
+	RemoveJamUserContent controller = ($primary_controller) slot = <slot> genre = <genre_chk>
+	Block \{type = remove_jam_user_content}
 	jam_upload_song_dialog_destroy
 	printstruct channel = jam_mode ($jam_curr_slot_array)
 	printstruct channel = jam_mode ($jam_curr_directory_listing)
 	curr_slot_file_id = ($jam_curr_slot_array [<slot>].file_id.file_id)
-	getarraysize ($jam_curr_directory_listing) param = directory_size
+	GetArraySize ($jam_curr_directory_listing) param = directory_size
 	j = 0
 	begin
 	curr_directory_file_id = ($jam_curr_directory_listing [<j>].fileid.file_id)
@@ -470,13 +470,13 @@ script jam_remove_song_from_slot \{slot = 0}
 		if (<curr_slot_file_id> [1] = <curr_directory_file_id> [1])
 			if (<curr_slot_file_id> [0] = <curr_directory_file_id> [0])
 				stoprendering
-				clearjamsession
+				ClearJamSession
 				jam_recording_create_editable_arrays
 				change memcard_jamsession_file_name = ($jam_curr_directory_listing [<j>].filename)
 				change \{memcard_after_func = stoprendering}
 				ui_memcard_load_jam \{event = menu_replace
 					data = {
-						state = uistate_jam_publish_update_fileid
+						state = UIstate_jam_publish_update_fileid
 					}}
 				return
 			endif
@@ -488,7 +488,7 @@ script jam_remove_song_from_slot \{slot = 0}
 endscript
 
 script file_id_test 
-	getsonginfo
+	GetSongInfo
 	printstruct channel = jam_mode <file_id>
 endscript
 
@@ -497,10 +497,10 @@ script jam_upload_song_legal_check
 endscript
 
 script jam_upload_song_to_slot_check \{slot = 0}
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = current_menu}
 	if jam_verify_publishing_rules filename = <newfilename> slot = <slot>
-		if gotparam \{replace}
+		if GotParam \{replace}
 			jam_upload_check_dialog dialog = 0 slot = <slot> filename = <filename> newfilename = <newfilename> genre = <genre>
 		else
 			jam_upload_song_to_slot slot = <slot> filename = <filename> newfilename = <newfilename> genre = <genre>
@@ -510,20 +510,20 @@ endscript
 
 script jam_upload_song_to_slot 
 	jam_upload_song_dialog \{dialog = 4}
-	netsessionfunc \{func = stats_init}
-	setsonginfo genre = <genre>
-	if gotparam \{replace}
-		if NOT checkforsignin controller_index = ($primary_controller)
-			if isps3
+	NetSessionFunc \{func = stats_init}
+	SetSongInfo genre = <genre>
+	if GotParam \{replace}
+		if NOT CheckForSignIn controller_index = ($primary_controller)
+			if IsPs3
 				jam_upload_song_failed \{dialog = 8}
 				return \{false}
 			endif
-			if NOT checkforsignin network_platform_only controller_index = ($primary_controller)
+			if NOT CheckForSignIn network_platform_only controller_index = ($primary_controller)
 				jam_upload_song_failed \{dialog = 5}
 				return \{false}
 			endif
-			if checkforsignin local controller_index = ($primary_controller)
-				if netsessionfunc \{func = iscableunplugged}
+			if CheckForSignIn local controller_index = ($primary_controller)
+				if NetSessionFunc \{func = IsCableUnplugged}
 					jam_upload_song_failed \{dialog = 5}
 					return
 				endif
@@ -536,26 +536,26 @@ script jam_upload_song_to_slot
 		if NOT jam_do_lobby_check_upload
 			return
 		endif
-		if NOT netsessionfunc \{func = can_view_user_content}
+		if NOT NetSessionFunc \{func = can_view_user_content}
 			jam_upload_song_failed \{dialog = 6}
 			return
 		endif
 		jam_upload_song_dialog \{dialog = 1}
-		removejamusercontent controller = ($primary_controller) slot = <slot> genre = ($jam_genre_list [<genre>].checksum)
-		block \{type = remove_jam_user_content}
+		RemoveJamUserContent controller = ($primary_controller) slot = <slot> genre = ($jam_genre_list [<genre>].checksum)
+		Block \{type = remove_jam_user_content}
 		jam_upload_song_dialog_destroy
 	endif
-	if NOT checkforsignin controller_index = ($primary_controller)
-		if isps3
+	if NOT CheckForSignIn controller_index = ($primary_controller)
+		if IsPs3
 			jam_upload_song_failed \{dialog = 8}
 			return \{false}
 		endif
-		if NOT checkforsignin network_platform_only controller_index = ($primary_controller)
+		if NOT CheckForSignIn network_platform_only controller_index = ($primary_controller)
 			jam_upload_song_failed \{dialog = 5}
 			return \{false}
 		endif
-		if checkforsignin local controller_index = ($primary_controller)
-			if netsessionfunc \{func = iscableunplugged}
+		if CheckForSignIn local controller_index = ($primary_controller)
+			if NetSessionFunc \{func = IsCableUnplugged}
 				jam_upload_song_failed \{dialog = 5}
 				return
 			endif
@@ -568,18 +568,18 @@ script jam_upload_song_to_slot
 	if NOT jam_do_lobby_check_upload
 		return
 	endif
-	if NOT netsessionfunc \{func = can_view_user_content}
+	if NOT NetSessionFunc \{func = can_view_user_content}
 		jam_upload_song_failed \{dialog = 6}
 		return
 	endif
 	jam_upload_song_dialog \{dialog = 0}
-	printf channel = jam_publish qs(0xf50293a7) s = <newfilename> a = <genre>
-	formattext textname = newfilename_nonlocal '%s' s = <newfilename>
-	addjamusercontent controller = ($primary_controller) slot = <slot> filename = <newfilename_nonlocal> genre = ($jam_genre_list [<genre>].checksum)
-	block \{type = add_jam_user_content}
+	printf channel = jam_publish qs("\Lfilename = %s genre = %a") s = <newfilename> a = <genre>
+	FormatText TextName = newfilename_nonlocal '%s' s = <newfilename>
+	AddJamUserContent controller = ($primary_controller) slot = <slot> filename = <newfilename_nonlocal> genre = ($jam_genre_list [<genre>].checksum)
+	Block \{type = add_jam_user_content}
 	jam_upload_song_dialog_destroy
 	if (<event_data>.failed = 0)
-		achievements_feeding_the_beast controller = ($primary_controller)
+		Achievements_FEEDING_THE_BEAST controller = ($primary_controller)
 		jam_save_and_quit_choose_script filename = <filename> newfilename = <newfilename> genre = <genre>
 	else
 		if (<event_data>.failed = 1)
@@ -597,7 +597,7 @@ script jam_verify_publishing_rules
 	begin
 	gem_array = ($jam_tracks [<count>].gem_array)
 	suffix = '_size'
-	appendsuffixtochecksum base = <gem_array> suffixstring = <suffix>
+	AppendSuffixToChecksum Base = <gem_array> SuffixString = <suffix>
 	notetrack_size = <appended_id>
 	if (($<notetrack_size>) > 0)
 		end_time = ($<gem_array> [(($<notetrack_size>) - 2)])
@@ -618,12 +618,12 @@ script jam_verify_publishing_rules
 		jam_upload_song_failed \{dialog = 3}
 		return \{false}
 	endif
-	getarraysize \{$jam_curr_slot_array}
+	GetArraySize \{$jam_curr_slot_array}
 	index = 0
 	begin
 	if (($jam_curr_slot_array [<index>].has_content) = 1)
 		slot_filename = ($jam_curr_slot_array [<index>].filename)
-		formattext textname = filename_nonlocal '%s' s = <filename>
+		FormatText TextName = filename_nonlocal '%s' s = <filename>
 		if (<filename_nonlocal> = <slot_filename>)
 			if NOT (<slot> = <index>)
 				jam_upload_song_failed \{dialog = 7}
@@ -636,28 +636,28 @@ script jam_verify_publishing_rules
 	return \{true}
 endscript
 
-script addjamusercontent_callback 
+script AddJamUserContent_callback 
 	printf \{channel = jam_publish
-		qs(0xb79f3d27)}
-	broadcastevent \{type = add_jam_user_content
+		qs("\LUpload Success")}
+	BroadcastEvent \{type = add_jam_user_content
 		data = {
 			failed = 0
 		}}
 endscript
 
-script addjamusercontent_failed_callback 
+script AddJamUserContent_failed_callback 
 	printf \{channel = jam_publish
-		qs(0xbce15630)}
-	broadcastevent \{type = add_jam_user_content
+		qs("\LUpload Failed")}
+	BroadcastEvent \{type = add_jam_user_content
 		data = {
 			failed = 1
 		}}
 endscript
 
-script addjamusercontent_failed_size_callback 
+script AddJamUserContent_failed_size_callback 
 	printf \{channel = jam_publish
-		qs(0x7134fb9c)}
-	broadcastevent \{type = add_jam_user_content
+		qs("\LUpload Failed, file size limit")}
+	BroadcastEvent \{type = add_jam_user_content
 		data = {
 			failed = 2
 		}}
@@ -670,74 +670,74 @@ jam_curr_slot_array = [
 	0
 ]
 
-script getjamusercontentlist_callback 
+script GetJamUserContentList_callback 
 	printf \{channel = jam_mode
-		qs(0x5b6ac636)}
+		qs("\LGetJamUserContentList_callback")}
 	change jam_curr_slot_array = <slot_array>
-	broadcastevent \{type = get_jam_user_content_list
+	BroadcastEvent \{type = get_jam_user_content_list
 		data = {
 			failed = 0
 		}}
 endscript
 
-script getjamusercontentlist_failed_callback 
+script GetJamUserContentList_failed_callback 
 	printf \{channel = jam_mode
-		qs(0x2c7733a9)}
-	broadcastevent \{type = get_jam_user_content_list
+		qs("\LGetJamUserContentList_failed_callback")}
+	BroadcastEvent \{type = get_jam_user_content_list
 		data = {
 			failed = 1
 		}}
 endscript
 
-script jamusercanupload_callback 
-	wait \{1
+script JamUserCanUpload_callback 
+	Wait \{1
 		second}
-	broadcastevent \{type = jam_user_can_upload
+	BroadcastEvent \{type = jam_user_can_upload
 		data = {
 			failed = 0
 		}}
 endscript
 
-script jamusercanupload_callback_failed 
-	wait \{1
+script JamUserCanUpload_callback_failed 
+	Wait \{1
 		second}
-	broadcastevent type = jam_user_can_upload data = {failed = 1 fail_type = <fail_type>}
+	BroadcastEvent type = jam_user_can_upload data = {failed = 1 fail_type = <fail_type>}
 endscript
 
-script removejamusercontent_callback 
-	broadcastevent \{type = remove_jam_user_content}
+script RemoveJamUserContent_callback 
+	BroadcastEvent \{type = remove_jam_user_content}
 endscript
 
 script jam_upload_song_dialog \{dialog = 0
 		ghtunes = 0}
 	if (<ghtunes> = 0)
-		launchevent \{type = unfocus
+		LaunchEvent \{type = unfocus
 			target = current_menu}
 	endif
 	destroy_popup_warning_menu
 	clean_up_user_control_helpers
 	switch <dialog>
 		case 0
-		formattext \{textname = upload_dialog
-			qs(0x3f0d3de7)}
+		FormatText \{TextName = upload_dialog
+			qs("Uploading Song...")}
 		case 1
-		formattext \{textname = upload_dialog
-			qs(0xab3efa6a)}
+		FormatText \{TextName = upload_dialog
+			qs("Removing Song...")}
 		case 2
-		formattext \{textname = upload_dialog
-			qs(0xb503f9a6)}
+		FormatText \{TextName = upload_dialog
+			qs("Downloading Song...")}
 		case 3
-		formattext \{textname = upload_dialog
-			qs(0xbc410800)}
+		FormatText \{TextName = upload_dialog
+			qs("Retrieving Slot Info...")}
 		case 4
-		formattext \{textname = upload_dialog
-			qs(0x487100b3)}
+		FormatText \{TextName = upload_dialog
+			qs("Saving Song Info...")}
 		case 5
-		formattext \{textname = upload_dialog
-			qs(0xc1cdb4da)}
+		FormatText \{TextName = upload_dialog
+			qs("Rating Song...")}
 	endswitch
 	create_popup_warning_menu {
-		title = qs(0x5204e0ef)
+		title = qs("GHTunes")
 		textblock = {
 			text = <upload_dialog>
 		}
@@ -753,33 +753,33 @@ script jam_upload_song_dialog_destroy
 endscript
 
 script jam_publish_timeout 
-	wait \{20
+	Wait \{20
 		seconds}
 	jam_upload_song_failed \{dialog = 5}
 endscript
 
 script jam_upload_song_success \{dialog = 0}
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = current_menu}
 	clean_up_user_control_helpers
 	switch <dialog>
 		case 0
-		formattext \{textname = title
-			qs(0x275580df)}
-		formattext \{textname = upload_dialog
-			qs(0x4ac404b0)}
+		FormatText \{TextName = title
+			qs("UPLOAD SUCCESS")}
+		FormatText \{TextName = upload_dialog
+			qs("Upload successful, song uploaded to GHTunes.")}
 		<dialog> = 0
 		case 1
-		formattext \{textname = title
-			qs(0x2b72c6cd)}
-		formattext \{textname = upload_dialog
-			qs(0x7ce4b64a)}
+		FormatText \{TextName = title
+			qs("REMOVE SUCCESS")}
+		FormatText \{TextName = upload_dialog
+			qs("Remove successful, song removed from GHTunes.")}
 		<dialog> = 1
 		case 2
-		formattext \{textname = title
-			qs(0x1af40d3a)}
-		formattext \{textname = upload_dialog
-			qs(0xbb24e4e3)}
+		FormatText \{TextName = title
+			qs("UPDATE SUCCESS")}
+		FormatText \{TextName = upload_dialog
+			qs("Update successful, song updated on GHTunes.")}
 		<dialog> = 0
 	endswitch
 	destroy_popup_warning_menu
@@ -795,7 +795,7 @@ script jam_upload_song_success \{dialog = 0}
 				{
 					func = {jam_save_and_quit_choose_script}
 					func_params = {dialog = <dialog> filename = <filename> newfilename = <newfilename> genre = <genre>}
-					text = qs(0x182f0173)
+					text = qs("CONTINUE")
 				}
 			]
 		}
@@ -811,7 +811,7 @@ script jam_upload_song_success \{dialog = 0}
 				{
 					func = {jam_upload_song_success_go_back}
 					func_params = {dialog = <dialog>}
-					text = qs(0x182f0173)
+					text = qs("CONTINUE")
 				}
 			]
 		}
@@ -821,8 +821,8 @@ endscript
 script jam_upload_song_success_go_back 
 	if (<dialog> = 0)
 		jamsession_unload \{song_prefix = 'editable'}
-		clearjamsession
-		generic_event_back \{state = uistate_jam_select_song
+		ClearJamSession
+		generic_event_back \{state = UIstate_jam_select_song
 			data = {
 				show_popup = 0
 			}}
@@ -835,81 +835,81 @@ script jam_upload_song_success_go_back
 endscript
 
 script jam_upload_song_failed \{dialog = 0}
-	if screenelementexists \{id = current_menu}
-		launchevent \{type = unfocus
+	if ScreenElementExists \{id = current_menu}
+		LaunchEvent \{type = unfocus
 			target = current_menu}
 	endif
 	clean_up_user_control_helpers
 	switch <dialog>
 		case 0
-		if isxenon
-			upload_dialog = qs(0xab79bf04)
-		elseif isps3
-			upload_dialog = qs(0x40c2758c)
+		if isXenon
+			upload_dialog = qs("You are not currently connected to Xbox LIVE. Please connect and try again.")
+		elseif IsPs3
+			upload_dialog = qs("Failed to connect to your PLAYSTATION®Network account. Please connect and try again.")
 		endif
 		case 1
-		upload_dialog = qs(0x4623a4fe)
+		upload_dialog = qs("You must select a genre to upload a song to GHTunes. Please select a genre.")
 		case 2
-		formattext textname = text qs(0x5a47560f) s = ($ghtunes_minimum_note_count)
+		FormatText TextName = text qs("Your song does not meet GHTunes upload qualifications. Uploaded songs must have at least one track recorded with at least %s notes.") s = ($ghtunes_minimum_note_count)
 		upload_dialog = <text>
 		case 3
 		minimum_seconds = ($ghtunes_minimum_song_time / 1000)
-		casttointeger \{minimum_seconds}
-		formattext textname = text qs(0x9757f57d) s = <minimum_seconds>
+		CastToInteger \{minimum_seconds}
+		FormatText TextName = text qs("Your song does not meet GHTunes upload qualifications. Uploaded songs must be at least %s seconds long.") s = <minimum_seconds>
 		upload_dialog = <text>
 		case 4
-		upload_dialog = qs(0x456ac8da)
+		upload_dialog = qs("Song upload failed. Error uploading song to GHTunes, please try again.")
 		case 5
-		upload_dialog = qs(0xb9f3b9df)
+		upload_dialog = qs("Unable to connect to GHTunes. Please check your network connection and settings and try again.")
 		case 6
-		if isxenon
-			upload_dialog = qs(0x3ec48030)
-		elseif isps3
-			upload_dialog = qs(0x27f1b12e)
+		if isXenon
+			upload_dialog = qs("You have set your console to prohibit user created content. You will be unable to access GHTunes. Any songs that you have received through GHTunes will not be accessible.")
+		elseif IsPs3
+			upload_dialog = qs("GHTunes is disabled because online service is disabled on your PLAYSTATION®Network account due to parental control restrictions")
 		endif
 		case 7
-		upload_dialog = qs(0x7cc9a727)
+		upload_dialog = qs("Song upload failed. The song you are trying to upload already exists in one of your slots. Please rename and try again.")
 		case 8
-		if isxenon
-			upload_dialog = qs(0xab994a63)
-		elseif isps3
-			upload_dialog = qs(0x45e839ba)
+		if isXenon
+			upload_dialog = qs("No gamer profile currently signed in. Please sign into an Xbox LIVE multiplayer enabled gamer profile to upload to GHTunes.")
+		elseif IsPs3
+			upload_dialog = qs("You must be signed into the PLAYSTATION®Network to upload to GHTunes.")
 		endif
 		case 9
-		if isxenon
-			upload_dialog = qs(0x24463799)
-		elseif isps3
-			upload_dialog = qs(0x45e839ba)
+		if isXenon
+			upload_dialog = qs("You must have an Xbox LIVE Gold Membership to upload a song to GHTunes. Please sign in and try again.")
+		elseif IsPs3
+			upload_dialog = qs("You must be signed into the PLAYSTATION®Network to upload to GHTunes.")
 		endif
 		case 10
-		formattext textname = text qs(0x2970079e) s = <filename>
+		FormatText TextName = text qs("The name you have selected, %s, has been flagged as inappropriate. Please rename and try again.") s = <filename>
 		upload_dialog = <text>
 		case 11
-		upload_dialog = qs(0xac11a184)
+		upload_dialog = qs("Song update failed. Error updating song on GHTunes, please try again.")
 		case 12
-		upload_dialog = qs(0x05f99039)
+		upload_dialog = qs("Notice: You are not permitted to upload this submission to the GHTunes(SM) service. This submission has been identified as violating the Content Submission Agreement and/or the Terms of Use. Please refer to the terms of those agreements for further information.")
 		case 13
-		if isxenon
+		if isXenon
 			upload_dialog = $lost_network_message_xenon
-		elseif isps3
+		elseif IsPs3
 			upload_dialog = $lost_network_message_ps3
 		endif
 		case 14
-		upload_dialog = qs(0x4bf318f9)
+		upload_dialog = qs("Notice: You are no longer permitted to upload content to the GHTunes(SM) service due to repeated violations of the GHTunes Content Submission Agreement and/or the Terms of Use.  Please refer to the terms of those agreements for further information.")
 		case 15
-		upload_dialog = qs(0xb2a15dea)
+		upload_dialog = qs("Song upload failed. The file you are attempting to upload to GHTunes is too large, please remove notes and try again.")
 		case 16
-		upload_dialog = qs(0xb9f3b9df)
+		upload_dialog = qs("Unable to connect to GHTunes. Please check your network connection and settings and try again.")
 		case 17
-		upload_dialog = qs(0xe50cc88e)
+		upload_dialog = qs("The page you are attempting to access failed to load. Please try again in a few minutes.")
 		case 18
-		upload_dialog = qs(0xb9f3b9df)
+		upload_dialog = qs("Unable to connect to GHTunes. Please check your network connection and settings and try again.")
 		case 19
-		upload_dialog = qs(0x6b545e9f)
+		upload_dialog = qs("The Guitar Hero World Tour server is not available at this time. Please try again later.")
 	endswitch
 	destroy_popup_warning_menu
 	create_popup_warning_menu {
-		title = qs(0x762bc5d2)
+		title = qs("UPLOAD FAILED")
 		textblock = {
 			text = <upload_dialog>
 			pos = (640.0, 370.0)
@@ -919,16 +919,16 @@ script jam_upload_song_failed \{dialog = 0}
 			{
 				func = {jam_upload_song_failed_go_back}
 				func_params = {dialog = <dialog> <...>}
-				text = qs(0x320a8d1c)
+				text = qs("GO BACK")
 			}
 		]
-		long
+		Long
 	}
 endscript
 
 script jam_upload_song_failed_go_back 
 	if (<dialog> = 4)
-		generic_event_back \{state = uistate_jam_publish_song}
+		generic_event_back \{state = UIstate_jam_publish_song}
 		destroy_popup_warning_menu
 	elseif (<dialog> = 2 || <dialog> = 3)
 		destroy_popup_warning_menu
@@ -938,22 +938,22 @@ script jam_upload_song_failed_go_back
 		generic_event_back
 	else
 		destroy_popup_warning_menu
-		launchevent \{type = focus
+		LaunchEvent \{type = focus
 			target = current_menu}
 	endif
 	clean_up_user_control_helpers
-	add_user_control_helper \{text = qs(0xc18d5e76)
+	add_user_control_helper \{text = qs("SELECT")
 		button = green
 		z = 100}
-	add_user_control_helper \{text = qs(0xaf4d5dd2)
+	add_user_control_helper \{text = qs("BACK")
 		button = red
 		z = 100}
 endscript
 
 script jam_upload_check_dialog \{dialog = 0}
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = current_menu}
-	netsessionfunc \{func = stats_init}
+	NetSessionFunc \{func = stats_init}
 	show_ghtunes_connecting_popup
 	if NOT jam_do_lobby_check_upload
 		return
@@ -961,30 +961,30 @@ script jam_upload_check_dialog \{dialog = 0}
 	clean_up_user_control_helpers
 	switch <dialog>
 		case 0
-		formattext \{textname = title
-			qs(0xe6cd2b61)}
-		formattext textname = upload_dialog qs(0xd10ce512) s = (<slot> + 1)
+		FormatText \{TextName = title
+			qs("REPLACING SONG")}
+		FormatText TextName = upload_dialog qs("Are you sure you want to replace your GHTunes song in slot %s?") s = (<slot> + 1)
 		func = jam_upload_song_to_slot
 		func_params = {<...> replace}
 		case 1
-		formattext \{textname = title
-			qs(0x9d4a3853)}
-		formattext textname = upload_dialog qs(0x28fb319a) s = (<slot> + 1)
+		FormatText \{TextName = title
+			qs("REMOVING SONG")}
+		FormatText TextName = upload_dialog qs("Are you sure you want to remove your GHTunes song in slot %s?") s = (<slot> + 1)
 		func = jam_remove_song_from_slot
 		func_params = {<...>}
 		case 2
 		show_ghtunes_connecting_popup
-		jamupdatesubmissionagreement controller = ($primary_controller)
-		block \{type = verify_update_submission_agreement}
+		JamUpdateSubmissionAgreement controller = ($primary_controller)
+		Block \{type = verify_update_submission_agreement}
 		destroy_popup_warning_menu
 		submission_error = 0
 		if (<event_data>.failed = 1)
 			<submission_error> = 1
 		endif
-		if NOT globalexists \{name = ghtunes_submission_agreement_array}
+		if NOT GlobalExists \{name = ghtunes_submission_agreement_array}
 			<submission_error> = 1
 		else
-			getarraysize \{$ghtunes_submission_agreement_array}
+			GetArraySize \{$ghtunes_submission_agreement_array}
 			if (<array_size> <= 0)
 				<submission_error> = 1
 			endif
@@ -1007,12 +1007,12 @@ script jam_upload_check_dialog \{dialog = 0}
 		options = [
 			{
 				func = {jam_upload_check_dialog_go_back}
-				text = qs(0x320a8d1c)
+				text = qs("GO BACK")
 			}
 			{
 				func = {<func>}
 				func_params = <func_params>
-				text = qs(0x182f0173)
+				text = qs("CONTINUE")
 			}
 		]
 	}
@@ -1020,18 +1020,18 @@ endscript
 
 script jam_upload_check_dialog_go_back 
 	destroy_popup_warning_menu
-	add_user_control_helper \{text = qs(0x0307b55c)
+	add_user_control_helper \{text = qs("REMOVE")
 		button = start
 		z = 100000}
 	menu_finish
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = current_menu}
 endscript
 
 script jam_name_choose_script 
-	printf channel = jam_publish qs(0xda5d9e2e) s = <text>
+	printf channel = jam_publish qs("\Lrenamed to: %s") s = <text>
 	directorylisting = $jam_curr_directory_listing
-	getarraysize <directorylisting>
+	GetArraySize <directorylisting>
 	if (<array_size> > 0)
 		index = 0
 		begin
@@ -1048,17 +1048,17 @@ script jam_name_choose_script
 endscript
 
 script jam_rename_song_failed \{dialog = 0}
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = current_menu}
 	clean_up_user_control_helpers
 	switch <dialog>
 		case 0
-		formattext \{textname = dialog
-			qs(0x4f3d7ad7)}
+		FormatText \{TextName = dialog
+			qs("You already have a song with the same name. Please select a different name or delete the duplicate song.")}
 	endswitch
 	destroy_popup_warning_menu
 	create_popup_warning_menu {
-		title = qs(0xbc9950cd)
+		title = qs("RENAME FAILED")
 		textblock = {
 			text = <dialog>
 			pos = (640.0, 370.0)
@@ -1068,7 +1068,7 @@ script jam_rename_song_failed \{dialog = 0}
 			{
 				func = {jam_rename_song_failed_go_back}
 				func_params = {<...>}
-				text = qs(0x320a8d1c)
+				text = qs("GO BACK")
 			}
 		]
 	}
@@ -1080,8 +1080,8 @@ script jam_rename_song_failed_go_back
 endscript
 
 script jam_save_and_quit_choose_script 
-	printf channel = jam_publish qs(0xcbd5f814) s = <genre>
-	printf channel = jam_mode qs(0xcf21ba8f) s = <genre>
+	printf channel = jam_publish qs("\LAttempting to save genre %s") s = <genre>
+	printf channel = jam_mode qs("\Lset %s") s = <genre>
 	stoprendering
 	if (<filename> != <newfilename>)
 		change memcard_jamsession_file_name = <filename>
@@ -1089,7 +1089,7 @@ script jam_save_and_quit_choose_script
 		change \{memcard_after_func = jam_publish_unload}
 		ui_memcard_rename_jam \{event = menu_back
 			data = {
-				state = uistate_jam_select_song
+				state = UIstate_jam_select_song
 				show_popup = 0
 			}}
 	else
@@ -1102,14 +1102,14 @@ script jam_publish_save_song
 	change \{memcard_after_func = jam_publish_unload}
 	ui_memcard_save_jam \{event = menu_back
 		data = {
-			state = uistate_jam_select_song
+			state = UIstate_jam_select_song
 			show_popup = 0
 		}}
 endscript
 
 script jam_publish_unload 
 	jamsession_unload \{song_prefix = 'editable'}
-	clearjamsession
+	ClearJamSession
 endscript
 
 script jam_publish_reinit_band_logo 
@@ -1117,36 +1117,36 @@ script jam_publish_reinit_band_logo
 endscript
 
 script jam_publish_song_back_warning 
-	requireparams \{[
+	RequireParams \{[
 			filename
 			newfilename
 			genre
 		]
 		all}
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = current_menu}
 	destroy_popup_warning_menu
 	create_popup_warning_menu {
-		title = qs(0xaa163738)
+		title = qs("WARNING")
 		no_background
 		textblock = {
-			text = qs(0xe861caa9)
+			text = qs("Unsaved edits will be lost. Do you want to continue?")
 		}
 		options = [
 			{
 				func = {jam_publish_song_back_cancel}
 				func_params = {}
-				text = qs(0xf7723015)
+				text = qs("CANCEL")
 			}
 			{
 				func = {jam_save_and_quit_choose_script}
 				func_params = {dialog = <dialog> filename = <filename> newfilename = <newfilename> genre = <genre>}
-				text = qs(0xb2415b7d)
+				text = qs("SAVE AND QUIT")
 			}
 			{
 				func = {jam_publish_song_back_no_save}
 				func_params = {}
-				text = qs(0x06d0b6b0)
+				text = qs("CONTINUE WITHOUT SAVING")
 			}
 		]
 	}
@@ -1154,7 +1154,7 @@ endscript
 
 script jam_publish_song_back_cancel 
 	destroy_popup_warning_menu
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = current_menu}
 endscript
 
@@ -1165,7 +1165,7 @@ endscript
 
 script jam_publish_song_back 
 	jam_publish_unload
-	generic_event_back \{state = uistate_jam_select_song
+	generic_event_back \{state = UIstate_jam_select_song
 		data = {
 			show_popup = 0
 		}}
@@ -1175,18 +1175,18 @@ script destroy_jam_publish_song_menu
 	destroy_song_preview_menu
 	set_focus_color
 	set_unfocus_color
-	if screenelementexists \{id = jam_publish_song_container}
-		destroyscreenelement \{id = jam_publish_song_container}
+	if ScreenElementExists \{id = jam_publish_song_container}
+		DestroyScreenElement \{id = jam_publish_song_container}
 	endif
 	destroy_generic_menu
-	killspawnedscript \{id = jam_publish_song_spawns}
+	KillSpawnedScript \{id = jam_publish_song_spawns}
 	clean_up_user_control_helpers
 	destroy_menu_backdrop
 	clean_up_user_control_helpers
 endscript
 
 script ui_create_jam_publish_signin 
-	if gotparam \{manage}
+	if GotParam \{manage}
 		change \{jam_signin_manage = 1}
 	else
 		change \{jam_signin_upload = 1}
@@ -1195,30 +1195,30 @@ script ui_create_jam_publish_signin
 endscript
 
 script ui_create_jam_publish_signin_spawned 
-	wait \{5
+	Wait \{5
 		gameframes}
 	generic_event_back \{params = {
-			state = uistate_jam_publish_song
+			state = UIstate_jam_publish_song
 		}}
 endscript
 
 script jam_do_lobby_check_upload 
-	if NOT netsessionfunc \{func = is_lobby_available}
-		wait \{1
+	if NOT NetSessionFunc \{func = is_lobby_available}
+		Wait \{1
 			gameframe}
 		<timeout> = 20.0
-		resettimer
+		ResetTimer
 		begin
-		if netsessionfunc \{func = iscableunplugged}
+		if NetSessionFunc \{func = IsCableUnplugged}
 			jam_upload_song_failed \{dialog = 5}
 		endif
-		if netsessionfunc \{func = is_lobby_available}
+		if NetSessionFunc \{func = is_lobby_available}
 			destroy_popup_warning_menu
 			break
 		else
 			if (<is_connecting> = 0)
 				if (<failed_get_server_list> = 0)
-					if netsessionfunc \{func = iscableunplugged}
+					if NetSessionFunc \{func = IsCableUnplugged}
 						jam_upload_song_failed \{dialog = 5}
 					endif
 					destroy_popup_warning_menu
@@ -1230,12 +1230,12 @@ script jam_do_lobby_check_upload
 				return \{false}
 			endif
 		endif
-		if timegreaterthan <timeout>
+		if TimeGreaterThan <timeout>
 			destroy_popup_warning_menu
 			jam_upload_song_failed \{dialog = 5}
 			return \{false}
 		endif
-		wait \{1
+		Wait \{1
 			gameframe}
 		repeat
 	endif

@@ -13,13 +13,13 @@ script ui_create_cap_artist_layer
 		scroll_bar_offeset = (425.0, 0.0)}
 	create_ui_history_header text = <text> num_icons = <num_icons>
 	if GotParam \{cam_name}
-		SpawnScriptNow task_menu_default_anim_in params = {base_name = <cam_name>}
+		spawnscriptnow task_menu_default_anim_in params = {base_name = <cam_name>}
 	endif
 	setup_cas_menu_handlers \{vmenu_id = create_cap_artist_layer_vmenu}
-	if NOT getcasappearancepart part = <part>
-		ScriptAssert '%s not found' s = <part> donotresolve
+	if NOT GetCASAppearancePart part = <part>
+		ScriptAssert '%s not found' s = <part> DoNotResolve
 	endif
-	if NOT getactualcasoptionstruct part = <part> desc_id = <desc_id>
+	if NOT GetActualCASOptionStruct part = <part> desc_id = <desc_id>
 		ScriptAssert '%s %t not found' s = <part> t = <desc_id>
 	endif
 	if GotParam \{sections}
@@ -39,14 +39,14 @@ script ui_create_cap_artist_layer
 			additional_focus_params = {part = <part> mask_index = <i> mask = <mask> section = (<sections> [<section_index>])}
 		}
 		i = (<i> + 1)
-		repeat <array_Size>
+		repeat <array_size>
 	endif
 	menu_finish \{car_helper_text_extra}
 	if NOT GotParam \{entered_with_part}
 		entered_with_part = <current_part>
 		ui_event_add_params entered_with_part = <entered_with_part>
 	endif
-	LaunchEvent Type = focus target = create_cap_artist_layer_vmenu data = {child_index = <entered_with_part>}
+	LaunchEvent type = focus target = create_cap_artist_layer_vmenu data = {child_index = <entered_with_part>}
 endscript
 
 script ui_destroy_cap_artist_layer 
@@ -54,12 +54,12 @@ script ui_destroy_cap_artist_layer
 endscript
 
 script ui_init_cap_artist_layer 
-	pushtemporarycasappearance
+	PushTemporaryCASAppearance
 endscript
 
 script ui_deinit_cap_artist_layer 
-	flushallcompositetextures
-	poptemporarycasappearance
+	FlushAllCompositeTextures
+	PopTemporaryCASAppearance
 endscript
 
 script cap_change_selected_pattern 
@@ -70,53 +70,53 @@ script cap_change_selected_pattern
 			section
 		]
 		all}
-	SetSpawnInstanceLimits \{Max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
 	if NOT layer_is_on_model section = <section> part = <part> mask = <mask> mask_index = <mask_index>
-		if NOT getcasappearancepart part = <part>
-			ScriptAssert '%s not found' s = <part> donotresolve
+		if NOT GetCASAppearancePart part = <part>
+			ScriptAssert '%s not found' s = <part> DoNotResolve
 		endif
-		if NOT getactualcasoptionstruct part = <part> desc_id = <desc_id>
+		if NOT GetActualCASOptionStruct part = <part> desc_id = <desc_id>
 			ScriptAssert '%s %t not found' s = <part> t = <desc_id>
 		endif
 		set_cap_flags mask = ((<mask>) [<mask_index>])
-		get_cap part = <part> section = <section> mask_index = <mask_index>
-		fiximagepath path = (((<mask>) [<mask_index>]).pattern)
+		get_CAP part = <part> section = <section> mask_index = <mask_index>
+		FixImagePath path = (((<mask>) [<mask_index>]).pattern)
 		if GotParam \{pre_layer}
 			pre_layer = {<pre_layer>
-				texture = <Name>}
-			if StructureContains structure = <section> initial_values
+				texture = <name>}
+			if StructureContains Structure = <section> initial_values
 				pre_layer = {<pre_layer>
 					(<section>.initial_values)}
 			endif
-			if StructureContains structure = ((<mask>) [<mask_index>]) initial_values
+			if StructureContains Structure = ((<mask>) [<mask_index>]) initial_values
 				pre_layer = {<pre_layer>
 					(((<mask>) [<mask_index>]).initial_values)}
 			endif
 			if NOT (<flags> = 0)
 				pre_layer = {<pre_layer>
-					texture = <Name>
+					texture = <name>
 					flags = <flags>}
 			endif
-			set_cap part = <part> section = <section> pre_layer = <pre_layer> mask_index = <mask_index>
+			set_CAP part = <part> section = <section> pre_layer = <pre_layer> mask_index = <mask_index>
 		endif
 		if GotParam \{post_layer}
 			post_layer = {<post_layer>
-				texture = <Name>}
-			if StructureContains structure = <section> initial_values
+				texture = <name>}
+			if StructureContains Structure = <section> initial_values
 				post_layer = {<post_layer>
 					(<section>.initial_values)}
 			endif
-			if StructureContains structure = ((<mask>) [<mask_index>]) initial_values
+			if StructureContains Structure = ((<mask>) [<mask_index>]) initial_values
 				post_layer = {<post_layer>
 					(((<mask>) [<mask_index>]).initial_values)}
 			endif
 			if NOT (<flags> = 0)
 				post_layer = {<post_layer>
-					texture = <Name>
+					texture = <name>
 					flags = <flags>}
 			endif
-			set_cap part = <part> section = <section> post_layer = <post_layer> mask_index = <mask_index>
+			set_CAP part = <part> section = <section> post_layer = <post_layer> mask_index = <mask_index>
 		endif
 	endif
 	clean_up_user_control_helpers
@@ -128,8 +128,8 @@ script cap_change_selected_pattern
 endscript
 
 script exit_artist_layers 
-	killallcompositetextures
-	restoretoptemporarycasappearance
+	KillAllCompositeTextures
+	RestoreTopTemporaryCASAppearance
 	ui_event \{event = menu_back}
 endscript
 
@@ -141,49 +141,49 @@ script layer_is_on_model
 			mask_index
 		]
 		all}
-	if NOT getcasappearancepart part = <part>
-		ScriptAssert '%s not found' s = <part> donotresolve
+	if NOT GetCASAppearancePart part = <part>
+		ScriptAssert '%s not found' s = <part> DoNotResolve
 	endif
-	if NOT getactualcasoptionstruct part = <part> desc_id = <desc_id>
+	if NOT GetActualCASOptionStruct part = <part> desc_id = <desc_id>
 		ScriptAssert '%s %t not found' s = <part> t = <desc_id>
 	endif
 	if GotParam \{cap}
 		GetArraySize \{cap}
-		cap_array_size = <array_Size>
+		cap_array_size = <array_size>
 		if (<cap_array_size> > 0)
 			i = 0
 			begin
-			formatText checksumName = Name '%s' s = (<section>.base_tex)
+			FormatText checksumname = name '%s' s = (<section>.base_tex)
 			if is_matching_section cap = (<cap> [<i>]) section = <section>
-				if StructureContains structure = (<cap> [<i>]) pre_layer
-					if StructureContains structure = <section> pre_userlayer
+				if StructureContains Structure = (<cap> [<i>]) pre_layer
+					if StructureContains Structure = <section> pre_userlayer
 						GetArraySize (((<cap> [<i>]).pre_layer))
-						if (<array_Size> > 0)
+						if (<array_size> > 0)
 							j = 0
 							begin
-							fiximagepath path = (((<mask>) [<mask_index>]).pattern)
-							if (((((<cap> [<i>]).pre_layer) [<j>]).texture) = <Name>)
-								printf \{qs(0x53e901f3)}
+							FixImagePath path = (((<mask>) [<mask_index>]).pattern)
+							if (((((<cap> [<i>]).pre_layer) [<j>]).texture) = <name>)
+								printf \{qs("\LMatched Pattern from mask in cap layer")}
 								return \{true}
 							endif
 							j = (<j> + 1)
-							repeat <array_Size>
+							repeat <array_size>
 						endif
 					endif
 				endif
-				if StructureContains structure = (<cap> [<i>]) post_layer
-					if StructureContains structure = <section> post_userlayer
+				if StructureContains Structure = (<cap> [<i>]) post_layer
+					if StructureContains Structure = <section> post_userlayer
 						GetArraySize (((<cap> [<i>]).post_layer))
-						if (<array_Size> > 0)
+						if (<array_size> > 0)
 							j = 0
 							begin
-							fiximagepath path = (((<mask>) [<mask_index>]).pattern)
-							if (((((<cap> [<i>]).post_layer) [<j>]).texture) = <Name>)
-								printf \{qs(0x53e901f3)}
+							FixImagePath path = (((<mask>) [<mask_index>]).pattern)
+							if (((((<cap> [<i>]).post_layer) [<j>]).texture) = <name>)
+								printf \{qs("\LMatched Pattern from mask in cap layer")}
 								return \{true}
 							endif
 							j = (<j> + 1)
-							repeat <array_Size>
+							repeat <array_size>
 						endif
 					endif
 				endif
@@ -192,7 +192,7 @@ script layer_is_on_model
 			repeat <cap_array_size>
 		endif
 	endif
-	return \{FALSE}
+	return \{false}
 endscript
 
 script cap_artist_layers_decide_action 
@@ -201,7 +201,7 @@ script cap_artist_layers_decide_action
 		cap_artist_layers_decide_steps_back
 		ui_event event = menu_back data = {num_states = <num_states>}
 	else
-		generic_event_choose state = uistate_cap_artist_layer_options data = {<...>}
+		generic_event_choose state = UIstate_cap_artist_layer_options data = {<...>}
 	endif
 endscript
 

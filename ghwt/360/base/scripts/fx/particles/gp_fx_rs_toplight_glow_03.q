@@ -1,30 +1,30 @@
-gp_fx_rs_toplight_glow_03 = {
-	Pos = (0.0, -1.937838, -0.062209)
-	Angles = (0.0, 0.0, 0.0)
+GP_FX_RS_TopLight_Glow_03 = {
+	pos = (0.0, -1.937838, -0.062209)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
-	Attach
+	attach
 	Align
 	ApplyPositionOffset
-	AttachObject = z_recordstore_g_jg_hanglight03
+	AttachObject = GH3_Camera_Steven_DreamOn_3a
 	EmitRangeDims = (0.0, 0.0, 0.0)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EnableRotate
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, 0.0, 0.0)
+	force = (0.0, 0.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	AngleSpread = 45.0
 	LifeRange = (0.1, 10.0)
-	Emit_Rate = 10.0
-	Max = 2
+	emit_rate = 10.0
+	max = 2
 	TimeSeed = 0.0
-	LifeTime = 0.0
-	EmitNum = 0
+	lifeTime = 0.0
+	emitNum = 0
 	FollowEmitter = 0.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -39,15 +39,15 @@ gp_fx_rs_toplight_glow_03 = {
 	PathFollowTime = 0.0
 	History = 2
 	HistoryListCoordinateSpace = object
-	Color = -1364362497
+	color = -1364362497
 	LOD_Default
 	QuickMaterial = {
 		DiffuseTextureEnabled
-		DiffuseTexture = ph_radialglow_01
+		DiffuseTexture = PH_RadialGlow_01
 		SpecularPower = 0
 		fillburst
-		AlphaCutoff = 1
-		BlendMode = add
+		alphacutoff = 1
+		blendMode = Add
 		Burn
 		BurnValue = 0.9
 		QuadAnimationFPS = 0

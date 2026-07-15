@@ -1,305 +1,305 @@
 Skate8_SFX_Background_Areas_And_States = {
-	Default = {
-		Default = Silence_Front_End_Crowd_Loop
+	`default` = {
+		`default` = Silence_Front_End_Crowd_Loop
 		Volume_Params = {
 			Silence_Front_End_Crowd_Loop = 10
 		}
 		Fade_From = {
-			crowd_large_ext_bad = 8
-			crowd_large_ext_good = 8
-			crowd_large_ext_neutral = 8
-			crowd_medium_ext_bad = 8
-			crowd_medium_ext_good = 8
-			crowd_medium_ext_neutral = 8
-			crowd_small_ext_bad = 8
-			crowd_small_ext_good = 8
-			crowd_small_ext_neutral = 8
-			fly_crowd_loop = 8
+			Crowd_Large_EXT_Bad = 8
+			Crowd_Large_EXT_Good = 8
+			Crowd_Large_EXT_Neutral = 8
+			Crowd_Medium_EXT_Bad = 8
+			Crowd_Medium_EXT_Good = 8
+			Crowd_Medium_EXT_Neutral = 8
+			Crowd_Small_EXT_Bad = 8
+			Crowd_Small_EXT_Good = 8
+			Crowd_Small_EXT_Neutral = 8
+			FLY_Crowd_Loop = 8
 		}
 	}
 	FrontEnd = {
-		Default = Silence_Front_End_Crowd_Loop
+		`default` = Silence_Front_End_Crowd_Loop
 		Volume_Params = {
 			Silence_Front_End_Crowd_Loop = 10
 		}
 		Fade_From = {
-			crowd_large_ext_bad = 8
-			crowd_large_ext_good = 8
-			crowd_large_ext_neutral = 8
-			crowd_medium_ext_bad = 8
-			crowd_medium_ext_good = 8
-			crowd_medium_ext_neutral = 8
-			crowd_small_ext_bad = 8
-			crowd_small_ext_good = 8
-			crowd_small_ext_neutral = 8
-			fly_crowd_loop = 8
+			Crowd_Large_EXT_Bad = 8
+			Crowd_Large_EXT_Good = 8
+			Crowd_Large_EXT_Neutral = 8
+			Crowd_Medium_EXT_Bad = 8
+			Crowd_Medium_EXT_Good = 8
+			Crowd_Medium_EXT_Neutral = 8
+			Crowd_Small_EXT_Bad = 8
+			Crowd_Small_EXT_Good = 8
+			Crowd_Small_EXT_Neutral = 8
+			FLY_Crowd_Loop = 8
 		}
 	}
-	musicstudio = {
-		Default = Silence_Front_End_Crowd_Loop
+	MusicStudio = {
+		`default` = Silence_Front_End_Crowd_Loop
 		Volume_Params = {
 			Silence_Front_End_Crowd_Loop = 10
 		}
 		Fade_From = {
-			crowd_large_ext_bad = 8
-			crowd_large_ext_good = 8
-			crowd_large_ext_neutral = 8
-			crowd_medium_ext_bad = 8
-			crowd_medium_ext_good = 8
-			crowd_medium_ext_neutral = 8
-			crowd_small_ext_bad = 8
-			crowd_small_ext_good = 8
-			crowd_small_ext_neutral = 8
-			fly_crowd_loop = 8
+			Crowd_Large_EXT_Bad = 8
+			Crowd_Large_EXT_Good = 8
+			Crowd_Large_EXT_Neutral = 8
+			Crowd_Medium_EXT_Bad = 8
+			Crowd_Medium_EXT_Good = 8
+			Crowd_Medium_EXT_Neutral = 8
+			Crowd_Small_EXT_Bad = 8
+			Crowd_Small_EXT_Good = 8
+			Crowd_Small_EXT_Neutral = 8
+			FLY_Crowd_Loop = 8
 		}
 	}
-	frontend_menu_music = {
-		Default = ext_md_crowd_good_loop
+	FrontEnd_Menu_Music = {
+		`default` = EXT_MD_Crowd_Good_Loop
 		Volume_Params = {
-			ext_md_crowd_good_loop = 10
+			EXT_MD_Crowd_Good_Loop = 10
 		}
 		Fade_From = {
-			ext_md_crowd_good_loop = 3
+			EXT_MD_Crowd_Good_Loop = 3
 		}
 	}
-	crowd_loop_fly_good = {
-		Default = fly_crowd_loop
+	Crowd_Loop_FLY_Good = {
+		`default` = FLY_Crowd_Loop
 		Volume_Params = {
-			fly_crowd_loop = 20
-		}
-		Fade_From = {
-			FrontEnd = 3
-		}
-	}
-	crowd_loop_fly_neutral = {
-		Default = fly_crowd_loop
-		Volume_Params = {
-			fly_crowd_loop = 20
+			FLY_Crowd_Loop = 20
 		}
 		Fade_From = {
 			FrontEnd = 3
 		}
 	}
-	crowd_loop_fly_bad = {
-		Default = fly_crowd_loop
+	Crowd_Loop_FLY_Neutral = {
+		`default` = FLY_Crowd_Loop
 		Volume_Params = {
-			fly_crowd_loop = 20
+			FLY_Crowd_Loop = 20
 		}
 		Fade_From = {
 			FrontEnd = 3
 		}
 	}
-	crowd_loop_tool_good = {
-		Default = tool_crowd_loop
+	Crowd_Loop_FLY_Bad = {
+		`default` = FLY_Crowd_Loop
 		Volume_Params = {
-			tool_crowd_loop = 65
+			FLY_Crowd_Loop = 20
 		}
 		Fade_From = {
 			FrontEnd = 3
 		}
 	}
-	crowd_loop_tool_neutral = {
-		Default = tool_crowd_loop
+	Crowd_Loop_TOOL_Good = {
+		`default` = Tool_Crowd_Loop
 		Volume_Params = {
-			tool_crowd_loop = 65
+			Tool_Crowd_Loop = 65
 		}
 		Fade_From = {
 			FrontEnd = 3
 		}
 	}
-	crowd_loop_tool_bad = {
-		Default = tool_crowd_loop
+	Crowd_Loop_TOOL_Neutral = {
+		`default` = Tool_Crowd_Loop
 		Volume_Params = {
-			tool_crowd_loop = 65
+			Tool_Crowd_Loop = 65
 		}
 		Fade_From = {
 			FrontEnd = 3
 		}
 	}
-	crowd_loop_large_ext_good = {
-		Default = ext_lg_crowd_good_loop
+	Crowd_Loop_TOOL_Bad = {
+		`default` = Tool_Crowd_Loop
 		Volume_Params = {
-			ext_lg_crowd_good_loop = 65
+			Tool_Crowd_Loop = 65
 		}
 		Fade_From = {
 			FrontEnd = 3
 		}
 	}
-	crowd_loop_large_ext_neutral = {
-		Default = ext_lg_crowd_neutral_loop
+	Crowd_Loop_Large_EXT_Good = {
+		`default` = EXT_LG_Crowd_Good_Loop
 		Volume_Params = {
-			ext_lg_crowd_neutral_loop = 65
+			EXT_LG_Crowd_Good_Loop = 65
 		}
 		Fade_From = {
 			FrontEnd = 3
 		}
 	}
-	crowd_loop_large_ext_bad = {
-		Default = ext_lg_crowd_bad_loop
+	Crowd_Loop_Large_EXT_Neutral = {
+		`default` = EXT_LG_Crowd_Neutral_Loop
 		Volume_Params = {
-			ext_lg_crowd_bad_loop = 70
+			EXT_LG_Crowd_Neutral_Loop = 65
 		}
 		Fade_From = {
 			FrontEnd = 3
 		}
 	}
-	crowd_loop_large_int_good = {
-		Default = int_lg_crowd_good_loop
+	Crowd_Loop_Large_EXT_Bad = {
+		`default` = EXT_LG_Crowd_Bad_Loop
 		Volume_Params = {
-			int_lg_crowd_good_loop = 80
+			EXT_LG_Crowd_Bad_Loop = 70
 		}
 		Fade_From = {
 			FrontEnd = 3
 		}
 	}
-	crowd_loop_large_int_neutral = {
-		Default = int_lg_crowd_neutral_loop
+	Crowd_Loop_Large_INT_Good = {
+		`default` = INT_LG_Crowd_Good_Loop
 		Volume_Params = {
-			int_lg_crowd_neutral_loop = 140
+			INT_LG_Crowd_Good_Loop = 80
 		}
 		Fade_From = {
 			FrontEnd = 3
 		}
 	}
-	crowd_loop_large_int_bad = {
-		Default = int_lg_crowd_bad_loop
+	Crowd_Loop_Large_INT_Neutral = {
+		`default` = INT_LG_Crowd_Neutral_Loop
 		Volume_Params = {
-			int_lg_crowd_bad_loop = 115
+			INT_LG_Crowd_Neutral_Loop = 140
 		}
 		Fade_From = {
 			FrontEnd = 3
 		}
 	}
-	crowd_loop_medium_ext_good = {
-		Default = ext_md_crowd_good_loop
+	Crowd_Loop_Large_INT_Bad = {
+		`default` = INT_LG_Crowd_Bad_Loop
 		Volume_Params = {
-			ext_md_crowd_good_loop = 35
+			INT_LG_Crowd_Bad_Loop = 115
 		}
 		Fade_From = {
 			FrontEnd = 3
 		}
 	}
-	crowd_loop_medium_ext_neutral = {
-		Default = ext_md_crowd_neutral_loop
+	Crowd_Loop_Medium_EXT_Good = {
+		`default` = EXT_MD_Crowd_Good_Loop
 		Volume_Params = {
-			ext_md_crowd_neutral_loop = 30
+			EXT_MD_Crowd_Good_Loop = 35
 		}
 		Fade_From = {
 			FrontEnd = 3
 		}
 	}
-	crowd_loop_medium_ext_bad = {
-		Default = ext_md_crowd_bad_loop
+	Crowd_Loop_Medium_EXT_Neutral = {
+		`default` = EXT_MD_Crowd_Neutral_Loop
 		Volume_Params = {
-			ext_md_crowd_bad_loop = 45
+			EXT_MD_Crowd_Neutral_Loop = 30
 		}
 		Fade_From = {
 			FrontEnd = 3
 		}
 	}
-	crowd_loop_medium_int_good = {
-		Default = int_md_crowd_good_loop
+	Crowd_Loop_Medium_EXT_Bad = {
+		`default` = EXT_MD_Crowd_Bad_Loop
 		Volume_Params = {
-			int_md_crowd_good_loop = 30
+			EXT_MD_Crowd_Bad_Loop = 45
 		}
 		Fade_From = {
 			FrontEnd = 3
 		}
 	}
-	crowd_loop_medium_int_neutral = {
-		Default = int_md_crowd_neutral_loop
+	Crowd_Loop_Medium_INT_Good = {
+		`default` = INT_MD_Crowd_Good_Loop
 		Volume_Params = {
-			int_md_crowd_neutral_loop = 50
+			INT_MD_Crowd_Good_Loop = 30
 		}
 		Fade_From = {
 			FrontEnd = 3
 		}
 	}
-	crowd_loop_medium_int_bad = {
-		Default = int_md_crowd_bad_loop
+	Crowd_Loop_Medium_INT_Neutral = {
+		`default` = INT_MD_Crowd_Neutral_Loop
 		Volume_Params = {
-			int_md_crowd_bad_loop = 45
+			INT_MD_Crowd_Neutral_Loop = 50
 		}
 		Fade_From = {
 			FrontEnd = 3
 		}
 	}
-	crowd_loop_small_ext_good = {
-		Default = ext_sm_crowd_good_loop
+	Crowd_Loop_Medium_INT_Bad = {
+		`default` = INT_MD_Crowd_Bad_Loop
 		Volume_Params = {
-			ext_sm_crowd_good_loop = 80
+			INT_MD_Crowd_Bad_Loop = 45
 		}
 		Fade_From = {
 			FrontEnd = 3
 		}
 	}
-	crowd_loop_small_ext_neutral = {
-		Default = ext_sm_crowd_neutral_loop
+	Crowd_Loop_Small_EXT_Good = {
+		`default` = EXT_SM_Crowd_Good_Loop
 		Volume_Params = {
-			ext_sm_crowd_neutral_loop = 80
+			EXT_SM_Crowd_Good_Loop = 80
 		}
 		Fade_From = {
 			FrontEnd = 3
 		}
 	}
-	crowd_loop_small_ext_bad = {
-		Default = ext_sm_crowd_bad_loop
+	Crowd_Loop_Small_EXT_Neutral = {
+		`default` = EXT_SM_Crowd_Neutral_Loop
 		Volume_Params = {
-			ext_sm_crowd_bad_loop = 80
+			EXT_SM_Crowd_Neutral_Loop = 80
 		}
 		Fade_From = {
 			FrontEnd = 3
 		}
 	}
-	crowd_loop_small_int_good = {
-		Default = int_sm_crowd_good_loop
+	Crowd_Loop_Small_EXT_Bad = {
+		`default` = EXT_SM_Crowd_Bad_Loop
 		Volume_Params = {
-			int_sm_crowd_good_loop = 35
+			EXT_SM_Crowd_Bad_Loop = 80
 		}
 		Fade_From = {
 			FrontEnd = 3
 		}
 	}
-	crowd_loop_small_int_neutral = {
-		Default = int_sm_crowd_neutral_loop
+	Crowd_Loop_Small_INT_Good = {
+		`default` = INT_SM_Crowd_Good_Loop
 		Volume_Params = {
-			int_sm_crowd_neutral_loop = 60
+			INT_SM_Crowd_Good_Loop = 35
 		}
 		Fade_From = {
 			FrontEnd = 3
 		}
 	}
-	crowd_loop_small_int_bad = {
-		Default = int_sm_crowd_bad_loop
+	Crowd_Loop_Small_INT_Neutral = {
+		`default` = INT_SM_Crowd_Neutral_Loop
 		Volume_Params = {
-			int_sm_crowd_bad_loop = 65
+			INT_SM_Crowd_Neutral_Loop = 60
 		}
 		Fade_From = {
 			FrontEnd = 3
 		}
 	}
-	crowd_loop_jam_good = {
-		Default = ext_md_crowd_good_loop
+	Crowd_Loop_Small_INT_Bad = {
+		`default` = INT_SM_Crowd_Bad_Loop
 		Volume_Params = {
-			ext_md_crowd_good_loop = 35
+			INT_SM_Crowd_Bad_Loop = 65
 		}
 		Fade_From = {
 			FrontEnd = 3
 		}
 	}
-	crowd_loop_jam_neutral = {
-		Default = ext_md_crowd_good_loop
+	Crowd_Loop_JAM_Good = {
+		`default` = EXT_MD_Crowd_Good_Loop
 		Volume_Params = {
-			ext_md_crowd_good_loop = 35
+			EXT_MD_Crowd_Good_Loop = 35
 		}
 		Fade_From = {
 			FrontEnd = 3
 		}
 	}
-	crowd_loop_jam_bad = {
-		Default = ext_md_crowd_good_loop
+	Crowd_Loop_JAM_Neutral = {
+		`default` = EXT_MD_Crowd_Good_Loop
 		Volume_Params = {
-			ext_md_crowd_good_loop = 35
+			EXT_MD_Crowd_Good_Loop = 35
+		}
+		Fade_From = {
+			FrontEnd = 3
+		}
+	}
+	Crowd_Loop_JAM_Bad = {
+		`default` = EXT_MD_Crowd_Good_Loop
+		Volume_Params = {
+			EXT_MD_Crowd_Good_Loop = 35
 		}
 		Fade_From = {
 			FrontEnd = 3

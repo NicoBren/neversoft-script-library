@@ -1,40 +1,40 @@
 
 script ui_create_connection_loss \{no_options = 0}
-	printf \{qs(0x9a635b14)}
+	printf \{qs("\Lui_create_connection_loss")}
 	printstruct <...>
 	destroy_popup_warning_menu
 	if (<no_options> = 0)
 		options = [
 			{
 				func = ui_connection_loss_continue
-				text = qs(0x182f0173)
+				text = qs("CONTINUE")
 				scale = (1.0, 1.0)
 			}
 		]
 	endif
-	if iswinport
-		text = qs(0x0df6659c)
-	elseif isxenon
-		text = qs(0x851ba98a)
+	if IsWinPort
+		text = qs("Your network connection has been disconnected.")
+	elseif isXenon
+		text = qs("You must be signed in to Xbox LIVE to continue.")
 	else
-		if checkforsignin \{network_platform_only}
-			text = qs(0x0f686da5)
+		if CheckForSignIn \{network_platform_only}
+			text = qs("The game servers are currently unavailable. Please try again later.")
 		else
-			text = qs(0x389abcd2)
+			text = qs("You must be signed in to the PLAYSTATION®Network to continue.")
 		endif
 	endif
-	if ((iswinport) && (gotparam reason))
+	if ((IsWinPort) && (GotParam reason))
 		printf qs(0x00df20cf) a = <reason>
 		text = qs(0xcf2ce8f5)
 	endif
-	if gotparam \{cable_unplugged}
-		text = qs(0xd5c7d8b1)
-	elseif gotparam \{lost_lobby_connection}
-		text = qs(0x3c4b0427)
+	if GotParam \{cable_unplugged}
+		text = qs("Your network connection has been disconnected. Returning to the main menu.")
+	elseif GotParam \{lost_lobby_connection}
+		text = qs("You have lost connection to the Lobby Server. Returning to the main menu.")
 	endif
 	startrendering
 	create_popup_warning_menu {
-		title = qs(0x5ce7042a)
+		title = qs("CONNECTION LOST")
 		title_props = {scale = 1.0}
 		textblock = {
 			text = <text>
@@ -56,7 +56,7 @@ endscript
 
 script ui_connection_loss_continue 
 	destroy_popup_warning_menu
-	generic_event_choose \{state = uistate_mainmenu
+	generic_event_choose \{state = UIstate_mainmenu
 		data = {
 			clear_previous_stack
 		}}

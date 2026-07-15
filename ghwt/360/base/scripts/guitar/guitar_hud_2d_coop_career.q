@@ -9,7 +9,7 @@ coop_career_hud_2d_elements = {
 	single_highway_rock_offset = (475.0, 200.0)
 	single_highway_score_offset = (-475.0, 650.0)
 	offscreen_note_streak_bar_off = (0.0, -600.0)
-	Scale = 0.75
+	scale = 0.75
 	small_bulb_scale = 0.7
 	big_bulb_scale = 1.0
 	z = 0
@@ -652,7 +652,7 @@ coop_career_hud_2d_elements = {
 			element_parent = HUD2D_rock_container
 			texture = HUD_score_nixie_1a
 			pos_off = (70.0, 70.0)
-			Scale = 0.9
+			scale = 0.9
 			zoff = 4
 			alpha = 0
 			create_once
@@ -662,7 +662,7 @@ coop_career_hud_2d_elements = {
 			element_parent = HUD2D_rock_container
 			texture = HUD_score_nixie_2a
 			pos_off = (70.0, 70.0)
-			Scale = 0.9
+			scale = 0.9
 			zoff = 4
 			alpha = 0
 			create_once
@@ -672,7 +672,7 @@ coop_career_hud_2d_elements = {
 			element_parent = HUD2D_rock_container
 			texture = HUD_score_nixie_2b
 			pos_off = (70.0, 70.0)
-			Scale = 0.9
+			scale = 0.9
 			zoff = 4
 			alpha = 0
 			create_once
@@ -682,7 +682,7 @@ coop_career_hud_2d_elements = {
 			element_parent = HUD2D_rock_container
 			texture = HUD_score_nixie_3a
 			pos_off = (70.0, 70.0)
-			Scale = 0.9
+			scale = 0.9
 			zoff = 4
 			alpha = 0
 			create_once
@@ -692,7 +692,7 @@ coop_career_hud_2d_elements = {
 			element_parent = HUD2D_rock_container
 			texture = HUD_score_nixie_4a
 			pos_off = (70.0, 70.0)
-			Scale = 0.9
+			scale = 0.9
 			zoff = 4
 			alpha = 0
 			create_once
@@ -702,7 +702,7 @@ coop_career_hud_2d_elements = {
 			element_parent = HUD2D_rock_container
 			texture = HUD_score_nixie_4b
 			pos_off = (70.0, 70.0)
-			Scale = 0.9
+			scale = 0.9
 			zoff = 4
 			alpha = 0
 			create_once
@@ -712,7 +712,7 @@ coop_career_hud_2d_elements = {
 			element_parent = HUD2D_rock_container
 			texture = HUD_score_nixie_6b
 			pos_off = (70.0, 70.0)
-			Scale = 0.9
+			scale = 0.9
 			zoff = 4
 			alpha = 0
 			create_once
@@ -722,7 +722,7 @@ coop_career_hud_2d_elements = {
 			element_parent = HUD2D_rock_container
 			texture = HUD_score_nixie_8b
 			pos_off = (70.0, 70.0)
-			Scale = 0.9
+			scale = 0.9
 			zoff = 4
 			alpha = 0
 			create_once

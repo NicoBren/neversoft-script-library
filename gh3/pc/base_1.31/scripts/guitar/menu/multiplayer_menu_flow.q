@@ -633,7 +633,7 @@ mp_faceoff_fail_song_fs = {
 }
 
 script mp_faceoff_song_select_quit 
-	gh3_sfx_fail_song_stop_sounds
+	GH3_SFX_fail_song_stop_sounds
 	kill_gem_scroller
 endscript
 mp_faceoff_song_ended_fs = {

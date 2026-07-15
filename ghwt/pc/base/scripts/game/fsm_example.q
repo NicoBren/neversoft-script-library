@@ -1,22 +1,22 @@
 
-script startfsmexample 
-	registermyteststates
-	setupmystatemachine
+script StartFSMExample 
+	RegisterMyTestStates
+	SetupMyStateMachine
 endscript
 
-script registermyteststates 
-	printf \{qs(0xe199831e)}
-	registerstate \{name = bv_myteststate
-		transitions = [
+script RegisterMyTestStates 
+	printf \{qs("\L//\\//\\ registering state structure")}
+	RegisterState \{name = Bv_MyTestState
+		Transitions = [
 			{
 				events = [
-					enter_state
-					mychildscripttrigger
+					Enter_State
+					MyChildScriptTrigger
 				]
 				responses = [
 					{
 						replacement = child
-						state = bv_myscriptchild
+						state = Bv_MyScriptChild
 						params = [
 							{
 								name = param1
@@ -36,16 +36,16 @@ script registermyteststates
 			}
 			{
 				events = [
-					childtrigger
+					ChildTrigger
 				]
 				responses = [
 					{
 						replacement = child
-						state = bv_message
+						state = Bv_Message
 						params = [
 							{
 								name = message
-								val = qs(0x008cfa10)
+								val = qs("\LChildTrigger fired!")
 							}
 						]
 					}
@@ -53,17 +53,17 @@ script registermyteststates
 			}
 			{
 				events = [
-					recurtrigger
+					RecurTrigger
 				]
 				recur = true
 				responses = [
 					{
 						replacement = child2
-						state = bv_message
+						state = Bv_Message
 						params = [
 							{
 								name = message
-								val = qs(0xa568cd0b)
+								val = qs("\LRecurTrigger fired!")
 							}
 						]
 					}
@@ -72,80 +72,80 @@ script registermyteststates
 		]}
 endscript
 
-script setupmystatemachine 
-	printf \{qs(0x3e917be0)}
-	createcompositeobject \{params = {
-			name = mystatemachine
+script SetupMyStateMachine 
+	printf \{qs("\L//\\//\\ setup state machine")}
+	CreateCompositeObject \{params = {
+			name = MyStateMachine
 			permanent
 		}
-		components = [
+		Components = [
 			{
-				component = eventcache
+				Component = EventCache
 			}
 			{
-				component = statemachinemanager
+				Component = StateMachineManager
 			}
 		]
-		heap = frontend}
-	mystatemachine :fsm_set \{state = bv_myteststate
+		heap = FrontEnd}
+	MyStateMachine :Fsm_Set \{state = Bv_MyTestState
 		params = {
 			input_param = my_input_param
 		}}
 endscript
 
-script bv_myteststateinscript 
-	printf \{qs(0x94e4d34a)}
-	fsm_set state = bv_myscriptchild params = {param1 = <input_param> param2 = my_param_2 param3 = <input_param>}
+script Bv_MyTestStateInScript 
+	printf \{qs("\L//\\//\\ Bv_MyTestStateInScript")}
+	Fsm_Set state = Bv_MyScriptChild params = {param1 = <input_param> param2 = my_param_2 param3 = <input_param>}
 	begin
 	blockuntilevent \{anytypes = [
-			mychildscripttrigger
-			childtrigger
-			recurtrigger
+			MyChildScriptTrigger
+			ChildTrigger
+			RecurTrigger
 		]}
 	switch <type>
-		case mychildscripttrigger
-		fsm_set state = bv_myscriptchild replacement = child params = {param1 = <input_param> param2 = my_param_2 param3 = my_param_3}
-		case childtrigger
-		fsm_set \{state = bv_message
+		case MyChildScriptTrigger
+		Fsm_Set state = Bv_MyScriptChild replacement = child params = {param1 = <input_param> param2 = my_param_2 param3 = my_param_3}
+		case ChildTrigger
+		Fsm_Set \{state = Bv_Message
 			replacement = child
 			params = {
-				message = qs(0x008cfa10)
+				message = qs("\LChildTrigger fired!")
 			}}
-		case recurtrigger
-		fsm_set \{state = bv_message
+		case RecurTrigger
+		Fsm_Set \{state = Bv_Message
 			replacement = child2
 			params = {
-				message = qs(0xa568cd0b)
+				message = qs("\LRecurTrigger fired!")
 			}}
 	endswitch
 	repeat
 endscript
 
-script bv_myscriptchild 
-	printf \{qs(0x72ee849c)}
+script Bv_MyScriptChild 
+	printf \{qs("\L//\\//\\ MyScriptChild Fired")}
 	printstruct <...>
 	begin
 	blockuntilevent \{anytypes = [
-			scriptchildevent1
-			scriptchildevent2
+			ScriptChildEvent1
+			ScriptChildEvent2
 		]}
 	switch <type>
-		case scriptchildevent1
-		printf \{qs(0x0fd9dd27)}
-		fsm_set state = bv_messageloop replacement = mess1 params = {message = qs(0xdbc712a1) event = <type>}
-		case scriptchildevent2
-		printf \{qs(0x24f48ee4)}
-		fsm_set state = bv_messageloop replacement = mess2 params = {message = qs(0xf0ea4162) event = <type>}
+		case ScriptChildEvent1
+		printf \{qs("\L//\\//\\ MyScriptChildLoop1")}
+		Fsm_Set state = Bv_MessageLoop replacement = mess1 params = {message = qs("\LMyScriptChildLoop1") event = <type>}
+		case ScriptChildEvent2
+		printf \{qs("\L//\\//\\ MyScriptChildLoop2")}
+		Fsm_Set state = Bv_MessageLoop replacement = mess2 params = {message = qs("\LMyScriptChildLoop2") event = <type>}
 	endswitch
-	wait \{1
+	Wait \{1
 		frame}
 	repeat
 endscript
 
-script bv_messageloop 
+script Bv_MessageLoop 
 	begin
 	printf <message>
-	wait \{10
+	Wait \{10
 		frames}
 	repeat
 endscript

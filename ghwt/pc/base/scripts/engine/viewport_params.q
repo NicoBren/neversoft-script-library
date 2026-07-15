@@ -1,10 +1,10 @@
 sfx_all_params = {
-	shadoweffect = true
-	lightvolumes = true
-	lightflares = true
-	fillburstparticles = true
-	softedgeparticles = true
-	trackrendernodegputime = true
+	ShadowEffect = true
+	LightVolumes = true
+	LightFlares = true
+	FillburstParticles = true
+	SoftedgeParticles = true
+	TrackRenderNodeGPUTime = true
 }
 viewport_params = {
 	perm_viewports = [
@@ -130,7 +130,7 @@ viewport_params = {
 			]
 			render_to_texture_with_alpha
 			width = 768
-			height = 320
+			Height = 320
 			copy_to_main
 			resolution = 1.0
 			discard_previous_frame
@@ -145,7 +145,7 @@ viewport_params = {
 			]
 			render_to_texture_with_alpha
 			width = 384
-			height = 160
+			Height = 160
 			copy_to_main
 			resolution = 1.0
 			discard_previous_frame
@@ -228,7 +228,7 @@ viewport_params = {
 				1.0
 			]
 			width = 768
-			height = 768
+			Height = 768
 			depth_only
 			uidims = (768.0, 768.0)
 		}
@@ -240,7 +240,7 @@ viewport_params = {
 				1.0
 			]
 			width = 512
-			height = 512
+			Height = 512
 			depth_only
 			uidims = (512.0, 512.0)
 		}
@@ -252,7 +252,7 @@ viewport_params = {
 				1.0
 			]
 			width = 128
-			height = 256
+			Height = 256
 			render_to_texture_with_alpha
 			mipmap
 			resolution = 1.0
@@ -272,10 +272,10 @@ viewport_params = {
 				1024.0
 			]
 			width = 768
-			height = 768
+			Height = 768
 			render_to_texture_with_alpha
 			mipmap
-			disablevisibility
+			DisableVisibility
 			resolution = 1.0
 			uidims = (768.0, 768.0)
 		}
@@ -293,10 +293,10 @@ viewport_params = {
 				1024.0
 			]
 			width = 1024
-			height = 1024
+			Height = 1024
 			render_to_texture_with_alpha
 			mipmap
-			disablevisibility
+			DisableVisibility
 			resolution = 1.0
 			uidims = (1024.0, 1024.0)
 		}
@@ -308,7 +308,7 @@ viewport_params = {
 				0.5
 			]
 			width = 768
-			height = 768
+			Height = 768
 			render_to_texture_with_alpha
 			resolution = 1.0
 			uidims = (768.0, 768.0)
@@ -321,7 +321,7 @@ viewport_params = {
 				1.0
 			]
 			width = 768
-			height = 768
+			Height = 768
 			render_to_texture_with_alpha
 			resolution = 1.0
 			uidims = (768.0, 768.0)
@@ -334,7 +334,7 @@ viewport_params = {
 				0.5
 			]
 			width = 768
-			height = 768
+			Height = 768
 			render_to_texture_with_alpha
 			resolution = 1.0
 			uidims = (768.0, 768.0)
@@ -347,7 +347,7 @@ viewport_params = {
 				1.0
 			]
 			width = 768
-			height = 768
+			Height = 768
 			render_to_texture_with_alpha
 			resolution = 1.0
 			uidims = (768.0, 768.0)
@@ -360,7 +360,7 @@ viewport_params = {
 				0.5
 			]
 			width = 768
-			height = 768
+			Height = 768
 			render_to_texture_with_alpha
 			resolution = 1.0
 			uidims = (768.0, 768.0)
@@ -373,7 +373,7 @@ viewport_params = {
 				1.0
 			]
 			width = 768
-			height = 768
+			Height = 768
 			render_to_texture_with_alpha
 			resolution = 1.0
 			uidims = (768.0, 768.0)
@@ -386,7 +386,7 @@ viewport_params = {
 				1.0
 			]
 			width = 256
-			height = 512
+			Height = 512
 			render_to_texture_with_alpha
 			mipmap
 			resolution = 1.0
@@ -400,7 +400,7 @@ viewport_params = {
 				0.5
 			]
 			width = 1024
-			height = 1024
+			Height = 1024
 			render_to_texture_with_alpha
 			resolution = 1.0
 			uidims = (1024.0, 1024.0)
@@ -413,7 +413,7 @@ viewport_params = {
 				1.0
 			]
 			width = 1024
-			height = 1024
+			Height = 1024
 			render_to_texture_with_alpha
 			resolution = 1.0
 			uidims = (1024.0, 1024.0)
@@ -426,7 +426,7 @@ viewport_params = {
 				0.5
 			]
 			width = 1024
-			height = 1024
+			Height = 1024
 			render_to_texture_with_alpha
 			resolution = 1.0
 			uidims = (1024.0, 1024.0)
@@ -439,7 +439,7 @@ viewport_params = {
 				1.0
 			]
 			width = 1024
-			height = 1024
+			Height = 1024
 			render_to_texture_with_alpha
 			resolution = 1.0
 			uidims = (1024.0, 1024.0)
@@ -452,7 +452,7 @@ viewport_params = {
 				0.5
 			]
 			width = 1024
-			height = 1024
+			Height = 1024
 			render_to_texture_with_alpha
 			resolution = 1.0
 			uidims = (1024.0, 720.0)
@@ -465,7 +465,7 @@ viewport_params = {
 				1.0
 			]
 			width = 1024
-			height = 1024
+			Height = 1024
 			render_to_texture_with_alpha
 			resolution = 1.0
 			uidims = (1024.0, 1024.0)
@@ -478,7 +478,7 @@ viewport_params = {
 				1.0
 			]
 			width = 256
-			height = 128
+			Height = 128
 			render_to_texture_with_alpha
 			mipmap
 			resolution = 1.0
@@ -492,7 +492,7 @@ viewport_params = {
 				1.0
 			]
 			width = 128
-			height = 128
+			Height = 128
 			mipmap
 			render_to_texture_with_alpha
 			resolution = 1.0
@@ -506,7 +506,7 @@ viewport_params = {
 				1.0
 			]
 			width = 64
-			height = 64
+			Height = 64
 			render_to_texture_with_alpha
 			resolution = 1.0
 			uidims = (64.0, 64.0)
@@ -519,7 +519,7 @@ viewport_params = {
 				1.0
 			]
 			width = 512
-			height = 512
+			Height = 512
 			render_to_texture
 			ignore_alpha_channel
 			resolution = 1.0
@@ -533,7 +533,7 @@ viewport_params = {
 				1.0
 			]
 			width = 512
-			height = 128
+			Height = 128
 			render_to_texture_with_alpha
 			resolution = 1.0
 			uidims = (512.0, 128.0)

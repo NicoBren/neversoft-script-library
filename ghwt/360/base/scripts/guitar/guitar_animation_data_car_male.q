@@ -2,2070 +2,2070 @@ car_male_animations = {
 	Stance_A = {
 		Idle = {
 			good = {
-				slow = [
-					car_male_idles_01
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
-					car_male_idles_07
-					car_male_idles_08
+				Slow = [
+					CAR_male_idles_01
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
+					CAR_male_idles_07
+					CAR_male_idles_08
 				]
-				med = [
-					car_male_idles_01
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
-					car_male_idles_07
-					car_male_idles_08
+				Med = [
+					CAR_male_idles_01
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
+					CAR_male_idles_07
+					CAR_male_idles_08
 				]
-				FAST = [
-					car_male_idles_01
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
-					car_male_idles_07
-					car_male_idles_08
+				Fast = [
+					CAR_male_idles_01
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
+					CAR_male_idles_07
+					CAR_male_idles_08
 				]
 			}
 			Normal = {
-				slow = [
-					car_male_idles_01
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
-					car_male_idles_07
-					car_male_idles_08
+				Slow = [
+					CAR_male_idles_01
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
+					CAR_male_idles_07
+					CAR_male_idles_08
 				]
-				med = [
-					car_male_idles_01
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
-					car_male_idles_07
-					car_male_idles_08
+				Med = [
+					CAR_male_idles_01
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
+					CAR_male_idles_07
+					CAR_male_idles_08
 				]
-				FAST = [
-					car_male_idles_01
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
-					car_male_idles_07
-					car_male_idles_08
+				Fast = [
+					CAR_male_idles_01
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
+					CAR_male_idles_07
+					CAR_male_idles_08
 				]
 			}
-			bad = {
-				slow = [
-					car_male_idles_01
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
-					car_male_idles_07
-					car_male_idles_08
+			Bad = {
+				Slow = [
+					CAR_male_idles_01
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
+					CAR_male_idles_07
+					CAR_male_idles_08
 				]
-				med = [
-					car_male_idles_01
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
-					car_male_idles_07
-					car_male_idles_08
+				Med = [
+					CAR_male_idles_01
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
+					CAR_male_idles_07
+					CAR_male_idles_08
 				]
-				FAST = [
-					car_male_idles_01
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
-					car_male_idles_07
-					car_male_idles_08
+				Fast = [
+					CAR_male_idles_01
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
+					CAR_male_idles_07
+					CAR_male_idles_08
 				]
 			}
 		}
 	}
-	stance_select_p1 = {
+	Stance_Select_P1 = {
 		Idle = {
 			good = {
-				slow = [
-					gh_rocker_male_select_p1
+				Slow = [
+					gh_rocker_male_Select_P1
 				]
-				med = [
-					gh_rocker_male_select_p1
+				Med = [
+					gh_rocker_male_Select_P1
 				]
-				FAST = [
-					gh_rocker_male_select_p1
+				Fast = [
+					gh_rocker_male_Select_P1
 				]
 			}
 			Normal = {
-				slow = [
-					gh_rocker_male_select_p1
+				Slow = [
+					gh_rocker_male_Select_P1
 				]
-				med = [
-					gh_rocker_male_select_p1
+				Med = [
+					gh_rocker_male_Select_P1
 				]
-				FAST = [
-					gh_rocker_male_select_p1
+				Fast = [
+					gh_rocker_male_Select_P1
 				]
 			}
-			bad = {
-				slow = [
-					gh_rocker_male_select_p1
+			Bad = {
+				Slow = [
+					gh_rocker_male_Select_P1
 				]
-				med = [
-					gh_rocker_male_select_p1
+				Med = [
+					gh_rocker_male_Select_P1
 				]
-				FAST = [
-					gh_rocker_male_select_p1
+				Fast = [
+					gh_rocker_male_Select_P1
 				]
 			}
 		}
 	}
-	stance_select_p2 = {
+	Stance_Select_P2 = {
 		Idle = {
 			good = {
-				slow = [
-					gh_rocker_male_select_p2
+				Slow = [
+					gh_rocker_male_Select_P2
 				]
-				med = [
-					gh_rocker_male_select_p2
+				Med = [
+					gh_rocker_male_Select_P2
 				]
-				FAST = [
-					gh_rocker_male_select_p2
+				Fast = [
+					gh_rocker_male_Select_P2
 				]
 			}
 			Normal = {
-				slow = [
-					gh_rocker_male_select_p2
+				Slow = [
+					gh_rocker_male_Select_P2
 				]
-				med = [
-					gh_rocker_male_select_p2
+				Med = [
+					gh_rocker_male_Select_P2
 				]
-				FAST = [
-					gh_rocker_male_select_p2
+				Fast = [
+					gh_rocker_male_Select_P2
 				]
 			}
-			bad = {
-				slow = [
-					gh_rocker_male_select_p2
+			Bad = {
+				Slow = [
+					gh_rocker_male_Select_P2
 				]
-				med = [
-					gh_rocker_male_select_p2
+				Med = [
+					gh_rocker_male_Select_P2
 				]
-				FAST = [
-					gh_rocker_male_select_p2
+				Fast = [
+					gh_rocker_male_Select_P2
 				]
 			}
 		}
 	}
-	stance_select_p3 = {
+	Stance_Select_P3 = {
 		Idle = {
 			good = {
-				slow = [
-					gh_rocker_male_select_p3
+				Slow = [
+					gh_rocker_male_Select_P3
 				]
-				med = [
-					gh_rocker_male_select_p3
+				Med = [
+					gh_rocker_male_Select_P3
 				]
-				FAST = [
-					gh_rocker_male_select_p3
+				Fast = [
+					gh_rocker_male_Select_P3
 				]
 			}
 			Normal = {
-				slow = [
-					gh_rocker_male_select_p3
+				Slow = [
+					gh_rocker_male_Select_P3
 				]
-				med = [
-					gh_rocker_male_select_p3
+				Med = [
+					gh_rocker_male_Select_P3
 				]
-				FAST = [
-					gh_rocker_male_select_p3
+				Fast = [
+					gh_rocker_male_Select_P3
 				]
 			}
-			bad = {
-				slow = [
-					gh_rocker_male_select_p3
+			Bad = {
+				Slow = [
+					gh_rocker_male_Select_P3
 				]
-				med = [
-					gh_rocker_male_select_p3
+				Med = [
+					gh_rocker_male_Select_P3
 				]
-				FAST = [
-					gh_rocker_male_select_p3
+				Fast = [
+					gh_rocker_male_Select_P3
 				]
 			}
 		}
 	}
-	stance_select_p4 = {
+	Stance_Select_P4 = {
 		Idle = {
 			good = {
-				slow = [
-					gh_rocker_male_select_p4
+				Slow = [
+					gh_rocker_male_Select_P4
 				]
-				med = [
-					gh_rocker_male_select_p4
+				Med = [
+					gh_rocker_male_Select_P4
 				]
-				FAST = [
-					gh_rocker_male_select_p4
+				Fast = [
+					gh_rocker_male_Select_P4
 				]
 			}
 			Normal = {
-				slow = [
-					gh_rocker_male_select_p4
+				Slow = [
+					gh_rocker_male_Select_P4
 				]
-				med = [
-					gh_rocker_male_select_p4
+				Med = [
+					gh_rocker_male_Select_P4
 				]
-				FAST = [
-					gh_rocker_male_select_p4
+				Fast = [
+					gh_rocker_male_Select_P4
 				]
 			}
-			bad = {
-				slow = [
-					gh_rocker_male_select_p4
+			Bad = {
+				Slow = [
+					gh_rocker_male_Select_P4
 				]
-				med = [
-					gh_rocker_male_select_p4
+				Med = [
+					gh_rocker_male_Select_P4
 				]
-				FAST = [
-					gh_rocker_male_select_p4
+				Fast = [
+					gh_rocker_male_Select_P4
 				]
 			}
 		}
 	}
-	stance_select_head = {
+	Stance_Select_Head = {
 		Idle = {
 			good = {
-				slow = [
-					car_male_select_hair_01
+				Slow = [
+					CAR_male_Select_Hair_01
 				]
-				med = [
-					car_male_select_hair_01
+				Med = [
+					CAR_male_Select_Hair_01
 				]
-				FAST = [
-					car_male_select_hair_01
+				Fast = [
+					CAR_male_Select_Hair_01
 				]
 			}
 			Normal = {
-				slow = [
-					car_male_select_hair_01
+				Slow = [
+					CAR_male_Select_Hair_01
 				]
-				med = [
-					car_male_select_hair_01
+				Med = [
+					CAR_male_Select_Hair_01
 				]
-				FAST = [
-					car_male_select_hair_01
+				Fast = [
+					CAR_male_Select_Hair_01
 				]
 			}
-			bad = {
-				slow = [
-					car_male_select_hair_01
+			Bad = {
+				Slow = [
+					CAR_male_Select_Hair_01
 				]
-				med = [
-					car_male_select_hair_01
+				Med = [
+					CAR_male_Select_Hair_01
 				]
-				FAST = [
-					car_male_select_hair_01
+				Fast = [
+					CAR_male_Select_Hair_01
 				]
 			}
 		}
-		transitions = {
-			stance_select_profile = car_male_select_facel_intoidle
+		Transitions = {
+			Stance_Select_Profile = CAR_male_Select_faceL_intoidle
 		}
 	}
-	stance_select_profile = {
+	Stance_Select_Profile = {
 		Idle = {
 			good = {
-				slow = [
-					car_male_select_facel_idle
+				Slow = [
+					CAR_male_Select_faceL_idle
 				]
-				med = [
-					car_male_select_facel_idle
+				Med = [
+					CAR_male_Select_faceL_idle
 				]
-				FAST = [
-					car_male_select_facel_idle
+				Fast = [
+					CAR_male_Select_faceL_idle
 				]
 			}
 			Normal = {
-				slow = [
-					car_male_select_facel_idle
+				Slow = [
+					CAR_male_Select_faceL_idle
 				]
-				med = [
-					car_male_select_facel_idle
+				Med = [
+					CAR_male_Select_faceL_idle
 				]
-				FAST = [
-					car_male_select_facel_idle
+				Fast = [
+					CAR_male_Select_faceL_idle
 				]
 			}
-			bad = {
-				slow = [
-					car_male_select_facel_idle
+			Bad = {
+				Slow = [
+					CAR_male_Select_faceL_idle
 				]
-				med = [
-					car_male_select_facel_idle
+				Med = [
+					CAR_male_Select_faceL_idle
 				]
-				FAST = [
-					car_male_select_facel_idle
+				Fast = [
+					CAR_male_Select_faceL_idle
 				]
 			}
 		}
-		transitions = {
-			stance_select_head = car_male_select_facel_outofidle
+		Transitions = {
+			Stance_Select_Head = CAR_male_Select_faceL_outofidle
 		}
 	}
-	stance_select_tat_chest = {
+	Stance_Select_Tat_Chest = {
 		Idle = {
 			good = {
-				slow = [
-					car_male_tat_chest_idle
+				Slow = [
+					CAR_male_tat_chest_idle
 				]
-				med = [
-					car_male_tat_chest_idle
+				Med = [
+					CAR_male_tat_chest_idle
 				]
-				FAST = [
-					car_male_tat_chest_idle
+				Fast = [
+					CAR_male_tat_chest_idle
 				]
 			}
 			Normal = {
-				slow = [
-					car_male_tat_chest_idle
+				Slow = [
+					CAR_male_tat_chest_idle
 				]
-				med = [
-					car_male_tat_chest_idle
+				Med = [
+					CAR_male_tat_chest_idle
 				]
-				FAST = [
-					car_male_tat_chest_idle
+				Fast = [
+					CAR_male_tat_chest_idle
 				]
 			}
-			bad = {
-				slow = [
-					car_male_tat_chest_idle
+			Bad = {
+				Slow = [
+					CAR_male_tat_chest_idle
 				]
-				med = [
-					car_male_tat_chest_idle
+				Med = [
+					CAR_male_tat_chest_idle
 				]
-				FAST = [
-					car_male_tat_chest_idle
+				Fast = [
+					CAR_male_tat_chest_idle
 				]
 			}
 		}
-		transitions = {
-			stance_frontend = car_male_tat_chest_outofidle
+		Transitions = {
+			stance_frontend = CAR_male_tat_chest_outofidle
 		}
 	}
-	stance_select_tat_arm_r = {
+	Stance_Select_Tat_Arm_R = {
 		Idle = {
 			good = {
-				slow = [
-					car_male_tat_rarm_idle
+				Slow = [
+					CAR_male_tat_Rarm_idle
 				]
-				med = [
-					car_male_tat_rarm_idle
+				Med = [
+					CAR_male_tat_Rarm_idle
 				]
-				FAST = [
-					car_male_tat_rarm_idle
+				Fast = [
+					CAR_male_tat_Rarm_idle
 				]
 			}
 			Normal = {
-				slow = [
-					car_male_tat_rarm_idle
+				Slow = [
+					CAR_male_tat_Rarm_idle
 				]
-				med = [
-					car_male_tat_rarm_idle
+				Med = [
+					CAR_male_tat_Rarm_idle
 				]
-				FAST = [
-					car_male_tat_rarm_idle
+				Fast = [
+					CAR_male_tat_Rarm_idle
 				]
 			}
-			bad = {
-				slow = [
-					car_male_tat_rarm_idle
+			Bad = {
+				Slow = [
+					CAR_male_tat_Rarm_idle
 				]
-				med = [
-					car_male_tat_rarm_idle
+				Med = [
+					CAR_male_tat_Rarm_idle
 				]
-				FAST = [
-					car_male_tat_rarm_idle
+				Fast = [
+					CAR_male_tat_Rarm_idle
 				]
 			}
 		}
-		transitions = {
-			stance_frontend = car_male_tat_rarm_outofidle
+		Transitions = {
+			stance_frontend = CAR_male_tat_Rarm_outofidle
 		}
 	}
-	stance_select_tat_arm_l = {
+	Stance_Select_Tat_Arm_L = {
 		Idle = {
 			good = {
-				slow = [
-					car_male_tat_larm_idle
+				Slow = [
+					CAR_male_tat_Larm_idle
 				]
-				med = [
-					car_male_tat_larm_idle
+				Med = [
+					CAR_male_tat_Larm_idle
 				]
-				FAST = [
-					car_male_tat_larm_idle
+				Fast = [
+					CAR_male_tat_Larm_idle
 				]
 			}
 			Normal = {
-				slow = [
-					car_male_tat_larm_idle
+				Slow = [
+					CAR_male_tat_Larm_idle
 				]
-				med = [
-					car_male_tat_larm_idle
+				Med = [
+					CAR_male_tat_Larm_idle
 				]
-				FAST = [
-					car_male_tat_larm_idle
+				Fast = [
+					CAR_male_tat_Larm_idle
 				]
 			}
-			bad = {
-				slow = [
-					car_male_tat_larm_idle
+			Bad = {
+				Slow = [
+					CAR_male_tat_Larm_idle
 				]
-				med = [
-					car_male_tat_larm_idle
+				Med = [
+					CAR_male_tat_Larm_idle
 				]
-				FAST = [
-					car_male_tat_larm_idle
+				Fast = [
+					CAR_male_tat_Larm_idle
 				]
 			}
 		}
-		transitions = {
-			stance_frontend = car_male_tat_larm_outofidle
-		}
-	}
-	stance_select_hair = {
-		Idle = {
-			good = {
-				slow = [
-					car_male_select_hair_01
-					car_male_select_hair_02
-					car_male_select_hair_03
-					car_male_select_hair_04
-					car_male_select_hair_05
-					car_male_select_hair_06
-				]
-				med = [
-					car_male_select_hair_01
-					car_male_select_hair_02
-					car_male_select_hair_03
-					car_male_select_hair_04
-					car_male_select_hair_05
-					car_male_select_hair_06
-				]
-				FAST = [
-					car_male_select_hair_01
-					car_male_select_hair_02
-					car_male_select_hair_03
-					car_male_select_hair_04
-					car_male_select_hair_05
-					car_male_select_hair_06
-				]
-			}
-			Normal = {
-				slow = [
-					car_male_select_hair_01
-					car_male_select_hair_02
-					car_male_select_hair_03
-					car_male_select_hair_04
-					car_male_select_hair_05
-					car_male_select_hair_06
-				]
-				med = [
-					car_male_select_hair_01
-					car_male_select_hair_02
-					car_male_select_hair_03
-					car_male_select_hair_04
-					car_male_select_hair_05
-					car_male_select_hair_06
-				]
-				FAST = [
-					car_male_select_hair_01
-					car_male_select_hair_02
-					car_male_select_hair_03
-					car_male_select_hair_04
-					car_male_select_hair_05
-					car_male_select_hair_06
-				]
-			}
-			bad = {
-				slow = [
-					car_male_select_hair_01
-					car_male_select_hair_02
-					car_male_select_hair_03
-					car_male_select_hair_04
-					car_male_select_hair_05
-					car_male_select_hair_06
-				]
-				med = [
-					car_male_select_hair_01
-					car_male_select_hair_02
-					car_male_select_hair_03
-					car_male_select_hair_04
-					car_male_select_hair_05
-					car_male_select_hair_06
-				]
-				FAST = [
-					car_male_select_hair_01
-					car_male_select_hair_02
-					car_male_select_hair_03
-					car_male_select_hair_04
-					car_male_select_hair_05
-					car_male_select_hair_06
-				]
-			}
+		Transitions = {
+			stance_frontend = CAR_male_tat_Larm_outofidle
 		}
 	}
-	stance_select_glasses = {
+	Stance_Select_Hair = {
 		Idle = {
 			good = {
-				slow = [
-					car_male_select_acc_glasses_01
-					car_male_select_acc_glasses_02
+				Slow = [
+					CAR_male_Select_Hair_01
+					CAR_male_Select_Hair_02
+					CAR_male_Select_Hair_03
+					CAR_male_Select_Hair_04
+					CAR_male_Select_Hair_05
+					CAR_male_Select_Hair_06
 				]
-				med = [
-					car_male_select_acc_glasses_01
-					car_male_select_acc_glasses_02
+				Med = [
+					CAR_male_Select_Hair_01
+					CAR_male_Select_Hair_02
+					CAR_male_Select_Hair_03
+					CAR_male_Select_Hair_04
+					CAR_male_Select_Hair_05
+					CAR_male_Select_Hair_06
 				]
-				FAST = [
-					car_male_select_acc_glasses_01
-					car_male_select_acc_glasses_02
+				Fast = [
+					CAR_male_Select_Hair_01
+					CAR_male_Select_Hair_02
+					CAR_male_Select_Hair_03
+					CAR_male_Select_Hair_04
+					CAR_male_Select_Hair_05
+					CAR_male_Select_Hair_06
 				]
 			}
 			Normal = {
-				slow = [
-					car_male_select_acc_glasses_01
-					car_male_select_acc_glasses_02
+				Slow = [
+					CAR_male_Select_Hair_01
+					CAR_male_Select_Hair_02
+					CAR_male_Select_Hair_03
+					CAR_male_Select_Hair_04
+					CAR_male_Select_Hair_05
+					CAR_male_Select_Hair_06
 				]
-				med = [
-					car_male_select_acc_glasses_01
-					car_male_select_acc_glasses_02
+				Med = [
+					CAR_male_Select_Hair_01
+					CAR_male_Select_Hair_02
+					CAR_male_Select_Hair_03
+					CAR_male_Select_Hair_04
+					CAR_male_Select_Hair_05
+					CAR_male_Select_Hair_06
 				]
-				FAST = [
-					car_male_select_acc_glasses_01
-					car_male_select_acc_glasses_02
+				Fast = [
+					CAR_male_Select_Hair_01
+					CAR_male_Select_Hair_02
+					CAR_male_Select_Hair_03
+					CAR_male_Select_Hair_04
+					CAR_male_Select_Hair_05
+					CAR_male_Select_Hair_06
 				]
 			}
-			bad = {
-				slow = [
-					car_male_select_acc_glasses_01
-					car_male_select_acc_glasses_02
+			Bad = {
+				Slow = [
+					CAR_male_Select_Hair_01
+					CAR_male_Select_Hair_02
+					CAR_male_Select_Hair_03
+					CAR_male_Select_Hair_04
+					CAR_male_Select_Hair_05
+					CAR_male_Select_Hair_06
 				]
-				med = [
-					car_male_select_acc_glasses_01
-					car_male_select_acc_glasses_02
+				Med = [
+					CAR_male_Select_Hair_01
+					CAR_male_Select_Hair_02
+					CAR_male_Select_Hair_03
+					CAR_male_Select_Hair_04
+					CAR_male_Select_Hair_05
+					CAR_male_Select_Hair_06
 				]
-				FAST = [
-					car_male_select_acc_glasses_01
-					car_male_select_acc_glasses_02
+				Fast = [
+					CAR_male_Select_Hair_01
+					CAR_male_Select_Hair_02
+					CAR_male_Select_Hair_03
+					CAR_male_Select_Hair_04
+					CAR_male_Select_Hair_05
+					CAR_male_Select_Hair_06
 				]
 			}
 		}
 	}
-	stance_select_hat = {
+	Stance_Select_Glasses = {
 		Idle = {
 			good = {
-				slow = [
-					car_male_select_acc_hat_01
-					car_male_select_acc_hat_02
+				Slow = [
+					CAR_male_Select_ACC_Glasses_01
+					CAR_male_Select_ACC_Glasses_02
 				]
-				med = [
-					car_male_select_acc_hat_01
-					car_male_select_acc_hat_02
+				Med = [
+					CAR_male_Select_ACC_Glasses_01
+					CAR_male_Select_ACC_Glasses_02
 				]
-				FAST = [
-					car_male_select_acc_hat_01
-					car_male_select_acc_hat_02
+				Fast = [
+					CAR_male_Select_ACC_Glasses_01
+					CAR_male_Select_ACC_Glasses_02
 				]
 			}
 			Normal = {
-				slow = [
-					car_male_select_acc_hat_01
-					car_male_select_acc_hat_02
+				Slow = [
+					CAR_male_Select_ACC_Glasses_01
+					CAR_male_Select_ACC_Glasses_02
 				]
-				med = [
-					car_male_select_acc_hat_01
-					car_male_select_acc_hat_02
+				Med = [
+					CAR_male_Select_ACC_Glasses_01
+					CAR_male_Select_ACC_Glasses_02
 				]
-				FAST = [
-					car_male_select_acc_hat_01
-					car_male_select_acc_hat_02
+				Fast = [
+					CAR_male_Select_ACC_Glasses_01
+					CAR_male_Select_ACC_Glasses_02
 				]
 			}
-			bad = {
-				slow = [
-					car_male_select_acc_hat_01
-					car_male_select_acc_hat_02
+			Bad = {
+				Slow = [
+					CAR_male_Select_ACC_Glasses_01
+					CAR_male_Select_ACC_Glasses_02
 				]
-				med = [
-					car_male_select_acc_hat_01
-					car_male_select_acc_hat_02
+				Med = [
+					CAR_male_Select_ACC_Glasses_01
+					CAR_male_Select_ACC_Glasses_02
 				]
-				FAST = [
-					car_male_select_acc_hat_01
-					car_male_select_acc_hat_02
+				Fast = [
+					CAR_male_Select_ACC_Glasses_01
+					CAR_male_Select_ACC_Glasses_02
 				]
 			}
 		}
 	}
-	stance_select_arm_r = {
+	Stance_Select_Hat = {
 		Idle = {
 			good = {
-				slow = [
-					car_male_select_accr_idle01
+				Slow = [
+					CAR_male_Select_ACC_Hat_01
+					CAR_male_Select_ACC_Hat_02
 				]
-				med = [
-					car_male_select_accr_idle01
+				Med = [
+					CAR_male_Select_ACC_Hat_01
+					CAR_male_Select_ACC_Hat_02
 				]
-				FAST = [
-					car_male_select_accr_idle01
+				Fast = [
+					CAR_male_Select_ACC_Hat_01
+					CAR_male_Select_ACC_Hat_02
 				]
 			}
 			Normal = {
-				slow = [
-					car_male_select_accr_idle01
+				Slow = [
+					CAR_male_Select_ACC_Hat_01
+					CAR_male_Select_ACC_Hat_02
 				]
-				med = [
-					car_male_select_accr_idle01
+				Med = [
+					CAR_male_Select_ACC_Hat_01
+					CAR_male_Select_ACC_Hat_02
 				]
-				FAST = [
-					car_male_select_accr_idle01
-				]
-			}
-			bad = {
-				slow = [
-					car_male_select_accr_idle01
-				]
-				med = [
-					car_male_select_accr_idle01
-				]
-				FAST = [
-					car_male_select_accr_idle01
+				Fast = [
+					CAR_male_Select_ACC_Hat_01
+					CAR_male_Select_ACC_Hat_02
 				]
 			}
-		}
-		transitions = {
-			stance_frontend = car_male_select_accr_out
-		}
-	}
-	stance_select_arm_l = {
-		Idle = {
-			good = {
-				slow = [
-					car_male_select_accl_idle01
+			Bad = {
+				Slow = [
+					CAR_male_Select_ACC_Hat_01
+					CAR_male_Select_ACC_Hat_02
 				]
-				med = [
-					car_male_select_accl_idle01
+				Med = [
+					CAR_male_Select_ACC_Hat_01
+					CAR_male_Select_ACC_Hat_02
 				]
-				FAST = [
-					car_male_select_accl_idle01
-				]
-			}
-			Normal = {
-				slow = [
-					car_male_select_accl_idle01
-				]
-				med = [
-					car_male_select_accl_idle01
-				]
-				FAST = [
-					car_male_select_accl_idle01
-				]
-			}
-			bad = {
-				slow = [
-					car_male_select_accl_idle01
-				]
-				med = [
-					car_male_select_accl_idle01
-				]
-				FAST = [
-					car_male_select_accl_idle01
-				]
-			}
-		}
-		transitions = {
-			stance_frontend = car_male_select_accl_out
-		}
-	}
-	stance_select_piercings = {
-		Idle = {
-			good = {
-				slow = [
-					car_male_select_acc_hat_01
-					car_male_select_acc_hat_02
-				]
-				med = [
-					car_male_select_acc_hat_01
-					car_male_select_acc_hat_02
-				]
-				FAST = [
-					car_male_select_acc_hat_01
-					car_male_select_acc_hat_02
-				]
-			}
-			Normal = {
-				slow = [
-					car_male_select_acc_hat_01
-					car_male_select_acc_hat_02
-				]
-				med = [
-					car_male_select_acc_hat_01
-					car_male_select_acc_hat_02
-				]
-				FAST = [
-					car_male_select_acc_hat_01
-					car_male_select_acc_hat_02
-				]
-			}
-			bad = {
-				slow = [
-					car_male_select_acc_hat_01
-					car_male_select_acc_hat_02
-				]
-				med = [
-					car_male_select_acc_hat_01
-					car_male_select_acc_hat_02
-				]
-				FAST = [
-					car_male_select_acc_hat_01
-					car_male_select_acc_hat_02
+				Fast = [
+					CAR_male_Select_ACC_Hat_01
+					CAR_male_Select_ACC_Hat_02
 				]
 			}
 		}
 	}
-	stance_select_torso = {
+	Stance_Select_Arm_R = {
 		Idle = {
 			good = {
-				slow = [
-					car_male_torso_outfit_02
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
+				Slow = [
+					CAR_male_Select_ACCR_Idle01
 				]
-				med = [
-					car_male_torso_outfit_02
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
+				Med = [
+					CAR_male_Select_ACCR_Idle01
 				]
-				FAST = [
-					car_male_torso_outfit_02
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
+				Fast = [
+					CAR_male_Select_ACCR_Idle01
 				]
 			}
 			Normal = {
-				slow = [
-					car_male_torso_outfit_02
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
+				Slow = [
+					CAR_male_Select_ACCR_Idle01
 				]
-				med = [
-					car_male_torso_outfit_02
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
+				Med = [
+					CAR_male_Select_ACCR_Idle01
 				]
-				FAST = [
-					car_male_torso_outfit_02
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
+				Fast = [
+					CAR_male_Select_ACCR_Idle01
 				]
 			}
-			bad = {
-				slow = [
-					car_male_torso_outfit_02
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
+			Bad = {
+				Slow = [
+					CAR_male_Select_ACCR_Idle01
 				]
-				med = [
-					car_male_torso_outfit_02
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
+				Med = [
+					CAR_male_Select_ACCR_Idle01
 				]
-				FAST = [
-					car_male_torso_outfit_02
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
+				Fast = [
+					CAR_male_Select_ACCR_Idle01
+				]
+			}
+		}
+		Transitions = {
+			stance_frontend = CAR_male_Select_ACCR_out
+		}
+	}
+	Stance_Select_Arm_L = {
+		Idle = {
+			good = {
+				Slow = [
+					CAR_male_Select_ACCL_Idle01
+				]
+				Med = [
+					CAR_male_Select_ACCL_Idle01
+				]
+				Fast = [
+					CAR_male_Select_ACCL_Idle01
+				]
+			}
+			Normal = {
+				Slow = [
+					CAR_male_Select_ACCL_Idle01
+				]
+				Med = [
+					CAR_male_Select_ACCL_Idle01
+				]
+				Fast = [
+					CAR_male_Select_ACCL_Idle01
+				]
+			}
+			Bad = {
+				Slow = [
+					CAR_male_Select_ACCL_Idle01
+				]
+				Med = [
+					CAR_male_Select_ACCL_Idle01
+				]
+				Fast = [
+					CAR_male_Select_ACCL_Idle01
+				]
+			}
+		}
+		Transitions = {
+			stance_frontend = CAR_male_Select_ACCL_out
+		}
+	}
+	Stance_Select_Piercings = {
+		Idle = {
+			good = {
+				Slow = [
+					CAR_male_Select_ACC_Hat_01
+					CAR_male_Select_ACC_Hat_02
+				]
+				Med = [
+					CAR_male_Select_ACC_Hat_01
+					CAR_male_Select_ACC_Hat_02
+				]
+				Fast = [
+					CAR_male_Select_ACC_Hat_01
+					CAR_male_Select_ACC_Hat_02
+				]
+			}
+			Normal = {
+				Slow = [
+					CAR_male_Select_ACC_Hat_01
+					CAR_male_Select_ACC_Hat_02
+				]
+				Med = [
+					CAR_male_Select_ACC_Hat_01
+					CAR_male_Select_ACC_Hat_02
+				]
+				Fast = [
+					CAR_male_Select_ACC_Hat_01
+					CAR_male_Select_ACC_Hat_02
+				]
+			}
+			Bad = {
+				Slow = [
+					CAR_male_Select_ACC_Hat_01
+					CAR_male_Select_ACC_Hat_02
+				]
+				Med = [
+					CAR_male_Select_ACC_Hat_01
+					CAR_male_Select_ACC_Hat_02
+				]
+				Fast = [
+					CAR_male_Select_ACC_Hat_01
+					CAR_male_Select_ACC_Hat_02
 				]
 			}
 		}
 	}
-	stance_select_pants = {
+	Stance_Select_Torso = {
 		Idle = {
 			good = {
-				slow = [
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
+				Slow = [
+					CAR_male_torso_outfit_02
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
 				]
-				med = [
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
+				Med = [
+					CAR_male_torso_outfit_02
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
 				]
-				FAST = [
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
+				Fast = [
+					CAR_male_torso_outfit_02
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
 				]
 			}
 			Normal = {
-				slow = [
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
+				Slow = [
+					CAR_male_torso_outfit_02
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
 				]
-				med = [
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
+				Med = [
+					CAR_male_torso_outfit_02
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
 				]
-				FAST = [
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
+				Fast = [
+					CAR_male_torso_outfit_02
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
 				]
 			}
-			bad = {
-				slow = [
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
+			Bad = {
+				Slow = [
+					CAR_male_torso_outfit_02
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
 				]
-				med = [
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
+				Med = [
+					CAR_male_torso_outfit_02
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
 				]
-				FAST = [
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
+				Fast = [
+					CAR_male_torso_outfit_02
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
 				]
 			}
 		}
 	}
-	stance_select_shoes = {
+	Stance_Select_Pants = {
 		Idle = {
 			good = {
-				slow = [
-					car_male_shoes_idle_01
-					car_male_shoes_idle_02
+				Slow = [
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
 				]
-				med = [
-					car_male_shoes_idle_01
-					car_male_shoes_idle_02
+				Med = [
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
 				]
-				FAST = [
-					car_male_shoes_idle_01
-					car_male_shoes_idle_02
+				Fast = [
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
 				]
 			}
 			Normal = {
-				slow = [
-					car_male_shoes_idle_01
-					car_male_shoes_idle_02
+				Slow = [
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
 				]
-				med = [
-					car_male_shoes_idle_01
-					car_male_shoes_idle_02
+				Med = [
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
 				]
-				FAST = [
-					car_male_shoes_idle_01
-					car_male_shoes_idle_02
-				]
-			}
-			bad = {
-				slow = [
-					car_male_shoes_idle_01
-					car_male_shoes_idle_02
-				]
-				med = [
-					car_male_shoes_idle_01
-					car_male_shoes_idle_02
-				]
-				FAST = [
-					car_male_shoes_idle_01
-					car_male_shoes_idle_02
+				Fast = [
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
 				]
 			}
-		}
-		transitions = {
-			stance_frontend = car_male_shoes_outofidle
-		}
-	}
-	stance_select_guitar = {
-		Idle = {
-			good = {
-				slow = [
-					car_male_select_guitar_idle
-					car_male_select_guitar_turn_flip
+			Bad = {
+				Slow = [
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
 				]
-				med = [
-					car_male_select_guitar_idle
-					car_male_select_guitar_turn_flip
+				Med = [
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
 				]
-				FAST = [
-					car_male_select_guitar_idle
-					car_male_select_guitar_turn_flip
-				]
-			}
-			Normal = {
-				slow = [
-					car_male_select_guitar_idle
-					car_male_select_guitar_turn_flip
-				]
-				med = [
-					car_male_select_guitar_idle
-					car_male_select_guitar_turn_flip
-				]
-				FAST = [
-					car_male_select_guitar_idle
-					car_male_select_guitar_turn_flip
-				]
-			}
-			bad = {
-				slow = [
-					car_male_select_guitar_idle
-					car_male_select_guitar_turn_flip
-				]
-				med = [
-					car_male_select_guitar_idle
-					car_male_select_guitar_turn_flip
-				]
-				FAST = [
-					car_male_select_guitar_idle
-					car_male_select_guitar_turn_flip
+				Fast = [
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
 				]
 			}
 		}
 	}
-	stance_select_mic = {
+	Stance_Select_Shoes = {
 		Idle = {
 			good = {
-				slow = [
-					gh_rocker_male_select_mic
+				Slow = [
+					CAR_male_shoes_idle_01
+					CAR_male_shoes_idle_02
 				]
-				med = [
-					gh_rocker_male_select_mic
+				Med = [
+					CAR_male_shoes_idle_01
+					CAR_male_shoes_idle_02
 				]
-				FAST = [
-					gh_rocker_male_select_mic
+				Fast = [
+					CAR_male_shoes_idle_01
+					CAR_male_shoes_idle_02
 				]
 			}
 			Normal = {
-				slow = [
-					gh_rocker_male_select_mic
+				Slow = [
+					CAR_male_shoes_idle_01
+					CAR_male_shoes_idle_02
 				]
-				med = [
-					gh_rocker_male_select_mic
+				Med = [
+					CAR_male_shoes_idle_01
+					CAR_male_shoes_idle_02
 				]
-				FAST = [
-					gh_rocker_male_select_mic
+				Fast = [
+					CAR_male_shoes_idle_01
+					CAR_male_shoes_idle_02
 				]
 			}
-			bad = {
-				slow = [
-					gh_rocker_male_select_mic
+			Bad = {
+				Slow = [
+					CAR_male_shoes_idle_01
+					CAR_male_shoes_idle_02
 				]
-				med = [
-					gh_rocker_male_select_mic
+				Med = [
+					CAR_male_shoes_idle_01
+					CAR_male_shoes_idle_02
 				]
-				FAST = [
-					gh_rocker_male_select_mic
+				Fast = [
+					CAR_male_shoes_idle_01
+					CAR_male_shoes_idle_02
 				]
 			}
 		}
-		transitions = {
-			stance_select_microphone = gh_rocker_male_select_into_idle
+		Transitions = {
+			stance_frontend = CAR_male_shoes_outofidle
 		}
 	}
-	stance_select_microphone = {
+	Stance_Select_Guitar = {
 		Idle = {
 			good = {
-				slow = [
-					gh_rocker_male_select_idle
+				Slow = [
+					CAR_male_Select_guitar_idle
+					CAR_male_Select_guitar_turn_flip
 				]
-				med = [
-					gh_rocker_male_select_idle
+				Med = [
+					CAR_male_Select_guitar_idle
+					CAR_male_Select_guitar_turn_flip
 				]
-				FAST = [
-					gh_rocker_male_select_idle
+				Fast = [
+					CAR_male_Select_guitar_idle
+					CAR_male_Select_guitar_turn_flip
 				]
 			}
 			Normal = {
-				slow = [
-					gh_rocker_male_select_idle
+				Slow = [
+					CAR_male_Select_guitar_idle
+					CAR_male_Select_guitar_turn_flip
 				]
-				med = [
-					gh_rocker_male_select_idle
+				Med = [
+					CAR_male_Select_guitar_idle
+					CAR_male_Select_guitar_turn_flip
 				]
-				FAST = [
-					gh_rocker_male_select_idle
-				]
-			}
-			bad = {
-				slow = [
-					gh_rocker_male_select_idle
-				]
-				med = [
-					gh_rocker_male_select_idle
-				]
-				FAST = [
-					gh_rocker_male_select_idle
+				Fast = [
+					CAR_male_Select_guitar_idle
+					CAR_male_Select_guitar_turn_flip
 				]
 			}
-		}
-		transitions = {
-			stance_select_mic = gh_rocker_male_select_outof_idle
+			Bad = {
+				Slow = [
+					CAR_male_Select_guitar_idle
+					CAR_male_Select_guitar_turn_flip
+				]
+				Med = [
+					CAR_male_Select_guitar_idle
+					CAR_male_Select_guitar_turn_flip
+				]
+				Fast = [
+					CAR_male_Select_guitar_idle
+					CAR_male_Select_guitar_turn_flip
+				]
+			}
 		}
 	}
-	stance_select_drum = {
+	Stance_Select_Mic = {
 		Idle = {
 			good = {
-				slow = [
-					gh_rocker_male_select_drums
-					gh_rocker_male_select_drums_03
+				Slow = [
+					gh_rocker_male_select_Mic
 				]
-				med = [
-					gh_rocker_male_select_drums
-					gh_rocker_male_select_drums_03
+				Med = [
+					gh_rocker_male_select_Mic
 				]
-				FAST = [
-					gh_rocker_male_select_drums
-					gh_rocker_male_select_drums_03
+				Fast = [
+					gh_rocker_male_select_Mic
 				]
 			}
 			Normal = {
-				slow = [
-					gh_rocker_male_select_drums
-					gh_rocker_male_select_drums_03
+				Slow = [
+					gh_rocker_male_select_Mic
 				]
-				med = [
-					gh_rocker_male_select_drums
-					gh_rocker_male_select_drums_03
+				Med = [
+					gh_rocker_male_select_Mic
 				]
-				FAST = [
-					gh_rocker_male_select_drums
-					gh_rocker_male_select_drums_03
+				Fast = [
+					gh_rocker_male_select_Mic
 				]
 			}
-			bad = {
-				slow = [
-					gh_rocker_male_select_drums
-					gh_rocker_male_select_drums_03
+			Bad = {
+				Slow = [
+					gh_rocker_male_select_Mic
 				]
-				med = [
-					gh_rocker_male_select_drums
-					gh_rocker_male_select_drums_03
+				Med = [
+					gh_rocker_male_select_Mic
 				]
-				FAST = [
-					gh_rocker_male_select_drums
-					gh_rocker_male_select_drums_03
+				Fast = [
+					gh_rocker_male_select_Mic
 				]
 			}
 		}
-		transitions = {
-			stance_select_drumsticks = car_male_select_drumsticks_in
+		Transitions = {
+			Stance_Select_Microphone = GH_Rocker_Male_Select_into_idle
 		}
 	}
-	stance_select_drumsticks = {
+	Stance_Select_Microphone = {
 		Idle = {
 			good = {
-				slow = [
-					car_male_select_drumsticks_idle
+				Slow = [
+					GH_Rocker_Male_Select_idle
 				]
-				med = [
-					car_male_select_drumsticks_idle
+				Med = [
+					GH_Rocker_Male_Select_idle
 				]
-				FAST = [
-					car_male_select_drumsticks_idle
+				Fast = [
+					GH_Rocker_Male_Select_idle
 				]
 			}
 			Normal = {
-				slow = [
-					car_male_select_drumsticks_idle
+				Slow = [
+					GH_Rocker_Male_Select_idle
 				]
-				med = [
-					car_male_select_drumsticks_idle
+				Med = [
+					GH_Rocker_Male_Select_idle
 				]
-				FAST = [
-					car_male_select_drumsticks_idle
+				Fast = [
+					GH_Rocker_Male_Select_idle
 				]
 			}
-			bad = {
-				slow = [
-					car_male_select_drumsticks_idle
+			Bad = {
+				Slow = [
+					GH_Rocker_Male_Select_idle
 				]
-				med = [
-					car_male_select_drumsticks_idle
+				Med = [
+					GH_Rocker_Male_Select_idle
 				]
-				FAST = [
-					car_male_select_drumsticks_idle
+				Fast = [
+					GH_Rocker_Male_Select_idle
 				]
 			}
 		}
-		transitions = {
-			stance_select_drum = car_male_select_drumsticks_out
+		Transitions = {
+			Stance_Select_Mic = GH_Rocker_Male_Select_outof_idle
+		}
+	}
+	Stance_Select_Drum = {
+		Idle = {
+			good = {
+				Slow = [
+					gh_rocker_male_select_Drums
+					gh_rocker_male_select_Drums_03
+				]
+				Med = [
+					gh_rocker_male_select_Drums
+					gh_rocker_male_select_Drums_03
+				]
+				Fast = [
+					gh_rocker_male_select_Drums
+					gh_rocker_male_select_Drums_03
+				]
+			}
+			Normal = {
+				Slow = [
+					gh_rocker_male_select_Drums
+					gh_rocker_male_select_Drums_03
+				]
+				Med = [
+					gh_rocker_male_select_Drums
+					gh_rocker_male_select_Drums_03
+				]
+				Fast = [
+					gh_rocker_male_select_Drums
+					gh_rocker_male_select_Drums_03
+				]
+			}
+			Bad = {
+				Slow = [
+					gh_rocker_male_select_Drums
+					gh_rocker_male_select_Drums_03
+				]
+				Med = [
+					gh_rocker_male_select_Drums
+					gh_rocker_male_select_Drums_03
+				]
+				Fast = [
+					gh_rocker_male_select_Drums
+					gh_rocker_male_select_Drums_03
+				]
+			}
+		}
+		Transitions = {
+			Stance_Select_DrumSticks = CAR_male_Select_drumsticks_in
+		}
+	}
+	Stance_Select_DrumSticks = {
+		Idle = {
+			good = {
+				Slow = [
+					CAR_male_Select_drumsticks_idle
+				]
+				Med = [
+					CAR_male_Select_drumsticks_idle
+				]
+				Fast = [
+					CAR_male_Select_drumsticks_idle
+				]
+			}
+			Normal = {
+				Slow = [
+					CAR_male_Select_drumsticks_idle
+				]
+				Med = [
+					CAR_male_Select_drumsticks_idle
+				]
+				Fast = [
+					CAR_male_Select_drumsticks_idle
+				]
+			}
+			Bad = {
+				Slow = [
+					CAR_male_Select_drumsticks_idle
+				]
+				Med = [
+					CAR_male_Select_drumsticks_idle
+				]
+				Fast = [
+					CAR_male_Select_drumsticks_idle
+				]
+			}
+		}
+		Transitions = {
+			Stance_Select_Drum = CAR_male_Select_drumsticks_out
 		}
 	}
 	stance_frontend = {
 		Idle = {
 			good = {
-				slow = [
-					car_male_idles_01
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
-					car_male_idles_07
-					car_male_idles_08
+				Slow = [
+					CAR_male_idles_01
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
+					CAR_male_idles_07
+					CAR_male_idles_08
 				]
-				med = [
-					car_male_idles_01
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
-					car_male_idles_07
-					car_male_idles_08
+				Med = [
+					CAR_male_idles_01
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
+					CAR_male_idles_07
+					CAR_male_idles_08
 				]
-				FAST = [
-					car_male_idles_01
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
-					car_male_idles_07
-					car_male_idles_08
+				Fast = [
+					CAR_male_idles_01
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
+					CAR_male_idles_07
+					CAR_male_idles_08
 				]
 			}
 			Normal = {
-				slow = [
-					car_male_idles_01
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
-					car_male_idles_07
-					car_male_idles_08
+				Slow = [
+					CAR_male_idles_01
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
+					CAR_male_idles_07
+					CAR_male_idles_08
 				]
-				med = [
-					car_male_idles_01
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
-					car_male_idles_07
-					car_male_idles_08
+				Med = [
+					CAR_male_idles_01
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
+					CAR_male_idles_07
+					CAR_male_idles_08
 				]
-				FAST = [
-					car_male_idles_01
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
-					car_male_idles_07
-					car_male_idles_08
+				Fast = [
+					CAR_male_idles_01
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
+					CAR_male_idles_07
+					CAR_male_idles_08
 				]
 			}
-			bad = {
-				slow = [
-					car_male_idles_01
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
-					car_male_idles_07
-					car_male_idles_08
+			Bad = {
+				Slow = [
+					CAR_male_idles_01
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
+					CAR_male_idles_07
+					CAR_male_idles_08
 				]
-				med = [
-					car_male_idles_01
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
-					car_male_idles_07
-					car_male_idles_08
+				Med = [
+					CAR_male_idles_01
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
+					CAR_male_idles_07
+					CAR_male_idles_08
 				]
-				FAST = [
-					car_male_idles_01
-					car_male_idles_02
-					car_male_idles_04
-					car_male_idles_05
-					car_male_idles_07
-					car_male_idles_08
+				Fast = [
+					CAR_male_idles_01
+					CAR_male_idles_02
+					CAR_male_idles_04
+					CAR_male_idles_05
+					CAR_male_idles_07
+					CAR_male_idles_08
 				]
 			}
 		}
-		rock = {
+		Rock = {
 			good = {
-				slow = [
-					car_male_readytorock_punk_01
+				Slow = [
+					CAR_Male_readytorock_Punk_01
 				]
-				med = [
-					car_male_readytorock_punk_01
+				Med = [
+					CAR_Male_readytorock_Punk_01
 				]
-				FAST = [
-					car_male_readytorock_punk_01
+				Fast = [
+					CAR_Male_readytorock_Punk_01
 				]
 			}
 			Normal = {
-				slow = [
-					car_male_readytorock_punk_01
+				Slow = [
+					CAR_Male_readytorock_Punk_01
 				]
-				med = [
-					car_male_readytorock_punk_01
+				Med = [
+					CAR_Male_readytorock_Punk_01
 				]
-				FAST = [
-					car_male_readytorock_punk_01
+				Fast = [
+					CAR_Male_readytorock_Punk_01
 				]
 			}
-			bad = {
-				slow = [
-					car_male_readytorock_punk_01
+			Bad = {
+				Slow = [
+					CAR_Male_readytorock_Punk_01
 				]
-				med = [
-					car_male_readytorock_punk_01
+				Med = [
+					CAR_Male_readytorock_Punk_01
 				]
-				FAST = [
-					car_male_readytorock_punk_01
+				Fast = [
+					CAR_Male_readytorock_Punk_01
 				]
 			}
 		}
-		punk = {
+		Punk = {
 			good = {
-				slow = [
-					car_male_readytorock_punk_02
+				Slow = [
+					CAR_male_readytorock_punk_02
 				]
-				med = [
-					car_male_readytorock_punk_02
+				Med = [
+					CAR_male_readytorock_punk_02
 				]
-				FAST = [
-					car_male_readytorock_punk_02
+				Fast = [
+					CAR_male_readytorock_punk_02
 				]
 			}
 			Normal = {
-				slow = [
-					car_male_readytorock_punk_02
+				Slow = [
+					CAR_male_readytorock_punk_02
 				]
-				med = [
-					car_male_readytorock_punk_02
+				Med = [
+					CAR_male_readytorock_punk_02
 				]
-				FAST = [
-					car_male_readytorock_punk_02
+				Fast = [
+					CAR_male_readytorock_punk_02
 				]
 			}
-			bad = {
-				slow = [
-					car_male_readytorock_punk_02
+			Bad = {
+				Slow = [
+					CAR_male_readytorock_punk_02
 				]
-				med = [
-					car_male_readytorock_punk_02
+				Med = [
+					CAR_male_readytorock_punk_02
 				]
-				FAST = [
-					car_male_readytorock_punk_02
+				Fast = [
+					CAR_male_readytorock_punk_02
 				]
 			}
 		}
-		heavymetal = {
+		HeavyMetal = {
 			good = {
-				slow = [
-					car_male_readytorock_metal_02
+				Slow = [
+					CAR_male_readytorock_metal_02
 				]
-				med = [
-					car_male_readytorock_metal_02
+				Med = [
+					CAR_male_readytorock_metal_02
 				]
-				FAST = [
-					car_male_readytorock_metal_02
+				Fast = [
+					CAR_male_readytorock_metal_02
 				]
 			}
 			Normal = {
-				slow = [
-					car_male_readytorock_metal_02
+				Slow = [
+					CAR_male_readytorock_metal_02
 				]
-				med = [
-					car_male_readytorock_metal_02
+				Med = [
+					CAR_male_readytorock_metal_02
 				]
-				FAST = [
-					car_male_readytorock_metal_02
+				Fast = [
+					CAR_male_readytorock_metal_02
 				]
 			}
-			bad = {
-				slow = [
-					car_male_readytorock_metal_02
+			Bad = {
+				Slow = [
+					CAR_male_readytorock_metal_02
 				]
-				med = [
-					car_male_readytorock_metal_02
+				Med = [
+					CAR_male_readytorock_metal_02
 				]
-				FAST = [
-					car_male_readytorock_metal_02
+				Fast = [
+					CAR_male_readytorock_metal_02
 				]
 			}
 		}
-		glam = {
+		Glam = {
 			good = {
-				slow = [
-					car_male_readytorock_glam_02
+				Slow = [
+					CAR_Male_readytorock_Glam_02
 				]
-				med = [
-					car_male_readytorock_glam_02
+				Med = [
+					CAR_Male_readytorock_Glam_02
 				]
-				FAST = [
-					car_male_readytorock_glam_02
+				Fast = [
+					CAR_Male_readytorock_Glam_02
 				]
 			}
 			Normal = {
-				slow = [
-					car_male_readytorock_glam_02
+				Slow = [
+					CAR_Male_readytorock_Glam_02
 				]
-				med = [
-					car_male_readytorock_glam_02
+				Med = [
+					CAR_Male_readytorock_Glam_02
 				]
-				FAST = [
-					car_male_readytorock_glam_02
+				Fast = [
+					CAR_Male_readytorock_Glam_02
 				]
 			}
-			bad = {
-				slow = [
-					car_male_readytorock_glam_02
+			Bad = {
+				Slow = [
+					CAR_Male_readytorock_Glam_02
 				]
-				med = [
-					car_male_readytorock_glam_02
+				Med = [
+					CAR_Male_readytorock_Glam_02
 				]
-				FAST = [
-					car_male_readytorock_glam_02
+				Fast = [
+					CAR_Male_readytorock_Glam_02
 				]
 			}
 		}
-		blackmetal = {
+		BlackMetal = {
 			good = {
-				slow = [
-					car_male_readytorock_blackmetal_02
+				Slow = [
+					CAR_Male_readytorock_BlackMetal_02
 				]
-				med = [
-					car_male_readytorock_blackmetal_02
+				Med = [
+					CAR_Male_readytorock_BlackMetal_02
 				]
-				FAST = [
-					car_male_readytorock_blackmetal_02
+				Fast = [
+					CAR_Male_readytorock_BlackMetal_02
 				]
 			}
 			Normal = {
-				slow = [
-					car_male_readytorock_blackmetal_02
+				Slow = [
+					CAR_Male_readytorock_BlackMetal_02
 				]
-				med = [
-					car_male_readytorock_blackmetal_02
+				Med = [
+					CAR_Male_readytorock_BlackMetal_02
 				]
-				FAST = [
-					car_male_readytorock_blackmetal_02
+				Fast = [
+					CAR_Male_readytorock_BlackMetal_02
 				]
 			}
-			bad = {
-				slow = [
-					car_male_readytorock_blackmetal_02
+			Bad = {
+				Slow = [
+					CAR_Male_readytorock_BlackMetal_02
 				]
-				med = [
-					car_male_readytorock_blackmetal_02
+				Med = [
+					CAR_Male_readytorock_BlackMetal_02
 				]
-				FAST = [
-					car_male_readytorock_blackmetal_02
+				Fast = [
+					CAR_Male_readytorock_BlackMetal_02
 				]
 			}
 		}
-		classic = {
+		Classic = {
 			good = {
-				slow = [
-					car_male_readytorock_classic_01
+				Slow = [
+					CAR_Male_readytorock_Classic_01
 				]
-				med = [
-					car_male_readytorock_classic_01
+				Med = [
+					CAR_Male_readytorock_Classic_01
 				]
-				FAST = [
-					car_male_readytorock_classic_01
+				Fast = [
+					CAR_Male_readytorock_Classic_01
 				]
 			}
 			Normal = {
-				slow = [
-					car_male_readytorock_classic_01
+				Slow = [
+					CAR_Male_readytorock_Classic_01
 				]
-				med = [
-					car_male_readytorock_classic_01
+				Med = [
+					CAR_Male_readytorock_Classic_01
 				]
-				FAST = [
-					car_male_readytorock_classic_01
+				Fast = [
+					CAR_Male_readytorock_Classic_01
 				]
 			}
-			bad = {
-				slow = [
-					car_male_readytorock_classic_01
+			Bad = {
+				Slow = [
+					CAR_Male_readytorock_Classic_01
 				]
-				med = [
-					car_male_readytorock_classic_01
+				Med = [
+					CAR_Male_readytorock_Classic_01
 				]
-				FAST = [
-					car_male_readytorock_classic_01
+				Fast = [
+					CAR_Male_readytorock_Classic_01
 				]
 			}
 		}
-		goth = {
+		Goth = {
 			good = {
-				slow = [
-					car_male_readytorock_goth_01
-					car_male_readytorock_goth_02
+				Slow = [
+					CAR_Male_readytorock_Goth_01
+					CAR_Male_readytorock_Goth_02
 				]
-				med = [
-					car_male_readytorock_goth_01
-					car_male_readytorock_goth_02
+				Med = [
+					CAR_Male_readytorock_Goth_01
+					CAR_Male_readytorock_Goth_02
 				]
-				FAST = [
-					car_male_readytorock_goth_01
-					car_male_readytorock_goth_02
+				Fast = [
+					CAR_Male_readytorock_Goth_01
+					CAR_Male_readytorock_Goth_02
 				]
 			}
 			Normal = {
-				slow = [
-					car_male_readytorock_goth_01
-					car_male_readytorock_goth_02
+				Slow = [
+					CAR_Male_readytorock_Goth_01
+					CAR_Male_readytorock_Goth_02
 				]
-				med = [
-					car_male_readytorock_goth_01
-					car_male_readytorock_goth_02
+				Med = [
+					CAR_Male_readytorock_Goth_01
+					CAR_Male_readytorock_Goth_02
 				]
-				FAST = [
-					car_male_readytorock_goth_01
-					car_male_readytorock_goth_02
+				Fast = [
+					CAR_Male_readytorock_Goth_01
+					CAR_Male_readytorock_Goth_02
 				]
 			}
-			bad = {
-				slow = [
-					car_male_readytorock_goth_01
-					car_male_readytorock_goth_02
+			Bad = {
+				Slow = [
+					CAR_Male_readytorock_Goth_01
+					CAR_Male_readytorock_Goth_02
 				]
-				med = [
-					car_male_readytorock_goth_01
-					car_male_readytorock_goth_02
+				Med = [
+					CAR_Male_readytorock_Goth_01
+					CAR_Male_readytorock_Goth_02
 				]
-				FAST = [
-					car_male_readytorock_goth_01
-					car_male_readytorock_goth_02
+				Fast = [
+					CAR_Male_readytorock_Goth_01
+					CAR_Male_readytorock_Goth_02
 				]
 			}
 		}
-		pop = {
+		Pop = {
 			good = {
-				slow = [
-					car_male_readytorock_glam_01
+				Slow = [
+					CAR_Male_readytorock_Glam_01
 				]
-				med = [
-					car_male_readytorock_glam_01
+				Med = [
+					CAR_Male_readytorock_Glam_01
 				]
-				FAST = [
-					car_male_readytorock_glam_01
+				Fast = [
+					CAR_Male_readytorock_Glam_01
 				]
 			}
 			Normal = {
-				slow = [
-					car_male_readytorock_glam_01
+				Slow = [
+					CAR_Male_readytorock_Glam_01
 				]
-				med = [
-					car_male_readytorock_glam_01
+				Med = [
+					CAR_Male_readytorock_Glam_01
 				]
-				FAST = [
-					car_male_readytorock_glam_01
+				Fast = [
+					CAR_Male_readytorock_Glam_01
 				]
 			}
-			bad = {
-				slow = [
-					car_male_readytorock_glam_01
+			Bad = {
+				Slow = [
+					CAR_Male_readytorock_Glam_01
 				]
-				med = [
-					car_male_readytorock_glam_01
+				Med = [
+					CAR_Male_readytorock_Glam_01
 				]
-				FAST = [
-					car_male_readytorock_glam_01
+				Fast = [
+					CAR_Male_readytorock_Glam_01
 				]
 			}
 		}
-		popin = {
+		PopIn = {
 			good = {
-				slow = [
-					car_male_popin_01
-					car_male_popin_02
+				Slow = [
+					CAR_male_popin_01
+					CAR_male_popin_02
 				]
-				med = [
-					car_male_popin_01
-					car_male_popin_02
+				Med = [
+					CAR_male_popin_01
+					CAR_male_popin_02
 				]
-				FAST = [
-					car_male_popin_01
-					car_male_popin_02
+				Fast = [
+					CAR_male_popin_01
+					CAR_male_popin_02
 				]
 			}
 			Normal = {
-				slow = [
-					car_male_popin_01
-					car_male_popin_02
+				Slow = [
+					CAR_male_popin_01
+					CAR_male_popin_02
 				]
-				med = [
-					car_male_popin_01
-					car_male_popin_02
+				Med = [
+					CAR_male_popin_01
+					CAR_male_popin_02
 				]
-				FAST = [
-					car_male_popin_01
-					car_male_popin_02
+				Fast = [
+					CAR_male_popin_01
+					CAR_male_popin_02
 				]
 			}
-			bad = {
-				slow = [
-					car_male_popin_01
-					car_male_popin_02
+			Bad = {
+				Slow = [
+					CAR_male_popin_01
+					CAR_male_popin_02
 				]
-				med = [
-					car_male_popin_01
-					car_male_popin_02
+				Med = [
+					CAR_male_popin_01
+					CAR_male_popin_02
 				]
-				FAST = [
-					car_male_popin_01
-					car_male_popin_02
+				Fast = [
+					CAR_male_popin_01
+					CAR_male_popin_02
 				]
 			}
 		}
-		backoutl = {
+		BackOutL = {
 			good = {
-				slow = [
-					car_male_backoutleft_01
-					car_male_backoutleft_02
+				Slow = [
+					CAR_male_backoutleft_01
+					CAR_male_backoutleft_02
 				]
-				med = [
-					car_male_backoutleft_01
-					car_male_backoutleft_02
+				Med = [
+					CAR_male_backoutleft_01
+					CAR_male_backoutleft_02
 				]
-				FAST = [
-					car_male_backoutleft_01
-					car_male_backoutleft_02
+				Fast = [
+					CAR_male_backoutleft_01
+					CAR_male_backoutleft_02
 				]
 			}
 			Normal = {
-				slow = [
-					car_male_backoutleft_01
-					car_male_backoutleft_02
+				Slow = [
+					CAR_male_backoutleft_01
+					CAR_male_backoutleft_02
 				]
-				med = [
-					car_male_backoutleft_01
-					car_male_backoutleft_02
+				Med = [
+					CAR_male_backoutleft_01
+					CAR_male_backoutleft_02
 				]
-				FAST = [
-					car_male_backoutleft_01
-					car_male_backoutleft_02
+				Fast = [
+					CAR_male_backoutleft_01
+					CAR_male_backoutleft_02
 				]
 			}
-			bad = {
-				slow = [
-					car_male_backoutleft_01
-					car_male_backoutleft_02
+			Bad = {
+				Slow = [
+					CAR_male_backoutleft_01
+					CAR_male_backoutleft_02
 				]
-				med = [
-					car_male_backoutleft_01
-					car_male_backoutleft_02
+				Med = [
+					CAR_male_backoutleft_01
+					CAR_male_backoutleft_02
 				]
-				FAST = [
-					car_male_backoutleft_01
-					car_male_backoutleft_02
+				Fast = [
+					CAR_male_backoutleft_01
+					CAR_male_backoutleft_02
 				]
 			}
 		}
-		backoutr = {
+		BackOutR = {
 			good = {
-				slow = [
-					car_male_backoutright_01
-					car_male_backoutright_02
+				Slow = [
+					CAR_male_backoutright_01
+					CAR_male_backoutright_02
 				]
-				med = [
-					car_male_backoutright_01
-					car_male_backoutright_02
+				Med = [
+					CAR_male_backoutright_01
+					CAR_male_backoutright_02
 				]
-				FAST = [
-					car_male_backoutright_01
-					car_male_backoutright_02
+				Fast = [
+					CAR_male_backoutright_01
+					CAR_male_backoutright_02
 				]
 			}
 			Normal = {
-				slow = [
-					car_male_backoutright_01
-					car_male_backoutright_02
+				Slow = [
+					CAR_male_backoutright_01
+					CAR_male_backoutright_02
 				]
-				med = [
-					car_male_backoutright_01
-					car_male_backoutright_02
+				Med = [
+					CAR_male_backoutright_01
+					CAR_male_backoutright_02
 				]
-				FAST = [
-					car_male_backoutright_01
-					car_male_backoutright_02
+				Fast = [
+					CAR_male_backoutright_01
+					CAR_male_backoutright_02
 				]
 			}
-			bad = {
-				slow = [
-					car_male_backoutright_01
-					car_male_backoutright_02
+			Bad = {
+				Slow = [
+					CAR_male_backoutright_01
+					CAR_male_backoutright_02
 				]
-				med = [
-					car_male_backoutright_01
-					car_male_backoutright_02
+				Med = [
+					CAR_male_backoutright_01
+					CAR_male_backoutright_02
 				]
-				FAST = [
-					car_male_backoutright_01
-					car_male_backoutright_02
+				Fast = [
+					CAR_male_backoutright_01
+					CAR_male_backoutright_02
 				]
 			}
 		}
 		guitar = {
 			good = {
-				slow = [
-					car_male_bandchoose_guit_01
-					car_male_bandchoose_guit_02
+				Slow = [
+					CAR_male_bandchoose_guit_01
+					CAR_male_bandchoose_guit_02
 				]
-				med = [
-					car_male_bandchoose_guit_01
-					car_male_bandchoose_guit_02
+				Med = [
+					CAR_male_bandchoose_guit_01
+					CAR_male_bandchoose_guit_02
 				]
-				FAST = [
-					car_male_bandchoose_guit_01
-					car_male_bandchoose_guit_02
+				Fast = [
+					CAR_male_bandchoose_guit_01
+					CAR_male_bandchoose_guit_02
 				]
 			}
 			Normal = {
-				slow = [
-					car_male_bandchoose_guit_01
-					car_male_bandchoose_guit_02
+				Slow = [
+					CAR_male_bandchoose_guit_01
+					CAR_male_bandchoose_guit_02
 				]
-				med = [
-					car_male_bandchoose_guit_01
-					car_male_bandchoose_guit_02
+				Med = [
+					CAR_male_bandchoose_guit_01
+					CAR_male_bandchoose_guit_02
 				]
-				FAST = [
-					car_male_bandchoose_guit_01
-					car_male_bandchoose_guit_02
+				Fast = [
+					CAR_male_bandchoose_guit_01
+					CAR_male_bandchoose_guit_02
 				]
 			}
-			bad = {
-				slow = [
-					car_male_bandchoose_guit_01
-					car_male_bandchoose_guit_02
+			Bad = {
+				Slow = [
+					CAR_male_bandchoose_guit_01
+					CAR_male_bandchoose_guit_02
 				]
-				med = [
-					car_male_bandchoose_guit_01
-					car_male_bandchoose_guit_02
+				Med = [
+					CAR_male_bandchoose_guit_01
+					CAR_male_bandchoose_guit_02
 				]
-				FAST = [
-					car_male_bandchoose_guit_01
-					car_male_bandchoose_guit_02
+				Fast = [
+					CAR_male_bandchoose_guit_01
+					CAR_male_bandchoose_guit_02
 				]
 			}
 		}
-		bass = {
+		Bass = {
 			good = {
-				slow = [
-					car_male_bandchoose_bass_01
-					car_male_bandchoose_bass_02
+				Slow = [
+					CAR_male_bandchoose_bass_01
+					CAR_male_bandchoose_bass_02
 				]
-				med = [
-					car_male_bandchoose_bass_01
-					car_male_bandchoose_bass_02
+				Med = [
+					CAR_male_bandchoose_bass_01
+					CAR_male_bandchoose_bass_02
 				]
-				FAST = [
-					car_male_bandchoose_bass_01
-					car_male_bandchoose_bass_02
+				Fast = [
+					CAR_male_bandchoose_bass_01
+					CAR_male_bandchoose_bass_02
 				]
 			}
 			Normal = {
-				slow = [
-					car_male_bandchoose_bass_01
-					car_male_bandchoose_bass_02
+				Slow = [
+					CAR_male_bandchoose_bass_01
+					CAR_male_bandchoose_bass_02
 				]
-				med = [
-					car_male_bandchoose_bass_01
-					car_male_bandchoose_bass_02
+				Med = [
+					CAR_male_bandchoose_bass_01
+					CAR_male_bandchoose_bass_02
 				]
-				FAST = [
-					car_male_bandchoose_bass_01
-					car_male_bandchoose_bass_02
+				Fast = [
+					CAR_male_bandchoose_bass_01
+					CAR_male_bandchoose_bass_02
 				]
 			}
-			bad = {
-				slow = [
-					car_male_bandchoose_bass_01
-					car_male_bandchoose_bass_02
+			Bad = {
+				Slow = [
+					CAR_male_bandchoose_bass_01
+					CAR_male_bandchoose_bass_02
 				]
-				med = [
-					car_male_bandchoose_bass_01
-					car_male_bandchoose_bass_02
+				Med = [
+					CAR_male_bandchoose_bass_01
+					CAR_male_bandchoose_bass_02
 				]
-				FAST = [
-					car_male_bandchoose_bass_01
-					car_male_bandchoose_bass_02
+				Fast = [
+					CAR_male_bandchoose_bass_01
+					CAR_male_bandchoose_bass_02
 				]
 			}
 		}
-		drums = {
+		Drums = {
 			good = {
-				slow = [
-					car_male_bandchoose_drum_01
-					car_male_bandchoose_drum_02
+				Slow = [
+					CAR_male_bandchoose_drum_01
+					CAR_male_bandchoose_drum_02
 				]
-				med = [
-					car_male_bandchoose_drum_01
-					car_male_bandchoose_drum_02
+				Med = [
+					CAR_male_bandchoose_drum_01
+					CAR_male_bandchoose_drum_02
 				]
-				FAST = [
-					car_male_bandchoose_drum_01
-					car_male_bandchoose_drum_02
+				Fast = [
+					CAR_male_bandchoose_drum_01
+					CAR_male_bandchoose_drum_02
 				]
 			}
 			Normal = {
-				slow = [
-					car_male_bandchoose_drum_01
-					car_male_bandchoose_drum_02
+				Slow = [
+					CAR_male_bandchoose_drum_01
+					CAR_male_bandchoose_drum_02
 				]
-				med = [
-					car_male_bandchoose_drum_01
-					car_male_bandchoose_drum_02
+				Med = [
+					CAR_male_bandchoose_drum_01
+					CAR_male_bandchoose_drum_02
 				]
-				FAST = [
-					car_male_bandchoose_drum_01
-					car_male_bandchoose_drum_02
+				Fast = [
+					CAR_male_bandchoose_drum_01
+					CAR_male_bandchoose_drum_02
 				]
 			}
-			bad = {
-				slow = [
-					car_male_bandchoose_drum_01
-					car_male_bandchoose_drum_02
+			Bad = {
+				Slow = [
+					CAR_male_bandchoose_drum_01
+					CAR_male_bandchoose_drum_02
 				]
-				med = [
-					car_male_bandchoose_drum_01
-					car_male_bandchoose_drum_02
+				Med = [
+					CAR_male_bandchoose_drum_01
+					CAR_male_bandchoose_drum_02
 				]
-				FAST = [
-					car_male_bandchoose_drum_01
-					car_male_bandchoose_drum_02
+				Fast = [
+					CAR_male_bandchoose_drum_01
+					CAR_male_bandchoose_drum_02
 				]
 			}
 		}
-		vocals = {
+		Vocals = {
 			good = {
-				slow = [
-					car_male_bandchoose_sing_01
-					car_male_bandchoose_sing_02
+				Slow = [
+					CAR_male_bandchoose_sing_01
+					CAR_male_bandchoose_sing_02
 				]
-				med = [
-					car_male_bandchoose_sing_01
-					car_male_bandchoose_sing_02
+				Med = [
+					CAR_male_bandchoose_sing_01
+					CAR_male_bandchoose_sing_02
 				]
-				FAST = [
-					car_male_bandchoose_sing_01
-					car_male_bandchoose_sing_02
+				Fast = [
+					CAR_male_bandchoose_sing_01
+					CAR_male_bandchoose_sing_02
 				]
 			}
 			Normal = {
-				slow = [
-					car_male_bandchoose_sing_01
-					car_male_bandchoose_sing_02
+				Slow = [
+					CAR_male_bandchoose_sing_01
+					CAR_male_bandchoose_sing_02
 				]
-				med = [
-					car_male_bandchoose_sing_01
-					car_male_bandchoose_sing_02
+				Med = [
+					CAR_male_bandchoose_sing_01
+					CAR_male_bandchoose_sing_02
 				]
-				FAST = [
-					car_male_bandchoose_sing_01
-					car_male_bandchoose_sing_02
+				Fast = [
+					CAR_male_bandchoose_sing_01
+					CAR_male_bandchoose_sing_02
 				]
 			}
-			bad = {
-				slow = [
-					car_male_bandchoose_sing_01
-					car_male_bandchoose_sing_02
+			Bad = {
+				Slow = [
+					CAR_male_bandchoose_sing_01
+					CAR_male_bandchoose_sing_02
 				]
-				med = [
-					car_male_bandchoose_sing_01
-					car_male_bandchoose_sing_02
+				Med = [
+					CAR_male_bandchoose_sing_01
+					CAR_male_bandchoose_sing_02
 				]
-				FAST = [
-					car_male_bandchoose_sing_01
-					car_male_bandchoose_sing_02
+				Fast = [
+					CAR_male_bandchoose_sing_01
+					CAR_male_bandchoose_sing_02
 				]
 			}
 		}
-		transitions = {
-			stance_select_tat_chest = car_male_tat_chest_intoidle
-			stance_select_tat_arm_r = car_male_tat_rarm_intoidle
-			stance_select_tat_arm_l = car_male_tat_larm_intoidle
-			stance_select_arm_r = car_male_select_accr_in
-			stance_select_arm_l = car_male_select_accl_in
-			stance_select_shoes = car_male_shoes_intoidle
-			Stance_A = car_male_popin_02
+		Transitions = {
+			Stance_Select_Tat_Chest = CAR_male_tat_chest_intoidle
+			Stance_Select_Tat_Arm_R = CAR_male_tat_Rarm_intoidle
+			Stance_Select_Tat_Arm_L = CAR_male_tat_Larm_intoidle
+			Stance_Select_Arm_R = CAR_male_Select_ACCR_in
+			Stance_Select_Arm_L = CAR_male_Select_ACCL_in
+			Stance_Select_Shoes = CAR_male_shoes_intoidle
+			Stance_A = CAR_male_popin_02
 		}
 	}
-	stance_frontend_instrument = {
+	stance_frontEnd_instrument = {
 		Idle = {
 			good = {
-				slow = [
-					car_male_select_guitar_idle
-					car_male_select_guitar_turn_flip
+				Slow = [
+					CAR_male_Select_guitar_idle
+					CAR_male_Select_guitar_turn_flip
 				]
-				med = [
-					car_male_select_guitar_idle
-					car_male_select_guitar_turn_flip
+				Med = [
+					CAR_male_Select_guitar_idle
+					CAR_male_Select_guitar_turn_flip
 				]
-				FAST = [
-					car_male_select_guitar_idle
-					car_male_select_guitar_turn_flip
+				Fast = [
+					CAR_male_Select_guitar_idle
+					CAR_male_Select_guitar_turn_flip
 				]
 			}
 			Normal = {
-				slow = [
-					car_male_select_guitar_idle
-					car_male_select_guitar_turn_flip
+				Slow = [
+					CAR_male_Select_guitar_idle
+					CAR_male_Select_guitar_turn_flip
 				]
-				med = [
-					car_male_select_guitar_idle
-					car_male_select_guitar_turn_flip
+				Med = [
+					CAR_male_Select_guitar_idle
+					CAR_male_Select_guitar_turn_flip
 				]
-				FAST = [
-					car_male_select_guitar_idle
-					car_male_select_guitar_turn_flip
+				Fast = [
+					CAR_male_Select_guitar_idle
+					CAR_male_Select_guitar_turn_flip
 				]
 			}
-			bad = {
-				slow = [
-					car_male_select_guitar_idle
-					car_male_select_guitar_turn_flip
+			Bad = {
+				Slow = [
+					CAR_male_Select_guitar_idle
+					CAR_male_Select_guitar_turn_flip
 				]
-				med = [
-					car_male_select_guitar_idle
-					car_male_select_guitar_turn_flip
+				Med = [
+					CAR_male_Select_guitar_idle
+					CAR_male_Select_guitar_turn_flip
 				]
-				FAST = [
-					car_male_select_guitar_idle
-					car_male_select_guitar_turn_flip
+				Fast = [
+					CAR_male_Select_guitar_idle
+					CAR_male_Select_guitar_turn_flip
 				]
 			}
 		}
 	}
 }
-guitarist_finger_anims_car_male = {
-	green = gh3_hnd_guit_chord_male_roll3_1
-	red = gh3_hnd_guit_chord_male_roll3_2
-	yellow = gh3_hnd_guit_chord_male_roll3_3
-	blue = gh3_hnd_guit_chord_male_roll3_4
-	orange = gh3_hnd_guit_chord_male_roll3_4
-	green_red = gh3_hnd_guit_chord_male_bar2
-	green_yellow = gh3_hnd_guit_chord_male_bar3
-	green_blue = gh3_hnd_guit_chord_male_bar4
-	green_orange = gh3_hnd_guit_chord_male_bar5
-	red_yellow = gh3_hnd_guit_chord_male_bar2
-	red_blue = gh3_hnd_guit_chord_male_bar3
-	red_orange = gh3_hnd_guit_chord_male_bar4
-	yellow_blue = gh3_hnd_guit_chord_male_bar2
-	yellow_orange = gh3_hnd_guit_chord_male_bar3
-	blue_orange = gh3_hnd_guit_chord_male_bar2
-	green_red_yellow = gh3_hnd_guit_chord_male_bar1
-	green_red_blue = gh3_hnd_guit_chord_male_bar5
-	green_red_orange = gh3_hnd_guit_chord_male_bar5
-	green_yellow_blue = gh3_hnd_guit_chord_male_bar5
-	green_yellow_orange = gh3_hnd_guit_chord_male_bar5
-	green_blue_orange = gh3_hnd_guit_chord_male_bar5
-	red_yellow_blue = gh3_hnd_guit_chord_male_bar1
-	red_yellow_orange = gh3_hnd_guit_chord_male_bar5
-	red_blue_orange = gh3_hnd_guit_chord_male_bar5
-	yellow_blue_orange = gh3_hnd_guit_chord_male_bar1
-	green_red_yellow_blue = gh3_hnd_guit_chord_male_bar5
-	green_red_yellow_orange = gh3_hnd_guit_chord_male_bar5
-	green_red_blue_orange = gh3_hnd_guit_chord_male_bar5
-	green_yellow_blue_orange = gh3_hnd_guit_chord_male_bar5
-	green_red_yellow_blue_orange = gh3_hnd_guit_chord_male_bar5
-	None = gh3_hnd_guit_chord_male_empty
-	track_none = gh3_hnd_guit_chord_male_empty
+guitarist_finger_anims_CAR_Male = {
+	green = GH3_Hnd_Guit_Chord_male_Roll3_1
+	red = GH3_Hnd_Guit_Chord_male_Roll3_2
+	Yellow = GH3_Hnd_Guit_Chord_male_Roll3_3
+	Blue = GH3_Hnd_Guit_Chord_male_Roll3_4
+	Orange = GH3_Hnd_Guit_Chord_male_Roll3_4
+	green_red = GH3_Hnd_Guit_Chord_male_Bar2
+	green_yellow = GH3_Hnd_Guit_Chord_male_Bar3
+	green_blue = GH3_Hnd_Guit_Chord_male_Bar4
+	green_orange = GH3_Hnd_Guit_Chord_male_Bar5
+	red_yellow = GH3_Hnd_Guit_Chord_male_Bar2
+	red_blue = GH3_Hnd_Guit_Chord_male_Bar3
+	red_orange = GH3_Hnd_Guit_Chord_male_Bar4
+	yellow_blue = GH3_Hnd_Guit_Chord_male_Bar2
+	yellow_orange = GH3_Hnd_Guit_Chord_male_Bar3
+	blue_orange = GH3_Hnd_Guit_Chord_male_Bar2
+	green_red_yellow = GH3_Hnd_Guit_Chord_male_Bar1
+	green_red_blue = GH3_Hnd_Guit_Chord_male_Bar5
+	green_red_orange = GH3_Hnd_Guit_Chord_male_Bar5
+	green_yellow_blue = GH3_Hnd_Guit_Chord_male_Bar5
+	green_yellow_orange = GH3_Hnd_Guit_Chord_male_Bar5
+	green_blue_orange = GH3_Hnd_Guit_Chord_male_Bar5
+	red_yellow_blue = GH3_Hnd_Guit_Chord_male_Bar1
+	red_yellow_orange = GH3_Hnd_Guit_Chord_male_Bar5
+	red_blue_orange = GH3_Hnd_Guit_Chord_male_Bar5
+	yellow_blue_orange = GH3_Hnd_Guit_Chord_male_Bar1
+	green_red_yellow_blue = GH3_Hnd_Guit_Chord_male_Bar5
+	green_red_yellow_orange = GH3_Hnd_Guit_Chord_male_Bar5
+	green_red_blue_orange = GH3_Hnd_Guit_Chord_male_Bar5
+	green_yellow_blue_orange = GH3_Hnd_Guit_Chord_male_Bar5
+	green_red_yellow_blue_orange = GH3_Hnd_Guit_Chord_male_Bar5
+	none = Gh3_hnd_guit_chord_male_Empty
+	track_none = Gh3_hnd_guit_chord_male_Empty
 }
-guitarist_finger_anims_jimi = {
-	green = gh3_hnd_guit_chord_jimi_roll3_1
-	red = gh3_hnd_guit_chord_jimi_roll3_2
-	yellow = gh3_hnd_guit_chord_jimi_roll3_3
-	blue = gh3_hnd_guit_chord_jimi_roll3_4
-	orange = gh3_hnd_guit_chord_jimi_roll3_4
-	green_red = gh3_hnd_guit_chord_jimi_bar2
-	green_yellow = gh3_hnd_guit_chord_jimi_bar3
-	green_blue = gh3_hnd_guit_chord_jimi_bar4
-	green_orange = gh3_hnd_guit_chord_jimi_bar5
-	red_yellow = gh3_hnd_guit_chord_jimi_bar2
-	red_blue = gh3_hnd_guit_chord_jimi_bar3
-	red_orange = gh3_hnd_guit_chord_jimi_bar4
-	yellow_blue = gh3_hnd_guit_chord_jimi_bar2
-	yellow_orange = gh3_hnd_guit_chord_jimi_bar3
-	blue_orange = gh3_hnd_guit_chord_jimi_bar2
-	green_red_yellow = gh3_hnd_guit_chord_jimi_bar1
-	green_red_blue = gh3_hnd_guit_chord_jimi_bar5
-	green_red_orange = gh3_hnd_guit_chord_jimi_bar5
-	green_yellow_blue = gh3_hnd_guit_chord_jimi_bar5
-	green_yellow_orange = gh3_hnd_guit_chord_jimi_bar5
-	green_blue_orange = gh3_hnd_guit_chord_jimi_bar5
-	red_yellow_blue = gh3_hnd_guit_chord_jimi_bar1
-	red_yellow_orange = gh3_hnd_guit_chord_jimi_bar5
-	red_blue_orange = gh3_hnd_guit_chord_jimi_bar5
-	yellow_blue_orange = gh3_hnd_guit_chord_jimi_bar1
-	green_red_yellow_blue = gh3_hnd_guit_chord_jimi_bar5
-	green_red_yellow_orange = gh3_hnd_guit_chord_jimi_bar5
-	green_red_blue_orange = gh3_hnd_guit_chord_jimi_bar5
-	green_yellow_blue_orange = gh3_hnd_guit_chord_jimi_bar5
-	green_red_yellow_blue_orange = gh3_hnd_guit_chord_jimi_bar5
-	None = gh3_hnd_guit_chord_jimi_empty
-	track_none = gh3_hnd_guit_chord_jimi_empty
+guitarist_finger_anims_Jimi = {
+	green = GH3_Hnd_Guit_Chord_Jimi_Roll3_1
+	red = GH3_Hnd_Guit_Chord_Jimi_Roll3_2
+	Yellow = GH3_Hnd_Guit_Chord_Jimi_Roll3_3
+	Blue = GH3_Hnd_Guit_Chord_Jimi_Roll3_4
+	Orange = GH3_Hnd_Guit_Chord_Jimi_Roll3_4
+	green_red = GH3_Hnd_Guit_Chord_Jimi_Bar2
+	green_yellow = GH3_Hnd_Guit_Chord_Jimi_Bar3
+	green_blue = GH3_Hnd_Guit_Chord_Jimi_Bar4
+	green_orange = GH3_Hnd_Guit_Chord_Jimi_Bar5
+	red_yellow = GH3_Hnd_Guit_Chord_Jimi_Bar2
+	red_blue = GH3_Hnd_Guit_Chord_Jimi_Bar3
+	red_orange = GH3_Hnd_Guit_Chord_Jimi_Bar4
+	yellow_blue = GH3_Hnd_Guit_Chord_Jimi_Bar2
+	yellow_orange = GH3_Hnd_Guit_Chord_Jimi_Bar3
+	blue_orange = GH3_Hnd_Guit_Chord_Jimi_Bar2
+	green_red_yellow = GH3_Hnd_Guit_Chord_Jimi_Bar1
+	green_red_blue = GH3_Hnd_Guit_Chord_Jimi_Bar5
+	green_red_orange = GH3_Hnd_Guit_Chord_Jimi_Bar5
+	green_yellow_blue = GH3_Hnd_Guit_Chord_Jimi_Bar5
+	green_yellow_orange = GH3_Hnd_Guit_Chord_Jimi_Bar5
+	green_blue_orange = GH3_Hnd_Guit_Chord_Jimi_Bar5
+	red_yellow_blue = GH3_Hnd_Guit_Chord_Jimi_Bar1
+	red_yellow_orange = GH3_Hnd_Guit_Chord_Jimi_Bar5
+	red_blue_orange = GH3_Hnd_Guit_Chord_Jimi_Bar5
+	yellow_blue_orange = GH3_Hnd_Guit_Chord_Jimi_Bar1
+	green_red_yellow_blue = GH3_Hnd_Guit_Chord_Jimi_Bar5
+	green_red_yellow_orange = GH3_Hnd_Guit_Chord_Jimi_Bar5
+	green_red_blue_orange = GH3_Hnd_Guit_Chord_Jimi_Bar5
+	green_yellow_blue_orange = GH3_Hnd_Guit_Chord_Jimi_Bar5
+	green_red_yellow_blue_orange = GH3_Hnd_Guit_Chord_Jimi_Bar5
+	none = Gh3_hnd_guit_chord_Jimi_Empty
+	track_none = Gh3_hnd_guit_chord_Jimi_Empty
 }
-car_male_normal_strums = {
-	no_strum_anim = gh_rocker_male_strum_norm_empty
-	short = [
-		gh_rocker_male_strum_pick_shrt_01
-		gh_rocker_male_strum_pick_shrt_02
+CAR_Male_Normal_Strums = {
+	no_strum_anim = GH_Rocker_Male_Strum_Norm_Empty
+	Short = [
+		GH_Rocker_Male_Strum_Pick_Shrt_01
+		GH_Rocker_Male_Strum_Pick_Shrt_02
 	]
-	med = [
-		gh_rocker_male_strum_norm_shrt_01
-		gh_rocker_male_strum_norm_shrt_02
-		gh_rocker_male_strum_norm_shrt_03
+	Med = [
+		GH_Rocker_male_Strum_Norm_Shrt_01
+		GH_Rocker_male_Strum_Norm_Shrt_02
+		GH_Rocker_male_Strum_Norm_Shrt_03
 	]
-	long = [
-		gh_rocker_male_strum_norm_lrg_01
-		gh_rocker_male_strum_norm_lrg_02
-	]
-}
-car_male_bass_strums = {
-	no_strum_anim = gh_rocker_male_strum_bass_empty
-	short = [
-		gh_rocker_male_strum_bass_shrt_01
-		gh_rocker_male_strum_bass_shrt_02
-	]
-	med = [
-		gh_rocker_male_strum_bass_med_01
-	]
-	long = [
-		gh_rocker_male_strum_bass_lrg_01
-		gh_rocker_male_strum_bass_lrg_02
+	Long = [
+		GH_Rocker_male_Strum_Norm_Lrg_01
+		GH_Rocker_male_Strum_Norm_Lrg_02
 	]
 }
-car_male_pick_strums = {
-	no_strum_anim = gh_rocker_male_pick_norm_empty
-	short = [
-		gh_rocker_male_strum_pick_shrt_01
-		gh_rocker_male_strum_pick_shrt_02
+CAR_Male_Bass_Strums = {
+	no_strum_anim = GH_Rocker_Male_Strum_Bass_Empty
+	Short = [
+		GH_Rocker_Male_Strum_Bass_Shrt_01
+		GH_Rocker_Male_Strum_Bass_Shrt_02
 	]
-	med = [
-		gh_rocker_male_strum_pick_med_01
+	Med = [
+		GH_Rocker_Male_Strum_Bass_Med_01
 	]
-	long = [
-		gh_rocker_male_strum_pick_lrg_01
-		gh_rocker_male_strum_pick_lrg_02
-	]
-}
-car_male_up_strums = {
-	no_strum_anim = gh_rocker_male_up_norm_empty
-	short = [
-		gh_rocker_male_pick_up_shrt_01
-		gh_rocker_male_pick_up_shrt_02
-	]
-	med = [
-		gh_rocker_male_pick_up_med_01
-	]
-	long = [
-		gh_rocker_male_pick_up_lrg_01
-		gh_rocker_male_pick_up_lrg_02
+	Long = [
+		GH_Rocker_Male_Strum_Bass_Lrg_01
+		GH_Rocker_Male_Strum_Bass_Lrg_02
 	]
 }
-car_male_tap_strums = {
-	no_strum_anim = gh_rocker_male_strum_tap_empty
-	short = [
-		gh_rocker_male_strum_tap_shrt_01
-		gh_rocker_male_strum_tap_shrt_02
-		gh_rocker_male_strum_tap_shrt_03
+CAR_Male_Pick_Strums = {
+	no_strum_anim = GH_Rocker_Male_Pick_Norm_Empty
+	Short = [
+		GH_Rocker_Male_Strum_Pick_Shrt_01
+		GH_Rocker_Male_Strum_Pick_Shrt_02
 	]
-	med = [
-		gh_rocker_male_strum_tap_shrt_01
-		gh_rocker_male_strum_tap_shrt_02
-		gh_rocker_male_strum_tap_shrt_03
+	Med = [
+		GH_Rocker_Male_Strum_Pick_Med_01
 	]
-	long = [
-		gh_rocker_male_strum_tap_shrt_01
-		gh_rocker_male_strum_tap_shrt_02
-		gh_rocker_male_strum_tap_shrt_03
+	Long = [
+		GH_Rocker_Male_Strum_Pick_Lrg_01
+		GH_Rocker_Male_Strum_Pick_Lrg_02
 	]
 }
-car_male_tap12_strums = {
-	no_strum_anim = gh_rocker_male_strum_tap12_empty
-	short = [
-		gh_rocker_male_strum_tap12_shrt_01
-		gh_rocker_male_strum_tap12_shrt_02
-		gh_rocker_male_strum_tap12_shrt_03
+CAR_Male_Up_Strums = {
+	no_strum_anim = GH_Rocker_Male_Up_Norm_Empty
+	Short = [
+		GH_Rocker_male_Pick_Up_Shrt_01
+		GH_Rocker_male_Pick_Up_Shrt_02
 	]
-	med = [
-		gh_rocker_male_strum_tap12_shrt_01
-		gh_rocker_male_strum_tap12_shrt_02
-		gh_rocker_male_strum_tap12_shrt_03
+	Med = [
+		GH_Rocker_male_Pick_Up_Med_01
 	]
-	long = [
-		gh_rocker_male_strum_tap12_shrt_01
-		gh_rocker_male_strum_tap12_shrt_02
-		gh_rocker_male_strum_tap12_shrt_03
+	Long = [
+		GH_Rocker_male_Pick_Up_Lrg_01
+		GH_Rocker_male_Pick_Up_Lrg_02
 	]
 }
-car_male_jimi_strums = {
-	no_strum_anim = gh_rocker_male_strum_jimi_empty
-	short = [
-		gh_rocker_male_strum_jimi_shrt_01
+CAR_Male_Tap_Strums = {
+	no_strum_anim = GH_Rocker_Male_Strum_Tap_Empty
+	Short = [
+		GH_Rocker_Male_Strum_Tap_Shrt_01
+		GH_Rocker_Male_Strum_Tap_Shrt_02
+		GH_Rocker_Male_Strum_Tap_Shrt_03
 	]
-	med = [
-		gh_rocker_male_strum_jimi_med_01
+	Med = [
+		GH_Rocker_Male_Strum_Tap_Shrt_01
+		GH_Rocker_Male_Strum_Tap_Shrt_02
+		GH_Rocker_Male_Strum_Tap_Shrt_03
 	]
-	long = [
-		gh_rocker_male_strum_jimi_med_01
+	Long = [
+		GH_Rocker_Male_Strum_Tap_Shrt_01
+		GH_Rocker_Male_Strum_Tap_Shrt_02
+		GH_Rocker_Male_Strum_Tap_Shrt_03
+	]
+}
+CAR_Male_Tap12_Strums = {
+	no_strum_anim = GH_Rocker_Male_Strum_Tap12_Empty
+	Short = [
+		GH_Rocker_Male_Strum_Tap12_Shrt_01
+		GH_Rocker_Male_Strum_Tap12_Shrt_02
+		GH_Rocker_Male_Strum_Tap12_Shrt_03
+	]
+	Med = [
+		GH_Rocker_Male_Strum_Tap12_Shrt_01
+		GH_Rocker_Male_Strum_Tap12_Shrt_02
+		GH_Rocker_Male_Strum_Tap12_Shrt_03
+	]
+	Long = [
+		GH_Rocker_Male_Strum_Tap12_Shrt_01
+		GH_Rocker_Male_Strum_Tap12_Shrt_02
+		GH_Rocker_Male_Strum_Tap12_Shrt_03
+	]
+}
+CAR_Male_Jimi_Strums = {
+	no_strum_anim = GH_Rocker_Male_Strum_Jimi_Empty
+	Short = [
+		GH_Rocker_Male_Strum_Jimi_Shrt_01
+	]
+	Med = [
+		GH_Rocker_Male_Strum_Jimi_Med_01
+	]
+	Long = [
+		GH_Rocker_Male_Strum_Jimi_Med_01
 	]
 }
 fret_anims_rocker = {
-	track_127 = gh_rocker_male_fret_01_d
-	track_126 = gh_rocker_male_fret_01_d
-	track_125 = gh_rocker_male_fret_02_d
-	track_124 = gh_rocker_male_fret_03_d
-	track_124 = gh_rocker_male_fret_04_d
-	track_122 = gh_rocker_male_fret_05_d
-	track_121 = gh_rocker_male_fret_06_d
-	track_120 = gh_rocker_male_fret_07_d
-	track_119 = gh_rocker_male_fret_08_d
-	track_118 = gh_rocker_male_fret_09_d
-	track_117 = gh_rocker_male_fret_10_d
-	track_116 = gh_rocker_male_fret_11_d
-	track_115 = gh_rocker_male_fret_12_d
-	track_114 = gh_rocker_male_fret_13_d
-	track_113 = gh_rocker_male_fret_14_d
-	track_112 = gh_rocker_male_fret_14_d
-	track_111 = gh_rocker_male_fret_14_d
-	track_110 = gh_rocker_male_fret_14_d
-	track_109 = gh_rocker_male_fret_14_d
-	track_103 = gh_rocker_male_fret_bass_01_d
-	track_102 = gh_rocker_male_fret_bass_01_d
-	track_101 = gh_rocker_male_fret_bass_02_d
-	track_100 = gh_rocker_male_fret_bass_03_d
-	track_99 = gh_rocker_male_fret_bass_04_d
-	track_98 = gh_rocker_male_fret_bass_05_d
-	track_97 = gh_rocker_male_fret_bass_06_d
-	track_96 = gh_rocker_male_fret_bass_07_d
-	track_95 = gh_rocker_male_fret_bass_08_d
-	track_94 = gh_rocker_male_fret_bass_09_d
-	track_93 = gh_rocker_male_fret_bass_10_d
-	track_92 = gh_rocker_male_fret_bass_11_d
-	track_91 = gh_rocker_male_fret_bass_12_d
-	track_90 = gh_rocker_male_fret_bass_13_d
-	track_89 = gh_rocker_male_fret_bass_14_d
-	track_88 = gh_rocker_male_fret_bass_14_d
-	track_87 = gh_rocker_male_fret_bass_14_d
-	track_86 = gh_rocker_male_fret_bass_14_d
-	track_85 = gh_rocker_male_fret_bass_14_d
+	track_127 = GH_Rocker_Male_Fret_01_D
+	track_126 = GH_Rocker_Male_Fret_01_D
+	track_125 = GH_Rocker_Male_Fret_02_D
+	track_124 = GH_Rocker_Male_Fret_03_D
+	track_124 = GH_Rocker_Male_Fret_04_D
+	track_122 = GH_Rocker_Male_Fret_05_D
+	track_121 = GH_Rocker_Male_Fret_06_D
+	track_120 = GH_Rocker_Male_Fret_07_D
+	track_119 = GH_Rocker_Male_Fret_08_D
+	track_118 = GH_Rocker_Male_Fret_09_D
+	track_117 = GH_Rocker_Male_Fret_10_D
+	track_116 = GH_Rocker_Male_Fret_11_D
+	track_115 = GH_Rocker_Male_Fret_12_D
+	track_114 = GH_Rocker_Male_Fret_13_D
+	track_113 = GH_Rocker_Male_Fret_14_D
+	track_112 = GH_Rocker_Male_Fret_14_D
+	track_111 = GH_Rocker_Male_Fret_14_D
+	track_110 = GH_Rocker_Male_Fret_14_D
+	track_109 = GH_Rocker_Male_Fret_14_D
+	track_103 = GH_Rocker_Male_Fret_Bass_01_D
+	track_102 = GH_Rocker_Male_Fret_Bass_01_D
+	track_101 = GH_Rocker_Male_Fret_Bass_02_D
+	track_100 = GH_Rocker_Male_Fret_Bass_03_D
+	track_99 = GH_Rocker_Male_Fret_Bass_04_D
+	track_98 = GH_Rocker_Male_Fret_Bass_05_D
+	track_97 = GH_Rocker_Male_Fret_Bass_06_D
+	track_96 = GH_Rocker_Male_Fret_Bass_07_D
+	track_95 = GH_Rocker_Male_Fret_Bass_08_D
+	track_94 = GH_Rocker_Male_Fret_Bass_09_D
+	track_93 = GH_Rocker_Male_Fret_Bass_10_D
+	track_92 = GH_Rocker_Male_Fret_Bass_11_D
+	track_91 = GH_Rocker_Male_Fret_Bass_12_D
+	track_90 = GH_Rocker_Male_Fret_Bass_13_D
+	track_89 = GH_Rocker_Male_Fret_Bass_14_D
+	track_88 = GH_Rocker_Male_Fret_Bass_14_D
+	track_87 = GH_Rocker_Male_Fret_Bass_14_D
+	track_86 = GH_Rocker_Male_Fret_Bass_14_D
+	track_85 = GH_Rocker_Male_Fret_Bass_14_D
 }
 facial_anims_male_rocker = {
 	Idle = [
-		gh_rocker_male_genericface_1
-		gh_rocker_male_genericface_2
-		gh_rocker_male_genericface_3
+		GH_Rocker_Male_genericFace_1
+		GH_Rocker_Male_genericFace_2
+		GH_Rocker_Male_genericFace_3
 	]
 }
 facial_anims_male_rocker_rocking = {

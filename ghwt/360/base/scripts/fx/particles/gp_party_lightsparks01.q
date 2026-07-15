@@ -1,15 +1,15 @@
 GP_Party_LightSparks01 = {
-	Pos = (-0.87266994, 3.2250981, 0.839895)
-	Angles = (0.0, 0.0, 0.0)
+	pos = (-0.87266994, 3.2250981, 0.839895)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
 	EmitRangeDims = (0.1, 0.1, 0.1)
-	Emit_Target = (-1.0, -0.5, 1.0)
+	emit_Target = (-1.0, -0.5, 1.0)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, -4.0, 0.0)
+	force = (0.0, -4.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
@@ -19,11 +19,11 @@ GP_Party_LightSparks01 = {
 	BounceCoeff = 0.2
 	BounceCallbackRate = 0.0
 	LifeRange = (1.0, 3.0)
-	Emit_Rate = 100.0
-	Max = 0
+	emit_rate = 100.0
+	max = 0
 	TimeSeed = 0.1
-	LifeTime = 0.0
-	EmitNum = 24
+	lifeTime = 0.0
+	emitNum = 24
 	FollowEmitter = 0.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -38,16 +38,16 @@ GP_Party_LightSparks01 = {
 	AlignWithPath
 	PathFollowTime = 0.07
 	History = 2
-	HistoryListCoordinateSpace = World
-	Color = -7064577
+	HistoryListCoordinateSpace = world
+	color = -7064577
 	LOD_Default
 	NoVisibilityTest
 	QuickMaterial = {
 		DiffuseTextureEnabled
 		DiffuseTexture = JOW_Spark01
 		SpecularPower = 0
-		AlphaCutoff = 16
-		BlendMode = add
+		alphacutoff = 16
+		blendMode = Add
 		QuadAnimationFPS = 0
 	}
 	Knot = [

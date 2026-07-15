@@ -1,83 +1,83 @@
-single_player_bad_note_guitar_struct = {
-	default_priority = 90
-	default_buss = wrong_notes_player1
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 4
+Single_Player_Bad_Note_Guitar_struct = {
+	Default_Priority = 90
+	Default_Buss = Wrong_Notes_Player1
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 4
 }
-single_player_bad_note_guitar_container = {
-	command = playsound
-	randomness = randomnorepeattype
-	sounds = {
-		sound1 = {
+Single_Player_Bad_Note_Guitar_container = {
+	command = PlaySound
+	Randomness = RandomNoRepeatType
+	Sounds = {
+		Sound1 = {
 			bad_note1
 			vol = 93
 		}
-		sound2 = {
+		Sound2 = {
 			bad_note2
 			vol = 56
 			pitch = 95
 		}
-		sound3 = {
+		Sound3 = {
 			bad_note3
 			vol = 87
 		}
-		sound4 = {
+		Sound4 = {
 			bad_note4
 			vol = 87
 			pitch = 105
 		}
-		sound5 = {
+		Sound5 = {
 			bad_note5
 			vol = 81
 		}
-		sound6 = {
+		Sound6 = {
 			bad_note6
 			vol = 77
 		}
 	}
 }
-single_player_bad_note_bass_struct = {
-	default_priority = 90
-	default_buss = wrong_notes_player1
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 4
+Single_Player_Bad_Note_Bass_struct = {
+	Default_Priority = 90
+	Default_Buss = Wrong_Notes_Player1
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 4
 }
-single_player_bad_note_bass_container = {
-	command = playsound
-	randomness = randomnorepeattype
-	sounds = {
-		sound1 = {
+Single_Player_Bad_Note_Bass_container = {
+	command = PlaySound
+	Randomness = RandomNoRepeatType
+	Sounds = {
+		Sound1 = {
 			bad_note_bass1
 			vol = 135
 		}
-		sound2 = {
+		Sound2 = {
 			bad_note_bass2
 			vol = 145
 		}
-		sound3 = {
+		Sound3 = {
 			bad_note_bass4
 			vol = 115
 		}
-		sound4 = {
+		Sound4 = {
 			bad_note_bass6
 			vol = 110
 		}
 	}
 }
-first_player_bad_note_guitar_struct = {
-	default_priority = 90
-	default_buss = wrong_notes_player1
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 4
+First_Player_Bad_Note_Guitar_struct = {
+	Default_Priority = 90
+	Default_Buss = Wrong_Notes_Player1
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 4
 }
-first_player_bad_note_guitar_container = {
-	command = playsound
-	randomness = randomnorepeattype
-	sounds = {
-		sound1 = {
+First_Player_Bad_Note_Guitar_container = {
+	command = PlaySound
+	Randomness = RandomNoRepeatType
+	Sounds = {
+		Sound1 = {
 			bad_note1
 			vol = 75
 			pan1x = -0.76199996
@@ -85,7 +85,7 @@ first_player_bad_note_guitar_container = {
 			pan2x = -0.44799998
 			pan2y = 0.894
 		}
-		sound2 = {
+		Sound2 = {
 			bad_note2
 			vol = 45
 			pitch = 95
@@ -94,7 +94,7 @@ first_player_bad_note_guitar_container = {
 			pan2x = -0.44799998
 			pan2y = 0.894
 		}
-		sound3 = {
+		Sound3 = {
 			bad_note3
 			vol = 70
 			pan1x = -0.76199996
@@ -102,7 +102,7 @@ first_player_bad_note_guitar_container = {
 			pan2x = -0.44799998
 			pan2y = 0.894
 		}
-		sound4 = {
+		Sound4 = {
 			bad_note4
 			vol = 70
 			pitch = 105
@@ -111,7 +111,7 @@ first_player_bad_note_guitar_container = {
 			pan2x = -0.44799998
 			pan2y = 0.894
 		}
-		sound5 = {
+		Sound5 = {
 			bad_note5
 			vol = 65
 			pan1x = -0.76199996
@@ -119,7 +119,7 @@ first_player_bad_note_guitar_container = {
 			pan2x = -0.44799998
 			pan2y = 0.894
 		}
-		sound6 = {
+		Sound6 = {
 			bad_note6
 			vol = 62
 			pan1x = -0.76199996
@@ -129,18 +129,18 @@ first_player_bad_note_guitar_container = {
 		}
 	}
 }
-first_player_bad_note_bass_struct = {
-	default_priority = 90
-	default_buss = wrong_notes_player1
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 4
+First_Player_Bad_Note_Bass_struct = {
+	Default_Priority = 90
+	Default_Buss = Wrong_Notes_Player1
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 4
 }
-first_player_bad_note_bass_container = {
-	command = playsound
-	randomness = randomnorepeattype
-	sounds = {
-		sound1 = {
+First_Player_Bad_Note_Bass_container = {
+	command = PlaySound
+	Randomness = RandomNoRepeatType
+	Sounds = {
+		Sound1 = {
 			bad_note_bass1
 			vol = 135
 			pan1x = -0.76199996
@@ -148,7 +148,7 @@ first_player_bad_note_bass_container = {
 			pan2x = -0.44799998
 			pan2y = 0.894
 		}
-		sound2 = {
+		Sound2 = {
 			bad_note_bass2
 			vol = 145
 			pan1x = -0.76199996
@@ -156,7 +156,7 @@ first_player_bad_note_bass_container = {
 			pan2x = -0.44799998
 			pan2y = 0.894
 		}
-		sound3 = {
+		Sound3 = {
 			bad_note_bass4
 			vol = 115
 			pan1x = -0.76199996
@@ -164,7 +164,7 @@ first_player_bad_note_bass_container = {
 			pan2x = -0.44799998
 			pan2y = 0.894
 		}
-		sound4 = {
+		Sound4 = {
 			bad_note_bass6
 			vol = 110
 			pan1x = -0.76199996
@@ -174,18 +174,18 @@ first_player_bad_note_bass_container = {
 		}
 	}
 }
-second_player_bad_note_guitar_struct = {
-	default_priority = 90
-	default_buss = wrong_notes_player2
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 4
+Second_Player_Bad_Note_Guitar_struct = {
+	Default_Priority = 90
+	Default_Buss = Wrong_Notes_Player2
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 4
 }
-second_player_bad_note_guitar_container = {
-	command = playsound
-	randomness = randomnorepeattype
-	sounds = {
-		sound1 = {
+Second_Player_Bad_Note_Guitar_container = {
+	command = PlaySound
+	Randomness = RandomNoRepeatType
+	Sounds = {
+		Sound1 = {
 			bad_note1
 			vol = 75
 			pan1x = 0.47
@@ -193,7 +193,7 @@ second_player_bad_note_guitar_container = {
 			pan2x = 0.728
 			pan2y = 0.685
 		}
-		sound2 = {
+		Sound2 = {
 			bad_note2
 			vol = 45
 			pitch = 95
@@ -202,7 +202,7 @@ second_player_bad_note_guitar_container = {
 			pan2x = 0.728
 			pan2y = 0.685
 		}
-		sound3 = {
+		Sound3 = {
 			bad_note3
 			vol = 70
 			pan1x = 0.47
@@ -210,7 +210,7 @@ second_player_bad_note_guitar_container = {
 			pan2x = 0.728
 			pan2y = 0.685
 		}
-		sound4 = {
+		Sound4 = {
 			bad_note4
 			vol = 70
 			pitch = 105
@@ -219,7 +219,7 @@ second_player_bad_note_guitar_container = {
 			pan2x = 0.728
 			pan2y = 0.685
 		}
-		sound5 = {
+		Sound5 = {
 			bad_note5
 			vol = 65
 			pan1x = 0.47
@@ -227,7 +227,7 @@ second_player_bad_note_guitar_container = {
 			pan2x = 0.728
 			pan2y = 0.685
 		}
-		sound6 = {
+		Sound6 = {
 			bad_note6
 			vol = 62
 			pan1x = 0.47
@@ -237,18 +237,18 @@ second_player_bad_note_guitar_container = {
 		}
 	}
 }
-second_player_bad_note_bass_struct = {
-	default_priority = 90
-	default_buss = wrong_notes_player2
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 4
+Second_Player_Bad_Note_Bass_struct = {
+	Default_Priority = 90
+	Default_Buss = Wrong_Notes_Player2
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 4
 }
-second_player_bad_note_bass_container = {
-	command = playsound
-	randomness = randomnorepeattype
-	sounds = {
-		sound1 = {
+Second_Player_Bad_Note_Bass_container = {
+	command = PlaySound
+	Randomness = RandomNoRepeatType
+	Sounds = {
+		Sound1 = {
 			bad_note_bass1
 			vol = 135
 			pan1x = 0.47
@@ -256,7 +256,7 @@ second_player_bad_note_bass_container = {
 			pan2x = 0.728
 			pan2y = 0.685
 		}
-		sound2 = {
+		Sound2 = {
 			bad_note_bass2
 			vol = 145
 			pan1x = 0.47
@@ -264,7 +264,7 @@ second_player_bad_note_bass_container = {
 			pan2x = 0.728
 			pan2y = 0.685
 		}
-		sound3 = {
+		Sound3 = {
 			bad_note_bass4
 			vol = 115
 			pan1x = 0.47
@@ -272,7 +272,7 @@ second_player_bad_note_bass_container = {
 			pan2x = 0.728
 			pan2y = 0.685
 		}
-		sound4 = {
+		Sound4 = {
 			bad_note_bass6
 			vol = 110
 			pan1x = 0.47
@@ -282,59 +282,59 @@ second_player_bad_note_bass_container = {
 		}
 	}
 }
-crowd_individual_clap_to_beat_struct = {
-	default_priority = 90
-	default_buss = crowd_star_power
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Crowd_Individual_Clap_To_Beat_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Star_Power
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-crowd_individual_clap_to_beat_container = {
-	command = playsound
-	randomness = randomnorepeattype
-	sounds = {
-		sound1 = {
-			crowd_group_clap_01
+Crowd_Individual_Clap_To_Beat_container = {
+	command = PlaySound
+	Randomness = RandomNoRepeatType
+	Sounds = {
+		Sound1 = {
+			Crowd_Group_Clap_01
 			vol = 100
 			pan1x = -1
 			pan1y = -0.5
 			pan2x = 1.0
 			pan2y = -0.5
 		}
-		sound2 = {
-			crowd_group_clap_02
+		Sound2 = {
+			Crowd_Group_Clap_02
 			vol = 100
 			pan1x = -1
 			pan1y = -0.5
 			pan2x = 1.0
 			pan2y = -0.5
 		}
-		sound3 = {
-			crowd_group_clap_03
+		Sound3 = {
+			Crowd_Group_Clap_03
 			vol = 100
 			pan1x = -1
 			pan1y = -0.5
 			pan2x = 1.0
 			pan2y = -0.5
 		}
-		sound4 = {
-			crowd_group_clap_04
+		Sound4 = {
+			Crowd_Group_Clap_04
 			vol = 100
 			pan1x = -1
 			pan1y = -0.5
 			pan2x = 1.0
 			pan2y = -0.5
 		}
-		sound5 = {
-			crowd_group_clap_05
+		Sound5 = {
+			Crowd_Group_Clap_05
 			vol = 100
 			pan1x = -1
 			pan1y = -0.5
 			pan2x = 1.0
 			pan2y = -0.5
 		}
-		sound6 = {
-			crowd_group_clap_06
+		Sound6 = {
+			Crowd_Group_Clap_06
 			vol = 100
 			pan1x = -1
 			pan1y = -0.5
@@ -343,19 +343,19 @@ crowd_individual_clap_to_beat_container = {
 		}
 	}
 }
-crowd_low_to_med_sfx_struct = {
-	default_priority = 90
-	default_buss = crowd_nuetral
-	norepeatfor = 0.02
-	instancemanagement = ignore
-	instancelimit = 3
+Crowd_Low_To_Med_SFX_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Nuetral
+	NoRepeatFor = 0.02
+	InstanceManagement = ignore
+	InstanceLimit = 3
 }
-crowd_low_to_med_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			crowd_bad_to_med
+Crowd_Low_To_Med_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Crowd_Bad_To_Med
 			vol = 60
 			pan1x = -0.897089
 			pan1y = 0.1418498
@@ -364,19 +364,19 @@ crowd_low_to_med_sfx_container = {
 		}
 	}
 }
-crowd_low_to_med_sfx_p1_struct = {
-	default_priority = 90
-	default_buss = crowd_nuetral
-	norepeatfor = 0.02
-	instancemanagement = ignore
-	instancelimit = 2
+Crowd_Low_To_Med_SFX_P1_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Nuetral
+	NoRepeatFor = 0.02
+	InstanceManagement = ignore
+	InstanceLimit = 2
 }
-crowd_low_to_med_sfx_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			crowd_bad_to_med
+Crowd_Low_To_Med_SFX_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Crowd_Bad_To_Med
 			vol = 60
 			pan1x = -0.76199996
 			pan1y = 0.6470001
@@ -385,19 +385,19 @@ crowd_low_to_med_sfx_p1_container = {
 		}
 	}
 }
-crowd_low_to_med_sfx_p2_struct = {
-	default_priority = 90
-	default_buss = crowd_nuetral
-	norepeatfor = 0.02
-	instancemanagement = ignore
-	instancelimit = 2
+Crowd_Low_To_Med_SFX_P2_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Nuetral
+	NoRepeatFor = 0.02
+	InstanceManagement = ignore
+	InstanceLimit = 2
 }
-crowd_low_to_med_sfx_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			crowd_bad_to_med
+Crowd_Low_To_Med_SFX_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Crowd_Bad_To_Med
 			vol = 60
 			pan1x = 0.47
 			pan1y = 0.883
@@ -406,19 +406,19 @@ crowd_low_to_med_sfx_p2_container = {
 		}
 	}
 }
-crowd_good_to_med_sfx_struct = {
-	default_priority = 90
-	default_buss = crowd_nuetral
-	norepeatfor = 0.02
-	instancemanagement = ignore
-	instancelimit = 3
+Crowd_Good_To_Med_SFX_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Nuetral
+	NoRepeatFor = 0.02
+	InstanceManagement = ignore
+	InstanceLimit = 3
 }
-crowd_good_to_med_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			crowd_good_to_medium
+Crowd_Good_To_Med_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Crowd_Good_To_Medium
 			vol = 75
 			pan1x = -0.897089
 			pan1y = 0.1418498
@@ -427,19 +427,19 @@ crowd_good_to_med_sfx_container = {
 		}
 	}
 }
-crowd_good_to_med_sfx_p1_struct = {
-	default_priority = 90
-	default_buss = crowd_nuetral
-	norepeatfor = 0.02
-	instancemanagement = ignore
-	instancelimit = 2
+Crowd_Good_To_Med_SFX_P1_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Nuetral
+	NoRepeatFor = 0.02
+	InstanceManagement = ignore
+	InstanceLimit = 2
 }
-crowd_good_to_med_sfx_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			crowd_good_to_medium
+Crowd_Good_To_Med_SFX_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Crowd_Good_To_Medium
 			vol = 75
 			pan1x = -0.76199996
 			pan1y = 0.6470001
@@ -448,19 +448,19 @@ crowd_good_to_med_sfx_p1_container = {
 		}
 	}
 }
-crowd_good_to_med_sfx_p2_struct = {
-	default_priority = 90
-	default_buss = crowd_nuetral
-	norepeatfor = 0.02
-	instancemanagement = ignore
-	instancelimit = 2
+Crowd_Good_To_Med_SFX_P2_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Nuetral
+	NoRepeatFor = 0.02
+	InstanceManagement = ignore
+	InstanceLimit = 2
 }
-crowd_good_to_med_sfx_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			crowd_good_to_medium
+Crowd_Good_To_Med_SFX_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Crowd_Good_To_Medium
 			vol = 75
 			pan1x = 0.47
 			pan1y = 0.883
@@ -469,19 +469,19 @@ crowd_good_to_med_sfx_p2_container = {
 		}
 	}
 }
-crowd_med_to_bad_sfx_struct = {
-	default_priority = 90
-	default_buss = crowd_boos
-	norepeatfor = 0.02
-	instancemanagement = ignore
-	instancelimit = 3
+Crowd_Med_To_Bad_SFX_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Boos
+	NoRepeatFor = 0.02
+	InstanceManagement = ignore
+	InstanceLimit = 3
 }
-crowd_med_to_bad_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			crowd_med_to_bad
+Crowd_Med_To_Bad_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Crowd_Med_To_Bad
 			vol = 70
 			pan1x = -0.897089
 			pan1y = 0.1418498
@@ -490,19 +490,19 @@ crowd_med_to_bad_sfx_container = {
 		}
 	}
 }
-crowd_med_to_bad_sfx_p1_struct = {
-	default_priority = 90
-	default_buss = crowd_boos
-	norepeatfor = 0.02
-	instancemanagement = ignore
-	instancelimit = 2
+Crowd_Med_To_Bad_SFX_P1_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Boos
+	NoRepeatFor = 0.02
+	InstanceManagement = ignore
+	InstanceLimit = 2
 }
-crowd_med_to_bad_sfx_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			crowd_med_to_bad
+Crowd_Med_To_Bad_SFX_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Crowd_Med_To_Bad
 			vol = 70
 			pan1x = -0.76199996
 			pan1y = 0.6470001
@@ -511,19 +511,19 @@ crowd_med_to_bad_sfx_p1_container = {
 		}
 	}
 }
-crowd_med_to_bad_sfx_p2_struct = {
-	default_priority = 90
-	default_buss = crowd_boos
-	norepeatfor = 0.02
-	instancemanagement = ignore
-	instancelimit = 2
+Crowd_Med_To_Bad_SFX_P2_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Boos
+	NoRepeatFor = 0.02
+	InstanceManagement = ignore
+	InstanceLimit = 2
 }
-crowd_med_to_bad_sfx_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			crowd_med_to_bad
+Crowd_Med_To_Bad_SFX_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Crowd_Med_To_Bad
 			vol = 70
 			pan1x = 0.47
 			pan1y = 0.883
@@ -532,19 +532,19 @@ crowd_med_to_bad_sfx_p2_container = {
 		}
 	}
 }
-crowd_med_to_good_sfx_struct = {
-	default_priority = 90
-	default_buss = crowd_cheers
-	norepeatfor = 0.02
-	instancemanagement = ignore
-	instancelimit = 3
+Crowd_Med_To_Good_SFX_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Cheers
+	NoRepeatFor = 0.02
+	InstanceManagement = ignore
+	InstanceLimit = 3
 }
-crowd_med_to_good_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			crowd_med_to_good
+Crowd_Med_To_Good_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Crowd_Med_To_Good
 			vol = 60
 			pan1x = -0.897089
 			pan1y = 0.1418498
@@ -553,19 +553,19 @@ crowd_med_to_good_sfx_container = {
 		}
 	}
 }
-crowd_med_to_good_sfx_p1_struct = {
-	default_priority = 90
-	default_buss = crowd_cheers
-	norepeatfor = 0.02
-	instancemanagement = ignore
-	instancelimit = 2
+Crowd_Med_To_Good_SFX_P1_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Cheers
+	NoRepeatFor = 0.02
+	InstanceManagement = ignore
+	InstanceLimit = 2
 }
-crowd_med_to_good_sfx_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			crowd_med_to_good
+Crowd_Med_To_Good_SFX_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Crowd_Med_To_Good
 			vol = 60
 			pan1x = -0.76199996
 			pan1y = 0.6470001
@@ -574,19 +574,19 @@ crowd_med_to_good_sfx_p1_container = {
 		}
 	}
 }
-crowd_med_to_good_sfx_p2_struct = {
-	default_priority = 90
-	default_buss = crowd_cheers
-	norepeatfor = 0.02
-	instancemanagement = ignore
-	instancelimit = 2
+Crowd_Med_To_Good_SFX_P2_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Cheers
+	NoRepeatFor = 0.02
+	InstanceManagement = ignore
+	InstanceLimit = 2
 }
-crowd_med_to_good_sfx_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			crowd_med_to_good
+Crowd_Med_To_Good_SFX_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Crowd_Med_To_Good
 			vol = 60
 			pan1x = 0.47
 			pan1y = 0.883
@@ -595,19 +595,19 @@ crowd_med_to_good_sfx_p2_container = {
 		}
 	}
 }
-crowd_fail_song_sfx_struct = {
-	default_priority = 90
-	default_buss = crowd_boos
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Crowd_Fail_Song_SFX_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Boos
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-crowd_fail_song_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			crowd_fail_song
+Crowd_Fail_Song_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Crowd_Fail_Song
 			vol = 90
 			pan1x = -0.897089
 			pan1y = 0.1418498
@@ -616,18 +616,18 @@ crowd_fail_song_sfx_container = {
 		}
 	}
 }
-star_power_awarded_sfx_struct = {
-	default_priority = 90
-	default_buss = ui_star_power
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Star_Power_Awarded_SFX_struct = {
+	Default_Priority = 90
+	Default_Buss = UI_Star_Power
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-star_power_awarded_sfx_container = {
-	command = playsound
-	randomness = randomnorepeattype
-	sounds = {
-		sound1 = {
+Star_Power_Awarded_SFX_container = {
+	command = PlaySound
+	Randomness = RandomNoRepeatType
+	Sounds = {
+		Sound1 = {
 			sp_awarded1
 			vol = 75
 			pan1x = -0.5000002
@@ -637,18 +637,18 @@ star_power_awarded_sfx_container = {
 		}
 	}
 }
-star_power_awarded_sfx_p1_struct = {
-	default_priority = 90
-	default_buss = ui_star_power
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Star_Power_Awarded_SFX_P1_struct = {
+	Default_Priority = 90
+	Default_Buss = UI_Star_Power
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-star_power_awarded_sfx_p1_container = {
-	command = playsound
-	randomness = randomnorepeattype
-	sounds = {
-		sound1 = {
+Star_Power_Awarded_SFX_P1_container = {
+	command = PlaySound
+	Randomness = RandomNoRepeatType
+	Sounds = {
+		Sound1 = {
 			sp_awarded1
 			vol = 60
 			pan1x = -0.76199996
@@ -658,18 +658,18 @@ star_power_awarded_sfx_p1_container = {
 		}
 	}
 }
-star_power_awarded_sfx_p2_struct = {
-	default_priority = 90
-	default_buss = ui_star_power
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Star_Power_Awarded_SFX_P2_struct = {
+	Default_Priority = 90
+	Default_Buss = UI_Star_Power
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-star_power_awarded_sfx_p2_container = {
-	command = playsound
-	randomness = randomnorepeattype
-	sounds = {
-		sound1 = {
+Star_Power_Awarded_SFX_P2_container = {
+	command = PlaySound
+	Randomness = RandomNoRepeatType
+	Sounds = {
+		Sound1 = {
 			sp_awarded1
 			vol = 60
 			pan1x = 0.47
@@ -679,35 +679,35 @@ star_power_awarded_sfx_p2_container = {
 		}
 	}
 }
-star_power_ready_sfx_struct = {
-	default_priority = 90
-	default_buss = ui_star_power
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Star_Power_Ready_SFX_struct = {
+	Default_Priority = 90
+	Default_Buss = UI_Star_Power
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-star_power_ready_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
+Star_Power_Ready_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
 			sp_available1
 			vol = 55
 		}
 	}
 }
-star_power_ready_sfx_p1_struct = {
-	default_priority = 90
-	default_buss = ui_star_power
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Star_Power_Ready_SFX_P1_struct = {
+	Default_Priority = 90
+	Default_Buss = UI_Star_Power
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-star_power_ready_sfx_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
+Star_Power_Ready_SFX_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
 			sp_available1
 			vol = 42
 			pan1x = -0.76199996
@@ -717,18 +717,18 @@ star_power_ready_sfx_p1_container = {
 		}
 	}
 }
-star_power_ready_sfx_p2_struct = {
-	default_priority = 90
-	default_buss = ui_star_power
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Star_Power_Ready_SFX_P2_struct = {
+	Default_Priority = 90
+	Default_Buss = UI_Star_Power
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-star_power_ready_sfx_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
+Star_Power_Ready_SFX_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
 			sp_available1
 			vol = 42
 			pan1x = 0.47
@@ -738,35 +738,35 @@ star_power_ready_sfx_p2_container = {
 		}
 	}
 }
-star_power_deployed_sfx_struct = {
-	default_priority = 90
-	default_buss = ui_star_power
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Star_Power_Deployed_SFX_struct = {
+	Default_Priority = 90
+	Default_Buss = UI_Star_Power
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-star_power_deployed_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
+Star_Power_Deployed_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
 			sp_deployed
 			vol = 30
 		}
 	}
 }
-star_power_deployed_sfx_p1_struct = {
-	default_priority = 90
-	default_buss = ui_star_power
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Star_Power_Deployed_SFX_P1_struct = {
+	Default_Priority = 90
+	Default_Buss = UI_Star_Power
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-star_power_deployed_sfx_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
+Star_Power_Deployed_SFX_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
 			sp_deployed
 			vol = 25
 			pan1x = -0.76199996
@@ -776,18 +776,18 @@ star_power_deployed_sfx_p1_container = {
 		}
 	}
 }
-star_power_deployed_sfx_p2_struct = {
-	default_priority = 90
-	default_buss = ui_star_power
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Star_Power_Deployed_SFX_P2_struct = {
+	Default_Priority = 90
+	Default_Buss = UI_Star_Power
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-star_power_deployed_sfx_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
+Star_Power_Deployed_SFX_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
 			sp_deployed
 			vol = 25
 			pan1x = 0.47
@@ -797,18 +797,18 @@ star_power_deployed_sfx_p2_container = {
 		}
 	}
 }
-star_power_deployed_cheer_sfx_struct = {
-	default_priority = 90
-	default_buss = crowd_star_power
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Star_Power_Deployed_Cheer_SFX_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Star_Power
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-star_power_deployed_cheer_sfx_container = {
-	command = obj_playsound
-	randomness = none
-	sounds = {
-		sound1 = {
+Star_Power_Deployed_Cheer_SFX_container = {
+	command = Obj_PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
 			sp_cheer1
 			vol = 75
 			pan1x = -0.897089
@@ -816,7 +816,7 @@ star_power_deployed_cheer_sfx_container = {
 			pan2x = 0.88932973
 			pan2y = 0.15726662
 		}
-		sound2 = {
+		Sound2 = {
 			sp_cheer2
 			vol = 75
 			pan1x = -0.897089
@@ -826,18 +826,18 @@ star_power_deployed_cheer_sfx_container = {
 		}
 	}
 }
-star_power_deployed_cheer_sfx_p1_struct = {
-	default_priority = 90
-	default_buss = crowd_star_power
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Star_Power_Deployed_Cheer_SFX_P1_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Star_Power
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-star_power_deployed_cheer_sfx_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
+Star_Power_Deployed_Cheer_SFX_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
 			sp_cheer1
 			vol = 75
 			pan1x = -0.76199996
@@ -845,7 +845,7 @@ star_power_deployed_cheer_sfx_p1_container = {
 			pan2x = -0.44799998
 			pan2y = 0.894
 		}
-		sound2 = {
+		Sound2 = {
 			sp_cheer2
 			vol = 75
 			pan1x = -0.76199996
@@ -855,18 +855,18 @@ star_power_deployed_cheer_sfx_p1_container = {
 		}
 	}
 }
-star_power_deployed_cheer_sfx_p2_struct = {
-	default_priority = 90
-	default_buss = crowd_star_power
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Star_Power_Deployed_Cheer_SFX_P2_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Star_Power
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-star_power_deployed_cheer_sfx_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
+Star_Power_Deployed_Cheer_SFX_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
 			sp_cheer1
 			vol = 75
 			pan1x = 0.47
@@ -874,7 +874,7 @@ star_power_deployed_cheer_sfx_p2_container = {
 			pan2x = 0.728
 			pan2y = 0.685
 		}
-		sound2 = {
+		Sound2 = {
 			sp_cheer2
 			vol = 75
 			pan1x = 0.47
@@ -885,109 +885,109 @@ star_power_deployed_cheer_sfx_p2_container = {
 	}
 }
 ui_sfx_scroll_struct = {
-	default_priority = 90
-	default_buss = front_end
-	norepeatfor = 0.03
-	instancemanagement = stop_oldest
-	instancelimit = 6
+	Default_Priority = 90
+	Default_Buss = front_end
+	NoRepeatFor = 0.03
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
 ui_sfx_scroll_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
 			scroll
 		}
 	}
 }
 ui_sfx_select_struct = {
-	default_priority = 90
-	default_buss = front_end
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+	Default_Priority = 90
+	Default_Buss = front_end
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
 ui_sfx_select_container = {
-	command = playsound
-	randomness = randomnorepeatlasttwotype
-	sounds = {
-		sound1 = {
-			ui_sound_01
+	command = PlaySound
+	Randomness = RandomNoRepeatLastTwoType
+	Sounds = {
+		Sound1 = {
+			UI_Sound_01
 		}
-		sound2 = {
+		Sound2 = {
 			ui_sound_05
 			vol = 150
 		}
-		sound3 = {
-			ui_sound_06
+		Sound3 = {
+			UI_Sound_06
 			vol = 150
 		}
 	}
 }
 ui_sfx_bandvol_struct = {
-	default_priority = 90
-	default_buss = band_playback
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 3
+	Default_Priority = 90
+	Default_Buss = Band_Playback
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 3
 }
 ui_sfx_bandvol_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
 			bandvol
 			vol = 45
 		}
 	}
 }
 ui_sfx_crowdvol_struct = {
-	default_priority = 90
-	default_buss = encore_events
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 3
+	Default_Priority = 90
+	Default_Buss = Encore_Events
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 3
 }
 ui_sfx_crowdvol_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
 			crowdvol
 			vol = 45
 		}
 	}
 }
 ui_sfx_guitvol_struct = {
-	default_priority = 90
-	default_buss = first_player_lead_playback
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 3
+	Default_Priority = 90
+	Default_Buss = First_Player_Lead_Playback
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 3
 }
 ui_sfx_guitvol_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
 			guitvol
 			vol = 55
 		}
 	}
 }
-gh_sfx_battlemode_lightning_player1_struct = {
-	default_priority = 90
-	default_buss = ui_battle_mode
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+GH_SFX_BattleMode_Lightning_Player1_struct = {
+	Default_Priority = 90
+	Default_Buss = UI_Battle_Mode
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-gh_sfx_battlemode_lightning_player1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			gh3_battlemode_lightning
+GH_SFX_BattleMode_Lightning_Player1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			GH3_BattleMode_Lightning
 			vol = 60
 			pan1x = -0.76199996
 			pan1y = 0.6470001
@@ -996,19 +996,19 @@ gh_sfx_battlemode_lightning_player1_container = {
 		}
 	}
 }
-gh_sfx_battlemode_lightning_player2_struct = {
-	default_priority = 90
-	default_buss = ui_battle_mode
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+GH_SFX_BattleMode_Lightning_Player2_struct = {
+	Default_Priority = 90
+	Default_Buss = UI_Battle_Mode
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-gh_sfx_battlemode_lightning_player2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			gh3_battlemode_lightning
+GH_SFX_BattleMode_Lightning_Player2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			GH3_BattleMode_Lightning
 			vol = 60
 			pan1x = 0.47
 			pan1y = 0.883
@@ -1017,338 +1017,338 @@ gh_sfx_battlemode_lightning_player2_container = {
 		}
 	}
 }
-gh_sfx_overloaded_static_player1_se_struct = {
-	default_priority = 90
-	default_buss = wrong_notes_player1
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+GH_SFX_Overloaded_Static_Player1_SE_struct = {
+	Default_Priority = 90
+	Default_Buss = Wrong_Notes_Player1
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-gh_sfx_overloaded_static_player1_se_container = {
-	command = playsound
-	randomness = randomnorepeattype
-	sounds = {
-		sound1 = {
-			gh3_battlemode_static_01
+GH_SFX_Overloaded_Static_Player1_SE_container = {
+	command = PlaySound
+	Randomness = RandomNoRepeatType
+	Sounds = {
+		Sound1 = {
+			GH3_BattleMode_Static_01
 			vol = 120
 			pan1x = -0.514
 			pan1y = 0.85700005
 		}
-		sound2 = {
-			gh3_battlemode_static_02
+		Sound2 = {
+			GH3_BattleMode_Static_02
 			vol = 120
 			pan1x = -0.514
 			pan1y = 0.85700005
 		}
-		sound3 = {
-			gh3_battlemode_static_03
+		Sound3 = {
+			GH3_BattleMode_Static_03
 			vol = 120
 			pan1x = -0.514
 			pan1y = 0.85700005
 		}
-		sound4 = {
-			gh3_battlemode_static_04
+		Sound4 = {
+			GH3_BattleMode_Static_04
 			vol = 120
 			pan1x = -0.514
 			pan1y = 0.85700005
 		}
-		sound5 = {
-			gh3_battlemode_static_05
+		Sound5 = {
+			GH3_BattleMode_Static_05
 			vol = 120
 			pan1x = -0.514
 			pan1y = 0.85700005
 		}
-		sound6 = {
-			gh3_battlemode_static_06
+		Sound6 = {
+			GH3_BattleMode_Static_06
 			vol = 120
 			pan1x = -0.514
 			pan1y = 0.85700005
 		}
 	}
 }
-gh_sfx_overloaded_static_player2_se_struct = {
-	default_priority = 90
-	default_buss = wrong_notes_player2
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+GH_SFX_Overloaded_Static_Player2_SE_struct = {
+	Default_Priority = 90
+	Default_Buss = Wrong_Notes_Player2
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-gh_sfx_overloaded_static_player2_se_container = {
-	command = playsound
-	randomness = randomnorepeattype
-	sounds = {
-		sound1 = {
-			gh3_battlemode_static_01
+GH_SFX_Overloaded_Static_Player2_SE_container = {
+	command = PlaySound
+	Randomness = RandomNoRepeatType
+	Sounds = {
+		Sound1 = {
+			GH3_BattleMode_Static_01
 			vol = 120
 			pan1x = 0.52099997
 			pan1y = 0.85400003
 		}
-		sound2 = {
-			gh3_battlemode_static_02
+		Sound2 = {
+			GH3_BattleMode_Static_02
 			vol = 120
 			pan1x = 0.52099997
 			pan1y = 0.85400003
 		}
-		sound3 = {
-			gh3_battlemode_static_03
+		Sound3 = {
+			GH3_BattleMode_Static_03
 			vol = 120
 			pan1x = 0.52099997
 			pan1y = 0.85400003
 		}
-		sound4 = {
-			gh3_battlemode_static_04
+		Sound4 = {
+			GH3_BattleMode_Static_04
 			vol = 120
 			pan1x = 0.52099997
 			pan1y = 0.85400003
 		}
-		sound5 = {
-			gh3_battlemode_static_05
+		Sound5 = {
+			GH3_BattleMode_Static_05
 			vol = 120
 			pan1x = 0.52099997
 			pan1y = 0.85400003
 		}
-		sound6 = {
-			gh3_battlemode_static_06
+		Sound6 = {
+			GH3_BattleMode_Static_06
 			vol = 120
 			pan1x = 0.52099997
 			pan1y = 0.85400003
 		}
 	}
 }
-gh_sfx_beatsoundevent_struct = {
-	default_priority = 90
-	default_buss = test_tones
-	norepeatfor = 0.001
-	instancemanagement = stop_oldest
-	instancelimit = 8
+GH_SFX_BeatSoundEvent_struct = {
+	Default_Priority = 90
+	Default_Buss = Test_Tones
+	NoRepeatFor = 0.001
+	InstanceManagement = stop_oldest
+	InstanceLimit = 8
 }
-gh_sfx_beatsoundevent_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			gh3_beat_sound
+GH_SFX_BeatSoundEvent_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			GH3_Beat_Sound
 			vol = 200
 		}
 	}
 }
-gh_sfx_beatwindowopensoundevent_struct = {
-	default_priority = 90
-	default_buss = test_tones
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+GH_SFX_BeatWindowOpenSoundEvent_struct = {
+	Default_Priority = 90
+	Default_Buss = Test_Tones
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-gh_sfx_beatwindowopensoundevent_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			gh3_beat_sound
+GH_SFX_BeatWindowOpenSoundEvent_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			GH3_Beat_Sound
 			vol = 200
 			pitch = 150
 		}
 	}
 }
-gh_sfx_beatwindowclosesoundevent_struct = {
-	default_priority = 90
-	default_buss = test_tones
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+GH_SFX_BeatWindowCloseSoundEvent_struct = {
+	Default_Priority = 90
+	Default_Buss = Test_Tones
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-gh_sfx_beatwindowclosesoundevent_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			gh3_beat_sound
+GH_SFX_BeatWindowCloseSoundEvent_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			GH3_Beat_Sound
 			vol = 200
 			pitch = 85
 		}
 	}
 }
 dummy_struct = {
-	default_priority = 50
-	default_buss = `default`
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+	Default_Priority = 50
+	Default_Buss = `default`
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-dummy_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			heavy_crowd_loop_nuetral_01
+Dummy_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Heavy_Crowd_Loop_Nuetral_01
 		}
-		sound2 = {
-			heavy_crowd_loop_bad_01
+		Sound2 = {
+			Heavy_Crowd_Loop_Bad_01
 		}
-		sound3 = {
-			heavy_crowd_loop_good_01
+		Sound3 = {
+			Heavy_Crowd_Loop_Good_01
 		}
-		sound4 = {
-			heavy_crowd_loop_nuetral_02
+		Sound4 = {
+			Heavy_Crowd_Loop_Nuetral_02
 		}
-		sound5 = {
-			medium_crowd_loop_bad_01
+		Sound5 = {
+			Medium_Crowd_Loop_Bad_01
 		}
-		sound6 = {
-			medium_crowd_loop_neutral_01
+		Sound6 = {
+			Medium_Crowd_Loop_Neutral_01
 		}
-		sound7 = {
-			small_crowd_loop_good
+		Sound7 = {
+			Small_Crowd_Loop_Good
 		}
-		sound8 = {
-			small_crowd_loop_neutral
+		Sound8 = {
+			Small_Crowd_Loop_Neutral
 		}
-		sound9 = {
-			small_crowd_loop_bad
+		Sound9 = {
+			Small_Crowd_Loop_Bad
 			vol = 90
 		}
-		sound10 = {
-			hell_crowd_loop_bad
+		Sound10 = {
+			Hell_Crowd_Loop_Bad
 		}
-		sound11 = {
-			hell_crowd_loop_good
+		Sound11 = {
+			Hell_Crowd_Loop_Good
 		}
-		sound12 = {
-			hell_crowd_loop_neutral
+		Sound12 = {
+			Hell_Crowd_Loop_Neutral
 		}
-		sound13 = {
-			silence_front_end_crowd_loop
+		Sound13 = {
+			Silence_Front_End_Crowd_Loop
 		}
-		sound14 = {
-			outdoor_crowd_loop_bad
+		Sound14 = {
+			Outdoor_Crowd_Loop_Bad
 		}
-		sound15 = {
-			outdoor_crowd_loop_neutral
+		Sound15 = {
+			Outdoor_Crowd_Loop_Neutral
 		}
-		sound16 = {
-			outdoor_crowd_loop_good
+		Sound16 = {
+			Outdoor_Crowd_Loop_Good
 		}
-		sound17 = {
-			medium_crowd_loop_good_01
+		Sound17 = {
+			Medium_Crowd_Loop_Good_01
 		}
-		sound18 = {
-			medium_crowd_loop_good_02
+		Sound18 = {
+			Medium_Crowd_Loop_Good_02
 		}
 	}
 }
-crowd_oneshots_cheer_close_struct = {
-	default_priority = 20
-	default_buss = crowd_one_shots
-	norepeatfor = 1
-	instancemanagement = ignore
-	instancelimit = 2
+Crowd_OneShots_Cheer_Close_struct = {
+	Default_Priority = 20
+	Default_Buss = Crowd_One_Shots
+	NoRepeatFor = 1
+	InstanceManagement = ignore
+	InstanceLimit = 2
 }
-crowd_oneshots_cheer_close_container = {
-	command = playsound
-	randomness = randomnorepeatlasttwotype
-	sounds = {
-		sound1 = {
+Crowd_OneShots_Cheer_Close_container = {
+	command = PlaySound
+	Randomness = RandomNoRepeatLastTwoType
+	Sounds = {
+		Sound1 = {
 			crowd_cheer_sm_08
 			pan1x = 0.015999999
 			pan1y = -0.29
-			randomvol = {
-				type = randomrangetype
+			RandomVol = {
+				type = RandomRangeType
 				vals = [
 					75
 					85
 				]
 			}
 		}
-		sound2 = {
+		Sound2 = {
 			crowd_cheer_sm_00
 			pan1x = 0.828
 			pan1y = -0.561
-			randomvol = {
-				type = randomrangetype
+			RandomVol = {
+				type = RandomRangeType
 				vals = [
 					90
 					105
 				]
 			}
 		}
-		sound3 = {
+		Sound3 = {
 			crowd_cheer_sm_01
 			pan1x = 0.388
 			pan1y = -0.92199993
-			randomvol = {
-				type = randomrangetype
+			RandomVol = {
+				type = RandomRangeType
 				vals = [
 					75
 					100
 				]
 			}
 		}
-		sound4 = {
+		Sound4 = {
 			crowd_cheer_sm_02
 			pan1x = -0.039
 			pan1y = -0.99899995
-			randomvol = {
-				type = randomrangetype
+			RandomVol = {
+				type = RandomRangeType
 				vals = [
 					75
 					100
 				]
 			}
 		}
-		sound5 = {
+		Sound5 = {
 			crowd_cheer_sm_03
 			pan1x = -0.46
 			pan1y = -0.888
-			randomvol = {
-				type = randomrangetype
+			RandomVol = {
+				type = RandomRangeType
 				vals = [
 					80
 					95
 				]
 			}
 		}
-		sound6 = {
+		Sound6 = {
 			crowd_cheer_sm_04
 			pan1x = -0.84000003
 			pan1y = -0.542
-			randomvol = {
-				type = randomrangetype
+			RandomVol = {
+				type = RandomRangeType
 				vals = [
 					75
 					100
 				]
 			}
 		}
-		sound7 = {
+		Sound7 = {
 			crowd_cheer_sm_05
 			pan1x = -0.401
 			pan1y = -0.368
-			randomvol = {
-				type = randomrangetype
+			RandomVol = {
+				type = RandomRangeType
 				vals = [
 					75
 					100
 				]
 			}
 		}
-		sound8 = {
+		Sound8 = {
 			crowd_cheer_sm_06
 			pan1x = 0.003
 			pan1y = -0.407
-			randomvol = {
-				type = randomrangetype
+			RandomVol = {
+				type = RandomRangeType
 				vals = [
 					150
 					178
 				]
 			}
 		}
-		sound9 = {
+		Sound9 = {
 			crowd_cheer_sm_07
 			pan1x = 0.446
 			pan1y = -0.407
-			randomvol = {
-				type = randomrangetype
+			RandomVol = {
+				type = RandomRangeType
 				vals = [
 					140
 					180
@@ -1357,30 +1357,30 @@ crowd_oneshots_cheer_close_container = {
 		}
 	}
 }
-donothing_oneshot_struct = {
-	default_priority = 50
-	default_buss = crowd_one_shots
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+DoNothing_OneShot_struct = {
+	Default_Priority = 50
+	Default_Buss = Crowd_One_Shots
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-donothing_oneshot_container = {
-	command = playsound
-	randomness = none
+DoNothing_OneShot_container = {
+	command = PlaySound
+	Randomness = none
 }
-crowd_fast_surge_cheer_struct = {
-	default_priority = 50
-	default_buss = crowd_cheers
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 2
+Crowd_Fast_Surge_Cheer_struct = {
+	Default_Priority = 50
+	Default_Buss = Crowd_Cheers
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 2
 }
-crowd_fast_surge_cheer_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			crowd_surge_fast_01
+Crowd_Fast_Surge_Cheer_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Crowd_Surge_Fast_01
 			vol = 50
 			pan1x = -0.897089
 			pan1y = 0.1418498
@@ -1389,291 +1389,291 @@ crowd_fast_surge_cheer_container = {
 		}
 	}
 }
-practice_mode_crash1_struct = {
-	default_priority = 50
-	default_buss = practice_band_playback
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Practice_Mode_Crash1_struct = {
+	Default_Priority = 50
+	Default_Buss = Practice_Band_Playback
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-practice_mode_crash1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			crash01
+Practice_Mode_Crash1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Crash01
 		}
 	}
 }
-practice_mode_crash2_struct = {
-	default_priority = 50
-	default_buss = practice_band_playback
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Practice_Mode_Crash2_struct = {
+	Default_Priority = 50
+	Default_Buss = Practice_Band_Playback
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-practice_mode_crash2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			crash02
+Practice_Mode_Crash2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Crash02
 		}
 	}
 }
-practice_mode_tom3_struct = {
-	default_priority = 50
-	default_buss = practice_band_playback
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Practice_Mode_Tom3_struct = {
+	Default_Priority = 50
+	Default_Buss = Practice_Band_Playback
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-practice_mode_tom3_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			floortom01
+Practice_Mode_Tom3_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			FloorTom01
 		}
 	}
 }
-practice_mode_hihatclosed_struct = {
-	default_priority = 50
-	default_buss = practice_band_playback
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Practice_Mode_HiHatClosed_struct = {
+	Default_Priority = 50
+	Default_Buss = Practice_Band_Playback
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-practice_mode_hihatclosed_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			hihatclosed01
+Practice_Mode_HiHatClosed_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			HiHatClosed01
 		}
 	}
 }
-practice_mode_hihatopen_struct = {
-	default_priority = 50
-	default_buss = practice_band_playback
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Practice_Mode_HiHatOpen_struct = {
+	Default_Priority = 50
+	Default_Buss = Practice_Band_Playback
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-practice_mode_hihatopen_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			hihatopen01
+Practice_Mode_HiHatOpen_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			HiHatOpen01
 		}
 	}
 }
-practice_mode_kick_struct = {
-	default_priority = 50
-	default_buss = practice_band_playback
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Practice_Mode_Kick_struct = {
+	Default_Priority = 50
+	Default_Buss = Practice_Band_Playback
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-practice_mode_kick_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			kick01
+Practice_Mode_Kick_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Kick01
 		}
 	}
 }
-practice_mode_ride_struct = {
-	default_priority = 50
-	default_buss = practice_band_playback
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Practice_Mode_Ride_struct = {
+	Default_Priority = 50
+	Default_Buss = Practice_Band_Playback
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-practice_mode_ride_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			ride01
+Practice_Mode_Ride_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Ride01
 		}
 	}
 }
-practice_mode_snare_struct = {
-	default_priority = 50
-	default_buss = practice_band_playback
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Practice_Mode_Snare_struct = {
+	Default_Priority = 50
+	Default_Buss = Practice_Band_Playback
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-practice_mode_snare_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			snare01
+Practice_Mode_Snare_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Snare01
 		}
 	}
 }
-practice_mode_tom2_struct = {
-	default_priority = 50
-	default_buss = practice_band_playback
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Practice_Mode_Tom2_struct = {
+	Default_Priority = 50
+	Default_Buss = Practice_Band_Playback
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-practice_mode_tom2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			hitom02
+Practice_Mode_Tom2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			HiTom02
 		}
 	}
 }
-practice_mode_tom1_struct = {
-	default_priority = 50
-	default_buss = practice_band_playback
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Practice_Mode_Tom1_struct = {
+	Default_Priority = 50
+	Default_Buss = Practice_Band_Playback
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-practice_mode_tom1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			hitom01
+Practice_Mode_Tom1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			HiTom01
 		}
 	}
 }
-crowd_oneshots_boo_close_struct = {
-	default_priority = 20
-	default_buss = crowd_one_shots
-	norepeatfor = 1.5
-	instancemanagement = ignore
-	instancelimit = 1
+Crowd_OneShots_Boo_Close_struct = {
+	Default_Priority = 20
+	Default_Buss = Crowd_One_Shots
+	NoRepeatFor = 1.5
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-crowd_oneshots_boo_close_container = {
-	command = playsound
-	randomness = randomnorepeattype
-	sounds = {
-		sound1 = {
-			crowd_boo_sm_03
+Crowd_OneShots_Boo_Close_container = {
+	command = PlaySound
+	Randomness = RandomNoRepeatType
+	Sounds = {
+		Sound1 = {
+			Crowd_Boo_Sm_03
 			pan1x = -0.606
 			pan1y = -0.79499996
-			randomvol = {
-				type = randomrangetype
+			RandomVol = {
+				type = RandomRangeType
 				vals = [
 					170
 					190
 				]
 			}
 		}
-		sound2 = {
-			crowd_boo_sm_04
+		Sound2 = {
+			Crowd_Boo_Sm_04
 			pan1x = -0.87
 			pan1y = -0.493
-			randomvol = {
-				type = randomrangetype
+			RandomVol = {
+				type = RandomRangeType
 				vals = [
 					170
 					190
 				]
 			}
 		}
-		sound3 = {
-			crowd_boo_sm_05
+		Sound3 = {
+			Crowd_Boo_Sm_05
 			pan1x = -0.9919999
 			pan1y = -0.124000005
-			randomvol = {
-				type = randomrangetype
+			RandomVol = {
+				type = RandomRangeType
 				vals = [
 					170
 					190
 				]
 			}
 		}
-		sound4 = {
-			crowd_boo_sm_06
+		Sound4 = {
+			Crowd_Boo_Sm_06
 			pan1x = -0.622
 			pan1y = -0.303
-			randomvol = {
-				type = randomrangetype
+			RandomVol = {
+				type = RandomRangeType
 				vals = [
 					170
 					190
 				]
 			}
 		}
-		sound5 = {
-			crowd_boo_sm_07
+		Sound5 = {
+			Crowd_Boo_Sm_07
 			pan1x = -0.492
 			pan1y = -0.511
-			randomvol = {
-				type = randomrangetype
+			RandomVol = {
+				type = RandomRangeType
 				vals = [
 					170
 					190
 				]
 			}
 		}
-		sound6 = {
-			crowd_boo_sm_08
+		Sound6 = {
+			Crowd_Boo_Sm_08
 			pan1x = 0.13399999
 			pan1y = -0.66800004
-			randomvol = {
-				type = randomrangetype
+			RandomVol = {
+				type = RandomRangeType
 				vals = [
 					170
 					190
 				]
 			}
 		}
-		sound7 = {
-			crowd_boo_sm_09
+		Sound7 = {
+			Crowd_Boo_Sm_09
 			pan1x = 0.564
 			pan1y = -0.498
-			randomvol = {
-				type = randomrangetype
+			RandomVol = {
+				type = RandomRangeType
 				vals = [
 					170
 					190
 				]
 			}
 		}
-		sound8 = {
-			crowd_boo_sm_10
+		Sound8 = {
+			Crowd_Boo_Sm_10
 			pan1x = 0.824
 			pan1y = -0.17300001
-			randomvol = {
-				type = randomrangetype
+			RandomVol = {
+				type = RandomRangeType
 				vals = [
 					170
 					190
 				]
 			}
 		}
-		sound9 = {
-			crowd_boo_sm_01
+		Sound9 = {
+			Crowd_Boo_Sm_01
 			pan1x = 0.66800004
 			pan1y = -0.733
-			randomvol = {
-				type = randomrangetype
+			RandomVol = {
+				type = RandomRangeType
 				vals = [
 					170
 					190
 				]
 			}
 		}
-		sound10 = {
-			crowd_boo_sm_02
+		Sound10 = {
+			Crowd_Boo_Sm_02
 			pan1x = -0.081
 			pan1y = -0.997
-			randomvol = {
-				type = randomrangetype
+			RandomVol = {
+				type = RandomRangeType
 				vals = [
 					170
 					190
@@ -1682,144 +1682,144 @@ crowd_oneshots_boo_close_container = {
 		}
 	}
 }
-menu_guitar_lick_sfx_struct = {
-	default_priority = 80
-	default_buss = front_end
-	norepeatfor = 2
-	instancemanagement = ignore
-	instancelimit = 1
+Menu_Guitar_Lick_SFX_struct = {
+	Default_Priority = 80
+	Default_Buss = front_end
+	NoRepeatFor = 2
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-menu_guitar_lick_sfx_container = {
-	command = playsound
-	randomness = randomnorepeatlasttwotype
-	sounds = {
-		sound1 = {
-			guitar_lick_23
+Menu_Guitar_Lick_SFX_container = {
+	command = PlaySound
+	Randomness = RandomNoRepeatLastTwoType
+	Sounds = {
+		Sound1 = {
+			Guitar_Lick_23
 			vol = 35
 		}
-		sound2 = {
-			guitar_lick_16
+		Sound2 = {
+			Guitar_Lick_16
 			vol = 35
 		}
-		sound3 = {
-			guitar_lick_17
+		Sound3 = {
+			Guitar_Lick_17
 			vol = 35
 		}
-		sound4 = {
-			guitar_lick_20
+		Sound4 = {
+			Guitar_Lick_20
 			vol = 35
 		}
-		sound5 = {
-			guitar_lick_22
+		Sound5 = {
+			Guitar_Lick_22
 			vol = 35
 		}
 	}
 }
-menu_warning_sfx_struct = {
-	default_priority = 75
-	default_buss = front_end
-	norepeatfor = 0.5
-	instancemanagement = stop_oldest
-	instancelimit = 2
+Menu_Warning_SFX_struct = {
+	Default_Priority = 75
+	Default_Buss = front_end
+	NoRepeatFor = 0.5
+	InstanceManagement = stop_oldest
+	InstanceLimit = 2
 }
-menu_warning_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			menu_warning_01
+Menu_Warning_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Menu_Warning_01
 			vol = 50
 		}
 	}
 }
-menu_music_se_struct = {
-	default_priority = 90
-	default_buss = music_frontend
-	norepeatfor = 3
-	instancemanagement = ignore
-	instancelimit = 1
+Menu_Music_SE_struct = {
+	Default_Priority = 90
+	Default_Buss = Music_FrontEnd
+	NoRepeatFor = 3
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-menu_music_se_container = {
-	command = playsound
-	randomness = randomnorepeatlasttwotype
-	sounds = {
-		sound1 = {
-			menu_music_stones
+Menu_Music_SE_container = {
+	command = PlaySound
+	Randomness = RandomNoRepeatLastTwoType
+	Sounds = {
+		Sound1 = {
+			Menu_Music_Stones
 			vol = 160
 		}
-		sound2 = {
-			menu_music_rage
+		Sound2 = {
+			Menu_Music_Rage
 			vol = 105
 		}
-		sound3 = {
-			menu_music_gnr
+		Sound3 = {
+			Menu_Music_GNR
 			vol = 130
 		}
-		sound4 = {
-			menu_music_evenflow
+		Sound4 = {
+			Menu_Music_EvenFlow
 			vol = 100
 		}
-		sound5 = {
-			menu_music_monsters
+		Sound5 = {
+			Menu_Music_Monsters
 			vol = 100
 		}
-		sound6 = {
-			menu_music_beforeiforget
+		Sound6 = {
+			Menu_Music_BeforeIForget
 			vol = 100
 		}
 	}
 }
-generic_menu_back_sfx_struct = {
-	default_priority = 50
-	default_buss = front_end
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Generic_Menu_Back_SFX_struct = {
+	Default_Priority = 50
+	Default_Buss = front_end
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-generic_menu_back_sfx_container = {
-	command = playsound
-	randomness = randomnorepeattype
-	sounds = {
-		sound1 = {
-			ui_sound_09
+Generic_Menu_Back_SFX_container = {
+	command = PlaySound
+	Randomness = RandomNoRepeatType
+	Sounds = {
+		Sound1 = {
+			UI_Sound_09
 			vol = 270
 		}
-		sound2 = {
-			ui_sound_10
+		Sound2 = {
+			UI_Sound_10
 			vol = 130
 		}
 	}
 }
-notes_ripple_up_sfx_struct = {
-	default_priority = 80
-	default_buss = front_end
-	norepeatfor = 0.5
-	instancemanagement = ignore
-	instancelimit = 1
+Notes_Ripple_Up_SFX_struct = {
+	Default_Priority = 80
+	Default_Buss = front_end
+	NoRepeatFor = 0.5
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-notes_ripple_up_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			notes_ripple_up_01
+Notes_Ripple_Up_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Notes_Ripple_Up_01
 			vol = 65
 		}
 	}
 }
-medium_crowd_bad_to_med_sfx_struct = {
-	default_priority = 90
-	default_buss = crowd_transitions
-	norepeatfor = 0.1
-	instancemanagement = ignore
-	instancelimit = 1
+Medium_Crowd_Bad_To_Med_SFX_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.1
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-medium_crowd_bad_to_med_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			medium_crowd_bad_to_medium
+Medium_Crowd_Bad_To_Med_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Medium_Crowd_Bad_to_Medium
 			vol = 130
 			pan1x = -0.897089
 			pan1y = 0.1418498
@@ -1828,19 +1828,19 @@ medium_crowd_bad_to_med_sfx_container = {
 		}
 	}
 }
-medium_crowd_bad_to_med_sfx_p1_struct = {
-	default_priority = 90
-	default_buss = crowd_transitions
-	norepeatfor = 0.1
-	instancemanagement = ignore
-	instancelimit = 1
+Medium_Crowd_Bad_To_Med_SFX_P1_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.1
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-medium_crowd_bad_to_med_sfx_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			medium_crowd_bad_to_medium
+Medium_Crowd_Bad_To_Med_SFX_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Medium_Crowd_Bad_to_Medium
 			vol = 130
 			pan1x = -0.76199996
 			pan1y = 0.6470001
@@ -1849,19 +1849,19 @@ medium_crowd_bad_to_med_sfx_p1_container = {
 		}
 	}
 }
-medium_crowd_bad_to_med_sfx_p2_struct = {
-	default_priority = 90
-	default_buss = crowd_transitions
-	norepeatfor = 0.1
-	instancemanagement = ignore
-	instancelimit = 1
+Medium_Crowd_Bad_To_Med_SFX_P2_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.1
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-medium_crowd_bad_to_med_sfx_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			medium_crowd_bad_to_medium
+Medium_Crowd_Bad_To_Med_SFX_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Medium_Crowd_Bad_to_Medium
 			vol = 130
 			pan1x = 0.47
 			pan1y = 0.883
@@ -1870,19 +1870,19 @@ medium_crowd_bad_to_med_sfx_p2_container = {
 		}
 	}
 }
-medium_crowd_med_to_bad_sfx_struct = {
-	default_priority = 90
-	default_buss = crowd_transitions
-	norepeatfor = 0.1
-	instancemanagement = ignore
-	instancelimit = 1
+Medium_Crowd_Med_To_Bad_SFX_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.1
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-medium_crowd_med_to_bad_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			medium_crowd_medium_to_bad
+Medium_Crowd_Med_To_Bad_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Medium_Crowd_Medium_to_Bad
 			vol = 100
 			pan1x = -0.897089
 			pan1y = 0.1418498
@@ -1891,19 +1891,19 @@ medium_crowd_med_to_bad_sfx_container = {
 		}
 	}
 }
-medium_crowd_med_to_bad_sfx_p1_struct = {
-	default_priority = 90
-	default_buss = crowd_transitions
-	norepeatfor = 0.1
-	instancemanagement = ignore
-	instancelimit = 1
+Medium_Crowd_Med_To_Bad_SFX_P1_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.1
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-medium_crowd_med_to_bad_sfx_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			medium_crowd_medium_to_bad
+Medium_Crowd_Med_To_Bad_SFX_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Medium_Crowd_Medium_to_Bad
 			vol = 100
 			pan1x = -0.76199996
 			pan1y = 0.6470001
@@ -1912,19 +1912,19 @@ medium_crowd_med_to_bad_sfx_p1_container = {
 		}
 	}
 }
-medium_crowd_med_to_bad_sfx_p2_struct = {
-	default_priority = 90
-	default_buss = crowd_transitions
-	norepeatfor = 0.1
-	instancemanagement = ignore
-	instancelimit = 1
+Medium_Crowd_Med_To_Bad_SFX_P2_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.1
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-medium_crowd_med_to_bad_sfx_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			medium_crowd_medium_to_bad
+Medium_Crowd_Med_To_Bad_SFX_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Medium_Crowd_Medium_to_Bad
 			vol = 100
 			pan1x = 0.47
 			pan1y = 0.883
@@ -1933,19 +1933,19 @@ medium_crowd_med_to_bad_sfx_p2_container = {
 		}
 	}
 }
-medium_crowd_good_to_med_sfx_struct = {
-	default_priority = 90
-	default_buss = crowd_transitions
-	norepeatfor = 0.1
-	instancemanagement = ignore
-	instancelimit = 1
+Medium_Crowd_Good_To_Med_SFX_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.1
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-medium_crowd_good_to_med_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			medium_crowd_good_to_medium
+Medium_Crowd_Good_To_Med_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Medium_Crowd_Good_to_Medium
 			vol = 100
 			pan1x = -0.897089
 			pan1y = 0.1418498
@@ -1954,19 +1954,19 @@ medium_crowd_good_to_med_sfx_container = {
 		}
 	}
 }
-medium_crowd_good_to_med_sfx_p1_struct = {
-	default_priority = 90
-	default_buss = crowd_transitions
-	norepeatfor = 0.1
-	instancemanagement = ignore
-	instancelimit = 1
+Medium_Crowd_Good_To_Med_SFX_P1_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.1
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-medium_crowd_good_to_med_sfx_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			medium_crowd_good_to_medium
+Medium_Crowd_Good_To_Med_SFX_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Medium_Crowd_Good_to_Medium
 			vol = 100
 			pan1x = -0.76199996
 			pan1y = 0.6470001
@@ -1975,19 +1975,19 @@ medium_crowd_good_to_med_sfx_p1_container = {
 		}
 	}
 }
-medium_crowd_good_to_med_sfx_p2_struct = {
-	default_priority = 90
-	default_buss = crowd_transitions
-	norepeatfor = 0.1
-	instancemanagement = ignore
-	instancelimit = 1
+Medium_Crowd_Good_To_Med_SFX_P2_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.1
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-medium_crowd_good_to_med_sfx_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			medium_crowd_good_to_medium
+Medium_Crowd_Good_To_Med_SFX_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Medium_Crowd_Good_to_Medium
 			vol = 100
 			pan1x = 0.47
 			pan1y = 0.883
@@ -1996,19 +1996,19 @@ medium_crowd_good_to_med_sfx_p2_container = {
 		}
 	}
 }
-medium_crowd_med_to_good_sfx_struct = {
-	default_priority = 90
-	default_buss = crowd_transitions
-	norepeatfor = 0.1
-	instancemanagement = ignore
-	instancelimit = 1
+Medium_Crowd_Med_To_Good_SFX_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.1
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-medium_crowd_med_to_good_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			medium_crowd_medium_to_good
+Medium_Crowd_Med_To_Good_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Medium_Crowd_Medium_to_Good
 			vol = 90
 			pan1x = -0.897089
 			pan1y = 0.1418498
@@ -2017,19 +2017,19 @@ medium_crowd_med_to_good_sfx_container = {
 		}
 	}
 }
-medium_crowd_med_to_good_sfx_p1_struct = {
-	default_priority = 90
-	default_buss = crowd_transitions
-	norepeatfor = 0.1
-	instancemanagement = ignore
-	instancelimit = 1
+Medium_Crowd_Med_To_Good_SFX_P1_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.1
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-medium_crowd_med_to_good_sfx_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			medium_crowd_medium_to_good
+Medium_Crowd_Med_To_Good_SFX_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Medium_Crowd_Medium_to_Good
 			vol = 90
 			pan1x = -0.76199996
 			pan1y = 0.6470001
@@ -2038,19 +2038,19 @@ medium_crowd_med_to_good_sfx_p1_container = {
 		}
 	}
 }
-medium_crowd_med_to_good_sfx_p2_struct = {
-	default_priority = 90
-	default_buss = crowd_transitions
-	norepeatfor = 0.1
-	instancemanagement = ignore
-	instancelimit = 1
+Medium_Crowd_Med_To_Good_SFX_P2_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.1
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-medium_crowd_med_to_good_sfx_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			medium_crowd_medium_to_good
+Medium_Crowd_Med_To_Good_SFX_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Medium_Crowd_Medium_to_Good
 			vol = 90
 			pan1x = 0.47
 			pan1y = 0.883
@@ -2059,27 +2059,27 @@ medium_crowd_med_to_good_sfx_p2_container = {
 		}
 	}
 }
-medium_crowd_swell_struct = {
-	default_priority = 90
-	default_buss = crowd_cheers
-	norepeatfor = 0.1
-	instancemanagement = ignore
-	instancelimit = 1
+Medium_Crowd_Swell_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Cheers
+	NoRepeatFor = 0.1
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-medium_crowd_swell_container = {
-	command = playsound
-	randomness = randomnorepeattype
-	sounds = {
-		sound1 = {
-			medium_crowd_swell_02
+Medium_Crowd_Swell_container = {
+	command = PlaySound
+	Randomness = RandomNoRepeatType
+	Sounds = {
+		Sound1 = {
+			Medium_Crowd_Swell_02
 			vol = 60
 			pan1x = -0.897089
 			pan1y = 0.1418498
 			pan2x = 0.88932973
 			pan2y = 0.15726662
 		}
-		sound2 = {
-			medium_crowd_swell_03
+		Sound2 = {
+			Medium_Crowd_Swell_03
 			vol = 60
 			pan1x = -0.897089
 			pan1y = 0.1418498
@@ -2088,19 +2088,19 @@ medium_crowd_swell_container = {
 		}
 	}
 }
-medium_crowd_applause_struct = {
-	default_priority = 90
-	default_buss = crowd_applause
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Medium_Crowd_Applause_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Applause
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-medium_crowd_applause_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			medium_crowd_applause_02
+Medium_Crowd_Applause_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Medium_Crowd_Applause_02
 			vol = 25
 			pan1x = -0.897089
 			pan1y = 0.1418498
@@ -2109,19 +2109,19 @@ medium_crowd_applause_container = {
 		}
 	}
 }
-small_crowd_bad_to_med_sfx_struct = {
-	default_priority = 50
-	default_buss = crowd_transitions
-	norepeatfor = 0.75
-	instancemanagement = ignore
-	instancelimit = 1
+Small_Crowd_Bad_To_Med_SFX_struct = {
+	Default_Priority = 50
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.75
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-small_crowd_bad_to_med_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			small_crowd_bad_to_med_sfx
+Small_Crowd_Bad_To_Med_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Small_Crowd_Bad_To_Med_SFX
 			vol = 120
 			pan1x = -0.897089
 			pan1y = 0.1418498
@@ -2130,19 +2130,19 @@ small_crowd_bad_to_med_sfx_container = {
 		}
 	}
 }
-small_crowd_bad_to_med_sfx_p1_struct = {
-	default_priority = 50
-	default_buss = crowd_transitions
-	norepeatfor = 0.75
-	instancemanagement = ignore
-	instancelimit = 1
+Small_Crowd_Bad_To_Med_SFX_P1_struct = {
+	Default_Priority = 50
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.75
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-small_crowd_bad_to_med_sfx_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			small_crowd_bad_to_med_sfx
+Small_Crowd_Bad_To_Med_SFX_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Small_Crowd_Bad_To_Med_SFX
 			vol = 120
 			pan1x = -0.76199996
 			pan1y = 0.6470001
@@ -2151,19 +2151,19 @@ small_crowd_bad_to_med_sfx_p1_container = {
 		}
 	}
 }
-small_crowd_bad_to_med_sfx_p2_struct = {
-	default_priority = 50
-	default_buss = crowd_transitions
-	norepeatfor = 0.75
-	instancemanagement = ignore
-	instancelimit = 1
+Small_Crowd_Bad_To_Med_SFX_P2_struct = {
+	Default_Priority = 50
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.75
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-small_crowd_bad_to_med_sfx_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			small_crowd_bad_to_med_sfx
+Small_Crowd_Bad_To_Med_SFX_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Small_Crowd_Bad_To_Med_SFX
 			vol = 120
 			pan1x = 0.47
 			pan1y = 0.883
@@ -2172,19 +2172,19 @@ small_crowd_bad_to_med_sfx_p2_container = {
 		}
 	}
 }
-small_crowd_med_to_bad_sfx_struct = {
-	default_priority = 50
-	default_buss = crowd_transitions
-	norepeatfor = 0.2
-	instancemanagement = ignore
-	instancelimit = 1
+Small_Crowd_Med_To_Bad_SFX_struct = {
+	Default_Priority = 50
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.2
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-small_crowd_med_to_bad_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			small_crowd_med_to_bad
+Small_Crowd_Med_To_Bad_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Small_Crowd_Med_To_Bad
 			vol = 60
 			pan1x = -0.897089
 			pan1y = 0.1418498
@@ -2193,19 +2193,19 @@ small_crowd_med_to_bad_sfx_container = {
 		}
 	}
 }
-small_crowd_med_to_bad_sfx_p1_struct = {
-	default_priority = 50
-	default_buss = crowd_transitions
-	norepeatfor = 0.2
-	instancemanagement = ignore
-	instancelimit = 1
+Small_Crowd_Med_To_Bad_SFX_P1_struct = {
+	Default_Priority = 50
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.2
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-small_crowd_med_to_bad_sfx_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			small_crowd_med_to_bad
+Small_Crowd_Med_To_Bad_SFX_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Small_Crowd_Med_To_Bad
 			vol = 60
 			pan1x = -0.76199996
 			pan1y = 0.6470001
@@ -2214,19 +2214,19 @@ small_crowd_med_to_bad_sfx_p1_container = {
 		}
 	}
 }
-small_crowd_med_to_bad_sfx_p2_struct = {
-	default_priority = 50
-	default_buss = crowd_transitions
-	norepeatfor = 0.2
-	instancemanagement = ignore
-	instancelimit = 1
+Small_Crowd_Med_To_Bad_SFX_P2_struct = {
+	Default_Priority = 50
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.2
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-small_crowd_med_to_bad_sfx_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			small_crowd_med_to_bad
+Small_Crowd_Med_To_Bad_SFX_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Small_Crowd_Med_To_Bad
 			vol = 60
 			pan1x = 0.47
 			pan1y = 0.883
@@ -2235,19 +2235,19 @@ small_crowd_med_to_bad_sfx_p2_container = {
 		}
 	}
 }
-small_crowd_med_to_good_sfx_struct = {
-	default_priority = 20
-	default_buss = crowd_transitions
-	norepeatfor = 0.75
-	instancemanagement = ignore
-	instancelimit = 1
+Small_Crowd_Med_To_Good_SFX_struct = {
+	Default_Priority = 20
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.75
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-small_crowd_med_to_good_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			small_crowd_med_to_good
+Small_Crowd_Med_To_Good_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Small_Crowd_Med_To_Good
 			vol = 65
 			pan1x = -0.897089
 			pan1y = 0.1418498
@@ -2256,19 +2256,19 @@ small_crowd_med_to_good_sfx_container = {
 		}
 	}
 }
-small_crowd_med_to_good_sfx_p1_struct = {
-	default_priority = 20
-	default_buss = crowd_transitions
-	norepeatfor = 0.75
-	instancemanagement = ignore
-	instancelimit = 1
+Small_Crowd_Med_To_Good_SFX_P1_struct = {
+	Default_Priority = 20
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.75
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-small_crowd_med_to_good_sfx_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			small_crowd_med_to_good
+Small_Crowd_Med_To_Good_SFX_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Small_Crowd_Med_To_Good
 			vol = 65
 			pan1x = -0.76199996
 			pan1y = 0.6470001
@@ -2277,19 +2277,19 @@ small_crowd_med_to_good_sfx_p1_container = {
 		}
 	}
 }
-small_crowd_med_to_good_sfx_p2_struct = {
-	default_priority = 20
-	default_buss = crowd_transitions
-	norepeatfor = 0.75
-	instancemanagement = ignore
-	instancelimit = 1
+Small_Crowd_Med_To_Good_SFX_P2_struct = {
+	Default_Priority = 20
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.75
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-small_crowd_med_to_good_sfx_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			small_crowd_med_to_good
+Small_Crowd_Med_To_Good_SFX_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Small_Crowd_Med_To_Good
 			vol = 65
 			pan1x = 0.47
 			pan1y = 0.883
@@ -2298,19 +2298,19 @@ small_crowd_med_to_good_sfx_p2_container = {
 		}
 	}
 }
-small_crowd_good_to_med_sfx_struct = {
-	default_priority = 50
-	default_buss = crowd_transitions
-	norepeatfor = 0.75
-	instancemanagement = ignore
-	instancelimit = 1
+Small_Crowd_Good_To_Med_SFX_struct = {
+	Default_Priority = 50
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.75
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-small_crowd_good_to_med_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			small_crowd_good_to_med
+Small_Crowd_Good_To_Med_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Small_Crowd_Good_To_Med
 			vol = 50
 			pan1x = -0.897089
 			pan1y = 0.1418498
@@ -2319,19 +2319,19 @@ small_crowd_good_to_med_sfx_container = {
 		}
 	}
 }
-small_crowd_good_to_med_sfx_p1_struct = {
-	default_priority = 50
-	default_buss = crowd_transitions
-	norepeatfor = 0.75
-	instancemanagement = ignore
-	instancelimit = 1
+Small_Crowd_Good_To_Med_SFX_P1_struct = {
+	Default_Priority = 50
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.75
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-small_crowd_good_to_med_sfx_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			small_crowd_good_to_med
+Small_Crowd_Good_To_Med_SFX_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Small_Crowd_Good_To_Med
 			vol = 50
 			pan1x = -0.76199996
 			pan1y = 0.6470001
@@ -2340,19 +2340,19 @@ small_crowd_good_to_med_sfx_p1_container = {
 		}
 	}
 }
-small_crowd_good_to_med_sfx_p2_struct = {
-	default_priority = 50
-	default_buss = crowd_transitions
-	norepeatfor = 0.75
-	instancemanagement = ignore
-	instancelimit = 1
+Small_Crowd_Good_To_Med_SFX_P2_struct = {
+	Default_Priority = 50
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.75
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-small_crowd_good_to_med_sfx_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			small_crowd_good_to_med
+Small_Crowd_Good_To_Med_SFX_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Small_Crowd_Good_To_Med
 			vol = 50
 			pan1x = 0.47
 			pan1y = 0.883
@@ -2361,210 +2361,210 @@ small_crowd_good_to_med_sfx_p2_container = {
 		}
 	}
 }
-box_check_sfx_struct = {
-	default_priority = 50
-	default_buss = front_end
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Box_Check_SFX_struct = {
+	Default_Priority = 50
+	Default_Buss = front_end
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-box_check_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			checkbox_check_sfx
+Box_Check_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			CheckBox_Check_SFX
 			vol = 80
 		}
-		sound2 = {
+		Sound2 = {
 			checkbox_sfx
 			vol = 80
 		}
 	}
 }
-box_uncheck_sfx_struct = {
-	default_priority = 50
-	default_buss = front_end
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Box_UnCheck_SFX_struct = {
+	Default_Priority = 50
+	Default_Buss = front_end
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-box_uncheck_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			checkbox_check_sfx
+Box_UnCheck_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			CheckBox_Check_SFX
 			vol = 80
 		}
-		sound2 = {
+		Sound2 = {
 			checkbox_sfx
 			vol = 80
 		}
 	}
 }
-cash_sound_struct = {
-	default_priority = 50
-	default_buss = front_end
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Cash_Sound_struct = {
+	Default_Priority = 50
+	Default_Buss = front_end
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-cash_sound_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			cash
+Cash_Sound_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Cash
 			vol = 60
 		}
 	}
 }
-you_rock_end_sfx_struct = {
-	default_priority = 50
-	default_buss = front_end
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+You_Rock_End_SFX_struct = {
+	Default_Priority = 50
+	Default_Buss = front_end
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-you_rock_end_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
+You_Rock_End_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
 			you_rock
 		}
 	}
 }
 ui_sfx_scroll_add_struct = {
-	default_priority = 50
-	default_buss = front_end
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+	Default_Priority = 50
+	Default_Buss = front_end
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
 ui_sfx_scroll_add_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			ui_scroll_add2
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			UI_Scroll_Add2
 			vol = 62
 		}
 	}
 }
-ui_sfx_lose_multiplier_2x_struct = {
-	default_priority = 50
-	default_buss = front_end
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+UI_SFX_Lose_Multiplier_2X_struct = {
+	Default_Priority = 50
+	Default_Buss = front_end
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-ui_sfx_lose_multiplier_2x_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			ui_lose_multiplier
+UI_SFX_Lose_Multiplier_2X_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			UI_Lose_Multiplier
 			vol = 38
 			pitch = 110
 		}
 	}
 }
-ui_sfx_lose_multiplier_3x_struct = {
-	default_priority = 50
-	default_buss = front_end
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+UI_SFX_Lose_Multiplier_3X_struct = {
+	Default_Priority = 50
+	Default_Buss = front_end
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-ui_sfx_lose_multiplier_3x_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			ui_lose_multiplier
+UI_SFX_Lose_Multiplier_3X_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			UI_Lose_Multiplier
 			vol = 57
 			pitch = 105
 		}
 	}
 }
-ui_sfx_lose_multiplier_4x_struct = {
-	default_priority = 50
-	default_buss = front_end
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+UI_SFX_Lose_Multiplier_4X_struct = {
+	Default_Priority = 50
+	Default_Buss = front_end
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-ui_sfx_lose_multiplier_4x_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			ui_lose_multiplier
+UI_SFX_Lose_Multiplier_4X_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			UI_Lose_Multiplier
 			vol = 75
 			pitch = 100
 		}
 	}
 }
-lose_multiplier_crowd_struct = {
-	default_priority = 50
-	default_buss = crowd_one_shots
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Lose_Multiplier_Crowd_struct = {
+	Default_Priority = 50
+	Default_Buss = Crowd_One_Shots
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-lose_multiplier_crowd_container = {
-	command = playsound
-	randomness = none
+Lose_Multiplier_Crowd_container = {
+	command = PlaySound
+	Randomness = none
 }
-song_intro_kick_sfx_struct = {
-	default_priority = 50
-	default_buss = front_end
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Song_Intro_Kick_SFX_struct = {
+	Default_Priority = 50
+	Default_Buss = front_end
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-song_intro_kick_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			ui_song_intro_kick
+Song_Intro_Kick_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			UI_Song_Intro_Kick
 			vol = 120
 		}
 	}
 }
-song_intro_highway_up_struct = {
-	default_priority = 50
-	default_buss = front_end
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Song_Intro_Highway_Up_struct = {
+	Default_Priority = 50
+	Default_Buss = front_end
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-song_intro_highway_up_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			highway_rise
+Song_Intro_Highway_Up_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Highway_Rise
 			vol = 115
 		}
 	}
 }
-gh_sfx_battlemode_deathof_p1_struct = {
-	default_priority = 50
-	default_buss = ui_battle_mode
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+GH_SFX_BattleMode_DeathOf_P1_struct = {
+	Default_Priority = 50
+	Default_Buss = UI_Battle_Mode
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-gh_sfx_battlemode_deathof_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			gh3_sudden_death
+GH_SFX_BattleMode_DeathOf_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			GH3_Sudden_Death
 			vol = 100
 			pan1x = -0.76199996
 			pan1y = 0.6470001
@@ -2573,19 +2573,19 @@ gh_sfx_battlemode_deathof_p1_container = {
 		}
 	}
 }
-gh_sfx_battlemode_diffup_p1_struct = {
-	default_priority = 50
-	default_buss = ui_battle_mode
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+GH_SFX_BattleMode_DiffUp_P1_struct = {
+	Default_Priority = 50
+	Default_Buss = UI_Battle_Mode
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-gh_sfx_battlemode_diffup_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			gh3_battle_difficultyrampup
+GH_SFX_BattleMode_DiffUp_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			GH3_Battle_DifficultyRampUp
 			vol = 40
 			pan1x = -0.59239036
 			pan1y = 0.805651
@@ -2594,19 +2594,19 @@ gh_sfx_battlemode_diffup_p1_container = {
 		}
 	}
 }
-gh_sfx_battlemode_doublenote_p1_struct = {
-	default_priority = 50
-	default_buss = ui_battle_mode
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+GH_SFX_BattleMode_DoubleNote_P1_struct = {
+	Default_Priority = 50
+	Default_Buss = UI_Battle_Mode
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-gh_sfx_battlemode_doublenote_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			gh3_battlemode_doublenoteattack
+GH_SFX_BattleMode_DoubleNote_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			GH3_BattleMode_DoubleNoteAttack
 			vol = 70
 			pan1x = -0.76199996
 			pan1y = 0.6470001
@@ -2615,19 +2615,19 @@ gh_sfx_battlemode_doublenote_p1_container = {
 		}
 	}
 }
-gh_sfx_battlemode_lefty_p1_struct = {
-	default_priority = 50
-	default_buss = ui_battle_mode
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+GH_SFX_BattleMode_Lefty_P1_struct = {
+	Default_Priority = 50
+	Default_Buss = UI_Battle_Mode
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-gh_sfx_battlemode_lefty_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			gh3_battlemode_leftyattack
+GH_SFX_BattleMode_Lefty_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			GH3_BattleMode_LeftyAttack
 			pan1x = -0.76199996
 			pan1y = 0.6470001
 			pan2x = -0.44799998
@@ -2635,19 +2635,19 @@ gh_sfx_battlemode_lefty_p1_container = {
 		}
 	}
 }
-gh_sfx_battlemode_steal_p1_struct = {
-	default_priority = 50
-	default_buss = ui_battle_mode
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+GH_SFX_BattleMode_Steal_P1_struct = {
+	Default_Priority = 50
+	Default_Buss = UI_Battle_Mode
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-gh_sfx_battlemode_steal_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			gh3_battlemode_stealpowerup
+GH_SFX_BattleMode_Steal_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			GH3_BattleMode_StealPowerup
 			vol = 50
 			pan1x = -0.76199996
 			pan1y = 0.6470001
@@ -2656,19 +2656,19 @@ gh_sfx_battlemode_steal_p1_container = {
 		}
 	}
 }
-gh_sfx_battlemode_stringbreak_p1_struct = {
-	default_priority = 50
-	default_buss = ui_battle_mode
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+GH_SFX_BattleMode_StringBreak_P1_struct = {
+	Default_Priority = 50
+	Default_Buss = UI_Battle_Mode
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-gh_sfx_battlemode_stringbreak_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			gh3_battlemode_stringbreakattack
+GH_SFX_BattleMode_StringBreak_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			GH3_BattleMode_StringBreakAttack
 			vol = 60
 			pan1x = -0.76199996
 			pan1y = 0.6470001
@@ -2677,19 +2677,19 @@ gh_sfx_battlemode_stringbreak_p1_container = {
 		}
 	}
 }
-gh_sfx_battlemode_whammyattack_p1_struct = {
-	default_priority = 50
-	default_buss = ui_battle_mode
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+GH_SFX_BattleMode_WhammyAttack_P1_struct = {
+	Default_Priority = 50
+	Default_Buss = UI_Battle_Mode
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-gh_sfx_battlemode_whammyattack_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			gh3_battlemode_whammyattack
+GH_SFX_BattleMode_WhammyAttack_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			GH3_BattleMode_WhammyAttack
 			vol = 40
 			pan1x = -0.5000002
 			pan1y = 0.8660253
@@ -2698,19 +2698,19 @@ gh_sfx_battlemode_whammyattack_p1_container = {
 		}
 	}
 }
-gh_sfx_battlemode_deathof_p2_struct = {
-	default_priority = 50
-	default_buss = ui_battle_mode
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+GH_SFX_BattleMode_DeathOf_P2_struct = {
+	Default_Priority = 50
+	Default_Buss = UI_Battle_Mode
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-gh_sfx_battlemode_deathof_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			gh3_sudden_death
+GH_SFX_BattleMode_DeathOf_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			GH3_Sudden_Death
 			vol = 100
 			pan1x = 0.47
 			pan1y = 0.883
@@ -2719,19 +2719,19 @@ gh_sfx_battlemode_deathof_p2_container = {
 		}
 	}
 }
-gh_sfx_battlemode_diffup_p2_struct = {
-	default_priority = 50
-	default_buss = ui_battle_mode
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+GH_SFX_BattleMode_DiffUp_P2_struct = {
+	Default_Priority = 50
+	Default_Buss = UI_Battle_Mode
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-gh_sfx_battlemode_diffup_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			gh3_battle_difficultyrampup
+GH_SFX_BattleMode_DiffUp_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			GH3_Battle_DifficultyRampUp
 			vol = 40
 			pan1x = 0.47
 			pan1y = 0.883
@@ -2740,19 +2740,19 @@ gh_sfx_battlemode_diffup_p2_container = {
 		}
 	}
 }
-gh_sfx_battlemode_doublenote_p2_struct = {
-	default_priority = 50
-	default_buss = ui_battle_mode
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+GH_SFX_BattleMode_DoubleNote_P2_struct = {
+	Default_Priority = 50
+	Default_Buss = UI_Battle_Mode
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-gh_sfx_battlemode_doublenote_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			gh3_battlemode_doublenoteattack
+GH_SFX_BattleMode_DoubleNote_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			GH3_BattleMode_DoubleNoteAttack
 			vol = 70
 			pan1x = 0.47
 			pan1y = 0.883
@@ -2761,19 +2761,19 @@ gh_sfx_battlemode_doublenote_p2_container = {
 		}
 	}
 }
-gh_sfx_battlemode_lefty_p2_struct = {
-	default_priority = 50
-	default_buss = ui_battle_mode
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+GH_SFX_BattleMode_Lefty_P2_struct = {
+	Default_Priority = 50
+	Default_Buss = UI_Battle_Mode
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-gh_sfx_battlemode_lefty_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			gh3_battlemode_leftyattack
+GH_SFX_BattleMode_Lefty_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			GH3_BattleMode_LeftyAttack
 			pan1x = 0.47
 			pan1y = 0.883
 			pan2x = 0.728
@@ -2781,19 +2781,19 @@ gh_sfx_battlemode_lefty_p2_container = {
 		}
 	}
 }
-gh_sfx_battlemode_steal_p2_struct = {
-	default_priority = 50
-	default_buss = ui_battle_mode
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+GH_SFX_BattleMode_Steal_P2_struct = {
+	Default_Priority = 50
+	Default_Buss = UI_Battle_Mode
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-gh_sfx_battlemode_steal_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			gh3_battlemode_stealpowerup
+GH_SFX_BattleMode_Steal_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			GH3_BattleMode_StealPowerup
 			vol = 50
 			pan1x = 0.47
 			pan1y = 0.883
@@ -2802,19 +2802,19 @@ gh_sfx_battlemode_steal_p2_container = {
 		}
 	}
 }
-gh_sfx_battlemode_stringbreak_p2_struct = {
-	default_priority = 50
-	default_buss = ui_battle_mode
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+GH_SFX_BattleMode_StringBreak_P2_struct = {
+	Default_Priority = 50
+	Default_Buss = UI_Battle_Mode
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-gh_sfx_battlemode_stringbreak_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			gh3_battlemode_stringbreakattack
+GH_SFX_BattleMode_StringBreak_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			GH3_BattleMode_StringBreakAttack
 			vol = 60
 			pan1x = 0.47
 			pan1y = 0.883
@@ -2823,19 +2823,19 @@ gh_sfx_battlemode_stringbreak_p2_container = {
 		}
 	}
 }
-gh_sfx_battlemode_whammyattack_p2_struct = {
-	default_priority = 50
-	default_buss = ui_battle_mode
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+GH_SFX_BattleMode_WhammyAttack_P2_struct = {
+	Default_Priority = 50
+	Default_Buss = UI_Battle_Mode
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-gh_sfx_battlemode_whammyattack_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			gh3_battlemode_whammyattack
+GH_SFX_BattleMode_WhammyAttack_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			GH3_BattleMode_WhammyAttack
 			vol = 40
 			pan1x = 0.5
 			pan1y = 0.86602545
@@ -2844,52 +2844,52 @@ gh_sfx_battlemode_whammyattack_p2_container = {
 		}
 	}
 }
-gh_sfx_bossbattle_playerdies_struct = {
-	default_priority = 50
-	default_buss = ui_battle_mode
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+GH_SFX_BossBattle_PlayerDies_struct = {
+	Default_Priority = 50
+	Default_Buss = UI_Battle_Mode
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-gh_sfx_bossbattle_playerdies_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			gh3_battlemode_deathfromslash
+GH_SFX_BossBattle_PlayerDies_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			GH3_BattleMode_DeathFromSlash
 		}
 	}
 }
-gh_sfx_you_lose_single_player_struct = {
-	default_priority = 50
-	default_buss = ui_battle_mode
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+GH_SFX_You_Lose_Single_Player_struct = {
+	Default_Priority = 50
+	Default_Buss = UI_Battle_Mode
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-gh_sfx_you_lose_single_player_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			gh3_sudden_death
+GH_SFX_You_Lose_Single_Player_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			GH3_Sudden_Death
 			vol = 75
 		}
 	}
 }
-gh_sfx_battlemode_attack_over_p1_struct = {
-	default_priority = 50
-	default_buss = ui_battle_mode
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+GH_SFX_BattleMode_Attack_Over_P1_struct = {
+	Default_Priority = 50
+	Default_Buss = UI_Battle_Mode
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-gh_sfx_battlemode_attack_over_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			gh3_battlemode_attack_over
+GH_SFX_BattleMode_Attack_Over_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			GH3_BattleMode_Attack_Over
 			vol = 45
 			pan1x = -0.76199996
 			pan1y = 0.6470001
@@ -2898,19 +2898,19 @@ gh_sfx_battlemode_attack_over_p1_container = {
 		}
 	}
 }
-gh_sfx_battlemode_attack_over_p2_struct = {
-	default_priority = 50
-	default_buss = ui_battle_mode
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+GH_SFX_BattleMode_Attack_Over_P2_struct = {
+	Default_Priority = 50
+	Default_Buss = UI_Battle_Mode
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-gh_sfx_battlemode_attack_over_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			gh3_battlemode_attack_over
+GH_SFX_BattleMode_Attack_Over_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			GH3_BattleMode_Attack_Over
 			vol = 45
 			pan1x = 0.47
 			pan1y = 0.883
@@ -2919,18 +2919,18 @@ gh_sfx_battlemode_attack_over_p2_container = {
 		}
 	}
 }
-battle_power_awarded_sfx_p1_struct = {
-	default_priority = 90
-	default_buss = ui_star_power
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Battle_Power_Awarded_SFX_P1_struct = {
+	Default_Priority = 90
+	Default_Buss = UI_Star_Power
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-battle_power_awarded_sfx_p1_container = {
-	command = playsound
-	randomness = randomnorepeattype
-	sounds = {
-		sound1 = {
+Battle_Power_Awarded_SFX_P1_container = {
+	command = PlaySound
+	Randomness = RandomNoRepeatType
+	Sounds = {
+		Sound1 = {
 			sp_awarded1
 			vol = 65
 			pan1x = -0.76199996
@@ -2940,18 +2940,18 @@ battle_power_awarded_sfx_p1_container = {
 		}
 	}
 }
-battle_power_awarded_sfx_p2_struct = {
-	default_priority = 90
-	default_buss = ui_star_power
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Battle_Power_Awarded_SFX_P2_struct = {
+	Default_Priority = 90
+	Default_Buss = UI_Star_Power
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-battle_power_awarded_sfx_p2_container = {
-	command = playsound
-	randomness = randomnorepeattype
-	sounds = {
-		sound1 = {
+Battle_Power_Awarded_SFX_P2_container = {
+	command = PlaySound
+	Randomness = RandomNoRepeatType
+	Sounds = {
+		Sound1 = {
 			sp_awarded1
 			vol = 65
 			pan1x = 0.47
@@ -2961,19 +2961,19 @@ battle_power_awarded_sfx_p2_container = {
 		}
 	}
 }
-hell_crowd_bad_to_med_sfx_struct = {
-	default_priority = 90
-	default_buss = crowd_transitions
-	norepeatfor = 0.02
-	instancemanagement = ignore
-	instancelimit = 3
+Hell_Crowd_Bad_To_Med_SFX_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.02
+	InstanceManagement = ignore
+	InstanceLimit = 3
 }
-hell_crowd_bad_to_med_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			hell_crowd_bad_neutral_fx
+Hell_Crowd_Bad_To_Med_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Hell_Crowd_Bad_Neutral_FX
 			vol = 40
 			pan1x = -0.897089
 			pan1y = 0.1418498
@@ -2982,19 +2982,19 @@ hell_crowd_bad_to_med_sfx_container = {
 		}
 	}
 }
-hell_crowd_bad_to_med_sfx_p1_struct = {
-	default_priority = 90
-	default_buss = crowd_transitions
-	norepeatfor = 0.02
-	instancemanagement = ignore
-	instancelimit = 2
+Hell_Crowd_Bad_To_Med_SFX_P1_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.02
+	InstanceManagement = ignore
+	InstanceLimit = 2
 }
-hell_crowd_bad_to_med_sfx_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			hell_crowd_bad_neutral_fx
+Hell_Crowd_Bad_To_Med_SFX_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Hell_Crowd_Bad_Neutral_FX
 			vol = 40
 			pan1x = -0.76199996
 			pan1y = 0.6470001
@@ -3003,19 +3003,19 @@ hell_crowd_bad_to_med_sfx_p1_container = {
 		}
 	}
 }
-hell_crowd_bad_to_med_sfx_p2_struct = {
-	default_priority = 90
-	default_buss = crowd_transitions
-	norepeatfor = 0.02
-	instancemanagement = ignore
-	instancelimit = 2
+Hell_Crowd_Bad_To_Med_SFX_P2_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.02
+	InstanceManagement = ignore
+	InstanceLimit = 2
 }
-hell_crowd_bad_to_med_sfx_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			hell_crowd_bad_neutral_fx
+Hell_Crowd_Bad_To_Med_SFX_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Hell_Crowd_Bad_Neutral_FX
 			vol = 40
 			pan1x = 0.47
 			pan1y = 0.883
@@ -3024,19 +3024,19 @@ hell_crowd_bad_to_med_sfx_p2_container = {
 		}
 	}
 }
-hell_crowd_good_to_med_sfx_struct = {
-	default_priority = 90
-	default_buss = crowd_transitions
-	norepeatfor = 0.02
-	instancemanagement = ignore
-	instancelimit = 3
+Hell_Crowd_Good_To_Med_SFX_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.02
+	InstanceManagement = ignore
+	InstanceLimit = 3
 }
-hell_crowd_good_to_med_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			hell_crowd_good_neutral_fx
+Hell_Crowd_Good_To_Med_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Hell_Crowd_Good_Neutral_FX
 			vol = 45
 			pan1x = -0.897089
 			pan1y = 0.1418498
@@ -3045,19 +3045,19 @@ hell_crowd_good_to_med_sfx_container = {
 		}
 	}
 }
-hell_crowd_good_to_med_sfx_p1_struct = {
-	default_priority = 90
-	default_buss = crowd_transitions
-	norepeatfor = 0.02
-	instancemanagement = ignore
-	instancelimit = 2
+Hell_Crowd_Good_To_Med_SFX_P1_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.02
+	InstanceManagement = ignore
+	InstanceLimit = 2
 }
-hell_crowd_good_to_med_sfx_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			hell_crowd_good_neutral_fx
+Hell_Crowd_Good_To_Med_SFX_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Hell_Crowd_Good_Neutral_FX
 			vol = 45
 			pan1x = -0.76199996
 			pan1y = 0.6470001
@@ -3066,19 +3066,19 @@ hell_crowd_good_to_med_sfx_p1_container = {
 		}
 	}
 }
-hell_crowd_good_to_med_sfx_p2_struct = {
-	default_priority = 90
-	default_buss = crowd_transitions
-	norepeatfor = 0.02
-	instancemanagement = ignore
-	instancelimit = 2
+Hell_Crowd_Good_To_Med_SFX_P2_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.02
+	InstanceManagement = ignore
+	InstanceLimit = 2
 }
-hell_crowd_good_to_med_sfx_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			hell_crowd_good_neutral_fx
+Hell_Crowd_Good_To_Med_SFX_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Hell_Crowd_Good_Neutral_FX
 			vol = 45
 			pan1x = 0.47
 			pan1y = 0.883
@@ -3087,19 +3087,19 @@ hell_crowd_good_to_med_sfx_p2_container = {
 		}
 	}
 }
-hell_crowd_med_to_bad_sfx_struct = {
-	default_priority = 90
-	default_buss = crowd_transitions
-	norepeatfor = 0.02
-	instancemanagement = ignore
-	instancelimit = 3
+Hell_Crowd_Med_To_Bad_SFX_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.02
+	InstanceManagement = ignore
+	InstanceLimit = 3
 }
-hell_crowd_med_to_bad_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			hell_crowd_neutral_bad
+Hell_Crowd_Med_To_Bad_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Hell_Crowd_Neutral_Bad
 			vol = 50
 			pan1x = -0.897089
 			pan1y = 0.1418498
@@ -3108,19 +3108,19 @@ hell_crowd_med_to_bad_sfx_container = {
 		}
 	}
 }
-hell_crowd_med_to_bad_sfx_p1_struct = {
-	default_priority = 90
-	default_buss = crowd_transitions
-	norepeatfor = 0.02
-	instancemanagement = ignore
-	instancelimit = 2
+Hell_Crowd_Med_To_Bad_SFX_P1_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.02
+	InstanceManagement = ignore
+	InstanceLimit = 2
 }
-hell_crowd_med_to_bad_sfx_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			hell_crowd_neutral_bad
+Hell_Crowd_Med_To_Bad_SFX_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Hell_Crowd_Neutral_Bad
 			vol = 50
 			pan1x = -0.76199996
 			pan1y = 0.6470001
@@ -3129,19 +3129,19 @@ hell_crowd_med_to_bad_sfx_p1_container = {
 		}
 	}
 }
-hell_crowd_med_to_bad_sfx_p2_struct = {
-	default_priority = 90
-	default_buss = crowd_transitions
-	norepeatfor = 0.02
-	instancemanagement = ignore
-	instancelimit = 2
+Hell_Crowd_Med_To_Bad_SFX_P2_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.02
+	InstanceManagement = ignore
+	InstanceLimit = 2
 }
-hell_crowd_med_to_bad_sfx_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			hell_crowd_neutral_bad
+Hell_Crowd_Med_To_Bad_SFX_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Hell_Crowd_Neutral_Bad
 			vol = 50
 			pan1x = 0.47
 			pan1y = 0.883
@@ -3150,19 +3150,19 @@ hell_crowd_med_to_bad_sfx_p2_container = {
 		}
 	}
 }
-hell_crowd_med_to_good_sfx_struct = {
-	default_priority = 90
-	default_buss = crowd_transitions
-	norepeatfor = 0.02
-	instancemanagement = ignore
-	instancelimit = 3
+Hell_Crowd_Med_To_Good_SFX_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.02
+	InstanceManagement = ignore
+	InstanceLimit = 3
 }
-hell_crowd_med_to_good_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			hell_neutral_good_sfx
+Hell_Crowd_Med_To_Good_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Hell_Neutral_Good_SFX
 			vol = 40
 			pan1x = -0.897089
 			pan1y = 0.1418498
@@ -3171,19 +3171,19 @@ hell_crowd_med_to_good_sfx_container = {
 		}
 	}
 }
-hell_crowd_med_to_good_sfx_p1_struct = {
-	default_priority = 90
-	default_buss = crowd_transitions
-	norepeatfor = 0.02
-	instancemanagement = ignore
-	instancelimit = 2
+Hell_Crowd_Med_To_Good_SFX_P1_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.02
+	InstanceManagement = ignore
+	InstanceLimit = 2
 }
-hell_crowd_med_to_good_sfx_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			hell_neutral_good_sfx
+Hell_Crowd_Med_To_Good_SFX_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Hell_Neutral_Good_SFX
 			vol = 40
 			pan1x = -0.76199996
 			pan1y = 0.6470001
@@ -3192,19 +3192,19 @@ hell_crowd_med_to_good_sfx_p1_container = {
 		}
 	}
 }
-hell_crowd_med_to_good_sfx_p2_struct = {
-	default_priority = 90
-	default_buss = crowd_transitions
-	norepeatfor = 0.02
-	instancemanagement = ignore
-	instancelimit = 2
+Hell_Crowd_Med_To_Good_SFX_P2_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.02
+	InstanceManagement = ignore
+	InstanceLimit = 2
 }
-hell_crowd_med_to_good_sfx_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			hell_neutral_good_sfx
+Hell_Crowd_Med_To_Good_SFX_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Hell_Neutral_Good_SFX
 			vol = 40
 			pan1x = 0.47
 			pan1y = 0.883
@@ -3213,19 +3213,19 @@ hell_crowd_med_to_good_sfx_p2_container = {
 		}
 	}
 }
-hell_crowd_swell_struct = {
-	default_priority = 90
-	default_buss = crowd_cheers
-	norepeatfor = 0.1
-	instancemanagement = ignore
-	instancelimit = 1
+Hell_Crowd_Swell_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Cheers
+	NoRepeatFor = 0.1
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-hell_crowd_swell_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			hell_crowd_swell
+Hell_Crowd_Swell_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Hell_Crowd_Swell
 			vol = 30
 			pan1x = -0.897089
 			pan1y = 0.1418498
@@ -3234,19 +3234,19 @@ hell_crowd_swell_container = {
 		}
 	}
 }
-small_crowd_swell_struct = {
-	default_priority = 90
-	default_buss = crowd_cheers
-	norepeatfor = 0.1
-	instancemanagement = ignore
-	instancelimit = 1
+Small_Crowd_Swell_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Cheers
+	NoRepeatFor = 0.1
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-small_crowd_swell_container = {
-	command = playsound
-	randomness = randomtype
-	sounds = {
-		sound1 = {
-			small_crowd_swell
+Small_Crowd_Swell_container = {
+	command = PlaySound
+	Randomness = RandomType
+	Sounds = {
+		Sound1 = {
+			Small_Crowd_Swell
 			vol = 40
 			pan1x = -0.897089
 			pan1y = 0.1418498
@@ -3255,19 +3255,19 @@ small_crowd_swell_container = {
 		}
 	}
 }
-outdoor_crowd_swell_struct = {
-	default_priority = 90
-	default_buss = crowd_cheers
-	norepeatfor = 0.1
-	instancemanagement = ignore
-	instancelimit = 1
+Outdoor_Crowd_Swell_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Cheers
+	NoRepeatFor = 0.1
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-outdoor_crowd_swell_container = {
-	command = playsound
-	randomness = randomnorepeattype
-	sounds = {
-		sound1 = {
-			outdoor_crowd_swell
+Outdoor_Crowd_Swell_container = {
+	command = PlaySound
+	Randomness = RandomNoRepeatType
+	Sounds = {
+		Sound1 = {
+			Outdoor_Crowd_Swell
 			pan1x = -0.897089
 			pan1y = 0.1418498
 			pan2x = 0.88932973
@@ -3275,35 +3275,35 @@ outdoor_crowd_swell_container = {
 		}
 	}
 }
-devil_die_transition_sfx_struct = {
-	default_priority = 90
-	default_buss = ui_battle_mode
-	norepeatfor = 0.1
-	instancemanagement = ignore
-	instancelimit = 1
+Devil_Die_Transition_SFX_struct = {
+	Default_Priority = 90
+	Default_Buss = UI_Battle_Mode
+	NoRepeatFor = 0.1
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-devil_die_transition_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			gh3_devil_die_sfx
+Devil_Die_Transition_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			GH3_Devil_Die_SFX
 		}
 	}
 }
-ui_1stplayerwins_sfx_struct = {
-	default_priority = 50
-	default_buss = front_end
-	norepeatfor = 0.1
-	instancemanagement = ignore
-	instancelimit = 1
+UI_1stPlayerWins_SFX_struct = {
+	Default_Priority = 50
+	Default_Buss = front_end
+	NoRepeatFor = 0.1
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-ui_1stplayerwins_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			multiplayer_win_screen
+UI_1stPlayerWins_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Multiplayer_Win_Screen
 			vol = 125
 			pan1x = -0.5000002
 			pan1y = 0.8660253
@@ -3312,19 +3312,19 @@ ui_1stplayerwins_sfx_container = {
 		}
 	}
 }
-ui_2ndplayerwins_sfx_struct = {
-	default_priority = 50
-	default_buss = front_end
-	norepeatfor = 0.1
-	instancemanagement = ignore
-	instancelimit = 1
+UI_2ndPlayerWins_SFX_struct = {
+	Default_Priority = 50
+	Default_Buss = front_end
+	NoRepeatFor = 0.1
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-ui_2ndplayerwins_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			multiplayer_win_screen
+UI_2ndPlayerWins_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Multiplayer_Win_Screen
 			vol = 125
 			pan1x = 0.5
 			pan1y = 0.86602545
@@ -3333,19 +3333,19 @@ ui_2ndplayerwins_sfx_container = {
 		}
 	}
 }
-preencore_crowd_build_sfx_backyard_struct = {
-	default_priority = 90
-	default_buss = crowd_preencore_building
-	norepeatfor = 3
-	instancemanagement = ignore
-	instancelimit = 1
+PreEncore_Crowd_Build_SFX_Backyard_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_PreEncore_Building
+	NoRepeatFor = 3
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-preencore_crowd_build_sfx_backyard_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			encore_build_party
+PreEncore_Crowd_Build_SFX_Backyard_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Encore_Build_Party
 			num_loops = -1
 			vol = 150
 			pan1x = -0.897089
@@ -3355,19 +3355,19 @@ preencore_crowd_build_sfx_backyard_container = {
 		}
 	}
 }
-preencore_crowd_build_sfx_budokan_struct = {
-	default_priority = 90
-	default_buss = crowd_preencore_building
-	norepeatfor = 3
-	instancemanagement = ignore
-	instancelimit = 1
+PreEncore_Crowd_Build_SFX_Budokan_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_PreEncore_Building
+	NoRepeatFor = 3
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-preencore_crowd_build_sfx_budokan_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			encore_build_budokan
+PreEncore_Crowd_Build_SFX_Budokan_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Encore_Build_Budokan
 			num_loops = -1
 			vol = 150
 			pan1x = -0.897089
@@ -3377,19 +3377,19 @@ preencore_crowd_build_sfx_budokan_container = {
 		}
 	}
 }
-preencore_crowd_build_sfx_deco_struct = {
-	default_priority = 90
-	default_buss = crowd_preencore_building
-	norepeatfor = 3
-	instancemanagement = ignore
-	instancelimit = 1
+PreEncore_Crowd_Build_SFX_Deco_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_PreEncore_Building
+	NoRepeatFor = 3
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-preencore_crowd_build_sfx_deco_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			encore_build_deco
+PreEncore_Crowd_Build_SFX_Deco_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Encore_Build_Deco
 			num_loops = -1
 			vol = 150
 			pan1x = -0.897089
@@ -3399,19 +3399,19 @@ preencore_crowd_build_sfx_deco_container = {
 		}
 	}
 }
-preencore_crowd_build_sfx_dive_struct = {
-	default_priority = 90
-	default_buss = crowd_preencore_building
-	norepeatfor = 3
-	instancemanagement = ignore
-	instancelimit = 1
+PreEncore_Crowd_Build_SFX_Dive_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_PreEncore_Building
+	NoRepeatFor = 3
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-preencore_crowd_build_sfx_dive_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			encore_build_dive
+PreEncore_Crowd_Build_SFX_Dive_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Encore_Build_Dive
 			num_loops = -1
 			vol = 150
 			pan1x = -0.897089
@@ -3421,19 +3421,19 @@ preencore_crowd_build_sfx_dive_container = {
 		}
 	}
 }
-preencore_crowd_build_sfx_hell_struct = {
-	default_priority = 90
-	default_buss = crowd_preencore_building
-	norepeatfor = 3
-	instancemanagement = ignore
-	instancelimit = 1
+PreEncore_Crowd_Build_SFX_Hell_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_PreEncore_Building
+	NoRepeatFor = 3
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-preencore_crowd_build_sfx_hell_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			encore_build_hell
+PreEncore_Crowd_Build_SFX_Hell_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Encore_Build_Hell
 			num_loops = -1
 			pan1x = -0.897089
 			pan1y = 0.1418498
@@ -3442,19 +3442,19 @@ preencore_crowd_build_sfx_hell_container = {
 		}
 	}
 }
-preencore_crowd_build_sfx_prison_struct = {
-	default_priority = 90
-	default_buss = crowd_preencore_building
-	norepeatfor = 3
-	instancemanagement = ignore
-	instancelimit = 1
+PreEncore_Crowd_Build_SFX_Prison_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_PreEncore_Building
+	NoRepeatFor = 3
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-preencore_crowd_build_sfx_prison_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			encore_build_prison
+PreEncore_Crowd_Build_SFX_Prison_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Encore_Build_Prison
 			num_loops = -1
 			pan1x = -0.897089
 			pan1y = 0.1418498
@@ -3463,19 +3463,19 @@ preencore_crowd_build_sfx_prison_container = {
 		}
 	}
 }
-preencore_crowd_build_sfx_video_struct = {
-	default_priority = 90
-	default_buss = crowd_preencore_building
-	norepeatfor = 3
-	instancemanagement = ignore
-	instancelimit = 1
+PreEncore_Crowd_Build_SFX_Video_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_PreEncore_Building
+	NoRepeatFor = 3
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-preencore_crowd_build_sfx_video_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			encore_build_video
+PreEncore_Crowd_Build_SFX_Video_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Encore_Build_Video
 			num_loops = -1
 			pan1x = -0.897089
 			pan1y = 0.1418498
@@ -3484,19 +3484,19 @@ preencore_crowd_build_sfx_video_container = {
 		}
 	}
 }
-preencore_crowd_build_sfx_wikker_struct = {
-	default_priority = 90
-	default_buss = crowd_preencore_building
-	norepeatfor = 3
-	instancemanagement = ignore
-	instancelimit = 1
+PreEncore_Crowd_Build_SFX_Wikker_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_PreEncore_Building
+	NoRepeatFor = 3
+	InstanceManagement = ignore
+	InstanceLimit = 1
 }
-preencore_crowd_build_sfx_wikker_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			encore_build_wikker
+PreEncore_Crowd_Build_SFX_Wikker_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Encore_Build_Wikker
 			num_loops = -1
 			vol = 150
 			pan1x = -0.897089
@@ -3506,39 +3506,39 @@ preencore_crowd_build_sfx_wikker_container = {
 		}
 	}
 }
-gh_sfx_hitnotesoundevent_struct = {
-	default_priority = 90
-	default_buss = test_tones
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+GH_SFX_HitNoteSoundEvent_struct = {
+	Default_Priority = 90
+	Default_Buss = Test_Tones
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-gh_sfx_hitnotesoundevent_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			gh3_beat_sound
+GH_SFX_HitNoteSoundEvent_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			GH3_Beat_Sound
 			vol = 200
 			pitch = 250
 		}
 	}
 }
-countoff_sfx_sticks_normal_hard_struct = {
-	default_priority = 90
-	default_buss = countoffs
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 2
+Countoff_SFX_Sticks_Normal_Hard_struct = {
+	Default_Priority = 90
+	Default_Buss = Countoffs
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 2
 }
-countoff_sfx_sticks_normal_hard_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			stickclickmed
-			randomvol = {
-				type = randomnorepeatlasttwotype
+Countoff_SFX_Sticks_Normal_Hard_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			StickClickMed
+			RandomVol = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					70
 					72
@@ -3546,8 +3546,8 @@ countoff_sfx_sticks_normal_hard_container = {
 					76
 				]
 			}
-			randompitch = {
-				type = randomnorepeatlasttwotype
+			RandomPitch = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					103
 					102
@@ -3559,21 +3559,21 @@ countoff_sfx_sticks_normal_hard_container = {
 		}
 	}
 }
-countoff_sfx_sticks_normal_med_struct = {
-	default_priority = 90
-	default_buss = countoffs
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 2
+Countoff_SFX_Sticks_Normal_Med_struct = {
+	Default_Priority = 90
+	Default_Buss = Countoffs
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 2
 }
-countoff_sfx_sticks_normal_med_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			stickclickmed
-			randomvol = {
-				type = randomnorepeatlasttwotype
+Countoff_SFX_Sticks_Normal_Med_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			StickClickMed
+			RandomVol = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					65
 					62
@@ -3581,8 +3581,8 @@ countoff_sfx_sticks_normal_med_container = {
 					50
 				]
 			}
-			randompitch = {
-				type = randomnorepeatlasttwotype
+			RandomPitch = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					101
 					100
@@ -3594,21 +3594,21 @@ countoff_sfx_sticks_normal_med_container = {
 		}
 	}
 }
-countoff_sfx_sticks_normal_soft_struct = {
-	default_priority = 90
-	default_buss = countoffs
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 2
+Countoff_SFX_Sticks_Normal_Soft_struct = {
+	Default_Priority = 90
+	Default_Buss = Countoffs
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 2
 }
-countoff_sfx_sticks_normal_soft_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			stickclickmed
-			randomvol = {
-				type = randomnorepeatlasttwotype
+Countoff_SFX_Sticks_Normal_Soft_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			StickClickMed
+			RandomVol = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					35
 					37
@@ -3616,8 +3616,8 @@ countoff_sfx_sticks_normal_soft_container = {
 					42
 				]
 			}
-			randompitch = {
-				type = randomnorepeatlasttwotype
+			RandomPitch = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					99
 					98
@@ -3629,29 +3629,29 @@ countoff_sfx_sticks_normal_soft_container = {
 		}
 	}
 }
-countoff_sfx_hihat01_hard_struct = {
-	default_priority = 50
-	default_buss = countoffs
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 2
+Countoff_SFX_HiHat01_Hard_struct = {
+	Default_Priority = 50
+	Default_Buss = Countoffs
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 2
 }
-countoff_sfx_hihat01_hard_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			hihatclosed01
-			randomvol = {
-				type = randomnorepeatlasttwotype
+Countoff_SFX_HiHat01_Hard_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			HiHatClosed01
+			RandomVol = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					90
 					95
 					100
 				]
 			}
-			randompitch = {
-				type = randomnorepeatlasttwotype
+			RandomPitch = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					103
 					102
@@ -3663,29 +3663,29 @@ countoff_sfx_hihat01_hard_container = {
 		}
 	}
 }
-countoff_sfx_hihat01_med_struct = {
-	default_priority = 50
-	default_buss = countoffs
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 2
+Countoff_SFX_HiHat01_Med_struct = {
+	Default_Priority = 50
+	Default_Buss = Countoffs
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 2
 }
-countoff_sfx_hihat01_med_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			hihatclosed01
-			randomvol = {
-				type = randomnorepeatlasttwotype
+Countoff_SFX_HiHat01_Med_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			HiHatClosed01
+			RandomVol = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					90
 					95
 					100
 				]
 			}
-			randompitch = {
-				type = randomnorepeatlasttwotype
+			RandomPitch = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					101
 					100
@@ -3697,29 +3697,29 @@ countoff_sfx_hihat01_med_container = {
 		}
 	}
 }
-countoff_sfx_hihat01_soft_struct = {
-	default_priority = 50
-	default_buss = countoffs
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 2
+Countoff_SFX_HiHat01_Soft_struct = {
+	Default_Priority = 50
+	Default_Buss = Countoffs
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 2
 }
-countoff_sfx_hihat01_soft_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			hihatclosed01
-			randomvol = {
-				type = randomnorepeatlasttwotype
+Countoff_SFX_HiHat01_Soft_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			HiHatClosed01
+			RandomVol = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					90
 					95
 					100
 				]
 			}
-			randompitch = {
-				type = randomnorepeatlasttwotype
+			RandomPitch = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					99
 					98
@@ -3731,29 +3731,29 @@ countoff_sfx_hihat01_soft_container = {
 		}
 	}
 }
-countoff_sfx_hihat02_hard_struct = {
-	default_priority = 50
-	default_buss = countoffs
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 3
+Countoff_SFX_HiHat02_Hard_struct = {
+	Default_Priority = 50
+	Default_Buss = Countoffs
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 3
 }
-countoff_sfx_hihat02_hard_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			hihatopen02
-			randomvol = {
-				type = randomnorepeatlasttwotype
+Countoff_SFX_HiHat02_Hard_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			HiHatOpen02
+			RandomVol = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					105
 					110
 					115
 				]
 			}
-			randompitch = {
-				type = randomnorepeatlasttwotype
+			RandomPitch = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					101
 					100
@@ -3763,29 +3763,29 @@ countoff_sfx_hihat02_hard_container = {
 		}
 	}
 }
-countoff_sfx_hihat02_med_struct = {
-	default_priority = 50
-	default_buss = countoffs
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 3
+Countoff_SFX_HiHat02_Med_struct = {
+	Default_Priority = 50
+	Default_Buss = Countoffs
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 3
 }
-countoff_sfx_hihat02_med_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			hihatopen02
-			randomvol = {
-				type = randomnorepeatlasttwotype
+Countoff_SFX_HiHat02_Med_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			HiHatOpen02
+			RandomVol = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					105
 					110
 					115
 				]
 			}
-			randompitch = {
-				type = randomnorepeatlasttwotype
+			RandomPitch = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					100
 					99
@@ -3795,29 +3795,29 @@ countoff_sfx_hihat02_med_container = {
 		}
 	}
 }
-countoff_sfx_hihat02_soft_struct = {
-	default_priority = 50
-	default_buss = countoffs
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 3
+Countoff_SFX_HiHat02_Soft_struct = {
+	Default_Priority = 50
+	Default_Buss = Countoffs
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 3
 }
-countoff_sfx_hihat02_soft_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			hihatopen02
-			randomvol = {
-				type = randomnorepeatlasttwotype
+Countoff_SFX_HiHat02_Soft_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			HiHatOpen02
+			RandomVol = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					105
 					110
 					115
 				]
 			}
-			randompitch = {
-				type = randomnorepeatlasttwotype
+			RandomPitch = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					99
 					98
@@ -3827,29 +3827,29 @@ countoff_sfx_hihat02_soft_container = {
 		}
 	}
 }
-countoff_sfx_hihat03_hard_struct = {
-	default_priority = 50
-	default_buss = countoffs
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 2
+Countoff_SFX_HiHat03_Hard_struct = {
+	Default_Priority = 50
+	Default_Buss = Countoffs
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 2
 }
-countoff_sfx_hihat03_hard_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			hihatpedal02
-			randomvol = {
-				type = randomnorepeatlasttwotype
+Countoff_SFX_HiHat03_Hard_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			HiHatPedal02
+			RandomVol = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					110
 					120
 					130
 				]
 			}
-			randompitch = {
-				type = randomnorepeatlasttwotype
+			RandomPitch = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					101
 					100
@@ -3859,29 +3859,29 @@ countoff_sfx_hihat03_hard_container = {
 		}
 	}
 }
-countoff_sfx_hihat03_med_struct = {
-	default_priority = 50
-	default_buss = countoffs
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 2
+Countoff_SFX_HiHat03_Med_struct = {
+	Default_Priority = 50
+	Default_Buss = Countoffs
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 2
 }
-countoff_sfx_hihat03_med_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			hihatpedal02
-			randomvol = {
-				type = randomnorepeatlasttwotype
+Countoff_SFX_HiHat03_Med_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			HiHatPedal02
+			RandomVol = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					110
 					120
 					130
 				]
 			}
-			randompitch = {
-				type = randomnorepeatlasttwotype
+			RandomPitch = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					100
 					99
@@ -3891,29 +3891,29 @@ countoff_sfx_hihat03_med_container = {
 		}
 	}
 }
-countoff_sfx_hihat03_soft_struct = {
-	default_priority = 50
-	default_buss = countoffs
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 2
+Countoff_SFX_HiHat03_Soft_struct = {
+	Default_Priority = 50
+	Default_Buss = Countoffs
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 2
 }
-countoff_sfx_hihat03_soft_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			hihatpedal02
-			randomvol = {
-				type = randomnorepeatlasttwotype
+Countoff_SFX_HiHat03_Soft_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			HiHatPedal02
+			RandomVol = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					110
 					120
 					130
 				]
 			}
-			randompitch = {
-				type = randomnorepeatlasttwotype
+			RandomPitch = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					99
 					98
@@ -3923,21 +3923,21 @@ countoff_sfx_hihat03_soft_container = {
 		}
 	}
 }
-countoff_sfx_sticks_huge_hard_struct = {
-	default_priority = 50
-	default_buss = countoffs
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 2
+Countoff_SFX_Sticks_Huge_Hard_struct = {
+	Default_Priority = 50
+	Default_Buss = Countoffs
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 2
 }
-countoff_sfx_sticks_huge_hard_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			stickclicklarge
-			randomvol = {
-				type = randomnorepeatlasttwotype
+Countoff_SFX_Sticks_Huge_Hard_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			StickClickLarge
+			RandomVol = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					70
 					72
@@ -3945,8 +3945,8 @@ countoff_sfx_sticks_huge_hard_container = {
 					76
 				]
 			}
-			randompitch = {
-				type = randomnorepeatlasttwotype
+			RandomPitch = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					103
 					102
@@ -3958,21 +3958,21 @@ countoff_sfx_sticks_huge_hard_container = {
 		}
 	}
 }
-countoff_sfx_sticks_huge_med_struct = {
-	default_priority = 50
-	default_buss = countoffs
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 2
+Countoff_SFX_Sticks_Huge_Med_struct = {
+	Default_Priority = 50
+	Default_Buss = Countoffs
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 2
 }
-countoff_sfx_sticks_huge_med_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			stickclicklarge
-			randomvol = {
-				type = randomnorepeatlasttwotype
+Countoff_SFX_Sticks_Huge_Med_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			StickClickLarge
+			RandomVol = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					70
 					72
@@ -3980,8 +3980,8 @@ countoff_sfx_sticks_huge_med_container = {
 					76
 				]
 			}
-			randompitch = {
-				type = randomnorepeatlasttwotype
+			RandomPitch = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					101
 					100
@@ -3993,21 +3993,21 @@ countoff_sfx_sticks_huge_med_container = {
 		}
 	}
 }
-countoff_sfx_sticks_huge_soft_struct = {
-	default_priority = 50
-	default_buss = countoffs
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 2
+Countoff_SFX_Sticks_Huge_Soft_struct = {
+	Default_Priority = 50
+	Default_Buss = Countoffs
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 2
 }
-countoff_sfx_sticks_huge_soft_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			stickclicklarge
-			randomvol = {
-				type = randomnorepeatlasttwotype
+Countoff_SFX_Sticks_Huge_Soft_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			StickClickLarge
+			RandomVol = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					70
 					72
@@ -4015,8 +4015,8 @@ countoff_sfx_sticks_huge_soft_container = {
 					76
 				]
 			}
-			randompitch = {
-				type = randomnorepeatlasttwotype
+			RandomPitch = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					99
 					98
@@ -4028,29 +4028,29 @@ countoff_sfx_sticks_huge_soft_container = {
 		}
 	}
 }
-countoff_sfx_sticks_tiny_hard_struct = {
-	default_priority = 50
-	default_buss = countoffs
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 2
+Countoff_SFX_Sticks_Tiny_Hard_struct = {
+	Default_Priority = 50
+	Default_Buss = Countoffs
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 2
 }
-countoff_sfx_sticks_tiny_hard_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			stickclicksmall
-			randomvol = {
-				type = randomnorepeatlasttwotype
+Countoff_SFX_Sticks_Tiny_Hard_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			StickClickSmall
+			RandomVol = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					85
 					90
 					95
 				]
 			}
-			randompitch = {
-				type = randomnorepeatlasttwotype
+			RandomPitch = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					103
 					102
@@ -4062,29 +4062,29 @@ countoff_sfx_sticks_tiny_hard_container = {
 		}
 	}
 }
-countoff_sfx_sticks_tiny_med_struct = {
-	default_priority = 50
-	default_buss = countoffs
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 2
+Countoff_SFX_Sticks_Tiny_Med_struct = {
+	Default_Priority = 50
+	Default_Buss = Countoffs
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 2
 }
-countoff_sfx_sticks_tiny_med_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			stickclicksmall
-			randomvol = {
-				type = randomnorepeatlasttwotype
+Countoff_SFX_Sticks_Tiny_Med_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			StickClickSmall
+			RandomVol = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					85
 					90
 					95
 				]
 			}
-			randompitch = {
-				type = randomnorepeatlasttwotype
+			RandomPitch = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					101
 					100
@@ -4096,29 +4096,29 @@ countoff_sfx_sticks_tiny_med_container = {
 		}
 	}
 }
-countoff_sfx_sticks_tiny_soft_struct = {
-	default_priority = 50
-	default_buss = countoffs
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 2
+Countoff_SFX_Sticks_Tiny_Soft_struct = {
+	Default_Priority = 50
+	Default_Buss = Countoffs
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 2
 }
-countoff_sfx_sticks_tiny_soft_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			stickclicksmall
-			randomvol = {
-				type = randomnorepeatlasttwotype
+Countoff_SFX_Sticks_Tiny_Soft_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			StickClickSmall
+			RandomVol = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					85
 					90
 					95
 				]
 			}
-			randompitch = {
-				type = randomnorepeatlasttwotype
+			RandomPitch = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					99
 					98
@@ -4130,261 +4130,261 @@ countoff_sfx_sticks_tiny_soft_container = {
 		}
 	}
 }
-win_axel_1_struct = {
-	default_priority = 50
-	default_buss = `default`
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Win_Axel_1_struct = {
+	Default_Priority = 50
+	Default_Buss = `default`
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-win_axel_1_container = {
-	command = obj_playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			axel_win_1
+Win_Axel_1_container = {
+	command = Obj_PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Axel_Win_1
 			dropoff = 50
 			dropoff_function = linear
 		}
 	}
 }
-cheat_single_strum_note_1_struct = {
-	default_priority = 50
-	default_buss = `default`
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Cheat_Single_Strum_Note_1_struct = {
+	Default_Priority = 50
+	Default_Buss = `default`
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-cheat_single_strum_note_1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			cheat_guitar_note_01
+Cheat_Single_Strum_Note_1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Cheat_Guitar_Note_01
 		}
 	}
 }
-cheat_single_strum_note_2_struct = {
-	default_priority = 50
-	default_buss = `default`
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Cheat_Single_Strum_Note_2_struct = {
+	Default_Priority = 50
+	Default_Buss = `default`
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-cheat_single_strum_note_2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			cheat_guitar_note_02
+Cheat_Single_Strum_Note_2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Cheat_Guitar_Note_02
 		}
 	}
 }
-cheat_single_strum_note_3_struct = {
-	default_priority = 50
-	default_buss = `default`
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Cheat_Single_Strum_Note_3_struct = {
+	Default_Priority = 50
+	Default_Buss = `default`
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-cheat_single_strum_note_3_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			cheat_guitar_note_03
+Cheat_Single_Strum_Note_3_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Cheat_Guitar_Note_03
 		}
 	}
 }
-cheat_single_strum_note_4_struct = {
-	default_priority = 50
-	default_buss = `default`
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Cheat_Single_Strum_Note_4_struct = {
+	Default_Priority = 50
+	Default_Buss = `default`
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-cheat_single_strum_note_4_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			cheat_guitar_note_04
+Cheat_Single_Strum_Note_4_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Cheat_Guitar_Note_04
 		}
 	}
 }
-cheat_single_strum_note_5_struct = {
-	default_priority = 50
-	default_buss = `default`
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Cheat_Single_Strum_Note_5_struct = {
+	Default_Priority = 50
+	Default_Buss = `default`
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-cheat_single_strum_note_5_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			cheat_guitar_note_05
+Cheat_Single_Strum_Note_5_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Cheat_Guitar_Note_05
 		}
 	}
 }
-cheat_chord_strum_1_struct = {
-	default_priority = 50
-	default_buss = `default`
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Cheat_Chord_Strum_1_struct = {
+	Default_Priority = 50
+	Default_Buss = `default`
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-cheat_chord_strum_1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			cheat_guitar_chord_01
+Cheat_Chord_Strum_1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Cheat_Guitar_Chord_01
 		}
 	}
 }
-cheat_chord_strum_2_struct = {
-	default_priority = 50
-	default_buss = `default`
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Cheat_Chord_Strum_2_struct = {
+	Default_Priority = 50
+	Default_Buss = `default`
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-cheat_chord_strum_2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			cheat_guitar_chord_02
+Cheat_Chord_Strum_2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Cheat_Guitar_Chord_02
 		}
 	}
 }
-cheat_chord_strum_3_struct = {
-	default_priority = 50
-	default_buss = `default`
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Cheat_Chord_Strum_3_struct = {
+	Default_Priority = 50
+	Default_Buss = `default`
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-cheat_chord_strum_3_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			cheat_guitar_chord_03
+Cheat_Chord_Strum_3_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Cheat_Guitar_Chord_03
 		}
 	}
 }
-cheat_chord_strum_4_struct = {
-	default_priority = 50
-	default_buss = `default`
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Cheat_Chord_Strum_4_struct = {
+	Default_Priority = 50
+	Default_Buss = `default`
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-cheat_chord_strum_4_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			cheat_guitar_chord_04
+Cheat_Chord_Strum_4_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Cheat_Guitar_Chord_04
 		}
 	}
 }
-cheat_chord_strum_5_struct = {
-	default_priority = 50
-	default_buss = `default`
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Cheat_Chord_Strum_5_struct = {
+	Default_Priority = 50
+	Default_Buss = `default`
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-cheat_chord_strum_5_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			cheat_guitar_chord_05
+Cheat_Chord_Strum_5_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Cheat_Guitar_Chord_05
 		}
 	}
 }
-cheat_chord_strum_6_struct = {
-	default_priority = 50
-	default_buss = `default`
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Cheat_Chord_Strum_6_struct = {
+	Default_Priority = 50
+	Default_Buss = `default`
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-cheat_chord_strum_6_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			cheat_guitar_chord_06
+Cheat_Chord_Strum_6_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Cheat_Guitar_Chord_06
 		}
 	}
 }
-cheat_chord_strum_7_struct = {
-	default_priority = 50
-	default_buss = `default`
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Cheat_Chord_Strum_7_struct = {
+	Default_Priority = 50
+	Default_Buss = `default`
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-cheat_chord_strum_7_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			cheat_guitar_chord_07
+Cheat_Chord_Strum_7_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Cheat_Guitar_Chord_07
 		}
 	}
 }
-cheat_chord_strum_8_struct = {
-	default_priority = 50
-	default_buss = `default`
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Cheat_Chord_Strum_8_struct = {
+	Default_Priority = 50
+	Default_Buss = `default`
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-cheat_chord_strum_8_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			cheat_guitar_chord_08
+Cheat_Chord_Strum_8_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Cheat_Guitar_Chord_08
 		}
 	}
 }
-cheat_chord_strum_9_struct = {
-	default_priority = 50
-	default_buss = `default`
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Cheat_Chord_Strum_9_struct = {
+	Default_Priority = 50
+	Default_Buss = `default`
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-cheat_chord_strum_9_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			cheat_guitar_chord_09
+Cheat_Chord_Strum_9_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Cheat_Guitar_Chord_09
 		}
 	}
 }
-gh_sfx_battlemode_whammyattack_received_p1_struct = {
-	default_priority = 50
-	default_buss = ui_battle_mode
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+GH_SFX_BattleMode_WhammyAttack_Received_P1_struct = {
+	Default_Priority = 50
+	Default_Buss = UI_Battle_Mode
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-gh_sfx_battlemode_whammyattack_received_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			gh3_battlemode_whammyattack_received
+GH_SFX_BattleMode_WhammyAttack_Received_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			GH3_BattleMode_WhammyAttack_Received
 			vol = 35
 			pan1x = -0.76199996
 			pan1y = 0.6470001
@@ -4393,19 +4393,19 @@ gh_sfx_battlemode_whammyattack_received_p1_container = {
 		}
 	}
 }
-gh_sfx_battlemode_whammyattack_received_p2_struct = {
-	default_priority = 50
-	default_buss = ui_battle_mode
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+GH_SFX_BattleMode_WhammyAttack_Received_P2_struct = {
+	Default_Priority = 50
+	Default_Buss = UI_Battle_Mode
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-gh_sfx_battlemode_whammyattack_received_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			gh3_battlemode_whammyattack_received
+GH_SFX_BattleMode_WhammyAttack_Received_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			GH3_BattleMode_WhammyAttack_Received
 			vol = 35
 			pan1x = 0.47
 			pan1y = 0.883
@@ -4414,83 +4414,83 @@ gh_sfx_battlemode_whammyattack_received_p2_container = {
 		}
 	}
 }
-cheat_chord_strum_10_struct = {
-	default_priority = 50
-	default_buss = `default`
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Cheat_Chord_Strum_10_struct = {
+	Default_Priority = 50
+	Default_Buss = `default`
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-cheat_chord_strum_10_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			cheat_guitar_chord_10
+Cheat_Chord_Strum_10_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Cheat_Guitar_Chord_10
 		}
 	}
 }
-cheat_chord_strum_11_struct = {
-	default_priority = 50
-	default_buss = `default`
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Cheat_Chord_Strum_11_struct = {
+	Default_Priority = 50
+	Default_Buss = `default`
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-cheat_chord_strum_11_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			cheat_guitar_chord_11
+Cheat_Chord_Strum_11_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Cheat_Guitar_Chord_11
 		}
 	}
 }
-cheat_chord_strum_12_struct = {
-	default_priority = 50
-	default_buss = `default`
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Cheat_Chord_Strum_12_struct = {
+	Default_Priority = 50
+	Default_Buss = `default`
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-cheat_chord_strum_12_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			cheat_guitar_chord_12
+Cheat_Chord_Strum_12_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Cheat_Guitar_Chord_12
 		}
 	}
 }
-checkbox_sfx_struct = {
-	default_priority = 80
-	default_buss = ui_star_power
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Checkbox_SFX_struct = {
+	Default_Priority = 80
+	Default_Buss = UI_Star_Power
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-checkbox_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
+Checkbox_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
 			checkbox_sfx
 			vol = 80
 		}
 	}
 }
-checkbox_sfx_p1_struct = {
-	default_priority = 80
-	default_buss = ui_star_power
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Checkbox_SFX_P1_struct = {
+	Default_Priority = 80
+	Default_Buss = UI_Star_Power
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-checkbox_sfx_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
+Checkbox_SFX_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
 			checkbox_sfx
 			vol = 80
 			pan1x = -0.47
@@ -4498,18 +4498,18 @@ checkbox_sfx_p1_container = {
 		}
 	}
 }
-checkbox_sfx_p2_struct = {
-	default_priority = 80
-	default_buss = ui_star_power
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Checkbox_SFX_P2_struct = {
+	Default_Priority = 80
+	Default_Buss = UI_Star_Power
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-checkbox_sfx_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
+Checkbox_SFX_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
 			checkbox_sfx
 			vol = 80
 			pan1x = 0.47
@@ -4517,332 +4517,332 @@ checkbox_sfx_p2_container = {
 		}
 	}
 }
-whammy_test_sfx_struct = {
-	default_priority = 80
-	default_buss = ui_star_power
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 5
+Whammy_Test_SFX_struct = {
+	Default_Priority = 80
+	Default_Buss = UI_Star_Power
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 5
 }
-whammy_test_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			whammy_test_sfx
+Whammy_Test_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Whammy_Test_SFX
 			vol = 70
 		}
 	}
 }
-pow_sfx_struct = {
-	default_priority = 80
-	default_buss = ui_star_power
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 4
+POW_SFX_struct = {
+	Default_Priority = 80
+	Default_Buss = UI_Star_Power
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 4
 }
-pow_sfx_container = {
-	command = playsound
-	randomness = randomnorepeattype
-	sounds = {
-		sound1 = {
-			pow_sfx_02
+POW_SFX_container = {
+	command = PlaySound
+	Randomness = RandomNoRepeatType
+	Sounds = {
+		Sound1 = {
+			POW_SFX_02
 			vol = 200
 		}
-		sound2 = {
-			pow_sfx_05
+		Sound2 = {
+			POW_SFX_05
 			vol = 200
 		}
-		sound3 = {
-			pow_sfx_07
+		Sound3 = {
+			POW_SFX_07
 			vol = 200
 		}
 	}
 }
-checkbox_check_sfx_struct = {
-	default_priority = 80
-	default_buss = ui_star_power
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+CheckBox_Check_SFX_struct = {
+	Default_Priority = 80
+	Default_Buss = UI_Star_Power
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-checkbox_check_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			checkbox_check_sfx
+CheckBox_Check_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			CheckBox_Check_SFX
 			vol = 80
 		}
 	}
 }
-checkbox_check_sfx_p1_struct = {
-	default_priority = 80
-	default_buss = ui_star_power
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+CheckBox_Check_SFX_P1_struct = {
+	Default_Priority = 80
+	Default_Buss = UI_Star_Power
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-checkbox_check_sfx_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			checkbox_check_sfx
+CheckBox_Check_SFX_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			CheckBox_Check_SFX
 			vol = 80
 			pan1x = -0.47
 			pan1y = 0.88
 		}
 	}
 }
-checkbox_check_sfx_p2_struct = {
-	default_priority = 80
-	default_buss = ui_star_power
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+CheckBox_Check_SFX_P2_struct = {
+	Default_Priority = 80
+	Default_Buss = UI_Star_Power
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-checkbox_check_sfx_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			checkbox_check_sfx
+CheckBox_Check_SFX_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			CheckBox_Check_SFX
 			vol = 80
 			pan1x = 0.47
 			pan1y = 0.88
 		}
 	}
 }
-axel_lose_1_struct = {
-	default_priority = 80
-	default_buss = crowd_boos
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Axel_Lose_1_struct = {
+	Default_Priority = 80
+	Default_Buss = Crowd_Boos
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-axel_lose_1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			axel_lose_1
+Axel_Lose_1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Axel_Lose_1
 			vol = 75
 		}
 	}
 }
-axel_lose_2_struct = {
-	default_priority = 80
-	default_buss = crowd_boos
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Axel_Lose_2_struct = {
+	Default_Priority = 80
+	Default_Buss = Crowd_Boos
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-axel_lose_2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			axel_lose_2
+Axel_Lose_2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Axel_Lose_2
 			dropoff = 50
 			dropoff_function = linear
 			vol = 75
 		}
 	}
 }
-axel_win_1_struct = {
-	default_priority = 80
-	default_buss = crowd_boos
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Axel_Win_1_struct = {
+	Default_Priority = 80
+	Default_Buss = Crowd_Boos
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-axel_win_1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			axel_win_1
+Axel_Win_1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Axel_Win_1
 			dropoff = 50
 			dropoff_function = linear
 			vol = 75
 		}
 	}
 }
-axel_win_4_struct = {
-	default_priority = 80
-	default_buss = crowd_boos
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Axel_Win_4_struct = {
+	Default_Priority = 80
+	Default_Buss = Crowd_Boos
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-axel_win_4_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			axel_win_4
+Axel_Win_4_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Axel_Win_4
 			dropoff = 50
 			dropoff_function = linear
 			vol = 75
 		}
 	}
 }
-izzy_lose_1_struct = {
-	default_priority = 80
-	default_buss = crowd_boos
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Izzy_Lose_1_struct = {
+	Default_Priority = 80
+	Default_Buss = Crowd_Boos
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-izzy_lose_1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			izzy_lose_1
+Izzy_Lose_1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Izzy_Lose_1
 			vol = 40
 		}
 	}
 }
-izzy_lose_2_struct = {
-	default_priority = 80
-	default_buss = crowd_boos
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Izzy_Lose_2_struct = {
+	Default_Priority = 80
+	Default_Buss = Crowd_Boos
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-izzy_lose_2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			izzy_lose_2
+Izzy_Lose_2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Izzy_Lose_2
 			dropoff = 50
 			dropoff_function = linear
 			vol = 75
 		}
 	}
 }
-johnny_lose_1_struct = {
-	default_priority = 80
-	default_buss = crowd_boos
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Johnny_Lose_1_struct = {
+	Default_Priority = 80
+	Default_Buss = Crowd_Boos
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-johnny_lose_1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			johnny_lose_1
+Johnny_Lose_1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Johnny_Lose_1
 			dropoff = 50
 			dropoff_function = linear
 			vol = 75
 		}
 	}
 }
-lars_lose_1_struct = {
-	default_priority = 80
-	default_buss = crowd_boos
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Lars_Lose_1_struct = {
+	Default_Priority = 80
+	Default_Buss = Crowd_Boos
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-lars_lose_1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			lars_lose_1
+Lars_Lose_1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Lars_Lose_1
 			dropoff = 50
 			dropoff_function = linear
 			vol = 75
 		}
 	}
 }
-lars_win_3_struct = {
-	default_priority = 80
-	default_buss = crowd_boos
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Lars_Win_3_struct = {
+	Default_Priority = 80
+	Default_Buss = Crowd_Boos
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-lars_win_3_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			lars_win_3
+Lars_Win_3_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Lars_Win_3
 			vol = 75
 		}
 	}
 }
-midori_lose_1_struct = {
-	default_priority = 80
-	default_buss = crowd_boos
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Midori_Lose_1_struct = {
+	Default_Priority = 80
+	Default_Buss = Crowd_Boos
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-midori_lose_1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			midori_lose_1
+Midori_Lose_1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Midori_Lose_1
 			vol = 75
 		}
 	}
 }
-midori_win_1_struct = {
-	default_priority = 80
-	default_buss = crowd_boos
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Midori_Win_1_struct = {
+	Default_Priority = 80
+	Default_Buss = Crowd_Boos
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-midori_win_1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			midori_win_1
+Midori_Win_1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Midori_Win_1
 			vol = 50
 		}
 	}
 }
-tutorial_mode_finish_chord_struct = {
-	default_priority = 50
-	default_buss = `default`
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Tutorial_Mode_Finish_Chord_struct = {
+	Default_Priority = 50
+	Default_Buss = `default`
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-tutorial_mode_finish_chord_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			finish_chord
+Tutorial_Mode_Finish_Chord_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Finish_Chord
 			vol = 130
 		}
 	}
 }
-battle_left_player_cheer_sfx_struct = {
-	default_priority = 90
-	default_buss = crowd_cheers
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Battle_Left_Player_Cheer_SFX_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Cheers
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-battle_left_player_cheer_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			crowd_med_to_good
+Battle_Left_Player_Cheer_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Crowd_Med_To_Good
 			vol = 60
 			pan1x = -0.76199996
 			pan1y = 0.6470001
@@ -4851,19 +4851,19 @@ battle_left_player_cheer_sfx_container = {
 		}
 	}
 }
-battle_right_player_cheer_sfx_struct = {
-	default_priority = 90
-	default_buss = crowd_cheers
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Battle_Right_Player_Cheer_SFX_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Cheers
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-battle_right_player_cheer_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			crowd_med_to_good
+Battle_Right_Player_Cheer_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Crowd_Med_To_Good
 			vol = 60
 			pan1x = 0.47
 			pan1y = 0.883
@@ -4872,19 +4872,19 @@ battle_right_player_cheer_sfx_container = {
 		}
 	}
 }
-battle_left_player_ooo_sfx_struct = {
-	default_priority = 90
-	default_buss = crowd_nuetral
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Battle_Left_Player_Ooo_SFX_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Nuetral
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-battle_left_player_ooo_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			crowd_good_to_medium
+Battle_Left_Player_Ooo_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Crowd_Good_To_Medium
 			vol = 75
 			pan1x = -1
 			pan1y = -0.5
@@ -4893,19 +4893,19 @@ battle_left_player_ooo_sfx_container = {
 		}
 	}
 }
-battle_right_player_ooo_sfx_struct = {
-	default_priority = 90
-	default_buss = crowd_nuetral
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Battle_Right_Player_Ooo_SFX_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Nuetral
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-battle_right_player_ooo_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			crowd_good_to_medium
+Battle_Right_Player_Ooo_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Crowd_Good_To_Medium
 			vol = 75
 			pan1x = -1
 			pan1y = -0.5
@@ -4914,74 +4914,53 @@ battle_right_player_ooo_sfx_container = {
 		}
 	}
 }
-ui_sfx_100_note_streak_singleplayer_struct = {
-	default_priority = 50
-	default_buss = front_end
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+UI_SFX_100_Note_Streak_SinglePlayer_struct = {
+	Default_Priority = 50
+	Default_Buss = front_end
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-ui_sfx_100_note_streak_singleplayer_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			ui_sfx_100_note_streak
+UI_SFX_100_Note_Streak_SinglePlayer_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			UI_SFX_100_Note_Streak
 			vol = 90
 		}
 	}
 }
-ui_sfx_50_note_streak_singleplayer_struct = {
-	default_priority = 50
-	default_buss = front_end
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+UI_SFX_50_Note_Streak_SinglePlayer_struct = {
+	Default_Priority = 50
+	Default_Buss = front_end
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-ui_sfx_50_note_streak_singleplayer_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			ui_sfx_50_note_streak
+UI_SFX_50_Note_Streak_SinglePlayer_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			UI_SFX_50_Note_Streak
 			vol = 90
 		}
 	}
 }
-ui_sfx_100_note_streak_p1_struct = {
-	default_priority = 50
-	default_buss = front_end
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+UI_SFX_100_Note_Streak_P1_struct = {
+	Default_Priority = 50
+	Default_Buss = front_end
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-ui_sfx_100_note_streak_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			ui_sfx_100_note_streak
-			vol = 90
-			pan1x = -0.76199996
-			pan1y = 0.6470001
-			pan2x = -0.44799998
-			pan2y = 0.894
-		}
-	}
-}
-ui_sfx_50_note_streak_p1_struct = {
-	default_priority = 50
-	default_buss = front_end
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
-}
-ui_sfx_50_note_streak_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			ui_sfx_50_note_streak
+UI_SFX_100_Note_Streak_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			UI_SFX_100_Note_Streak
 			vol = 90
 			pan1x = -0.76199996
 			pan1y = 0.6470001
@@ -4990,19 +4969,40 @@ ui_sfx_50_note_streak_p1_container = {
 		}
 	}
 }
-ui_sfx_100_note_streak_p2_struct = {
-	default_priority = 50
-	default_buss = front_end
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+UI_SFX_50_Note_Streak_P1_struct = {
+	Default_Priority = 50
+	Default_Buss = front_end
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-ui_sfx_100_note_streak_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			ui_sfx_100_note_streak
+UI_SFX_50_Note_Streak_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			UI_SFX_50_Note_Streak
+			vol = 90
+			pan1x = -0.76199996
+			pan1y = 0.6470001
+			pan2x = -0.44799998
+			pan2y = 0.894
+		}
+	}
+}
+UI_SFX_100_Note_Streak_P2_struct = {
+	Default_Priority = 50
+	Default_Buss = front_end
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
+}
+UI_SFX_100_Note_Streak_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			UI_SFX_100_Note_Streak
 			vol = 90
 			pan1x = 0.47
 			pan1y = 0.883
@@ -5011,19 +5011,19 @@ ui_sfx_100_note_streak_p2_container = {
 		}
 	}
 }
-ui_sfx_50_note_streak_p2_struct = {
-	default_priority = 50
-	default_buss = front_end
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+UI_SFX_50_Note_Streak_P2_struct = {
+	Default_Priority = 50
+	Default_Buss = front_end
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-ui_sfx_50_note_streak_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			ui_sfx_50_note_streak
+UI_SFX_50_Note_Streak_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			UI_SFX_50_Note_Streak
 			vol = 90
 			pan1x = 0.47
 			pan1y = 0.883
@@ -5032,19 +5032,19 @@ ui_sfx_50_note_streak_p2_container = {
 		}
 	}
 }
-gh_sfx_battlemode_death_drain_p1_struct = {
-	default_priority = 50
-	default_buss = ui_battle_mode
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+GH_SFX_BattleMode_Death_Drain_P1_struct = {
+	Default_Priority = 50
+	Default_Buss = UI_Battle_Mode
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-gh_sfx_battlemode_death_drain_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			gh3_battlemode_death_drain
+GH_SFX_BattleMode_Death_Drain_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			GH3_Battlemode_Death_Drain
 			vol = 45
 			pan1x = -0.5000002
 			pan1y = 0.8660253
@@ -5053,19 +5053,19 @@ gh_sfx_battlemode_death_drain_p1_container = {
 		}
 	}
 }
-gh_sfx_battlemode_death_drain_p2_struct = {
-	default_priority = 50
-	default_buss = ui_battle_mode
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+GH_SFX_BattleMode_Death_Drain_P2_struct = {
+	Default_Priority = 50
+	Default_Buss = UI_Battle_Mode
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-gh_sfx_battlemode_death_drain_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			gh3_battlemode_death_drain
+GH_SFX_BattleMode_Death_Drain_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			GH3_Battlemode_Death_Drain
 			vol = 45
 			pan1x = 0.5
 			pan1y = 0.86602545
@@ -5074,36 +5074,36 @@ gh_sfx_battlemode_death_drain_p2_container = {
 		}
 	}
 }
-gh_sfx_battlemode_sudden_death_struct = {
-	default_priority = 50
-	default_buss = ui_battle_mode
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+GH_SFX_BattleMode_Sudden_Death_struct = {
+	Default_Priority = 50
+	Default_Buss = UI_Battle_Mode
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-gh_sfx_battlemode_sudden_death_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			gh3_battlemode_deathfromslash
+GH_SFX_BattleMode_Sudden_Death_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			GH3_BattleMode_DeathFromSlash
 			vol = 80
 		}
 	}
 }
-encore_decline_crowd_med_to_bad_sfx_struct = {
-	default_priority = 90
-	default_buss = crowd_boos
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Encore_Decline_Crowd_Med_To_Bad_SFX_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Boos
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-encore_decline_crowd_med_to_bad_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			crowd_med_to_bad
+Encore_Decline_Crowd_Med_To_Bad_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Crowd_Med_To_Bad
 			vol = 70
 			pan1x = -0.897089
 			pan1y = 0.1418498
@@ -5112,19 +5112,19 @@ encore_decline_crowd_med_to_bad_sfx_container = {
 		}
 	}
 }
-encore_decline_medium_crowd_med_to_bad_sfx_struct = {
-	default_priority = 90
-	default_buss = crowd_transitions
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Encore_Decline_Medium_Crowd_Med_To_Bad_SFX_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-encore_decline_medium_crowd_med_to_bad_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			medium_crowd_medium_to_bad
+Encore_Decline_Medium_Crowd_Med_To_Bad_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Medium_Crowd_Medium_to_Bad
 			vol = 160
 			pan1x = -0.897089
 			pan1y = 0.1418498
@@ -5133,19 +5133,19 @@ encore_decline_medium_crowd_med_to_bad_sfx_container = {
 		}
 	}
 }
-encore_decline_small_crowd_med_to_bad_sfx_struct = {
-	default_priority = 50
-	default_buss = crowd_transitions
-	norepeatfor = 0.2
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Encore_Decline_Small_Crowd_Med_To_Bad_SFX_struct = {
+	Default_Priority = 50
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.2
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-encore_decline_small_crowd_med_to_bad_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			small_crowd_med_to_bad
+Encore_Decline_Small_Crowd_Med_To_Bad_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Small_Crowd_Med_To_Bad
 			vol = 60
 			pan1x = -0.897089
 			pan1y = 0.1418498
@@ -5154,19 +5154,19 @@ encore_decline_small_crowd_med_to_bad_sfx_container = {
 		}
 	}
 }
-encore_decline_hell_crowd_med_to_bad_sfx_struct = {
-	default_priority = 90
-	default_buss = crowd_transitions
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Encore_Decline_Hell_Crowd_Med_To_Bad_SFX_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-encore_decline_hell_crowd_med_to_bad_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			hell_crowd_neutral_bad
+Encore_Decline_Hell_Crowd_Med_To_Bad_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Hell_Crowd_Neutral_Bad
 			vol = 50
 			pan1x = -0.897089
 			pan1y = 0.1418498
@@ -5175,19 +5175,19 @@ encore_decline_hell_crowd_med_to_bad_sfx_container = {
 		}
 	}
 }
-small_crowd_applause_se_struct = {
-	default_priority = 50
-	default_buss = `default`
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Small_Crowd_Applause_SE_struct = {
+	Default_Priority = 50
+	Default_Buss = `default`
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-small_crowd_applause_se_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			small_crowd_applause
+Small_Crowd_Applause_SE_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Small_Crowd_Applause
 			pan1x = -0.897089
 			pan1y = 0.1418498
 			pan2x = 0.88932973
@@ -5195,224 +5195,224 @@ small_crowd_applause_se_container = {
 		}
 	}
 }
-slash_outro_struct = {
-	default_priority = 80
-	default_buss = crowd_boos
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Slash_Outro_struct = {
+	Default_Priority = 80
+	Default_Buss = Crowd_Boos
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-slash_outro_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			slash_guitar_smashing
+Slash_Outro_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Slash_Guitar_Smashing
 			vol = 100
 			vol = 150
 		}
 	}
 }
-slash_intro_back_speakers_struct = {
-	default_priority = 100
-	default_buss = crowd_boos
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Slash_Intro_Back_Speakers_struct = {
+	Default_Priority = 100
+	Default_Buss = Crowd_Boos
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-slash_intro_back_speakers_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			slash_intro_back_speakers
+Slash_Intro_Back_Speakers_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Slash_Intro_Back_Speakers
 			vol = 150
 		}
 	}
 }
-slash_intro_front_speakers_struct = {
-	default_priority = 100
-	default_buss = crowd_boos
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Slash_Intro_Front_Speakers_struct = {
+	Default_Priority = 100
+	Default_Buss = Crowd_Boos
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-slash_intro_front_speakers_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			slash_intro_front_speakers
+Slash_Intro_Front_Speakers_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Slash_Intro_Front_Speakers
 			vol = 150
 		}
 	}
 }
-tom_intro_back_speakers_struct = {
-	default_priority = 100
-	default_buss = crowd_boos
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Tom_Intro_Back_Speakers_struct = {
+	Default_Priority = 100
+	Default_Buss = Crowd_Boos
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-tom_intro_back_speakers_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			tom_intro_back_speakers
+Tom_Intro_Back_Speakers_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Tom_Intro_Back_Speakers
 			vol = 150
 		}
 	}
 }
-tom_intro_front_speakers_struct = {
-	default_priority = 100
-	default_buss = crowd_boos
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Tom_Intro_Front_Speakers_struct = {
+	Default_Priority = 100
+	Default_Buss = Crowd_Boos
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-tom_intro_front_speakers_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			tom_intro_front_speakers
+Tom_Intro_Front_Speakers_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Tom_Intro_Front_Speakers
 			vol = 150
 		}
 	}
 }
-tutorial_missed_hopo_free_struct = {
-	default_priority = 100
-	default_buss = front_end
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Tutorial_Missed_HOPO_Free_struct = {
+	Default_Priority = 100
+	Default_Buss = front_end
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-tutorial_missed_hopo_free_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			tutorial_missed_hopo_free
+Tutorial_Missed_HOPO_Free_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Tutorial_Missed_HOPO_Free
 			vol = 150
 		}
 	}
 }
-tutorial_string_1_hopo_free_struct = {
-	default_priority = 100
-	default_buss = front_end
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Tutorial_String_1_HOPO_Free_struct = {
+	Default_Priority = 100
+	Default_Buss = front_end
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-tutorial_string_1_hopo_free_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			tutorial_string_1_hopo_free
+Tutorial_String_1_HOPO_Free_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Tutorial_String_1_HOPO_Free
 			vol = 150
 		}
 	}
 }
-tutorial_string_1_strum_free_struct = {
-	default_priority = 100
-	default_buss = front_end
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Tutorial_String_1_Strum_Free_struct = {
+	Default_Priority = 100
+	Default_Buss = front_end
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-tutorial_string_1_strum_free_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			tutorial_string_1_strum_free
+Tutorial_String_1_Strum_Free_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Tutorial_String_1_Strum_Free
 			vol = 150
 		}
 	}
 }
-tutorial_string_2_hopo_free_struct = {
-	default_priority = 100
-	default_buss = front_end
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Tutorial_String_2_HOPO_Free_struct = {
+	Default_Priority = 100
+	Default_Buss = front_end
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-tutorial_string_2_hopo_free_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			tutorial_string_2_hopo_free
+Tutorial_String_2_HOPO_Free_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Tutorial_String_2_HOPO_Free
 			vol = 150
 		}
 	}
 }
-tutorial_string_2_strum_free_struct = {
-	default_priority = 100
-	default_buss = front_end
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Tutorial_String_2_Strum_Free_struct = {
+	Default_Priority = 100
+	Default_Buss = front_end
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-tutorial_string_2_strum_free_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			tutorial_string_2_strum_free
+Tutorial_String_2_Strum_Free_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Tutorial_String_2_Strum_Free
 			vol = 150
 		}
 	}
 }
-tutorial_string_3_hopo_free_struct = {
-	default_priority = 100
-	default_buss = front_end
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 3
+Tutorial_String_3_HOPO_Free_struct = {
+	Default_Priority = 100
+	Default_Buss = front_end
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 3
 }
-tutorial_string_3_hopo_free_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			tutorial_string_3_hopo_free
+Tutorial_String_3_HOPO_Free_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Tutorial_String_3_HOPO_Free
 			vol = 150
 		}
 	}
 }
-tutorial_string_3_strum_free_struct = {
-	default_priority = 100
-	default_buss = front_end
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Tutorial_String_3_Strum_Free_struct = {
+	Default_Priority = 100
+	Default_Buss = front_end
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-tutorial_string_3_strum_free_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			tutorial_string_3_strum_free
+Tutorial_String_3_Strum_Free_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Tutorial_String_3_Strum_Free
 			vol = 150
 		}
 	}
 }
-battle_attack_small_crowd_cheer_p1_struct = {
-	default_priority = 20
-	default_buss = crowd_transitions
-	norepeatfor = 0.75
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Battle_Attack_Small_Crowd_Cheer_P1_struct = {
+	Default_Priority = 20
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.75
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-battle_attack_small_crowd_cheer_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			small_crowd_med_to_good
+Battle_Attack_Small_Crowd_Cheer_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Small_Crowd_Med_To_Good
 			vol = 85
 			pan1x = -0.76199996
 			pan1y = 0.6470001
@@ -5421,19 +5421,19 @@ battle_attack_small_crowd_cheer_p1_container = {
 		}
 	}
 }
-battle_attack_medium_crowd_cheer_p1_struct = {
-	default_priority = 90
-	default_buss = crowd_transitions
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Battle_Attack_Medium_Crowd_Cheer_P1_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-battle_attack_medium_crowd_cheer_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			medium_crowd_medium_to_good
+Battle_Attack_Medium_Crowd_Cheer_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Medium_Crowd_Medium_to_Good
 			vol = 105
 			pan1x = -0.76199996
 			pan1y = 0.6470001
@@ -5442,19 +5442,19 @@ battle_attack_medium_crowd_cheer_p1_container = {
 		}
 	}
 }
-battle_attack_large_crowd_cheer_p1_struct = {
-	default_priority = 90
-	default_buss = crowd_cheers
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Battle_Attack_Large_Crowd_Cheer_P1_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Cheers
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-battle_attack_large_crowd_cheer_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			crowd_med_to_good
+Battle_Attack_Large_Crowd_Cheer_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Crowd_Med_To_Good
 			vol = 73
 			pan1x = -0.76199996
 			pan1y = 0.6470001
@@ -5463,19 +5463,19 @@ battle_attack_large_crowd_cheer_p1_container = {
 		}
 	}
 }
-battle_attack_hell_crowd_cheer_p1_struct = {
-	default_priority = 90
-	default_buss = crowd_transitions
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Battle_Attack_Hell_Crowd_Cheer_P1_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-battle_attack_hell_crowd_cheer_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			hell_neutral_good_sfx
+Battle_Attack_Hell_Crowd_Cheer_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Hell_Neutral_Good_SFX
 			vol = 48
 			pan1x = -0.76199996
 			pan1y = 0.6470001
@@ -5484,19 +5484,19 @@ battle_attack_hell_crowd_cheer_p1_container = {
 		}
 	}
 }
-battle_attack_small_crowd_cheer_p2_struct = {
-	default_priority = 20
-	default_buss = crowd_transitions
-	norepeatfor = 0.75
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Battle_Attack_Small_Crowd_Cheer_P2_struct = {
+	Default_Priority = 20
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.75
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-battle_attack_small_crowd_cheer_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			small_crowd_med_to_good
+Battle_Attack_Small_Crowd_Cheer_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Small_Crowd_Med_To_Good
 			vol = 85
 			pan1x = 0.47
 			pan1y = 0.883
@@ -5505,19 +5505,19 @@ battle_attack_small_crowd_cheer_p2_container = {
 		}
 	}
 }
-battle_attack_medium_crowd_cheer_p2_struct = {
-	default_priority = 90
-	default_buss = crowd_transitions
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Battle_Attack_Medium_Crowd_Cheer_P2_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-battle_attack_medium_crowd_cheer_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			medium_crowd_medium_to_good
+Battle_Attack_Medium_Crowd_Cheer_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Medium_Crowd_Medium_to_Good
 			vol = 105
 			pan1x = 0.47
 			pan1y = 0.883
@@ -5526,19 +5526,19 @@ battle_attack_medium_crowd_cheer_p2_container = {
 		}
 	}
 }
-battle_attack_large_crowd_cheer_p2_struct = {
-	default_priority = 90
-	default_buss = crowd_cheers
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Battle_Attack_Large_Crowd_Cheer_P2_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Cheers
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-battle_attack_large_crowd_cheer_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			crowd_med_to_good
+Battle_Attack_Large_Crowd_Cheer_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Crowd_Med_To_Good
 			vol = 73
 			pan1x = 0.47
 			pan1y = 0.883
@@ -5547,19 +5547,19 @@ battle_attack_large_crowd_cheer_p2_container = {
 		}
 	}
 }
-battle_attack_hell_crowd_cheer_p2_struct = {
-	default_priority = 90
-	default_buss = crowd_transitions
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Battle_Attack_Hell_Crowd_Cheer_P2_struct = {
+	Default_Priority = 90
+	Default_Buss = Crowd_Transitions
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-battle_attack_hell_crowd_cheer_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			hell_neutral_good_sfx
+Battle_Attack_Hell_Crowd_Cheer_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Hell_Neutral_Good_SFX
 			vol = 48
 			pan1x = 0.47
 			pan1y = 0.883
@@ -5568,19 +5568,19 @@ battle_attack_hell_crowd_cheer_p2_container = {
 		}
 	}
 }
-large_crowd_applause_sfx_struct = {
-	default_priority = 50
-	default_buss = `default`
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Large_Crowd_Applause_SFX_struct = {
+	Default_Priority = 50
+	Default_Buss = `default`
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-large_crowd_applause_sfx_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			large_crowd_applause
+Large_Crowd_Applause_SFX_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Large_Crowd_Applause
 			pan1x = -0.897089
 			pan1y = 0.1418498
 			pan2x = 0.88932973
@@ -5588,117 +5588,117 @@ large_crowd_applause_sfx_container = {
 		}
 	}
 }
-stopnotes_01_struct = {
-	default_priority = 100
-	default_buss = front_end
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 3
+StopNotes_01_struct = {
+	Default_Priority = 100
+	Default_Buss = front_end
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 3
 }
-stopnotes_01_container = {
-	command = playsound
-	randomness = none
+StopNotes_01_container = {
+	command = PlaySound
+	Randomness = none
 }
-stopnotes_02_struct = {
-	default_priority = 100
-	default_buss = front_end
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 3
+StopNotes_02_struct = {
+	Default_Priority = 100
+	Default_Buss = front_end
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 3
 }
-stopnotes_02_container = {
-	command = playsound
-	randomness = none
+StopNotes_02_container = {
+	command = PlaySound
+	Randomness = none
 }
-stopnotes_03_struct = {
-	default_priority = 100
-	default_buss = front_end
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 3
+StopNotes_03_struct = {
+	Default_Priority = 100
+	Default_Buss = front_end
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 3
 }
-stopnotes_03_container = {
-	command = playsound
-	randomness = none
+StopNotes_03_container = {
+	command = PlaySound
+	Randomness = none
 }
-stopnotes_04_struct = {
-	default_priority = 100
-	default_buss = front_end
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 3
+StopNotes_04_struct = {
+	Default_Priority = 100
+	Default_Buss = front_end
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 3
 }
-stopnotes_04_container = {
-	command = playsound
-	randomness = none
+StopNotes_04_container = {
+	command = PlaySound
+	Randomness = none
 }
-stopnotes_05_struct = {
-	default_priority = 100
-	default_buss = front_end
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 3
+StopNotes_05_struct = {
+	Default_Priority = 100
+	Default_Buss = front_end
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 3
 }
-stopnotes_05_container = {
-	command = playsound
-	randomness = none
+StopNotes_05_container = {
+	command = PlaySound
+	Randomness = none
 }
-stopnotes_06_struct = {
-	default_priority = 100
-	default_buss = front_end
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 3
+StopNotes_06_struct = {
+	Default_Priority = 100
+	Default_Buss = front_end
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 3
 }
-stopnotes_06_container = {
-	command = playsound
-	randomness = none
+StopNotes_06_container = {
+	command = PlaySound
+	Randomness = none
 }
-lou_intro_back_speakers_struct = {
-	default_priority = 50
-	default_buss = encore_events
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Lou_Intro_Back_Speakers_struct = {
+	Default_Priority = 50
+	Default_Buss = Encore_Events
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-lou_intro_back_speakers_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			lou_intro_back_speakers
+Lou_Intro_Back_Speakers_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Lou_Intro_Back_Speakers
 		}
 	}
 }
-lou_intro_front_speakers_struct = {
-	default_priority = 50
-	default_buss = encore_events
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Lou_Intro_Front_Speakers_struct = {
+	Default_Priority = 50
+	Default_Buss = Encore_Events
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-lou_intro_front_speakers_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			lou_intro_front_speakers
+Lou_Intro_Front_Speakers_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Lou_Intro_Front_Speakers
 		}
 	}
 }
-battlemode_heartbeat_p1_struct = {
-	default_priority = 50
-	default_buss = ui_battle_mode
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Battlemode_HeartBeat_P1_struct = {
+	Default_Priority = 50
+	Default_Buss = UI_Battle_Mode
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-battlemode_heartbeat_p1_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			gh3_battlemode_heartbeat
+Battlemode_HeartBeat_P1_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			GH3_Battlemode_Heartbeat
 			vol = 35
 			pan1x = -0.5000002
 			pan1y = 0.8660253
@@ -5708,19 +5708,19 @@ battlemode_heartbeat_p1_container = {
 		}
 	}
 }
-battlemode_heartbeat_p2_struct = {
-	default_priority = 50
-	default_buss = ui_battle_mode
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+Battlemode_HeartBeat_P2_struct = {
+	Default_Priority = 50
+	Default_Buss = UI_Battle_Mode
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-battlemode_heartbeat_p2_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			gh3_battlemode_heartbeat
+Battlemode_HeartBeat_P2_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			GH3_Battlemode_Heartbeat
 			vol = 35
 			pan1x = 0.5000002
 			pan1y = 0.8660253
@@ -5730,22 +5730,22 @@ battlemode_heartbeat_p2_container = {
 		}
 	}
 }
-gh3_star_flyin_struct = {
-	default_priority = 50
-	default_buss = `default`
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 3
+GH3_Star_FlyIn_struct = {
+	Default_Priority = 50
+	Default_Buss = `default`
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 3
 }
-gh3_star_flyin_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			fly_in_whoosh
+GH3_Star_FlyIn_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Fly_In_Whoosh
 			vol = 55
-			randompitch = {
-				type = randomnorepeatlasttwotype
+			RandomPitch = {
+				type = RandomNoRepeatLastTwoType
 				vals = [
 					106
 					104
@@ -5757,19 +5757,19 @@ gh3_star_flyin_container = {
 		}
 	}
 }
-gh3_score_flyin_struct = {
-	default_priority = 50
-	default_buss = `default`
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 3
+GH3_Score_FlyIn_struct = {
+	Default_Priority = 50
+	Default_Buss = `default`
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 3
 }
-gh3_score_flyin_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			fly_in_whoosh
+GH3_Score_FlyIn_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Fly_In_Whoosh
 			vol = 90
 			pitch = 65
 			pan1x = -0.76199996
@@ -5779,19 +5779,19 @@ gh3_score_flyin_container = {
 		}
 	}
 }
-gh3_cash_flyin_struct = {
-	default_priority = 50
-	default_buss = `default`
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 3
+GH3_Cash_FlyIn_struct = {
+	Default_Priority = 50
+	Default_Buss = `default`
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 3
 }
-gh3_cash_flyin_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			fly_in_whoosh
+GH3_Cash_FlyIn_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Fly_In_Whoosh
 			vol = 85
 			pitch = 71
 			pan1x = 0.47
@@ -5801,36 +5801,36 @@ gh3_cash_flyin_container = {
 		}
 	}
 }
-gh3_score_flyin_hit_struct = {
-	default_priority = 50
-	default_buss = front_end
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+GH3_Score_FlyIn_Hit_struct = {
+	Default_Priority = 50
+	Default_Buss = front_end
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-gh3_score_flyin_hit_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			ui_song_intro_kick
+GH3_Score_FlyIn_Hit_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			UI_Song_Intro_Kick
 			vol = 40
 		}
 	}
 }
-gh3_cash_flyin_hit_struct = {
-	default_priority = 50
-	default_buss = front_end
-	norepeatfor = 0.1
-	instancemanagement = stop_oldest
-	instancelimit = 1
+GH3_Cash_FlyIn_Hit_struct = {
+	Default_Priority = 50
+	Default_Buss = front_end
+	NoRepeatFor = 0.1
+	InstanceManagement = stop_oldest
+	InstanceLimit = 1
 }
-gh3_cash_flyin_hit_container = {
-	command = playsound
-	randomness = none
-	sounds = {
-		sound1 = {
-			cash
+GH3_Cash_FlyIn_Hit_container = {
+	command = PlaySound
+	Randomness = none
+	Sounds = {
+		Sound1 = {
+			Cash
 			vol = 60
 		}
 	}

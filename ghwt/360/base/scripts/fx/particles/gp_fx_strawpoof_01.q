@@ -1,25 +1,25 @@
-gp_fx_strawpoof_01 = {
-	Pos = (-0.12421401, 7.145174, -2.791274)
-	Angles = (0.0, 0.0, 0.0)
+GP_FX_StrawPoof_01 = {
+	pos = (-0.12421401, 7.145174, -2.791274)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
 	EmitRangeDims = (0.2, 0.2, 0.2)
-	Emit_Target = (0.0, 1.0, 1.0)
+	emit_Target = (0.0, 1.0, 1.0)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, -5.0, 0.0)
+	force = (0.0, -5.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	AngleSpread = 70.0
 	LifeRange = (2.0, 2.0)
-	Emit_Rate = 300.0
-	Max = 0
+	emit_rate = 300.0
+	max = 0
 	TimeSeed = 0.0
-	LifeTime = 2.0
-	EmitNum = 0
+	lifeTime = 2.0
+	emitNum = 0
 	FollowEmitter = 0.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -33,19 +33,19 @@ gp_fx_strawpoof_01 = {
 	EmitDelayStart = 0.0
 	PathFollowTime = 0.0
 	History = 2
-	HistoryListCoordinateSpace = World
+	HistoryListCoordinateSpace = world
 	align_to = (1.0, 0.0, 0.0)
 	Rotate3D
-	Color = -673988609
+	color = -673988609
 	LOD_Default
 	QuickMaterial = {
 		TextureLayout = Layout2x2
 		DiffuseTextureEnabled
-		DiffuseTexture = ph_straw_quad
+		DiffuseTexture = PH_Straw_Quad
 		SpecularPower = 0
 		TwoSide
-		AlphaCutoff = 1
-		BlendMode = blend
+		alphacutoff = 1
+		blendMode = blend
 		QuadAnimationFPS = 0
 	}
 	Knot = [

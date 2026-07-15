@@ -27,55 +27,55 @@ lightshow_offset_ms = 100
 lightshow_housingmodels = [
 	{
 		Model = 'LightHousings\\GO_NoHousing01\\GO_NoHousing01.mdl'
-		CloneSrc = LS_GO_NoHousing01
+		clonesrc = LS_GO_NoHousing01
 	}
 	{
 		Model = 'LightHousings\\GO_NoHousing01_Flare01\\GO_NoHousing01_Flare01.mdl'
-		CloneSrc = LS_GO_NoHousing01_Flare01
+		clonesrc = LS_GO_NoHousing01_Flare01
 	}
 	{
 		Model = 'LightHousings\\GO_NoHousing01_SmallFlare01\\GO_NoHousing01_SmallFlare01.mdl'
-		CloneSrc = LS_GO_NoHousing01_SmallFlare01
+		clonesrc = LS_GO_NoHousing01_SmallFlare01
 	}
 	{
 		Model = 'LightHousings\\GO_BarnHousing01\\GO_BarnHousing01.mdl'
-		CloneSrc = LS_GO_BarnHousing01
+		clonesrc = LS_GO_BarnHousing01
 	}
 	{
 		Model = 'LightHousings\\GO_LightHousing01\\GO_LightHousing01.mdl'
-		CloneSrc = LS_GO_LightHousing01
+		clonesrc = LS_GO_LightHousing01
 	}
 	{
 		Model = 'LightHousings\\GO_LightHousing01_SmallFlare01\\GO_LightHousing01_SmallFlare01.mdl'
-		CloneSrc = LS_GO_LightHousing01_SmallFlare01
+		clonesrc = LS_GO_LightHousing01_SmallFlare01
 	}
 	{
 		Model = 'LightHousings\\GO_LightHousing02\\GO_LightHousing02.mdl'
-		CloneSrc = LS_GO_LightHousing02
+		clonesrc = LS_GO_LightHousing02
 	}
 	{
 		Model = 'LightHousings\\GO_LightHousing02_SmallFlare01\\GO_LightHousing02_SmallFlare01.mdl'
-		CloneSrc = LS_GO_LightHousing02_SmallFlare01
+		clonesrc = LS_GO_LightHousing02_SmallFlare01
 	}
 	{
 		Model = 'LightHousings\\GO_LightHousing02_Small01\\GO_LightHousing02_Small01.mdl'
-		CloneSrc = LS_GO_LightHousing02_Small01
+		clonesrc = LS_GO_LightHousing02_Small01
 	}
 	{
 		Model = 'LightHousings\\GO_LH_Bowl\\GO_LH_Bowl.mdl'
-		CloneSrc = ls_go_lh_bowl
+		clonesrc = LS_GO_LH_Bowl
 	}
 	{
 		Model = 'LightHousings\\GO_LH_Tentacle_Big01\\GO_LH_Tentacle_Big01.mdl'
-		CloneSrc = ls_go_lh_tentacle_big01
+		clonesrc = LS_GO_LH_Tentacle_Big01
 	}
 	{
 		Model = 'LightHousings\\GO_LH_Tentacle_Med01\\GO_LH_Tentacle_Med01.mdl'
-		CloneSrc = ls_go_lh_tentacle_med01
+		clonesrc = LS_GO_LH_Tentacle_Med01
 	}
 	{
 		Model = 'LightHousings\\GO_LH_Tentacle_Small01\\GO_LH_Tentacle_Small01.mdl'
-		CloneSrc = ls_go_lh_tentacle_small01
+		clonesrc = LS_GO_LH_Tentacle_Small01
 	}
 ]
 
@@ -85,25 +85,25 @@ script LightShow_CreatePermModels
 	begin
 	<desc> = ($lightshow_housingmodels [<i>])
 	<Model> = (<desc>.Model)
-	<Pos> = ((-100.0, 300.0) + <i> * (0.0, 10.0))
-	<src> = (<desc>.CloneSrc)
+	<pos> = ((-100.0, 300.0) + <i> * (0.0, 10.0))
+	<src> = (<desc>.clonesrc)
 	CreateCompositeObject {
-		components = [
+		Components = [
 			{
-				component = Model
+				Component = Model
 				Model = <Model>
 			}
 		]
 		params = {
-			Pos = <Pos>
-			Name = <src>
+			pos = <pos>
+			name = <src>
 		}
 	}
-	<src> :Hide
+	<src> :hide
 	<src> :Obj_ForceUpdate
 	<src> :Suspend
 	<i> = (<i> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 endscript
 
 script LS_AllOff 
@@ -121,11 +121,11 @@ endscript
 
 script LS_KillFX 
 endscript
-lightshow_spotlightfollownames = [
-	GUITARIST
+lightshow_SpotlightFollowNames = [
+	Guitarist
 	vocalist
-	BASSIST
-	drummer
+	bassist
+	Drummer
 ]
 LightShow_StateNodeFlags = [
 	LS_PERF_POOR
@@ -140,20 +140,20 @@ LightShow_StateNodeFlags = [
 	LS_PERF_POOR_MEDIUM_NOBLACKOUT
 	LS_PERF_MEDIUM_GOOD_NOBLACKOUT
 	LS_PERF_POOR_MEDIUM_GOOD_NOBLACKOUT
-	ls_mood_intro
+	LS_MOOD_INTRO
 	LS_MOOD_BLACKOUT
 	LS_MOOD_FLARE
 	LS_MOOD_STROBE
-	ls_mood_wash
-	ls_mood_prelude
-	ls_mood_exposition
-	ls_mood_rising
-	ls_mood_tension
-	ls_mood_climax
-	ls_mood_falling
-	ls_mood_resolution
-	ls_mood_pyro
-	ls_mood_silhouette
+	LS_MOOD_WASH
+	LS_MOOD_PRELUDE
+	LS_MOOD_EXPOSITION
+	LS_MOOD_RISING
+	LS_MOOD_TENSION
+	LS_MOOD_CLIMAX
+	LS_MOOD_FALLING
+	LS_MOOD_RESOLUTION
+	LS_MOOD_PYRO
+	LS_MOOD_SILHOUETTE
 ]
 LightShow_StateNodeFlagMapping = {
 	performance = {
@@ -245,9 +245,9 @@ LightShow_StateNodeFlagMapping = {
 		]
 	}
 	mood = {
-		Intro = [
+		intro = [
 			{
-				ls_mood_intro
+				LS_MOOD_INTRO
 				1
 			}
 		]
@@ -319,61 +319,61 @@ LightShow_StateNodeFlagMapping = {
 		]
 		wash = [
 			{
-				ls_mood_wash
+				LS_MOOD_WASH
 				1
 			}
 		]
 		prelude = [
 			{
-				ls_mood_prelude
+				LS_MOOD_PRELUDE
 				1
 			}
 		]
 		exposition = [
 			{
-				ls_mood_exposition
+				LS_MOOD_EXPOSITION
 				1
 			}
 		]
-		risingaction = [
+		risingAction = [
 			{
-				ls_mood_rising
+				LS_MOOD_RISING
 				1
 			}
 		]
 		tension = [
 			{
-				ls_mood_tension
+				LS_MOOD_TENSION
 				1
 			}
 		]
 		climax = [
 			{
-				ls_mood_climax
+				LS_MOOD_CLIMAX
 				1
 			}
 		]
-		fallingaction = [
+		fallingAction = [
 			{
-				ls_mood_falling
+				LS_MOOD_FALLING
 				1
 			}
 		]
 		resolution = [
 			{
-				ls_mood_resolution
+				LS_MOOD_RESOLUTION
 				1
 			}
 		]
 		pyro = [
 			{
-				ls_mood_pyro
+				LS_MOOD_PYRO
 				1
 			}
 		]
 		silhouette = [
 			{
-				ls_mood_silhouette
+				LS_MOOD_SILHOUETTE
 				1
 			}
 		]
@@ -382,65 +382,65 @@ LightShow_StateNodeFlagMapping = {
 LightShow_NoteMapping = [
 	{
 		MidiNote = 105
-		Scr = lightshow_spotlightcolor
+		Scr = LightShow_SpotlightColor
 		params = {
-			Color = red
+			color = red
 		}
 	}
 	{
 		MidiNote = 104
-		Scr = lightshow_spotlightcolor
+		Scr = LightShow_SpotlightColor
 		params = {
-			Color = orange
+			color = Orange
 		}
 	}
 	{
 		MidiNote = 103
-		Scr = lightshow_spotlightcolor
+		Scr = LightShow_SpotlightColor
 		params = {
-			Color = yellow
+			color = Yellow
 		}
 	}
 	{
 		MidiNote = 102
-		Scr = lightshow_spotlightcolor
+		Scr = LightShow_SpotlightColor
 		params = {
-			Color = green
+			color = green
 		}
 	}
 	{
 		MidiNote = 101
-		Scr = lightshow_spotlightcolor
+		Scr = LightShow_SpotlightColor
 		params = {
-			Color = blue
+			color = Blue
 		}
 	}
 	{
 		MidiNote = 100
-		Scr = lightshow_spotlightcolor
+		Scr = LightShow_SpotlightColor
 		params = {
-			Color = Purple
+			color = Purple
 		}
 	}
 	{
 		MidiNote = 99
-		Scr = lightshow_spotlightcolor
+		Scr = LightShow_SpotlightColor
 		params = {
-			Color = Magenta
+			color = Magenta
 		}
 	}
 	{
 		MidiNote = 98
-		Scr = lightshow_spotlightcolor
+		Scr = LightShow_SpotlightColor
 		params = {
-			Color = white
+			color = white
 		}
 	}
 	{
 		MidiNote = 97
 		Scr = LightShow_EnableSpotlights
 		params = {
-			Enabled = true
+			enabled = true
 			spots = [
 				vocalist
 			]
@@ -450,7 +450,7 @@ LightShow_NoteMapping = [
 		MidiNote = 96
 		Scr = LightShow_EnableSpotlights
 		params = {
-			Enabled = FALSE
+			enabled = false
 			spots = [
 				vocalist
 			]
@@ -460,9 +460,9 @@ LightShow_NoteMapping = [
 		MidiNote = 95
 		Scr = LightShow_EnableSpotlights
 		params = {
-			Enabled = true
+			enabled = true
 			spots = [
-				GUITARIST
+				Guitarist
 			]
 		}
 	}
@@ -470,9 +470,9 @@ LightShow_NoteMapping = [
 		MidiNote = 94
 		Scr = LightShow_EnableSpotlights
 		params = {
-			Enabled = FALSE
+			enabled = false
 			spots = [
-				GUITARIST
+				Guitarist
 			]
 		}
 	}
@@ -480,9 +480,9 @@ LightShow_NoteMapping = [
 		MidiNote = 93
 		Scr = LightShow_EnableSpotlights
 		params = {
-			Enabled = true
+			enabled = true
 			spots = [
-				BASSIST
+				bassist
 			]
 		}
 	}
@@ -490,9 +490,9 @@ LightShow_NoteMapping = [
 		MidiNote = 92
 		Scr = LightShow_EnableSpotlights
 		params = {
-			Enabled = FALSE
+			enabled = false
 			spots = [
-				BASSIST
+				bassist
 			]
 		}
 	}
@@ -500,9 +500,9 @@ LightShow_NoteMapping = [
 		MidiNote = 91
 		Scr = LightShow_EnableSpotlights
 		params = {
-			Enabled = true
+			enabled = true
 			spots = [
-				drummer
+				Drummer
 			]
 		}
 	}
@@ -510,9 +510,9 @@ LightShow_NoteMapping = [
 		MidiNote = 90
 		Scr = LightShow_EnableSpotlights
 		params = {
-			Enabled = FALSE
+			enabled = false
 			spots = [
-				drummer
+				Drummer
 			]
 		}
 	}
@@ -520,21 +520,21 @@ LightShow_NoteMapping = [
 		MidiNote = 88
 		Scr = LightShow_SetParams
 		params = {
-			resetcycleonmoodchange = true
+			ResetCycleOnMoodChange = true
 		}
 	}
 	{
 		MidiNote = 87
 		Scr = LightShow_SetParams
 		params = {
-			resetcycleonmoodchange = FALSE
+			ResetCycleOnMoodChange = false
 		}
 	}
 	{
 		MidiNote = 84
 		Scr = LightShow_SetParams
 		params = {
-			mood = Intro
+			mood = intro
 		}
 	}
 	{
@@ -583,7 +583,7 @@ LightShow_NoteMapping = [
 		MidiNote = 77
 		Scr = LightShow_SetParams
 		params = {
-			mood = risingaction
+			mood = risingAction
 		}
 	}
 	{
@@ -604,7 +604,7 @@ LightShow_NoteMapping = [
 		MidiNote = 74
 		Scr = LightShow_SetParams
 		params = {
-			mood = fallingaction
+			mood = fallingAction
 		}
 	}
 	{
@@ -632,63 +632,63 @@ LightShow_NoteMapping = [
 		MidiNote = 69
 		Scr = LightShow_OverrideColor
 		params = {
-			Color = red
+			color = red
 		}
 	}
 	{
 		MidiNote = 68
 		Scr = LightShow_OverrideColor
 		params = {
-			Color = orange
+			color = Orange
 		}
 	}
 	{
 		MidiNote = 67
 		Scr = LightShow_OverrideColor
 		params = {
-			Color = yellow
+			color = Yellow
 		}
 	}
 	{
 		MidiNote = 66
 		Scr = LightShow_OverrideColor
 		params = {
-			Color = green
+			color = green
 		}
 	}
 	{
 		MidiNote = 65
 		Scr = LightShow_OverrideColor
 		params = {
-			Color = blue
+			color = Blue
 		}
 	}
 	{
 		MidiNote = 64
 		Scr = LightShow_OverrideColor
 		params = {
-			Color = Purple
+			color = Purple
 		}
 	}
 	{
 		MidiNote = 63
 		Scr = LightShow_OverrideColor
 		params = {
-			Color = Magenta
+			color = Magenta
 		}
 	}
 	{
 		MidiNote = 62
 		Scr = LightShow_OverrideColor
 		params = {
-			Color = white
+			color = white
 		}
 	}
 	{
 		MidiNote = 61
 		Scr = LightShow_OverrideColor
 		params = {
-			OFF
+			off
 		}
 	}
 	{
@@ -814,156 +814,156 @@ LightShow_NoteMapping = [
 		MidiNote = 39
 		Scr = LightShow_SetTime
 		params = {
-			Default
+			`default`
 		}
 	}
 	{
 		MidiNote = 37
 		Scr = LightShow_PyroEvent
 		params = {
-			Type = Generic
+			type = generic
 		}
 	}
 	{
 		MidiNote = 35
 		Scr = LightShow_PyroEvent
 		params = {
-			Type = front_1
+			type = front_1
 		}
 	}
 	{
 		MidiNote = 34
 		Scr = LightShow_PyroEvent
 		params = {
-			Type = front_2
+			type = front_2
 		}
 	}
 	{
 		MidiNote = 33
 		Scr = LightShow_PyroEvent
 		params = {
-			Type = front_3
+			type = front_3
 		}
 	}
 	{
 		MidiNote = 32
 		Scr = LightShow_PyroEvent
 		params = {
-			Type = front_4
+			type = front_4
 		}
 	}
 	{
 		MidiNote = 31
 		Scr = LightShow_PyroEvent
 		params = {
-			Type = top_1
+			type = top_1
 		}
 	}
 	{
 		MidiNote = 30
 		Scr = LightShow_PyroEvent
 		params = {
-			Type = top_2
+			type = top_2
 		}
 	}
 	{
 		MidiNote = 29
 		Scr = LightShow_PyroEvent
 		params = {
-			Type = top_3
+			type = top_3
 		}
 	}
 	{
 		MidiNote = 28
 		Scr = LightShow_PyroEvent
 		params = {
-			Type = top_4
+			type = top_4
 		}
 	}
 	{
 		MidiNote = 27
 		Scr = LightShow_PyroEvent
 		params = {
-			Type = mid_1
+			type = mid_1
 		}
 	}
 	{
 		MidiNote = 26
 		Scr = LightShow_PyroEvent
 		params = {
-			Type = mid_2
+			type = mid_2
 		}
 	}
 	{
 		MidiNote = 25
 		Scr = LightShow_PyroEvent
 		params = {
-			Type = mid_3
+			type = mid_3
 		}
 	}
 	{
 		MidiNote = 24
 		Scr = LightShow_PyroEvent
 		params = {
-			Type = mid_4
+			type = mid_4
 		}
 	}
 	{
 		MidiNote = 23
 		Scr = LightShow_PyroEvent
 		params = {
-			Type = back_1
+			type = back_1
 		}
 	}
 	{
 		MidiNote = 22
 		Scr = LightShow_PyroEvent
 		params = {
-			Type = back_2
+			type = back_2
 		}
 	}
 	{
 		MidiNote = 21
 		Scr = LightShow_PyroEvent
 		params = {
-			Type = back_3
+			type = back_3
 		}
 	}
 	{
 		MidiNote = 20
 		Scr = LightShow_PyroEvent
 		params = {
-			Type = back_4
+			type = back_4
 		}
 	}
 ]
 LightShow_SharedProcessors = [
 	{
-		Name = default_generic
+		name = Default_Generic
 		ScrEnter = LightShow_GenericMood_Enter
 		ScrEvent = LightShow_GenericMood_Event
 		ScrExit = LightShow_GenericMood_Exit
 	}
 	{
-		Name = Poor_Generic
+		name = Poor_Generic
 		ScrEnter = LightShow_Poor_Enter
 		ScrEvent = LightShow_Poor_Event
 		ScrExit = LightShow_Poor_Exit
 	}
 	{
-		Name = Blackout_Generic
+		name = Blackout_Generic
 		ScrEnter = LightShow_Blackout_Enter
 		ScrEvent = LightShow_Blackout_Event
 		ScrExit = LightShow_Blackout_Exit
 	}
 	{
-		Name = Flare_Generic
+		name = Flare_Generic
 		ScrEnter = LightShow_Flare_Enter
 		ScrEvent = LightShow_Flare_Event
 		ScrExit = LightShow_Flare_Exit
 	}
 	{
-		Name = Strobe_Generic
+		name = Strobe_Generic
 		ScrEnter = LightShow_Strobe_Enter
 		ScrEvent = LightShow_Strobe_Event
 		ScrExit = LightShow_Strobe_Exit
@@ -971,22 +971,22 @@ LightShow_SharedProcessors = [
 ]
 
 script lightshow_iterator 
-	printf qs(0xc9557688) d = <time_offset>
-	LightShow_SetActive \{Active = FALSE}
+	printf qs("\LLightShow Iterator started with time %d") d = <time_offset>
+	LightShow_SetActive \{active = false}
 	if NOT CD
-		DestroyScreenElement \{id = lightshow_debuganchor}
+		DestroyScreenElement \{id = LightShow_DebugAnchor}
 		if ($lightshow_debug = 1)
-			lightshow_displaydebuginfo
+			LightShow_DisplayDebugInfo
 		endif
 	endif
 	if ($lightshow_enabled = 0)
-		printf \{qs(0x46b6ad6b)}
+		printf \{qs("\LLIGHTSHOW DISABLED: By script variable")}
 		return
 	endif
 	get_song_prefix song = <song_name>
-	formatText checksumName = event_array '%s_lightshow_notes' s = <song_prefix> AddToStringLookup
-	if NOT GlobalExists Name = <event_array> Type = array
-		printf \{qs(0x093d0e8a)}
+	FormatText checksumname = event_array '%s_lightshow_notes' s = <song_prefix> AddToStringLookup
+	if NOT GlobalExists name = <event_array> type = array
+		printf \{qs("\LLIGHTSHOW DISABLED: No midi events found for this song")}
 		return
 	endif
 	if NOT LightShow_InitEventMappings
@@ -996,19 +996,19 @@ script lightshow_iterator
 		array_entry = 0
 		fretbar_count = 0
 		GetArraySize $<event_array>
-		array_Size = (<array_Size> / 2)
+		array_size = (<array_size> / 2)
 		GetSongTimeMs time_offset = <time_offset>
-		if NOT (<array_Size> = 0)
+		if NOT (<array_size> = 0)
 			begin
 			if ((<time> - <skipleadin>) < $<event_array> [<array_entry>])
 				break
 			endif
 			<array_entry> = (<array_entry> + 2)
-			repeat <array_Size>
-			array_Size = (<array_Size> - (<array_entry> / 2))
-			if NOT (<array_Size> = 0)
+			repeat <array_size>
+			array_size = (<array_size> - (<array_entry> / 2))
+			if NOT (<array_size> = 0)
 				begin
-				TimeMarkerReached_SetParams time_offset = <time_offset> array = <event_array> array_entry = <array_entry> perframe
+				TimeMarkerReached_SetParams time_offset = <time_offset> array = <event_array> array_entry = <array_entry> PerFrame
 				begin
 				LightShow_Update
 				if TimeMarkerReached
@@ -1019,7 +1019,7 @@ script lightshow_iterator
 					gameframe}
 				repeat
 				TimeMarkerReached_ClearParams
-				decompressnotevalue note_value = ($<event_array> [(<array_entry> + 1)])
+				DecompressNoteValue note_value = ($<event_array> [(<array_entry> + 1)])
 				if LightShow_BeginProcessBlock {time = ($<event_array> [<array_entry>])
 						note = <note>
 						length = <length>}
@@ -1027,18 +1027,18 @@ script lightshow_iterator
 						case event
 						LightShow_PassEvent
 						case Scr
-						<eventscr> <eventParams>
+						<eventscr> <eventparams>
 					endswitch
 					LightShow_EndProcessBlock
 				endif
 				<array_entry> = (<array_entry> + 2)
-				repeat <array_Size>
+				repeat <array_size>
 			endif
 		endif
 	endif
 	if NOT CD
-		if ScreenElementExists \{id = lightshow_debugtext}
-			lightshow_debugtext :se_setprops \{text = qs(0xcbc0eb10)}
+		if ScreenElementExists \{id = LightShow_DebugText}
+			LightShow_DebugText :SE_SetProps \{text = qs("End")}
 		endif
 	endif
 	begin
@@ -1048,25 +1048,25 @@ script lightshow_iterator
 	repeat
 endscript
 
-script lightshow_toggledebuginfo 
+script LightShow_ToggleDebugInfo 
 	if ($lightshow_debug = 1)
-		Change \{lightshow_debug = 0}
-		DestroyScreenElement \{id = lightshow_debuganchor}
+		change \{lightshow_debug = 0}
+		DestroyScreenElement \{id = LightShow_DebugAnchor}
 	else
-		Change \{lightshow_debug = 1}
-		lightshow_displaydebuginfo
+		change \{lightshow_debug = 1}
+		LightShow_DisplayDebugInfo
 	endif
 endscript
 
-script lightshow_displaydebuginfo 
-	DestroyScreenElement \{id = lightshow_debuganchor}
-	CreateScreenElement \{Type = ContainerElement
+script LightShow_DisplayDebugInfo 
+	DestroyScreenElement \{id = LightShow_DebugAnchor}
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
-		id = lightshow_debuganchor
-		Pos = (400.0, 440.0)
+		id = LightShow_DebugAnchor
+		pos = (400.0, 440.0)
 		z_priority = 1000}
-	CreateScreenElement \{Type = SpriteElement
-		parent = lightshow_debuganchor
+	CreateScreenElement \{type = SpriteElement
+		parent = LightShow_DebugAnchor
 		dims = (500.0, 220.0)
 		just = [
 			left
@@ -1079,34 +1079,34 @@ script lightshow_displaydebuginfo
 			255
 		]
 		alpha = 0.7}
-	CreateScreenElement \{Type = TextBlockElement
-		parent = lightshow_debuganchor
-		id = lightshow_debugtext
+	CreateScreenElement \{type = TextBlockElement
+		parent = LightShow_DebugAnchor
+		id = LightShow_DebugText
 		just = [
 			left
 			top
 		]
-		Pos = (0.0, 0.0)
+		pos = (0.0, 0.0)
 		dims = (1000.0, 1000.0)
 		font = fontgrid_text_a11
 		internal_scale = (0.6, 0.4)
-		text = qs(0xcbc0eb10)}
+		text = qs("End")}
 	if NOT LightShow_GetParams
-		lightshow_debugtext = qs(0x46e08381)
+		LightShow_DebugText = qs("Disabled")
 	endif
 endscript
 
 script LightShow_PyroEvent 
 	if LightShow_GetPyroScript
-		if StructureContains structure = pyro_scripts <Type>
-			<Scr> = (<pyro_scripts>.<Type>)
+		if StructureContains Structure = pyro_scripts <type>
+			<Scr> = (<pyro_scripts>.<type>)
 			if LightShow_GetParams
 				if ScriptExists <Scr>
-					SpawnScriptNow <Scr> id = LightShow params = {performance = <performance>}
+					spawnscriptnow <Scr> id = LightShow params = {performance = <performance>}
 				endif
 			endif
 		else
-			printf 'lightshow - pyro event skipped due to missing venue type %s' s = <Type>
+			printf 'lightshow - pyro event skipped due to missing venue type %s' s = <type>
 		endif
 	else
 		printf \{'lightshow - pyro event skipped due to missing venue definitions'}
@@ -1153,10 +1153,10 @@ script LightShow_Blackout_Enter
 		case z_soundcheck_practice
 		case z_training
 		case z_viewer
-		LightShow_AppendSnapshotParams \{Intensity = 0.25
+		LightShow_AppendSnapshotParams \{intensity = 0.25
 			SpecularIntensity = 0.25}
 	endswitch
-	LightShow_CycleNextSnapshot \{save = FALSE
+	LightShow_CycleNextSnapshot \{save = false
 		UseSnapshotPositions = true}
 endscript
 
@@ -1170,7 +1170,7 @@ script LightShow_Blackout_Exit
 		case z_soundcheck_practice
 		case z_training
 		case z_viewer
-		LightShow_AppendSnapshotParams \{CLEAR}
+		LightShow_AppendSnapshotParams \{Clear}
 	endswitch
 endscript
 
@@ -1181,10 +1181,10 @@ script LightShow_Flare_Enter
 		case z_soundcheck_practice
 		case z_training
 		case z_viewer
-		LightShow_AppendSnapshotParams \{Intensity = 0.25
+		LightShow_AppendSnapshotParams \{intensity = 0.25
 			SpecularIntensity = 0.25}
 	endswitch
-	LightShow_CycleNextSnapshot \{save = FALSE
+	LightShow_CycleNextSnapshot \{save = false
 		UseSnapshotPositions = true}
 endscript
 
@@ -1198,28 +1198,28 @@ script LightShow_Flare_Exit
 		case z_soundcheck_practice
 		case z_training
 		case z_viewer
-		LightShow_AppendSnapshotParams \{CLEAR}
+		LightShow_AppendSnapshotParams \{Clear}
 	endswitch
 endscript
 
 script LightShow_Strobe_Enter 
-	LightShow_SetTime \{enable = FALSE}
+	LightShow_SetTime \{enable = false}
 endscript
 
 script LightShow_Strobe_Event 
 	LightShow_GetParams
 	<original_snapshot> = <previous_snapshot>
 	begin
-	LightShow_CycleNextSnapshot \{UseSnapshotPositions = FALSE
-		save = FALSE}
+	LightShow_CycleNextSnapshot \{UseSnapshotPositions = false
+		save = false}
 	LightShow_WaitForNextEvent \{events = [
 			strobetoggle
 		]}
-	LightShow_AppendSnapshotParams \{Intensity = 1.0}
+	LightShow_AppendSnapshotParams \{intensity = 1.0}
 	if GotParam \{original_snapshot}
-		LightShow_PlaySnapshot Name = <original_snapshot> save = FALSE UseSnapshotPositions = FALSE
+		LightShow_PlaySnapshot name = <original_snapshot> save = false UseSnapshotPositions = false
 	else
-		LightShow_CycleNextSnapshot \{UseSnapshotPositions = FALSE
+		LightShow_CycleNextSnapshot \{UseSnapshotPositions = false
 			save = true}
 	endif
 	LightShow_WaitForNextEvent \{events = [
@@ -1229,7 +1229,7 @@ script LightShow_Strobe_Event
 endscript
 
 script LightShow_Strobe_Exit 
-	LightShow_AppendSnapshotParams \{CLEAR}
+	LightShow_AppendSnapshotParams \{Clear}
 	LightShow_SetTime \{enable = true}
 endscript
 
@@ -1239,7 +1239,7 @@ script LightShow_AddNodeFlags
 	begin
 	CreateNodeFlag ($LightShow_StateNodeFlags [<i>])
 	<i> = (<i> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	CreateNodeFlag \{LS_ALWAYS}
 	CreateNodeFlag \{LS_3_5_PRE}
 	CreateNodeFlag \{LS_3_5_POST}
@@ -1250,11 +1250,11 @@ script LightShow_AddNodeFlags
 endscript
 
 script LightShow_InitEventMappings 
-	LightShow_AppendSnapshotParams \{CLEAR}
-	LightShow_OverrideColor \{OFF}
-	LightShow_SetTime \{Default
+	LightShow_AppendSnapshotParams \{Clear}
+	LightShow_OverrideColor \{off}
+	LightShow_SetTime \{`default`
 		enable = true}
-	LightShow_SetActive \{Active = FALSE}
+	LightShow_SetActive \{active = false}
 	ChangeNodeFlag \{LS_SPOTLIGHT_GUITARIST
 		1}
 	if ($current_num_players = 1)
@@ -1268,60 +1268,60 @@ script LightShow_InitEventMappings
 		<pakname> = <force_pakname>
 	else
 		if NOT GetPakManCurrentName \{map = zones}
-			printf \{qs(0xe20be0e2)}
+			printf \{qs("\LLIGHTSHOW DISABLED: No pakman item is loaded")}
 			printstruct <...>
-			return \{FALSE}
+			return \{false}
 		endif
 	endif
-	formatText checksumName = event_struct '%s_lightshow_mapping' s = <pakname> AddToStringLookup
-	formatText checksumName = snapshot_struct '%s_snapshots' s = <pakname> AddToStringLookup
-	formatText checksumName = material_snapshot_struct '%s_material_snapshots' s = <pakname> AddToStringLookup
-	formatText checksumName = processors_struct '%s_lightshow_processors' s = <pakname> AddToStringLookup
-	if NOT GlobalExists Name = <event_struct> Type = structure
-		printf \{qs(0xce52f5c2)}
+	FormatText checksumname = event_struct '%s_lightshow_mapping' s = <pakname> AddToStringLookup
+	FormatText checksumname = snapshot_struct '%s_snapshots' s = <pakname> AddToStringLookup
+	FormatText checksumname = material_snapshot_struct '%s_material_snapshots' s = <pakname> AddToStringLookup
+	FormatText checksumname = processors_struct '%s_lightshow_processors' s = <pakname> AddToStringLookup
+	if NOT GlobalExists name = <event_struct> type = Structure
+		printf \{qs("\LLIGHTSHOW DISABLED: No event mapping found for this venue")}
 		printstruct <...>
-		return \{FALSE}
+		return \{false}
 	endif
-	if NOT GlobalExists Name = <snapshot_struct> Type = structure
-		printf \{qs(0xdc2d0c88)}
+	if NOT GlobalExists name = <snapshot_struct> type = Structure
+		printf \{qs("\LLIGHTSHOW DISABLED: No snapshots found for this venue")}
 		printstruct <...>
-		return \{FALSE}
+		return \{false}
 	endif
-	if GlobalExists Name = <processors_struct> Type = array
-		printf \{qs(0x23e129d8)}
+	if GlobalExists name = <processors_struct> type = array
+		printf \{qs("\LLIGHTSHOW: Adding venue processor definitions")}
 		LightShow_SetProcessors venue = $<processors_struct>
 	endif
 	LightShow_SetMapping ($<event_struct>)
-	LightShow_SetActive \{Active = true}
+	LightShow_SetActive \{active = true}
 	LightShow_SetParams {
 		performance = medium
-		mood = Intro
+		mood = intro
 		VenueSnapshots = $<snapshot_struct>
-		venuematerialsnapshotsname = <material_snapshot_struct>
+		VenueMaterialSnapshotsName = <material_snapshot_struct>
 	}
-	lightshow_spotlightcolor \{Color = white}
-	if NOT ($debug_forcescore = OFF)
+	LightShow_SpotlightColor \{color = white}
+	if NOT ($debug_forcescore = off)
 		CrowdIncrease \{player_status = player1_status}
 	endif
-	formatText checksumName = venue_setup_scr '%s_SetupLightShow' s = <pakname> AddToStringLookup
+	FormatText checksumname = venue_setup_scr '%s_SetupLightShow' s = <pakname> AddToStringLookup
 	if ScriptExists <venue_setup_scr>
-		SpawnScriptNow <venue_setup_scr> id = LightShow
+		spawnscriptnow <venue_setup_scr> id = LightShow
 	endif
 	<parse_notetrack> = true
 	switch <pakname>
 		case 'z_studio2'
-		<parse_notetrack> = FALSE
+		<parse_notetrack> = false
 	endswitch
 	return true parse_notetrack = <parse_notetrack>
 endscript
 
-script lightshow_dummyloop 
-	KillSpawnedScript \{Name = lightshow_dummyloop_spawned}
-	SpawnScriptNow \{lightshow_dummyloop_spawned
+script LightShow_DummyLoop 
+	KillSpawnedScript \{name = LightShow_DummyLoop_Spawned}
+	spawnscriptnow \{LightShow_DummyLoop_Spawned
 		id = LightShow}
 endscript
 
-script lightshow_dummyloop_spawned 
+script LightShow_DummyLoop_Spawned 
 	begin
 	LightShow_Update
 	Wait \{1
@@ -1330,24 +1330,24 @@ script lightshow_dummyloop_spawned
 endscript
 
 script LightShow_Shutdown 
-	printf \{qs(0x9010c422)}
-	LightShow_SetActive \{Active = FALSE}
-	LightShow_SetProcessors \{CLEAR}
-	LightShow_SetMapping \{CLEAR}
-	KillSpawnedScript \{Name = lightshow_iterator}
+	printf \{qs("\LLightShow_Shutdown starting")}
+	LightShow_SetActive \{active = false}
+	LightShow_SetProcessors \{Clear}
+	LightShow_SetMapping \{Clear}
+	KillSpawnedScript \{name = lightshow_iterator}
 	KillSpawnedScript \{id = LightShow}
-	printf \{qs(0x4d49808d)}
+	printf \{qs("\LLightShow_Shutdown finished")}
 endscript
 
-script lightshow_songfailed 
-	KillSpawnedScript \{Name = lightshow_iterator}
+script LightShow_SongFailed 
+	KillSpawnedScript \{name = lightshow_iterator}
 	KillSpawnedScript \{id = LightShow}
-	LightShow_EnableSpotlights \{Enabled = FALSE
+	LightShow_EnableSpotlights \{enabled = false
 		spots = [
 			vocalist
-			GUITARIST
-			BASSIST
-			drummer
+			Guitarist
+			bassist
+			Drummer
 		]}
 endscript
 
@@ -1364,8 +1364,8 @@ script Venue_PulseOnEvents \{amount = 1.12
 		<end_scale> = (<scaling> * <amount>)
 		begin
 		Block anytypes = <events>
-		Wait <delay> Seconds
-		Obj_ApplyScaling Scale = <end_scale>
+		Wait <delay> seconds
+		Obj_ApplyScaling scale = <end_scale>
 		Wait \{1
 			gameframes}
 		Obj_MorphScaling target_scale = <start_scale> blend_duration = <time>
@@ -1376,7 +1376,7 @@ script Venue_PulseOnEvents \{amount = 1.12
 endscript
 
 script Venue_PulseGreen 
-	SetSpawnInstanceLimits \{Max = 8
+	SetSpawnInstanceLimits \{max = 8
 		management = ignore_spawn_request}
 	Venue_PulseOnEvents \{events = [
 			HitNote_Green
@@ -1384,7 +1384,7 @@ script Venue_PulseGreen
 endscript
 
 script Venue_PulseRed 
-	SetSpawnInstanceLimits \{Max = 8
+	SetSpawnInstanceLimits \{max = 8
 		management = ignore_spawn_request}
 	Venue_PulseOnEvents \{events = [
 			HitNote_Red
@@ -1392,7 +1392,7 @@ script Venue_PulseRed
 endscript
 
 script Venue_PulseYellow 
-	SetSpawnInstanceLimits \{Max = 8
+	SetSpawnInstanceLimits \{max = 8
 		management = ignore_spawn_request}
 	Venue_PulseOnEvents \{events = [
 			HitNote_Yellow
@@ -1400,7 +1400,7 @@ script Venue_PulseYellow
 endscript
 
 script Venue_PulseBlue 
-	SetSpawnInstanceLimits \{Max = 8
+	SetSpawnInstanceLimits \{max = 8
 		management = ignore_spawn_request}
 	Venue_PulseOnEvents \{events = [
 			HitNote_Blue
@@ -1408,7 +1408,7 @@ script Venue_PulseBlue
 endscript
 
 script Venue_PulseOrange 
-	SetSpawnInstanceLimits \{Max = 8
+	SetSpawnInstanceLimits \{max = 8
 		management = ignore_spawn_request}
 	Venue_PulseOnEvents \{events = [
 			HitNote_Orange
@@ -1416,12 +1416,12 @@ script Venue_PulseOrange
 endscript
 
 script Venue_PulseOpen 
-	SetSpawnInstanceLimits \{Max = 8
+	SetSpawnInstanceLimits \{max = 8
 		management = ignore_spawn_request}
 endscript
 
 script Venue_PulseDrumLeft 
-	SetSpawnInstanceLimits \{Max = 2
+	SetSpawnInstanceLimits \{max = 2
 		management = ignore_spawn_request}
 	Venue_PulseOnEvents \{events = [
 			DrumKick_Left
@@ -1431,7 +1431,7 @@ script Venue_PulseDrumLeft
 endscript
 
 script Venue_PulseDrumRight 
-	SetSpawnInstanceLimits \{Max = 2
+	SetSpawnInstanceLimits \{max = 2
 		management = ignore_spawn_request}
 	Venue_PulseOnEvents \{events = [
 			DrumKick_Right
@@ -1441,7 +1441,7 @@ script Venue_PulseDrumRight
 endscript
 
 script Venue_PulseDrumBoth 
-	SetSpawnInstanceLimits \{Max = 4
+	SetSpawnInstanceLimits \{max = 4
 		management = ignore_spawn_request}
 	Venue_PulseOnEvents \{events = [
 			DrumKick_Left
@@ -1452,7 +1452,7 @@ script Venue_PulseDrumBoth
 endscript
 
 script Venue_PulseAny 
-	SetSpawnInstanceLimits \{Max = 8
+	SetSpawnInstanceLimits \{max = 8
 		management = ignore_spawn_request}
 	Venue_PulseOnEvents \{events = [
 			HitNote_Green
@@ -1464,7 +1464,7 @@ script Venue_PulseAny
 endscript
 
 script Venue_PulseGreenRed 
-	SetSpawnInstanceLimits \{Max = 8
+	SetSpawnInstanceLimits \{max = 8
 		management = ignore_spawn_request}
 	Venue_PulseOnEvents \{events = [
 			HitNote_Green
@@ -1473,7 +1473,7 @@ script Venue_PulseGreenRed
 endscript
 
 script Venue_PulseGreenYellow 
-	SetSpawnInstanceLimits \{Max = 8
+	SetSpawnInstanceLimits \{max = 8
 		management = ignore_spawn_request}
 	Venue_PulseOnEvents \{events = [
 			HitNote_Green
@@ -1482,7 +1482,7 @@ script Venue_PulseGreenYellow
 endscript
 
 script Venue_PulseGreenBlue 
-	SetSpawnInstanceLimits \{Max = 8
+	SetSpawnInstanceLimits \{max = 8
 		management = ignore_spawn_request}
 	Venue_PulseOnEvents \{events = [
 			HitNote_Green
@@ -1491,7 +1491,7 @@ script Venue_PulseGreenBlue
 endscript
 
 script Venue_PulseGreenOrange 
-	SetSpawnInstanceLimits \{Max = 8
+	SetSpawnInstanceLimits \{max = 8
 		management = ignore_spawn_request}
 	Venue_PulseOnEvents \{events = [
 			HitNote_Green
@@ -1500,7 +1500,7 @@ script Venue_PulseGreenOrange
 endscript
 
 script Venue_PulseGreenOpen 
-	SetSpawnInstanceLimits \{Max = 8
+	SetSpawnInstanceLimits \{max = 8
 		management = ignore_spawn_request}
 	Venue_PulseOnEvents \{events = [
 			HitNote_Green
@@ -1508,7 +1508,7 @@ script Venue_PulseGreenOpen
 endscript
 
 script Venue_PulseRedYellow 
-	SetSpawnInstanceLimits \{Max = 8
+	SetSpawnInstanceLimits \{max = 8
 		management = ignore_spawn_request}
 	Venue_PulseOnEvents \{events = [
 			HitNote_Red
@@ -1517,7 +1517,7 @@ script Venue_PulseRedYellow
 endscript
 
 script Venue_PulseRedBlue 
-	SetSpawnInstanceLimits \{Max = 8
+	SetSpawnInstanceLimits \{max = 8
 		management = ignore_spawn_request}
 	Venue_PulseOnEvents \{events = [
 			HitNote_Red
@@ -1526,7 +1526,7 @@ script Venue_PulseRedBlue
 endscript
 
 script Venue_PulseRedOrange 
-	SetSpawnInstanceLimits \{Max = 8
+	SetSpawnInstanceLimits \{max = 8
 		management = ignore_spawn_request}
 	Venue_PulseOnEvents \{events = [
 			HitNote_Red
@@ -1535,7 +1535,7 @@ script Venue_PulseRedOrange
 endscript
 
 script Venue_PulseRedOpen 
-	SetSpawnInstanceLimits \{Max = 8
+	SetSpawnInstanceLimits \{max = 8
 		management = ignore_spawn_request}
 	Venue_PulseOnEvents \{events = [
 			HitNote_Red
@@ -1543,7 +1543,7 @@ script Venue_PulseRedOpen
 endscript
 
 script Venue_PulseYellowBlue 
-	SetSpawnInstanceLimits \{Max = 8
+	SetSpawnInstanceLimits \{max = 8
 		management = ignore_spawn_request}
 	Venue_PulseOnEvents \{events = [
 			HitNote_Yellow
@@ -1552,7 +1552,7 @@ script Venue_PulseYellowBlue
 endscript
 
 script Venue_PulseYellowOrange 
-	SetSpawnInstanceLimits \{Max = 8
+	SetSpawnInstanceLimits \{max = 8
 		management = ignore_spawn_request}
 	Venue_PulseOnEvents \{events = [
 			HitNote_Yellow
@@ -1561,7 +1561,7 @@ script Venue_PulseYellowOrange
 endscript
 
 script Venue_PulseYellowOpen 
-	SetSpawnInstanceLimits \{Max = 8
+	SetSpawnInstanceLimits \{max = 8
 		management = ignore_spawn_request}
 	Venue_PulseOnEvents \{events = [
 			HitNote_Yellow
@@ -1569,7 +1569,7 @@ script Venue_PulseYellowOpen
 endscript
 
 script Venue_PulseBlueOrange 
-	SetSpawnInstanceLimits \{Max = 8
+	SetSpawnInstanceLimits \{max = 8
 		management = ignore_spawn_request}
 	Venue_PulseOnEvents \{events = [
 			HitNote_Blue
@@ -1578,7 +1578,7 @@ script Venue_PulseBlueOrange
 endscript
 
 script Venue_PulseBlueOpen 
-	SetSpawnInstanceLimits \{Max = 8
+	SetSpawnInstanceLimits \{max = 8
 		management = ignore_spawn_request}
 	Venue_PulseOnEvents \{events = [
 			HitNote_Blue
@@ -1586,7 +1586,7 @@ script Venue_PulseBlueOpen
 endscript
 
 script Venue_PulseOrangeOpen 
-	SetSpawnInstanceLimits \{Max = 8
+	SetSpawnInstanceLimits \{max = 8
 		management = ignore_spawn_request}
 	Venue_PulseOnEvents \{events = [
 			HitNote_Orange

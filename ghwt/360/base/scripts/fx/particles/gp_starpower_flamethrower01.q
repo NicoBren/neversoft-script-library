@@ -1,31 +1,31 @@
 GP_StarPower_FlameThrower01 = {
-	Pos = (0.0, 0.0, -0.35865304)
-	Angles = (0.0, 0.0, 0.0)
+	pos = (0.0, 0.0, -0.35865304)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
-	Attach
+	attach
 	Align
 	ApplyPositionOffset
-	AttachObject = GUITARIST
+	AttachObject = Guitarist
 	bone = bone_guitar_neck
 	EmitRangeDims = (0.0, 0.0, 0.0)
-	Emit_Target = (0.0, 0.0, -1.0)
+	emit_Target = (0.0, 0.0, -1.0)
 	EnableRotate
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, 0.2, 0.0)
+	force = (0.0, 0.2, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	AngleSpread = 20.0
 	LifeRange = (1.0, 1.3)
-	Emit_Rate = 16.0
-	Max = 0
+	emit_rate = 16.0
+	max = 0
 	TimeSeed = 0.0
-	LifeTime = 0.0
-	EmitNum = 0
+	lifeTime = 0.0
+	emitNum = 0
 	FollowEmitter = 0.2
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -40,16 +40,16 @@ GP_StarPower_FlameThrower01 = {
 	AlignWithPath
 	PathFollowTime = 0.6
 	History = 2
-	HistoryListCoordinateSpace = World
-	Color = -1
+	HistoryListCoordinateSpace = world
+	color = -1
 	LOD_Default
 	QuickMaterial = {
 		TextureLayout = Layout2x2
 		DiffuseTextureEnabled
-		DiffuseTexture = JOW_StatueFlames01
+		DiffuseTexture = jow_statueflames01
 		SpecularPower = 0
-		AlphaCutoff = 24
-		BlendMode = blend
+		alphacutoff = 24
+		blendMode = blend
 		Burn
 		BurnValue = 0.7
 		QuadAnimationFPS = 12

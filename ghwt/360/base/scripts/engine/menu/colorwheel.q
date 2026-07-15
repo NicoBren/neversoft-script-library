@@ -12,14 +12,14 @@ color_wheel_arrow_anim_speed = 0.5
 color_wheel_full_alpha = 255
 color_wheel_step_1_alpha = 150
 color_wheel_step_2_alpha = 100
-color_wheel_turn_sound = colorwheel_rotate
-color_wheel_choose_sound = colorwheel_selectpie
-color_wheel_increment_sound = colorwheel_highlight_up_down
-color_wheel_focus_sound = colorwheel_selectpie
-color_wheel_unfocus_sound = colorwheel_deselect_piepiece
+color_wheel_turn_sound = ColorWheel_Rotate
+color_wheel_choose_sound = ColorWheel_SelectPie
+color_wheel_increment_sound = ColorWheel_HighLight_Up_Down
+color_wheel_focus_sound = ColorWheel_SelectPie
+color_wheel_unfocus_sound = ColorWheel_Deselect_PiePiece
 default_colorwheel = [
 	[
-		black_1guitar
+		Black_1guitar
 		grey_2guitar
 		grey_3guitar
 		grey_4guitar
@@ -117,23 +117,23 @@ script colorwheel_add_item {
 		pad_choose_script = color_slice_back
 		increment_focus_script = nullscript
 		increment_focus_params = {}
-		Scale = 1
+		scale = 1
 		dims = (550.0, 550.0)
-		Pos = (175.0, 165.0)
+		pos = (175.0, 165.0)
 		lookup_table = ($default_colorwheel)
 	}
 	PushAssetContext \{context = z_soundcheck}
 	SetScreenElementLock \{id = current_menu
-		OFF}
+		off}
 	if NOT GotParam \{pad_choose_params}
 		<pad_choose_params> = <...>
 	endif
 	<z_priority> = 100
 	CreateScreenElement {
-		Type = ContainerElement
+		type = ContainerElement
 		parent = current_menu
 		id = color_wheel_menu_item
-		dims = (<Scale> * <dims>)
+		dims = (<scale> * <dims>)
 		event_handlers = [{focus <focus_script> <focus_params>}
 			{unfocus <unfocus_script>}
 			{pad_choose color_wheel_choose}
@@ -142,33 +142,33 @@ script colorwheel_add_item {
 		z_priority = <z_priority>
 	}
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = color_wheel_menu_item
 		id = color_wheel_left_arrow
 		texture = wheel_arrow
-		Scale = (-1.0, 1.0)
+		scale = (-1.0, 1.0)
 		rot_angle = -90
-		Pos = (<Scale> * (50.0, 0.0))
-		Scale = ((-1.0, 1.0) * <Scale>)
+		pos = (<scale> * (50.0, 0.0))
+		scale = ((-1.0, 1.0) * <scale>)
 		rgba = [0 0 0 0]
 	}
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = color_wheel_menu_item
 		id = color_wheel_right_arrow
 		texture = wheel_arrow
 		rot_angle = 90
-		Pos = (<Scale> * (550.0, 0.0))
-		Scale = <Scale>
+		pos = (<scale> * (550.0, 0.0))
+		scale = <scale>
 		rgba = [0 0 0 0]
 	}
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = color_wheel_menu_item
 		id = color_wheel_backing
 		texture = wheel_back
-		Scale = <Scale>
-		Pos = <Pos>
+		scale = <scale>
+		pos = <pos>
 		rgba = [235 235 235 250]
 		z_priority = (<z_priority> -10)
 	}
@@ -180,12 +180,12 @@ script colorwheel_add_item {
 		}
 	endif
 	CreateScreenElement {
-		Type = ContainerElement
+		type = ContainerElement
 		id = color_wheel
 		parent = color_wheel_menu_item
 		not_focusable
-		Pos = <Pos>
-		Scale = <Scale>
+		pos = <pos>
+		scale = <scale>
 	}
 	color_wheel :SetTags {
 		current_rot_inc = 0
@@ -203,7 +203,7 @@ script colorwheel_add_item {
 	}
 	add_screen_elements
 	SetScreenElementLock \{id = current_menu
-		On}
+		on}
 	if GotParam \{initial_rgb}
 		color_wheel_focus_on_rgb_match initial_rgb = <initial_rgb>
 	endif
@@ -211,16 +211,16 @@ script colorwheel_add_item {
 	current_menu :GetTags
 	if GotParam \{total_length}
 		GetScreenElementDims \{id = current_menu}
-		parent_height = <height>
+		parent_height = <Height>
 		GetScreenElementDims \{id = color_wheel_menu_item}
-		total_length = (<total_length> + <height>)
+		total_length = (<total_length> + <Height>)
 		if (<total_length> > <parent_height>)
-			generic_menu :se_setprops \{generic_menu_scrollbar_alpha = 1.0}
+			generic_menu :SE_SetProps \{generic_menu_scrollbar_alpha = 1.0}
 		endif
 		current_menu :SetTags {total_length = <total_length>}
 	else
 		GetScreenElementDims \{id = color_wheel_menu_item}
-		current_menu :SetTags {total_length = <height>}
+		current_menu :SetTags {total_length = <Height>}
 	endif
 endscript
 
@@ -229,122 +229,122 @@ script add_screen_elements
 	color_wheel :GetTags
 	i = 0
 	begin
-	formatText checksumName = base_id 'color_section_%i' i = <i> AddToStringLookup = true
+	FormatText checksumname = base_id 'color_section_%i' i = <i> AddToStringLookup = true
 	CreateScreenElement {
-		Type = ContainerElement
+		type = ContainerElement
 		id = <base_id>
 		parent = color_wheel
 		rot_angle = (<i> * ($slice_rot_inc))
 		not_focusable
 	}
-	getscreenelementzpriority id = <id>
-	formatText checksumName = child_id 'color_section_%i_%j' i = <i> j = 1 AddToStringLookup = true
+	GetScreenElementZPriority id = <id>
+	FormatText checksumname = child_id 'color_section_%i_%j' i = <i> j = 1 AddToStringLookup = true
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = <base_id>
 		id = <child_id>
 		texture = blank_1
-		Pos = ($slice_1_pos)
+		pos = ($slice_1_pos)
 		rgba = (($color_lookup_table).(((<lookup_table> [<i>]) [0])).diffuse)
 		rgba = (($color_lookup_table).(((<lookup_table> [<i>]) [0])).rgb)
 		z_priority = (<z_priority> + 2)
 	}
 	GetScreenElementDims id = <child_id>
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = <child_id>
 		texture = blank_1
-		Scale = ($color_wheel_inc_outline_scale)
+		scale = ($color_wheel_inc_outline_scale)
 		just = [left , top]
-		Pos = (((<width> - <width> * (($color_wheel_inc_outline_scale).(1.0, 0.0))) / 2) * (1.0, 0.0) + ((<height> - <height> * (($color_wheel_inc_outline_scale).(0.0, 1.0))) / 2) * (0.0, 1.0))
+		pos = (((<width> - <width> * (($color_wheel_inc_outline_scale).(1.0, 0.0))) / 2) * (1.0, 0.0) + ((<Height> - <Height> * (($color_wheel_inc_outline_scale).(0.0, 1.0))) / 2) * (0.0, 1.0))
 		z_priority = (<z_priority> + 1)
 		alpha = 0
 	}
-	formatText checksumName = child_id 'color_section_%i_%j' i = <i> j = 2 AddToStringLookup = true
+	FormatText checksumname = child_id 'color_section_%i_%j' i = <i> j = 2 AddToStringLookup = true
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = <base_id>
 		id = <child_id>
 		texture = blank_2
-		Pos = ($slice_2_pos)
+		pos = ($slice_2_pos)
 		rgba = (($color_lookup_table).(((<lookup_table> [<i>]) [1])).diffuse)
 		rgba = (($color_lookup_table).(((<lookup_table> [<i>]) [1])).rgb)
 		z_priority = (<z_priority> + 2)
 	}
 	GetScreenElementDims id = <child_id>
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = <child_id>
 		texture = blank_2
-		Scale = ($color_wheel_inc_outline_scale)
+		scale = ($color_wheel_inc_outline_scale)
 		just = [left , top]
-		Pos = (((<width> - <width> * (($color_wheel_inc_outline_scale).(1.0, 0.0))) / 2) * (1.0, 0.0) + ((<height> - <height> * (($color_wheel_inc_outline_scale).(0.0, 1.0))) / 2) * (0.0, 1.0))
+		pos = (((<width> - <width> * (($color_wheel_inc_outline_scale).(1.0, 0.0))) / 2) * (1.0, 0.0) + ((<Height> - <Height> * (($color_wheel_inc_outline_scale).(0.0, 1.0))) / 2) * (0.0, 1.0))
 		z_priority = (<z_priority> + 1)
 		alpha = 0
 	}
-	formatText checksumName = child_id 'color_section_%i_%j' i = <i> j = 3 AddToStringLookup = true
+	FormatText checksumname = child_id 'color_section_%i_%j' i = <i> j = 3 AddToStringLookup = true
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = <base_id>
 		id = <child_id>
 		texture = blank_3
-		Pos = ($slice_3_pos)
+		pos = ($slice_3_pos)
 		rgba = (($color_lookup_table).(((<lookup_table> [<i>]) [2])).diffuse)
 		rgba = (($color_lookup_table).(((<lookup_table> [<i>]) [2])).rgb)
 		z_priority = (<z_priority> + 2)
 	}
 	GetScreenElementDims id = <child_id>
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = <child_id>
 		texture = blank_3
-		Scale = ($color_wheel_inc_outline_scale)
+		scale = ($color_wheel_inc_outline_scale)
 		just = [left , top]
-		Pos = (((<width> - <width> * (($color_wheel_inc_outline_scale).(1.0, 0.0))) / 2) * (1.0, 0.0) + ((<height> - <height> * (($color_wheel_inc_outline_scale).(0.0, 1.0))) / 2) * (0.0, 1.0))
+		pos = (((<width> - <width> * (($color_wheel_inc_outline_scale).(1.0, 0.0))) / 2) * (1.0, 0.0) + ((<Height> - <Height> * (($color_wheel_inc_outline_scale).(0.0, 1.0))) / 2) * (0.0, 1.0))
 		z_priority = (<z_priority> + 1)
 		alpha = 0
 	}
-	formatText checksumName = child_id 'color_section_%i_%j' i = <i> j = 4 AddToStringLookup = true
+	FormatText checksumname = child_id 'color_section_%i_%j' i = <i> j = 4 AddToStringLookup = true
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = <base_id>
 		id = <child_id>
 		texture = blank_4
-		Pos = ($slice_4_pos)
+		pos = ($slice_4_pos)
 		rgba = (($color_lookup_table).(((<lookup_table> [<i>]) [3])).diffuse)
 		rgba = (($color_lookup_table).(((<lookup_table> [<i>]) [3])).rgb)
 		z_priority = (<z_priority> + 2)
 	}
 	GetScreenElementDims id = <child_id>
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = <child_id>
 		texture = blank_4
-		Scale = ($color_wheel_inc_outline_scale)
+		scale = ($color_wheel_inc_outline_scale)
 		just = [left , top]
-		Pos = (((<width> - <width> * (($color_wheel_inc_outline_scale).(1.0, 0.0))) / 2) * (1.0, 0.0) + ((<height> - <height> * (($color_wheel_inc_outline_scale).(0.0, 1.0))) / 2) * (0.0, 1.0))
+		pos = (((<width> - <width> * (($color_wheel_inc_outline_scale).(1.0, 0.0))) / 2) * (1.0, 0.0) + ((<Height> - <Height> * (($color_wheel_inc_outline_scale).(0.0, 1.0))) / 2) * (0.0, 1.0))
 		z_priority = (<z_priority> + 1)
 		alpha = 0
 	}
-	formatText checksumName = child_id 'color_section_%i_%j' i = <i> j = 5 AddToStringLookup = true
+	FormatText checksumname = child_id 'color_section_%i_%j' i = <i> j = 5 AddToStringLookup = true
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = <base_id>
 		id = <child_id>
 		texture = blank_5
-		Pos = ($slice_5_pos)
+		pos = ($slice_5_pos)
 		rgba = (($color_lookup_table).(((<lookup_table> [<i>]) [4])).diffuse)
 		rgba = (($color_lookup_table).(((<lookup_table> [<i>]) [4])).rgb)
 		z_priority = (<z_priority> + 2)
 	}
 	GetScreenElementDims id = <child_id>
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = <child_id>
 		texture = blank_5
-		Scale = ($color_wheel_inc_outline_scale)
+		scale = ($color_wheel_inc_outline_scale)
 		just = [left , top]
-		Pos = (((<width> - <width> * (($color_wheel_inc_outline_scale).(1.0, 0.0))) / 2) * (1.0, 0.0) + ((<height> - <height> * (($color_wheel_inc_outline_scale).(0.0, 1.0))) / 2) * (0.0, 1.0))
+		pos = (((<width> - <width> * (($color_wheel_inc_outline_scale).(1.0, 0.0))) / 2) * (1.0, 0.0) + ((<Height> - <Height> * (($color_wheel_inc_outline_scale).(0.0, 1.0))) / 2) * (0.0, 1.0))
 		z_priority = (<z_priority> + 1)
 		alpha = 0
 	}
@@ -358,11 +358,11 @@ script color_wheel_choose
 	color_wheel_get_rgba
 	printstruct <...>
 	color_wheel :SetTags {
-		init_color = <Color>
+		init_color = <color>
 	}
-	LaunchEvent \{Type = unfocus
+	LaunchEvent \{type = unfocus
 		target = current_menu}
-	LaunchEvent \{Type = focus
+	LaunchEvent \{type = focus
 		target = color_wheel_menu_item}
 	SetScreenElementProps \{id = color_wheel_menu_item
 		event_handlers = [
@@ -442,15 +442,15 @@ script color_wheel_back
 	SoundEvent event = ($color_wheel_unfocus_sound)
 	color_wheel :GetTags
 	color_wheel_reset increment_focus_script = <increment_focus_script> increment_focus_params = <increment_focus_params> pad_choose_script = <pad_choose_script> pad_choose_params = <pad_choose_params>
-	LaunchEvent \{Type = unfocus
+	LaunchEvent \{type = unfocus
 		target = color_wheel_menu_item}
-	LaunchEvent \{Type = focus
+	LaunchEvent \{type = focus
 		target = current_menu}
 	if NOT GotParam \{skip_exit_script}
 		if GotParam \{special_exit_script}
 			if GotParam \{increment_focus_script}
 				color_wheel_focus_on_rgb_match initial_rgb = ((($color_lookup_table).<init_color>).diffuse)
-				<increment_focus_script> {<increment_focus_params> Color = <init_color>}
+				<increment_focus_script> {<increment_focus_params> color = <init_color>}
 			endif
 			<special_exit_script> <special_exit_params>
 		endif
@@ -493,7 +493,7 @@ script color_slice_back
 endscript
 
 script color_wheel_rotate_clockwise 
-	setspawnedscriptnorepeatfor time = ($color_wheel_spin_speed)
+	SetSpawnedScriptNoRepeatFor time = ($color_wheel_spin_speed)
 	SoundEvent event = ($color_wheel_turn_sound)
 	SetScreenElementProps \{id = color_wheel_right_arrow
 		rgba = [
@@ -513,7 +513,7 @@ script color_wheel_rotate_clockwise
 	if (<current_rot_inc> = 0)
 		current_rot_inc = 12
 		SetScreenElementProps id = color_wheel rot_angle = (-1 * ($slice_rot_inc)) time = ($color_wheel_spin_speed)
-		SpawnScriptNow color_wheel_fix_rotate params = {current_rot_inc = <current_rot_inc>}
+		spawnscriptnow color_wheel_fix_rotate params = {current_rot_inc = <current_rot_inc>}
 	else
 		current_rot_inc = (<current_rot_inc> -1)
 		SetScreenElementProps id = color_wheel rot_angle = (<current_rot_inc> * ($slice_rot_inc)) time = ($color_wheel_spin_speed)
@@ -523,11 +523,11 @@ script color_wheel_rotate_clockwise
 	color_slice_set_alpha_all alpha = ($color_wheel_step_1_alpha)
 	color_slice_set_alpha_slice alpha = ($color_wheel_full_alpha)
 	color_wheel_fire_inc_focus increment_focus_script = <increment_focus_script> increment_focus_params = <increment_focus_params>
-	SetScreenElementProps id = color_wheel_left_arrow rgba = [0 0 0 0] time = ($color_wheel_arrow_anim_speed) anim = gentle
+	SetScreenElementProps id = color_wheel_left_arrow rgba = [0 0 0 0] time = ($color_wheel_arrow_anim_speed) Anim = gentle
 endscript
 
 script color_wheel_rotate_counter_clockwise 
-	setspawnedscriptnorepeatfor time = ($color_wheel_spin_speed)
+	SetSpawnedScriptNoRepeatFor time = ($color_wheel_spin_speed)
 	SoundEvent event = ($color_wheel_turn_sound)
 	SetScreenElementProps \{id = color_wheel_right_arrow
 		rgba = [
@@ -547,7 +547,7 @@ script color_wheel_rotate_counter_clockwise
 	if (<current_rot_inc> = 12)
 		current_rot_inc = 0
 		SetScreenElementProps id = color_wheel rot_angle = (13 * ($slice_rot_inc)) time = ($color_wheel_spin_speed)
-		SpawnScriptNow color_wheel_fix_rotate params = {current_rot_inc = <current_rot_inc>}
+		spawnscriptnow color_wheel_fix_rotate params = {current_rot_inc = <current_rot_inc>}
 	else
 		current_rot_inc = (<current_rot_inc> + 1)
 		SetScreenElementProps id = color_wheel rot_angle = ((<current_rot_inc>) * ($slice_rot_inc)) time = ($color_wheel_spin_speed)
@@ -557,7 +557,7 @@ script color_wheel_rotate_counter_clockwise
 	color_slice_set_alpha_all alpha = ($color_wheel_step_1_alpha)
 	color_slice_set_alpha_slice alpha = ($color_wheel_full_alpha)
 	color_wheel_fire_inc_focus increment_focus_script = <increment_focus_script> increment_focus_params = <increment_focus_params>
-	SetScreenElementProps id = color_wheel_right_arrow rgba = [0 0 0 0] time = ($color_wheel_arrow_anim_speed) anim = gentle
+	SetScreenElementProps id = color_wheel_right_arrow rgba = [0 0 0 0] time = ($color_wheel_arrow_anim_speed) Anim = gentle
 endscript
 
 script color_wheel_fix_rotate 
@@ -565,7 +565,7 @@ script color_wheel_fix_rotate
 			current_rot_inc
 		]
 		all}
-	Wait ($color_wheel_spin_speed) Seconds
+	Wait ($color_wheel_spin_speed) seconds
 	if ScreenElementExists \{id = color_wheel}
 		SetScreenElementProps id = color_wheel rot_angle = (<current_rot_inc> * ($slice_rot_inc))
 	endif
@@ -575,7 +575,7 @@ script color_slice_up
 	color_wheel :GetTags
 	if NOT (<current_ring> = 1)
 		current_ring = (<current_ring> -1)
-		SpawnScriptNow colorwheel_increment_up_down params = {current_ring = <current_ring>}
+		spawnscriptnow colorwheel_increment_up_down params = {current_ring = <current_ring>}
 	endif
 	color_wheel :SetTags {current_ring = <current_ring>}
 	color_slice_raise_inc
@@ -586,7 +586,7 @@ script color_slice_down
 	color_wheel :GetTags
 	if NOT (<current_ring> = 5)
 		current_ring = (<current_ring> + 1)
-		SpawnScriptNow colorwheel_increment_up_down params = {current_ring = <current_ring>}
+		spawnscriptnow colorwheel_increment_up_down params = {current_ring = <current_ring>}
 	endif
 	color_wheel :SetTags {current_ring = <current_ring>}
 	color_slice_raise_inc
@@ -597,24 +597,24 @@ script color_wheel_raise_current_rot
 	color_wheel_depress_current_rot
 	color_wheel :GetTags
 	if (<current_rot_inc> = 0)
-		formatText \{checksumName = new_id
+		FormatText \{checksumname = new_id
 			'color_section_%i'
 			i = 0}
 	else
-		formatText checksumName = new_id 'color_section_%i' i = (13 - <current_rot_inc>)
+		FormatText checksumname = new_id 'color_section_%i' i = (13 - <current_rot_inc>)
 	endif
-	SetScreenElementProps id = <new_id> Scale = ($color_wheel_slice_highlight_scale) anim = fast_out time = ($color_wheel_spin_speed)
+	SetScreenElementProps id = <new_id> scale = ($color_wheel_slice_highlight_scale) Anim = fast_out time = ($color_wheel_spin_speed)
 	color_wheel_turn_on_slice_boarders
 endscript
 
 script color_wheel_depress_current_rot 
 	i = 0
 	begin
-	formatText checksumName = current_id 'color_section_%i' i = <i>
-	SetScreenElementProps id = <current_id> Scale = 1.0 anim = fast_in time = ($color_wheel_spin_speed)
+	FormatText checksumname = current_id 'color_section_%i' i = <i>
+	SetScreenElementProps id = <current_id> scale = 1.0 Anim = fast_in time = ($color_wheel_spin_speed)
 	i = (<i> + 1)
 	repeat 13
-	color_wheel_turn_off_slice_boarders \{anim = gentle
+	color_wheel_turn_off_slice_boarders \{Anim = gentle
 		time = 1.5}
 endscript
 
@@ -623,34 +623,34 @@ script color_slice_raise_inc
 	color_wheel_get_slice_id
 	<slice_id> :GetTags
 	color_wheel :GetTags
-	formatText checksumName = inc_id 'color_section_%i_%j' i = <current_highlight> j = <current_ring>
-	getscreenelementzpriority \{id = color_wheel}
-	SetScreenElementProps id = <inc_id> Scale = ($color_wheel_inc_highlight_scale) z_priority = (<z_priority> + 30)
+	FormatText checksumname = inc_id 'color_section_%i_%j' i = <current_highlight> j = <current_ring>
+	GetScreenElementZPriority \{id = color_wheel}
+	SetScreenElementProps id = <inc_id> scale = ($color_wheel_inc_highlight_scale) z_priority = (<z_priority> + 30)
 	GetScreenElementChildren id = <inc_id>
 	GetArraySize <children>
 	k = 0
 	begin
 	SetScreenElementProps id = (<children> [<k>]) z_priority = (<z_priority> + 29)
 	k = (<k> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	color_slice_add_drop_shadow i = <current_highlight> j = <current_ring>
 endscript
 
 script color_slice_depress_inc 
 	color_wheel_get_slice_id
 	<slice_id> :GetTags
-	getscreenelementzpriority \{id = color_wheel}
+	GetScreenElementZPriority \{id = color_wheel}
 	j = 1
 	begin
-	formatText checksumName = inc_id 'color_section_%i_%j' i = <current_highlight> j = <j>
-	SetScreenElementProps id = <inc_id> Scale = 1 z_priority = (<z_priority> + 2)
+	FormatText checksumname = inc_id 'color_section_%i_%j' i = <current_highlight> j = <j>
+	SetScreenElementProps id = <inc_id> scale = 1 z_priority = (<z_priority> + 2)
 	GetScreenElementChildren id = <inc_id>
 	GetArraySize <children>
 	k = 0
 	begin
 	SetScreenElementProps id = (<children> [<k>]) z_priority = (<z_priority> + 1.5)
 	k = (<k> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	j = (<j> + 1)
 	repeat 5
 	color_slice_del_drop_shadow
@@ -664,19 +664,19 @@ script color_slice_add_drop_shadow
 		all}
 	color_slice_del_drop_shadow
 	color_wheel :GetTags
-	formatText checksumName = parent_id 'color_section_%i' i = <i>
-	formatText checksumName = child_id 'color_section_%i_%j' i = <i> j = <j>
-	formatText checksumName = texture 'blank_%i_ds' i = <j>
-	formatText checksumName = pos_global 'slice_%i_pos' i = <j>
-	getscreenelementzpriority \{id = color_wheel}
+	FormatText checksumname = parent_id 'color_section_%i' i = <i>
+	FormatText checksumname = child_id 'color_section_%i_%j' i = <i> j = <j>
+	FormatText checksumname = texture 'blank_%i_ds' i = <j>
+	FormatText checksumname = pos_global 'slice_%i_pos' i = <j>
+	GetScreenElementZPriority \{id = color_wheel}
 	GetScreenElementDims id = <child_id>
 	PushAssetContext \{context = z_soundcheck}
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = <parent_id>
 		id = drop_shadow
 		texture = <texture>
-		Pos = (($<pos_global>) + <height> * 0.25 * (0.0, 1.0))
+		pos = (($<pos_global>) + <Height> * 0.25 * (0.0, 1.0))
 		rgba = [0 0 0 255]
 		z_priority = (<z_priority> + 28)
 	}
@@ -694,8 +694,8 @@ script color_slice_raise_ring
 	i = 0
 	begin
 	color_wheel :GetTags
-	formatText checksumName = inc_id 'color_section_%i_%j' i = <i> j = <current_ring>
-	SetScreenElementProps id = <inc_id> Scale = ($color_wheel_inc_highlight_scale)
+	FormatText checksumname = inc_id 'color_section_%i_%j' i = <i> j = <current_ring>
+	SetScreenElementProps id = <inc_id> scale = ($color_wheel_inc_highlight_scale)
 	i = (<i> + 1)
 	repeat 13
 endscript
@@ -708,8 +708,8 @@ script color_slice_depress_ring
 	j = 1
 	begin
 	if NOT (<i> = <current_highlight>)
-		formatText checksumName = inc_id 'color_section_%i_%j' i = <i> j = <j>
-		SetScreenElementProps id = <inc_id> Scale = 1
+		FormatText checksumname = inc_id 'color_section_%i_%j' i = <i> j = <j>
+		SetScreenElementProps id = <inc_id> scale = 1
 	endif
 	j = (<j> + 1)
 	repeat 5
@@ -727,7 +727,7 @@ script color_slice_set_alpha_all
 	begin
 	j = 1
 	begin
-	formatText checksumName = inc_id 'color_section_%i_%j' i = <i> j = <j>
+	FormatText checksumname = inc_id 'color_section_%i_%j' i = <i> j = <j>
 	SetScreenElementProps id = <inc_id> alpha = (<alpha> / 255.0)
 	j = (<j> + 1)
 	repeat 5
@@ -749,14 +749,14 @@ script color_slice_set_alpha_slice
 	endif
 	j = 1
 	begin
-	formatText checksumName = inc_id 'color_section_%i_%j' i = <i> j = <j>
+	FormatText checksumname = inc_id 'color_section_%i_%j' i = <i> j = <j>
 	SetScreenElementProps id = <inc_id> alpha = (<alpha> / 255.0)
 	j = (<j> + 1)
 	repeat 5
 endscript
 
 script color_wheel_turn_on_slice_boarders 
-	color_wheel_turn_off_slice_boarders \{anim = gentle
+	color_wheel_turn_off_slice_boarders \{Anim = gentle
 		time = 1}
 	color_wheel :GetTags
 	if (<current_rot_inc> = 0)
@@ -766,14 +766,14 @@ script color_wheel_turn_on_slice_boarders
 	endif
 	j = 1
 	begin
-	formatText checksumName = inc_id 'color_section_%i_%j' i = <i> j = <j>
+	FormatText checksumname = inc_id 'color_section_%i_%j' i = <i> j = <j>
 	GetScreenElementChildren id = <inc_id>
 	GetArraySize <children>
 	k = 0
 	begin
 	SetScreenElementProps id = (<children> [<k>]) alpha = 1
 	k = (<k> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	j = (<j> + 1)
 	repeat 5
 endscript
@@ -784,14 +784,14 @@ script color_wheel_turn_off_slice_boarders
 	begin
 	j = 1
 	begin
-	formatText checksumName = inc_id 'color_section_%i_%j' i = <i> j = <j>
+	FormatText checksumname = inc_id 'color_section_%i_%j' i = <i> j = <j>
 	GetScreenElementChildren id = <inc_id>
 	GetArraySize <children>
 	k = 0
 	begin
-	SetScreenElementProps id = (<children> [<k>]) alpha = 0 anim = <anim> time = <time>
+	SetScreenElementProps id = (<children> [<k>]) alpha = 0 Anim = <Anim> time = <time>
 	k = (<k> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	j = (<j> + 1)
 	repeat 5
 	i = (<i> + 1)
@@ -805,7 +805,7 @@ script color_wheel_get_slice_id
 	else
 		current_highlight = (13 - <current_rot_inc>)
 	endif
-	formatText checksumName = slice_id 'color_section_%i' i = <current_highlight>
+	FormatText checksumname = slice_id 'color_section_%i' i = <current_highlight>
 	return slice_id = <slice_id> current_highlight = <current_highlight>
 endscript
 
@@ -821,14 +821,14 @@ script color_wheel_unfocus
 endscript
 
 script print_color_results 
-	printf qs(0x72aafd87) r = <r> g = <g> b = <b> a = <a>
+	printf qs("\LRGBA selected is : [ %r %g %b %a ]") r = <r> g = <g> b = <b> a = <a>
 endscript
 
 script color_wheel_get_rgba 
 	color_wheel_get_slice_id
 	<slice_id> :GetTags
 	color_wheel :GetTags
-	return Color = ((<lookup_table> [<current_highlight>]) [(<current_ring> -1)])
+	return color = ((<lookup_table> [<current_highlight>]) [(<current_ring> -1)])
 endscript
 
 script color_wheel_reset 
@@ -855,7 +855,7 @@ endscript
 script color_wheel_fire_inc_focus 
 	color_wheel :GetTags
 	color_wheel_get_rgba
-	increment_focus_params = {<increment_focus_params> Color = <Color>}
+	increment_focus_params = {<increment_focus_params> color = <color>}
 	<increment_focus_script> <increment_focus_params>
 endscript
 
@@ -870,11 +870,11 @@ script color_wheel_match_rgb
 		j = 0
 		begin
 		lookup_rgba = (($color_lookup_table).(((<lookup_table> [<i>]) [<j>])).diffuse)
-		absolutevalue value = (<rgb> [0] - <lookup_rgba> [0])
+		AbsoluteValue value = (<rgb> [0] - <lookup_rgba> [0])
 		dev = <value>
-		absolutevalue value = (<rgb> [1] - <lookup_rgba> [1])
+		AbsoluteValue value = (<rgb> [1] - <lookup_rgba> [1])
 		dev = (<dev> + <value>)
-		absolutevalue value = (<rgb> [2] - <lookup_rgba> [2])
+		AbsoluteValue value = (<rgb> [2] - <lookup_rgba> [2])
 		dev = (<dev> + <value>)
 		if (<dev> < <best_match_dev>)
 			best_match_dev = <dev>
@@ -885,7 +885,7 @@ script color_wheel_match_rgb
 		repeat 5
 		i = (<i> + 1)
 		repeat 13
-		printf qs(0x99a7d843) i = <best_match_spoke> j = <best_match_inc>
+		printf qs("\Lbest_match_spoke = %i, best_match_inc=%j ") i = <best_match_spoke> j = <best_match_inc>
 		return best_match_spoke = <best_match_spoke> best_match_inc = <best_match_inc>
 	else
 		return \{spoke_num = 0
@@ -893,7 +893,7 @@ script color_wheel_match_rgb
 	endif
 endscript
 
-script absolutevalue 
+script AbsoluteValue 
 	RequireParams \{[
 			value
 		]}
@@ -919,13 +919,13 @@ script color_wheel_fire_select
 	SoundEvent event = ($color_wheel_choose_sound)
 	color_wheel_get_slice_id
 	<slice_id> :GetTags
-	formatText checksumName = inc_id 'color_section_%i_%j' i = <current_highlight> j = <current_ring>
-	SetScreenElementProps id = <inc_id> Scale = (1.05 * ($color_wheel_inc_highlight_scale)) time = 0.03
+	FormatText checksumname = inc_id 'color_section_%i_%j' i = <current_highlight> j = <current_ring>
+	SetScreenElementProps id = <inc_id> scale = (1.05 * ($color_wheel_inc_highlight_scale)) time = 0.03
 	Wait \{0.15
-		Seconds}
-	SetScreenElementProps id = <inc_id> Scale = (($color_wheel_inc_highlight_scale)) time = 0.031999998
+		seconds}
+	SetScreenElementProps id = <inc_id> scale = (($color_wheel_inc_highlight_scale)) time = 0.031999998
 	Wait \{0.3
-		Seconds}
+		seconds}
 	color_wheel_get_rgba
 	<pad_choose_script> {<pad_choose_params> diffuse = <diffuse> transition = <transition> dark = <dark> edge = <edge>}
 endscript

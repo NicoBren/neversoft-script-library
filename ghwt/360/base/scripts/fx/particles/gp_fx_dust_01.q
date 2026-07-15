@@ -1,25 +1,25 @@
-gp_fx_dust_01 = {
-	Pos = (-0.73808295, 2.696533, -6.520752)
-	Angles = (0.0, 0.0, 0.0)
+GP_FX_Dust_01 = {
+	pos = (-0.73808295, 2.696533, -6.520752)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
 	EmitRangeDims = (5.0, 2.0, 4.0)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, 0.0, 0.0)
+	force = (0.0, 0.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	AngleSpread = 360.0
 	LifeRange = (10.0, 10.0)
-	Emit_Rate = 20.0
-	Max = 0
+	emit_rate = 20.0
+	max = 0
 	TimeSeed = 0.0
-	LifeTime = 0.0
-	EmitNum = 0
+	lifeTime = 0.0
+	emitNum = 0
 	FollowEmitter = 0.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -33,16 +33,16 @@ gp_fx_dust_01 = {
 	EmitDelayStart = 0.0
 	PathFollowTime = 0.0
 	History = 2
-	HistoryListCoordinateSpace = World
-	Color = 1633767713
+	HistoryListCoordinateSpace = world
+	color = 1633767713
 	LOD_Default
 	QuickMaterial = {
 		DiffuseTextureEnabled
-		DiffuseTexture = ph_dustparticle
+		DiffuseTexture = PH_DustParticle
 		SpecularPower = 0
 		Lighting
-		AlphaCutoff = 0
-		BlendMode = add
+		alphacutoff = 0
+		blendMode = Add
 		QuadAnimationFPS = 0
 	}
 	Knot = [

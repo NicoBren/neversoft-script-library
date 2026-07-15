@@ -12,48 +12,48 @@ script mpm_dump_state
 endscript
 
 script mpm_new_map 
-	requireparams \{[
+	RequireParams \{[
 			heap
 			links
 			folder
 		]
 		all}
 	pakman_state = ($mpm_state)
-	if NOT arraycontains array = (<pakman_state>.available_links) contains = <links>
-		addarrayelement array = (<pakman_state>.available_links) element = <links>
+	if NOT ArrayContains array = (<pakman_state>.available_links) contains = <links>
+		AddArrayElement array = (<pakman_state>.available_links) element = <links>
 		pakman_state = {<pakman_state> available_links = <array>}
 	endif
 	mpm_generate_map_id heap = <heap> links = <links> index = <index>
-	if structurecontains structure = <pakman_state> <links>
+	if StructureContains Structure = <pakman_state> <links>
 		if mpm_search_for_map_key maps = (<pakman_state>.<links>.maps) key = name value = <map_id>
-			scriptassert \{'map already exists!'}
+			ScriptAssert \{'map already exists!'}
 		endif
 	endif
 	pakman_state_links = {maps = []}
-	if structurecontains structure = <pakman_state> <links>
+	if StructureContains Structure = <pakman_state> <links>
 		pakman_state_links = (<pakman_state>.<links>)
 	endif
 	map_struct = {name = <map_id> pak = none handles = []}
-	addarrayelement array = (<pakman_state_links>.maps) element = <map_struct>
+	AddArrayElement array = (<pakman_state_links>.maps) element = <map_struct>
 	pakman_state_links = {<pakman_state_links> maps = <array>}
-	appendstruct struct = pakman_state field = <links> params = <pakman_state_links>
-	if gotparam \{no_vram}
+	AppendStruct struct = pakman_state field = <links> params = <pakman_state_links>
+	if GotParam \{no_vram}
 		no_vram_flag = {no_vram}
 	endif
-	mempushcontext \{bottomupheap}
-	createpakmanmap map = <map_id> links = <links> folder = <folder> <no_vram_flag> allocheap = <heap>
-	mempopcontext
+	MemPushContext \{BottomUpHeap}
+	CreatePakManMap map = <map_id> links = <links> folder = <folder> <no_vram_flag> allocheap = <heap>
+	MemPopContext
 	change mpm_state = <pakman_state>
 	printf 'Created map %m on heap %h' m = <map_id> h = <heap>
 endscript
 
 script mpm_free_map 
-	requireparams \{[
+	RequireParams \{[
 			heap
 			links
 		]
 		all}
-	if arraycontains array = (($mpm_state).available_links) contains = <links>
+	if ArrayContains array = (($mpm_state).available_links) contains = <links>
 		mpm_generate_map_id heap = <heap> links = <links> index = <index>
 		if mpm_free_map_by_id map_id = <map_id>
 			return \{true}
@@ -64,13 +64,13 @@ script mpm_free_map
 endscript
 
 script mpm_free_map_by_id 
-	requireparams \{[
+	RequireParams \{[
 			map_id
 			links
 		]
 		all}
 	pakman_state = ($mpm_state)
-	if structurecontains structure = <pakman_state> <links>
+	if StructureContains Structure = <pakman_state> <links>
 		if mpm_search_for_map_key maps = (<pakman_state>.<links>.maps) key = name value = <map_id>
 			links_struct = (<pakman_state>.<links>)
 			map_array = ((<links_struct>.maps))
@@ -78,13 +78,13 @@ script mpm_free_map_by_id
 			if NOT (<existing_pak> = none)
 				mpm_flush_pak pak = <existing_pak> async = 0
 			endif
-			removearrayelement array = <map_array> index = <key_index>
+			RemoveArrayElement array = <map_array> index = <key_index>
 			links_struct = {<links_struct> maps = <array>}
-			appendstruct struct = pakman_state field = <links> params = <links_struct>
+			AppendStruct struct = pakman_state field = <links> params = <links_struct>
 			change mpm_state = <pakman_state>
-			destroypakmanmap map = <map_id>
+			DestroyPakManMap map = <map_id>
 			printf 'Freed pakman map %m' m = <map_id>
-			getarraysize <map_array>
+			GetArraySize <map_array>
 			if (<array_size> = 0)
 			endif
 			return \{true}
@@ -95,33 +95,33 @@ endscript
 
 script mpm_free_all_maps 
 	mpm_flush_all_paks
-	foreachin (($mpm_state).available_links) do = mpm_free_all_maps_eachlink
+	ForEachIn (($mpm_state).available_links) do = mpm_free_all_maps_eachlink
 endscript
 
 script mpm_object_load_pak 
-	if NOT gotparam \{owner}
-		obj_getid
-		owner = <objid>
-		removeparameter \{objid}
+	if NOT GotParam \{owner}
+		Obj_GetID
+		owner = <ObjID>
+		RemoveParameter \{ObjID}
 	endif
 	mpm_load_pak <...> owner = <obj_id>
 endscript
 
 script mpm_load_pak \{async = 0
 		owner = no_owner}
-	requireparams \{[
+	RequireParams \{[
 			pak
 			async
 			owner
 		]
 		all}
 	if mpm_find_existing_loaded_pak pak = <pak>
-		printf 'mpm_load_pak - using links %l' l = <links> donotresolve
+		printf 'mpm_load_pak - using links %l' l = <links> DoNotResolve
 	endif
-	if NOT gotparam \{links}
+	if NOT GotParam \{links}
 		if NOT find_pak_in_links pak = <pak>
 			mpm_dump_state
-			scriptassert 'pak %s isn\'t in a managed links set' s = <pak>
+			ScriptAssert 'pak %s isn\'t in a managed links set' s = <pak>
 		endif
 	endif
 	pakman_state = ($mpm_state)
@@ -130,7 +130,7 @@ script mpm_load_pak \{async = 0
 	if mpm_search_for_map_key maps = <map_array> key = pak value = <pak>
 		map_entry = (<map_array> [<key_index>])
 		mpm_add_handle map_entry = <map_entry> handle = <owner>
-		setarrayelement arrayname = map_array index = <key_index> newvalue = <map_entry>
+		SetArrayElement ArrayName = map_array index = <key_index> newvalue = <map_entry>
 		printf '%p already loaded. Adding handle %h' p = <pak> h = <owner>
 	else
 		if NOT mpm_search_for_map_key maps = <map_array> key = pak value = none
@@ -141,44 +141,44 @@ script mpm_load_pak \{async = 0
 				map_array = ((<links_struct>.maps))
 			else
 				mpm_dump_state
-				scriptassert 'All maps in %l are in use, pak %p cannot be loaded' l = <links> p = <pak> donotresolve
+				ScriptAssert 'All maps in %l are in use, pak %p cannot be loaded' l = <links> p = <pak> DoNotResolve
 			endif
 		endif
 		map_entry = (<map_array> [<key_index>])
 		if NOT mpm_has_no_handles map_entry = <map_entry>
-			scriptassert \{'Should have no handles!'}
+			ScriptAssert \{'Should have no handles!'}
 		endif
 		if NOT ((<map_entry>.pak) = none)
-			scriptassert \{'pak should be none!'}
+			ScriptAssert \{'pak should be none!'}
 		endif
 		map_entry = {<map_entry> pak = <pak>}
 		mpm_add_handle map_entry = <map_entry> handle = <owner>
-		setarrayelement arrayname = map_array index = <key_index> newvalue = <map_entry>
+		SetArrayElement ArrayName = map_array index = <key_index> newvalue = <map_entry>
 		pak_needs_loading_map = (<map_entry>.name)
 	endif
 	links_struct = {<links_struct> maps = <map_array>}
-	appendstruct struct = pakman_state field = <links> params = <links_struct>
+	AppendStruct struct = pakman_state field = <links> params = <links_struct>
 	change mpm_state = <pakman_state>
-	if gotparam \{pak_needs_loading_map}
+	if GotParam \{pak_needs_loading_map}
 		printf 'Loading %p onto map %m' p = <pak> m = <pak_needs_loading_map>
 		if (<async> = 1)
 			mpm_wait_until_free
 		endif
-		onexitrun \{mpm_load_pak_exit}
+		OnExitRun \{mpm_load_pak_exit}
 		mpm_lock
-		if NOT structurecontains structure = ($<links>) <pak>
-			scriptassert 'pak %s does not exist in pakman links: %m' s = <pak> m = <links> donotresolve
+		if NOT StructureContains Structure = ($<links>) <pak>
+			ScriptAssert 'pak %s does not exist in pakman links: %m' s = <pak> m = <links> DoNotResolve
 		endif
 		pak_filename = ((($<links>).<pak>).name)
-		getcontentfolderindexfromfile <pak_filename>
+		GetContentFolderIndexFromFile <pak_filename>
 		if (<device> = content)
-			if NOT downloads_opencontentfolder content_index = <content_index>
-				scriptassert 'Downloads_OpenContentFolder FAILED on %p' p = <pak>
+			if NOT Downloads_OpenContentFolder content_index = <content_index>
+				ScriptAssert 'Downloads_OpenContentFolder FAILED on %p' p = <pak>
 			endif
 		endif
-		setpakmancurrentblock map = <pak_needs_loading_map> pak = <pak> block_scripts = (1 - <async>) device = <device>
+		SetPakManCurrentBlock map = <pak_needs_loading_map> pak = <pak> block_scripts = (1 - <async>) device = <device>
 		if (<device> = content)
-			downloads_closecontentfolder content_index = <content_index>
+			Downloads_CloseContentFolder content_index = <content_index>
 		endif
 		mpm_unlock
 		printf 'Finished loading %p onto map %m' p = <pak> m = <pak_needs_loading_map>
@@ -186,12 +186,12 @@ script mpm_load_pak \{async = 0
 endscript
 
 script mpm_find_existing_loaded_pak 
-	requireparams \{[
+	RequireParams \{[
 			pak
 		]
 		all}
 	i = 0
-	getarraysize (($mpm_state).available_links)
+	GetArraySize (($mpm_state).available_links)
 	if (<array_size> > 0)
 		begin
 		links = ((($mpm_state).available_links) [<i>])
@@ -211,23 +211,23 @@ endscript
 script mpm_load_pak_exit 
 	if ($mpm_lock_var = 1)
 		mpm_dump_state
-		scriptassert \{'Pakman lock violation'}
+		ScriptAssert \{'Pakman lock violation'}
 	endif
 endscript
 
 script mpm_flush_pak \{async = 0}
-	requireparams \{[
+	RequireParams \{[
 			pak
 			async
 		]
 		all}
 	if (<pak> = none)
-		printf \{qs(0xb18bc3fc)}
+		printf \{qs("\L<pak> is equal to 'None', returning...")}
 		return
 	endif
-	if NOT gotparam \{links}
+	if NOT GotParam \{links}
 		if NOT find_pak_in_links pak = <pak>
-			scriptassert 'pak %s isn\'t in a managed links set' s = <pak>
+			ScriptAssert 'pak %s isn\'t in a managed links set' s = <pak>
 		endif
 	endif
 	pakman_state = ($mpm_state)
@@ -235,17 +235,17 @@ script mpm_flush_pak \{async = 0}
 	map_array = ((<links_struct>.maps))
 	if NOT mpm_search_for_map_key maps = <map_array> key = pak value = <pak>
 		mpm_dump_state
-		scriptassert 'Pak %p not found' p = <pak>
+		ScriptAssert 'Pak %p not found' p = <pak>
 	endif
 	map_entry = (<map_array> [<key_index>])
 	if NOT mpm_has_no_handles map_entry = <map_entry>
 		mpm_dump_state
-		scriptassert 'There are active handles to %p!' p = <pak>
+		ScriptAssert 'There are active handles to %p!' p = <pak>
 	endif
 	map_entry = {<map_entry> pak = none}
-	setarrayelement arrayname = map_array index = <key_index> newvalue = <map_entry>
+	SetArrayElement ArrayName = map_array index = <key_index> newvalue = <map_entry>
 	links_struct = {<links_struct> maps = <map_array>}
-	appendstruct struct = pakman_state field = <links> params = <links_struct>
+	AppendStruct struct = pakman_state field = <links> params = <links_struct>
 	change mpm_state = <pakman_state>
 	map = (<map_entry>.name)
 	printf 'Unloading pak %p on map %m' p = <pak> m = <map>
@@ -253,9 +253,9 @@ script mpm_flush_pak \{async = 0}
 		mpm_wait_until_free
 	endif
 	mpm_lock
-	onexitrun \{mpm_flush_pak_exit}
+	OnExitRun \{mpm_flush_pak_exit}
 	pak_filename = ((($<links>).<pak>).name)
-	setpakmancurrentblock map = <map> pak = none block_scripts = (1 - <async>)
+	SetPakManCurrentBlock map = <map> pak = none block_scripts = (1 - <async>)
 	mpm_unlock
 	printf 'Finished unloading %p on map %m' p = <pak> m = <map>
 endscript
@@ -263,56 +263,56 @@ endscript
 script mpm_flush_pak_exit 
 	if ($mpm_lock_var = 1)
 		mpm_dump_state
-		scriptassert \{'Pakman lock violation'}
+		ScriptAssert \{'Pakman lock violation'}
 	endif
 endscript
 
 script mpm_flush_all_paks 
-	foreachin (($mpm_state).available_links) do = mpm_flush_all_paks_eachlink
+	ForEachIn (($mpm_state).available_links) do = mpm_flush_all_paks_eachlink
 endscript
 
 script mpm_unload_pak \{owner = no_owner}
-	requireparams \{[
+	RequireParams \{[
 			pak
 			owner
 		]
 		all}
-	if NOT gotparam \{links}
+	if NOT GotParam \{links}
 		if NOT find_pak_in_links pak = <pak>
-			scriptassert 'pak %s isn\'t in a managed links set' s = <pak>
+			ScriptAssert 'pak %s isn\'t in a managed links set' s = <pak>
 		endif
 	endif
 	pakman_state = ($mpm_state)
 	links_struct = (<pakman_state>.<links>)
 	map_array = ((<links_struct>.maps))
 	if NOT mpm_search_for_map_key maps = <map_array> key = pak value = <pak>
-		scriptassert 'Pak %p not found' p = <pak>
+		ScriptAssert 'Pak %p not found' p = <pak>
 	endif
 	map_entry = (<map_array> [<key_index>])
 	if (<owner> = all)
 		map_entry = {<map_entry> handles = []}
 	else
 		if mpm_has_no_handles map_entry = <map_entry>
-			if gotparam \{already_unloaded_is_okay}
+			if GotParam \{already_unloaded_is_okay}
 				return
 			endif
-			scriptassert 'refcount is already zero on %p!' p = <pak>
+			ScriptAssert 'refcount is already zero on %p!' p = <pak>
 		endif
 		mpm_remove_handle map_entry = <map_entry> handle = <owner>
 	endif
-	setarrayelement arrayname = map_array index = <key_index> newvalue = <map_entry>
+	SetArrayElement ArrayName = map_array index = <key_index> newvalue = <map_entry>
 	links_struct = {<links_struct> maps = <map_array>}
-	appendstruct struct = pakman_state field = <links> params = <links_struct>
+	AppendStruct struct = pakman_state field = <links> params = <links_struct>
 	change mpm_state = <pakman_state>
 endscript
 
 script mpm_object_unload_paks 
-	if NOT gotparam \{owner}
-		obj_getid
-		owner = <objid>
-		removeparameter \{objid}
+	if NOT GotParam \{owner}
+		Obj_GetID
+		owner = <ObjID>
+		RemoveParameter \{ObjID}
 	endif
-	foreachin (($mpm_state).available_links) do = mpm_object_unload_paks_eachlink params = {<...>}
+	ForEachIn (($mpm_state).available_links) do = mpm_object_unload_paks_eachlink params = {<...>}
 endscript
 
 script mpm_is_busy 
@@ -328,24 +328,24 @@ script mpm_wait_until_free
 		return
 	endif
 	printf \{'mpm_wait_until_free - Waiting for pakman to finish it\'s stuff'}
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
 script mpm_generate_map_id 
-	manglechecksums a = <heap> b = <links>
-	if gotparam \{index}
-		manglechecksums a = <mangled_id> b = <index>
+	MangleChecksums a = <heap> b = <links>
+	if GotParam \{index}
+		MangleChecksums a = <mangled_ID> b = <index>
 	endif
-	manglechecksums a = <mangled_id> b = managed_pakman_map
-	return map_id = <mangled_id>
+	MangleChecksums a = <mangled_ID> b = managed_pakman_map
+	return map_id = <mangled_ID>
 endscript
 
 script mpm_lock 
 	if ($mpm_lock_var = 1)
 		mpm_dump_state
-		scriptassert \{'Pakman lock violation'}
+		ScriptAssert \{'Pakman lock violation'}
 	endif
 	change \{mpm_lock_var = 1}
 endscript
@@ -353,13 +353,13 @@ endscript
 script mpm_unlock 
 	if ($mpm_lock_var = 0)
 		mpm_dump_state
-		scriptassert \{'Pakman lock violation'}
+		ScriptAssert \{'Pakman lock violation'}
 	endif
 	change \{mpm_lock_var = 0}
 endscript
 
 script mpm_has_no_handles 
-	getarraysize (<map_entry>.handles)
+	GetArraySize (<map_entry>.handles)
 	if (<array_size> = 0)
 		return \{true}
 	endif
@@ -368,23 +368,23 @@ endscript
 
 script mpm_remove_handle 
 	array = (<map_entry>.handles)
-	if NOT arraycontains array = <array> contains = <handle>
+	if NOT ArrayContains array = <array> contains = <handle>
 		mpm_dump_state
-		scriptassert 'Handle %h not found!' h = <handle>
+		ScriptAssert 'Handle %h not found!' h = <handle>
 	endif
 	begin
-	getarraysize <array>
+	GetArraySize <array>
 	i = 0
 	if (<array_size> > 0)
 		begin
 		if (<handle> = (<array> [<i>]))
-			removearrayelement array = <array> index = <i>
+			RemoveArrayElement array = <array> index = <i>
 			break
 		endif
 		i = (<i> + 1)
 		repeat <array_size>
 	endif
-	if NOT arraycontains array = <array> contains = <handle>
+	if NOT ArrayContains array = <array> contains = <handle>
 		break
 	endif
 	repeat
@@ -393,14 +393,14 @@ script mpm_remove_handle
 endscript
 
 script mpm_add_handle 
-	addarrayelement array = (<map_entry>.handles) element = <handle>
+	AddArrayElement array = (<map_entry>.handles) element = <handle>
 	map_entry = {<map_entry> handles = <array>}
 	return map_entry = <map_entry>
 endscript
 
 script mpm_search_for_unused_map 
 	i = 0
-	getarraysize <maps>
+	GetArraySize <maps>
 	if (<array_size> > 0)
 		begin
 		if mpm_has_no_handles map_entry = (<maps> [<i>])
@@ -413,15 +413,15 @@ script mpm_search_for_unused_map
 endscript
 
 script mpm_unload_paks 
-	foreachin (($mpm_state).<checksum>.maps) do = mpm_unload_pak params = {owner = all}
+	ForEachIn (($mpm_state).<checksum>.maps) do = mpm_unload_pak params = {owner = all}
 endscript
 
 script mpm_object_unload_paks_eachlink 
-	foreachin (($mpm_state).<checksum>.maps) do = mpm_object_unload_paks_eachlink_eachmap params = {<...> links = <checksum>}
+	ForEachIn (($mpm_state).<checksum>.maps) do = mpm_object_unload_paks_eachlink_eachmap params = {<...> links = <checksum>}
 endscript
 
 script mpm_object_unload_paks_eachlink_eachmap 
-	if arraycontains array = <handles> contains = <owner>
+	if ArrayContains array = <handles> contains = <owner>
 		mpm_unload_pak pak = <pak> links = <links> async = <async> owner = <owner>
 	endif
 endscript
@@ -429,7 +429,7 @@ endscript
 script mpm_flush_all_paks_eachlink 
 	maps_array = (($mpm_state).<checksum>.maps)
 	i = 0
-	getarraysize <maps_array>
+	GetArraySize <maps_array>
 	if (<array_size> > 0)
 		begin
 		if NOT (((<maps_array> [<i>]).pak) = none)
@@ -443,11 +443,11 @@ endscript
 script mpm_free_all_maps_eachlink 
 	maps_array = (($mpm_state).<checksum>.maps)
 	i = 0
-	getarraysize <maps_array>
+	GetArraySize <maps_array>
 	if (<array_size> > 0)
 		begin
 		if NOT mpm_free_map_by_id map_id = ((<maps_array> [<i>]).name) links = <checksum>
-			scriptassert \{'Problem freeing map'}
+			ScriptAssert \{'Problem freeing map'}
 		endif
 		i = (<i> + 1)
 		repeat <array_size>
@@ -455,14 +455,14 @@ script mpm_free_all_maps_eachlink
 endscript
 
 script mpm_search_for_map_key 
-	requireparams \{[
+	RequireParams \{[
 			maps
 			key
 			value
 		]
 		all}
 	i = 0
-	getarraysize <maps>
+	GetArraySize <maps>
 	if (<array_size> > 0)
 		begin
 		key_found = ((<maps> [<i>]).<key>)
@@ -476,12 +476,12 @@ script mpm_search_for_map_key
 endscript
 
 script pakman_links_contains_pak 
-	requireparams \{[
+	RequireParams \{[
 			links
 			pak
 		]
 		all}
-	if structurecontains structure = ($<links>) <pak>
+	if StructureContains Structure = ($<links>) <pak>
 		return \{true}
 	endif
 	return \{false}
@@ -489,7 +489,7 @@ endscript
 
 script find_pak_in_links 
 	i = 0
-	getarraysize (($mpm_state).available_links)
+	GetArraySize (($mpm_state).available_links)
 	if (<array_size> > 0)
 		begin
 		links = ((($mpm_state).available_links) [<i>])

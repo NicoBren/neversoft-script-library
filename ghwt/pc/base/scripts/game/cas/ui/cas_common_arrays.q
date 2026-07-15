@@ -1,119 +1,119 @@
 generic_widget_scale_params = {
 	step = 0.1
-	fill_type = `center out`
+	fill_type = `Center Out`
 	icon = widget_scale
 	pad_direction = vert
 }
 generic_widget_spread_horiz_params = {
 	step = 0.1
-	fill_type = `center left/right`
+	fill_type = `Center Left/Right`
 	icon = widget_spread
 	pad_direction = horiz
 }
 generic_widget_spread_vert_params = {
 	step = 0.1
-	fill_type = `center up/down`
+	fill_type = `Center Up/Down`
 	icon = widget_spread
 	icon_rot = 90
 	pad_direction = vert
 }
 generic_widget_move_vert_params = {
 	step = 0.1
-	fill_type = `center up/down`
+	fill_type = `Center Up/Down`
 	icon = widget_uni_move
 	pad_direction = vert
 }
 generic_widget_move_horz_params = {
 	step = 0.1
-	fill_type = `center left/right`
+	fill_type = `Center Left/Right`
 	icon = widget_uni_move
 	icon_rot = 90
 	pad_direction = horiz
 }
 cas_head_bone_options = [
 	{
-		text = qs(0x409ddb91)
-		group_name = headsize
+		text = qs("SIZE")
+		group_name = HeadSize
 		$generic_widget_scale_params
 		bonemenu
 	}
 	{
-		text = qs(0x574076c0)
-		group_name = facefullness
+		text = qs("FULLNESS")
+		group_name = FaceFullness
 		$generic_widget_scale_params
 		bonemenu
 	}
 	{
-		text = qs(0x87f425da)
-		group_name = jawscale
+		text = qs("JAW SCALE")
+		group_name = JawScale
 		$generic_widget_spread_horiz_params
 		bonemenu
 	}
 	{
-		text = qs(0x3622608d)
+		text = qs("CHIN SIZE")
 		$generic_widget_spread_horiz_params
-		group_name = chinsize
+		group_name = ChinSize
 		bonemenu
 	}
 	{
-		text = qs(0x23ad871a)
+		text = qs("CHIN WIDTH")
 		$generic_widget_spread_horiz_params
-		group_name = chinwidth
+		group_name = ChinWidth
 		bonemenu
 	}
 	{
-		text = qs(0xfd71b849)
-		group_name = cheekboneshape
-		$generic_widget_spread_horiz_params
-		bonemenu
-	}
-	{
-		text = qs(0x9b2f48c6)
-		group_name = earangle
+		text = qs("CHEEKBONE")
+		group_name = CheekboneShape
 		$generic_widget_spread_horiz_params
 		bonemenu
 	}
 	{
-		text = qs(0xcfb7d01a)
-		group_name = eartip
+		text = qs("EAR ANGLE")
+		group_name = EarAngle
+		$generic_widget_spread_horiz_params
+		bonemenu
+	}
+	{
+		text = qs("EAR TIP")
+		group_name = EarTip
 		$generic_widget_spread_vert_params
 		bonemenu
 	}
 ]
 cas_nose_bone_options = [
 	{
-		text = qs(0x409ddb91)
-		group_name = nosesize
+		text = qs("SIZE")
+		group_name = NoseSize
 		$generic_widget_scale_params
 		bonemenu
 	}
 	{
-		text = qs(0x85855e5e)
-		group_name = nosetip
+		text = qs("TIP")
+		group_name = NoseTip
 		$generic_widget_move_vert_params
 		bonemenu
 	}
 	{
-		text = qs(0x9969c6fc)
-		group_name = nosewidth
+		text = qs("WIDTH")
+		group_name = NoseWidth
 		$generic_widget_spread_horiz_params
 		bonemenu
 	}
 	{
-		text = qs(0x1f8b4dd9)
-		group_name = noseangle
+		text = qs("ANGLE")
+		group_name = NoseAngle
 		$generic_widget_move_vert_params
 		bonemenu
 	}
 	{
-		text = qs(0x9a18a9d5)
-		group_name = nosedepth
+		text = qs("DEPTH")
+		group_name = NoseDepth
 		$generic_widget_move_horz_params
 		bonemenu
 	}
 	{
-		text = qs(0xb1cc1727)
-		group_name = noseposition
+		text = qs("POSITION")
+		group_name = NosePosition
 		$generic_widget_move_vert_params
 		invert = {
 			invert
@@ -121,40 +121,40 @@ cas_nose_bone_options = [
 		bonemenu
 	}
 	{
-		text = qs(0xcc450cf2)
-		group_name = nosebridge
+		text = qs("BRIDGE")
+		group_name = NoseBridge
 		$generic_widget_move_horz_params
 		bonemenu
 	}
 	{
-		text = qs(0xb281a6e0)
-		group_name = nosebroken
+		text = qs("BROKEN")
+		group_name = NoseBroken
 		$generic_widget_spread_horiz_params
 		bonemenu
 	}
 ]
 cas_mouth_bone_options = [
 	{
-		text = qs(0x409ddb91)
-		group_name = mouthscale
+		text = qs("SIZE")
+		group_name = MouthScale
 		$generic_widget_scale_params
 		bonemenu
 	}
 	{
-		text = qs(0x1f8b4dd9)
-		group_name = mouthangle
+		text = qs("ANGLE")
+		group_name = MouthAngle
 		$generic_widget_spread_horiz_params
 		bonemenu
 	}
 	{
-		text = qs(0x9a18a9d5)
-		group_name = mouthdepth
+		text = qs("DEPTH")
+		group_name = MouthDepth
 		$generic_widget_spread_horiz_params
 		bonemenu
 	}
 	{
-		text = qs(0xb1cc1727)
-		group_name = mouthposition
+		text = qs("POSITION")
+		group_name = MouthPosition
 		$generic_widget_move_vert_params
 		invert = {
 			invert
@@ -162,209 +162,209 @@ cas_mouth_bone_options = [
 		bonemenu
 	}
 	{
-		text = qs(0xd8f358a1)
-		group_name = lipshape
+		text = qs("LIP SHAPE")
+		group_name = LipShape
 		$generic_widget_spread_horiz_params
 		bonemenu
 	}
 	{
-		text = qs(0xcf080ae3)
-		group_name = upperlipthickness
+		text = qs("UPPER LIP")
+		group_name = UpperLipThickness
 		$generic_widget_scale_params
 		bonemenu
 	}
 	{
-		text = qs(0x14a8bd72)
-		group_name = lowerlipthickness
+		text = qs("LOWER LIP")
+		group_name = LowerLipThickness
 		$generic_widget_scale_params
 		bonemenu
 	}
 ]
 cas_eye_bone_options = [
 	{
-		text = qs(0x1f8b4dd9)
-		group_name = eyeangle
+		text = qs("ANGLE")
+		group_name = EyeAngle
 		$generic_widget_move_vert_params
 		bonemenu
 	}
 	{
-		text = qs(0x36291eb1)
-		group_name = eyeshape
+		text = qs("SHAPE")
+		group_name = EyeShape
 		$generic_widget_scale_params
 		bonemenu
 	}
 	{
-		text = qs(0xb1cc1727)
-		group_name = eyeposition
+		text = qs("POSITION")
+		group_name = EyePosition
 		$generic_widget_move_vert_params
 		bonemenu
 	}
 	{
-		text = qs(0x9a18a9d5)
-		group_name = eyedepth
+		text = qs("DEPTH")
+		group_name = EyeDepth
 		$generic_widget_spread_horiz_params
 		bonemenu
 	}
 	{
-		text = qs(0x718ceac0)
-		group_name = eyescale
+		text = qs("SCALE")
+		group_name = EyeScale
 		$generic_widget_scale_params
 		bonemenu
 	}
 	{
-		text = qs(0x29344d54)
-		group_name = eyedistance
+		text = qs("DISTANCE")
+		group_name = EyeDistance
 		$generic_widget_spread_horiz_params
 		bonemenu
 	}
 	{
-		text = qs(0xaa2546c1)
-		desc_id = eyecolor
+		text = qs("COLOR")
+		desc_id = EyeColor
 		hist_tex = icon_iris
-		part = cas_eyes
-		stance = stance_select_head
+		part = CAS_Eyes
+		stance = Stance_Select_Head
 		replacemenu
 	}
 ]
 cas_brow_bone_options = [
 	{
-		text = qs(0x36291eb1)
-		group_name = eyebrowshape
+		text = qs("SHAPE")
+		group_name = EyebrowShape
 		$generic_widget_move_vert_params
 		bonemenu
 	}
 	{
-		text = qs(0x409ddb91)
-		group_name = eyebrowsize
+		text = qs("SIZE")
+		group_name = EyebrowSize
 		$generic_widget_scale_params
 		bonemenu
 	}
 	{
-		text = qs(0x1f8b4dd9)
-		group_name = eyebrowangle
+		text = qs("ANGLE")
+		group_name = EyebrowAngle
 		$generic_widget_move_vert_params
 		bonemenu
 	}
 	{
-		text = qs(0x29344d54)
-		group_name = eyebrowdistance
+		text = qs("DISTANCE")
+		group_name = EyebrowDistance
 		$generic_widget_spread_horiz_params
 		bonemenu
 	}
 	{
-		text = qs(0xb1cc1727)
-		group_name = browposition
+		text = qs("POSITION")
+		group_name = BrowPosition
 		$generic_widget_move_vert_params
 		bonemenu
 	}
 	{
-		text = qs(0x9a18a9d5)
-		group_name = browdepth
+		text = qs("DEPTH")
+		group_name = BrowDepth
 		$generic_widget_spread_horiz_params
 		bonemenu
 	}
 ]
 cas_physique_bone_options = [
 	{
-		text = qs(0x6e2e3fea)
-		group_name = height
+		text = qs("HEIGHT")
+		group_name = Height
 		step = 0.1
-		fill_type = `bottom to top`
+		fill_type = `Bottom to Top`
 		icon = widget_uni_scale
 		bonemenu
 	}
 ]
 cag_instruments = [
 	{
-		text = qs(0x9504b94a)
+		text = qs("GUITAR")
 		icon = icon_cag_guitar
 		desc_id = guitar
 		instrument_name = guitar
-		body_part = cas_guitar_body
-		neck_part = cas_guitar_neck
-		head_part = cas_guitar_head
-		pick_guard_part = cas_guitar_pickguards
-		pickups_part = cas_guitar_pickups
-		knobs_part = cas_guitar_knobs
-		bridge_part = cas_guitar_bridges
-		string_part = cas_guitar_strings
-		highway_part = cas_guitar_highway
+		body_part = CAS_Guitar_Body
+		neck_part = CAS_Guitar_Neck
+		head_part = CAS_Guitar_Head
+		pick_guard_part = CAS_Guitar_Pickguards
+		pickups_part = CAS_Guitar_Pickups
+		knobs_part = CAS_Guitar_Knobs
+		bridge_part = CAS_Guitar_Bridges
+		string_part = CAS_Guitar_Strings
+		highway_part = CAS_Guitar_Highway
 	}
 	{
-		text = qs(0x7d4f9214)
+		text = qs("BASS")
 		icon = icon_cag_bass
-		desc_id = bass
-		instrument_name = bass
-		body_part = cas_bass_body
-		neck_part = cas_bass_neck
-		head_part = cas_bass_head
-		pick_guard_part = cas_bass_pickguards
-		pickups_part = cas_bass_pickups
-		knobs_part = cas_bass_knobs
-		bridge_part = cas_bass_bridges
-		string_part = cas_bass_strings
-		highway_part = cas_bass_highway
+		desc_id = Bass
+		instrument_name = Bass
+		body_part = CAS_Bass_Body
+		neck_part = CAS_Bass_Neck
+		head_part = CAS_Bass_Head
+		pick_guard_part = CAS_Bass_Pickguards
+		pickups_part = CAS_Bass_Pickups
+		knobs_part = CAS_Bass_Knobs
+		bridge_part = CAS_Bass_Bridges
+		string_part = CAS_Bass_Strings
+		highway_part = CAS_Bass_Highway
 	}
 	{
-		text = qs(0xcf488ba5)
+		text = qs("DRUM")
 		desc_id = drum
 		instrument_name = drum
-		body_part = cas_drums
-		highway_part = cas_drums_highway
-		stick_part = cas_drums_sticks
+		body_part = CAS_Drums
+		highway_part = CAS_Drums_Highway
+		stick_part = CAS_Drums_Sticks
 	}
 	{
-		text = qs(0xc0b34c9f)
+		text = qs("MIC")
 		desc_id = mic
 		instrument_name = mic
-		body_part = cas_mic
-		stand_part = cas_mic_stand
+		body_part = CAS_Mic
+		stand_part = CAS_Mic_Stand
 	}
 ]
-genre_list = [
+Genre_List = [
 	{
-		frontend_desc = qs(0xe9fc0d89)
-		desc_id = rock
-		icon = icon_genre_rock
+		frontend_desc = qs("ROCK")
+		desc_id = Rock
+		icon = icon_genre_Rock
 	}
 	{
-		frontend_desc = qs(0xfbfef3d4)
-		desc_id = punk
-		icon = icon_genre_punk
+		frontend_desc = qs("PUNK")
+		desc_id = Punk
+		icon = icon_genre_Punk
 	}
 	{
-		frontend_desc = qs(0xfe37a2a0)
-		desc_id = `heavy metal`
-		icon = icon_genre_heavymetal
+		frontend_desc = qs("METAL")
+		desc_id = `Heavy Metal`
+		icon = icon_genre_HeavyMetal
 	}
 	{
-		frontend_desc = qs(0xa7602f65)
-		desc_id = `glam rock`
-		icon = icon_genre_glam
+		frontend_desc = qs("GLAM")
+		desc_id = `Glam Rock`
+		icon = icon_genre_Glam
 	}
 	{
-		frontend_desc = qs(0xf39d9fe1)
-		desc_id = `black metal`
-		icon = icon_genre_blackmetal
+		frontend_desc = qs("BLACK METAL")
+		desc_id = `Black Metal`
+		icon = icon_genre_BlackMetal
 	}
 	{
-		frontend_desc = qs(0x3b7647f0)
-		desc_id = `classic rock`
-		icon = icon_genre_classic
+		frontend_desc = qs("CLASSIC")
+		desc_id = `Classic Rock`
+		icon = icon_genre_Classic
 	}
 	{
-		frontend_desc = qs(0x3b440e23)
-		desc_id = goth
-		icon = icon_genre_goth
+		frontend_desc = qs("GOTH")
+		desc_id = Goth
+		icon = icon_genre_Goth
 	}
 	{
-		frontend_desc = qs(0x3b7f4394)
-		desc_id = pop
-		icon = icon_genre_pop
+		frontend_desc = qs("POP")
+		desc_id = Pop
+		icon = icon_genre_Pop
 	}
 	{
-		frontend_desc = qs(0x99e16acb)
+		frontend_desc = qs("MIXED")
 		desc_id = any
-		icon = icon_genre_mix
+		icon = icon_genre_Mix
 	}
 ]

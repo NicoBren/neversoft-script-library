@@ -1,7 +1,7 @@
 
 script ui_create_jam_ratesong 
 	printf \{'in create ratesong'}
-	bg_crowd_front_end_silence \{immediate = 1}
+	BG_Crowd_Front_End_Silence \{immediate = 1}
 	spawnscriptnow \{jam_ratesong_menu
 		id = jam_ratesong_spawn}
 endscript
@@ -13,29 +13,29 @@ script ui_init_jam_ratesong
 endscript
 
 script ui_deinit_jam_ratesong 
-	if screenelementexists \{id = jam_ratesong_dialog}
-		destroyscreenelement \{id = jam_ratesong_dialog}
+	if ScreenElementExists \{id = jam_ratesong_dialog}
+		DestroyScreenElement \{id = jam_ratesong_dialog}
 	endif
 endscript
 
 script jam_ratesong_menu 
 	create_menu_backdrop \{texture = boot_brick_bg}
-	createscreenelement \{parent = root_window
+	CreateScreenElement \{parent = root_window
 		id = jam_ratesong_dialog
-		type = descinterface
+		type = DescInterface
 		desc = 'jam_ratesong'
 		pos = (0.0, 0.0)}
-	jam_ratesong_dialog :settags \{current_rating = 7}
+	jam_ratesong_dialog :SetTags \{current_rating = 7}
 	<current_rating> = 7
-	mod a = <current_rating> b = 2
-	if (<mod> = 0)
-		formattext textname = rating_text qs(0xb283ed85) a = (<current_rating> / 2) decimalplaces = 0
+	Mod a = <current_rating> b = 2
+	if (<Mod> = 0)
+		FormatText TextName = rating_text qs("%a/5") a = (<current_rating> / 2) DecimalPlaces = 0
 	else
 		<decimal_rating> = (<current_rating> / 2.0)
-		formattext textname = rating_text qs(0xb283ed85) a = <decimal_rating> decimalplaces = 1
+		FormatText TextName = rating_text qs("%a/5") a = <decimal_rating> DecimalPlaces = 1
 	endif
-	getsonginfo
-	jam_ratesong_dialog :se_setprops {song_name_text = ($jam_selected_song) artist_name_text = <artist> rating_number_text = <rating_text>}
+	GetSongInfo
+	jam_ratesong_dialog :SE_SetProps {song_name_text = ($jam_selected_song) artist_name_text = <artist> rating_number_text = <rating_text>}
 	new_menu {
 		scrollid = scrolling_ratesong
 		vmenuid = vmenu_ratesong
@@ -52,35 +52,35 @@ script jam_ratesong_menu
 		]
 		menu_parent = jam_ratesong_dialog
 	}
-	add_user_control_helper \{text = qs(0xb73cb78f)
+	add_user_control_helper \{text = qs("ACCEPT")
 		button = green
 		z = 100}
-	add_user_control_helper \{text = qs(0x784c64ff)
+	add_user_control_helper \{text = qs("SKIP")
 		button = red
 		z = 100}
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = vmenu_ratesong}
 endscript
 
 script jam_ratesong_updown 
-	jam_ratesong_dialog :gettags
-	if gotparam \{up}
+	jam_ratesong_dialog :GetTags
+	if GotParam \{up}
 		generic_menu_up_or_down_sound \{up}
 		<current_rating> = (<current_rating> + 1)
-		jam_ratesong_dialog :se_setprops \{up_arrow_scale = 1.3
+		jam_ratesong_dialog :SE_SetProps \{up_arrow_scale = 1.3
 			relative_scale}
-		jam_ratesong_dialog :se_setprops \{up_arrow_scale = 1.0
+		jam_ratesong_dialog :SE_SetProps \{up_arrow_scale = 1.0
 			relative_scale
 			time = 0.1}
 		if (<current_rating> > 10)
 			<current_rating> = 10
 		endif
-	elseif gotparam \{down}
+	elseif GotParam \{down}
 		generic_menu_up_or_down_sound \{down}
 		<current_rating> = (<current_rating> - 1)
-		jam_ratesong_dialog :se_setprops \{down_arrow_scale = 1.3
+		jam_ratesong_dialog :SE_SetProps \{down_arrow_scale = 1.3
 			relative_scale}
-		jam_ratesong_dialog :se_setprops \{down_arrow_scale = 1.0
+		jam_ratesong_dialog :SE_SetProps \{down_arrow_scale = 1.0
 			relative_scale
 			time = 0.1}
 		if (<current_rating> < 1)
@@ -89,65 +89,65 @@ script jam_ratesong_updown
 	endif
 	lit_color = [255 255 255 255]
 	base_rating = (<current_rating> / 2)
-	casttointeger \{base_rating}
-	mod a = <current_rating> b = 2
-	fraction = <mod>
+	CastToInteger \{base_rating}
+	Mod a = <current_rating> b = 2
+	fraction = <Mod>
 	<i> = 1
 	begin
-	formattext checksumname = star_id 'alias_star_on%a' a = <i>
-	if jam_ratesong_dialog :desc_resolvealias name = <star_id>
+	FormatText checksumname = star_id 'alias_star_on%a' a = <i>
+	if jam_ratesong_dialog :Desc_ResolveAlias name = <star_id>
 		if (<base_rating> >= <i>)
-			<resolved_id> :setprops texture = one_star_lrg_full rgba = <lit_color>
+			<resolved_id> :SetProps texture = one_star_lrg_full rgba = <lit_color>
 		elseif ((<base_rating> + 1) = <i>)
 			if (<fraction> = 0)
-				<resolved_id> :setprops texture = one_star_lrg_off rgba = [255 255 255 0]
+				<resolved_id> :SetProps texture = one_star_lrg_off rgba = [255 255 255 0]
 			else
-				<resolved_id> :setprops texture = one_star_lrg_half rgba = <lit_color>
+				<resolved_id> :SetProps texture = one_star_lrg_half rgba = <lit_color>
 			endif
 		elseif ((<base_rating> + 1) < <i>)
-			<resolved_id> :setprops texture = one_star_lrg_off rgba = [255 255 255 0]
+			<resolved_id> :SetProps texture = one_star_lrg_off rgba = [255 255 255 0]
 		endif
 	endif
 	<i> = (<i> + 1)
 	repeat 5
-	if jam_ratesong_dialog :desc_resolvealias \{name = alias_rating_words}
+	if jam_ratesong_dialog :Desc_ResolveAlias \{name = alias_rating_words}
 		switch (<current_rating>)
 			case 1
-			<new_text> = qs(0x2f1a8159)
+			<new_text> = qs("Absolute Suck-age.")
 			case 2
-			<new_text> = qs(0xc341ca3a)
+			<new_text> = qs("Lame. Keep your day job.")
 			case 3
-			<new_text> = qs(0xe31d1f5e)
+			<new_text> = qs("Poor. I won't play it again.")
 			case 4
-			<new_text> = qs(0xb810c386)
+			<new_text> = qs("Not great. Needs work.")
 			case 5
-			<new_text> = qs(0xe30f2bec)
+			<new_text> = qs("Average. Nice effort.")
 			case 6
-			<new_text> = qs(0x2538c776)
+			<new_text> = qs("Solid. I'll play it again.")
 			case 7
-			<new_text> = qs(0x2d61429d)
+			<new_text> = qs("Very Good. Some parts are fun!")
 			case 8
-			<new_text> = qs(0x71b8c195)
+			<new_text> = qs("Rockin'! A definite keeper.")
 			case 9
-			<new_text> = qs(0x84476889)
+			<new_text> = qs("Awesome! A notch below perfect.")
 			case 10
-			<new_text> = qs(0xcee92ae3)
+			<new_text> = qs("GOD-LIKE! One for the ages!")
 		endswitch
-		<resolved_id> :setprops text = <new_text>
+		<resolved_id> :SetProps text = <new_text>
 	endif
-	jam_ratesong_dialog :settags {current_rating = <current_rating>}
+	jam_ratesong_dialog :SetTags {current_rating = <current_rating>}
 endscript
 
 script jam_ratesong 
-	netsessionfunc \{func = stats_init}
-	if NOT netsessionfunc \{func = is_lobby_available}
-		wait \{1
+	NetSessionFunc \{func = stats_init}
+	if NOT NetSessionFunc \{func = is_lobby_available}
+		Wait \{1
 			gameframe}
 		show_ghtunes_connecting_popup
 		<timeout> = 20.0
-		resettimer
+		ResetTimer
 		begin
-		if netsessionfunc \{func = is_lobby_available}
+		if NetSessionFunc \{func = is_lobby_available}
 			destroy_popup_warning_menu
 			break
 		else
@@ -157,29 +157,29 @@ script jam_ratesong
 				return
 			endif
 		endif
-		if timegreaterthan <timeout>
+		if TimeGreaterThan <timeout>
 			destroy_popup_warning_menu
 			jam_ratesong_continue
 		endif
-		wait \{1
+		Wait \{1
 			gameframe}
 		repeat
 	endif
 	generic_menu_pad_choose_sound
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = vmenu_ratesong}
 	jam_upload_song_dialog \{dialog = 5
 		ghtunes = 1}
-	jam_ratesong_dialog :gettags
-	rateusercontent rating = (<current_rating> -1)
+	jam_ratesong_dialog :GetTags
+	RateUserContent rating = (<current_rating> -1)
 endscript
 
 script jam_ratesong_completed 
-	getglobaltags \{user_options
+	GetGlobalTags \{user_options
 		param = ghtunes_num_songs_rated}
 	new_num_songs_rated = (<ghtunes_num_songs_rated> + 1)
-	setglobaltags user_options params = {ghtunes_num_songs_rated = <new_num_songs_rated>}
-	getsonginfo
+	SetGlobalTags user_options params = {ghtunes_num_songs_rated = <new_num_songs_rated>}
+	GetSongInfo
 	<new_array> = (($jam_songs_rated_this_session) + (<file_id>.file_id))
 	change jam_songs_rated_this_session = <new_array>
 	jam_upload_song_dialog_destroy
@@ -187,18 +187,18 @@ script jam_ratesong_completed
 endscript
 
 script jam_ratesong_failed 
-	if gotparam \{fail_type}
-		getsonginfo
+	if GotParam \{fail_type}
+		GetSongInfo
 		<new_array> = (($jam_songs_rated_this_session) + (<file_id>.file_id))
 		change jam_songs_rated_this_session = <new_array>
 		jam_upload_song_dialog_destroy
 		jam_ratesong_continue
 	else
 		jam_upload_song_dialog_destroy
-		if isps3
-			msg_txt = qs(0x7b5606a9)
+		if IsPs3
+			msg_txt = qs("You are not connected to the PLAYSTATION®Network. Please connect and try again.")
 		else
-			msg_txt = qs(0xb9f3b9df)
+			msg_txt = qs("Unable to connect to GHTunes. Please check your network connection and settings and try again.")
 		endif
 		create_popup_warning_menu {
 			textblock = {
@@ -209,7 +209,7 @@ script jam_ratesong_failed
 			options = [
 				{
 					func = {jam_ratesong_continue}
-					text = qs(0x182f0173)
+					text = qs("CONTINUE")
 				}
 			]
 		}
@@ -220,7 +220,7 @@ script jam_ratesong_continue
 	destroy_popup_warning_menu
 	if ui_event_exists_in_stack \{name = 'jam'}
 		ui_memcard_autosave \{state = uistate_jam}
-		if gotparam \{skip}
+		if GotParam \{skip}
 			generic_menu_pad_choose_sound
 		endif
 	elseif ui_event_exists_in_stack \{name = 'setlist'}
@@ -230,14 +230,14 @@ script jam_ratesong_continue
 endscript
 
 script jam_ratesong_check_for_rating 
-	getsonginfo
-	if NOT gotparam \{downloaded}
+	GetSongInfo
+	if NOT GotParam \{downloaded}
 		<downloaded> = 0
 	endif
 	if (<downloaded> = 1)
 		<song_is_rated> = 0
 		<rated_ids> = $jam_songs_rated_this_session
-		getarraysize <rated_ids>
+		GetArraySize <rated_ids>
 		<i> = 0
 		begin
 		if (<array_size> = 0)
@@ -253,7 +253,7 @@ script jam_ratesong_check_for_rating
 			generic_menu_pad_choose_sound
 			ui_event_wait \{event = menu_change
 				data = {
-					state = uistate_jam_ratesong
+					state = UIstate_jam_ratesong
 				}}
 		else
 			if ui_event_exists_in_stack \{name = 'jam'}

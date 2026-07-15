@@ -1,7 +1,7 @@
 tilt_default_settings = {
-	MotionBalanceActive = FALSE
-	MotionSteeringActive = FALSE
-	MotionTricksActive = FALSE
+	MotionBalanceActive = false
+	MotionSteeringActive = false
+	MotionTricksActive = false
 	MotionSensitivity = 6
 }
 tilt_params = {

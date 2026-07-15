@@ -1,10 +1,10 @@
 
 script ui_create_customize_character_outfit 
 	make_generic_menu \{vmenu_id = create_customize_character_outfit_vmenu
-		title = qs(0x2d77289b)
+		title = qs("Outfit")
 		num_icons = 1
 		show_history}
-	cas_set_object_node_pos player = ($cas_current_player) node = $cas_node_name
+	cas_set_object_node_pos player = ($cas_current_player) node = $CAS_node_name
 	setup_cas_menu_handlers \{vmenu_id = create_customize_character_outfit_vmenu
 		camera_list = [
 			'customize_character_outfit'
@@ -14,71 +14,71 @@ script ui_create_customize_character_outfit
 		]
 		zoom_camera = 'customize_character_Zoom'}
 	add_generic_menu_icon_item {
-		icon = outfit_torso
-		text = qs(0xb3283b80)
-		choose_state = uistate_popout_select_part
+		icon = Outfit_Torso
+		text = qs("TORSO")
+		choose_state = UIstate_popout_select_part
 		choose_state_data = {
-			text = qs(0x782bf118)
+			text = qs("SELECT TOP")
 			cam_name = 'customize_torso'
 			camera_list = ['customize_torso' 'customize_torso_R' 'customize_torso_B' 'customize_torso_L']
 			zoom_camera = 'customize_character_Zoom'
-			part = cas_torso
+			part = CAS_Torso
 			purchase_menu
 			num_icons = 2
-			hist_tex = outfit_torso
+			hist_tex = Outfit_Torso
 			is_popup
 			icon_offset = (0.0, 20.0)
 			list_offset = (0.0, 55.0)
 			color_wheel = ($clothing_colorwheel)
-			stance = stance_select_torso}
+			stance = Stance_Select_Torso}
 	}
 	add_generic_menu_icon_item {
 		icon = pants
-		text = qs(0xa0fd2ecc)
-		choose_state = uistate_popout_select_part
+		text = qs("PANTS")
+		choose_state = UIstate_popout_select_part
 		choose_state_data = {
-			text = qs(0xf9412531)
+			text = qs("SELECT PANTS")
 			cam_name = 'customize_pants'
 			camera_list = ['customize_pants' 'customize_pants_R' 'customize_pants_B' 'customize_pants_L']
 			zoom_camera = 'customize_character_Zoom'
-			part = cas_legs
+			part = CAS_Legs
 			purchase_menu
 			num_icons = 2
 			hist_tex = pants
 			is_popup
 			color_wheel = ($clothing_colorwheel)
-			stance = stance_select_pants}
+			stance = Stance_Select_Pants}
 	}
 	add_generic_menu_icon_item {
 		icon = shoes
-		text = qs(0x777c6dbb)
-		choose_state = uistate_popout_select_part
+		text = qs("SHOES")
+		choose_state = UIstate_popout_select_part
 		choose_state_data = {
-			text = qs(0x2ec06646)
+			text = qs("SELECT SHOES")
 			cam_name = 'customize_shoes'
 			camera_list = ['customize_shoes' 'customize_shoes_R' 'customize_shoes_B' 'customize_shoes_L']
 			zoom_camera = 'customize_character_Zoom'
-			part = cas_shoes
+			part = CAS_Shoes
 			purchase_menu
 			num_icons = 2
 			hist_tex = shoes
 			is_popup
 			color_wheel = ($clothing_colorwheel)
-			stance = stance_select_shoes}
+			stance = Stance_Select_Shoes}
 	}
-	add_generic_menu_icon_item \{icon = accessories
-		text = qs(0x69fb513a)
-		choose_state = uistate_customize_character_outfit_accessories}
+	add_generic_menu_icon_item \{icon = Accessories
+		text = qs("ACCESSORIES")
+		choose_state = UIstate_customize_character_outfit_accessories}
 	menu_finish \{car_helper_text}
-	getglobaltags savegame = ($cas_current_savegame) cas_helper_dialogue param = visit_outfit
+	GetGlobalTags savegame = ($cas_current_savegame) cas_helper_dialogue param = visit_outfit
 	if (<visit_outfit> = 0)
-		setglobaltags savegame = ($cas_current_savegame) cas_helper_dialogue params = {visit_outfit = 1}
+		SetGlobalTags savegame = ($cas_current_savegame) cas_helper_dialogue params = {visit_outfit = 1}
 		ui_event_wait \{event = menu_change
 			data = {
-				state = uistate_helper_dialogue
+				state = UIstate_helper_dialogue
 				is_popup
 				life = 30
-				text = qs(0x0fc1223d)
+				text = qs("The OUTFIT option allows you to change your apparel and purchase more items as they become available.  Some items can be colorized after being selected.")
 			}}
 	endif
 endscript

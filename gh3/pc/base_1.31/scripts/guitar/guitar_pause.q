@@ -1,6 +1,6 @@
 
 script setup_pause 
-	setscreenelementprops \{id = root_window
+	SetScreenElementProps \{id = root_window
 		event_handlers = [
 			{
 				pad_start
@@ -8,7 +8,7 @@ script setup_pause
 			}
 		]
 		replace_handlers}
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = root_window}
 endscript
 winport_block_pause = 0
@@ -29,22 +29,22 @@ script pausegh3
 	printf \{"--------------"}
 	printf \{"Pausing Game"}
 	printf \{"--------------"}
-	broadcastevent \{type = event_pause_game}
-	pausegh3sounds <...>
-	pausefullscreenmovie
-	pausegame
-	if ismovieplaying \{textureslot = 0}
-		pausemovie \{textureslot = 0}
+	BroadcastEvent \{type = event_pause_game}
+	PauseGh3Sounds <...>
+	PauseFullScreenMovie
+	PauseGame
+	if IsMoviePlaying \{TextureSlot = 0}
+		PauseMovie \{TextureSlot = 0}
 	endif
-	if ismovieplaying \{textureslot = 1}
-		pausemovie \{textureslot = 1}
+	if IsMoviePlaying \{TextureSlot = 1}
+		PauseMovie \{TextureSlot = 1}
 	endif
-	if NOT (skatercamanimfinished name = cutscene)
-		moviemembfunc \{name = cutscene
-			func = cut_gel_pause}
+	if NOT (SkaterCamAnimFinished name = cutscene)
+		MovieMembFunc \{name = cutscene
+			func = Cut_GEL_Pause}
 	endif
 	ui_flow_manager_respond_to_action \{action = pause_game}
-	wait \{1
+	Wait \{1
 		gameframe}
 endscript
 
@@ -52,27 +52,27 @@ script unpausegh3
 	printf \{"------------"}
 	printf \{"Unpausing Game"}
 	printf \{"------------"}
-	wait \{1
+	Wait \{1
 		gameframe}
-	unpausegh3sounds <...>
-	unpausefullscreenmovie
-	unpausegame
-	if ismovieplaying \{textureslot = 0}
-		resumemovie \{textureslot = 0}
+	UnpauseGh3Sounds <...>
+	UnPauseFullScreenMovie
+	UnPauseGame
+	if IsMoviePlaying \{TextureSlot = 0}
+		ResumeMovie \{TextureSlot = 0}
 	endif
-	if ismovieplaying \{textureslot = 1}
-		resumemovie \{textureslot = 1}
+	if IsMoviePlaying \{TextureSlot = 1}
+		ResumeMovie \{TextureSlot = 1}
 	endif
-	if NOT (skatercamanimfinished name = cutscene)
-		moviemembfunc \{name = cutscene
-			func = cut_gel_pause
+	if NOT (SkaterCamAnimFinished name = cutscene)
+		MovieMembFunc \{name = cutscene
+			func = Cut_GEL_Pause
 			params = {
 				off
 			}}
 	endif
 	change \{toggleviewmode_enabled = true}
-	if NOT isps3
-		resumecontrollerchecking
+	if NOT IsPs3
+		ResumeControllerChecking
 	endif
 	change \{paused_for_hardware = 0}
 	ui_flow_manager_respond_to_action \{action = select_resume}
@@ -105,14 +105,14 @@ script gh3_start_pressed \{device_num = -1}
 			return
 		endif
 	endif
-	if gameispaused
+	if GameIsPaused
 		if NOT (<device_num> = -1)
 			if NOT (<start_pressed_device> = $last_start_pressed_device)
 				return
 			endif
 		endif
 		if NOT (<device_num> = -1)
-			setinput controller = <device_num> pattern = 0 strum = 0
+			SetInput controller = <device_num> pattern = 0 strum = 0
 		endif
 	else
 		change last_start_pressed_device = <start_pressed_device>
@@ -123,20 +123,20 @@ endscript
 script gh3_start_pressed_spawned 
 	printf \{"gh3_start_pressed_spawned"}
 	if NOT ($view_mode = 0)
-		if gameispaused
-			unpausegh3sounds <...>
-			unpausegame
+		if GameIsPaused
+			UnpauseGh3Sounds <...>
+			UnPauseGame
 		else
-			pausegh3sounds <...>
-			pausegame
+			PauseGh3Sounds <...>
+			PauseGame
 			unpausespawnedscript \{update_crowd_model_cam}
 		endif
 		return
 	endif
-	if gameispaused
+	if GameIsPaused
 		unpausegh3 <...>
 		spawnscriptnow \{destroy_gh3_pause_menu}
-		broadcastevent \{type = event_unpause_game}
+		BroadcastEvent \{type = event_unpause_game}
 		change \{viewer_buttons_enabled = 1}
 	else
 		if ($ui_flow_manager_state [0] = online_pause_fs)
@@ -155,18 +155,18 @@ endscript
 
 script block_input 
 	if ($fade_overlay_count = 0)
-		setbuttoneventmappings \{block_menu_input}
-		wait \{0.25
+		SetButtonEventMappings \{block_menu_input}
+		Wait \{0.25
 			seconds}
-		setbuttoneventmappings \{unblock_menu_input}
+		SetButtonEventMappings \{unblock_menu_input}
 	endif
 endscript
 
 script create_gh3_pause_menu 
 	change \{toggleviewmode_enabled = false}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
-		id = pause_menu
+		id = Pause_Menu
 		pos = (0.0, 0.0)
 		just = [
 			left
@@ -175,23 +175,23 @@ script create_gh3_pause_menu
 endscript
 
 script destroy_gh3_pause_menu 
-	if screenelementexists \{id = pause_menu}
-		destroyscreenelement \{id = pause_menu}
+	if ScreenElementExists \{id = Pause_Menu}
+		DestroyScreenElement \{id = Pause_Menu}
 	endif
-	doscreenelementmorph \{id = hud_window
+	doScreenElementMorph \{id = hud_window
 		alpha = 1}
 endscript
 
 script safe_create_gh3_pause_menu 
-	killspawnedscript \{name = destroy_loading_screen_spawned}
-	if NOT screenelementexists \{id = pause_menu}
+	KillSpawnedScript \{name = destroy_loading_screen_spawned}
+	if NOT ScreenElementExists \{id = Pause_Menu}
 		create_gh3_pause_menu <...>
 	endif
 endscript
 
 script create_generic_backdrop 
-	if NOT screenelementexists \{id = generic_backdrop_container}
-		createscreenelement \{type = containerelement
+	if NOT ScreenElementExists \{id = generic_backdrop_container}
+		CreateScreenElement \{type = ContainerElement
 			parent = root_window
 			id = generic_backdrop_container
 			pos = (0.0, 0.0)
@@ -199,10 +199,10 @@ script create_generic_backdrop
 				left
 				top
 			]}
-		createscreenelement \{type = spriteelement
+		CreateScreenElement \{type = SpriteElement
 			id = pause_backdrop
 			parent = generic_backdrop_container
-			texture = venue_bg
+			texture = Venue_BG
 			rgba = [
 				255
 				255
@@ -217,14 +217,14 @@ script create_generic_backdrop
 			]
 			z_priority = 0
 			alpha = 1}
-		doscreenelementmorph \{id = hud_window
+		doScreenElementMorph \{id = hud_window
 			alpha = 0
 			time = 0.5}
 	endif
 endscript
 
 script destroy_generic_backdrop 
-	if screenelementexists \{id = generic_backdrop_container}
-		destroyscreenelement \{id = generic_backdrop_container}
+	if ScreenElementExists \{id = generic_backdrop_container}
+		DestroyScreenElement \{id = generic_backdrop_container}
 	endif
 endscript

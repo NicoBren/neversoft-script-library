@@ -1,9 +1,9 @@
 
 script ui_create_options_delete_band 
 	text = [
-		qs(0x7e925edf)
-		qs(0x693fb0b2)
-		qs(0x75472e4e)
+		qs("You are about to permanently delete the selected band. ")
+		qs("All progress associated with that band will be lost. ")
+		qs("Are you sure you want to continue?")
 	]
 	create_popup_warning_menu {
 		textblock = {
@@ -14,12 +14,12 @@ script ui_create_options_delete_band
 		options = [
 			{
 				func = menu_confirm_band_delete_select_yes
-				text = qs(0x271a1633)
+				text = qs("DELETE")
 				scale = (1.0, 1.0)
 			}
 			{
 				func = generic_event_back
-				text = qs(0xf7723015)
+				text = qs("CANCEL")
 				scale = (1.0, 1.0)
 			}
 		]

@@ -1,7 +1,7 @@
 enable_file_cache = 0
 
-script cachefiles 
-	getarraysize <cache_list>
+script CacheFiles 
+	GetArraySize <cache_list>
 	i = 0
 	if (<array_size> = 0)
 		return
@@ -12,38 +12,38 @@ script cachefiles
 	repeat <array_size>
 endscript
 
-script cachegamefiles 
-	if cd
-		if gotparam \{force_clear}
-			initfilecache \{max_files = 1024
+script CacheGameFiles 
+	if CD
+		if GotParam \{force_clear}
+			InitFileCache \{max_files = 1024
 				streambuff = 0
 				size = 2048
 				format}
 		else
-			initfilecache \{max_files = 1024
+			InitFileCache \{max_files = 1024
 				streambuff = 0
 				size = 2048}
 		endif
 	else
-		initfilecache \{max_files = 1024
+		InitFileCache \{max_files = 1024
 			streambuff = 0
 			size = 2048
 			format}
 	endif
-	if NOT istrue \{$enable_file_cache}
+	if NOT IsTrue \{$enable_file_cache}
 		return
 	endif
-	resizefilecachestreambuff (768 * 1024)
-	cachefiles \{cache_list = $zone_cache_files}
-	cachegamefilesasync
-	if isps3
-		cachefiles \{cache_list = $zone_cache_vram_files}
-		cachefiles \{cache_list = $pak_cache_vram_files}
+	ResizeFileCacheStreamBuff (768 * 1024)
+	CacheFiles \{cache_list = $zone_cache_files}
+	CacheGameFilesAsync
+	if IsPs3
+		CacheFiles \{cache_list = $zone_cache_vram_files}
+		CacheFiles \{cache_list = $pak_cache_vram_files}
 	endif
 endscript
 
-script cachegamefilesasync 
-	cachefiles \{cache_list = $model_skin_cache_files}
-	cachefiles \{cache_list = $model_tex_cache_files}
-	cachefiles \{cache_list = $pak_cache_files}
+script CacheGameFilesAsync 
+	CacheFiles \{cache_list = $model_skin_cache_files}
+	CacheFiles \{cache_list = $model_tex_cache_files}
+	CacheFiles \{cache_list = $pak_cache_files}
 endscript

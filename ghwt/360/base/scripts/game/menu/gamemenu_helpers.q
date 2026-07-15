@@ -81,7 +81,7 @@ Default_Font_Colors = [
 is_changing_levels = 0
 
 script generic_menu_pad_back 
-	printf \{qs(0xd7d7f670)}
+	printf \{qs("\Lgeneric_menu_pad_back Parameters = ")}
 	generic_menu_pad_back_sound
 	if GotParam \{callback}
 		<callback> <...>
@@ -166,16 +166,16 @@ disable_menu_sounds = 0
 script generic_menu_up_or_down_sound \{menu_id = current_menu}
 	if ($disable_menu_sounds = 0)
 		if GotParam \{down}
-			SoundEvent \{event = ui_sfx_scroll_down}
+			SoundEvent \{event = UI_SFX_Scroll_Down}
 		else
-			SoundEvent \{event = ui_sfx_scroll_up}
+			SoundEvent \{event = UI_SFX_Scroll_Up}
 		endif
 	endif
 endscript
 
 script menu_scroll_end_sound 
 	if ($disable_menu_sounds = 0)
-		SoundEvent \{event = menu_scroll_end}
+		SoundEvent \{event = Menu_Scroll_End}
 	endif
 endscript
 
@@ -226,25 +226,25 @@ endscript
 
 script menu_get_sponsor_sound 
 	if ($disable_menu_sounds = 0)
-		SoundEvent \{event = gh4_gigcomplete_sponsor}
+		SoundEvent \{event = Gh4_GigComplete_Sponsor}
 	endif
 endscript
 
-script ghmix_pad_back_sound 
+script GhMix_Pad_Back_Sound 
 	if ($disable_menu_sounds = 0)
-		SoundEvent \{event = ghmix_back}
+		SoundEvent \{event = GhMix_Back}
 	endif
 endscript
 
-script ghmix_pad_choose_sound 
+script GhMix_Pad_Choose_Sound 
 	if ($disable_menu_sounds = 0)
-		SoundEvent \{event = ghmix_select}
+		SoundEvent \{event = GhMix_Select}
 	endif
 endscript
 
-script ghmix_pad_up_down 
+script GhMix_Pad_Up_Down 
 	if ($disable_menu_sounds = 0)
-		SoundEvent \{event = ghmix_scroll_up_down}
+		SoundEvent \{event = GhMix_Scroll_Up_Down}
 	endif
 endscript
 

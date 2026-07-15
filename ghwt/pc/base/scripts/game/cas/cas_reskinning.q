@@ -1,22 +1,22 @@
-reskintree = {
-	type = degenerateblend
-	id = rootnode
+ReskinTree = {
+	type = DegenerateBlend
+	id = RootNode
 }
-reskinanimbranch = {
+ReskinAnimBranch = {
 	type = param_timer_type
-	id = timernode
-	speed = param_speed
+	id = TimerNode
+	Speed = param_speed
 	start = param_start
-	anim = param_anim
+	Anim = param_anim
 	[
 		{
-			type = tweakbones
-			id = tweakbonesnode
+			type = TweakBones
+			id = TweakBonesNode
 			[
 				{
-					type = source
-					id = sourcenode
-					anim = param_anim
+					type = Source
+					id = SourceNode
+					Anim = param_anim
 				}
 			]
 		}
@@ -24,16 +24,16 @@ reskinanimbranch = {
 }
 
 script cas_get_bone_slider_value 
-	requireparams \{[
+	RequireParams \{[
 			part
 			group_name
 		]
 		all}
-	if NOT getcasappearancepart part = <part>
-		scriptassert 'Part %s not found' s = <part>
+	if NOT GetCASAppearancePart part = <part>
+		ScriptAssert 'Part %s not found' s = <part>
 	else
-		if gotparam \{bones}
-			if structurecontains structure = <bones> <group_name>
+		if GotParam \{bones}
+			if StructureContains Structure = <bones> <group_name>
 				slider = (<bones>.<group_name>)
 			else
 				printf 'Bone %s missing in part, will devise a default setting' s = <group_name>
@@ -41,15 +41,15 @@ script cas_get_bone_slider_value
 		else
 		endif
 	endif
-	if NOT getactualcasoptionstruct part = <part> desc_id = <desc_id>
-		scriptassert '%s %t not found' s = <part> t = <desc_id>
+	if NOT GetActualCASOptionStruct part = <part> desc_id = <desc_id>
+		ScriptAssert '%s %t not found' s = <part> t = <desc_id>
 	endif
-	getarraysize <deform_bones> globalarray
+	GetArraySize <deform_bones> GlobalArray
 	i = 0
 	begin
 	deform_info = ($<deform_bones> [<i>])
 	if (<group_name> = (<deform_info>.group_name))
-		if NOT gotparam \{slider}
+		if NOT GotParam \{slider}
 			cas_get_default_slider_value deform_info = <deform_info>
 		endif
 		cas_get_min_bone_slider deform_info = <deform_info>
@@ -64,83 +64,83 @@ script cas_get_bone_slider_value
 	endif
 	i = (<i> + 1)
 	repeat <array_size>
-	if NOT gotparam \{slider}
+	if NOT GotParam \{slider}
 		slider = 0.0
 	endif
 	return {slider = <slider> min_slider = <min_slider> max_slider = <max_slider>}
 endscript
 
 script cas_set_bone_slider 
-	requireparams \{[
+	RequireParams \{[
 			part
 			group_name
 			slider
 		]
 		all}
-	getcasappearancepart part = <part>
-	if NOT gotparam \{bones}
+	GetCASAppearancePart part = <part>
+	if NOT GotParam \{bones}
 		bones = {}
 	endif
-	updatestructelement struct = <bones> element = <group_name> value = <slider>
-	setcasappearancebones part = <part> bones = <newstruct>
+	UpdateStructElement struct = <bones> element = <group_name> value = <slider>
+	SetCASAppearanceBones part = <part> bones = <newstruct>
 endscript
 
 script cas_part_reskin_create_object 
-	if compositeobjectexists name = <id>
+	if CompositeObjectExists name = <id>
 		if ($cas_reskin_preview = none)
-			scriptassert 'Name clash on %s when reskinning' s = <id> donotresolve
+			ScriptAssert 'Name clash on %s when reskinning' s = <id> DoNotResolve
 		else
 			return
 		endif
 	endif
-	if NOT gotparam \{deform_mesh}
-		scriptassert \{'deform_mesh missing'}
+	if NOT GotParam \{deform_mesh}
+		ScriptAssert \{'deform_mesh missing'}
 	endif
-	if NOT gotparam \{deform_skel}
-		scriptassert \{'deform_mesh missing'}
+	if NOT GotParam \{deform_skel}
+		ScriptAssert \{'deform_mesh missing'}
 	endif
-	extendcrc <deform_skel> '_default' out = deform_anim
-	mempushcontext \{topdownheap}
-	formattext checksumname = modelcsum '%s' s = <deform_mesh>
+	ExtendCRC <deform_skel> '_default' out = deform_anim
+	MemPushContext \{TopDownHeap}
+	FormatText checksumname = modelcsum '%s' s = <deform_mesh>
 	if ($cas_reskin_debug = 1)
-		if getcurrentcasobject
-			<cas_object> :obj_getposition
+		if GetCurrentCASObject
+			<cas_object> :Obj_GetPosition
 		endif
 		pos = (<pos> + (-0.45000002, 0.0, 0.0))
 	endif
-	createcompositeobject {
+	CreateCompositeObject {
 		params = {
 			name = <id>
-			skeletonname = <deform_skel>
-			modelchecksum = <modelcsum>
+			SkeletonName = <deform_skel>
+			ModelChecksum = <modelcsum>
 			geomname = <part>
 			pos = <pos>
 			allow_reset
 		}
-		components = [
-			{component = skeleton}
-			{component = model}
-			{component = animtree}
+		Components = [
+			{Component = skeleton}
+			{Component = Model}
+			{Component = AnimTree}
 		]
 	}
-	<id> :anim_inittree {
-		tree = $reskintree
-		nodeiddeclaration = [
-			rootnode
-			timernode
-			sourcenode
-			flipnode
-			tweakbonesnode
+	<id> :Anim_InitTree {
+		Tree = $ReskinTree
+		NodeIdDeclaration = [
+			RootNode
+			TimerNode
+			SourceNode
+			FlipNode
+			TweakBonesNode
 		]
 	}
-	<id> :anim_command {
-		target = rootnode
-		command = degenerateblend_addbranch
+	<id> :Anim_Command {
+		target = RootNode
+		command = DegenerateBlend_AddBranch
 		params = {
-			blendduration = 0.0
-			tree = $reskinanimbranch
+			BlendDuration = 0.0
+			Tree = $ReskinAnimBranch
 			params = {
-				param_timer_type = cycle
+				param_timer_type = Cycle
 				param_anim = <deform_anim>
 				param_speed = 1.0
 			}
@@ -149,50 +149,50 @@ script cas_part_reskin_create_object
 	if ($cas_reskin_debug = 0)
 		<id> :hide
 	endif
-	mempopcontext
+	MemPopContext
 endscript
 
 script cas_apply_bone_group_settings 
-	requireparams \{[
+	RequireParams \{[
 			bone_settings
 			deform_bones
 		]
 		all}
-	getarraysize <deform_bones> globalarray
+	GetArraySize <deform_bones> GlobalArray
 	num_groups = <array_size>
-	igroup = 0
+	iGroup = 0
 	begin
-	deform_info = ($<deform_bones> [<igroup>])
+	deform_info = ($<deform_bones> [<iGroup>])
 	group_name = (<deform_info>.group_name)
-	if structurecontains structure = <bone_settings> <group_name>
+	if StructureContains Structure = <bone_settings> <group_name>
 		slider = (<bone_settings>.<group_name>)
-		getarraysize (<deform_info>.bones)
-		ibone = 0
+		GetArraySize (<deform_info>.bones)
+		iBone = 0
 		begin
 		cas_apply_bone_transforms {
-			bone_info = (<deform_info>.bones [<ibone>])
+			bone_info = (<deform_info>.bones [<iBone>])
 			slider = <slider>
 			deform_info = <deform_info>
 			main_skeleton = <main_skeleton>
 			lowres_rig = <lowres_rig>
 			deform_skel = <deform_skel>
 		}
-		ibone = (<ibone> + 1)
+		iBone = (<iBone> + 1)
 		repeat <array_size>
 	endif
-	igroup = (<igroup> + 1)
+	iGroup = (<iGroup> + 1)
 	repeat <num_groups>
 endscript
 
 script cas_apply_bone_transforms_lowres 
-	if skeleton_hasbone bone = <bone_name>
+	if Skeleton_HasBone bone = <bone_name>
 		<transform_script> transform_data = <transform_data> amount = <amount> bone_name = <bone_name>
 	endif
-	if gotparam \{no_recurse}
+	if GotParam \{no_recurse}
 		return
 	endif
-	getskeletonchildbones bone = <bone_name> skeleton = <deform_skel>
-	getarraysize <child_bones>
+	GetSkeletonChildBones bone = <bone_name> skeleton = <deform_skel>
+	GetArraySize <child_bones>
 	i = 0
 	if (<array_size> > 0)
 		begin
@@ -209,8 +209,8 @@ script cas_apply_bone_transforms_lowres
 endscript
 
 script cas_apply_bone_transforms 
-	if getbonemappedvalue \{name = scaling}
-		if gotparam \{lowres_rig}
+	if GetBoneMappedValue \{name = scaling}
+		if GotParam \{lowres_rig}
 			cas_apply_bone_transforms_lowres {
 				transform_script = cas_bone_scaling
 				transform_data = (<bone_info>.scaling)
@@ -223,8 +223,8 @@ script cas_apply_bone_transforms
 			cas_bone_scaling transform_data = (<bone_info>.scaling) amount = <mapped_value> bone_name = (<bone_info>.bone)
 		endif
 	endif
-	if getbonemappedvalue \{name = translation}
-		if gotparam \{lowres_rig}
+	if GetBoneMappedValue \{name = translation}
+		if GotParam \{lowres_rig}
 			cas_apply_bone_transforms_lowres {
 				transform_script = cas_bone_translation
 				transform_data = (<bone_info>.translation)
@@ -236,8 +236,8 @@ script cas_apply_bone_transforms
 			cas_bone_translation transform_data = (<bone_info>.translation) amount = <mapped_value> bone_name = (<bone_info>.bone)
 		endif
 	endif
-	if getbonemappedvalue \{name = rotation}
-		if gotparam \{lowres_rig}
+	if GetBoneMappedValue \{name = rotation}
+		if GotParam \{lowres_rig}
 			cas_apply_bone_transforms_lowres {
 				transform_script = cas_bone_rotation
 				transform_data = (<bone_info>.rotation)
@@ -252,18 +252,18 @@ script cas_apply_bone_transforms
 endscript
 
 script cas_bone_translation 
-	if structurecontains structure = <transform_data> bone_space
+	if StructureContains Structure = <transform_data> bone_space
 		amount = (<amount>.(1.0, 0.0, 0.0))
 	endif
-	if structurecontains structure = <transform_data> no_propagate
-		if structurecontains structure = <transform_data> model_space
+	if StructureContains Structure = <transform_data> no_propagate
+		if StructureContains Structure = <transform_data> model_space
 			flags = {model_space}
 		endif
-		obj_addbonetranslation bone = <bone_name> <amount> <flags>
+		Obj_AddBoneTranslation bone = <bone_name> <amount> <flags>
 	else
-		anim_command {
-			target = tweakbonesnode
-			command = tweakbones_translatebone
+		Anim_Command {
+			target = TweakBonesNode
+			command = TweakBones_TranslateBone
 			params = {
 				bone = <bone_name>
 				<amount>
@@ -273,30 +273,30 @@ script cas_bone_translation
 endscript
 
 script cas_bone_scaling 
-	requireparams \{[
+	RequireParams \{[
 			transform_data
 			amount
 			bone_name
 		]}
-	if NOT structurecontains structure = <transform_data> no_propagate
+	if NOT StructureContains Structure = <transform_data> no_propagate
 		flags = {propagate}
 	endif
-	if structurecontains structure = <transform_data> stop_propagate
+	if StructureContains Structure = <transform_data> stop_propagate
 		flags = {stop_propagate}
 	endif
-	obj_addbonescale bone = <bone_name> <amount> <flags>
+	Obj_AddBoneScale bone = <bone_name> <amount> <flags>
 endscript
 
 script cas_bone_rotation 
-	if structurecontains structure = <transform_data> no_propagate
-		if structurecontains structure = <transform_data> model_space
+	if StructureContains Structure = <transform_data> no_propagate
+		if StructureContains Structure = <transform_data> model_space
 			flags = {model_space}
 		endif
-		obj_addbonerotation bone = <bone_name> <amount> <flags>
+		Obj_AddBoneRotation bone = <bone_name> <amount> <flags>
 	else
-		anim_command {
-			target = tweakbonesnode
-			command = tweakbones_rotatebone
+		Anim_Command {
+			target = TweakBonesNode
+			command = TweakBones_RotateBone
 			params = {
 				bone = <bone_name>
 				<amount>
@@ -306,18 +306,18 @@ script cas_bone_rotation
 endscript
 
 script cas_reset_bones 
-	obj_resetbones
-	if anim_animnodeexists \{id = tweakbonesnode}
-		anim_command \{target = tweakbonesnode
-			command = tweakbones_reset}
+	Obj_ResetBones
+	if Anim_AnimNodeExists \{id = TweakBonesNode}
+		Anim_Command \{target = TweakBonesNode
+			command = TweakBones_Reset}
 	endif
 endscript
 
 script cas_get_default_slider_value 
 	slider_sum = 0.0
 	sliders_checked = 0.0
-	if structurecontains structure = <deform_info> bones
-		getarraysize (<deform_info>.bones)
+	if StructureContains Structure = <deform_info> bones
+		GetArraySize (<deform_info>.bones)
 		i = 0
 		if (<array_size> > 0)
 			begin
@@ -342,17 +342,17 @@ endscript
 script cas_get_default_slider_value_struct 
 	slider_sum = 0.0
 	sliders_checked = 0.0
-	if structurecontains structure = <deform_map> rotation
+	if StructureContains Structure = <deform_map> rotation
 		cas_get_default_slider_value_entry deform_info = <deform_info> map = (<deform_map>.rotation)
 		slider_sum = (<slider_sum> + <slider>)
 		sliders_checked = (<sliders_checked> + 1.0)
 	endif
-	if structurecontains structure = <deform_map> translation
+	if StructureContains Structure = <deform_map> translation
 		cas_get_default_slider_value_entry deform_info = <deform_info> map = (<deform_map>.translation)
 		slider_sum = (<slider_sum> + <slider>)
 		sliders_checked = (<sliders_checked> + 1.0)
 	endif
-	if structurecontains structure = <deform_map> scaling
+	if StructureContains Structure = <deform_map> scaling
 		cas_get_default_slider_value_entry deform_info = <deform_info> map = (<deform_map>.scaling)
 		slider_sum = (<slider_sum> + <slider>)
 		sliders_checked = (<sliders_checked> + 1.0)
@@ -365,46 +365,46 @@ endscript
 
 script cas_get_default_slider_value_entry 
 	cas_get_slider_linearmap_values map = <map> deform_info = <deform_info>
-	if isvector <from_bone>
-		linearmap result = x from = <min_slider> to = <max_slider> basedon = 0.0 lowerbound = (<from_bone>.(1.0, 0.0, 0.0)) upperbound = (<to_bone>.(1.0, 0.0, 0.0))
-		linearmap result = y from = <min_slider> to = <max_slider> basedon = 0.0 lowerbound = (<from_bone>.(0.0, 1.0, 0.0)) upperbound = (<to_bone>.(0.0, 1.0, 0.0))
-		linearmap result = z from = <min_slider> to = <max_slider> basedon = 0.0 lowerbound = (<from_bone>.(0.0, 0.0, 1.0)) upperbound = (<to_bone>.(0.0, 0.0, 1.0))
+	if IsVector <from_bone>
+		LinearMap result = x from = <min_slider> to = <max_slider> basedOn = 0.0 lowerBound = (<from_bone>.(1.0, 0.0, 0.0)) upperBound = (<to_bone>.(1.0, 0.0, 0.0))
+		LinearMap result = y from = <min_slider> to = <max_slider> basedOn = 0.0 lowerBound = (<from_bone>.(0.0, 1.0, 0.0)) upperBound = (<to_bone>.(0.0, 1.0, 0.0))
+		LinearMap result = z from = <min_slider> to = <max_slider> basedOn = 0.0 lowerBound = (<from_bone>.(0.0, 0.0, 1.0)) upperBound = (<to_bone>.(0.0, 0.0, 1.0))
 		return slider = ((<x> + <y> + <z>) / 3.0)
 	else
-		linearmap result = slider from = <min_slider> to = <max_slider> basedon = 0.0 lowerbound = <from_bone> upperbound = <to_bone>
+		LinearMap result = slider from = <min_slider> to = <max_slider> basedOn = 0.0 lowerBound = <from_bone> upperBound = <to_bone>
 		return slider = <slider>
 	endif
 endscript
 
 script cas_get_slider_linearmap_values 
-	requireparams \{[
+	RequireParams \{[
 			map
 			deform_info
 		]
 		all}
-	if NOT structurecontains structure = <map> to
-		printf 'Missing \'to\' entry for %s-%t!' s = (<deform_info>.frontend_desc) t = (<deform_info>.group_name) donotresolve
+	if NOT StructureContains Structure = <map> to
+		printf 'Missing \'to\' entry for %s-%t!' s = (<deform_info>.frontend_desc) t = (<deform_info>.group_name) DoNotResolve
 		return \{from_bone = 0.0
 			to_bone = 0.0
 			min_slider = 0.0
 			max_slider = 1.0}
 	endif
-	if structurecontains structure = <map> from
+	if StructureContains Structure = <map> from
 		from_bone = (<map>.from)
 	else
-		if isvector (<map>.to)
+		if IsVector (<map>.to)
 			from_bone = (0.0, 0.0, 0.0)
 		else
 			from_bone = 0
 		endif
 	endif
 	to_bone = (<map>.to)
-	if structurecontains structure = <map> min
+	if StructureContains Structure = <map> min
 		min_slider = (<map>.min)
 	else
 		cas_get_min_bone_slider deform_info = <deform_info>
 	endif
-	if structurecontains structure = <map> max
+	if StructureContains Structure = <map> max
 		max_slider = (<map>.max)
 	else
 		cas_get_max_bone_slider deform_info = <deform_info>
@@ -413,7 +413,7 @@ script cas_get_slider_linearmap_values
 endscript
 
 script cas_get_min_bone_slider 
-	if structurecontains structure = <deform_info> min
+	if StructureContains Structure = <deform_info> min
 		return min_slider = (<deform_info>.min)
 	else
 		return \{min_slider = 0.0}
@@ -421,7 +421,7 @@ script cas_get_min_bone_slider
 endscript
 
 script cas_get_max_bone_slider 
-	if structurecontains structure = <deform_info> max
+	if StructureContains Structure = <deform_info> max
 		return max_slider = (<deform_info>.max)
 	else
 		return \{max_slider = 1.0}
@@ -429,37 +429,37 @@ script cas_get_max_bone_slider
 endscript
 
 script cas_part_reskin 
-	if NOT gotparam \{bone_settings}
+	if NOT GotParam \{bone_settings}
 		bone_settings = {}
 	endif
 	cas_part_reskin_create_object id = <reskin_object> part = <part> pos = (0.0, 0.0, 0.0) deform_mesh = <deform_mesh> deform_skel = <deform_skel>
 	<reskin_object> :cas_reset_bones
-	if gotparam \{bone_settings}
+	if GotParam \{bone_settings}
 		<reskin_object> :cas_apply_bone_group_settings bone_settings = <bone_settings> deform_bones = <deform_bones>
 	endif
-	if gotparam \{additional_bone_transforms}
-		printf 'Doing additional transforms for %s' s = <part> donotresolve
+	if GotParam \{additional_bone_transforms}
+		printf 'Doing additional transforms for %s' s = <part> DoNotResolve
 		<reskin_object> :cas_apply_additional_bone_transforms additional_bone_transforms = <additional_bone_transforms>
 	endif
-	<reskin_object> :anim_updatepose
+	<reskin_object> :Anim_UpdatePose
 	return \{true}
 endscript
 
 script cas_main_skel_scale 
-	if NOT gotparam \{bone_settings}
+	if NOT GotParam \{bone_settings}
 		bone_settings = {}
 	endif
-	if gotparam \{bone_settings}
+	if GotParam \{bone_settings}
 		cas_apply_bone_group_settings bone_settings = <bone_settings> deform_bones = <deform_bones> main_skeleton = 1
 	endif
-	if gotparam \{additional_bone_transforms}
-		printf 'Doing additional transforms for %s' s = <part> donotresolve
+	if GotParam \{additional_bone_transforms}
+		printf 'Doing additional transforms for %s' s = <part> DoNotResolve
 		cas_apply_additional_bone_transforms additional_bone_transforms = <additional_bone_transforms> main_skeleton = 1
 	endif
 endscript
 
 script cas_apply_additional_bone_transforms 
-	getarraysize <additional_bone_transforms>
+	GetArraySize <additional_bone_transforms>
 	i = 0
 	if (<array_size> > 0)
 		begin
@@ -477,12 +477,12 @@ script cas_apply_additional_bone_transforms
 endscript
 
 script cas_lowres_rig_reskin 
-	if gotparam \{bone_settings}
+	if GotParam \{bone_settings}
 		cas_apply_bone_group_settings bone_settings = <bone_settings> deform_bones = <deform_bones> deform_skel = <deform_skel> lowres_rig = 1
 	endif
-	if gotparam \{additional_bone_transforms}
+	if GotParam \{additional_bone_transforms}
 		cas_apply_additional_bone_transforms additional_bone_transforms = <additional_bone_transforms> deform_skel = <deform_skel> lowres_rig = 1
 	endif
-	anim_updatepose
+	Anim_UpdatePose
 	return \{true}
 endscript

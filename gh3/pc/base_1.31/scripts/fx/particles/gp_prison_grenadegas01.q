@@ -1,55 +1,55 @@
-gp_prison_grenadegas01 = {
+GP_Prison_GrenadeGas01 = {
 	pos = (0.27317998, 0.0, -0.593401)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
+	CreatedAtStart
 	attach
-	emitrangedims = (0.0, 0.0, 0.0)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	EmitRangeDims = (0.0, 0.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, 0.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 20.0
-	liferange = (1.6, 2.0)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 20.0
+	LifeRange = (1.6, 2.0)
 	emit_rate = 64.0
 	max = 0
-	timeseed = 0.0
-	lifetime = 1.2
-	emitnum = 0
-	followemitter = 0.0
-	fillpath
-	alwaysemit
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 1.2
+	emitNum = 0
+	FollowEmitter = 0.0
+	FillPath
+	AlwaysEmit
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.3, 0.3)
 		(1.0, 1.0)
 	]
-	speedrange = (0.0, 0.0)
-	rotvel = (-0.2, -0.5)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	pathfollowtime = 0.0
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (0.0, 0.0)
+	RotVel = (-0.2, -0.5)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.0
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -1835629678
-	lod_default
-	quickmaterial = {
-		texturelayout = layout2x2
-		diffusetextureenabled
-		diffusetexture = jow_smoke01
-		specularpower = 0
-		lighting
+	LOD_Default
+	QuickMaterial = {
+		TextureLayout = Layout2x2
+		DiffuseTextureEnabled
+		DiffuseTexture = jow_smoke01
+		SpecularPower = 0
+		Lighting
 		alphacutoff = 64
-		blendmode = blend
-		quadanimationfps = 0
+		blendMode = blend
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.377769, 0.0, -0.0)
 		(-0.377769, 0.0, -0.0)
 		(-0.26279598, 0.0, -0.0)
@@ -60,7 +60,7 @@ gp_prison_grenadegas01 = {
 		(0.41061902, 0.0, -0.0)
 		(0.41061902, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-215041
 		-419439873
 		-471604225
@@ -68,7 +68,7 @@ gp_prison_grenadegas01 = {
 		-1044266752
 		-1027423744
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.4375
 		1.0
 	]

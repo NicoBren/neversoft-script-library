@@ -1,17 +1,17 @@
-curreviewlighting = 0
+curReviewLighting = 0
 
-script cyclereviewlighting 
-	change curreviewlighting = ($curreviewlighting + 1)
-	if ($curreviewlighting = 7)
-		change \{curreviewlighting = 0}
+script CycleReviewLighting 
+	change curReviewLighting = ($curReviewLighting + 1)
+	if ($curReviewLighting = 7)
+		change \{curReviewLighting = 0}
 	endif
-	getpakmancurrentname \{map = zones}
-	formattext checksumname = lightprefix '%p_GFX_L' p = <pakname>
-	callscriptonnode prefix = <lightprefix> callback_script = cb_cyclereviewlighting params = {}
+	GetPakManCurrentName \{map = zones}
+	FormatText checksumname = lightPrefix '%p_GFX_L' p = <pakname>
+	CallScriptOnNode prefix = <lightPrefix> callBack_Script = CB_CycleReviewLighting params = {}
 endscript
 
-script cb_cyclereviewlighting 
-	getlightcolor name = <nodename>
+script CB_CycleReviewLighting 
+	GetLightColor name = <nodeName>
 	big = <r>
 	if (<big> < <g>)
 		big = <g>
@@ -19,135 +19,135 @@ script cb_cyclereviewlighting
 	if (<big> < <b>)
 		big = <b>
 	endif
-	switch $curreviewlighting
+	switch $curReviewLighting
 		case 0
-		setlightcolor name = <nodename> r = <big> g = <big> b = <big>
+		SetLightColor name = <nodeName> r = <big> g = <big> b = <big>
 		case 1
-		setlightcolor name = <nodename> r = <big> g = (<big> / 6.0) b = (<big> / 6.0)
+		SetLightColor name = <nodeName> r = <big> g = (<big> / 6.0) b = (<big> / 6.0)
 		case 2
-		setlightcolor name = <nodename> r = (<big> / 6.0) g = <big> b = (<big> / 6.0)
+		SetLightColor name = <nodeName> r = (<big> / 6.0) g = <big> b = (<big> / 6.0)
 		case 3
-		setlightcolor name = <nodename> r = (<big> / 6.0) g = (<big> / 6.0) b = <big>
+		SetLightColor name = <nodeName> r = (<big> / 6.0) g = (<big> / 6.0) b = <big>
 		case 4
-		setlightcolor name = <nodename> r = (<big> / 6.0) g = <big> b = <big>
+		SetLightColor name = <nodeName> r = (<big> / 6.0) g = <big> b = <big>
 		case 5
-		setlightcolor name = <nodename> r = <big> g = (<big> / 6.0) b = <big>
+		SetLightColor name = <nodeName> r = <big> g = (<big> / 6.0) b = <big>
 		case 6
-		setlightcolor name = <nodename> r = <big> g = <big> b = (<big> / 6.0)
+		SetLightColor name = <nodeName> r = <big> g = <big> b = (<big> / 6.0)
 	endswitch
 endscript
 
-script safecreate 
-	if isinnodearray <nodename>
-		if NOT iscreated <nodename>
-			create name = <nodename>
+script SafeCreate 
+	if IsInNodeArray <nodeName>
+		if NOT IsCreated <nodeName>
+			create name = <nodeName>
 		endif
 	endif
 endscript
 
-script safekill 
-	if iscreated <nodename>
-		kill name = <nodename>
+script SafeKill 
+	if IsCreated <nodeName>
+		kill name = <nodeName>
 	endif
 endscript
 
-script screenflash \{time = 1}
-	killspawnedscript \{id = screenflash}
-	spawnscriptlater screenflashon id = screenflash params = {time = <time>}
+script ScreenFlash \{time = 1}
+	KillSpawnedScript \{id = ScreenFlash}
+	SpawnScriptLater ScreenFlashOn id = ScreenFlash params = {time = <time>}
 endscript
 
-script screenflashon 
-	if NOT screenfx_fxinstanceexists \{viewport = bg_viewport
-			name = flashbs}
-		screenfx_addfxinstance {
+script ScreenFlashOn 
+	if NOT ScreenFX_FxInstanceExists \{viewport = bg_viewport
+			name = FlashBS}
+		ScreenFX_AddFXInstance {
 			viewport = bg_viewport
-			name = flashbs
-			($screenflash_tod_manager.screen_fx [0])
+			name = FlashBS
+			($ScreenFlash_TOD_Manager.screen_fx [0])
 		}
 	else
-		screenfx_updatefxinstanceparams {
+		ScreenFX_UpdateFXInstanceParams {
 			viewport = bg_viewport
-			name = flashbs
-			($screenflash_tod_manager.screen_fx [0])
+			name = FlashBS
+			($ScreenFlash_TOD_Manager.screen_fx [0])
 		}
 	endif
-	wait (0.1 * <time>) seconds
-	if screenfx_fxinstanceexists \{viewport = bg_viewport
-			name = flashbs}
-		screenfx_updatefxinstanceparams {
+	Wait (0.1 * <time>) seconds
+	if ScreenFX_FxInstanceExists \{viewport = bg_viewport
+			name = FlashBS}
+		ScreenFX_UpdateFXInstanceParams {
 			viewport = bg_viewport
-			name = flashbs
+			name = FlashBS
 			time = <time>
-			($screenflash_tod_manager.screen_fx [0])
+			($ScreenFlash_TOD_Manager.screen_fx [0])
 			contrast = 1
 			brightness = 1
 		}
 	endif
-	wait <time> seconds
-	spawnscriptlater \{screenflashoff
-		id = screenflash}
+	Wait <time> seconds
+	SpawnScriptLater \{ScreenFlashOff
+		id = ScreenFlash}
 endscript
 
-script screenflashoff 
-	if viewportexists \{id = bg_viewport}
-		if screenfx_fxinstanceexists \{viewport = bg_viewport
-				name = flashbs}
-			screenfx_removefxinstance \{viewport = bg_viewport
-				name = flashbs}
+script ScreenFlashOff 
+	if ViewportExists \{id = bg_viewport}
+		if ScreenFX_FxInstanceExists \{viewport = bg_viewport
+				name = FlashBS}
+			ScreenFX_RemoveFXInstance \{viewport = bg_viewport
+				name = FlashBS}
 		endif
 	endif
 endscript
 
-script screentoblack \{time = 0.4
+script ScreenToBlack \{time = 0.4
 		viewport = ui}
-	killspawnedscript \{id = screentoblack}
-	spawnscriptlater call_screentoblack id = screentoblack params = {<...>}
+	KillSpawnedScript \{id = ScreenToBlack}
+	SpawnScriptLater Call_ScreenToBlack id = ScreenToBlack params = {<...>}
 endscript
 
-script call_screentoblack 
+script Call_ScreenToBlack 
 	time = (0.5 * <time>)
-	spawnscriptlater do_screentoblack id = screentoblack params = {on time = <time> <...>}
-	wait <time> seconds
-	spawnscriptlater do_screentoblack id = screentoblack params = {off time = <time> <...>}
+	SpawnScriptLater Do_ScreenToBlack id = ScreenToBlack params = {on time = <time> <...>}
+	Wait <time> seconds
+	SpawnScriptLater Do_ScreenToBlack id = ScreenToBlack params = {off time = <time> <...>}
 endscript
 
-script do_screentoblack 
+script Do_ScreenToBlack 
 	if NOT (<viewport> = 0)
-		if NOT viewportexists id = <viewport>
+		if NOT ViewportExists id = <viewport>
 			return
 		endif
 	endif
-	if gotparam \{on}
-		if NOT screenfx_fxinstanceexists viewport = <viewport> name = blackfx
-			screenfx_addfxinstance {
+	if GotParam \{on}
+		if NOT ScreenFX_FxInstanceExists viewport = <viewport> name = blackFX
+			ScreenFX_AddFXInstance {
 				viewport = <viewport>
-				name = blackfx
-				($screentoblack_tod_manager.screen_fx [0])
+				name = blackFX
+				($ScreenToBlack_TOD_Manager.screen_fx [0])
 			}
 		endif
-		screenfx_updatefxinstanceparams {
+		ScreenFX_UpdateFXInstanceParams {
 			viewport = <viewport>
-			name = blackfx
+			name = blackFX
 			time = <time>
-			($screentoblack_tod_manager.screen_fx [0])
+			($ScreenToBlack_TOD_Manager.screen_fx [0])
 			inner_radius = 0
 			outer_radius = 0
 			alpha = 1
 		}
 	else
-		if screenfx_fxinstanceexists viewport = <viewport> name = blackfx
-			screenfx_updatefxinstanceparams {
+		if ScreenFX_FxInstanceExists viewport = <viewport> name = blackFX
+			ScreenFX_UpdateFXInstanceParams {
 				viewport = <viewport>
-				name = blackfx
+				name = blackFX
 				time = <time>
-				($screentoblack_tod_manager.screen_fx [0])
+				($ScreenToBlack_TOD_Manager.screen_fx [0])
 				inner_radius = 1
 				outer_radius = 1.5
 				alpha = 0
 			}
-			if gotparam \{off}
-				wait <time> seconds
-				screenfx_removefxinstance viewport = <viewport> name = blackfx
+			if GotParam \{off}
+				Wait <time> seconds
+				ScreenFX_RemoveFXInstance viewport = <viewport> name = blackFX
 			endif
 		endif
 	endif

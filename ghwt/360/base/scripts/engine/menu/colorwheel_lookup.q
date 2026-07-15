@@ -1640,7 +1640,7 @@ color_lookup_table = {
 			253
 		]
 	}
-	black_1guitar = {
+	Black_1guitar = {
 		diffuse = [
 			30
 			30
@@ -2852,7 +2852,7 @@ clothing_colorwheel = [
 ]
 guitar_colorwheel = [
 	[
-		black_1guitar
+		Black_1guitar
 		grey_2guitar
 		grey_3guitar
 		grey_4guitar

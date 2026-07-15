@@ -3,7 +3,7 @@ script create_practice_warning_menu
 	disable_pause
 	player_device = ($player1_status.controller)
 	get_song_struct song = ($current_song)
-	if structurecontains structure = <song_struct> boss
+	if StructureContains Structure = <song_struct> boss
 		warning_text = "Your progress in this song will be lost if you exit to Tutorial now. Exit?"
 		goto_text = "TUTORIAL"
 	else
@@ -44,9 +44,9 @@ endscript
 
 script practice_warning_menu_select_practice 
 	get_song_struct song = ($current_song)
-	if structurecontains structure = <song_struct> boss
+	if StructureContains Structure = <song_struct> boss
 		player_device = ($primary_controller)
-		if isguitarcontroller controller = <player_device>
+		if IsGuitarController controller = <player_device>
 			ui_flow_manager_respond_to_action \{action = continue_tutorial}
 		endif
 	else

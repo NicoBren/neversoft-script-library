@@ -1,25 +1,25 @@
-gp_fx_dragon_bottompuffs_01 = {
-	Pos = (1.3104758, 0.435185, -3.550901)
-	Angles = (0.0, 0.0, 0.0)
+GP_FX_Dragon_BottomPuffs_01 = {
+	pos = (1.3104758, 0.435185, -3.550901)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
 	EmitRangeDims = (0.1, 0.0, 0.0)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, 0.0, 0.0)
+	force = (0.0, 0.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	AngleSpread = 5.0
 	LifeRange = (1.2, 1.6)
-	Emit_Rate = 10.0
-	Max = 0
+	emit_rate = 10.0
+	max = 0
 	TimeSeed = 0.0
-	LifeTime = 0.7
-	EmitNum = 0
+	lifeTime = 0.7
+	emitNum = 0
 	FollowEmitter = 0.0
 	AlwaysEmit
 	EmitFunction = constant
@@ -34,16 +34,16 @@ gp_fx_dragon_bottompuffs_01 = {
 	EmitDelayStart = 0.0
 	PathFollowTime = 0.0
 	History = 2
-	HistoryListCoordinateSpace = World
-	Color = -3964161
+	HistoryListCoordinateSpace = world
+	color = -3964161
 	LOD_Default
 	QuickMaterial = {
 		DiffuseTextureEnabled
-		DiffuseTexture = ph_firepuffs
+		DiffuseTexture = PH_FirePuffs
 		SpecularPower = 0
-		Bloom
-		AlphaCutoff = 1
-		BlendMode = add
+		bloom
+		alphacutoff = 1
+		blendMode = Add
 		QuadAnimationFPS = 0
 	}
 	Knot = [

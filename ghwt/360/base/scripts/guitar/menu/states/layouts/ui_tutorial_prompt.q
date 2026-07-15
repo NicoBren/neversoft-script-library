@@ -2,7 +2,7 @@
 script ui_create_tutorial_prompt 
 	if GotParam \{continue_to_gigs}
 		choose_skip_tutorials
-	elseif isrbdrum controller = ($primary_controller)
+	elseif isRBDrum controller = ($primary_controller)
 		choose_skip_tutorials
 	else
 		GetGlobalTags \{training}
@@ -18,8 +18,8 @@ script ui_create_tutorial_prompt
 						has_prompt_guitar_tutorial = complete
 					}}
 			endif
-			text = qs(0xfcdbf168)
-			case bass
+			text = qs("You are starting a new Guitar Career. You'll encounter new stuff such as Extended Sustains and Tapping Solo Sections. Would you like to check out the Guitar Tutorials?")
+			case Bass
 			if (<has_prompt_bass_tutorial> = complete)
 				choose_skip_tutorials
 				return
@@ -29,7 +29,7 @@ script ui_create_tutorial_prompt
 						has_prompt_bass_tutorial = complete
 					}}
 			endif
-			text = qs(0x0b9838ef)
+			text = qs("You are starting a new Bass Career. You'll encounter new stuff such as Extended Sustains and Open Notes. Would you like to check out the Bass Tutorials?")
 			case drum
 			if (<has_prompt_drum_tutorial> = complete)
 				choose_skip_tutorials
@@ -40,8 +40,8 @@ script ui_create_tutorial_prompt
 						has_prompt_drum_tutorial = complete
 					}}
 			endif
-			text = qs(0xbaf2d153)
-			case vocals
+			text = qs("You are starting a new Drum Career. To play drums you'll need to know how to use the drums and kick pedal, and trigger star power.  Would you like to check out the Drum Tutorials?")
+			case Vocals
 			if (<has_prompt_vocal_tutorial> = complete)
 				choose_skip_tutorials
 				return
@@ -51,24 +51,24 @@ script ui_create_tutorial_prompt
 						has_prompt_vocal_tutorial = complete
 					}}
 			endif
-			text = qs(0xb3218b2a)
+			text = qs("You are starting a new Vocal Career. You'll need to know how to match the pitch, sing freeform sections, and trigger Star Power. Would you like to check out the Vocals Tutorials?")
 			default
 			choose_skip_tutorials
 			return
 		endswitch
 		create_popup_warning_menu {
-			title = qs(0x20cd276e)
+			title = qs("NEW CAREER")
 			textblock = {
 				text = <text>
 			}
 			options = [
 				{
 					func = choose_skip_tutorials
-					text = qs(0x182f0173)
+					text = qs("CONTINUE")
 				}
 				{
 					func = choose_view_tutorials
-					text = qs(0x33764e9f)
+					text = qs("VIEW TUTORIAL")
 				}
 			]
 			no_background
@@ -78,7 +78,7 @@ script ui_create_tutorial_prompt
 			]
 		}
 		clean_up_user_control_helpers
-		add_user_control_helper \{text = qs(0xc18d5e76)
+		add_user_control_helper \{text = qs("SELECT")
 			button = green
 			z = 100000}
 	endif
@@ -93,17 +93,17 @@ script ui_deinit_tutorial_prompt
 endscript
 
 script choose_view_tutorials 
-	SpawnScriptNow \{choose_view_tutorials_worker}
+	spawnscriptnow \{choose_view_tutorials_worker}
 endscript
 
 script choose_view_tutorials_worker 
 	hide_glitch \{num_frames = 3}
 	destroy_popup_warning_menu
-	menu_music_off
+	Menu_Music_Off
 	BG_Crowd_Front_End_Silence
 	do_training_loading
 	destroy_loading_screen
-	StartRendering
+	startrendering
 	ui_event_wait \{event = menu_replace
 		data = {
 			state = uistate_select_tutorial
@@ -117,12 +117,12 @@ script choose_skip_tutorials
 		if GotParam \{has_prompt_easy_tutorial}
 			ui_event_wait \{event = menu_replace
 				data = {
-					state = uistate_tutorial_prompt_easy
+					state = UIstate_tutorial_prompt_easy
 					is_popup
 				}}
 		else
-			if pakfilesarecached
-				StopRendering
+			if PakFilesAreCached
+				stoprendering
 			else
 				create_loading_screen \{spawn}
 			endif
@@ -132,8 +132,8 @@ script choose_skip_tutorials
 				}}
 		endif
 	else
-		if pakfilesarecached
-			StopRendering
+		if PakFilesAreCached
+			stoprendering
 		else
 			create_loading_screen \{spawn}
 		endif

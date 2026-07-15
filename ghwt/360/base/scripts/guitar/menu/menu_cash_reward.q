@@ -1,32 +1,32 @@
 cash_deduction_types = [
 	{
-		desc = qs(0x9bc68157)
+		desc = qs("CARS, SET FIRE TO")
 		val = 2500
 	}
 	{
-		desc = qs(0xa02f6e9b)
+		desc = qs("WALL ART, STOLEN")
 		val = 80
 	}
 	{
-		desc = qs(0x4108d3de)
+		desc = qs("GREEN ROOM, TRASHED")
 		val = 210
 	}
 	{
-		desc = qs(0x2dc1968f)
+		desc = qs("NOISE VIOLATIONS, PAID")
 		val = 550
 	}
 	{
-		desc = qs(0xa5050591)
+		desc = qs("HOTEL ROOM, TRASHED")
 		val = 330
 	}
 	{
-		desc = qs(0x5209229d)
+		desc = qs("DRINKS, CONSUMED")
 		val = 300
 	}
 ]
-review_string_3star = qs(0x14dfd00e)
-review_string_4star = qs(0x9dcab56e)
-review_string_5star = qs(0x5e06061b)
+review_string_3star = qs("Mediocre 3-star review. Here's your cut.")
+review_string_4star = qs("Good 4-star review. Here's your cut.")
+review_string_5star = qs("Killer 5-star review. Here's your cut.")
 base_deduction_index_array = [
 	0
 	1
@@ -53,26 +53,26 @@ script create_cash_reward_menu
 	get_progression_globals game_mode = ($game_mode) ($current_progression_flag)
 	format_globaltag_gigname setlist_prefix = ($<tier_global>.prefix) gignum = ($current_gig_number)
 	GetGlobalTags <gig_name> param = cash_earned
-	Change structurename = player1_status new_cash = (($player1_status.new_cash) + <cash_earned>)
+	change structurename = player1_status new_cash = (($player1_status.new_cash) + <cash_earned>)
 	SetGlobalTags <gig_name> params = {cash_earned = 0}
 	CreateScreenElement {
-		Type = ContainerElement
+		type = ContainerElement
 		parent = root_window
 		id = cash_reward_container
-		Pos = (-90.0, 0.0)
+		pos = (-90.0, 0.0)
 		rot_angle = 6
 		exclusive_device = <exclusive_device>
 	}
 	stars = ($player1_status.stars)
 	song_cash = ($player1_status.new_cash)
-	Change \{structurename = player1_status
+	change \{structurename = player1_status
 		new_cash = 0}
 	venue_name = (($LevelZones.($current_level)).title)
 	GetUpperCaseString <venue_name>
-	CreateScreenElement \{Type = SpriteElement
+	CreateScreenElement \{type = SpriteElement
 		parent = cash_reward_container
 		texture = 2p_song_summary_bg
-		Pos = (640.0, 360.0)
+		pos = (640.0, 360.0)
 		just = [
 			center
 			center
@@ -81,22 +81,22 @@ script create_cash_reward_menu
 		z_priority = -100}
 	create_menu_backdrop \{texture = screen_reward_bg}
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = cash_reward_container
-		Scale = (1.1, 0.9)
-		Pos = (660.0, 0.0)
-		text = <UppercaseString>
+		scale = (1.1, 0.9)
+		pos = (660.0, 0.0)
+		text = <UpperCaseString>
 		font = ($cash_reward_font)
 		rgba = [0 0 0 255]
 		just = [center top]
 		z_priority = 3
 	}
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = cash_reward_container
-		Scale = (1.8, 1.3)
-		Pos = (660.0, 40.0)
-		text = qs(0x651f4d04)
+		scale = (1.8, 1.3)
+		pos = (660.0, 40.0)
+		text = qs("GIG MONEY")
 		font = ($cash_reward_font)
 		rgba = [150 60 35 255]
 		just = [center top]
@@ -104,15 +104,15 @@ script create_cash_reward_menu
 	}
 	GetScreenElementDims id = <id>
 	if (<width> > 600)
-		SetScreenElementProps id = <id> Scale = 1
-		fit_text_in_rectangle id = <id> dims = ((600.0, 0.0) + <height> * (0.0, 1.0))
+		SetScreenElementProps id = <id> scale = 1
+		fit_text_in_rectangle id = <id> dims = ((600.0, 0.0) + <Height> * (0.0, 1.0))
 	endif
-	formatText checksumName = review_text 'review_string_%vstar' v = <stars>
+	FormatText checksumname = review_text 'review_string_%vstar' v = <stars>
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = cash_reward_container
-		Scale = 0.7
-		Pos = (355.0, 110.0)
+		scale = 0.7
+		pos = (355.0, 110.0)
 		text = (<review_text>)
 		font = ($cash_reward_font)
 		rgba = [0 0 0 255]
@@ -120,28 +120,28 @@ script create_cash_reward_menu
 		z_priority = 3
 	}
 	GetScreenElementDims id = <id>
-	fit_text_in_rectangle id = <id> dims = ((530.0, 0.0) + <height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = 0.7 start_y_scale = 0.7
+	fit_text_in_rectangle id = <id> dims = ((530.0, 0.0) + <Height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = 0.7 start_y_scale = 0.7
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = cash_reward_container
-		Scale = 0.7
-		Pos = (355.0, 140.0)
-		text = qs(0x326eba5e)
+		scale = 0.7
+		pos = (355.0, 140.0)
+		text = qs("Go buy yourself somethin' pretty.")
 		font = ($cash_reward_font)
 		rgba = [0 0 0 255]
 		just = [left top]
 		z_priority = 3
 	}
 	GetScreenElementDims id = <id>
-	fit_text_in_rectangle id = <id> dims = ((530.0, 0.0) + <height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = 0.7 start_y_scale = 0.7
-	create_deductions_list Pos = (340.0, 195.0) dims = (550.0, 500.0) Scale = (0.9, 0.7) received = <song_cash>
-	create_you_get_text Pos = (890.0, 400.0) Scale = (2.0, 1.5) value = <song_cash>
+	fit_text_in_rectangle id = <id> dims = ((530.0, 0.0) + <Height> * (0.0, 1.0)) only_if_larger_x = 1 start_x_scale = 0.7 start_y_scale = 0.7
+	create_deductions_list pos = (340.0, 195.0) dims = (550.0, 500.0) scale = (0.9, 0.7) received = <song_cash>
+	create_you_get_text pos = (890.0, 400.0) scale = (2.0, 1.5) value = <song_cash>
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = cash_reward_container
-		Scale = 0.8
-		Pos = (880.0, 460.0)
-		text = qs(0xa4e51434)
+		scale = 0.8
+		pos = (880.0, 460.0)
+		text = qs("Spend your hard-earned")
 		font = ($cash_reward_font)
 		rgba = [0 0 0 255]
 		just = [right top]
@@ -149,26 +149,26 @@ script create_cash_reward_menu
 	}
 	GetScreenElementDims id = <id>
 	if (<width> > 510)
-		fit_text_in_rectangle id = <id> dims = ((510.0, 0.0) + ((0.0, 1.0) * <height>)) start_x_scale = 0.8 start_y_scale = 0.8
+		fit_text_in_rectangle id = <id> dims = ((510.0, 0.0) + ((0.0, 1.0) * <Height>)) start_x_scale = 0.8 start_y_scale = 0.8
 	endif
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = cash_reward_container
-		Scale = 0.8
-		Pos = (880.0, 495.0)
-		text = qs(0xbf41d8d6)
+		scale = 0.8
+		pos = (880.0, 495.0)
+		text = qs("cash at the store.")
 		font = ($cash_reward_font)
 		rgba = [0 0 0 255]
 		just = [right top]
 		z_priority = 3
 	}
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = cash_reward_container
 		id = continue_button
-		Scale = 0.7
-		Pos = (435.0, 572.0)
-		text = qs(0x182f0173)
+		scale = 0.7
+		pos = (435.0, 572.0)
+		text = qs("CONTINUE")
 		font = ($cash_reward_font)
 		rgba = [0 0 0 255]
 		z_priority = 3
@@ -179,7 +179,7 @@ script create_cash_reward_menu
 	}
 	displaySprite \{parent = cash_reward_container
 		tex = pill_128
-		Pos = (390.0, 580.0)
+		pos = (390.0, 580.0)
 		rgba = [
 			0
 			0
@@ -192,7 +192,7 @@ script create_cash_reward_menu
 		]}
 	GetScreenElementDims \{id = continue_button}
 	SetScreenElementProps id = <id> dims = (<width> * (1.0, 0.0) + (64.0, 96.0))
-	LaunchEvent \{Type = focus
+	LaunchEvent \{type = focus
 		target = continue_button}
 endscript
 
@@ -202,17 +202,17 @@ script destroy_cash_reward_menu
 endscript
 cash_reward_font = fontgrid_text_a8
 
-script create_deductions_list \{Pos = (200.0, 200.0)
-		Scale = 1
+script create_deductions_list \{pos = (200.0, 200.0)
+		scale = 1
 		dims = (400.0, 400.0)
 		received = 1200}
 	dl_width = ((1.0, 0.0).<dims>)
 	dl_height = ((0.0, 1.0).<dims>)
 	CreateScreenElement {
-		Type = ContainerElement
+		type = ContainerElement
 		parent = cash_reward_container
 		id = deductions_container
-		Pos = <Pos>
+		pos = <pos>
 	}
 	pay = <received>
 	deduction_count = 4
@@ -223,12 +223,12 @@ script create_deductions_list \{Pos = (200.0, 200.0)
 	<pay> = (<pay> + $cash_deduction_types [<perm_index>].val)
 	<index> = (<index> + 1)
 	repeat <deduction_count>
-	formatText TextName = gross_pay_text qs(0xcb2f9062) d = <pay>
+	FormatText TextName = gross_pay_text qs("\L$%d") d = <pay>
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = deductions_container
-		Pos = ((1.0, 0.0) * <dl_width>)
-		Scale = <Scale>
+		pos = ((1.0, 0.0) * <dl_width>)
+		scale = <scale>
 		text = <gross_pay_text>
 		font = ($cash_reward_font)
 		rgba = [15 70 0 255]
@@ -236,25 +236,25 @@ script create_deductions_list \{Pos = (200.0, 200.0)
 		z_priority = 3
 	}
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = deductions_container
 		id = cd_pay_text
-		Pos = (15.0, 0.0)
-		Scale = <Scale>
-		text = qs(0x0a628fee)
+		pos = (15.0, 0.0)
+		scale = <scale>
+		text = qs("PAY")
 		font = ($cash_reward_font)
 		rgba = [15 70 0 255]
 		just = [left top]
 		z_priority = 3
 	}
 	GetScreenElementDims \{id = cd_pay_text}
-	separation_height = (<height> * 0.9)
+	separation_height = (<Height> * 0.9)
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = deductions_container
-		Pos = (((0.0, 1.0) * <separation_height>) + (15.0, 0.0))
-		Scale = (<Scale> * 0.95)
-		text = qs(0x0a5e6464)
+		pos = (((0.0, 1.0) * <separation_height>) + (15.0, 0.0))
+		scale = (<scale> * 0.95)
+		text = qs("MINUS DEDUCTIONS")
 		font_spacing = 4
 		font = ($cash_reward_font)
 		rgba = [150 60 35 255]
@@ -265,12 +265,12 @@ script create_deductions_list \{Pos = (200.0, 200.0)
 	begin
 	perm_index = (<perm_deduction_array> [<index>])
 	deduction_string = ($cash_deduction_types [<perm_index>].desc)
-	formatText TextName = deduction_value qs(0x291a78e8) v = ($cash_deduction_types [<perm_index>].val)
+	FormatText TextName = deduction_value qs("\L-$%v") v = ($cash_deduction_types [<perm_index>].val)
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = deductions_container
-		Pos = (((0.0, 1.0) * (<separation_height> * (<index> + 2))) + (15.0, 0.0))
-		Scale = (<Scale> * 0.95)
+		pos = (((0.0, 1.0) * (<separation_height> * (<index> + 2))) + (15.0, 0.0))
+		scale = (<scale> * 0.95)
 		text = <deduction_string>
 		font = ($cash_reward_font)
 		rgba = [0 0 0 255]
@@ -279,14 +279,14 @@ script create_deductions_list \{Pos = (200.0, 200.0)
 	}
 	GetScreenElementDims id = <id>
 	if (<width> > 400)
-		SetScreenElementProps id = <id> Scale = 1
-		fit_text_in_rectangle id = <id> dims = ((400.0, 0.0) + <height> * (0.0, 1.0))
+		SetScreenElementProps id = <id> scale = 1
+		fit_text_in_rectangle id = <id> dims = ((400.0, 0.0) + <Height> * (0.0, 1.0))
 	endif
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = deductions_container
-		Pos = ((1.0, 0.0) * <dl_width> + (0.0, 1.0) * (<separation_height> * (<index> + 2)))
-		Scale = (<Scale> * 0.95)
+		pos = ((1.0, 0.0) * <dl_width> + (0.0, 1.0) * (<separation_height> * (<index> + 2)))
+		scale = (<scale> * 0.95)
 		text = <deduction_value>
 		font = ($cash_reward_font)
 		rgba = [150 60 35 255]
@@ -298,27 +298,27 @@ script create_deductions_list \{Pos = (200.0, 200.0)
 endscript
 
 script create_you_get_text \{value = 1200
-		Scale = 1
-		Pos = (630.0, 320.0)}
-	formatText TextName = payment_text qs(0xb3dbe0b1) v = <value>
+		scale = 1
+		pos = (630.0, 320.0)}
+	FormatText TextName = payment_text qs("\L$%v") v = <value>
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = cash_reward_container
 		id = payment_text_id
-		Scale = <Scale>
+		scale = <scale>
 		text = <payment_text>
 		font = ($cash_reward_font)
-		Pos = (<Pos> - (0.0, 15.0))
+		pos = (<pos> - (0.0, 15.0))
 		rgba = [15 70 0 255]
 		just = [right top]
 		z_priority = 3
 	}
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = cash_reward_container
 		id = you_get_id
-		Scale = (<Scale> * 0.65000004)
-		text = qs(0x950e0054)
+		scale = (<scale> * 0.65000004)
+		text = qs("You Get:")
 		font = ($cash_reward_font)
 		rgba = [0 0 0 255]
 		just = [right top]
@@ -326,6 +326,6 @@ script create_you_get_text \{value = 1200
 	}
 	SoundEvent \{event = Cash_Sound}
 	GetScreenElementDims \{id = payment_text_id}
-	you_get_pos = (<Pos> - (1.0, 0.0) * (<width> * 1.1))
-	SetScreenElementProps id = you_get_id Pos = <you_get_pos>
+	you_get_pos = (<pos> - (1.0, 0.0) * (<width> * 1.1))
+	SetScreenElementProps id = you_get_id pos = <you_get_pos>
 endscript

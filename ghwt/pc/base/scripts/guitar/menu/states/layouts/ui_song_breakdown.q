@@ -13,7 +13,7 @@ ui_song_breakdown_helper_params = {
 script ui_init_song_breakdown 
 	change \{playing_song = 0}
 	change \{my_trans_flag = 0}
-	gamemode_gettype
+	GameMode_GetType
 	if (<type> = training)
 		spawnscriptnow \{kill_gem_scroller}
 		spawnscriptnow \{task_menu_default_anim_in
@@ -52,18 +52,18 @@ script ui_create_song_breakdown
 	ui_song_breakdown_clear_ready_up_book_keeping
 	set_focus_color
 	set_unfocus_color
-	if screenelementexists \{id = my_breakdown_id}
-		destroyscreenelement \{id = my_breakdown_id}
+	if ScreenElementExists \{id = my_breakdown_id}
+		DestroyScreenElement \{id = my_breakdown_id}
 	endif
 	get_current_band_info
-	getglobaltags <band_info>
+	GetGlobalTags <band_info>
 	bandname = <name>
 	my_song = ($current_song)
 	if NOT ($track_last_song = none)
 		my_song = ($track_last_song)
 	endif
 	get_song_title song = <my_song>
-	gamemode_gettype
+	GameMode_GetType
 	if (<type> = training)
 		ui_create_song_breakdown_practice <...>
 	else
@@ -72,19 +72,19 @@ script ui_create_song_breakdown
 endscript
 
 script ui_create_song_breakdown_normal 
-	gamemode_gettype
+	GameMode_GetType
 	if ((<type> = battle) || (<type> = faceoff) || (<type> = pro_faceoff))
 		desc = 'song_complete_h2h'
 	else
 		desc = 'song_complete_4p'
 	endif
-	gamemode_getnumplayersshown
+	GameMode_GetNumPlayersShown
 	trim_boss_from_num_players_show
 	star_rgba = [254 204 55 255]
 	p = 1
 	begin
 	get_percent_notes_hit player_index = <p>
-	if gotparam \{percent_notes_hit}
+	if GotParam \{percent_notes_hit}
 		if (<percent_notes_hit> < 100)
 			star_rgba = [255 255 255 255]
 		endif
@@ -92,10 +92,10 @@ script ui_create_song_breakdown_normal
 	p = (<p> + 1)
 	repeat <num_players_shown>
 	get_all_exclusive_devices
-	createscreenelement {
+	CreateScreenElement {
 		parent = root_window
 		id = my_breakdown_id
-		type = descinterface
+		type = DescInterface
 		desc = <desc>
 		title_text = <song_title>
 		band_header_container_pos = {(0.0, -300.0) relative}
@@ -106,7 +106,7 @@ script ui_create_song_breakdown_normal
 		song_complete_leathershape_alpha = 0
 		exclusive_device = <exclusive_device>
 	}
-	soundevent \{event = menu_song_complete_in}
+	SoundEvent \{event = Menu_Song_Complete_In}
 	num_players = <num_players_shown>
 	strips_rel_pos = (0.0, 0.0)
 	if (<num_players> = 3)
@@ -119,7 +119,7 @@ script ui_create_song_breakdown_normal
 	if (<type> = training)
 		strips_rel_pos = (0.0, 220.0)
 	endif
-	setscreenelementprops {
+	SetScreenElementProps {
 		id = my_breakdown_id
 		strips_pos = {<strips_rel_pos> relative}
 	}
@@ -151,14 +151,14 @@ script ui_create_song_breakdown_normal
 	else
 		song_breakdown_assign_band_data band_cash = <band_cash> star_rgba = <star_rgba>
 	endif
-	if gotparam \{gig_complete}
+	if GotParam \{gig_complete}
 		printf \{channel = mychannel
-			qs(0x894d7755)}
+			qs("\Lsong breakdown gig_complete")}
 		ui_song_breakdown_add_components_for_gig_complete
 	endif
-	if gotparam \{for_encore}
+	if GotParam \{for_encore}
 		printf \{channel = mychannel
-			qs(0x723f2f31)}
+			qs("\Lsong breakdown ready for encore")}
 		ui_song_breakdown_add_components_for_encore
 	endif
 	if (($my_trans_flag) = 1)
@@ -168,13 +168,13 @@ endscript
 
 script get_percent_notes_hit 
 	ui_song_breakdown_get_basic_player_data player_index = <player_index>
-	if NOT playerinfoequals <player_index> part = vocals
+	if NOT PlayerInfoEquals <player_index> part = Vocals
 		if (<max_notes> > 0)
 			<percent_notes_hit> = (((<notes_hit> * 1.0) / <max_notes>) * 100.0)
 		else
 			<percent_notes_hit> = 0
 		endif
-		mathfloor <percent_notes_hit>
+		MathFloor <percent_notes_hit>
 		<percent_notes_hit> = <floor>
 	else
 		if (<vocal_phrase_max_qual> > 0)
@@ -182,7 +182,7 @@ script get_percent_notes_hit
 		else
 			<percent_notes_hit> = 0
 		endif
-		mathfloor <percent_notes_hit>
+		MathFloor <percent_notes_hit>
 		<percent_notes_hit> = <floor>
 	endif
 	return percent_notes_hit = <percent_notes_hit>
@@ -190,35 +190,35 @@ endscript
 
 script ui_destroy_song_breakdown 
 	clean_up_user_control_helpers
-	killspawnedscript \{name = pulsate_helper_pill}
-	gamemode_gettype
+	KillSpawnedScript \{name = pulsate_helper_pill}
+	GameMode_GetType
 	if (<type> = training)
-		destroyscreenelement \{id = my_breakdown_practice_id}
+		DestroyScreenElement \{id = my_breakdown_practice_id}
 	else
-		destroyscreenelement \{id = my_breakdown_id}
+		DestroyScreenElement \{id = my_breakdown_id}
 		ui_destroy_encore_confirmation
 	endif
 endscript
 
 script ui_deinit_song_breakdown 
 	printf \{channel = mychannel
-		qs(0xf4674b8a)}
+		qs("\L****** DEINIT SONG BREAKDOWN CLEAR DETAILED STATS FOR GIG *****")}
 	if ($track_last_song != jamsession)
 		song_breakdown_auto_write_top_rockers
 	endif
 	ui_song_breakdown_clean_up_highest_multipliers
 	clear_cash_milestones_per_song
 	ui_gig_cash_increase_earnings_for_all
-	progression_clearnewcash
+	Progression_ClearNewCash
 endscript
 
 script song_breakdown_assign_strips_data \{winner = -1}
-	if NOT my_breakdown_id :desc_resolvealias \{name = alias_player_stats_element}
-		scriptassert \{qs(0xcced482f)}
+	if NOT my_breakdown_id :Desc_ResolveAlias \{name = alias_player_stats_element}
+		ScriptAssert \{qs("\LProblem resolving alias in song breakdown")}
 	endif
-	gamemode_getnumplayersshown
+	GameMode_GetNumPlayersShown
 	trim_boss_from_num_players_show
-	getscreenelementchildren id = <resolved_id>
+	GetScreenElementChildren id = <resolved_id>
 	band_cash = 0
 	player = 1
 	begin
@@ -226,9 +226,9 @@ script song_breakdown_assign_strips_data \{winner = -1}
 	band_cash = (<band_cash> + <new_cash>)
 	arrow_alpha = <cash_rank_up>
 	cut_alpha_val = 1
-	gamemode_gettype
+	GameMode_GetType
 	if NOT (<type> = career || <type> = quickplay)
-		cash_text = qs(0x00000000)
+		cash_text = qs("")
 		cut_alpha_val = 0
 	endif
 	if (<player> = <winner>)
@@ -238,7 +238,7 @@ script song_breakdown_assign_strips_data \{winner = -1}
 		<winner_alpha> = 0
 		<loser_alpha> = 1
 	endif
-	setscreenelementprops {
+	SetScreenElementProps {
 		id = (<children> [(<player> - 1)])
 		player_name_text = <player_text>
 		notes_hit_text = <percent_text>
@@ -253,7 +253,7 @@ script song_breakdown_assign_strips_data \{winner = -1}
 		hand_devil_horn_alpha = <winner_alpha>
 		hand_thumb_down_alpha = <loser_alpha>
 	}
-	setscreenelementprops {
+	SetScreenElementProps {
 		id = my_breakdown_id
 		cut_alpha = <cut_alpha_val>
 	}
@@ -263,27 +263,27 @@ script song_breakdown_assign_strips_data \{winner = -1}
 endscript
 
 script song_breakdown_assign_player_data_faceoff 
-	gamemode_gettype
+	GameMode_GetType
 	<player_index> = 1
 	begin
-	formattext checksumname = player_patch 'alias_song_complete_h2h_player_patch_%p' p = <player_index>
-	my_breakdown_id :desc_resolvealias name = <player_patch>
-	if NOT gotparam \{resolved_id}
-		scriptsoftassert \{qs(0xc74d08cb)}
+	FormatText checksumname = player_patch 'alias_song_complete_h2h_player_patch_%p' p = <player_index>
+	my_breakdown_id :Desc_ResolveAlias name = <player_patch>
+	if NOT GotParam \{resolved_id}
+		ScriptSoftAssert \{qs("Could not find my_breakdown_id")}
 		return
 	endif
 	ui_song_breakdown_get_basic_player_data player_index = <player_index>
-	getplayerinfo <player_index> highest_multiplier
-	formattext textname = score_text qs(0x21379b76) n = <score> decimalplaces = 0 usecommas
-	formattext textname = multiplier_text qs(0xff33e928) n = <highest_multiplier>
-	formattext textname = high_note_streak qs(0xedf69b30) n = <best_run>
-	getplayerinfo <player_index> current_health
+	GetPlayerInfo <player_index> highest_multiplier
+	FormatText TextName = score_text qs("SCORE: %n") n = <score> DecimalPlaces = 0 usecommas
+	FormatText TextName = multiplier_text qs("HIGHEST MULTIPLIER: %nx") n = <highest_multiplier>
+	FormatText TextName = high_note_streak qs("NOTE STREAK: %n") n = <best_run>
+	GetPlayerInfo <player_index> current_health
 	if (<current_health> = 1.0)
 		<winner_alpha> = 1
 	else
 		<winner_alpha> = 0
 	endif
-	setscreenelementprops {
+	SetScreenElementProps {
 		id = <resolved_id>
 		notestreak_entry_text = <high_note_streak>
 		score_entry_text = <score_text>
@@ -294,7 +294,7 @@ script song_breakdown_assign_player_data_faceoff
 	}
 	<player_index> = (<player_index> + 1)
 	if (<type> = battle)
-		setscreenelementprops {
+		SetScreenElementProps {
 			id = <resolved_id>
 			alpha = 0
 		}
@@ -304,21 +304,21 @@ endscript
 
 script song_breakdown_assign_band_data 
 	if (($current_num_players) = 1 || (($current_num_players) = 2 && ($boss_battle) = 1))
-		gamemode_gettype
+		GameMode_GetType
 		if (<type> = career || <type> = quickplay)
-			getscorefromdetailedstats \{player = 1}
-			getstarsfromdetailedstats \{player = 1}
+			getScoreFromDetailedStats \{player = 1}
+			getStarsFromDetailedStats \{player = 1}
 		else
-			getplayerinfo \{1
+			GetPlayerInfo \{1
 				score}
-			getplayerinfo \{1
+			GetPlayerInfo \{1
 				stars}
 		endif
-		getplayerinfo \{1
+		GetPlayerInfo \{1
 			highest_multiplier}
-		formattext textname = band_score_text qs(0x21379b76) n = <score> decimalplaces = 0 usecommas
-		formattext textname = multiplier_text qs(0xff33e928) n = <highest_multiplier>
-		setscreenelementprops {
+		FormatText TextName = band_score_text qs("SCORE: %n") n = <score> DecimalPlaces = 0 usecommas
+		FormatText TextName = multiplier_text qs("HIGHEST MULTIPLIER: %nx") n = <highest_multiplier>
+		SetScreenElementProps {
 			id = my_breakdown_id
 			cash_entry_alpha = 0
 			notestreak_entry_alpha = 0
@@ -326,7 +326,7 @@ script song_breakdown_assign_band_data
 			multiplier_entry_text = <multiplier_text>
 		}
 	else
-		gamemode_getnumplayersshown
+		GameMode_GetNumPlayersShown
 		trim_boss_from_num_players_show
 		b_note_streak = ($gig_detailed_stats_band.high_2p_streak)
 		if (($gig_detailed_stats_band.high_3p_streak) > <b_note_streak>)
@@ -337,13 +337,13 @@ script song_breakdown_assign_band_data
 		endif
 		score = ($gig_detailed_stats_band.score)
 		b_high_mult = ($gig_detailed_stats_band.high_mult)
-		casttointeger \{b_high_mult}
-		casttointeger \{score}
-		formattext textname = band_score_text qs(0x21379b76) n = <score> decimalplaces = 0 usecommas
-		formattext textname = band_cash_entry_text qs(0x71ff7c2b) n = <band_cash> decimalplaces = 0 usecommas
-		formattext textname = band_high_mult_text qs(0xff33e928) n = <b_high_mult>
-		formattext textname = band_high_note_streak qs(0xedf69b30) n = <b_note_streak>
-		setscreenelementprops {
+		CastToInteger \{b_high_mult}
+		CastToInteger \{score}
+		FormatText TextName = band_score_text qs("SCORE: %n") n = <score> DecimalPlaces = 0 usecommas
+		FormatText TextName = band_cash_entry_text qs("CASH: %n") n = <band_cash> DecimalPlaces = 0 usecommas
+		FormatText TextName = band_high_mult_text qs("HIGHEST MULTIPLIER: %nx") n = <b_high_mult>
+		FormatText TextName = band_high_note_streak qs("NOTE STREAK: %n") n = <b_note_streak>
+		SetScreenElementProps {
 			id = my_breakdown_id
 			score_entry_text = <band_score_text>
 			cash_entry_text = <band_cash_entry_text>
@@ -353,21 +353,21 @@ script song_breakdown_assign_band_data
 		stars = ($gig_detailed_stats_band.stars)
 	endif
 	if (<stars> > 3)
-		if my_breakdown_id :desc_resolvealias \{name = alias_song_complete_stars}
+		if my_breakdown_id :Desc_ResolveAlias \{name = alias_song_complete_stars}
 		else
-			scriptassert \{qs(0xcd7237ca)}
+			ScriptAssert \{qs("\LProblem resolving alias in song breakdown assign band data")}
 		endif
-		createscreenelement {
+		CreateScreenElement {
 			parent = <resolved_id>
-			type = spriteelement
+			type = SpriteElement
 			texture = song_complete_star
 			dims = (40.0, 40.0)
 			rgba = <star_rgba>
 		}
 		if (<stars> > 4)
-			createscreenelement {
+			CreateScreenElement {
 				parent = <resolved_id>
-				type = spriteelement
+				type = SpriteElement
 				texture = song_complete_star
 				dims = (40.0, 40.0)
 				rgba = <star_rgba>
@@ -383,66 +383,66 @@ script ui_song_breakdown_hide_player_data
 		num_players = 1
 	endif
 	if (<num_players> < 4)
-		setscreenelementprops \{id = my_breakdown_id
+		SetScreenElementProps \{id = my_breakdown_id
 			leather_strips_mask_p4_alpha = 0
 			song_complete_player_stats_p4_alpha = 0}
 	endif
 	if (<num_players> < 3)
-		setscreenelementprops \{id = my_breakdown_id
+		SetScreenElementProps \{id = my_breakdown_id
 			leather_strips_mask_p3_alpha = 0
 			song_complete_player_stats_p3_alpha = 0}
 	endif
 	if (<num_players> < 2)
-		setscreenelementprops \{id = my_breakdown_id
+		SetScreenElementProps \{id = my_breakdown_id
 			leather_strips_mask_p2_alpha = 0
 			song_complete_player_stats_p2_alpha = 0}
 	endif
 endscript
 
 script ui_song_breakdown_get_basic_player_data \{player_index = 1}
-	gamemode_gettype
+	GameMode_GetType
 	if ($is_network_game = 1)
-		getplayerinfo <player_index> best_run
-		getplayerinfo <player_index> score
-		getplayerinfo <player_index> max_notes
-		getplayerinfo <player_index> notes_hit
-		getplayerinfo <player_index> stars
-		getplayerinfo <player_index> cash_rank_up
-		getplayerinfo <player_index> vocal_streak_phrases
-		getplayerinfo <player_index> vocal_phrase_quality
-		getplayerinfo <player_index> vocal_phrase_max_qual
-		getplayerinfo <player_index> total_notes
-		getplayerinfo <player_index> career_earnings
+		GetPlayerInfo <player_index> best_run
+		GetPlayerInfo <player_index> score
+		GetPlayerInfo <player_index> max_notes
+		GetPlayerInfo <player_index> notes_hit
+		GetPlayerInfo <player_index> stars
+		GetPlayerInfo <player_index> cash_rank_up
+		GetPlayerInfo <player_index> vocal_streak_phrases
+		GetPlayerInfo <player_index> vocal_phrase_quality
+		GetPlayerInfo <player_index> vocal_phrase_max_qual
+		GetPlayerInfo <player_index> total_notes
+		GetPlayerInfo <player_index> career_earnings
 	elseif (<type> = career || <type> = quickplay)
-		getscorefromdetailedstats player = <player_index>
-		getbestrunfromdetailedstats player = <player_index>
-		getmaxnotesfromdetailedstats player = <player_index>
-		getnoteshitfromdetailedstats player = <player_index>
-		getstarsfromdetailedstats player = <player_index>
-		getvocalstreakphrasesfromdetailedstats player = <player_index>
-		getvocalphrasequalityfromdetailedstats player = <player_index>
-		getvocalphrasemaxqualfromdetailedstats player = <player_index>
-		getcashrankupfromdetailedstats player = <player_index>
-		gettotalnotesfromdetailedstats player = <player_index>
-		getcareerearningsfromdetailedstats player = <player_index>
+		getScoreFromDetailedStats player = <player_index>
+		getBestRunFromDetailedStats player = <player_index>
+		getMaxNotesFromDetailedStats player = <player_index>
+		getNotesHitFromDetailedStats player = <player_index>
+		getStarsFromDetailedStats player = <player_index>
+		getVocalStreakPhrasesFromDetailedStats player = <player_index>
+		getVocalPhraseQualityFromDetailedStats player = <player_index>
+		getVocalPhraseMaxQualFromDetailedStats player = <player_index>
+		getCashRankUpFromDetailedStats player = <player_index>
+		getTotalNotesFromDetailedStats player = <player_index>
+		getCareerEarningsFromDetailedStats player = <player_index>
 	else
-		getplayerinfo <player_index> best_run
-		getplayerinfo <player_index> score
-		getplayerinfo <player_index> max_notes
-		getplayerinfo <player_index> notes_hit
-		getplayerinfo <player_index> stars
-		getplayerinfo <player_index> cash_rank_up
-		getplayerinfo <player_index> vocal_streak_phrases
-		getplayerinfo <player_index> vocal_phrase_quality
-		getplayerinfo <player_index> vocal_phrase_max_qual
-		getplayerinfo <player_index> total_notes
-		getplayerinfo <player_index> career_earnings
+		GetPlayerInfo <player_index> best_run
+		GetPlayerInfo <player_index> score
+		GetPlayerInfo <player_index> max_notes
+		GetPlayerInfo <player_index> notes_hit
+		GetPlayerInfo <player_index> stars
+		GetPlayerInfo <player_index> cash_rank_up
+		GetPlayerInfo <player_index> vocal_streak_phrases
+		GetPlayerInfo <player_index> vocal_phrase_quality
+		GetPlayerInfo <player_index> vocal_phrase_max_qual
+		GetPlayerInfo <player_index> total_notes
+		GetPlayerInfo <player_index> career_earnings
 	endif
-	getplayerinfo <player_index> part
-	getplayerinfo <player_index> difficulty
-	getplayerinfo <player_index> new_cash
+	GetPlayerInfo <player_index> part
+	GetPlayerInfo <player_index> difficulty
+	GetPlayerInfo <player_index> new_cash
 	if (<cash_rank_up> = 1)
-		setplayerinfo <player_index> cash_rank_up = 0
+		SetPlayerInfo <player_index> cash_rank_up = 0
 	endif
 	if (<max_notes> = 0)
 		max_notes = 1
@@ -461,28 +461,28 @@ script ui_song_breakdown_get_basic_player_data \{player_index = 1}
 		get_difficulty_text difficulty = ($player4_status.difficulty)
 	endswitch
 	cash_get_info_from_earnings earnings = <career_earnings>
-	casttointeger \{score}
-	<name> = qs(0x00000000)
+	CastToInteger \{score}
+	<name> = qs("")
 	if ($is_network_game = 1)
-		getplayerinfo <player_index> gamertag
+		GetPlayerInfo <player_index> gamertag
 		name = $<gamertag>
 	else
-		if isxenon
-			getplayerinfo <player_index> controller
+		if isXenon
+			GetPlayerInfo <player_index> controller
 			if NOT ((<controller> < 0) || (<controller> > 3))
-				if getlocalgamertag controller = <controller>
+				if GetLocalGamerTag controller = <controller>
 					<name> = <gamertag>
 				endif
 			endif
 		endif
 	endif
-	if (<name> = qs(0x00000000))
-		formattext textname = player_text qs(0x5c5cedaa) p = <player_index>
+	if (<name> = qs(""))
+		FormatText TextName = player_text qs("Player %p") p = <player_index>
 	else
 		<player_text> = <name>
 	endif
-	formattext textname = score_text qs(0x73307931) s = <score> usecommas
-	if NOT playerinfoequals <player_index> part = vocals
+	FormatText TextName = score_text qs("\L%s") s = <score> usecommas
+	if NOT PlayerInfoEquals <player_index> part = Vocals
 		if (<type> = training)
 			if (<total_notes> > 0)
 				<percent_notes_hit> = (((<notes_hit> * 1.0) / <total_notes>) * 100.0)
@@ -496,31 +496,31 @@ script ui_song_breakdown_get_basic_player_data \{player_index = 1}
 				<percent_notes_hit> = 0
 			endif
 		endif
-		mathfloor <percent_notes_hit>
+		MathFloor <percent_notes_hit>
 		<percent_notes_hit> = <floor>
-		formattext textname = percent_text qs(0xea41c83d) p = <percent_notes_hit>
-		formattext textname = streak_text qs(0x8c5c152d) n = <best_run> decimalplaces = 0
+		FormatText TextName = percent_text qs("\L%p\%") p = <percent_notes_hit>
+		FormatText TextName = streak_text qs("\L%n") n = <best_run> DecimalPlaces = 0
 	else
 		if (<vocal_phrase_max_qual> > 0)
 			percent_notes_hit = (((<vocal_phrase_quality> * 1.0) / <vocal_phrase_max_qual>) * 100.0)
-			mathfloor <percent_notes_hit>
+			MathFloor <percent_notes_hit>
 			<percent_notes_hit> = <floor>
-			formattext textname = percent_text qs(0xea41c83d) p = <percent_notes_hit> decimalplaces = 0
+			FormatText TextName = percent_text qs("\L%p\%") p = <percent_notes_hit> DecimalPlaces = 0
 		else
-			<percent_text> = qs(0x4c1271a9)
+			<percent_text> = qs("NA")
 		endif
-		formattext textname = streak_text qs(0x8c5c152d) n = <vocal_streak_phrases> decimalplaces = 0
+		FormatText TextName = streak_text qs("\L%n") n = <vocal_streak_phrases> DecimalPlaces = 0
 	endif
-	formattext textname = cash_text qs(0x31c078e8) n = <new_cash> usecommas
-	formattext textname = rank_text qs(0x8c5c152d) n = <rank>
+	FormatText TextName = cash_text qs("\L$%n") n = <new_cash> usecommas
+	FormatText TextName = rank_text qs("\L%n") n = <rank>
 	switch (<part>)
 		case guitar
 		icon_texture = mixer_icon_guitar
-		case bass
+		case Bass
 		icon_texture = mixer_icon_bass
 		case drum
 		icon_texture = mixer_icon_drums
-		case vocals
+		case Vocals
 		icon_texture = mixer_icon_vox
 	endswitch
 	switch (<difficulty>)
@@ -544,13 +544,13 @@ endscript
 
 script ui_song_breakdown_someone_signed_in 
 	signin_params = {local}
-	if isps3
+	if IsPs3
 		signin_params = {}
 	endif
 	i = 1
 	begin
-	getplayerinfo <i> controller
-	if checkforsignin <signin_params> controller_index = <controller>
+	GetPlayerInfo <i> controller
+	if CheckForSignIn <signin_params> controller_index = <controller>
 		return \{true}
 	endif
 	i = (<i> + 1)
@@ -559,7 +559,7 @@ script ui_song_breakdown_someone_signed_in
 endscript
 
 script ui_song_breakdown_add_components_for_continue 
-	gamemode_gettype
+	GameMode_GetType
 	if ($is_network_game = 1)
 		array = [
 			{pad_choose net_ui_song_breakdown_continue_to_next_screen_gig_complete}
@@ -572,12 +572,12 @@ script ui_song_breakdown_add_components_for_continue
 		if NOT ((<type> = battle) || (<type> = faceoff) || (<type> = pro_faceoff))
 			if ui_song_breakdown_someone_signed_in
 				if NOT is_boss_battle_song song = ($track_last_song)
-					addarrayelement array = <array> element = {pad_option2 ui_leaderboard_view_current_song params = {my_song = ($track_last_song)}}
+					AddArrayElement array = <array> element = {pad_option2 ui_leaderboard_view_current_song params = {my_song = ($track_last_song)}}
 				endif
 			endif
 		endif
 		if (<type> = quickplay)
-			addarrayelement array = <array> element = {pad_option song_breakdown_run_top_rockers}
+			AddArrayElement array = <array> element = {pad_option song_breakdown_run_top_rockers}
 		endif
 		if ($current_song = jamsession)
 			array = [
@@ -585,30 +585,30 @@ script ui_song_breakdown_add_components_for_continue
 			]
 		endif
 	endif
-	setscreenelementprops {
+	SetScreenElementProps {
 		id = my_breakdown_id
 		event_handlers = <array>
 	}
-	add_user_control_helper ($ui_song_breakdown_helper_params) text = qs(0x182f0173) button = green z = 100000
+	add_user_control_helper ($ui_song_breakdown_helper_params) text = qs("CONTINUE") button = green z = 100000
 	if ($is_network_game = 0)
 		if ($track_last_song != jamsession)
-			add_user_control_helper ($ui_song_breakdown_helper_params) text = qs(0x3f11367e) button = red z = 100000
+			add_user_control_helper ($ui_song_breakdown_helper_params) text = qs("MORE STATS") button = red z = 100000
 			if NOT ((<type> = battle) || (<type> = faceoff) || (<type> = pro_faceoff))
 				if ui_song_breakdown_someone_signed_in
 					if NOT is_boss_battle_song song = ($track_last_song)
-						add_user_control_helper ($ui_song_breakdown_helper_params) text = qs(0x87251a1f) button = yellow z = 100000
+						add_user_control_helper ($ui_song_breakdown_helper_params) text = qs("LEADERBOARD") button = Yellow z = 100000
 					endif
 				endif
 			endif
 			if (<type> = quickplay)
-				add_user_control_helper ($ui_song_breakdown_helper_params) text = qs(0x88572463) button = blue z = 100000
+				add_user_control_helper ($ui_song_breakdown_helper_params) text = qs("TOP ROCKERS") button = Blue z = 100000
 				if (($ui_song_breakdown_pulsate_helper_pill) = 1)
-					spawnscriptlater pulsate_helper_pill params = {id = <helper_pill_id> time = 0.5}
+					SpawnScriptLater pulsate_helper_pill params = {id = <helper_pill_ID> time = 0.5}
 				endif
 			endif
 		endif
 	endif
-	assignalias \{id = my_breakdown_id
+	AssignAlias \{id = my_breakdown_id
 		alias = current_menu}
 endscript
 
@@ -617,7 +617,7 @@ script ui_song_breakdown_add_components_for_gig_complete
 endscript
 
 script ui_song_breakdown_add_components_for_encore 
-	gamemode_gettype
+	GameMode_GetType
 	array = []
 	if ($is_network_game = 1)
 		array = [
@@ -630,26 +630,26 @@ script ui_song_breakdown_add_components_for_encore
 		]
 		if ui_song_breakdown_someone_signed_in
 			if NOT is_boss_battle_song song = ($track_last_song)
-				addarrayelement array = <array> element = {pad_option2 song_breakdown_go_to_leaderboard_from_transition}
+				AddArrayElement array = <array> element = {pad_option2 song_breakdown_go_to_leaderboard_from_transition}
 			endif
 		endif
 	endif
-	setscreenelementprops {
+	SetScreenElementProps {
 		id = my_breakdown_id
 		event_handlers = <array>
 	}
 	if ($is_network_game = 1)
-		add_user_control_helper ($ui_song_breakdown_helper_params) text = qs(0x182f0173) button = green z = 100000
+		add_user_control_helper ($ui_song_breakdown_helper_params) text = qs("CONTINUE") button = green z = 100000
 	else
-		add_user_control_helper ($ui_song_breakdown_helper_params) text = qs(0x182f0173) button = green z = 100000
-		add_user_control_helper ($ui_song_breakdown_helper_params) text = qs(0x3f11367e) button = red z = 100000
+		add_user_control_helper ($ui_song_breakdown_helper_params) text = qs("CONTINUE") button = green z = 100000
+		add_user_control_helper ($ui_song_breakdown_helper_params) text = qs("MORE STATS") button = red z = 100000
 		if ui_song_breakdown_someone_signed_in
 			if NOT is_boss_battle_song song = ($track_last_song)
-				add_user_control_helper ($ui_song_breakdown_helper_params) text = qs(0x87251a1f) button = yellow z = 100000
+				add_user_control_helper ($ui_song_breakdown_helper_params) text = qs("LEADERBOARD") button = Yellow z = 100000
 			endif
 		endif
 	endif
-	assignalias \{id = my_breakdown_id
+	AssignAlias \{id = my_breakdown_id
 		alias = current_menu}
 endscript
 
@@ -665,7 +665,7 @@ endscript
 
 script song_breakdown_run_top_rockers 
 	printf \{channel = mychannel
-		qs(0xc8a705c8)}
+		qs("\Lcalling top rockers from song summary")}
 	if (($ui_song_breakdown_wrote_tr) = 0)
 		change \{ui_song_breakdown_wrote_tr = 1}
 		change \{ui_song_breakdown_pulsate_helper_pill = 0}
@@ -679,21 +679,21 @@ script song_breakdown_run_top_rockers
 endscript
 
 script song_breakdown_auto_write_top_rockers 
-	gamemode_gettype
+	GameMode_GetType
 	if (<type> = quickplay)
 		if (($ui_song_breakdown_wrote_tr) = 0)
 			change \{ui_song_breakdown_wrote_tr = 1}
 			change \{ui_song_breakdown_pulsate_helper_pill = 0}
 			menu_top_rockers_check_for_new_top_score \{nowrite = 0}
 			printf \{channel = mychannel
-				qs(0xc284fe5b)}
+				qs("\Lwriting top scores")}
 		endif
 	endif
 endscript
 
 script ui_song_breakdown_anim_in_script 
-	setscriptcannotpause
-	gamemode_gettype
+	SetScriptCannotPause
+	GameMode_GetType
 	if (<type> = training)
 		return
 	endif
@@ -702,64 +702,64 @@ script ui_song_breakdown_anim_in_script
 		stars_alpha = 0.0
 	endif
 	startrendering \{reason = menu_transition}
-	if screenelementexists \{id = my_breakdown_id}
-		setscreenelementprops {
+	if ScreenElementExists \{id = my_breakdown_id}
+		SetScreenElementProps {
 			id = my_breakdown_id
-			band_info_alpha = 1 time = 0.1 anim = gentle
-			song_complete_stars_alpha = <stars_alpha> time = 0.1 anim = gentle
-			band_header_container_pos = {(0.0, 300.0) relative} time = 0.1 anim = gentle
-			strips_pos = {(1100.0, 0.0) relative} time = 0.1 anim = gentle
+			band_info_alpha = 1 time = 0.1 Anim = gentle
+			song_complete_stars_alpha = <stars_alpha> time = 0.1 Anim = gentle
+			band_header_container_pos = {(0.0, 300.0) relative} time = 0.1 Anim = gentle
+			strips_pos = {(1100.0, 0.0) relative} time = 0.1 Anim = gentle
 			song_complete_leather_shape_alpha = 1 time = 0.1
 		}
-		wait \{0.3
+		Wait \{0.3
 			second}
 	endif
 	change \{song_breakdown_busy_flag = 0}
 endscript
 
 script ui_song_breakdown_anim_out_script 
-	setscriptcannotpause
-	gamemode_gettype
+	SetScriptCannotPause
+	GameMode_GetType
 	if (<type> = training)
 		return
 	endif
 	startrendering \{reason = menu_transition}
 	clean_up_user_control_helpers
-	if screenelementexists \{id = my_breakdown_id}
-		setscreenelementprops \{id = my_breakdown_id
+	if ScreenElementExists \{id = my_breakdown_id}
+		SetScreenElementProps \{id = my_breakdown_id
 			band_info_alpha = 0
 			time = 0.05
-			anim = gentle
+			Anim = gentle
 			song_complete_stars_alpha = 0
 			time = 0.05
-			anim = gentle
+			Anim = gentle
 			band_header_container_pos = {
 				(0.0, -330.0)
 				relative
 			}
 			time = 0.1
-			anim = gentle
+			Anim = gentle
 			strips_pos = {
 				(1100.0, 0.0)
 				relative
 			}
 			time = 0.1
-			anim = gentle
+			Anim = gentle
 			song_complete_leather_shape_alpha = 0
 			time = 0.05}
-		wait \{0.3
+		Wait \{0.3
 			second}
 	endif
 endscript
 
 script song_breakdown_anim_band_banner_up 
-	setscreenelementprops \{id = my_breakdown_id
+	SetScreenElementProps \{id = my_breakdown_id
 		band_header_container_pos = {
 			(0.0, -30.0)
 			relative
 		}
 		time = 0.08
-		anim = gentle}
+		Anim = gentle}
 endscript
 got_sponsored_last_gig = 0
 got_sponsored_tier_number = 0
@@ -771,28 +771,28 @@ script ui_song_breakdown_continue_to_next_screen_gig_complete
 	ui_song_breakdown_ready_up device_num = <device_num>
 	if (<everyone_is_ready> = 0)
 		return
-		getpakmancurrent \{map = zones}
+		GetPakManCurrent \{map = zones}
 		printf \{channel = mychannel
 			'continue on from song breakdown after gig complete'}
 		if (<pak> != z_studio && <pak> != z_studio2 && <pak> != z_tool && <pak> != z_credits && <pak> != z_training)
-			spawnscriptnow \{skate8_sfx_backgrounds_new_area
+			spawnscriptnow \{Skate8_SFX_Backgrounds_New_Area
 				params = {
-					bg_sfx_area = frontend_menu_music
+					BG_SFX_Area = FrontEnd_Menu_Music
 				}}
 		endif
 	endif
-	printf \{qs(0x2bd3b055)}
+	printf \{qs("\LUnpausing the songtime")}
 	change \{songtime_paused = 0}
-	gamemode_gettype
+	GameMode_GetType
 	if (<type> = career || <type> = quickplay)
-		soundevent \{event = menu_song_complete_out}
-		getpakmancurrent \{map = zones}
+		SoundEvent \{event = Menu_Song_Complete_Out}
+		GetPakManCurrent \{map = zones}
 		printf \{channel = mychannel
 			'continue on from song breakdown after gig complete'}
 		if (<pak> != z_studio && <pak> != z_studio2 && <pak> != z_tool && <pak> != z_credits && <pak> != z_training)
-			spawnscriptnow \{skate8_sfx_backgrounds_new_area
+			spawnscriptnow \{Skate8_SFX_Backgrounds_New_Area
 				params = {
-					bg_sfx_area = frontend_menu_music
+					BG_SFX_Area = FrontEnd_Menu_Music
 				}}
 		endif
 		if (($current_num_players) = 1)
@@ -801,7 +801,7 @@ script ui_song_breakdown_continue_to_next_screen_gig_complete
 					from_song_complete = 1
 				}}
 		else
-			generic_event_replace \{state = uistate_gig_cash_summary
+			generic_event_replace \{state = UIstate_gig_cash_summary
 				data = {
 					from_song_complete = 1
 				}}
@@ -812,24 +812,24 @@ script ui_song_breakdown_continue_to_next_screen_gig_complete
 endscript
 
 script net_ui_song_breakdown_continue_to_next_screen_gig_complete 
-	soundevent \{event = menu_song_complete_out}
+	SoundEvent \{event = Menu_Song_Complete_Out}
 	printf \{channel = sfx
-		qs(0x7751fe7c)}
-	getpakmancurrent \{map = zones}
+		qs("\LComing Out of Net Session, Putting Crowd Back to FrontEnd_Menu_Music")}
+	GetPakManCurrent \{map = zones}
 	if (<pak> != z_studio && <pak> != z_studio2 && <pak> != z_tool && <pak> != z_credits && <pak> != z_training)
-		spawnscriptnow \{skate8_sfx_backgrounds_new_area
+		spawnscriptnow \{Skate8_SFX_Backgrounds_New_Area
 			params = {
-				bg_sfx_area = frontend_menu_music
+				BG_SFX_Area = FrontEnd_Menu_Music
 			}}
 	endif
-	if ishost
+	if IsHost
 		if ($net_breakdown_continue_msg_sent = 0)
 			change \{net_breakdown_continue_msg_sent = 1}
 		else
 			return
 		endif
 	else
-		sendstructure \{callback = net_ui_song_breakdown_continue_to_next_screen_gig_complete
+		SendStructure \{callback = net_ui_song_breakdown_continue_to_next_screen_gig_complete
 			data_to_send = {
 				none
 			}}
@@ -839,7 +839,7 @@ script net_ui_song_breakdown_continue_to_next_screen_gig_complete
 endscript
 
 script song_breakdown_check_for_sponsor 
-	requireparams \{[
+	RequireParams \{[
 			player
 		]
 		all}
@@ -848,8 +848,8 @@ script song_breakdown_check_for_sponsor
 	if (<got_sponsored> = 1)
 		grab_sponsor_given_tier_and_type tier = <tier_number> type = <tier_catagory>
 		sponsorship_value = (<sponsor>.sponsorship_value)
-		progression_setcashmilestone player = <player> milestone = got_sponsored sponsorship_value = <sponsorship_value>
-		getplayerinfo <player_num> controller
+		Progression_SetCashMilestone player = <player> milestone = got_sponsored sponsorship_value = <sponsorship_value>
+		GetPlayerInfo <player_num> controller
 		if (<controller> = ($primary_controller))
 			change \{got_sponsored_last_gig = 1}
 			change got_sponsored_tier_number = <tier_number>
@@ -865,10 +865,10 @@ script ui_song_breakdown_continue_to_next_screen_encore
 			return
 		endif
 	else
-		if ishost
+		if IsHost
 			if ($net_encore_msg_start_sent = 0)
 				change \{net_encore_msg_start_sent = 1}
-				sendstructure \{callback = encore_play
+				SendStructure \{callback = encore_play
 					data_to_send = {
 						none
 					}}
@@ -876,47 +876,47 @@ script ui_song_breakdown_continue_to_next_screen_encore
 				return
 			endif
 		else
-			sendstructure \{callback = ui_song_breakdown_continue_to_next_screen_encore
+			SendStructure \{callback = ui_song_breakdown_continue_to_next_screen_encore
 				data_to_send = {
 					none
 				}}
-			soundevent \{event = menu_song_complete_out}
+			SoundEvent \{event = Menu_Song_Complete_Out}
 			return
 		endif
 	endif
 	printf \{channel = mychannel
 		'continue on to encore after song complete'}
-	soundevent \{event = menu_song_complete_out}
+	SoundEvent \{event = Menu_Song_Complete_Out}
 	encore_play
 endscript
 
 script ui_create_song_breakdown_practice 
-	progression_updatedetailedstatsforgig
+	Progression_UpdateDetailedStatsForGig
 	get_song_title song = ($current_song)
 	ui_song_breakdown_get_basic_player_data
-	if NOT playerinfoequals <player_index> part = vocals
+	if NOT PlayerInfoEquals <player_index> part = Vocals
 		if (<total_notes> > 0)
 			<percent_notes_hit> = (((<notes_hit> * 1.0) / <total_notes>) * 100.0)
 		else
 			<percent_notes_hit> = 0
 		endif
-		mathfloor <percent_notes_hit>
+		MathFloor <percent_notes_hit>
 		<percent_notes_hit> = <floor>
-		formattext textname = percent_text qs(0x581d2af2) p = <percent_notes_hit>
+		FormatText TextName = percent_text qs("\L%p") p = <percent_notes_hit>
 	else
 		if (<vocal_phrase_max_qual> > 0)
 			percent_notes_hit = (((<vocal_phrase_quality> * 1.0) / <vocal_phrase_max_qual>) * 100.0)
-			mathfloor <percent_notes_hit>
+			MathFloor <percent_notes_hit>
 			<percent_notes_hit> = <floor>
-			formattext textname = percent_text qs(0xea41c83d) p = <percent_notes_hit> decimalplaces = 0
+			FormatText TextName = percent_text qs("\L%p\%") p = <percent_notes_hit> DecimalPlaces = 0
 		else
-			<percent_text> = qs(0x3bf547a6)
+			<percent_text> = qs("\L0")
 		endif
 	endif
-	createscreenelement {
+	CreateScreenElement {
 		parent = root_window
 		id = my_breakdown_practice_id
-		type = descinterface
+		type = DescInterface
 		desc = 'dialog_box_continue'
 		dlog_title_text = <song_title>
 		dlog_continue_notes_entry_text = <percent_text>
@@ -926,19 +926,19 @@ script ui_create_song_breakdown_practice
 		exclusive_device = ($primary_controller)
 	}
 	disable_pause
-	my_breakdown_practice_id :desc_resolvealias \{name = alias_dlog_vmenu}
-	setscreenelementprops {
+	my_breakdown_practice_id :Desc_ResolveAlias \{name = alias_dlog_vmenu}
+	SetScreenElementProps {
 		id = <resolved_id>
 		event_handlers = [
 			{pad_up generic_menu_up_or_down_sound params = {up = 1}}
 			{pad_down generic_menu_up_or_down_sound params = {down = 2}}
 		]
 	}
-	createscreenelement {
+	CreateScreenElement {
 		parent = <resolved_id>
-		type = textelement
+		type = TextElement
 		font = fontgrid_text_a6
-		text = qs(0x182f0173)
+		text = qs("CONTINUE")
 		scale = 0.75
 		rgba = ($menu_unfocus_color)
 		event_handlers = [
@@ -947,11 +947,11 @@ script ui_create_song_breakdown_practice
 			{pad_choose ui_song_summary_continue_next_screen params = {for_practice = 1}}
 		]
 	}
-	createscreenelement {
+	CreateScreenElement {
 		parent = <resolved_id>
-		type = textelement
+		type = TextElement
 		font = fontgrid_text_a6
-		text = qs(0x1d227332)
+		text = qs("DETAILED STATS")
 		scale = 0.75
 		rgba = ($menu_unfocus_color)
 		event_handlers = [
@@ -960,11 +960,11 @@ script ui_create_song_breakdown_practice
 			{pad_choose generic_event_choose params = {state = uistate_song_summary_details}}
 		]
 	}
-	createscreenelement {
+	CreateScreenElement {
 		parent = <resolved_id>
-		type = textelement
+		type = TextElement
 		font = fontgrid_text_a6
-		text = qs(0x4994d173)
+		text = qs("REPLAY")
 		scale = 0.75
 		rgba = ($menu_unfocus_color)
 		event_handlers = [
@@ -973,13 +973,13 @@ script ui_create_song_breakdown_practice
 			{pad_choose practice_restart_song}
 		]
 	}
-	if NOT playerinfoequals \{1
-			part = vocals}
-		createscreenelement {
+	if NOT PlayerInfoEquals \{1
+			part = Vocals}
+		CreateScreenElement {
 			parent = <resolved_id>
-			type = textelement
+			type = TextElement
 			font = fontgrid_text_a6
-			text = qs(0x2586eb28)
+			text = qs("SELECT SPEED")
 			scale = 0.75
 			rgba = ($menu_unfocus_color)
 			event_handlers = [
@@ -989,11 +989,11 @@ script ui_create_song_breakdown_practice
 			]
 		}
 	endif
-	createscreenelement {
+	CreateScreenElement {
 		parent = <resolved_id>
-		type = textelement
+		type = TextElement
 		font = fontgrid_text_a6
-		text = qs(0xde4bb13a)
+		text = qs("SELECT SECTION")
 		scale = 0.75
 		rgba = ($menu_unfocus_color)
 		event_handlers = [
@@ -1002,21 +1002,21 @@ script ui_create_song_breakdown_practice
 			{pad_choose generic_event_back params = {state = uistate_select_song_section}}
 		]
 	}
-	assignalias id = <resolved_id> alias = current_menu
-	add_user_control_helper ($ui_song_breakdown_helper_params) text = qs(0xc18d5e76) button = green z = 100000
+	AssignAlias id = <resolved_id> alias = current_menu
+	add_user_control_helper ($ui_song_breakdown_helper_params) text = qs("SELECT") button = green z = 100000
 endscript
 
 script ui_song_breakdown_ready_up 
-	gamemode_getnumplayersshown
+	GameMode_GetNumPlayersShown
 	trim_boss_from_num_players_show
 	player = 1
 	begin
-	getplayerinfo <player> controller
+	GetPlayerInfo <player> controller
 	if (<device_num> = <controller>)
-		rdyarray = ($ui_song_breakdown_players_rdy)
-		setarrayelement arrayname = rdyarray index = (<player> - 1) newvalue = 1
+		rdyArray = ($ui_song_breakdown_players_rdy)
+		SetArrayElement ArrayName = rdyArray index = (<player> - 1) newvalue = 1
 		ui_song_breakdown_set_player_ready dev_num = (<player> - 1)
-		change ui_song_breakdown_players_rdy = <rdyarray>
+		change ui_song_breakdown_players_rdy = <rdyArray>
 	endif
 	player = (<player> + 1)
 	repeat <num_players_shown>
@@ -1026,11 +1026,11 @@ endscript
 
 script ui_song_breakdown_num_players_ready 
 	num_players_rdy = 0
-	gamemode_getnumplayersshown
+	GameMode_GetNumPlayersShown
 	trim_boss_from_num_players_show
 	player = 1
 	begin
-	getplayerinfo <player> bot_play
+	GetPlayerInfo <player> bot_play
 	if (<bot_play> = 1)
 		num_players_rdy = (<num_players_rdy> + 1)
 	endif
@@ -1047,7 +1047,7 @@ endscript
 
 script ui_song_breakdown_is_everyone_ready 
 	everyone_is_ready = 1
-	gamemode_getnumplayersshown
+	GameMode_GetNumPlayersShown
 	trim_boss_from_num_players_show
 	ui_song_breakdown_num_players_ready
 	if (<num_players_shown> > <players_ready>)
@@ -1057,20 +1057,20 @@ script ui_song_breakdown_is_everyone_ready
 endscript
 
 script ui_song_breakdown_set_player_ready 
-	if my_breakdown_id :desc_resolvealias \{name = alias_player_stats_element}
+	if my_breakdown_id :Desc_ResolveAlias \{name = alias_player_stats_element}
 	else
-		scriptassert \{qs(0xcced482f)}
+		ScriptAssert \{qs("\LProblem resolving alias in song breakdown")}
 	endif
-	getscreenelementchildren id = <resolved_id>
-	getscreenelementprops id = (<children> [<dev_num>])
+	GetScreenElementChildren id = <resolved_id>
+	GetScreenElementProps id = (<children> [<dev_num>])
 	if (<check_mark_alpha> = 0)
 		if (($game_mode = p1_career) || ($game_mode = training) || ($game_mode = tutorial) || ($game_mode = p1_quickplay))
 			generic_menu_pad_choose_sound
 		else
-			soundevent \{event = box_check_sfx}
+			SoundEvent \{event = Box_Check_SFX}
 		endif
 	endif
-	setscreenelementprops {
+	SetScreenElementProps {
 		id = (<children> [<dev_num>])
 		check_mark_alpha = 1
 	}
@@ -1101,11 +1101,11 @@ script ui_song_breakdown_clear_ready_up_book_keeping
 endscript
 
 script ui_song_breakdown_clean_up_highest_multipliers 
-	gamemode_getnumplayersshown
+	GameMode_GetNumPlayersShown
 	trim_boss_from_num_players_show
 	player_idx = 1
 	begin
-	setplayerinfo <player_idx> highest_multiplier = 1
+	SetPlayerInfo <player_idx> highest_multiplier = 1
 	player_idx = (<player_idx> + 1)
 	repeat <num_players_shown>
 endscript
@@ -1116,12 +1116,12 @@ endscript
 
 script ui_song_breakdown_add_components_for_transitions 
 	printscriptinfo \{'ui_song_breakdown_add_components_for_transitions'}
-	if gotparam \{for_encore}
+	if GotParam \{for_encore}
 		return
 	endif
 	printf \{channel = mychannel
-		qs(0x4de80e59)}
-	gamemode_gettype
+		qs("\LUI Transitioning between songs")}
+	GameMode_GetType
 	array = []
 	if ($track_last_song = jamsession)
 		printf \{'in song breakdown add components, song is jam'
@@ -1129,28 +1129,28 @@ script ui_song_breakdown_add_components_for_transitions
 		array = [
 			{pad_choose ui_song_breakdown_continue_to_next_screen_song_transition}
 		]
-		add_user_control_helper ($ui_song_breakdown_helper_params) text = qs(0x182f0173) button = green z = 100000
+		add_user_control_helper ($ui_song_breakdown_helper_params) text = qs("CONTINUE") button = green z = 100000
 	else
 		array = [
 			{pad_choose ui_song_breakdown_continue_to_next_screen_song_transition}
 			{pad_back song_breakdown_go_to_stats_from_transition}
 		]
-		add_user_control_helper ($ui_song_breakdown_helper_params) text = qs(0x182f0173) button = green z = 100000
-		add_user_control_helper ($ui_song_breakdown_helper_params) text = qs(0x3f11367e) button = red z = 100000
+		add_user_control_helper ($ui_song_breakdown_helper_params) text = qs("CONTINUE") button = green z = 100000
+		add_user_control_helper ($ui_song_breakdown_helper_params) text = qs("MORE STATS") button = red z = 100000
 		if ui_song_breakdown_someone_signed_in
-			add_user_control_helper ($ui_song_breakdown_helper_params) text = qs(0x87251a1f) button = yellow z = 100000
-			addarrayelement array = <array> element = {pad_option2 song_breakdown_go_to_leaderboard_from_transition}
+			add_user_control_helper ($ui_song_breakdown_helper_params) text = qs("LEADERBOARD") button = Yellow z = 100000
+			AddArrayElement array = <array> element = {pad_option2 song_breakdown_go_to_leaderboard_from_transition}
 		endif
 		if (<type> = quickplay)
-			add_user_control_helper ($ui_song_breakdown_helper_params) text = qs(0x88572463) button = blue z = 100000
-			addarrayelement array = <array> element = {pad_option song_breakdown_run_top_rockers_from_transition}
+			add_user_control_helper ($ui_song_breakdown_helper_params) text = qs("TOP ROCKERS") button = Blue z = 100000
+			AddArrayElement array = <array> element = {pad_option song_breakdown_run_top_rockers_from_transition}
 			if (($ui_song_breakdown_pulsate_helper_pill) = 1)
-				spawnscriptlater pulsate_helper_pill params = {id = <helper_pill_id> time = 0.5}
+				SpawnScriptLater pulsate_helper_pill params = {id = <helper_pill_ID> time = 0.5}
 			endif
 		endif
 	endif
 	get_all_exclusive_devices
-	setscreenelementprops {
+	SetScreenElementProps {
 		id = my_breakdown_id
 		event_handlers = <array>
 		exclusive_device = <exclusive_device>
@@ -1158,24 +1158,24 @@ script ui_song_breakdown_add_components_for_transitions
 	if (($my_trans_flag) = 1)
 		change \{my_trans_flag = 0}
 	else
-		wait \{10
+		Wait \{10
 			gameframes}
 	endif
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = my_breakdown_id}
 endscript
 my_trans_flag = 0
 song_breakdown_busy_flag = 0
 
 script song_breakdown_go_to_leaderboard_from_transition 
-	if isxenon
+	if isXenon
 		change lb_controller = <device_num>
-	elseif isps3
+	elseif IsPs3
 		get_all_exclusive_devices
 		change lb_controller = <exclusive_device>
 	endif
 	signin_params = {local}
-	if isps3
+	if IsPs3
 		signin_params = {}
 	endif
 	if NOT (($song_breakdown_busy_flag) = 0)
@@ -1183,10 +1183,10 @@ script song_breakdown_go_to_leaderboard_from_transition
 	endif
 	change \{my_trans_flag = 1}
 	change \{song_breakdown_busy_flag = 1}
-	if NOT checkforsignin <signin_params> controller_index = <device_num>
+	if NOT CheckForSignIn <signin_params> controller_index = <device_num>
 		ui_event_wait \{event = menu_change
 			data = {
-				state = uistate_leaderboard_timeout
+				state = UIstate_leaderboard_timeout
 			}}
 		return
 	endif
@@ -1214,7 +1214,7 @@ script ui_song_breakdown_continue_to_next_screen_song_transition
 		return
 	endif
 	generic_menu_pad_choose_sound
-	soundevent \{event = menu_song_complete_out}
+	SoundEvent \{event = Menu_Song_Complete_Out}
 	change \{songtime_paused = 0}
 	generic_event_back \{nosound}
 endscript
@@ -1228,10 +1228,10 @@ script trim_boss_from_num_players_show
 endscript
 
 script my_is_active_controller \{dev_num = 0}
-	gamemode_getnumplayersshown
+	GameMode_GetNumPlayersShown
 	i = 1
 	begin
-	getplayerinfo <i> controller
+	GetPlayerInfo <i> controller
 	if (<dev_num> = <controller>)
 		return \{is_active = 1}
 	endif
@@ -1241,99 +1241,99 @@ script my_is_active_controller \{dev_num = 0}
 endscript
 
 script my_get_active_devices 
-	gamemode_getnumplayersshown
+	GameMode_GetNumPlayersShown
 	trim_boss_from_num_players_show
 	devices = []
 	player = 1
 	begin
-	getplayerinfo <player> controller
-	addarrayelement array = <devices> element = <controller>
+	GetPlayerInfo <player> controller
+	AddArrayElement array = <devices> element = <controller>
 	devices = <array>
 	player = (<player> + 1)
 	repeat <num_players_shown>
 	return devices = <devices>
 endscript
 
-script getscorefromdetailedstats \{player = 1}
+script getScoreFromDetailedStats \{player = 1}
 	score = ($gig_detailed_stats [(<player> - 1)] [0].score)
 	return score = <score>
 endscript
 
-script getbestrunfromdetailedstats \{player = 1}
+script getBestRunFromDetailedStats \{player = 1}
 	best_run = ($gig_detailed_stats [(<player> - 1)] [0].best_run)
 	return best_run = <best_run>
 endscript
 
-script getstarsfromdetailedstats \{player = 1}
+script getStarsFromDetailedStats \{player = 1}
 	stars = ($gig_detailed_stats [(<player> - 1)] [0].stars)
 	return stars = <stars>
 endscript
 
-script getnoteshitfromdetailedstats \{player = 1}
+script getNotesHitFromDetailedStats \{player = 1}
 	notes_hit = ($gig_detailed_stats [(<player> - 1)] [0].notes_hit)
 	return notes_hit = <notes_hit>
 endscript
 
-script getmaxnotesfromdetailedstats \{player = 1}
+script getMaxNotesFromDetailedStats \{player = 1}
 	max_notes = ($gig_detailed_stats [(<player> - 1)] [0].max_notes)
 	return max_notes = <max_notes>
 endscript
 
-script gettotalnotesfromdetailedstats \{player = 1}
+script getTotalNotesFromDetailedStats \{player = 1}
 	total_notes = ($gig_detailed_stats [(<player> - 1)] [0].total_notes)
 	return total_notes = <total_notes>
 endscript
 
-script getspphraseshitfromdetailedstats \{player = 1}
+script getSpPhrasesHitFromDetailedStats \{player = 1}
 	sp_phrases_hit = ($gig_detailed_stats [(<player> - 1)] [0].sp_phrases_hit)
 	return sp_phrases_hit = <sp_phrases_hit>
 endscript
 
-script getspphrasestotalfromdetailedstats \{player = 1}
+script getSpPhrasesTotalFromDetailedStats \{player = 1}
 	sp_phrases_total = ($gig_detailed_stats [(<player> - 1)] [0].sp_phrases_total)
 	return sp_phrases_total = <sp_phrases_total>
 endscript
 
-script getavgmultiplierfromdetailedstats \{player = 1}
+script getAvgMultiplierFromDetailedStats \{player = 1}
 	avg_multiplier = ($gig_detailed_stats [(<player> - 1)] [0].avg_multiplier)
 	return avg_multiplier = <avg_multiplier>
 endscript
 
-script getvocalstreakphrasesfromdetailedstats \{player = 1}
+script getVocalStreakPhrasesFromDetailedStats \{player = 1}
 	vocal_streak_phrases = ($gig_detailed_stats [(<player> - 1)] [0].vocal_streak_phrases)
 	return vocal_streak_phrases = <vocal_streak_phrases>
 endscript
 
-script getvocalphrasequalityfromdetailedstats \{player = 1}
+script getVocalPhraseQualityFromDetailedStats \{player = 1}
 	vocal_phrase_quality = ($gig_detailed_stats [(<player> - 1)] [0].vocal_phrase_quality)
 	return vocal_phrase_quality = <vocal_phrase_quality>
 endscript
 
-script getvocalphrasemaxqualfromdetailedstats \{player = 1}
+script getVocalPhraseMaxQualFromDetailedStats \{player = 1}
 	vocal_phrase_max_qual = ($gig_detailed_stats [(<player> - 1)] [0].vocal_phrase_max_qual)
 	return vocal_phrase_max_qual = <vocal_phrase_max_qual>
 endscript
 
-script getcashrankupfromdetailedstats \{player = 1}
+script getCashRankUpFromDetailedStats \{player = 1}
 	cash_rank_up = ($gig_detailed_stats [(<player> - 1)] [0].cash_rank_up)
 	return cash_rank_up = <cash_rank_up>
 endscript
 
-script getnewcashfromdetailedstats \{player = 1}
+script getNewCashFromDetailedStats \{player = 1}
 	new_cash = ($gig_detailed_stats [(<player> - 1)] [0].new_cash)
 	return new_cash = <new_cash>
 endscript
 
-script getcareerearningsfromdetailedstats \{player = 1}
+script getCareerEarningsFromDetailedStats \{player = 1}
 	career_earnings = ($gig_detailed_stats [(<player> - 1)] [0].career_earnings)
 	return career_earnings = <career_earnings>
 endscript
 
 script song_breakdown_drop_player 
-	printf \{qs(0xe0296c2b)}
+	printf \{qs("\Lsong_breakdown_drop_player")}
 	printstruct <...>
 	if (<is_game_over> = 0)
-		gamemode_gettype
+		GameMode_GetType
 		if (<type> = career)
 			wait_for_safe_shutdown
 			spawnscriptnow gameplay_drop_player params = {<...>}
@@ -1342,42 +1342,42 @@ script song_breakdown_drop_player
 endscript
 
 script song_breakdown_end_game 
-	printf \{qs(0x47ac8b43)}
+	printf \{qs("\L---song_breakdown_end_game")}
 	printstruct <...>
 	destroy_popup_warning_menu
 	if ((<is_game_over> = 1) && ($net_popup_active = 0))
 		net_disable_pause
 		switch <drop_reason>
 			case net_message_player_quit
-			formattext textname = first_msg qs(0x567f10d8) s = <name_string>
+			FormatText TextName = first_msg qs("%s has quit.") s = <name_string>
 			case net_message_player_dropped
 			case net_message_player_timed_out
-			formattext textname = first_msg qs(0xd4b272d7) s = <name_string>
+			FormatText TextName = first_msg qs("Lost connection to %s.") s = <name_string>
 			default
-			first_msg = qs(0x00000000)
+			first_msg = qs("")
 		endswitch
-		formattext textname = msg qs(0x78bb855f) s = <first_msg>
-		create_net_popup title = qs(0x5ca2c535) popup_text = <msg>
-		if screenelementexists \{id = popup_warning_container}
-			popup_warning_container :se_setprops \{z_priority = 1500.2}
+		FormatText TextName = msg qs("%s\nThere are not enough players to continue.") s = <first_msg>
+		create_net_popup title = qs("GAME OVER") popup_text = <msg>
+		if ScreenElementExists \{id = popup_warning_container}
+			popup_warning_container :SE_SetProps \{z_priority = 1500.2}
 		endif
-		if screenelementexists \{id = popupelement}
-			popupelement :obj_spawnscriptnow song_breakdown_end_game_spawned id = not_ui_player_drop_scripts params = <...>
+		if ScreenElementExists \{id = PopupElement}
+			PopupElement :Obj_SpawnScriptNow song_breakdown_end_game_spawned id = not_ui_player_drop_scripts params = <...>
 		endif
 	endif
 endscript
 
 script song_breakdown_end_game_spawned 
 	change \{net_ready_to_start = 1}
-	printf \{qs(0x60090de2)}
-	wait \{3
+	printf \{qs("\L---song_breakdown_end_game_spawned")}
+	Wait \{3
 		seconds}
-	printf \{qs(0xa43fad2b)}
+	printf \{qs("\Lmade it past 3 seconds")}
 	destroy_net_popup
 	if ($playing_song = 1)
-		change \{achievements_early_quit_flag = 1}
+		change \{Achievements_early_quit_flag = 1}
 	endif
-	gamemode_gettype
+	GameMode_GetType
 	if (<type> = career)
 		if ($playing_song = 1)
 			kill_gem_scroller

@@ -11,9 +11,9 @@ script create_pausemenu_change_difficulty_warning
 	disable_pause
 	create_popup_warning_menu {
 		textblock = {
-			text = qs(0x5b07675d)
+			text = qs("To change the difficulty setting, this song must be restarted. You will lose all unsaved progress if you restart. Are you sure you want to continue?")
 			dims = (800.0, 400.0)
-			Scale = 0.55
+			scale = 0.55
 		}
 		player_device = <player_device>
 		no_background
@@ -21,11 +21,11 @@ script create_pausemenu_change_difficulty_warning
 		options = [
 			{
 				func = generic_event_back
-				text = qs(0xf7723015)
+				text = qs("CANCEL")
 			}
 			{
 				func = {pausemenu_change_difficulty_warning_yes params = {difficulty = <difficulty>}}
-				text = qs(0xb8790f2f)
+				text = qs("RESTART")
 			}
 		]
 	}
@@ -33,5 +33,5 @@ endscript
 
 script pausemenu_change_difficulty_warning_yes 
 	kill_intro_celeb_ui
-	generic_event_choose state = uistate_pausemenu_change_difficulty_confirm data = {<...> difficulty = <difficulty>}
+	generic_event_choose state = UIstate_pausemenu_change_difficulty_confirm data = {<...> difficulty = <difficulty>}
 endscript

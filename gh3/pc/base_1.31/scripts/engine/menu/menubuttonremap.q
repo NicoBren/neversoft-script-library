@@ -556,7 +556,7 @@ xenon_guitar_flip = [
 ]
 
 script setup_main_button_event_mappings 
-	setbuttoneventmappings {
+	SetButtonEventMappings {
 		ps3 = ($ps3_pad)
 		xenon = ($xenon_pad)
 	}
@@ -576,12 +576,12 @@ script setup_controller_button_event_mappings \{guitar = 0
 			<ps3> = $ps3_guitar_flip
 		endif
 	endif
-	addarrayelement array = [] element = (<controller>)
-	setbuttoneventmappings {
+	AddArrayElement array = [] element = (<controller>)
+	SetButtonEventMappings {
 		ps3 = (<ps3>)
 		xenon = (<xenon>)
 		devices = (<array>)
-		clear
+		Clear
 	}
 endscript
 player_controls_valid = 0

@@ -1,131 +1,131 @@
 guitar_events = [
 	{
 		event = missed_note
-		scr = guitarevent_missednote
+		Scr = GuitarEvent_MissedNote
 	}
 	{
 		event = unnecessary_note
-		scr = guitarevent_unnecessarynote
+		Scr = GuitarEvent_UnnecessaryNote
 	}
 	{
 		event = hit_notes
-		scr = guitarevent_hitnotes
+		Scr = GuitarEvent_HitNotes
 	}
 	{
 		event = hit_note
-		scr = guitarevent_hitnote
+		Scr = GuitarEvent_HitNote
 	}
 	{
 		event = star_power_on
-		scr = guitarevent_starpoweron
+		Scr = GuitarEvent_StarPowerOn
 	}
 	{
 		event = star_power_off
-		scr = guitarevent_starpoweroff
+		Scr = GuitarEvent_StarPowerOff
 	}
 	{
 		event = song_failed
-		scr = guitarevent_songfailed
+		Scr = GuitarEvent_SongFailed
 	}
 	{
 		event = song_won
-		scr = guitarevent_songwon
+		Scr = GuitarEvent_SongWon
 	}
 	{
 		event = star_hit_note
-		scr = guitarevent_starhitnote
+		Scr = GuitarEvent_StarHitNote
 	}
 	{
 		event = star_sequence_bonus
-		scr = guitarevent_starsequencebonus
+		Scr = GuitarEvent_StarSequenceBonus
 	}
 	{
 		event = star_miss_note
-		scr = guitarevent_starmissnote
+		Scr = GuitarEvent_StarMissNote
 	}
 	{
 		event = whammy_on
-		scr = guitarevent_whammyon
+		Scr = GuitarEvent_WhammyOn
 	}
 	{
 		event = whammy_off
-		scr = guitarevent_whammyoff
+		Scr = GuitarEvent_WhammyOff
 	}
 	{
 		event = star_whammy_on
-		scr = guitarevent_starwhammyon
+		Scr = GuitarEvent_StarWhammyOn
 	}
 	{
 		event = star_whammy_off
-		scr = guitarevent_starwhammyoff
+		Scr = GuitarEvent_StarWhammyOff
 	}
 	{
 		event = note_window_open
-		scr = guitarevent_note_window_open
+		Scr = GuitarEvent_Note_Window_Open
 	}
 	{
 		event = note_window_close
-		scr = guitarevent_note_window_close
+		Scr = GuitarEvent_Note_Window_Close
 	}
 	{
 		event = crowd_poor_medium
-		scr = guitarevent_crowd_poor_medium
+		Scr = GuitarEvent_crowd_poor_medium
 	}
 	{
 		event = crowd_medium_good
-		scr = guitarevent_crowd_medium_good
+		Scr = GuitarEvent_crowd_medium_good
 	}
 	{
 		event = crowd_medium_poor
-		scr = guitarevent_crowd_medium_poor
+		Scr = GuitarEvent_crowd_medium_poor
 	}
 	{
 		event = crowd_good_medium
-		scr = guitarevent_crowd_good_medium
+		Scr = GuitarEvent_crowd_good_medium
 	}
 	{
 		event = first_gem
-		scr = guitarevent_createfirstgem
+		Scr = GuitarEvent_CreateFirstGem
 	}
 	{
 		event = firstnote_window_open
-		scr = guitarevent_firstnote_window_open
+		Scr = GuitarEvent_FirstNote_Window_Open
 	}
 ]
 
 script create_guitar_events 
 	printf "create_guitar_events %a .........." a = <player_text>
-	getarraysize \{$guitar_events}
+	GetArraySize \{$guitar_events}
 	array_entry = 0
 	begin
 	printf \{"adding..."}
 	event = ($guitar_events [<array_entry>].event)
-	extendcrc <event> <player_text> out = event
-	seteventhandler response = call_script event = <event> scr = event_spawner params = {event_spawned = <array_entry>}
+	ExtendCRC <event> <player_text> out = event
+	SetEventHandler response = call_script event = <event> Scr = event_spawner params = {event_spawned = <array_entry>}
 	array_entry = (<array_entry> + 1)
 	repeat <array_size>
-	if iswinport
-		winportgetconfignumber \{name = "Sound.ClapDelay"
-			defaultvalue = 0}
+	if IsWinPort
+		WinPortGetConfigNumber \{name = "Sound.ClapDelay"
+			defaultValue = 0}
 		change winport_clap_delay = <value>
 	endif
-	block
+	Block
 endscript
 
 script event_spawner 
-	spawnscriptnow ($guitar_events [<event_spawned>].scr) params = {<...>} id = song_event_scripts
+	spawnscriptnow ($guitar_events [<event_spawned>].Scr) params = {<...>} id = song_event_scripts
 endscript
 
 script event_iterator 
 	printf "Event Iterator started with time %d" d = <time_offset>
 	get_song_prefix song = <song_name>
-	formattext checksumname = song '%s_%e' s = <song_prefix> e = <event_string> addtostringlookup
+	FormatText checksumname = song '%s_%e' s = <song_prefix> e = <event_string> AddToStringLookup
 	array_entry = 0
-	getarraysize $<song>
+	GetArraySize $<song>
 	if (<array_size> = 0)
 		return
 	endif
-	getsongtimems time_offset = <time_offset>
+	GetSongTimeMs time_offset = <time_offset>
 	begin
 	if ((<time> - <skipleadin>) < (($<song> [<array_entry>]).time))
 		break
@@ -137,29 +137,29 @@ script event_iterator
 		return
 	endif
 	begin
-	timemarkerreached_setparams time_offset = <time_offset> array = <song> array_entry = <array_entry> arrayofstructures
+	TimeMarkerReached_SetParams time_offset = <time_offset> array = <song> array_entry = <array_entry> ArrayOfStructures
 	begin
-	if timemarkerreached
-		getsongtimems time_offset = <time_offset>
+	if TimeMarkerReached
+		GetSongTimeMs time_offset = <time_offset>
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
-	timemarkerreached_clearparams
-	scriptname = ($<song> [<array_entry>].scr)
-	if scriptexists <scriptname>
-		spawnscriptnow <scriptname> params = {time = <time> ($<song> [<array_entry>].params)} id = song_event_scripts
-	elseif symboliscfunc <scriptname>
-		<scriptname> {time = <time> ($<song> [<array_entry>].params)}
+	TimeMarkerReached_ClearParams
+	ScriptName = ($<song> [<array_entry>].Scr)
+	if ScriptExists <ScriptName>
+		spawnscriptnow <ScriptName> params = {time = <time> ($<song> [<array_entry>].params)} id = song_event_scripts
+	elseif SymbolIsCFunc <ScriptName>
+		<ScriptName> {time = <time> ($<song> [<array_entry>].params)}
 	endif
 	<array_entry> = (<array_entry> + 1)
 	repeat <array_size>
 endscript
 
-script guitarevent_missednote 
+script GuitarEvent_MissedNote 
 	if (<bum_note> = 1)
-		guitar_wrong_note_sound_logic <...>
+		Guitar_Wrong_Note_Sound_Logic <...>
 	endif
 	if ($is_network_game && ($<player_status>.player = 2))
 		if (<silent_miss> = 1)
@@ -171,86 +171,86 @@ script guitarevent_missednote
 				spawnscriptnow highway_pulse_black params = {player_text = ($<player_status>.text)}
 			else
 				change structurename = <player_status> guitar_volume = 0
-				updateguitarvolume
+				UpdateGuitarVolume
 			endif
 		endif
 	endif
-	crowddecrease player_status = <player_status>
+	CrowdDecrease player_status = <player_status>
 	if ($always_strum = false)
 		if ($disable_band = 0)
-			if compositeobjectexists name = (<player_status>.band_member)
-				launchevent type = anim_missednote target = (<player_status>.band_member)
+			if CompositeObjectExists name = (<player_status>.band_member)
+				LaunchEvent type = Anim_MissedNote target = (<player_status>.band_member)
 			endif
 		endif
 	endif
 	note_time = ($<song> [<array_entry>] [0])
 	if ($show_play_log = 1)
-		output_log_text "Missed Note (%t)" t = <note_time> color = orange
+		output_log_text "Missed Note (%t)" t = <note_time> color = Orange
 	endif
 endscript
 
 script highway_pulse_black 
 	<half_time> = ($highway_pulse_time / 2.0)
-	formattext checksumname = highway 'Highway_2D%p' p = <player_text> addtostringlookup = true
-	doscreenelementmorph id = <highway> rgba = ($highway_pulse) time = <half_time>
-	wait <half_time> seconds
-	doscreenelementmorph id = <highway> rgba = ($highway_normal) time = <half_time>
+	FormatText checksumname = highway 'Highway_2D%p' p = <player_text> AddToStringLookup = true
+	doScreenElementMorph id = <highway> rgba = ($highway_pulse) time = <half_time>
+	Wait <half_time> seconds
+	doScreenElementMorph id = <highway> rgba = ($highway_normal) time = <half_time>
 endscript
 
-script guitar_wrong_note_sound_logic 
+script Guitar_Wrong_Note_Sound_Logic 
 	if ($current_num_players = 1)
 		get_song_rhythm_track song = ($current_song)
 		if ($<player_status>.part = rhythm)
 			if (<rhythm_track> = 1)
-				soundevent \{event = single_player_bad_note_guitar}
+				SoundEvent \{event = Single_Player_Bad_Note_Guitar}
 			else
-				soundevent \{event = single_player_bad_note_bass}
+				SoundEvent \{event = Single_Player_Bad_Note_Bass}
 			endif
 		else
-			soundevent \{event = single_player_bad_note_guitar}
+			SoundEvent \{event = Single_Player_Bad_Note_Guitar}
 		endif
 	else
 		if ($<player_status>.player = 1)
 			get_song_rhythm_track song = ($current_song)
 			if ($<player_status>.part = rhythm)
 				if (<rhythm_track> = 1)
-					soundevent \{event = first_player_bad_note_guitar}
+					SoundEvent \{event = First_Player_Bad_Note_Guitar}
 				else
-					soundevent \{event = first_player_bad_note_bass}
+					SoundEvent \{event = First_Player_Bad_Note_Bass}
 				endif
 			else
-				soundevent \{event = first_player_bad_note_guitar}
+				SoundEvent \{event = First_Player_Bad_Note_Guitar}
 			endif
 		else
 			get_song_rhythm_track song = ($current_song)
 			if ($boss_battle = 1)
-				soundevent \{event = second_player_bad_note_guitar}
+				SoundEvent \{event = Second_Player_Bad_Note_Guitar}
 			else
 				if ($<player_status>.part = rhythm)
 					if (<rhythm_track> = 1)
-						soundevent \{event = second_player_bad_note_guitar}
+						SoundEvent \{event = Second_Player_Bad_Note_Guitar}
 					else
-						soundevent \{event = second_player_bad_note_bass}
+						SoundEvent \{event = Second_Player_Bad_Note_Bass}
 					endif
 				else
-					soundevent \{event = second_player_bad_note_guitar}
+					SoundEvent \{event = Second_Player_Bad_Note_Guitar}
 				endif
 			endif
 		endif
 	endif
 endscript
 
-script guitarevent_unnecessarynote 
-	guitar_wrong_note_sound_logic <...>
+script GuitarEvent_UnnecessaryNote 
+	Guitar_Wrong_Note_Sound_Logic <...>
 	if NOT ($is_network_game && ($<player_status>.player = 2))
 		change structurename = <player_status> guitar_volume = 0
-		updateguitarvolume
+		UpdateGuitarVolume
 	endif
-	crowddecrease player_status = <player_status>
+	CrowdDecrease player_status = <player_status>
 	if ($always_strum = false)
 		if ($disable_band = 0)
-			if compositeobjectexists name = (<player_status>.band_member)
-				launchevent type = anim_missednote target = (<player_status>.band_member)
+			if CompositeObjectExists name = (<player_status>.band_member)
+				LaunchEvent type = Anim_MissedNote target = (<player_status>.band_member)
 			endif
 		endif
 	endif
@@ -274,27 +274,27 @@ script guitarevent_unnecessarynote
 	endif
 endscript
 
-script guitarevent_hitnotes 
-	if guitarevent_hitnotes_cfunc
-		updateguitarvolume
+script GuitarEvent_HitNotes 
+	if GuitarEvent_HitNotes_CFunc
+		UpdateGuitarVolume
 	endif
 endscript
 
-script guitarevent_hitnote 
-	spawnscriptnow guitarevent_hitnote_spawned params = {<...>}
+script GuitarEvent_HitNote 
+	spawnscriptnow GuitarEvent_HitNote_Spawned params = {<...>}
 endscript
 
-script guitarevent_hitnote_spawned 
+script GuitarEvent_HitNote_Spawned 
 	if ($game_mode = p2_battle || $boss_battle = 1)
 		change structurename = <player_status> last_hit_note = <color>
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	spawnscriptnow hit_note_fx params = {name = <fx_id> pos = <pos> player_text = <player_text> star = ($<player_status>.star_power_used) player = <player>}
 endscript
 hit_particle_params = {
 	z_priority = 8.0
-	material = sys_particle_spark01_sys_particle_spark01
+	material = sys_Particle_Spark01_sys_Particle_Spark01
 	start_color = [
 		255
 		128
@@ -323,7 +323,7 @@ hit_particle_params = {
 }
 star_hit_particle_params = {
 	z_priority = 8.0
-	material = sys_particle_spark01_sys_particle_spark01
+	material = sys_Particle_Spark01_sys_Particle_Spark01
 	start_color = [
 		0
 		255
@@ -352,7 +352,7 @@ star_hit_particle_params = {
 }
 whammy_particle_params = {
 	z_priority = 8.0
-	material = sys_particle_spark01_sys_particle_spark01
+	material = sys_Particle_Spark01_sys_Particle_Spark01
 	start_color = [
 		255
 		128
@@ -381,64 +381,64 @@ whammy_particle_params = {
 }
 
 script hit_note_fx 
-	notefx <...>
-	wait \{6
+	NoteFX <...>
+	Wait \{6
 		gameframes}
-	destroy2dparticlesystem id = <particle_id> kill_when_empty
-	wait \{10
+	Destroy2DParticleSystem id = <particle_id> kill_when_empty
+	Wait \{10
 		gameframes}
-	if screenelementexists id = <fx_id>
-		destroyscreenelement id = <fx_id>
+	if ScreenElementExists id = <fx_id>
+		DestroyScreenElement id = <fx_id>
 	endif
 endscript
 
-script guitarevent_starpoweron 
-	gh_star_power_verb_on
-	formattext checksumname = scriptid '%p_StarPower_StageFX' p = <player_text>
-	spawnscriptlater do_starpower_stagefx id = <scriptid> params = {<...>}
-	starpoweron player = <player>
+script GuitarEvent_StarPowerOn 
+	GH_Star_Power_Verb_On
+	FormatText checksumname = scriptID '%p_StarPower_StageFX' p = <player_text>
+	SpawnScriptLater Do_StarPower_StageFX id = <scriptID> params = {<...>}
+	StarPowerOn player = <player>
 endscript
 
-script guitarevent_starpoweroff 
-	gh_star_power_verb_off
+script GuitarEvent_StarPowerOff 
+	GH_Star_Power_Verb_Off
 	spawnscriptnow rock_meter_star_power_off params = {player_text = <player_text>}
-	spawnscriptlater kill_starpower_stagefx params = {<...>}
-	formattext checksumname = cont 'starpower_container_left%p' p = <player_text> addtostringlookup = true
-	if screenelementexists id = <cont>
-		doscreenelementmorph id = <cont> alpha = 0
+	SpawnScriptLater Kill_StarPower_StageFX params = {<...>}
+	FormatText checksumname = cont 'starpower_container_left%p' p = <player_text> AddToStringLookup = true
+	if ScreenElementExists id = <cont>
+		doScreenElementMorph id = <cont> alpha = 0
 	endif
-	formattext checksumname = cont 'starpower_container_right%p' p = <player_text> addtostringlookup = true
-	if screenelementexists id = <cont>
-		doscreenelementmorph id = <cont> alpha = 0
+	FormatText checksumname = cont 'starpower_container_right%p' p = <player_text> AddToStringLookup = true
+	if ScreenElementExists id = <cont>
+		doScreenElementMorph id = <cont> alpha = 0
 	endif
-	formattext checksumname = highway 'Highway_2D%p' p = <player_text> addtostringlookup = true
-	if screenelementexists id = <highway>
-		setscreenelementprops id = <highway> rgba = ($highway_normal)
+	FormatText checksumname = highway 'Highway_2D%p' p = <player_text> AddToStringLookup = true
+	if ScreenElementExists id = <highway>
+		SetScreenElementProps id = <highway> rgba = ($highway_normal)
 	endif
-	spawnscriptnow \{kill_starpower_camera}
+	spawnscriptnow \{Kill_StarPower_Camera}
 endscript
 winport_clap_delay = 0.18
 
-script guitarevent_prefretbar 
+script GuitarEvent_PreFretbar 
 	if ($winport_clap_delay > 0)
-		wait \{$winport_clap_delay
+		Wait \{$winport_clap_delay
 			seconds}
 		if ($<player_status>.star_power_used = 1)
 			if ($game_mode != tutorial)
 				printf \{channel = sfx
 					"Clap"}
-				soundevent \{event = crowd_individual_clap_to_beat}
+				SoundEvent \{event = Crowd_Individual_Clap_To_Beat}
 			endif
 		else
-			if ($crowdlistenerstateclapon1234 = 1)
-				soundevent \{event = crowd_individual_clap_to_beat}
+			if ($CrowdListenerStateClapOn1234 = 1)
+				SoundEvent \{event = Crowd_Individual_Clap_To_Beat}
 			endif
 		endif
 	endif
 endscript
 beat_flip = 0
 
-script guitarevent_fretbar 
+script GuitarEvent_Fretbar 
 	if ($current_num_players = 2)
 		if ($game_mode = p2_battle || $boss_battle)
 			<dying> = 0
@@ -480,147 +480,147 @@ script guitarevent_fretbar
 endscript
 
 script set_sidebar_flash 
-	formattext checksumname = left 'sidebar_left%p' p = ($<player_status>.text) addtostringlookup = true
-	formattext checksumname = right 'sidebar_right%p' p = ($<player_status>.text) addtostringlookup = true
+	FormatText checksumname = left 'sidebar_left%p' p = ($<player_status>.text) AddToStringLookup = true
+	FormatText checksumname = right 'sidebar_right%p' p = ($<player_status>.text) AddToStringLookup = true
 	if ($<player_status>.star_power_used = 1)
 		if ($beat_flip = 0)
-			setscreenelementprops id = <left> rgba = ($sidebar_starpower0)
-			setscreenelementprops id = <right> rgba = ($sidebar_starpower0)
+			SetScreenElementProps id = <left> rgba = ($sidebar_starpower0)
+			SetScreenElementProps id = <right> rgba = ($sidebar_starpower0)
 		else
-			setscreenelementprops id = <left> rgba = ($sidebar_starpower1)
-			setscreenelementprops id = <right> rgba = ($sidebar_starpower1)
+			SetScreenElementProps id = <left> rgba = ($sidebar_starpower1)
+			SetScreenElementProps id = <right> rgba = ($sidebar_starpower1)
 		endif
 	else
 		if (<dying> = 1)
 			if ($beat_flip = 0)
-				setscreenelementprops id = <left> rgba = ($sidebar_dying0)
-				setscreenelementprops id = <right> rgba = ($sidebar_dying0)
+				SetScreenElementProps id = <left> rgba = ($sidebar_dying0)
+				SetScreenElementProps id = <right> rgba = ($sidebar_dying0)
 			else
-				setscreenelementprops id = <left> rgba = ($sidebar_dying1)
-				setscreenelementprops id = <right> rgba = ($sidebar_dying1)
+				SetScreenElementProps id = <left> rgba = ($sidebar_dying1)
+				SetScreenElementProps id = <right> rgba = ($sidebar_dying1)
 			endif
 		else
 			if ($<player_status>.star_power_amount >= 50.0)
 				if ($beat_flip = 0)
-					setscreenelementprops id = <left> rgba = ($sidebar_starready0)
-					setscreenelementprops id = <right> rgba = ($sidebar_starready0)
+					SetScreenElementProps id = <left> rgba = ($sidebar_starready0)
+					SetScreenElementProps id = <right> rgba = ($sidebar_starready0)
 				else
-					setscreenelementprops id = <left> rgba = ($sidebar_starready1)
-					setscreenelementprops id = <right> rgba = ($sidebar_starready1)
+					SetScreenElementProps id = <left> rgba = ($sidebar_starready1)
+					SetScreenElementProps id = <right> rgba = ($sidebar_starready1)
 				endif
 			else
 				if ($beat_flip = 0)
-					setscreenelementprops id = <left> rgba = ($sidebar_normal0)
-					setscreenelementprops id = <right> rgba = ($sidebar_normal0)
+					SetScreenElementProps id = <left> rgba = ($sidebar_normal0)
+					SetScreenElementProps id = <right> rgba = ($sidebar_normal0)
 				else
-					setscreenelementprops id = <left> rgba = ($sidebar_normal1)
-					setscreenelementprops id = <right> rgba = ($sidebar_normal1)
+					SetScreenElementProps id = <left> rgba = ($sidebar_normal1)
+					SetScreenElementProps id = <right> rgba = ($sidebar_normal1)
 				endif
 			endif
 		endif
 	endif
 endscript
 
-script guitarevent_fretbar_early 
+script GuitarEvent_Fretbar_Early 
 endscript
 
-script guitarevent_fretbar_late 
+script GuitarEvent_Fretbar_Late 
 endscript
 
 script check_first_note_formed 
-	getsongtime
-	<starttime> = (<songtime> - 0.0167)
+	GetSongTime
+	<StartTime> = (<songtime> - 0.0167)
 	duration = ($<player_status>.check_time_early + $<player_status>.check_time_late)
 	begin
-	getheldpattern controller = ($<player_status>.controller) player_status = <player_status>
+	GetHeldPattern controller = ($<player_status>.controller) player_status = <player_status>
 	if (<strum> = <hold_pattern>)
 		change structurename = <player_status> guitar_volume = 100
-		updateguitarvolume
+		UpdateGuitarVolume
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
-	getsongtime
-	if ((<songtime> - <starttime>) >= <duration>)
+	GetSongTime
+	if ((<songtime> - <StartTime>) >= <duration>)
 		break
 	endif
 	repeat
 endscript
 
-script guitarevent_firstnote_window_open 
-	if isguitarcontroller controller = ($<player_status>.controller)
-		getstrumpattern entry = 0 song = <song>
+script GuitarEvent_FirstNote_Window_Open 
+	if IsGuitarController controller = ($<player_status>.controller)
+		GetStrumPattern entry = 0 song = <song>
 		spawnscriptnow check_first_note_formed params = {strum = <strum> player_status = <player_status>}
 	else
 		change structurename = <player_status> guitar_volume = 100
-		updateguitarvolume
+		UpdateGuitarVolume
 	endif
 endscript
 
-script guitarevent_note_window_open 
-	if ($debug_audible_open = 1)
-		soundevent \{event = gh_sfx_beatwindowopensoundevent}
+script GuitarEvent_Note_Window_Open 
+	if ($Debug_Audible_Open = 1)
+		SoundEvent \{event = GH_SFX_BeatWindowOpenSoundEvent}
 	endif
-	getsongtime
-	<starttime> = (<songtime> - 0.0167)
+	GetSongTime
+	<StartTime> = (<songtime> - 0.0167)
 	begin
-	wait \{1
+	Wait \{1
 		gameframe}
-	getsongtime
-	if ((<songtime> - <starttime>) >= $check_time_early)
+	GetSongTime
+	if ((<songtime> - <StartTime>) >= $check_time_early)
 		break
 	endif
 	repeat
-	if ($debug_audible_downbeat = 1)
-		soundevent \{event = gh_sfx_beatsoundevent}
+	if ($Debug_Audible_Downbeat = 1)
+		SoundEvent \{event = GH_SFX_BeatSoundEvent}
 	endif
 endscript
 
-script guitarevent_note_window_close 
-	if ($debug_audible_close = 1)
-		soundevent \{event = gh_sfx_beatwindowclosesoundevent}
+script GuitarEvent_Note_Window_Close 
+	if ($Debug_Audible_Close = 1)
+		SoundEvent \{event = GH_SFX_BeatWindowCloseSoundEvent}
 	endif
 endscript
-bluewhammyfxid01p1 = jow_nil
-bluewhammyfxid02p1 = jow_nil
-greenwhammyfxid01p1 = jow_nil
-greenwhammyfxid02p1 = jow_nil
-orangewhammyfxid01p1 = jow_nil
-orangewhammyfxid02p1 = jow_nil
-redwhammyfxid01p1 = jow_nil
-redwhammyfxid02p1 = jow_nil
-yellowwhammyfxid01p1 = jow_nil
-yellowwhammyfxid02p1 = jow_nil
-bluewhammyfxid01p2 = jow_nil
-bluewhammyfxid02p2 = jow_nil
-greenwhammyfxid01p2 = jow_nil
-greenwhammyfxid02p2 = jow_nil
-orangewhammyfxid01p2 = jow_nil
-orangewhammyfxid02p2 = jow_nil
-redwhammyfxid01p2 = jow_nil
-redwhammyfxid02p2 = jow_nil
-yellowwhammyfxid01p2 = jow_nil
-yellowwhammyfxid02p2 = jow_nil
+blueWhammyFXID01p1 = JOW_NIL
+blueWhammyFXID02p1 = JOW_NIL
+greenWhammyFXID01p1 = JOW_NIL
+greenWhammyFXID02p1 = JOW_NIL
+orangeWhammyFXID01p1 = JOW_NIL
+orangeWhammyFXID02p1 = JOW_NIL
+redWhammyFXID01p1 = JOW_NIL
+redWhammyFXID02p1 = JOW_NIL
+yellowWhammyFXID01p1 = JOW_NIL
+yellowWhammyFXID02p1 = JOW_NIL
+blueWhammyFXID01p2 = JOW_NIL
+blueWhammyFXID02p2 = JOW_NIL
+greenWhammyFXID01p2 = JOW_NIL
+greenWhammyFXID02p2 = JOW_NIL
+orangeWhammyFXID01p2 = JOW_NIL
+orangeWhammyFXID02p2 = JOW_NIL
+redWhammyFXID01p2 = JOW_NIL
+redWhammyFXID02p2 = JOW_NIL
+yellowWhammyFXID01p2 = JOW_NIL
+yellowWhammyFXID02p2 = JOW_NIL
 
-script destroy_allwhammyfx 
-	whammyfxoffall \{player_status = player1_status}
-	whammyfxoffall \{player_status = player2_status}
+script Destroy_AllWhammyFX 
+	WhammyFXOffAll \{player_status = player1_status}
+	WhammyFXOffAll \{player_status = player2_status}
 endscript
 
-script guitarevent_whammyon 
-	whammyfxon <...>
+script GuitarEvent_WhammyOn 
+	WhammyFXOn <...>
 endscript
 
-script guitarevent_whammyoff 
-	whammyfxoff <...>
+script GuitarEvent_WhammyOff 
+	WhammyFXOff <...>
 endscript
 
-script guitarevent_starwhammyon 
+script GuitarEvent_StarWhammyOn 
 endscript
 
-script guitarevent_starwhammyoff 
+script GuitarEvent_StarWhammyOff 
 endscript
 
-script guitarevent_songfailed 
+script GuitarEvent_SongFailed 
 	if ($game_mode = training || $game_mode = tutorial)
 		return
 	endif
@@ -629,34 +629,34 @@ script guitarevent_songfailed
 		return
 	endif
 	if ($game_mode = p2_battle)
-		guitarevent_songwon \{battle_win = 1}
+		GuitarEvent_SongWon \{battle_win = 1}
 	else
-		killspawnedscript \{name = guitarevent_songwon_spawned}
-		spawnscriptnow \{guitarevent_songfailed_spawned}
+		KillSpawnedScript \{name = GuitarEvent_SongWon_Spawned}
+		spawnscriptnow \{GuitarEvent_SongFailed_Spawned}
 	endif
 endscript
 
-script guitarevent_songfailed_spawned 
+script GuitarEvent_SongFailed_Spawned 
 	if NOT ($boss_battle = 1)
 		disable_highway_prepass
 		disable_bg_viewport
 	endif
 	if ($is_network_game)
-		change \{gisinnetgame = 0}
+		change \{gIsInNetGame = 0}
 	endif
 	if ($is_network_game)
-		killspawnedscript \{name = dispatch_player_state}
+		KillSpawnedScript \{name = dispatch_player_state}
 		kill_start_key_binding
 		if ($ui_flow_manager_state [0] = online_pause_fs)
 			net_unpausegh3
 		endif
 		mark_unsafe_for_shutdown
 	endif
-	getsongtimems
+	GetSongTimeMs
 	change failed_song_time = <time>
-	achievements_songfailed
-	pausegame
-	progression_songfailed
+	Achievements_SongFailed
+	PauseGame
+	Progression_SongFailed
 	if ($boss_battle = 1)
 		kill_start_key_binding
 		if ($current_song = bossdevil)
@@ -664,16 +664,16 @@ script guitarevent_songfailed_spawned
 		else
 			preload_movie = 'Player2_wins'
 		endif
-		killmovie \{textureslot = 1}
-		preloadmovie {
+		KillMovie \{TextureSlot = 1}
+		PreLoadMovie {
 			movie = <preload_movie>
-			textureslot = 1
-			texturepri = 70
+			TextureSlot = 1
+			TexturePri = 70
 			no_looping
 			no_hold
 			nowait
 		}
-		formattext textname = winner_text "%s Rocks!" s = ($current_boss.character_name)
+		FormatText TextName = winner_text "%s Rocks!" s = ($current_boss.character_name)
 		winner_space_between = (50.0, 0.0)
 		winner_scale = 1.0
 		if ($current_boss.character_profile = morello)
@@ -689,11 +689,11 @@ script guitarevent_songfailed_spawned
 			<winner_scale> = 1.0
 		endif
 		spawnscriptnow \{wait_and_play_you_rock_movie}
-		wait \{0.2
+		Wait \{0.2
 			seconds}
 		destroy_menu \{menu_id = yourock_text}
 		destroy_menu \{menu_id = yourock_text_2}
-		stringlength string = <winner_text>
+		StringLength string = <winner_text>
 		<fit_dims> = (<str_len> * (23.0, 0.0))
 		if (<fit_dims>.(1.0, 0.0) >= 350)
 			<fit_dims> = (350.0, 0.0)
@@ -716,8 +716,8 @@ script guitarevent_songfailed_spawned
 			}
 			centered
 		}
-		spawnscriptnow \{waitandkillhighway}
-		killspawnedscript \{name = jiggle_text_array_elements}
+		spawnscriptnow \{waitAndKillHighway}
+		KillSpawnedScript \{name = jiggle_text_array_elements}
 		spawnscriptnow \{jiggle_text_array_elements
 			params = {
 				id = yourock_text
@@ -730,80 +730,80 @@ script guitarevent_songfailed_spawned
 		xenon_singleplayer_session_begin_uninit
 		spawnscriptnow \{xenon_singleplayer_session_complete_uninit}
 	endif
-	unpausegame
-	soundevent \{event = crowd_fail_song_sfx}
-	soundevent \{event = gh_sfx_you_lose_single_player}
-	transition_play \{type = songlost}
-	transition_wait
+	UnPauseGame
+	SoundEvent \{event = Crowd_Fail_Song_SFX}
+	SoundEvent \{event = GH_SFX_You_Lose_Single_Player}
+	Transition_Play \{type = songlost}
+	Transition_Wait
 	change \{current_transition = none}
-	pausegame
+	PauseGame
 	restore_start_key_binding
 	spawnscriptnow \{ui_flow_manager_respond_to_action
 		params = {
 			action = fail_song
 		}}
 	if ($current_num_players = 1)
-		soundevent \{event = crowd_fail_song_sfx}
+		SoundEvent \{event = Crowd_Fail_Song_SFX}
 	else
-		soundevent \{event = crowd_med_to_good_sfx}
+		SoundEvent \{event = Crowd_Med_To_Good_SFX}
 	endif
 	if ($is_network_game)
 		mark_safe_for_shutdown
 	endif
 endscript
 
-script guitarevent_songwon \{battle_win = 0}
-	if notcd
+script GuitarEvent_SongWon \{battle_win = 0}
+	if NotCD
 		if ($output_gpu_log = 1)
-			if isps3
-				formattext \{textname = filename
+			if IsPs3
+				FormatText \{TextName = filename
 					"%s_gpu_ps3"
 					s = $current_level
-					dontassertforchecksums}
+					DontAssertForChecksums}
 			else
-				formattext \{textname = filename
+				FormatText \{TextName = filename
 					"%s_gpu"
 					s = $current_level
-					dontassertforchecksums}
+					DontAssertForChecksums}
 			endif
-			textoutputend output_text filename = <filename>
+			TextOutputEnd output_text filename = <filename>
 		endif
 		if ($output_song_stats = 1)
-			formattext \{textname = filename
+			FormatText \{TextName = filename
 				"%s_stats"
 				s = $current_song
-				dontassertforchecksums}
-			textoutputstart
-			textoutput \{text = "Player 1"}
-			formattext textname = text "Score: %s" s = ($player1_status.score) dontassertforchecksums
-			textoutput text = <text>
-			formattext textname = text "Notes Hit: %n of %t" n = ($player1_status.notes_hit) t = ($player1_status.total_notes) dontassertforchecksums
-			textoutput text = <text>
-			formattext textname = text "Best Run: %r" r = ($player1_status.best_run) dontassertforchecksums
-			textoutput text = <text>
-			formattext textname = text "Max Notes: %m" m = ($player1_status.max_notes) dontassertforchecksums
-			textoutput text = <text>
-			formattext textname = text "Base score: %b" b = ($player1_status.base_score) dontassertforchecksums
-			textoutput text = <text>
+				DontAssertForChecksums}
+			TextOutputStart
+			TextOutput \{text = "Player 1"}
+			FormatText TextName = text "Score: %s" s = ($player1_status.score) DontAssertForChecksums
+			TextOutput text = <text>
+			FormatText TextName = text "Notes Hit: %n of %t" n = ($player1_status.notes_hit) t = ($player1_status.total_notes) DontAssertForChecksums
+			TextOutput text = <text>
+			FormatText TextName = text "Best Run: %r" r = ($player1_status.best_run) DontAssertForChecksums
+			TextOutput text = <text>
+			FormatText TextName = text "Max Notes: %m" m = ($player1_status.max_notes) DontAssertForChecksums
+			TextOutput text = <text>
+			FormatText TextName = text "Base score: %b" b = ($player1_status.base_score) DontAssertForChecksums
+			TextOutput text = <text>
 			if (($player1_status.base_score) = 0)
-				formattext \{textname = text
+				FormatText \{TextName = text
 					"Score Scale: n/a"}
 			else
-				formattext textname = text "Score Scale: %s" s = (($player1_status.score) / ($player1_status.base_score)) dontassertforchecksums
+				FormatText TextName = text "Score Scale: %s" s = (($player1_status.score) / ($player1_status.base_score)) DontAssertForChecksums
 			endif
-			textoutput text = <text>
+			TextOutput text = <text>
 			if (($player1_status.total_notes) = 0)
-				formattext \{textname = text
+				FormatText \{TextName = text
 					"Notes Hit Percentage: n/a"}
 			else
-				formattext textname = text "Notes Hit Percentage: %s" s = ((($player1_status.notes_hit) / ($player1_status.total_notes)) * 100.0) dontassertforchecksums
+				FormatText TextName = text "Notes Hit Percentage: %s" s = ((($player1_status.notes_hit) / ($player1_status.total_notes)) * 100.0) DontAssertForChecksums
 			endif
-			textoutput text = <text>
-			textoutputend output_text filename = <filename>
+			TextOutput text = <text>
+			TextOutputEnd output_text filename = <filename>
 		endif
 	endif
 	if ($current_num_players = 2)
-		getsongtimems
+		GetSongTimeMs
 		if ($last_time_in_lead_player = 0)
 			change structurename = player1_status time_in_lead = ($player1_status.time_in_lead + <time> - $last_time_in_lead)
 		elseif ($last_time_in_lead_player = 1)
@@ -836,8 +836,8 @@ script guitarevent_songwon \{battle_win = 0}
 			change structurename = player1_status save_health = <p1_health>
 			change structurename = player2_status save_health = <p2_health>
 			battlemode_killspawnedscripts
-			if screenelementexists \{id = battlemode_container}
-				destroyscreenelement \{id = battlemode_container}
+			if ScreenElementExists \{id = battlemode_container}
+				DestroyScreenElement \{id = battlemode_container}
 			endif
 			change \{battle_sudden_death = 1}
 		else
@@ -845,15 +845,15 @@ script guitarevent_songwon \{battle_win = 0}
 			change \{battle_sudden_death = 0}
 		endif
 	endif
-	killspawnedscript \{name = guitarevent_songfailed_spawned}
-	spawnscriptnow \{guitarevent_songwon_spawned}
+	KillSpawnedScript \{name = GuitarEvent_SongFailed_Spawned}
+	spawnscriptnow \{GuitarEvent_SongWon_Spawned}
 endscript
 
-script guitarevent_songwon_spawned 
+script GuitarEvent_SongWon_Spawned 
 	if ($is_network_game)
 		mark_unsafe_for_shutdown
 		if ($is_network_game)
-			change \{gisinnetgame = 0}
+			change \{gIsInNetGame = 0}
 		endif
 		if ($shutdown_game_for_signin_change_flag = 1)
 			return
@@ -861,9 +861,9 @@ script guitarevent_songwon_spawned
 		if ($ui_flow_manager_state [0] = online_pause_fs)
 			net_unpausegh3
 		endif
-		killspawnedscript \{name = dispatch_player_state}
+		KillSpawnedScript \{name = dispatch_player_state}
 		if ($player2_present)
-			sendnetmessage {
+			SendNetMessage {
 				type = net_win_song
 				stars = ($player1_status.stars)
 				note_streak = ($player1_status.best_run)
@@ -871,7 +871,7 @@ script guitarevent_songwon_spawned
 				total_notes = ($player1_status.total_notes)
 			}
 		endif
-		if NOT ($game_mode = p2_battle || $cheat_nofail = 1 || $cheat_easyexpert = 1)
+		if NOT ($game_mode = p2_battle || $Cheat_NoFail = 1 || $Cheat_EasyExpert = 1)
 			if ($game_mode = p2_coop)
 				online_song_end_write_stats \{song_type = coop}
 			else
@@ -895,17 +895,17 @@ script guitarevent_songwon_spawned
 	else
 		change \{devil_finish = 0}
 	endif
-	progression_endcredits_done
-	pausegame
+	Progression_EndCredits_Done
+	PauseGame
 	kill_start_key_binding
 	if ($battle_sudden_death = 1)
-		soundevent \{event = gh_sfx_battlemode_sudden_death}
+		SoundEvent \{event = GH_SFX_BattleMode_Sudden_Death}
 	else
 		if ($game_mode = p1_career || $game_mode = p2_career || $game_mode = p2_coop || $game_mode = p1_quickplay)
-			soundevent \{event = you_rock_end_sfx}
+			SoundEvent \{event = You_Rock_End_SFX}
 		endif
 	endif
-	spawnscriptnow \{you_rock_waiting_crowd_sfx}
+	spawnscriptnow \{You_Rock_Waiting_Crowd_SFX}
 	if ($game_mode = p2_battle || $boss_battle = 1)
 		if ($player1_status.current_health >= $player2_status.current_health)
 			if ($current_song = bossdevil)
@@ -926,11 +926,11 @@ script guitarevent_songwon_spawned
 		if ($battle_sudden_death = 1)
 			preload_movie = 'Fret_Flames'
 		endif
-		killmovie \{textureslot = 1}
-		preloadmovie {
+		KillMovie \{TextureSlot = 1}
+		PreLoadMovie {
 			movie = <preload_movie>
-			textureslot = 1
-			texturepri = 70
+			TextureSlot = 1
+			TexturePri = 70
 			no_looping
 			no_hold
 			nowait
@@ -955,23 +955,23 @@ script guitarevent_songwon_spawned
 			p2_health = ($player2_status.current_health)
 			if (<p2_health> > <p1_health>)
 				winner = "Two"
-				soundevent \{event = ui_2ndplayerwins_sfx}
+				SoundEvent \{event = UI_2ndPlayerWins_SFX}
 			else
 				winner = "One"
-				soundevent \{event = ui_1stplayerwins_sfx}
+				SoundEvent \{event = UI_1stPlayerWins_SFX}
 			endif
 			if ($is_network_game)
 				if (<p2_health> > <p1_health>)
 					name = ($opponent_gamertag)
 				else
-					if (netsessionfunc obj = match func = get_gamertag)
+					if (NetSessionFunc obj = match func = get_gamertag)
 						name = <name>
 					endif
 				endif
-				formattext textname = winner_text <name>
+				FormatText TextName = winner_text <name>
 				<text_pos> = (640.0, 240.0)
 			else
-				formattext textname = winner_text "Player %s Rocks!" s = <winner>
+				FormatText TextName = winner_text "Player %s Rocks!" s = <winner>
 			endif
 			winner_space_between = (50.0, 0.0)
 			winner_scale = 1.5
@@ -980,13 +980,13 @@ script guitarevent_songwon_spawned
 			p2_score = ($player2_status.score)
 			if (<p2_score> > <p1_score>)
 				winner = "Two"
-				soundevent \{event = ui_2ndplayerwins_sfx}
+				SoundEvent \{event = UI_2ndPlayerWins_SFX}
 			elseif (<p1_score> > <p2_score>)
 				winner = "One"
-				soundevent \{event = ui_1stplayerwins_sfx}
+				SoundEvent \{event = UI_1stPlayerWins_SFX}
 			else
 				<tie> = true
-				soundevent \{event = you_rock_end_sfx}
+				SoundEvent \{event = You_Rock_End_SFX}
 			endif
 			if (<tie> = true)
 				winner_text = "TIE!"
@@ -998,14 +998,14 @@ script guitarevent_songwon_spawned
 					if (<p2_score> > <p1_score>)
 						name = ($opponent_gamertag)
 					else
-						if (netsessionfunc obj = match func = get_gamertag)
+						if (NetSessionFunc obj = match func = get_gamertag)
 							name = <name>
 						endif
 					endif
-					formattext textname = winner_text <name>
+					FormatText TextName = winner_text <name>
 					<text_pos> = (640.0, 240.0)
 				else
-					formattext textname = winner_text "Player %s Rocks!" s = <winner>
+					FormatText TextName = winner_text "Player %s Rocks!" s = <winner>
 				endif
 				winner_space_between = (50.0, 0.0)
 				winner_scale = 1.5
@@ -1030,7 +1030,7 @@ script guitarevent_songwon_spawned
 			fit_dims = (200.0, 0.0)
 		endif
 	endif
-	stringlength string = <winner_text>
+	StringLength string = <winner_text>
 	<fit_dims> = (<str_len> * (23.0, 0.0))
 	if (<fit_dims>.(1.0, 0.0) >= 350)
 		<fit_dims> = (350.0, 0.0)
@@ -1093,8 +1093,8 @@ script guitarevent_songwon_spawned
 		endif
 	endif
 	if NOT ($devil_finish = 1 || $battle_sudden_death = 1)
-		spawnscriptnow \{waitandkillhighway}
-		killspawnedscript \{name = jiggle_text_array_elements}
+		spawnscriptnow \{waitAndKillHighway}
+		KillSpawnedScript \{name = jiggle_text_array_elements}
 		spawnscriptnow \{jiggle_text_array_elements
 			params = {
 				id = yourock_text
@@ -1131,13 +1131,13 @@ script guitarevent_songwon_spawned
 			endif
 			if (<boss_character> >= 0)
 				unlocked_for_purchase = 1
-				getglobaltags ($secret_characters [<boss_character>].id)
+				GetGlobalTags ($Secret_Characters [<boss_character>].id)
 				if (<unlocked_for_purchase> = 0)
-					spawnscriptnow \{boss_unlocked_text
+					spawnscriptnow \{Boss_Unlocked_Text
 						params = {
 							parent_id = yourock_text
 						}}
-					setglobaltags ($secret_characters [<boss_character>].id) params = {unlocked_for_purchase = 1}
+					SetGlobalTags ($Secret_Characters [<boss_character>].id) params = {unlocked_for_purchase = 1}
 				endif
 			endif
 		endif
@@ -1145,23 +1145,23 @@ script guitarevent_songwon_spawned
 	change \{old_song = none}
 	if NOT ($devil_finish = 1)
 		if NOT ($battle_sudden_death = 1)
-			progression_songwon
+			Progression_SongWon
 			if ($current_transition = preencore)
 				end_song
-				unpausegame
-				transition_play \{type = preencore}
-				transition_wait
+				UnPauseGame
+				Transition_Play \{type = preencore}
+				Transition_Wait
 				change \{current_transition = none}
-				pausegame
+				PauseGame
 				ui_flow_manager_respond_to_action \{action = preencore_win_song}
 				encore_transition = 1
 			elseif ($current_transition = preboss)
 				end_song
-				unpausegame
-				transition_play \{type = preboss}
-				transition_wait
+				UnPauseGame
+				Transition_Play \{type = preboss}
+				Transition_Wait
 				change \{current_transition = none}
-				pausegame
+				PauseGame
 				change \{use_last_player_scores = 1}
 				change old_song = ($current_song)
 				change \{show_boss_helper_screen = 1}
@@ -1173,21 +1173,21 @@ script guitarevent_songwon_spawned
 						endif
 					endif
 					net_write_single_player_stats
-					spawnscriptlater \{xenon_singleplayer_session_complete_uninit}
+					SpawnScriptLater \{xenon_singleplayer_session_complete_uninit}
 				endif
 				return
 			else
-				unpausegame
-				transition_play \{type = songwon}
-				transition_wait
+				UnPauseGame
+				Transition_Play \{type = songwon}
+				Transition_Wait
 				change \{current_transition = none}
-				pausegame
+				PauseGame
 			endif
 		else
-			unpausegame
-			transition_play \{type = songwon}
+			UnPauseGame
+			Transition_Play \{type = songwon}
 			spawnscriptnow \{wait_and_play_you_rock_movie}
-			killspawnedscript \{name = jiggle_text_array_elements}
+			KillSpawnedScript \{name = jiggle_text_array_elements}
 			spawnscriptnow \{jiggle_text_array_elements
 				params = {
 					id = yourock_text
@@ -1195,23 +1195,23 @@ script guitarevent_songwon_spawned
 					wait_time = 3000
 					explode = 1
 				}}
-			spawnscriptnow \{sudden_death_helper_text
+			spawnscriptnow \{Sudden_Death_Helper_Text
 				params = {
 					parent_id = yourock_text
 				}}
-			wait \{0.1
+			Wait \{0.1
 				seconds}
-			spawnscriptnow \{waitandkillhighway}
-			wait \{4
+			spawnscriptnow \{waitAndKillHighway}
+			Wait \{4
 				seconds}
 			change \{current_transition = none}
-			pausegame
+			PauseGame
 		endif
 	else
-		unpausegame
-		transition_play \{type = songwon}
+		UnPauseGame
+		Transition_Play \{type = songwon}
 		spawnscriptnow \{wait_and_play_you_rock_movie}
-		killspawnedscript \{name = jiggle_text_array_elements}
+		KillSpawnedScript \{name = jiggle_text_array_elements}
 		spawnscriptnow \{jiggle_text_array_elements
 			params = {
 				id = yourock_text
@@ -1220,30 +1220,30 @@ script guitarevent_songwon_spawned
 				explode = 1
 			}}
 		devil_finish_anim
-		wait \{0.15
+		Wait \{0.15
 			seconds}
-		spawnscriptnow \{waitandkillhighway}
-		wait \{2.5
+		spawnscriptnow \{waitAndKillHighway}
+		Wait \{2.5
 			seconds}
-		soundevent \{event = devil_die_transition_sfx}
-		wait \{0.5
+		SoundEvent \{event = Devil_Die_Transition_SFX}
+		Wait \{0.5
 			seconds}
 		change \{current_transition = none}
-		pausegame
+		PauseGame
 	endif
 	if ($end_credits = 1 && $current_song = bossdevil)
-		menu_music_off
-		playmovieandwait \{movie = 'singleplayer_end'}
+		Menu_Music_Off
+		PlayMovieAndWait \{movie = 'singleplayer_end'}
 		get_movie_id_by_name \{movie = 'singleplayer_end'}
-		setglobaltags <id> params = {unlocked = 1}
+		SetGlobalTags <id> params = {unlocked = 1}
 	endif
 	if ($battle_sudden_death = 1)
-		stopsoundevent \{gh_sfx_battlemode_sudden_death}
+		StopSoundEvent \{GH_SFX_BattleMode_Sudden_Death}
 		printf \{"BATTLE MODE, Song Won, Begin Sudden Death"}
 		change \{battle_sudden_death = 1}
 		if ($is_network_game)
 			ui_flow_manager_respond_to_action \{action = sudden_death_begin}
-			spawnscriptlater \{load_and_sync_timing
+			SpawnScriptLater \{load_and_sync_timing
 				params = {
 					start_delay = 4000
 					player_status = player1_status
@@ -1255,8 +1255,8 @@ script guitarevent_songwon_spawned
 					sudden_death = 1
 				}}
 		endif
-		if screenelementexists \{id = yourock_text}
-			destroyscreenelement \{id = yourock_text}
+		if ScreenElementExists \{id = yourock_text}
+			DestroyScreenElement \{id = yourock_text}
 		endif
 	elseif ($end_credits = 1 && $current_song = thrufireandflames)
 		destroy_menu \{menu_id = yourock_text}
@@ -1273,7 +1273,7 @@ script guitarevent_songwon_spawned
 		ui_flow_manager_respond_to_action \{action = win_song}
 	endif
 	if ($is_network_game = 1)
-		if ishost
+		if IsHost
 			agora_write_stats
 		endif
 	elseif NOT ($boss_battle = 1)
@@ -1290,23 +1290,23 @@ script guitarevent_songwon_spawned
 	if ($is_network_game = 0)
 		if NOT ($devil_finish = 1)
 			if NOT ($battle_sudden_death = 1)
-				if NOT gotparam \{encore_transition}
+				if NOT GotParam \{encore_transition}
 					spawnscriptnow \{xenon_singleplayer_session_complete_uninit}
 				endif
 			endif
 		endif
 	endif
-	soundevent \{event = crowd_med_to_good_sfx}
+	SoundEvent \{event = Crowd_Med_To_Good_SFX}
 	if ($is_network_game)
 		mark_safe_for_shutdown
 	endif
 endscript
 
-script sudden_death_helper_text 
-	formattext \{checksumname = text_checksum
+script Sudden_Death_Helper_Text 
+	FormatText \{checksumname = text_checksum
 		'sudden_death_helper'}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		id = <text_checksum>
 		parent = <parent_id>
 		pos = (640.0, 500.0)
@@ -1317,10 +1317,10 @@ script sudden_death_helper_text
 		just = [center bottom]
 		z_priority = 500
 	}
-	formattext \{checksumname = text_checksum2
+	FormatText \{checksumname = text_checksum2
 		'sudden_death_helper2'}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		id = <text_checksum2>
 		parent = <parent_id>
 		pos = (640.0, 540.0)
@@ -1331,46 +1331,46 @@ script sudden_death_helper_text
 		just = [center bottom]
 		z_priority = 500
 	}
-	wait \{3
+	Wait \{3
 		seconds}
-	doscreenelementmorph {
+	doScreenElementMorph {
 		id = <text_checksum>
 		alpha = 0
 		time = 1
 	}
-	doscreenelementmorph {
+	doScreenElementMorph {
 		id = <text_checksum2>
 		alpha = 0
 		time = 1
 	}
 endscript
 
-script boss_unlocked_text 
+script Boss_Unlocked_Text 
 	if ($current_song = bosstom)
-		formattext \{textname = boss
+		FormatText \{TextName = boss
 			"Tom Morello"}
 		pos = (634.0, 580.0)
 	elseif ($current_song = bossslash)
 		pos = (634.0, 580.0)
-		formattext \{textname = boss
+		FormatText \{TextName = boss
 			"Slash"}
 	elseif ($current_song = bossdevil)
 		pos = (800.0, 580.0)
-		formattext \{textname = boss
+		FormatText \{TextName = boss
 			"Lou"}
 	endif
-	formattext \{textname = unlocked
+	FormatText \{TextName = unlocked
 		"unlocked"}
-	formattext \{textname = visit_store
+	FormatText \{TextName = visit_store
 		"VISIT STORE"}
-	formattext textname = text "%s %b, %v" s = <boss> b = <unlocked> v = <visit_store>
-	formattext \{checksumname = boss_unlocked
+	FormatText TextName = text "%s %b, %v" s = <boss> b = <unlocked> v = <visit_store>
+	FormatText \{checksumname = boss_unlocked
 		'boss_unlocked'}
-	if screenelementexists id = <boss_unlocked>
-		destroyscreenelement id = <boss_unlocked>
+	if ScreenElementExists id = <boss_unlocked>
+		DestroyScreenElement id = <boss_unlocked>
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		id = <boss_unlocked>
 		parent = <parent_id>
 		pos = <pos>
@@ -1384,10 +1384,10 @@ script boss_unlocked_text
 		shadow_offs = (1.0, 1.0)
 		shadow_rgba = [0 0 0 255]
 	}
-	wait \{3
+	Wait \{3
 		seconds}
-	if screenelementexists id = <boss_unlocked>
-		doscreenelementmorph {
+	if ScreenElementExists id = <boss_unlocked>
+		doScreenElementMorph {
 			id = <boss_unlocked>
 			alpha = 0
 			time = 1
@@ -1399,41 +1399,41 @@ script start_devil_finish
 	change \{end_credits = 0}
 	marker_count = 37
 	get_song_prefix song = ($current_song)
-	formattext checksumname = marker_array '%s_markers' s = <song_prefix>
-	starttime = ($<marker_array> [<marker_count>].time)
+	FormatText checksumname = marker_array '%s_markers' s = <song_prefix>
+	StartTime = ($<marker_array> [<marker_count>].time)
 	startmarker = <marker_count>
-	change \{cameracuts_forcetime = 0}
+	change \{CameraCuts_ForceTime = 0}
 	stoprendering
-	restart_gem_scroller song_name = ($current_song) difficulty = ($current_difficulty) difficulty2 = ($current_difficulty2) starttime = <starttime> startmarker = <startmarker> no_render = 1 devil_finish_restart = 1
+	restart_gem_scroller song_name = ($current_song) difficulty = ($current_difficulty) difficulty2 = ($current_difficulty2) StartTime = <StartTime> startmarker = <startmarker> no_render = 1 devil_finish_restart = 1
 	devil_lose_anim
-	wait \{20
+	Wait \{20
 		frames}
 	startrendering
-	if screenelementexists \{id = yourock_text}
-		destroyscreenelement \{id = yourock_text}
+	if ScreenElementExists \{id = yourock_text}
+		DestroyScreenElement \{id = yourock_text}
 	endif
-	if screenelementexists \{id = yourock_text_legend}
-		destroyscreenelement \{id = yourock_text_legend}
+	if ScreenElementExists \{id = yourock_text_legend}
+		DestroyScreenElement \{id = yourock_text_legend}
 	endif
 endscript
 
 script devil_finish_anim 
-	wait \{1
+	Wait \{1
 		gameframe}
-	bassist :obj_switchscript \{transition_playanim_spawned
+	bassist :Obj_SwitchScript \{Transition_PlayAnim_Spawned
 		params = {
-			anim = gh3_guit_satn_a_lose02
+			Anim = GH3_Guit_Satn_A_Lose02
 		}}
-	change \{cameracuts_allownotescripts = false}
-	change \{cameracuts_forcetime = 3.2}
-	cameracuts_setarrayprefix \{prefix = 'cameras_boss_finish'
+	change \{CameraCuts_AllowNoteScripts = false}
+	change \{CameraCuts_ForceTime = 3.2}
+	CameraCuts_SetArrayPrefix \{prefix = 'cameras_boss_finish'
 		length = 0
 		changenow}
 	spawnscriptnow \{devil_camera_flash}
 endscript
 
 script devil_camera_flash 
-	wait \{2.7
+	Wait \{2.7
 		seconds}
 	fadetoblack \{on
 		time = 0.03
@@ -1446,71 +1446,71 @@ script devil_camera_flash
 			255
 			255
 		]}
-	wait \{0.04
+	Wait \{0.04
 		seconds}
-	soundevent \{event = song_intro_kick_sfx}
-	soundevent \{event = practice_mode_crash2}
+	SoundEvent \{event = Song_Intro_Kick_SFX}
+	SoundEvent \{event = Practice_Mode_Crash2}
 	fadetoblack \{off}
 endscript
 
 script devil_lose_anim 
-	change \{cameracuts_allownotescripts = false}
-	cameracuts_setarrayprefix \{prefix = 'cameras_boss_dead'
+	change \{CameraCuts_AllowNoteScripts = false}
+	CameraCuts_SetArrayPrefix \{prefix = 'cameras_boss_dead'
 		length = 0
 		changenow}
-	bassist :obj_switchscript \{transition_playanim_spawned
+	bassist :Obj_SwitchScript \{Transition_PlayAnim_Spawned
 		params = {
-			cycle = 1
+			Cycle = 1
 			stance = lose
-			anim = gh3_guit_satn_a_lose03
+			Anim = GH3_Guit_Satn_A_Lose03
 		}}
 endscript
 
 script wait_and_play_you_rock_movie 
 	begin
-	if (ismoviepreloaded textureslot = 1)
-		startpreloadedmovie \{textureslot = 1}
+	if (isMoviePreLoaded TextureSlot = 1)
+		StartPreLoadedMovie \{TextureSlot = 1}
 		return
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
-script waitandkillhighway 
-	wait \{0.5
+script waitAndKillHighway 
+	Wait \{0.5
 		seconds}
-	soundevent \{event = crowd_fast_surge_cheer}
+	SoundEvent \{event = Crowd_Fast_Surge_Cheer}
 	disable_bg_viewport
 endscript
 
-script guitarevent_crowd_poor_medium 
+script GuitarEvent_crowd_poor_medium 
 	printf \{"Crowd went from poor to medium"}
 endscript
 
-script guitarevent_crowd_medium_good 
+script GuitarEvent_crowd_medium_good 
 	printf \{"Crowd went from medium to good"}
 endscript
 
-script guitarevent_crowd_medium_poor 
+script GuitarEvent_crowd_medium_poor 
 	printf \{"Crowd went from medium to poor"}
 endscript
 
-script guitarevent_crowd_good_medium 
+script GuitarEvent_crowd_good_medium 
 	printf \{"Crowd went from good to medium"}
 endscript
 
-script guitarevent_starhitnote 
+script GuitarEvent_StarHitNote 
 endscript
 
-script guitarevent_starsequencebonus 
+script GuitarEvent_StarSequenceBonus 
 	if ($is_attract_mode = 1)
 		return
 	endif
 	change structurename = <player_status> sp_phrases_hit = ($<player_status>.sp_phrases_hit + 1)
-	soundevent \{event = star_power_awarded_sfx}
-	formattext checksumname = container_id 'gem_container%p' p = ($<player_status>.text) addtostringlookup = true
-	getarraysize \{$gem_colors}
+	SoundEvent \{event = Star_Power_Awarded_SFX}
+	FormatText checksumname = container_id 'gem_container%p' p = ($<player_status>.text) AddToStringLookup = true
+	GetArraySize \{$gem_colors}
 	gem_count = 0
 	begin
 	<note> = ($<song> [<array_entry>] [(<gem_count> + 1)])
@@ -1518,32 +1518,32 @@ script guitarevent_starsequencebonus
 		color = ($gem_colors [<gem_count>])
 		if ($<player_status>.lefthanded_button_ups = 1)
 			<pos2d> = ($button_up_models.<color>.left_pos_2d)
-			<angle> = ($button_models.<color>.angle)
+			<Angle> = ($button_models.<color>.Angle)
 		else
 			<pos2d> = ($button_up_models.<color>.pos_2d)
-			<angle> = ($button_models.<color>.left_angle)
+			<Angle> = ($button_models.<color>.left_angle)
 		endif
-		formattext checksumname = name 'big_bolt%p%e' p = ($<player_status>.text) e = <gem_count> addtostringlookup = true
-		createscreenelement {
-			type = spriteelement
+		FormatText checksumname = name 'big_bolt%p%e' p = ($<player_status>.text) e = <gem_count> AddToStringLookup = true
+		CreateScreenElement {
+			type = SpriteElement
 			id = <name>
 			parent = <container_id>
-			material = sys_big_bolt01_sys_big_bolt01
+			material = sys_Big_Bolt01_sys_Big_Bolt01
 			rgba = [255 255 255 255]
 			pos = <pos2d>
-			rot_angle = <angle>
+			rot_angle = <Angle>
 			scale = $star_power_bolt_scale
 			just = [center bottom]
 			z_priority = 6
 		}
-		formattext checksumname = fx_id 'big_bolt_particle%p%e' p = ($<player_status>.text) e = <gem_count> addtostringlookup = true
-		destroy2dparticlesystem id = <fx_id>
+		FormatText checksumname = fx_id 'big_bolt_particle%p%e' p = ($<player_status>.text) e = <gem_count> AddToStringLookup = true
+		Destroy2DParticleSystem id = <fx_id>
 		<particle_pos> = (<pos2d> - (0.0, 0.0))
-		create2dparticlesystem {
+		Create2DParticleSystem {
 			id = <fx_id>
 			pos = <particle_pos>
 			z_priority = 8.0
-			material = sys_particle_star01_sys_particle_star01
+			material = sys_Particle_Star01_sys_Particle_Star01
 			parent = <container_id>
 			start_color = [0 128 255 255]
 			end_color = [0 128 128 0]
@@ -1561,13 +1561,13 @@ script guitarevent_starsequencebonus
 			friction = (0.0, 66.0)
 			time = 2.0
 		}
-		formattext checksumname = fx2_id 'big_bolt_particle2%p%e' p = ($<player_status>.text) e = <gem_count> addtostringlookup = true
+		FormatText checksumname = fx2_id 'big_bolt_particle2%p%e' p = ($<player_status>.text) e = <gem_count> AddToStringLookup = true
 		<particle_pos> = (<pos2d> - (0.0, 0.0))
-		create2dparticlesystem {
+		Create2DParticleSystem {
 			id = <fx2_id>
 			pos = <particle_pos>
 			z_priority = 8.0
-			material = sys_particle_star02_sys_particle_star02
+			material = sys_Particle_Star02_sys_Particle_Star02
 			parent = <container_id>
 			start_color = [255 255 255 255]
 			end_color = [128 128 128 0]
@@ -1585,13 +1585,13 @@ script guitarevent_starsequencebonus
 			friction = (0.0, 55.0)
 			time = 2.0
 		}
-		formattext checksumname = fx3_id 'big_bolt_particle3%p%e' p = ($<player_status>.text) e = <gem_count> addtostringlookup = true
+		FormatText checksumname = fx3_id 'big_bolt_particle3%p%e' p = ($<player_status>.text) e = <gem_count> AddToStringLookup = true
 		<particle_pos> = (<pos2d> - (0.0, 15.0))
-		create2dparticlesystem {
+		Create2DParticleSystem {
 			id = <fx3_id>
 			pos = <particle_pos>
 			z_priority = 8.0
-			material = sys_particle_spark01_sys_particle_spark01
+			material = sys_Particle_Spark01_sys_Particle_Spark01
 			parent = <container_id>
 			start_color = [0 255 255 255]
 			end_color = [0 255 255 0]
@@ -1612,151 +1612,151 @@ script guitarevent_starsequencebonus
 	endif
 	gem_count = (<gem_count> + 1)
 	repeat <array_size>
-	wait \{$star_power_bolt_time
+	Wait \{$star_power_bolt_time
 		seconds}
 	gem_count = 0
 	begin
 	<note> = ($<song> [<array_entry>] [(<gem_count> + 1)])
 	if (<note> > 0)
-		formattext checksumname = name 'big_bolt%p%e' p = ($<player_status>.text) e = <gem_count> addtostringlookup = true
-		destroyscreenelement id = <name>
-		formattext checksumname = fx_id 'big_bolt_particle%p%e' p = ($<player_status>.text) e = <gem_count> addtostringlookup = true
-		destroy2dparticlesystem id = <fx_id> kill_when_empty
-		formattext checksumname = fx2_id 'big_bolt_particle2%p%e' p = ($<player_status>.text) e = <gem_count> addtostringlookup = true
-		destroy2dparticlesystem id = <fx2_id> kill_when_empty
-		formattext checksumname = fx3_id 'big_bolt_particle3%p%e' p = ($<player_status>.text) e = <gem_count> addtostringlookup = true
-		destroy2dparticlesystem id = <fx3_id> kill_when_empty
-		wait \{1
+		FormatText checksumname = name 'big_bolt%p%e' p = ($<player_status>.text) e = <gem_count> AddToStringLookup = true
+		DestroyScreenElement id = <name>
+		FormatText checksumname = fx_id 'big_bolt_particle%p%e' p = ($<player_status>.text) e = <gem_count> AddToStringLookup = true
+		Destroy2DParticleSystem id = <fx_id> kill_when_empty
+		FormatText checksumname = fx2_id 'big_bolt_particle2%p%e' p = ($<player_status>.text) e = <gem_count> AddToStringLookup = true
+		Destroy2DParticleSystem id = <fx2_id> kill_when_empty
+		FormatText checksumname = fx3_id 'big_bolt_particle3%p%e' p = ($<player_status>.text) e = <gem_count> AddToStringLookup = true
+		Destroy2DParticleSystem id = <fx3_id> kill_when_empty
+		Wait \{1
 			gameframe}
 	endif
 	gem_count = (<gem_count> + 1)
 	repeat <array_size>
 endscript
 
-script guitarevent_starmissnote 
+script GuitarEvent_StarMissNote 
 endscript
 
-script guitarevent_multiplier4xon 
-	spawnscriptnow guitarevent_multiplier4xon_spawned params = {<...>}
+script GuitarEvent_Multiplier4xOn 
+	spawnscriptnow GuitarEvent_Multiplier4xOn_Spawned params = {<...>}
 endscript
 
-script guitarevent_multiplier4xon_spawned 
+script GuitarEvent_Multiplier4xOn_Spawned 
 	if ($disable_band = 0)
-		objid = (<player_status>.band_member)
-		getpakmancurrent \{map = zones}
+		ObjID = (<player_status>.band_member)
+		GetPakManCurrent \{map = zones}
 		if NOT (<pak> = z_soundcheck)
-			wait \{1
+			Wait \{1
 				gameframe}
-			safegetuniquecompositeobjectid preferredid = fingersparks01 objid = <objid>
-			createparticlesystem_fast name = <uniqueid> objid = <objid> groupid = zoneparticles bone = bone_hand_middle_mid_l params_script = $gp_4x_fingersparks01
-			manglechecksums a = <uniqueid> b = <objid>
-			change structurename = <player_status> fourx_fingerfxid01 = <mangled_id>
-			wait \{1
+			SafeGetUniqueCompositeObjectID preferredID = FingerSparks01 ObjID = <ObjID>
+			CreateParticleSystem_Fast name = <uniqueID> ObjID = <ObjID> groupID = zoneparticles bone = Bone_Hand_Middle_Mid_L params_Script = $GP_4X_FingerSparks01
+			MangleChecksums a = <uniqueID> b = <ObjID>
+			change structurename = <player_status> FourX_FingerFXID01 = <mangled_ID>
+			Wait \{1
 				gameframe}
-			safegetuniquecompositeobjectid preferredid = fingerflames01 objid = <objid>
-			createparticlesystem_fast name = <uniqueid> objid = <objid> groupid = zoneparticles bone = bone_hand_middle_mid_l params_script = $gp_4x_fingerflames01
-			manglechecksums a = <uniqueid> b = <objid>
-			change structurename = <player_status> fourx_fingerfxid02 = <mangled_id>
-			wait \{1
+			SafeGetUniqueCompositeObjectID preferredID = FingerFlames01 ObjID = <ObjID>
+			CreateParticleSystem_Fast name = <uniqueID> ObjID = <ObjID> groupID = zoneparticles bone = Bone_Hand_Middle_Mid_L params_Script = $GP_4X_FingerFlames01
+			MangleChecksums a = <uniqueID> b = <ObjID>
+			change structurename = <player_status> FourX_FingerFXID02 = <mangled_ID>
+			Wait \{1
 				gameframe}
-			safegetuniquecompositeobjectid preferredid = fingersparks02 objid = <objid>
-			createparticlesystem_fast name = <uniqueid> objid = <objid> groupid = zoneparticles bone = bone_hand_middle_mid_r params_script = {$gp_4x_fingersparks01 emit_target = (0.0, -1.0, 0.0)}
-			manglechecksums a = <uniqueid> b = <objid>
-			change structurename = <player_status> fourx_fingerfxid03 = <mangled_id>
-			wait \{1
+			SafeGetUniqueCompositeObjectID preferredID = FingerSparks02 ObjID = <ObjID>
+			CreateParticleSystem_Fast name = <uniqueID> ObjID = <ObjID> groupID = zoneparticles bone = Bone_Hand_Middle_Mid_R params_Script = {$GP_4X_FingerSparks01 emit_Target = (0.0, -1.0, 0.0)}
+			MangleChecksums a = <uniqueID> b = <ObjID>
+			change structurename = <player_status> FourX_FingerFXID03 = <mangled_ID>
+			Wait \{1
 				gameframe}
-			safegetuniquecompositeobjectid preferredid = fingerflames02 objid = <objid>
-			createparticlesystem_fast name = <uniqueid> objid = <objid> groupid = zoneparticles bone = bone_hand_middle_mid_r params_script = $gp_4x_fingerflames01
-			manglechecksums a = <uniqueid> b = <objid>
-			change structurename = <player_status> fourx_fingerfxid04 = <mangled_id>
+			SafeGetUniqueCompositeObjectID preferredID = FingerFlames02 ObjID = <ObjID>
+			CreateParticleSystem_Fast name = <uniqueID> ObjID = <ObjID> groupID = zoneparticles bone = Bone_Hand_Middle_Mid_R params_Script = $GP_4X_FingerFlames01
+			MangleChecksums a = <uniqueID> b = <ObjID>
+			change structurename = <player_status> FourX_FingerFXID04 = <mangled_ID>
 		endif
 	endif
 endscript
 
-script guitarevent_multiplier3xon 
+script GuitarEvent_Multiplier3xOn 
 endscript
 
-script guitarevent_multiplier2xon 
+script GuitarEvent_Multiplier2xOn 
 endscript
 
 script kill_4x_fx 
-	killspawnedscript \{name = guitarevent_multiplier4xon_spawned}
-	if iscreated ($<player_status>.fourx_fingerfxid01)
-		($<player_status>.fourx_fingerfxid01) :emitrate rate = 0
-		($<player_status>.fourx_fingerfxid01) :destroy ifempty = 1
+	KillSpawnedScript \{name = GuitarEvent_Multiplier4xOn_Spawned}
+	if IsCreated ($<player_status>.FourX_FingerFXID01)
+		($<player_status>.FourX_FingerFXID01) :EmitRate rate = 0
+		($<player_status>.FourX_FingerFXID01) :destroy ifEmpty = 1
 	endif
-	if iscreated ($<player_status>.fourx_fingerfxid02)
-		($<player_status>.fourx_fingerfxid02) :emitrate rate = 0
-		($<player_status>.fourx_fingerfxid02) :destroy ifempty = 1
+	if IsCreated ($<player_status>.FourX_FingerFXID02)
+		($<player_status>.FourX_FingerFXID02) :EmitRate rate = 0
+		($<player_status>.FourX_FingerFXID02) :destroy ifEmpty = 1
 	endif
-	if iscreated ($<player_status>.fourx_fingerfxid03)
-		($<player_status>.fourx_fingerfxid03) :emitrate rate = 0
-		($<player_status>.fourx_fingerfxid03) :destroy ifempty = 1
+	if IsCreated ($<player_status>.FourX_FingerFXID03)
+		($<player_status>.FourX_FingerFXID03) :EmitRate rate = 0
+		($<player_status>.FourX_FingerFXID03) :destroy ifEmpty = 1
 	endif
-	if iscreated ($<player_status>.fourx_fingerfxid04)
-		($<player_status>.fourx_fingerfxid04) :emitrate rate = 0
-		($<player_status>.fourx_fingerfxid04) :destroy ifempty = 1
+	if IsCreated ($<player_status>.FourX_FingerFXID04)
+		($<player_status>.FourX_FingerFXID04) :EmitRate rate = 0
+		($<player_status>.FourX_FingerFXID04) :destroy ifEmpty = 1
 	endif
-	change structurename = <player_status> fourx_fingerfxid01 = jow_nil
-	change structurename = <player_status> fourx_fingerfxid02 = jow_nil
-	change structurename = <player_status> fourx_fingerfxid03 = jow_nil
-	change structurename = <player_status> fourx_fingerfxid04 = jow_nil
+	change structurename = <player_status> FourX_FingerFXID01 = JOW_NIL
+	change structurename = <player_status> FourX_FingerFXID02 = JOW_NIL
+	change structurename = <player_status> FourX_FingerFXID03 = JOW_NIL
+	change structurename = <player_status> FourX_FingerFXID04 = JOW_NIL
 endscript
 
-script guitarevent_multiplier4xoff 
-	soundevent \{event = ui_sfx_lose_multiplier_4x}
-	soundevent \{event = lose_multiplier_crowd}
+script GuitarEvent_Multiplier4xOff 
+	SoundEvent \{event = UI_SFX_Lose_Multiplier_4X}
+	SoundEvent \{event = Lose_Multiplier_Crowd}
 	spawnscriptnow highway_pulse_multiplier_loss params = {player_text = ($<player_status>.text) multiplier = 4}
 	kill_4x_fx <...>
 endscript
 
-script guitarevent_multiplier3xoff 
-	soundevent \{event = ui_sfx_lose_multiplier_3x}
+script GuitarEvent_Multiplier3xOff 
+	SoundEvent \{event = UI_SFX_Lose_Multiplier_3X}
 	spawnscriptnow highway_pulse_multiplier_loss params = {player_text = ($<player_status>.text) multiplier = 3}
 endscript
 
-script guitarevent_multiplier2xoff 
-	soundevent \{event = ui_sfx_lose_multiplier_2x}
+script GuitarEvent_Multiplier2xOff 
+	SoundEvent \{event = UI_SFX_Lose_Multiplier_2X}
 	spawnscriptnow highway_pulse_multiplier_loss params = {player_text = ($<player_status>.text) multiplier = 2}
 endscript
 
-script guitarevent_killsong 
-	gh3_sfx_stop_sounds_for_killsong
-	gh_star_power_verb_off
-	formattext \{checksumname = player_status
+script GuitarEvent_KillSong 
+	GH3_SFX_Stop_Sounds_For_KillSong
+	GH_Star_Power_Verb_Off
+	FormatText \{checksumname = player_status
 		'player1_status'}
 	kill_4x_fx player_status = <player_status>
-	formattext \{checksumname = player_status
+	FormatText \{checksumname = player_status
 		'player2_status'}
 	kill_4x_fx player_status = <player_status>
 endscript
 
-script guitarevent_entervenue 
-	getpakmancurrentname \{map = zones}
-	formattext checksumname = echo_params 'Echo_Crowd_Buss_%s' s = <pakname>
-	formattext checksumname = reverb_params 'Reverb_Crowd_Buss_%s' s = <pakname>
-	if NOT globalexists name = <echo_params>
-		echo_params = echo_crowd_buss_default
+script GuitarEvent_EnterVenue 
+	GetPakManCurrentName \{map = zones}
+	FormatText checksumname = echo_params 'Echo_Crowd_Buss_%s' s = <pakname>
+	FormatText checksumname = reverb_params 'Reverb_Crowd_Buss_%s' s = <pakname>
+	if NOT GlobalExists name = <echo_params>
+		echo_params = Echo_Crowd_Buss_Default
 	endif
-	if NOT globalexists name = <reverb_params>
-		reverb_params = reverb_crowd_buss_default
+	if NOT GlobalExists name = <reverb_params>
+		reverb_params = Reverb_Crowd_Buss_Default
 	endif
 	setsoundbusseffects effect = $<echo_params>
 	setsoundbusseffects effect = $<reverb_params>
 endscript
 
-script guitarevent_exitvenue 
-	setsoundbusseffects \{effect = $echo_crowd_buss}
-	setsoundbusseffects \{effect = $reverb_crowd_buss}
+script GuitarEvent_ExitVenue 
+	setsoundbusseffects \{effect = $Echo_Crowd_Buss}
+	setsoundbusseffects \{effect = $Reverb_Crowd_Buss}
 endscript
 
-script guitarevent_createfirstgem 
+script GuitarEvent_CreateFirstGem 
 	spawnscriptnow first_gem_fx params = {<...>}
 endscript
 
 script first_gem_fx 
-	extendcrc <gem_id> '_particle' out = fx_id
-	if gotparam \{is_star}
+	ExtendCRC <gem_id> '_particle' out = fx_id
+	if GotParam \{is_star}
 		if ($game_mode = p2_battle || $boss_battle = 1)
 			<pos> = (125.0, 170.0)
 		else
@@ -1765,12 +1765,12 @@ script first_gem_fx
 	else
 		<pos> = (66.0, 20.0)
 	endif
-	destroy2dparticlesystem id = <fx_id>
-	create2dparticlesystem {
+	Destroy2DParticleSystem id = <fx_id>
+	Create2DParticleSystem {
 		id = <fx_id>
 		pos = <pos>
 		z_priority = 8.0
-		material = sys_particle_lnzflare02_sys_particle_lnzflare02
+		material = sys_Particle_lnzflare02_sys_Particle_lnzflare02
 		parent = <gem_id>
 		start_color = [255 255 255 255]
 		end_color = [255 255 255 0]
@@ -1789,44 +1789,44 @@ script first_gem_fx
 		time = 1.25
 	}
 	spawnscriptnow destroy_first_gem_fx params = {gem_id = <gem_id> fx_id = <fx_id>}
-	wait \{0.8
+	Wait \{0.8
 		seconds}
-	destroy2dparticlesystem id = <fx_id> kill_when_empty
+	Destroy2DParticleSystem id = <fx_id> kill_when_empty
 endscript
 
 script destroy_first_gem_fx 
 	begin
-	if NOT screenelementexists id = <gem_id>
-		destroy2dparticlesystem id = <fx_id>
+	if NOT ScreenElementExists id = <gem_id>
+		Destroy2DParticleSystem id = <fx_id>
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
-script guitarevent_gemstarpoweron 
+script GuitarEvent_GemStarPowerOn 
 endscript
 
-script guitarevent_battleattackfinished 
-	gh3_battle_attack_finished_sfx <...>
-	reset_battle_dsp_effects <...>
+script GuitarEvent_BattleAttackFinished 
+	GH3_Battle_Attack_Finished_SFX <...>
+	Reset_Battle_DSP_Effects <...>
 endscript
 
-script guitarevent_transitionintro 
+script GuitarEvent_TransitionIntro 
 endscript
 
-script guitarevent_transitionfastintro 
+script GuitarEvent_TransitionFastIntro 
 endscript
 
-script guitarevent_transitionpreencore 
+script GuitarEvent_TransitionPreEncore 
 endscript
 
-script guitarevent_transitionencore 
+script GuitarEvent_TransitionEncore 
 endscript
 
-script guitarevent_transitionpreboss 
+script GuitarEvent_TransitionPreBoss 
 endscript
 
-script guitarevent_transitionboss 
+script GuitarEvent_TransitionBoss 
 endscript

@@ -11,12 +11,12 @@ script ShatterFromSkater \{vel_scale = 0.5
 		shininess = 0
 		radius = 0.0}
 	Obj_GetID
-	<objID> :Obj_GetVelocity
-	<Force> = (<vel> * <vel_scale>)
-	<objID> :Obj_GetPosition
+	<ObjID> :Obj_GetVelocity
+	<force> = (<vel> * <vel_scale>)
+	<ObjID> :Obj_GetPosition
 	if GotParam \{radial_shatter}
-		printf \{qs(0xb2a63bf8)}
-		<origin> = <Pos>
+		printf \{qs("\LUsing skater's position for nicer shatter.  If a crash occurs after this text, please remove the radial_shatter parameter from the ShatterFromSkater parameter list")}
+		<origin> = <pos>
 	endif
 	Shatter <...>
 endscript

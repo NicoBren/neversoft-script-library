@@ -1,7 +1,7 @@
 
 script init_packed_structs \{globaltag_sets = 1}
 	GetArraySize ($gh_songlist)
-	num_songs = (<array_Size> + 255)
+	num_songs = (<array_size> + 255)
 	num_parts = 5
 	num_diffs = 5
 	num_completetags = 64
@@ -11,204 +11,204 @@ script init_packed_structs \{globaltag_sets = 1}
 	num_charactertags = 16
 	num_songtags_scores = (<num_songs> * <num_parts> * <num_diffs>)
 	num_songtags_lean = (<num_songs>)
-	GetArraySize ($preset_musician_profiles_modifiable)
-	num_preset_profiles = <array_Size>
+	GetArraySize ($Preset_Musician_Profiles_Modifiable)
+	num_preset_profiles = <array_size>
 	packed_compression = (2.0 / 3.0)
 	PushMemProfile \{'packedstructs'}
-	setuppackedstructtypes {
+	SetupPackedStructTypes {
 		types =
 		[
 			{
-				Name = createarocker
+				name = createarocker
 				pool_size = (<globaltag_sets> * ($max_num_create_a_rockers))
 				buffer_size = (21000 * <packed_compression>)
 			}
 			{
-				Name = presetcars
+				name = presetcars
 				pool_size = (<globaltag_sets> * <num_preset_profiles>)
 				buffer_size = (13500 * <packed_compression>)
 			}
 			{
-				Name = logos
+				name = logos
 				pool_size = (<globaltag_sets> * ($max_num_logo_saves))
 				buffer_size = (1750 * <packed_compression>)
 			}
 			{
-				Name = guitars
+				name = guitars
 				pool_size = (<globaltag_sets> * ($max_num_instrument_saves))
 				buffer_size = (4300 * <packed_compression>)
 			}
 			{
-				Name = basses
+				name = basses
 				pool_size = (<globaltag_sets> * ($max_num_instrument_saves))
 				buffer_size = (4300 * <packed_compression>)
 			}
 			{
-				Name = drums
+				name = Drums
 				pool_size = (<globaltag_sets> * ($max_num_instrument_saves))
 				buffer_size = (2000 * <packed_compression>)
 			}
 			{
-				Name = vocals
+				name = Vocals
 				pool_size = (<globaltag_sets> * ($max_num_instrument_saves))
 				buffer_size = 150
 			}
 			{
-				Name = completetags
+				name = completetags
 				pool_size = (<num_completetags> * <globaltag_sets>)
 				fields =
 				[
 					{
-						Name = complete
-						Type = bool
+						name = complete
+						type = bool
 					}
 				]
 			}
 			{
-				Name = unlockedtags
+				name = unlockedtags
 				pool_size = (<num_unlockedtags> * <globaltag_sets>)
 				fields =
 				[
 					{
-						Name = unlocked
-						Type = bool
+						name = unlocked
+						type = bool
 					}
 				]
 			}
 			{
-				Name = gigtags
+				name = gigtags
 				pool_size = (<num_gigtags> * <globaltag_sets>)
 				fields =
 				[
 					{
-						Name = cash_earned
-						Type = int
+						name = cash_earned
+						type = int
 						low_limit = 0
 						high_limit = 1
 					}
 					{
-						Name = unlocked
-						Type = bool
+						name = unlocked
+						type = bool
 					}
 					{
-						Name = first_time_unlocked
-						Type = bool
+						name = first_time_unlocked
+						type = bool
 					}
 					{
-						Name = completed
-						Type = int
+						name = completed
+						type = int
 						low_limit = -1
 						high_limit = 3
 						default_value = 0
 					}
 					{
-						Name = started
-						Type = bool
+						name = started
+						type = bool
 					}
 					{
-						Name = encore_unlocked
-						Type = bool
+						name = encore_unlocked
+						type = bool
 					}
 					{
-						Name = boss_unlocked
-						Type = bool
+						name = boss_unlocked
+						type = bool
 					}
 				]
 			}
 			{
-				Name = charactertags
+				name = charactertags
 				pool_size = (<num_charactertags> * <globaltag_sets>)
 				fields =
 				[
 					{
-						Name = unlocked
-						Type = bool
+						name = unlocked
+						type = bool
 					}
 					{
-						Name = unlocked_for_purchase
-						Type = bool
+						name = unlocked_for_purchase
+						type = bool
 					}
 				]
 			}
 			{
-				Name = songtags_scores
+				name = songtags_scores
 				pool_size = (<num_songtags_scores> * <globaltag_sets>)
 				fields =
 				[
 					{
-						Name = names
-						Type = wstring
+						name = names
+						type = wstring
 						max_length = ($tr_max_band_characters)
-						array_Size = 3
+						array_size = 3
 					}
 					{
-						Name = scores
-						Type = int
+						name = scores
+						type = int
 						low_limit = 0
 						high_limit = 16777215
-						array_Size = 3
+						array_size = 3
 					}
 					{
-						Name = tr_stars
-						Type = int
+						name = tr_stars
+						type = int
 						low_limit = 0
 						high_limit = 5
-						array_Size = 3
+						array_size = 3
 					}
 					{
-						Name = bestscore
-						Type = int
-						low_limit = 0
-						high_limit = 16777215
-					}
-					{
-						Name = beststars
-						Type = int
-						low_limit = 0
-						high_limit = 5
-					}
-					{
-						Name = tr_percent100
-						Type = bool
-					}
-					{
-						Name = achievement_gold_star
-						Type = bool
-					}
-					{
-						Name = stars
-						Type = int
-						low_limit = 0
-						high_limit = 5
-					}
-					{
-						Name = score
-						Type = int
+						name = bestscore
+						type = int
 						low_limit = 0
 						high_limit = 16777215
 					}
 					{
-						Name = percent100
-						Type = bool
+						name = beststars
+						type = int
+						low_limit = 0
+						high_limit = 5
 					}
 					{
-						Name = unlocked
-						Type = bool
+						name = tr_percent100
+						type = bool
+					}
+					{
+						name = achievement_gold_star
+						type = bool
+					}
+					{
+						name = stars
+						type = int
+						low_limit = 0
+						high_limit = 5
+					}
+					{
+						name = score
+						type = int
+						low_limit = 0
+						high_limit = 16777215
+					}
+					{
+						name = percent100
+						type = bool
+					}
+					{
+						name = unlocked
+						type = bool
 					}
 				]
 			}
 			{
-				Name = songtags_lean
+				name = songtags_lean
 				pool_size = (<num_songtags_lean> * <globaltag_sets>)
 				fields =
 				[
 					{
-						Name = unlocked
-						Type = bool
+						name = unlocked
+						type = bool
 					}
 					{
-						Name = available_on_other_client
-						Type = int
+						name = available_on_other_client
+						type = int
 						low_limit = 0
 						high_limit = 8
 					}

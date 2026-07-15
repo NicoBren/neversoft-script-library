@@ -1,18 +1,18 @@
 g_spc_check_pow_bool = 1
 g_spc_whammy_is_popup = 0
 g_spc_sp_is_popup = 0
-should_we_play_whammy_sound = 1
+SHOULD_WE_PLAY_WHAMMY_SOUND = 1
 
 script create_whammy_bar_calibration_menu \{controller = 0
 		popup = 0}
-	if iswinport
+	if IsWinPort
 		if (<popup> = 1)
 			kill_start_key_binding
 		endif
 	else
 		kill_start_key_binding
 	endif
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = wbc_container
 		pos = (0.0, 0.0)
@@ -29,8 +29,8 @@ script create_whammy_bar_calibration_menu \{controller = 0
 		<z> = 2
 	endif
 	if NOT (<popup>)
-		create_menu_backdrop \{texture = venue_bg}
-		createscreenelement \{type = spriteelement
+		create_menu_backdrop \{texture = Venue_BG}
+		CreateScreenElement \{type = SpriteElement
 			parent = wbc_container
 			id = wbc_light_overlay
 			texture = venue_overlay
@@ -42,37 +42,37 @@ script create_whammy_bar_calibration_menu \{controller = 0
 			]
 			z_priority = 99}
 	endif
-	displaysprite {
+	displaySprite {
 		id = wbc_poster_1
 		parent = wbc_container
-		tex = options_whammy_poster_1
+		tex = Options_Whammy_Poster_1
 		pos = (286.0, 15.0)
 		dims = (896.0, 896.0)
 		rot_angle = -2
 		z = <z>
 	}
-	displaysprite {
+	displaySprite {
 		id = wbc_poster_2
 		parent = wbc_container
-		tex = options_whammy_poster_2
+		tex = Options_Whammy_Poster_2
 		pos = (286.0, 15.0)
 		dims = (896.0, 896.0)
 		rot_angle = -2
 		z = (<z> - 1)
 	}
 	if NOT (<popup>)
-		displaysprite {
+		displaySprite {
 			parent = wbc_container
-			tex = toprockers_tape_1
+			tex = Toprockers_Tape_1
 			pos = (1010.0, 450.0)
 			dims = (192.0, 92.0)
 			z = (<z> + 1)
 			flip_v
 			rot_angle = 90
 		}
-		displaysprite {
+		displaySprite {
 			parent = wbc_container
-			tex = toprockers_tape_2
+			tex = Toprockers_Tape_2
 			pos = (350.0, 200.0)
 			z = (<z> + 1)
 			rot_angle = 90
@@ -91,14 +91,14 @@ script create_whammy_bar_calibration_menu \{controller = 0
 	text_block_3_dims = (525.0, 300.0)
 	<text_1> = "Press  the  whammy  bar  completely  down, and  gently  allow  it  to  return  to  its  resting  position."
 	button_color = "Green"
-	getenterbuttonassignment
+	GetEnterButtonAssignment
 	if (<assignment> = circle)
 		button_color = "Red"
 	endif
-	formattext textname = text_2 "Press  the  %a  Button  to  calibrate  using  this  position." a = <button_color>
+	FormatText TextName = text_2 "Press  the  %a  Button  to  calibrate  using  this  position." a = <button_color>
 	<text_3> = "Repeat  the  process  until  you  see  the  \\c1''Resting  position  calibrated'' \\c0message  every  time  you  return  the  whammy  bar  to  its  resting  position."
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		font = text_a3
 		pos = <text_block_1_pos>
 		parent = wbc_container
@@ -113,8 +113,8 @@ script create_whammy_bar_calibration_menu \{controller = 0
 		rot_angle = -2
 		line_spacing = 0.8
 	}
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		font = text_a3
 		pos = <text_block_2_pos>
 		parent = wbc_container
@@ -129,8 +129,8 @@ script create_whammy_bar_calibration_menu \{controller = 0
 		rot_angle = -3
 		line_spacing = 0.8
 	}
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		font = text_a3
 		pos = <text_block_3_pos>
 		parent = wbc_container
@@ -145,8 +145,8 @@ script create_whammy_bar_calibration_menu \{controller = 0
 		rot_angle = -2
 		line_spacing = 0.8
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		font = text_a5
 		pos = (760.0, 315.0)
 		parent = wbc_container
@@ -157,8 +157,8 @@ script create_whammy_bar_calibration_menu \{controller = 0
 		scale = 1.6
 		rot_angle = -4
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		font = text_a5
 		pos = (800.0, 365.0)
 		parent = wbc_container
@@ -169,8 +169,8 @@ script create_whammy_bar_calibration_menu \{controller = 0
 		scale = 1.6
 		rot_angle = -4
 	}
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		font = text_a3
 		rgba = [140 235 170 255]
 		pos = (810.0, 408.0)
@@ -195,7 +195,7 @@ script create_whammy_bar_calibration_menu \{controller = 0
 		]
 		exclusive_device = <controller>
 	}
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = resting_message}
 	spawnscriptnow menu_whammy_bar_update_resting_message params = {controller = <controller>}
 	change \{user_control_pill_text_color = [
@@ -215,14 +215,14 @@ script create_whammy_bar_calibration_menu \{controller = 0
 endscript
 
 script destroy_whammy_bar_calibration_menu 
-	if iswinport
+	if IsWinPort
 		if ($g_spc_whammy_is_popup = 1)
 			restore_start_key_binding
 		endif
 	else
 		restore_start_key_binding
 	endif
-	killspawnedscript \{name = menu_whammy_bar_update_resting_message}
+	KillSpawnedScript \{name = menu_whammy_bar_update_resting_message}
 	destroy_menu \{menu_id = wbc_container}
 	clean_up_user_control_helpers
 	if NOT ($g_spc_whammy_is_popup)
@@ -231,7 +231,7 @@ script destroy_whammy_bar_calibration_menu
 endscript
 
 script menu_whammy_bar_calibration_enter_sample 
-	if guitargetanalogueinfo controller = <device_num>
+	if GuitarGetAnalogueInfo controller = <device_num>
 		if (<rightx> = 0)
 			<rightx> = 0.0001
 		elseif (<rightx> = 1)
@@ -239,19 +239,19 @@ script menu_whammy_bar_calibration_enter_sample
 		endif
 		switch (<device_num>)
 			case 0
-			setglobaltags user_options params = {resting_whammy_position_device_0 = <rightx>}
+			SetGlobalTags user_options params = {resting_whammy_position_device_0 = <rightx>}
 			case 1
-			setglobaltags user_options params = {resting_whammy_position_device_1 = <rightx>}
+			SetGlobalTags user_options params = {resting_whammy_position_device_1 = <rightx>}
 			case 2
-			setglobaltags user_options params = {resting_whammy_position_device_2 = <rightx>}
+			SetGlobalTags user_options params = {resting_whammy_position_device_2 = <rightx>}
 			case 3
-			setglobaltags user_options params = {resting_whammy_position_device_3 = <rightx>}
+			SetGlobalTags user_options params = {resting_whammy_position_device_3 = <rightx>}
 			case 4
-			setglobaltags user_options params = {resting_whammy_position_device_4 = <rightx>}
+			SetGlobalTags user_options params = {resting_whammy_position_device_4 = <rightx>}
 			case 5
-			setglobaltags user_options params = {resting_whammy_position_device_5 = <rightx>}
+			SetGlobalTags user_options params = {resting_whammy_position_device_5 = <rightx>}
 			case 6
-			setglobaltags user_options params = {resting_whammy_position_device_6 = <rightx>}
+			SetGlobalTags user_options params = {resting_whammy_position_device_6 = <rightx>}
 		endswitch
 		if (<device_num> = $player1_status.controller)
 			get_resting_whammy_position controller = <device_num>
@@ -268,31 +268,31 @@ endscript
 script menu_whammy_bar_update_resting_message 
 	begin
 	if is_whammy_resting controller = <controller>
-		if ($should_we_play_whammy_sound = 0)
-			soundevent \{event = whammy_test_sfx}
-			change \{should_we_play_whammy_sound = 1}
+		if ($SHOULD_WE_PLAY_WHAMMY_SOUND = 0)
+			SoundEvent \{event = Whammy_Test_SFX}
+			change \{SHOULD_WE_PLAY_WHAMMY_SOUND = 1}
 		endif
-		setscreenelementprops \{id = resting_message
+		SetScreenElementProps \{id = resting_message
 			unhide}
-		setscreenelementprops \{id = wbc_poster_1
+		SetScreenElementProps \{id = wbc_poster_1
 			alpha = 1}
 	else
-		change \{should_we_play_whammy_sound = 0}
-		setscreenelementprops \{id = resting_message
+		change \{SHOULD_WE_PLAY_WHAMMY_SOUND = 0}
+		SetScreenElementProps \{id = resting_message
 			hide}
 		menu_whammy_bar_do_poster_morph controller = <controller>
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
 script menu_whammy_bar_do_poster_morph 
-	if guitargetanalogueinfo controller = <controller>
+	if GuitarGetAnalogueInfo controller = <controller>
 		if (<rightx> >= 0)
-			setscreenelementprops id = wbc_poster_1 alpha = ((1 - <rightx>) * 0.5)
+			SetScreenElementProps id = wbc_poster_1 alpha = ((1 - <rightx>) * 0.5)
 		else
-			setscreenelementprops id = wbc_poster_1 alpha = ((0.5 * (<rightx> * -1)) + 0.5)
+			SetScreenElementProps id = wbc_poster_1 alpha = ((0.5 * (<rightx> * -1)) + 0.5)
 		endif
 	endif
 endscript
@@ -300,8 +300,8 @@ endscript
 script create_star_power_trigger_calibration_menu \{controller = 0
 		popup = 0}
 	kill_start_key_binding
-	createscreenelement \{id = spc_container
-		type = containerelement
+	CreateScreenElement \{id = spc_container
+		type = ContainerElement
 		parent = root_window
 		pos = (0.0, 0.0)
 		just = [
@@ -315,56 +315,56 @@ script create_star_power_trigger_calibration_menu \{controller = 0
 		<z> = -4
 	endif
 	if NOT (<popup>)
-		create_menu_backdrop \{texture = options_calibrate_starpower_posterwall}
+		create_menu_backdrop \{texture = Options_Calibrate_Starpower_Posterwall}
 	else
-		displaysprite \{parent = spc_container
-			tex = options_calibrate_starpower_posterwall
+		displaySprite \{parent = spc_container
+			tex = Options_Calibrate_Starpower_Posterwall
 			pos = (0.0, 0.0)
 			dims = (1280.0, 720.0)
 			z = 107}
 	endif
-	displaysprite {
+	displaySprite {
 		parent = spc_container
-		tex = options_calibrate_starpower_bg
+		tex = Options_Calibrate_Starpower_BG
 		pos = (326.0, 0.0)
 		dims = (512.0, 512.0)
 		rot_angle = -2
 		z = <z>
 	}
-	displaysprite {
+	displaySprite {
 		id = spc_rotating_bg_lines
 		parent = spc_container
-		tex = options_calibrate_starpower_bg2
+		tex = Options_Calibrate_Starpower_BG2
 		pos = (578.0, 156.0)
 		dims = (640.0, 640.0)
 		just = [center center]
 		rot_angle = 25
 		z = (<z> + 1)
 	}
-	displaysprite {
+	displaySprite {
 		id = spc_rotating_bg_planes
 		parent = spc_container
-		tex = options_calibrate_starpower_bg3
+		tex = Options_Calibrate_Starpower_BG3
 		pos = (568.0, 114.0)
 		dims = (512.0, 384.0)
 		just = [center center]
 		rot_angle = 20
 		z = (<z> + 2)
 	}
-	if english
-		starpower_pow_tex = options_calibrate_starpower_pow
-	elseif french
+	if English
+		starpower_pow_tex = Options_Calibrate_Starpower_Pow
+	elseif French
 		starpower_pow_tex = options_calibrate_starpower_pow_fr
-	elseif spanish
+	elseif Spanish
 		starpower_pow_tex = options_calibrate_starpower_pow_sp
-	elseif german
+	elseif German
 		starpower_pow_tex = options_calibrate_starpower_pow_de
-	elseif italian
+	elseif Italian
 		starpower_pow_tex = options_calibrate_starpower_pow_fr
-	elseif korean
-		starpower_pow_tex = options_calibrate_starpower_pow
+	elseif Korean
+		starpower_pow_tex = Options_Calibrate_Starpower_Pow
 	endif
-	displaysprite {
+	displaySprite {
 		id = spc_pow
 		parent = spc_container
 		tex = <starpower_pow_tex>
@@ -373,15 +373,15 @@ script create_star_power_trigger_calibration_menu \{controller = 0
 		relative_scale
 		z = (<z> + 3)
 	}
-	setscreenelementprops id = <id> hide
+	SetScreenElementProps id = <id> hide
 	button_color = "Green"
-	getenterbuttonassignment
+	GetEnterButtonAssignment
 	if (<assignment> = circle)
 		button_color = "Red"
 	endif
-	formattext textname = element_text "Raise the Guitar up to the point at which you would like Star Power to be triggered and press the %a Button to set this value." a = <button_color>
-	createscreenelement {
-		type = textblockelement
+	FormatText TextName = element_text "Raise the Guitar up to the point at which you would like Star Power to be triggered and press the %a Button to set this value." a = <button_color>
+	CreateScreenElement {
+		type = TextBlockElement
 		id = star_calibration_text
 		parent = spc_container
 		font = text_a6
@@ -400,7 +400,7 @@ script create_star_power_trigger_calibration_menu \{controller = 0
 		z_priority = (<z> + 6.1)
 		rot_angle = -2
 	}
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = star_calibration_text}
 	spawnscriptnow menu_star_power_trigger_pow_check params = {controller = <controller>}
 	add_user_control_helper \{text = "SELECT"
@@ -415,18 +415,18 @@ script destroy_star_power_trigger_calibration_menu
 	restore_start_key_binding
 	destroy_menu \{menu_id = spc_container}
 	clean_up_user_control_helpers
-	killspawnedscript \{name = menu_star_power_trigger_pow_check}
+	KillSpawnedScript \{name = menu_star_power_trigger_pow_check}
 	destroy_menu_backdrop
 endscript
 
 script menu_star_power_trigger_pow_check 
 	begin
-	if guitargetanalogueinfo controller = <controller>
-		<spc_v_dist> = <righty>
+	if GuitarGetAnalogueInfo controller = <controller>
+		<spc_v_dist> = <RightY>
 		if (<spc_v_dist> > 0)
 			<spc_v_dist> = 0
 		endif
-		getglobaltags \{user_options}
+		GetGlobalTags \{user_options}
 		if (<controller> = $player1_status.controller)
 			if (<lefty_flip_p1> = 1)
 				<line_rot> = (25.0 -30.0 * ((<spc_v_dist>) * -1))
@@ -440,34 +440,34 @@ script menu_star_power_trigger_pow_check
 				<line_rot> = (25.0 -30.0 * <spc_v_dist>)
 			endif
 		endif
-		setscreenelementprops id = spc_rotating_bg_lines rot_angle = <line_rot>
-		setscreenelementprops id = spc_rotating_bg_planes rot_angle = (<line_rot> - 5.0)
+		SetScreenElementProps id = spc_rotating_bg_lines rot_angle = <line_rot>
+		SetScreenElementProps id = spc_rotating_bg_planes rot_angle = (<line_rot> - 5.0)
 		get_star_power_position controller = <controller>
 		<spc_pos_dev> = <star_power_position>
-		wait \{0.05
+		Wait \{0.05
 			seconds}
 		if (<spc_v_dist> <= <spc_pos_dev>)
 			if ($g_spc_check_pow_bool = 1)
-				soundevent \{event = pow_sfx}
+				SoundEvent \{event = POW_SFX}
 				<spc_pow_rand_x> = 0
 				<spc_pow_rand_y> = 0
 				<spc_pow_rand_scale> = 0
 				<spc_pow_rand_rot> = 0
-				getrandomvalue \{name = spc_pow_rand_x
-					integer
+				GetRandomValue \{name = spc_pow_rand_x
+					Integer
 					a = 380
 					b = 470}
-				getrandomvalue \{name = spc_pow_rand_y
-					integer
+				GetRandomValue \{name = spc_pow_rand_y
+					Integer
 					a = 50
 					b = 80}
-				getrandomvalue \{name = spc_pow_rand_scale
+				GetRandomValue \{name = spc_pow_rand_scale
 					a = 0.6
 					b = 1.0}
-				getrandomvalue \{name = spc_pow_rand_rot
+				GetRandomValue \{name = spc_pow_rand_rot
 					a = -3.0
 					b = 3.0}
-				setscreenelementprops {
+				SetScreenElementProps {
 					id = spc_pow
 					unhide
 					pos = (((1.0, 0.0) * <spc_pow_rand_x>) + ((0.0, 1.0) * <spc_pow_rand_y>))
@@ -478,35 +478,35 @@ script menu_star_power_trigger_pow_check
 				change \{g_spc_check_pow_bool = 0}
 			endif
 		else
-			setscreenelementprops \{id = spc_pow
+			SetScreenElementProps \{id = spc_pow
 				hide}
 			change \{g_spc_check_pow_bool = 1}
 		endif
 	else
-		wait \{0.05
+		Wait \{0.05
 			seconds}
 	endif
 	repeat
 endscript
 
 script menu_star_power_trigger_enter_position 
-	if guitargetanalogueinfo controller = <device_num>
-		if (<righty> > 0)
-			<righty> = 0
+	if GuitarGetAnalogueInfo controller = <device_num>
+		if (<RightY> > 0)
+			<RightY> = 0
 		endif
 		switch (<device_num>)
 			case 0
-			setglobaltags user_options params = {star_power_position_device_0 = <righty>}
-			soundevent \{event = pow_sfx}
+			SetGlobalTags user_options params = {star_power_position_device_0 = <RightY>}
+			SoundEvent \{event = POW_SFX}
 			case 1
-			setglobaltags user_options params = {star_power_position_device_1 = <righty>}
-			soundevent \{event = pow_sfx}
+			SetGlobalTags user_options params = {star_power_position_device_1 = <RightY>}
+			SoundEvent \{event = POW_SFX}
 			case 2
-			setglobaltags user_options params = {star_power_position_device_2 = <righty>}
-			soundevent \{event = pow_sfx}
+			SetGlobalTags user_options params = {star_power_position_device_2 = <RightY>}
+			SoundEvent \{event = POW_SFX}
 			case 3
-			setglobaltags user_options params = {star_power_position_device_3 = <righty>}
-			soundevent \{event = pow_sfx}
+			SetGlobalTags user_options params = {star_power_position_device_3 = <RightY>}
+			SoundEvent \{event = POW_SFX}
 		endswitch
 		if (<device_num> = $player1_status.controller)
 			get_star_power_position controller = <device_num>
@@ -521,7 +521,7 @@ script menu_star_power_trigger_enter_position
 endscript
 
 script create_guitar_diagnostic_menu 
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = gd_container
 		pos = (0.0, 0.0)
@@ -529,7 +529,7 @@ script create_guitar_diagnostic_menu
 			left
 			top
 		]}
-	createscreenelement \{type = spriteelement
+	CreateScreenElement \{type = SpriteElement
 		parent = gd_container
 		pos = (0.0, 0.0)
 		just = [
@@ -545,64 +545,64 @@ script create_guitar_diagnostic_menu
 		]
 		z_priority = -1}
 	font = text_a4
-	text_params = {type = textelement parent = gd_container font = <font> just = [left top]}
-	createscreenelement {
+	text_params = {type = TextElement parent = gd_container font = <font> just = [left top]}
+	CreateScreenElement {
 		<text_params>
 		id = title_text
 		text = "Guitar info"
 		pos = (540.0, 100.0)
 	}
-	createscreenelement {
+	CreateScreenElement {
 		<text_params>
 		id = leftx
 		text = "Left X "
 		pos = (580.0, 200.0)
 	}
-	createscreenelement {
+	CreateScreenElement {
 		<text_params>
 		id = rightx
 		text = "Right X "
 		pos = (580.0, 240.0)
 	}
-	createscreenelement {
+	CreateScreenElement {
 		<text_params>
 		id = lefty
 		text = "Left Y "
 		pos = (580.0, 280.0)
 	}
-	createscreenelement {
+	CreateScreenElement {
 		<text_params>
-		id = righty
+		id = RightY
 		text = "Right Y "
 		pos = (580.0, 320.0)
 	}
-	createscreenelement {
+	CreateScreenElement {
 		<text_params>
 		id = leftlength
 		text = "Left Length "
 		pos = (580.0, 360.0)
 	}
-	createscreenelement {
+	CreateScreenElement {
 		<text_params>
 		id = rightlength
 		text = "Right Length "
 		pos = (580.0, 400.0)
 	}
-	createscreenelement {
+	CreateScreenElement {
 		<text_params>
 		id = lefttrigger
 		text = "Left Trigger "
 		pos = (580.0, 440.0)
 	}
-	createscreenelement {
+	CreateScreenElement {
 		<text_params>
 		id = righttrigger
 		text = "Right Trigger "
 		pos = (580.0, 480.0)
 	}
-	createscreenelement {
+	CreateScreenElement {
 		<text_params>
-		id = verticaldist
+		id = VerticalDist
 		text = "Vertical Dist "
 		pos = (580.0, 520.0)
 	}
@@ -610,33 +610,33 @@ script create_guitar_diagnostic_menu
 endscript
 
 script destroy_guitar_diagnostic_menu 
-	killspawnedscript \{name = update_guitar_diagnostic_menu}
+	KillSpawnedScript \{name = update_guitar_diagnostic_menu}
 	destroy_menu \{menu_id = gd_container}
 endscript
 
 script update_guitar_diagnostic_menu 
 	begin
-	if guitargetanalogueinfo \{controller = 0}
-		formattext textname = leftxtext "Left X - %v" v = <leftx>
-		formattext textname = rightxtext "Whammy position - %v" v = <rightx>
-		formattext textname = leftytext "Left Y - %v" v = <lefty>
-		formattext textname = rightytext "Right Y - %v" v = <righty>
-		formattext textname = leftlengthtext "Left Length - %v" v = <leftlength>
-		formattext textname = rightlengthtext "Right Length - %v" v = <rightlength>
-		formattext textname = lefttriggertext "Left Trigger - %v" v = <lefttrigger>
-		formattext textname = righttriggertext "Right Trigger - %v" v = <righttrigger>
-		formattext textname = verticaldisttext "Vertical orientation - %v" v = <verticaldist>
-		setscreenelementprops id = leftx text = <leftxtext>
-		setscreenelementprops id = rightx text = <rightxtext>
-		setscreenelementprops id = lefty text = <leftytext>
-		setscreenelementprops id = righty text = <rightytext>
-		setscreenelementprops id = leftlength text = <leftlengthtext>
-		setscreenelementprops id = rightlength text = <rightlengthtext>
-		setscreenelementprops id = lefttrigger text = <lefttriggertext>
-		setscreenelementprops id = righttrigger text = <righttriggertext>
-		setscreenelementprops id = verticaldist text = <verticaldisttext>
+	if GuitarGetAnalogueInfo \{controller = 0}
+		FormatText TextName = leftxtext "Left X - %v" v = <leftx>
+		FormatText TextName = rightxtext "Whammy position - %v" v = <rightx>
+		FormatText TextName = leftytext "Left Y - %v" v = <lefty>
+		FormatText TextName = rightytext "Right Y - %v" v = <RightY>
+		FormatText TextName = leftlengthtext "Left Length - %v" v = <leftlength>
+		FormatText TextName = rightlengthtext "Right Length - %v" v = <rightlength>
+		FormatText TextName = lefttriggertext "Left Trigger - %v" v = <lefttrigger>
+		FormatText TextName = righttriggertext "Right Trigger - %v" v = <righttrigger>
+		FormatText TextName = verticaldisttext "Vertical orientation - %v" v = <VerticalDist>
+		SetScreenElementProps id = leftx text = <leftxtext>
+		SetScreenElementProps id = rightx text = <rightxtext>
+		SetScreenElementProps id = lefty text = <leftytext>
+		SetScreenElementProps id = RightY text = <rightytext>
+		SetScreenElementProps id = leftlength text = <leftlengthtext>
+		SetScreenElementProps id = rightlength text = <rightlengthtext>
+		SetScreenElementProps id = lefttrigger text = <lefttriggertext>
+		SetScreenElementProps id = righttrigger text = <righttriggertext>
+		SetScreenElementProps id = VerticalDist text = <verticaldisttext>
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript

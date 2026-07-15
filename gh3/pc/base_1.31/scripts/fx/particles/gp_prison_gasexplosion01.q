@@ -1,54 +1,54 @@
-gp_prison_gasexplosion01 = {
+GP_Prison_GasExplosion01 = {
 	pos = (-3.6405418, -0.46997103, 10.573374)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	emitrangedims = (0.5, 0.1, 0.5)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	EmitRangeDims = (0.5, 0.1, 0.5)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, 0.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	radiate
-	elevspread = (90.0, 110.0)
-	sweepspread = (0.0, 360.0)
-	liferange = (1.0, 1.5)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	Radiate
+	ElevSpread = (90.0, 110.0)
+	SweepSpread = (0.0, 360.0)
+	LifeRange = (1.0, 1.5)
 	emit_rate = 100.0
 	max = 0
-	timeseed = 0.3
-	lifetime = 0.0
-	emitnum = 64
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.3
+	lifeTime = 0.0
+	emitNum = 64
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(1.5, 1.5)
 		(2.0, 2.0)
 	]
-	speedrange = (3.0, 4.0)
-	rotvel = (-0.2, -0.5)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	pathfollowtime = 0.0
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (3.0, 4.0)
+	RotVel = (-0.2, -0.5)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.0
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -1515613482
-	lod_default
-	quickmaterial = {
-		texturelayout = layout2x2
-		diffusetextureenabled
-		diffusetexture = jow_smoke01
-		specularpower = 0
-		lighting
+	LOD_Default
+	QuickMaterial = {
+		TextureLayout = Layout2x2
+		DiffuseTextureEnabled
+		DiffuseTexture = jow_smoke01
+		SpecularPower = 0
+		Lighting
 		alphacutoff = 64
-		blendmode = blend
-		quadanimationfps = 0
+		blendMode = blend
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.377769, 0.0, -0.0)
 		(-0.377769, 0.0, -0.0)
 		(-0.26279598, 0.0, -0.0)
@@ -59,7 +59,7 @@ gp_prison_gasexplosion01 = {
 		(0.41061902, 0.0, -0.0)
 		(0.41061902, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-215041
 		-419439873
 		-471604225
@@ -67,7 +67,7 @@ gp_prison_gasexplosion01 = {
 		-1044266752
 		-1027423744
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.4375
 		1.0
 	]

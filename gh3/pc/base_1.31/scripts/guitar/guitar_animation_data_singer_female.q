@@ -1,680 +1,680 @@
 singer_female_animations = {
-	stance_a = {
-		idle = {
+	Stance_A = {
+		Idle = {
 			good = {
-				fast = [
-					gh3_singer_fem_nosing_fst_idle01
-					gh3_singer_fem_nosing_fst_idle02
-					gh3_singer_fem_nosing_fst_idle03
-					gh3_singer_fem_nosing_fst_idle04
-					gh3_singer_fem_nosing_fst_clap
-					gh3_singer_fem_nosing_fst_fistpmp
+				Fast = [
+					GH3_Singer_Fem_NoSing_Fst_Idle01
+					GH3_Singer_Fem_NoSing_Fst_Idle02
+					GH3_Singer_Fem_NoSing_Fst_Idle03
+					GH3_Singer_Fem_NoSing_Fst_Idle04
+					GH3_Singer_Fem_NoSing_Fst_Clap
+					GH3_Singer_Fem_NoSing_Fst_FistPmp
 				]
-				med = [
-					gh3_singer_fem_nosing_med_idle01
-					gh3_singer_fem_nosing_med_idle02
-					gh3_singer_fem_nosing_med_idle03
-					gh3_singer_fem_nosing_med_idle04
-					gh3_singer_fem_nosing_med_idle05
-					gh3_singer_fem_nosing_med_idle06
-					gh3_singer_fem_nosing_med_idleclap
+				Med = [
+					GH3_Singer_Fem_NoSing_Med_Idle01
+					GH3_Singer_Fem_NoSing_Med_Idle02
+					GH3_Singer_Fem_NoSing_Med_Idle03
+					GH3_Singer_Fem_NoSing_Med_Idle04
+					GH3_Singer_Fem_NoSing_Med_Idle05
+					GH3_Singer_Fem_NoSing_Med_Idle06
+					GH3_Singer_Fem_NoSing_Med_IdleClap
 				]
-				slow = [
-					gh3_singer_fem_slw_nsidle1
-					gh3_singer_fem_slw_nsidle2
-					gh3_singer_fem_slw_nsidle3
-					gh3_singer_fem_slw_nssolo2
-					gh3_singer_fem_slw_nssolo3
-					gh3_singer_fem_slw_nssolo5
-				]
-			}
-			normal = {
-				fast = [
-					gh3_singer_fem_nosing_fst_idle01
-					gh3_singer_fem_nosing_fst_idle02
-					gh3_singer_fem_nosing_fst_idle03
-					gh3_singer_fem_nosing_fst_idle04
-				]
-				med = [
-					gh3_singer_fem_nosing_med_idle01
-					gh3_singer_fem_nosing_med_idle02
-					gh3_singer_fem_nosing_med_idle03
-					gh3_singer_fem_nosing_med_idle04
-				]
-				slow = [
-					gh3_singer_fem_slw_nsidle1
-					gh3_singer_fem_slw_nsidle2
-					gh3_singer_fem_slw_nsidle3
-					gh3_singer_fem_slw_nssolo2
-					gh3_singer_fem_slw_nssolo3
-					gh3_singer_fem_slw_nssolo5
+				Slow = [
+					GH3_Singer_Fem_Slw_NSIdle1
+					GH3_Singer_Fem_Slw_NSIdle2
+					GH3_Singer_Fem_Slw_NSIdle3
+					GH3_Singer_Fem_Slw_NSSolo2
+					GH3_Singer_Fem_Slw_NSSolo3
+					GH3_Singer_Fem_Slw_NSSolo5
 				]
 			}
-			bad = {
-				fast = [
-					gh3_singer_fem_nosing_fst_idle01
-					gh3_singer_fem_nosing_fst_hips
+			Normal = {
+				Fast = [
+					GH3_Singer_Fem_NoSing_Fst_Idle01
+					GH3_Singer_Fem_NoSing_Fst_Idle02
+					GH3_Singer_Fem_NoSing_Fst_Idle03
+					GH3_Singer_Fem_NoSing_Fst_Idle04
 				]
-				med = [
-					gh3_singer_fem_nosing_med_idle01
-					gh3_singer_fem_nosing_med_idle02
+				Med = [
+					GH3_Singer_Fem_NoSing_Med_Idle01
+					GH3_Singer_Fem_NoSing_Med_Idle02
+					GH3_Singer_Fem_NoSing_Med_Idle03
+					GH3_Singer_Fem_NoSing_Med_Idle04
 				]
-				slow = [
-					gh3_singer_fem_slw_nsidle1
-					gh3_singer_fem_slw_nsidle3
-					gh3_singer_fem_slw_nssolo2
+				Slow = [
+					GH3_Singer_Fem_Slw_NSIdle1
+					GH3_Singer_Fem_Slw_NSIdle2
+					GH3_Singer_Fem_Slw_NSIdle3
+					GH3_Singer_Fem_Slw_NSSolo2
+					GH3_Singer_Fem_Slw_NSSolo3
+					GH3_Singer_Fem_Slw_NSSolo5
+				]
+			}
+			Bad = {
+				Fast = [
+					GH3_Singer_Fem_NoSing_Fst_Idle01
+					GH3_Singer_Fem_NoSing_Fst_hips
+				]
+				Med = [
+					GH3_Singer_Fem_NoSing_Med_Idle01
+					GH3_Singer_Fem_NoSing_Med_Idle02
+				]
+				Slow = [
+					GH3_Singer_Fem_Slw_NSIdle1
+					GH3_Singer_Fem_Slw_NSIdle3
+					GH3_Singer_Fem_Slw_NSSolo2
 				]
 			}
 		}
 		special = {
 			good = {
-				fast = [
-					gh3_singer_fem_sing_fst_spec01
-					gh3_singer_fem_sing_fst_spec02
-					gh3_singer_fem_sing_fst_spec03
-					gh3_singer_fem_sing_fst_spec04
-					gh3_singer_fem_sing_fst_spec05
+				Fast = [
+					GH3_Singer_Fem_Sing_Fst_Spec01
+					GH3_Singer_Fem_Sing_Fst_Spec02
+					GH3_Singer_Fem_Sing_Fst_Spec03
+					GH3_Singer_Fem_Sing_Fst_Spec04
+					GH3_Singer_Fem_Sing_Fst_Spec05
 				]
-				med = [
-					gh3_singer_fem_nosing_med_hdbang
-					gh3_singer_fem_nosing_med_spin
-					gh3_singer_fem_nosing_med_pump
-					gh3_singer_fem_nosing_med_shfl
-					gh3_singer_fem_nosing_med_back
+				Med = [
+					GH3_Singer_Fem_NoSing_Med_HdBang
+					GH3_Singer_Fem_NoSing_Med_Spin
+					GH3_Singer_Fem_NoSing_Med_Pump
+					GH3_Singer_Fem_NoSing_Med_Shfl
+					GH3_Singer_Fem_NoSing_Med_Back
 				]
-				slow = [
-					gh3_singer_fem_slw_nssolo1
-					gh3_singer_fem_slw_nssolo2
-					gh3_singer_fem_slw_nssolo3
-					gh3_singer_fem_slw_nssolo4
-					gh3_singer_fem_slw_nssolo5
-					gh3_singer_fem_slw_nssolo6
-					gh3_singer_fem_slw_nssolo7
-				]
-			}
-			normal = {
-				fast = [
-					gh3_singer_fem_sing_fst_spec01
-					gh3_singer_fem_sing_fst_spec03
-					gh3_singer_fem_sing_fst_spec05
-				]
-				med = [
-					gh3_singer_fem_nosing_med_pump
-					gh3_singer_fem_nosing_med_shfl
-					gh3_singer_fem_nosing_med_back
-				]
-				slow = [
-					gh3_singer_fem_slw_nssolo1
-					gh3_singer_fem_slw_nssolo2
-					gh3_singer_fem_slw_nssolo3
-					gh3_singer_fem_slw_nssolo4
-					gh3_singer_fem_slw_nssolo5
-					gh3_singer_fem_slw_nssolo6
-					gh3_singer_fem_slw_nssolo7
+				Slow = [
+					GH3_Singer_Fem_Slw_NSSolo1
+					GH3_Singer_Fem_Slw_NSSolo2
+					GH3_Singer_Fem_Slw_NSSolo3
+					GH3_Singer_Fem_Slw_NSSolo4
+					GH3_Singer_Fem_Slw_NSSolo5
+					GH3_Singer_Fem_Slw_NSSolo6
+					GH3_Singer_Fem_Slw_NSSolo7
 				]
 			}
-			bad = {
-				fast = [
-					gh3_singer_fem_nosing_fst_fistpmp
+			Normal = {
+				Fast = [
+					GH3_Singer_Fem_Sing_Fst_Spec01
+					GH3_Singer_Fem_Sing_Fst_Spec03
+					GH3_Singer_Fem_Sing_Fst_Spec05
 				]
-				med = [
-					gh3_singer_fem_nosing_med_idle01
-					gh3_singer_fem_nosing_med_idle02
+				Med = [
+					GH3_Singer_Fem_NoSing_Med_Pump
+					GH3_Singer_Fem_NoSing_Med_Shfl
+					GH3_Singer_Fem_NoSing_Med_Back
 				]
-				slow = [
-					gh3_singer_fem_slw_nssolo1
-					gh3_singer_fem_slw_nssolo2
-					gh3_singer_fem_slw_nssolo4
-					gh3_singer_fem_slw_nssolo6
+				Slow = [
+					GH3_Singer_Fem_Slw_NSSolo1
+					GH3_Singer_Fem_Slw_NSSolo2
+					GH3_Singer_Fem_Slw_NSSolo3
+					GH3_Singer_Fem_Slw_NSSolo4
+					GH3_Singer_Fem_Slw_NSSolo5
+					GH3_Singer_Fem_Slw_NSSolo6
+					GH3_Singer_Fem_Slw_NSSolo7
+				]
+			}
+			Bad = {
+				Fast = [
+					GH3_Singer_Fem_NoSing_Fst_FistPmp
+				]
+				Med = [
+					GH3_Singer_Fem_NoSing_Med_Idle01
+					GH3_Singer_Fem_NoSing_Med_Idle02
+				]
+				Slow = [
+					GH3_Singer_Fem_Slw_NSSolo1
+					GH3_Singer_Fem_Slw_NSSolo2
+					GH3_Singer_Fem_Slw_NSSolo4
+					GH3_Singer_Fem_Slw_NSSolo6
 				]
 			}
 		}
-		transitions = {
+		Transitions = {
 			stance_b = {
 				good = {
-					fast = gh3_singer_fem_trans_nosngsng
-					med = gh3_singer_fem_trans_med_nosngsng
-					slow = gh3_singer_fem_trans_nosngsng
+					Fast = GH3_Singer_Fem_Trans_NoSngSng
+					Med = GH3_Singer_Fem_Trans_Med_NoSngSng
+					Slow = GH3_Singer_Fem_Trans_NoSngSng
 				}
-				normal = {
-					fast = gh3_singer_fem_trans_nosngsng
-					med = gh3_singer_fem_trans_med_nosngsng
-					slow = gh3_singer_fem_trans_nosngsng
+				Normal = {
+					Fast = GH3_Singer_Fem_Trans_NoSngSng
+					Med = GH3_Singer_Fem_Trans_Med_NoSngSng
+					Slow = GH3_Singer_Fem_Trans_NoSngSng
 				}
-				bad = {
-					fast = gh3_singer_fem_trans_nosngsng
-					med = gh3_singer_fem_trans_med_nosngsng
-					slow = gh3_singer_fem_trans_nosngsng
+				Bad = {
+					Fast = GH3_Singer_Fem_Trans_NoSngSng
+					Med = GH3_Singer_Fem_Trans_Med_NoSngSng
+					Slow = GH3_Singer_Fem_Trans_NoSngSng
 				}
 			}
 			intro = gh3_singer_fem_intro2
 		}
 	}
 	stance_b = {
-		idle = {
+		Idle = {
 			good = {
-				fast = [
-					gh3_singer_fem_sing_fst_idle01
-					gh3_singer_fem_sing_fst_idle02
-					gh3_singer_fem_sing_fst_idle03
-					gh3_singer_fem_sing_fst_idle04
-					gh3_singer_fem_sing_fst_idle05
-					gh3_singer_fem_sing_fst_idle06
-					gh3_singer_fem_sing_fst_idlewave
-					gh3_singer_fem_sing_fst_idlebig
-					gh3_singer_fem_sing_fst_solo03
-					gh3_singer_fem_sing_fst_solo04
-					gh3_singer_fem_sing_fst_solo05
+				Fast = [
+					GH3_Singer_Fem_Sing_Fst_Idle01
+					GH3_Singer_Fem_Sing_Fst_Idle02
+					GH3_Singer_Fem_Sing_Fst_Idle03
+					GH3_Singer_Fem_Sing_Fst_Idle04
+					GH3_Singer_Fem_Sing_Fst_Idle05
+					GH3_Singer_Fem_Sing_Fst_Idle06
+					GH3_Singer_Fem_Sing_Fst_IdleWave
+					GH3_Singer_Fem_Sing_Fst_IdleBig
+					GH3_Singer_Fem_Sing_Fst_Solo03
+					GH3_Singer_Fem_Sing_Fst_Solo04
+					GH3_Singer_Fem_Sing_Fst_Solo05
 				]
-				med = [
-					gh3_singer_fem_sing_med_idle01
-					gh3_singer_fem_sing_med_idle02
-					gh3_singer_fem_sing_med_idle03
-					gh3_singer_fem_sing_med_idle04
-					gh3_singer_fem_sing_med_idle05
-					gh3_singer_fem_sing_med_idle06
-					gh3_singer_fem_sing_med_spec_lngl
-					gh3_singer_fem_sing_med_spec_lngr
+				Med = [
+					GH3_Singer_Fem_Sing_Med_Idle01
+					GH3_Singer_Fem_Sing_Med_Idle02
+					GH3_Singer_Fem_Sing_Med_Idle03
+					GH3_Singer_Fem_Sing_Med_Idle04
+					GH3_Singer_Fem_Sing_Med_Idle05
+					GH3_Singer_Fem_Sing_Med_Idle06
+					GH3_Singer_Fem_Sing_Med_Spec_LngL
+					GH3_Singer_Fem_Sing_Med_Spec_LngR
 				]
-				slow = [
-					gh3_singer_fem_slw_sidle1
-					gh3_singer_fem_slw_sidle2
-					gh3_singer_fem_slw_ssolo1
-					gh3_singer_fem_slw_ssolo2
-					gh3_singer_fem_slw_ssolo3
-					gh3_singer_fem_slw_ssolo5
-					gh3_singer_fem_slw_ssolo6
-					gh3_singer_fem_slw_sspecial4
-				]
-			}
-			normal = {
-				fast = [
-					gh3_singer_fem_sing_fst_idle01
-					gh3_singer_fem_sing_fst_idle02
-					gh3_singer_fem_sing_fst_idle03
-					gh3_singer_fem_sing_fst_idle04
-					gh3_singer_fem_sing_fst_idle05
-					gh3_singer_fem_sing_fst_idlewave
-					gh3_singer_fem_sing_fst_idlebig
-					gh3_singer_fem_sing_fst_solo01
-					gh3_singer_fem_sing_fst_solo04
-				]
-				med = [
-					gh3_singer_fem_sing_med_idle01
-					gh3_singer_fem_sing_med_idle02
-					gh3_singer_fem_sing_med_idle03
-					gh3_singer_fem_sing_med_idle04
-					gh3_singer_fem_sing_med_idle05
-					gh3_singer_fem_sing_med_idle06
-					gh3_singer_fem_sing_med_spec_lngl
-					gh3_singer_fem_sing_med_spec_lngr
-				]
-				slow = [
-					gh3_singer_fem_slw_sidle1
-					gh3_singer_fem_slw_sidle2
-					gh3_singer_fem_slw_ssolo1
-					gh3_singer_fem_slw_ssolo2
-					gh3_singer_fem_slw_ssolo3
-					gh3_singer_fem_slw_ssolo5
-					gh3_singer_fem_slw_ssolo6
+				Slow = [
+					GH3_Singer_Fem_Slw_SIdle1
+					GH3_Singer_Fem_Slw_SIdle2
+					GH3_Singer_Fem_Slw_SSolo1
+					GH3_Singer_Fem_Slw_SSolo2
+					GH3_Singer_Fem_Slw_SSolo3
+					GH3_Singer_Fem_Slw_SSolo5
+					GH3_Singer_Fem_Slw_SSolo6
+					GH3_Singer_Fem_Slw_SSpecial4
 				]
 			}
-			bad = {
-				fast = [
-					gh3_singer_fem_sing_fst_idle01
-					gh3_singer_fem_sing_fst_solo02
+			Normal = {
+				Fast = [
+					GH3_Singer_Fem_Sing_Fst_Idle01
+					GH3_Singer_Fem_Sing_Fst_Idle02
+					GH3_Singer_Fem_Sing_Fst_Idle03
+					GH3_Singer_Fem_Sing_Fst_Idle04
+					GH3_Singer_Fem_Sing_Fst_Idle05
+					GH3_Singer_Fem_Sing_Fst_IdleWave
+					GH3_Singer_Fem_Sing_Fst_IdleBig
+					GH3_Singer_Fem_Sing_Fst_Solo01
+					GH3_Singer_Fem_Sing_Fst_Solo04
 				]
-				med = [
-					gh3_singer_fem_sing_med_idle01
-					gh3_singer_fem_sing_med_idle03
+				Med = [
+					GH3_Singer_Fem_Sing_Med_Idle01
+					GH3_Singer_Fem_Sing_Med_Idle02
+					GH3_Singer_Fem_Sing_Med_Idle03
+					GH3_Singer_Fem_Sing_Med_Idle04
+					GH3_Singer_Fem_Sing_Med_Idle05
+					GH3_Singer_Fem_Sing_Med_Idle06
+					GH3_Singer_Fem_Sing_Med_Spec_LngL
+					GH3_Singer_Fem_Sing_Med_Spec_LngR
 				]
-				slow = [
-					gh3_singer_fem_slw_sidle1
-					gh3_singer_fem_slw_sidle2
-					gh3_singer_fem_slw_ssolo1
-					gh3_singer_fem_slw_ssolo2
-					gh3_singer_fem_slw_ssolo5
-					gh3_singer_fem_slw_ssolo6
+				Slow = [
+					GH3_Singer_Fem_Slw_SIdle1
+					GH3_Singer_Fem_Slw_SIdle2
+					GH3_Singer_Fem_Slw_SSolo1
+					GH3_Singer_Fem_Slw_SSolo2
+					GH3_Singer_Fem_Slw_SSolo3
+					GH3_Singer_Fem_Slw_SSolo5
+					GH3_Singer_Fem_Slw_SSolo6
+				]
+			}
+			Bad = {
+				Fast = [
+					GH3_Singer_Fem_Sing_Fst_Idle01
+					GH3_Singer_Fem_Sing_Fst_Solo02
+				]
+				Med = [
+					GH3_Singer_Fem_Sing_Med_Idle01
+					GH3_Singer_Fem_Sing_Med_Idle03
+				]
+				Slow = [
+					GH3_Singer_Fem_Slw_SIdle1
+					GH3_Singer_Fem_Slw_SIdle2
+					GH3_Singer_Fem_Slw_SSolo1
+					GH3_Singer_Fem_Slw_SSolo2
+					GH3_Singer_Fem_Slw_SSolo5
+					GH3_Singer_Fem_Slw_SSolo6
 				]
 			}
 		}
 		special = {
 			good = {
-				fast = [
-					gh3_singer_fem_sing_fst_idle01
-					gh3_singer_fem_sing_fst_spec02
-					gh3_singer_fem_sing_fst_spec05
+				Fast = [
+					GH3_Singer_Fem_Sing_Fst_Idle01
+					GH3_Singer_Fem_Sing_Fst_Spec02
+					GH3_Singer_Fem_Sing_Fst_Spec05
 				]
-				med = [
-					gh3_singer_fem_sing_med_spec_jmp
-					gh3_singer_fem_sing_med_spec_spn1
-					gh3_singer_fem_sing_med_spec_spn2
-					gh3_singer_fem_sing_med_spec_spn3
+				Med = [
+					GH3_Singer_Fem_Sing_Med_Spec_jmp
+					GH3_Singer_Fem_Sing_Med_Spec_Spn1
+					GH3_Singer_Fem_Sing_Med_Spec_Spn2
+					GH3_Singer_Fem_Sing_Med_Spec_Spn3
 				]
-				slow = [
-					gh3_singer_fem_slw_ssolo1
-					gh3_singer_fem_slw_ssolo2
-					gh3_singer_fem_slw_ssolo3
-					gh3_singer_fem_slw_ssolo4
-					gh3_singer_fem_slw_ssolo5
-					gh3_singer_fem_slw_ssolo6
-					gh3_singer_fem_slw_ssolo7
-					gh3_singer_fem_slw_sspecial1
-					gh3_singer_fem_slw_sspecial2
-					gh3_singer_fem_slw_sspecial3
-					gh3_singer_fem_slw_sspecial4
-					gh3_singer_fem_slw_sspecial5
-					gh3_singer_fem_slw_sspecial6
-				]
-			}
-			normal = {
-				fast = [
-					gh3_singer_fem_sing_fst_spec01
-					gh3_singer_fem_sing_fst_spec05
-				]
-				med = [
-					gh3_singer_fem_sing_med_spec_jmp
-					gh3_singer_fem_sing_med_spec_spn1
-					gh3_singer_fem_sing_med_spec_spn2
-					gh3_singer_fem_sing_med_spec_spn3
-				]
-				slow = [
-					gh3_singer_fem_slw_ssolo1
-					gh3_singer_fem_slw_ssolo2
-					gh3_singer_fem_slw_ssolo3
-					gh3_singer_fem_slw_ssolo4
-					gh3_singer_fem_slw_ssolo5
-					gh3_singer_fem_slw_ssolo6
-					gh3_singer_fem_slw_ssolo7
-					gh3_singer_fem_slw_sspecial1
-					gh3_singer_fem_slw_sspecial2
-					gh3_singer_fem_slw_sspecial3
-					gh3_singer_fem_slw_sspecial5
-					gh3_singer_fem_slw_sspecial6
+				Slow = [
+					GH3_Singer_Fem_Slw_SSolo1
+					GH3_Singer_Fem_Slw_SSolo2
+					GH3_Singer_Fem_Slw_SSolo3
+					GH3_Singer_Fem_Slw_SSolo4
+					GH3_Singer_Fem_Slw_SSolo5
+					GH3_Singer_Fem_Slw_SSolo6
+					GH3_Singer_Fem_Slw_SSolo7
+					GH3_Singer_Fem_Slw_SSpecial1
+					GH3_Singer_Fem_Slw_SSpecial2
+					GH3_Singer_Fem_Slw_SSpecial3
+					GH3_Singer_Fem_Slw_SSpecial4
+					GH3_Singer_Fem_Slw_SSpecial5
+					GH3_Singer_Fem_Slw_SSpecial6
 				]
 			}
-			bad = {
-				fast = [
-					gh3_singer_fem_sing_fst_idle01
+			Normal = {
+				Fast = [
+					GH3_Singer_Fem_Sing_Fst_Spec01
+					GH3_Singer_Fem_Sing_Fst_Spec05
 				]
-				med = [
-					gh3_singer_fem_sing_med_idle01
-					gh3_singer_fem_sing_med_idle02
+				Med = [
+					GH3_Singer_Fem_Sing_Med_Spec_jmp
+					GH3_Singer_Fem_Sing_Med_Spec_Spn1
+					GH3_Singer_Fem_Sing_Med_Spec_Spn2
+					GH3_Singer_Fem_Sing_Med_Spec_Spn3
 				]
-				slow = [
-					gh3_singer_fem_slw_ssolo1
-					gh3_singer_fem_slw_ssolo2
-					gh3_singer_fem_slw_ssolo3
-					gh3_singer_fem_slw_ssolo4
-					gh3_singer_fem_slw_ssolo5
-					gh3_singer_fem_slw_ssolo6
-					gh3_singer_fem_slw_ssolo7
-					gh3_singer_fem_slw_sspecial1
-					gh3_singer_fem_slw_sspecial3
-					gh3_singer_fem_slw_sspecial6
+				Slow = [
+					GH3_Singer_Fem_Slw_SSolo1
+					GH3_Singer_Fem_Slw_SSolo2
+					GH3_Singer_Fem_Slw_SSolo3
+					GH3_Singer_Fem_Slw_SSolo4
+					GH3_Singer_Fem_Slw_SSolo5
+					GH3_Singer_Fem_Slw_SSolo6
+					GH3_Singer_Fem_Slw_SSolo7
+					GH3_Singer_Fem_Slw_SSpecial1
+					GH3_Singer_Fem_Slw_SSpecial2
+					GH3_Singer_Fem_Slw_SSpecial3
+					GH3_Singer_Fem_Slw_SSpecial5
+					GH3_Singer_Fem_Slw_SSpecial6
+				]
+			}
+			Bad = {
+				Fast = [
+					GH3_Singer_Fem_Sing_Fst_Idle01
+				]
+				Med = [
+					GH3_Singer_Fem_Sing_Med_Idle01
+					GH3_Singer_Fem_Sing_Med_Idle02
+				]
+				Slow = [
+					GH3_Singer_Fem_Slw_SSolo1
+					GH3_Singer_Fem_Slw_SSolo2
+					GH3_Singer_Fem_Slw_SSolo3
+					GH3_Singer_Fem_Slw_SSolo4
+					GH3_Singer_Fem_Slw_SSolo5
+					GH3_Singer_Fem_Slw_SSolo6
+					GH3_Singer_Fem_Slw_SSolo7
+					GH3_Singer_Fem_Slw_SSpecial1
+					GH3_Singer_Fem_Slw_SSpecial3
+					GH3_Singer_Fem_Slw_SSpecial6
 				]
 			}
 		}
-		jump = {
+		Jump = {
 			good = {
-				fast = [
-					gh3_singer_fem_sing_med_idle01
+				Fast = [
+					GH3_Singer_Fem_Sing_Med_Idle01
 				]
-				med = [
-					gh3_singer_fem_sing_med_idle01
+				Med = [
+					GH3_Singer_Fem_Sing_Med_Idle01
 				]
-				slow = [
-					gh3_singer_fem_sing_med_idle01
-				]
-			}
-			normal = {
-				fast = [
-					gh3_singer_fem_sing_med_idle01
-				]
-				med = [
-					gh3_singer_fem_sing_med_idle01
-				]
-				slow = [
-					gh3_singer_fem_sing_med_idle01
+				Slow = [
+					GH3_Singer_Fem_Sing_Med_Idle01
 				]
 			}
-			bad = {
-				fast = [
-					gh3_singer_fem_sing_med_idle01
+			Normal = {
+				Fast = [
+					GH3_Singer_Fem_Sing_Med_Idle01
 				]
-				med = [
-					gh3_singer_fem_sing_med_idle01
+				Med = [
+					GH3_Singer_Fem_Sing_Med_Idle01
 				]
-				slow = [
-					gh3_singer_fem_sing_med_idle01
+				Slow = [
+					GH3_Singer_Fem_Sing_Med_Idle01
+				]
+			}
+			Bad = {
+				Fast = [
+					GH3_Singer_Fem_Sing_Med_Idle01
+				]
+				Med = [
+					GH3_Singer_Fem_Sing_Med_Idle01
+				]
+				Slow = [
+					GH3_Singer_Fem_Sing_Med_Idle01
 				]
 			}
 		}
 		kick = {
 			good = {
-				fast = [
-					gh3_singer_fem_sing_med_idle01
+				Fast = [
+					GH3_Singer_Fem_Sing_Med_Idle01
 				]
-				med = [
-					gh3_singer_fem_sing_med_idle01
+				Med = [
+					GH3_Singer_Fem_Sing_Med_Idle01
 				]
-				slow = [
-					gh3_singer_fem_sing_med_idle01
-				]
-			}
-			normal = {
-				fast = [
-					gh3_singer_fem_sing_med_idle01
-				]
-				med = [
-					gh3_singer_fem_sing_med_idle01
-				]
-				slow = [
-					gh3_singer_fem_sing_med_idle01
+				Slow = [
+					GH3_Singer_Fem_Sing_Med_Idle01
 				]
 			}
-			bad = {
-				fast = [
-					gh3_singer_fem_sing_med_idle01
+			Normal = {
+				Fast = [
+					GH3_Singer_Fem_Sing_Med_Idle01
 				]
-				med = [
-					gh3_singer_fem_sing_med_idle01
+				Med = [
+					GH3_Singer_Fem_Sing_Med_Idle01
 				]
-				slow = [
-					gh3_singer_fem_sing_med_idle01
+				Slow = [
+					GH3_Singer_Fem_Sing_Med_Idle01
+				]
+			}
+			Bad = {
+				Fast = [
+					GH3_Singer_Fem_Sing_Med_Idle01
+				]
+				Med = [
+					GH3_Singer_Fem_Sing_Med_Idle01
+				]
+				Slow = [
+					GH3_Singer_Fem_Sing_Med_Idle01
 				]
 			}
 		}
 		release = {
 			good = {
-				fast = [
-					gh3_singer_fem_sing_fst_spec04
-					gh3_singer_fem_sing_fst_spec03
+				Fast = [
+					GH3_Singer_Fem_Sing_Fst_Spec04
+					GH3_Singer_Fem_Sing_Fst_Spec03
 				]
-				med = [
-					gh3_singer_fem_sing_med_idle01
+				Med = [
+					GH3_Singer_Fem_Sing_Med_Idle01
 				]
-				slow = [
-					gh3_singer_fem_sing_med_idle01
-				]
-			}
-			normal = {
-				fast = [
-					gh3_singer_fem_sing_fst_spec04
-					gh3_singer_fem_sing_fst_spec03
-				]
-				med = [
-					gh3_singer_fem_sing_med_idle01
-				]
-				slow = [
-					gh3_singer_fem_sing_med_idle01
+				Slow = [
+					GH3_Singer_Fem_Sing_Med_Idle01
 				]
 			}
-			bad = {
-				fast = [
-					gh3_singer_fem_sing_fst_idle01
+			Normal = {
+				Fast = [
+					GH3_Singer_Fem_Sing_Fst_Spec04
+					GH3_Singer_Fem_Sing_Fst_Spec03
 				]
-				med = [
-					gh3_singer_fem_sing_med_idle01
+				Med = [
+					GH3_Singer_Fem_Sing_Med_Idle01
 				]
-				slow = [
-					gh3_singer_fem_sing_med_idle01
+				Slow = [
+					GH3_Singer_Fem_Sing_Med_Idle01
+				]
+			}
+			Bad = {
+				Fast = [
+					GH3_Singer_Fem_Sing_Fst_Idle01
+				]
+				Med = [
+					GH3_Singer_Fem_Sing_Med_Idle01
+				]
+				Slow = [
+					GH3_Singer_Fem_Sing_Med_Idle01
 				]
 			}
 		}
-		long_note = {
+		Long_note = {
 			good = {
-				fast = [
-					gh3_singer_fem_longnote_1
+				Fast = [
+					GH3_Singer_Fem_LongNote_1
 				]
-				med = [
-					gh3_singer_fem_longnote_1
+				Med = [
+					GH3_Singer_Fem_LongNote_1
 				]
-				slow = [
-					gh3_singer_fem_longnote_1
-				]
-			}
-			normal = {
-				fast = [
-					gh3_singer_fem_longnote_1
-				]
-				med = [
-					gh3_singer_fem_longnote_1
-				]
-				slow = [
-					gh3_singer_fem_longnote_1
+				Slow = [
+					GH3_Singer_Fem_LongNote_1
 				]
 			}
-			bad = {
-				fast = [
-					gh3_singer_fem_longnote_1
+			Normal = {
+				Fast = [
+					GH3_Singer_Fem_LongNote_1
 				]
-				med = [
-					gh3_singer_fem_longnote_1
+				Med = [
+					GH3_Singer_Fem_LongNote_1
 				]
-				slow = [
-					gh3_singer_fem_longnote_1
+				Slow = [
+					GH3_Singer_Fem_LongNote_1
+				]
+			}
+			Bad = {
+				Fast = [
+					GH3_Singer_Fem_LongNote_1
+				]
+				Med = [
+					GH3_Singer_Fem_LongNote_1
+				]
+				Slow = [
+					GH3_Singer_Fem_LongNote_1
 				]
 			}
 		}
-		transitions = {
-			stance_a = {
+		Transitions = {
+			Stance_A = {
 				good = {
-					fast = gh3_singer_fem_trans_sngnosng_hop
-					med = gh3_singer_fem_trans_sngnosng_hop
-					slow = gh3_singer_fem_trans_sngnosng_hop
+					Fast = GH3_Singer_Fem_Trans_SngNoSng_hop
+					Med = GH3_Singer_Fem_Trans_SngNoSng_hop
+					Slow = GH3_Singer_Fem_Trans_SngNoSng_hop
 				}
-				normal = {
-					fast = gh3_singer_fem_trans_sngnosng
-					med = gh3_singer_fem_trans_med_sngnosng
-					slow = gh3_singer_fem_trans_sngnosng
+				Normal = {
+					Fast = GH3_Singer_Fem_Trans_SngNoSng
+					Med = GH3_Singer_Fem_Trans_Med_SngNoSng
+					Slow = GH3_Singer_Fem_Trans_SngNoSng
 				}
-				bad = {
-					fast = gh3_singer_fem_trans_sngnosng
-					med = gh3_singer_fem_trans_med_sngnosng
-					slow = gh3_singer_fem_trans_sngnosng
+				Bad = {
+					Fast = GH3_Singer_Fem_Trans_SngNoSng
+					Med = GH3_Singer_Fem_Trans_Med_SngNoSng
+					Slow = GH3_Singer_Fem_Trans_SngNoSng
 				}
 			}
-			intro = gh3_singer_fem_trans_sngnosng
-			win = gh3_singer_fem_trans_sngnosng_hop
-			lose = gh3_singer_fem_trans_sngnosng
+			intro = GH3_Singer_Fem_Trans_SngNoSng
+			win = GH3_Singer_Fem_Trans_SngNoSng_hop
+			lose = GH3_Singer_Fem_Trans_SngNoSng
 		}
 	}
 	intro = {
-		idle = {
+		Idle = {
 			good = {
-				fast = [
+				Fast = [
 					gh3_singer_fem_intro4
 					gh3_singer_fem_intro5
 					gh3_singer_fem_intro6
 				]
-				med = [
+				Med = [
 					gh3_singer_fem_intro4
 					gh3_singer_fem_intro5
 					gh3_singer_fem_intro6
 				]
-				slow = [
-					gh3_singer_fem_intro4
-					gh3_singer_fem_intro5
-					gh3_singer_fem_intro6
-				]
-			}
-			normal = {
-				fast = [
-					gh3_singer_fem_intro4
-					gh3_singer_fem_intro5
-					gh3_singer_fem_intro6
-				]
-				med = [
-					gh3_singer_fem_intro4
-					gh3_singer_fem_intro5
-					gh3_singer_fem_intro6
-				]
-				slow = [
+				Slow = [
 					gh3_singer_fem_intro4
 					gh3_singer_fem_intro5
 					gh3_singer_fem_intro6
 				]
 			}
-			bad = {
-				fast = [
+			Normal = {
+				Fast = [
 					gh3_singer_fem_intro4
 					gh3_singer_fem_intro5
 					gh3_singer_fem_intro6
 				]
-				med = [
+				Med = [
 					gh3_singer_fem_intro4
 					gh3_singer_fem_intro5
 					gh3_singer_fem_intro6
 				]
-				slow = [
+				Slow = [
+					gh3_singer_fem_intro4
+					gh3_singer_fem_intro5
+					gh3_singer_fem_intro6
+				]
+			}
+			Bad = {
+				Fast = [
+					gh3_singer_fem_intro4
+					gh3_singer_fem_intro5
+					gh3_singer_fem_intro6
+				]
+				Med = [
+					gh3_singer_fem_intro4
+					gh3_singer_fem_intro5
+					gh3_singer_fem_intro6
+				]
+				Slow = [
 					gh3_singer_fem_intro4
 					gh3_singer_fem_intro5
 					gh3_singer_fem_intro6
 				]
 			}
 		}
-		transitions = {
+		Transitions = {
 			stance_b = {
 				good = {
-					slow = gh3_singer_fem_trans_nosngsng
-					med = gh3_singer_fem_trans_med_nosngsng
-					fast = gh3_singer_fem_trans_nosngsng
+					Slow = GH3_Singer_Fem_Trans_NoSngSng
+					Med = GH3_Singer_Fem_Trans_Med_NoSngSng
+					Fast = GH3_Singer_Fem_Trans_NoSngSng
 				}
-				normal = {
-					slow = gh3_singer_fem_trans_nosngsng
-					med = gh3_singer_fem_trans_med_nosngsng
-					fast = gh3_singer_fem_trans_nosngsng
+				Normal = {
+					Slow = GH3_Singer_Fem_Trans_NoSngSng
+					Med = GH3_Singer_Fem_Trans_Med_NoSngSng
+					Fast = GH3_Singer_Fem_Trans_NoSngSng
 				}
-				bad = {
-					slow = gh3_singer_fem_trans_nosngsng
-					med = gh3_singer_fem_trans_med_nosngsng
-					fast = gh3_singer_fem_trans_nosngsng
+				Bad = {
+					Slow = GH3_Singer_Fem_Trans_NoSngSng
+					Med = GH3_Singer_Fem_Trans_Med_NoSngSng
+					Fast = GH3_Singer_Fem_Trans_NoSngSng
 				}
 			}
 		}
 	}
 	win = {
-		idle = {
+		Idle = {
 			good = {
-				fast = [
+				Fast = [
 					gh3_singer_fem_win1
 					gh3_singer_fem_win2
 					gh3_singer_fem_win3
 				]
-				med = [
+				Med = [
 					gh3_singer_fem_win1
 					gh3_singer_fem_win2
 					gh3_singer_fem_win3
 				]
-				slow = [
-					gh3_singer_fem_win1
-					gh3_singer_fem_win2
-					gh3_singer_fem_win3
-				]
-			}
-			normal = {
-				fast = [
-					gh3_singer_fem_win1
-					gh3_singer_fem_win2
-					gh3_singer_fem_win3
-				]
-				med = [
-					gh3_singer_fem_win1
-					gh3_singer_fem_win2
-					gh3_singer_fem_win3
-				]
-				slow = [
+				Slow = [
 					gh3_singer_fem_win1
 					gh3_singer_fem_win2
 					gh3_singer_fem_win3
 				]
 			}
-			bad = {
-				fast = [
+			Normal = {
+				Fast = [
 					gh3_singer_fem_win1
 					gh3_singer_fem_win2
 					gh3_singer_fem_win3
 				]
-				med = [
+				Med = [
 					gh3_singer_fem_win1
 					gh3_singer_fem_win2
 					gh3_singer_fem_win3
 				]
-				slow = [
+				Slow = [
+					gh3_singer_fem_win1
+					gh3_singer_fem_win2
+					gh3_singer_fem_win3
+				]
+			}
+			Bad = {
+				Fast = [
+					gh3_singer_fem_win1
+					gh3_singer_fem_win2
+					gh3_singer_fem_win3
+				]
+				Med = [
+					gh3_singer_fem_win1
+					gh3_singer_fem_win2
+					gh3_singer_fem_win3
+				]
+				Slow = [
 					gh3_singer_fem_win1
 					gh3_singer_fem_win2
 					gh3_singer_fem_win3
 				]
 			}
 		}
-		transitions = {
-			stance_b = gh3_singer_fem_trans_med_nosngsng
+		Transitions = {
+			stance_b = GH3_Singer_Fem_Trans_Med_NoSngSng
 		}
 	}
 	lose = {
-		idle = {
+		Idle = {
 			good = {
-				fast = [
+				Fast = [
 					gh3_singer_fem_lose1
 					gh3_singer_fem_lose2
 					gh3_singer_fem_lose3
 				]
-				med = [
+				Med = [
 					gh3_singer_fem_lose1
 					gh3_singer_fem_lose2
 					gh3_singer_fem_lose3
 				]
-				slow = [
-					gh3_singer_fem_lose1
-					gh3_singer_fem_lose2
-					gh3_singer_fem_lose3
-				]
-			}
-			normal = {
-				fast = [
-					gh3_singer_fem_lose1
-					gh3_singer_fem_lose2
-					gh3_singer_fem_lose3
-				]
-				med = [
-					gh3_singer_fem_lose1
-					gh3_singer_fem_lose2
-					gh3_singer_fem_lose3
-				]
-				slow = [
+				Slow = [
 					gh3_singer_fem_lose1
 					gh3_singer_fem_lose2
 					gh3_singer_fem_lose3
 				]
 			}
-			bad = {
-				fast = [
+			Normal = {
+				Fast = [
 					gh3_singer_fem_lose1
 					gh3_singer_fem_lose2
 					gh3_singer_fem_lose3
 				]
-				med = [
+				Med = [
 					gh3_singer_fem_lose1
 					gh3_singer_fem_lose2
 					gh3_singer_fem_lose3
 				]
-				slow = [
+				Slow = [
+					gh3_singer_fem_lose1
+					gh3_singer_fem_lose2
+					gh3_singer_fem_lose3
+				]
+			}
+			Bad = {
+				Fast = [
+					gh3_singer_fem_lose1
+					gh3_singer_fem_lose2
+					gh3_singer_fem_lose3
+				]
+				Med = [
+					gh3_singer_fem_lose1
+					gh3_singer_fem_lose2
+					gh3_singer_fem_lose3
+				]
+				Slow = [
 					gh3_singer_fem_lose1
 					gh3_singer_fem_lose2
 					gh3_singer_fem_lose3
 				]
 			}
 		}
-		transitions = {
-			stance_b = gh3_singer_fem_trans_med_nosngsng
+		Transitions = {
+			stance_b = GH3_Singer_Fem_Trans_Med_NoSngSng
 		}
 	}
 	facial_anims = {
-		idle = [
-			gh3_singer_female_face_idle_1
-			gh3_singer_female_face_idle_1
-			gh3_singer_female_wink
+		Idle = [
+			GH3_Singer_Female_Face_Idle_1
+			GH3_Singer_Female_Face_Idle_1
+			GH3_Singer_Female_Wink
 		]
 	}
 }

@@ -1,91 +1,91 @@
-practice_notemapping = [
+Practice_NoteMapping = [
 	{
-		midinote = 60
-		scr = play_drum_sample
+		MidiNote = 60
+		Scr = play_drum_sample
 		params = {
 			pad = kick
-			buss = practicemode_drums
+			buss = PracticeMode_Drums
 		}
 	}
 	{
-		midinote = 61
-		scr = play_drum_sample
+		MidiNote = 61
+		Scr = play_drum_sample
 		params = {
 			pad = floortom
-			buss = practicemode_drums
+			buss = PracticeMode_Drums
 		}
 	}
 	{
-		midinote = 62
-		scr = play_drum_sample
+		MidiNote = 62
+		Scr = play_drum_sample
 		params = {
 			pad = floortom
-			buss = practicemode_drums
+			buss = PracticeMode_Drums
 		}
 	}
 	{
-		midinote = 63
-		scr = play_drum_sample
+		MidiNote = 63
+		Scr = play_drum_sample
 		params = {
 			pad = hitom
-			buss = practicemode_drums
+			buss = PracticeMode_Drums
 		}
 	}
 	{
-		midinote = 64
-		scr = play_drum_sample
+		MidiNote = 64
+		Scr = play_drum_sample
 		params = {
 			pad = snare
-			buss = practicemode_drums
+			buss = PracticeMode_Drums
 		}
 	}
 	{
-		midinote = 65
-		scr = play_drum_sample
+		MidiNote = 65
+		Scr = play_drum_sample
 		params = {
 			pad = hihat
-			buss = practicemode_drums
+			buss = PracticeMode_Drums
 			velocity = 50
 		}
 	}
 	{
-		midinote = 66
-		scr = play_drum_sample
+		MidiNote = 66
+		Scr = play_drum_sample
 		params = {
 			pad = hihat
-			buss = practicemode_drums
+			buss = PracticeMode_Drums
 		}
 	}
 	{
-		midinote = 67
-		scr = play_drum_sample
+		MidiNote = 67
+		Scr = play_drum_sample
 		params = {
 			pad = cymbal
-			buss = practicemode_drums
+			buss = PracticeMode_Drums
 			velocity = 50
 		}
 	}
 	{
-		midinote = 68
-		scr = play_drum_sample
+		MidiNote = 68
+		Scr = play_drum_sample
 		params = {
 			pad = cymbal
-			buss = practicemode_drums
+			buss = PracticeMode_Drums
 		}
 	}
 	{
-		midinote = 69
-		scr = play_drum_sample
+		MidiNote = 69
+		Scr = play_drum_sample
 		params = {
 			pad = cymbal
-			buss = practicemode_drums
+			buss = PracticeMode_Drums
 			velocity = 90
 		}
 	}
 ]
 
-script practice_dummyfunction 
-	printf \{qs(0x65bbc7fe)}
+script Practice_DummyFunction 
+	printf \{qs("\LPractice_DummyFunction")}
 endscript
 practice_font = fontgrid_title_a1
 
@@ -96,19 +96,19 @@ script practicemode_init
 			gem_filler_first_note = 1}
 	endif
 	if NOT ($current_speedfactor = 1.0)
-		if NOT playerinfoequals \{1
+		if NOT PlayerInfoEquals \{1
 				part = drum}
-			setnotemappings \{section = drums
-				mapping = $practice_notemapping}
+			SetNoteMappings \{section = Drums
+				mapping = $Practice_NoteMapping}
 		endif
 	endif
 	hide_band
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = practice_container
 		pos = (0.0, 0.0)}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = practice_container
 		id = practice_sectiontext
 		scale = (1.1, 0.9)
@@ -126,49 +126,49 @@ script practicemode_section
 	if ($special_event_stage != 0)
 		return
 	endif
-	if playerinfoequals \{1
-			part = vocals}
+	if PlayerInfoEquals \{1
+			part = Vocals}
 		return
 	endif
 	current_section_index = 0
 	begin
-	getsongtimems
+	GetSongTimeMs
 	if (<time> > $current_starttime)
-		practice_sectiontext :se_setprops text = ($current_section_array [($current_section_array_entry)].marker)
-		practice_sectiontext :legacydomorph \{alpha = 1.0
+		practice_sectiontext :SE_SetProps text = ($current_section_array [($current_section_array_entry)].marker)
+		practice_sectiontext :LegacyDoMorph \{alpha = 1.0
 			time = 0.5}
 		current_section_index = ($current_section_array_entry)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	begin
-	getsongtimems
+	GetSongTimeMs
 	if (<time> > $current_endtime)
-		practice_sectiontext :legacydomorph \{alpha = 0.0
+		practice_sectiontext :LegacyDoMorph \{alpha = 0.0
 			time = 0.5}
 		break
 	elseif NOT (<current_section_index> = ($current_section_array_entry))
-		practice_sectiontext :legacydomorph \{alpha = 0.0
+		practice_sectiontext :LegacyDoMorph \{alpha = 0.0
 			time = 0.5}
-		wait \{0.5
+		Wait \{0.5
 			second}
-		practice_sectiontext :se_setprops text = ($current_section_array [($current_section_array_entry)].marker)
-		practice_sectiontext :legacydomorph \{alpha = 1.0
+		practice_sectiontext :SE_SetProps text = ($current_section_array [($current_section_array_entry)].marker)
+		practice_sectiontext :LegacyDoMorph \{alpha = 1.0
 			time = 0.5}
 		current_section_index = ($current_section_array_entry)
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
 script practicemode_deinit 
-	clearnotemappings \{section = practice}
-	killspawnedscript \{name = practicemode_section}
-	if screenelementexists \{id = practice_container}
-		destroyscreenelement \{id = practice_container}
+	ClearNoteMappings \{section = practice}
+	KillSpawnedScript \{name = practicemode_section}
+	if ScreenElementExists \{id = practice_container}
+		DestroyScreenElement \{id = practice_container}
 	endif
-	stopsoundsbybuss \{practicemode_drums}
+	StopSoundsByBuss \{PracticeMode_Drums}
 endscript

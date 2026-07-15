@@ -1,24 +1,24 @@
-gp_fx_goldsparkleburst_bigglow_01 = {
-	Pos = (-11.09185, 8.545341, 2.0203898)
-	Angles = (0.0, 0.0, 0.0)
+GP_FX_GoldSparkleBurst_BigGlow_01 = {
+	pos = (-11.09185, 8.545341, 2.0203898)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	EmitRangeDims = (0.0, 0.0, 0.0)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, 0.0, 0.0)
+	force = (0.0, 0.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	AngleSpread = 45.0
 	LifeRange = (2.0, 2.0)
-	Emit_Rate = 1.0
-	Max = 0
+	emit_rate = 1.0
+	max = 0
 	TimeSeed = 1.0
-	LifeTime = 0.5
-	EmitNum = 0
+	lifeTime = 0.5
+	emitNum = 0
 	FollowEmitter = 0.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -32,8 +32,8 @@ gp_fx_goldsparkleburst_bigglow_01 = {
 	EmitDelayStart = 0.0
 	PathFollowTime = 0.0
 	History = 2
-	HistoryListCoordinateSpace = World
-	Color = -1769052417
+	HistoryListCoordinateSpace = world
+	color = -1769052417
 	LOD_Default
 	QuickMaterial = {
 		TextureLayout = Layout2x2
@@ -41,8 +41,8 @@ gp_fx_goldsparkleburst_bigglow_01 = {
 		DiffuseTexture = JOW_Steam02
 		SpecularPower = 0
 		fillburst
-		AlphaCutoff = 1
-		BlendMode = add
+		alphacutoff = 1
+		blendMode = Add
 		QuadAnimationFPS = 5
 	}
 	Knot = [

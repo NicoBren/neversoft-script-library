@@ -5,12 +5,12 @@ script create_credits_menu
 		disable_pause
 		stoprendering
 		change \{current_level = load_z_credits}
-		load_venue
+		Load_Venue
 		startrendering
 	endif
-	pushassetcontext \{context = z_credits}
+	PushAssetContext \{context = z_credits}
 	if NOT ($end_credits = 1)
-		createscreenelement \{type = containerelement
+		CreateScreenElement \{type = ContainerElement
 			parent = root_window
 			id = credits_backdrop_container
 			pos = (0.0, 0.0)
@@ -18,10 +18,10 @@ script create_credits_menu
 				left
 				top
 			]}
-		createscreenelement \{type = spriteelement
+		CreateScreenElement \{type = SpriteElement
 			id = credits_backdrop
 			parent = credits_backdrop_container
-			texture = endcredits_bg
+			texture = endcredits_BG
 			rgba = [
 				255
 				255
@@ -37,7 +37,7 @@ script create_credits_menu
 			z_priority = 0
 			alpha = 1}
 	endif
-	popassetcontext
+	PopAssetContext
 	if NOT ($end_credits = 1)
 		event_handlers = [
 			{pad_back ui_flow_manager_respond_to_action params = {action = go_back}}
@@ -50,7 +50,7 @@ script create_credits_menu
 		new_menu \{scrollid = mc_scroll
 			vmenuid = mc_vmenu}
 	endif
-	text_params = {parent = mc_vmenu type = textelement font = ($credits_menu_font) rgba = ($menu_unfocus_color)}
+	text_params = {parent = mc_vmenu type = TextElement font = ($credits_menu_font) rgba = ($menu_unfocus_color)}
 	spawnscriptnow \{scrolling_list_begin}
 endscript
 
@@ -58,21 +58,21 @@ script destroy_credits_menu
 	clean_up_user_control_helpers
 	destroy_menu \{menu_id = mc_scroll}
 	destroy_menu \{menu_id = credits_list_container}
-	killspawnedscript \{name = start_team_photos}
-	killspawnedscript \{name = fadein_team_photos}
-	killspawnedscript \{name = scrolling_list_begin}
-	killspawnedscript \{name = fade_in_credit_item}
-	if screenelementexists \{id = team_photos_container}
-		destroyscreenelement \{id = team_photos_container}
+	KillSpawnedScript \{name = start_team_photos}
+	KillSpawnedScript \{name = fadein_team_photos}
+	KillSpawnedScript \{name = scrolling_list_begin}
+	KillSpawnedScript \{name = fade_in_credit_item}
+	if ScreenElementExists \{id = team_photos_container}
+		DestroyScreenElement \{id = team_photos_container}
 	endif
-	if screenelementexists \{id = credits_backdrop_container}
-		destroyscreenelement \{id = credits_backdrop_container}
+	if ScreenElementExists \{id = credits_backdrop_container}
+		DestroyScreenElement \{id = credits_backdrop_container}
 	endif
 endscript
 
 script scrolling_list_begin 
 	if ($end_credits = 1)
-		wait \{2
+		Wait \{2
 			seconds}
 	endif
 	scrolling_list_init_credits
@@ -91,24 +91,24 @@ script scrolling_list_add_item \{i = 0}
 	else
 		z_priority_credits = 1000
 	endif
-	getarraysize ($credits)
+	GetArraySize ($credits)
 	if (<i> = <array_size>)
 		printf \{"** END OF CREDITS **"}
-		wait <time> seconds
-		if screenelementexists \{id = credits_list_container}
-			destroyscreenelement \{id = credits_list_container}
+		Wait <time> seconds
+		if ScreenElementExists \{id = credits_list_container}
+			DestroyScreenElement \{id = credits_list_container}
 		endif
 		if NOT ($end_credits = 1)
 			ui_flow_manager_respond_to_action \{action = go_back}
 		endif
 		return
 	endif
-	if structurecontains structure = ($credits [<i>]) item
+	if StructureContains Structure = ($credits [<i>]) item
 		text = (($credits [<i>]).item)
 	else
 		text = " "
 	endif
-	if structurecontains structure = ($credits [<i>]) heading
+	if StructureContains Structure = ($credits [<i>]) heading
 		scale = <scale_head>
 		color = <color_head>
 		color_shadow = [20 10 5 90]
@@ -119,24 +119,24 @@ script scrolling_list_add_item \{i = 0}
 		color_shadow = [0 0 0 255]
 		shadow_offs = (1.0, 1.0)
 	endif
-	if structurecontains structure = ($credits [<i>]) title
+	if StructureContains Structure = ($credits [<i>]) title
 		scale = <scale_title>
 		color = <color_title>
 		color_shadow = [20 10 5 90]
 		shadow_offs = (3.0, 3.0)
 	endif
-	if structurecontains structure = ($credits [<i>]) small
+	if StructureContains Structure = ($credits [<i>]) small
 		scale = 0.5
 		color = <color_body>
 		color_shadow = [0 0 0 255]
 		shadow_offs = (1.0, 1.0)
 	endif
-	formattext checksumname = item_id 'item_%n' n = <i>
-	if screenelementexists id = <item_id>
-		destroyscreenelement id = <item_id>
+	FormatText checksumname = item_id 'item_%n' n = <i>
+	if ScreenElementExists id = <item_id>
+		DestroyScreenElement id = <item_id>
 	endif
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		id = <item_id>
 		parent = credits_list_container
 		font = text_a4
@@ -154,14 +154,14 @@ script scrolling_list_add_item \{i = 0}
 		shadow_rgba = <color_shadow>
 		z_priority = <z_priority_credits>
 	}
-	getscreenelementdims id = <item_id>
-	item_height = (<height> + <spacer>)
+	GetScreenElementDims id = <item_id>
+	item_height = (<Height> + <spacer>)
 	item_pos = (<base_pos> + (<item_height> * (0.0, 1.0)))
-	setscreenelementprops id = <item_id> pos = <item_pos>
+	SetScreenElementProps id = <item_id> pos = <item_pos>
 	distance = (<screen_height> + ((<item_pos>.(0.0, 1.0)) - <screen_height>))
 	time = (<distance> / <rate>)
-	if screenelementexists id = <item_id>
-		runscriptonscreenelement id = <item_id> scrolling_list_move_item params = {<...>}
+	if ScreenElementExists id = <item_id>
+		RunScriptOnScreenElement id = <item_id> scrolling_list_move_item params = {<...>}
 	endif
 endscript
 
@@ -171,9 +171,9 @@ script scrolling_list_move_item
 	target_pos = (<item_pos> - ((0.0, 1.0) * <distance>))
 	alpha_pos_y = (<distance> / <time>)
 	<alpha_pos> = (<item_pos> - ((0.0, 1.0) * <alpha_pos_y>))
-	domorph time = (<time>) pos = <target_pos>
-	if screenelementexists id = <item_id>
-		destroyscreenelement id = <item_id>
+	DoMorph time = (<time>) pos = <target_pos>
+	if ScreenElementExists id = <item_id>
+		DestroyScreenElement id = <item_id>
 	endif
 endscript
 
@@ -182,18 +182,18 @@ script fade_in_credit_item
 	item_alpha = 0.0
 	begin
 	<item_alpha> = (<item_alpha> + (1.0 / <fade_duration>))
-	if screenelementexists id = <item_id>
-		<item_id> :setprops alpha = <item_alpha>
+	if ScreenElementExists id = <item_id>
+		<item_id> :SetProps alpha = <item_alpha>
 	endif
-	wait \{4
+	Wait \{4
 		gameframes}
 	repeat <fade_duration>
 endscript
 
 script scrolling_list_queue_next_item 
 	begin
-	if screenelementexists id = <item_id>
-		getscreenelementprops id = <item_id>
+	if ScreenElementExists id = <item_id>
+		GetScreenElementProps id = <item_id>
 	endif
 	pos_y = (<pos>.(0.0, 1.0))
 	if (<pos_y> < <screen_height>)
@@ -201,7 +201,7 @@ script scrolling_list_queue_next_item
 		scrolling_list_add_item <...>
 		return
 	endif
-	wait \{1
+	Wait \{1
 		frame}
 	repeat
 endscript
@@ -257,19 +257,19 @@ team_photo_textures_r = [
 ]
 
 script start_team_photos 
-	formattext \{checksumname = team_photos_container
+	FormatText \{checksumname = team_photos_container
 		'team_photos_container'}
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = root_window
 		id = <team_photos_container>
 		just = [left top]
 		pos = (0.0, 0.0)
 	}
-	wait \{5
+	Wait \{5
 		seconds}
 	spawnscriptnow fadein_team_photos params = {team_photos_container = <team_photos_container> rot_direction = -1 texture_array = team_photo_textures_l pos = (395.0, 200.0) frame = 1}
-	wait \{0.25
+	Wait \{0.25
 		seconds}
 	spawnscriptnow fadein_team_photos params = {team_photos_container = <team_photos_container> rot_direction = 1 texture_array = team_photo_textures_r pos = (905.0, 200.0) frame = 2}
 endscript
@@ -278,21 +278,21 @@ script fadein_team_photos \{pos = (350.0, 150.0)}
 	photo_count = 0
 	maximum_rotate = 20
 	photo_wait = 5
-	getarraysize $<texture_array>
+	GetArraySize $<texture_array>
 	begin
-	formattext checksumname = team_photo_checksum 'team_photo_%s_%f' s = <photo_count> f = <frame>
+	FormatText checksumname = team_photo_checksum 'team_photo_%s_%f' s = <photo_count> f = <frame>
 	texture = ($<texture_array> [<photo_count>])
-	if screenelementexists id = <team_photo_checksum>
-		destroyscreenelement id = <team_photo_checksum>
+	if ScreenElementExists id = <team_photo_checksum>
+		DestroyScreenElement id = <team_photo_checksum>
 	endif
-	pushassetcontext \{context = z_credits}
+	PushAssetContext \{context = z_credits}
 	if ($end_credits = 1)
 		z_priority_team_photos = -2
 	else
 		z_priority_team_photos = 25
 	endif
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		id = <team_photo_checksum>
 		parent = <team_photos_container>
 		texture = <texture>
@@ -303,8 +303,8 @@ script fadein_team_photos \{pos = (350.0, 150.0)}
 		just = [center center]
 		z_priority = <z_priority_team_photos>
 	}
-	popassetcontext
-	getrandomvalue name = random_rot a = 10 b = <maximum_rotate> integer
+	PopAssetContext
+	GetRandomValue name = random_rot a = 10 b = <maximum_rotate> Integer
 	<random_rot> = (<random_rot> * <rot_direction>)
 	scale = 1.15
 	if (<texture> = endcredits_photo_18 || <texture> = endcredits_photo_32
@@ -317,13 +317,13 @@ script fadein_team_photos \{pos = (350.0, 150.0)}
 			<texture> = endcredits_photo_16)
 		<scale> = 1.2
 	endif
-	doscreenelementmorph id = <team_photo_checksum> rot_angle = <random_rot> time = 2 alpha = 1 scale = <scale>
-	wait <photo_wait> seconds
-	doscreenelementmorph id = <team_photo_checksum> time = 2 alpha = 0
-	wait \{2
+	doScreenElementMorph id = <team_photo_checksum> rot_angle = <random_rot> time = 2 alpha = 1 scale = <scale>
+	Wait <photo_wait> seconds
+	doScreenElementMorph id = <team_photo_checksum> time = 2 alpha = 0
+	Wait \{2
 		seconds}
-	if screenelementexists id = <team_photo_checksum>
-		destroyscreenelement id = <team_photo_checksum>
+	if ScreenElementExists id = <team_photo_checksum>
+		DestroyScreenElement id = <team_photo_checksum>
 	endif
 	<photo_count> = (<photo_count> + 1)
 	repeat <array_size>
@@ -362,10 +362,10 @@ script scrolling_list_init_credits
 		color_title = [180 165 120 255]
 	endif
 	dims = (<column_width> * (1.0, 0.0))
-	if screenelementexists \{id = credits_list_container}
-		destroyscreenelement \{id = credits_list_container}
+	if ScreenElementExists \{id = credits_list_container}
+		DestroyScreenElement \{id = credits_list_container}
 	endif
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = credits_list_container
 		pos = (0.0, 0.0)}

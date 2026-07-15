@@ -1,31 +1,31 @@
 
 script ui_create_leaderboard_instrument 
 	make_menu_frontend {
-		screen = guitarist
-		title = qs(0x8694014b)
+		screen = Guitarist
+		title = qs("INSTRUMENT")
 		exclusive_device = ($primary_controller)
 	}
-	add_menu_frontend_item \{text = qs(0x9504b94a)
+	add_menu_frontend_item \{text = qs("GUITAR")
 		pad_choose_script = ui_leaderboard_instrument_select
 		pad_choose_params = {
 			instrument = 'guitar'
 		}}
-	add_menu_frontend_item \{text = qs(0x7d4f9214)
+	add_menu_frontend_item \{text = qs("BASS")
 		pad_choose_script = ui_leaderboard_instrument_select
 		pad_choose_params = {
 			instrument = 'backup'
 		}}
-	add_menu_frontend_item \{text = qs(0x388cd3db)
+	add_menu_frontend_item \{text = qs("DRUMS")
 		pad_choose_script = ui_leaderboard_instrument_select
 		pad_choose_params = {
 			instrument = 'drums'
 		}}
-	add_menu_frontend_item \{text = qs(0x1b9f6f84)
+	add_menu_frontend_item \{text = qs("VOCALS")
 		pad_choose_script = ui_leaderboard_instrument_select
 		pad_choose_params = {
 			instrument = 'mic'
 		}}
-	add_menu_frontend_item \{text = qs(0xdabf99c0)
+	add_menu_frontend_item \{text = qs("BAND")
 		pad_choose_script = ui_leaderboard_instrument_select
 		pad_choose_params = {
 			instrument = 'band'
@@ -44,20 +44,20 @@ script ui_leaderboard_instrument_select
 		change \{game_mode = p1_quickplay}
 		switch (<instrument>)
 			case 'guitar'
-			setplayerinfo \{1
+			SetPlayerInfo \{1
 				part = guitar}
 			case 'backup'
-			setplayerinfo \{1
-				part = bass}
+			SetPlayerInfo \{1
+				part = Bass}
 			case 'drums'
-			setplayerinfo \{1
+			SetPlayerInfo \{1
 				part = drum}
 			case 'mic'
-			setplayerinfo \{1
-				part = vocals}
+			SetPlayerInfo \{1
+				part = Vocals}
 		endswitch
 	endif
-	formattext checksumname = instrument_checksum '%i' i = <instrument>
+	FormatText checksumname = instrument_checksum '%i' i = <instrument>
 	change current_leaderboard_instrument = <instrument_checksum>
 	generic_event_choose \{state = uistate_setlist
 		data = {

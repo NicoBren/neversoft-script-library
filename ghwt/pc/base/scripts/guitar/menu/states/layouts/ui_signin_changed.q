@@ -5,16 +5,16 @@ script ui_create_signin_changed \{no_options = 0}
 		options = [
 			{
 				func = signing_change_confirm_reboot
-				text = qs(0x182f0173)
+				text = qs("CONTINUE")
 				scale = (1.0, 1.0)
 			}
 		]
 	endif
 	create_popup_warning_menu {
-		title = qs(0x85335438)
+		title = qs("SIGN-IN CHANGED")
 		title_props = {scale = 1.0}
 		textblock = {
-			text = qs(0xebb660bd)
+			text = qs("A user sign-in change has caused the game to lose ownership of saves and achievements. As a result, the game has restarted.")
 			pos = (640.0, 380.0)
 		}
 		menu_pos = (640.0, 510.0)
@@ -23,7 +23,7 @@ script ui_create_signin_changed \{no_options = 0}
 		z_priority = 1100
 		no_focus
 	}
-	assignalias id = <menu_id> alias = current_menu
+	AssignAlias id = <menu_id> alias = current_menu
 endscript
 
 script ui_destroy_signin_changed 

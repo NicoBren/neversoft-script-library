@@ -1,37 +1,37 @@
 info_text = [
-	qs(0x327fe39a)
-	qs(0x89eb6a6e)
-	qs(0x3ea1cc61)
-	qs(0xc56ef667)
-	qs(0xd9d0f5b3)
-	qs(0xf6fa560c)
-	qs(0xbb1a9899)
-	qs(0xfb4953fc)
-	qs(0x814a1933)
+	qs("Jump right into a Player Match and rock the house against the first rocker available.")
+	qs("Jump right into a Ranked Match and rock the house against the first rocker available.")
+	qs("Search for a specific type of online match.")
+	qs("Create and host your own online match.")
+	qs("Setup and make changes to your Quick Match Options.")
+	qs("Check out who the best of the best are and see where you rank.")
+	qs("Check out the newest available downloads for Guitar Hero 3.")
+	qs("Be A Guitar Hero, and join the online community!")
+	qs("Select 'Message Of The Day' to see the latest news in the Guitar Hero universe.")
 ]
 online_main_menu_pos = (470.0, 110.0)
 online_info_pane_pos = (890.0, 150.0)
 
-script 0xaed968e4 
+script ui_create_online_main_menu 
 	create_online_main_menu
 endscript
 
-script 0xe343b747 
+script ui_destroy_online_main_menu 
 	destroy_online_main_menu
 endscript
 
-script create_online_main_menu \{menu_title_xenon = qs(0xfbe1a4b2)
-		menu_title_ps3 = qs(0x918b1e04)
+script create_online_main_menu \{menu_title_xenon = qs("Xbox LIVE Main Menu")
+		menu_title_ps3 = qs("Online Main Menu")
 		menu_id = online_main_menu
 		vmenu_id = online_main_vmenu}
 	change \{rich_presence_context = presence_menus}
 	spawnscriptnow \{menu_music_on}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = main_menu_anchor
 		pos = (0.0, 0.0)}
-	createscreenelement {
-		type = vscrollingmenu
+	CreateScreenElement {
+		type = VScrollingMenu
 		parent = main_menu_anchor
 		id = <menu_id>
 		just = [center top]
@@ -39,8 +39,8 @@ script create_online_main_menu \{menu_title_xenon = qs(0xfbe1a4b2)
 		pos = (($online_main_menu_pos) + (0.0, 75.0))
 		z_priority = 1
 	}
-	createscreenelement {
-		type = vmenu
+	CreateScreenElement {
+		type = VMenu
 		parent = <menu_id>
 		id = <vmenu_id>
 		pos = (47.5, 0.0)
@@ -55,28 +55,28 @@ script create_online_main_menu \{menu_title_xenon = qs(0xfbe1a4b2)
 		]
 		exclusive_device = ($primary_controller)
 	}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = main_menu_anchor
 		id = online_main_menu_container
 		pos = (0.0, 0.0)}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = online_main_menu_container
 		id = online_main_menu_text_container
 		pos = (0.0, 0.0)}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = main_menu_anchor
 		id = online_info_pane_container
 		pos = (0.0, 0.0)}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = online_info_pane_container
 		id = online_info_pane_text_container
 		pos = (0.0, 0.0)}
 	create_menu_backdrop \{texture = xb_online_bg}
-	displaysprite id = online_frame parent = online_main_menu_container tex = xb_online_frame_large pos = ($online_main_menu_pos) dims = (660.0, 480.0) just = [center top] z = 2
-	displaysprite id = xb_online_frame_crown parent = online_main_menu_container tex = xb_online_frame_crown pos = (($online_main_menu_pos) + (0.0, -62.0)) dims = (256.0, 105.0) just = [center top] z = 3
-	if ((isxenon) && ((iswinport) = false))
-		createscreenelement {
-			type = textelement
+	displaySprite id = online_frame parent = online_main_menu_container tex = xb_online_frame_large pos = ($online_main_menu_pos) dims = (660.0, 480.0) just = [center top] z = 2
+	displaySprite id = xb_online_frame_crown parent = online_main_menu_container tex = xb_online_frame_crown pos = (($online_main_menu_pos) + (0.0, -62.0)) dims = (256.0, 105.0) just = [center top] z = 3
+	if ((isXenon) && ((IsWinPort) = false))
+		CreateScreenElement {
+			type = TextElement
 			parent = online_main_menu_text_container
 			id = online_title
 			font = fontgrid_title_a1
@@ -88,8 +88,8 @@ script create_online_main_menu \{menu_title_xenon = qs(0xfbe1a4b2)
 			z_priority = 4.0
 		}
 	else
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = online_main_menu_text_container
 			id = online_title
 			font = fontgrid_title_a1
@@ -101,114 +101,114 @@ script create_online_main_menu \{menu_title_xenon = qs(0xfbe1a4b2)
 			z_priority = 4.0
 		}
 	endif
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	if (<width> > 420)
-		setscreenelementprops {
+		SetScreenElementProps {
 			id = <id>
 			scale = 1.0
 		}
 		scale_element_to_size {
 			id = <id>
 			target_width = 420
-			target_height = <height>
+			target_height = <Height>
 		}
 	endif
 	net_add_item_to_main_menu {
-		vmenu = <vmenu_id>
-		text = qs(0xfa706a51)
+		VMenu = <vmenu_id>
+		text = qs("Auto Match (Do Not Test)")
 		info_text_index = 0
 		pad_choose_script = online_menu_select_automatch_player
 	}
-	if isxenon
+	if isXenon
 		net_add_item_to_main_menu {
-			vmenu = <vmenu_id>
-			text = qs(0x8fd1b039)
+			VMenu = <vmenu_id>
+			text = qs("Quick Match: Player Match")
 			info_text_index = 0
 			pad_choose_script = online_menu_select_quickmatch_player
 		}
 		net_add_item_to_main_menu {
-			vmenu = <vmenu_id>
-			text = qs(0x6db89d96)
+			VMenu = <vmenu_id>
+			text = qs("Quick Match: Ranked Match")
 			info_text_index = 1
 			pad_choose_script = online_menu_select_quickmatch_ranked
 		}
 	else
 		net_add_item_to_main_menu {
-			vmenu = <vmenu_id>
-			text = qs(0x709b942a)
+			VMenu = <vmenu_id>
+			text = qs("Quick Match")
 			info_text_index = 0
 			pad_choose_script = online_menu_select_quickmatch_player
 		}
 	endif
 	net_add_item_to_main_menu {
-		vmenu = <vmenu_id>
-		text = qs(0xd7442bec)
+		VMenu = <vmenu_id>
+		text = qs("Custom Match")
 		info_text_index = 2
 		pad_choose_script = ui_flow_manager_respond_to_action
 		choose_script_params = {action = select_custom_match}
 	}
 	net_add_item_to_main_menu {
-		vmenu = <vmenu_id>
-		text = qs(0x938415b6)
+		VMenu = <vmenu_id>
+		text = qs("Create Match")
 		info_text_index = 3
 		pad_choose_script = ui_flow_manager_respond_to_action
 		choose_script_params = {action = select_create_match}
 	}
 	net_add_item_to_main_menu {
-		vmenu = <vmenu_id>
-		text = qs(0xb2cf8423)
+		VMenu = <vmenu_id>
+		text = qs("Online Options")
 		info_text_index = 4
 		pad_choose_script = online_menu_select_options
 	}
 	net_add_item_to_main_menu {
-		vmenu = <vmenu_id>
-		text = qs(0x28d033df)
+		VMenu = <vmenu_id>
+		text = qs("Leaderboards")
 		info_text_index = 5
 		pad_choose_script = ui_flow_manager_respond_to_action
 		choose_script_params = {action = select_leaderboards}
 	}
-	if isxenon
+	if isXenon
 		net_add_item_to_main_menu {
-			vmenu = <vmenu_id>
-			text = qs(0x60679f40)
+			VMenu = <vmenu_id>
+			text = qs("Downloadable Content")
 			info_text_index = 6
 			pad_choose_script = online_select_downloads
-			pad_choose_script2 = soundevent
+			pad_choose_script2 = SoundEvent
 			choose_script_params2 = {event = ui_sfx_select}
 		}
 	endif
 	net_add_item_to_main_menu {
-		vmenu = <vmenu_id>
-		text = qs(0x0d8a6066)
+		VMenu = <vmenu_id>
+		text = qs("www.guitarhero.com")
 		info_text_index = 7
 		pad_choose_script = online_menu_select_website
-		pad_choose_script2 = soundevent
+		pad_choose_script2 = SoundEvent
 		choose_script_params2 = {event = ui_sfx_select}
 	}
 	net_add_item_to_main_menu {
-		vmenu = <vmenu_id>
-		text = qs(0xb7dbccb4)
+		VMenu = <vmenu_id>
+		text = qs("Message Of The Day")
 		info_text_index = 8
 		pad_choose_script = online_menu_select_motd
-		pad_choose_script2 = soundevent
+		pad_choose_script2 = SoundEvent
 		choose_script_params2 = {event = ui_sfx_select}
 	}
 	net_add_item_to_main_menu {
-		vmenu = <vmenu_id>
-		text = qs(0x92fadeaa)
+		VMenu = <vmenu_id>
+		text = qs("MATCHMAKING")
 		info_text_index = 8
 		pad_choose_script = ui_flow_manager_respond_to_action
 		choose_script_params = {action = select_matchmaking}
 	}
 	net_add_item_to_main_menu {
-		vmenu = <vmenu_id>
-		text = qs(0xe7f553d2)
+		VMenu = <vmenu_id>
+		text = qs("ACHIEVEMENT TRACKER")
 		info_text_index = 8
 		pad_choose_script = ui_flow_manager_respond_to_action
 		choose_script_params = {action = select_at}
 	}
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = online_info_pane_text_container
 		id = help_info_text_block
 		font = fontgrid_text_a8
@@ -221,35 +221,35 @@ script create_online_main_menu \{menu_title_xenon = qs(0xfbe1a4b2)
 		pos = (($online_info_pane_pos) + (-4.0, 20.0))
 		dims = (320.0, 370.0)
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = online_info_pane_text_container
 		id = motd_info_pane_title
 		font = fontgrid_text_a8
-		text = qs(0x6043e467)
+		text = qs("Message of the Day")
 		scale = 0.65000004
 		rgba = ($online_light_blue)
 		pos = (($online_info_pane_pos) + (0.0, 264.0))
 		just = [center top]
 		z_priority = 6.0
 	}
-	createscreenelement {
-		type = windowelement
+	CreateScreenElement {
+		type = WindowElement
 		parent = online_info_pane_text_container
 		id = motd_ticker_window
 		pos = (($online_info_pane_pos) + (0.0, 312.0))
 		dims = (248.0, 32.0)
 		just = [center top]
 	}
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = motd_ticker_window
 		id = motd_ticker_text_block
 		just = [left top]
 		internal_just = [left top]
 		pos = (0.0, 0.0)
 		scale = (0.75, 0.55)
-		text = qs(0x00000000)
+		text = qs("")
 		font = fontgrid_text_a8
 		rgba = ($online_light_blue)
 		z_priority = 100
@@ -257,17 +257,17 @@ script create_online_main_menu \{menu_title_xenon = qs(0xfbe1a4b2)
 		line_spacing = 1.0
 	}
 	spawnscriptnow \{get_motd_and_start_ticker}
-	if NOT isxenon
-		if NOT netsessionfunc \{obj = voice
+	if NOT isXenon
+		if NOT NetSessionFunc \{obj = voice
 				func = voice_allowed}
-			createscreenelement {
-				type = textblockelement
+			CreateScreenElement {
+				type = TextBlockElement
 				parent = online_info_pane_container
 				just = [center top]
 				internal_just = [center top]
 				pos = (640.0, 585.0)
 				scale = (0.55, 0.55)
-				text = qs(0x925535f4)
+				text = qs("Chat is disabled on your PLAYSTATION®Network account due to parental control restrictions.")
 				font = fontgrid_text_a8
 				rgba = ($online_light_blue)
 				z_priority = 6.0
@@ -278,16 +278,16 @@ script create_online_main_menu \{menu_title_xenon = qs(0xfbe1a4b2)
 	set_focus_color rgba = ($online_dark_purple)
 	set_unfocus_color rgba = ($online_light_blue)
 	create_online_main_menu_helper_buttons
-	launchevent type = focus target = <vmenu_id>
+	LaunchEvent type = focus target = <vmenu_id>
 endscript
 
 script destroy_online_main_menu 
 	clean_up_user_control_helpers
 	destroy_menu_backdrop
-	if screenelementexists \{id = main_menu_anchor}
-		destroyscreenelement \{id = main_menu_anchor}
+	if ScreenElementExists \{id = main_menu_anchor}
+		DestroyScreenElement \{id = main_menu_anchor}
 	endif
-	killspawnedscript \{name = scroll_motd_ticker}
+	KillSpawnedScript \{name = scroll_motd_ticker}
 endscript
 
 script create_online_main_menu_helper_buttons 
@@ -303,23 +303,23 @@ script create_online_main_menu_helper_buttons
 			0
 			200
 		]}
-	add_user_control_helper \{text = qs(0xc18d5e76)
+	add_user_control_helper \{text = qs("SELECT")
 		button = green
 		z = 100}
-	add_user_control_helper \{text = qs(0xaf4d5dd2)
+	add_user_control_helper \{text = qs("BACK")
 		button = red
 		z = 100}
 endscript
 
 script get_motd_and_start_ticker 
 	if ($retrieved_message_of_the_day = 0)
-		netsessionfunc \{obj = motd
+		NetSessionFunc \{obj = motd
 			func = get_demonware_motd
 			params = {
 				callback = motd_callback
 			}}
 	else
-		motd_ticker_text_block :se_setprops text = ($message_of_the_day)
+		motd_ticker_text_block :SE_SetProps text = ($message_of_the_day)
 		spawnscriptnow \{scroll_motd_ticker
 			params = {
 				id = motd_ticker_text_block
@@ -328,11 +328,11 @@ script get_motd_and_start_ticker
 endscript
 
 script motd_callback 
-	if gotparam \{motd_text}
+	if GotParam \{motd_text}
 		change \{retrieved_message_of_the_day = 1}
 		change message_of_the_day = <motd_text>
-		if screenelementexists \{id = motd_ticker_text_block}
-			motd_ticker_text_block :se_setprops text = ($message_of_the_day)
+		if ScreenElementExists \{id = motd_ticker_text_block}
+			motd_ticker_text_block :SE_SetProps text = ($message_of_the_day)
 			spawnscriptnow \{scroll_motd_ticker
 				params = {
 					id = motd_ticker_text_block
@@ -344,24 +344,24 @@ endscript
 script scroll_motd_ticker \{scroll_time = 20}
 	<end_pos> = (-1000.0, 0.0)
 	<this_id> = <id>
-	getscreenelementchildren id = <this_id>
-	if gotparam \{children}
+	GetScreenElementChildren id = <this_id>
+	if GotParam \{children}
 		begin
 		begin
-		wait \{2
+		Wait \{2
 			seconds}
-		legacydoscreenelementmorph id = <this_id> pos = <end_pos> time = <scroll_time>
-		wait \{5
+		LegacyDoScreenElementMorph id = <this_id> pos = <end_pos> time = <scroll_time>
+		Wait \{5
 			seconds}
-		getscreenelementprops id = <this_id>
-		setscreenelementprops id = <this_id> pos = <pos>
-		wait \{2.0
+		GetScreenElementProps id = <this_id>
+		SetScreenElementProps id = <this_id> pos = <pos>
+		Wait \{2.0
 			seconds}
-		<this_id> :legacydomorph alpha = 0 time = 0.2
-		<this_id> :se_setprops pos = (0.0, 0.0)
-		wait \{0.5
+		<this_id> :LegacyDoMorph alpha = 0 time = 0.2
+		<this_id> :SE_SetProps pos = (0.0, 0.0)
+		Wait \{0.5
 			seconds}
-		<this_id> :legacydomorph alpha = 1 time = 0.2
+		<this_id> :LegacyDoMorph alpha = 1 time = 0.2
 		break
 		repeat
 		repeat
@@ -369,7 +369,7 @@ script scroll_motd_ticker \{scroll_time = 20}
 endscript
 
 script return_from_online_main_menu 
-	printf \{qs(0x6de09062)}
+	printf \{qs("\L--- deinitializing network layer")}
 	shut_down_net_play
 	ui_flow_manager_respond_to_action \{action = go_back}
 endscript
@@ -391,9 +391,9 @@ script online_menu_select_options
 endscript
 
 script lobby_connection_lost 
-	printf \{qs(0xb0c233b5)}
-	endgamenetscriptpump
-	if NOT (ishost)
+	printf \{qs("\L---lobby_connection_lost performing net cleanup")}
+	EndGameNetScriptPump
+	if NOT (IsHost)
 		quit_network_game
 		setup_sessionfuncs
 		destroy_popup_warning_menu
@@ -406,7 +406,7 @@ script online_menu_select_website
 	hide_unhide_menu_elements \{id = online_info_pane_container
 		time = 0.2
 		hide}
-	wait \{0.1
+	Wait \{0.1
 		seconds}
 	hide_unhide_menu_elements \{id = online_main_menu_text_container
 		time = 0.2
@@ -415,58 +415,58 @@ script online_menu_select_website
 		time = 0.2
 		hide}
 	translate_and_scale_online_menu
-	wait \{0.3
+	Wait \{0.3
 		seconds}
-	if screenelementexists \{id = gh_link_container}
-		runscriptonscreenelement \{id = gh_link_container
-			legacydoscreenelementmorph
+	if ScreenElementExists \{id = gh_link_container}
+		RunScriptOnScreenElement \{id = gh_link_container
+			LegacyDoScreenElementMorph
 			params = {
 				id = gh_link_container
 				alpha = 1.0
 				time = 0.2
 			}}
 	endif
-	ghlink_vmenu :se_setprops \{enable_pad_handling}
-	launchevent \{type = focus
+	ghlink_vmenu :SE_SetProps \{enable_pad_handling}
+	LaunchEvent \{type = focus
 		target = ghlink_vmenu}
 endscript
 
 script online_menu_unselect_website 
-	if screenelementexists \{id = gh_link_container}
-		runscriptonscreenelement \{id = gh_link_container
-			legacydoscreenelementmorph
+	if ScreenElementExists \{id = gh_link_container}
+		RunScriptOnScreenElement \{id = gh_link_container
+			LegacyDoScreenElementMorph
 			params = {
 				id = gh_link_container
 				alpha = 0.0
 				time = 0.2
 			}}
 	endif
-	wait \{0.3
+	Wait \{0.3
 		seconds}
-	if screenelementexists \{id = gh_link_container}
-		destroyscreenelement \{id = gh_link_container}
+	if ScreenElementExists \{id = gh_link_container}
+		DestroyScreenElement \{id = gh_link_container}
 	endif
 	translate_and_scale_online_menu \{revert}
 	hide_unhide_menu_elements \{id = online_main_menu_text_container
 		time = 0.2}
 	hide_unhide_menu_elements \{id = online_main_vmenu
 		time = 0.2}
-	wait \{0.1
+	Wait \{0.1
 		seconds}
 	hide_unhide_menu_elements \{id = online_info_pane_container
 		time = 0.2}
-	wait \{0.3
+	Wait \{0.3
 		seconds}
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = online_main_vmenu}
 endscript
 
 script create_link_text 
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = online_main_menu_container
 		id = gh_link_container
 		pos = (0.0, 0.0)}
-	createscreenelement \{type = vscrollingmenu
+	CreateScreenElement \{type = VScrollingMenu
 		parent = gh_link_container
 		id = ghlink
 		just = [
@@ -476,8 +476,8 @@ script create_link_text
 		dims = (400.0, 480.0)
 		pos = (320.0, 200.0)
 		z_priority = 1}
-	createscreenelement {
-		type = vmenu
+	CreateScreenElement {
+		type = VMenu
 		parent = ghlink
 		id = ghlink_vmenu
 		pos = (0.0, 0.0)
@@ -486,55 +486,55 @@ script create_link_text
 		dims = (400.0, 480.0)
 		exclusive_device = ($primary_controller)
 		event_handlers = [
-			{pad_back soundevent params = {event = generic_menu_back_sfx}}
+			{pad_back SoundEvent params = {event = Generic_Menu_Back_SFX}}
 			{pad_back online_menu_unselect_website}
 			{pad_back clean_up_user_control_helpers}
 			{pad_back create_online_main_menu_helper_buttons}
 		]
 	}
-	<id> :se_setprops disable_pad_handling
-	createscreenelement {
-		type = textelement
+	<id> :SE_SetProps disable_pad_handling
+	CreateScreenElement {
+		type = TextElement
 		parent = gh_link_container
 		id = gh_link_title
 		font = fontgrid_title_a1
 		scale = 0.85
 		rgba = ($online_dark_purple)
-		text = qs(0x0d8a6066)
+		text = qs("www.guitarhero.com")
 		just = [center top]
 		pos = (640.0, 111.0)
 		z_priority = 4.0
 	}
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = gh_link_container
 		font = fontgrid_text_a8
 		scale = (0.75, 0.75)
 		rgba = ($online_light_blue)
-		text = qs(0xe6d25a85)
+		text = qs("Ready to Be A Guitar Hero? \nHere's how to link your stats to the web community:")
 		just = [center top]
 		internal_just = [center top]
 		z_priority = 6.0
 		pos = (640.0, 160.0)
 		dims = (950.0, 200.0)
 	}
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = gh_link_container
 		font = fontgrid_text_a8
 		scale = (0.75, 0.75)
 		rgba = ($online_light_blue)
-		text = qs(0x96e1c5ce)
+		text = qs("- Go to www.guitarhero.com\n- Create a New Account or Login\n- Click 'Link Account'\n- Enter the following VIP Passcode")
 		just = [center top]
 		internal_just = [left top]
 		z_priority = 6.0
 		pos = (640.0, 240.0)
 		dims = (1010.0, 600.0)
 	}
-	netsessionfunc \{func = get_agora_token}
-	formattext textname = vip_code qs(0x0bc409e2) a = <token>
-	createscreenelement {
-		type = textelement
+	NetSessionFunc \{func = get_agora_token}
+	FormatText TextName = vip_code qs("\L%a") a = <token>
+	CreateScreenElement {
+		type = TextElement
 		parent = gh_link_container
 		font = fontgrid_text_a3
 		scale = 1.25
@@ -545,22 +545,22 @@ script create_link_text
 		pos = (640.0, 410.0)
 		font_spacing = 5
 	}
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = gh_link_container
 		font = fontgrid_text_a8
 		scale = (0.75, 0.75)
 		rgba = ($online_light_blue)
-		text = qs(0xd23ba7b8)
+		text = qs("On the web you can personalize your profile, browse leaderboards, jam with an online band, collect groupies, and rock out in tournaments!")
 		just = [center top]
 		internal_just = [left top]
 		z_priority = 6.0
 		pos = (648.0, 460.0)
 		dims = (1010.0, 600.0)
 	}
-	if screenelementexists \{id = gh_link_container}
-		runscriptonscreenelement \{id = gh_link_container
-			legacydoscreenelementmorph
+	if ScreenElementExists \{id = gh_link_container}
+		RunScriptOnScreenElement \{id = gh_link_container
+			LegacyDoScreenElementMorph
 			params = {
 				id = gh_link_container
 				alpha = 0.0
@@ -579,10 +579,10 @@ script create_link_text
 			0
 			200
 		]}
-	add_user_control_helper \{text = qs(0xaf4d5dd2)
+	add_user_control_helper \{text = qs("BACK")
 		button = red
 		z = 100}
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = online_main_vmenu}
 endscript
 
@@ -594,66 +594,66 @@ script online_menu_select_motd
 	hide_unhide_menu_elements \{id = online_main_vmenu
 		time = 0.2
 		hide}
-	wait \{0.1
+	Wait \{0.1
 		seconds}
 	hide_unhide_menu_elements \{id = online_info_pane_text_container
 		time = 0.2
 		hide}
 	translate_and_scale_info_pane
-	wait \{0.3
+	Wait \{0.3
 		seconds}
-	if screenelementexists \{id = motd_container}
-		runscriptonscreenelement \{id = motd_container
-			legacydoscreenelementmorph
+	if ScreenElementExists \{id = MOTD_Container}
+		RunScriptOnScreenElement \{id = MOTD_Container
+			LegacyDoScreenElementMorph
 			params = {
-				id = motd_container
+				id = MOTD_Container
 				alpha = 1.0
 				time = 0.2
 			}}
 	endif
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = motd_vmenu}
-	motd_vmenu :se_setprops \{enable_pad_handling}
+	motd_vmenu :SE_SetProps \{enable_pad_handling}
 endscript
 
 script online_menu_unselect_motd 
-	if screenelementexists \{id = motd_container}
-		runscriptonscreenelement \{id = motd_container
-			legacydoscreenelementmorph
+	if ScreenElementExists \{id = MOTD_Container}
+		RunScriptOnScreenElement \{id = MOTD_Container
+			LegacyDoScreenElementMorph
 			params = {
-				id = motd_container
+				id = MOTD_Container
 				alpha = 0.0
 				time = 0.2
 			}}
 	endif
-	wait \{0.3
+	Wait \{0.3
 		seconds}
 	destroy_menu \{menu_id = motd_scroller}
-	if screenelementexists \{id = motd_container}
-		destroyscreenelement \{id = motd_container}
+	if ScreenElementExists \{id = MOTD_Container}
+		DestroyScreenElement \{id = MOTD_Container}
 	endif
 	translate_and_scale_info_pane \{revert}
 	hide_unhide_menu_elements \{id = online_info_pane_text_container
 		time = 0.2}
-	wait \{0.1
+	Wait \{0.1
 		seconds}
 	hide_unhide_menu_elements \{id = online_main_vmenu
 		time = 0.2}
 	hide_unhide_menu_elements \{id = online_main_menu_container
 		time = 0.2}
-	wait \{0.3
+	Wait \{0.3
 		seconds}
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = online_main_vmenu}
 endscript
 
 script create_motd_text 
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = online_info_pane_container
-		id = motd_container
+		id = MOTD_Container
 		pos = (0.0, 0.0)}
-	createscreenelement \{type = vscrollingmenu
-		parent = motd_container
+	CreateScreenElement \{type = VScrollingMenu
+		parent = MOTD_Container
 		id = motd_scroller
 		just = [
 			center
@@ -662,8 +662,8 @@ script create_motd_text
 		dims = (400.0, 480.0)
 		pos = (640.0, 0.0)
 		z_priority = 1}
-	createscreenelement {
-		type = vmenu
+	CreateScreenElement {
+		type = VMenu
 		parent = motd_scroller
 		id = motd_vmenu
 		pos = (0.0, 0.0)
@@ -672,27 +672,27 @@ script create_motd_text
 		dims = (400.0, 480.0)
 		exclusive_device = ($primary_controller)
 		event_handlers = [
-			{pad_back soundevent params = {event = generic_menu_back_sfx}}
+			{pad_back SoundEvent params = {event = Generic_Menu_Back_SFX}}
 			{pad_back online_menu_unselect_motd}
 			{pad_back clean_up_user_control_helpers}
 			{pad_back create_online_main_menu_helper_buttons}
 		]
 	}
-	<id> :se_setprops disable_pad_handling
-	createscreenelement {
-		type = textelement
-		parent = motd_container
+	<id> :SE_SetProps disable_pad_handling
+	CreateScreenElement {
+		type = TextElement
+		parent = MOTD_Container
 		id = gh_link_title
 		font = fontgrid_title_a1
 		scale = 0.85
 		rgba = ($online_light_blue)
-		text = qs(0xb7dbccb4)
+		text = qs("Message Of The Day")
 		just = [center top]
 		pos = (640.0, 160.0)
 		z_priority = 10.0
 	}
-	createscreenelement \{type = windowelement
-		parent = motd_container
+	CreateScreenElement \{type = WindowElement
+		parent = MOTD_Container
 		id = motd_info_scroll_window
 		pos = (633.0, 220.0)
 		dims = (500.0, 300.0)
@@ -700,8 +700,8 @@ script create_motd_text
 			center
 			top
 		]}
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = motd_info_scroll_window
 		id = motd_info_text_block
 		just = [left top]
@@ -719,8 +719,8 @@ script create_motd_text
 		params = {
 			id = motd_info_text_block
 		}}
-	if screenelementexists \{id = motd_container}
-		motd_container :se_setprops \{alpha = 0.0}
+	if ScreenElementExists \{id = MOTD_Container}
+		MOTD_Container :SE_SetProps \{alpha = 0.0}
 	endif
 	clean_up_user_control_helpers
 	set_user_control_color \{text_rgba = [
@@ -735,19 +735,19 @@ script create_motd_text
 			0
 			200
 		]}
-	add_user_control_helper \{text = qs(0xaf4d5dd2)
+	add_user_control_helper \{text = qs("BACK")
 		button = red
 		z = 100}
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = online_main_vmenu}
 endscript
 
 script scroll_motd_info \{scroll_time = 60}
 	<end_pos> = (0.0, -1000.0)
 	<this_id> = <id>
-	getscreenelementchildren id = <this_id>
-	if gotparam \{children}
-		getarraysize (<children>)
+	GetScreenElementChildren id = <this_id>
+	if GotParam \{children}
+		GetArraySize (<children>)
 		<line_nums> = <array_size>
 	else
 		return
@@ -755,19 +755,19 @@ script scroll_motd_info \{scroll_time = 60}
 	if (<line_nums> > 10)
 		begin
 		begin
-		wait \{5
+		Wait \{5
 			seconds}
-		legacydoscreenelementmorph id = <this_id> pos = <end_pos> time = <scroll_time>
-		wait ((<line_nums> - 10) * 1.8) seconds
-		getscreenelementprops id = <this_id>
-		setscreenelementprops id = <this_id> pos = <pos>
-		wait \{4.0
+		LegacyDoScreenElementMorph id = <this_id> pos = <end_pos> time = <scroll_time>
+		Wait ((<line_nums> - 10) * 1.8) seconds
+		GetScreenElementProps id = <this_id>
+		SetScreenElementProps id = <this_id> pos = <pos>
+		Wait \{4.0
 			seconds}
-		<this_id> :legacydomorph alpha = 0 time = 0.2
-		<this_id> :se_setprops pos = (0.0, 0.0)
-		wait \{0.5
+		<this_id> :LegacyDoMorph alpha = 0 time = 0.2
+		<this_id> :SE_SetProps pos = (0.0, 0.0)
+		Wait \{0.5
 			seconds}
-		<this_id> :legacydomorph alpha = 1 time = 0.2
+		<this_id> :LegacyDoMorph alpha = 1 time = 0.2
 		break
 		repeat
 		repeat
@@ -775,10 +775,10 @@ script scroll_motd_info \{scroll_time = 60}
 endscript
 
 script translate_and_scale_online_menu 
-	if NOT gotparam \{revert}
-		runscriptonscreenelement id = online_frame legacydoscreenelementmorph params = {id = online_frame pos = (($online_main_menu_pos) + (170.0, -35.0)) time = 0.2}
-		runscriptonscreenelement id = xb_online_frame_crown legacydoscreenelementmorph params = {id = xb_online_frame_crown pos = (($online_main_menu_pos) + (180.0, -88.0)) time = 0.2}
-		runscriptonscreenelement \{id = online_frame
+	if NOT GotParam \{revert}
+		RunScriptOnScreenElement id = online_frame LegacyDoScreenElementMorph params = {id = online_frame pos = (($online_main_menu_pos) + (170.0, -35.0)) time = 0.2}
+		RunScriptOnScreenElement id = xb_online_frame_crown LegacyDoScreenElementMorph params = {id = xb_online_frame_crown pos = (($online_main_menu_pos) + (180.0, -88.0)) time = 0.2}
+		RunScriptOnScreenElement \{id = online_frame
 			scale_element_to_size
 			params = {
 				id = online_frame
@@ -787,10 +787,10 @@ script translate_and_scale_online_menu
 				time = 0.2
 			}}
 	else
-		runscriptonscreenelement id = online_frame legacydoscreenelementmorph params = {id = online_frame pos = ($online_main_menu_pos) time = 0.2}
-		runscriptonscreenelement id = xb_online_frame_crown legacydoscreenelementmorph params = {id = xb_online_frame_crown pos = (($online_main_menu_pos) + (0.0, -62.0)) time = 0.2}
-		online_frame :se_setprops \{scale = 1.0}
-		runscriptonscreenelement \{id = online_frame
+		RunScriptOnScreenElement id = online_frame LegacyDoScreenElementMorph params = {id = online_frame pos = ($online_main_menu_pos) time = 0.2}
+		RunScriptOnScreenElement id = xb_online_frame_crown LegacyDoScreenElementMorph params = {id = xb_online_frame_crown pos = (($online_main_menu_pos) + (0.0, -62.0)) time = 0.2}
+		online_frame :SE_SetProps \{scale = 1.0}
+		RunScriptOnScreenElement \{id = online_frame
 			scale_element_to_size
 			params = {
 				id = online_frame
@@ -802,14 +802,14 @@ script translate_and_scale_online_menu
 endscript
 
 script translate_and_scale_info_pane 
-	if NOT gotparam \{revert}
-		runscriptonscreenelement id = motd_top legacydoscreenelementmorph params = {id = motd_top pos = (($online_info_pane_pos) + (-250.0, -32.0)) time = 0.2}
-		runscriptonscreenelement id = motd_top_fill legacydoscreenelementmorph params = {id = motd_top_fill pos = (($online_info_pane_pos) + (-250.0, -32.0)) time = 0.2}
-		runscriptonscreenelement id = motd_body legacydoscreenelementmorph params = {id = motd_body pos = (($online_info_pane_pos) + (-250.0, 64.0)) time = 0.2}
-		runscriptonscreenelement id = motd_body_fill legacydoscreenelementmorph params = {id = motd_body_fill pos = (($online_info_pane_pos) + (-250.0, 64.0)) time = 0.2}
-		runscriptonscreenelement id = motd_end legacydoscreenelementmorph params = {id = motd_end pos = (($online_info_pane_pos) + (-250.0, 320.0)) time = 0.2}
-		runscriptonscreenelement id = motd_end_fill legacydoscreenelementmorph params = {id = motd_end_fill pos = (($online_info_pane_pos) + (-250.0, 320.0)) time = 0.2}
-		runscriptonscreenelement \{id = motd_top
+	if NOT GotParam \{revert}
+		RunScriptOnScreenElement id = motd_top LegacyDoScreenElementMorph params = {id = motd_top pos = (($online_info_pane_pos) + (-250.0, -32.0)) time = 0.2}
+		RunScriptOnScreenElement id = motd_top_fill LegacyDoScreenElementMorph params = {id = motd_top_fill pos = (($online_info_pane_pos) + (-250.0, -32.0)) time = 0.2}
+		RunScriptOnScreenElement id = motd_body LegacyDoScreenElementMorph params = {id = motd_body pos = (($online_info_pane_pos) + (-250.0, 64.0)) time = 0.2}
+		RunScriptOnScreenElement id = motd_body_fill LegacyDoScreenElementMorph params = {id = motd_body_fill pos = (($online_info_pane_pos) + (-250.0, 64.0)) time = 0.2}
+		RunScriptOnScreenElement id = motd_end LegacyDoScreenElementMorph params = {id = motd_end pos = (($online_info_pane_pos) + (-250.0, 320.0)) time = 0.2}
+		RunScriptOnScreenElement id = motd_end_fill LegacyDoScreenElementMorph params = {id = motd_end_fill pos = (($online_info_pane_pos) + (-250.0, 320.0)) time = 0.2}
+		RunScriptOnScreenElement \{id = motd_top
 			scale_element_to_size
 			params = {
 				id = motd_top
@@ -817,7 +817,7 @@ script translate_and_scale_info_pane
 				target_height = 96
 				time = 0.2
 			}}
-		runscriptonscreenelement \{id = motd_top_fill
+		RunScriptOnScreenElement \{id = motd_top_fill
 			scale_element_to_size
 			params = {
 				id = motd_top_fill
@@ -825,7 +825,7 @@ script translate_and_scale_info_pane
 				target_height = 96
 				time = 0.2
 			}}
-		runscriptonscreenelement \{id = motd_body
+		RunScriptOnScreenElement \{id = motd_body
 			scale_element_to_size
 			params = {
 				id = motd_body
@@ -833,7 +833,7 @@ script translate_and_scale_info_pane
 				target_height = 256
 				time = 0.2
 			}}
-		runscriptonscreenelement \{id = motd_body_fill
+		RunScriptOnScreenElement \{id = motd_body_fill
 			scale_element_to_size
 			params = {
 				id = motd_body_fill
@@ -841,7 +841,7 @@ script translate_and_scale_info_pane
 				target_height = 256
 				time = 0.2
 			}}
-		runscriptonscreenelement \{id = motd_end
+		RunScriptOnScreenElement \{id = motd_end
 			scale_element_to_size
 			params = {
 				id = motd_end
@@ -849,7 +849,7 @@ script translate_and_scale_info_pane
 				target_height = 96
 				time = 0.2
 			}}
-		runscriptonscreenelement \{id = motd_end_fill
+		RunScriptOnScreenElement \{id = motd_end_fill
 			scale_element_to_size
 			params = {
 				id = motd_end_fill
@@ -858,13 +858,13 @@ script translate_and_scale_info_pane
 				time = 0.2
 			}}
 	else
-		runscriptonscreenelement id = motd_top legacydoscreenelementmorph params = {id = motd_top pos = ($online_info_pane_pos) time = 0.2}
-		runscriptonscreenelement id = motd_top_fill legacydoscreenelementmorph params = {id = motd_top_fill pos = ($online_info_pane_pos) time = 0.2}
-		runscriptonscreenelement id = motd_body legacydoscreenelementmorph params = {id = motd_body pos = (($online_info_pane_pos) + (0.0, 64.0)) time = 0.2}
-		runscriptonscreenelement id = motd_body_fill legacydoscreenelementmorph params = {id = motd_body_fill pos = (($online_info_pane_pos) + (0.0, 64.0)) time = 0.2}
-		runscriptonscreenelement id = motd_end legacydoscreenelementmorph params = {id = motd_end pos = (($online_info_pane_pos) + (0.0, 320.0)) time = 0.2}
-		runscriptonscreenelement id = motd_end_fill legacydoscreenelementmorph params = {id = motd_end_fill pos = (($online_info_pane_pos) + (0.0, 320.0)) time = 0.2}
-		runscriptonscreenelement \{id = motd_top
+		RunScriptOnScreenElement id = motd_top LegacyDoScreenElementMorph params = {id = motd_top pos = ($online_info_pane_pos) time = 0.2}
+		RunScriptOnScreenElement id = motd_top_fill LegacyDoScreenElementMorph params = {id = motd_top_fill pos = ($online_info_pane_pos) time = 0.2}
+		RunScriptOnScreenElement id = motd_body LegacyDoScreenElementMorph params = {id = motd_body pos = (($online_info_pane_pos) + (0.0, 64.0)) time = 0.2}
+		RunScriptOnScreenElement id = motd_body_fill LegacyDoScreenElementMorph params = {id = motd_body_fill pos = (($online_info_pane_pos) + (0.0, 64.0)) time = 0.2}
+		RunScriptOnScreenElement id = motd_end LegacyDoScreenElementMorph params = {id = motd_end pos = (($online_info_pane_pos) + (0.0, 320.0)) time = 0.2}
+		RunScriptOnScreenElement id = motd_end_fill LegacyDoScreenElementMorph params = {id = motd_end_fill pos = (($online_info_pane_pos) + (0.0, 320.0)) time = 0.2}
+		RunScriptOnScreenElement \{id = motd_top
 			scale_element_to_size
 			params = {
 				id = motd_top
@@ -872,7 +872,7 @@ script translate_and_scale_info_pane
 				target_height = 96
 				time = 0.2
 			}}
-		runscriptonscreenelement \{id = motd_top_fill
+		RunScriptOnScreenElement \{id = motd_top_fill
 			scale_element_to_size
 			params = {
 				id = motd_top_fill
@@ -880,7 +880,7 @@ script translate_and_scale_info_pane
 				target_height = 96
 				time = 0.2
 			}}
-		runscriptonscreenelement \{id = motd_body
+		RunScriptOnScreenElement \{id = motd_body
 			scale_element_to_size
 			params = {
 				id = motd_body
@@ -888,7 +888,7 @@ script translate_and_scale_info_pane
 				target_height = 256
 				time = 0.2
 			}}
-		runscriptonscreenelement \{id = motd_body_fill
+		RunScriptOnScreenElement \{id = motd_body_fill
 			scale_element_to_size
 			params = {
 				id = motd_body_fill
@@ -896,7 +896,7 @@ script translate_and_scale_info_pane
 				target_height = 256
 				time = 0.2
 			}}
-		runscriptonscreenelement \{id = motd_end
+		RunScriptOnScreenElement \{id = motd_end
 			scale_element_to_size
 			params = {
 				id = motd_end
@@ -904,7 +904,7 @@ script translate_and_scale_info_pane
 				target_height = 96
 				time = 0.2
 			}}
-		runscriptonscreenelement \{id = motd_end_fill
+		RunScriptOnScreenElement \{id = motd_end_fill
 			scale_element_to_size
 			params = {
 				id = motd_end_fill
@@ -916,11 +916,11 @@ script translate_and_scale_info_pane
 endscript
 
 script hide_unhide_menu_elements \{time = 0.0}
-	if screenelementexists id = <id>
-		if gotparam \{hide}
-			runscriptonscreenelement id = <id> legacydoscreenelementmorph params = {alpha = 0.0 time = <time> id = <id>}
+	if ScreenElementExists id = <id>
+		if GotParam \{hide}
+			RunScriptOnScreenElement id = <id> LegacyDoScreenElementMorph params = {alpha = 0.0 time = <time> id = <id>}
 		else
-			runscriptonscreenelement id = <id> legacydoscreenelementmorph params = {alpha = 1.0 time = <time> id = <id>}
+			RunScriptOnScreenElement id = <id> LegacyDoScreenElementMorph params = {alpha = 1.0 time = <time> id = <id>}
 		endif
 	endif
 endscript
@@ -932,59 +932,59 @@ script destroy_net_play_song_menu
 endscript
 
 script online_select_downloads 
-	netsessionfunc \{func = showmarketplaceui}
+	NetSessionFunc \{func = ShowMarketPlaceUI}
 	wait_for_blade_complete
-	setpakmancurrentblock \{map = zones
+	SetPakManCurrentBlock \{map = zones
 		pak = none
 		block_scripts = 1}
 	destroy_band
-	downloads_unloadcontent
+	Downloads_UnloadContent
 	ui_flow_manager_respond_to_action \{action = select_downloadable_content}
 endscript
 
 script net_add_item_to_main_menu 
-	if iswinport
+	if IsWinPort
 		line_spacing = 50
-	elseif isxenon
+	elseif isXenon
 		line_spacing = 40
 	else
 		line_spacing = 50
 	endif
 	if (<info_text_index> = -1)
-		0xbeaab0b8 = [
+		info_event_handlers = [
 			{focus net_main_menu_focus}
 			{unfocus net_main_menu_unfocus}
 		]
 	else
-		0xbeaab0b8 = [
+		info_event_handlers = [
 			{focus net_main_menu_focus}
-			{focus setscreenelementprops params = {id = help_info_text_block text = ($info_text [<info_text_index>])}}
+			{focus SetScreenElementProps params = {id = help_info_text_block text = ($info_text [<info_text_index>])}}
 			{unfocus net_main_menu_unfocus}
 		]
 	endif
-	createscreenelement {
-		type = containerelement
-		parent = <vmenu>
+	CreateScreenElement {
+		type = ContainerElement
+		parent = <VMenu>
 		dims = ((100.0, 0.0) + (0.0, 1.0) * <line_spacing>)
-		event_handlers = <0xbeaab0b8>
+		event_handlers = <info_event_handlers>
 	}
 	menu_item_container = <id>
-	if gotparam \{pad_choose_script}
-		if gotparam \{choose_script_params}
-			<menu_item_container> :se_setprops event_handlers = [{pad_choose <pad_choose_script> params = {<choose_script_params>}}]
+	if GotParam \{pad_choose_script}
+		if GotParam \{choose_script_params}
+			<menu_item_container> :SE_SetProps event_handlers = [{pad_choose <pad_choose_script> params = {<choose_script_params>}}]
 		else
-			<menu_item_container> :se_setprops event_handlers = [{pad_choose <pad_choose_script>}]
+			<menu_item_container> :SE_SetProps event_handlers = [{pad_choose <pad_choose_script>}]
 		endif
 	endif
-	if gotparam \{pad_choose_script2}
-		if gotparam \{choose_script_params2}
-			<menu_item_container> :se_setprops event_handlers = [{pad_choose <pad_choose_script2> params = {<choose_script_params2>}}]
+	if GotParam \{pad_choose_script2}
+		if GotParam \{choose_script_params2}
+			<menu_item_container> :SE_SetProps event_handlers = [{pad_choose <pad_choose_script2> params = {<choose_script_params2>}}]
 		else
-			<menu_item_container> :se_setprops event_handlers = [{pad_choose <pad_choose_script2>}]
+			<menu_item_container> :SE_SetProps event_handlers = [{pad_choose <pad_choose_script2>}]
 		endif
 	endif
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <menu_item_container>
 		local_id = highlightbar
 		texture = white
@@ -995,8 +995,8 @@ script net_add_item_to_main_menu
 		z_priority = 3
 		alpha = 0.0
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <menu_item_container>
 		local_id = left_bookend
 		texture = character_hub_hilite_bookend
@@ -1007,8 +1007,8 @@ script net_add_item_to_main_menu
 		z_priority = 3
 		alpha = 0.0
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <menu_item_container>
 		local_id = right_bookend
 		texture = character_hub_hilite_bookend
@@ -1019,8 +1019,8 @@ script net_add_item_to_main_menu
 		z_priority = 3
 		alpha = 0.0
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <menu_item_container>
 		local_id = text
 		font = fontgrid_text_a8
@@ -1030,26 +1030,26 @@ script net_add_item_to_main_menu
 		just = [center top]
 		z_priority = 4.0
 	}
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	if (<width> > 420)
-		setscreenelementprops {
+		SetScreenElementProps {
 			id = <id>
 			scale = 1.0
 		}
 		scale_element_to_size {
 			id = <id>
 			target_width = 420
-			target_height = <height>
+			target_height = <Height>
 		}
 	endif
-	if (<text> = qs(0x6db89d96))
-		getglobaltags \{user_options}
+	if (<text> = qs("Quick Match: Ranked Match"))
+		GetGlobalTags \{user_options}
 		if (<online_game_mode> = 4)
-			setscreenelementprops {
+			SetScreenElementProps {
 				id = <menu_item_container>
 				not_focusable
 			}
-			setscreenelementprops {
+			SetScreenElementProps {
 				id = {<menu_item_container> child = text}
 				rgba = ($online_grey)
 			}
@@ -1058,56 +1058,56 @@ script net_add_item_to_main_menu
 endscript
 
 script net_main_menu_focus 
-	obj_getid
-	if screenelementexists id = {<objid> child = highlightbar}
-		setscreenelementprops {
-			id = {<objid> child = highlightbar}
+	Obj_GetID
+	if ScreenElementExists id = {<ObjID> child = highlightbar}
+		SetScreenElementProps {
+			id = {<ObjID> child = highlightbar}
 			alpha = 1.0
 		}
 	endif
-	if screenelementexists id = {<objid> child = left_bookend}
-		setscreenelementprops {
-			id = {<objid> child = left_bookend}
+	if ScreenElementExists id = {<ObjID> child = left_bookend}
+		SetScreenElementProps {
+			id = {<ObjID> child = left_bookend}
 			alpha = 1.0
 		}
 	endif
-	if screenelementexists id = {<objid> child = right_bookend}
-		setscreenelementprops {
-			id = {<objid> child = right_bookend}
+	if ScreenElementExists id = {<ObjID> child = right_bookend}
+		SetScreenElementProps {
+			id = {<ObjID> child = right_bookend}
 			alpha = 1.0
 		}
 	endif
-	if screenelementexists id = {<objid> child = text}
-		setscreenelementprops {
-			id = {<objid> child = text}
+	if ScreenElementExists id = {<ObjID> child = text}
+		SetScreenElementProps {
+			id = {<ObjID> child = text}
 			rgba = ($online_dark_purple)
 		}
 	endif
 endscript
 
 script net_main_menu_unfocus 
-	obj_getid
-	if screenelementexists id = {<objid> child = highlightbar}
-		setscreenelementprops {
-			id = {<objid> child = highlightbar}
+	Obj_GetID
+	if ScreenElementExists id = {<ObjID> child = highlightbar}
+		SetScreenElementProps {
+			id = {<ObjID> child = highlightbar}
 			alpha = 0.0
 		}
 	endif
-	if screenelementexists id = {<objid> child = left_bookend}
-		setscreenelementprops {
-			id = {<objid> child = left_bookend}
+	if ScreenElementExists id = {<ObjID> child = left_bookend}
+		SetScreenElementProps {
+			id = {<ObjID> child = left_bookend}
 			alpha = 0.0
 		}
 	endif
-	if screenelementexists id = {<objid> child = right_bookend}
-		setscreenelementprops {
-			id = {<objid> child = right_bookend}
+	if ScreenElementExists id = {<ObjID> child = right_bookend}
+		SetScreenElementProps {
+			id = {<ObjID> child = right_bookend}
 			alpha = 0.0
 		}
 	endif
-	if screenelementexists id = {<objid> child = text}
-		setscreenelementprops {
-			id = {<objid> child = text}
+	if ScreenElementExists id = {<ObjID> child = text}
+		SetScreenElementProps {
+			id = {<ObjID> child = text}
 			rgba = ($online_light_blue)
 		}
 	endif

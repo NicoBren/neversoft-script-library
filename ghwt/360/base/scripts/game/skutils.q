@@ -7,90 +7,90 @@ Xenon_AnimLODInterleave2 = 20
 Xenon_AnimLODInterleave4 = 12
 
 script autolaunch 
-	lockglobaltags \{forceoff}
+	LockGlobalTags \{forceoff}
 	if GotParam \{level}
-		Change current_level = <level>
+		change current_level = <level>
 		startnow = 1
 	endif
 	if GotParam \{song}
-		Change current_song = <song>
+		change current_song = <song>
 		startnow = 1
 	endif
 	if GotParam \{difficulty}
-		Change structurename = player1_status difficulty = <difficulty>
+		change structurename = player1_status difficulty = <difficulty>
 		startnow = 1
 	endif
 	if GotParam \{difficulty2}
-		Change structurename = player2_status difficulty = <difficulty2>
+		change structurename = player2_status difficulty = <difficulty2>
 		startnow = 1
 	endif
 	if GotParam \{difficulty3}
-		Change structurename = player3_status difficulty = <difficulty3>
+		change structurename = player3_status difficulty = <difficulty3>
 		startnow = 1
 	endif
 	if GotParam \{difficulty4}
-		Change structurename = player4_status difficulty = <difficulty4>
+		change structurename = player4_status difficulty = <difficulty4>
 		startnow = 1
 	endif
-	if GotParam \{starttime}
-		Change current_starttime = <starttime>
+	if GotParam \{StartTime}
+		change current_starttime = <StartTime>
 		startnow = 1
 	endif
 	if GotParam \{controller}
-		Change structurename = player1_status controller = <controller>
-		Change player1_device = <controller>
-		Change primary_controller = <controller>
-		Change \{primary_controller_assigned = 1}
+		change structurename = player1_status controller = <controller>
+		change player1_device = <controller>
+		change primary_controller = <controller>
+		change \{primary_controller_assigned = 1}
 		startnow = 1
 	else
-		Change \{primary_controller = 0}
-		Change \{primary_controller_assigned = 1}
+		change \{primary_controller = 0}
+		change \{primary_controller_assigned = 1}
 	endif
 	if GotParam \{controller2}
-		Change structurename = player2_status controller = <controller2>
-		Change player2_device = <controller2>
-		Change primary_controller = <controller2>
-		Change \{primary_controller_assigned = 1}
+		change structurename = player2_status controller = <controller2>
+		change player2_device = <controller2>
+		change primary_controller = <controller2>
+		change \{primary_controller_assigned = 1}
 		startnow = 1
 	endif
 	if GotParam \{controller3}
-		Change structurename = player3_status controller = <controller3>
-		Change player2_device = <controller3>
-		Change primary_controller = <controller3>
-		Change \{primary_controller_assigned = 1}
+		change structurename = player3_status controller = <controller3>
+		change player2_device = <controller3>
+		change primary_controller = <controller3>
+		change \{primary_controller_assigned = 1}
 		startnow = 1
 	endif
 	if GotParam \{controller4}
-		Change structurename = player4_status controller = <controller4>
-		Change player2_device = <controller4>
-		Change primary_controller = <controller4>
-		Change \{primary_controller_assigned = 1}
+		change structurename = player4_status controller = <controller4>
+		change player2_device = <controller4>
+		change primary_controller = <controller4>
+		change \{primary_controller_assigned = 1}
 		startnow = 1
 	endif
 	if GotParam \{part}
-		Change structurename = player1_status part = <part>
+		change structurename = player1_status part = <part>
 		startnow = 1
 	endif
 	if GotParam \{part2}
-		Change structurename = player2_status part = <part2>
+		change structurename = player2_status part = <part2>
 		startnow = 1
 	endif
 	if GotParam \{part3}
-		Change structurename = player3_status part = <part3>
+		change structurename = player3_status part = <part3>
 		startnow = 1
 	endif
 	if GotParam \{part4}
-		Change structurename = player4_status part = <part4>
+		change structurename = player4_status part = <part4>
 		startnow = 1
 	endif
 	if GotParam \{game_mode}
-		Change game_mode = <game_mode>
+		change game_mode = <game_mode>
 		if ($game_mode = p2_faceoff || $game_mode = p2_pro_faceoff)
-			Change \{current_num_players = 2}
+			change \{current_num_players = 2}
 		elseif ($game_mode = p3_quickplay)
-			Change \{current_num_players = 3}
+			change \{current_num_players = 3}
 		elseif ($game_mode = p4_quickplay)
-			Change \{current_num_players = 4}
+			change \{current_num_players = 4}
 		endif
 		startnow = 1
 	endif
@@ -103,34 +103,34 @@ script autolaunch
 			params = {
 				current_song_count = 0
 			}}
-		Change autolaunch_startnow = <startnow>
+		change autolaunch_startnow = <startnow>
 	endif
-	progression_cashmilestonesclear
+	Progression_CashMilestonesClear
 	translate_gamemode
 endscript
 
 script setup_4_player_bot 
-	setplayerinfo \{1
+	SetPlayerInfo \{1
 		part = guitar}
-	setplayerinfo \{2
+	SetPlayerInfo \{2
 		part = drum}
-	setplayerinfo \{3
-		part = bass}
-	setplayerinfo \{4
-		part = vocals}
-	setplayerinfo \{1
+	SetPlayerInfo \{3
+		part = Bass}
+	SetPlayerInfo \{4
+		part = Vocals}
+	SetPlayerInfo \{1
 		bot_play = 1}
-	setplayerinfo \{2
+	SetPlayerInfo \{2
 		bot_play = 1}
-	setplayerinfo \{3
+	SetPlayerInfo \{3
 		bot_play = 1}
-	setplayerinfo \{4
+	SetPlayerInfo \{4
 		bot_play = 1}
 	return \{game_mode = p4_quickplay}
 endscript
 
 script change_level 
-	script_assert \{qs(0xd5d70466)}
+	script_assert \{qs("\LThis is now gone...")}
 endscript
 
 script KillElement3d 
@@ -140,7 +140,7 @@ script KillElement3d
 endscript
 
 script script_assert 
-	printf \{qs(0x8b930894)}
+	printf \{qs("\LASSERT MESSAGE:")}
 	ScriptAssert <...>
 endscript
 
@@ -150,7 +150,7 @@ endscript
 script DumpMetrics 
 	GetMetrics
 	printf
-	printf \{qs(0xff1d69af)}
+	printf \{qs("\LDumping Metrics Structure")}
 	printstruct <...>
 endscript
 dummy_metrics_struct = {
@@ -172,7 +172,7 @@ script GetSkaterCam
 	if InSplitScreenGame
 		if IsObjectScript
 			Obj_GetID
-			if NOT checksumequals a = <objID> b = 0
+			if NOT ChecksumEquals a = <ObjID> b = 0
 				camera_object = skatercam1
 			endif
 		endif
@@ -194,7 +194,7 @@ script empty_script
 endscript
 
 script restore_start_key_binding 
-	printf \{qs(0x2313a464)}
+	printf \{qs("\L+++ RESTORE START KEY")}
 	SetScreenElementProps \{id = root_window
 		event_handlers = [
 			{
@@ -207,7 +207,7 @@ endscript
 
 script kill_start_key_binding 
 	if NOT GotParam \{nospam}
-		printf \{qs(0x3ddc95e5)}
+		printf \{qs("\L--- KILL START KEY")}
 	endif
 	SetScreenElementProps \{id = root_window
 		event_handlers = [
@@ -225,7 +225,7 @@ script BlockPendingPakManLoads \{map = all
 	if (<block_scripts> = 1)
 		PendingPakManLoads map = <map> block_scripts = 1 noparse = <noparse>
 		if GotParam \{loaderror}
-			return \{FALSE}
+			return \{false}
 		endif
 		return \{true}
 	endif
@@ -237,7 +237,7 @@ script BlockPendingPakManLoads \{map = all
 		gameframe}
 	repeat
 	if GotParam \{loaderror}
-		return \{FALSE}
+		return \{false}
 	endif
 	return \{true}
 endscript
@@ -246,13 +246,13 @@ script SetPakManCurrentBlock \{block_scripts = 0
 		noparse = 0}
 	SetPakManCurrent map = <map> pak = <pak> pakname = <pakname>
 	if NOT BlockPendingPakManLoads map = <map> block_scripts = <block_scripts> noparse = <noparse>
-		return \{FALSE}
+		return \{false}
 	endif
 	GetPakManCurrentName \{map = zones}
 	if GotParam \{pakname}
-		formatText checksumName = zone_setup '%s_setup' s = <pakname>
+		FormatText checksumname = zone_setup '%s_setup' s = <pakname>
 		if ScriptExists <zone_setup>
-			SpawnScriptNow <zone_setup>
+			spawnscriptnow <zone_setup>
 		endif
 	endif
 	set_hidebytype
@@ -264,24 +264,24 @@ script RefreshPakManCurrent
 endscript
 
 script Zones_PakMan_Init 
-	printf \{qs(0xd75fe338)}
+	printf \{qs("\LZones_PakMan_Init")}
 	zone_name = <pak_name>
 	zone_string_name = <pak_string_name>
-	formatText checksumName = sfx_zone_name '%z_sfx' z = <zone_string_name>
-	formatText checksumName = gfx_zone_name '%z_gfx' z = <zone_string_name>
-	formatText checksumName = lfx_zone_name '%z_lfx' z = <zone_string_name>
-	formatText checksumName = mfx_zone_name '%z_mfx' z = <zone_string_name>
-	formatText checksumName = array_name '%z_NodeArray' z = <zone_string_name>
-	formatText checksumName = sfx_array_name '%z_SFX_NodeArray' z = <zone_string_name>
-	formatText checksumName = gfx_array_name '%z_GFX_NodeArray' z = <zone_string_name>
-	formatText checksumName = lfx_array_name '%z_LFX_NodeArray' z = <zone_string_name>
-	formatText checksumName = mfx_array_name '%z_MFX_NodeArray' z = <zone_string_name>
+	FormatText checksumname = sfx_zone_name '%z_sfx' z = <zone_string_name>
+	FormatText checksumname = gfx_zone_name '%z_gfx' z = <zone_string_name>
+	FormatText checksumname = lfx_zone_name '%z_lfx' z = <zone_string_name>
+	FormatText checksumname = mfx_zone_name '%z_mfx' z = <zone_string_name>
+	FormatText checksumname = array_name '%z_NodeArray' z = <zone_string_name>
+	FormatText checksumname = sfx_array_name '%z_SFX_NodeArray' z = <zone_string_name>
+	FormatText checksumname = gfx_array_name '%z_GFX_NodeArray' z = <zone_string_name>
+	FormatText checksumname = lfx_array_name '%z_LFX_NodeArray' z = <zone_string_name>
+	FormatText checksumname = mfx_array_name '%z_MFX_NodeArray' z = <zone_string_name>
 	zone_init <...>
-	formatText checksumName = script_zone_init '%z_init' z = <zone_string_name>
-	formatText checksumName = script_zone_sfx_init '%z_sfx_init' z = <zone_string_name>
-	formatText checksumName = script_zone_gfx_init '%z_gfx_init' z = <zone_string_name>
-	formatText checksumName = script_zone_lfx_init '%z_lfx_init' z = <zone_string_name>
-	formatText checksumName = script_zone_mfx_init '%z_mfx_init' z = <zone_string_name>
+	FormatText checksumname = script_zone_init '%z_init' z = <zone_string_name>
+	FormatText checksumname = script_zone_sfx_init '%z_sfx_init' z = <zone_string_name>
+	FormatText checksumname = script_zone_gfx_init '%z_gfx_init' z = <zone_string_name>
+	FormatText checksumname = script_zone_lfx_init '%z_lfx_init' z = <zone_string_name>
+	FormatText checksumname = script_zone_mfx_init '%z_mfx_init' z = <zone_string_name>
 	if ScriptExists <script_zone_init>
 		<script_zone_init>
 	endif
@@ -298,28 +298,28 @@ script Zones_PakMan_Init
 		<script_zone_mfx_init>
 	endif
 	UpdatePakManVisibility \{map = zones}
-	printf \{qs(0xd94a3f05)}
+	printf \{qs("\LZones_PakMan_Init end")}
 endscript
 
 script Zones_PakMan_DeInit 
-	printf \{qs(0x8ba60592)}
+	printf \{qs("\LZones_PakMan_DeInit")}
 	zone_name = <pak_name>
 	zone_string_name = <pak_string_name>
-	formatText checksumName = sfx_zone_name '%z_sfx' z = <zone_string_name>
-	formatText checksumName = gfx_zone_name '%z_gfx' z = <zone_string_name>
-	formatText checksumName = lfx_zone_name '%z_lfx' z = <zone_string_name>
-	formatText checksumName = mfx_zone_name '%z_mfx' z = <zone_string_name>
-	formatText checksumName = array_name '%z_NodeArray' z = <zone_string_name>
-	formatText checksumName = sfx_array_name '%z_SFX_NodeArray' z = <zone_string_name>
-	formatText checksumName = gfx_array_name '%z_GFX_NodeArray' z = <zone_string_name>
-	formatText checksumName = lfx_array_name '%z_LFX_NodeArray' z = <zone_string_name>
-	formatText checksumName = mfx_array_name '%z_MFX_NodeArray' z = <zone_string_name>
+	FormatText checksumname = sfx_zone_name '%z_sfx' z = <zone_string_name>
+	FormatText checksumname = gfx_zone_name '%z_gfx' z = <zone_string_name>
+	FormatText checksumname = lfx_zone_name '%z_lfx' z = <zone_string_name>
+	FormatText checksumname = mfx_zone_name '%z_mfx' z = <zone_string_name>
+	FormatText checksumname = array_name '%z_NodeArray' z = <zone_string_name>
+	FormatText checksumname = sfx_array_name '%z_SFX_NodeArray' z = <zone_string_name>
+	FormatText checksumname = gfx_array_name '%z_GFX_NodeArray' z = <zone_string_name>
+	FormatText checksumname = lfx_array_name '%z_LFX_NodeArray' z = <zone_string_name>
+	FormatText checksumname = mfx_array_name '%z_MFX_NodeArray' z = <zone_string_name>
 	zone_deinit <...>
-	formatText checksumName = script_zone_deinit '%z_deinit' z = <zone_string_name>
-	formatText checksumName = script_zone_sfx_deinit '%z_sfx_deinit' z = <zone_string_name>
-	formatText checksumName = script_zone_gfx_deinit '%z_gfx_deinit' z = <zone_string_name>
-	formatText checksumName = script_zone_lfx_deinit '%z_lfx_deinit' z = <zone_string_name>
-	formatText checksumName = script_zone_mfx_deinit '%z_mfx_deinit' z = <zone_string_name>
+	FormatText checksumname = script_zone_deinit '%z_deinit' z = <zone_string_name>
+	FormatText checksumname = script_zone_sfx_deinit '%z_sfx_deinit' z = <zone_string_name>
+	FormatText checksumname = script_zone_gfx_deinit '%z_gfx_deinit' z = <zone_string_name>
+	FormatText checksumname = script_zone_lfx_deinit '%z_lfx_deinit' z = <zone_string_name>
+	FormatText checksumname = script_zone_mfx_deinit '%z_mfx_deinit' z = <zone_string_name>
 	if ScriptExists <script_zone_deinit>
 		<script_zone_deinit>
 	endif
@@ -342,5 +342,5 @@ script Zones_PakMan_DeInit
 	ResetWaypoints pak_name = <sfx_zone_name>
 	ResetWaypoints pak_name = <lfx_zone_name>
 	UpdatePakManVisibility \{map = zones}
-	printf \{qs(0x4dc93d77)}
+	printf \{qs("\LZones_PakMan_DeInit end")}
 endscript

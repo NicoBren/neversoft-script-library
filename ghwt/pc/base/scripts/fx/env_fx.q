@@ -1,26 +1,26 @@
-doupdatelensflare = 1
-lensflare_morph_in = 0.15
-lensflare_morph_out = 0.1
+DoUpdateLensFlare = 1
+LensFlare_Morph_In = 0.15
+LensFlare_Morph_Out = 0.1
 
-script disablesun 
-	change \{doupdatelensflare = 0}
-	maybehidelensflare
-	setsunprops \{size = 0}
+script DisableSun 
+	change \{DoUpdateLensFlare = 0}
+	MaybeHideLensFlare
+	SetSunProps \{size = 0}
 endscript
 
-script enablesun 
-	change \{doupdatelensflare = 1}
-	unhidelensflare
-	setsunprops \{size = 7332.0}
+script EnableSun 
+	change \{DoUpdateLensFlare = 1}
+	UnHideLensFlare
+	SetSunProps \{size = 7332.0}
 endscript
 
-script createlensflare 
+script CreateLensFlare 
 	return
-	setscreenelementlock \{id = root_window
+	SetScreenElementLock \{id = root_window
 		off}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
-		id = lens_flare_container
+		id = Lens_Flare_Container
 		dims = (640.0, 480.0)
 		pos = (0.0, 0.0)
 		alpha = 0
@@ -28,36 +28,36 @@ script createlensflare
 			left
 			top
 		]}
-	getarraysize \{lens_flare_data}
+	GetArraySize \{Lens_Flare_Data}
 	index = 0
 	begin
-	createscreenelement {
-		type = spriteelement
-		parent = lens_flare_container
-		id = (lens_flare_data [<index>].id)
-		scale = (lens_flare_data [<index>].scale)
-		texture = (lens_flare_data [<index>].texture)
-		rgba = (lens_flare_data [<index>].rgba)
+	CreateScreenElement {
+		type = SpriteElement
+		parent = Lens_Flare_Container
+		id = (Lens_Flare_Data [<index>].id)
+		scale = (Lens_Flare_Data [<index>].scale)
+		texture = (Lens_Flare_Data [<index>].texture)
+		rgba = (Lens_Flare_Data [<index>].rgba)
 		pos = (0.0, 0.0)
-		blend = add
+		blend = Add
 	}
 	<index> = (<index> + 1)
 	repeat <array_size>
-	setscreenelementlock \{id = root_window
+	SetScreenElementLock \{id = root_window
 		on}
 endscript
 
-script maybehidelensflare \{morph_time = 0.0}
-	if screenelementexists \{id = lens_flare_container}
-		hidelensflare <...>
+script MaybeHideLensFlare \{morph_time = 0.0}
+	if ScreenElementExists \{id = Lens_Flare_Container}
+		HideLensFlare <...>
 	else
-		createlensflare
+		CreateLensFlare
 	endif
 endscript
-lens_flare_data = [
+Lens_Flare_Data = [
 	{
 		id = lf_sprite_1
-		texture = apm_abberation02
+		texture = APM_abberation02
 		pos_scale = 0.8
 		scale = 3.0
 		rgba = [
@@ -69,7 +69,7 @@ lens_flare_data = [
 	}
 	{
 		id = lf_sprite_2
-		texture = apm_abberation02
+		texture = APM_abberation02
 		pos_scale = 0.7
 		scale = 2.0
 		rgba = [
@@ -81,7 +81,7 @@ lens_flare_data = [
 	}
 	{
 		id = lf_sprite_3
-		texture = apm_abberation01
+		texture = APM_abberation01
 		pos_scale = 0.65000004
 		scale = 0.6
 		rgba = [
@@ -117,7 +117,7 @@ lens_flare_data = [
 	}
 	{
 		id = lf_sprite_6
-		texture = apm_abberation01
+		texture = APM_abberation01
 		pos_scale = 0.57
 		scale = 0.75
 		rgba = [
@@ -141,7 +141,7 @@ lens_flare_data = [
 	}
 	{
 		id = lf_sprite_8
-		texture = apm_abberation02
+		texture = APM_abberation02
 		pos_scale = 0.45000002
 		scale = 1.3
 		rgba = [
@@ -165,7 +165,7 @@ lens_flare_data = [
 	}
 	{
 		id = lf_sprite_10
-		texture = apm_abberation01
+		texture = APM_abberation01
 		pos_scale = 0.120000005
 		scale = 3.1
 		rgba = [
@@ -177,7 +177,7 @@ lens_flare_data = [
 	}
 	{
 		id = lf_sprite_11
-		texture = apm_abberation02
+		texture = APM_abberation02
 		pos_scale = -0.45000002
 		scale = 2.75
 		rgba = [
@@ -189,7 +189,7 @@ lens_flare_data = [
 	}
 	{
 		id = lf_sprite_12
-		texture = apm_abberation02
+		texture = APM_abberation02
 		pos_scale = -0.48000002
 		scale = 1.0
 		rgba = [
@@ -200,7 +200,7 @@ lens_flare_data = [
 		]
 	}
 ]
-lens_flare_data1 = [
+Lens_Flare_Data1 = [
 	{
 		id = lf_sprite_1
 		texture = flare1
@@ -215,7 +215,7 @@ lens_flare_data1 = [
 	}
 	{
 		id = lf_sprite_2
-		texture = apm_abberation01
+		texture = APM_abberation01
 		pos_scale = 0.5
 		scale = 0.75
 		rgba = [
@@ -239,7 +239,7 @@ lens_flare_data1 = [
 	}
 	{
 		id = lf_sprite_4
-		texture = apm_abberation02
+		texture = APM_abberation02
 		pos_scale = 0.125
 		scale = 2.0
 		rgba = [
@@ -251,7 +251,7 @@ lens_flare_data1 = [
 	}
 	{
 		id = lf_sprite_5
-		texture = apm_abberation01
+		texture = APM_abberation01
 		pos_scale = -0.5
 		scale = 0.85
 		rgba = [
@@ -275,7 +275,7 @@ lens_flare_data1 = [
 	}
 	{
 		id = lf_sprite_7
-		texture = apm_abberation02
+		texture = APM_abberation02
 		pos_scale = -0.18180001
 		scale = 0.85
 		rgba = [
@@ -286,4 +286,4 @@ lens_flare_data1 = [
 		]
 	}
 ]
-sunburst_out = 0.25
+SunBurst_Out = 0.25

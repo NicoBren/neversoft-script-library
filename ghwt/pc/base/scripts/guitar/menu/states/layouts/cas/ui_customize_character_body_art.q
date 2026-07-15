@@ -1,7 +1,7 @@
 
 script ui_create_customize_character_body_art 
 	make_generic_menu \{vmenu_id = create_customize_character_body_art_vmenu
-		title = qs(0xea5928be)
+		title = qs("Tattoos")
 		num_icons = 2
 		show_history}
 	setup_cas_menu_handlers \{vmenu_id = create_customize_character_body_art_vmenu
@@ -13,61 +13,61 @@ script ui_create_customize_character_body_art
 		]
 		zoom_camera = 'customize_character_Zoom'}
 	add_generic_menu_icon_item {
-		icon = bodyart_chest
-		text = qs(0x7844d77c)
-		choose_state = uistate_cap_main
+		icon = BodyArt_Chest
+		text = qs("Torso")
+		choose_state = UIstate_cap_main
 		choose_state_data = {
 			savegame = ($cas_current_savegame)
-			part = cas_body
-			text = qs(0x96383f0a)
+			part = CAS_Body
+			text = qs("Torso Tattoo")
 			cam_name = 'customize_tat_torso'
 			camera_list = ['customize_tat_torso' 'customize_tat_torso_R' 'customize_tat_torso_B' 'customize_tat_torso_L']
 			zoom_camera = 'customize_character_Zoom'
-			div_id = body
-			hist_tex = bodyart_chest
-			stance = stance_select_tat_chest
+			div_id = Body
+			hist_tex = BodyArt_Chest
+			stance = Stance_Select_Tat_Chest
 			additional_init_script = hide_torso_parts_for_body_art
 			additional_deinit_script = unhide_torso_parts_for_body_art
 		}
 	}
 	add_generic_menu_icon_item {
-		icon = bodyart_rightarm
-		text = qs(0xf9df288f)
-		choose_state = uistate_cap_main
+		icon = BodyArt_RightArm
+		text = qs("Right Arm")
+		choose_state = UIstate_cap_main
 		choose_state_data = {
 			savegame = ($cas_current_savegame)
-			part = cas_body
-			text = qs(0xf9df288f)
+			part = CAS_Body
+			text = qs("Right Arm")
 			cam_name = 'customize_tat_right_arm'
 			camera_list = ['customize_tat_right_arm' 'customize_tat_right_arm_R' 'customize_tat_right_arm_B' 'customize_tat_right_arm_L']
 			zoom_camera = 'customize_character_Zoom'
-			div_id = `right arm`
-			hist_tex = bodyart_rightarm
-			stance = stance_select_tat_arm_r
+			div_id = `Right Arm`
+			hist_tex = BodyArt_RightArm
+			stance = Stance_Select_Tat_Arm_R
 			additional_init_script = hide_torso_parts_for_body_art
 			additional_deinit_script = unhide_torso_parts_for_body_art
 		}
 	}
 	add_generic_menu_icon_item {
-		icon = bodyart_leftarm
-		text = qs(0x86bc5ab4)
-		choose_state = uistate_cap_main
+		icon = BodyArt_LeftArm
+		text = qs("Left Arm")
+		choose_state = UIstate_cap_main
 		choose_state_data = {
 			savegame = ($cas_current_savegame)
-			part = cas_body
-			text = qs(0x86bc5ab4)
+			part = CAS_Body
+			text = qs("Left Arm")
 			cam_name = 'customize_tat_left_arm'
 			camera_list = ['customize_tat_left_arm' 'customize_tat_left_arm_R' 'customize_tat_left_arm_B' 'customize_tat_left_arm_L']
 			zoom_camera = 'customize_character_Zoom'
-			div_id = `left arm`
-			hist_tex = bodyart_leftarm
-			stance = stance_select_tat_arm_l
+			div_id = `Left Arm`
+			hist_tex = BodyArt_LeftArm
+			stance = Stance_Select_Tat_Arm_L
 			additional_init_script = hide_torso_parts_for_body_art
 			additional_deinit_script = unhide_torso_parts_for_body_art
 		}
 	}
 	menu_finish \{car_helper_text}
-	launchevent type = focus target = create_customize_character_body_art_vmenu data = {child_index = <selected_index>}
+	LaunchEvent type = focus target = create_customize_character_body_art_vmenu data = {child_index = <selected_index>}
 endscript
 
 script ui_destroy_customize_character_body_art 
@@ -75,31 +75,31 @@ script ui_destroy_customize_character_body_art
 endscript
 
 script hide_torso_parts_for_body_art 
-	pushtemporarycasappearance
-	setcasappearancepartinstance \{part = cas_acc_left
+	PushTemporaryCASAppearance
+	SetCASAppearancePartInstance \{part = CAS_Acc_Left
 		part_instance = {
 			desc_id = none
 		}}
-	setcasappearancepartinstance \{part = cas_acc_right
+	SetCASAppearancePartInstance \{part = CAS_Acc_Right
 		part_instance = {
 			desc_id = none
 		}}
 	if is_female_char
-		setcasappearancepartinstance \{part = cas_torso
+		SetCASAppearancePartInstance \{part = CAS_Torso
 			part_instance = {
-				desc_id = f_fun_torso_bra
+				desc_id = F_Fun_Torso_Bra
 			}}
 	else
-		setcasappearancepartinstance \{part = cas_torso
+		SetCASAppearancePartInstance \{part = CAS_Torso
 			part_instance = {
-				desc_id = shirtless
+				desc_id = Shirtless
 			}}
 	endif
-	rebuildcurrentcasmodel
+	RebuildCurrentCASModel
 endscript
 
 script unhide_torso_parts_for_body_art 
-	mergepartintotemporarycasappearance \{part_list = [
-			cas_body
+	MergePartIntoTemporaryCASAppearance \{part_list = [
+			CAS_Body
 		]}
 endscript

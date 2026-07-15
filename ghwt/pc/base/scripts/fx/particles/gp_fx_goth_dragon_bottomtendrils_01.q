@@ -1,51 +1,51 @@
-gp_fx_goth_dragon_bottomtendrils_01 = {
+GP_FX_Goth_Dragon_BottomTendrils_01 = {
 	pos = (-3.026833, -0.09869001, 5.10143)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	emitrangedims = (0.1, 0.0, 0.0)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	EmitRangeDims = (0.1, 0.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, -3.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 5.0
-	liferange = (1.5, 1.3)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 5.0
+	LifeRange = (1.5, 1.3)
 	emit_rate = 20.0
 	max = 0
-	timeseed = 0.0
-	lifetime = 0.7
-	emitnum = 0
-	followemitter = 0.0
-	alwaysemit
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 0.7
+	emitNum = 0
+	FollowEmitter = 0.0
+	AlwaysEmit
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.5, 0.5)
 		(0.3, 0.3)
 	]
-	speedrange = (5.0, 5.0)
-	rotvel = (1.0, -1.0)
-	rotveltimescale = 0.5
-	emitdelaystart = 0.0
-	pathfollowtime = 0.0
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (5.0, 5.0)
+	RotVel = (1.0, -1.0)
+	RotVelTimeScale = 0.5
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.0
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -6553345
-	lod_default
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = ph_firetendrils
-		specularpower = 0
+	LOD_Default
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = PH_FireTendrils
+		SpecularPower = 0
 		alphacutoff = 1
-		blendmode = add
-		quadanimationfps = 0
+		blendMode = Add
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.48103303, 0.0, -0.0)
 		(-0.48103303, 0.0, -0.0)
 		(-0.448603, 0.0, -0.0)
@@ -59,7 +59,7 @@ gp_fx_goth_dragon_bottomtendrils_01 = {
 		(0.477463, 0.0, -0.0)
 		(0.477463, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-256
 		-256
 		-1
@@ -69,7 +69,7 @@ gp_fx_goth_dragon_bottomtendrils_01 = {
 		-256
 		-256
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.10150301
 		0.57733697
 		1.0

@@ -1,18 +1,18 @@
-gp_pinwheelsparks01 = {
-	Pos = (-2.4759521, 0.0, -1.01012)
-	Angles = (0.0, 0.0, 0.0)
+GP_PinWheelSparks01 = {
+	pos = (-2.4759521, 0.0, -1.01012)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
-	Attach
+	attach
 	Align
 	EmitRangeDims = (0.1, 0.1, 0.0)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EnableRotate
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, -9.8, 0.0)
+	force = (0.0, -9.8, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
@@ -21,11 +21,11 @@ gp_pinwheelsparks01 = {
 	BounceCoeff = 0.2
 	BounceCallbackRate = 0.0
 	LifeRange = (0.5, 1.0)
-	Emit_Rate = 384.0
-	Max = 0
+	emit_rate = 384.0
+	max = 0
 	TimeSeed = 0.0
-	LifeTime = 0.0
-	EmitNum = 0
+	lifeTime = 0.0
+	emitNum = 0
 	FollowEmitter = 0.0
 	FillPath
 	AlwaysEmit
@@ -42,9 +42,9 @@ gp_pinwheelsparks01 = {
 	AlignWithPath
 	PathFollowTime = 0.05
 	History = 2
-	HistoryListCoordinateSpace = World
+	HistoryListCoordinateSpace = world
 	align_to = (1.0, 0.0, 0.0)
-	Color = -1
+	color = -1
 	LOD_Default
 	NoVisibilityTest
 	QuickMaterial = {
@@ -52,8 +52,8 @@ gp_pinwheelsparks01 = {
 		DiffuseTexture = JOW_Spark01
 		SpecularPower = 0
 		TwoSide
-		AlphaCutoff = 16
-		BlendMode = add
+		alphacutoff = 16
+		blendMode = Add
 		Burn
 		BurnValue = 0.7
 		QuadAnimationFPS = 0

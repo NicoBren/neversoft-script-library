@@ -17,7 +17,7 @@ script create_confirm_band_delete_menu
 			0
 			255
 		]}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = cbd_container
 		pos = (0.0, 0.0)
@@ -27,15 +27,15 @@ script create_confirm_band_delete_menu
 		]}
 	offwhite = [223 223 223 255]
 	z = 100
-	displaysprite parent = cbd_container tex = dialog_title_bg flip_v pos = (416.0, 60.0) scale = (1.75, 1.75) z = <z>
-	displaysprite parent = cbd_container tex = dialog_title_bg pos = (640.0, 60.0) scale = (1.75, 1.75) z = <z>
-	displaysprite parent = cbd_container tex = white pos = (525.0, 524.0) scale = (58.0, 6.0) z = (<z> + 0.1) rgba = <offwhite>
-	displaysprite parent = cbd_container tex = dialog_frame_joiner pos = (510.0, 510.0) rot_angle = 5 scale = (1.575, 1.5) z = (<z> + 0.2)
-	displaysprite parent = cbd_container tex = dialog_frame_joiner pos = (723.0, 514.0) flip_v rot_angle = -5 scale = (1.575, 1.5) z = (<z> + 0.2)
-	displaysprite parent = cbd_container tex = dialog_bg pos = (514.0, 467.0) scale = (1.0, 1.25) z = <z>
-	displaysprite parent = cbd_container tex = dialog_bg flip_h pos = (514.0, 537.0) scale = (1.0, 1.25) z = <z>
-	displaysprite id = hi_right parent = cbd_container tex = dialog_highlight pos = (770.0, 533.0) scale = (1.0, 1.0) z = (<z> + 0.3)
-	displaysprite id = hi_left parent = cbd_container tex = dialog_highlight flip_v pos = (500.0, 533.0) scale = (1.0, 1.0) z = (<z> + 0.3)
+	displaySprite parent = cbd_container tex = Dialog_Title_BG flip_v pos = (416.0, 60.0) scale = (1.75, 1.75) z = <z>
+	displaySprite parent = cbd_container tex = Dialog_Title_BG pos = (640.0, 60.0) scale = (1.75, 1.75) z = <z>
+	displaySprite parent = cbd_container tex = white pos = (525.0, 524.0) scale = (58.0, 6.0) z = (<z> + 0.1) rgba = <offwhite>
+	displaySprite parent = cbd_container tex = dialog_frame_joiner pos = (510.0, 510.0) rot_angle = 5 scale = (1.575, 1.5) z = (<z> + 0.2)
+	displaySprite parent = cbd_container tex = dialog_frame_joiner pos = (723.0, 514.0) flip_v rot_angle = -5 scale = (1.575, 1.5) z = (<z> + 0.2)
+	displaySprite parent = cbd_container tex = dialog_bg pos = (514.0, 467.0) scale = (1.0, 1.25) z = <z>
+	displaySprite parent = cbd_container tex = dialog_bg flip_h pos = (514.0, 537.0) scale = (1.0, 1.25) z = <z>
+	displaySprite id = hi_right parent = cbd_container tex = Dialog_Highlight pos = (770.0, 533.0) scale = (1.0, 1.0) z = (<z> + 0.3)
+	displaySprite id = hi_left parent = cbd_container tex = Dialog_Highlight flip_v pos = (500.0, 533.0) scale = (1.0, 1.0) z = (<z> + 0.3)
 	create_pause_menu_frame \{x_scale = 1.2
 		z = 98}
 	create_confirm_band_delete_warning_text z = <z>
@@ -50,8 +50,8 @@ script destroy_confirm_band_delete_menu
 endscript
 
 script create_confirm_band_delete_warning_text 
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		font = ($confirm_band_delete_menu_font)
 		text = "WARNING"
 		just = [center center]
@@ -69,8 +69,8 @@ script create_confirm_band_delete_warning_text
 		"All progress associated with that band will be lost. "
 		"Are you sure you want to continue?"
 	]
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		font = ($confirm_band_delete_menu_font)
 		text = <text>
 		just = [center center]
@@ -87,8 +87,8 @@ script create_confirm_band_delete_warning_text
 endscript
 
 script create_confirm_band_delete_warning_menu_options 
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		font = ($confirm_band_delete_menu_font)
 		parent = cbd_warning_vmenu
 		text = "NO"
@@ -101,8 +101,8 @@ script create_confirm_band_delete_warning_menu_options
 		]
 		z_priority = (<z> + 5)
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		font = ($confirm_band_delete_menu_font)
 		parent = cbd_warning_vmenu
 		text = "YES"
@@ -119,19 +119,19 @@ endscript
 
 script menu_confirm_band_delete_highlight_no 
 	retail_menu_focus
-	setscreenelementprops \{id = hi_left
+	SetScreenElementProps \{id = hi_left
 		pos = (545.0, 502.0)
 		flip_v}
-	setscreenelementprops \{id = hi_right
+	SetScreenElementProps \{id = hi_right
 		pos = (680.0, 502.0)}
 endscript
 
 script menu_confirm_band_delete_highlight_yes 
 	retail_menu_focus
-	setscreenelementprops \{id = hi_left
+	SetScreenElementProps \{id = hi_left
 		pos = (540.0, 548.0)
 		flip_v}
-	setscreenelementprops \{id = hi_right
+	SetScreenElementProps \{id = hi_right
 		pos = (685.0, 548.0)}
 endscript
 
@@ -141,27 +141,27 @@ endscript
 
 script menu_confirm_band_delete_select_yes 
 	band_count = ($current_band)
-	getarraysize \{$difficulty_list}
+	GetArraySize \{$difficulty_list}
 	array_count = 0
 	begin
 	get_difficulty_text_nl difficulty = ($difficulty_list [<array_count>])
-	formattext checksumname = bandname 'p1_career_band%i_%d' i = ($num_career_bands + 1) d = <difficulty_text_nl> addtostringlookup = true
+	FormatText checksumname = bandname 'p1_career_band%i_%d' i = ($num_career_bands + 1) d = <difficulty_text_nl> AddToStringLookup = true
 	pop_bandtags bandname = <bandname>
-	formattext checksumname = bandname 'p1_career_band%i_%d' i = <band_count> d = <difficulty_text_nl> addtostringlookup = true
+	FormatText checksumname = bandname 'p1_career_band%i_%d' i = <band_count> d = <difficulty_text_nl> AddToStringLookup = true
 	push_bandtags bandname = <bandname> mode = p1_career
-	formattext checksumname = bandname 'p2_career_band%i_%d' i = ($num_career_bands + 1) d = <difficulty_text_nl> addtostringlookup = true
+	FormatText checksumname = bandname 'p2_career_band%i_%d' i = ($num_career_bands + 1) d = <difficulty_text_nl> AddToStringLookup = true
 	pop_bandtags bandname = <bandname>
-	formattext checksumname = bandname 'p2_career_band%i_%d' i = <band_count> d = <difficulty_text_nl> addtostringlookup = true
+	FormatText checksumname = bandname 'p2_career_band%i_%d' i = <band_count> d = <difficulty_text_nl> AddToStringLookup = true
 	push_bandtags bandname = <bandname> mode = p2_career
-	formattext checksumname = default_bandname 'band%i_info_p1_career' i = <band_count> addtostringlookup = true
-	setglobaltags <default_bandname> params = {($default_bandtags)}
-	formattext checksumname = default_bandname 'band%i_info_p2_career' i = <band_count> addtostringlookup = true
-	setglobaltags <default_bandname> params = {($default_bandtags)}
+	FormatText checksumname = default_bandname 'band%i_info_p1_career' i = <band_count> AddToStringLookup = true
+	SetGlobalTags <default_bandname> params = {($default_bandtags)}
+	FormatText checksumname = default_bandname 'band%i_info_p2_career' i = <band_count> AddToStringLookup = true
+	SetGlobalTags <default_bandname> params = {($default_bandtags)}
 	array_count = (<array_count> + 1)
 	repeat <array_size>
-	if iswinport
-		savetomemorycard \{filename = $memcard_file_name
-			filetype = progress
+	if IsWinPort
+		SaveToMemoryCard \{filename = $memcard_file_name
+			FileType = Progress
 			usepaddingslot = always}
 	endif
 	ui_flow_manager_respond_to_action \{action = continue}

@@ -12,9 +12,9 @@ script create_battle_alert_frames
 	change \{battle_alert_icons_created = 1}
 	i = 1
 	begin
-	formattext textname = player_text 'p%d' d = <i>
-	extendcrc battle_alert_container <player_text> out = battle_alert_container_id
-	if screenelementexists id = <battle_alert_container_id>
+	FormatText TextName = player_text 'p%d' d = <i>
+	ExtendCRC battle_alert_container <player_text> out = battle_alert_container_id
+	if ScreenElementExists id = <battle_alert_container_id>
 		return
 	endif
 	if (<i> = 1)
@@ -24,25 +24,25 @@ script create_battle_alert_frames
 	endif
 	y = (($highway_playline - $highway_height) - 48)
 	alert_pos = (<player_x> * (1.0, 0.0) + <y> * (0.0, 1.0))
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = battlemode_container
 		id = <battle_alert_container_id>
 		pos = <alert_pos>
 		z_priority = 49
 	}
 	parent_container = <id>
-	extendcrc ba_icon_frame_container <player_text> out = new_container_id
-	createscreenelement {
-		type = containerelement
+	ExtendCRC ba_icon_frame_container <player_text> out = new_container_id
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <parent_container>
 		id = <new_container_id>
 		alpha = 0
 	}
 	<parent_container> = <id>
-	extendcrc ba_icon_frame_left <player_text> out = new_container_id
-	createscreenelement {
-		type = spriteelement
+	ExtendCRC ba_icon_frame_left <player_text> out = new_container_id
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <parent_container>
 		id = <new_container_id>
 		texture = battle_alert_frame_end
@@ -51,9 +51,9 @@ script create_battle_alert_frames
 		just = [right center]
 		flip_v
 	}
-	extendcrc ba_icon_frame_middle <player_text> out = new_container_id
-	createscreenelement {
-		type = spriteelement
+	ExtendCRC ba_icon_frame_middle <player_text> out = new_container_id
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <parent_container>
 		id = <new_container_id>
 		texture = battle_alert_frame_middle
@@ -61,9 +61,9 @@ script create_battle_alert_frames
 		dims = (32.0, 72.0)
 		just = [center center]
 	}
-	extendcrc ba_icon_frame_right <player_text> out = new_container_id
-	createscreenelement {
-		type = spriteelement
+	ExtendCRC ba_icon_frame_right <player_text> out = new_container_id
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <parent_container>
 		id = <new_container_id>
 		texture = battle_alert_frame_end
@@ -71,9 +71,9 @@ script create_battle_alert_frames
 		pos = (48.0, 0.0)
 		just = [left center]
 	}
-	extendcrc ba_icon_fill_single <player_text> out = new_container_id
-	createscreenelement {
-		type = spriteelement
+	ExtendCRC ba_icon_fill_single <player_text> out = new_container_id
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <battle_alert_container_id>
 		id = <new_container_id>
 		texture = battle_alert_fill_single
@@ -82,9 +82,9 @@ script create_battle_alert_frames
 		just = [center center]
 		alpha = 0
 	}
-	extendcrc ba_icon_fill_hard_double <player_text> out = new_container_id
-	createscreenelement {
-		type = spriteelement
+	ExtendCRC ba_icon_fill_hard_double <player_text> out = new_container_id
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <battle_alert_container_id>
 		id = <new_container_id>
 		texture = battle_alert_fill_hard_double
@@ -93,9 +93,9 @@ script create_battle_alert_frames
 		just = [center center]
 		alpha = 0
 	}
-	extendcrc ba_icon_fill_hard_lefty <player_text> out = new_container_id
-	createscreenelement {
-		type = spriteelement
+	ExtendCRC ba_icon_fill_hard_lefty <player_text> out = new_container_id
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <battle_alert_container_id>
 		id = <new_container_id>
 		texture = battle_alert_fill_hard_lefty
@@ -104,9 +104,9 @@ script create_battle_alert_frames
 		just = [center center]
 		alpha = 0
 	}
-	extendcrc ba_icon_fill_double_lefty <player_text> out = new_container_id
-	createscreenelement {
-		type = spriteelement
+	ExtendCRC ba_icon_fill_double_lefty <player_text> out = new_container_id
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <battle_alert_container_id>
 		id = <new_container_id>
 		texture = battle_alert_fill_double_lefty
@@ -115,9 +115,9 @@ script create_battle_alert_frames
 		just = [center center]
 		alpha = 0
 	}
-	extendcrc ba_icon_fill_triple <player_text> out = new_container_id
-	createscreenelement {
-		type = spriteelement
+	ExtendCRC ba_icon_fill_triple <player_text> out = new_container_id
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <battle_alert_container_id>
 		id = <new_container_id>
 		texture = battle_alert_fill_triple
@@ -126,9 +126,9 @@ script create_battle_alert_frames
 		just = [center center]
 		alpha = 0
 	}
-	extendcrc ba_alert_star_1 <player_text> out = new_container_id
-	createscreenelement {
-		type = spriteelement
+	ExtendCRC ba_alert_star_1 <player_text> out = new_container_id
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <battle_alert_container_id>
 		id = <new_container_id>
 		texture = battle_alert_star_1
@@ -136,9 +136,9 @@ script create_battle_alert_frames
 		just = [center center]
 		alpha = 0
 	}
-	extendcrc ba_alert_star_2 <player_text> out = new_container_id
-	createscreenelement {
-		type = spriteelement
+	ExtendCRC ba_alert_star_2 <player_text> out = new_container_id
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <battle_alert_container_id>
 		id = <new_container_id>
 		texture = battle_alert_star_2
@@ -146,9 +146,9 @@ script create_battle_alert_frames
 		just = [center center]
 		alpha = 0
 	}
-	extendcrc ba_alert_star_3 <player_text> out = new_container_id
-	createscreenelement {
-		type = spriteelement
+	ExtendCRC ba_alert_star_3 <player_text> out = new_container_id
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <battle_alert_container_id>
 		id = <new_container_id>
 		texture = battle_alert_star_3
@@ -156,9 +156,9 @@ script create_battle_alert_frames
 		just = [center center]
 		alpha = 0
 	}
-	extendcrc ba_alert_icon_1 <player_text> out = new_container_id
-	createscreenelement {
-		type = spriteelement
+	ExtendCRC ba_alert_icon_1 <player_text> out = new_container_id
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <battle_alert_container_id>
 		id = <new_container_id>
 		texture = icon_attack_difficulty
@@ -166,9 +166,9 @@ script create_battle_alert_frames
 		just = [center center]
 		alpha = 0
 	}
-	extendcrc ba_alert_icon_2 <player_text> out = new_container_id
-	createscreenelement {
-		type = spriteelement
+	ExtendCRC ba_alert_icon_2 <player_text> out = new_container_id
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <battle_alert_container_id>
 		id = <new_container_id>
 		texture = icon_attack_addnote
@@ -176,9 +176,9 @@ script create_battle_alert_frames
 		just = [center center]
 		alpha = 0
 	}
-	extendcrc ba_alert_icon_3 <player_text> out = new_container_id
-	createscreenelement {
-		type = spriteelement
+	ExtendCRC ba_alert_icon_3 <player_text> out = new_container_id
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <battle_alert_container_id>
 		id = <new_container_id>
 		texture = icon_attack_leftyrighty
@@ -186,8 +186,8 @@ script create_battle_alert_frames
 		just = [center center]
 		alpha = 0
 	}
-	extendcrc battle_alert_text <player_text> out = battle_alert_text_id
-	displaytext {
+	ExtendCRC battle_alert_text <player_text> out = battle_alert_text_id
+	displayText {
 		id = <battle_alert_text_id>
 		parent = <battle_alert_container_id>
 		text = <battle_text>
@@ -205,39 +205,39 @@ endscript
 
 script destroy_battle_alert_frames 
 	change \{battle_alert_icons_created = 0}
-	if screenelementexists \{id = battle_alert_containerp1}
-		destroyscreenelement \{id = battle_alert_containerp1}
+	if ScreenElementExists \{id = battle_alert_containerp1}
+		DestroyScreenElement \{id = battle_alert_containerp1}
 	endif
-	if screenelementexists \{id = battle_alert_containerp2}
-		destroyscreenelement \{id = battle_alert_containerp2}
+	if ScreenElementExists \{id = battle_alert_containerp2}
+		DestroyScreenElement \{id = battle_alert_containerp2}
 	endif
 endscript
 
 script scale_battle_alert_frame \{player = 1
 		new_scale = 3
 		time = 0.3}
-	formattext textname = player_text 'p%d' d = <player>
+	FormatText TextName = player_text 'p%d' d = <player>
 	new_pos = (<new_scale> * (16.0, 0.0))
-	extendcrc ba_icon_frame_left <player_text> out = new_id
-	if screenelementexists id = <new_id>
-		doscreenelementmorph id = <new_id> pos = (-1 * <new_pos>) time = <time>
+	ExtendCRC ba_icon_frame_left <player_text> out = new_id
+	if ScreenElementExists id = <new_id>
+		doScreenElementMorph id = <new_id> pos = (-1 * <new_pos>) time = <time>
 	endif
-	extendcrc ba_icon_frame_middle <player_text> out = new_id
-	if screenelementexists id = <new_id>
-		getscreenelementprops id = <new_id>
-		doscreenelementmorph id = <new_id> scale = ((<new_scale> * (1.0, 0.0)) + (0.0, 1.0)) time = <time> relative_scale
+	ExtendCRC ba_icon_frame_middle <player_text> out = new_id
+	if ScreenElementExists id = <new_id>
+		GetScreenElementProps id = <new_id>
+		doScreenElementMorph id = <new_id> scale = ((<new_scale> * (1.0, 0.0)) + (0.0, 1.0)) time = <time> relative_scale
 	endif
-	extendcrc ba_icon_frame_right <player_text> out = new_id
-	if screenelementexists id = <new_id>
-		doscreenelementmorph id = <new_id> pos = <new_pos> time = <time>
+	ExtendCRC ba_icon_frame_right <player_text> out = new_id
+	if ScreenElementExists id = <new_id>
+		doScreenElementMorph id = <new_id> pos = <new_pos> time = <time>
 	endif
 endscript
 
 script update_battle_alert_icon \{player_status = player1_status}
-	formattext textname = player_text 'p%d' d = ($<player_status>.player)
-	extendcrc battle_alert_container <player_text> out = battle_alert_container_id
-	formattext textname = underscore_player '_p%d' d = ($<player_status>.player)
-	extendcrc battle_icons <underscore_player> out = player_icons
+	FormatText TextName = player_text 'p%d' d = ($<player_status>.player)
+	ExtendCRC battle_alert_container <player_text> out = battle_alert_container_id
+	FormatText TextName = underscore_player '_p%d' d = ($<player_status>.player)
+	ExtendCRC battle_icons <underscore_player> out = player_icons
 	battle_text = ""
 	num_icons = 0
 	lefty = 0
@@ -264,7 +264,7 @@ script update_battle_alert_icon \{player_status = player1_status}
 		<num_icons> = (<num_icons> + 1)
 		<double> = 1
 	endif
-	getglobaltags \{user_options}
+	GetGlobalTags \{user_options}
 	<is_lefty_flip> = 0
 	if ($<player_status>.player = 1)
 		<is_lefty_flip> = <lefty_flip_p1>
@@ -293,11 +293,11 @@ script update_battle_alert_icon \{player_status = player1_status}
 		fit_dims = (75.0, 25.0)
 		width_max = 250
 	endif
-	extendcrc battle_alert_text <player_text> out = battle_alert_text_id
-	if screenelementexists id = <battle_alert_text_id>
-		setscreenelementprops id = <battle_alert_text_id> text = <battle_text> scale = <text_scale>
+	ExtendCRC battle_alert_text <player_text> out = battle_alert_text_id
+	if ScreenElementExists id = <battle_alert_text_id>
+		SetScreenElementProps id = <battle_alert_text_id> text = <battle_text> scale = <text_scale>
 		if NOT (<num_icons> = 0)
-			getscreenelementdims id = <battle_alert_text_id>
+			GetScreenElementDims id = <battle_alert_text_id>
 			if (<width> > <width_max>)
 				fit_text_in_rectangle id = <battle_alert_text_id> dims = <fit_dims>
 			endif
@@ -307,26 +307,26 @@ script update_battle_alert_icon \{player_status = player1_status}
 	if (<num_icons> = 0)
 		reset_all_battle_bgs player_text = <player_text>
 		alpha_in_or_out_battle_hud player_text = <player_text> alpha = 0
-		extendcrc ba_icon_fill_single <player_text> out = new_id
-		if screenelementexists id = <new_id>
-			doscreenelementmorph id = <new_id> alpha = 0 time = 0.3
+		ExtendCRC ba_icon_fill_single <player_text> out = new_id
+		if ScreenElementExists id = <new_id>
+			doScreenElementMorph id = <new_id> alpha = 0 time = 0.3
 		endif
 	elseif (<num_icons> = 1)
 		reset_all_battle_bgs player_text = <player_text>
 		alpha_in_or_out_battle_hud player_text = <player_text> alpha = 1
 		frame_scale = 3
-		extendcrc ba_icon_fill_single <player_text> out = new_id
-		if screenelementexists id = <new_id>
-			doscreenelementmorph id = <new_id> alpha = 1 time = 0.3 scale = (1.2, 1.0) relative_scale
+		ExtendCRC ba_icon_fill_single <player_text> out = new_id
+		if ScreenElementExists id = <new_id>
+			doScreenElementMorph id = <new_id> alpha = 1 time = 0.3 scale = (1.2, 1.0) relative_scale
 			if (<lefty>)
 				change_battle_alert_icon player_text = <player_text> num = 2 tex = icon_attack_leftyrighty pos = battle_alert_icon_pos_off_2
-				setscreenelementprops id = <new_id> rgba = [55 170 130 255]
+				SetScreenElementProps id = <new_id> rgba = [55 170 130 255]
 			elseif (<double>)
 				change_battle_alert_icon num = 2 player_text = <player_text> tex = icon_attack_addnote pos = battle_alert_icon_pos_off_2
-				setscreenelementprops id = <new_id> rgba = [200 115 200 255]
+				SetScreenElementProps id = <new_id> rgba = [200 115 200 255]
 			elseif (<harder>)
 				change_battle_alert_icon num = 2 player_text = <player_text> tex = icon_attack_difficulty pos = battle_alert_icon_pos_off_2
-				setscreenelementprops id = <new_id> rgba = [210 210 210 255]
+				SetScreenElementProps id = <new_id> rgba = [210 210 210 255]
 			endif
 		endif
 	elseif (<num_icons> >= 2)
@@ -336,38 +336,38 @@ script update_battle_alert_icon \{player_status = player1_status}
 			frame_scale = 5
 		endif
 		reset_all_battle_bgs player_text = <player_text>
-		extendcrc ba_icon_fill_single <player_text> out = new_id
-		if screenelementexists id = <new_id>
-			doscreenelementmorph id = <new_id> alpha = 0 time = 0.3
+		ExtendCRC ba_icon_fill_single <player_text> out = new_id
+		if ScreenElementExists id = <new_id>
+			doScreenElementMorph id = <new_id> alpha = 0 time = 0.3
 		endif
 		if (<lefty>)
 			if (<harder>)
 				if (<double>)
-					change_battle_alert_back player_text = <player_text> bg = ba_icon_fill_triple scale = (1.0, 1.0)
+					change_battle_alert_back player_text = <player_text> bG = ba_icon_fill_triple scale = (1.0, 1.0)
 					change_battle_alert_icon num = 1 player_text = <player_text> tex = icon_attack_difficulty pos = battle_alert_icon_pos_off_1
 					change_battle_alert_icon num = 2 player_text = <player_text> tex = icon_attack_addnote pos = battle_alert_icon_pos_off_2
 					change_battle_alert_icon num = 3 player_text = <player_text> tex = icon_attack_leftyrighty pos = battle_alert_icon_pos_off_3
 				else
-					change_battle_alert_back player_text = <player_text> bg = ba_icon_fill_hard_lefty scale = (1.1, 1.0)
+					change_battle_alert_back player_text = <player_text> bG = ba_icon_fill_hard_lefty scale = (1.1, 1.0)
 					change_battle_alert_icon num = 1 player_text = <player_text> tex = icon_attack_difficulty pos = battle_alert_icon_pos_off_4
 					change_battle_alert_icon num = 3 player_text = <player_text> tex = icon_attack_leftyrighty pos = battle_alert_icon_pos_off_5
 				endif
 			else
-				change_battle_alert_back player_text = <player_text> bg = ba_icon_fill_double_lefty scale = (1.1, 1.0)
+				change_battle_alert_back player_text = <player_text> bG = ba_icon_fill_double_lefty scale = (1.1, 1.0)
 				change_battle_alert_icon num = 2 player_text = <player_text> tex = icon_attack_addnote pos = battle_alert_icon_pos_off_4
 				change_battle_alert_icon num = 3 player_text = <player_text> tex = icon_attack_leftyrighty pos = battle_alert_icon_pos_off_5
 			endif
 		else
-			change_battle_alert_back player_text = <player_text> bg = ba_icon_fill_hard_double scale = (1.1, 1.0)
+			change_battle_alert_back player_text = <player_text> bG = ba_icon_fill_hard_double scale = (1.1, 1.0)
 			change_battle_alert_icon num = 1 player_text = <player_text> tex = icon_attack_difficulty pos = battle_alert_icon_pos_off_4
 			change_battle_alert_icon num = 2 player_text = <player_text> tex = icon_attack_addnote pos = battle_alert_icon_pos_off_5
 		endif
 	endif
 	if (<num_icons>)
-		formattext checksumname = ba_alert_holder 'ba_alert_star_%d' d = <num_icons>
-		extendcrc <ba_alert_holder> <player_text> out = new_id
-		if screenelementexists id = <new_id>
-			doscreenelementmorph id = <new_id> alpha = 1 time = 0.3
+		FormatText checksumname = ba_alert_holder 'ba_alert_star_%d' d = <num_icons>
+		ExtendCRC <ba_alert_holder> <player_text> out = new_id
+		if ScreenElementExists id = <new_id>
+			doScreenElementMorph id = <new_id> alpha = 1 time = 0.3
 		endif
 	endif
 	if (<frame_scale>)
@@ -376,62 +376,62 @@ script update_battle_alert_icon \{player_status = player1_status}
 endscript
 
 script change_battle_alert_icon 
-	formattext checksumname = icon_pos 'ba_alert_icon_%d' d = <num>
-	extendcrc <icon_pos> <player_text> out = icon_id
-	if screenelementexists id = <icon_id>
-		setscreenelementprops id = <icon_id> texture = <tex> pos = ($<pos>)
-		doscreenelementmorph id = <icon_id> alpha = 1 time = 0.3
+	FormatText checksumname = icon_pos 'ba_alert_icon_%d' d = <num>
+	ExtendCRC <icon_pos> <player_text> out = icon_id
+	if ScreenElementExists id = <icon_id>
+		SetScreenElementProps id = <icon_id> texture = <tex> pos = ($<pos>)
+		doScreenElementMorph id = <icon_id> alpha = 1 time = 0.3
 	endif
 endscript
 
 script change_battle_alert_back 
-	extendcrc <bg> <player_text> out = new_id
-	if screenelementexists id = <new_id>
-		doscreenelementmorph id = <new_id> alpha = 1 time = 0.3 scale = <scale> relative_scale
+	ExtendCRC <bG> <player_text> out = new_id
+	if ScreenElementExists id = <new_id>
+		doScreenElementMorph id = <new_id> alpha = 1 time = 0.3 scale = <scale> relative_scale
 	endif
 endscript
 
 script reset_all_battle_bgs 
-	extendcrc ba_icon_fill_hard_double <player_text> out = new_id
-	if screenelementexists id = <new_id>
-		doscreenelementmorph id = <new_id> alpha = 0 time = 0.3
+	ExtendCRC ba_icon_fill_hard_double <player_text> out = new_id
+	if ScreenElementExists id = <new_id>
+		doScreenElementMorph id = <new_id> alpha = 0 time = 0.3
 	endif
-	extendcrc ba_icon_fill_hard_double <player_text> out = new_id
-	if screenelementexists id = <new_id>
-		doscreenelementmorph id = <new_id> alpha = 0 time = 0.3
+	ExtendCRC ba_icon_fill_hard_double <player_text> out = new_id
+	if ScreenElementExists id = <new_id>
+		doScreenElementMorph id = <new_id> alpha = 0 time = 0.3
 	endif
-	extendcrc ba_icon_fill_double_lefty <player_text> out = new_id
-	if screenelementexists id = <new_id>
-		doscreenelementmorph id = <new_id> alpha = 0 time = 0.3
+	ExtendCRC ba_icon_fill_double_lefty <player_text> out = new_id
+	if ScreenElementExists id = <new_id>
+		doScreenElementMorph id = <new_id> alpha = 0 time = 0.3
 	endif
-	extendcrc ba_icon_fill_hard_lefty <player_text> out = new_id
-	if screenelementexists id = <new_id>
-		doscreenelementmorph id = <new_id> alpha = 0 time = 0.3
+	ExtendCRC ba_icon_fill_hard_lefty <player_text> out = new_id
+	if ScreenElementExists id = <new_id>
+		doScreenElementMorph id = <new_id> alpha = 0 time = 0.3
 	endif
-	extendcrc ba_icon_fill_triple <player_text> out = new_id
-	if screenelementexists id = <new_id>
-		doscreenelementmorph id = <new_id> alpha = 0 time = 0.3
+	ExtendCRC ba_icon_fill_triple <player_text> out = new_id
+	if ScreenElementExists id = <new_id>
+		doScreenElementMorph id = <new_id> alpha = 0 time = 0.3
 	endif
 	i = 1
 	begin
-	formattext checksumname = num 'ba_alert_star_%d' d = <i>
-	extendcrc <num> <player_text> out = new_id
-	if screenelementexists id = <new_id>
-		doscreenelementmorph id = <new_id> alpha = 0 time = 0.3
+	FormatText checksumname = num 'ba_alert_star_%d' d = <i>
+	ExtendCRC <num> <player_text> out = new_id
+	if ScreenElementExists id = <new_id>
+		doScreenElementMorph id = <new_id> alpha = 0 time = 0.3
 	endif
-	formattext checksumname = num 'ba_alert_icon_%d' d = <i>
-	extendcrc <num> <player_text> out = new_id
-	if screenelementexists id = <new_id>
-		doscreenelementmorph id = <new_id> alpha = 0 time = 0.3
+	FormatText checksumname = num 'ba_alert_icon_%d' d = <i>
+	ExtendCRC <num> <player_text> out = new_id
+	if ScreenElementExists id = <new_id>
+		doScreenElementMorph id = <new_id> alpha = 0 time = 0.3
 	endif
 	<i> = (<i> + 1)
 	repeat 3
 endscript
 
 script alpha_in_or_out_battle_hud \{alpha = 1}
-	extendcrc ba_icon_frame_container <player_text> out = new_container_id
-	if screenelementexists id = <new_container_id>
-		doscreenelementmorph id = <new_container_id> alpha = <alpha> time = 0.3
+	ExtendCRC ba_icon_frame_container <player_text> out = new_container_id
+	if ScreenElementExists id = <new_container_id>
+		doScreenElementMorph id = <new_container_id> alpha = <alpha> time = 0.3
 	endif
 endscript
 
@@ -481,7 +481,7 @@ script remove_hud_lefty_notes
 	if ($<other_player_status>.lefty_notes < 1)
 		break
 	endif
-	wait \{30
+	Wait \{30
 		frames}
 	repeat
 	update_battle_alert_icon player_status = <other_player_status>
@@ -497,7 +497,7 @@ script remove_hud_difficulty_up
 	if ($<other_player_status>.diffup_notes < 1)
 		break
 	endif
-	wait \{30
+	Wait \{30
 		frames}
 	repeat
 	update_battle_alert_icon player_status = <other_player_status>
@@ -513,7 +513,7 @@ script remove_hud_double_notes
 	if ($<other_player_status>.double_notes < 1)
 		break
 	endif
-	wait \{30
+	Wait \{30
 		frames}
 	repeat
 	update_battle_alert_icon player_status = <other_player_status>

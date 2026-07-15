@@ -1,285 +1,285 @@
 gStar_Power_Triggered = 0
-achievement_scripts = [
+Achievement_Scripts = [
 	{
-		Name = one_time_solo_artist
-		Scr = achievements_one_time_solo_artist
+		name = ONE_TIME_SOLO_ARTIST
+		Scr = Achievements_ONE_TIME_SOLO_ARTIST
 	}
 	{
-		Name = band_on_a_mission
-		Scr = achievements_band_on_a_mission
+		name = BAND_ON_A_MISSION
+		Scr = Achievements_BAND_ON_A_MISSION
 	}
 	{
-		Name = solo_artist
-		Scr = achievements_solo_artist
+		name = SOLO_ARTIST
+		Scr = Achievements_SOLO_ARTIST
 	}
 	{
-		Name = learning_the_ropes
-		Scr = achievements_learning_the_ropes
+		name = LEARNING_THE_ROPES
+		Scr = Achievements_LEARNING_THE_ROPES
 	}
 	{
-		Name = stix
-		Scr = achievements_stix
+		name = STIX
+		Scr = Achievements_STIX
 	}
 	{
-		Name = yodeler
-		Scr = achievements_yodeler
+		name = YODELER
+		Scr = Achievements_YODELER
 	}
 	{
-		Name = pick_and_axe
-		Scr = achievements_pick_and_axe
+		name = PICK_AND_AXE
+		Scr = Achievements_PICK_AND_AXE
 	}
 	{
-		Name = played_bass
-		Scr = achievements_played_bass
+		name = PLAYED_BASS
+		Scr = Achievements_PLAYED_BASS
 	}
 	{
-		Name = first_of_many
-		Scr = achievements_first_of_many
+		name = FIRST_OF_MANY
+		Scr = Achievements_FIRST_OF_MANY
 	}
 	{
-		Name = bling_bling
-		Scr = achievements_bling_bling
+		name = BLING_BLING
+		Scr = Achievements_BLING_BLING
 	}
 	{
-		Name = easy_there
-		Scr = achievements_easy_there
+		name = EASY_THERE
+		Scr = Achievements_EASY_THERE
 	}
 	{
-		Name = medium_musician
-		Scr = achievements_medium_musician
+		name = MEDIUM_MUSICIAN
+		Scr = Achievements_MEDIUM_MUSICIAN
 	}
 	{
-		Name = hardcore
-		Scr = achievements_hardcore
+		name = Hardcore
+		Scr = Achievements_HARDCORE
 	}
 	{
-		Name = hall_of_famer
-		Scr = achievements_hall_of_famer
+		name = HALL_OF_FAMER
+		Scr = Achievements_HALL_OF_FAMER
 	}
 	{
-		Name = jack_of_all_trades
-		Scr = achievements_jack_of_all_trades
+		name = JACK_OF_ALL_TRADES
+		Scr = Achievements_JACK_OF_ALL_TRADES
 	}
 	{
-		Name = one_man_band
-		Scr = achievements_one_man_band
+		name = ONE_MAN_BAND
+		Scr = Achievements_ONE_MAN_BAND
 	}
 	{
-		Name = 50_note_posse
-		Scr = achievements_50_note_posse
+		name = 50_NOTE_POSSE
+		Scr = Achievements_50_NOTE_POSSE
 	}
 	{
-		Name = 121_jigowatts
-		Scr = achievements_121_jigowatts
+		name = 121_JIGOWATTS
+		Scr = Achievements_121_JIGOWATTS
 	}
 	{
-		Name = top_of_the_charts
-		Scr = achievements_top_of_the_charts
+		name = TOP_OF_THE_CHARTS
+		Scr = Achievements_TOP_OF_THE_CHARTS
 	}
 	{
-		Name = should_we_stick_together
-		Scr = achievements_should_we_stick_together
+		name = SHOULD_WE_STICK_TOGETHER
+		Scr = Achievements_SHOULD_WE_STICK_TOGETHER
 	}
 	{
-		Name = guitarists_coat_tails_jigowatts
-		Scr = achievements_guitarists_coat_tails
+		name = GUITARISTS_COAT_TAILS_JIGOWATTS
+		Scr = Achievements_GUITARISTS_COAT_TAILS
 	}
 	{
-		Name = vocalists_coat_tails
-		Scr = achievements_vocalists_coat_tails
+		name = VOCALISTS_COAT_TAILS
+		Scr = Achievements_VOCALISTS_COAT_TAILS
 	}
 	{
-		Name = solid_gold_rockstars
-		Scr = achievements_solid_gold_rockstars
+		name = SOLID_GOLD_ROCKSTARS
+		Scr = Achievements_SOLID_GOLD_ROCKSTARS
 	}
 	{
-		Name = platinum_rockstars
-		Scr = achievements_platinum_rockstars
+		name = PLATINUM_ROCKSTARS
+		Scr = Achievements_PLATINUM_ROCKSTARS
 	}
 	{
-		Name = youre_a_tool
-		Scr = achievements_youre_a_tool
+		name = YOURE_A_TOOL
+		Scr = Achievements_YOURE_A_TOOL
 	}
 	{
-		Name = heavy_metall
-		Scr = achievements_heavy_metall
+		name = HEAVY_METALL
+		Scr = Achievements_HEAVY_METALL
 	}
 	{
-		Name = super_group_unite
-		Scr = achievements_super_group_unite
+		name = SUPER_GROUP_UNITE
+		Scr = Achievements_SUPER_GROUP_UNITE
 	}
 	{
-		Name = feeding_the_beast
-		Scr = achievements_feeding_the_beast
+		name = FEEDING_THE_BEAST
+		Scr = Achievements_FEEDING_THE_BEAST
 	}
 	{
-		Name = this_is_totally_legal
-		Scr = achievements_this_is_totally_legal
+		name = THIS_IS_TOTALLY_LEGAL
+		Scr = Achievements_THIS_IS_TOTALLY_LEGAL
 	}
 	{
-		Name = mine_is_bigger_than_yours
-		Scr = achievements_mine_is_bigger_than_yours
+		name = MINE_IS_BIGGER_THAN_YOURS
+		Scr = Achievements_MINE_IS_BIGGER_THAN_YOURS
 	}
 	{
-		Name = a_pair_beats_a_pair
-		Scr = achievements_a_pair_beats_a_pair
+		name = A_PAIR_BEATS_A_PAIR
+		Scr = Achievements_A_PAIR_BEATS_A_PAIR
 	}
 	{
-		Name = survival_of_the_fittest
-		Scr = achievements_survival_of_the_fittest
+		name = SURVIVAL_OF_THE_FITTEST
+		Scr = Achievements_SURVIVAL_OF_THE_FITTEST
 	}
 	{
-		Name = rock_maiden
-		Scr = achievements_rock_maiden
+		name = ROCK_MAIDEN
+		Scr = Achievements_ROCK_MAIDEN
 	}
 	{
-		Name = warrior_of_rock
-		Scr = achievements_warrior_of_rock
+		name = WARRIOR_OF_ROCK
+		Scr = Achievements_WARRIOR_OF_ROCK
 	}
 	{
-		Name = stamp_of_approval
-		Scr = achievements_stamp_of_approval
+		name = STAMP_OF_APPROVAL
+		Scr = Achievements_STAMP_OF_APPROVAL
 	}
 	{
-		Name = one_of_a_kind_axe
-		Scr = achievements_one_of_a_kind_axe
+		name = ONE_OF_A_KIND_AXE
+		Scr = Achievements_ONE_OF_A_KIND_AXE
 	}
 	{
-		Name = custom_beats
-		Scr = achievements_custom_beats
+		name = CUSTOM_BEATS
+		Scr = Achievements_CUSTOM_BEATS
 	}
 	{
-		Name = inked
-		Scr = achievements_inked
+		name = INKED
+		Scr = Achievements_INKED
 	}
 	{
-		Name = bad_to_the_bone
-		Scr = achievements_bad_to_the_bone
+		name = BAD_TO_THE_BONE
+		Scr = Achievements_BAD_TO_THE_BONE
 	}
 	{
-		Name = shiny_metal_thingy
-		Scr = achievements_shiny_metal_thingy
+		name = SHINY_METAL_THINGY
+		Scr = Achievements_SHINY_METAL_THINGY
 	}
 	{
-		Name = pumpkin_smasher
-		Scr = achievements_pumpkin_smasher
+		name = PUMPKIN_SMASHER
+		Scr = Achievements_PUMPKIN_SMASHER
 	}
 	{
-		Name = wylde_man
-		Scr = achievements_wylde_man
+		name = WYLDE_MAN
+		Scr = Achievements_WYLDE_MAN
 	}
 	{
-		Name = dont_blink
-		Scr = achievements_dont_blink
+		name = DONT_BLINK
+		Scr = Achievements_DONT_BLINK
 	}
 	{
-		Name = the_experience
-		Scr = achievements_the_experience
+		name = THE_EXPERIENCE
+		Scr = Achievements_THE_EXPERIENCE
 	}
 	{
-		Name = motorcity_madman
-		Scr = achievements_motorcity_madman
+		name = MOTORCITY_MADMAN
+		Scr = Achievements_MOTORCITY_MADMAN
 	}
 	{
-		Name = leading_lady
-		Scr = achievements_leading_lady
+		name = LEADING_LADY
+		Scr = Achievements_LEADING_LADY
 	}
 	{
-		Name = the_dark_prince
-		Scr = achievements_the_dark_prince
+		name = THE_DARK_PRINCE
+		Scr = Achievements_THE_DARK_PRINCE
 	}
 	{
-		Name = muse_to_my_ears
-		Scr = achievements_muse_to_my_ears
+		name = MUSE_TO_MY_EARS
+		Scr = Achievements_MUSE_TO_MY_EARS
 	}
 	{
-		Name = mike_checka
-		Scr = achievements_mike_checka
+		name = MIKE_CHECKA
+		Scr = Achievements_MIKE_CHECKA
 	}
 	{
-		Name = get_your_boogie_on
-		Scr = achievements_get_your_boogie_on
+		name = GET_YOUR_BOOGIE_ON
+		Scr = Achievements_GET_YOUR_BOOGIE_ON
 	}
 	{
-		Name = axe_museum
-		Scr = achievements_axe_museum
+		name = AXE_MUSEUM
+		Scr = Achievements_AXE_MUSEUM
 	}
 ]
 
-script achievements_update 
-	GetArraySize \{$achievement_scripts}
+script Achievements_Update 
+	GetArraySize \{$Achievement_Scripts}
 	<i> = 0
 	begin
-	<Scr> = ($achievement_scripts [<i>].Scr)
+	<Scr> = ($Achievement_Scripts [<i>].Scr)
 	<Scr>
 	<i> = (<i> + 1)
-	repeat <array_Size>
-	Change \{achievements_early_quit_flag = 0}
+	repeat <array_size>
+	change \{Achievements_early_quit_flag = 0}
 endscript
 Achievements_SongWonFlag = 0
-achievements_newgigwonflag = 0
-achievements_50_note_posse_flag = 0
+Achievements_NewGigWonFlag = 0
+Achievements_50_note_posse_flag = 0
 achievements_121_jigowatts_flag = 0
-achievements_super_group_unite_flag = 0
-achievements_creating_character = 0
-achievements_modified_logo = 0
-achievements_early_quit_flag = 0
+Achievements_super_group_unite_flag = 0
+Achievements_creating_character = 0
+Achievements_modified_logo = 0
+Achievements_early_quit_flag = 0
 
-script achievements_resetglobals 
-	Change \{Achievements_SongWonFlag = 0}
-	Change \{achievements_newgigwonflag = 0}
-	Change \{achievements_50_note_posse_flag = 0}
-	Change \{achievements_121_jigowatts_flag = 0}
-	Change \{achievements_super_group_unite_flag = 0}
-	Change \{achievements_creating_character = 0}
-	Change \{achievements_modified_logo = 0}
-	Change \{achievements_early_quit_flag = 0}
+script Achievements_ResetGlobals 
+	change \{Achievements_SongWonFlag = 0}
+	change \{Achievements_NewGigWonFlag = 0}
+	change \{Achievements_50_note_posse_flag = 0}
+	change \{achievements_121_jigowatts_flag = 0}
+	change \{Achievements_super_group_unite_flag = 0}
+	change \{Achievements_creating_character = 0}
+	change \{Achievements_modified_logo = 0}
+	change \{Achievements_early_quit_flag = 0}
 endscript
 
 script Achievements_IsSongWon 
 	if ($Achievements_SongWonFlag = 1)
 		return \{true}
 	endif
-	return \{FALSE}
+	return \{false}
 endscript
 
-script achievements_isnewgigwon 
-	if ($achievements_newgigwonflag = 1)
+script Achievements_IsNewGigWon 
+	if ($Achievements_NewGigWonFlag = 1)
 		return \{true}
 	endif
-	return \{FALSE}
+	return \{false}
 endscript
 
-script achievements_areanygigswon \{part = 'guitar'}
-	formatText checksumName = career_part_struct 'gh4_career_%p_songs' p = <part>
+script Achievements_AreAnyGigsWon \{part = 'guitar'}
+	FormatText checksumname = career_part_struct 'gh4_career_%p_songs' p = <part>
 	<total_gigs> = ($<career_part_struct>.num_tiers)
 	<i> = 1
 	begin
-	formatText checksumName = career_part_gig 'career_%p_gig%n' p = <part> n = <i>
+	FormatText checksumname = career_part_gig 'career_%p_gig%n' p = <part> n = <i>
 	GetGlobalTags <career_part_gig>
 	if (<completed> = 1)
 		return \{true}
 	endif
 	<i> = (<i> + 1)
 	repeat <total_gigs>
-	return \{FALSE}
+	return \{false}
 endscript
 
-script achievements_numgigswon \{part = 'guitar'}
-	formatText checksumName = player_status 'player%n_status' n = <Player>
+script Achievements_NumGigsWon \{part = 'guitar'}
+	FormatText checksumname = player_status 'player%n_status' n = <player>
 	get_savegame_from_controller controller = ($<player_status>.controller)
-	formatText checksumName = career_part_struct 'gh4_career_%p_songs' p = <part>
+	FormatText checksumname = career_part_struct 'gh4_career_%p_songs' p = <part>
 	<total_gigs> = ($<career_part_struct>.num_tiers)
 	<num_crucial_gigs> = 0
 	<num_gigs_won> = 0
 	<i> = 1
 	begin
-	formatText checksumName = career_part_gig 'career_%p_gig%n' p = <part> n = <i>
+	FormatText checksumname = career_part_gig 'career_%p_gig%n' p = <part> n = <i>
 	GetGlobalTags <career_part_gig> savegame = <savegame>
-	formatText checksumName = Tier 'tier%n' n = <i>
-	if NOT StructureContains structure = ($<career_part_struct>.<Tier>) paytoplay
-		if NOT StructureContains structure = ($<career_part_struct>.<Tier>) debug_gig
-			if NOT StructureContains structure = ($<career_part_struct>.<Tier>) createagig
+	FormatText checksumname = tier 'tier%n' n = <i>
+	if NOT StructureContains Structure = ($<career_part_struct>.<tier>) paytoplay
+		if NOT StructureContains Structure = ($<career_part_struct>.<tier>) debug_gig
+			if NOT StructureContains Structure = ($<career_part_struct>.<tier>) createagig
 				<num_crucial_gigs> = (<num_crucial_gigs> + 1)
 				if (<completed> = 1)
 					<num_gigs_won> = (<num_gigs_won> + 1)
@@ -292,11 +292,11 @@ script achievements_numgigswon \{part = 'guitar'}
 	return num_gigs_won = <num_gigs_won> total_gigs = <num_crucial_gigs>
 endscript
 
-script achievements_numgigswonondiff \{part = 'guitar'
+script Achievements_NumGigsWonOnDiff \{part = 'guitar'
 		diff = expert}
-	formatText checksumName = player_status 'player%n_status' n = <Player>
+	FormatText checksumname = player_status 'player%n_status' n = <player>
 	get_savegame_from_controller controller = ($<player_status>.controller)
-	formatText checksumName = career_part_struct 'gh4_career_%p_songs' p = <part>
+	FormatText checksumname = career_part_struct 'gh4_career_%p_songs' p = <part>
 	<total_gigs> = ($<career_part_struct>.num_tiers)
 	<num_crucial_gigs> = 0
 	<num_gigs_won> = 0
@@ -315,24 +315,24 @@ script achievements_numgigswonondiff \{part = 'guitar'
 	endswitch
 	<i> = 1
 	begin
-	formatText checksumName = career_part_gig 'career_%p_gig%n' p = <part> n = <i>
+	FormatText checksumname = career_part_gig 'career_%p_gig%n' p = <part> n = <i>
 	GetGlobalTags <career_part_gig> savegame = <savegame>
-	formatText checksumName = Tier 'tier%n' n = <i>
-	if NOT StructureContains structure = ($<career_part_struct>.<Tier>) paytoplay
-		if NOT StructureContains structure = ($<career_part_struct>.<Tier>) debug_gig
-			if NOT StructureContains structure = ($<career_part_struct>.<Tier>) createagig
+	FormatText checksumname = tier 'tier%n' n = <i>
+	if NOT StructureContains Structure = ($<career_part_struct>.<tier>) paytoplay
+		if NOT StructureContains Structure = ($<career_part_struct>.<tier>) debug_gig
+			if NOT StructureContains Structure = ($<career_part_struct>.<tier>) createagig
 				<num_crucial_gigs> = (<num_crucial_gigs> + 1)
-				GetArraySize ($<career_part_struct>.<Tier>.songs)
-				<num_required> = <array_Size>
-				<song_size> = <array_Size>
+				GetArraySize ($<career_part_struct>.<tier>.songs)
+				<num_required> = <array_size>
+				<song_size> = <array_size>
 				<array_entry> = 0
 				begin
 				GetArraySize <diff_array>
-				<diff_size> = <array_Size>
+				<diff_size> = <array_size>
 				<diff_index> = 0
 				begin
 				<diff> = (<diff_array> [<diff_index>])
-				format_globaltag_song_checksum part = ($<career_part_struct>.part) song = ($<career_part_struct>.<Tier>.songs [<array_entry>]) difficulty = <diff>
+				format_globaltag_song_checksum part = ($<career_part_struct>.part) song = ($<career_part_struct>.<tier>.songs [<array_entry>]) difficulty = <diff>
 				GetGlobalTags <song_checksum> params = stars
 				if (<stars> > 2)
 					<num_required> = (<num_required> - 1)
@@ -353,22 +353,22 @@ script achievements_numgigswonondiff \{part = 'guitar'
 	return num_gigs_won = <num_gigs_won> total_gigs = <num_crucial_gigs>
 endscript
 
-script achievements_careercomplete \{part = 'guitar'
-		Player = 1}
-	getplayerinfo <Player> bot_play
+script Achievements_CareerComplete \{part = 'guitar'
+		player = 1}
+	GetPlayerInfo <player> bot_play
 	if (<bot_play> = 1)
 		return \{complete = 0}
 	endif
 	if isXenon
-		getplayerinfo <Player> controller
+		GetPlayerInfo <player> controller
 		if NOT CheckForSignIn local controller_index = <controller>
 			return \{complete = 0}
 		endif
 	endif
 	if GotParam \{diff}
-		achievements_numgigswonondiff part = <part> diff = <diff> Player = <Player>
+		Achievements_NumGigsWonOnDiff part = <part> diff = <diff> player = <player>
 	else
-		achievements_numgigswon part = <part> Player = <Player>
+		Achievements_NumGigsWon part = <part> player = <player>
 	endif
 	if (<num_gigs_won> >= <total_gigs>)
 		return \{complete = 1}
@@ -376,18 +376,18 @@ script achievements_careercomplete \{part = 'guitar'
 	return \{complete = 0}
 endscript
 
-script achievements_played_bass 
+script Achievements_PLAYED_BASS 
 	printf \{'Achievements_PLAYED_BASS'}
 	if NOT Achievements_IsSongWon
-		return \{FALSE}
+		return \{false}
 	endif
 	if ($game_mode = tutorial ||
 			$game_mode = training)
 		return
 	endif
-	getplayerinfo \{1
+	GetPlayerInfo \{1
 		part}
-	if (<part> = bass)
+	if (<part> = Bass)
 		SetGlobalTags \{achievement_info
 			params = {
 				performed_as_bassist = 1
@@ -395,101 +395,101 @@ script achievements_played_bass
 	endif
 endscript
 
-script achievements_getpartstring 
+script Achievements_GetPartString 
 	switch (<part>)
 		case guitar
 		return \{part_string = 'guitar'}
-		case bass
+		case Bass
 		return \{part_string = 'bass'}
 		case drum
 		return \{part_string = 'drum'}
-		case vocals
+		case Vocals
 		return \{part_string = 'vocals'}
-		case None
+		case none
 		return \{part_string = 'none'}
 		default
 		return \{part_string = 'none'}
 	endswitch
 endscript
 
-script achievements_awardplayer 
-	getplayerinfo <Player> bot_play
+script Achievements_AwardPlayer 
+	GetPlayerInfo <player> bot_play
 	if (<bot_play> = 1)
 		return
 	endif
-	formatText checksumName = player_status 'player%n_status' n = <Player>
+	FormatText checksumname = player_status 'player%n_status' n = <player>
 	<controller> = ($<player_status>.controller)
 	WriteAchievements achievement = <achievement> controller_id = <controller>
 endscript
 
-script achievements_awardband 
-	gamemode_getnumplayersshown
-	<Player> = 1
+script Achievements_AwardBand 
+	GameMode_GetNumPlayersShown
+	<player> = 1
 	begin
-	achievements_awardplayer achievement = <achievement> Player = <Player>
-	<Player> = (<Player> + 1)
+	Achievements_AwardPlayer achievement = <achievement> player = <player>
+	<player> = (<player> + 1)
 	repeat <num_players_shown>
 endscript
 
-script achievements_checkfor50noteposse 
-	if ($achievements_50_note_posse_flag = 0 && ($game_mode = p4_career || $game_mode = p4_quickplay || $game_mode = p8_pro_faceoff))
+script Achievements_CheckFor50NotePosse 
+	if ($Achievements_50_note_posse_flag = 0 && ($game_mode = p4_career || $game_mode = p4_quickplay || $game_mode = p8_pro_faceoff))
 		<four_way_streak> = 1
-		<Player> = 1
+		<player> = 1
 		begin
-		getplayerinfo <Player> current_run
+		GetPlayerInfo <player> current_run
 		if (<current_run> < 50)
 			<four_way_streak> = 0
 			break
 		endif
-		<Player> = (<Player> + 1)
+		<player> = (<player> + 1)
 		repeat 4
 		if (<four_way_streak> = 1)
-			Change \{achievements_50_note_posse_flag = 1}
+			change \{Achievements_50_note_posse_flag = 1}
 		endif
 	endif
 endscript
 
-script achievements_checkforsupergroupunite 
-	if ($achievements_super_group_unite_flag = 0 && ($game_mode = p4_career || $game_mode = p4_quickplay || $game_mode = p8_pro_faceoff))
+script Achievements_CheckForSuperGroupUnite 
+	if ($Achievements_super_group_unite_flag = 0 && ($game_mode = p4_career || $game_mode = p4_quickplay || $game_mode = p8_pro_faceoff))
 		<four_way_multiplier> = 1
-		<Player> = 1
+		<player> = 1
 		begin
-		formatText checksumName = player_status 'player%n_status' n = <Player>
+		FormatText checksumname = player_status 'player%n_status' n = <player>
 		get_current_multiplier player_status = <player_status>
 		if (<multiplier> < 8)
 			<four_way_multiplier> = 0
 			break
 		endif
-		<Player> = (<Player> + 1)
+		<player> = (<player> + 1)
 		repeat 4
 		if (<four_way_multiplier> = 1)
-			Change \{achievements_super_group_unite_flag = 1}
+			change \{Achievements_super_group_unite_flag = 1}
 		endif
 	endif
 endscript
 
-script achievements_ischeatingautokick 
-	if ($cheat_autokick != 1)
-		return \{FALSE}
+script Achievements_IsCheatingAutoKick 
+	if ($Cheat_AutoKick != 1)
+		return \{false}
 	endif
-	gamemode_getnumplayersshown
-	<Player> = 1
+	GameMode_GetNumPlayersShown
+	<player> = 1
 	begin
-	getplayerinfo <Player> part
+	GetPlayerInfo <player> part
 	if (<part> = drum)
 		return \{true}
 	endif
-	<Player> = (<Player> + 1)
+	<player> = (<player> + 1)
 	repeat <num_players_shown>
-	return \{FALSE}
+	return \{false}
 endscript
 
-script achievements_one_time_solo_artist 
+script Achievements_ONE_TIME_SOLO_ARTIST 
 	printf \{'Achievements_ONE_TIME_SOLO_ARTIST'}
 	if NOT Achievements_IsSongWon
 		return
 	endif
-	if achievements_ischeatingautokick
+	if Achievements_IsCheatingAutoKick
 		return
 	endif
 	if ($game_mode = tutorial ||
@@ -498,79 +498,79 @@ script achievements_one_time_solo_artist
 			$rich_presence_context = presence_music_studio)
 		return
 	endif
-	gamemode_getnumplayers
+	GameMode_GetNumPlayers
 	if (<num_players> = 1)
-		achievements_awardplayer \{achievement = one_time_solo_artist
-			Player = 1}
+		Achievements_AwardPlayer \{achievement = ONE_TIME_SOLO_ARTIST
+			player = 1}
 	endif
 endscript
 
-script achievements_band_on_a_mission 
+script Achievements_BAND_ON_A_MISSION 
 	printf \{'Achievements_BAND_ON_A_MISSION'}
-	if NOT achievements_isnewgigwon
+	if NOT Achievements_IsNewGigWon
 		return
 	endif
-	if achievements_ischeatingautokick
+	if Achievements_IsCheatingAutoKick
 		return
 	endif
-	gamemode_getnumplayers
+	GameMode_GetNumPlayers
 	if (<num_players> > 1)
-		gamemode_getnumplayersshown
-		<Player> = 1
+		GameMode_GetNumPlayersShown
+		<player> = 1
 		begin
-		getplayerinfo <Player> bot_play
-		getplayerinfo <Player> is_local_client
+		GetPlayerInfo <player> bot_play
+		GetPlayerInfo <player> is_local_client
 		if ((<bot_play> = 0) && (<is_local_client> = 1))
-			achievements_numgigswon part = 'band' Player = <Player>
+			Achievements_NumGigsWon part = 'band' player = <player>
 			<half_gigs> = (<total_gigs> / 2)
 			if (<num_gigs_won> > <half_gigs>)
-				achievements_awardplayer achievement = band_on_a_mission Player = <Player>
+				Achievements_AwardPlayer achievement = BAND_ON_A_MISSION player = <player>
 			endif
 		endif
-		<Player> = (<Player> + 1)
+		<player> = (<player> + 1)
 		repeat <num_players_shown>
 	else
-		getplayerinfo \{1
+		GetPlayerInfo \{1
 			bot_play}
 		if (<bot_play> = 0)
-			getplayerinfo \{1
+			GetPlayerInfo \{1
 				part}
-			achievements_getpartstring part = <part>
-			achievements_numgigswon part = <part_string> Player = 1
+			Achievements_GetPartString part = <part>
+			Achievements_NumGigsWon part = <part_string> player = 1
 			<half_gigs> = (<total_gigs> / 2)
 			if (<num_gigs_won> > <half_gigs>)
-				achievements_awardplayer \{achievement = band_on_a_mission
-					Player = 1}
+				Achievements_AwardPlayer \{achievement = BAND_ON_A_MISSION
+					player = 1}
 			endif
 		endif
 	endif
 endscript
 
-script achievements_solo_artist 
+script Achievements_SOLO_ARTIST 
 	printf \{'Achievements_SOLO_ARTIST'}
-	if NOT achievements_isnewgigwon
+	if NOT Achievements_IsNewGigWon
 		return
 	endif
-	gamemode_getnumplayers
+	GameMode_GetNumPlayers
 	if (<num_players> > 1)
 		return
 	endif
-	if achievements_ischeatingautokick
+	if Achievements_IsCheatingAutoKick
 		return
 	endif
-	getplayerinfo \{1
+	GetPlayerInfo \{1
 		part}
-	achievements_getpartstring part = <part>
-	achievements_careercomplete part = <part_string> Player = 1
+	Achievements_GetPartString part = <part>
+	Achievements_CareerComplete part = <part_string> player = 1
 	if (<complete> = 1)
-		achievements_awardplayer \{achievement = solo_artist
-			Player = 1}
+		Achievements_AwardPlayer \{achievement = SOLO_ARTIST
+			player = 1}
 	endif
 endscript
 
-script achievements_learning_the_ropes 
+script Achievements_LEARNING_THE_ROPES 
 	printf \{'Achievements_LEARNING_THE_ROPES'}
-	gamemode_getnumplayers
+	GameMode_GetNumPlayers
 	if (<num_players> > 1)
 		return
 	endif
@@ -594,20 +594,20 @@ script achievements_learning_the_ropes
 			<rs_advanced_tools_lesson> = complete ||
 			<rs_ghmix_editing_lesson> = complete ||
 			<rs_ghmix_pro_techniques_tools_lesson> = complete)
-		achievements_awardplayer \{achievement = learning_the_ropes
-			Player = 1}
+		Achievements_AwardPlayer \{achievement = LEARNING_THE_ROPES
+			player = 1}
 	endif
 endscript
 
-script achievements_stix 
+script Achievements_STIX 
 	printf \{'Achievements_STIX'}
-	if ($achievements_early_quit_flag = 1)
+	if ($Achievements_early_quit_flag = 1)
 		return
 	endif
 	if NOT Achievements_IsSongWon
 		return
 	endif
-	if achievements_ischeatingautokick
+	if Achievements_IsCheatingAutoKick
 		return
 	endif
 	if ($game_mode = tutorial ||
@@ -616,26 +616,26 @@ script achievements_stix
 			$rich_presence_context = presence_music_studio)
 		return
 	endif
-	gamemode_getnumplayersshown
-	<Player> = 1
+	GameMode_GetNumPlayersShown
+	<player> = 1
 	begin
-	getplayerinfo <Player> part
+	GetPlayerInfo <player> part
 	if (<part> = drum)
-		if (<Player> = 1)
+		if (<player> = 1)
 			SetGlobalTags \{achievement_info
 				params = {
 					performed_as_drummer = 1
 				}}
 		endif
-		achievements_awardplayer achievement = stix Player = <Player>
+		Achievements_AwardPlayer achievement = STIX player = <player>
 	endif
-	<Player> = (<Player> + 1)
+	<player> = (<player> + 1)
 	repeat <num_players_shown>
 endscript
 
-script achievements_yodeler 
+script Achievements_YODELER 
 	printf \{'Achievements_YODELER'}
-	if ($achievements_early_quit_flag = 1)
+	if ($Achievements_early_quit_flag = 1)
 		return
 	endif
 	if NOT Achievements_IsSongWon
@@ -647,26 +647,26 @@ script achievements_yodeler
 			$rich_presence_context = presence_music_studio)
 		return
 	endif
-	gamemode_getnumplayersshown
-	<Player> = 1
+	GameMode_GetNumPlayersShown
+	<player> = 1
 	begin
-	getplayerinfo <Player> part
-	if (<part> = vocals)
-		if (<Player> = 1)
+	GetPlayerInfo <player> part
+	if (<part> = Vocals)
+		if (<player> = 1)
 			SetGlobalTags \{achievement_info
 				params = {
 					performed_as_vocalist = 1
 				}}
 		endif
-		achievements_awardplayer achievement = yodeler Player = <Player>
+		Achievements_AwardPlayer achievement = YODELER player = <player>
 	endif
-	<Player> = (<Player> + 1)
+	<player> = (<player> + 1)
 	repeat <num_players_shown>
 endscript
 
-script achievements_pick_and_axe 
+script Achievements_PICK_AND_AXE 
 	printf \{'Achievements_PICK_AND_AXE'}
-	if ($achievements_early_quit_flag = 1)
+	if ($Achievements_early_quit_flag = 1)
 		return
 	endif
 	if NOT Achievements_IsSongWon
@@ -678,220 +678,220 @@ script achievements_pick_and_axe
 			$rich_presence_context = presence_music_studio)
 		return
 	endif
-	gamemode_getnumplayersshown
-	<Player> = 1
+	GameMode_GetNumPlayersShown
+	<player> = 1
 	begin
-	getplayerinfo <Player> part
+	GetPlayerInfo <player> part
 	if (<part> = guitar)
-		if (<Player> = 1)
+		if (<player> = 1)
 			SetGlobalTags \{achievement_info
 				params = {
 					performed_as_guitarist = 1
 				}}
 		endif
-		achievements_awardplayer achievement = pick_and_axe Player = <Player>
+		Achievements_AwardPlayer achievement = PICK_AND_AXE player = <player>
 	endif
-	<Player> = (<Player> + 1)
+	<player> = (<player> + 1)
 	repeat <num_players_shown>
 endscript
 
-script achievements_first_of_many 
+script Achievements_FIRST_OF_MANY 
 	printf \{'Achievements_FIRST_OF_MANY'}
-	if NOT achievements_isnewgigwon
+	if NOT Achievements_IsNewGigWon
 		return
 	endif
-	if achievements_ischeatingautokick
+	if Achievements_IsCheatingAutoKick
 		return
 	endif
-	achievements_awardband \{achievement = first_of_many}
+	Achievements_AwardBand \{achievement = FIRST_OF_MANY}
 endscript
 
-script achievements_bling_bling 
+script Achievements_BLING_BLING 
 	printf \{'Achievements_BLING_BLING'}
 	GetGlobalTags \{band_info}
 	if (<career_earnings> >= 1000000)
-		achievements_awardband \{achievement = bling_bling}
+		Achievements_AwardBand \{achievement = BLING_BLING}
 	endif
 endscript
 
-script achievements_easy_there 
+script Achievements_EASY_THERE 
 	printf \{'Achievements_EASY_THERE'}
-	if NOT achievements_isnewgigwon
+	if NOT Achievements_IsNewGigWon
 		return
 	endif
-	if achievements_ischeatingautokick
+	if Achievements_IsCheatingAutoKick
 		return
 	endif
-	gamemode_getnumplayers
+	GameMode_GetNumPlayers
 	if (<num_players> > 1)
-		gamemode_getnumplayersshown
-		<Player> = 1
+		GameMode_GetNumPlayersShown
+		<player> = 1
 		begin
-		achievements_careercomplete part = 'band' diff = easy Player = <Player>
+		Achievements_CareerComplete part = 'band' diff = easy player = <player>
 		if (<complete> = 1)
-			achievements_awardplayer achievement = easy_there Player = <Player>
+			Achievements_AwardPlayer achievement = EASY_THERE player = <player>
 		endif
-		<Player> = (<Player> + 1)
+		<player> = (<player> + 1)
 		repeat <num_players_shown>
 	else
-		getplayerinfo \{1
+		GetPlayerInfo \{1
 			part}
-		achievements_getpartstring part = <part>
-		achievements_careercomplete part = <part_string> diff = easy Player = 1
+		Achievements_GetPartString part = <part>
+		Achievements_CareerComplete part = <part_string> diff = easy player = 1
 		if (<complete> = 1)
-			achievements_awardplayer \{achievement = easy_there
-				Player = 1}
+			Achievements_AwardPlayer \{achievement = EASY_THERE
+				player = 1}
 		endif
 	endif
 endscript
 
-script achievements_medium_musician 
+script Achievements_MEDIUM_MUSICIAN 
 	printf \{'Achievements_MEDIUM_MUSICIAN'}
-	if NOT achievements_isnewgigwon
+	if NOT Achievements_IsNewGigWon
 		return
 	endif
-	if achievements_ischeatingautokick
+	if Achievements_IsCheatingAutoKick
 		return
 	endif
-	gamemode_getnumplayers
+	GameMode_GetNumPlayers
 	if (<num_players> > 1)
-		gamemode_getnumplayersshown
-		<Player> = 1
+		GameMode_GetNumPlayersShown
+		<player> = 1
 		begin
-		achievements_careercomplete part = 'band' diff = medium Player = <Player>
+		Achievements_CareerComplete part = 'band' diff = medium player = <player>
 		if (<complete> = 1)
-			achievements_awardplayer achievement = easy_there Player = <Player>
-			achievements_awardplayer achievement = medium_musician Player = <Player>
+			Achievements_AwardPlayer achievement = EASY_THERE player = <player>
+			Achievements_AwardPlayer achievement = MEDIUM_MUSICIAN player = <player>
 		endif
-		<Player> = (<Player> + 1)
+		<player> = (<player> + 1)
 		repeat <num_players_shown>
 	else
-		getplayerinfo \{1
+		GetPlayerInfo \{1
 			part}
-		achievements_getpartstring part = <part>
-		achievements_careercomplete part = <part_string> diff = medium Player = 1
+		Achievements_GetPartString part = <part>
+		Achievements_CareerComplete part = <part_string> diff = medium player = 1
 		if (<complete> = 1)
-			achievements_awardplayer \{achievement = easy_there
-				Player = 1}
-			achievements_awardplayer \{achievement = medium_musician
-				Player = 1}
+			Achievements_AwardPlayer \{achievement = EASY_THERE
+				player = 1}
+			Achievements_AwardPlayer \{achievement = MEDIUM_MUSICIAN
+				player = 1}
 		endif
 	endif
 endscript
 
-script achievements_hardcore 
+script Achievements_HARDCORE 
 	printf \{'Achievements_HARDCORE'}
-	if NOT achievements_isnewgigwon
+	if NOT Achievements_IsNewGigWon
 		return
 	endif
-	if achievements_ischeatingautokick
+	if Achievements_IsCheatingAutoKick
 		return
 	endif
-	gamemode_getnumplayers
+	GameMode_GetNumPlayers
 	if (<num_players> > 1)
-		gamemode_getnumplayersshown
-		<Player> = 1
+		GameMode_GetNumPlayersShown
+		<player> = 1
 		begin
-		achievements_careercomplete part = 'band' diff = hard Player = <Player>
+		Achievements_CareerComplete part = 'band' diff = hard player = <player>
 		if (<complete> = 1)
-			achievements_awardplayer achievement = easy_there Player = <Player>
-			achievements_awardplayer achievement = medium_musician Player = <Player>
-			achievements_awardplayer achievement = hardcore Player = <Player>
+			Achievements_AwardPlayer achievement = EASY_THERE player = <player>
+			Achievements_AwardPlayer achievement = MEDIUM_MUSICIAN player = <player>
+			Achievements_AwardPlayer achievement = Hardcore player = <player>
 		endif
-		<Player> = (<Player> + 1)
+		<player> = (<player> + 1)
 		repeat <num_players_shown>
 	else
-		getplayerinfo \{1
+		GetPlayerInfo \{1
 			part}
-		achievements_getpartstring part = <part>
-		achievements_careercomplete part = <part_string> diff = hard Player = 1
+		Achievements_GetPartString part = <part>
+		Achievements_CareerComplete part = <part_string> diff = hard player = 1
 		if (<complete> = 1)
-			achievements_awardplayer \{achievement = easy_there
-				Player = 1}
-			achievements_awardplayer \{achievement = medium_musician
-				Player = 1}
-			achievements_awardplayer \{achievement = hardcore
-				Player = 1}
+			Achievements_AwardPlayer \{achievement = EASY_THERE
+				player = 1}
+			Achievements_AwardPlayer \{achievement = MEDIUM_MUSICIAN
+				player = 1}
+			Achievements_AwardPlayer \{achievement = Hardcore
+				player = 1}
 		endif
 	endif
 endscript
 
-script achievements_hall_of_famer 
+script Achievements_HALL_OF_FAMER 
 	printf \{'Achievements_HALL_OF_FAMER'}
-	if NOT achievements_isnewgigwon
+	if NOT Achievements_IsNewGigWon
 		return
 	endif
-	if achievements_ischeatingautokick
+	if Achievements_IsCheatingAutoKick
 		return
 	endif
-	gamemode_getnumplayers
+	GameMode_GetNumPlayers
 	if (<num_players> > 1)
-		gamemode_getnumplayersshown
-		<Player> = 1
+		GameMode_GetNumPlayersShown
+		<player> = 1
 		begin
-		achievements_careercomplete part = 'band' diff = expert Player = <Player>
+		Achievements_CareerComplete part = 'band' diff = expert player = <player>
 		if (<complete> = 1)
-			achievements_awardplayer achievement = easy_there Player = <Player>
-			achievements_awardplayer achievement = medium_musician Player = <Player>
-			achievements_awardplayer achievement = hardcore Player = <Player>
-			achievements_awardplayer achievement = hall_of_famer Player = <Player>
+			Achievements_AwardPlayer achievement = EASY_THERE player = <player>
+			Achievements_AwardPlayer achievement = MEDIUM_MUSICIAN player = <player>
+			Achievements_AwardPlayer achievement = Hardcore player = <player>
+			Achievements_AwardPlayer achievement = HALL_OF_FAMER player = <player>
 		endif
-		<Player> = (<Player> + 1)
+		<player> = (<player> + 1)
 		repeat <num_players_shown>
 	else
-		getplayerinfo \{1
+		GetPlayerInfo \{1
 			part}
-		achievements_getpartstring part = <part>
-		achievements_careercomplete part = <part_string> diff = expert Player = 1
+		Achievements_GetPartString part = <part>
+		Achievements_CareerComplete part = <part_string> diff = expert player = 1
 		if (<complete> = 1)
-			achievements_awardplayer \{achievement = easy_there
-				Player = 1}
-			achievements_awardplayer \{achievement = medium_musician
-				Player = 1}
-			achievements_awardplayer \{achievement = hardcore
-				Player = 1}
-			achievements_awardplayer \{achievement = hall_of_famer
-				Player = 1}
+			Achievements_AwardPlayer \{achievement = EASY_THERE
+				player = 1}
+			Achievements_AwardPlayer \{achievement = MEDIUM_MUSICIAN
+				player = 1}
+			Achievements_AwardPlayer \{achievement = Hardcore
+				player = 1}
+			Achievements_AwardPlayer \{achievement = HALL_OF_FAMER
+				player = 1}
 		endif
 	endif
 endscript
 
-script achievements_jack_of_all_trades 
+script Achievements_JACK_OF_ALL_TRADES 
 	printf \{'Achievements_JACK_OF_ALL_TRADES'}
-	gamemode_getnumplayers
+	GameMode_GetNumPlayers
 	if (<num_players> > 1)
 		return
 	endif
-	if achievements_ischeatingautokick
+	if Achievements_IsCheatingAutoKick
 		return
 	endif
-	achievements_careercomplete \{part = 'guitar'
-		Player = 1}
+	Achievements_CareerComplete \{part = 'guitar'
+		player = 1}
 	if (<complete> = 0)
 		return
 	endif
-	achievements_careercomplete \{part = 'bass'
-		Player = 1}
+	Achievements_CareerComplete \{part = 'bass'
+		player = 1}
 	if (<complete> = 0)
 		return
 	endif
-	achievements_careercomplete \{part = 'drum'
-		Player = 1}
+	Achievements_CareerComplete \{part = 'drum'
+		player = 1}
 	if (<complete> = 0)
 		return
 	endif
-	achievements_careercomplete \{part = 'vocals'
-		Player = 1}
+	Achievements_CareerComplete \{part = 'vocals'
+		player = 1}
 	if (<complete> = 0)
 		return
 	endif
-	achievements_awardplayer \{achievement = jack_of_all_trades
-		Player = 1}
+	Achievements_AwardPlayer \{achievement = JACK_OF_ALL_TRADES
+		player = 1}
 endscript
 
-script achievements_one_man_band 
+script Achievements_ONE_MAN_BAND 
 	printf \{'Achievements_ONE_MAN_BAND'}
-	if achievements_ischeatingautokick
+	if Achievements_IsCheatingAutoKick
 		return
 	endif
 	GetGlobalTags \{achievement_info}
@@ -899,12 +899,12 @@ script achievements_one_man_band
 			<performed_as_bassist> = 1 &&
 			<performed_as_drummer> = 1 &&
 			<performed_as_vocalist> = 1)
-		achievements_awardplayer \{achievement = one_man_band
-			Player = 1}
+		Achievements_AwardPlayer \{achievement = ONE_MAN_BAND
+			player = 1}
 	endif
 endscript
 
-script achievements_50_note_posse 
+script Achievements_50_NOTE_POSSE 
 	printf \{'Achievements_50_NOTE_POSSE'}
 	if NOT ($game_mode = p4_quickplay ||
 			$game_mode = p4_career ||
@@ -917,16 +917,16 @@ script achievements_50_note_posse
 			$rich_presence_context = presence_music_studio)
 		return
 	endif
-	if achievements_ischeatingautokick
+	if Achievements_IsCheatingAutoKick
 		return
 	endif
-	if ($achievements_50_note_posse_flag = 1)
-		achievements_awardband \{achievement = 50_note_posse}
-		Change \{achievements_50_note_posse_flag = 0}
+	if ($Achievements_50_note_posse_flag = 1)
+		Achievements_AwardBand \{achievement = 50_NOTE_POSSE}
+		change \{Achievements_50_note_posse_flag = 0}
 	endif
 endscript
 
-script achievements_121_jigowatts 
+script Achievements_121_JIGOWATTS 
 	printf \{'Achievements_121_JIGOWATTS'}
 	if NOT ($game_mode = p4_quickplay ||
 			$game_mode = p4_career ||
@@ -939,43 +939,43 @@ script achievements_121_jigowatts
 			$rich_presence_context = presence_music_studio)
 		return
 	endif
-	if achievements_ischeatingautokick
+	if Achievements_IsCheatingAutoKick
 		return
 	endif
 	if ($achievements_121_jigowatts_flag = 1)
-		achievements_awardband \{achievement = 121_jigowatts}
-		Change \{achievements_121_jigowatts_flag = 0}
+		Achievements_AwardBand \{achievement = 121_JIGOWATTS}
+		change \{achievements_121_jigowatts_flag = 0}
 	endif
 endscript
 
-script achievements_top_of_the_charts 
+script Achievements_TOP_OF_THE_CHARTS 
 	printf \{'Achievements_TOP_OF_THE_CHARTS'}
-	if NOT achievements_isnewgigwon
+	if NOT Achievements_IsNewGigWon
 		return
 	endif
-	if achievements_ischeatingautokick
+	if Achievements_IsCheatingAutoKick
 		return
 	endif
-	gamemode_getnumplayersshown
-	<Player> = 1
+	GameMode_GetNumPlayersShown
+	<player> = 1
 	begin
-	achievements_careercomplete part = 'band' Player = <Player>
+	Achievements_CareerComplete part = 'band' player = <player>
 	if (<complete> = 1)
-		achievements_awardplayer achievement = top_of_the_charts Player = <Player>
+		Achievements_AwardPlayer achievement = TOP_OF_THE_CHARTS player = <player>
 	endif
-	<Player> = (<Player> + 1)
+	<player> = (<player> + 1)
 	repeat <num_players_shown>
 endscript
 
-script achievements_should_we_stick_together 
+script Achievements_SHOULD_WE_STICK_TOGETHER 
 	printf \{'Achievements_SHOULD_WE_STICK_TOGETHER'}
-	if ($achievements_early_quit_flag = 1)
+	if ($Achievements_early_quit_flag = 1)
 		return
 	endif
 	if NOT Achievements_IsSongWon
 		return
 	endif
-	if achievements_ischeatingautokick
+	if Achievements_IsCheatingAutoKick
 		return
 	endif
 	if NOT ($game_mode = p4_quickplay ||
@@ -983,12 +983,12 @@ script achievements_should_we_stick_together
 			$game_mode = p8_pro_faceoff)
 		return
 	endif
-	achievements_awardband \{achievement = should_we_stick_together}
+	Achievements_AwardBand \{achievement = SHOULD_WE_STICK_TOGETHER}
 endscript
 
-script achievements_guitarists_coat_tails 
+script Achievements_GUITARISTS_COAT_TAILS 
 	printf \{'Achievements_GUITARISTS_COAT_TAILS'}
-	if ($achievements_early_quit_flag = 1)
+	if ($Achievements_early_quit_flag = 1)
 		return
 	endif
 	if NOT Achievements_IsSongWon
@@ -999,31 +999,31 @@ script achievements_guitarists_coat_tails
 			$game_mode = p8_pro_faceoff)
 		return
 	endif
-	if achievements_ischeatingautokick
+	if Achievements_IsCheatingAutoKick
 		return
 	endif
 	<highest_score> = 0
 	<highest_score_player> = -1
-	<highest_score_part> = None
-	<Player> = 1
+	<highest_score_part> = none
+	<player> = 1
 	begin
-	getplayerinfo <Player> score
+	GetPlayerInfo <player> score
 	if (<score> > <highest_score>)
 		<highest_score> = <score>
-		<highest_score_player> = <Player>
-		getplayerinfo <Player> part
+		<highest_score_player> = <player>
+		GetPlayerInfo <player> part
 		<highest_score_part> = <part>
 	endif
-	<Player> = (<Player> + 1)
+	<player> = (<player> + 1)
 	repeat 4
-	if (<highest_score_part> = guitar || <highest_score_part> = bass)
-		achievements_awardplayer achievement = guitarists_coat_tails Player = <highest_score_player>
+	if (<highest_score_part> = guitar || <highest_score_part> = Bass)
+		Achievements_AwardPlayer achievement = GUITARISTS_COAT_TAILS player = <highest_score_player>
 	endif
 endscript
 
-script achievements_vocalists_coat_tails 
+script Achievements_VOCALISTS_COAT_TAILS 
 	printf \{'Achievements_VOCALISTS_COAT_TAILS'}
-	if ($achievements_early_quit_flag = 1)
+	if ($Achievements_early_quit_flag = 1)
 		return
 	endif
 	if NOT Achievements_IsSongWon
@@ -1034,37 +1034,37 @@ script achievements_vocalists_coat_tails
 			$game_mode = p8_pro_faceoff)
 		return
 	endif
-	if achievements_ischeatingautokick
+	if Achievements_IsCheatingAutoKick
 		return
 	endif
 	<highest_score> = 0
 	<highest_score_player> = -1
-	<highest_score_part> = None
-	<Player> = 1
+	<highest_score_part> = none
+	<player> = 1
 	begin
-	getplayerinfo <Player> score
+	GetPlayerInfo <player> score
 	if (<score> > <highest_score>)
 		<highest_score> = <score>
-		<highest_score_player> = <Player>
-		getplayerinfo <Player> part
+		<highest_score_player> = <player>
+		GetPlayerInfo <player> part
 		<highest_score_part> = <part>
 	endif
-	<Player> = (<Player> + 1)
+	<player> = (<player> + 1)
 	repeat 4
-	if (<highest_score_part> = vocals)
-		achievements_awardplayer achievement = vocalists_coat_tails Player = <highest_score_player>
+	if (<highest_score_part> = Vocals)
+		Achievements_AwardPlayer achievement = VOCALISTS_COAT_TAILS player = <highest_score_player>
 	endif
 endscript
 
-script achievements_solid_gold_rockstars 
+script Achievements_SOLID_GOLD_ROCKSTARS 
 	printf \{'Achievements_SOLID_GOLD_ROCKSTARS'}
-	if ($achievements_early_quit_flag = 1)
+	if ($Achievements_early_quit_flag = 1)
 		return
 	endif
 	if NOT Achievements_IsSongWon
 		return
 	endif
-	if achievements_ischeatingautokick
+	if Achievements_IsCheatingAutoKick
 		return
 	endif
 	if ($current_song = jamsession)
@@ -1075,37 +1075,37 @@ script achievements_solid_gold_rockstars
 			$game_mode = p8_pro_faceoff)
 		return
 	endif
-	gamemode_getnumplayersshown
-	<Player> = 1
+	GameMode_GetNumPlayersShown
+	<player> = 1
 	begin
-	getplayerinfo <Player> part
-	if (<part> != vocals)
-		getplayerinfo <Player> notes_hit
-		getplayerinfo <Player> total_notes
+	GetPlayerInfo <player> part
+	if (<part> != Vocals)
+		GetPlayerInfo <player> notes_hit
+		GetPlayerInfo <player> total_notes
 		if ((<notes_hit> < <total_notes>) || (<total_notes> = 0))
 			return
 		endif
 	else
-		getplayerinfo <Player> vocal_phrase_quality
-		getplayerinfo <Player> vocal_phrase_max_qual
+		GetPlayerInfo <player> vocal_phrase_quality
+		GetPlayerInfo <player> vocal_phrase_max_qual
 		if ((<vocal_phrase_quality> < <vocal_phrase_max_qual>) || (<vocal_phrase_quality> = 0))
 			return
 		endif
 	endif
-	<Player> = (<Player> + 1)
+	<player> = (<player> + 1)
 	repeat <num_players_shown>
-	achievements_awardband \{achievement = solid_gold_rockstars}
+	Achievements_AwardBand \{achievement = SOLID_GOLD_ROCKSTARS}
 endscript
 
-script achievements_platinum_rockstars 
+script Achievements_PLATINUM_ROCKSTARS 
 	printf \{'Achievements_PLATINUM_ROCKSTARS'}
-	if ($achievements_early_quit_flag = 1)
+	if ($Achievements_early_quit_flag = 1)
 		return
 	endif
 	if NOT Achievements_IsSongWon
 		return
 	endif
-	if achievements_ischeatingautokick
+	if Achievements_IsCheatingAutoKick
 		return
 	endif
 	if ($current_song = jamsession)
@@ -1116,19 +1116,19 @@ script achievements_platinum_rockstars
 			$game_mode = p8_pro_faceoff)
 		return
 	endif
-	<Player> = 1
+	<player> = 1
 	begin
-	getplayerinfo <Player> difficulty
-	getplayerinfo <Player> part
-	if (<part> != vocals)
-		getplayerinfo <Player> notes_hit
-		getplayerinfo <Player> total_notes
+	GetPlayerInfo <player> difficulty
+	GetPlayerInfo <player> part
+	if (<part> != Vocals)
+		GetPlayerInfo <player> notes_hit
+		GetPlayerInfo <player> total_notes
 		if ((<notes_hit> < <total_notes>) || (<total_notes> = 0))
 			return
 		endif
 	else
-		getplayerinfo <Player> vocal_phrase_quality
-		getplayerinfo <Player> vocal_phrase_max_qual
+		GetPlayerInfo <player> vocal_phrase_quality
+		GetPlayerInfo <player> vocal_phrase_max_qual
 		if ((<vocal_phrase_quality> < <vocal_phrase_max_qual>) || (<vocal_phrase_quality> = 0))
 			return
 		endif
@@ -1136,20 +1136,20 @@ script achievements_platinum_rockstars
 	if ((<difficulty> != hard && <difficulty> != expert))
 		return
 	endif
-	<Player> = (<Player> + 1)
+	<player> = (<player> + 1)
 	repeat 4
-	achievements_awardband \{achievement = platinum_rockstars}
+	Achievements_AwardBand \{achievement = PLATINUM_ROCKSTARS}
 endscript
 
-script achievements_youre_a_tool 
+script Achievements_YOURE_A_TOOL 
 	printf \{'Achievements_YOURE_A_TOOL'}
-	if ($achievements_early_quit_flag = 1)
+	if ($Achievements_early_quit_flag = 1)
 		return
 	endif
 	if NOT Achievements_IsSongWon
 		return
 	endif
-	if achievements_ischeatingautokick
+	if Achievements_IsCheatingAutoKick
 		return
 	endif
 	if NOT ($game_mode = p4_quickplay ||
@@ -1158,20 +1158,20 @@ script achievements_youre_a_tool
 		return
 	endif
 	if ($band1_status.score >= 444444 &&
-			$current_song = schism)
-		achievements_awardband \{achievement = youre_a_tool}
+			$current_song = Schism)
+		Achievements_AwardBand \{achievement = YOURE_A_TOOL}
 	endif
 endscript
 
-script achievements_heavy_metall 
+script Achievements_HEAVY_METALL 
 	printf \{'Achievements_HEAVY_METALL'}
-	if ($achievements_early_quit_flag = 1)
+	if ($Achievements_early_quit_flag = 1)
 		return
 	endif
 	if NOT Achievements_IsSongWon
 		return
 	endif
-	if achievements_ischeatingautokick
+	if Achievements_IsCheatingAutoKick
 		return
 	endif
 	if NOT ($game_mode = p4_quickplay ||
@@ -1181,124 +1181,124 @@ script achievements_heavy_metall
 	endif
 	if ($band1_status.score >= 444444 &&
 			$current_song = trappedunderice)
-		achievements_awardband \{achievement = heavy_metall}
+		Achievements_AwardBand \{achievement = HEAVY_METALL}
 	endif
 endscript
 
-script achievements_super_group_unite 
+script Achievements_SUPER_GROUP_UNITE 
 	printf \{'Achievements_SUPER_GROUP_UNITE'}
 	if NOT ($game_mode = p4_quickplay ||
 			$game_mode = p4_career ||
 			$game_mode = p8_pro_faceoff)
 		return
 	endif
-	if achievements_ischeatingautokick
+	if Achievements_IsCheatingAutoKick
 		return
 	endif
-	if ($achievements_super_group_unite_flag = 1)
-		achievements_awardband \{achievement = super_group_unite}
-		Change \{achievements_super_group_unite_flag = 0}
+	if ($Achievements_super_group_unite_flag = 1)
+		Achievements_AwardBand \{achievement = SUPER_GROUP_UNITE}
+		change \{Achievements_super_group_unite_flag = 0}
 	endif
 endscript
 
-script achievements_feeding_the_beast 
+script Achievements_FEEDING_THE_BEAST 
 	printf \{'Achievements_FEEDING_THE_BEAST'}
 	if GotParam \{controller}
-		WriteAchievements achievement = feeding_the_beast controller_id = <controller>
+		WriteAchievements achievement = FEEDING_THE_BEAST controller_id = <controller>
 	endif
 endscript
 
-script achievements_this_is_totally_legal 
+script Achievements_THIS_IS_TOTALLY_LEGAL 
 	printf \{'Achievements_THIS_IS_TOTALLY_LEGAL'}
 	if GotParam \{controller}
 		GetGlobalTags \{achievement_info}
 		<new_total> = (<total_ghtunes_downloaded> + 1)
 		SetGlobalTags achievement_info params = {total_ghtunes_downloaded = <new_total>}
 		if (<new_total> > 2)
-			WriteAchievements achievement = this_is_totally_legal controller_id = <controller>
+			WriteAchievements achievement = THIS_IS_TOTALLY_LEGAL controller_id = <controller>
 		endif
 	endif
 endscript
 
-script achievements_mine_is_bigger_than_yours 
+script Achievements_MINE_IS_BIGGER_THAN_YOURS 
 	printf \{'Achievements_MINE_IS_BIGGER_THAN_YOURS'}
-	if ($achievements_early_quit_flag = 1)
+	if ($Achievements_early_quit_flag = 1)
 		return
 	endif
 	if ($game_mode = p8_pro_faceoff && $is_network_game)
-		achievements_awardband \{achievement = mine_is_bigger_than_yours}
+		Achievements_AwardBand \{achievement = MINE_IS_BIGGER_THAN_YOURS}
 	endif
 endscript
 
-script achievements_a_pair_beats_a_pair 
+script Achievements_A_PAIR_BEATS_A_PAIR 
 	printf \{'Achievements_A_PAIR_BEATS_A_PAIR'}
-	if ($achievements_early_quit_flag = 1)
+	if ($Achievements_early_quit_flag = 1)
 		return
 	endif
 	if ($game_mode = p4_pro_faceoff && $is_network_game)
-		achievements_awardband \{achievement = a_pair_beats_a_pair}
+		Achievements_AwardBand \{achievement = A_PAIR_BEATS_A_PAIR}
 	endif
 endscript
 
-script achievements_survival_of_the_fittest 
+script Achievements_SURVIVAL_OF_THE_FITTEST 
 	printf \{'Achievements_SURVIVAL_OF_THE_FITTEST'}
-	if ($achievements_early_quit_flag = 1)
+	if ($Achievements_early_quit_flag = 1)
 		return
 	endif
 	if ($game_mode = p2_battle && $is_network_game)
-		achievements_awardband \{achievement = survival_of_the_fittest}
+		Achievements_AwardBand \{achievement = SURVIVAL_OF_THE_FITTEST}
 	endif
 endscript
 
-script achievements_rock_maiden 
+script Achievements_ROCK_MAIDEN 
 	printf \{'Achievements_ROCK_MAIDEN'}
 	if GotParam \{controller}
-		WriteAchievements achievement = rock_maiden controller_id = <controller>
+		WriteAchievements achievement = ROCK_MAIDEN controller_id = <controller>
 	endif
 endscript
 
-script achievements_warrior_of_rock 
+script Achievements_WARRIOR_OF_ROCK 
 	printf \{'Achievements_WARRIOR_OF_ROCK'}
 	if GotParam \{controller}
-		WriteAchievements achievement = warrior_of_rock controller_id = <controller>
+		WriteAchievements achievement = WARRIOR_OF_ROCK controller_id = <controller>
 	endif
 endscript
 
-script achievements_stamp_of_approval 
+script Achievements_STAMP_OF_APPROVAL 
 	printf \{'Achievements_STAMP_OF_APPROVAL'}
 	if ($rich_presence_context = presence_music_studio)
 		return
 	endif
 	if GotParam \{controller}
-		WriteAchievements achievement = stamp_of_approval controller_id = <controller>
-		Change \{achievements_modified_logo = 0}
+		WriteAchievements achievement = STAMP_OF_APPROVAL controller_id = <controller>
+		change \{Achievements_modified_logo = 0}
 	endif
 endscript
 
-script achievements_one_of_a_kind_axe 
+script Achievements_ONE_OF_A_KIND_AXE 
 	printf \{'Achievements_ONE_OF_A_KIND_AXE'}
 	if GotParam \{controller}
-		WriteAchievements achievement = one_of_a_kind_axe controller_id = <controller>
+		WriteAchievements achievement = ONE_OF_A_KIND_AXE controller_id = <controller>
 	endif
 endscript
 
-script achievements_custom_beats 
+script Achievements_CUSTOM_BEATS 
 	printf \{'Achievements_CUSTOM_BEATS'}
 	if GotParam \{controller}
-		WriteAchievements achievement = custom_beats controller_id = <controller>
+		WriteAchievements achievement = CUSTOM_BEATS controller_id = <controller>
 	endif
 endscript
 
-script achievements_inked 
+script Achievements_INKED 
 	printf \{'Achievements_INKED'}
 	if GotParam \{controller}
-		WriteAchievements achievement = inked controller_id = <controller>
+		WriteAchievements achievement = INKED controller_id = <controller>
 	endif
 endscript
 
-script achievements_bad_to_the_bone 
+script Achievements_BAD_TO_THE_BONE 
 	printf \{'Achievements_BAD_TO_THE_BONE'}
-	if ($achievements_early_quit_flag = 1)
+	if ($Achievements_early_quit_flag = 1)
 		return
 	endif
 	if NOT Achievements_IsSongWon
@@ -1307,20 +1307,20 @@ script achievements_bad_to_the_bone
 	if ($current_level = load_z_tool)
 		return
 	endif
-	gamemode_getnumplayersshown
-	<Player> = 1
+	GameMode_GetNumPlayersShown
+	<player> = 1
 	begin
-	getplayerinfo <Player> character_id
-	if (<character_id> = Skeleton)
-		achievements_awardplayer achievement = bad_to_the_bone Player = <Player>
+	GetPlayerInfo <player> character_id
+	if (<character_id> = skeleton)
+		Achievements_AwardPlayer achievement = BAD_TO_THE_BONE player = <player>
 	endif
-	<Player> = (<Player> + 1)
+	<player> = (<player> + 1)
 	repeat <num_players_shown>
 endscript
 
-script achievements_shiny_metal_thingy 
+script Achievements_SHINY_METAL_THINGY 
 	printf \{'Achievements_SHINY_METAL_THINGY'}
-	if ($achievements_early_quit_flag = 1)
+	if ($Achievements_early_quit_flag = 1)
 		return
 	endif
 	if NOT Achievements_IsSongWon
@@ -1329,20 +1329,20 @@ script achievements_shiny_metal_thingy
 	if ($current_level = load_z_tool)
 		return
 	endif
-	gamemode_getnumplayersshown
-	<Player> = 1
+	GameMode_GetNumPlayersShown
+	<player> = 1
 	begin
-	getplayerinfo <Player> character_id
-	if (<character_id> = rockbot)
-		achievements_awardplayer achievement = shiny_metal_thingy Player = <Player>
+	GetPlayerInfo <player> character_id
+	if (<character_id> = Rockbot)
+		Achievements_AwardPlayer achievement = SHINY_METAL_THINGY player = <player>
 	endif
-	<Player> = (<Player> + 1)
+	<player> = (<player> + 1)
 	repeat <num_players_shown>
 endscript
 
-script achievements_pumpkin_smasher 
+script Achievements_PUMPKIN_SMASHER 
 	printf \{'Achievements_PUMPKIN_SMASHER'}
-	if ($achievements_early_quit_flag = 1)
+	if ($Achievements_early_quit_flag = 1)
 		return
 	endif
 	if NOT Achievements_IsSongWon
@@ -1351,20 +1351,20 @@ script achievements_pumpkin_smasher
 	if ($current_level = load_z_tool)
 		return
 	endif
-	gamemode_getnumplayersshown
-	<Player> = 1
+	GameMode_GetNumPlayersShown
+	<player> = 1
 	begin
-	getplayerinfo <Player> character_id
-	if (<character_id> = billy)
-		achievements_awardplayer achievement = pumpkin_smasher Player = <Player>
+	GetPlayerInfo <player> character_id
+	if (<character_id> = Billy)
+		Achievements_AwardPlayer achievement = PUMPKIN_SMASHER player = <player>
 	endif
-	<Player> = (<Player> + 1)
+	<player> = (<player> + 1)
 	repeat <num_players_shown>
 endscript
 
-script achievements_wylde_man 
+script Achievements_WYLDE_MAN 
 	printf \{'Achievements_WYLDE_MAN'}
-	if ($achievements_early_quit_flag = 1)
+	if ($Achievements_early_quit_flag = 1)
 		return
 	endif
 	if NOT Achievements_IsSongWon
@@ -1373,20 +1373,20 @@ script achievements_wylde_man
 	if ($current_level = load_z_tool)
 		return
 	endif
-	gamemode_getnumplayersshown
-	<Player> = 1
+	GameMode_GetNumPlayersShown
+	<player> = 1
 	begin
-	getplayerinfo <Player> character_id
-	if (<character_id> = zakkwylde)
-		achievements_awardplayer achievement = wylde_man Player = <Player>
+	GetPlayerInfo <player> character_id
+	if (<character_id> = ZakkWylde)
+		Achievements_AwardPlayer achievement = WYLDE_MAN player = <player>
 	endif
-	<Player> = (<Player> + 1)
+	<player> = (<player> + 1)
 	repeat <num_players_shown>
 endscript
 
-script achievements_dont_blink 
+script Achievements_DONT_BLINK 
 	printf \{'Achievements_DONT_BLINK'}
-	if ($achievements_early_quit_flag = 1)
+	if ($Achievements_early_quit_flag = 1)
 		return
 	endif
 	if NOT Achievements_IsSongWon
@@ -1395,20 +1395,20 @@ script achievements_dont_blink
 	if ($current_level = load_z_tool)
 		return
 	endif
-	gamemode_getnumplayersshown
-	<Player> = 1
+	GameMode_GetNumPlayersShown
+	<player> = 1
 	begin
-	getplayerinfo <Player> character_id
+	GetPlayerInfo <player> character_id
 	if (<character_id> = travis)
-		achievements_awardplayer achievement = dont_blink Player = <Player>
+		Achievements_AwardPlayer achievement = DONT_BLINK player = <player>
 	endif
-	<Player> = (<Player> + 1)
+	<player> = (<player> + 1)
 	repeat <num_players_shown>
 endscript
 
-script achievements_the_experience 
+script Achievements_THE_EXPERIENCE 
 	printf \{'Achievements_THE_EXPERIENCE'}
-	if ($achievements_early_quit_flag = 1)
+	if ($Achievements_early_quit_flag = 1)
 		return
 	endif
 	if NOT Achievements_IsSongWon
@@ -1437,26 +1437,26 @@ script achievements_the_experience
 	if (<download> = 1)
 		<songlist_props> = download_songlist_props
 	endif
-	if NOT StructureContains structure = ($<songlist_props>.($current_song)) Band
+	if NOT StructureContains Structure = ($<songlist_props>.($current_song)) Band
 		return
 	endif
-	if NOT (($<songlist_props>.($current_song).Band) = band_hendrix)
+	if NOT (($<songlist_props>.($current_song).Band) = Band_Hendrix)
 		return
 	endif
-	gamemode_getnumplayersshown
-	<Player> = 1
+	GameMode_GetNumPlayersShown
+	<player> = 1
 	begin
-	getplayerinfo <Player> part
-	if (<part> = guitar || <part> = vocals)
-		achievements_awardplayer achievement = the_experience Player = <Player>
+	GetPlayerInfo <player> part
+	if (<part> = guitar || <part> = Vocals)
+		Achievements_AwardPlayer achievement = THE_EXPERIENCE player = <player>
 	endif
-	<Player> = (<Player> + 1)
+	<player> = (<player> + 1)
 	repeat <num_players_shown>
 endscript
 
-script achievements_motorcity_madman 
+script Achievements_MOTORCITY_MADMAN 
 	printf \{'Achievements_MOTORCITY_MADMAN'}
-	if ($achievements_early_quit_flag = 1)
+	if ($Achievements_early_quit_flag = 1)
 		return
 	endif
 	if NOT Achievements_IsSongWon
@@ -1465,20 +1465,20 @@ script achievements_motorcity_madman
 	if ($current_level = load_z_tool)
 		return
 	endif
-	gamemode_getnumplayersshown
-	<Player> = 1
+	GameMode_GetNumPlayersShown
+	<player> = 1
 	begin
-	getplayerinfo <Player> character_id
-	if (<character_id> = tednugent)
-		achievements_awardplayer achievement = motorcity_madman Player = <Player>
+	GetPlayerInfo <player> character_id
+	if (<character_id> = TedNugent)
+		Achievements_AwardPlayer achievement = MOTORCITY_MADMAN player = <player>
 	endif
-	<Player> = (<Player> + 1)
+	<player> = (<player> + 1)
 	repeat <num_players_shown>
 endscript
 
-script achievements_leading_lady 
+script Achievements_LEADING_LADY 
 	printf \{'Achievements_LEADING_LADY'}
-	if ($achievements_early_quit_flag = 1)
+	if ($Achievements_early_quit_flag = 1)
 		return
 	endif
 	if NOT Achievements_IsSongWon
@@ -1487,20 +1487,20 @@ script achievements_leading_lady
 	if ($current_level = load_z_tool)
 		return
 	endif
-	gamemode_getnumplayersshown
-	<Player> = 1
+	GameMode_GetNumPlayersShown
+	<player> = 1
 	begin
-	getplayerinfo <Player> character_id
-	if (<character_id> = hayley)
-		achievements_awardplayer achievement = leading_lady Player = <Player>
+	GetPlayerInfo <player> character_id
+	if (<character_id> = Hayley)
+		Achievements_AwardPlayer achievement = LEADING_LADY player = <player>
 	endif
-	<Player> = (<Player> + 1)
+	<player> = (<player> + 1)
 	repeat <num_players_shown>
 endscript
 
-script achievements_the_dark_prince 
+script Achievements_THE_DARK_PRINCE 
 	printf \{'Achievements_THE_DARK_PRINCE'}
-	if ($achievements_early_quit_flag = 1)
+	if ($Achievements_early_quit_flag = 1)
 		return
 	endif
 	if NOT Achievements_IsSongWon
@@ -1509,92 +1509,92 @@ script achievements_the_dark_prince
 	if ($current_level = load_z_tool)
 		return
 	endif
-	gamemode_getnumplayersshown
-	<Player> = 1
+	GameMode_GetNumPlayersShown
+	<player> = 1
 	begin
-	getplayerinfo <Player> character_id
-	if (<character_id> = ozzy)
-		achievements_awardplayer achievement = the_dark_prince Player = <Player>
+	GetPlayerInfo <player> character_id
+	if (<character_id> = Ozzy)
+		Achievements_AwardPlayer achievement = THE_DARK_PRINCE player = <player>
 	endif
-	<Player> = (<Player> + 1)
+	<player> = (<player> + 1)
 	repeat <num_players_shown>
 endscript
 
-script achievements_muse_to_my_ears 
+script Achievements_MUSE_TO_MY_EARS 
 	printf \{'Achievements_MUSE_TO_MY_EARS'}
 	if NOT Achievements_IsSongWon
 		return
 	endif
-	if achievements_ischeatingautokick
+	if Achievements_IsCheatingAutoKick
 		return
 	endif
-	gamemode_getnumplayers
+	GameMode_GetNumPlayers
 	if (<num_players> > 1)
 		return
 	endif
-	getplayerinfo \{1
+	GetPlayerInfo \{1
 		score}
-	getplayerinfo \{1
+	GetPlayerInfo \{1
 		part}
 	if (<score> >= 222222 &&
 			<part> = drum &&
 			$current_song = assassin)
-		achievements_awardplayer \{achievement = muse_to_my_ears
-			Player = 1}
+		Achievements_AwardPlayer \{achievement = MUSE_TO_MY_EARS
+			player = 1}
 	endif
 endscript
 
-script achievements_mike_checka 
+script Achievements_MIKE_CHECKA 
 	printf \{'Achievements_MIKE_CHECKA'}
 	if NOT Achievements_IsSongWon
 		return
 	endif
-	gamemode_getnumplayers
+	GameMode_GetNumPlayers
 	if (<num_players> > 1)
 		return
 	endif
-	getplayerinfo \{1
+	GetPlayerInfo \{1
 		score}
-	getplayerinfo \{1
+	GetPlayerInfo \{1
 		part}
 	if (<score> >= 123450 &&
-			<part> = vocals &&
+			<part> = Vocals &&
 			$current_song = beatit)
-		achievements_awardplayer \{achievement = mike_checka
-			Player = 1}
+		Achievements_AwardPlayer \{achievement = MIKE_CHECKA
+			player = 1}
 	endif
 endscript
 
-script achievements_get_your_boogie_on 
+script Achievements_GET_YOUR_BOOGIE_ON 
 	printf \{'Achievements_GET_YOUR_BOOGIE_ON'}
 	if NOT Achievements_IsSongWon
 		return
 	endif
-	gamemode_getnumplayers
+	GameMode_GetNumPlayers
 	if (<num_players> > 1)
 		return
 	endif
-	getplayerinfo \{1
+	GetPlayerInfo \{1
 		score}
-	getplayerinfo \{1
+	GetPlayerInfo \{1
 		part}
 	if (<score> >= 222222 &&
-			(<part> = guitar || <part> = bass) &&
-			$current_song = satchboogie)
-		achievements_awardplayer \{achievement = get_your_boogie_on
-			Player = 1}
+			(<part> = guitar || <part> = Bass) &&
+			$current_song = SatchBoogie)
+		Achievements_AwardPlayer \{achievement = GET_YOUR_BOOGIE_ON
+			player = 1}
 	endif
 endscript
 
-script achievements_axe_museum 
+script Achievements_AXE_MUSEUM 
 	printf \{'Achievements_AXE_MUSEUM'}
 	GetArraySize ($progression_guitar_rewards)
-	<main_array_size> = <array_Size>
+	<main_array_size> = <array_size>
 	<i> = 0
 	begin
-	if StructureContains structure = ($progression_guitar_rewards [<i>]) car_pieces
+	if StructureContains Structure = ($progression_guitar_rewards [<i>]) car_pieces
 		GetArraySize ($progression_guitar_rewards [<i>].car_pieces)
-		if (<array_Size> > 0)
+		if (<array_size> > 0)
 			<j> = 0
 			begin
 			get_savegame_from_controller controller = ($primary_controller)
@@ -1602,10 +1602,10 @@ script achievements_axe_museum
 				return
 			endif
 			<j> = (<j> + 1)
-			repeat <array_Size>
+			repeat <array_size>
 		endif
 	endif
 	<i> = (<i> + 1)
 	repeat <main_array_size>
-	WriteAchievements achievement = axe_museum controller_id = ($primary_controller)
+	WriteAchievements achievement = AXE_MUSEUM controller_id = ($primary_controller)
 endscript

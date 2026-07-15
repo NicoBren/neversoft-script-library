@@ -1,37 +1,37 @@
-PreloadWinAnimStream_GuitaristID = None
-PreloadWinAnimStream_BassistID = None
+PreloadWinAnimStream_GuitaristID = none
+PreloadWinAnimStream_BassistID = none
 
 script PreloadWinAnimStream 
 	Obj_GetID
-	MangleChecksums a = <objID> b = winanimstream
-	if (<objID> = GUITARIST)
-		if PreloadStream <Stream> buss = binkcutscenes
-			Change PreloadWinAnimStream_GuitaristID = <unique_id>
+	MangleChecksums a = <ObjID> b = winanimstream
+	if (<ObjID> = Guitarist)
+		if PreloadStream <stream> buss = binkcutscenes
+			change PreloadWinAnimStream_GuitaristID = <unique_id>
 		else
-			Change \{PreloadWinAnimStream_GuitaristID = None}
+			change \{PreloadWinAnimStream_GuitaristID = none}
 		endif
-	elseif (<objID> = BASSIST)
-		if PreloadStream <Stream> buss = binkcutscenes
-			Change PreloadWinAnimStream_BassistID = <unique_id>
+	elseif (<ObjID> = bassist)
+		if PreloadStream <stream> buss = binkcutscenes
+			change PreloadWinAnimStream_BassistID = <unique_id>
 		else
-			Change \{PreloadWinAnimStream_BassistID = None}
+			change \{PreloadWinAnimStream_BassistID = none}
 		endif
 	endif
 endscript
 
 script PlayPreLoadedWinAnimStream 
 	Obj_GetID
-	if (<objID> = GUITARIST)
-		if (($PreloadWinAnimStream_GuitaristID) = None)
+	if (<ObjID> = Guitarist)
+		if (($PreloadWinAnimStream_GuitaristID) = none)
 			printf \{'WinAnimStream not found for guitarist'}
 		else
-			StartPreLoadedStream ($PreloadWinAnimStream_GuitaristID) vol = 63 forcesafepreload = 1 buss = binkcutscenes
+			StartPreloadedStream ($PreloadWinAnimStream_GuitaristID) vol = 63 forcesafepreload = 1 buss = binkcutscenes
 		endif
-	elseif (<objID> = BASSIST)
-		if (($PreloadWinAnimStream_BassistID) = None)
+	elseif (<ObjID> = bassist)
+		if (($PreloadWinAnimStream_BassistID) = none)
 			printf \{'WinAnimStream not found for bassist'}
 		else
-			StartPreLoadedStream ($PreloadWinAnimStream_BassistID) vol = 63 forcesafepreload = 1 buss = binkcutscenes
+			StartPreloadedStream ($PreloadWinAnimStream_BassistID) vol = 63 forcesafepreload = 1 buss = binkcutscenes
 		endif
 	endif
 endscript

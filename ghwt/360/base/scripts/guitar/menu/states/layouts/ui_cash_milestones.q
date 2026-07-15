@@ -9,7 +9,7 @@ script ui_destroy_cash_milestones
 endscript
 
 script ui_deinit_cash_milestones 
-	progression_cashmilestonesclear
+	Progression_CashMilestonesClear
 endscript
 
 script ui_cash_milestones_build_page_for_mp 
@@ -20,40 +20,40 @@ script ui_cash_milestones_build_page_for_mp
 	endif
 	CreateScreenElement \{parent = root_window
 		id = my_milestones_id
-		Type = descinterface
+		type = DescInterface
 		desc = 'cash_milestones_mp_band'}
-	if my_milestones_id :desc_resolvealias \{Name = alias_cash_milestones_mp_list}
+	if my_milestones_id :Desc_ResolveAlias \{name = alias_cash_milestones_mp_list}
 	else
-		ScriptAssert \{qs(0xd06d1448)}
+		ScriptAssert \{qs("\LProblem resolving list alias in UIstate_cash_milestones")}
 	endif
 	cnt = 0
 	begin
 	p_cash = (($cash_milestones_band_ui) [<cnt>])
 	gig_cash_earned = (<p_cash>.total_cash)
-	formatText TextName = gig_cash qs(0x447de8d3) d = <gig_cash_earned>
-	cash_ranks_get_rank Player = (<cnt> + 1)
-	cash_ranks_get_icon_id Player = (<cnt> + 1)
-	formatText TextName = player_name qs(0x8c021f45) d = (<cnt> + 1)
-	getplayerinfo (<cnt> + 1) part
+	FormatText TextName = gig_cash qs("$%d") d = <gig_cash_earned>
+	cash_ranks_get_rank player = (<cnt> + 1)
+	cash_ranks_get_icon_id player = (<cnt> + 1)
+	FormatText TextName = player_name qs("Player%d") d = (<cnt> + 1)
+	GetPlayerInfo (<cnt> + 1) part
 	switch (<part>)
 		case guitar
 		icon_texture = mixer_icon_guitar
-		case bass
+		case Bass
 		icon_texture = mixer_icon_bass
 		case drum
 		icon_texture = mixer_icon_drums
-		case vocals
+		case Vocals
 		icon_texture = mixer_icon_vox
 	endswitch
-	formatText TextName = car_earnings_txt qs(0x447de8d3) d = (<career_earnings> + <gig_cash_earned>)
-	formatText TextName = rank_txt qs(0x48c6d14c) d = <rank>
+	FormatText TextName = car_earnings_txt qs("$%d") d = (<career_earnings> + <gig_cash_earned>)
+	FormatText TextName = rank_txt qs("%d") d = <rank>
 	CreateScreenElement {
 		parent = <resolved_id>
-		Type = descinterface
+		type = DescInterface
 		desc = 'cash_milestones_row_mp'
-		autosizedims = true
+		autoSizeDims = true
 		gig_cash_text = <gig_cash>
-		career_earnings_text = qs(0xc768e0ed)
+		career_earnings_text = qs("fix me")
 		cash_milestones_icon_texture = <cash_icon_id>
 		player_name_text = <player_name>
 		mixer_icon_guitar_texture = <icon_texture>
@@ -65,7 +65,7 @@ script ui_cash_milestones_build_page_for_mp
 		v}
 	cnt = (<cnt> + 1)
 	repeat ($current_num_players)
-	SpawnScriptNow ui_milestones_set_focus_to_menu params = {menu_id = <resolved_id>}
+	spawnscriptnow ui_milestones_set_focus_to_menu params = {menu_id = <resolved_id>}
 endscript
 
 script ui_cash_milestones_build_page_for_1p 
@@ -73,20 +73,20 @@ script ui_cash_milestones_build_page_for_1p
 	gig_earnings = ($cash_milestones_gig_total)
 	cash_ranks_get_rank
 	cash_ranks_get_patch_id
-	formatText TextName = car_earn qs(0xbe2b541b) d = <career_earnings> usecommas
-	formatText TextName = car_rank qs(0xce985b63) d = <rank>
-	formatText TextName = gig_earn qs(0xc5d1b38b) d = <gig_earnings> usecommas
+	FormatText TextName = car_earn qs("CAREER:$%d") d = <career_earnings> usecommas
+	FormatText TextName = car_rank qs("Milestone #%d") d = <rank>
+	FormatText TextName = gig_earn qs("GIG:$%d") d = <gig_earnings> usecommas
 	if ScreenElementExists \{id = my_milestones_id}
 		DestroyScreenElement \{id = my_milestones_id}
 	endif
 	get_current_band_info
-	GetGlobalTags <band_info> param = Name
+	GetGlobalTags <band_info> param = name
 	CreateScreenElement {
 		parent = root_window
 		id = my_milestones_id
-		Type = descinterface
+		type = DescInterface
 		desc = 'cash_milestones'
-		cash_milestone_player_name_text = <Name>
+		cash_milestone_player_name_text = <name>
 		cash_milestones_career_total_text = <car_earn>
 		cash_milestones_title_text = <car_rank>
 		cash_milestones_patch_texture = <cash_patch_id>
@@ -105,23 +105,23 @@ script ui_cash_milestones_build_page_for_1p
 		id = my_milestones_id
 		cash_milestones_title_text = <blurb>
 	}
-	SpawnScriptNow ui_milestones_set_focus_to_menu params = {menu_id = <resolved_id> focus_index = <focus_index>}
+	spawnscriptnow ui_milestones_set_focus_to_menu params = {menu_id = <resolved_id> focus_index = <focus_index>}
 endscript
 
 script ui_cash_milestones_build_cash_rank_list 
-	if my_milestones_id :desc_resolvealias \{Name = alias_cash_milestones_list}
+	if my_milestones_id :Desc_ResolveAlias \{name = alias_cash_milestones_list}
 	else
-		ScriptAssert \{qs(0x2fd38b2c)}
+		ScriptAssert \{qs("\LProblem resolving alias in UIstate_cash_milestones")}
 	endif
 	focus_index = 0
 	i = 1
 	begin
-	formatText TextName = num_text qs(0xa61fa3a1) d = <i>
+	FormatText TextName = num_text qs("%d.") d = <i>
 	CreateScreenElement {
 		parent = <resolved_id>
-		Type = descinterface
+		type = DescInterface
 		desc = 'cash_milestones_row'
-		autosizedims = true
+		autoSizeDims = true
 		list_highlight_alpha = 0
 		number_text_text = <num_text>
 		tags = {
@@ -137,11 +137,11 @@ script ui_cash_milestones_build_cash_rank_list
 		<thresh> = (($cash_rank_thresholds) [(<i> -2)])
 	endif
 	if (<i> < 10)
-		formatText checksumName = tex_name 'cash_milestone_icon_00%d' d = <i>
+		FormatText checksumname = tex_name 'cash_milestone_icon_00%d' d = <i>
 	else
-		formatText checksumName = tex_name 'cash_milestone_icon_0%d' d = <i>
+		FormatText checksumname = tex_name 'cash_milestone_icon_0%d' d = <i>
 	endif
-	formatText TextName = amnt qs(0x447de8d3) d = <thresh>
+	FormatText TextName = amnt qs("$%d") d = <thresh>
 	SetScreenElementProps {
 		id = <id>
 		cash_milestones_icon_pho_texture = <tex_name>
@@ -165,19 +165,19 @@ script ui_cash_milestones_build_cash_rank_list
 endscript
 
 script ui_cash_milestones_build_cash_rank_list_elite 
-	if my_milestones_id :desc_resolvealias \{Name = alias_cash_milestones_list}
+	if my_milestones_id :Desc_ResolveAlias \{name = alias_cash_milestones_list}
 	else
-		ScriptAssert \{qs(0x2fd38b2c)}
+		ScriptAssert \{qs("\LProblem resolving alias in UIstate_cash_milestones")}
 	endif
 	focus_index = 0
 	i = 1
 	begin
-	formatText TextName = num_text qs(0xa61fa3a1) d = (1 + (<i> * 50))
+	FormatText TextName = num_text qs("%d.") d = (1 + (<i> * 50))
 	CreateScreenElement {
 		parent = <resolved_id>
-		Type = descinterface
+		type = DescInterface
 		desc = 'cash_milestones_row'
-		autosizedims = true
+		autoSizeDims = true
 		list_highlight_alpha = 0
 		number_text_text = <num_text>
 		tags = {
@@ -185,8 +185,8 @@ script ui_cash_milestones_build_cash_rank_list_elite
 		}
 	}
 	<thresh> = (<i> * (($cash_rank_thresholds) [49]))
-	formatText checksumName = tex_name 'cash_milestone_icon_05%d' d = <i>
-	formatText TextName = amnt qs(0x447de8d3) d = <thresh>
+	FormatText checksumname = tex_name 'cash_milestone_icon_05%d' d = <i>
+	FormatText TextName = amnt qs("$%d") d = <thresh>
 	SetScreenElementProps {
 		id = <id>
 		cash_milestones_icon_pho_texture = <tex_name>
@@ -212,10 +212,10 @@ endscript
 
 script ui_cash_milestones_continue_to_next_screen 
 	printf \{channel = mychannel
-		qs(0x59360a51)}
-	gamemode_gettype
-	printf channel = mychannel qs(0xc9c7ed06) t = <Type>
-	if (<Type> = career)
+		qs("\Lcontinue on from cash milestones")}
+	GameMode_GetType
+	printf channel = mychannel qs("\Lgame mode TYPE = %t") t = <type>
+	if (<type> = career)
 		ui_win_song_career_continue
 	else
 		ui_win_song_continue
@@ -224,10 +224,10 @@ endscript
 
 script ui_cash_milestones_set_focus 
 	GetTags
-	printf channel = mychannel qs(0x0ad25ba7) i = <index>
+	printf channel = mychannel qs("\Lindex = %i") i = <index>
 	<ratio> = (<index> / 55.0)
-	Pos = ((402.0, -38.0) + ((0.0, 1.0) * (<ratio> * 160)))
-	my_milestones_id :se_setprops thumb_piece_pos = <Pos>
+	pos = ((402.0, -38.0) + ((0.0, 1.0) * (<ratio> * 160)))
+	my_milestones_id :SE_SetProps thumb_piece_pos = <pos>
 	SetScreenElementProps {
 		id = <id>
 		list_highlight_alpha = 255
@@ -244,11 +244,11 @@ endscript
 
 script ui_milestones_set_focus_to_menu 
 	if GotParam \{focus_index}
-		LaunchEvent Type = focus target = <menu_id> data = {child_index = (<focus_index> -1)}
+		LaunchEvent type = focus target = <menu_id> data = {child_index = (<focus_index> -1)}
 	else
-		LaunchEvent Type = focus target = <menu_id>
+		LaunchEvent type = focus target = <menu_id>
 	endif
-	add_user_control_helper \{text = qs(0xaf4d5dd2)
+	add_user_control_helper \{text = qs("BACK")
 		button = red
 		z = 100000}
 endscript

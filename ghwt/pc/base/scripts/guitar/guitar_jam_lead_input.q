@@ -11,15 +11,15 @@ endscript
 script jam_input_lead_per_frame 
 	instrument_controls = [enabled]
 	if ($game_mode = training)
-		if screenelementexists \{id = jam_band_container}
-			jam_band_container :gettags
-		elseif screenelementexists \{id = jam_studio_element}
-			jam_studio_element :gettags
+		if ScreenElementExists \{id = jam_band_container}
+			jam_band_container :GetTags
+		elseif ScreenElementExists \{id = jam_studio_element}
+			jam_studio_element :GetTags
 		endif
 	endif
-	if arraycontains array = <instrument_controls> contains = enabled
+	if ArrayContains array = <instrument_controls> contains = enabled
 		if NOT (<touch_strum> = 1)
-			if controllerpressed up <controller>
+			if ControllerPressed up <controller>
 				if (<mid_up_strum> = 0)
 					jam_input_lead_strum spawn_id = <spawn_id> hold_pattern = <hold_pattern> up_strum = 1 stop_sound = 1 controller = <controller> select_player = <select_player>
 					spawnscriptnow jam_input_stop_sound_lead id = <spawn_id> params = {select_player = <select_player> controller = <controller>}
@@ -28,7 +28,7 @@ script jam_input_lead_per_frame
 			else
 				<mid_up_strum> = 0
 			endif
-			if controllerpressed down <controller>
+			if ControllerPressed down <controller>
 				if (<mid_down_strum> = 0)
 					jam_input_lead_strum spawn_id = <spawn_id> hold_pattern = <hold_pattern> up_strum = 0 stop_sound = 1 controller = <controller> select_player = <select_player>
 					spawnscriptnow jam_input_stop_sound_lead id = <spawn_id> params = {select_player = <select_player> controller = <controller>}
@@ -50,12 +50,12 @@ script jam_input_lead_per_frame
 endscript
 
 script jam_input_lead_per_frame_no_strum 
-	if controllerpressed up <controller>
+	if ControllerPressed up <controller>
 		<mid_up_strum> = (<mid_up_strum> + 1)
 	else
 		<mid_up_strum> = 0
 	endif
-	if controllerpressed down <controller>
+	if ControllerPressed down <controller>
 		<mid_down_strum> = (<mid_down_strum> + 1)
 	else
 		<mid_down_strum> = 0
@@ -64,14 +64,14 @@ script jam_input_lead_per_frame_no_strum
 endscript
 
 script jam_input_stop_sound_lead select_player = 1 controller = ($player1_status.controller)
-	wait \{$jam_input_strum_wait
+	Wait \{$jam_input_strum_wait
 		gameframes}
-	getheldpattern controller = <controller> player = <select_player> nobrokenstring
+	GetHeldPattern controller = <controller> player = <select_player> nobrokenstring
 	lead_hold_pattern = <hold_pattern>
 	jam_input_get_single_note pattern = <lead_hold_pattern>
 	<lead_hold_pattern> = <single_note_pattern>
 	begin
-	getheldpattern controller = <controller> player = <select_player> nobrokenstring
+	GetHeldPattern controller = <controller> player = <select_player> nobrokenstring
 	jam_input_get_single_note pattern = <hold_pattern>
 	<hold_pattern> = <single_note_pattern>
 	if NOT (<lead_hold_pattern> = <hold_pattern>)
@@ -81,15 +81,15 @@ script jam_input_stop_sound_lead select_player = 1 controller = ($player1_status
 			break
 		endif
 	endif
-	if NOT issoundplayingbyid \{$jam_input_current_lead}
+	if NOT IsSoundPlayingByID \{$jam_input_current_lead}
 		jam_update_falling_gem_sustain \{sustain_global = jam_sustain_lead
 			stop = 1}
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
-	stopsound \{unique_id = $jam_input_current_lead
+	StopSound \{unique_id = $jam_input_current_lead
 		fade_type = log_fast
 		fade_time = 0.3}
 	if ($jam_highway_step_recording = 0)
@@ -126,7 +126,7 @@ script jam_input_lead_strum controller = ($player2_status.controller) hammer_on 
 	final_note_sample = null
 	note_type = 0
 	if NOT (<mute> = 1)
-		if controllerpressed select <controller>
+		if ControllerPressed select <controller>
 			<note_type> = 3
 		endif
 	else
@@ -145,11 +145,11 @@ script jam_input_lead_strum controller = ($player2_status.controller) hammer_on 
 		endif
 	endif
 	strum_type = ($guitarist_info.strum)
-	extendcrc <strum_type> '_Strums' out = strum_anims
-	getarraysize ($<strum_anims>.med)
-	getrandomvalue name = newindex integer a = 0 b = (<array_size> - 1)
-	strum_anim = ($<strum_anims>.med [<newindex>])
-	band_play_strum_anim name = guitarist anim = <strum_anim> blendduration = $strum_blend_time
+	ExtendCRC <strum_type> '_Strums' out = strum_anims
+	GetArraySize ($<strum_anims>.Med)
+	GetRandomValue name = newindex Integer a = 0 b = (<array_size> - 1)
+	strum_anim = ($<strum_anims>.Med [<newindex>])
+	band_play_strum_anim name = Guitarist Anim = <strum_anim> BlendDuration = $strum_blend_time
 	if (<hold_pattern> && 1)
 		<hold_pattern> = 1
 		jam_get_sample player = <select_player> button = 5 sample_type = <note_type> tilt = ($jam_tilt_lead)
@@ -176,7 +176,7 @@ script jam_input_lead_strum controller = ($player2_status.controller) hammer_on 
 endscript
 
 script jam_input_lead_hopo spawn_id = jam_input_spawns controller = ($player2_status.controller)
-	if controllerpressed select <controller>
+	if ControllerPressed select <controller>
 		return
 	endif
 	final_note_sample = null
@@ -231,10 +231,10 @@ script jam_input_lead_get_current_note
 	if ((<scale_index> = 0) || (<scale_index> = 4))
 		if (<hold_pattern> = 17)
 			jam_get_sample player = <player> button = 6 tilt = ($jam_tilt_lead) get_text = 1
-			if gotparam \{single_note_text}
+			if GotParam \{single_note_text}
 				return single_note_text = <single_note_text>
 			else
-				return \{single_note_text = qs(0xca3bb3d6)}
+				return \{single_note_text = qs("err")}
 			endif
 		endif
 	endif
@@ -242,32 +242,32 @@ script jam_input_lead_get_current_note
 	finger_anims = ($guitarist_info.finger_anims)
 	if (<hold_pattern> && 1)
 		jam_get_sample player = <player> button = 5 tilt = ($jam_tilt_lead) get_text = 1
-		band_play_finger_anim name = guitarist anim = ($<finger_anims>.green)
-		band_play_fret_anim name = guitarist anim = ($<fret_anims>.track_117)
+		band_play_finger_anim name = Guitarist Anim = ($<finger_anims>.green)
+		band_play_fret_anim name = Guitarist Anim = ($<fret_anims>.track_117)
 	elseif (<hold_pattern> && 16)
 		jam_get_sample player = <player> button = 4 tilt = ($jam_tilt_lead) get_text = 1
-		band_play_finger_anim name = guitarist anim = ($<finger_anims>.green_red)
-		band_play_fret_anim name = guitarist anim = ($<fret_anims>.track_118)
+		band_play_finger_anim name = Guitarist Anim = ($<finger_anims>.green_red)
+		band_play_fret_anim name = Guitarist Anim = ($<fret_anims>.track_118)
 	elseif (<hold_pattern> && 256)
 		jam_get_sample player = <player> button = 3 tilt = ($jam_tilt_lead) get_text = 1
-		band_play_finger_anim name = guitarist anim = ($<finger_anims>.yellow)
-		band_play_fret_anim name = guitarist anim = ($<fret_anims>.track_119)
+		band_play_finger_anim name = Guitarist Anim = ($<finger_anims>.Yellow)
+		band_play_fret_anim name = Guitarist Anim = ($<fret_anims>.track_119)
 	elseif (<hold_pattern> && 4096)
 		jam_get_sample player = <player> button = 2 tilt = ($jam_tilt_lead) get_text = 1
-		band_play_finger_anim name = guitarist anim = ($<finger_anims>.blue_orange)
-		band_play_fret_anim name = guitarist anim = ($<fret_anims>.track_120)
+		band_play_finger_anim name = Guitarist Anim = ($<finger_anims>.blue_orange)
+		band_play_fret_anim name = Guitarist Anim = ($<fret_anims>.track_120)
 	elseif (<hold_pattern> && 65536)
 		jam_get_sample player = <player> button = 1 tilt = ($jam_tilt_lead) get_text = 1
-		band_play_finger_anim name = guitarist anim = ($<finger_anims>.green_blue)
-		band_play_fret_anim name = guitarist anim = ($<fret_anims>.track_121)
+		band_play_finger_anim name = Guitarist Anim = ($<finger_anims>.green_blue)
+		band_play_fret_anim name = Guitarist Anim = ($<fret_anims>.track_121)
 	elseif (<hold_pattern> = 1048576)
 		jam_get_sample player = <player> button = 0 tilt = ($jam_tilt_lead) get_text = 1
-		band_play_finger_anim name = guitarist anim = ($<finger_anims>.none)
+		band_play_finger_anim name = Guitarist Anim = ($<finger_anims>.none)
 	endif
-	if gotparam \{single_note_text}
+	if GotParam \{single_note_text}
 		return single_note_text = <single_note_text>
 	else
-		return \{single_note_text = qs(0xca3bb3d6)}
+		return \{single_note_text = qs("err")}
 	endif
 endscript
 
@@ -275,14 +275,14 @@ script jam_input_lead_tilt
 	<chosen_scales_array> = ($jam_track_scaleindex)
 	<chosen_scale_index> = (<chosen_scales_array> [1])
 	<chosen_scale> = ($jam_scales_new [<chosen_scale_index>])
-	if structurecontains structure = <chosen_scale> chromatic
+	if StructureContains Structure = <chosen_scale> chromatic
 		<chromatic> = 1
 	else
 		<chromatic> = 0
 	endif
 	begin
-	if guitargetanalogueinfo controller = <controller>
-		<spc_v_dist> = <righty_unscaled>
+	if GuitarGetAnalogueInfo controller = <controller>
+		<spc_v_dist> = <RightY_unscaled>
 		<spc_v_dist> = (<spc_v_dist> * 0.0078125)
 		jam_calc_line_rot player = <player> spc_v_dist = <spc_v_dist>
 		if (<chromatic> = 0)
@@ -305,49 +305,49 @@ script jam_input_lead_tilt
 	else
 		return
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
 script jam_input_lead_play_note \{sustain = 0
 		playback = 0}
-	killspawnedscript \{name = jam_input_stop_sound_lead}
+	KillSpawnedScript \{name = jam_input_stop_sound_lead}
 	jam_update_falling_gem_sustain \{sustain_global = jam_sustain_lead
 		stop = 1}
-	stopsound \{unique_id = $jam_input_current_lead
+	StopSound \{unique_id = $jam_input_current_lead
 		fade_type = linear
 		fade_time = $jam_fade_time}
-	stopsoundevent \{jam_fret_noise_lead
+	StopSoundEvent \{Jam_Fret_Noise_Lead
 		fade_time = 0.2
 		fade_type = linear}
-	if gotparam \{no_vibrato}
-		vibrato_struct = {bpm = $jam_current_bpm depth = 0 time = 0}
+	if GotParam \{no_vibrato}
+		vibrato_struct = {bpm = $jam_current_bpm DEPTH = 0 time = 0}
 	else
 		ms_per_beat = (60000.0 / $jam_current_bpm)
 		seconds_per_measure = ((<ms_per_beat> * 2) / 1000.0)
-		vibrato_struct = {bpm = ($jam_current_bpm * 2) depth = $jam_lead_vibrato_depth time = <seconds_per_measure>}
+		vibrato_struct = {bpm = ($jam_current_bpm * 2) DEPTH = $jam_lead_vibrato_depth time = <seconds_per_measure>}
 	endif
 	switch <note_type>
 		case 0
-		playsound <final_note_sample> pitch = (<pitch_shift> + (($jam_current_tuning) / 10.0)) vol = 0 buss = jammode_leadguitar vibrato = <vibrato_struct>
+		PlaySound <final_note_sample> pitch = (<pitch_shift> + (($jam_current_tuning) / 10.0)) vol = 0 buss = JamMode_LeadGuitar vibrato = <vibrato_struct>
 		case 1
-		playsound <final_note_sample> pitch = (<pitch_shift> + (($jam_current_tuning) / 10.0)) vol = -2 buss = jammode_leadguitar attack_time = 0.055 attack_function = flat_middle vibrato = <vibrato_struct>
+		PlaySound <final_note_sample> pitch = (<pitch_shift> + (($jam_current_tuning) / 10.0)) vol = -2 buss = JamMode_LeadGuitar attack_time = 0.055 attack_function = flat_middle vibrato = <vibrato_struct>
 		case 2
-		playsound <final_note_sample> pitch = (<pitch_shift> + (($jam_current_tuning) / 10.0)) vol = -3.5 buss = jammode_leadguitar attack_time = 0.07 attack_function = flat_middle vibrato = <vibrato_struct>
+		PlaySound <final_note_sample> pitch = (<pitch_shift> + (($jam_current_tuning) / 10.0)) vol = -3.5 buss = JamMode_LeadGuitar attack_time = 0.07 attack_function = flat_middle vibrato = <vibrato_struct>
 		case 3
-		playsound <final_note_sample> pitch = (<pitch_shift> + (($jam_current_tuning) / 10.0)) vol = 0 buss = jammode_leadguitar vibrato = <vibrato_struct>
+		PlaySound <final_note_sample> pitch = (<pitch_shift> + (($jam_current_tuning) / 10.0)) vol = 0 buss = JamMode_LeadGuitar vibrato = <vibrato_struct>
 	endswitch
 	change jam_input_current_lead = <unique_id>
 	if ($jam_tutorial_status = active)
-		broadcastevent type = jam_tutorial_lead_strum data = {hold_pattern = <hold_pattern> tilt = ($jam_tilt_lead) note_type = <note_type>}
+		BroadcastEvent type = jam_tutorial_lead_strum data = {hold_pattern = <hold_pattern> tilt = ($jam_tilt_lead) note_type = <note_type>}
 	endif
 	if (<playback> = 0)
 		spawnscriptnow jam_fretboard_add_note params = {player = <select_player> gem_pattern = <hold_pattern> sustain = jam_sustain_lead hopo = <hopo_note>}
 		<pulsate_id> = pulsate_lead_spawn_id
-		killspawnedscript id = <pulsate_id>
+		KillSpawnedScript id = <pulsate_id>
 		spawnscriptnow id = <pulsate_id> jam_band_pulsate_speaker_head params = {instrument = 1 spawn_id = <pulsate_id>}
 		jam_record_note <...>
 	endif
-	broadcastevent \{type = jam_note_hit}
+	BroadcastEvent \{type = jam_note_hit}
 endscript

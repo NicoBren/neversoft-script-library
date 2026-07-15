@@ -1,23 +1,23 @@
-cas_band_logo_details = {
+CAS_Band_Logo_Details = {
 	assetcontext = band_logo
-	texdict = `models/skater_male/shared/car_logo_test.tex`
-	textureasset = `tex\models\characters\global\global_blank_logo.dds`
+	texdict = `models/Skater_Male/Shared/CAR_Logo_Test.tex`
+	textureasset = `tex\models\Characters\Global\Global_Blank_Logo.dds`
 }
-cas_band_logo = [
+CAS_Band_Logo = [
 	{
-		desc_id = cas_band_logo_id
-		frontend_desc = qs(0x50df6bb6)
+		desc_id = CAS_Band_Logo_id
+		frontend_desc = qs("Band Logo")
 		mesh = 'models/Skater_Male/Shared/CAR_Logo_Test.skin'
 		materials = [
-			band_logo_primary
+			Band_Logo_Primary
 		]
 		random_weight = 1.0
 		sections = [
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex\\models\\Characters\\Global\\Global_Blank_Logo.dds'
-				material = band_logo_primary
+				material = Band_Logo_Primary
 				mask = $car_basic_primitives_1
 				userlayer
 				omit_base_tex
@@ -25,9 +25,9 @@ cas_band_logo = [
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex\\models\\Characters\\Global\\Global_Blank_Logo.dds'
-				material = band_logo_primary
+				material = Band_Logo_Primary
 				mask = $car_basic_primitives_2
 				userlayer
 				omit_base_tex
@@ -35,9 +35,9 @@ cas_band_logo = [
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex\\models\\Characters\\Global\\Global_Blank_Logo.dds'
-				material = band_logo_primary
+				material = Band_Logo_Primary
 				mask = $car_gradiant_shapes
 				userlayer
 				omit_base_tex
@@ -45,9 +45,9 @@ cas_band_logo = [
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex\\models\\Characters\\Global\\Global_Blank_Logo.dds'
-				material = band_logo_primary
+				material = Band_Logo_Primary
 				mask = $car_icons
 				userlayer
 				omit_base_tex
@@ -55,9 +55,9 @@ cas_band_logo = [
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex\\models\\Characters\\Global\\Global_Blank_Logo.dds'
-				material = band_logo_primary
+				material = Band_Logo_Primary
 				mask = $car_living_shapes
 				userlayer
 				omit_base_tex
@@ -65,9 +65,9 @@ cas_band_logo = [
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex\\models\\Characters\\Global\\Global_Blank_Logo.dds'
-				material = band_logo_primary
+				material = Band_Logo_Primary
 				mask = $car_graphics
 				userlayer
 				omit_base_tex
@@ -75,49 +75,49 @@ cas_band_logo = [
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex\\models\\Characters\\Global\\Global_Blank_Logo.dds'
-				material = band_logo_primary
+				material = Band_Logo_Primary
 				mask = $car_sponsors
 				userlayer
 				omit_base_tex
 				diffuse
 			}
 			{
-				desc_id = `font a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex\\models\\Characters\\Global\\Global_Blank_Logo.dds'
-				material = band_logo_primary
+				material = Band_Logo_Primary
 				mask = $car_fontgrid_title_a1
 				diffuse
 				omit_base_tex
 				userlayer
 			}
 			{
-				desc_id = `font a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex\\models\\Characters\\Global\\Global_Blank_Logo.dds'
-				material = band_logo_primary
+				material = Band_Logo_Primary
 				mask = $car_fontgrid_text_a3
 				diffuse
 				omit_base_tex
 				userlayer
 			}
 			{
-				desc_id = `font a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex\\models\\Characters\\Global\\Global_Blank_Logo.dds'
-				material = band_logo_primary
+				material = Band_Logo_Primary
 				mask = $car_fontgrid_text_a6
 				diffuse
 				omit_base_tex
 				userlayer
 			}
 			{
-				desc_id = `font a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex\\models\\Characters\\Global\\Global_Blank_Logo.dds'
-				material = band_logo_primary
+				material = Band_Logo_Primary
 				mask = $car_fontgrid_text_a8
 				diffuse
 				omit_base_tex

@@ -1,4 +1,4 @@
 
-script sfx_dummy_terrains_placeholder 
-	printf \{qs(0xf7999800)}
+script SFX_Dummy_Terrains_Placeholder 
+	printf \{qs("\LNOTHING")}
 endscript

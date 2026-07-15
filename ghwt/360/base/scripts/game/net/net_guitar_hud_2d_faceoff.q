@@ -8,7 +8,7 @@ net_faceoff_hud_2d_elements_solo = {
 	score_pos_p2 = (1140.0, 100.0)
 	counter_pos_p2 = (1153.0, 270.0)
 	offscreen_note_streak_bar_off = (0.0, -400.0)
-	Scale = 0.75
+	scale = 0.75
 	small_bulb_scale = 0.7
 	big_bulb_scale = 1.0
 	z = 0
@@ -27,7 +27,7 @@ net_faceoff_hud_2d_elements_solo = {
 			texture = HUD_2p_c_rock_frame
 			pos_off = (0.0, 0.0)
 			zoff = 20
-			Scale = 1.5
+			scale = 1.5
 			create_once
 		}
 		{

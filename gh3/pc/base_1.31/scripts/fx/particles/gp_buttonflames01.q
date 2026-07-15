@@ -1,55 +1,55 @@
-gp_buttonflames01 = {
+GP_ButtonFlames01 = {
 	pos = (200.0, -99.49771, 4.686832)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	emitrangedims = (0.0, 0.0, 0.0)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	EmitRangeDims = (0.0, 0.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, 0.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	radiate
-	anglespread = 30.0
-	bounceheight = -99.9
-	bouncecoeff = 0.6
-	bouncecallbackrate = 0.0
-	liferange = (1.0, 1.5)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	Radiate
+	AngleSpread = 30.0
+	BounceHeight = -99.9
+	BounceCoeff = 0.6
+	BounceCallbackRate = 0.0
+	LifeRange = (1.0, 1.5)
 	emit_rate = 2.0
 	max = 0
-	timeseed = 0.0
-	lifetime = 0.0
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 0.0
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.6, 1.0)
 		(0.8, 1.2)
 	]
-	speedrange = (0.3, 0.3)
-	rotvel = (0.0, 0.0)
-	rotveltimescale = 1.0
-	emitdelaystart = 0.0
-	pathfollowtime = 0.0
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (0.3, 0.3)
+	RotVel = (0.0, 0.0)
+	RotVelTimeScale = 1.0
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.0
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -12451585
-	lod_default
-	quickmaterial = {
-		texturelayout = layout2x1
-		diffusetextureenabled
-		diffusetexture = jow_buttonflames01
-		specularpower = 0
+	LOD_Default
+	QuickMaterial = {
+		TextureLayout = Layout2x1
+		DiffuseTextureEnabled
+		DiffuseTexture = JOW_ButtonFlames01
+		SpecularPower = 0
 		alphacutoff = 32
-		blendmode = add
-		quadanimationfps = 0
+		blendMode = Add
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.61986405, 0.0, -0.0)
 		(-0.61986405, 0.0, -0.0)
 		(-0.36443204, 0.0, -0.0)
@@ -60,7 +60,7 @@ gp_buttonflames01 = {
 		(0.47343102, 0.0, -0.0)
 		(0.47343102, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-1
 		-1
 		-1
@@ -68,7 +68,7 @@ gp_buttonflames01 = {
 		-256
 		-256
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.68709105
 		1.0
 	]

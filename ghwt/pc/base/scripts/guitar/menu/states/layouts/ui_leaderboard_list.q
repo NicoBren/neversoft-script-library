@@ -2,17 +2,17 @@
 script ui_create_leaderboard_list 
 	if ($current_leaderboard_group = song)
 		make_generic_menu {
-			title = qs(0xa1ae7e56)
+			title = qs("LEADERBOARDS")
 			exclusive_device = ($primary_controller)
 			scrolling
 		}
 		get_songlist_size
 		add_menu_script = add_generic_menu_text_item
 	else
-		getarraysize ($current_leaderboard_array)
+		GetArraySize ($current_leaderboard_array)
 		make_menu_frontend {
-			screen = guitarist
-			title = qs(0xa1ae7e56)
+			screen = Guitarist
+			title = qs("LEADERBOARDS")
 			exclusive_device = ($primary_controller)
 		}
 		add_menu_script = add_menu_frontend_item
@@ -62,43 +62,43 @@ script ui_leaderboard_list_select
 			instrument = 'guitar'
 			case backup
 			instrument = 'backup'
-			case drums
+			case Drums
 			instrument = 'drums'
 			case mic
 			instrument = 'mic'
-			case band
+			case Band
 			instrument = 'band'
 		endswitch
-		formattext checksumname = leaderboard_id '%s_%i' s = <song_prefix> i = <instrument> addtostringlookup = true
+		FormatText checksumname = leaderboard_id '%s_%i' s = <song_prefix> i = <instrument> AddToStringLookup = true
 		change current_leaderboard_id = <leaderboard_id>
 	else
 		change song_checksum = <leaderboard_id>
 		change current_leaderboard_id = <leaderboard_id>
 	endif
 	change \{force_mainmenu_signin = 0}
-	if ((isps3) || (iswinport))
-		set_primary_controller device_num = <device_num> state = uistate_leaderboard_load data = {my_status = 1} require_live = 1
+	if ((IsPs3) || (IsWinPort))
+		set_primary_controller device_num = <device_num> state = UIstate_leaderboard_load data = {my_status = 1} require_live = 1
 	else
-		set_primary_controller device_num = <device_num> state = uistate_leaderboard_load data = {my_status = 1} leaderboards = 1
+		set_primary_controller device_num = <device_num> state = UIstate_leaderboard_load data = {my_status = 1} leaderboards = 1
 	endif
 endscript
 
 script ui_leaderboard_list_cash 
-	change \{current_leaderboard_group = cash}
+	change \{current_leaderboard_group = Cash}
 	change \{current_leaderboard_instrument = guitar}
 	change \{song_checksum = lb_career_cash}
 	change \{current_leaderboard_id = lb_career_cash}
-	if iswinport
+	if IsWinPort
 		change \{current_leaderboard_array = $master_leaderboard_cash_list_ps3}
-	elseif isxenon
+	elseif isXenon
 		change \{current_leaderboard_array = $master_leaderboard_cash_list}
 	else
 		change \{current_leaderboard_array = $master_leaderboard_cash_list_ps3}
 	endif
 	change \{force_mainmenu_signin = 0}
-	if ((isps3) || (iswinport))
-		set_primary_controller device_num = <device_num> state = uistate_leaderboard_load data = {my_status = 1} require_live = 1
+	if ((IsPs3) || (IsWinPort))
+		set_primary_controller device_num = <device_num> state = UIstate_leaderboard_load data = {my_status = 1} require_live = 1
 	else
-		set_primary_controller device_num = <device_num> state = uistate_leaderboard_load data = {my_status = 1} leaderboards = 1
+		set_primary_controller device_num = <device_num> state = UIstate_leaderboard_load data = {my_status = 1} leaderboards = 1
 	endif
 endscript

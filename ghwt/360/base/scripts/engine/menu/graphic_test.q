@@ -5,34 +5,34 @@ graphic_test_axis = 0
 script launch_graphic_test 
 	generic_ui_destroy
 	skater :KillSkater \{no_node}
-	skater :DisablePlayerInput
-	Change \{graphic_test_selection = test_graphic1}
-	legacydoscreenelementmorph \{id = hud_container
+	skater :Disableplayerinput
+	change \{graphic_test_selection = test_graphic1}
+	LegacyDoScreenElementMorph \{id = hud_container
 		alpha = 0}
-	lock = OFF
+	lock = off
 	if AreAssetsLocked
-		AllowAssetLoading \{On}
-		lock = On
+		AllowAssetLoading \{on}
+		lock = on
 	endif
 	LoadTexture \{'Test\\graphic_test'}
 	LoadTexture \{'Test\\graphic_test2'}
 	LoadTexture \{'Test\\graphic_test3'}
 	LoadTexture \{'Test\\graphic_test4'}
-	if (<lock> = On)
-		AllowAssetLoading \{OFF}
+	if (<lock> = on)
+		AllowAssetLoading \{off}
 	endif
 	disable_pause
 	SetAnalogStickActiveForMenus \{1}
 	SetScreenElementLock \{id = root_window
-		OFF}
+		off}
 	if NOT ScreenElementExists \{id = graphic_test_anchor}
 		CreateScreenElement \{id = graphic_test_anchor
-			Type = ContainerElement
+			type = ContainerElement
 			parent = root_window
-			Pos = (0.0, 0.0)
+			pos = (0.0, 0.0)
 			z_priority = 5000
 			alpha = 1
-			Scale = 1}
+			scale = 1}
 	endif
 	SetScreenElementProps \{id = graphic_test_anchor
 		event_handlers = [
@@ -72,71 +72,71 @@ script launch_graphic_test
 				pad_up
 				test_graphic_move
 				params = {
-					Dir = up
+					dir = up
 				}
 			}
 			{
 				pad_right
 				test_graphic_move
 				params = {
-					Dir = right
+					dir = right
 				}
 			}
 			{
 				pad_down
 				test_graphic_move
 				params = {
-					Dir = down
+					dir = down
 				}
 			}
 			{
 				pad_left
 				test_graphic_move
 				params = {
-					Dir = left
+					dir = left
 				}
 			}
 			{
-				pad_R2
+				pad_r2
 				test_graphic_scale
 				params = {
-					Dir = up
+					dir = up
 				}
 			}
 			{
-				pad_L2
+				pad_l2
 				test_graphic_scale
 				params = {
-					Dir = down
+					dir = down
 				}
 			}
 			{
-				pad_R3
+				pad_r3
 				test_graphic_toggle_axis
 			}
 			{
-				pad_R1
+				pad_r1
 				test_graphic_z
 				params = {
 					up
 				}
 			}
 			{
-				pad_L1
+				pad_l1
 				test_graphic_z
 				params = {
 					down
 				}
 			}
 			{
-				pad_L3
+				pad_l3
 				test_graphic_toggle_speed
 			}
 		]
 		replace_handlers}
-	legacydoscreenelementmorph \{id = graphic_test_anchor
+	LegacyDoScreenElementMorph \{id = graphic_test_anchor
 		alpha = 1}
-	LaunchEvent \{Type = focus
+	LaunchEvent \{type = focus
 		target = graphic_test_anchor}
 	PauseGame
 	<elements> = [test_graphic1 test_graphic2 test_graphic3 test_graphic4]
@@ -148,8 +148,8 @@ script launch_graphic_test
 		CreateScreenElement {
 			id = <element>
 			parent = graphic_test_anchor
-			Type = SpriteElement
-			Pos = (320.0, 224.0)
+			type = SpriteElement
+			pos = (320.0, 224.0)
 			texture = (<textures> [<i>])
 		}
 	endif
@@ -158,11 +158,11 @@ script launch_graphic_test
 endscript
 
 script test_graphic_switch 
-	Change graphic_test_selection = <selection>
+	change graphic_test_selection = <selection>
 endscript
 
 script test_graphic_move 
-	switch <Dir>
+	switch <dir>
 		case up
 		<delta> = ((0.0, -1.0) * $graphic_test_speed)
 		case right
@@ -173,24 +173,24 @@ script test_graphic_move
 		<delta> = ((-1.0, 0.0) * $graphic_test_speed)
 	endswitch
 	GetScreenElementProps id = ($graphic_test_selection)
-	legacydoscreenelementmorph id = ($graphic_test_selection) Pos = (<delta> + <Pos>) time = 0
+	LegacyDoScreenElementMorph id = ($graphic_test_selection) pos = (<delta> + <pos>) time = 0
 endscript
 
 script test_graphic_scale 
 	GetScreenElementProps id = ($graphic_test_selection)
 	GetScreenElementDims id = ($graphic_test_selection)
-	if NOT (IsPair <Scale>)
-		<Scale> = (<Scale> * (1.0, 1.0))
+	if NOT (IsPair <scale>)
+		<scale> = (<scale> * (1.0, 1.0))
 	endif
 	if ($graphic_test_axis = 0)
-		<delta> = ((1.0, 0.0) * ($graphic_test_speed / (<width> / <Scale> [0])))
+		<delta> = ((1.0, 0.0) * ($graphic_test_speed / (<width> / <scale> [0])))
 	else
-		<delta> = ((0.0, 1.0) * ($graphic_test_speed / (<height> / <Scale> [1])))
+		<delta> = ((0.0, 1.0) * ($graphic_test_speed / (<Height> / <scale> [1])))
 	endif
-	if (<Dir> = up)
-		legacydoscreenelementmorph id = ($graphic_test_selection) Scale = (<Scale> + <delta>) time = 0
+	if (<dir> = up)
+		LegacyDoScreenElementMorph id = ($graphic_test_selection) scale = (<scale> + <delta>) time = 0
 	else
-		legacydoscreenelementmorph id = ($graphic_test_selection) Scale = (<Scale> - <delta>) time = 0
+		LegacyDoScreenElementMorph id = ($graphic_test_selection) scale = (<scale> - <delta>) time = 0
 	endif
 endscript
 
@@ -205,33 +205,33 @@ endscript
 
 script test_graphic_toggle_axis 
 	if ($graphic_test_axis = 0)
-		Change \{graphic_test_axis = 1}
-		printf \{qs(0x3b9f4a81)}
+		change \{graphic_test_axis = 1}
+		printf \{qs("\L$graphic_test_axis = y")}
 	else
-		Change \{graphic_test_axis = 0}
-		printf \{qs(0x22847bc0)}
+		change \{graphic_test_axis = 0}
+		printf \{qs("\L$graphic_test_axis = x")}
 	endif
 endscript
 
 script test_graphic_toggle_speed 
 	if ($graphic_test_speed = 1)
-		Change \{graphic_test_speed = 5}
+		change \{graphic_test_speed = 5}
 	else
-		Change \{graphic_test_speed = 1}
+		change \{graphic_test_speed = 1}
 	endif
-	printf qs(0xd0467bb3) d = ($graphic_test_speed)
+	printf qs("\L$graphic_test_speed = %d") d = ($graphic_test_speed)
 endscript
 
 script destroy_graphic_test 
 	enable_pause
 	UnPauseGame
-	skater :EnablePlayerInput
-	legacydoscreenelementmorph \{id = hud_container
+	skater :Enableplayerinput
+	LegacyDoScreenElementMorph \{id = hud_container
 		alpha = 1}
 	if ScreenElementExists \{id = graphic_test_anchor}
-		legacydoscreenelementmorph \{id = graphic_test_anchor
+		LegacyDoScreenElementMorph \{id = graphic_test_anchor
 			alpha = 0}
-		LaunchEvent \{Type = unfocus
+		LaunchEvent \{type = unfocus
 			target = graphic_test_anchor}
 		SetAnalogStickActiveForMenus \{0}
 	endif

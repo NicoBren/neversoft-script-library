@@ -33,7 +33,7 @@ script sliderbar_add_item \{tab = tab1
 		up_arrow_texture = up_arrow
 		down_arrow_texture = down_arrow
 		dims = (0.0, 20.0)}
-	if gotparam \{is_enabled_script}
+	if GotParam \{is_enabled_script}
 		<is_enabled_script>
 		if (<success> = 0)
 			return
@@ -48,21 +48,21 @@ script sliderbar_add_item \{tab = tab1
 		<bar_scale> = (0.78, 1.2)
 		<font> = dialog
 	endswitch
-	setscreenelementlock \{id = current_menu
+	SetScreenElementLock \{id = current_menu
 		off}
-	if NOT gotparam \{pad_choose_params}
+	if NOT GotParam \{pad_choose_params}
 		<pad_choose_params> = <...>
 	endif
-	if gotparam \{index}
-		if gotparam \{pad_choose_params}
+	if GotParam \{index}
+		if GotParam \{pad_choose_params}
 			<pad_choose_params> = (<pad_choose_params> + {parent_index = <index>})
 		else
 			<pad_choose_params> = {parent_index = <index>}
 		endif
 	endif
 	<z_priority> = 300
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = current_menu
 		id = <anchor_id>
 		dims = <dims>
@@ -74,19 +74,19 @@ script sliderbar_add_item \{tab = tab1
 		z_priority = <z_priority>
 	}
 	<parent_id> = <id>
-	if gotparam \{index}
-		setscreenelementprops {
+	if GotParam \{index}
+		SetScreenElementProps {
 			id = <parent_id>
 			tags = {tag_grid_x = <index>}
 		}
 	endif
-	if gotparam \{not_focusable}
+	if GotParam \{not_focusable}
 		<rgba> = [60 60 60 100]
 	else
 		rgba = [128 128 128 240]
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <parent_id>
 		font = text_a1
 		text = <text>
@@ -95,16 +95,16 @@ script sliderbar_add_item \{tab = tab1
 		just = <text_just>
 		pos = <text_pos>
 		shadow
-		shadow_rgba = $ui_text_shadow_color
+		shadow_rgba = $UI_text_shadow_color
 		shadow_offs = (1.0, 1.0)
 		replace_handlers
 		<not_focusable>
 	}
 	highlight_angle = 0
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <parent_id>
-		texture = de_highlight_bar
+		texture = DE_highlight_bar
 		pos = (-25.0, -7.0)
 		rgba = [0 0 0 0]
 		just = [center center]
@@ -113,12 +113,12 @@ script sliderbar_add_item \{tab = tab1
 		rot_angle = <highlight_angle>
 	}
 	<pos> = (-9.0, 0.0)
-	if gotparam \{bar_pos}
+	if GotParam \{bar_pos}
 		<pos> = <bar_pos>
 	endif
 	bar_rgba = [100 90 80 255]
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <parent_id>
 		z_priority = 1
 		pos = <pos>
@@ -126,40 +126,40 @@ script sliderbar_add_item \{tab = tab1
 		texture = roundbar_middle
 		rgba = <bar_rgba>
 	}
-	doscreenelementmorph id = <id> alpha = 0 time = 0
-	createscreenelement {
-		type = containerelement
+	doScreenElementMorph id = <id> alpha = 0 time = 0
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <anchor_id>
 		just = [center bottom]
 		dims = {200 , 200}
 		pos = <arrow_pos_down>
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <id>
 		id = <down_arrow_id>
 		texture = <down_arrow_texture>
 		rgba = <arrow_rgba>
 		scale = 0.0
 	}
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <anchor_id>
 		just = [center top]
 		dims = {200 , 200}
 		pos = <arrow_pos_up>
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <id>
 		id = <up_arrow_id>
 		texture = <up_arrow_texture>
 		rgba = <arrow_rgba>
 		scale = 0.0
 	}
-	if gotparam \{child_texture}
-		createscreenelement {
-			type = spriteelement
+	if GotParam \{child_texture}
+		CreateScreenElement {
+			type = SpriteElement
 			parent = <parent_id>
 			texture = <child_texture>
 			pos = <icon_pos>
@@ -168,15 +168,15 @@ script sliderbar_add_item \{tab = tab1
 			id = <icon_id>
 		}
 	endif
-	setscreenelementlock \{id = current_menu
+	SetScreenElementLock \{id = current_menu
 		on}
 endscript
 
 script sliderbar_add_text_item 
-	setscreenelementlock \{id = current_menu
+	SetScreenElementLock \{id = current_menu
 		off}
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = current_menu
 		event_handlers = [{focus sliderbar_focus_text_item params = <focus_params>}
 			{unfocus sliderbar_unfocus_text_item}
@@ -185,8 +185,8 @@ script sliderbar_add_text_item
 		dims = (0.0, 20.0)
 	}
 	<parent_id> = <id>
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <parent_id>
 		font = text_a1
 		text = <text>
@@ -195,12 +195,12 @@ script sliderbar_add_text_item
 		just = [center top]
 		pos = (-6.0, -6.0)
 		shadow
-		shadow_rgba = $ui_text_shadow_color
+		shadow_rgba = $UI_text_shadow_color
 		shadow_offs = (1.0, 1.0)
 	}
 	bar_rgba = [100 90 80 255]
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <parent_id>
 		z_priority = 1
 		scale = (8.0, 0.75)
@@ -208,31 +208,31 @@ script sliderbar_add_text_item
 		texture = roundbar_middle
 		rgba = <bar_rgba>
 	}
-	doscreenelementmorph id = <id> alpha = 0 time = 0
-	setscreenelementlock \{id = current_menu
+	doScreenElementMorph id = <id> alpha = 0 time = 0
+	SetScreenElementLock \{id = current_menu
 		on}
 endscript
 
 script sliderbar_focus_text_item 
 	create_helper_text helper_pos = <helper_pos> $generic_helper_text_cas_z scale = 0.9
-	obj_getid
-	id = <objid>
+	Obj_GetID
+	id = <ObjID>
 	on_color = [128 123 20 255]
-	setscreenelementprops {
+	SetScreenElementProps {
 		id = {<id> child = 0}
 		rgba = [90 80 70 255]
 		shadow_rgba = [0 , 0 , 0 , 0]
 	}
-	doscreenelementmorph id = {<id> child = 1} alpha = 1 time = 0
+	doScreenElementMorph id = {<id> child = 1} alpha = 1 time = 0
 endscript
 
 script sliderbar_unfocus_text_item 
-	obj_getid
-	id = <objid>
-	setscreenelementprops {
+	Obj_GetID
+	id = <ObjID>
+	SetScreenElementProps {
 		id = {<id> child = 0}
 		rgba = [110 110 110 255]
-		shadow_rgba = $ui_text_shadow_color
+		shadow_rgba = $UI_text_shadow_color
 	}
-	doscreenelementmorph id = {<id> child = 1} alpha = 0 time = 0
+	doScreenElementMorph id = {<id> child = 1} alpha = 0 time = 0
 endscript

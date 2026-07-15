@@ -1,5 +1,5 @@
 drum_stick_hits_early_frames = 6
-drum_stick_hits_anim = drum_andy_standardlp_stickhits
+drum_stick_hits_anim = Drum_Andy_StandardLP_Stickhits
 drum_stick_hits_anim_blend_time = 0.1
 drum_anim_stance_patterns = [
 	{
@@ -16,7 +16,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_g
+		stance = Stance_G
 	}
 	{
 		notes = [
@@ -32,7 +32,7 @@ drum_anim_stance_patterns = [
 			0
 			1
 		]
-		stance = stance_g
+		stance = Stance_G
 	}
 	{
 		notes = [
@@ -48,7 +48,7 @@ drum_anim_stance_patterns = [
 			0
 			2
 		]
-		stance = stance_g
+		stance = Stance_G
 	}
 	{
 		notes = [
@@ -64,7 +64,7 @@ drum_anim_stance_patterns = [
 			0
 			3
 		]
-		stance = stance_g
+		stance = Stance_G
 	}
 	{
 		notes = [
@@ -80,7 +80,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -96,7 +96,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -112,7 +112,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -128,7 +128,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -153,70 +153,6 @@ drum_anim_stance_patterns = [
 			0
 			0
 			0
-			0
-			0
-			0
-			8
-			0
-			0
-		]
-		stance = stance_d
-	}
-	{
-		notes = [
-			0
-			0
-			0
-			0
-			1
-			0
-			0
-			0
-			4
-			0
-			0
-		]
-		stance = stance_d
-	}
-	{
-		notes = [
-			0
-			0
-			0
-			0
-			1
-			0
-			0
-			0
-			0
-			4
-			0
-		]
-		stance = stance_d
-	}
-	{
-		notes = [
-			0
-			0
-			0
-			0
-			1
-			0
-			0
-			4
-			0
-			0
-			0
-		]
-		stance = stance_c
-	}
-	{
-		notes = [
-			0
-			0
-			0
-			0
-			1
 			0
 			0
 			0
@@ -236,6 +172,70 @@ drum_anim_stance_patterns = [
 			0
 			0
 			0
+			4
+			0
+			0
+		]
+		stance = stance_d
+	}
+	{
+		notes = [
+			0
+			0
+			0
+			0
+			1
+			0
+			0
+			0
+			0
+			4
+			0
+		]
+		stance = stance_d
+	}
+	{
+		notes = [
+			0
+			0
+			0
+			0
+			1
+			0
+			0
+			4
+			0
+			0
+			0
+		]
+		stance = stance_c
+	}
+	{
+		notes = [
+			0
+			0
+			0
+			0
+			1
+			0
+			0
+			0
+			8
+			0
+			0
+		]
+		stance = stance_d
+	}
+	{
+		notes = [
+			0
+			0
+			0
+			0
+			1
+			0
+			0
+			0
 			0
 			8
 			0
@@ -272,7 +272,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -288,7 +288,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -304,7 +304,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -320,7 +320,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -336,7 +336,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -352,7 +352,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -368,7 +368,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -384,7 +384,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -400,7 +400,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -416,7 +416,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -432,7 +432,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -448,7 +448,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -464,7 +464,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -480,7 +480,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -496,7 +496,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -512,7 +512,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -528,7 +528,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -544,7 +544,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -560,7 +560,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -576,23 +576,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
-	}
-	{
-		notes = [
-			0
-			0
-			1
-			0
-			3
-			0
-			1
-			0
-			0
-			0
-			0
-		]
-		stance = stance_b
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -612,6 +596,22 @@ drum_anim_stance_patterns = [
 	}
 	{
 		notes = [
+			0
+			0
+			1
+			0
+			3
+			0
+			1
+			0
+			0
+			0
+			0
+		]
+		stance = stance_b
+	}
+	{
+		notes = [
 			1
 			0
 			1
@@ -640,7 +640,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -656,7 +656,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -672,7 +672,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -688,7 +688,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -704,7 +704,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -720,7 +720,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -752,7 +752,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -768,7 +768,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -784,7 +784,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -800,7 +800,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -816,7 +816,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -832,7 +832,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_g
+		stance = Stance_G
 	}
 	{
 		notes = [
@@ -848,30 +848,11 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
 			1
-			2
-			1
-			0
-			0
-			0
-			0
-			0
-			0
-			0
-			0
-		]
-		stance = stance_e
-	}
-	{
-		notes = [
-			1
-			0
-			0
-			0
 			2
 			1
 			0
@@ -879,8 +860,11 @@ drum_anim_stance_patterns = [
 			0
 			0
 			0
+			0
+			0
+			0
 		]
-		stance = stance_a
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -896,7 +880,23 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
+	}
+	{
+		notes = [
+			1
+			0
+			0
+			0
+			2
+			1
+			0
+			0
+			0
+			0
+			0
+		]
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -912,7 +912,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -928,7 +928,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -944,7 +944,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -953,70 +953,6 @@ drum_anim_stance_patterns = [
 			0
 			0
 			3
-			0
-			0
-			0
-			0
-			0
-			0
-		]
-		stance = stance_b
-	}
-	{
-		notes = [
-			2
-			0
-			0
-			0
-			2
-			1
-			0
-			0
-			0
-			0
-			0
-		]
-		stance = stance_a
-	}
-	{
-		notes = [
-			1
-			0
-			0
-			0
-			0
-			0
-			0
-			2
-			0
-			0
-			0
-		]
-		stance = stance_c
-	}
-	{
-		notes = [
-			1
-			0
-			0
-			0
-			0
-			0
-			0
-			2
-			0
-			0
-			0
-		]
-		stance = stance_c
-	}
-	{
-		notes = [
-			2
-			0
-			1
-			0
-			2
 			0
 			0
 			0
@@ -1040,7 +976,71 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
+	}
+	{
+		notes = [
+			1
+			0
+			0
+			0
+			0
+			0
+			0
+			2
+			0
+			0
+			0
+		]
+		stance = stance_c
+	}
+	{
+		notes = [
+			1
+			0
+			0
+			0
+			0
+			0
+			0
+			2
+			0
+			0
+			0
+		]
+		stance = stance_c
+	}
+	{
+		notes = [
+			2
+			0
+			1
+			0
+			2
+			0
+			0
+			0
+			0
+			0
+			0
+		]
+		stance = stance_b
+	}
+	{
+		notes = [
+			2
+			0
+			0
+			0
+			2
+			1
+			0
+			0
+			0
+			0
+			0
+		]
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -1232,7 +1232,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -1248,7 +1248,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -1264,7 +1264,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -1280,7 +1280,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -1328,7 +1328,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -1344,7 +1344,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -1376,7 +1376,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -1392,7 +1392,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -1408,7 +1408,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -1424,7 +1424,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -1456,7 +1456,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -1472,7 +1472,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -1488,7 +1488,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -1504,7 +1504,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -1520,7 +1520,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -1536,7 +1536,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -1552,7 +1552,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -1568,7 +1568,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -1584,7 +1584,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -1600,7 +1600,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -1616,7 +1616,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -1632,7 +1632,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -1664,7 +1664,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -1680,7 +1680,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -1696,7 +1696,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -1712,7 +1712,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -1744,7 +1744,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -1760,7 +1760,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -1776,23 +1776,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
-	}
-	{
-		notes = [
-			3
-			0
-			0
-			0
-			0
-			0
-			0
-			3
-			0
-			0
-			0
-		]
-		stance = stance_c
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -1828,6 +1812,22 @@ drum_anim_stance_patterns = [
 	}
 	{
 		notes = [
+			3
+			0
+			0
+			0
+			0
+			0
+			0
+			3
+			0
+			0
+			0
+		]
+		stance = stance_c
+	}
+	{
+		notes = [
 			1
 			2
 			2
@@ -1840,7 +1840,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -1968,7 +1968,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -2240,7 +2240,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -2256,7 +2256,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -2272,7 +2272,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -2288,7 +2288,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -2304,7 +2304,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -2320,7 +2320,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -2336,7 +2336,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -2368,7 +2368,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -2384,7 +2384,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -2400,7 +2400,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -2416,7 +2416,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -2432,7 +2432,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -2448,7 +2448,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -2464,7 +2464,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -2480,23 +2480,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
-	}
-	{
-		notes = [
-			2
-			0
-			3
-			0
-			1
-			0
-			0
-			0
-			0
-			0
-			0
-		]
-		stance = stance_f
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -2512,7 +2496,23 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
+	}
+	{
+		notes = [
+			2
+			0
+			3
+			0
+			1
+			0
+			0
+			0
+			0
+			0
+			0
+		]
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -2544,7 +2544,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -2560,7 +2560,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -2576,7 +2576,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -2592,7 +2592,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -2608,7 +2608,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -2624,7 +2624,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -2656,7 +2656,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -2672,7 +2672,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -2688,7 +2688,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -2704,7 +2704,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -2736,7 +2736,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -2752,7 +2752,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -2768,7 +2768,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -2784,7 +2784,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -2800,7 +2800,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -2816,7 +2816,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -2864,7 +2864,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -2880,7 +2880,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -2896,7 +2896,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -2928,7 +2928,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -2944,7 +2944,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -2960,7 +2960,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -2976,7 +2976,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -2992,7 +2992,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -3008,7 +3008,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -3024,7 +3024,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -3040,7 +3040,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -3056,7 +3056,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -3072,7 +3072,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -3088,7 +3088,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -3104,7 +3104,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -3120,7 +3120,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -3136,7 +3136,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -3232,7 +3232,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -3296,7 +3296,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -3312,7 +3312,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -3328,7 +3328,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -3344,7 +3344,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -3360,7 +3360,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -3376,7 +3376,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -3408,7 +3408,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -3440,7 +3440,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -3456,7 +3456,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -3488,7 +3488,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -3616,7 +3616,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -3696,7 +3696,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -3776,7 +3776,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -3792,7 +3792,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -3808,7 +3808,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -3888,7 +3888,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -3920,7 +3920,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -3952,7 +3952,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -3984,7 +3984,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -4000,7 +4000,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -4016,7 +4016,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -4032,7 +4032,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -4064,7 +4064,7 @@ drum_anim_stance_patterns = [
 			0
 			1
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -4080,7 +4080,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -4096,7 +4096,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -4128,7 +4128,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -4224,7 +4224,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -4240,7 +4240,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -4256,7 +4256,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -4272,7 +4272,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -4304,7 +4304,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -4400,7 +4400,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -4416,7 +4416,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -4432,7 +4432,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -4464,7 +4464,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -4480,7 +4480,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -4496,7 +4496,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -4512,7 +4512,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -4528,7 +4528,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -4544,7 +4544,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -4560,7 +4560,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -4576,7 +4576,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -4592,7 +4592,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -4608,7 +4608,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -4624,7 +4624,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -4640,7 +4640,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -4672,7 +4672,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -4736,7 +4736,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -4752,7 +4752,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -4768,7 +4768,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -4816,7 +4816,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -4832,7 +4832,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -4848,7 +4848,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -4864,7 +4864,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -4880,7 +4880,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -4896,7 +4896,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -4944,7 +4944,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stacne_e
+		stance = stacne_E
 	}
 	{
 		notes = [
@@ -4960,7 +4960,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -4976,7 +4976,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -4992,7 +4992,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -5008,7 +5008,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -5136,7 +5136,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -5152,7 +5152,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -5168,7 +5168,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -5184,7 +5184,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -5200,7 +5200,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -5216,7 +5216,7 @@ drum_anim_stance_patterns = [
 			0
 			1
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -5232,7 +5232,7 @@ drum_anim_stance_patterns = [
 			0
 			1
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -5264,7 +5264,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -5296,7 +5296,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -5312,7 +5312,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -5328,7 +5328,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -5344,7 +5344,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -5360,7 +5360,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -5376,7 +5376,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -5392,7 +5392,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -5408,7 +5408,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -5424,7 +5424,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -5440,7 +5440,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -5456,7 +5456,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -5472,7 +5472,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -5488,7 +5488,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -5504,7 +5504,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -5536,7 +5536,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -5552,7 +5552,7 @@ drum_anim_stance_patterns = [
 			1
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -5568,7 +5568,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -5584,7 +5584,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -5632,7 +5632,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -5648,7 +5648,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -5664,7 +5664,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -5680,7 +5680,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -5696,7 +5696,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -5712,7 +5712,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -5728,7 +5728,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -5744,7 +5744,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -5760,7 +5760,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -5776,7 +5776,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -5792,7 +5792,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -5856,7 +5856,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -5872,7 +5872,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -5904,7 +5904,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -5920,7 +5920,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -5936,7 +5936,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -5984,7 +5984,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -6000,7 +6000,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -6032,7 +6032,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -6064,7 +6064,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -6096,7 +6096,7 @@ drum_anim_stance_patterns = [
 			1
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -6112,7 +6112,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -6144,7 +6144,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -6160,7 +6160,7 @@ drum_anim_stance_patterns = [
 			1
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -6176,7 +6176,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -6192,7 +6192,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -6208,7 +6208,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -6224,7 +6224,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -6240,7 +6240,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -6256,7 +6256,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -6272,7 +6272,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -6320,7 +6320,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -6352,7 +6352,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -6400,7 +6400,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -6416,7 +6416,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -6432,7 +6432,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -6448,7 +6448,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -6464,7 +6464,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -6512,7 +6512,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -6544,7 +6544,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -6592,7 +6592,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -6608,7 +6608,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -6624,7 +6624,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -6640,7 +6640,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -6656,7 +6656,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -6672,7 +6672,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -6688,7 +6688,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -6704,7 +6704,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -6736,7 +6736,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -6752,7 +6752,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -6768,7 +6768,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -6800,7 +6800,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -6848,7 +6848,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -6864,7 +6864,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -6896,7 +6896,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -6928,7 +6928,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -6944,7 +6944,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -6960,7 +6960,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -6976,7 +6976,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -6992,7 +6992,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -7008,7 +7008,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -7104,7 +7104,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -7152,7 +7152,7 @@ drum_anim_stance_patterns = [
 			1
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -7168,7 +7168,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -7184,7 +7184,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -7200,7 +7200,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -7216,7 +7216,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -7232,7 +7232,7 @@ drum_anim_stance_patterns = [
 			1
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -7248,7 +7248,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -7280,7 +7280,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -7296,7 +7296,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -7312,7 +7312,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -7328,7 +7328,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -7344,7 +7344,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -7360,7 +7360,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -7376,7 +7376,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -7392,7 +7392,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -7424,7 +7424,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -7440,7 +7440,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -7504,7 +7504,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -7520,27 +7520,27 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
-	}
-	{
-		notes = [
-			2
-			0
-			0
-			1
-			1
-			0
-			0
-			0
-			0
-			0
-			0
-		]
-		stance = stance_f
+		stance = stance_E
 	}
 	{
 		notes = [
 			2
+			0
+			0
+			1
+			1
+			0
+			0
+			0
+			0
+			0
+			0
+		]
+		stance = Stance_F
+	}
+	{
+		notes = [
+			2
 			1
 			0
 			1
@@ -7552,7 +7552,7 @@ drum_anim_stance_patterns = [
 			1
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -7568,7 +7568,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -7584,7 +7584,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -7600,7 +7600,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -7616,7 +7616,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -7632,7 +7632,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -7648,7 +7648,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -7680,7 +7680,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -7696,27 +7696,27 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
-	}
-	{
-		notes = [
-			2
-			4
-			4
-			0
-			0
-			0
-			0
-			0
-			0
-			0
-			0
-		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
 			2
+			4
+			4
+			0
+			0
+			0
+			0
+			0
+			0
+			0
+			0
+		]
+		stance = Stance_F
+	}
+	{
+		notes = [
+			2
 			0
 			0
 			0
@@ -7728,7 +7728,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -7744,7 +7744,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -7760,7 +7760,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -7776,7 +7776,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -7792,7 +7792,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -7808,7 +7808,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -7824,7 +7824,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -7840,7 +7840,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -7856,7 +7856,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -7872,7 +7872,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -7888,7 +7888,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -7904,7 +7904,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -7920,7 +7920,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -7936,7 +7936,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -7952,7 +7952,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -7968,7 +7968,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -8000,7 +8000,7 @@ drum_anim_stance_patterns = [
 			1
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -8016,7 +8016,7 @@ drum_anim_stance_patterns = [
 			1
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -8032,7 +8032,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -8048,7 +8048,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -8064,7 +8064,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -8080,7 +8080,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -8096,7 +8096,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -8112,7 +8112,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -8128,7 +8128,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -8144,7 +8144,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -8160,7 +8160,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -8176,7 +8176,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -8192,7 +8192,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -8208,7 +8208,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -8224,7 +8224,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -8240,7 +8240,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -8256,7 +8256,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -8272,7 +8272,7 @@ drum_anim_stance_patterns = [
 			1
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -8288,7 +8288,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -8304,7 +8304,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -8320,7 +8320,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -8336,7 +8336,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -8384,7 +8384,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -8400,7 +8400,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -8416,7 +8416,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -8432,7 +8432,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -8448,7 +8448,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -8464,7 +8464,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -8480,7 +8480,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -8496,7 +8496,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -8512,7 +8512,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -8528,7 +8528,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -8544,7 +8544,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -8560,7 +8560,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -8576,7 +8576,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -8592,7 +8592,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -8608,7 +8608,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -8624,7 +8624,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -8640,7 +8640,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -8656,7 +8656,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -8672,7 +8672,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -8688,7 +8688,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -8704,7 +8704,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -8848,7 +8848,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -8880,7 +8880,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -8896,7 +8896,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -8912,7 +8912,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -8928,7 +8928,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -8944,7 +8944,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -8976,7 +8976,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -8992,7 +8992,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -9024,7 +9024,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -9040,7 +9040,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -9088,7 +9088,7 @@ drum_anim_stance_patterns = [
 			1
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -9104,7 +9104,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -9120,7 +9120,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -9136,7 +9136,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -9152,7 +9152,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -9168,7 +9168,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -9248,7 +9248,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -9280,7 +9280,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -9296,7 +9296,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -9328,7 +9328,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -9360,7 +9360,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -9376,7 +9376,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -9392,7 +9392,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -9408,7 +9408,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -9424,7 +9424,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -9440,7 +9440,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -9456,7 +9456,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -9472,7 +9472,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -9488,7 +9488,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -9504,7 +9504,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -9520,7 +9520,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -9600,7 +9600,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -9632,7 +9632,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -9648,7 +9648,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -9680,7 +9680,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -9744,7 +9744,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -9760,7 +9760,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -9840,7 +9840,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -9856,7 +9856,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -9872,7 +9872,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -9936,7 +9936,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_a
+		stance = Stance_A
 	}
 	{
 		notes = [
@@ -10000,7 +10000,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 	{
 		notes = [
@@ -10016,7 +10016,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_e
+		stance = stance_E
 	}
 	{
 		notes = [
@@ -10032,7 +10032,7 @@ drum_anim_stance_patterns = [
 			0
 			0
 		]
-		stance = stance_f
+		stance = Stance_F
 	}
 ]
 drum_anim_exclude_special_songs = [
@@ -10053,9 +10053,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hhhh_120
+		Anim = Drum_Andy_HHHH_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			rooftops
 		]
@@ -10074,9 +10074,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hhhh_120
+		Anim = Drum_Andy_HHHH_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			eyeofthetiger
 			windcriesmary
@@ -10097,9 +10097,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hhhh_120
+		Anim = Drum_Andy_HHHH_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -10115,9 +10115,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -10133,9 +10133,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_hs_120
+		Anim = Drum_Andy_SS_2_RollC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 		exclude = [
 			lovemetwotimes
 		]
@@ -10154,9 +10154,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_hs_120
+		Anim = Drum_Andy_SS_2_RollC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -10172,9 +10172,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -10190,9 +10190,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -10208,9 +10208,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -10226,9 +10226,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -10244,9 +10244,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -10262,9 +10262,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -10280,9 +10280,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -10298,9 +10298,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 30
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -10316,9 +10316,9 @@ drum_anim_special_patterns = [
 			2
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -10334,9 +10334,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -10352,9 +10352,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_roll_120
+		Anim = Drum_Andy_SS_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			lovemetwotimes
 		]
@@ -10373,9 +10373,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_roll_120
+		Anim = Drum_Andy_SS_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -10391,9 +10391,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_hs_120
+		Anim = Drum_Andy_SS_2_RollC1_HS_120
 		earlyframes = 5
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -10409,9 +10409,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_hs_120
+		Anim = Drum_Andy_SS_2_RollC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -10427,9 +10427,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_hs_120
+		Anim = Drum_Andy_SS_2_RollC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -10445,9 +10445,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -10463,9 +10463,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_hs_120
+		Anim = Drum_Andy_SS_2_RollC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -10481,9 +10481,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_hs_120
+		Anim = Drum_Andy_SS_2_RollC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -10499,9 +10499,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -10517,9 +10517,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -10535,9 +10535,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -10553,9 +10553,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -10571,9 +10571,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hhhh_120
+		Anim = Drum_Andy_HHHH_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			crazytrain
 			stranglehold
@@ -10587,7 +10587,7 @@ drum_anim_special_patterns = [
 			obstacle1
 			bosszakk
 			rooftops
-			demolitionman
+			DemolitionMan
 			nosleeptillbrooklyn
 			rooftops
 			hotelcalifornia
@@ -10608,9 +10608,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -10626,9 +10626,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -10644,9 +10644,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -10662,9 +10662,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -10680,9 +10680,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_hs_120
+		Anim = Drum_Andy_SS_2_RollC1_HS_120
 		earlyframes = 24
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -10698,9 +10698,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_hs_120
+		Anim = Drum_Andy_SS_2_RollC1_HS_120
 		earlyframes = 24
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -10716,9 +10716,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -10734,9 +10734,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_rs_120
+		Anim = Drum_Andy_SS_2_RollC1_RS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 		exclude = [
 			trappedunderice
 		]
@@ -10755,9 +10755,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 30
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -10773,9 +10773,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -10791,9 +10791,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -10809,9 +10809,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 30
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -10827,12 +10827,12 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_hhhs_hs_120
+		Anim = Drum_Andy_HS_2_HHHS_HS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			crazytrain
-			feelthepain
+			FeelthePain
 			santeria
 			sweethomealabama
 			badtothebone
@@ -10852,7 +10852,7 @@ drum_anim_special_patterns = [
 			hollywoodnights
 			aboutagirl
 			beautifuldisaster
-			demolitionman
+			DemolitionMan
 			shiver
 		]
 	}
@@ -10870,9 +10870,9 @@ drum_anim_special_patterns = [
 			2
 			0
 		]
-		anim = drum_andy_c2c1c2c1_120
+		Anim = Drum_Andy_C2C1C2C1_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			sweethomealabama
 			stranglehold
@@ -10892,9 +10892,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_rs_120
+		Anim = Drum_Andy_SS_2_RollC1_RS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -10910,9 +10910,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_rs_120
+		Anim = Drum_Andy_SS_2_RollC2_RS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -10928,9 +10928,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_roll_120
+		Anim = Drum_Andy_SS_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -10946,9 +10946,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_roll_120
+		Anim = Drum_Andy_SS_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -10964,9 +10964,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_roll_120
+		Anim = Drum_Andy_SS_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -10982,9 +10982,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_hhhs_hs_120
+		Anim = Drum_Andy_HS_2_HHHS_HS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			badtothebone
 			hotelcalifornia
@@ -10992,7 +10992,7 @@ drum_anim_special_patterns = [
 			kickoutthejams
 			beautifuldisaster
 			bosszakk
-			demolitionman
+			DemolitionMan
 			nosleeptillbrooklyn
 			aggro
 			lvialviaquez
@@ -11012,9 +11012,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -11030,9 +11030,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_hs_120
+		Anim = Drum_Andy_SS_2_RollC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -11048,9 +11048,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -11066,9 +11066,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hhhh_120
+		Anim = Drum_Andy_HHHH_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			hotelcalifornia
 			whativedone
@@ -11088,9 +11088,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_c2_hs_120
+		Anim = Drum_Andy_HS_2_C2_HS_120
 		earlyframes = 15
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -11106,9 +11106,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_c2_hs_120
+		Anim = Drum_Andy_HS_2_C2_HS_120
 		earlyframes = 15
-		cycle = 0
+		Cycle = 0
 		exclude = [
 			spiderwebs
 		]
@@ -11127,9 +11127,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_c2_hs_120
+		Anim = Drum_Andy_HS_2_C2_HS_120
 		earlyframes = 15
-		cycle = 0
+		Cycle = 0
 		exclude = [
 			spiderwebs
 			toomuchtooyoung
@@ -11150,9 +11150,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 		exclude = [
 			lovemetwotimes
 		]
@@ -11171,9 +11171,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -11189,9 +11189,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 		exclude = [
 			hotforteacher
 		]
@@ -11210,9 +11210,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_hs_120
+		Anim = Drum_Andy_SS_2_RollC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -11228,9 +11228,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_hs_120
+		Anim = Drum_Andy_SS_2_RollC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -11246,9 +11246,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_hs_120
+		Anim = Drum_Andy_SS_2_RollC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -11264,9 +11264,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_roll_120
+		Anim = Drum_Andy_SS_Roll_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -11282,9 +11282,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_roll_120
+		Anim = Drum_Andy_SS_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			whativedone
 			lovemetwotimes
@@ -11304,9 +11304,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_hhhs_hs_120
+		Anim = Drum_Andy_HS_2_HHHS_HS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -11322,9 +11322,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_roll_120
+		Anim = Drum_Andy_SS_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			lovemetwotimes
 		]
@@ -11343,9 +11343,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_roll_120
+		Anim = Drum_Andy_SS_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -11361,11 +11361,11 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hhhh_120
+		Anim = Drum_Andy_HHHH_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
-			demolitionman
+			DemolitionMan
 		]
 	}
 	{
@@ -11382,9 +11382,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -11400,27 +11400,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
-	}
-	{
-		notes = [
-			2
-			0
-			0
-			0
-			4
-			1
-			0
-			0
-			0
-			1
-			0
-		]
-		anim = drum_andy_ss_2_rollc2_hs_120
-		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -11429,6 +11411,24 @@ drum_anim_special_patterns = [
 			0
 			0
 			4
+			1
+			0
+			0
+			0
+			1
+			0
+		]
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
+		earlyframes = 0
+		Cycle = 0
+	}
+	{
+		notes = [
+			2
+			0
+			0
+			0
+			4
 			0
 			1
 			0
@@ -11436,9 +11436,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_hs_120
+		Anim = Drum_Andy_SS_2_RollC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -11454,9 +11454,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_hs_120
+		Anim = Drum_Andy_SS_2_RollC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -11472,9 +11472,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_hs_120
+		Anim = Drum_Andy_SS_2_RollC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -11490,9 +11490,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_hs_120
+		Anim = Drum_Andy_SS_2_RollC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -11508,9 +11508,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -11526,9 +11526,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_roll_120
+		Anim = Drum_Andy_SS_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -11544,9 +11544,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_roll_120
+		Anim = Drum_Andy_SS_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -11562,9 +11562,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_roll_120
+		Anim = Drum_Andy_SS_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			lovemetwotimes
 		]
@@ -11583,9 +11583,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_roll_120
+		Anim = Drum_Andy_SS_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			ontheroadagain
 		]
@@ -11604,9 +11604,9 @@ drum_anim_special_patterns = [
 			4
 			0
 		]
-		anim = drum_andy_c2c2c2_120
+		Anim = Drum_Andy_C2C2C2_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			yourface
 		]
@@ -11625,9 +11625,9 @@ drum_anim_special_patterns = [
 			3
 			0
 		]
-		anim = drum_andy_c2c2c2_120
+		Anim = Drum_Andy_C2C2C2_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			eyeofthetiger
 		]
@@ -11646,9 +11646,9 @@ drum_anim_special_patterns = [
 			7
 			0
 		]
-		anim = drum_andy_c2c2c2_120
+		Anim = Drum_Andy_C2C2C2_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -11664,9 +11664,9 @@ drum_anim_special_patterns = [
 			8
 			0
 		]
-		anim = drum_andy_c2c2c2_120
+		Anim = Drum_Andy_C2C2C2_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -11682,9 +11682,9 @@ drum_anim_special_patterns = [
 			4
 			0
 		]
-		anim = drum_andy_c2c2c2_120
+		Anim = Drum_Andy_C2C2C2_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -11700,9 +11700,9 @@ drum_anim_special_patterns = [
 			8
 			0
 		]
-		anim = drum_andy_c2c2c2_120
+		Anim = Drum_Andy_C2C2C2_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -11718,9 +11718,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_c1c1c1_120
+		Anim = Drum_Andy_C1C1C1_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -11736,9 +11736,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_c1c1c1_120
+		Anim = Drum_Andy_C1C1C1_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -11754,9 +11754,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_c1c1c1_120
+		Anim = Drum_Andy_C1C1C1_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -11772,9 +11772,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_c1c1c1_120
+		Anim = Drum_Andy_C1C1C1_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -11790,9 +11790,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_c1c1_120
+		Anim = Drum_Andy_C1C1_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -11808,9 +11808,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_c1c1_120
+		Anim = Drum_Andy_C1C1_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -11826,9 +11826,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_c1c1_120
+		Anim = Drum_Andy_C1C1_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -11844,9 +11844,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_c2c1c2c1_120
+		Anim = Drum_Andy_C2C1C2C1_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -11862,9 +11862,9 @@ drum_anim_special_patterns = [
 			3
 			0
 		]
-		anim = drum_andy_c2c1c2c1_120
+		Anim = Drum_Andy_C2C1C2C1_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -11880,9 +11880,9 @@ drum_anim_special_patterns = [
 			3
 			0
 		]
-		anim = drum_andy_c2c1c2c1_120
+		Anim = Drum_Andy_C2C1C2C1_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -11898,9 +11898,9 @@ drum_anim_special_patterns = [
 			2
 			0
 		]
-		anim = drum_andy_c2c1c2c1_120
+		Anim = Drum_Andy_C2C1C2C1_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -11916,9 +11916,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_t1_2_c1_hs_120
+		Anim = Drum_Andy_HS_2_T1_2_C1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -11934,9 +11934,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_t1_2_c1_hs_120
+		Anim = Drum_Andy_HS_2_T1_2_C1_HS_120
 		earlyframes = 5
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -11952,9 +11952,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_t1_2_c1_hs_120
+		Anim = Drum_Andy_HS_2_T1_2_C1_HS_120
 		earlyframes = 15
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -11970,9 +11970,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_t1_2_c1_hs_120
+		Anim = Drum_Andy_HS_2_T1_2_C1_HS_120
 		earlyframes = 15
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -11988,9 +11988,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_t1_2_c1_hs_120
+		Anim = Drum_Andy_HS_2_T1_2_C1_HS_120
 		earlyframes = 15
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -12006,9 +12006,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_t1_2_c1_hs_120
+		Anim = Drum_Andy_HS_2_T1_2_C1_HS_120
 		earlyframes = 15
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -12024,9 +12024,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_t1_2_c1_hs_120
+		Anim = Drum_Andy_HS_2_T1_2_C1_HS_120
 		earlyframes = 15
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -12042,9 +12042,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_t1_2_c1_hs_120
+		Anim = Drum_Andy_HS_2_T1_2_C1_HS_120
 		earlyframes = 15
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -12060,9 +12060,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_t1_2_c1_hs_120
+		Anim = Drum_Andy_HS_2_T1_2_C1_HS_120
 		earlyframes = 15
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -12078,9 +12078,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_t1_2_c1_hs_120
+		Anim = Drum_Andy_HS_2_T1_2_C1_HS_120
 		earlyframes = 15
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -12096,9 +12096,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_t1_2_c1_hs_120
+		Anim = Drum_Andy_HS_2_T1_2_C1_HS_120
 		earlyframes = 15
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -12114,9 +12114,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_t1_2_c1_hs_120
+		Anim = Drum_Andy_HS_2_T1_2_C1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -12132,9 +12132,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_t1_2_c1_hs_120
+		Anim = Drum_Andy_HS_2_T1_2_C1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -12150,9 +12150,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_t1_2_c1_hs_120
+		Anim = Drum_Andy_HS_2_T1_2_C1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -12168,9 +12168,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_t1_2_c1_hs_120
+		Anim = Drum_Andy_HS_2_T1_2_C1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -12186,9 +12186,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_t1_2_c1_hs_120
+		Anim = Drum_Andy_HS_2_T1_2_C1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -12204,9 +12204,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_t1_2_c1_hs_120
+		Anim = Drum_Andy_HS_2_T1_2_C1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -12222,9 +12222,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hhhh_120
+		Anim = Drum_Andy_HHHH_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -12240,9 +12240,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_roll_120
+		Anim = Drum_Andy_SS_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			ontheroadagain
 			hotblooded
@@ -12268,9 +12268,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hh_120
+		Anim = Drum_Andy_HH_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			aboutagirl
 			hollywoodnights
@@ -12295,9 +12295,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hh_120
+		Anim = Drum_Andy_HH_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 		exclude = [
 			aboutagirl
 			toyboy
@@ -12325,9 +12325,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hh_120
+		Anim = Drum_Andy_HH_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			aboutagirl
 			sweethomealabama
@@ -12357,9 +12357,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hh_120
+		Anim = Drum_Andy_HH_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 		exclude = [
 			hollywoodnights
 			heymanniceshot
@@ -12381,9 +12381,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_roll_120
+		Anim = Drum_Andy_SS_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -12399,9 +12399,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t3s_075
+		Anim = Drum_Andy_T3S_075
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -12417,9 +12417,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_fill_t3_120
+		Anim = Drum_Andy_SS_2_Fill_T3_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -12435,9 +12435,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_fill_t3_120
+		Anim = Drum_Andy_SS_2_Fill_T3_120
 		earlyframes = 15
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -12453,9 +12453,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_fill_t3_120
+		Anim = Drum_Andy_SS_2_Fill_T3_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -12471,9 +12471,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1s_2_t2ss_120
+		Anim = Drum_Andy_T1S_2_T2SS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -12489,9 +12489,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1s_2_t2ss_120
+		Anim = Drum_Andy_T1S_2_T2SS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -12507,9 +12507,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1_2_t1t2_120
+		Anim = drum_andy_t1_2_t1t2_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -12525,9 +12525,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1s_2_t2ss_120
+		Anim = Drum_Andy_T1S_2_T2SS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -12543,9 +12543,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1s_2_t2ss_120
+		Anim = Drum_Andy_T1S_2_T2SS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 		exclude = [
 			goyourownway
 		]
@@ -12564,9 +12564,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1s_2_t2ss_120
+		Anim = Drum_Andy_T1S_2_T2SS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -12582,9 +12582,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1s_2_t2ss_120
+		Anim = Drum_Andy_T1S_2_T2SS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -12600,9 +12600,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_fill_t3_120
+		Anim = Drum_Andy_SS_2_Fill_T3_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -12618,9 +12618,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_fill_t3_120
+		Anim = Drum_Andy_SS_2_Fill_T3_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -12636,9 +12636,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_fill_t3_120
+		Anim = Drum_Andy_SS_2_Fill_T3_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -12654,9 +12654,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t3s_2_t2t3_120
+		Anim = drum_andy_t3s_2_t2t3_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -12672,9 +12672,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1s_2_t2ss_120
+		Anim = Drum_Andy_T1S_2_T2SS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -12690,9 +12690,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1s_2_t2ss_120
+		Anim = Drum_Andy_T1S_2_T2SS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -12708,9 +12708,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1s_2_t2ss_120
+		Anim = Drum_Andy_T1S_2_T2SS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -12726,9 +12726,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1_2_t1t2_120
+		Anim = drum_andy_t1_2_t1t2_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -12744,9 +12744,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1_2_t1t2_120
+		Anim = drum_andy_t1_2_t1t2_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -12762,9 +12762,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_fill_t3_120
+		Anim = Drum_Andy_SS_2_Fill_T3_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -12780,9 +12780,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1_2_t1t2_120
+		Anim = drum_andy_t1_2_t1t2_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -12798,9 +12798,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_fill_t3_120
+		Anim = Drum_Andy_SS_2_Fill_T3_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -12816,9 +12816,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_fill_t3_120
+		Anim = Drum_Andy_SS_2_Fill_T3_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -12834,9 +12834,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1s_2_t2ss_120
+		Anim = Drum_Andy_T1S_2_T2SS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -12852,9 +12852,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1s_2_t1ss_120
+		Anim = drum_andy_t1s_2_t1ss_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -12870,9 +12870,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_fill_t3_120
+		Anim = Drum_Andy_SS_2_Fill_T3_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -12888,9 +12888,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_fill_t3_120
+		Anim = Drum_Andy_SS_2_Fill_T3_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -12906,9 +12906,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t3s_2_t2t3_120
+		Anim = drum_andy_t3s_2_t2t3_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -12924,9 +12924,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t3s_2_t2t3_120
+		Anim = drum_andy_t3s_2_t2t3_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -12942,9 +12942,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t3s_2_t2t3_120
+		Anim = drum_andy_t3s_2_t2t3_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			goyourownway
 		]
@@ -12963,9 +12963,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t3s_2_t2t3_120
+		Anim = drum_andy_t3s_2_t2t3_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -12981,9 +12981,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_fill_t3_120
+		Anim = Drum_Andy_SS_2_Fill_T3_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -12999,9 +12999,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_fill_t3_120
+		Anim = Drum_Andy_SS_2_Fill_T3_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13017,9 +13017,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_fill_t3_120
+		Anim = Drum_Andy_SS_2_Fill_T3_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13035,9 +13035,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_fill_t3_120
+		Anim = Drum_Andy_SS_2_Fill_T3_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13053,9 +13053,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_fill_t3_120
+		Anim = Drum_Andy_SS_2_Fill_T3_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13071,9 +13071,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1s_2_t2ss_120
+		Anim = Drum_Andy_T1S_2_T2SS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -13089,9 +13089,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_fill_t3_120
+		Anim = Drum_Andy_SS_2_Fill_T3_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13107,9 +13107,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13125,9 +13125,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13143,9 +13143,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1t2_c1_120
+		Anim = Drum_Andy_T1T2_C1_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13161,9 +13161,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13179,9 +13179,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 15
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13197,9 +13197,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 15
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13215,9 +13215,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13233,9 +13233,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13251,9 +13251,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1t2_c1_120
+		Anim = Drum_Andy_T1T2_C1_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13269,9 +13269,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13287,9 +13287,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13305,9 +13305,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13323,9 +13323,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13341,9 +13341,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13359,9 +13359,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13377,9 +13377,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13395,9 +13395,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13413,9 +13413,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 24
-		cycle = 0
+		Cycle = 0
 		exclude = [
 			lovemetwotimes
 		]
@@ -13434,9 +13434,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13452,9 +13452,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13470,9 +13470,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 30
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13488,9 +13488,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 30
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13506,9 +13506,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 30
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13524,9 +13524,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 30
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13542,9 +13542,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13560,9 +13560,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 30
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13578,9 +13578,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13596,9 +13596,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13614,9 +13614,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13632,9 +13632,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13650,9 +13650,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13668,9 +13668,9 @@ drum_anim_special_patterns = [
 			7
 			0
 		]
-		anim = drum_andy_c2c2c2_120
+		Anim = Drum_Andy_C2C2C2_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -13686,9 +13686,9 @@ drum_anim_special_patterns = [
 			5
 			0
 		]
-		anim = drum_andy_c2c2c2_120
+		Anim = Drum_Andy_C2C2C2_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			beautifuldisaster
 		]
@@ -13707,9 +13707,9 @@ drum_anim_special_patterns = [
 			4
 			0
 		]
-		anim = drum_andy_c2c2c2_120
+		Anim = Drum_Andy_C2C2C2_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			everlong
 			yourface
@@ -13733,9 +13733,9 @@ drum_anim_special_patterns = [
 			5
 			0
 		]
-		anim = drum_andy_c2c2c2_120
+		Anim = Drum_Andy_C2C2C2_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -13751,9 +13751,9 @@ drum_anim_special_patterns = [
 			4
 			0
 		]
-		anim = drum_andy_c2c2c2_120
+		Anim = Drum_Andy_C2C2C2_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -13769,9 +13769,9 @@ drum_anim_special_patterns = [
 			2
 			0
 		]
-		anim = drum_andy_c2sc2s_120
+		Anim = Drum_Andy_C2SC2S_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -13787,9 +13787,9 @@ drum_anim_special_patterns = [
 			3
 			0
 		]
-		anim = drum_andy_c2c2c2_120
+		Anim = Drum_Andy_C2C2C2_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -13805,9 +13805,9 @@ drum_anim_special_patterns = [
 			2
 			0
 		]
-		anim = drum_andy_c2sc2s_120
+		Anim = Drum_Andy_C2SC2S_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -13823,9 +13823,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_solo_t1_2_t2
+		Anim = Drum_Andy_Solo_T1_2_T2
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -13841,9 +13841,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_fill_t3_120
+		Anim = Drum_Andy_SS_2_Fill_T3_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13859,9 +13859,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t3s_075
+		Anim = Drum_Andy_T3S_075
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			weaponofchoice
 		]
@@ -13880,9 +13880,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t3s_075
+		Anim = Drum_Andy_T3S_075
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13898,9 +13898,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_fill_t3_120
+		Anim = Drum_Andy_SS_2_Fill_T3_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -13916,9 +13916,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_solo_t3_roll_120
+		Anim = drum_solo_T3_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			crazytrain
 		]
@@ -13937,9 +13937,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_solo_t3_roll_120
+		Anim = drum_solo_T3_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -13955,9 +13955,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_solo_t3_roll_120
+		Anim = drum_solo_T3_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			crazytrain
 			weaponofchoice
@@ -13977,9 +13977,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_solo_t1_roll_120
+		Anim = Drum_Andy_Solo_T1_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -13995,9 +13995,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_solo_t3_roll_120
+		Anim = drum_solo_T3_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -14013,9 +14013,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 30
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -14031,9 +14031,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_solo_t3_roll_120
+		Anim = drum_solo_T3_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -14049,9 +14049,9 @@ drum_anim_special_patterns = [
 			2
 			0
 		]
-		anim = drum_andy_ss_roll_120
+		Anim = Drum_Andy_SS_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -14067,9 +14067,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_solo_t2_roll_120
+		Anim = drum_solo_T2_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -14085,9 +14085,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -14103,9 +14103,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -14121,9 +14121,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_solo_t1_2_t2
+		Anim = Drum_Andy_Solo_T1_2_T2
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -14139,9 +14139,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_solo_t1_2_t2
+		Anim = Drum_Andy_Solo_T1_2_T2
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -14157,9 +14157,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1_2_t1t2_c1_120
+		Anim = Drum_Andy_T1_2_T1T2_C1_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -14175,9 +14175,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_solo_t1_roll_120
+		Anim = Drum_Andy_Solo_T1_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -14193,9 +14193,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -14211,9 +14211,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1s_2_t2ss_120
+		Anim = Drum_Andy_T1S_2_T2SS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -14229,9 +14229,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1t2_c1_120
+		Anim = Drum_Andy_T1T2_C1_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 		exclude = [
 			hotelcalifornia
 		]
@@ -14250,9 +14250,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1t2_c1_120
+		Anim = Drum_Andy_T1T2_C1_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -14268,9 +14268,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -14286,9 +14286,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_solo_t1_roll_120
+		Anim = Drum_Andy_Solo_T1_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -14304,9 +14304,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 5
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -14322,9 +14322,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 5
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -14340,9 +14340,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 5
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -14358,9 +14358,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 5
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -14376,9 +14376,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -14394,9 +14394,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_solo_r_roll_120
+		Anim = Drum_Andy_Solo_R_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			shiver
 		]
@@ -14415,9 +14415,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_solo_r_roll_120
+		Anim = Drum_Andy_Solo_R_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -14433,9 +14433,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_solo_r_roll_120
+		Anim = Drum_Andy_Solo_R_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -14451,9 +14451,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hshs_120
+		Anim = Drum_Andy_HSHS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			hollywoodnights
 			whativedone
@@ -14481,9 +14481,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_roll_120
+		Anim = Drum_Andy_SS_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			hotblooded
 		]
@@ -14502,9 +14502,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1s_2_t2ss_120
+		Anim = Drum_Andy_T1S_2_T2SS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -14520,9 +14520,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -14538,9 +14538,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -14556,9 +14556,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hshs_120
+		Anim = Drum_Andy_HSHS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			aboutagirl
 			windcriesmary
@@ -14579,9 +14579,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hshs_120
+		Anim = Drum_Andy_HSHS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			aboutagirl
 			aggro
@@ -14589,17 +14589,17 @@ drum_anim_special_patterns = [
 			antisocial
 			areyougonnagomyway
 			assassin
-			bandontherun
+			BandOnTheRun
 			beatit
 			beautifuldisaster
 			byob
 			crazytrain
-			demolitionman
+			DemolitionMan
 			doitagain
 			escueladecalor
 			everlong
 			eyeyofthetiger
-			feelthepain
+			FeelthePain
 			goyourownway
 			goodgod
 			hailtothefreaks
@@ -14622,7 +14622,7 @@ drum_anim_special_patterns = [
 			monsoon
 			mountiansong
 			mrcrowley
-			nevertoolate
+			NeverTooLate
 			nosleeptillbrooklyn
 			nuvole
 			obstacle1
@@ -14642,7 +14642,7 @@ drum_anim_special_patterns = [
 			spiderwebs
 			stranglehold
 			sweethomealabama
-			today
+			Today
 			toomuchtooyoung
 			toyboy
 			trappedunderice
@@ -14668,9 +14668,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hshs_120
+		Anim = Drum_Andy_HSHS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			aboutagirl
 			aggro
@@ -14678,17 +14678,17 @@ drum_anim_special_patterns = [
 			antisocial
 			areyougonnagomyway
 			assassin
-			bandontherun
+			BandOnTheRun
 			beatit
 			beautifuldisaster
 			byob
 			crazytrain
-			demolitionman
+			DemolitionMan
 			doitagain
 			escueladecalor
 			everlong
 			eyeyofthetiger
-			feelthepain
+			FeelthePain
 			goyourownway
 			goodgod
 			hailtothefreaks
@@ -14711,7 +14711,7 @@ drum_anim_special_patterns = [
 			monsoon
 			mountiansong
 			mrcrowley
-			nevertoolate
+			NeverTooLate
 			nosleeptillbrooklyn
 			nuvole
 			obstacle1
@@ -14731,7 +14731,7 @@ drum_anim_special_patterns = [
 			spiderwebs
 			stranglehold
 			sweethomealabama
-			today
+			Today
 			toomuchtooyoung
 			toyboy
 			trappedunderice
@@ -14757,9 +14757,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_rs_2_fill_rs_120
+		Anim = Drum_Andy_RS_2_Fill_RS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -14775,9 +14775,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_rs_2_fill_rs_120
+		Anim = Drum_Andy_RS_2_Fill_RS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			doitagain
 		]
@@ -14796,9 +14796,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hshs_120
+		Anim = Drum_Andy_HSHS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			loveremovalmachine
 			heartbreaker
@@ -14824,9 +14824,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_h_hs_075
+		Anim = Drum_Andy_H_HS_075
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			goyourownway
 			aboutagirl
@@ -14853,9 +14853,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_hs_120
+		Anim = Drum_Andy_SS_2_RollC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -14871,9 +14871,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_hs_120
+		Anim = Drum_Andy_SS_2_RollC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -14889,9 +14889,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 10
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -14907,9 +14907,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_hs_120
+		Anim = Drum_Andy_SS_2_RollC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -14925,9 +14925,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_hs_120
+		Anim = Drum_Andy_SS_2_RollC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -14943,9 +14943,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -14961,9 +14961,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_hs_120
+		Anim = Drum_Andy_SS_2_RollC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -14979,9 +14979,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -14997,9 +14997,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_fill_t3_120
+		Anim = Drum_Andy_SS_2_Fill_T3_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -15015,9 +15015,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1s_2_t2ss_120
+		Anim = Drum_Andy_T1S_2_T2SS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			goyourownway
 		]
@@ -15036,9 +15036,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1s_2_t2ss_120
+		Anim = Drum_Andy_T1S_2_T2SS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -15054,9 +15054,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1s_2_t2ss_120
+		Anim = Drum_Andy_T1S_2_T2SS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -15072,9 +15072,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_solo_t2_roll_120
+		Anim = drum_solo_T2_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -15090,9 +15090,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_solo_t2_roll_120
+		Anim = drum_solo_T2_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -15108,9 +15108,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1t2_c1_120
+		Anim = Drum_Andy_T1T2_C1_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -15126,9 +15126,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_roll_120
+		Anim = Drum_Andy_SS_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -15144,9 +15144,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 30
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -15162,9 +15162,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_hs_120
+		Anim = Drum_Andy_SS_2_RollC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -15180,9 +15180,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_solo_t3_roll_120
+		Anim = drum_solo_T3_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			crazytrain
 		]
@@ -15201,9 +15201,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t3s_2_t2t3_120
+		Anim = drum_andy_t3s_2_t2t3_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -15219,9 +15219,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t3s_2_t2t3_120
+		Anim = drum_andy_t3s_2_t2t3_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -15237,9 +15237,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_roll_120
+		Anim = Drum_Andy_SS_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			americanwoman
 			lovemetwotimes
@@ -15259,9 +15259,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_solo_t1_roll_120
+		Anim = Drum_Andy_Solo_T1_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			thejoker
 		]
@@ -15280,9 +15280,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_solo_t1_roll_120
+		Anim = Drum_Andy_Solo_T1_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -15298,9 +15298,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_solo_t1_2_t2
+		Anim = Drum_Andy_Solo_T1_2_T2
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -15316,9 +15316,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -15334,9 +15334,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_roll_120
+		Anim = Drum_Andy_SS_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			hollywoodnights
 			lovemetwotimes
@@ -15356,9 +15356,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_solo_t1_roll_120
+		Anim = Drum_Andy_Solo_T1_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -15374,9 +15374,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_fill_t3_120
+		Anim = Drum_Andy_SS_2_Fill_T3_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -15392,9 +15392,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hhhh_120
+		Anim = Drum_Andy_HHHH_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -15410,9 +15410,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_roll_120
+		Anim = Drum_Andy_SS_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			lovemetwotimes
 		]
@@ -15431,9 +15431,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_t2_120
+		Anim = Drum_Andy_SS_2_T2_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -15449,9 +15449,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_roll_120
+		Anim = Drum_Andy_SS_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -15467,9 +15467,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_solo_t1_roll_120
+		Anim = Drum_Andy_Solo_T1_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -15485,9 +15485,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_solo_t1_roll_120
+		Anim = Drum_Andy_Solo_T1_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -15503,9 +15503,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -15521,9 +15521,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1_2_t1t2_c1_120
+		Anim = Drum_Andy_T1_2_T1T2_C1_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -15539,9 +15539,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_roll_120
+		Anim = Drum_Andy_SS_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -15557,9 +15557,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_solo_t1_roll_120
+		Anim = Drum_Andy_Solo_T1_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -15575,9 +15575,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_solo_t1_roll_120
+		Anim = Drum_Andy_Solo_T1_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -15593,9 +15593,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_solo_t1_roll_120
+		Anim = Drum_Andy_Solo_T1_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -15611,9 +15611,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_fill_t3_120
+		Anim = Drum_Andy_SS_2_Fill_T3_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -15629,9 +15629,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_fill_t3_120
+		Anim = Drum_Andy_SS_2_Fill_T3_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 		exclude = [
 			goyourownway
 		]
@@ -15650,9 +15650,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_solo_t1_roll_120
+		Anim = Drum_Andy_Solo_T1_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -15668,9 +15668,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_fill_t3_120
+		Anim = Drum_Andy_SS_2_Fill_T3_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -15686,9 +15686,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_fill_t3_120
+		Anim = Drum_Andy_SS_2_Fill_T3_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -15704,9 +15704,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_solo_t2_roll_120
+		Anim = drum_solo_T2_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			lvialviaquez
 		]
@@ -15725,9 +15725,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_solo_t3_roll_120
+		Anim = drum_solo_T3_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -15743,9 +15743,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_solo_t1_roll_120
+		Anim = Drum_Andy_Solo_T1_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -15761,9 +15761,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_solo_t1_roll_120
+		Anim = Drum_Andy_Solo_T1_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -15779,9 +15779,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_solo_t1_roll_120
+		Anim = Drum_Andy_Solo_T1_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -15797,9 +15797,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_solo_t1_roll_120
+		Anim = Drum_Andy_Solo_T1_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -15815,9 +15815,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_solo_t1_roll_120
+		Anim = Drum_Andy_Solo_T1_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -15833,9 +15833,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_solo_t2_roll_120
+		Anim = drum_solo_T2_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -15851,9 +15851,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_solo_t1_roll_120
+		Anim = Drum_Andy_Solo_T1_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			windcriesmary
 		]
@@ -15872,9 +15872,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 		exclude = [
 			spiderwebs
 			hotforteacher
@@ -15898,9 +15898,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_solo_t1_roll_120
+		Anim = Drum_Andy_Solo_T1_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -15916,9 +15916,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2hits_c1_120
+		Anim = Drum_Andy_SS_2Hits_C1_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -15934,9 +15934,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2hits_c1_120
+		Anim = Drum_Andy_SS_2Hits_C1_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			lovemetwotimes
 			hotforteacher
@@ -15957,9 +15957,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_c2_hs_120
+		Anim = Drum_Andy_SS_2_C2_HS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			windcriesmary
 			aggro
@@ -15980,9 +15980,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_solo_t3_roll_120
+		Anim = drum_solo_T3_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			crazytrain
 		]
@@ -16001,9 +16001,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_solo_t3_roll_120
+		Anim = drum_solo_T3_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			crazytrain
 		]
@@ -16022,9 +16022,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2hits_c1_120
+		Anim = Drum_Andy_SS_2Hits_C1_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			assassin
 		]
@@ -16043,9 +16043,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2hits_c1_120
+		Anim = Drum_Andy_SS_2Hits_C1_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			whativedone
 		]
@@ -16064,9 +16064,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 5
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -16082,9 +16082,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -16100,9 +16100,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_hs_120
+		Anim = Drum_Andy_SS_2_RollC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -16118,9 +16118,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2hits_120
+		Anim = Drum_Andy_SS_2Hits_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			prisonerofsociety
 			americanwoman
@@ -16142,9 +16142,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_arms_up_120
+		Anim = Drum_Andy_SS_arms_up_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			mrcrowley
 			hotelcalifonia
@@ -16172,9 +16172,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2hits_120
+		Anim = Drum_Andy_SS_2Hits_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			aboutagirl
 			hollywoodnights
@@ -16195,9 +16195,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_roll_120
+		Anim = Drum_Andy_SS_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -16213,9 +16213,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -16231,9 +16231,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2hits_120
+		Anim = Drum_Andy_SS_2Hits_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			outtruth
 			hotblooded
@@ -16253,9 +16253,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_roll_120
+		Anim = Drum_Andy_SS_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -16271,9 +16271,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -16289,9 +16289,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -16307,9 +16307,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -16325,9 +16325,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 5
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -16343,9 +16343,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -16361,9 +16361,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 5
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -16379,9 +16379,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2hits_c1_120
+		Anim = Drum_Andy_SS_2Hits_C1_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -16397,9 +16397,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -16415,9 +16415,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -16433,9 +16433,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_c2s_2_t2t1_c1_120
+		Anim = Drum_Andy_C2S_2_T2T1_C1_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -16451,9 +16451,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 5
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -16469,9 +16469,9 @@ drum_anim_special_patterns = [
 			0
 			3
 		]
-		anim = drum_andy_ss_2hits_120
+		Anim = Drum_Andy_SS_2Hits_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -16487,9 +16487,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -16505,9 +16505,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_c2s_2_t2t1_c1_120
+		Anim = Drum_Andy_C2S_2_T2T1_C1_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -16523,9 +16523,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_c2s_2_t2t1_c1_120
+		Anim = Drum_Andy_C2S_2_T2T1_C1_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -16541,9 +16541,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_c2s_2_t2t1_c1_120
+		Anim = Drum_Andy_C2S_2_T2T1_C1_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -16559,9 +16559,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_solo_t3_roll_120
+		Anim = drum_solo_T3_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -16577,9 +16577,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -16595,9 +16595,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1s_2_c1_hs_120
+		Anim = Drum_Andy_T1S_2_C1_HS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -16613,9 +16613,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_s_2_t1_c2_120
+		Anim = Drum_Andy_s_2_T1_C2_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -16631,9 +16631,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -16649,9 +16649,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -16667,9 +16667,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1s_2_c1_hs_120
+		Anim = Drum_Andy_T1S_2_C1_HS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -16685,9 +16685,9 @@ drum_anim_special_patterns = [
 			3
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 		exclude = [
 			lovemetwotimes
 		]
@@ -16706,9 +16706,9 @@ drum_anim_special_patterns = [
 			2
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 		exclude = [
 			assassin
 			hotforteacher
@@ -16733,9 +16733,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 		exclude = [
 			themiddle
 			ourtruth
@@ -16747,7 +16747,7 @@ drum_anim_special_patterns = [
 			heymanniceshot
 			heartbreaker
 			whativedone
-			nevertoolate
+			NeverTooLate
 		]
 	}
 	{
@@ -16764,9 +16764,9 @@ drum_anim_special_patterns = [
 			2
 			0
 		]
-		anim = drum_andy_t1s_2_c2_t3s_120
+		Anim = Drum_Andy_T1S_2_C2_T3S_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -16782,9 +16782,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_t1s_2_c2_t3s_120
+		Anim = Drum_Andy_T1S_2_C2_T3S_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -16800,9 +16800,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_c2s_2_t2t1_c1_120
+		Anim = Drum_Andy_C2S_2_T2T1_C1_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -16818,9 +16818,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 5
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -16836,9 +16836,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 5
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -16854,9 +16854,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_fill_t3_120
+		Anim = Drum_Andy_SS_2_Fill_T3_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -16872,9 +16872,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_solo_t1_roll_120
+		Anim = Drum_Andy_Solo_T1_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -16890,9 +16890,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_roll_120
+		Anim = Drum_Andy_SS_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			americanwoman
 		]
@@ -16911,9 +16911,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_fill_t3_120
+		Anim = Drum_Andy_SS_2_Fill_T3_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -16929,9 +16929,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_c2s_2_t2t1_c1_120
+		Anim = Drum_Andy_C2S_2_T2T1_C1_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -16947,9 +16947,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -16965,9 +16965,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_solo_t1_2_t2
+		Anim = Drum_Andy_Solo_T1_2_T2
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -16983,9 +16983,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_roll_120
+		Anim = Drum_Andy_SS_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -17001,9 +17001,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_solo_t1_roll_120
+		Anim = Drum_Andy_Solo_T1_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -17019,9 +17019,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_solo_t1_roll_120
+		Anim = Drum_Andy_Solo_T1_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -17037,9 +17037,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2hits_120
+		Anim = Drum_Andy_SS_2Hits_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			kickoutthejams
 			doitagain
@@ -17060,9 +17060,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 		exclude = [
 			goyourownway
 		]
@@ -17081,9 +17081,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_fill_t3_120
+		Anim = Drum_Andy_SS_2_Fill_T3_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -17099,9 +17099,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -17117,9 +17117,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -17135,9 +17135,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_c2s_2_t2t1_c1_120
+		Anim = Drum_Andy_C2S_2_T2T1_C1_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -17153,9 +17153,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_c2s_2_t2t1_c1_120
+		Anim = Drum_Andy_C2S_2_T2T1_C1_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -17171,9 +17171,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -17189,9 +17189,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_c2s_2_t2t1_c1_120
+		Anim = Drum_Andy_C2S_2_T2T1_C1_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -17207,9 +17207,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 5
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -17225,9 +17225,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_solo_t2_roll_120
+		Anim = drum_solo_T2_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -17243,9 +17243,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_hs_120
+		Anim = Drum_Andy_SS_2_RollC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -17261,9 +17261,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_t1_2_c1_hs_120
+		Anim = Drum_Andy_HS_2_T1_2_C1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -17279,9 +17279,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_t1_2_c1_hs_120
+		Anim = Drum_Andy_HS_2_T1_2_C1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -17297,9 +17297,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_fill_t3_120
+		Anim = Drum_Andy_SS_2_Fill_T3_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -17315,9 +17315,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_fill_t3_120
+		Anim = Drum_Andy_SS_2_Fill_T3_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -17333,9 +17333,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_t1_2_c1_hs_120
+		Anim = Drum_Andy_HS_2_T1_2_C1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -17351,9 +17351,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_fill_t3_120
+		Anim = Drum_Andy_SS_2_Fill_T3_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -17369,9 +17369,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_solo_t1_roll_120
+		Anim = Drum_Andy_Solo_T1_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -17387,9 +17387,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -17405,9 +17405,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_t1_120
+		Anim = Drum_Andy_SS_2_T1_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -17423,9 +17423,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_t1_2_c1_hs_120
+		Anim = Drum_Andy_HS_2_T1_2_C1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -17441,9 +17441,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_s_2_t1_120
+		Anim = Drum_Andy_s_2_T1_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -17459,9 +17459,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_t1_2_c1_hs_120
+		Anim = Drum_Andy_HS_2_T1_2_C1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -17477,9 +17477,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_t1_2_c1_hs_120
+		Anim = Drum_Andy_HS_2_T1_2_C1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -17495,9 +17495,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_t1_2_c1_hs_120
+		Anim = Drum_Andy_HS_2_T1_2_C1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -17513,9 +17513,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_rs_120
+		Anim = Drum_Andy_SS_2_RollC1_RS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -17531,9 +17531,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -17549,9 +17549,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -17567,9 +17567,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2hits_c1_120
+		Anim = Drum_Andy_SS_2Hits_C1_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			lovemetwotimes
 			assassin
@@ -17589,9 +17589,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -17607,9 +17607,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -17625,9 +17625,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_t1_2_c1_hs_120
+		Anim = Drum_Andy_HS_2_T1_2_C1_HS_120
 		earlyframes = 15
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -17643,9 +17643,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_solo_t1_roll_120
+		Anim = Drum_Andy_Solo_T1_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -17661,9 +17661,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_t1_2_c1_hs_120
+		Anim = Drum_Andy_HS_2_T1_2_C1_HS_120
 		earlyframes = 15
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -17679,9 +17679,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 15
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -17697,9 +17697,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -17715,9 +17715,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2hits_c1_120
+		Anim = Drum_Andy_SS_2Hits_C1_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			assassin
 			americanwoman
@@ -17737,9 +17737,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_t1_2_c1_hs_120
+		Anim = Drum_Andy_HS_2_T1_2_C1_HS_120
 		earlyframes = 15
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -17755,9 +17755,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_t1_2_c1_hs_120
+		Anim = Drum_Andy_HS_2_T1_2_C1_HS_120
 		earlyframes = 15
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -17773,9 +17773,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_t1_2_c1_hs_120
+		Anim = Drum_Andy_HS_2_T1_2_C1_HS_120
 		earlyframes = 15
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -17791,9 +17791,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_t1_2_c1_hs_120
+		Anim = Drum_Andy_HS_2_T1_2_C1_HS_120
 		earlyframes = 15
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -17809,9 +17809,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1s_2_c1_t1s_120
+		Anim = Drum_Andy_T1S_2_C1_T1S_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -17827,9 +17827,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1s_2_c1_t1s_120
+		Anim = Drum_Andy_T1S_2_C1_T1S_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -17845,9 +17845,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_roll_120
+		Anim = Drum_Andy_SS_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -17863,9 +17863,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_roll_120
+		Anim = Drum_Andy_SS_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -17881,9 +17881,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1s_2_c1_t1s_120
+		Anim = Drum_Andy_T1S_2_C1_T1S_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -17899,9 +17899,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_fill_t3_120
+		Anim = Drum_Andy_SS_2_Fill_T3_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -17917,9 +17917,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_t2_120
+		Anim = Drum_Andy_SS_2_T2_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -17935,9 +17935,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_c2s_2_t2t1_c1_120
+		Anim = Drum_Andy_C2S_2_T2T1_C1_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -17953,9 +17953,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_rs_2_fill_rs_120
+		Anim = Drum_Andy_RS_2_Fill_RS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -17971,9 +17971,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_rs_2_fill_rs_120
+		Anim = Drum_Andy_RS_2_Fill_RS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -17989,9 +17989,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_rs_2_fill_rs_120
+		Anim = Drum_Andy_RS_2_Fill_RS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -18007,9 +18007,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_rs_2_fill_rs_120
+		Anim = Drum_Andy_RS_2_Fill_RS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -18025,9 +18025,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_rs_2_fill_rs_120
+		Anim = Drum_Andy_RS_2_Fill_RS_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -18043,9 +18043,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2hits_120
+		Anim = Drum_Andy_SS_2Hits_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			thejoker
 			heymanniceshot
@@ -18065,9 +18065,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_s_2_t1_c2_120
+		Anim = Drum_Andy_s_2_T1_C2_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -18083,9 +18083,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2hits_120
+		Anim = Drum_Andy_SS_2Hits_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -18101,9 +18101,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_drum_andy_ss_2_rollc1_rs_120
+		Anim = Drum_Drum_Andy_SS_2_RollC1_RS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -18119,9 +18119,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_t1_120
+		Anim = Drum_Andy_SS_2_T1_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -18137,9 +18137,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_t2_120
+		Anim = Drum_Andy_SS_2_T2_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -18155,9 +18155,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_fill_t3_120
+		Anim = Drum_Andy_SS_2_Fill_T3_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -18173,9 +18173,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -18191,9 +18191,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_t1_120
+		Anim = Drum_Andy_SS_2_T1_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -18209,9 +18209,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -18227,9 +18227,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1s_2_t2ss_120
+		Anim = Drum_Andy_T1S_2_T2SS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 		exclude = [
 			shiver
 			windcriesmary
@@ -18249,9 +18249,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_s_2_t1_120
+		Anim = Drum_Andy_s_2_T1_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -18267,9 +18267,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_fill_t3_120
+		Anim = Drum_Andy_SS_2_Fill_T3_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -18285,9 +18285,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_t1_120
+		Anim = Drum_Andy_SS_2_T1_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -18303,9 +18303,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_s_2_t1_c2_120
+		Anim = Drum_Andy_s_2_T1_C2_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 		exclude = [
 			antisocial
 		]
@@ -18324,9 +18324,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_rr_s_rr_s_120
+		Anim = Drum_Andy_RR_S_RR_S_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			assassin
 			americanwoman
@@ -18355,9 +18355,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_rr_s_rr_s_120
+		Anim = Drum_Andy_RR_S_RR_S_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			assassin
 			doitagain
@@ -18383,9 +18383,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -18401,9 +18401,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -18419,9 +18419,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -18437,9 +18437,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -18455,9 +18455,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_s_2_t1_c2_120
+		Anim = Drum_Andy_s_2_T1_C2_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 		exclude = [
 			spiderwebs
 		]
@@ -18476,9 +18476,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -18494,9 +18494,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_s_2_t1_c2_120
+		Anim = Drum_Andy_s_2_T1_C2_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 		exclude = [
 			windcriesmary
 		]
@@ -18515,9 +18515,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -18533,9 +18533,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2hits_c1_120
+		Anim = Drum_Andy_SS_2Hits_C1_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -18551,9 +18551,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_t1_2_c1_hs_120
+		Anim = Drum_Andy_HS_2_T1_2_C1_HS_120
 		earlyframes = 15
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -18569,9 +18569,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2hits_120
+		Anim = Drum_Andy_SS_2Hits_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 		exclude = [
 			shiver
 			thejoker
@@ -18592,9 +18592,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 15
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -18610,9 +18610,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_s_2_t1_c2_120
+		Anim = Drum_Andy_s_2_T1_C2_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -18628,9 +18628,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2hits_120
+		Anim = Drum_Andy_SS_2Hits_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 		exclude = [
 			assassin
 			americanwoman
@@ -18650,9 +18650,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2hits_120
+		Anim = Drum_Andy_SS_2Hits_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -18668,27 +18668,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_s_2_t1_120
+		Anim = Drum_Andy_s_2_T1_120
 		earlyframes = 0
-		cycle = 1
-	}
-	{
-		notes = [
-			2
-			0
-			0
-			0
-			4
-			0
-			0
-			5
-			0
-			1
-			0
-		]
-		anim = drum_andy_ss_2_rollc2_rs_120
-		earlyframes = 0
-		cycle = 0
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -18700,13 +18682,31 @@ drum_anim_special_patterns = [
 			0
 			0
 			5
+			0
+			1
+			0
+		]
+		Anim = Drum_Andy_SS_2_RollC2_RS_120
+		earlyframes = 0
+		Cycle = 0
+	}
+	{
+		notes = [
+			2
+			0
+			0
+			0
+			4
+			0
+			0
+			5
 			1
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_rs_120
+		Anim = Drum_Andy_SS_2_RollC1_RS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -18722,9 +18722,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_rs_120
+		Anim = Drum_Andy_SS_2_RollC1_RS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -18740,9 +18740,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_c1c2_rs_120
+		Anim = Drum_Andy_SS_2_C1C2_RS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -18758,9 +18758,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_fill_t3_120
+		Anim = Drum_Andy_SS_2_Fill_T3_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -18776,9 +18776,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_rs_120
+		Anim = Drum_Andy_SS_2_RollC2_RS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -18794,9 +18794,9 @@ drum_anim_special_patterns = [
 			4
 			0
 		]
-		anim = drum_andy_c2c2c2_120
+		Anim = Drum_Andy_C2C2C2_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -18812,9 +18812,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_c2_hs_120
+		Anim = Drum_Andy_SS_2_C2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -18830,9 +18830,9 @@ drum_anim_special_patterns = [
 			3
 			0
 		]
-		anim = drum_andy_ss_2_c2_c2s_120
+		Anim = Drum_Andy_SS_2_C2_C2S_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -18848,9 +18848,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1s_2_t2ss_120
+		Anim = Drum_Andy_T1S_2_T2SS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -18866,9 +18866,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_c1_hs_120
+		Anim = Drum_Andy_HS_2_C1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -18884,9 +18884,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1s_2_c1_hs_120
+		Anim = Drum_Andy_T1S_2_C1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -18902,9 +18902,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -18920,9 +18920,9 @@ drum_anim_special_patterns = [
 			4
 			0
 		]
-		anim = drum_andy_ss_2_c2_c2s_120
+		Anim = Drum_Andy_SS_2_C2_C2S_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -18938,9 +18938,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_s_2_t1_120
+		Anim = Drum_Andy_s_2_T1_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -18956,9 +18956,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_c1_rs_120
+		Anim = Drum_Andy_SS_2_C1_RS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -18974,9 +18974,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_c1_rs_120
+		Anim = Drum_Andy_SS_2_C1_RS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -18992,9 +18992,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19010,9 +19010,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_hs_120
+		Anim = Drum_Andy_SS_2_RollC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19028,9 +19028,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_rs_120
+		Anim = Drum_Andy_SS_2_RollC2_RS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19046,9 +19046,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_s_2_t1_c2_120
+		Anim = Drum_Andy_s_2_T1_C2_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19064,9 +19064,9 @@ drum_anim_special_patterns = [
 			4
 			0
 		]
-		anim = drum_andy_ss_2_c2_c2s_120
+		Anim = Drum_Andy_SS_2_C2_C2S_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19082,9 +19082,9 @@ drum_anim_special_patterns = [
 			4
 			0
 		]
-		anim = drum_andy_ss_2_c2_c2s_120
+		Anim = Drum_Andy_SS_2_C2_C2S_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19100,9 +19100,9 @@ drum_anim_special_patterns = [
 			4
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19118,9 +19118,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19136,9 +19136,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19154,9 +19154,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_solo_t1_roll_120
+		Anim = Drum_Andy_Solo_T1_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -19172,9 +19172,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19190,9 +19190,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19208,9 +19208,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19226,9 +19226,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19244,9 +19244,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19262,9 +19262,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19280,9 +19280,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19298,9 +19298,9 @@ drum_anim_special_patterns = [
 			2
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19316,9 +19316,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_solo_t1_roll_120
+		Anim = Drum_Andy_Solo_T1_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -19334,9 +19334,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_t1_2_c1_hs_120
+		Anim = Drum_Andy_HS_2_T1_2_C1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19352,9 +19352,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19370,9 +19370,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_t2_120
+		Anim = Drum_Andy_SS_2_T2_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19388,9 +19388,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19406,9 +19406,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_c2_hs_120
+		Anim = Drum_Andy_SS_2_C2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19424,9 +19424,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_c2_hs_120
+		Anim = Drum_Andy_SS_2_C2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19442,9 +19442,9 @@ drum_anim_special_patterns = [
 			2
 			0
 		]
-		anim = drum_andy_ss_2_c2_hs_120
+		Anim = Drum_Andy_SS_2_C2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19460,9 +19460,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19478,9 +19478,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_c2_hs_120
+		Anim = Drum_Andy_SS_2_C2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19496,9 +19496,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19514,9 +19514,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1s_2_c1_rs_120
+		Anim = Drum_Andy_T1S_2_C1_RS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19532,9 +19532,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1s_2_t2ss_120
+		Anim = Drum_Andy_T1S_2_T2SS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19550,9 +19550,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_hs_120
+		Anim = Drum_Andy_SS_2_RollC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19568,9 +19568,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_s_2_t1_c2_120
+		Anim = Drum_Andy_s_2_T1_C2_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19586,9 +19586,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19604,117 +19604,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
-	}
-	{
-		notes = [
-			2
-			0
-			0
-			0
-			1
-			0
-			0
-			3
-			0
-			1
-			0
-		]
-		anim = drum_andy_rs_2_c2_rs_120
-		earlyframes = 0
-		cycle = 0
-	}
-	{
-		notes = [
-			2
-			0
-			0
-			0
-			1
-			0
-			0
-			1
-			0
-			2
-			0
-		]
-		anim = drum_andy_ss_2_c2_rs_120
-		earlyframes = 0
-		cycle = 0
-	}
-	{
-		notes = [
-			3
-			0
-			0
-			1
-			1
-			0
-			2
-			0
-			1
-			0
-			0
-		]
-		anim = drum_andy_hs_2_fillc1_hs_120
-		earlyframes = 0
-		cycle = 0
-	}
-	{
-		notes = [
-			3
-			0
-			1
-			0
-			1
-			0
-			2
-			0
-			1
-			0
-			0
-		]
-		anim = drum_andy_hs_2_fillc1_hs_120
-		earlyframes = 0
-		cycle = 0
-	}
-	{
-		notes = [
-			2
-			0
-			0
-			0
-			1
-			0
-			0
-			1
-			1
-			1
-			0
-		]
-		anim = drum_andy_rs_2_c1_c2s_120
-		earlyframes = 0
-		cycle = 0
-	}
-	{
-		notes = [
-			3
-			0
-			1
-			0
-			2
-			0
-			0
-			0
-			1
-			0
-			0
-		]
-		anim = drum_andy_hs_2_fillc1_hs_120
-		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19726,13 +19618,121 @@ drum_anim_special_patterns = [
 			0
 			0
 			3
+			0
+			1
+			0
+		]
+		Anim = Drum_Andy_RS_2_C2_RS_120
+		earlyframes = 0
+		Cycle = 0
+	}
+	{
+		notes = [
+			2
+			0
+			0
+			0
+			1
+			0
+			0
+			1
+			0
+			2
+			0
+		]
+		Anim = Drum_Andy_SS_2_C2_RS_120
+		earlyframes = 0
+		Cycle = 0
+	}
+	{
+		notes = [
+			3
+			0
+			0
+			1
+			1
+			0
+			2
+			0
 			1
 			0
 			0
 		]
-		anim = drum_andy_rs_2_c1_rs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
+	}
+	{
+		notes = [
+			3
+			0
+			1
+			0
+			1
+			0
+			2
+			0
+			1
+			0
+			0
+		]
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
+		earlyframes = 0
+		Cycle = 0
+	}
+	{
+		notes = [
+			2
+			0
+			0
+			0
+			1
+			0
+			0
+			1
+			1
+			1
+			0
+		]
+		Anim = Drum_Andy_RS_2_C1_C2S_120
+		earlyframes = 0
+		Cycle = 0
+	}
+	{
+		notes = [
+			3
+			0
+			1
+			0
+			2
+			0
+			0
+			0
+			1
+			0
+			0
+		]
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
+		earlyframes = 0
+		Cycle = 0
+	}
+	{
+		notes = [
+			2
+			0
+			0
+			0
+			1
+			0
+			0
+			3
+			1
+			0
+			0
+		]
+		Anim = Drum_Andy_RS_2_C1_RS_120
+		earlyframes = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19748,9 +19748,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19766,9 +19766,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19784,9 +19784,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1_2_t1t2_120
+		Anim = drum_andy_t1_2_t1t2_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19802,9 +19802,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_t1_120
+		Anim = Drum_Andy_SS_2_T1_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19820,9 +19820,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_ssss_hs_120
+		Anim = Drum_Andy_HS_2_SSSS_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19838,9 +19838,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19856,9 +19856,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_c1_c2s_120
+		Anim = Drum_Andy_SS_2_C1_C2S_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19874,9 +19874,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19892,9 +19892,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_roll_120
+		Anim = Drum_Andy_SS_Roll_120
 		earlyframes = 0
-		cycle = 1
+		Cycle = 1
 	}
 	{
 		notes = [
@@ -19910,9 +19910,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19928,9 +19928,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_rs_2_fillc2_rs_120
+		Anim = Drum_Andy_RS_2_FillC2_RS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19946,9 +19946,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19964,9 +19964,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1t2_c1_120
+		Anim = Drum_Andy_T1T2_C1_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -19982,9 +19982,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_hs_120
+		Anim = Drum_Andy_SS_2_RollC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -20000,9 +20000,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1_2_t1t2_120
+		Anim = drum_andy_t1_2_t1t2_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 		exclude = [
 			goyourownway
 		]
@@ -20021,9 +20021,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_rs_120
+		Anim = Drum_Andy_SS_2_RollC1_RS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -20039,9 +20039,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_rs_120
+		Anim = Drum_Andy_SS_2_RollC1_RS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -20057,9 +20057,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_rs_120
+		Anim = Drum_Andy_SS_2_RollC1_RS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -20075,9 +20075,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -20093,9 +20093,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -20111,9 +20111,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_rs_2_c1_rs_120
+		Anim = Drum_Andy_RS_2_C1_RS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -20129,9 +20129,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_rs_2_c1_rs_120
+		Anim = Drum_Andy_RS_2_C1_RS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -20147,9 +20147,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -20165,9 +20165,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_hs_2_fillc1_hs_120
+		Anim = Drum_Andy_HS_2_FillC1_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -20183,9 +20183,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_rs_120
+		Anim = Drum_Andy_SS_2_RollC2_RS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -20201,9 +20201,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_rs_2_fillc2_rs_120
+		Anim = Drum_Andy_RS_2_FillC2_RS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -20219,9 +20219,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_rs_120
+		Anim = Drum_Andy_SS_2_RollC2_RS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -20237,9 +20237,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -20255,9 +20255,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_hs_2_fillc2_hs_120
+		Anim = Drum_Andy_HS_2_FillC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -20273,9 +20273,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1_2_t1t2_c1_120
+		Anim = Drum_Andy_T1_2_T1T2_C1_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -20291,9 +20291,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1_2_t1t2_c1_120
+		Anim = Drum_Andy_T1_2_T1T2_C1_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -20309,9 +20309,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1_2_t1t2_120
+		Anim = drum_andy_t1_2_t1t2_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 		exclude = [
 			goyourownway
 		]
@@ -20330,9 +20330,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1t2_c1_120
+		Anim = Drum_Andy_T1T2_C1_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -20348,9 +20348,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1t2_c1_120
+		Anim = Drum_Andy_T1T2_C1_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -20366,9 +20366,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1t2_c1_120
+		Anim = Drum_Andy_T1T2_C1_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -20384,9 +20384,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_ss_2_rollc2_hs_120
+		Anim = Drum_Andy_SS_2_RollC2_HS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -20402,9 +20402,9 @@ drum_anim_special_patterns = [
 			1
 			0
 		]
-		anim = drum_andy_t1s_2_c2_t3s_120
+		Anim = Drum_Andy_T1S_2_C2_T3S_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -20420,9 +20420,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_ss_2_rollc1_rs_120
+		Anim = Drum_Andy_SS_2_RollC1_RS_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 	{
 		notes = [
@@ -20438,9 +20438,9 @@ drum_anim_special_patterns = [
 			0
 			0
 		]
-		anim = drum_andy_t1t2_c1_120
+		Anim = Drum_Andy_T1T2_C1_120
 		earlyframes = 0
-		cycle = 0
+		Cycle = 0
 	}
 ]
 drum_anim_trans_patterns = [

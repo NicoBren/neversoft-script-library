@@ -1,14 +1,14 @@
 
 script ui_create_leaderboard_load 
-	netsessionfunc \{func = stats_uninit}
-	netsessionfunc \{func = stats_init}
+	NetSessionFunc \{func = stats_uninit}
+	NetSessionFunc \{func = stats_init}
 	spawnscriptnow ui_create_leaderboard_load_spawned params = <...>
 endscript
 
 script ui_create_leaderboard_load_spawned 
-	removeparameter \{base_name}
-	removeparameter \{focus_id}
-	createscreenelement \{type = containerelement
+	RemoveParameter \{base_name}
+	RemoveParameter \{focus_id}
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = leaderboard_load
 		dims = (1280.0, 720.0)
@@ -18,26 +18,26 @@ script ui_create_leaderboard_load_spawned
 		]
 		z_priority = 1000000}
 	ui_leaderboard_get_headers
-	if gotparam \{my_status}
-		createscreenelement \{parent = leaderboard_load
-			type = descinterface
+	if GotParam \{my_status}
+		CreateScreenElement \{parent = leaderboard_load
+			type = DescInterface
 			desc = 'leaderboard'
 			z_priority = -100}
 		<id> :obj_spawnscript ui_leaderboard_load_spin
 		ui_event_wait_for_safe
-		change \{leaderboardsearchvalue = 0}
-		change \{leaderboarddiffvalue = 3}
+		change \{LeaderboardSearchValue = 0}
+		change \{LeaderboardDiffValue = 3}
 		change \{lb_list_type = 0}
 		change \{lb_offset = 1}
 		if ($current_leaderboard_group = song)
-			change lb_rating_value = (($leaderboarddiffvalue) + 1)
+			change lb_rating_value = (($LeaderboardDiffValue) + 1)
 		else
 			change \{lb_rating_value = 0}
 		endif
-		if isxenon
+		if isXenon
 			controller_index = ($lb_controller)
 		endif
-		netsessionfunc {
+		NetSessionFunc {
 			obj = stats
 			func = get_stats
 			params = {
@@ -50,13 +50,13 @@ script ui_create_leaderboard_load_spawned
 				controller_index = <controller_index>
 			}
 		}
-	elseif gotparam \{offset}
-		leaderboardinterface :obj_spawnscript \{ui_leaderboard_load_spin}
-		leaderboard_load :settags offset = <prev_offset>
+	elseif GotParam \{offset}
+		LeaderboardInterface :obj_spawnscript \{ui_leaderboard_load_spin}
+		leaderboard_load :SetTags offset = <prev_offset>
 		if ($lb_list_type = friends)
 			listtype = friends
 		endif
-		netsessionfunc {
+		NetSessionFunc {
 			obj = stats
 			func = get_stats
 			params = {
@@ -69,13 +69,13 @@ script ui_create_leaderboard_load_spawned
 			}
 		}
 	else
-		leaderboardinterface :obj_spawnscript \{ui_leaderboard_load_spin}
-		if (((isps3) || (iswinport)) && ($lb_list_type = friends))
+		LeaderboardInterface :obj_spawnscript \{ui_leaderboard_load_spin}
+		if (((IsPs3) || (IsWinPort)) && ($lb_list_type = friends))
 			change \{lb_list_type = 0}
 		elseif ($lb_list_type = me)
-			leaderboard_load :settags \{my_leaderboard = 1}
+			leaderboard_load :SetTags \{my_leaderboard = 1}
 		endif
-		netsessionfunc {
+		NetSessionFunc {
 			obj = stats
 			func = get_stats
 			params = {
@@ -93,27 +93,27 @@ endscript
 
 script ui_destroy_leaderboard_load 
 	destroy_menu_backdrop
-	killspawnedscript \{name = ui_leaderboard_load_spin}
-	destroyscreenelement \{id = leaderboard_load}
-	if screenelementexists \{id = leaderboardinterface}
-		leaderboardinterface :se_setprops \{loading_alpha = 0.0
+	KillSpawnedScript \{name = ui_leaderboard_load_spin}
+	DestroyScreenElement \{id = leaderboard_load}
+	if ScreenElementExists \{id = LeaderboardInterface}
+		LeaderboardInterface :SE_SetProps \{loading_alpha = 0.0
 			time = 0.1}
 	endif
-	if NOT gotparam \{my_status}
+	if NOT GotParam \{my_status}
 	endif
 endscript
 
 script ui_leaderboard_load_callback_me 
-	printf \{qs(0xe0264b2d)
+	printf \{qs("\Lui_leaderboard_load_callback_me")
 		channel = leaderboard}
-	getarraysize \{leaderboard_data}
+	GetArraySize \{leaderboard_data}
 	if (<array_size> > 0)
 		my_data = (<leaderboard_data> [0].data)
-		leaderboard_load :settags my_data = <my_data>
-		leaderboard_load :settags my_xuid = (<leaderboard_data> [0].player_xuid)
+		leaderboard_load :SetTags my_data = <my_data>
+		leaderboard_load :SetTags my_xuid = (<leaderboard_data> [0].player_xuid)
 		my_cash = (<my_data> [2])
 	endif
-	if ($current_leaderboard_group = cash)
+	if ($current_leaderboard_group = Cash)
 		spawnscriptnow ui_leaderboard_load_callback_me_continue params = {my_data = <my_data> my_cash = <my_cash>}
 	else
 		leaderboard_load :obj_spawnscript \{ui_leaderboard_load_cash_me}
@@ -121,14 +121,14 @@ script ui_leaderboard_load_callback_me
 endscript
 
 script ui_leaderboard_load_cash_me 
-	printf \{qs(0x2d7e3020)}
-	wait \{0.5
+	printf \{qs("\Lui_leaderboard_load_cash_me")}
+	Wait \{0.5
 		second}
-	getsingletag \{my_xuid}
-	if gotparam \{my_xuid}
+	GetSingleTag \{my_xuid}
+	if GotParam \{my_xuid}
 		array = []
-		addarrayelement array = <array> element = <my_xuid>
-		netsessionfunc {
+		AddArrayElement array = <array> element = <my_xuid>
+		NetSessionFunc {
 			obj = stats
 			func = get_stats
 			params = {
@@ -151,9 +151,9 @@ script ui_leaderboard_load_cash_me
 endscript
 
 script ui_leaderboard_load_callback_xuid_me 
-	printf \{qs(0x6199ec64)}
-	leaderboard_load :getsingletag \{my_data}
-	getarraysize \{leaderboard_data}
+	printf \{qs("\Lui_leaderboard_load_callback_xuid_me")}
+	leaderboard_load :GetSingleTag \{my_data}
+	GetArraySize \{leaderboard_data}
 	if (<array_size> > 0)
 		my_cash = (<leaderboard_data> [0].data [2])
 	endif
@@ -163,25 +163,25 @@ endscript
 script ui_leaderboard_load_callback_me_continue 
 	ui_event_wait_for_safe
 	mark_unsafe_for_shutdown
-	ui_event_block event = menu_replace data = {state = uistate_leaderboard my_data = <my_data> my_cash = <my_cash>}
+	ui_event_block event = menu_replace data = {state = UIstate_leaderboard my_data = <my_data> my_cash = <my_cash>}
 	ui_event_block \{event = menu_change
 		data = {
-			state = uistate_leaderboard_load
+			state = UIstate_leaderboard_load
 			is_popup
 		}}
 	mark_safe_for_shutdown
 endscript
 
 script ui_leaderboard_load_callback 
-	printf \{qs(0x0e5280e0)
+	printf \{qs("\Lui_leaderboard_load_callback")
 		channel = leaderboard}
 	if NOT ($lb_list_type = friends)
-		if gotparam \{offset}
+		if GotParam \{offset}
 			change lb_offset = <offset>
 		endif
 	endif
-	leaderboard_load :settags song_data = <leaderboard_data>
-	if ($current_leaderboard_group = cash)
+	leaderboard_load :SetTags song_data = <leaderboard_data>
+	if ($current_leaderboard_group = Cash)
 		spawnscriptnow ui_leaderboard_load_callback_xuid params = {leaderboard_data = <leaderboard_data>}
 	else
 		leaderboard_load :obj_spawnscript \{ui_leaderboard_load_cash}
@@ -189,30 +189,30 @@ script ui_leaderboard_load_callback
 endscript
 
 script ui_leaderboard_load_cash 
-	printf \{qs(0x13c6793d)}
-	wait \{0.5
+	printf \{qs("\Lui_leaderboard_load_cash")}
+	Wait \{0.5
 		second}
-	getsingletag \{song_data}
-	getarraysize <song_data>
+	GetSingleTag \{song_data}
+	GetArraySize <song_data>
 	controller = ($lb_controller)
-	if ((isps3) || (iswinport))
+	if ((IsPs3) || (IsWinPort))
 		controller = ($primary_controller)
 	endif
 	<live_enabled> = 0
-	if iswinport
+	if IsWinPort
 		signin_params = {}
-		if checkforsignin <signin_params> controller_index = <controller>
+		if CheckForSignIn <signin_params> controller_index = <controller>
 			<live_enabled> = 1
 		else
 			array_size = 0
 		endif
 	else
-		if netsessionfunc func = isliveenabled params = {controller_index = <controller>}
+		if NetSessionFunc func = IsLiveEnabled params = {controller_index = <controller>}
 			signin_params = {local}
-			if isps3
+			if IsPs3
 				signin_params = {}
 			endif
-			if checkforsignin <signin_params> controller_index = <controller>
+			if CheckForSignIn <signin_params> controller_index = <controller>
 				<live_enabled> = 1
 			else
 				array_size = 0
@@ -223,13 +223,13 @@ script ui_leaderboard_load_cash
 		array = []
 		i = 0
 		begin
-		addarrayelement array = <array> element = (<song_data> [<i>].player_xuid)
+		AddArrayElement array = <array> element = (<song_data> [<i>].player_xuid)
 		i = (<i> + 1)
 		repeat <array_size>
 	endif
-	if gotparam \{array}
-		getarraysize <array>
-		netsessionfunc {
+	if GotParam \{array}
+		GetArraySize <array>
+		NetSessionFunc {
 			obj = stats
 			func = get_stats
 			params = {
@@ -247,15 +247,15 @@ script ui_leaderboard_load_cash
 		endif
 		ui_event_wait \{event = menu_replace
 			data = {
-				state = uistate_leaderboard_timeout
+				state = UIstate_leaderboard_timeout
 			}}
 		return
 	else
 		if ui_event_exists_in_stack \{name = 'leaderboard'}
 			ui_event \{event = menu_back}
 		endif
-		leaderboard_load :getsingletag \{offset}
-		if NOT gotparam \{offset}
+		leaderboard_load :GetSingleTag \{offset}
+		if NOT GotParam \{offset}
 			leaderboard_load :obj_spawnscript \{ui_leaderboard_load_empty}
 		else
 			change lb_offset = <offset>
@@ -265,29 +265,29 @@ script ui_leaderboard_load_cash
 endscript
 
 script ui_leaderboard_load_callback_xuid 
-	printf \{qs(0x3d715f60)
+	printf \{qs("\Lui_leaderboard_load_callback_xuid")
 		channel = leaderboard}
-	leaderboard_load :getsingletag \{song_data}
-	leaderboard_load :getsingletag \{my_leaderboard}
-	getarraysize <song_data>
+	leaderboard_load :GetSingleTag \{song_data}
+	leaderboard_load :GetSingleTag \{my_leaderboard}
+	GetArraySize <song_data>
 	controller = ($lb_controller)
-	if isps3
+	if IsPs3
 		controller = ($primary_controller)
 	endif
 	<live_enabled> = 0
-	if iswinport
-		if checkforsignin controller_index = <controller>
+	if IsWinPort
+		if CheckForSignIn controller_index = <controller>
 			<live_enabled> = 1
 		else
 			array_size = 0
 		endif
 	else
-		if netsessionfunc func = isliveenabled params = {controller_index = <controller>}
+		if NetSessionFunc func = IsLiveEnabled params = {controller_index = <controller>}
 			signin_params = {local}
-			if isps3
+			if IsPs3
 				signin_params = {}
 			endif
-			if checkforsignin <signin_params> controller_index = <controller>
+			if CheckForSignIn <signin_params> controller_index = <controller>
 				<live_enabled> = 1
 			else
 				array_size = 0
@@ -302,14 +302,14 @@ script ui_leaderboard_load_callback_xuid
 		endif
 		ui_event_wait \{event = menu_replace
 			data = {
-				state = uistate_leaderboard_timeout
+				state = UIstate_leaderboard_timeout
 			}}
 	else
 		if ui_event_exists_in_stack \{name = 'leaderboard'}
 			ui_event \{event = menu_back}
 		endif
-		leaderboard_load :getsingletag \{offset}
-		if NOT gotparam \{offset}
+		leaderboard_load :GetSingleTag \{offset}
+		if NOT GotParam \{offset}
 			leaderboard_load :obj_spawnscript \{ui_leaderboard_load_empty}
 		else
 			change lb_offset = <offset>
@@ -319,31 +319,31 @@ script ui_leaderboard_load_callback_xuid
 endscript
 
 script ui_leaderboard_load_timeout 
-	if NOT gotparam \{no_wait}
-		wait \{5
+	if NOT GotParam \{no_wait}
+		Wait \{5
 			seconds}
 	endif
 	if (<callback> = ui_leaderboard_load_callback_me)
 		leaderboard_load :obj_spawnscript <callback> params = {leaderboard_data = []}
 		return
 	endif
-	printf \{qs(0x1ab6e016)
+	printf \{qs("\Lui_leaderboard_load_timeout timing out --- ")
 		channel = leaderboard}
 	if ($lb_list_type = friends)
 		ui_event_wait \{event = menu_replace
 			data = {
-				state = uistate_leaderboard
+				state = UIstate_leaderboard
 			}}
 		return
 	endif
 	if ui_event_exists_in_stack \{name = 'leaderboard'}
 		ui_event \{event = menu_back}
 	endif
-	leaderboard_load :getsingletag \{offset}
-	if NOT gotparam \{offset}
+	leaderboard_load :GetSingleTag \{offset}
+	if NOT GotParam \{offset}
 		ui_event_wait \{event = menu_replace
 			data = {
-				state = uistate_leaderboard_timeout
+				state = UIstate_leaderboard_timeout
 			}}
 	else
 		change lb_offset = <offset>
@@ -353,18 +353,18 @@ endscript
 script ui_leaderboard_load_empty 
 	ui_event_wait \{event = menu_replace
 		data = {
-			state = uistate_leaderboard_empty
+			state = UIstate_leaderboard_empty
 		}}
 endscript
 
 script ui_leaderboard_load_spin 
-	se_setprops spin_rot_angle = RandomFloat (0.0, 360.0)
-	se_setprops \{loading_alpha = 1.0}
-	if desc_resolvealias \{name = alias_spin}
+	SE_SetProps spin_rot_angle = RandomFloat (0.0, 360.0)
+	SE_SetProps \{loading_alpha = 1.0}
+	if Desc_ResolveAlias \{name = alias_spin}
 		begin
-		<resolved_id> :se_getprops
-		<resolved_id> :se_setprops rot_angle = (<rot_angle> - 360.0) time = 1.0
-		<resolved_id> :se_waitprops
+		<resolved_id> :SE_GetProps
+		<resolved_id> :SE_SetProps rot_angle = (<rot_angle> - 360.0) time = 1.0
+		<resolved_id> :SE_WaitProps
 		repeat
 	endif
 endscript

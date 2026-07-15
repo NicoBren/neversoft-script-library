@@ -5,34 +5,34 @@ ui_preview_pak_size = -1
 script debug_ui_loadpreviewpak 
 	if ($ui_preview_pak_loaded)
 		change \{ui_preview_pak_loaded = 0}
-		unloadpak \{$ui_preview_pak_name}
-		waitunloadpak \{$ui_preview_pak_name}
+		UnloadPak \{$ui_preview_pak_name}
+		WaitUnloadPak \{$ui_preview_pak_name}
 	endif
 	change \{ui_preview_pak_loaded = 1}
-	mempushcontext \{bottomupheap}
-	loadpak \{$ui_preview_pak_name}
-	if isps3
+	MemPushContext \{BottomUpHeap}
+	LoadPak \{$ui_preview_pak_name}
+	if IsPs3
 		change ui_preview_pak_size = (<loadpak_alloc_size> + <loadpak_alloc_size_vram>)
 	else
 		change ui_preview_pak_size = <loadpak_alloc_size>
 	endif
-	mempopcontext
+	MemPopContext
 endscript
 
 script debug_ui_show_paksize 
-	if screenelementexists \{id = debugpaksize}
-		destroyscreenelement \{id = debugpaksize}
+	if ScreenElementExists \{id = debugpaksize}
+		DestroyScreenElement \{id = debugpaksize}
 	endif
-	if gotparam \{die}
+	if GotParam \{Die}
 		return
 	endif
 	if ($ui_preview_pak_size < 0)
-		<text> = qs(0x661324a9)
+		<text> = qs("\LTest Pak: not loaded")
 	else
-		formattext textname = text qs(0x81a85be4) d = ($ui_preview_pak_size / 1024) usecommas
+		FormatText TextName = text qs("\LTest Pak: %dkb") d = ($ui_preview_pak_size / 1024) usecommas
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = root_window
 		id = debugpaksize
 		just = [left center]

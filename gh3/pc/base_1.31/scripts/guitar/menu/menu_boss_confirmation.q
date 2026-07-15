@@ -5,13 +5,13 @@ script create_boss_confirmation_screen
 		tile_sprite = 0
 		menu_pos = (605.0, 380.0)}
 	create_pause_menu_frame
-	text_params = {parent = bc_vmenu type = textelement font = text_a4 rgba = ($menu_unfocus_color)}
-	createscreenelement {
-		parent = bc_scroll type = textelement font = text_a4 rgba = ($menu_unfocus_color)
+	text_params = {parent = bc_vmenu type = TextElement font = text_a4 rgba = ($menu_unfocus_color)}
+	CreateScreenElement {
+		parent = bc_scroll type = TextElement font = text_a4 rgba = ($menu_unfocus_color)
 		text = "PLAY BOSS BATTLE?"
 		pos = {(35.0, -45.0) relative}
 	}
-	createscreenelement {
+	CreateScreenElement {
 		<text_params>
 		text = "YES"
 		event_handlers = [
@@ -20,7 +20,7 @@ script create_boss_confirmation_screen
 			{pad_choose ui_flow_manager_respond_to_action params = {action = choose_yes}}
 		]
 	}
-	createscreenelement {
+	CreateScreenElement {
 		<text_params>
 		text = "NO"
 		event_handlers = [

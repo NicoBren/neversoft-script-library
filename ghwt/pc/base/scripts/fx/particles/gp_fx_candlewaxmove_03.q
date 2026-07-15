@@ -1,55 +1,55 @@
-gp_fx_candlewaxmove_03 = {
+GP_FX_CandleWaxMove_03 = {
 	pos = (0.002791, -3.2148218, 2.0365732)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = textureribbontrail
 	active
-	createdatstart
+	CreatedAtStart
 	attach
-	align
-	applypositionoffset
-	attachobject = z_cathedral_g_chandparent
-	emitrangedims = (0.01, 0.01, 0.01)
-	emit_target = (0.0, 1.0, 0.0)
-	enablerotate
-	emitangle = (0.0, 0.0, 0.0)
+	Align
+	ApplyPositionOffset
+	AttachObject = z_cathedral_g_ChandParent
+	EmitRangeDims = (0.01, 0.01, 0.01)
+	emit_Target = (0.0, 1.0, 0.0)
+	EnableRotate
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, -10.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 0.0
-	liferange = (1.7, 2.0)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 0.0
+	LifeRange = (1.7, 2.0)
 	emit_rate = 2.0
 	max = 0
-	timeseed = 0.0
-	lifetime = 0.0
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = triangle
-	emitperiod = 5.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 0.0
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = triangle
+	EmitPeriod = 5.0
+	SizeRange = [
 		(0.03, 0.1)
 		(0.02, 0.1)
 	]
-	speedrange = (0.1, 0.2)
-	rotvel = (0.0, 0.0)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	pathfollowtime = 0.08
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (0.1, 0.2)
+	RotVel = (0.0, 0.0)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.08
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = 555553279
-	lod_default
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = jow_spark01
-		specularpower = 0
+	LOD_Default
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = JOW_Spark01
+		SpecularPower = 0
 		alphacutoff = 1
-		blendmode = add
-		quadanimationfps = 0
+		blendMode = Add
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.74808604, 0.0, -0.0)
 		(-0.74808604, 0.0, -0.0)
 		(-0.72039497, 0.0, -0.0)
@@ -63,7 +63,7 @@ gp_fx_candlewaxmove_03 = {
 		(0.825195, 0.0, -0.0)
 		(0.825195, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-256
 		-256
 		-1
@@ -73,7 +73,7 @@ gp_fx_candlewaxmove_03 = {
 		-256
 		-256
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.052803
 		0.82458603
 		1.0

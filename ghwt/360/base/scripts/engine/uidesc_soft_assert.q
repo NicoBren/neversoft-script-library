@@ -1,6 +1,6 @@
 uidesc_soft_assert = {
-	descversion = 1
-	Name = uidesc_soft_assert
+	DescVersion = 1
+	name = uidesc_soft_assert
 	rect = [
 		0.0
 		0.0
@@ -11,20 +11,20 @@ uidesc_soft_assert = {
 		{
 			path = [
 				{
-					validatelocalid = soft_assert_anchor
+					validateLocalID = soft_assert_anchor
 				}
 				{
 					index = 2
-					validatelocalid = window
-					includeparentowned = FALSE
+					validateLocalID = window
+					includeParentOwned = false
 				}
 				{
 					index = 0
-					validatelocalid = menu
-					includeparentowned = FALSE
+					validateLocalID = menu
+					includeParentOwned = false
 				}
 			]
-			Name = alias_menu
+			name = alias_menu
 			visiblename = 'alias_menu'
 			help = 'soft_assert_anchor -> window -> menu'
 		}
@@ -33,331 +33,331 @@ uidesc_soft_assert = {
 		{
 			path = [
 				{
-					validatelocalid = soft_assert_anchor
+					validateLocalID = soft_assert_anchor
 				}
 				{
 					index = 2
-					validatelocalid = window
-					includeparentowned = FALSE
+					validateLocalID = window
+					includeParentOwned = false
 				}
 				{
 					index = 0
-					validatelocalid = menu
-					includeparentowned = FALSE
+					validateLocalID = menu
+					includeParentOwned = false
 				}
 				{
 					index = 0
-					validatelocalid = file
-					includeparentowned = FALSE
+					validateLocalID = file
+					includeParentOwned = false
 				}
 			]
-			Name = file_text
+			name = file_text
 			visiblename = 'file_text'
 			help = 'soft_assert_anchor -> window -> menu -> file => text'
 			target = text
-			Type = string_wchar
+			type = string_wchar
 		}
 		{
 			path = [
 				{
-					validatelocalid = soft_assert_anchor
+					validateLocalID = soft_assert_anchor
 				}
 				{
 					index = 2
-					validatelocalid = window
-					includeparentowned = FALSE
+					validateLocalID = window
+					includeParentOwned = false
 				}
 				{
 					index = 0
-					validatelocalid = menu
-					includeparentowned = FALSE
+					validateLocalID = menu
+					includeParentOwned = false
 				}
 				{
 					index = 1
-					validatelocalid = build
-					includeparentowned = FALSE
+					validateLocalID = build
+					includeParentOwned = false
 				}
 			]
-			Name = build_text
+			name = build_text
 			visiblename = 'build_text'
 			help = 'soft_assert_anchor -> window -> menu -> build => text'
 			target = text
-			Type = string_wchar
+			type = string_wchar
 		}
 		{
 			path = [
 				{
-					validatelocalid = soft_assert_anchor
+					validateLocalID = soft_assert_anchor
 				}
 				{
 					index = 2
-					validatelocalid = window
-					includeparentowned = FALSE
+					validateLocalID = window
+					includeParentOwned = false
 				}
 				{
 					index = 0
-					validatelocalid = menu
-					includeparentowned = FALSE
+					validateLocalID = menu
+					includeParentOwned = false
 				}
 				{
 					index = 2
-					validatelocalid = line
-					includeparentowned = FALSE
+					validateLocalID = line
+					includeParentOwned = false
 				}
 			]
-			Name = line_text
+			name = line_text
 			visiblename = 'line_text'
 			help = 'soft_assert_anchor -> window -> menu -> line => text'
 			target = text
-			Type = string_wchar
+			type = string_wchar
 		}
 		{
 			path = [
 				{
-					validatelocalid = soft_assert_anchor
+					validateLocalID = soft_assert_anchor
 				}
 				{
 					index = 2
-					validatelocalid = window
-					includeparentowned = FALSE
+					validateLocalID = window
+					includeParentOwned = false
 				}
 				{
 					index = 0
-					validatelocalid = menu
-					includeparentowned = FALSE
+					validateLocalID = menu
+					includeParentOwned = false
 				}
 				{
 					index = 3
-					validatelocalid = message
-					includeparentowned = FALSE
+					validateLocalID = message
+					includeParentOwned = false
 				}
 			]
-			Name = message_text
+			name = message_text
 			visiblename = 'message_text'
 			help = 'soft_assert_anchor -> window -> menu -> message => text'
 			target = text
-			Type = string_wchar
+			type = string_wchar
 		}
 		{
 			path = [
 				{
-					validatelocalid = soft_assert_anchor
+					validateLocalID = soft_assert_anchor
 				}
 				{
 					index = 2
-					validatelocalid = window
-					includeparentowned = FALSE
+					validateLocalID = window
+					includeParentOwned = false
 				}
 				{
 					index = 0
-					validatelocalid = menu
-					includeparentowned = FALSE
+					validateLocalID = menu
+					includeParentOwned = false
 				}
 				{
 					index = 4
-					validatelocalid = callstack
-					includeparentowned = FALSE
+					validateLocalID = callstack
+					includeParentOwned = false
 				}
 			]
-			Name = callstack_text
+			name = callstack_text
 			visiblename = 'callstack_text'
 			help = 'soft_assert_anchor -> window -> menu -> callstack => text'
 			target = text
-			Type = string_wchar
+			type = string_wchar
 		}
 		{
 			path = [
 				{
-					validatelocalid = soft_assert_anchor
+					validateLocalID = soft_assert_anchor
 				}
 				{
 					index = 3
-					validatelocalid = helper
-					includeparentowned = FALSE
+					validateLocalID = helper
+					includeParentOwned = false
 				}
 			]
-			Name = helper_text
+			name = helper_text
 			visiblename = 'helper_text'
 			help = 'soft_assert_anchor -> helper => text'
 			target = text
-			Type = string_wchar
+			type = string_wchar
 		}
 		{
 			path = [
 				{
-					validatelocalid = soft_assert_anchor
+					validateLocalID = soft_assert_anchor
 				}
 				{
 					index = 2
-					validatelocalid = window
-					includeparentowned = FALSE
+					validateLocalID = window
+					includeParentOwned = false
 				}
 				{
 					index = 0
-					validatelocalid = menu
-					includeparentowned = FALSE
+					validateLocalID = menu
+					includeParentOwned = false
 				}
 				{
 					index = 0
-					validatelocalid = file
-					includeparentowned = FALSE
+					validateLocalID = file
+					includeParentOwned = false
 				}
 			]
-			Name = text_font
+			name = text_font
 			visiblename = 'text_font'
 			help = 'soft_assert_anchor -> window -> menu -> file => font'
 			target = font
-			Type = checksum
+			type = checksum
 		}
 		{
 			path = [
 				{
-					validatelocalid = soft_assert_anchor
+					validateLocalID = soft_assert_anchor
 				}
 				{
 					index = 2
-					validatelocalid = window
-					includeparentowned = FALSE
+					validateLocalID = window
+					includeParentOwned = false
 				}
 				{
 					index = 0
-					validatelocalid = menu
-					includeparentowned = FALSE
+					validateLocalID = menu
+					includeParentOwned = false
 				}
 				{
 					index = 1
-					validatelocalid = build
-					includeparentowned = FALSE
+					validateLocalID = build
+					includeParentOwned = false
 				}
 			]
-			Name = text_font
+			name = text_font
 			visiblename = 'text_font'
 			help = 'soft_assert_anchor -> window -> menu -> build => font'
 			target = font
-			Type = checksum
+			type = checksum
 		}
 		{
 			path = [
 				{
-					validatelocalid = soft_assert_anchor
+					validateLocalID = soft_assert_anchor
 				}
 				{
 					index = 2
-					validatelocalid = window
-					includeparentowned = FALSE
+					validateLocalID = window
+					includeParentOwned = false
 				}
 				{
 					index = 0
-					validatelocalid = menu
-					includeparentowned = FALSE
+					validateLocalID = menu
+					includeParentOwned = false
 				}
 				{
 					index = 2
-					validatelocalid = line
-					includeparentowned = FALSE
+					validateLocalID = line
+					includeParentOwned = false
 				}
 			]
-			Name = text_font
+			name = text_font
 			visiblename = 'text_font'
 			help = 'soft_assert_anchor -> window -> menu -> line => font'
 			target = font
-			Type = checksum
+			type = checksum
 		}
 		{
 			path = [
 				{
-					validatelocalid = soft_assert_anchor
+					validateLocalID = soft_assert_anchor
 				}
 				{
 					index = 2
-					validatelocalid = window
-					includeparentowned = FALSE
+					validateLocalID = window
+					includeParentOwned = false
 				}
 				{
 					index = 0
-					validatelocalid = menu
-					includeparentowned = FALSE
+					validateLocalID = menu
+					includeParentOwned = false
 				}
 				{
 					index = 3
-					validatelocalid = message
-					includeparentowned = FALSE
+					validateLocalID = message
+					includeParentOwned = false
 				}
 			]
-			Name = text_font
+			name = text_font
 			visiblename = 'text_font'
 			help = 'soft_assert_anchor -> window -> menu -> message => font'
 			target = font
-			Type = checksum
+			type = checksum
 		}
 		{
 			path = [
 				{
-					validatelocalid = soft_assert_anchor
+					validateLocalID = soft_assert_anchor
 				}
 				{
 					index = 2
-					validatelocalid = window
-					includeparentowned = FALSE
+					validateLocalID = window
+					includeParentOwned = false
 				}
 				{
 					index = 0
-					validatelocalid = menu
-					includeparentowned = FALSE
+					validateLocalID = menu
+					includeParentOwned = false
 				}
 				{
 					index = 4
-					validatelocalid = callstack
-					includeparentowned = FALSE
+					validateLocalID = callstack
+					includeParentOwned = false
 				}
 			]
-			Name = text_font
+			name = text_font
 			visiblename = 'text_font'
 			help = 'soft_assert_anchor -> window -> menu -> callstack => font'
 			target = font
-			Type = checksum
+			type = checksum
 		}
 		{
 			path = [
 				{
-					validatelocalid = soft_assert_anchor
+					validateLocalID = soft_assert_anchor
 				}
 				{
 					index = 1
-					validatelocalid = soft_assertion
-					includeparentowned = FALSE
+					validateLocalID = soft_assertion
+					includeParentOwned = false
 				}
 			]
-			Name = text_font
+			name = text_font
 			visiblename = 'text_font'
 			help = 'soft_assert_anchor -> soft_assertion => font'
 			target = font
-			Type = checksum
+			type = checksum
 		}
 		{
 			path = [
 				{
-					validatelocalid = soft_assert_anchor
+					validateLocalID = soft_assert_anchor
 				}
 				{
 					index = 3
-					validatelocalid = helper
-					includeparentowned = FALSE
+					validateLocalID = helper
+					includeParentOwned = false
 				}
 			]
-			Name = text_font
+			name = text_font
 			visiblename = 'text_font'
 			help = 'soft_assert_anchor -> helper => font'
 			target = font
-			Type = checksum
+			type = checksum
 		}
 	]
-	formatversion = 2
+	FormatVersion = 2
 	elements = {
 		props = {
 			local_id = soft_assert_anchor
-			Type = ContainerElement
-			hiddenlocal = FALSE
+			type = ContainerElement
+			hiddenLocal = false
 			alpha = 1.0
 			dims = (1280.0, 720.0)
 			just = [
@@ -368,9 +368,9 @@ uidesc_soft_assert = {
 				-1.0
 				-1.0
 			]
-			Pos = (0.0, 0.0)
+			pos = (0.0, 0.0)
 			z_priority = 10000.0
-			Scale = (1.0, 1.0)
+			scale = (1.0, 1.0)
 			rot_angle = 0.0
 			rgba = [
 				255
@@ -379,18 +379,18 @@ uidesc_soft_assert = {
 				255
 			]
 			events_blocked = 0
-			preserve_local_orientation = FALSE
+			preserve_local_orientation = false
 		}
 		children = [
 			{
 				props = {
 					texture = white
 					blend = blend
-					flip_h = FALSE
-					flip_v = FALSE
+					flip_h = false
+					flip_v = false
 					local_id = background
-					Type = SpriteElement
-					hiddenlocal = FALSE
+					type = SpriteElement
+					hiddenLocal = false
 					alpha = 1.0
 					dims = (1280.0, 720.0)
 					just = [
@@ -401,9 +401,9 @@ uidesc_soft_assert = {
 						-1.0
 						-1.0
 					]
-					Pos = (0.0, 0.0)
+					pos = (0.0, 0.0)
 					z_priority = 10001.0
-					Scale = (1.0, 1.0)
+					scale = (1.0, 1.0)
 					rot_angle = 0.0
 					rgba = [
 						0
@@ -412,14 +412,14 @@ uidesc_soft_assert = {
 						200
 					]
 					events_blocked = 0
-					preserve_local_orientation = FALSE
+					preserve_local_orientation = false
 				}
 			}
 			{
 				props = {
 					local_id = soft_assertion
-					Type = TextBlockElement
-					hiddenlocal = FALSE
+					type = TextBlockElement
+					hiddenLocal = false
 					alpha = 1.0
 					dims = (768.0, 36.75)
 					just = [
@@ -430,9 +430,9 @@ uidesc_soft_assert = {
 						-1.0
 						-1.0
 					]
-					Pos = (640.0, 72.0)
+					pos = (640.0, 72.0)
 					z_priority = 10002.0
-					Scale = (1.0, 1.0)
+					scale = (1.0, 1.0)
 					rot_angle = 0.0
 					rgba = [
 						255
@@ -441,12 +441,12 @@ uidesc_soft_assert = {
 						255
 					]
 					events_blocked = 0
-					preserve_local_orientation = FALSE
-					text = qs(0x715ceda6)
+					preserve_local_orientation = false
+					text = qs("\L\c2Soft Assertion:")
 					font = debug
-					single_line = FALSE
+					single_line = false
 					fit_width = wrap
-					fit_height = `scale	down	if	larger`
+					fit_height = `scale down if larger`
 					scale_mode = proportional
 					internal_just = [
 						0.0
@@ -456,8 +456,8 @@ uidesc_soft_assert = {
 					blend = blend
 					font_spacing = -1
 					override_color_tag_alpha = true
-					override_color_tag_rgba = FALSE
-					use_shadow = FALSE
+					override_color_tag_rgba = false
+					use_shadow = false
 					shadow_rgba = [
 						0
 						0
@@ -471,8 +471,8 @@ uidesc_soft_assert = {
 			{
 				props = {
 					local_id = window
-					Type = WindowElement
-					hiddenlocal = FALSE
+					type = WindowElement
+					hiddenLocal = false
 					alpha = 1.0
 					dims = (768.0, 576.0)
 					just = [
@@ -483,9 +483,9 @@ uidesc_soft_assert = {
 						-1.0
 						-1.0
 					]
-					Pos = (256.0, 72.0)
+					pos = (256.0, 72.0)
 					z_priority = 10001.0
-					Scale = (1.0, 1.0)
+					scale = (1.0, 1.0)
 					rot_angle = 0.0
 					rgba = [
 						255
@@ -494,14 +494,14 @@ uidesc_soft_assert = {
 						255
 					]
 					events_blocked = 0
-					preserve_local_orientation = FALSE
+					preserve_local_orientation = false
 				}
 				children = [
 					{
 						props = {
 							local_id = menu
-							Type = menuelement
-							hiddenlocal = FALSE
+							type = MenuElement
+							hiddenLocal = false
 							alpha = 1.0
 							dims = (768.0, 220.5)
 							just = [
@@ -512,9 +512,9 @@ uidesc_soft_assert = {
 								-1.0
 								-1.0
 							]
-							Pos = (0.0, 0.0)
+							pos = (0.0, 0.0)
 							z_priority = 10001.0
-							Scale = (1.0, 1.0)
+							scale = (1.0, 1.0)
 							rot_angle = 0.0
 							rgba = [
 								255
@@ -523,8 +523,8 @@ uidesc_soft_assert = {
 								255
 							]
 							events_blocked = 0
-							preserve_local_orientation = FALSE
-							isvertical = true
+							preserve_local_orientation = false
+							isVertical = true
 							internal_just = [
 								-1.0
 								-1.0
@@ -538,8 +538,8 @@ uidesc_soft_assert = {
 							{
 								props = {
 									local_id = file
-									Type = TextBlockElement
-									hiddenlocal = FALSE
+									type = TextBlockElement
+									hiddenLocal = false
 									alpha = 1.0
 									dims = (768.0, 36.75)
 									just = [
@@ -550,9 +550,9 @@ uidesc_soft_assert = {
 										-1.0
 										-1.0
 									]
-									Pos = (0.0, 18.374998)
+									pos = (0.0, 18.374998)
 									z_priority = 10002.0
-									Scale = (1.0, 1.0)
+									scale = (1.0, 1.0)
 									rot_angle = 0.0
 									rgba = [
 										200
@@ -561,12 +561,12 @@ uidesc_soft_assert = {
 										255
 									]
 									events_blocked = 0
-									preserve_local_orientation = FALSE
-									text = qs(0x5d7df441)
+									preserve_local_orientation = false
+									text = qs("\L\c2File: \c0")
 									font = debug
-									single_line = FALSE
+									single_line = false
 									fit_width = wrap
-									fit_height = `expand	dims`
+									fit_height = `expand dims`
 									scale_mode = proportional
 									internal_just = [
 										-1.0
@@ -576,8 +576,8 @@ uidesc_soft_assert = {
 									blend = blend
 									font_spacing = -1
 									override_color_tag_alpha = true
-									override_color_tag_rgba = FALSE
-									use_shadow = FALSE
+									override_color_tag_rgba = false
+									use_shadow = false
 									shadow_rgba = [
 										0
 										0
@@ -591,8 +591,8 @@ uidesc_soft_assert = {
 							{
 								props = {
 									local_id = build
-									Type = TextBlockElement
-									hiddenlocal = FALSE
+									type = TextBlockElement
+									hiddenLocal = false
 									alpha = 1.0
 									dims = (768.0, 36.75)
 									just = [
@@ -603,9 +603,9 @@ uidesc_soft_assert = {
 										-1.0
 										-1.0
 									]
-									Pos = (0.0, 55.125)
+									pos = (0.0, 55.125)
 									z_priority = 10002.0
-									Scale = (1.0, 1.0)
+									scale = (1.0, 1.0)
 									rot_angle = 0.0
 									rgba = [
 										200
@@ -614,12 +614,12 @@ uidesc_soft_assert = {
 										255
 									]
 									events_blocked = 0
-									preserve_local_orientation = FALSE
-									text = qs(0x16e1c60a)
+									preserve_local_orientation = false
+									text = qs("\L\c2Build: \c0")
 									font = debug
-									single_line = FALSE
+									single_line = false
 									fit_width = wrap
-									fit_height = `expand	dims`
+									fit_height = `expand dims`
 									scale_mode = proportional
 									internal_just = [
 										-1.0
@@ -629,8 +629,8 @@ uidesc_soft_assert = {
 									blend = blend
 									font_spacing = -1
 									override_color_tag_alpha = true
-									override_color_tag_rgba = FALSE
-									use_shadow = FALSE
+									override_color_tag_rgba = false
+									use_shadow = false
 									shadow_rgba = [
 										0
 										0
@@ -644,8 +644,8 @@ uidesc_soft_assert = {
 							{
 								props = {
 									local_id = line
-									Type = TextBlockElement
-									hiddenlocal = FALSE
+									type = TextBlockElement
+									hiddenLocal = false
 									alpha = 1.0
 									dims = (768.0, 36.75)
 									just = [
@@ -656,9 +656,9 @@ uidesc_soft_assert = {
 										-1.0
 										-1.0
 									]
-									Pos = (0.0, 91.875)
+									pos = (0.0, 91.875)
 									z_priority = 10002.0
-									Scale = (1.0, 1.0)
+									scale = (1.0, 1.0)
 									rot_angle = 0.0
 									rgba = [
 										200
@@ -667,12 +667,12 @@ uidesc_soft_assert = {
 										255
 									]
 									events_blocked = 0
-									preserve_local_orientation = FALSE
-									text = qs(0x557fdea3)
+									preserve_local_orientation = false
+									text = qs("\L\c2Line Number: \c0")
 									font = debug
-									single_line = FALSE
+									single_line = false
 									fit_width = wrap
-									fit_height = `expand	dims`
+									fit_height = `expand dims`
 									scale_mode = proportional
 									internal_just = [
 										-1.0
@@ -682,8 +682,8 @@ uidesc_soft_assert = {
 									blend = blend
 									font_spacing = -1
 									override_color_tag_alpha = true
-									override_color_tag_rgba = FALSE
-									use_shadow = FALSE
+									override_color_tag_rgba = false
+									use_shadow = false
 									shadow_rgba = [
 										0
 										0
@@ -697,8 +697,8 @@ uidesc_soft_assert = {
 							{
 								props = {
 									local_id = message
-									Type = TextBlockElement
-									hiddenlocal = FALSE
+									type = TextBlockElement
+									hiddenLocal = false
 									alpha = 1.0
 									dims = (768.0, 36.75)
 									just = [
@@ -709,9 +709,9 @@ uidesc_soft_assert = {
 										-1.0
 										-1.0
 									]
-									Pos = (0.0, 128.62502)
+									pos = (0.0, 128.62502)
 									z_priority = 10002.0
-									Scale = (1.0, 1.0)
+									scale = (1.0, 1.0)
 									rot_angle = 0.0
 									rgba = [
 										200
@@ -720,12 +720,12 @@ uidesc_soft_assert = {
 										255
 									]
 									events_blocked = 0
-									preserve_local_orientation = FALSE
-									text = qs(0xdca379bf)
+									preserve_local_orientation = false
+									text = qs("\L\c2Message: \c0")
 									font = debug
-									single_line = FALSE
+									single_line = false
 									fit_width = wrap
-									fit_height = `expand	dims`
+									fit_height = `expand dims`
 									scale_mode = proportional
 									internal_just = [
 										-1.0
@@ -735,8 +735,8 @@ uidesc_soft_assert = {
 									blend = blend
 									font_spacing = -1
 									override_color_tag_alpha = true
-									override_color_tag_rgba = FALSE
-									use_shadow = FALSE
+									override_color_tag_rgba = false
+									use_shadow = false
 									shadow_rgba = [
 										0
 										0
@@ -750,8 +750,8 @@ uidesc_soft_assert = {
 							{
 								props = {
 									local_id = callstack
-									Type = TextBlockElement
-									hiddenlocal = FALSE
+									type = TextBlockElement
+									hiddenLocal = false
 									alpha = 1.0
 									dims = (768.0, 36.75)
 									just = [
@@ -762,9 +762,9 @@ uidesc_soft_assert = {
 										-1.0
 										-1.0
 									]
-									Pos = (0.0, 165.37502)
+									pos = (0.0, 165.37502)
 									z_priority = 10002.0
-									Scale = (1.0, 1.0)
+									scale = (1.0, 1.0)
 									rot_angle = 0.0
 									rgba = [
 										200
@@ -773,12 +773,12 @@ uidesc_soft_assert = {
 										255
 									]
 									events_blocked = 0
-									preserve_local_orientation = FALSE
-									text = qs(0xdf520d3a)
+									preserve_local_orientation = false
+									text = qs("\L\c2Callstack: \c0")
 									font = debug
-									single_line = FALSE
+									single_line = false
 									fit_width = wrap
-									fit_height = `expand	dims`
+									fit_height = `expand dims`
 									scale_mode = proportional
 									internal_just = [
 										-1.0
@@ -788,8 +788,8 @@ uidesc_soft_assert = {
 									blend = blend
 									font_spacing = -1
 									override_color_tag_alpha = true
-									override_color_tag_rgba = FALSE
-									use_shadow = FALSE
+									override_color_tag_rgba = false
+									use_shadow = false
 									shadow_rgba = [
 										0
 										0
@@ -807,8 +807,8 @@ uidesc_soft_assert = {
 			{
 				props = {
 					local_id = helper
-					Type = TextBlockElement
-					hiddenlocal = FALSE
+					type = TextBlockElement
+					hiddenLocal = false
 					alpha = 1.0
 					dims = (768.0, 36.75)
 					just = [
@@ -819,9 +819,9 @@ uidesc_soft_assert = {
 						-1.0
 						-1.0
 					]
-					Pos = (640.0, 648.0)
+					pos = (640.0, 648.0)
 					z_priority = 10002.0
-					Scale = (1.0, 1.0)
+					scale = (1.0, 1.0)
 					rot_angle = 0.0
 					rgba = [
 						255
@@ -830,12 +830,12 @@ uidesc_soft_assert = {
 						255
 					]
 					events_blocked = 0
-					preserve_local_orientation = FALSE
-					text = qs(0x35d24a9a)
+					preserve_local_orientation = false
+					text = qs("\L\c4continue: (\b2 + \b0 + \b1)")
 					font = debug
-					single_line = FALSE
-					fit_width = `scale	each	line	if	larger`
-					fit_height = `scale	down	if	larger`
+					single_line = false
+					fit_width = `scale each line if larger`
+					fit_height = `scale down if larger`
 					scale_mode = proportional
 					internal_just = [
 						0.0
@@ -845,8 +845,8 @@ uidesc_soft_assert = {
 					blend = blend
 					font_spacing = -1
 					override_color_tag_alpha = true
-					override_color_tag_rgba = FALSE
-					use_shadow = FALSE
+					override_color_tag_rgba = false
+					use_shadow = false
 					shadow_rgba = [
 						0
 						0
@@ -861,8 +861,8 @@ uidesc_soft_assert = {
 	}
 }
 uidesc_soft_assert_nxgui = {
-	workspaceform = {
-		expansionstate = [
+	WorkspaceForm = {
+		ExpansionState = [
 		]
 	}
 }

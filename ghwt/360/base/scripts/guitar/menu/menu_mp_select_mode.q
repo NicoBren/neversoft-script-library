@@ -3,16 +3,16 @@ coop_dlc_active = 0
 menu_mp_select_mode_is_friendly_faceoff = 0
 
 script create_mp_select_mode_menu 
-	Change \{coop_dlc_active = 0}
-	Change \{menu_mp_select_mode_is_friendly_faceoff = 0}
-	Change \{rich_presence_context = presence_menus}
+	change \{coop_dlc_active = 0}
+	change \{menu_mp_select_mode_is_friendly_faceoff = 0}
+	change \{rich_presence_context = presence_menus}
 	if (($is_network_game) = 1)
-		title_text = qs(0x220fe81c)
+		title_text = qs("create match")
 		title_pos = (585.0, 115.0)
 		left_flourish_offset = (-187.0, -9.0)
 		right_flourish_offset = (-210.0, -28.0)
 	else
-		title_text = qs(0x1f671e32)
+		title_text = qs("multiplayer")
 		title_pos = (600.0, 115.0)
 		left_flourish_offset = (-170.0, -10.0)
 		right_flourish_offset = (-193.0, -29.5)
@@ -45,102 +45,102 @@ script create_mp_select_mode_menu
 			0
 			250
 		]}
-	Scale = 0.7
+	scale = 0.7
 	text_params = {
-		Type = TextElement
+		type = TextElement
 		parent = current_menu
 		font = ($menu_mp_select_mode_font)
-		Scale = <Scale>
+		scale = <scale>
 		rgba = ($menu_unfocus_color)
 		rot_angle = -7
 	}
 	create_menu_backdrop \{texture = mode_2p_bg}
 	z = 1
 	g_rot_angle = -3
-	CreateScreenElement \{Type = ContainerElement
+	CreateScreenElement \{type = ContainerElement
 		id = mpsm_container
 		parent = root_window
-		Pos = (0.0, 0.0)}
+		pos = (0.0, 0.0)}
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = mpsm_container
 		texture = mode_2p_lp
 		id = record
 		just = [center center]
-		Pos = (850.0, 340.0)
+		pos = (850.0, 340.0)
 		dims = (540.0, 540.0)
 		z_priority = (<z> + 0.1)
 	}
-	SpawnScriptNow \{menu_select_multiplayer_mode_record_rotate}
+	spawnscriptnow \{menu_select_multiplayer_mode_record_rotate}
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = mpsm_container
 		texture = mode_2p_lp_jacket02
 		just = [center center]
-		Pos = (600.0, 360.0)
+		pos = (600.0, 360.0)
 		rot_angle = <g_rot_angle>
 		dims = (600.0, 600.0)
 		z_priority = (<z> + 0.2)
 	}
 	blood_splat_dims = (164.0, 164.0)
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = mpsm_container
 		texture = mode_2p_highlight01
 		id = blood_splat_01
 		just = [center center]
-		Pos = (3040.0, 3060.0)
+		pos = (3040.0, 3060.0)
 		z_priority = (<z> + 2)
 		rgba = [20 180 20 0]
 		just = [0 0.7]
 		dims = <blood_splat_dims>
 	}
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = mpsm_container
 		texture = mode_2p_highlight02
 		id = blood_splat_02
 		just = [center center]
-		Pos = (3040.0, 3060.0)
+		pos = (3040.0, 3060.0)
 		z_priority = (<z> + 2)
 		rgba = [20 180 20 0]
 		just = [0.25 0.4]
 		dims = <blood_splat_dims>
 	}
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = mpsm_container
 		font = ($menu_mp_select_mode_font)
 		text = <title_text>
 		id = multiplayer_text
 		rgba = [220 220 220 250]
-		Pos = <title_pos>
-		Scale = (1.5, 1.3)
+		pos = <title_pos>
+		scale = (1.5, 1.3)
 		font_spacing = 2
 		rot_angle = <g_rot_angle>
 	}
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = mpsm_container
 		font = ($menu_mp_select_mode_font)
-		text = qs(0x89bcc52d)
+		text = qs("CHOOSE MODE")
 		rgba = [100 100 100 250]
-		Pos = (600.0, 165.0)
-		Scale = (0.8, 0.8)
+		pos = (600.0, 165.0)
+		scale = (0.8, 0.8)
 		font_spacing = 2
 		rot_angle = <g_rot_angle>
 	}
 	fastscreenelementpos \{id = multiplayer_text
 		absolute}
 	GetScreenElementDims \{id = multiplayer_text}
-	mp_text_center = (<screenelementpos> + (0.0, 0.5) * <height>)
+	mp_text_center = (<screenelementpos> + (0.0, 0.5) * <Height>)
 	flourish_dims = ((64.0, 32.0) * 1.3)
 	<left_flourish_offset> = ((-0.5, 0.0) * <width> + (0.0, -5.0))
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = mpsm_container
 		texture = mode_2p_flourish
-		Pos = (<mp_text_center> + <left_flourish_offset>)
+		pos = (<mp_text_center> + <left_flourish_offset>)
 		rot_angle = <g_rot_angle>
 		dims = <flourish_dims>
 		z_priority = (<z> + 3)
@@ -150,10 +150,10 @@ script create_mp_select_mode_menu
 	}
 	<right_flourish_offset> = ((0.5, 0.0) * <width> + (0.0, -20.0))
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = mpsm_container
 		texture = mode_2p_flourish
-		Pos = (<mp_text_center> + <right_flourish_offset>)
+		pos = (<mp_text_center> + <right_flourish_offset>)
 		rot_angle = <g_rot_angle>
 		dims = <flourish_dims>
 		z_priority = (<z> + 3)
@@ -163,7 +163,7 @@ script create_mp_select_mode_menu
 	CreateScreenElement {
 		<text_params>
 		id = sm_faceofftext_id
-		text = qs(0x0952b48b)
+		text = qs("FACE-OFF")
 		event_handlers = [
 			{focus menu_select_multiplayer_mode_focus}
 			{unfocus menu_select_multiplayer_mode_unfocus}
@@ -172,7 +172,7 @@ script create_mp_select_mode_menu
 	}
 	CreateScreenElement {
 		<text_params>
-		text = qs(0x46577877)
+		text = qs("PRO FACE-OFF")
 		event_handlers = [
 			{focus menu_select_multiplayer_mode_focus}
 			{unfocus menu_select_multiplayer_mode_unfocus}
@@ -181,18 +181,18 @@ script create_mp_select_mode_menu
 	}
 	CreateScreenElement {
 		<text_params>
-		text = qs(0x33b59779)
+		text = qs("BATTLE")
 		event_handlers = [
 			{focus menu_select_multiplayer_mode_focus}
 			{unfocus menu_select_multiplayer_mode_unfocus}
 			{pad_choose mp_select_mode_menu_select_mode params = {mode = p2_battle}}
 		]
 	}
-	add_user_control_helper \{text = qs(0xc18d5e76)
+	add_user_control_helper \{text = qs("SELECT")
 		button = green}
-	add_user_control_helper \{text = qs(0xaf4d5dd2)
+	add_user_control_helper \{text = qs("BACK")
 		button = red}
-	LaunchEvent \{Type = focus
+	LaunchEvent \{type = focus
 		target = current_menu}
 endscript
 
@@ -200,25 +200,25 @@ script destroy_mp_select_mode_menu
 	destroy_menu \{menu_id = scrolling_mp_select_mode_menu}
 	destroy_menu_backdrop
 	destroy_menu \{menu_id = mpsm_container}
-	KillSpawnedScript \{Name = menu_select_multiplayer_mode_record_rotate}
+	KillSpawnedScript \{name = menu_select_multiplayer_mode_record_rotate}
 	clean_up_user_control_helpers
 endscript
 
 script mp_select_mode_menu_select_mode \{mode = p2_faceoff}
-	LaunchEvent \{Type = unfocus
+	LaunchEvent \{type = unfocus
 		target = current_menu}
 	if GotParam \{friendly}
-		Change \{menu_mp_select_mode_is_friendly_faceoff = 1}
+		change \{menu_mp_select_mode_is_friendly_faceoff = 1}
 	endif
-	Change \{band_mode_mode = None}
-	Change game_mode = <mode>
+	change \{band_mode_mode = none}
+	change game_mode = <mode>
 	if GotParam \{set_coop_dlc}
-		Change \{coop_dlc_active = 1}
+		change \{coop_dlc_active = 1}
 	endif
 	if (($is_network_game) = 1)
 		ui_flow_manager_respond_to_action \{action = select_game_mode}
 		if ScreenElementExists \{id = current_menu}
-			LaunchEvent \{Type = focus
+			LaunchEvent \{type = focus
 				target = current_menu}
 		endif
 	else
@@ -244,15 +244,15 @@ endscript
 
 script menu_select_multiplayer_mode_focus 
 	retail_menu_focus
-	Change record_angle_change = (-1 * ($record_angle_change))
+	change record_angle_change = (-1 * ($record_angle_change))
 	GetTags
 	Obj_GetID
-	<id> = <objID>
-	SetScreenElementProps id = <id> Scale = 1.05
+	<id> = <ObjID>
+	SetScreenElementProps id = <id> scale = 1.05
 	if (<id> = sm_faceofftext_id)
 		GetScreenElementDims id = <id>
 		if (<width> > 260)
-			SetScreenElementProps id = <id> Scale = 1
+			SetScreenElementProps id = <id> scale = 1
 			fit_text_in_rectangle id = <id> dims = (260.0, 50.0)
 		endif
 	endif
@@ -263,13 +263,13 @@ script menu_select_multiplayer_mode_unfocus
 	retail_menu_unfocus
 	GetTags
 	Obj_GetID
-	<id> = <objID>
-	Scale = 0.7
-	SetScreenElementProps id = <id> Scale = <Scale>
+	<id> = <ObjID>
+	scale = 0.7
+	SetScreenElementProps id = <id> scale = <scale>
 	if (<id> = sm_faceofftext_id)
 		GetScreenElementDims id = <id>
 		if (<width> > 260)
-			SetScreenElementProps id = <id> Scale = 1
+			SetScreenElementProps id = <id> scale = 1
 			fit_text_in_rectangle id = <id> dims = (250.0, 44.0)
 		endif
 	endif
@@ -294,25 +294,25 @@ script menu_select_multiplayer_mode_attach_random_blood_splat
 	GetScreenElementDims id = <id>
 	GetRandomValue \{a = 0
 		b = 1
-		integer
-		Name = bottom}
+		Integer
+		name = bottom}
 	GetRandomValue \{a = 0
 		b = 1
-		Name = horiz_ratio}
-	splat_placement = (<screenelementpos> + (0.0, -1.0) * 12 + (0.0, 1.0) * (<bottom> * <height>) + (1.0, 0.0) * (<width> * <horiz_ratio>))
+		name = horiz_ratio}
+	splat_placement = (<screenelementpos> + (0.0, -1.0) * 12 + (0.0, 1.0) * (<bottom> * <Height>) + (1.0, 0.0) * (<width> * <horiz_ratio>))
 	GetRandomValue \{a = 1
 		b = 2
-		integer
-		Name = random_splat}
+		Integer
+		name = random_splat}
 	if (<bottom> = 0)
 		GetRandomValue \{a = -90
 			b = 90
-			Name = random_rot}
+			name = random_rot}
 	else
 		GetRandomValue \{a = 90
 			b = 180
-			Name = random_rot}
+			name = random_rot}
 	endif
-	formatText checksumName = splat_id 'blood_splat_0%d' d = <random_splat>
-	SetScreenElementProps id = <splat_id> rgba = [100 100 100 100] Pos = <splat_placement> rot_angle = <random_rot>
+	FormatText checksumname = splat_id 'blood_splat_0%d' d = <random_splat>
+	SetScreenElementProps id = <splat_id> rgba = [100 100 100 100] pos = <splat_placement> rot_angle = <random_rot>
 endscript

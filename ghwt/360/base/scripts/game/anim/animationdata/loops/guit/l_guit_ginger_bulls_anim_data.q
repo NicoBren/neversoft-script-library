@@ -1,36 +1,36 @@
-l_guit_ginger_bulls_anims_set = {
+L_GUIT_ginger_bulls_anims_set = {
 	Stance_A = {
 		Idle = {
 			good = {
-				slow = [
+				Slow = [
 					guit_ginger_bulls_075_01
 				]
-				med = [
+				Med = [
 					guit_ginger_bulls_100_01
 				]
-				FAST = [
+				Fast = [
 					guit_ginger_bulls_120_01
 				]
 			}
 			Normal = {
-				slow = [
+				Slow = [
 					guit_ginger_bulls_075_01
 				]
-				med = [
+				Med = [
 					guit_ginger_bulls_100_01
 				]
-				FAST = [
+				Fast = [
 					guit_ginger_bulls_120_01
 				]
 			}
-			bad = {
-				slow = [
+			Bad = {
+				Slow = [
 					guit_ginger_bulls_075_01
 				]
-				med = [
+				Med = [
 					guit_ginger_bulls_100_01
 				]
-				FAST = [
+				Fast = [
 					guit_ginger_bulls_120_01
 				]
 			}

@@ -2,12 +2,12 @@
 script ui_create_options_data_delete 
 	if NOT GotParam \{really}
 		create_popup_warning_menu \{textblock = {
-				text = qs(0x113bad66)
+				text = qs("Are you sure you want to reset your progress and overwrite your current save??")
 			}
 			options = [
 				{
 					func = generic_event_back
-					text = qs(0xf7723015)
+					text = qs("CANCEL")
 				}
 				{
 					func = generic_event_replace
@@ -17,17 +17,17 @@ script ui_create_options_data_delete
 							really = 1
 						}
 					}
-					text = qs(0xc2993a50)
+					text = qs("I'M SURE")
 				}
 			]}
 	elseif NOT GotParam \{confirm}
 		create_popup_warning_menu \{textblock = {
-				text = qs(0x1df63a52)
+				text = qs("Are you really sure you want to reset your progress and overwrite your current save?  All career progress, cash earned, items unlocked, rock stars created, etc. will be lost!")
 			}
 			options = [
 				{
 					func = generic_event_back
-					text = qs(0xf7723015)
+					text = qs("CANCEL")
 				}
 				{
 					func = generic_event_replace
@@ -38,22 +38,22 @@ script ui_create_options_data_delete
 							confirm = 1
 						}
 					}
-					text = qs(0x120d3970)
+					text = qs("I'M REALLY SURE")
 				}
 			]}
 	else
 		if isXenon
-			text = qs(0xe4655cd5)
+			text = qs("Clearing all of your save data...\nPlease do not turn off your Xbox 360 console.")
 		else
-			text = qs(0x3cb30bee)
+			text = qs("Clearing all of your save data...\nDo not switch off power during this time.")
 		endif
 		create_popup_warning_menu {
 			textblock = {
 				text = <text>
 			}
 		}
-		SpawnScriptNow \{ui_options_data_delete}
-		menu_music_off
+		spawnscriptnow \{ui_options_data_delete}
+		Menu_Music_Off
 	endif
 endscript
 
@@ -73,7 +73,7 @@ script ui_options_data_delete
 	SetGlobalTags user_options params = {autosave = <autosave>}
 	ui_event_wait_for_safe
 	ui_memcard_save \{event = menu_change
-		state = uistate_boot_iis
+		state = UIstate_boot_iis
 		data = {
 			clear_previous_stack
 		}}

@@ -4,12 +4,12 @@ script ui_create_cap_main \{album_cover = 0}
 endscript
 
 script ui_create_cap_main_spawned savegame = ($cas_current_savegame)
-	if NOT gotparam \{old_save_checksum}
+	if NOT GotParam \{old_save_checksum}
 		globaltag_getarraychecksum savegame = <savegame> array_name = player_created_graphics_save
 		old_save_checksum = <array_checksum>
 		ui_event_add_params old_save_checksum = <old_save_checksum>
 	endif
-	if NOT checksumequals a = <part> b = cas_band_logo
+	if NOT ChecksumEquals a = <part> b = CAS_Band_Logo
 		show_history = {show_history}
 	else
 		no_show_history = 1
@@ -24,50 +24,50 @@ script ui_create_cap_main_spawned savegame = ($cas_current_savegame)
 	}
 	add_generic_menu_icon_item {
 		icon = icon_current
-		text = qs(0x57a22b82)
-		choose_state = uistate_cap_layers_list
+		text = qs("EDIT")
+		choose_state = UIstate_cap_layers_list
 		choose_state_data = {part = <part> div_id = <div_id> camera_list = <camera_list> zoom_camera = <zoom_camera> override_base_name = <cam_name>}
 	}
 	dim_save_option_for_guest <...>
 	add_generic_menu_icon_item {
 		icon = icon_save
-		text = qs(0xe618e644)
+		text = qs("SAVE")
 		pad_choose_script = cap_main_choose_save
-		pad_choose_params = {savegame = <savegame> slot_list = player_created_graphics_save save_cap part = <part> div_id = <div_id> hist_tex = icon_save text = qs(0x5a1c43cf) no_show_history = <no_show_history>}
+		pad_choose_params = {savegame = <savegame> slot_list = player_created_graphics_save save_cap part = <part> div_id = <div_id> hist_tex = icon_save text = qs("Save Design") no_show_history = <no_show_history>}
 		not_focusable = <not_focusable>
 	}
 	add_generic_menu_icon_item {
 		icon = icon_load
-		text = qs(0xad5cfad4)
-		choose_state = uistate_generic_dialogue
+		text = qs("LOAD")
+		choose_state = UIstate_generic_dialogue
 		choose_state_data = {
 			is_popup
-			title = qs(0x427518a8)
-			text = qs(0x7b18be62)
+			title = qs("Load Design?")
+			text = qs("By loading, your old design will be lost. Would you like to continue?")
 			choose_yes_func = generic_event_replace
-			choose_yes_params = {data = {state = uistate_cas_save_slots savegame = <savegame> text = qs(0x9f46747e) slot_list = player_created_graphics_save part = <part> div_id = <div_id> load_design hist_tex = icon_load camera_list = <camera_list> zoom_camera = <zoom_camera> no_show_history = <no_show_history>}}
+			choose_yes_params = {data = {state = UIstate_cas_save_slots savegame = <savegame> text = qs("Load") slot_list = player_created_graphics_save part = <part> div_id = <div_id> load_design hist_tex = icon_load camera_list = <camera_list> zoom_camera = <zoom_camera> no_show_history = <no_show_history>}}
 		}
 		not_focusable = <not_focusable>
 	}
-	if checksumequals a = <part> b = cas_band_logo
+	if ChecksumEquals a = <part> b = CAS_Band_Logo
 		add_generic_menu_icon_item \{icon = icon_random
-			text = qs(0x0b6c701b)
+			text = qs("RANDOM")
 			pad_choose_script = randomize_band_logo}
 	endif
 	add_generic_menu_icon_item {
 		icon = icon_remove
-		text = qs(0xe37a67d9)
-		choose_state = uistate_generic_dialogue
+		text = qs("CLEAR")
+		choose_state = UIstate_generic_dialogue
 		choose_state_data = {
 			is_popup
-			title = qs(0x31cf1706)
-			text = qs(0x28e2d00a)
+			title = qs("Clear Design?")
+			text = qs("By selecting clear your old design will be lost. Would you like to continue?")
 			choose_yes_func = cap_clear_design
 			choose_yes_params = {part = <part> div_id = <div_id>}
 			highlight_no
 		}
 	}
-	if checksumequals a = <part> b = cas_band_logo
+	if ChecksumEquals a = <part> b = CAS_Band_Logo
 		menu_finish \{car_helper_text
 			no_rotate_zoom_text}
 		generic_menu_animate_in
@@ -75,28 +75,28 @@ script ui_create_cap_main_spawned savegame = ($cas_current_savegame)
 		setup_cas_menu_handlers vmenu_id = create_cap_main_vmenu camera_list = <camera_list> zoom_camera = <zoom_camera>
 		menu_finish \{car_helper_text}
 	endif
-	if gotparam \{cam_name}
+	if GotParam \{cam_name}
 		change \{generic_menu_block_input = 1}
 		task_menu_default_anim_in base_name = <cam_name>
 		change \{generic_menu_block_input = 0}
 	endif
-	getglobaltags savegame = <savegame> cas_helper_dialogue param = visit_cap
+	GetGlobalTags savegame = <savegame> cas_helper_dialogue param = visit_cap
 	if (<visit_cap> = 0)
-		printf \{qs(0xaba2e79c)}
-		setglobaltags savegame = <savegame> cas_helper_dialogue params = {visit_cap = 1}
+		printf \{qs("\LSHOW HELPER DIALOGUE")}
+		SetGlobalTags savegame = <savegame> cas_helper_dialogue params = {visit_cap = 1}
 		ui_event_wait \{event = menu_change
 			data = {
-				state = uistate_helper_dialogue
+				state = UIstate_helper_dialogue
 				is_popup
 				life = 30
-				text = qs(0x6b2c6fa2)
+				text = qs("The EDIT option allows you to design art with customizable shapes, in layers.  The SAVE and LOAD options allow created art to be available in all modes where you can apply graphics.")
 			}}
 	endif
 endscript
 
 script ui_return_cap_main 
 	clean_up_user_control_helpers
-	if checksumequals a = <part> b = cas_band_logo
+	if ChecksumEquals a = <part> b = CAS_Band_Logo
 		menu_finish \{car_helper_text
 			no_rotate_zoom_text}
 	else
@@ -105,13 +105,13 @@ script ui_return_cap_main
 endscript
 
 script ui_init_cap_main 
-	if gotparam \{additional_init_script}
+	if GotParam \{additional_init_script}
 		<additional_init_script>
 	endif
-	if gotparam \{stance}
-		getcurrentcasobject
-		if gotparam \{cas_object}
-			bandmanager_changestance name = <cas_object> stance = <stance> no_wait
+	if GotParam \{stance}
+		GetCurrentCASObject
+		if GotParam \{cas_object}
+			BandManager_ChangeStance name = <cas_object> stance = <stance> no_wait
 		endif
 	endif
 endscript
@@ -121,53 +121,53 @@ script ui_destroy_cap_main
 endscript
 
 script ui_deinit_cap_main 
-	flushallcompositetextures
-	if gotparam \{additional_deinit_script}
+	FlushAllCompositeTextures
+	if GotParam \{additional_deinit_script}
 		<additional_deinit_script>
 	endif
-	if getcurrentcasobject
-		if gotparam \{return_stance}
-			bandmanager_changestance name = <cas_object> stance = <return_stance> no_wait
+	if GetCurrentCASObject
+		if GotParam \{return_stance}
+			BandManager_ChangeStance name = <cas_object> stance = <return_stance> no_wait
 		else
-			bandmanager_changestance name = <cas_object> stance = stance_frontend no_wait
+			BandManager_ChangeStance name = <cas_object> stance = stance_frontend no_wait
 		endif
 	endif
 endscript
 
 script cas_load_graphic 
 	cas_load_graphic_data layers = <layers> part = <part> div_id = <div_id>
-	ui_event event = menu_change data = {state = uistate_cap_layers_list part = <part> div_id = <div_id> camera_list = <camera_list> zoom_camera = <zoom_camera>}
+	ui_event event = menu_change data = {state = UIstate_cap_layers_list part = <part> div_id = <div_id> camera_list = <camera_list> zoom_camera = <zoom_camera>}
 endscript
 
 script cas_load_graphic_data 
-	requireparams \{[
+	RequireParams \{[
 			layers
 			part
 		]
 		all}
-	if NOT getcasappearancepart part = <part>
-		scriptassert '%s not found' s = <part> donotresolve donotresolve
+	if NOT GetCASAppearancePart part = <part>
+		ScriptAssert '%s not found' s = <part> DoNotResolve DoNotResolve
 	endif
-	if NOT getactualcasoptionstruct part = <part> desc_id = <desc_id>
-		scriptassert '%s %t not found' s = <part> t = <desc_id> donotresolve
+	if NOT GetActualCASOptionStruct part = <part> desc_id = <desc_id>
+		ScriptAssert '%s %t not found' s = <part> t = <desc_id> DoNotResolve
 	endif
-	if NOT gotparam \{sections}
-		scriptassert qs(0x9d0f595e) s = <part> donotresolve
+	if NOT GotParam \{sections}
+		ScriptAssert qs("\LAsset is missing sections for this part %s") s = <part> DoNotResolve
 	endif
-	printf qs(0xd59a22e6) d = <div_id> donotresolve
+	printf qs("\LDiv_id = %d") d = <div_id> DoNotResolve
 	get_div_info part = <part> div_id = <div_id>
-	if NOT gotparam \{target}
-		printf \{qs(0x8f2a48f2)}
+	if NOT GotParam \{target}
+		printf \{qs("\LUnable to find target for specified CAP design, check part definition.")}
 	endif
-	printf qs(0x8ca54ffc) t = <target>
-	if structurecontains structure = (<layers> [0]) texture
+	printf qs("\Ltarget = %t") t = <target>
+	if StructureContains Structure = (<layers> [0]) texture
 		match_layers_texture sections = <sections> prof_texture = (<layers> [0].texture) target = <target> material = <material>
-	elseif structurecontains structure = (<layers> [0]) font
+	elseif StructureContains Structure = (<layers> [0]) font
 		match_layers_font prof_font = (<layers> [0].font) prof_text = (<layers> [0].text) sections = <sections> target = <target> material = <material>
 	endif
-	if NOT gotparam \{section_index}
-		if NOT cd
-			create_panel_message \{text = qs(0x03692b6c)
+	if NOT GotParam \{section_index}
+		if NOT CD
+			create_panel_message \{text = qs("Unable to match layer to a section, check part definition.")
 				pos = (950.0, 600.0)
 				rgba = [
 					200
@@ -176,75 +176,75 @@ script cas_load_graphic_data
 					255
 				]
 				scale = 0.5}
-			printf \{qs(0x5402b519)}
+			printf \{qs("\LUnable to match layer to a section, check part definition.")}
 		endif
 	endif
-	printf qs(0xff32c09c) s = <section_index>
-	if gotparam \{section_index}
+	printf qs("\Lsection_index = %s") s = <section_index>
+	if GotParam \{section_index}
 		section = (<sections> [<section_index>])
-		if gotparam \{cap}
-			getarraysize \{cap}
+		if GotParam \{cap}
+			GetArraySize \{cap}
 			i = 0
 			begin
 			if is_target_in_div target = (<cap> [<i>]) part = <part> div_id = <div_id>
-				printf qs(0xfba10fd5) i = <i>
+				printf qs("\L~~~ IN CAP %i ~~~") i = <i>
 				if is_matching_section cap = (<cap> [<i>]) section = <section>
-					setarrayelement arrayname = cap index = <i> newvalue = {
+					SetArrayElement ArrayName = cap index = <i> newvalue = {
 						(<cap> [<i>])
 						layers = <layers>
 					}
-					setcasappearancecap part = <part> cap = <cap>
-					updatecasmodelcap part = <part>
+					SetCASAppearanceCAP part = <part> cap = <cap>
+					UpdateCASModelCAP part = <part>
 					return
 				endif
 			endif
 			i = (<i> + 1)
 			repeat <array_size>
-			formattext checksumname = name '%s' s = (<sections> [<section_index>].base_tex)
+			FormatText checksumname = name '%s' s = (<sections> [<section_index>].base_tex)
 			entry = {
 				base_tex = <name>
 				material = (<sections> [<section_index>].material)
 				layers = <layers>
 			}
 			cap_set_target entry = <entry> section = <section>
-			addarrayelement array = <cap> element = <entry>
-			setcasappearancecap part = <part> cap = <array>
-			updatecasmodelcap part = <part>
+			AddArrayElement array = <cap> element = <entry>
+			SetCASAppearanceCAP part = <part> cap = <array>
+			UpdateCASModelCAP part = <part>
 			return
 		else
-			formattext checksumname = name '%s' s = (<sections> [<section_index>].base_tex)
+			FormatText checksumname = name '%s' s = (<sections> [<section_index>].base_tex)
 			entry = {
 				base_tex = <name>
 				material = (<sections> [<section_index>].material)
 				layers = <layers>
 			}
 			cap_set_target entry = <entry> section = <section>
-			setcasappearancecap part = <part> cap = [{<entry>}]
-			updatecasmodelcap part = <part>
+			SetCASAppearanceCAP part = <part> cap = [{<entry>}]
+			UpdateCASModelCAP part = <part>
 			return
 		endif
 	endif
 endscript
 
 script cap_new_design_worker 
-	if NOT getcasappearancepart part = <part>
-		scriptassert '%s not found' s = <part> donotresolve
+	if NOT GetCASAppearancePart part = <part>
+		ScriptAssert '%s not found' s = <part> DoNotResolve
 	endif
 	remove_cap = 0
-	if gotparam \{cap}
-		newcap = <cap>
-		getarraysize \{cap}
+	if GotParam \{cap}
+		newCAP = <cap>
+		GetArraySize \{cap}
 		if (<array_size> > 0)
 			i = 0
 			begin
 			capstruct = (<cap> [<i>])
 			if is_target_in_div target = <capstruct> part = <part> div_id = <div_id>
-				removecomponent \{name = layers
+				RemoveComponent \{name = layers
 					structure_name = capstruct}
-				setarrayelement arrayname = newcap index = <i> newvalue = <capstruct>
-				if NOT ((structurecontains structure = <capstruct> pre_layer) || (structurecontains structure = <capstruct> post_layer))
-					removearrayelement array = <newcap> index = <i>
-					newcap = <array>
+				SetArrayElement ArrayName = newCAP index = <i> newvalue = <capstruct>
+				if NOT ((StructureContains Structure = <capstruct> pre_layer) || (StructureContains Structure = <capstruct> post_layer))
+					RemoveArrayElement array = <newCAP> index = <i>
+					newCAP = <array>
 					if (<array_size> = 1)
 						remove_cap = 1
 					endif
@@ -253,27 +253,27 @@ script cap_new_design_worker
 			i = (<i> + 1)
 			repeat <array_size>
 		else
-			setcasappearancecap part = <part>
+			SetCASAppearanceCAP part = <part>
 		endif
 		if (<remove_cap> = 1)
-			setcasappearancecap part = <part>
+			SetCASAppearanceCAP part = <part>
 		else
-			setcasappearancecap part = <part> cap = <newcap>
+			SetCASAppearanceCAP part = <part> cap = <newCAP>
 		endif
 	endif
-	updatecasmodelcap part = <part>
+	UpdateCASModelCAP part = <part>
 endscript
 
 script cap_new_design 
 	cap_new_design_worker <...>
-	ui_event event = menu_change data = {state = uistate_cap_layers_list part = <part> div_id = <div_id>}
+	ui_event event = menu_change data = {state = UIstate_cap_layers_list part = <part> div_id = <div_id>}
 endscript
 
 script cap_clear_design 
 	cap_new_design_worker <...>
 	generic_event_back
-	if ((iswinport) && ($0xb1d07721 = 1))
-		flushallcompositetextures
+	if ((IsWinPort) && ($winport_isBandLogo = 1))
+		FlushAllCompositeTextures
 	endif
 endscript
 
@@ -287,25 +287,25 @@ script cap_main_back_warning
 		return
 	endif
 	if ($save_data_dirty = 1)
-		launchevent \{type = unfocus
+		LaunchEvent \{type = unfocus
 			target = current_menu}
 		destroy_popup_warning_menu
 		create_popup_warning_menu {
-			title = qs(0xaa163738)
+			title = qs("WARNING")
 			no_background
 			textblock = {
-				text = qs(0xd556ac8f)
+				text = qs("Are you sure you want to quit? Any unsaved album art will be lost.")
 			}
 			options = [
 				{
 					func = {cap_main_back_warning_cancel}
 					func_params = {}
-					text = qs(0xf7723015)
+					text = qs("CANCEL")
 				}
 				{
 					func = {cap_main_back_continue}
 					func_params = {<...> from_warning = 1}
-					text = qs(0x182f0173)
+					text = qs("CONTINUE")
 				}
 			]
 		}
@@ -316,7 +316,7 @@ endscript
 
 script cap_main_back_warning_cancel 
 	destroy_popup_warning_menu
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = current_menu}
 endscript
 
@@ -324,7 +324,7 @@ script cap_main_back_continue \{from_warning = 0}
 	if (<from_warning> = 1)
 		cap_main_back_warning_cancel
 	endif
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = current_menu}
 	cas_free_resources \{album_art
 		no_loading_screen}
@@ -334,7 +334,7 @@ endscript
 script cap_save_content \{num_states = 2
 		album_cover = 0}
 	if NOT (<album_cover> = 1)
-		if gotparam \{back_steps}
+		if GotParam \{back_steps}
 			num_states = <back_steps>
 		endif
 		globaltag_getarraychecksum savegame = <savegame> array_name = player_created_graphics_save
@@ -342,9 +342,9 @@ script cap_save_content \{num_states = 2
 			cag_update_photo
 			ui_memcard_autosave event = menu_back data = {num_states = <num_states> savegame = <savegame>}
 		else
-			if gotparam \{back_steps}
+			if GotParam \{back_steps}
 				cas_get_player_status
-				if checkforsignin local controller_index = ($<player_status>.controller)
+				if CheckForSignIn local controller_index = ($<player_status>.controller)
 					ui_event event = menu_back data = {num_states = <num_states>}
 				else
 					generic_event_back
@@ -354,7 +354,7 @@ script cap_save_content \{num_states = 2
 			endif
 		endif
 	else
-		launchevent \{type = unfocus
+		LaunchEvent \{type = unfocus
 			target = current_menu}
 		cas_free_resources \{album_art
 			no_loading_screen}
@@ -364,15 +364,15 @@ endscript
 
 script cap_main_choose_save 
 	extract_current_layers part = <part> div_id = <div_id>
-	if NOT gotparam \{layers}
-		generic_event_choose \{state = uistate_generic_alert_popup
+	if NOT GotParam \{layers}
+		generic_event_choose \{state = UIstate_generic_alert_popup
 			data = {
 				pad_choose_script = generic_event_back
 				is_popup
-				title = qs(0x8843a2fb)
-				text = qs(0x8f38157e)
+				title = qs("No Design to Save")
+				text = qs("You Cannot save an empty design!")
 			}}
 	else
-		generic_event_choose data = {state = uistate_cas_save_slots savegame = <savegame> <...>}
+		generic_event_choose data = {state = UIstate_cas_save_slots savegame = <savegame> <...>}
 	endif
 endscript

@@ -1,121 +1,121 @@
-animpreviewbasetree = {
-	type = degenerateblend
-	id = previewtreeanimnode
+AnimPreviewBaseTree = {
+	type = DegenerateBlend
+	id = PreviewTreeAnimNode
 }
 
-script animtreepreview_updateblendvalues 
-	if compositeobjectexists \{name = animtreepreviewobject}
-		animtreepreviewobject :animpreview_setsourcevalues <...>
+script AnimTreePreview_UpdateBlendValues 
+	if CompositeObjectExists \{name = AnimTreePreviewObject}
+		AnimTreePreviewObject :AnimPreview_SetSourceValues <...>
 	endif
 endscript
 
-script testanimscript 
-	anim_command target = previewtreeanimnode command = degenerateblend_addbranch params = {tree = <tree> params = <tree_params>}
-	obj_forceupdate
+script TestAnimScript 
+	Anim_Command target = PreviewTreeAnimNode command = DegenerateBlend_AddBranch params = {Tree = <Tree> params = <Tree_Params>}
+	Obj_ForceUpdate
 endscript
 
-script animtreepreview_nxcommon \{targetobject = skater}
-	if compositeobjectexists \{name = animtreepreviewobject}
-		animtreepreviewrestore
+script AnimTreePreview_NxCommon \{targetObject = skater}
+	if CompositeObjectExists \{name = AnimTreePreviewObject}
+		AnimTreePreviewRestore
 	endif
-	dump <tree>
-	if NOT gotparam \{skeleton}
-		<targetobject> :skeleton_getskeletonname
-		skeleton = <skeletonname>
+	dump <Tree>
+	if NOT GotParam \{skeleton}
+		<targetObject> :Skeleton_GetSkeletonName
+		skeleton = <SkeletonName>
 	endif
-	if NOT gotparam \{ragdoll}
-		if <targetobject> :containscomponent ragdoll
-			if <targetobject> :ragdoll_getragdollname
-				ragdoll = <ragdollname>
+	if NOT GotParam \{ragdoll}
+		if <targetObject> :ContainsComponent ragdoll
+			if <targetObject> :ragdoll_getragdollname
+				ragdoll = <ragdollName>
 			endif
 		endif
 	endif
-	setsearchallassetcontexts
-	createfakeplayer positionfrom = <targetobject> clonefrom = <targetobject> model = <model> ragdoll = <ragdoll> skeleton = <skeleton> appearance = <appearance> active_value_sources = <active_value_sources>
-	animtreepreviewobject :anim_inittree \{tree = $animpreviewbasetree
-		nodeiddeclaration = [
-			previewtreeanimnode
+	SetSearchAllAssetContexts
+	CreateFakePlayer PositionFrom = <targetObject> CloneFrom = <targetObject> Model = <Model> ragdoll = <ragdoll> skeleton = <skeleton> appearance = <appearance> active_value_sources = <active_value_sources>
+	AnimTreePreviewObject :Anim_InitTree \{Tree = $AnimPreviewBaseTree
+		NodeIdDeclaration = [
+			PreviewTreeAnimNode
 		]}
-	if animtreepreviewobject :anim_loadanims tree = <tree> params = <tree_params>
-		animtreepreviewobject :obj_switchscript testanimscript params = {tree = <tree> tree_params = <tree_params>}
-		<targetobject> :hide
-		<targetobject> :pause
+	if AnimTreePreviewObject :anim_loadanims Tree = <Tree> params = <Tree_Params>
+		AnimTreePreviewObject :Obj_SwitchScript TestAnimScript params = {Tree = <Tree> Tree_Params = <Tree_Params>}
+		<targetObject> :hide
+		<targetObject> :Pause
 	else
-		animtreepreviewobject :die
+		AnimTreePreviewObject :Die
 	endif
-	dump <tree>
+	dump <Tree>
 endscript
 
-script createfakeplayer 
-	if NOT compositeobjectexists <clonefrom>
+script CreateFakePlayer 
+	if NOT CompositeObjectExists <CloneFrom>
 		return
 	endif
-	if NOT compositeobjectexists <positionfrom>
+	if NOT CompositeObjectExists <PositionFrom>
 		return
 	endif
-	if compositeobjectexists \{animtreepreviewobject}
-		animtreepreviewobject :die
+	if CompositeObjectExists \{AnimTreePreviewObject}
+		AnimTreePreviewObject :Die
 	endif
-	<positionfrom> :obj_getposition
-	<positionfrom> :obj_getquat
-	components = []
-	if gotparam \{ragdoll}
-		ragdollcomponents = [
+	<PositionFrom> :Obj_GetPosition
+	<PositionFrom> :Obj_GetQuat
+	Components = []
+	if GotParam \{ragdoll}
+		RagdollComponents = [
 			{
-				component = ragdoll
-				ragdollname = <ragdoll>
+				Component = ragdoll
+				ragdollName = <ragdoll>
 				initialize_empty = false
 			}
 		]
-		components = (<components> + <ragdollcomponents>)
+		Components = (<Components> + <RagdollComponents>)
 	endif
-	basiccomponents = [
+	BasicComponents = [
 		{
-			component = animpreview
+			Component = AnimPreview
 			active_value_source_list = <active_value_sources>
-			preload_model = <model>
+			preload_model = <Model>
 		}
 		{
-			component = animinfo
+			Component = AnimInfo
 			active_value_set = preview
 		}
 		{
-			component = animtree
-			referencechecksum = <skeleton>
-			animeventtablename = skateranimeventtable
+			Component = AnimTree
+			ReferenceChecksum = <skeleton>
+			AnimEventTableName = SkaterAnimEventTable
 		}
 		{
-			component = skeleton
+			Component = skeleton
 		}
 		{
-			component = setdisplaymatrix
+			Component = SetDisplayMatrix
 		}
 	]
-	components = (<components> + <basiccomponents>)
-	if gotparam \{model}
-		modelcomponent = [
+	Components = (<Components> + <BasicComponents>)
+	if GotParam \{Model}
+		ModelComponent = [
 			{
-				component = model
-				model = <model>
+				Component = Model
+				Model = <Model>
 			}
 		]
 	else
-		modelcomponent = [
+		ModelComponent = [
 			{
-				component = model
-				clonefrom = <clonefrom>
+				Component = Model
+				CloneFrom = <CloneFrom>
 			}
 		]
 	endif
-	components = (<components> + <modelcomponent>)
-	createcompositeobject {
-		components = <components>
+	Components = (<Components> + <ModelComponent>)
+	CreateCompositeObject {
+		Components = <Components>
 		params = {
-			skeletonname = <skeleton>
-			name = animtreepreviewobject
+			SkeletonName = <skeleton>
+			name = AnimTreePreviewObject
 			pos = <pos>
-			orientation = <quat>
-			assetcontext = animpreviewobject
+			Orientation = <Quat>
+			assetcontext = AnimPreviewObject
 			<appearance>
 		}
 	}

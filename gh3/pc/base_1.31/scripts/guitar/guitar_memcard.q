@@ -1,12 +1,12 @@
 max_memcard_filename_length = 15
-savingorloading = saving
+SavingOrLoading = Saving
 memcard_using_new_save_system = 1
 memcard_default_title = 'Guitar Hero III: Legends of Rock'
 memcard_content_name = "Progress"
 memcard_file_name = "GH3Progress"
 memcard_file_types = [
 	{
-		name = progress
+		name = Progress
 		version = 48
 		fixed_size = 262144
 		menu_text = "GAME PROGRESS"
@@ -17,30 +17,30 @@ memcard_file_types = [
 	}
 ]
 memcard_folder_desc = {
-	guitarcontent = {
+	GuitarContent = {
 		icon_xen = 'memcard\\gh.png'
 		icon_ps3 = 'memcard\\ICON0.PNG'
 		file_types = [
 			{
-				name = progress
+				name = Progress
 				slots_reserve = 1
 			}
 		]
 	}
 }
-writetobuffer_compressionlookuptable_8 = [
+WriteToBuffer_CompressionLookupTable_8 = [
 ]
-writetobuffer_compressionlookuptable_16 = [
+WriteToBuffer_CompressionLookupTable_16 = [
 ]
-memcarddonescript = nullscript
-memcardretryscript = nullscript
-memcardsavingorloading = saving
-memcardsuccess = false
+MemcardDoneScript = nullscript
+MemcardRetryScript = nullscript
+MemcardSavingOrLoading = Saving
+MemcardSuccess = false
 
-script memcard_choose_storage_device \{storageselectorforce = 0}
+script memcard_choose_storage_device \{StorageSelectorForce = 0}
 	printscriptinfo \{"==> memcard_choose_storage_device"}
 	if ($memcard_using_new_save_system = 0)
-		if NOT isxenon
+		if NOT isXenon
 			return
 		endif
 	endif
@@ -48,36 +48,36 @@ script memcard_choose_storage_device \{storageselectorforce = 0}
 		return
 	endif
 	create_checking_memory_card_screen
-	wait \{3
+	Wait \{3
 		gameframe}
 	if ($memcard_using_new_save_system = 0)
-		showstorageselector force = <force> filetype = progress
+		ShowStorageSelector force = <force> FileType = Progress
 		begin
-		if storageselectorfinished
+		if StorageSelectorFinished
 			break
 		else
-			wait \{1
+			Wait \{1
 				gameframe}
 		endif
 		repeat
 	else
-		newshowstorageselector force = <storageselectorforce> filetype = progress
+		NewShowStorageSelector force = <StorageSelectorForce> FileType = Progress
 	endif
 endscript
 
 script memcard_check_for_previously_used_folder 
-	mc_waitasyncopsfinished
+	MC_WaitAsyncOpsFinished
 	memcard_check_for_card
-	if mc_hasactivefolder
+	if MC_HasActiveFolder
 		printf \{"Card didn't change, re-using old data!"}
 		return \{found = 1
 			corrupt = 0}
 	else
 		memcard_enum_folders
-		mc_loadtocinactivefolder \{validateprev}
+		MC_LoadTOCInActiveFolder \{ValidatePrev}
 		if (<result> = true)
-			if memcardfileexists \{filename = $memcard_file_name
-					filetype = progress}
+			if MemCardFileExists \{filename = $memcard_file_name
+					FileType = Progress}
 				printf \{"Card re-inserted, re-using old data!"}
 				return \{found = 1
 					corrupt = 0}
@@ -86,11 +86,11 @@ script memcard_check_for_previously_used_folder
 					corrupt = 1}
 			endif
 		else
-			if (<errorcode> = invalidtoc)
+			if (<ErrorCode> = InvalidTOC)
 				return \{found = 0
 					corrupt = 0}
 			else
-				if mc_folderexists \{foldername = $memcard_content_name}
+				if MC_FolderExists \{FolderName = $memcard_content_name}
 					return \{found = 1
 						corrupt = 1}
 				else
@@ -103,7 +103,7 @@ script memcard_check_for_previously_used_folder
 endscript
 
 script memcard_enum_folders 
-	mc_enumeratefolders
+	MC_EnumerateFolders
 	if (<result> = false)
 		memcard_error \{error = create_storagedevice_warning_menu}
 	endif
@@ -111,11 +111,11 @@ endscript
 
 script memcard_check_for_existing_save 
 	if ($memcard_using_new_save_system = 0)
-		if isps3
+		if IsPs3
 			return \{found = 0}
 		endif
 		memcard_choose_storage_device
-		getmemcarddirectorylisting \{filetype = progress}
+		GetMemCardDirectoryListing \{FileType = Progress}
 		if (<totalthps4filesoncard> = 1)
 			printf \{"Found save file"}
 			return \{found = 1
@@ -123,17 +123,17 @@ script memcard_check_for_existing_save
 		endif
 	else
 		memcard_enum_folders
-		mc_waitasyncopsfinished
+		MC_WaitAsyncOpsFinished
 		memcard_check_for_card
-		if mc_folderexists \{foldername = $memcard_content_name}
-			mc_setactivefolder \{foldername = $memcard_content_name}
-			mc_loadtocinactivefolder
+		if MC_FolderExists \{FolderName = $memcard_content_name}
+			MC_SetActiveFolder \{FolderName = $memcard_content_name}
+			MC_LoadTOCInActiveFolder
 			if (<result> = false)
 				return \{found = 1
 					corrupt = 1}
 			endif
-			if memcardfileexists \{filename = $memcard_file_name
-					filetype = progress}
+			if MemCardFileExists \{filename = $memcard_file_name
+					FileType = Progress}
 				return \{found = 1
 					corrupt = 0}
 			else
@@ -148,50 +148,50 @@ endscript
 
 script memcard_wait_for_timer \{time = 3.0}
 	begin
-	if timegreaterthan <time>
+	if TimeGreaterThan <time>
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
-script memcard_save_file \{overwriteconfirmed = 0}
+script memcard_save_file \{OverwriteConfirmed = 0}
 	printf \{"==> memcard_save_file"}
-	change \{memcardsavingorloading = saving}
+	change \{MemcardSavingOrLoading = Saving}
 	if ($memcard_using_new_save_system = 0)
-		if isps3
+		if IsPs3
 			return
 		endif
-		setsavefilename \{filetype = progress
+		SetSaveFileName \{FileType = Progress
 			name = "GH3Progress"}
-		if NOT savetomemorycard \{filetype = progress}
+		if NOT SaveToMemoryCard \{FileType = Progress}
 			printstruct <...>
 			return \{failed = 1}
 		endif
 	else
 		memcard_check_for_card
-		resettimer
+		ResetTimer
 		<overwrite> = 0
-		if mc_folderexists \{foldername = $memcard_content_name}
-			if (<overwriteconfirmed> = 1)
+		if MC_FolderExists \{FolderName = $memcard_content_name}
+			if (<OverwriteConfirmed> = 1)
 				<overwrite> = 1
 				create_overwrite_menu
-				mc_setactivefolder \{foldername = $memcard_content_name}
+				MC_SetActiveFolder \{FolderName = $memcard_content_name}
 			else
 				goto \{create_confirm_overwrite_menu}
 			endif
 		else
-			if isps3
-				if NOT mc_spacefornewfolder \{desc = guitarcontent}
+			if IsPs3
+				if NOT MC_SpaceForNewFolder \{desc = GuitarContent}
 					memcard_error \{error = create_out_of_space_menu}
 				endif
 			endif
 			create_save_menu
-			mc_createfolder \{name = $memcard_content_name
-				desc = guitarcontent}
+			MC_CreateFolder \{name = $memcard_content_name
+				desc = GuitarContent}
 			if (<result> = false)
-				if (<errorcode> = outofspace)
+				if (<ErrorCode> = OutOfSpace)
 					memcard_error \{error = create_out_of_space_menu}
 				else
 					memcard_error \{error = create_save_failed_menu}
@@ -199,11 +199,11 @@ script memcard_save_file \{overwriteconfirmed = 0}
 			endif
 		endif
 		memcard_pre_save_progress
-		savetomemorycard \{filename = $memcard_file_name
-			filetype = progress
+		SaveToMemoryCard \{filename = $memcard_file_name
+			FileType = Progress
 			usepaddingslot = always}
 		if (<result> = false)
-			if (<errorcode> = outofspace)
+			if (<ErrorCode> = OutOfSpace)
 				memcard_error \{error = create_out_of_space_menu}
 			else
 				if (<overwrite> = 1)
@@ -213,14 +213,14 @@ script memcard_save_file \{overwriteconfirmed = 0}
 				endif
 			endif
 		endif
-		change \{memcardsuccess = true}
+		change \{MemcardSuccess = true}
 		memcard_wait_for_timer
 		if (<overwrite> = 1)
 			create_overwrite_success_menu
 		else
 			create_save_success_menu
 		endif
-		wait \{1
+		Wait \{1
 			seconds}
 	endif
 	memcard_sequence_quit
@@ -229,7 +229,7 @@ endscript
 script memcard_delete_file 
 	printf \{"==> memcard_delete_file"}
 	if ($memcard_using_new_save_system = 0)
-		if NOT deletememcardfile \{filetype = progress}
+		if NOT DeleteMemCardFile \{FileType = Progress}
 			destroy_popup_warning_menu
 			create_delete_failed_menu
 		else
@@ -238,27 +238,27 @@ script memcard_delete_file
 		endif
 	else
 		create_delete_file_menu
-		mc_waitasyncopsfinished
-		if isps3
+		MC_WaitAsyncOpsFinished
+		if IsPs3
 			fade_overlay_on
-			mc_startps3forcedelete
+			MC_StartPS3ForceDelete
 			begin
-			if mc_isps3forcedeletefinished
+			if MC_IsPS3ForceDeleteFinished
 				break
 			endif
-			wait \{1
+			Wait \{1
 				gameframes}
 			repeat
 			fade_overlay_off
 		else
-			resettimer
-			mc_deletefolder \{foldername = $memcard_content_name}
+			ResetTimer
+			MC_DeleteFolder \{FolderName = $memcard_content_name}
 			if (<result> = false)
 				memcard_error \{error = create_delete_failed_menu}
 			endif
 			memcard_wait_for_timer
 			create_delete_success_menu
-			wait \{1
+			Wait \{1
 				seconds}
 		endif
 	endif
@@ -266,57 +266,57 @@ script memcard_delete_file
 	memcard_sequence_retry
 endscript
 
-script memcard_load_file \{loadconfirmed = 0}
+script memcard_load_file \{LoadConfirmed = 0}
 	printf \{"==> memcard_load_file"}
-	change \{memcardsavingorloading = loading}
+	change \{MemcardSavingOrLoading = loading}
 	if ($memcard_using_new_save_system = 0)
-		if isps3
+		if IsPs3
 			return
 		endif
-		setsavefilename \{filetype = progress
+		SetSaveFileName \{FileType = Progress
 			name = "GH3Progress"}
-		getglobaltags \{globaltag_checksum
+		GetGlobalTags \{globaltag_checksum
 			params = globaltag_checksum}
 		oldglobaltag_checksum = <globaltag_checksum>
-		if NOT loadfrommemorycard \{filetype = progress}
+		if NOT LoadFromMemoryCard \{FileType = Progress}
 			printstruct <...>
-			if gotparam \{corrupteddata}
-				return \{corrupteddata = 1}
+			if GotParam \{CorruptedData}
+				return \{CorruptedData = 1}
 			else
 				printstruct <...>
 				return \{failed = 1}
 			endif
 		endif
 	else
-		mc_waitasyncopsfinished
+		MC_WaitAsyncOpsFinished
 		memcard_check_for_card
-		resettimer
-		if mc_folderexists \{foldername = $memcard_content_name}
-			if (<loadconfirmed> = 1)
-				mc_setactivefolder \{foldername = $memcard_content_name}
+		ResetTimer
+		if MC_FolderExists \{FolderName = $memcard_content_name}
+			if (<LoadConfirmed> = 1)
+				MC_SetActiveFolder \{FolderName = $memcard_content_name}
 			else
 				goto \{create_confirm_load_menu}
 			endif
 		else
 			memcard_error \{error = create_no_save_found_menu}
 		endif
-		mc_setactivefolder \{foldername = $memcard_content_name}
+		MC_SetActiveFolder \{FolderName = $memcard_content_name}
 		create_load_file_menu
-		loadfrommemorycard \{filename = $memcard_file_name
-			filetype = progress}
+		LoadFromMemoryCard \{filename = $memcard_file_name
+			FileType = Progress}
 		if (<result> = false)
-			if (<errorcode> = corrupt)
+			if (<ErrorCode> = corrupt)
 				memcard_error \{error = create_corrupted_data_menu}
 			else
 				memcard_error \{error = create_load_failed_menu}
 			endif
 		endif
-		change \{memcardsuccess = true}
+		change \{MemcardSuccess = true}
 		memcard_wait_for_timer
 		create_load_success_menu
 		memcard_post_load_progress
 	endif
-	wait \{1
+	Wait \{1
 		seconds}
 	memcard_sequence_quit
 endscript
@@ -346,24 +346,24 @@ script memcard_cleanup_messages
 endscript
 
 script memcard_sequence_generic_done 
-	if ($memcardsavingorloading = saving)
-		if ($memcardsuccess = true)
+	if ($MemcardSavingOrLoading = Saving)
+		if ($MemcardSuccess = true)
 			printf \{"==> Memcard sequence finished (save success)"}
 			ui_flow_manager_respond_to_action \{action = memcard_sequence_save_success
 				play_sound = 0}
 		else
 			printf \{"==> Memcard sequence finished (save failed)"}
-			mc_setactivefolder \{folderindex = -1}
+			MC_SetActiveFolder \{FolderIndex = -1}
 			ui_flow_manager_respond_to_action \{action = memcard_sequence_save_failed}
 		endif
 	else
-		if ($memcardsuccess = true)
+		if ($MemcardSuccess = true)
 			printf \{"==> Memcard sequence finished (load success)"}
 			ui_flow_manager_respond_to_action \{action = memcard_sequence_load_success
 				play_sound = 0}
 		else
 			printf \{"==> Memcard sequence finished (load failed)"}
-			mc_setactivefolder \{folderindex = -1}
+			MC_SetActiveFolder \{FolderIndex = -1}
 			ui_flow_manager_respond_to_action \{action = memcard_sequence_load_failed}
 		endif
 	endif
@@ -371,11 +371,11 @@ endscript
 
 script memcard_sequence_retry 
 	printf \{"memcard_sequence_retry"}
-	goto memcardretryscript params = <...>
+	goto MemcardRetryScript params = <...>
 endscript
 
 script memcard_disable_saves_and_quit 
-	setglobaltags \{user_options
+	SetGlobalTags \{user_options
 		params = {
 			autosave = 0
 		}}
@@ -385,18 +385,18 @@ endscript
 script memcard_sequence_quit 
 	printf \{"memcard_sequence_quit"}
 	mark_safe_for_shutdown
-	goto memcarddonescript params = <...>
+	goto MemcardDoneScript params = <...>
 endscript
 
 script memcard_check_for_card 
-	if NOT cardisinslot
+	if NOT CardIsInSlot
 		goto \{create_storagedevice_warning_menu}
 	endif
 endscript
 
 script memcard_error 
 	printf \{"memcard_error"}
-	requireparams \{[
+	RequireParams \{[
 			error
 		]
 		all}
@@ -405,22 +405,22 @@ script memcard_error
 endscript
 
 script memcard_sequence_cleanup_generic 
-	mc_waitasyncopsfinished
+	MC_WaitAsyncOpsFinished
 	memcard_cleanup_messages
-	change \{memcarddonescript = nullscript}
-	change \{memcardretryscript = nullscript}
+	change \{MemcardDoneScript = nullscript}
+	change \{MemcardRetryScript = nullscript}
 endscript
 
-script memcard_validate_card_data \{storageselectorforce = 0
-		validateprev = 0}
-	memcard_choose_storage_device storageselectorforce = <storageselectorforce>
+script memcard_validate_card_data \{StorageSelectorForce = 0
+		ValidatePrev = 0}
+	memcard_choose_storage_device StorageSelectorForce = <StorageSelectorForce>
 	memcard_check_for_card
-	if (<validateprev> = 1)
+	if (<ValidatePrev> = 1)
 		memcard_check_for_previously_used_folder
 	else
 		memcard_check_for_existing_save
 	endif
-	requireparams \{[
+	RequireParams \{[
 			found
 			corrupt
 		]
@@ -449,62 +449,62 @@ endscript
 
 script memcard_sequence_begin_bootup_logic 
 	printf \{"memcard_sequence_begin_bootup"}
-	change \{memcarddonescript = memcard_sequence_generic_done}
-	change \{memcardretryscript = memcard_sequence_begin_bootup_logic}
-	change \{memcardsavingorloading = saving}
-	change \{memcardsuccess = false}
-	memcard_validate_card_data storageselectorforce = <storageselectorforce> validateprev = 0
+	change \{MemcardDoneScript = memcard_sequence_generic_done}
+	change \{MemcardRetryScript = memcard_sequence_begin_bootup_logic}
+	change \{MemcardSavingOrLoading = Saving}
+	change \{MemcardSuccess = false}
+	memcard_validate_card_data StorageSelectorForce = <StorageSelectorForce> ValidatePrev = 0
 	if (<found> = 1)
 		goto \{memcard_load_file
 			params = {
-				loadconfirmed = 1
+				LoadConfirmed = 1
 			}}
 	else
 		goto \{memcard_save_file}
 	endif
 endscript
 
-script memcard_sequence_begin_save_logic \{storageselectorforce = 1}
-	change \{memcarddonescript = memcard_sequence_generic_done}
-	change \{memcardretryscript = memcard_sequence_begin_save_logic}
-	change \{memcardsavingorloading = saving}
-	change \{memcardsuccess = false}
-	memcard_validate_card_data storageselectorforce = <storageselectorforce> validateprev = 0
+script memcard_sequence_begin_save_logic \{StorageSelectorForce = 1}
+	change \{MemcardDoneScript = memcard_sequence_generic_done}
+	change \{MemcardRetryScript = memcard_sequence_begin_save_logic}
+	change \{MemcardSavingOrLoading = Saving}
+	change \{MemcardSuccess = false}
+	memcard_validate_card_data StorageSelectorForce = <StorageSelectorForce> ValidatePrev = 0
 	goto \{memcard_save_file}
 endscript
 
 script memcard_sequence_begin_autosave_logic 
 	disable_pause
 	mark_unsafe_for_shutdown
-	change \{memcarddonescript = memcard_sequence_generic_done}
-	change \{memcardretryscript = memcard_sequence_begin_save_logic}
-	change \{memcardsavingorloading = saving}
-	change \{memcardsuccess = false}
-	getglobaltags \{user_options}
+	change \{MemcardDoneScript = memcard_sequence_generic_done}
+	change \{MemcardRetryScript = memcard_sequence_begin_save_logic}
+	change \{MemcardSavingOrLoading = Saving}
+	change \{MemcardSuccess = false}
+	GetGlobalTags \{user_options}
 	if (<autosave> = 0)
 		printf \{"Aborting autosave due to option being off"}
 		goto \{memcard_sequence_quit}
 	endif
-	if NOT cardisinslot
+	if NOT CardIsInSlot
 		goto \{create_storagedevice_warning_menu}
 	endif
-	memcard_validate_card_data \{storageselectorforce = 0
-		validateprev = 1}
+	memcard_validate_card_data \{StorageSelectorForce = 0
+		ValidatePrev = 1}
 	if (<found> = 1)
 		goto \{memcard_save_file
 			params = {
-				overwriteconfirmed = 1
+				OverwriteConfirmed = 1
 			}}
 	else
 		memcard_sequence_retry
 	endif
 endscript
 
-script memcard_sequence_begin_load_logic \{storageselectorforce = 1}
-	change \{memcarddonescript = memcard_sequence_generic_done}
-	change \{memcardretryscript = memcard_sequence_begin_load_logic}
-	change \{memcardsavingorloading = loading}
-	change \{memcardsuccess = false}
-	memcard_validate_card_data storageselectorforce = <storageselectorforce> validateprev = 0
+script memcard_sequence_begin_load_logic \{StorageSelectorForce = 1}
+	change \{MemcardDoneScript = memcard_sequence_generic_done}
+	change \{MemcardRetryScript = memcard_sequence_begin_load_logic}
+	change \{MemcardSavingOrLoading = loading}
+	change \{MemcardSuccess = false}
+	memcard_validate_card_data StorageSelectorForce = <StorageSelectorForce> ValidatePrev = 0
 	goto \{memcard_load_file}
 endscript

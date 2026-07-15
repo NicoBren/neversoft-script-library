@@ -21,20 +21,20 @@ script career_select_difficulty_flow_state_func
 	endif
 	get_current_first_play
 	generic_event_choose \{data = {
-			state = uistate_singleplayer_character_hub
-			Player = 1
+			state = UIstate_singleplayer_character_hub
+			player = 1
 		}}
 endscript
 
 script lefty_flip_func 
-	getplayerinfo <Player> lefty_flip
-	formatText checksumName = player_status 'player%i_status' i = <Player> AddToStringLookup
-	Change structurename = <player_status> lefthanded_gems = <lefty_flip>
-	Change structurename = <player_status> lefthanded_button_ups = <lefty_flip>
+	GetPlayerInfo <player> lefty_flip
+	FormatText checksumname = player_status 'player%i_status' i = <player> AddToStringLookup
+	change structurename = <player_status> lefthanded_gems = <lefty_flip>
+	change structurename = <player_status> lefthanded_button_ups = <lefty_flip>
 	if (<lefty_flip>)
-		Change \{pad_event_up_inversion = true}
+		change \{pad_event_up_inversion = true}
 	else
-		Change \{pad_event_up_inversion = FALSE}
+		change \{pad_event_up_inversion = false}
 	endif
 	if ($game_mode = training)
 		practice_restart_song
@@ -44,7 +44,7 @@ script lefty_flip_func
 endscript
 
 script career_restart_song 
-	KillSpawnedScript \{Name = GuitarEvent_SongWon_Spawned}
+	KillSpawnedScript \{name = GuitarEvent_SongWon_Spawned}
 	destroy_menu \{menu_id = yourock_text}
 	destroy_menu \{menu_id = yourock_text_2}
 	destroy_menu \{menu_id = yourock_text_legend}
@@ -53,34 +53,34 @@ endscript
 
 script career_song_ended_select_quit 
 	if ($debug_playcredits_active = 1)
-		Change \{debug_playcredits_active = 0}
+		change \{debug_playcredits_active = 0}
 	endif
 	kill_gem_scroller <...>
 endscript
 
 script start_encore 
-	printf \{qs(0x0cfa1258)}
+	printf \{qs("\Lstart_encore")}
 	GetGlobalTags \{Progression
 		params = encore_song}
 	SetGlobalTags Progression params = {current_tier = <next_tier>}
 	SetGlobalTags Progression params = {current_song_count = <next_song_count>}
 	if ($is_network_game = 1)
-		Change current_song = <encore_song>
-		Change \{net_ready_to_start = 0}
+		change current_song = <encore_song>
+		change \{net_ready_to_start = 0}
 	else
-		Change current_song = <encore_song>
+		change current_song = <encore_song>
 	endif
 endscript
 default_loading_screen = {
 	create = create_loading_screen
-	Destroy = destroy_loading_screen
+	destroy = destroy_loading_screen
 }
 
 script should_play_boss_intro 
 	if NOT GotParam \{song}
 		song = ($current_song)
 	endif
-	return_val = FALSE
+	return_val = false
 	GetPakManCurrent \{map = zones}
 	switch <pak>
 		case z_bayou
@@ -104,13 +104,13 @@ script start_boss
 	SetGlobalTags Progression params = {current_tier = <next_tier>}
 	SetGlobalTags Progression params = {current_song_count = <next_song_count>}
 	if ($show_boss_helper_screen = 1)
-		Change \{current_transition = boss}
+		change \{current_transition = boss}
 	else
-		Change \{current_transition = fastintro}
+		change \{current_transition = fastintro}
 	endif
-	Change \{boss_battle = 1}
-	Change \{current_num_players = 2}
-	SpawnScriptNow restart_gem_scroller params = {song_name = <boss_song> difficulty = ($player1_status.difficulty) difficulty2 = ($player2_status.difficulty) starttime = ($current_starttime) device_num = ($player1_status.controller)}
+	change \{boss_battle = 1}
+	change \{current_num_players = 2}
+	spawnscriptnow restart_gem_scroller params = {song_name = <boss_song> difficulty = ($player1_status.difficulty) difficulty2 = ($player2_status.difficulty) StartTime = ($current_starttime) device_num = ($player1_status.controller)}
 endscript
 
 script get_current_battle_first_play 

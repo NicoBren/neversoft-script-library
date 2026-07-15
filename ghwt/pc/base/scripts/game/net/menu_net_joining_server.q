@@ -1,11 +1,11 @@
 
 script create_join_server_menu 
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = joining_screen_container
 		pos = (0.0, 0.0)}
 	create_menu_backdrop \{texture = xb_online_bg}
-	displaysprite \{id = online_frame
+	displaySprite \{id = online_frame
 		parent = joining_screen_container
 		tex = xb_online_frame_large
 		pos = (640.0, 100.0)
@@ -14,7 +14,7 @@ script create_join_server_menu
 			top
 		]
 		z = 2}
-	displaysprite \{id = xb_online_frame_crown
+	displaySprite \{id = xb_online_frame_crown
 		parent = joining_screen_container
 		tex = xb_online_frame_crown
 		pos = (640.0, 42.0)
@@ -25,14 +25,14 @@ script create_join_server_menu
 		z = 2.1
 		dims = (256.0, 105.0)}
 	if (($ui_flow_manager_state [0]) = quick_match_joining_game_fs)
-		<title_text> = qs(0x17e61634)
+		<title_text> = qs("QUICKMATCH")
 	elseif (($ui_flow_manager_state [0]) = invite_joining_game_fs)
-		<title_text> = qs(0xf05a63dd)
+		<title_text> = qs("INVITATION")
 	else
-		<title_text> = qs(0x0956be4d)
+		<title_text> = qs("CUSTOM MATCH")
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = joining_screen_container
 		font = fontgrid_title_a1
 		scale = 0.85
@@ -42,10 +42,10 @@ script create_join_server_menu
 		just = [center top]
 		z_priority = 2.1
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = joining_screen_container
-		text = qs(0x78490530)
+		text = qs("JOINING GAME")
 		just = [center center]
 		pos = (640.0, 340.0)
 		rot_angle = 0
@@ -54,21 +54,21 @@ script create_join_server_menu
 		rgba = ($online_light_blue)
 		z_priority = 2.1
 	}
-	getscreenelementdims id = <id>
-	createscreenelement {
-		type = textelement
+	GetScreenElementDims id = <id>
+	CreateScreenElement {
+		type = TextElement
 		parent = <id>
 		id = dots_text
 		font = fontgrid_title_a1
 		scale = 0.65000004
 		rgba = ($online_light_blue)
-		text = qs(0x03ac90f0)
+		text = qs("\L")
 		just = [left top]
 		z_priority = 2.1
 		pos = (<width> * (1.0, 0.0) + (5.0, 15.0))
 	}
-	if screenelementexists \{id = dots_text}
-		runscriptonscreenelement \{id = dots_text
+	if ScreenElementExists \{id = dots_text}
+		RunScriptOnScreenElement \{id = dots_text
 			animate_dots
 			params = {
 				id = dots_text
@@ -77,22 +77,22 @@ script create_join_server_menu
 endscript
 
 script destroy_join_server_menu 
-	if screenelementexists \{id = joining_screen_container}
-		destroyscreenelement \{id = joining_screen_container}
+	if ScreenElementExists \{id = joining_screen_container}
+		DestroyScreenElement \{id = joining_screen_container}
 	endif
 	destroy_popup_warning_menu
 	destroy_menu_backdrop
 endscript
 
 script create_joining_screen 
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = joining_screen_container
 		pos = (0.0, 0.0)}
 	create_menu_backdrop \{texture = menu_venue_bg}
-	createscreenelement \{type = textelement
+	CreateScreenElement \{type = TextElement
 		parent = joining_screen_container
-		text = qs(0x78490530)
+		text = qs("JOINING GAME")
 		just = [
 			center
 			center
@@ -116,7 +116,7 @@ script create_joining_screen
 			255
 		]
 		z_priority = 2.0}
-	createscreenelement \{type = textelement
+	CreateScreenElement \{type = TextElement
 		parent = joining_screen_container
 		id = joining_dots_text
 		font = fontgrid_text_a6
@@ -127,7 +127,7 @@ script create_joining_screen
 			210
 			250
 		]
-		text = qs(0x03ac90f0)
+		text = qs("\L")
 		just = [
 			left
 			top
@@ -142,8 +142,8 @@ script create_joining_screen
 			0
 			255
 		]}
-	if screenelementexists \{id = joining_dots_text}
-		runscriptonscreenelement \{id = joining_dots_text
+	if ScreenElementExists \{id = joining_dots_text}
+		RunScriptOnScreenElement \{id = joining_dots_text
 			animate_dots
 			params = {
 				id = joining_dots_text
@@ -152,8 +152,8 @@ script create_joining_screen
 endscript
 
 script destroy_joining_screen 
-	if screenelementexists \{id = joining_screen_container}
-		destroyscreenelement \{id = joining_screen_container}
+	if ScreenElementExists \{id = joining_screen_container}
+		DestroyScreenElement \{id = joining_screen_container}
 	endif
 	destroy_menu_backdrop
 endscript

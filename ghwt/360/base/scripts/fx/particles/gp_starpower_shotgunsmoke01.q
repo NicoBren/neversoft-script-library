@@ -1,21 +1,21 @@
 GP_StarPower_ShotgunSmoke01 = {
-	Pos = (0.0, 0.0, -0.63)
-	Angles = (0.0, 0.0, 0.0)
+	pos = (0.0, 0.0, -0.63)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
-	Attach
+	attach
 	Align
 	ApplyPositionOffset
 	bone = bone_guitar_neck
 	EmitRangeDims = (0.1, 0.1, 0.1)
 	DoCircularEmit
-	Emit_Target = (0.0, 0.0, -1.0)
+	emit_Target = (0.0, 0.0, -1.0)
 	EnableRotate
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, 0.0, 0.0)
+	force = (0.0, 0.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
@@ -23,11 +23,11 @@ GP_StarPower_ShotgunSmoke01 = {
 	ElevSpread = (90.0, 120.0)
 	SweepSpread = (0.0, 360.0)
 	LifeRange = (1.0, 1.5)
-	Emit_Rate = 99.0
-	Max = 0
+	emit_rate = 99.0
+	max = 0
 	TimeSeed = 0.0
-	LifeTime = 0.0
-	EmitNum = 8
+	lifeTime = 0.0
+	emitNum = 8
 	FollowEmitter = 0.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -41,8 +41,8 @@ GP_StarPower_ShotgunSmoke01 = {
 	EmitDelayStart = 0.0
 	PathFollowTime = 1.0
 	History = 2
-	HistoryListCoordinateSpace = World
-	Color = -1
+	HistoryListCoordinateSpace = world
+	color = -1
 	LOD_Distances = (20.0, 30.0)
 	NoVisibilityTest
 	QuickMaterial = {
@@ -50,8 +50,8 @@ GP_StarPower_ShotgunSmoke01 = {
 		DiffuseTextureEnabled
 		DiffuseTexture = JOW_Steam02
 		SpecularPower = 0
-		AlphaCutoff = 32
-		BlendMode = blend
+		alphacutoff = 32
+		blendMode = blend
 		Burn
 		BurnValue = 0.2
 		QuadAnimationFPS = 0

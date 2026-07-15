@@ -1162,12 +1162,12 @@ script create_leaderboard_groups_menu \{menu_title = "LEADERBOARDS"
 		vmenu_id = online_leaderboard_groups_vmenu
 		pos = (540.0, 100.0)}
 	change \{last_leaderboard_menu_index = 0}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = online_menu_ui_container
 		pos = (0.0, 0.0)}
-	createscreenelement {
-		type = vscrollingmenu
+	CreateScreenElement {
+		type = VScrollingMenu
 		parent = online_menu_ui_container
 		id = <menu_id>
 		just = [center top]
@@ -1175,8 +1175,8 @@ script create_leaderboard_groups_menu \{menu_title = "LEADERBOARDS"
 		pos = (($online_general_menu_pos) + (0.0, 182.0))
 		z_priority = 1
 	}
-	createscreenelement {
-		type = vmenu
+	CreateScreenElement {
+		type = VMenu
 		parent = <menu_id>
 		id = <vmenu_id>
 		pos = ((128.0, 0.0) + (-8.0, 0.0))
@@ -1192,27 +1192,27 @@ script create_leaderboard_groups_menu \{menu_title = "LEADERBOARDS"
 		]
 		exclusive_device = ($primary_controller)
 	}
-	create_menu_backdrop \{texture = online_background}
-	displaysprite id = online_frame_crown parent = online_menu_ui_container tex = online_frame_crown pos = (($online_general_menu_pos) + (0.0, -48.0)) dims = (192.0, 96.0) just = [center top] z = 3
-	displaysprite id = online_menu_box_top parent = online_menu_ui_container tex = window_frame_cap rgba = ($online_medium_blue) pos = ($online_general_menu_pos) dims = (288.0, 64.0) just = [center top] z = 2
-	displaysprite id = online_menu_box_top_fill parent = online_menu_ui_container tex = window_fill_cap rgba = [0 0 0 200] pos = ($online_general_menu_pos) dims = (288.0, 64.0) just = [center top] z = 2
-	displaysprite id = online_menu_box_body parent = online_menu_ui_container tex = window_frame_body_tall rgba = ($online_medium_blue) pos = (($online_general_menu_pos) + (0.0, 64.0)) dims = (288.0, 432.0) just = [center top] z = 2 flip_h
-	displaysprite id = online_menu_box_body_fill parent = online_menu_ui_container tex = window_fill_body_large rgba = [0 0 0 200] pos = (($online_general_menu_pos) + (0.0, 64.0)) dims = (288.0, 432.0) just = [center top] z = 2 flip_h
-	displaysprite id = online_menu_box_bottom parent = online_menu_ui_container tex = window_frame_cap rgba = ($online_medium_blue) pos = (($online_general_menu_pos) + (0.0, 496.0)) dims = (288.0, 64.0) just = [center top] z = 2 flip_h
-	displaysprite id = online_menu_box_bottom_fill parent = online_menu_ui_container tex = window_fill_cap rgba = [0 0 0 200] pos = (($online_general_menu_pos) + (0.0, 496.0)) dims = (288.0, 64.0) just = [center top] z = 2 flip_h
-	displaysprite id = online_title_bar parent = online_menu_ui_container tex = store_frame_bottom_bg rgba = ($online_light_blue) pos = (($online_general_menu_pos) + (0.0, 128.0)) dims = (288.0, 128.0) just = [center center] z = 3
-	displaysprite id = online_highlight parent = online_menu_ui_container tex = white rgba = ($online_light_blue) pos = ((($online_general_menu_hi_lite_ypos [0]) * (0.0, 1.0)) + (632.0, 0.0)) dims = (288.0, 40.0) just = [center top] z = 3
-	displaysprite id = online_bookend1 parent = online_menu_ui_container tex = character_hub_hilite_bookend rgba = ($online_light_blue) pos = ((($online_general_menu_hi_lite_ypos [0]) * (0.0, 1.0)) + (502.0, 20.0)) dims = (40.0, 35.0) just = [center center] z = 3
-	displaysprite id = online_bookend2 parent = online_menu_ui_container tex = character_hub_hilite_bookend rgba = ($online_light_blue) pos = ((($online_general_menu_hi_lite_ypos [0]) * (0.0, 1.0)) + (774.0, 20.0)) dims = (40.0, 35.0) just = [center center] z = 3
-	if isxenon
+	create_menu_backdrop \{texture = Online_Background}
+	displaySprite id = online_frame_crown parent = online_menu_ui_container tex = online_frame_crown pos = (($online_general_menu_pos) + (0.0, -48.0)) dims = (192.0, 96.0) just = [center top] z = 3
+	displaySprite id = online_menu_box_top parent = online_menu_ui_container tex = window_frame_cap rgba = ($online_medium_blue) pos = ($online_general_menu_pos) dims = (288.0, 64.0) just = [center top] z = 2
+	displaySprite id = online_menu_box_top_fill parent = online_menu_ui_container tex = window_fill_cap rgba = [0 0 0 200] pos = ($online_general_menu_pos) dims = (288.0, 64.0) just = [center top] z = 2
+	displaySprite id = online_menu_box_body parent = online_menu_ui_container tex = window_frame_body_tall rgba = ($online_medium_blue) pos = (($online_general_menu_pos) + (0.0, 64.0)) dims = (288.0, 432.0) just = [center top] z = 2 flip_h
+	displaySprite id = online_menu_box_body_fill parent = online_menu_ui_container tex = window_fill_body_large rgba = [0 0 0 200] pos = (($online_general_menu_pos) + (0.0, 64.0)) dims = (288.0, 432.0) just = [center top] z = 2 flip_h
+	displaySprite id = online_menu_box_bottom parent = online_menu_ui_container tex = window_frame_cap rgba = ($online_medium_blue) pos = (($online_general_menu_pos) + (0.0, 496.0)) dims = (288.0, 64.0) just = [center top] z = 2 flip_h
+	displaySprite id = online_menu_box_bottom_fill parent = online_menu_ui_container tex = window_fill_cap rgba = [0 0 0 200] pos = (($online_general_menu_pos) + (0.0, 496.0)) dims = (288.0, 64.0) just = [center top] z = 2 flip_h
+	displaySprite id = online_title_bar parent = online_menu_ui_container tex = store_frame_bottom_bg rgba = ($online_light_blue) pos = (($online_general_menu_pos) + (0.0, 128.0)) dims = (288.0, 128.0) just = [center center] z = 3
+	displaySprite id = online_highlight parent = online_menu_ui_container tex = white rgba = ($online_light_blue) pos = ((($online_general_menu_hi_lite_ypos [0]) * (0.0, 1.0)) + (632.0, 0.0)) dims = (288.0, 40.0) just = [center top] z = 3
+	displaySprite id = online_bookend1 parent = online_menu_ui_container tex = character_hub_hilite_bookend rgba = ($online_light_blue) pos = ((($online_general_menu_hi_lite_ypos [0]) * (0.0, 1.0)) + (502.0, 20.0)) dims = (40.0, 35.0) just = [center center] z = 3
+	displaySprite id = online_bookend2 parent = online_menu_ui_container tex = character_hub_hilite_bookend rgba = ($online_light_blue) pos = ((($online_general_menu_hi_lite_ypos [0]) * (0.0, 1.0)) + (774.0, 20.0)) dims = (40.0, 35.0) just = [center center] z = 3
+	if isXenon
 		<global_list_single_player> = master_leaderboard_singleplayer_list
 		<global_list_multi_player> = master_leaderboard_multiplayer_list
 	else
 		<global_list_single_player> = master_leaderboard_singleplayer_list_ps3
 		<global_list_multi_player> = master_leaderboard_multiplayer_list_ps3
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = online_menu_ui_container
 		font = text_a4
 		scale = (0.65000004, 0.75)
@@ -1223,8 +1223,8 @@ script create_leaderboard_groups_menu \{menu_title = "LEADERBOARDS"
 		z_priority = 3.0
 	}
 	fit_text_into_menu_item id = <id> max_width = 223
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = online_menu_ui_container
 		font = fontgrid_title_gh3
 		scale = (0.58, 0.75)
@@ -1236,8 +1236,8 @@ script create_leaderboard_groups_menu \{menu_title = "LEADERBOARDS"
 	}
 	fit_text_into_menu_item id = <id> max_width = 223
 	selectable_menu_items = 0
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <vmenu_id>
 		font = fontgrid_title_gh3
 		scale = (0.63, 0.75)
@@ -1247,15 +1247,15 @@ script create_leaderboard_groups_menu \{menu_title = "LEADERBOARDS"
 		z_priority = 4.0
 	}
 	fit_text_into_menu_item id = <id> max_width = 223
-	<id> :settags menu_item = <selectable_menu_items>
-	<id> :setprops event_handlers = [
+	<id> :SetTags menu_item = <selectable_menu_items>
+	<id> :SetProps event_handlers = [
 		{focus online_general_menu_focus params = {id = <id>}}
 		{unfocus retail_menu_unfocus}
 		{pad_choose online_select_leaderboard_group params = {group = song global_list = gh3_songlist}}
 	]
 	<selectable_menu_items> = (<selectable_menu_items> + 1)
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <vmenu_id>
 		font = fontgrid_title_gh3
 		scale = (0.65000004, 0.75)
@@ -1265,15 +1265,15 @@ script create_leaderboard_groups_menu \{menu_title = "LEADERBOARDS"
 		z_priority = 4.0
 	}
 	fit_text_into_menu_item id = <id> max_width = 223
-	<id> :settags menu_item = <selectable_menu_items>
-	<id> :setprops event_handlers = [
+	<id> :SetTags menu_item = <selectable_menu_items>
+	<id> :SetProps event_handlers = [
 		{focus online_general_menu_focus params = {id = <id>}}
 		{unfocus retail_menu_unfocus}
 		{pad_choose online_select_leaderboard_group params = {group = single global_list = <global_list_single_player>}}
 	]
 	<selectable_menu_items> = (<selectable_menu_items> + 1)
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <vmenu_id>
 		font = fontgrid_title_gh3
 		scale = (0.65000004, 0.75)
@@ -1283,14 +1283,14 @@ script create_leaderboard_groups_menu \{menu_title = "LEADERBOARDS"
 		z_priority = 4.0
 	}
 	fit_text_into_menu_item id = <id> max_width = 223
-	<id> :settags menu_item = <selectable_menu_items>
-	<id> :setprops event_handlers = [
+	<id> :SetTags menu_item = <selectable_menu_items>
+	<id> :SetProps event_handlers = [
 		{focus online_general_menu_focus params = {id = <id>}}
 		{unfocus retail_menu_unfocus}
 		{pad_choose online_select_leaderboard_group params = {group = multi global_list = <global_list_multi_player>}}
 	]
 	<selectable_menu_items> = (<selectable_menu_items> + 1)
-	set_online_menu_highlight_pos menu_items = <selectable_menu_items>
+	set_online_menu_highlight_pos Menu_items = <selectable_menu_items>
 	set_focus_color rgba = ($online_dark_purple)
 	set_unfocus_color rgba = ($online_light_blue)
 	change \{user_control_pill_text_color = [
@@ -1314,15 +1314,15 @@ script create_leaderboard_groups_menu \{menu_title = "LEADERBOARDS"
 	add_user_control_helper \{text = "UP/DOWN"
 		button = strumbar
 		z = 100}
-	launchevent type = focus target = <vmenu_id>
+	LaunchEvent type = focus target = <vmenu_id>
 endscript
 
 script destroy_leaderboard_groups_menu 
-	if screenelementexists \{id = online_menu_ui_container}
-		destroyscreenelement \{id = online_menu_ui_container}
+	if ScreenElementExists \{id = online_menu_ui_container}
+		DestroyScreenElement \{id = online_menu_ui_container}
 	endif
-	if screenelementexists \{id = online_leaderboard_groups_menu}
-		destroyscreenelement \{id = online_leaderboard_groups_menu}
+	if ScreenElementExists \{id = online_leaderboard_groups_menu}
+		DestroyScreenElement \{id = online_leaderboard_groups_menu}
 	endif
 	clean_up_user_control_helpers
 	destroy_menu_backdrop
@@ -1337,9 +1337,9 @@ endscript
 script create_leaderboard_group_listing_menu \{menu_id = online_leaderboard_select_menu
 		vmenu_id = online_leaderboard_select_vmenu
 		pos = (350.0, 100.0)}
-	create_menu_backdrop \{texture = online_background}
-	createscreenelement {
-		type = containerelement
+	create_menu_backdrop \{texture = Online_Background}
+	CreateScreenElement {
+		type = ContainerElement
 		id = leaderboard_group_cont
 		parent = root_window
 		pos = <pos>
@@ -1347,7 +1347,7 @@ script create_leaderboard_group_listing_menu \{menu_id = online_leaderboard_sele
 		z_priority = <z_priority>
 	}
 	cont_id = <id>
-	displaysprite {
+	displaySprite {
 		id = online_frame_crown
 		parent = <cont_id>
 		tex = online_frame_crown
@@ -1356,8 +1356,8 @@ script create_leaderboard_group_listing_menu \{menu_id = online_leaderboard_sele
 		just = [center top]
 		z = 3
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <cont_id>
 		id = joe_temp_id
 		font = fontgrid_title_gh3
@@ -1368,10 +1368,10 @@ script create_leaderboard_group_listing_menu \{menu_id = online_leaderboard_sele
 		pos = (300.0, 30.0)
 		z_priority = 3.0
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		id = net_leaderboard_bg
-		texture = online_frame_large
+		texture = Online_Frame_Large
 		parent = <cont_id>
 		just = [center top]
 		pos = (305.0, -10.0)
@@ -1382,8 +1382,8 @@ script create_leaderboard_group_listing_menu \{menu_id = online_leaderboard_sele
 		target_height = 560
 	}
 	menu_offset = (20.0, 100.0)
-	createscreenelement {
-		type = vscrollingmenu
+	CreateScreenElement {
+		type = VScrollingMenu
 		parent = <cont_id>
 		id = leaderboard_group_scrolling_menu
 		just = [left top]
@@ -1391,8 +1391,8 @@ script create_leaderboard_group_listing_menu \{menu_id = online_leaderboard_sele
 		pos = <menu_offset>
 	}
 	menu_id = <id>
-	createscreenelement {
-		type = vmenu
+	CreateScreenElement {
+		type = VMenu
 		parent = <menu_id>
 		id = leaderboard_group_vmenu
 		just = [left top]
@@ -1404,12 +1404,12 @@ script create_leaderboard_group_listing_menu \{menu_id = online_leaderboard_sele
 			{pad_down generic_menu_up_or_down_sound params = {down}}
 		]
 	}
-	<id> :settags menu_width = 562
+	<id> :SetTags menu_width = 562
 	vmenu_id = <id>
 	if ($current_leaderboard_group = song)
 		get_songlist_size
 	else
-		getarraysize ($current_leaderboard_array)
+		GetArraySize ($current_leaderboard_array)
 	endif
 	array_entry = 0
 	color = grey
@@ -1425,7 +1425,7 @@ script create_leaderboard_group_listing_menu \{menu_id = online_leaderboard_sele
 	endswitch
 	if ($current_leaderboard_group = song)
 		if (<song_struct>.version = gh3 && <song_struct>.leaderboard = 1)
-			if checksumequals a = black b = <color>
+			if ChecksumEquals a = black b = <color>
 				bg_color = [0 0 0 100]
 				color = grey
 			else
@@ -1443,7 +1443,7 @@ script create_leaderboard_group_listing_menu \{menu_id = online_leaderboard_sele
 			grid_index = (<grid_index> + 1)
 		endif
 	else
-		if checksumequals a = black b = <color>
+		if ChecksumEquals a = black b = <color>
 			bg_color = [0 0 0 100]
 			color = grey
 		else
@@ -1483,9 +1483,9 @@ script create_leaderboard_group_listing_menu \{menu_id = online_leaderboard_sele
 	add_user_control_helper \{text = "UP/DOWN"
 		button = strumbar
 		z = 100}
-	launchevent type = focus target = <vmenu_id> data = {grid_index = $last_leaderboard_menu_index}
-	setscreenelementlock id = <vmenu_id> on
-	setscreenelementlock id = <vmenu_id> off
+	LaunchEvent type = focus target = <vmenu_id> data = {grid_index = $last_leaderboard_menu_index}
+	SetScreenElementLock id = <vmenu_id> on
+	SetScreenElementLock id = <vmenu_id> off
 endscript
 
 script leaderboard_group_add_item {
@@ -1496,8 +1496,8 @@ script leaderboard_group_add_item {
 	}
 	text_scale = 0.6
 	text_nudge = (20.0, 0.0)
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <parent>
 		just = [left top]
 		event_handlers = [
@@ -1507,9 +1507,9 @@ script leaderboard_group_add_item {
 		]
 	}
 	cont_id = <id>
-	<cont_id> :settags orig_bg_color = <bg_color>
-	createscreenelement {
-		type = textelement
+	<cont_id> :SetTags orig_bg_color = <bg_color>
+	CreateScreenElement {
+		type = TextElement
 		local_id = the_text
 		parent = <cont_id>
 		font = text_a4
@@ -1519,23 +1519,23 @@ script leaderboard_group_add_item {
 		just = [left top]
 		pos = <text_nudge>
 	}
-	getscreenelementdims id = <id>
-	<parent> :getsingletag menu_width
-	text_height = <height>
+	GetScreenElementDims id = <id>
+	<parent> :GetSingleTag menu_width
+	text_height = <Height>
 	text_width = <width>
-	entry_height = <height>
-	setscreenelementprops {
+	entry_height = <Height>
+	SetScreenElementProps {
 		id = <id>
 		pos = (((<menu_width> - <text_width>) / 2.0) * (1.0, 0.0) + (0.0, -7.0))
 	}
 	padding = 10
-	setscreenelementprops {
+	SetScreenElementProps {
 		id = <cont_id>
 		dims = ((<entry_height>) * (0.0, 1.0) + (10.0, 0.0))
 	}
-	getscreenelementdims id = <id>
-	createscreenelement {
-		type = spriteelement
+	GetScreenElementDims id = <id>
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <cont_id>
 		local_id = bar
 		texture = white
@@ -1548,10 +1548,10 @@ script leaderboard_group_add_item {
 		target_width = <menu_width>
 		target_height = <entry_height>
 	}
-	getscreenelementprops id = <id>
+	GetScreenElementProps id = <id>
 	bar_pos = <pos>
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <cont_id>
 		local_id = bar_left
 		texture = character_hub_hilite_bookend
@@ -1565,14 +1565,14 @@ script leaderboard_group_add_item {
 		target_height = <entry_height>
 	}
 	back_nudge = (12.0, 0.0)
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	end_width = <width>
-	setscreenelementprops {
+	SetScreenElementProps {
 		id = <id>
 		pos = (<bar_pos> - (1.0, 0.0) * <end_width> + <back_nudge>)
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <cont_id>
 		local_id = bar_right
 		texture = character_hub_hilite_bookend
@@ -1585,67 +1585,67 @@ script leaderboard_group_add_item {
 		target_width = <entry_height>
 		target_height = <entry_height>
 	}
-	setscreenelementprops {
+	SetScreenElementProps {
 		id = <id>
 		pos = (<bar_pos> + (1.0, 0.0) * <menu_width> - (4.0, 0.0))
 	}
-	if gotparam \{tag_grid_x}
-		<cont_id> :settags tag_grid_x = <tag_grid_x>
+	if GotParam \{tag_grid_x}
+		<cont_id> :SetTags tag_grid_x = <tag_grid_x>
 	endif
 endscript
 
 script leaderboard_group_item_focus 
-	obj_getid
-	if screenelementexists id = {<objid> child = the_text}
-		setscreenelementprops {
-			id = {<objid> child = the_text}
+	Obj_GetID
+	if ScreenElementExists id = {<ObjID> child = the_text}
+		SetScreenElementProps {
+			id = {<ObjID> child = the_text}
 			rgba = ($online_dark_purple)
 		}
 	endif
-	if screenelementexists id = {<objid> child = bar}
-		setscreenelementprops {
-			id = {<objid> child = bar}
+	if ScreenElementExists id = {<ObjID> child = bar}
+		SetScreenElementProps {
+			id = {<ObjID> child = bar}
 			rgba = ($online_light_blue)
 		}
 	endif
-	if screenelementexists id = {<objid> child = bar_left}
-		setscreenelementprops {
-			id = {<objid> child = bar_left}
+	if ScreenElementExists id = {<ObjID> child = bar_left}
+		SetScreenElementProps {
+			id = {<ObjID> child = bar_left}
 			alpha = 1
 		}
 	endif
-	if screenelementexists id = {<objid> child = bar_left}
-		setscreenelementprops {
-			id = {<objid> child = bar_right}
+	if ScreenElementExists id = {<ObjID> child = bar_left}
+		SetScreenElementProps {
+			id = {<ObjID> child = bar_right}
 			alpha = 1
 		}
 	endif
 endscript
 
 script leaderboard_group_item_unfocus 
-	obj_getid
-	if screenelementexists id = {<objid> child = the_text}
-		setscreenelementprops {
-			id = {<objid> child = the_text}
+	Obj_GetID
+	if ScreenElementExists id = {<ObjID> child = the_text}
+		SetScreenElementProps {
+			id = {<ObjID> child = the_text}
 			rgba = ($online_light_blue)
 		}
 	endif
-	<objid> :getsingletag orig_bg_color
-	if screenelementexists id = {<objid> child = bar}
-		setscreenelementprops {
-			id = {<objid> child = bar}
+	<ObjID> :GetSingleTag orig_bg_color
+	if ScreenElementExists id = {<ObjID> child = bar}
+		SetScreenElementProps {
+			id = {<ObjID> child = bar}
 			rgba = <orig_bg_color>
 		}
 	endif
-	if screenelementexists id = {<objid> child = bar_left}
-		setscreenelementprops {
-			id = {<objid> child = bar_left}
+	if ScreenElementExists id = {<ObjID> child = bar_left}
+		SetScreenElementProps {
+			id = {<ObjID> child = bar_left}
 			alpha = 0
 		}
 	endif
-	if screenelementexists id = {<objid> child = bar_left}
-		setscreenelementprops {
-			id = {<objid> child = bar_right}
+	if ScreenElementExists id = {<ObjID> child = bar_left}
+		SetScreenElementProps {
+			id = {<ObjID> child = bar_right}
 			alpha = 0
 		}
 	endif
@@ -1653,22 +1653,22 @@ endscript
 
 script destroy_leaderboard_group_listing_menu 
 	clean_up_user_control_helpers
-	if screenelementexists \{id = leaderboard_group_cont}
-		destroyscreenelement \{id = leaderboard_group_cont}
+	if ScreenElementExists \{id = leaderboard_group_cont}
+		DestroyScreenElement \{id = leaderboard_group_cont}
 	endif
 	destroy_menu_backdrop
 endscript
 last_leaderboard_menu_index = 0
 
 script select_leaderboard_from_list 
-	change \{leaderboardsearchvalue = 0}
-	change \{leaderboardsongtypevalue = 0}
-	change \{leaderboarddiffvalue = 3}
+	change \{LeaderboardSearchValue = 0}
+	change \{LeaderboardSongTypeValue = 0}
+	change \{LeaderboardDiffValue = 3}
 	change \{checking_coop_song_flag = 0}
 	change \{lb_list_type = rating}
 	change song_checksum = <leaderboard_id>
 	change current_leaderboard_id = <leaderboard_id>
-	if gotparam \{index}
+	if GotParam \{index}
 		change last_leaderboard_menu_index = <index>
 	endif
 	ui_flow_manager_respond_to_action \{action = select_leaderboard}
@@ -1676,23 +1676,23 @@ endscript
 
 script create_leaderboard_menu 
 	printf \{"--- create_leaderboard_menu"}
-	create_menu_backdrop \{texture = online_background}
+	create_menu_backdrop \{texture = Online_Background}
 	if ($current_leaderboard_group = song)
 		get_leaderboard_headers \{song = true}
-		change lb_rating_value = (($leaderboarddiffvalue) + 1)
+		change lb_rating_value = (($LeaderboardDiffValue) + 1)
 	else
 		get_leaderboard_headers \{song = false}
 		change \{lb_rating_value = 0}
 	endif
-	switch ($leaderboardsearchvalue)
+	switch ($LeaderboardSearchValue)
 		case 0
 		search_title = "ALL TIME BEST:"
 		case 1
 		search_title = "MY RANK:"
 	endswitch
-	menu_backdrop_container :settags <...>
+	menu_backdrop_container :SetTags <...>
 	create_leaderboard_loading_bar
-	netsessionfunc {
+	NetSessionFunc {
 		obj = stats
 		func = get_stats
 		params = {
@@ -1706,16 +1706,16 @@ script create_leaderboard_menu
 endscript
 
 script destroy_leaderboard_loading_bar 
-	if screenelementexists \{id = net_leaderboards_loading_cont}
-		destroyscreenelement \{id = net_leaderboards_loading_cont}
+	if ScreenElementExists \{id = net_leaderboards_loading_cont}
+		DestroyScreenElement \{id = net_leaderboards_loading_cont}
 	endif
 endscript
 
 script create_leaderboard_loading_bar 
-	if screenelementexists \{id = net_leaderboards_loading_cont}
-		destroyscreenelement \{id = net_leaderboards_loading_cont}
+	if ScreenElementExists \{id = net_leaderboards_loading_cont}
+		DestroyScreenElement \{id = net_leaderboards_loading_cont}
 	endif
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = net_leaderboards_loading_cont
 		z_priority = 1500
@@ -1725,8 +1725,8 @@ script create_leaderboard_loading_bar
 		]
 		pos = (570.0, 280.0)}
 	<cont_id> = <id>
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <cont_id>
 		font = text_a4
 		text = "Loading"
@@ -1735,22 +1735,22 @@ script create_leaderboard_loading_bar
 		alpha = 0
 	}
 	text_id = <id>
-	runscriptonscreenelement id = <text_id> leaderboard_loading_bar_animate
-	runscriptonscreenelement id = <cont_id> leaderbaord_loading_timeout_script
+	RunScriptOnScreenElement id = <text_id> leaderboard_loading_bar_animate
+	RunScriptOnScreenElement id = <cont_id> leaderbaord_loading_timeout_script
 endscript
 
 script leaderbaord_loading_timeout_script 
-	wait \{10
+	Wait \{10
 		seconds}
 	leaderboard_back_action
 	destroy_leaderboard_loading_bar
 endscript
 
 script leaderboard_loading_bar_animate 
-	obj_getid
-	wait \{0.5
+	Obj_GetID
+	Wait \{0.5
 		seconds}
-	<objid> :setprops alpha = 1
+	<ObjID> :SetProps alpha = 1
 	i = 0
 	begin
 	text = "Loading"
@@ -1764,8 +1764,8 @@ script leaderboard_loading_bar_animate
 		case 3
 		text = "Loading..."
 	endswitch
-	<objid> :setprops text = <text>
-	wait \{0.5
+	<ObjID> :SetProps text = <text>
+	Wait \{0.5
 		seconds}
 	i = (<i> + 1)
 	if (<i> > 3)
@@ -1777,7 +1777,7 @@ endscript
 script create_leaderboard_menu2 
 	printf \{"--- create_leaderboard_menu2"}
 	printstruct <...>
-	getarraysize \{leaderboard_data}
+	GetArraySize \{leaderboard_data}
 	if ($current_leaderboard_group = song)
 		my_data = ["no rank" "" "" "no score"]
 	else
@@ -1787,13 +1787,13 @@ script create_leaderboard_menu2
 		my_data = (<leaderboard_data> [0].data)
 	endif
 	destroy_leaderboard_loading_bar
-	spawnscriptlater create_leaderboard_menu3 params = {my_data = <my_data>}
+	SpawnScriptLater create_leaderboard_menu3 params = {my_data = <my_data>}
 endscript
 
 script create_leaderboard_menu3 
 	printf \{"--- create_leaderboard_menu3"}
-	menu_backdrop_container :gettags
-	wait \{1
+	menu_backdrop_container :GetTags
+	Wait \{1
 		gameframes}
 	new_leaderboard_menu {
 		title = <title>
@@ -1822,7 +1822,7 @@ script create_leaderboard_menu3
 		button = red
 		z = 100}
 	add_user_control_helper \{text = "FILTERS"
-		button = yellow
+		button = Yellow
 		z = 100}
 	add_user_control_helper \{text = "UP/DOWN"
 		button = strumbar
@@ -1833,52 +1833,52 @@ script add_leaderboard_rows_to_menu
 	printf \{"--- add_leaderboard_rows_to_menu"}
 	destroy_leaderboard_loading_bar
 	printstruct <...>
-	if screenelementexists \{id = arrow_down}
-		setscreenelementprops id = arrow_down rgba = ($online_light_blue)
+	if ScreenElementExists \{id = arrow_down}
+		SetScreenElementProps id = arrow_down rgba = ($online_light_blue)
 	endif
-	if screenelementexists \{id = arrow_up}
-		setscreenelementprops id = arrow_up rgba = ($online_light_blue) flip_h
+	if ScreenElementExists \{id = arrow_up}
+		SetScreenElementProps id = arrow_up rgba = ($online_light_blue) flip_h
 	endif
-	if gotparam \{leaderboard_data}
+	if GotParam \{leaderboard_data}
 		<array_count> = 0
-		getarraysize <leaderboard_data>
+		GetArraySize <leaderboard_data>
 		begin
 		if (<array_size> <= 0)
 			break
 		endif
-		formattext checksumname = leaderboard_rank 'leaderboard_entry_%i_rank' i = <array_count>
-		formattext checksumname = leaderboard_entry 'leaderboard_entry_%i_gamertag' i = <array_count>
-		formattext checksumname = leaderboard_name 'leaderboard_entry_%i_name' i = <array_count>
-		formattext checksumname = leaderboard_score 'leaderboard_entry_%i_score' i = <array_count>
-		formattext checksumname = leaderboard_difficulty 'leaderboard_entry_%i_difficulty' i = <array_count>
-		formattext textname = rank "%a" a = (<leaderboard_data> [<array_count>].data [0])
-		formattext textname = text "%a" a = (<leaderboard_data> [<array_count>].data [1])
-		if screenelementexists id = <leaderboard_difficulty>
-			formattext textname = score "%a" a = (<leaderboard_data> [<array_count>].data [3])
+		FormatText checksumname = leaderboard_rank 'leaderboard_entry_%i_rank' i = <array_count>
+		FormatText checksumname = leaderboard_entry 'leaderboard_entry_%i_gamertag' i = <array_count>
+		FormatText checksumname = leaderboard_name 'leaderboard_entry_%i_name' i = <array_count>
+		FormatText checksumname = leaderboard_score 'leaderboard_entry_%i_score' i = <array_count>
+		FormatText checksumname = leaderboard_difficulty 'leaderboard_entry_%i_difficulty' i = <array_count>
+		FormatText TextName = rank "%a" a = (<leaderboard_data> [<array_count>].data [0])
+		FormatText TextName = text "%a" a = (<leaderboard_data> [<array_count>].data [1])
+		if ScreenElementExists id = <leaderboard_difficulty>
+			FormatText TextName = score "%a" a = (<leaderboard_data> [<array_count>].data [3])
 			get_diff_string_from_string_num num = (<leaderboard_data> [<array_count>].data [2])
-			formattext textname = difficulty "(%a)" a = <diff>
+			FormatText TextName = difficulty "(%a)" a = <diff>
 		else
-			formattext textname = score "%a" a = (<leaderboard_data> [<array_count>].data [2])
+			FormatText TextName = score "%a" a = (<leaderboard_data> [<array_count>].data [2])
 		endif
 		if ((<leaderboard_id> = lb_faceoff_winratio) || (<leaderboard_id> = lb_pro_faceoff_winratio) || (<leaderboard_id> = lb_battle_winratio))
 			winlosevalue = (<leaderboard_data> [<array_count>].data [2])
-			widestringtointeger \{winlosevalue}
-			getleaderboardwinlosevalue winlosevalue = <winlosevalue>
-			formattext textname = score "%a" a = <win> b = <lose>
+			WideStringToInteger \{winlosevalue}
+			GetLeaderboardWinLoseValue winlosevalue = <winlosevalue>
+			FormatText TextName = score "%a" a = <win> b = <lose>
 		endif
-		<leaderboard_rank> :setprops text = <rank>
-		<leaderboard_entry> :setprops unblock_events
-		<leaderboard_rank> :setprops text = <rank>
-		<leaderboard_entry> :settags player_xuid = (<leaderboard_data> [<array_count>].player_xuid)
-		<leaderboard_score> :setprops text = <score>
-		<leaderboard_name> :setprops text = <text>
+		<leaderboard_rank> :SetProps text = <rank>
+		<leaderboard_entry> :SetProps unblock_events
+		<leaderboard_rank> :SetProps text = <rank>
+		<leaderboard_entry> :SetTags player_xuid = (<leaderboard_data> [<array_count>].player_xuid)
+		<leaderboard_score> :SetProps text = <score>
+		<leaderboard_name> :SetProps text = <text>
 		fit_text_into_menu_item id = <leaderboard_score> max_width = 175
 		fit_text_into_menu_item id = <leaderboard_name> max_width = 220
-		if screenelementexists id = <leaderboard_difficulty>
-			<leaderboard_difficulty> :setprops text = <difficulty>
+		if ScreenElementExists id = <leaderboard_difficulty>
+			<leaderboard_difficulty> :SetProps text = <difficulty>
 		endif
 		if ($lb_list_type = me)
-			if (netsessionfunc obj = match func = get_gamertag)
+			if (NetSessionFunc obj = match func = get_gamertag)
 				if (<name> = (<leaderboard_data> [<array_count>].data [1]))
 					change lb_offset = <offset>
 					change lb_selection_index = <array_count>
@@ -1895,35 +1895,35 @@ script add_leaderboard_rows_to_menu
 		if (<array_size> < 10)
 			filler = (10 - <array_size>)
 			begin
-			formattext checksumname = leaderboard_rank 'leaderboard_entry_%i_rank' i = <array_count>
-			formattext checksumname = leaderboard_entry 'leaderboard_entry_%i_gamertag' i = <array_count>
-			formattext checksumname = leaderboard_score 'leaderboard_entry_%i_score' i = <array_count>
-			formattext checksumname = leaderboard_difficulty 'leaderboard_entry_%i_difficulty' i = <array_count>
-			if screenelementexists id = <leaderboard_difficulty>
-				<leaderboard_difficulty> :setprops text = "-"
+			FormatText checksumname = leaderboard_rank 'leaderboard_entry_%i_rank' i = <array_count>
+			FormatText checksumname = leaderboard_entry 'leaderboard_entry_%i_gamertag' i = <array_count>
+			FormatText checksumname = leaderboard_score 'leaderboard_entry_%i_score' i = <array_count>
+			FormatText checksumname = leaderboard_difficulty 'leaderboard_entry_%i_difficulty' i = <array_count>
+			if ScreenElementExists id = <leaderboard_difficulty>
+				<leaderboard_difficulty> :SetProps text = "-"
 			endif
-			<leaderboard_rank> :setprops text = "-"
-			setscreenelementprops {
+			<leaderboard_rank> :SetProps text = "-"
+			SetScreenElementProps {
 				id = {<leaderboard_entry> child = the_text}
 				text = "-"
 			}
-			<leaderboard_score> :setprops text = "-"
+			<leaderboard_score> :SetProps text = "-"
 			<array_count> = (<array_count> + 1)
 			repeat <filler>
 		endif
 	else
 		printf \{"did not recieve leaderboard information"}
 	endif
-	formattext checksumname = leaderboard_entry 'leaderboard_entry_%i_gamertag' i = ($lb_selection_index)
-	gamertag_vmenu :obj_spawnscriptlater return_focus_to_leaderboard params = {target = <leaderboard_entry>}
+	FormatText checksumname = leaderboard_entry 'leaderboard_entry_%i_gamertag' i = ($lb_selection_index)
+	gamertag_vmenu :Obj_SpawnScriptLater return_focus_to_leaderboard params = {target = <leaderboard_entry>}
 endscript
 
 script return_focus_to_leaderboard 
-	wait \{0.8
+	Wait \{0.8
 		seconds}
-	launchevent type = focus target = gamertag_vmenu data = {child_id = <target>}
+	LaunchEvent type = focus target = gamertag_vmenu data = {child_id = <target>}
 	if ($lb_list_type = me)
-		launchevent type = focus target = <target>
+		LaunchEvent type = focus target = <target>
 	endif
 endscript
 
@@ -1931,18 +1931,18 @@ script destroy_leaderboard_menu
 	clean_up_user_control_helpers
 	destroy_menu \{menu_id = online_leaderboard_menu}
 	destroy_menu_backdrop
-	if screenelementexists \{id = leaderboard_container}
-		destroyscreenelement \{id = leaderboard_container}
+	if ScreenElementExists \{id = leaderboard_container}
+		DestroyScreenElement \{id = leaderboard_container}
 	endif
-	if screenelementexists \{id = leaderboard_filter_container}
-		destroyscreenelement \{id = leaderboard_filter_container}
+	if ScreenElementExists \{id = leaderboard_filter_container}
+		DestroyScreenElement \{id = leaderboard_filter_container}
 	endif
 endscript
 
 script get_leaderboard_headers \{song = true}
-	getarraysize ($current_leaderboard_array)
+	GetArraySize ($current_leaderboard_array)
 	if (<song> = true)
-		if isxenon
+		if isXenon
 			<columns> = ($master_leaderboard_song_list [0].column_ids)
 			<headers> = ($master_leaderboard_song_list [0].headers)
 			column_pos = ($master_leaderboard_song_list [0].column_pos)
@@ -1953,13 +1953,13 @@ script get_leaderboard_headers \{song = true}
 		endif
 		if ($checking_coop_song_flag = 1)
 			get_song_title song = ($song_checksum)
-			formattext textname = title "CO-OP %s" s = <song_title>
+			FormatText TextName = title "CO-OP %s" s = <song_title>
 		else
 			get_song_title song = ($current_leaderboard_id)
 			<title> = <song_title>
 		endif
 	else
-		getarraysize ($current_leaderboard_array)
+		GetArraySize ($current_leaderboard_array)
 		array_entry = 0
 		begin
 		if ((($current_leaderboard_array) [<array_entry>].leaderboard_id) = ($current_leaderboard_id))
@@ -1991,29 +1991,29 @@ script leaderboard_back_action
 endscript
 
 script submit_filter_query 
-	switch ($leaderboardsearchvalue)
+	switch ($LeaderboardSearchValue)
 		case 0
 		change \{lb_list_type = rating}
 		case 1
 		change \{lb_list_type = me}
 	endswitch
-	if (($current_leaderboard_group = song) && ($leaderboardsongtypevalue = 1))
+	if (($current_leaderboard_group = song) && ($LeaderboardSongTypeValue = 1))
 		get_song_struct song = ($song_checksum)
-		formattext checksumname = leaderboard_id 'lb_coop_%s' s = (<song_struct>.name)
+		FormatText checksumname = leaderboard_id 'lb_coop_%s' s = (<song_struct>.name)
 		change current_leaderboard_id = <leaderboard_id>
 		change \{checking_coop_song_flag = 1}
-	elseif (($current_leaderboard_group = song) && ($leaderboardsongtypevalue = 0))
+	elseif (($current_leaderboard_group = song) && ($LeaderboardSongTypeValue = 0))
 		change current_leaderboard_id = ($song_checksum)
 		change \{checking_coop_song_flag = 0}
 	endif
-	if screenelementexists \{id = leaderboard_filter_container}
-		destroyscreenelement \{id = leaderboard_filter_container}
+	if ScreenElementExists \{id = leaderboard_filter_container}
+		DestroyScreenElement \{id = leaderboard_filter_container}
 	endif
-	if screenelementexists \{id = leaderboard_container}
-		destroyscreenelement \{id = leaderboard_container}
+	if ScreenElementExists \{id = leaderboard_container}
+		DestroyScreenElement \{id = leaderboard_container}
 	endif
-	if screenelementexists \{id = menu_backdrop_container}
-		destroyscreenelement \{id = menu_backdrop_container}
+	if ScreenElementExists \{id = menu_backdrop_container}
+		DestroyScreenElement \{id = menu_backdrop_container}
 	endif
 	clean_up_user_control_helpers
 	create_leaderboard_menu
@@ -2021,7 +2021,7 @@ endscript
 
 script new_leaderboard_menu 
 	printf \{"--- new_leaderboard_menu"}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = leaderboard_container
 		just = [
@@ -2030,10 +2030,10 @@ script new_leaderboard_menu
 		]
 		pos = (0.0, 0.0)}
 	anchor_id = <id>
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		id = net_leaderboard_bg
-		texture = online_frame_large
+		texture = Online_Frame_Large
 		parent = <anchor_id>
 		just = [left top]
 		pos = (60.0, 40.0)
@@ -2049,8 +2049,8 @@ script new_leaderboard_menu
 		column_pos = <column_pos>
 	}
 	text_scale = (0.8, 1.0)
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <anchor_id>
 		id = current_leaderboard_title_extra
 		font = fontgrid_title_gh3
@@ -2062,8 +2062,8 @@ script new_leaderboard_menu
 		z_priority = 20
 	}
 	fit_text_into_menu_item id = <id> max_width = 320
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <anchor_id>
 		id = current_leaderboard_title
 		font = fontgrid_title_gh3
@@ -2075,8 +2075,8 @@ script new_leaderboard_menu
 		z_priority = 10
 	}
 	fit_text_into_menu_item id = <id> max_width = 400
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <anchor_id>
 		texture = online_icon_player
 		pos = (320.0, 250.0)
@@ -2085,9 +2085,9 @@ script new_leaderboard_menu
 		just = [left top]
 		scale = 1.5
 	}
-	if (netsessionfunc obj = match func = get_gamertag)
-		createscreenelement {
-			type = textelement
+	if (NetSessionFunc obj = match func = get_gamertag)
+		CreateScreenElement {
+			type = TextElement
 			parent = <anchor_id>
 			id = leaderboard_your_gamertag
 			font = text_a4
@@ -2103,20 +2103,20 @@ script new_leaderboard_menu
 	if ((($current_leaderboard_id) = lb_faceoff_winratio) || (($current_leaderboard_id) = lb_pro_faceoff_winratio) || (($current_leaderboard_id) = lb_battle_winratio))
 		if NOT ((<my_data> [2]) = "no score")
 			winlosevalue = (<my_data> [2])
-			widestringtointeger \{winlosevalue}
-			getleaderboardwinlosevalue winlosevalue = <winlosevalue>
-			formattext textname = score "%a" a = <win> b = <lose>
+			WideStringToInteger \{winlosevalue}
+			GetLeaderboardWinLoseValue winlosevalue = <winlosevalue>
+			FormatText TextName = score "%a" a = <win> b = <lose>
 		endif
 	elseif ($current_leaderboard_group = song)
 		if ((<my_data> [3]) = "no score")
-			formattext textname = score "%a" a = (<my_data> [3])
+			FormatText TextName = score "%a" a = (<my_data> [3])
 		else
 			get_diff_string_from_string_num num = (<my_data> [2])
-			formattext textname = score "%a (%b)" a = (<my_data> [3]) b = <diff>
+			FormatText TextName = score "%a (%b)" a = (<my_data> [3]) b = <diff>
 		endif
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <anchor_id>
 		id = leaderboard_your_score
 		font = text_a4
@@ -2127,10 +2127,10 @@ script new_leaderboard_menu
 		scale = (0.5, 0.7)
 		alpha = 1
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		id = arrow_up
-		texture = online_arrow
+		texture = Online_Arrow
 		parent = <anchor_id>
 		just = [left top]
 		pos = (750.0, 195.0)
@@ -2138,11 +2138,11 @@ script new_leaderboard_menu
 		scale = 1
 		rgba = ($online_light_blue)
 	}
-	<id> :setprops flip_h
-	createscreenelement {
-		type = spriteelement
+	<id> :SetProps flip_h
+	CreateScreenElement {
+		type = SpriteElement
 		id = arrow_down
-		texture = online_arrow
+		texture = Online_Arrow
 		parent = <anchor_id>
 		just = [left top]
 		pos = (750.0, 590.0)
@@ -2150,7 +2150,7 @@ script new_leaderboard_menu
 		scale = 1
 		rgba = ($online_light_blue)
 	}
-	createscreenelement \{type = vscrollingmenu
+	CreateScreenElement \{type = VScrollingMenu
 		parent = leaderboard_container
 		id = gamertag_scrolling_menu
 		internal_just = [
@@ -2163,7 +2163,7 @@ script new_leaderboard_menu
 		]
 		dims = (400.0, 480.0)
 		pos = (580.0, 210.0)}
-	createscreenelement \{type = vmenu
+	CreateScreenElement \{type = VMenu
 		parent = gamertag_scrolling_menu
 		id = gamertag_vmenu
 		just = [
@@ -2209,13 +2209,13 @@ script new_leaderboard_menu
 	array_count = 0
 	color = black
 	begin
-	formattext checksumname = leaderboard_rank 'leaderboard_entry_%i_rank' i = <array_count>
-	formattext checksumname = leaderboard_entry 'leaderboard_entry_%i_gamertag' i = <array_count>
-	formattext checksumname = leaderboard_name 'leaderboard_entry_%i_name' i = <array_count>
-	formattext checksumname = leaderboard_score 'leaderboard_entry_%i_score' i = <array_count>
-	formattext checksumname = leaderboard_difficulty 'leaderboard_entry_%i_difficulty' i = <array_count>
-	createscreenelement {
-		type = containerelement
+	FormatText checksumname = leaderboard_rank 'leaderboard_entry_%i_rank' i = <array_count>
+	FormatText checksumname = leaderboard_entry 'leaderboard_entry_%i_gamertag' i = <array_count>
+	FormatText checksumname = leaderboard_name 'leaderboard_entry_%i_name' i = <array_count>
+	FormatText checksumname = leaderboard_score 'leaderboard_entry_%i_score' i = <array_count>
+	FormatText checksumname = leaderboard_difficulty 'leaderboard_entry_%i_difficulty' i = <array_count>
+	CreateScreenElement {
+		type = ContainerElement
 		dims = (30.0, 35.0)
 		parent = gamertag_vmenu
 		id = <leaderboard_entry>
@@ -2227,8 +2227,8 @@ script new_leaderboard_menu
 	cont_id = <id>
 	text_scale = 0.65000004
 	text_offset = (-80.0, 0.0)
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <cont_id>
 		id = <leaderboard_rank>
 		local_id = rank
@@ -2240,8 +2240,8 @@ script new_leaderboard_menu
 		just = [left top]
 		z_priority = 10
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <cont_id>
 		id = <leaderboard_name>
 		local_id = the_text
@@ -2253,8 +2253,8 @@ script new_leaderboard_menu
 		z_priority = 10
 		pos = (<text_offset> + (1.0, 0.0) * <column_pos> [1])
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <cont_id>
 		local_id = score
 		id = <leaderboard_score>
@@ -2267,10 +2267,10 @@ script new_leaderboard_menu
 		block_events
 		z_priority = 10
 	}
-	getarraysize \{headers}
+	GetArraySize \{headers}
 	if (<array_size> = 4)
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = <cont_id>
 			local_id = difficulty
 			id = <leaderboard_difficulty>
@@ -2284,16 +2284,16 @@ script new_leaderboard_menu
 			z_priority = 10
 		}
 	endif
-	if checksumequals a = black b = <color>
+	if ChecksumEquals a = black b = <color>
 		bg_color = [0 0 0 100]
 		color = grey
 	else
 		bg_color = [128 128 128 100]
 		color = black
 	endif
-	<cont_id> :settags orig_bg_color = <bg_color>
-	createscreenelement {
-		type = spriteelement
+	<cont_id> :SetTags orig_bg_color = <bg_color>
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <cont_id>
 		local_id = bg_bar
 		texture = white
@@ -2307,8 +2307,8 @@ script new_leaderboard_menu
 		target_width = 500
 		target_height = 35
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <cont_id>
 		local_id = bg_bar_left
 		texture = character_hub_hilite_bookend
@@ -2323,8 +2323,8 @@ script new_leaderboard_menu
 		target_width = 40
 		target_height = 35
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <cont_id>
 		local_id = bg_bar_right
 		texture = character_hub_hilite_bookend
@@ -2357,23 +2357,23 @@ script create_leaderboard_headers \{pos = (500.0, 160.0)
 		]
 		text_scale = 0.7}
 	printf \{"--- create_leaderboard_headers"}
-	if NOT screenelementexists id = <parent>
+	if NOT ScreenElementExists id = <parent>
 		printf \{"parent does not exist!"}
 		return
 	endif
-	if screenelementexists \{id = leaderboard_column_header_cont}
-		destroyscreenelement \{id = leaderboard_column_header_cont}
+	if ScreenElementExists \{id = leaderboard_column_header_cont}
+		DestroyScreenElement \{id = leaderboard_column_header_cont}
 	endif
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		id = leaderboard_column_header_cont
 		parent = <parent>
 		pos = <pos>
 		just = [left top]
 	}
 	cont_id = <id>
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		id = leaderboard_header_bg
 		parent = <cont_id>
 		pos = (-55.0, -14.0)
@@ -2386,9 +2386,9 @@ script create_leaderboard_headers \{pos = (500.0, 160.0)
 		target_width = 580
 		target_height = 75
 	}
-	getarraysize \{headers}
-	createscreenelement {
-		type = textelement
+	GetArraySize \{headers}
+	CreateScreenElement {
+		type = TextElement
 		parent = <cont_id>
 		font = text_a4
 		scale = <text_scale>
@@ -2399,8 +2399,8 @@ script create_leaderboard_headers \{pos = (500.0, 160.0)
 		z_priority = 10
 	}
 	fit_text_into_menu_item id = <id> max_width = 100
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <cont_id>
 		font = text_a4
 		scale = <text_scale>
@@ -2411,8 +2411,8 @@ script create_leaderboard_headers \{pos = (500.0, 160.0)
 		z_priority = 10
 	}
 	fit_text_into_menu_item id = <id> max_width = 200
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <cont_id>
 		font = text_a4
 		scale = <text_scale>
@@ -2423,8 +2423,8 @@ script create_leaderboard_headers \{pos = (500.0, 160.0)
 		z_priority = 10
 	}
 	if (<array_size> > 3)
-		formattext textname = new_text "%s %d" s = (<headers> [2]) d = (<headers> [3])
-		<id> :setprops {
+		FormatText TextName = new_text "%s %d" s = (<headers> [2]) d = (<headers> [3])
+		<id> :SetProps {
 			text = <new_text>
 			just = [right top]
 			pos = ((1.0, 0.0) * <column_pos> [3] + (50.0, 0.0))
@@ -2434,60 +2434,60 @@ script create_leaderboard_headers \{pos = (500.0, 160.0)
 endscript
 
 script leaderboard_custom_focus 
-	obj_getid
-	if screenelementexists id = {<objid> child = rank}
-		setscreenelementprops id = {<objid> child = rank} rgba = ($online_dark_purple)
+	Obj_GetID
+	if ScreenElementExists id = {<ObjID> child = rank}
+		SetScreenElementProps id = {<ObjID> child = rank} rgba = ($online_dark_purple)
 	endif
-	if screenelementexists id = {<objid> child = the_text}
-		setscreenelementprops id = {<objid> child = the_text} rgba = ($online_dark_purple)
+	if ScreenElementExists id = {<ObjID> child = the_text}
+		SetScreenElementProps id = {<ObjID> child = the_text} rgba = ($online_dark_purple)
 	endif
-	if screenelementexists id = {<objid> child = score}
-		setscreenelementprops id = {<objid> child = score} rgba = ($online_dark_purple)
+	if ScreenElementExists id = {<ObjID> child = score}
+		SetScreenElementProps id = {<ObjID> child = score} rgba = ($online_dark_purple)
 	endif
-	if screenelementexists id = {<objid> child = difficulty}
-		setscreenelementprops id = {<objid> child = difficulty} rgba = ($online_dark_purple)
+	if ScreenElementExists id = {<ObjID> child = difficulty}
+		SetScreenElementProps id = {<ObjID> child = difficulty} rgba = ($online_dark_purple)
 	endif
-	if screenelementexists id = {<objid> child = bg_bar}
-		setscreenelementprops id = {<objid> child = bg_bar} rgba = ($online_light_blue)
+	if ScreenElementExists id = {<ObjID> child = bg_bar}
+		SetScreenElementProps id = {<ObjID> child = bg_bar} rgba = ($online_light_blue)
 	endif
-	if screenelementexists id = {<objid> child = bg_bar_right}
-		setscreenelementprops id = {<objid> child = bg_bar_right} alpha = 1
+	if ScreenElementExists id = {<ObjID> child = bg_bar_right}
+		SetScreenElementProps id = {<ObjID> child = bg_bar_right} alpha = 1
 	endif
-	if screenelementexists id = {<objid> child = bg_bar_left}
-		setscreenelementprops id = {<objid> child = bg_bar_left} alpha = 1
+	if ScreenElementExists id = {<ObjID> child = bg_bar_left}
+		SetScreenElementProps id = {<ObjID> child = bg_bar_left} alpha = 1
 	endif
 endscript
 
 script leaderboard_custom_unfocus 
-	obj_getid
-	if screenelementexists id = {<objid> child = rank}
-		setscreenelementprops id = {<objid> child = rank} rgba = ($online_light_blue)
+	Obj_GetID
+	if ScreenElementExists id = {<ObjID> child = rank}
+		SetScreenElementProps id = {<ObjID> child = rank} rgba = ($online_light_blue)
 	endif
-	if screenelementexists id = {<objid> child = the_text}
-		setscreenelementprops id = {<objid> child = the_text} rgba = ($online_light_blue)
+	if ScreenElementExists id = {<ObjID> child = the_text}
+		SetScreenElementProps id = {<ObjID> child = the_text} rgba = ($online_light_blue)
 	endif
-	if screenelementexists id = {<objid> child = score}
-		setscreenelementprops id = {<objid> child = score} rgba = ($online_light_blue)
+	if ScreenElementExists id = {<ObjID> child = score}
+		SetScreenElementProps id = {<ObjID> child = score} rgba = ($online_light_blue)
 	endif
-	if screenelementexists id = {<objid> child = difficulty}
-		setscreenelementprops id = {<objid> child = difficulty} rgba = ($online_light_blue)
+	if ScreenElementExists id = {<ObjID> child = difficulty}
+		SetScreenElementProps id = {<ObjID> child = difficulty} rgba = ($online_light_blue)
 	endif
-	<objid> :getsingletag orig_bg_color
-	if screenelementexists id = {<objid> child = bg_bar}
-		setscreenelementprops id = {<objid> child = bg_bar} rgba = <orig_bg_color>
+	<ObjID> :GetSingleTag orig_bg_color
+	if ScreenElementExists id = {<ObjID> child = bg_bar}
+		SetScreenElementProps id = {<ObjID> child = bg_bar} rgba = <orig_bg_color>
 	endif
-	if screenelementexists id = {<objid> child = bg_bar_right}
-		setscreenelementprops id = {<objid> child = bg_bar_right} alpha = 0
+	if ScreenElementExists id = {<ObjID> child = bg_bar_right}
+		SetScreenElementProps id = {<ObjID> child = bg_bar_right} alpha = 0
 	endif
-	if screenelementexists id = {<objid> child = bg_bar_left}
-		setscreenelementprops id = {<objid> child = bg_bar_left} alpha = 0
+	if ScreenElementExists id = {<ObjID> child = bg_bar_left}
+		SetScreenElementProps id = {<ObjID> child = bg_bar_left} alpha = 0
 	endif
 endscript
 
 script leaderboard_scroll \{dir = down}
 	if (<dir> = down)
 		if ($lb_selection_index = 9)
-			launchevent \{type = unfocus
+			LaunchEvent \{type = unfocus
 				target = gamertag_vmenu}
 			change \{lb_selection_index = 0}
 			change lb_offset = ($lb_offset + 10)
@@ -2496,9 +2496,9 @@ script leaderboard_scroll \{dir = down}
 			else
 				get_leaderboard_headers \{song = false}
 			endif
-			if screenelementexists \{id = arrow_down}
-				setscreenelementprops id = arrow_down rgba = ($online_dark_purple)
-				wait \{0.2
+			if ScreenElementExists \{id = arrow_down}
+				SetScreenElementProps id = arrow_down rgba = ($online_dark_purple)
+				Wait \{0.2
 					seconds}
 			endif
 			request_leaderboard <...>
@@ -2515,7 +2515,7 @@ script leaderboard_scroll \{dir = down}
 			else
 				change lb_offset = ($lb_offset - 10)
 			endif
-			launchevent \{type = unfocus
+			LaunchEvent \{type = unfocus
 				target = gamertag_vmenu}
 			change \{lb_selection_index = 9}
 			if ($current_leaderboard_group = song)
@@ -2523,9 +2523,9 @@ script leaderboard_scroll \{dir = down}
 			else
 				get_leaderboard_headers \{song = false}
 			endif
-			if screenelementexists \{id = arrow_up}
-				setscreenelementprops id = arrow_up rgba = ($online_dark_purple) flip_h
-				wait \{0.2
+			if ScreenElementExists \{id = arrow_up}
+				SetScreenElementProps id = arrow_up rgba = ($online_dark_purple) flip_h
+				Wait \{0.2
 					seconds}
 			endif
 			request_leaderboard <...>
@@ -2538,7 +2538,7 @@ endscript
 
 script request_leaderboard 
 	create_leaderboard_loading_bar
-	netsessionfunc {
+	NetSessionFunc {
 		obj = stats
 		func = get_stats
 		params = {
@@ -2554,15 +2554,15 @@ script request_leaderboard
 endscript
 
 script show_gamercard 
-	formattext checksumname = leaderboard_entry 'leaderboard_entry_%i_gamertag' i = ($lb_selection_index)
-	<leaderboard_entry> :gettags
-	netsessionfunc func = showgamercard params = {player_xuid = <player_xuid>}
+	FormatText checksumname = leaderboard_entry 'leaderboard_entry_%i_gamertag' i = ($lb_selection_index)
+	<leaderboard_entry> :GetTags
+	NetSessionFunc func = showGamerCard params = {player_xuid = <player_xuid>}
 endscript
 
 script create_leaderboard_filter_dialog \{menu_id = online_leaderboard_filter_menu
 		vmenu_id = online_leaderboard_filter_vmenu
 		pos = (400.0, 525.0)}
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = gamertag_vmenu}
 	search_vmenu_id = leaderboard_search_filter
 	search_text_id = leaderboard_search_type
@@ -2570,12 +2570,12 @@ script create_leaderboard_filter_dialog \{menu_id = online_leaderboard_filter_me
 	difficulty_text_id = lb_difficulty_selection_text
 	song_vmenu_id = song_selection
 	song_text_id = song_selection_text
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = leaderboard_filter_container
 		pos = (0.0, 0.0)}
-	createscreenelement {
-		type = vscrollingmenu
+	CreateScreenElement {
+		type = VScrollingMenu
 		parent = leaderboard_filter_container
 		id = <menu_id>
 		just = [center top]
@@ -2583,8 +2583,8 @@ script create_leaderboard_filter_dialog \{menu_id = online_leaderboard_filter_me
 		pos = (640.0, 290.0)
 		z_priority = 1
 	}
-	createscreenelement {
-		type = vmenu
+	CreateScreenElement {
+		type = VMenu
 		parent = <menu_id>
 		id = <vmenu_id>
 		pos = (205.0, 0.0)
@@ -2600,16 +2600,16 @@ script create_leaderboard_filter_dialog \{menu_id = online_leaderboard_filter_me
 		]
 		exclusive_device = ($primary_controller)
 	}
-	displaysprite \{id = leaderboard_filter_frame
+	displaySprite \{id = leaderboard_filter_frame
 		parent = leaderboard_filter_container
-		tex = online_frame_large
+		tex = Online_Frame_Large
 		pos = (640.0, 100.0)
 		just = [
 			center
 			top
 		]
 		z = 2}
-	displaysprite \{id = leaderboard_filter_frame_crown
+	displaySprite \{id = leaderboard_filter_frame_crown
 		parent = leaderboard_filter_container
 		tex = online_frame_crown
 		pos = (640.0, 42.0)
@@ -2619,8 +2619,8 @@ script create_leaderboard_filter_dialog \{menu_id = online_leaderboard_filter_me
 		]
 		z = 3
 		dims = (256.0, 105.0)}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = leaderboard_filter_container
 		font = fontgrid_title_gh3
 		scale = 0.85
@@ -2630,8 +2630,8 @@ script create_leaderboard_filter_dialog \{menu_id = online_leaderboard_filter_me
 		just = [center top]
 		z_priority = 100.0
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		id = lb_difficulty
 		parent = <vmenu_id>
 		font = fontgrid_title_gh3
@@ -2641,14 +2641,14 @@ script create_leaderboard_filter_dialog \{menu_id = online_leaderboard_filter_me
 		just = [left top]
 		z_priority = 100.0
 		event_handlers = [
-			{focus net_custom_ui_focus params = {this_id = lb_difficulty text_id = <difficulty_text_id> vmenu = <vmenu_id>}}
+			{focus net_custom_ui_focus params = {this_id = lb_difficulty text_id = <difficulty_text_id> VMenu = <vmenu_id>}}
 			{unfocus net_custom_ui_unfocus params = {text_id = <difficulty_text_id>}}
 			{pad_choose net_custom_ui_change_focus params = {this_id = lb_difficulty text_id = <difficulty_text_id> to = <difficulty_vmenu_id> from = <vmenu_id>}}
-			{pad_choose net_copy_intial_params params = {copy_from = leaderboarddiffvalue copy_to = copyofglobal}}
+			{pad_choose net_copy_intial_params params = {copy_from = LeaderboardDiffValue copy_to = CopyOfGlobal}}
 		]
 	}
-	createscreenelement {
-		type = vmenu
+	CreateScreenElement {
+		type = VMenu
 		id = <difficulty_vmenu_id>
 		parent = lb_difficulty
 		pos = (550.0, 0.0)
@@ -2657,28 +2657,28 @@ script create_leaderboard_filter_dialog \{menu_id = online_leaderboard_filter_me
 		event_handlers = [
 			{pad_up animate_helper_arrows params = {direction = up}}
 			{pad_down animate_helper_arrows params = {direction = down}}
-			{pad_up net_custom_up_down params = {text = <difficulty_text_id> global = copyofglobal type = lb_diff direction = up}}
-			{pad_down net_custom_up_down params = {text = <difficulty_text_id> global = copyofglobal type = lb_diff direction = down}}
-			{pad_back net_commit_or_reset_params params = {text = <difficulty_text_id> global = leaderboarddiffvalue type = lb_diff}}
+			{pad_up net_custom_up_down params = {text = <difficulty_text_id> global = CopyOfGlobal type = lb_diff direction = up}}
+			{pad_down net_custom_up_down params = {text = <difficulty_text_id> global = CopyOfGlobal type = lb_diff direction = down}}
+			{pad_back net_commit_or_reset_params params = {text = <difficulty_text_id> global = LeaderboardDiffValue type = lb_diff}}
 			{pad_back net_custom_ui_change_unfocus params = {action = back to = <vmenu_id> from = <difficulty_vmenu_id> menu = search}}
-			{pad_choose net_commit_or_reset_params params = {commit copy_from = copyofglobal copy_to = leaderboarddiffvalue}}
+			{pad_choose net_commit_or_reset_params params = {commit copy_from = CopyOfGlobal copy_to = LeaderboardDiffValue}}
 			{pad_choose net_custom_ui_change_unfocus params = {action = choose to = <vmenu_id> from = <difficulty_vmenu_id> menu = search}}
 		]
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		id = <difficulty_text_id>
 		parent = <difficulty_vmenu_id>
 		font = fontgrid_title_gh3
 		scale = 1.0
 		rgba = ($online_light_blue)
-		text = ($filtertypes.lb_diff.values [($leaderboarddiffvalue)])
+		text = ($FilterTypes.lb_diff.values [($LeaderboardDiffValue)])
 		just = [left top]
 		z_priority = 100.0
 	}
 	fit_text_into_menu_item id = <id> max_width = 375
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		id = song_type
 		parent = <vmenu_id>
 		font = fontgrid_title_gh3
@@ -2688,14 +2688,14 @@ script create_leaderboard_filter_dialog \{menu_id = online_leaderboard_filter_me
 		just = [left top]
 		z_priority = 100.0
 		event_handlers = [
-			{focus net_custom_ui_focus params = {this_id = song_type text_id = <song_text_id> vmenu = <vmenu_id>}}
+			{focus net_custom_ui_focus params = {this_id = song_type text_id = <song_text_id> VMenu = <vmenu_id>}}
 			{unfocus net_custom_ui_unfocus params = {text_id = <song_text_id>}}
 			{pad_choose net_custom_ui_change_focus params = {this_id = song_type text_id = <song_text_id> to = <song_vmenu_id> from = <vmenu_id>}}
-			{pad_choose net_copy_intial_params params = {copy_from = leaderboardsongtypevalue copy_to = copyofglobal}}
+			{pad_choose net_copy_intial_params params = {copy_from = LeaderboardSongTypeValue copy_to = CopyOfGlobal}}
 		]
 	}
-	createscreenelement {
-		type = vmenu
+	CreateScreenElement {
+		type = VMenu
 		id = <song_vmenu_id>
 		parent = song_type
 		pos = (550.0, 0.0)
@@ -2704,28 +2704,28 @@ script create_leaderboard_filter_dialog \{menu_id = online_leaderboard_filter_me
 		event_handlers = [
 			{pad_up animate_helper_arrows params = {direction = up}}
 			{pad_down animate_helper_arrows params = {direction = down}}
-			{pad_up net_custom_up_down params = {text = <song_text_id> global = copyofglobal type = song_type direction = up}}
-			{pad_down net_custom_up_down params = {text = <song_text_id> global = copyofglobal type = song_type direction = down}}
-			{pad_back net_commit_or_reset_params params = {text = <song_text_id> global = leaderboardsongtypevalue type = song_type}}
+			{pad_up net_custom_up_down params = {text = <song_text_id> global = CopyOfGlobal type = song_type direction = up}}
+			{pad_down net_custom_up_down params = {text = <song_text_id> global = CopyOfGlobal type = song_type direction = down}}
+			{pad_back net_commit_or_reset_params params = {text = <song_text_id> global = LeaderboardSongTypeValue type = song_type}}
 			{pad_back net_custom_ui_change_unfocus params = {action = back to = <vmenu_id> from = <song_vmenu_id> menu = song_type}}
-			{pad_choose net_commit_or_reset_params params = {commit copy_from = copyofglobal copy_to = leaderboardsongtypevalue}}
+			{pad_choose net_commit_or_reset_params params = {commit copy_from = CopyOfGlobal copy_to = LeaderboardSongTypeValue}}
 			{pad_choose net_custom_ui_change_unfocus params = {action = choose to = <vmenu_id> from = <song_vmenu_id> menu = song_type}}
 		]
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		id = <song_text_id>
 		parent = <song_vmenu_id>
 		font = fontgrid_title_gh3
 		scale = 1.0
 		rgba = ($online_light_blue)
-		text = ($filtertypes.song_type.values [($leaderboardsongtypevalue)])
+		text = ($FilterTypes.song_type.values [($LeaderboardSongTypeValue)])
 		just = [left top]
 		z_priority = 100.0
 	}
 	fit_text_into_menu_item id = <id> max_width = 375
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		id = submit_selection
 		parent = <vmenu_id>
 		font = fontgrid_title_gh3
@@ -2735,39 +2735,39 @@ script create_leaderboard_filter_dialog \{menu_id = online_leaderboard_filter_me
 		just = [left top]
 		z_priority = 100.0
 		event_handlers = [
-			{focus net_custom_ui_focus params = {this_id = submit_selection vmenu = <vmenu_id>}}
+			{focus net_custom_ui_focus params = {this_id = submit_selection VMenu = <vmenu_id>}}
 			{unfocus net_custom_ui_unfocus}
 			{pad_choose submit_filter_query}
 		]
 	}
-	<vmenu_id> :settags current_focus = first_time
+	<vmenu_id> :SetTags current_focus = first_time
 	block_unblock_filter_criterias
-	launchevent type = focus target = <vmenu_id>
+	LaunchEvent type = focus target = <vmenu_id>
 endscript
 
 script destroy_leaderboard_filter 
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = online_leaderboard_filter_vmenu}
-	if screenelementexists \{id = leaderboard_filter_container}
-		destroyscreenelement \{id = leaderboard_filter_container}
+	if ScreenElementExists \{id = leaderboard_filter_container}
+		DestroyScreenElement \{id = leaderboard_filter_container}
 	endif
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = gamertag_vmenu}
 endscript
 
 script block_unblock_filter_criterias 
 	if NOT ($current_leaderboard_group = song)
-		if screenelementexists \{id = lb_difficulty}
-			lb_difficulty :setprops not_focusable rgba = ($online_grey)
+		if ScreenElementExists \{id = lb_difficulty}
+			lb_difficulty :SetProps not_focusable rgba = ($online_grey)
 		endif
-		if screenelementexists \{id = lb_difficulty_selection_text}
-			lb_difficulty_selection_text :setprops rgba = ($online_grey) text = "N/A"
+		if ScreenElementExists \{id = lb_difficulty_selection_text}
+			lb_difficulty_selection_text :SetProps rgba = ($online_grey) text = "N/A"
 		endif
-		if screenelementexists \{id = song_type}
-			song_type :setprops not_focusable rgba = ($online_grey)
+		if ScreenElementExists \{id = song_type}
+			song_type :SetProps not_focusable rgba = ($online_grey)
 		endif
-		if screenelementexists \{id = song_selection_text}
-			song_selection_text :setprops rgba = ($online_grey) text = "N/A"
+		if ScreenElementExists \{id = song_selection_text}
+			song_selection_text :SetProps rgba = ($online_grey) text = "N/A"
 		endif
 	endif
 endscript
@@ -2784,8 +2784,8 @@ script create_blue_bg \{id = net_blue_bg_cont
 			0
 			255
 		]}
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		id = <id>
 		parent = <parent>
 		pos = <pos>
@@ -2796,7 +2796,7 @@ script create_blue_bg \{id = net_blue_bg_cont
 	base_z = <z_priority>
 	top_dims = ((0.0, 64.0) + <window_width> * (1.0, 0.0))
 	top_pos = (0.0, 0.0)
-	displaysprite {
+	displaySprite {
 		parent = <cont_id>
 		tex = window_frame_cap
 		rgba = ($online_medium_blue)
@@ -2809,7 +2809,7 @@ script create_blue_bg \{id = net_blue_bg_cont
 		target_width = (<top_dims>.(1.0, 0.0))
 		target_height = (<top_dims>.(0.0, 1.0))
 	}
-	displaysprite {
+	displaySprite {
 		parent = <cont_id>
 		tex = window_fill_cap
 		rgba = <bg_fill_color>
@@ -2822,10 +2822,10 @@ script create_blue_bg \{id = net_blue_bg_cont
 		target_width = (<top_dims>.(1.0, 0.0))
 		target_height = (<top_dims>.(0.0, 1.0))
 	}
-	getscreenelementdims id = <id>
-	middle_pos = (<top_pos> + <height> * (0.0, 1.0))
+	GetScreenElementDims id = <id>
+	middle_pos = (<top_pos> + <Height> * (0.0, 1.0))
 	middle_dims = ((0.0, 1.0) * <window_body_height> + <window_width> * (1.0, 0.0))
-	displaysprite {
+	displaySprite {
 		parent = <cont_id>
 		tex = window_frame_body_tall
 		rgba = ($online_medium_blue)
@@ -2839,7 +2839,7 @@ script create_blue_bg \{id = net_blue_bg_cont
 		target_width = (<middle_dims>.(1.0, 0.0))
 		target_height = (<middle_dims>.(0.0, 1.0))
 	}
-	displaysprite {
+	displaySprite {
 		parent = <cont_id>
 		tex = window_fill_body_large
 		rgba = <bg_fill_color>
@@ -2853,10 +2853,10 @@ script create_blue_bg \{id = net_blue_bg_cont
 		target_width = (<middle_dims>.(1.0, 0.0))
 		target_height = (<middle_dims>.(0.0, 1.0))
 	}
-	getscreenelementdims id = <id>
-	bottom_pos = (<middle_pos> + <height> * (0.0, 1.0))
+	GetScreenElementDims id = <id>
+	bottom_pos = (<middle_pos> + <Height> * (0.0, 1.0))
 	bottom_dims = ((0.0, 64.0) + <window_width> * (1.0, 0.0))
-	displaysprite {
+	displaySprite {
 		parent = <cont_id>
 		tex = window_frame_cap
 		rgba = ($online_medium_blue)
@@ -2870,7 +2870,7 @@ script create_blue_bg \{id = net_blue_bg_cont
 		target_width = (<bottom_dims>.(1.0, 0.0))
 		target_height = (<bottom_dims>.(0.0, 1.0))
 	}
-	displaysprite {
+	displaySprite {
 		parent = <cont_id>
 		tex = window_fill_cap
 		rgba = <bg_fill_color>
@@ -2884,9 +2884,9 @@ script create_blue_bg \{id = net_blue_bg_cont
 		target_width = (<bottom_dims>.(1.0, 0.0))
 		target_height = (<bottom_dims>.(0.0, 1.0))
 	}
-	getscreenelementdims id = <id>
-	cont_dims = (<bottom_pos> + (1.0, 0.0) * <width> + (0.0, 1.0) * <height>)
-	setscreenelementprops {
+	GetScreenElementDims id = <id>
+	cont_dims = (<bottom_pos> + (1.0, 0.0) * <width> + (0.0, 1.0) * <Height>)
+	SetScreenElementProps {
 		id = <cont_id>
 		dims = <cont_dims>
 	}
@@ -2894,13 +2894,13 @@ script create_blue_bg \{id = net_blue_bg_cont
 endscript
 
 script hide_unhide_current_leaderboard 
-	if gotparam \{hide}
+	if GotParam \{hide}
 		alpha_value = 0.0
 	else
 		alpha_value = 1.0
 	endif
-	if screenelementexists \{id = leaderboard_container}
-		setscreenelementprops {
+	if ScreenElementExists \{id = leaderboard_container}
+		SetScreenElementProps {
 			id = leaderboard_container
 			alpha = <alpha_value>
 		}
@@ -2908,7 +2908,7 @@ script hide_unhide_current_leaderboard
 endscript
 
 script get_diff_string_from_string_num 
-	if gotparam \{num}
+	if GotParam \{num}
 		switch <num>
 			case "1"
 			return \{diff = "E"}

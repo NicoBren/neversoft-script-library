@@ -59,10 +59,10 @@ script cap_artist_layer_edit
 		]
 		all}
 	mask = (<section>.mask)
-	if NOT StructureContains structure = ((<mask>) [<mask_index>]) no_color
+	if NOT StructureContains Structure = ((<mask>) [<mask_index>]) no_color
 		cap_get_current_rgb section = <section> part = <part> mask_index = <mask_index>
 		colorwheel_add_item {
-			Scale = 0.6
+			scale = 0.6
 			pad_choose_script = unfocus_color_wheel
 			pad_choose_params = {part = <part>}
 			increment_focus_script = cap_artist_colorwheel_focus_change
@@ -70,35 +70,35 @@ script cap_artist_layer_edit
 			initial_rgb = <rgb>
 			lookup_table = <color_wheel>
 			special_exit_script = restore_color_initial
-			special_exit_params = {part = <part> add_script = cap_artist_colorwheel_focus_change add_params = {Color = <rgb> section = <section> part = <part> mask_index = <mask_index>}}
+			special_exit_params = {part = <part> add_script = cap_artist_colorwheel_focus_change add_params = {color = <rgb> section = <section> part = <part> mask_index = <mask_index>}}
 			special_choose_script = widget_init_cap
 		}
 	endif
-	if NOT StructureContains structure = ((<mask>) [<mask_index>]) no_alpha
-		get_cap part = <part> section = <section> mask_index = <mask_index>
+	if NOT StructureContains Structure = ((<mask>) [<mask_index>]) no_alpha
+		get_CAP part = <part> section = <section> mask_index = <mask_index>
 		a = ($default_cap_alpha)
 		if GotParam \{pre_layer}
-			if StructureContains structure = <pre_layer> a
+			if StructureContains Structure = <pre_layer> a
 				a = (<pre_layer>.a)
 			endif
 		elseif GotParam \{post_layer}
-			if StructureContains structure = <post_layer> a
+			if StructureContains Structure = <post_layer> a
 				a = (<post_layer>.a)
 			endif
 		endif
 		button_widget_add_item {
 			widget_id = alpha_widget
-			text = qs(0x3d6d9684)
+			text = qs("Transparency")
 			button_icon = widget_transparency
 			start_value = <a>
 			min = ($color_min_alpha)
-			Max = ($color_max_alpha)
+			max = ($color_max_alpha)
 			step = ($color_alpha_increment)
 			pad_up_script = cap_layer_set_alpha
 			pad_up_params = {section = <section> part = <part> mask_index = <mask_index> pre_layer = <pre_layer> post_layer = <post_layer>}
 			pad_down_script = cap_layer_set_alpha
 			pad_down_params = {section = <section> part = <part> mask_index = <mask_index> pre_layer = <pre_layer> post_layer = <post_layer>}
-			fill_type = `bottom	to	top`
+			fill_type = `Bottom to Top`
 			<no_cas_handlers>
 			deinit_script = widget_accept_cap
 			init_script = widget_init_cap
@@ -107,31 +107,31 @@ script cap_artist_layer_edit
 			zoom_camera = <zoom_camera>
 		}
 	endif
-	if NOT StructureContains structure = ((<mask>) [<mask_index>]) no_scale
-		get_cap part = <part> section = <section> mask_index = <mask_index>
+	if NOT StructureContains Structure = ((<mask>) [<mask_index>]) no_scale
+		get_CAP part = <part> section = <section> mask_index = <mask_index>
 		x_scale = ($default_cap_scale)
 		if GotParam \{pre_layer}
-			if StructureContains structure = <pre_layer> x_scale
+			if StructureContains Structure = <pre_layer> x_scale
 				x_scale = (<pre_layer>.x_scale)
 			endif
 		elseif GotParam \{post_layer}
-			if StructureContains structure = <post_layer> x_scale
+			if StructureContains Structure = <post_layer> x_scale
 				x_scale = (<post_layer>.x_scale)
 			endif
 		endif
 		button_widget_add_item {
 			widget_id = x_scale_widget
-			text = qs(0x52052a00)
+			text = qs("Width")
 			button_icon = widget_uni_scale
 			start_value = <x_scale>
 			min = ($min_scale)
-			Max = ($max_scale)
+			max = ($max_scale)
 			step = ($scale_increment)
 			pad_left_script = cap_layer_set_x_scale
 			pad_left_params = {section = <section> part = <part> mask_index = <mask_index> pre_layer = <pre_layer> post_layer = <post_layer>}
 			pad_right_script = cap_layer_set_x_scale
 			pad_right_params = {section = <section> part = <part> mask_index = <mask_index> pre_layer = <pre_layer> post_layer = <post_layer>}
-			fill_type = `center	left/right`
+			fill_type = `Center Left/Right`
 			icon_rot = 90
 			<no_cas_handlers>
 			deinit_script = widget_accept_cap
@@ -140,30 +140,30 @@ script cap_artist_layer_edit
 			camera_list = <camera_list>
 			zoom_camera = <zoom_camera>
 		}
-		get_cap part = <part> section = <section> mask_index = <mask_index>
+		get_CAP part = <part> section = <section> mask_index = <mask_index>
 		y_scale = ($default_cap_scale)
 		if GotParam \{pre_layer}
-			if StructureContains structure = <pre_layer> y_scale
+			if StructureContains Structure = <pre_layer> y_scale
 				y_scale = (<pre_layer>.y_scale)
 			endif
 		elseif GotParam \{post_layer}
-			if StructureContains structure = <post_layer> y_scale
+			if StructureContains Structure = <post_layer> y_scale
 				y_scale = (<post_layer>.y_scale)
 			endif
 		endif
 		button_widget_add_item {
 			widget_id = y_scale_widget
-			text = qs(0xea1fd0c6)
+			text = qs("Height")
 			button_icon = widget_uni_scale
 			start_value = <y_scale>
 			min = ($min_scale)
-			Max = ($max_scale)
+			max = ($max_scale)
 			step = ($scale_increment)
 			pad_up_script = cap_layer_set_y_scale
 			pad_up_params = {section = <section> part = <part> mask_index = <mask_index> pre_layer = <pre_layer> post_layer = <post_layer>}
 			pad_down_script = cap_layer_set_y_scale
 			pad_down_params = {section = <section> part = <part> mask_index = <mask_index> pre_layer = <pre_layer> post_layer = <post_layer>}
-			fill_type = `center	up/down`
+			fill_type = `Center Up/Down`
 			<no_cas_handlers>
 			deinit_script = widget_accept_cap
 			init_script = widget_init_cap
@@ -172,31 +172,31 @@ script cap_artist_layer_edit
 			zoom_camera = <zoom_camera>
 		}
 	endif
-	if NOT StructureContains structure = ((<mask>) [<mask_index>]) no_translate
-		get_cap part = <part> section = <section> mask_index = <mask_index>
+	if NOT StructureContains Structure = ((<mask>) [<mask_index>]) no_translate
+		get_CAP part = <part> section = <section> mask_index = <mask_index>
 		x_trans = ($default_cap_trans)
 		if GotParam \{pre_layer}
-			if StructureContains structure = <pre_layer> x_trans
+			if StructureContains Structure = <pre_layer> x_trans
 				x_trans = (<pre_layer>.x_trans)
 			endif
 		elseif GotParam \{post_layer}
-			if StructureContains structure = <post_layer> x_trans
+			if StructureContains Structure = <post_layer> x_trans
 				x_trans = (<post_layer>.x_trans)
 			endif
 		endif
 		button_widget_add_item {
 			widget_id = x_trans_widget
-			text = qs(0xc261e706)
+			text = qs("Horizontal")
 			button_icon = widget_uni_move
 			start_value = <x_trans>
 			min = ($min_trans)
-			Max = ($max_trans)
+			max = ($max_trans)
 			step = ($trans_increment)
 			pad_left_script = cap_layer_set_x_trans
 			pad_left_params = {section = <section> part = <part> mask_index = <mask_index> pre_layer = <pre_layer> post_layer = <post_layer>}
 			pad_right_script = cap_layer_set_x_trans
 			pad_right_params = {section = <section> part = <part> mask_index = <mask_index> pre_layer = <pre_layer> post_layer = <post_layer>}
-			fill_type = `center	left/right`
+			fill_type = `Center Left/Right`
 			icon_rot = 90
 			<no_cas_handlers>
 			deinit_script = widget_accept_cap
@@ -205,30 +205,30 @@ script cap_artist_layer_edit
 			camera_list = <camera_list>
 			zoom_camera = <zoom_camera>
 		}
-		get_cap part = <part> section = <section> mask_index = <mask_index>
+		get_CAP part = <part> section = <section> mask_index = <mask_index>
 		y_trans = ($default_cap_trans)
 		if GotParam \{pre_layer}
-			if StructureContains structure = <pre_layer> y_trans
+			if StructureContains Structure = <pre_layer> y_trans
 				y_trans = (<pre_layer>.x_scale)
 			endif
 		elseif GotParam \{post_layer}
-			if StructureContains structure = <post_layer> y_trans
+			if StructureContains Structure = <post_layer> y_trans
 				y_trans = (<post_layer>.y_trans)
 			endif
 		endif
 		button_widget_add_item {
 			widget_id = y_trans_widget
-			text = qs(0xbc37bc4e)
+			text = qs("Vertical")
 			button_icon = widget_uni_move
 			start_value = <y_trans>
 			min = ($min_trans)
-			Max = ($max_trans)
+			max = ($max_trans)
 			step = ($trans_increment)
 			pad_up_script = cap_layer_set_y_trans
 			pad_up_params = {section = <section> part = <part> mask_index = <mask_index> pre_layer = <pre_layer> post_layer = <post_layer>}
 			pad_down_script = cap_layer_set_y_trans
 			pad_down_params = {section = <section> part = <part> mask_index = <mask_index> pre_layer = <pre_layer> post_layer = <post_layer>}
-			fill_type = `center	up/down`
+			fill_type = `Center Up/Down`
 			<no_cas_handlers>
 			deinit_script = widget_accept_cap
 			init_script = widget_init_cap
@@ -237,31 +237,31 @@ script cap_artist_layer_edit
 			zoom_camera = <zoom_camera>
 		}
 	endif
-	if NOT StructureContains structure = ((<mask>) [<mask_index>]) no_skew
-		get_cap part = <part> section = <section> mask_index = <mask_index>
+	if NOT StructureContains Structure = ((<mask>) [<mask_index>]) no_skew
+		get_CAP part = <part> section = <section> mask_index = <mask_index>
 		x_skew = ($default_cap_skew)
 		if GotParam \{pre_layer}
-			if StructureContains structure = <pre_layer> x_skew
+			if StructureContains Structure = <pre_layer> x_skew
 				x_skew = (<pre_layer>.x_skew)
 			endif
 		elseif GotParam \{post_layer}
-			if StructureContains structure = <post_layer> x_skew
+			if StructureContains Structure = <post_layer> x_skew
 				x_skew = (<post_layer>.x_skew)
 			endif
 		endif
 		button_widget_add_item {
 			widget_id = x_skew_widget
-			text = qs(0xc432bf92)
+			text = qs("Lean")
 			button_icon = widget_shear
 			start_value = <x_skew>
 			min = ($min_skew)
-			Max = ($max_skew)
+			max = ($max_skew)
 			step = ($skew_increment)
 			pad_left_script = cap_layer_set_x_skew
 			pad_left_params = {section = <section> part = <part> mask_index = <mask_index> pre_layer = <pre_layer> post_layer = <post_layer>}
 			pad_right_script = cap_layer_set_x_skew
 			pad_right_params = {section = <section> part = <part> mask_index = <mask_index> pre_layer = <pre_layer> post_layer = <post_layer>}
-			fill_type = `center	left/right`
+			fill_type = `Center Left/Right`
 			<no_cas_handlers>
 			deinit_script = widget_accept_cap
 			init_script = widget_init_cap
@@ -269,30 +269,30 @@ script cap_artist_layer_edit
 			camera_list = <camera_list>
 			zoom_camera = <zoom_camera>
 		}
-		get_cap part = <part> section = <section> mask_index = <mask_index>
+		get_CAP part = <part> section = <section> mask_index = <mask_index>
 		y_skew = ($default_cap_skew)
 		if GotParam \{pre_layer}
-			if StructureContains structure = <pre_layer> y_skew
+			if StructureContains Structure = <pre_layer> y_skew
 				y_skew = (<pre_layer>.y_skew)
 			endif
 		elseif GotParam \{post_layer}
-			if StructureContains structure = <post_layer> y_skew
+			if StructureContains Structure = <post_layer> y_skew
 				y_skew = (<post_layer>.y_skew)
 			endif
 		endif
 		button_widget_add_item {
 			widget_id = y_skew_widget
-			text = qs(0x5ee97771)
+			text = qs("Tilt")
 			button_icon = widget_shear
 			start_value = <y_skew>
 			min = ($min_skew)
-			Max = ($max_skew)
+			max = ($max_skew)
 			step = ($skew_increment)
 			pad_up_script = cap_layer_set_y_skew
 			pad_up_params = {section = <section> part = <part> mask_index = <mask_index> pre_layer = <pre_layer> post_layer = <post_layer>}
 			pad_down_script = cap_layer_set_y_skew
 			pad_down_params = {section = <section> part = <part> mask_index = <mask_index> pre_layer = <pre_layer> post_layer = <post_layer>}
-			fill_type = `center	up/down`
+			fill_type = `Center Up/Down`
 			icon_rot = 90
 			<no_cas_handlers>
 			deinit_script = widget_accept_cap
@@ -302,31 +302,31 @@ script cap_artist_layer_edit
 			zoom_camera = <zoom_camera>
 		}
 	endif
-	if NOT StructureContains structure = ((<mask>) [<mask_index>]) NO_ROTATE
-		get_cap part = <part> section = <section> mask_index = <mask_index>
+	if NOT StructureContains Structure = ((<mask>) [<mask_index>]) no_rotate
+		get_CAP part = <part> section = <section> mask_index = <mask_index>
 		rot = ($default_cap_rot)
 		if GotParam \{pre_layer}
-			if StructureContains structure = <pre_layer> rot
+			if StructureContains Structure = <pre_layer> rot
 				rot = (<pre_layer>.rot)
 			endif
 		elseif GotParam \{post_layer}
-			if StructureContains structure = <post_layer> rot
+			if StructureContains Structure = <post_layer> rot
 				rot = (<post_layer>.rot)
 			endif
 		endif
 		rot_widget_add_item {
 			widget_id = rot_widget
-			text = qs(0x63e34942)
+			text = qs("Rotate")
 			button_icon = widget_rotate
 			start_value = <rot>
 			min = ($min_rot)
-			Max = ($max_rot)
+			max = ($max_rot)
 			step = ($rot_increment)
 			pad_up_script = cap_layer_set_rot
 			pad_up_params = {section = <section> part = <part> mask_index = <mask_index> pre_layer = <pre_layer> post_layer = <post_layer>}
 			pad_down_script = cap_layer_set_rot
 			pad_down_params = {section = <section> part = <part> mask_index = <mask_index> pre_layer = <pre_layer> post_layer = <post_layer>}
-			fill_type = `counter	clockwise`
+			fill_type = `Counter Clockwise`
 			wrap
 			sweep
 			<no_cas_handlers>
@@ -339,7 +339,7 @@ script cap_artist_layer_edit
 	endif
 	add_generic_menu_icon_item {
 		icon = widget_default
-		text = qs(0x675459e3)
+		text = qs("Default")
 		pad_choose_sound = ui_menu_select_sfx
 		pad_choose_script = reset_to_default
 		pad_choose_params = {part = <part> section = <section> mask_index = <mask_index>}
@@ -355,34 +355,34 @@ script edit_cas_layer
 			layer_index
 		]
 		all}
-	if NOT StructureContains structure = <mask> no_color
+	if NOT StructureContains Structure = <mask> no_color
 		add_generic_menu_icon_item {
 			icon = menu_history_color_edit
-			text = qs(0x6149aa3d)
-			choose_state = uistate_cap_color_wheel
+			text = qs("Color")
+			choose_state = UIstate_cap_color_wheel
 			choose_state_data = {part = <part> cap_index = <cap_index> layer_index = <layer_index> color_wheel = <color_wheel> camera_list = <camera_list> zoom_camera = <zoom_camera>}
 		}
 	endif
-	if NOT StructureContains structure = <mask> no_alpha
-		getlayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
-		if StructureContains structure = <layer> a
+	if NOT StructureContains Structure = <mask> no_alpha
+		GetLayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
+		if StructureContains Structure = <layer> a
 			a = (<layer>.a)
 		else
 			a = ($default_cap_alpha)
 		endif
 		button_widget_add_item {
 			widget_id = alpha_widget
-			text = qs(0x3d6d9684)
+			text = qs("Transparency")
 			button_icon = widget_transparency
 			start_value = <a>
 			min = ($color_min_alpha)
-			Max = ($color_max_alpha)
+			max = ($color_max_alpha)
 			step = ($color_alpha_increment)
 			pad_up_script = cap_layer_set_alpha
 			pad_up_params = {part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>}
 			pad_down_script = cap_layer_set_alpha
 			pad_down_params = {part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>}
-			fill_type = `bottom	to	top`
+			fill_type = `Bottom to Top`
 			<no_cas_handlers>
 			deinit_script = widget_accept_cap
 			deinit_params = {part = <part>}
@@ -394,26 +394,26 @@ script edit_cas_layer
 			zoom_camera = <zoom_camera>
 		}
 	endif
-	if NOT StructureContains structure = <mask> no_scale
-		getlayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
-		if StructureContains structure = <layer> x_scale
+	if NOT StructureContains Structure = <mask> no_scale
+		GetLayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
+		if StructureContains Structure = <layer> x_scale
 			x_scale = (<layer>.x_scale)
 		else
 			x_scale = ($default_cap_scale)
 		endif
 		button_widget_add_item {
 			widget_id = x_scale_widget
-			text = qs(0x52052a00)
+			text = qs("Width")
 			button_icon = widget_uni_scale
 			start_value = <x_scale>
 			min = ($min_scale)
-			Max = ($max_scale)
+			max = ($max_scale)
 			step = ($scale_increment)
 			pad_left_script = cap_layer_set_x_scale
 			pad_left_params = {part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>}
 			pad_right_script = cap_layer_set_x_scale
 			pad_right_params = {part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>}
-			fill_type = `center	left/right`
+			fill_type = `Center Left/Right`
 			icon_rot = 90
 			<no_cas_handlers>
 			deinit_script = widget_accept_cap
@@ -425,25 +425,25 @@ script edit_cas_layer
 			camera_list = <camera_list>
 			zoom_camera = <zoom_camera>
 		}
-		getlayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
-		if StructureContains structure = <layer> y_scale
+		GetLayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
+		if StructureContains Structure = <layer> y_scale
 			y_scale = (<layer>.y_scale)
 		else
 			y_scale = ($default_cap_scale)
 		endif
 		button_widget_add_item {
 			widget_id = y_scale_widget
-			text = qs(0xea1fd0c6)
+			text = qs("Height")
 			button_icon = widget_uni_scale
 			start_value = <y_scale>
 			min = ($min_scale)
-			Max = ($max_scale)
+			max = ($max_scale)
 			step = ($scale_increment)
 			pad_up_script = cap_layer_set_y_scale
 			pad_up_params = {part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>}
 			pad_down_script = cap_layer_set_y_scale
 			pad_down_params = {part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>}
-			fill_type = `center	up/down`
+			fill_type = `Center Up/Down`
 			<no_cas_handlers>
 			deinit_script = widget_accept_cap
 			deinit_params = {part = <part>}
@@ -455,26 +455,26 @@ script edit_cas_layer
 			zoom_camera = <zoom_camera>
 		}
 	endif
-	if NOT StructureContains structure = <mask> no_translate
-		getlayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
-		if StructureContains structure = <layer> x_trans
+	if NOT StructureContains Structure = <mask> no_translate
+		GetLayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
+		if StructureContains Structure = <layer> x_trans
 			x_trans = (<layer>.x_trans)
 		else
 			x_trans = ($default_cap_trans)
 		endif
 		button_widget_add_item {
 			widget_id = x_trans_widget
-			text = qs(0xc261e706)
+			text = qs("Horizontal")
 			button_icon = widget_uni_move
 			start_value = <x_trans>
 			min = ($min_trans)
-			Max = ($max_trans)
+			max = ($max_trans)
 			step = ($trans_increment)
 			pad_left_script = cap_layer_set_x_trans
 			pad_left_params = {part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>}
 			pad_right_script = cap_layer_set_x_trans
 			pad_right_params = {part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>}
-			fill_type = `center	left/right`
+			fill_type = `Center Left/Right`
 			icon_rot = 90
 			<no_cas_handlers>
 			deinit_script = widget_accept_cap
@@ -486,25 +486,25 @@ script edit_cas_layer
 			camera_list = <camera_list>
 			zoom_camera = <zoom_camera>
 		}
-		getlayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
-		if StructureContains structure = <layer> y_trans
+		GetLayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
+		if StructureContains Structure = <layer> y_trans
 			y_trans = (<layer>.y_trans)
 		else
 			y_trans = ($default_cap_trans)
 		endif
 		button_widget_add_item {
 			widget_id = y_trans_widget
-			text = qs(0xbc37bc4e)
+			text = qs("Vertical")
 			button_icon = widget_uni_move
 			start_value = <y_trans>
 			min = ($min_trans)
-			Max = ($max_trans)
+			max = ($max_trans)
 			step = ($trans_increment)
 			pad_up_script = cap_layer_set_y_trans
 			pad_up_params = {part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>}
 			pad_down_script = cap_layer_set_y_trans
 			pad_down_params = {part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>}
-			fill_type = `center	up/down`
+			fill_type = `Center Up/Down`
 			<no_cas_handlers>
 			deinit_script = widget_accept_cap
 			deinit_params = {part = <part>}
@@ -516,26 +516,26 @@ script edit_cas_layer
 			zoom_camera = <zoom_camera>
 		}
 	endif
-	if NOT StructureContains structure = <mask> no_skew
-		getlayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
-		if StructureContains structure = <layer> x_skew
+	if NOT StructureContains Structure = <mask> no_skew
+		GetLayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
+		if StructureContains Structure = <layer> x_skew
 			x_skew = (<layer>.x_skew)
 		else
 			x_skew = ($default_cap_skew)
 		endif
 		button_widget_add_item {
 			widget_id = x_skew_widget
-			text = qs(0xc432bf92)
+			text = qs("Lean")
 			button_icon = widget_shear
 			start_value = <x_skew>
 			min = ($min_skew)
-			Max = ($max_skew)
+			max = ($max_skew)
 			step = ($skew_increment)
 			pad_left_script = cap_layer_set_x_skew
 			pad_left_params = {part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>}
 			pad_right_script = cap_layer_set_x_skew
 			pad_right_params = {part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>}
-			fill_type = `center	left/right`
+			fill_type = `Center Left/Right`
 			<no_cas_handlers>
 			deinit_script = widget_accept_cap
 			deinit_params = {part = <part>}
@@ -546,25 +546,25 @@ script edit_cas_layer
 			camera_list = <camera_list>
 			zoom_camera = <zoom_camera>
 		}
-		getlayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
-		if StructureContains structure = <layer> y_skew
+		GetLayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
+		if StructureContains Structure = <layer> y_skew
 			y_skew = (<layer>.y_skew)
 		else
 			y_skew = ($default_cap_skew)
 		endif
 		button_widget_add_item {
 			widget_id = y_skew_widget
-			text = qs(0x5ee97771)
+			text = qs("Tilt")
 			button_icon = widget_shear
 			start_value = <y_skew>
 			min = ($min_skew)
-			Max = ($max_skew)
+			max = ($max_skew)
 			step = ($skew_increment)
 			pad_up_script = cap_layer_set_y_skew
 			pad_up_params = {part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>}
 			pad_down_script = cap_layer_set_y_skew
 			pad_down_params = {part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>}
-			fill_type = `center	up/down`
+			fill_type = `Center Up/Down`
 			icon_rot = 90
 			<no_cas_handlers>
 			deinit_script = widget_accept_cap
@@ -577,26 +577,26 @@ script edit_cas_layer
 			zoom_camera = <zoom_camera>
 		}
 	endif
-	if NOT StructureContains structure = <mask> NO_ROTATE
-		getlayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
-		if StructureContains structure = <layer> rot
+	if NOT StructureContains Structure = <mask> no_rotate
+		GetLayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
+		if StructureContains Structure = <layer> rot
 			rot = (<layer>.rot)
 		else
 			rot = ($default_cap_rot)
 		endif
 		rot_widget_add_item {
 			widget_id = rot_widget
-			text = qs(0x63e34942)
+			text = qs("Rotate")
 			button_icon = widget_rotate
 			start_value = <rot>
 			min = ($min_rot)
-			Max = ($max_rot)
+			max = ($max_rot)
 			step = ($rot_increment)
 			pad_up_script = cap_layer_set_rot
 			pad_up_params = {part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>}
 			pad_down_script = cap_layer_set_rot
 			pad_down_params = {part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>}
-			fill_type = `counter	clockwise`
+			fill_type = `Counter Clockwise`
 			wrap
 			sweep
 			<no_cas_handlers>
@@ -610,38 +610,38 @@ script edit_cas_layer
 			zoom_camera = <zoom_camera>
 		}
 	endif
-	if NOT StructureContains structure = <mask> no_u_flip
+	if NOT StructureContains Structure = <mask> no_u_flip
 		if is_flip_layer_horizontal part = <part> cap_index = <cap_index> layer_index = <layer_index>
 			horiz_on = true
 		endif
 		add_generic_menu_button_icon_item {
 			id = flip_horiz_widget
 			icon = widget_flip
-			text = qs(0xc619fe8a)
+			text = qs("Flip Horiz.")
 			pad_choose_sound = ui_menu_select_sfx
 			pad_choose_script = flip_layer_horizontal
 			pad_choose_params = {part = <part> cap_index = <cap_index> layer_index = <layer_index>}
 			icon_rot = 90
-			On = <horiz_on>
+			on = <horiz_on>
 		}
 	endif
-	if NOT StructureContains structure = <mask> no_v_flip
+	if NOT StructureContains Structure = <mask> no_v_flip
 		if is_flip_layer_vertical part = <part> cap_index = <cap_index> layer_index = <layer_index>
 			vert_on = true
 		endif
 		add_generic_menu_button_icon_item {
 			id = flip_vert_widget
 			icon = widget_flip
-			text = qs(0x2916c9f2)
+			text = qs("Flip Vert.")
 			pad_choose_sound = ui_menu_select_sfx
 			pad_choose_script = flip_layer_vertical
 			pad_choose_params = {part = <part> cap_index = <cap_index> layer_index = <layer_index>}
-			On = <vert_on>
+			on = <vert_on>
 		}
 	endif
 	add_generic_menu_icon_item {
 		icon = widget_default
-		text = qs(0x675459e3)
+		text = qs("Default")
 		pad_choose_sound = ui_menu_select_sfx
 		pad_choose_script = reset_layer_to_default
 		pad_choose_params = {mask = <mask> part = <part> cap_index = <cap_index> layer_index = <layer_index> section = <section> mask = <mask>}
@@ -651,201 +651,201 @@ endscript
 script cap_layer_set_alpha 
 	CastToInteger \{value}
 	if GotParam \{pre_layer}
-		get_cap part = <part> section = <section> mask_index = <mask_index>
+		get_CAP part = <part> section = <section> mask_index = <mask_index>
 		pre_layer = {<pre_layer>
 			a = <value>}
-		set_cap part = <part> section = <section> pre_layer = <pre_layer> mask_index = <mask_index>
+		set_CAP part = <part> section = <section> pre_layer = <pre_layer> mask_index = <mask_index>
 	endif
 	if GotParam \{post_layer}
-		get_cap part = <part> section = <section> mask_index = <mask_index>
+		get_CAP part = <part> section = <section> mask_index = <mask_index>
 		post_layer = {<post_layer>
 			a = <value>}
-		set_cap part = <part> section = <section> post_layer = <post_layer> mask_index = <mask_index>
+		set_CAP part = <part> section = <section> post_layer = <post_layer> mask_index = <mask_index>
 	endif
 	if GotParam \{layer}
-		getlayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
+		GetLayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
 		layer = {<layer>
 			a = <value>}
-		setlayer part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>
+		SetLayer part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>
 	endif
 endscript
 
 script cap_layer_set_x_scale 
 	CastToInteger \{value}
 	if GotParam \{pre_layer}
-		get_cap part = <part> section = <section> mask_index = <mask_index>
+		get_CAP part = <part> section = <section> mask_index = <mask_index>
 		pre_layer = {<pre_layer>
 			x_scale = <value>}
-		set_cap part = <part> section = <section> pre_layer = <pre_layer> mask_index = <mask_index>
+		set_CAP part = <part> section = <section> pre_layer = <pre_layer> mask_index = <mask_index>
 	endif
 	if GotParam \{post_layer}
-		get_cap part = <part> section = <section> mask_index = <mask_index>
+		get_CAP part = <part> section = <section> mask_index = <mask_index>
 		post_layer = {<post_layer>
 			x_scale = <value>}
-		set_cap part = <part> section = <section> post_layer = <post_layer> mask_index = <mask_index>
+		set_CAP part = <part> section = <section> post_layer = <post_layer> mask_index = <mask_index>
 	endif
 	if GotParam \{layer}
-		getlayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
+		GetLayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
 		layer = {<layer>
 			x_scale = <value>}
-		setlayer part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>
+		SetLayer part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>
 	endif
 endscript
 
 script cap_layer_set_y_scale 
 	CastToInteger \{value}
 	if GotParam \{pre_layer}
-		get_cap part = <part> section = <section> mask_index = <mask_index>
+		get_CAP part = <part> section = <section> mask_index = <mask_index>
 		pre_layer = {<pre_layer>
 			y_scale = <value>}
-		set_cap part = <part> section = <section> pre_layer = <pre_layer> mask_index = <mask_index>
+		set_CAP part = <part> section = <section> pre_layer = <pre_layer> mask_index = <mask_index>
 	endif
 	if GotParam \{post_layer}
-		get_cap part = <part> section = <section> mask_index = <mask_index>
+		get_CAP part = <part> section = <section> mask_index = <mask_index>
 		post_layer = {<post_layer>
 			y_scale = <value>}
-		set_cap part = <part> section = <section> post_layer = <post_layer> mask_index = <mask_index>
+		set_CAP part = <part> section = <section> post_layer = <post_layer> mask_index = <mask_index>
 	endif
 	if GotParam \{layer}
-		getlayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
+		GetLayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
 		layer = {<layer>
 			y_scale = <value>}
-		setlayer part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>
+		SetLayer part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>
 	endif
 endscript
 
 script cap_layer_set_x_trans 
 	CastToInteger \{value}
 	if GotParam \{pre_layer}
-		get_cap part = <part> section = <section> mask_index = <mask_index>
+		get_CAP part = <part> section = <section> mask_index = <mask_index>
 		pre_layer = {<pre_layer>
 			x_trans = <value>}
-		set_cap part = <part> section = <section> pre_layer = <pre_layer> mask_index = <mask_index>
+		set_CAP part = <part> section = <section> pre_layer = <pre_layer> mask_index = <mask_index>
 	endif
 	if GotParam \{post_layer}
-		get_cap part = <part> section = <section> mask_index = <mask_index>
+		get_CAP part = <part> section = <section> mask_index = <mask_index>
 		post_layer = {<post_layer>
 			x_trans = <value>}
-		set_cap part = <part> section = <section> post_layer = <post_layer> mask_index = <mask_index>
+		set_CAP part = <part> section = <section> post_layer = <post_layer> mask_index = <mask_index>
 	endif
 	if GotParam \{layer}
-		getlayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
+		GetLayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
 		layer = {<layer>
 			x_trans = <value>}
-		setlayer part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>
+		SetLayer part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>
 	endif
 endscript
 
 script cap_layer_set_y_trans 
 	CastToInteger \{value}
 	if GotParam \{pre_layer}
-		get_cap part = <part> section = <section> mask_index = <mask_index>
+		get_CAP part = <part> section = <section> mask_index = <mask_index>
 		pre_layer = {<pre_layer>
 			y_trans = <value>}
-		set_cap part = <part> section = <section> pre_layer = <pre_layer> mask_index = <mask_index>
+		set_CAP part = <part> section = <section> pre_layer = <pre_layer> mask_index = <mask_index>
 	endif
 	if GotParam \{post_layer}
-		get_cap part = <part> section = <section> mask_index = <mask_index>
+		get_CAP part = <part> section = <section> mask_index = <mask_index>
 		post_layer = {<post_layer>
 			y_trans = <value>}
-		set_cap part = <part> section = <section> post_layer = <post_layer> mask_index = <mask_index>
+		set_CAP part = <part> section = <section> post_layer = <post_layer> mask_index = <mask_index>
 	endif
 	if GotParam \{layer}
-		getlayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
+		GetLayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
 		layer = {<layer>
 			y_trans = <value>}
-		setlayer part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>
+		SetLayer part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>
 	endif
 endscript
 
 script cap_layer_set_x_skew 
 	CastToInteger \{value}
 	if GotParam \{pre_layer}
-		get_cap part = <part> section = <section> mask_index = <mask_index>
+		get_CAP part = <part> section = <section> mask_index = <mask_index>
 		pre_layer = {<pre_layer>
 			x_skew = <value>}
-		set_cap part = <part> section = <section> pre_layer = <pre_layer> mask_index = <mask_index>
+		set_CAP part = <part> section = <section> pre_layer = <pre_layer> mask_index = <mask_index>
 	endif
 	if GotParam \{post_layer}
-		get_cap part = <part> section = <section> mask_index = <mask_index>
+		get_CAP part = <part> section = <section> mask_index = <mask_index>
 		post_layer = {<post_layer>
 			x_skew = <value>}
-		set_cap part = <part> section = <section> post_layer = <post_layer> mask_index = <mask_index>
+		set_CAP part = <part> section = <section> post_layer = <post_layer> mask_index = <mask_index>
 	endif
 	if GotParam \{layer}
-		getlayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
+		GetLayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
 		layer = {<layer>
 			x_skew = <value>}
-		setlayer part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>
+		SetLayer part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>
 	endif
 endscript
 
 script cap_layer_set_y_skew 
 	CastToInteger \{value}
 	if GotParam \{pre_layer}
-		get_cap part = <part> section = <section> mask_index = <mask_index>
+		get_CAP part = <part> section = <section> mask_index = <mask_index>
 		pre_layer = {<pre_layer>
 			y_skew = <value>}
-		set_cap part = <part> section = <section> pre_layer = <pre_layer> mask_index = <mask_index>
+		set_CAP part = <part> section = <section> pre_layer = <pre_layer> mask_index = <mask_index>
 	endif
 	if GotParam \{post_layer}
-		get_cap part = <part> section = <section> mask_index = <mask_index>
+		get_CAP part = <part> section = <section> mask_index = <mask_index>
 		post_layer = {<post_layer>
 			y_skew = <value>}
-		set_cap part = <part> section = <section> post_layer = <post_layer> mask_index = <mask_index>
+		set_CAP part = <part> section = <section> post_layer = <post_layer> mask_index = <mask_index>
 	endif
 	if GotParam \{layer}
-		getlayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
+		GetLayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
 		layer = {<layer>
 			y_skew = <value>}
-		setlayer part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>
+		SetLayer part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>
 	endif
 endscript
 
 script cap_layer_set_rot 
 	CastToInteger \{value}
 	if GotParam \{pre_layer}
-		get_cap part = <part> section = <section> mask_index = <mask_index>
+		get_CAP part = <part> section = <section> mask_index = <mask_index>
 		pre_layer = {<pre_layer>
 			rot = <value>}
-		set_cap part = <part> section = <section> pre_layer = <pre_layer> mask_index = <mask_index>
+		set_CAP part = <part> section = <section> pre_layer = <pre_layer> mask_index = <mask_index>
 	endif
 	if GotParam \{post_layer}
-		get_cap part = <part> section = <section> mask_index = <mask_index>
+		get_CAP part = <part> section = <section> mask_index = <mask_index>
 		post_layer = {<post_layer>
 			rot = <value>}
-		set_cap part = <part> section = <section> post_layer = <post_layer> mask_index = <mask_index>
+		set_CAP part = <part> section = <section> post_layer = <post_layer> mask_index = <mask_index>
 	endif
 	if GotParam \{layer}
-		getlayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
+		GetLayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
 		layer = {<layer>
 			rot = <value>}
-		setlayer part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>
+		SetLayer part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>
 	endif
 endscript
 
-script get_cap 
-	if NOT getcasappearancepart part = <part>
-		ScriptAssert '%s not found' s = <part> donotresolve donotresolve
+script get_CAP 
+	if NOT GetCASAppearancePart part = <part>
+		ScriptAssert '%s not found' s = <part> DoNotResolve DoNotResolve
 	endif
 	mask = (<section>.mask)
 	set_cap_flags mask = ((<mask>) [<mask_index>])
 	if GotParam \{cap}
 		GetArraySize (cap)
-		capsize = <array_Size>
+		capsize = <array_size>
 		i = 0
 		begin
 		if is_matching_section cap = (<cap> [<i>]) section = <section>
-			if StructureContains structure = (<cap> [<i>]) pre_layer
-				if StructureContains structure = <section> pre_userlayer
+			if StructureContains Structure = (<cap> [<i>]) pre_layer
+				if StructureContains Structure = <section> pre_userlayer
 					cap_populate_layer cap_entry = ((<cap> [<i>]).pre_layer) mask_entry = ((<mask>) [<mask_index>]) flags = <flags>
 					if GotParam \{layer}
 						return pre_layer = <layer>
 					endif
 				endif
 			endif
-			if StructureContains structure = (<cap> [<i>]) post_layer
-				if StructureContains structure = <section> post_userlayer
+			if StructureContains Structure = (<cap> [<i>]) post_layer
+				if StructureContains Structure = <section> post_userlayer
 					cap_populate_layer cap_entry = ((<cap> [<i>]).post_layer) mask_entry = ((<mask>) [<mask_index>]) flags = <flags>
 					if GotParam \{layer}
 						return post_layer = <layer>
@@ -856,67 +856,67 @@ script get_cap
 		i = (<i> + 1)
 		repeat <capsize>
 	endif
-	if StructureContains structure = <section> pre_userlayer
+	if StructureContains Structure = <section> pre_userlayer
 		cap_new_artist_layer section = <section> mask_entry = ((<mask>) [<mask_index>]) flags = <flags>
 		return pre_layer = <layer>
 	endif
-	if StructureContains structure = <section> post_userlayer
+	if StructureContains Structure = <section> post_userlayer
 		cap_new_artist_layer section = <section> mask_entry = ((<mask>) [<mask_index>]) flags = <flags>
 		return post_layer = <layer>
 	endif
 endscript
 
-script set_cap 
+script set_CAP 
 	RequireParams \{[
 			section
 			part
 		]
 		all}
-	if NOT getcasappearancepart part = <part>
-		ScriptAssert '%s not found' s = <part> donotresolve donotresolve
+	if NOT GetCASAppearancePart part = <part>
+		ScriptAssert '%s not found' s = <part> DoNotResolve DoNotResolve
 	endif
 	mask = (<section>.mask)
 	if GotParam \{cap}
 		found_mat = 0
 		GetArraySize (cap)
-		cap_array_size = <array_Size>
+		cap_array_size = <array_size>
 		i = 0
 		begin
-		formatText checksumName = Name '%s' s = (<section>.base_tex)
+		FormatText checksumname = name '%s' s = (<section>.base_tex)
 		if is_matching_section cap = (<cap> [<i>]) section = <section>
 			found_mat = 1
 			found_tex = 0
 			capstruct = (<cap> [<i>])
-			if ((GotParam pre_layer) && (StructureContains structure = <capstruct> pre_layer))
+			if ((GotParam pre_layer) && (StructureContains Structure = <capstruct> pre_layer))
 				GetArraySize ((<cap> [<i>]).pre_layer)
-				mat_array_size = <array_Size>
+				mat_array_size = <array_size>
 				j = 0
 				begin
-				if StructureContains structure = ((<mask>) [<mask_index>]) pattern
-					fiximagepath path = (((<mask>) [<mask_index>]).pattern)
-					if in_tex_same_section section = <section> prev_tex = <Name> new_tex = ((((<cap> [<i>]).pre_layer) [<j>]).texture)
+				if StructureContains Structure = ((<mask>) [<mask_index>]) pattern
+					FixImagePath path = (((<mask>) [<mask_index>]).pattern)
+					if in_tex_same_section section = <section> prev_tex = <name> new_tex = ((((<cap> [<i>]).pre_layer) [<j>]).texture)
 						found_tex = 1
 						pre_layers = ((<cap> [<i>]).pre_layer)
-						SetArrayElement ArrayName = pre_layers index = <j> NewValue = <pre_layer>
-						SetArrayElement ArrayName = cap index = <i> NewValue = {
+						SetArrayElement ArrayName = pre_layers index = <j> newvalue = <pre_layer>
+						SetArrayElement ArrayName = cap index = <i> newvalue = {
 							(<cap> [<i>])
 							pre_layer = <pre_layers>
 						}
-						setcasappearancecap part = <part> cap = <cap>
-						updatecasmodelcap part = <part>
+						SetCASAppearanceCAP part = <part> cap = <cap>
+						UpdateCASModelCAP part = <part>
 						return
 					endif
-				elseif StructureContains structure = ((<mask>) [<mask_index>]) font
+				elseif StructureContains Structure = ((<mask>) [<mask_index>]) font
 					if in_font_same_section section = <section> prev_text = (((<mask>) [<mask_index>]).text) new_text = ((((<cap> [<i>]).pre_layer) [<j>]).text)
 						found_tex = 1
 						pre_layers = ((<cap> [<i>]).pre_layer)
-						SetArrayElement ArrayName = pre_layers index = <j> NewValue = <pre_layer>
-						SetArrayElement ArrayName = cap index = <i> NewValue = {
+						SetArrayElement ArrayName = pre_layers index = <j> newvalue = <pre_layer>
+						SetArrayElement ArrayName = cap index = <i> newvalue = {
 							(<cap> [<i>])
 							pre_layer = <pre_layers>
 						}
-						setcasappearancecap part = <part> cap = <cap>
-						updatecasmodelcap part = <part>
+						SetCASAppearanceCAP part = <part> cap = <cap>
+						UpdateCASModelCAP part = <part>
 						return
 					endif
 				endif
@@ -924,51 +924,51 @@ script set_cap
 				repeat <mat_array_size>
 				get_proper_location section = <section> pre_layer = ((<cap> [<i>]).pre_layer) part = <part>
 				if GotParam \{index}
-					insertarrayelement array = ((<cap> [<i>]).pre_layer) element = <pre_layer> index = <index>
-					SetArrayElement ArrayName = cap index = <i> NewValue = {
+					InsertArrayElement array = ((<cap> [<i>]).pre_layer) element = <pre_layer> index = <index>
+					SetArrayElement ArrayName = cap index = <i> newvalue = {
 						(<cap> [<i>])
 						pre_layer = <array>
 					}
 				else
 					AddArrayElement array = ((<cap> [<i>]).pre_layer) element = <pre_layer>
-					SetArrayElement ArrayName = cap index = <i> NewValue = {
+					SetArrayElement ArrayName = cap index = <i> newvalue = {
 						(<cap> [<i>])
 						pre_layer = <array>
 					}
 				endif
-				setcasappearancecap part = <part> cap = <cap>
-				updatecasmodelcap part = <part>
+				SetCASAppearanceCAP part = <part> cap = <cap>
+				UpdateCASModelCAP part = <part>
 				return
-			elseif ((GotParam post_layer) && (StructureContains structure = <capstruct> post_layer))
+			elseif ((GotParam post_layer) && (StructureContains Structure = <capstruct> post_layer))
 				GetArraySize ((<cap> [<i>]).post_layer)
-				mat_array_size = <array_Size>
+				mat_array_size = <array_size>
 				j = 0
 				begin
-				if StructureContains structure = ((<mask>) [<mask_index>]) pattern
-					fiximagepath path = (((<mask>) [<mask_index>]).pattern)
-					if in_tex_same_section section = <section> prev_tex = <Name> new_tex = ((((<cap> [<i>]).post_layer) [<j>]).texture)
+				if StructureContains Structure = ((<mask>) [<mask_index>]) pattern
+					FixImagePath path = (((<mask>) [<mask_index>]).pattern)
+					if in_tex_same_section section = <section> prev_tex = <name> new_tex = ((((<cap> [<i>]).post_layer) [<j>]).texture)
 						found_tex = 1
 						post_layers = ((<cap> [<i>]).post_layer)
-						SetArrayElement ArrayName = post_layers index = <j> NewValue = <post_layer>
-						SetArrayElement ArrayName = cap index = <i> NewValue = {
+						SetArrayElement ArrayName = post_layers index = <j> newvalue = <post_layer>
+						SetArrayElement ArrayName = cap index = <i> newvalue = {
 							(<cap> [<i>])
 							post_layer = <post_layers>
 						}
-						setcasappearancecap part = <part> cap = <cap>
-						updatecasmodelcap part = <part>
+						SetCASAppearanceCAP part = <part> cap = <cap>
+						UpdateCASModelCAP part = <part>
 						return
 					endif
-				elseif StructureContains structure = ((<mask>) [<mask_index>]) font
+				elseif StructureContains Structure = ((<mask>) [<mask_index>]) font
 					if in_font_same_section section = <section> prev_text = (((<mask>) [<mask_index>]).text) new_text = ((((<cap> [<i>]).post_layer) [<j>]).text)
 						found_tex = 1
 						post_layer = ((<cap> [<i>]).post_layer)
-						SetArrayElement ArrayName = post_layer index = <j> NewValue = <post_layer>
-						SetArrayElement ArrayName = cap index = <i> NewValue = {
+						SetArrayElement ArrayName = post_layer index = <j> newvalue = <post_layer>
+						SetArrayElement ArrayName = cap index = <i> newvalue = {
 							(<cap> [<i>])
 							post_layer = <post_layer>
 						}
-						setcasappearancecap part = <part> cap = <cap>
-						updatecasmodelcap part = <part>
+						SetCASAppearanceCAP part = <part> cap = <cap>
+						UpdateCASModelCAP part = <part>
 						return
 					endif
 				endif
@@ -976,52 +976,52 @@ script set_cap
 				repeat <mat_array_size>
 				get_proper_location section = <section> post_layer = ((<cap> [<i>]).post_layer) part = <part>
 				if GotParam \{index}
-					insertarrayelement array = ((<cap> [<i>]).post_layer) element = <post_layer> index = <index>
-					SetArrayElement ArrayName = cap index = <i> NewValue = {
+					InsertArrayElement array = ((<cap> [<i>]).post_layer) element = <post_layer> index = <index>
+					SetArrayElement ArrayName = cap index = <i> newvalue = {
 						(<cap> [<i>])
 						post_layer = <array>
 					}
 				else
 					AddArrayElement array = ((<cap> [<i>]).post_layer) element = <post_layer>
-					SetArrayElement ArrayName = cap index = <i> NewValue = {
+					SetArrayElement ArrayName = cap index = <i> newvalue = {
 						(<cap> [<i>])
 						post_layer = <array>
 					}
 				endif
-				setcasappearancecap part = <part> cap = <cap>
-				updatecasmodelcap part = <part>
+				SetCASAppearanceCAP part = <part> cap = <cap>
+				UpdateCASModelCAP part = <part>
 				return
 			else
-				printf \{qs(0x1aff5f9d)}
+				printf \{qs("\LAdd new selection")}
 				if GotParam \{pre_layer}
-					printf \{qs(0x1305fce1)}
+					printf \{qs("\LAdd a pre-layers selection")}
 					pre_layers = [{<pre_layer>}]
-					SetArrayElement ArrayName = cap index = <i> NewValue = {
+					SetArrayElement ArrayName = cap index = <i> newvalue = {
 						(<cap> [<i>])
 						pre_layer = <pre_layers>
 					}
 				endif
 				if GotParam \{post_layer}
-					printf \{qs(0x4af2b10e)}
+					printf \{qs("\LAdd a post-layers selection")}
 					post_layers = [{<post_layer>}]
-					SetArrayElement ArrayName = cap index = <i> NewValue = {
+					SetArrayElement ArrayName = cap index = <i> newvalue = {
 						(<cap> [<i>])
 						post_layer = <post_layers>
 					}
 				endif
-				setcasappearancecap part = <part> cap = <cap>
-				updatecasmodelcap part = <part>
+				SetCASAppearanceCAP part = <part> cap = <cap>
+				UpdateCASModelCAP part = <part>
 				return
 			endif
 		endif
 		i = (<i> + 1)
 		repeat <cap_array_size>
 		if (<found_mat> = 0)
-			formatText checksumName = Name '%s' s = (<section>.base_tex)
+			FormatText checksumname = name '%s' s = (<section>.base_tex)
 			if GotParam \{pre_layer}
 				new_select = [{<pre_layer>}]
 				entry = {
-					base_tex = <Name>
+					base_tex = <name>
 					material = (<section>.material)
 					pre_layer = <new_select>
 				}
@@ -1030,7 +1030,7 @@ script set_cap
 			if GotParam \{post_layer}
 				new_select = [{<post_layer>}]
 				entry = {
-					base_tex = <Name>
+					base_tex = <name>
 					material = (<section>.material)
 					post_layer = <new_select>
 				}
@@ -1038,16 +1038,16 @@ script set_cap
 			endif
 			AddArrayElement array = <cap> element = <entry>
 			<cap> = <array>
-			setcasappearancecap part = <part> cap = <cap>
-			updatecasmodelcap part = <part>
+			SetCASAppearanceCAP part = <part> cap = <cap>
+			UpdateCASModelCAP part = <part>
 			return
 		endif
 	else
-		formatText checksumName = Name '%s' s = (<section>.base_tex)
+		FormatText checksumname = name '%s' s = (<section>.base_tex)
 		if GotParam \{pre_layer}
 			new_select = [{<pre_layer>}]
 			entry = {
-				base_tex = <Name>
+				base_tex = <name>
 				material = (<section>.material)
 				pre_layer = <new_select>
 			}
@@ -1057,15 +1057,15 @@ script set_cap
 		if GotParam \{post_layer}
 			new_select = [{<post_layer>}]
 			entry = {
-				base_tex = <Name>
+				base_tex = <name>
 				material = (<section>.material)
 				post_layer = <new_select>
 			}
 			cap_set_target entry = <entry> section = <section>
 			cap = [{<entry>}]
 		endif
-		setcasappearancecap part = <part> cap = <cap>
-		updatecasmodelcap part = <part>
+		SetCASAppearanceCAP part = <part> cap = <cap>
+		UpdateCASModelCAP part = <part>
 		return
 	endif
 endscript
@@ -1083,21 +1083,21 @@ script in_tex_same_section
 	GetArraySize (<mask>)
 	j = 0
 	begin
-	fiximagepath path = (((<mask>) [<j>]).pattern)
-	if (<Name> = <prev_tex>)
+	FixImagePath path = (((<mask>) [<j>]).pattern)
+	if (<name> = <prev_tex>)
 		match_prev_tex = 1
 	endif
-	if (<Name> = <new_tex>)
+	if (<name> = <new_tex>)
 		match_new_tex = 1
 	endif
 	j = (<j> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	if (<match_prev_tex> = 1)
 		if (<match_new_tex> = 1)
 			return \{true}
 		endif
 	endif
-	return \{FALSE}
+	return \{false}
 endscript
 
 script in_font_same_section 
@@ -1113,21 +1113,21 @@ script in_font_same_section
 	GetArraySize (<mask>)
 	j = 0
 	begin
-	fiximagepath path = (((<mask>) [<j>]).text)
-	if (<Name> = <prev_text>)
+	FixImagePath path = (((<mask>) [<j>]).text)
+	if (<name> = <prev_text>)
 		match_prev_text = 1
 	endif
-	if (<Name> = <new_text>)
+	if (<name> = <new_text>)
 		match_new_text = 1
 	endif
 	j = (<j> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	if (<match_prev_text> = 1)
 		if (<match_new_text> = 1)
 			return \{true}
 		endif
 	endif
-	return \{FALSE}
+	return \{false}
 endscript
 
 script reset_to_default 
@@ -1138,13 +1138,13 @@ script reset_to_default
 		all}
 	mask = (<section>.mask)
 	set_cap_flags mask = ((<mask>) [<mask_index>])
-	if StructureContains structure = <section> pre_userlayer
+	if StructureContains Structure = <section> pre_userlayer
 		reset_to_default_helper mask_entry = ((<mask>) [<mask_index>]) flags = <flags> section = <section>
-		set_cap part = <part> section = <section> pre_layer = <layer> mask_index = <mask_index>
+		set_CAP part = <part> section = <section> pre_layer = <layer> mask_index = <mask_index>
 	endif
-	if StructureContains structure = <section> post_userlayer
+	if StructureContains Structure = <section> post_userlayer
 		reset_to_default_helper mask_entry = ((<mask>) [<mask_index>]) flags = <flags> section = <section>
-		set_cap part = <part> section = <section> post_layer = <layer> mask_index = <mask_index>
+		set_CAP part = <part> section = <section> post_layer = <layer> mask_index = <mask_index>
 	endif
 	reset_widgets
 endscript
@@ -1156,10 +1156,10 @@ script reset_to_default_helper
 			section
 		]
 		all}
-	if StructureContains structure = <mask_entry> pattern
-		fiximagepath path = (<mask_entry>.pattern)
-		layer = {texture = <Name>}
-	elseif StructureContains structure = <mask_entry> font
+	if StructureContains Structure = <mask_entry> pattern
+		FixImagePath path = (<mask_entry>.pattern)
+		layer = {texture = <name>}
+	elseif StructureContains Structure = <mask_entry> font
 		layer = {font = (<mask_entry>.font)
 			text = (<mask_entry>.text)}
 	endif
@@ -1167,10 +1167,10 @@ script reset_to_default_helper
 		layer = {<layer>
 			flags = <flags>}
 	endif
-	if StructureContains structure = <section> initial_values
+	if StructureContains Structure = <section> initial_values
 		layer = {<layer> (<section>.initial_values)}
 	endif
-	if StructureContains structure = <mask_entry> initial_values
+	if StructureContains Structure = <mask_entry> initial_values
 		layer = {<layer> (<mask_entry>.initial_values)}
 	endif
 	return layer = <layer>
@@ -1183,14 +1183,14 @@ script add_layer_to_profile
 			part
 		]
 		all}
-	if NOT getcasappearancepart part = <part>
-		ScriptAssert '%s not found' s = <part> donotresolve donotresolve
+	if NOT GetCASAppearancePart part = <part>
+		ScriptAssert '%s not found' s = <part> DoNotResolve DoNotResolve
 	endif
 	set_cap_flags mask = (<mask>)
-	if StructureContains structure = <mask> pattern
-		fiximagepath path = (<mask>.pattern)
-		layer = {texture = <Name>}
-	elseif StructureContains structure = <mask> font
+	if StructureContains Structure = <mask> pattern
+		FixImagePath path = (<mask>.pattern)
+		layer = {texture = <name>}
+	elseif StructureContains Structure = <mask> font
 		layer = {font = (<mask>.font)
 			text = (<mask>.text)}
 	endif
@@ -1198,23 +1198,23 @@ script add_layer_to_profile
 		layer = {<layer>
 			flags = <flags>}
 	endif
-	if StructureContains structure = <section> initial_values
+	if StructureContains Structure = <section> initial_values
 		initial_values = (<section>.initial_values)
 		layer = {<layer>
 			<initial_values>}
-		if ((StructureContains structure = initial_values x_trans) || (StructureContains structure = initial_values y_trans))
+		if ((StructureContains Structure = initial_values x_trans) || (StructureContains Structure = initial_values y_trans))
 			no_average = 1
 		endif
 	endif
-	if StructureContains structure = (<mask>) initial_values
+	if StructureContains Structure = (<mask>) initial_values
 		initial_values = ((<mask>).initial_values)
 		layer = {<layer>
 			((<mask>).initial_values)}
-		if ((StructureContains structure = initial_values x_trans) || (StructureContains structure = initial_values y_trans))
+		if ((StructureContains Structure = initial_values x_trans) || (StructureContains Structure = initial_values y_trans))
 			no_average = 1
 		endif
 	endif
-	if StructureContains structure = <section> center
+	if StructureContains Structure = <section> center
 		x_trans = (50 - (<section>.center [0]))
 		y_trans = (50 - (<section>.center [1]))
 		CastToInteger \{x_trans}
@@ -1230,60 +1230,60 @@ script add_layer_to_profile
 	endif
 	if GotParam \{cap}
 		GetArraySize (cap)
-		cap_array_size = <array_Size>
+		cap_array_size = <array_size>
 		if (<cap_array_size> > 0)
 			i = 0
 			begin
-			formatText checksumName = Name '%s' s = (<section>.base_tex)
+			FormatText checksumname = name '%s' s = (<section>.base_tex)
 			if is_matching_section cap = (<cap> [<i>]) section = <section>
-				if StructureContains structure = (<cap> [<i>]) layers
+				if StructureContains Structure = (<cap> [<i>]) layers
 					GetArraySize (((<cap> [<i>]).layers))
 					AddArrayElement array = ((<cap> [<i>]).layers) element = <layer>
 					new_layers = <array>
-					SetArrayElement ArrayName = cap index = <i> NewValue = {
+					SetArrayElement ArrayName = cap index = <i> newvalue = {
 						(<cap> [<i>])
 						layers = <new_layers>
 					}
-					setcasappearancecap part = <part> cap = <cap>
-					updatecasmodelcap part = <part>
-					return cap_index = <i> layer_index = <array_Size>
+					SetCASAppearanceCAP part = <part> cap = <cap>
+					UpdateCASModelCAP part = <part>
+					return cap_index = <i> layer_index = <array_size>
 				else
-					SetArrayElement ArrayName = cap index = <i> NewValue = {
+					SetArrayElement ArrayName = cap index = <i> newvalue = {
 						(<cap> [<i>])
 						layers = [{<layer>}]
 					}
-					setcasappearancecap part = <part> cap = <cap>
-					updatecasmodelcap part = <part>
+					SetCASAppearanceCAP part = <part> cap = <cap>
+					UpdateCASModelCAP part = <part>
 					return cap_index = <i> layer_index = 0
 				endif
 			endif
 			i = (<i> + 1)
 			repeat <cap_array_size>
 		endif
-		formatText checksumName = Name '%s' s = (<section>.base_tex)
+		FormatText checksumname = name '%s' s = (<section>.base_tex)
 		entry = {
-			base_tex = <Name>
+			base_tex = <name>
 			material = (<section>.material)
 			layers = [{<layer>}]
 		}
 		cap_set_target entry = <entry> section = <section>
 		AddArrayElement array = <cap> element = <entry>
 		<cap> = <array>
-		setcasappearancecap part = <part> cap = <cap>
-		updatecasmodelcap part = <part>
+		SetCASAppearanceCAP part = <part> cap = <cap>
+		UpdateCASModelCAP part = <part>
 		return cap_index = (<cap_array_size>) layer_index = 0
 	endif
-	formatText checksumName = Name '%s' s = (<section>.base_tex)
+	FormatText checksumname = name '%s' s = (<section>.base_tex)
 	new_layers = [{<layer>}]
 	entry = {
-		base_tex = <Name>
+		base_tex = <name>
 		material = (<section>.material)
 		layers = <new_layers>
 	}
 	cap_set_target entry = <entry> section = <section>
 	cap = [{<entry>}]
-	setcasappearancecap part = <part> cap = <cap>
-	updatecasmodelcap part = <part>
+	SetCASAppearanceCAP part = <part> cap = <cap>
+	UpdateCASModelCAP part = <part>
 	return \{cap_index = 0
 		layer_index = 0}
 endscript
@@ -1295,19 +1295,19 @@ script match_layers_texture
 		]
 		all}
 	GetArraySize (sections)
-	sections_size = <array_Size>
+	sections_size = <array_size>
 	i = 0
 	begin
-	if StructureContains structure = (<sections> [<i>]) mask
+	if StructureContains Structure = (<sections> [<i>]) mask
 		if section_has_target_and_material section = (<sections> [<i>]) target = <target> material = <material>
 			mask = (<sections> [<i>].mask)
 			GetArraySize (mask)
-			mask_size = <array_Size>
+			mask_size = <array_size>
 			j = 0
 			begin
-			if StructureContains structure = ((<mask>) [<j>]) pattern
-				fiximagepath path = ((<mask>) [<j>].pattern)
-				if (<Name> = <prof_texture>)
+			if StructureContains Structure = ((<mask>) [<j>]) pattern
+				FixImagePath path = ((<mask>) [<j>].pattern)
+				if (<name> = <prof_texture>)
 					return mask = ((<mask>) [<j>]) section_index = <i> mask_index = <j>
 				endif
 			endif
@@ -1327,18 +1327,18 @@ script match_layers_font
 		]
 		all}
 	GetArraySize (sections)
-	sections_size = <array_Size>
+	sections_size = <array_size>
 	i = 0
 	begin
-	if StructureContains structure = (<sections> [<i>]) mask
+	if StructureContains Structure = (<sections> [<i>]) mask
 		if section_has_target_and_material section = (<sections> [<i>]) target = <target> material = <material>
 			mask = (<sections> [<i>].mask)
 			GetArraySize (mask)
-			mask_size = <array_Size>
+			mask_size = <array_size>
 			j = 0
 			begin
-			if StructureContains structure = ((<mask>) [<j>]) font
-				if checksumequals a = ((<mask>) [<j>].font) b = <prof_font>
+			if StructureContains Structure = ((<mask>) [<j>]) font
+				if ChecksumEquals a = ((<mask>) [<j>].font) b = <prof_font>
 					if (<prof_text> = ((<mask>) [<j>].text))
 						return mask = ((<mask>) [<j>]) section_index = <i> mask_index = <j>
 					endif
@@ -1352,30 +1352,30 @@ script match_layers_font
 	repeat <sections_size>
 endscript
 
-script getlayer 
-	if NOT getcasappearancepart part = <part>
-		ScriptAssert '%s not found' s = <part> donotresolve
+script GetLayer 
+	if NOT GetCASAppearancePart part = <part>
+		ScriptAssert '%s not found' s = <part> DoNotResolve
 	endif
 	if NOT CD
 		GetArraySize <cap>
-		if (<cap_index> > (<array_Size> -1))
-			ScriptAssert \{qs(0x69c75a7f)}
+		if (<cap_index> > (<array_size> -1))
+			ScriptAssert \{qs("\LGetLayer was given a cap_index that is out of bounds.")}
 		endif
 		GetArraySize ((<cap> [<cap_index>]).layers)
-		if (<layer_index> > (<array_Size> -1))
-			ScriptAssert \{qs(0xd06c9a70)}
+		if (<layer_index> > (<array_size> -1))
+			ScriptAssert \{qs("\LGetLayer was given a layers_index that is out of bounds.")}
 		endif
 	endif
 	if GotParam \{cap}
-		if StructureContains structure = (((<cap> [<cap_index>]).layers) [<layer_index>]) texture
+		if StructureContains Structure = (((<cap> [<cap_index>]).layers) [<layer_index>]) texture
 			layer = {texture = ((((<cap> [<cap_index>]).layers) [<layer_index>]).texture)}
-		elseif StructureContains structure = (((<cap> [<cap_index>]).layers) [<layer_index>]) font
+		elseif StructureContains Structure = (((<cap> [<cap_index>]).layers) [<layer_index>]) font
 			layer = {font = ((((<cap> [<cap_index>]).layers) [<layer_index>]).font)
 				text = ((((<cap> [<cap_index>]).layers) [<layer_index>]).text)}
 		endif
 		layer = {
 			<layer>
-			Color = ((((<cap> [<cap_index>]).layers) [<layer_index>]).Color)
+			color = ((((<cap> [<cap_index>]).layers) [<layer_index>]).color)
 			a = ((((<cap> [<cap_index>]).layers) [<layer_index>]).a)
 			x_trans = ((((<cap> [<cap_index>]).layers) [<layer_index>]).x_trans)
 			y_trans = ((((<cap> [<cap_index>]).layers) [<layer_index>]).y_trans)
@@ -1392,7 +1392,7 @@ script getlayer
 		}}
 endscript
 
-script setlayer 
+script SetLayer 
 	RequireParams \{[
 			layer_index
 			cap_index
@@ -1400,18 +1400,18 @@ script setlayer
 			layer
 		]
 		all}
-	if NOT getcasappearancepart part = <part>
-		ScriptAssert '%s not found' s = <part> donotresolve donotresolve
+	if NOT GetCASAppearancePart part = <part>
+		ScriptAssert '%s not found' s = <part> DoNotResolve DoNotResolve
 	endif
 	if GotParam \{cap}
 		old_layers = ((<cap> [<cap_index>]).layers)
-		SetArrayElement ArrayName = old_layers index = <layer_index> NewValue = <layer>
-		SetArrayElement ArrayName = cap index = <cap_index> NewValue = {
+		SetArrayElement ArrayName = old_layers index = <layer_index> newvalue = <layer>
+		SetArrayElement ArrayName = cap index = <cap_index> newvalue = {
 			(<cap> [<cap_index>])
 			layers = <old_layers>
 		}
-		setcasappearancecap part = <part> cap = <cap>
-		updatecasmodelcap part = <part>
+		SetCASAppearanceCAP part = <part> cap = <cap>
+		UpdateCASModelCAP part = <part>
 	endif
 endscript
 
@@ -1424,25 +1424,25 @@ script reset_layer_to_default
 			section
 		]
 		all}
-	getlayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
+	GetLayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
 	set_cap_flags mask = (<mask>)
-	if StructureContains structure = <mask> pattern
-		fiximagepath path = (<mask>.pattern)
-		layer = {texture = <Name>}
-	elseif StructureContains structure = <mask> font
+	if StructureContains Structure = <mask> pattern
+		FixImagePath path = (<mask>.pattern)
+		layer = {texture = <name>}
+	elseif StructureContains Structure = <mask> font
 		layer = {font = (<mask>.font) text = (<mask>.text)}
 	endif
 	if NOT (<flags> = 0)
 		layer = {<layer>
 			flags = <flags>}
 	endif
-	if StructureContains structure = <section> initial_values
+	if StructureContains Structure = <section> initial_values
 		layer = {<layer> (<section>.initial_values)}
 	endif
-	if StructureContains structure = <mask> initial_values
+	if StructureContains Structure = <mask> initial_values
 		layer = {<layer> (<mask>.initial_values)}
 	endif
-	setlayer part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>
+	SetLayer part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>
 	reset_widgets
 	reset_flip_buttons part = <part> cap_index = <cap_index> layer_index = <layer_index>
 endscript
@@ -1454,36 +1454,36 @@ script delete_layer
 			part
 		]
 		all}
-	if NOT getcasappearancepart part = <part>
-		ScriptAssert '%s not found' s = <part> donotresolve donotresolve
+	if NOT GetCASAppearancePart part = <part>
+		ScriptAssert '%s not found' s = <part> DoNotResolve DoNotResolve
 	endif
 	if GotParam \{cap}
 		RemoveArrayElement array = ((<cap> [<cap_index>]).layers) index = <layer_index>
-		SetArrayElement ArrayName = cap index = <cap_index> NewValue = {
+		SetArrayElement ArrayName = cap index = <cap_index> newvalue = {
 			(<cap> [<cap_index>])
 			layers = <array>
 		}
 		GetArraySize (array)
-		if (<array_Size> = 0)
+		if (<array_size> = 0)
 			cap_struct = (<cap> [<cap_index>])
-			if ((StructureContains structure = <cap_struct> pre_layer) || (StructureContains structure = <cap_struct> post_layer))
+			if ((StructureContains Structure = <cap_struct> pre_layer) || (StructureContains Structure = <cap_struct> post_layer))
 				capstruct = (<cap> [<cap_index>])
-				RemoveComponent \{Name = layers
+				RemoveComponent \{name = layers
 					structure_name = capstruct}
-				SetArrayElement ArrayName = cap index = <cap_index> NewValue = <capstruct>
+				SetArrayElement ArrayName = cap index = <cap_index> newvalue = <capstruct>
 			else
 				RemoveArrayElement array = (<cap>) index = <cap_index>
 				cap = <array>
 			endif
 		endif
 		GetArraySize (cap)
-		if (<array_Size> = 0)
-			setcasappearancecap part = <part>
+		if (<array_size> = 0)
+			SetCASAppearanceCAP part = <part>
 		else
-			setcasappearancecap part = <part> cap = <cap>
+			SetCASAppearanceCAP part = <part> cap = <cap>
 		endif
 		if NOT GotParam \{skip_build}
-			updatecasmodelcap part = <part>
+			UpdateCASModelCAP part = <part>
 		endif
 	endif
 endscript
@@ -1496,15 +1496,15 @@ script has_user_layers
 	GetArraySize (sections)
 	i = 0
 	begin
-	if NOT StructureContains structure = (<sections> [<i>]) pre_userlayer
+	if NOT StructureContains Structure = (<sections> [<i>]) pre_userlayer
 		return \{true}
 	endif
-	if NOT StructureContains structure = (<sections> [<i>]) post_userlayer
+	if NOT StructureContains Structure = (<sections> [<i>]) post_userlayer
 		return \{true}
 	endif
 	i = (<i> + 1)
-	repeat <array_Size>
-	return \{FALSE}
+	repeat <array_size>
+	return \{false}
 endscript
 
 script get_proper_location 
@@ -1521,7 +1521,7 @@ script get_proper_location
 			return index = <i>
 		endif
 		i = (<i> + 1)
-		repeat <array_Size>
+		repeat <array_size>
 	endif
 	if GotParam \{post_layer}
 		GetArraySize (post_layer)
@@ -1531,7 +1531,7 @@ script get_proper_location
 			return index = <i>
 		endif
 		i = (<i> + 1)
-		repeat <array_Size>
+		repeat <array_size>
 	endif
 endscript
 
@@ -1550,23 +1550,23 @@ script is_pre_layer_before_section
 		if (<pre_layer_section_index> < <section_index>)
 			return \{true}
 		else
-			return \{FALSE}
+			return \{false}
 		endif
 	endif
 endscript
 
 script get_section_index_of_pre_layer 
-	if NOT getcasappearancepart part = <part>
-		ScriptAssert '%s not found' s = <part> donotresolve
+	if NOT GetCASAppearancePart part = <part>
+		ScriptAssert '%s not found' s = <part> DoNotResolve
 	endif
-	if NOT getactualcasoptionstruct part = <part> desc_id = <desc_id>
+	if NOT GetActualCASOptionStruct part = <part> desc_id = <desc_id>
 		ScriptAssert '%s %t not found' s = <part> t = <desc_id>
 	endif
 	if GotParam \{sections}
 		if GotParam \{pre_layer}
-			if StructureContains structure = <pre_layer> texture
+			if StructureContains Structure = <pre_layer> texture
 				match_layers_texture prof_texture = (<pre_layer>.texture) sections = <sections>
-			elseif StructureContains structure = <pre_layer> font
+			elseif StructureContains Structure = <pre_layer> font
 				match_layers_font prof_font = (<pre_layer>.font) prof_text = (<pre_layer>.text) sections = <sections>
 			endif
 			GetArraySize (sections)
@@ -1576,12 +1576,12 @@ script get_section_index_of_pre_layer
 				return pre_layer_section_index = <section_index> section_index = <i>
 			endif
 			i = (<i> + 1)
-			repeat <array_Size>
+			repeat <array_size>
 		endif
 		if GotParam \{post_layer}
-			if StructureContains structure = <post_layer> texture
+			if StructureContains Structure = <post_layer> texture
 				match_layers_texture prof_texture = (<post_layer>.texture) sections = <sections>
-			elseif StructureContains structure = <post_layer> font
+			elseif StructureContains Structure = <post_layer> font
 				match_layers_font prof_font = (<post_layer>.font) prof_text = (<post_layer>.text) sections = <sections>
 			endif
 			GetArraySize (sections)
@@ -1591,10 +1591,10 @@ script get_section_index_of_pre_layer
 				return pre_layer_section_index = <section_index> section_index = <i>
 			endif
 			i = (<i> + 1)
-			repeat <array_Size>
+			repeat <array_size>
 		endif
 	else
-		ScriptAssert \{qs(0x8ed8529e)}
+		ScriptAssert \{qs("\LUnable to retrieve sections")}
 	endif
 endscript
 
@@ -1604,31 +1604,31 @@ script set_cap_flags
 		]
 		all}
 	flags = 0
-	if StructureContains structure = <mask> clamp_u
+	if StructureContains Structure = <mask> clamp_u
 		flags = (<flags> || 1)
 	endif
-	if StructureContains structure = <mask> clamp_v
+	if StructureContains Structure = <mask> clamp_v
 		flags = (<flags> || 2)
 	endif
-	if StructureContains structure = <mask> clamp_uv
+	if StructureContains Structure = <mask> clamp_uv
 		flags = 3
 	endif
-	if StructureContains structure = <mask> static_alpha
+	if StructureContains Structure = <mask> static_alpha
 		flags = (<flags> || 4)
 	endif
-	if StructureContains structure = <mask> wrap_texture
+	if StructureContains Structure = <mask> wrap_texture
 		flags = (<flags> || 32)
 	endif
 	return flags = <flags>
 endscript
 
 script flip_layer_horizontal 
-	if NOT getcasappearancepart part = <part>
-		ScriptAssert '%s not found' s = <part> donotresolve donotresolve
+	if NOT GetCASAppearancePart part = <part>
+		ScriptAssert '%s not found' s = <part> DoNotResolve DoNotResolve
 	endif
 	layer = (((<cap> [<cap_index>]).layers) [<layer_index>])
 	if GotParam \{cap}
-		if StructureContains structure = <layer> flags
+		if StructureContains Structure = <layer> flags
 			if ((<layer>.flags) && 8)
 				newflags = ((<layer>.flags) && -9)
 				layer = {<layer>
@@ -1644,37 +1644,37 @@ script flip_layer_horizontal
 		endif
 	endif
 	old_layers = ((<cap> [<cap_index>]).layers)
-	SetArrayElement ArrayName = old_layers index = <layer_index> NewValue = <layer>
-	SetArrayElement ArrayName = cap index = <cap_index> NewValue = {
+	SetArrayElement ArrayName = old_layers index = <layer_index> newvalue = <layer>
+	SetArrayElement ArrayName = cap index = <cap_index> newvalue = {
 		(<cap> [<cap_index>])
 		layers = <old_layers>
 	}
-	setcasappearancecap part = <part> cap = <cap>
-	updatecasmodelcap part = <part>
+	SetCASAppearanceCAP part = <part> cap = <cap>
+	UpdateCASModelCAP part = <part>
 endscript
 
 script is_flip_layer_horizontal 
-	if NOT getcasappearancepart part = <part>
-		ScriptAssert '%s not found' s = <part> donotresolve donotresolve
+	if NOT GetCASAppearancePart part = <part>
+		ScriptAssert '%s not found' s = <part> DoNotResolve DoNotResolve
 	endif
 	layer = (((<cap> [<cap_index>]).layers) [<layer_index>])
 	if GotParam \{cap}
-		if StructureContains structure = <layer> flags
+		if StructureContains Structure = <layer> flags
 			if ((<layer>.flags) && 8)
 				return \{true}
 			endif
 		endif
 	endif
-	return \{FALSE}
+	return \{false}
 endscript
 
 script flip_layer_vertical 
-	if NOT getcasappearancepart part = <part>
-		ScriptAssert '%s not found' s = <part> donotresolve donotresolve
+	if NOT GetCASAppearancePart part = <part>
+		ScriptAssert '%s not found' s = <part> DoNotResolve DoNotResolve
 	endif
 	layer = (((<cap> [<cap_index>]).layers) [<layer_index>])
 	if GotParam \{cap}
-		if StructureContains structure = <layer> flags
+		if StructureContains Structure = <layer> flags
 			if ((<layer>.flags) && 16)
 				newflags = ((<layer>.flags) && -17)
 				layer = {<layer>
@@ -1690,55 +1690,55 @@ script flip_layer_vertical
 		endif
 	endif
 	old_layers = ((<cap> [<cap_index>]).layers)
-	SetArrayElement ArrayName = old_layers index = <layer_index> NewValue = <layer>
-	SetArrayElement ArrayName = cap index = <cap_index> NewValue = {
+	SetArrayElement ArrayName = old_layers index = <layer_index> newvalue = <layer>
+	SetArrayElement ArrayName = cap index = <cap_index> newvalue = {
 		(<cap> [<cap_index>])
 		layers = <old_layers>
 	}
-	setcasappearancecap part = <part> cap = <cap>
-	updatecasmodelcap part = <part>
+	SetCASAppearanceCAP part = <part> cap = <cap>
+	UpdateCASModelCAP part = <part>
 endscript
 
 script is_flip_layer_vertical 
-	if NOT getcasappearancepart part = <part>
-		ScriptAssert '%s not found' s = <part> donotresolve donotresolve
+	if NOT GetCASAppearancePart part = <part>
+		ScriptAssert '%s not found' s = <part> DoNotResolve DoNotResolve
 	endif
 	layer = (((<cap> [<cap_index>]).layers) [<layer_index>])
 	if GotParam \{cap}
-		if StructureContains structure = <layer> flags
+		if StructureContains Structure = <layer> flags
 			if ((<layer>.flags) && 16)
 				return \{true}
 			endif
 		endif
 	endif
-	return \{FALSE}
+	return \{false}
 endscript
 
-script updatecasmodelcap 
+script UpdateCASModelCAP 
 	if NOT GotParam \{part}
 		ScriptAssert \{'This requires a part parameter, updating CAP on everything at once isn\'t a great idea!'}
 	endif
-	updatecurrentcasmodel buildscript = update_cap_part buildscriptparams = {part = <part>}
+	UpdateCurrentCASModel buildScript = update_cap_part buildscriptparams = {part = <part>}
 endscript
 
 script is_matching_section 
-	formatText checksumName = Name '%s' s = (<section>.base_tex)
-	if (((<cap>.material) = (<section>.material)) && ((<cap>.base_tex) = <Name>))
-		if ((StructureContains structure = <section> normal_map) && (StructureContains structure = <cap> normal_map))
+	FormatText checksumname = name '%s' s = (<section>.base_tex)
+	if (((<cap>.material) = (<section>.material)) && ((<cap>.base_tex) = <name>))
+		if ((StructureContains Structure = <section> normal_map) && (StructureContains Structure = <cap> normal_map))
 			return \{true}
-		elseif ((StructureContains structure = <section> cas_1) && (StructureContains structure = <cap> cas_1))
+		elseif ((StructureContains Structure = <section> Cas_1) && (StructureContains Structure = <cap> Cas_1))
 			return \{true}
-		elseif ((StructureContains structure = <section> cas_2) && (StructureContains structure = <cap> cas_2))
+		elseif ((StructureContains Structure = <section> cas_2) && (StructureContains Structure = <cap> cas_2))
 			return \{true}
-		elseif ((StructureContains structure = <section> specular) && (StructureContains structure = <cap> specular))
+		elseif ((StructureContains Structure = <section> specular) && (StructureContains Structure = <cap> specular))
 			return \{true}
-		elseif ((StructureContains structure = <section> diffuse) && (StructureContains structure = <cap> diffuse))
+		elseif ((StructureContains Structure = <section> diffuse) && (StructureContains Structure = <cap> diffuse))
 			return \{true}
 		else
-			return \{FALSE}
+			return \{false}
 		endif
 	endif
-	return \{FALSE}
+	return \{false}
 endscript
 
 script cap_set_target 
@@ -1747,19 +1747,19 @@ script cap_set_target
 			entry
 		]
 		all}
-	if StructureContains structure = <section> normal_map
+	if StructureContains Structure = <section> normal_map
 		entry = {<entry>
 			normal_map}
-	elseif StructureContains structure = <section> cas_1
+	elseif StructureContains Structure = <section> Cas_1
 		entry = {<entry>
-			cas_1}
-	elseif StructureContains structure = <section> cas_2
+			Cas_1}
+	elseif StructureContains Structure = <section> cas_2
 		entry = {<entry>
 			cas_2}
-	elseif StructureContains structure = <section> specular
+	elseif StructureContains Structure = <section> specular
 		entry = {<entry>
 			specular}
-	elseif StructureContains structure = <section> diffuse
+	elseif StructureContains Structure = <section> diffuse
 		entry = {<entry>
 			diffuse}
 	else
@@ -1775,10 +1775,10 @@ script is_target_in_div
 			part
 		]
 		all}
-	if NOT getcasappearancepart part = <part>
-		ScriptAssert '%s not found' s = <part> donotresolve donotresolve
+	if NOT GetCASAppearancePart part = <part>
+		ScriptAssert '%s not found' s = <part> DoNotResolve DoNotResolve
 	endif
-	if NOT getactualcasoptionstruct part = <part> desc_id = <desc_id>
+	if NOT GetActualCASOptionStruct part = <part> desc_id = <desc_id>
 		ScriptAssert '%s %t not found' s = <part> t = <desc_id>
 	endif
 	if NOT GotParam \{divisions}
@@ -1787,21 +1787,21 @@ script is_target_in_div
 		return \{true}
 	else
 		GetArraySize \{divisions}
-		if (<array_Size> > 0)
+		if (<array_size> > 0)
 			i = 0
 			begin
 			if ((<divisions> [<i>].desc_id) = <div_id>)
 				if ((<target>.material) = (<divisions> [<i>].material))
-					if StructureContains structure = <target> (<divisions> [<i>].target)
+					if StructureContains Structure = <target> (<divisions> [<i>].target)
 						return \{true}
 					endif
 				endif
 			endif
 			i = (<i> + 1)
-			repeat <array_Size>
+			repeat <array_size>
 		endif
 	endif
-	return \{FALSE}
+	return \{false}
 endscript
 
 script get_div_info 
@@ -1811,22 +1811,22 @@ script get_div_info
 	if NOT GotParam \{div_id}
 		return
 	endif
-	if NOT getcasappearancepart part = <part>
-		ScriptAssert '%s not found' s = <part> donotresolve donotresolve
+	if NOT GetCASAppearancePart part = <part>
+		ScriptAssert '%s not found' s = <part> DoNotResolve DoNotResolve
 	endif
-	if NOT getactualcasoptionstruct part = <part> desc_id = <desc_id>
+	if NOT GetActualCASOptionStruct part = <part> desc_id = <desc_id>
 		ScriptAssert '%s %t not found' s = <part> t = <desc_id>
 	endif
 	if GotParam \{divisions}
 		GetArraySize \{divisions}
-		if (<array_Size> > 0)
+		if (<array_size> > 0)
 			i = 0
 			begin
 			if ((<divisions> [<i>].desc_id) = <div_id>)
 				return target = (<divisions> [<i>].target) material = (<divisions> [<i>].material)
 			endif
 			i = (<i> + 1)
-			repeat <array_Size>
+			repeat <array_size>
 		endif
 	endif
 endscript
@@ -1841,13 +1841,13 @@ script section_has_target_and_material
 	elseif NOT GotParam \{material}
 		return \{true}
 	else
-		if StructureContains structure = <section> <target>
-			if checksumequals a = (<section>.material) b = <material>
+		if StructureContains Structure = <section> <target>
+			if ChecksumEquals a = (<section>.material) b = <material>
 				return \{true}
 			endif
 		endif
 	endif
-	return \{FALSE}
+	return \{false}
 endscript
 
 script add_cap_array_to_part 
@@ -1856,7 +1856,7 @@ script add_cap_array_to_part
 			newstruct
 		]
 		all}
-	if NOT getactualcasoptionstruct part = <part> desc_id = (<newstruct>.desc_id)
+	if NOT GetActualCASOptionStruct part = <part> desc_id = (<newstruct>.desc_id)
 		ScriptAssert '%s %t not found' s = <part> t = (<newstruct>.desc_id)
 	endif
 	if GotParam \{default_cap}
@@ -1867,16 +1867,16 @@ script add_cap_array_to_part
 endscript
 
 script cap_artist_colorwheel_focus_change 
-	get_cap part = <part> section = <section> mask_index = <mask_index>
+	get_CAP part = <part> section = <section> mask_index = <mask_index>
 	if GotParam \{pre_layer}
 		pre_layer = {<pre_layer>
-			Color = <Color>}
-		set_cap part = <part> section = <section> pre_layer = <pre_layer> mask_index = <mask_index>
+			color = <color>}
+		set_CAP part = <part> section = <section> pre_layer = <pre_layer> mask_index = <mask_index>
 	endif
 	if GotParam \{post_layer}
 		post_layer = {<post_layer>
-			Color = <Color>}
-		set_cap part = <part> section = <section> post_layer = <post_layer> mask_index = <mask_index>
+			color = <color>}
+		set_CAP part = <part> section = <section> post_layer = <post_layer> mask_index = <mask_index>
 	endif
 endscript
 
@@ -1893,10 +1893,10 @@ script cap_get_current_rgb
 			mask_index
 		]
 		all}
-	get_cap part = <part> section = <section> mask_index = <mask_index>
+	get_CAP part = <part> section = <section> mask_index = <mask_index>
 	if GotParam \{pre_layer}
-		if StructureContains structure = <pre_layer> Color
-			rgba = ((($color_lookup_table).(<pre_layer>.Color)).diffuse)
+		if StructureContains Structure = <pre_layer> color
+			rgba = ((($color_lookup_table).(<pre_layer>.color)).diffuse)
 		else
 			AddArrayElement array = [] element = ($default_cap_red)
 			AddArrayElement array = <array> element = ($default_cap_green)
@@ -1904,8 +1904,8 @@ script cap_get_current_rgb
 			rgba = <array>
 		endif
 	else
-		if StructureContains structure = <post_layer> Color
-			rgba = ((($color_lookup_table).(<post_layer>.Color)).diffuse)
+		if StructureContains Structure = <post_layer> color
+			rgba = ((($color_lookup_table).(<post_layer>.color)).diffuse)
 		else
 			AddArrayElement array = [] element = ($default_cap_red)
 			AddArrayElement array = <array> element = ($default_cap_green)
@@ -1922,22 +1922,22 @@ script average_layer_translation
 		]
 		all}
 	GetArraySize <layers>
-	if (<array_Size> > 0)
+	if (<array_size> > 0)
 		sum_x = 0
 		sum_y = 0
 		i = 0
 		begin
-		if StructureContains structure = (<layers> [<i>]) x_trans
+		if StructureContains Structure = (<layers> [<i>]) x_trans
 			x_trans = ((<layers> [<i>]).x_trans)
 			sum_x = (<sum_x> + <x_trans>)
 		endif
-		if StructureContains structure = (<layers> [<i>]) y_trans
+		if StructureContains Structure = (<layers> [<i>]) y_trans
 			y_trans = ((<layers> [<i>]).y_trans)
 			sum_y = (<sum_y> + <y_trans>)
 		endif
 		i = (<i> + 1)
-		repeat <array_Size>
-		return x_trans = (<sum_x> / <array_Size>) y_trans = (<sum_y> / <array_Size>)
+		repeat <array_size>
+		return x_trans = (<sum_x> / <array_size>) y_trans = (<sum_y> / <array_size>)
 	endif
 endscript
 
@@ -1946,24 +1946,24 @@ script cap_no_transforms
 			mask
 		]
 		all}
-	if StructureContains structure = <mask> no_edit_options
+	if StructureContains Structure = <mask> no_edit_options
 		return \{true}
-	elseif NOT StructureContains structure = <mask> no_color
-		return \{FALSE}
-	elseif NOT StructureContains structure = <mask> no_alpha
-		return \{FALSE}
-	elseif NOT StructureContains structure = <mask> no_translate
-		return \{FALSE}
-	elseif NOT StructureContains structure = <mask> no_scale
-		return \{FALSE}
-	elseif NOT StructureContains structure = <mask> NO_ROTATE
-		return \{FALSE}
-	elseif NOT StructureContains structure = <mask> no_skew
-		return \{FALSE}
-	elseif NOT StructureContains structure = <mask> no_u_flip
-		return \{FALSE}
-	elseif NOT StructureContains structure = <mask> no_v_flip
-		return \{FALSE}
+	elseif NOT StructureContains Structure = <mask> no_color
+		return \{false}
+	elseif NOT StructureContains Structure = <mask> no_alpha
+		return \{false}
+	elseif NOT StructureContains Structure = <mask> no_translate
+		return \{false}
+	elseif NOT StructureContains Structure = <mask> no_scale
+		return \{false}
+	elseif NOT StructureContains Structure = <mask> no_rotate
+		return \{false}
+	elseif NOT StructureContains Structure = <mask> no_skew
+		return \{false}
+	elseif NOT StructureContains Structure = <mask> no_u_flip
+		return \{false}
+	elseif NOT StructureContains Structure = <mask> no_v_flip
+		return \{false}
 	else
 		return \{true}
 	endif
@@ -1974,13 +1974,13 @@ script cap_populate_layer
 	j = 0
 	begin
 	cap_entry_struct = (<cap_entry> [<j>])
-	if ((StructureContains structure = <cap_entry_struct> texture) && (StructureContains structure = <mask_entry> pattern))
-		fiximagepath path = (<mask_entry>.pattern)
-		if (((<cap_entry> [<j>]).texture) = <Name>)
-			fiximagepath path = (<mask_entry>.pattern)
+	if ((StructureContains Structure = <cap_entry_struct> texture) && (StructureContains Structure = <mask_entry> pattern))
+		FixImagePath path = (<mask_entry>.pattern)
+		if (((<cap_entry> [<j>]).texture) = <name>)
+			FixImagePath path = (<mask_entry>.pattern)
 			layer = {
-				texture = <Name>
-				Color = ((<cap_entry> [<j>]).Color)
+				texture = <name>
+				color = ((<cap_entry> [<j>]).color)
 				a = ((<cap_entry> [<j>]).a)
 				x_trans = ((<cap_entry> [<j>]).x_trans)
 				y_trans = ((<cap_entry> [<j>]).y_trans)
@@ -1997,11 +1997,11 @@ script cap_populate_layer
 			endif
 			return layer = <layer>
 		endif
-	elseif ((StructureContains structure = <cap_entry_struct> font) && (StructureContains structure = <mask_entry> font))
+	elseif ((StructureContains Structure = <cap_entry_struct> font) && (StructureContains Structure = <mask_entry> font))
 		layer = {
 			font = (<mask_entry>.font)
 			text = (<mask_entry>.text)
-			Color = ((<cap_entry> [<j>]).Color)
+			color = ((<cap_entry> [<j>]).color)
 			a = ((<cap_entry> [<j>]).a)
 			x_trans = ((<cap_entry> [<j>]).x_trans)
 			y_trans = ((<cap_entry> [<j>]).y_trans)
@@ -2019,21 +2019,21 @@ script cap_populate_layer
 		return layer = <layer>
 	endif
 	j = (<j> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 endscript
 
 script cap_new_artist_layer 
-	if StructureContains structure = <mask_entry> pattern
-		fiximagepath path = (<mask_entry>.pattern)
-		layer = {texture = <Name>}
-	elseif StructureContains structure = <mask_entry> font
+	if StructureContains Structure = <mask_entry> pattern
+		FixImagePath path = (<mask_entry>.pattern)
+		layer = {texture = <name>}
+	elseif StructureContains Structure = <mask_entry> font
 		layer = {font = (<mask_entry>.font) text = (<mask_entry>.text)}
 	endif
 	if NOT (<flags> = 0)
 		layer = {<layer>
 			flags = <flags>}
 	endif
-	if StructureContains structure = <section> center
+	if StructureContains Structure = <section> center
 		x_trans = (50 - (<section>.center [0]))
 		y_trans = (50 - (<section>.center [1]))
 		CastToInteger \{x_trans}
@@ -2051,10 +2051,10 @@ script cap_new_artist_layer
 endscript
 
 script cap_color_wheel_focus_change_color 
-	getlayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
+	GetLayer part = <part> cap_index = <cap_index> layer_index = <layer_index>
 	layer = {<layer>
-		Color = <Color>}
-	setlayer part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>
+		color = <color>}
+	SetLayer part = <part> cap_index = <cap_index> layer_index = <layer_index> layer = <layer>
 endscript
 
 script reset_widgets 
@@ -2074,14 +2074,14 @@ script reset_flip_buttons
 			new_value = true}
 	else
 		button_generic_set_value \{id = flip_horiz_widget
-			new_value = FALSE}
+			new_value = false}
 	endif
 	if is_flip_layer_vertical part = <part> cap_index = <cap_index> layer_index = <layer_index>
 		button_generic_set_value \{id = flip_vert_widget
 			new_value = true}
 	else
 		button_generic_set_value \{id = flip_vert_widget
-			new_value = FALSE}
+			new_value = false}
 	endif
 endscript
 
@@ -2092,7 +2092,7 @@ endscript
 script widget_init_cap 
 	clean_up_user_control_helpers
 	if GotParam \{part}
-		if checksumequals a = <part> b = cas_band_logo
+		if ChecksumEquals a = <part> b = CAS_Band_Logo
 			menu_finish \{car_helper_text_cancel
 				no_rotate_zoom_text}
 		else
@@ -2106,7 +2106,7 @@ endscript
 script widget_accept_cap 
 	clean_up_user_control_helpers
 	if GotParam \{part}
-		if checksumequals a = <part> b = cas_band_logo
+		if ChecksumEquals a = <part> b = CAS_Band_Logo
 			menu_finish \{car_helper_text_back
 				no_rotate_zoom_text}
 		else
@@ -2119,9 +2119,9 @@ endscript
 
 script restore_color_initial 
 	clean_up_user_control_helpers
-	if StructureContains \{structure = add_params
+	if StructureContains \{Structure = add_params
 			part}
-		if checksumequals a = (<add_params>.part) b = cas_band_logo
+		if ChecksumEquals a = (<add_params>.part) b = CAS_Band_Logo
 			menu_finish \{car_helper_text_back
 				no_rotate_zoom_text}
 		else

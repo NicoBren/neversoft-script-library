@@ -1,6 +1,6 @@
 
 script net_create_choose_part_menu 
-	resetinstrumentselections
+	ResetInstrumentSelections
 	ui_print_gamertags \{pos1 = (500.0, 100.0)
 		pos2 = (780.0, 550.0)
 		dims = (330.0, 35.0)
@@ -16,7 +16,7 @@ script net_create_choose_part_menu
 endscript
 
 script net_choose_part_screen_elements 
-	createscreenelement \{type = vmenu
+	CreateScreenElement \{type = VMenu
 		parent = si_scrolling_menu
 		id = si_vmenu_p1
 		event_handlers = [
@@ -56,13 +56,13 @@ script net_choose_part_screen_elements
 			}
 		]
 		exclusive_device = $player1_device}
-	createscreenelement \{type = vmenu
+	CreateScreenElement \{type = VMenu
 		parent = si_scrolling_menu
 		id = si_vmenu_p2}
 endscript
 
 script net_request_instrument 
-	sendnetmessage {
+	SendNetMessage {
 		type = instrument_selection
 		value = ($g_si_player1_index + 2)
 	}
@@ -91,28 +91,28 @@ endscript
 script force_instrument_highlight 
 	if (<player> = 1)
 		if ($g_si_player1_index = 0)
-			setscreenelementprops \{id = si_hilite_p1
+			SetScreenElementProps \{id = si_hilite_p1
 				pos = $g_si_hilitep1_pos}
-			setscreenelementprops id = si_hilite_bookend_p1a pos = ($g_si_hilitep1_pos + (0.0, 10.0))
+			SetScreenElementProps id = si_hilite_bookend_p1a pos = ($g_si_hilitep1_pos + (0.0, 10.0))
 		else
-			setscreenelementprops id = si_hilite_p1 pos = ($g_si_hilitep1_pos + (0.0, 50.0))
-			setscreenelementprops id = si_hilite_bookend_p1a pos = ($g_si_hilitep1_pos + (0.0, 60.0))
+			SetScreenElementProps id = si_hilite_p1 pos = ($g_si_hilitep1_pos + (0.0, 50.0))
+			SetScreenElementProps id = si_hilite_bookend_p1a pos = ($g_si_hilitep1_pos + (0.0, 60.0))
 		endif
 	else
 		if ($g_si_player2_index = 0)
-			setscreenelementprops \{id = si_hilite_p2
+			SetScreenElementProps \{id = si_hilite_p2
 				pos = $g_si_hilitep2_pos
 				flip_h}
-			setscreenelementprops id = si_hilite_bookend_p2a pos = ($g_si_hilitep2_pos + (0.0, 20.0))
+			SetScreenElementProps id = si_hilite_bookend_p2a pos = ($g_si_hilitep2_pos + (0.0, 20.0))
 		else
-			setscreenelementprops id = si_hilite_p2 pos = ($g_si_hilitep2_pos + (0.0, 50.0)) flip_h
-			setscreenelementprops id = si_hilite_bookend_p2a pos = ($g_si_hilitep2_pos + (0.0, 70.0))
+			SetScreenElementProps id = si_hilite_p2 pos = ($g_si_hilitep2_pos + (0.0, 50.0)) flip_h
+			SetScreenElementProps id = si_hilite_bookend_p2a pos = ($g_si_hilitep2_pos + (0.0, 70.0))
 		endif
 	endif
 	select_instrument_randomize_bookends player = <player>
 endscript
 
 script net_instrument_go_back 
-	sendnetmessage \{type = instrument_selection
+	SendNetMessage \{type = instrument_selection
 		value = 1}
 endscript

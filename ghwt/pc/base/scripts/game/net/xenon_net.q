@@ -1,9 +1,9 @@
 xboxlive_num_results = 0
 
 script xboxlive_menu_optimatch_results_stop 
-	netsessionfunc \{obj = match
+	NetSessionFunc \{obj = match
 		func = stop_server_list}
-	if gotparam \{xboxlive_num_results}
+	if GotParam \{xboxlive_num_results}
 		xboxlive_menu_optimatch_results_end xboxlive_num_results = <xboxlive_num_results>
 	else
 		xboxlive_menu_optimatch_results_end \{xboxlive_num_results = 0}
@@ -12,44 +12,44 @@ endscript
 
 script xboxlive_menu_optimatch_results_end 
 	destroy_server_list_searching_dialog
-	if gotparam \{xboxlive_num_results}
+	if GotParam \{xboxlive_num_results}
 		change xboxlive_num_results = <xboxlive_num_results>
 	endif
-	printf qs(0x88790069) d = ($xboxlive_num_results)
+	printf qs("\Lxboxlive_menu_optimatch_results_end : %d") d = ($xboxlive_num_results)
 	if (($xboxlive_num_results) = 0)
-		if checkforsignin
-			if screenelementexists \{id = search_results_container}
+		if CheckForSignIn
+			if ScreenElementExists \{id = search_results_container}
 				create_server_list_create_match_dialog
 			else
-				printf \{qs(0xc87c5d4c)}
+				printf \{qs("\Lour serverlist doesn't exist any more")}
 			endif
 		endif
 	else
-		spawnscript \{xboxlive_menu_optimatch_results_wait_and_focus}
+		SpawnScript \{xboxlive_menu_optimatch_results_wait_and_focus}
 	endif
 endscript
 
 script xboxlive_menu_optimatch_results_wait_and_focus 
-	wait \{1
+	Wait \{1
 		gameframes}
 	set_focus_color rgba = ($online_dark_purple)
 	set_unfocus_color rgba = ($online_light_blue)
-	if screenelementexists \{id = search_results_vmenu}
-		launchevent \{type = focus
+	if ScreenElementExists \{id = search_results_vmenu}
+		LaunchEvent \{type = focus
 			target = search_results_vmenu}
-		setscreenelementprops \{id = search_results_vmenu
+		SetScreenElementProps \{id = search_results_vmenu
 			enable_pad_handling}
 	endif
-	if screenelementexists \{id = search_results_container}
-		getscreenelementchildren \{id = search_results_container}
-		if gotparam \{children}
-			getarraysize \{children}
+	if ScreenElementExists \{id = search_results_container}
+		GetScreenElementChildren \{id = search_results_container}
+		if GotParam \{children}
+			GetArraySize \{children}
 			i = 0
 			begin
-			if screenelementexists id = (<children> [<i>])
-				(<children> [<i>]) :gettags
-				if NOT gotparam \{highlight}
-					(<children> [<i>]) :se_setprops preserve_flip alpha = 1.0
+			if ScreenElementExists id = (<children> [<i>])
+				(<children> [<i>]) :GetTags
+				if NOT GotParam \{highlight}
+					(<children> [<i>]) :SE_SetProps preserve_flip alpha = 1.0
 				endif
 				<i> = (<i> + 1)
 			endif
@@ -59,11 +59,11 @@ script xboxlive_menu_optimatch_results_wait_and_focus
 endscript
 
 script xboxlive_menu_optimatch_results_item_add 
-	printf \{qs(0x417b8ab2)}
+	printf \{qs("\L--- xboxlive_menu_optimatch_results_item_add")}
 	printstruct <...>
 	change xboxlive_num_results = (($xboxlive_num_results) + 1)
-	if NOT screenelementexists \{id = search_results_vmenu}
-		printf \{qs(0xc5757bfc)}
+	if NOT ScreenElementExists \{id = search_results_vmenu}
+		printf \{qs("\LWarning! tried to add a server when results menu not up")}
 		return
 	endif
 	translate_server_checksums_to_strings {
@@ -72,11 +72,11 @@ script xboxlive_menu_optimatch_results_item_add
 		difficulty_checksum = <difficulty>
 	}
 	if ($match_type = ranked)
-		<host_text> = qs(0x99c4796b)
+		<host_text> = qs("HOST")
 	else
 		<host_text> = <server_name>
 	endif
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = search_results_vmenu
 		dims = (210.0, 30.0)
 		pos = (0.0, 0.0)
@@ -85,20 +85,20 @@ script xboxlive_menu_optimatch_results_item_add
 			top
 		]}
 	<container_element> = <id>
-	<id> :se_setprops {
+	<id> :SE_SetProps {
 		event_handlers = [
 			{focus serverlist_focus params = {parent = <id>}}
 			{unfocus serverlist_unfocus params = {parent = <id>}}
 			{pad_choose net_choose_server params = {id = <server_id>}}
 		]
 	}
-	if isxenon
+	if isXenon
 		if ($match_type = player)
-			<id> :se_setprops event_handlers = [{pad_start menu_show_gamercard_from_netid params = {net_id = <player_xuid>}}]
+			<id> :SE_SetProps event_handlers = [{pad_start menu_show_gamercard_from_netid params = {net_id = <player_xuid>}}]
 		endif
 	endif
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <container_element>
 		local_id = highlight_bar
 		texture = white
@@ -108,10 +108,10 @@ script xboxlive_menu_optimatch_results_item_add
 		just = [left top]
 		z_priority = 4
 	}
-	<id> :settags highlight = 1
-	<id> :se_setprops alpha = 0.0
-	createscreenelement {
-		type = spriteelement
+	<id> :SetTags highlight = 1
+	<id> :SE_SetProps alpha = 0.0
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <container_element>
 		local_id = bookend_left
 		texture = character_hub_hilite_bookend
@@ -121,10 +121,10 @@ script xboxlive_menu_optimatch_results_item_add
 		just = [center top]
 		z_priority = 4
 	}
-	<id> :settags highlight = 1
-	<id> :se_setprops alpha = 0.0
-	createscreenelement {
-		type = spriteelement
+	<id> :SetTags highlight = 1
+	<id> :SE_SetProps alpha = 0.0
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <container_element>
 		local_id = bookend_right
 		texture = character_hub_hilite_bookend
@@ -134,10 +134,10 @@ script xboxlive_menu_optimatch_results_item_add
 		just = [center top]
 		z_priority = 4
 	}
-	<id> :settags highlight = 1
-	<id> :se_setprops alpha = 0.0
-	createscreenelement {
-		type = textelement
+	<id> :SetTags highlight = 1
+	<id> :SE_SetProps alpha = 0.0
+	CreateScreenElement {
+		type = TextElement
 		parent = <container_element>
 		font = fontgrid_text_a6
 		local_id = server_name
@@ -150,8 +150,8 @@ script xboxlive_menu_optimatch_results_item_add
 	}
 	<server_entry_id> = <id>
 	fit_text_into_menu_item id = <id> max_width = 200
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <container_element>
 		font = fontgrid_text_a6
 		local_id = mode
@@ -164,8 +164,8 @@ script xboxlive_menu_optimatch_results_item_add
 		z_priority = 10.0
 	}
 	fit_text_into_menu_item id = <id> max_width = 200
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <container_element>
 		font = fontgrid_text_a6
 		local_id = songs
@@ -178,8 +178,8 @@ script xboxlive_menu_optimatch_results_item_add
 		z_priority = 10.0
 	}
 	get_qos_color qos = <qos>
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <container_element>
 		local_id = signal_bar1
 		texture = white
@@ -190,8 +190,8 @@ script xboxlive_menu_optimatch_results_item_add
 		z_priority = 10.0
 		alpha = 1.0
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <container_element>
 		local_id = signal_bar2
 		texture = white
@@ -203,10 +203,10 @@ script xboxlive_menu_optimatch_results_item_add
 		alpha = 0.0
 	}
 	if (<qos> > 2.0)
-		<id> :se_setprops alpha = 1.0
+		<id> :SE_SetProps alpha = 1.0
 	endif
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <container_element>
 		local_id = signal_bar3
 		texture = white
@@ -218,10 +218,10 @@ script xboxlive_menu_optimatch_results_item_add
 		alpha = 0.0
 	}
 	if (<qos> > 4.0)
-		<id> :se_setprops alpha = 1.0
+		<id> :SE_SetProps alpha = 1.0
 	endif
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <container_element>
 		local_id = signal_bar4
 		texture = white
@@ -233,10 +233,10 @@ script xboxlive_menu_optimatch_results_item_add
 		alpha = 0.0
 	}
 	if (<qos> > 6.0)
-		<id> :se_setprops alpha = 1.0
+		<id> :SE_SetProps alpha = 1.0
 	endif
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <container_element>
 		local_id = signal_bar5
 		texture = white
@@ -248,57 +248,57 @@ script xboxlive_menu_optimatch_results_item_add
 		alpha = 0.0
 	}
 	if (<qos> > 8)
-		<id> :se_setprops alpha = 1.0
+		<id> :SE_SetProps alpha = 1.0
 	endif
 endscript
 
 script translate_server_checksums_to_strings 
 	printstruct <...>
-	if gotparam \{game_mode_checksum}
+	if GotParam \{game_mode_checksum}
 		switch (<game_mode_checksum>)
 			case p2_battle
-			<game_mode_value> = qs(0x33b59779)
+			<game_mode_value> = qs("BATTLE")
 			case p2_faceoff
-			<game_mode_value> = qs(0x0952b48b)
+			<game_mode_value> = qs("FACE-OFF")
 			case p2_pro_faceoff
-			<game_mode_value> = qs(0x46577877)
+			<game_mode_value> = qs("PRO FACE-OFF")
 			case p2_coop
-			<game_mode_value> = qs(0x5bbbf8bc)
+			<game_mode_value> = qs("CO-OP")
 		endswitch
 	endif
-	if gotparam \{num_songs_checksum}
+	if GotParam \{num_songs_checksum}
 		switch (<num_songs_checksum>)
 			case num_1
-			<num_songs_value> = qs(0x787beab2)
+			<num_songs_value> = qs("1")
 			case num_3
-			<num_songs_value> = qs(0x4a4d8830)
+			<num_songs_value> = qs("3")
 			case num_5
-			<num_songs_value> = qs(0x1c172fb6)
+			<num_songs_value> = qs("5")
 			case num_7
-			<num_songs_value> = qs(0x2e214d34)
+			<num_songs_value> = qs("7")
 		endswitch
 	endif
 	return num_songs_value = <num_songs_value> game_mode_value = <game_mode_value>
 endscript
 
 script serverlist_focus 
-	obj_getid
-	legacydoscreenelementmorph id = {<objid> child = server_name} rgba = ($online_dark_purple)
-	legacydoscreenelementmorph id = {<objid> child = mode} rgba = ($online_dark_purple)
-	legacydoscreenelementmorph id = {<objid> child = songs} rgba = ($online_dark_purple)
-	legacydoscreenelementmorph id = {<objid> child = highlight_bar} alpha = 1.0
-	legacydoscreenelementmorph id = {<objid> child = bookend_left} alpha = 1.0
-	legacydoscreenelementmorph id = {<objid> child = bookend_right} alpha = 1.0
+	Obj_GetID
+	LegacyDoScreenElementMorph id = {<ObjID> child = server_name} rgba = ($online_dark_purple)
+	LegacyDoScreenElementMorph id = {<ObjID> child = mode} rgba = ($online_dark_purple)
+	LegacyDoScreenElementMorph id = {<ObjID> child = songs} rgba = ($online_dark_purple)
+	LegacyDoScreenElementMorph id = {<ObjID> child = highlight_bar} alpha = 1.0
+	LegacyDoScreenElementMorph id = {<ObjID> child = bookend_left} alpha = 1.0
+	LegacyDoScreenElementMorph id = {<ObjID> child = bookend_right} alpha = 1.0
 endscript
 
 script serverlist_unfocus 
-	obj_getid
-	legacydoscreenelementmorph id = {<objid> child = server_name} rgba = ($online_light_blue)
-	legacydoscreenelementmorph id = {<objid> child = mode} rgba = ($online_light_blue)
-	legacydoscreenelementmorph id = {<objid> child = songs} rgba = ($online_light_blue)
-	legacydoscreenelementmorph id = {<objid> child = highlight_bar} alpha = 0.0
-	legacydoscreenelementmorph id = {<objid> child = bookend_left} alpha = 0.0
-	legacydoscreenelementmorph id = {<objid> child = bookend_right} alpha = 0.0
+	Obj_GetID
+	LegacyDoScreenElementMorph id = {<ObjID> child = server_name} rgba = ($online_light_blue)
+	LegacyDoScreenElementMorph id = {<ObjID> child = mode} rgba = ($online_light_blue)
+	LegacyDoScreenElementMorph id = {<ObjID> child = songs} rgba = ($online_light_blue)
+	LegacyDoScreenElementMorph id = {<ObjID> child = highlight_bar} alpha = 0.0
+	LegacyDoScreenElementMorph id = {<ObjID> child = bookend_left} alpha = 0.0
+	LegacyDoScreenElementMorph id = {<ObjID> child = bookend_right} alpha = 0.0
 endscript
 
 script get_qos_color 

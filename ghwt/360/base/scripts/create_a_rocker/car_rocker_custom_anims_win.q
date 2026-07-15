@@ -1,7 +1,7 @@
-cas_female_win_anim = [
+CAS_Female_Win_Anim = [
 	{
-		desc_id = win_hype
-		frontend_desc = qs(0x0b553ad7)
+		desc_id = Win_Hype
+		frontend_desc = qs("\LInsta-Hype")
 		frontend_anim_name = car_female_wins_crowdhype
 		headtohead_anim_name = car_female_wins_crowdhype
 		guitarist_anim_name = g_kris_win_crowdhype01
@@ -10,8 +10,8 @@ cas_female_win_anim = [
 		singer_anim_name = s_kris_win_crowdhype01
 	}
 	{
-		desc_id = win_elvis
-		frontend_desc = qs(0x002bf7e1)
+		desc_id = Win_Elvis
+		frontend_desc = qs("\LKingly Command")
 		frontend_anim_name = car_female_wins_elvis
 		guitarist_anim_name = g_kris_win_elvis
 		bassist_anim_name = b_kris_win_elvis
@@ -19,8 +19,8 @@ cas_female_win_anim = [
 		singer_anim_name = s_kris_win_elvis
 	}
 	{
-		desc_id = win_generic1
-		frontend_desc = qs(0x58178258)
+		desc_id = Win_Generic1
+		frontend_desc = qs("\LGive It Up")
 		frontend_anim_name = car_female_wins_generic
 		guitarist_anim_name = g_alla_win_generic
 		bassist_anim_name = b_alla_win_generic
@@ -28,53 +28,53 @@ cas_female_win_anim = [
 		singer_anim_name = s_alla_win_generic
 	}
 	{
-		desc_id = win_generic2
-		frontend_desc = qs(0x53b5b9b9)
-		frontend_anim_name = car_female_wins_generic_02
+		desc_id = Win_Generic2
+		frontend_desc = qs("\LHow Y'all Doin'?")
+		frontend_anim_name = CAR_Female_Wins_Generic_02
 		guitarist_anim_name = g_kris_win_pointguit
 		bassist_anim_name = b_kris_win_pointbass
 		drummer_anim_name = d_kris_win_pointdrum
 		singer_anim_name = s_kris_win_pointsing
 	}
 	{
-		desc_id = win_jump
-		frontend_desc = qs(0x08894418)
-		frontend_anim_name = car_female_wins_jump
+		desc_id = Win_Jump
+		frontend_desc = qs("\LWhen I Say Jump...")
+		frontend_anim_name = CAR_Female_Wins_Jump
 		guitarist_anim_name = g_alla_win_jump
 		bassist_anim_name = b_alla_win_jump
 		drummer_anim_name = d_alla_win_jump
 		singer_anim_name = s_alla_win_jump
 	}
 	{
-		desc_id = win_kick
-		frontend_desc = qs(0xa3969a77)
-		frontend_anim_name = car_female_wins_kick
+		desc_id = Win_Kick
+		frontend_desc = qs("\LI Kick Ya")
+		frontend_anim_name = CAR_Female_Wins_kick
 		guitarist_anim_name = g_kris_win_kick
 		bassist_anim_name = b_kris_win_kick
 		drummer_anim_name = d_kris_win_kick
 		singer_anim_name = s_kris_win_kick
 	}
 	{
-		desc_id = win_kungfu
-		frontend_desc = qs(0xe7fbec8b)
-		frontend_anim_name = car_female_wins_kungfu
+		desc_id = Win_KungFu
+		frontend_desc = qs("\LSecret Kung Fu")
+		frontend_anim_name = CAR_Female_Wins_KungFu
 		guitarist_anim_name = g_kris_win_kungfu
 		bassist_anim_name = b_kris_win_kungfu
 		drummer_anim_name = d_kris_win_kungfu
 		singer_anim_name = s_kris_win_kungfu
 	}
 	{
-		desc_id = win_pointing
-		frontend_desc = qs(0x5af74d01)
-		frontend_anim_name = car_female_wins_generic_03
+		desc_id = Win_Pointing
+		frontend_desc = qs("\LI'm Talkin' To You")
+		frontend_anim_name = CAR_Female_Wins_Generic_03
 		guitarist_anim_name = g_kris_win_pointsing
 		bassist_anim_name = b_kris_win_pointsing
 		drummer_anim_name = d_kris_win_pointdrum
 		singer_anim_name = s_kris_win_pointsing
 	}
 	{
-		desc_id = win_pretentious
-		frontend_desc = qs(0x5b6a1378)
+		desc_id = Win_Pretentious
+		frontend_desc = qs("\LYeah, What!")
 		frontend_anim_name = car_female_wins_pretentious
 		headtohead_anim_name = car_female_wins_pretentious
 		guitarist_anim_name = g_kris_win_pretentious
@@ -83,8 +83,8 @@ cas_female_win_anim = [
 		singer_anim_name = s_kris_win_pretentious
 	}
 	{
-		desc_id = win_robot
-		frontend_desc = qs(0x41410a7f)
+		desc_id = Win_Robot
+		frontend_desc = qs("\LRockubot Hustle")
 		frontend_anim_name = car_female_wins_robot
 		guitarist_anim_name = g_kris_win_robot
 		bassist_anim_name = b_kris_win_robot
@@ -92,18 +92,18 @@ cas_female_win_anim = [
 		singer_anim_name = s_kris_win_robot
 	}
 	{
-		desc_id = win_scary
-		frontend_desc = qs(0x978f0c57)
-		frontend_anim_name = car_female_wins_scary
+		desc_id = Win_Scary
+		frontend_desc = qs("\LMwah Haha")
+		frontend_anim_name = CAR_Female_Wins_Scary
 		guitarist_anim_name = g_kris_win_scary
 		bassist_anim_name = b_kris_win_scary
 		drummer_anim_name = d_kris_win_scary
 		singer_anim_name = s_kris_win_scary
 	}
 	{
-		desc_id = win_waving
-		frontend_desc = qs(0x6bf330d6)
-		frontend_anim_name = car_female_wins_waving
+		desc_id = Win_Waving
+		frontend_desc = qs("\LCrowd Wavin'")
+		frontend_anim_name = CAR_Female_Wins_Waving
 		guitarist_anim_name = g_kris_win_waving
 		bassist_anim_name = b_kris_win_waving
 		drummer_anim_name = d_kris_win_waving
@@ -118,19 +118,19 @@ cas_female_win_anim = [
 		drummer_anim_name = d_alla_win_jump
 	}
 ]
-cas_male_win_anim = [
+CAS_Male_Win_Anim = [
 	{
-		desc_id = win_adjust
-		frontend_desc = qs(0x6cbdba84)
-		frontend_anim_name = car_wins_noinstrument
+		desc_id = Win_Adjust
+		frontend_desc = qs("\LJust Checkin'")
+		frontend_anim_name = CAR_wins_noinstrument
 		guitarist_anim_name = g_jeff_win_adjust
 		bassist_anim_name = b_jeff_win_adjust
 		drummer_anim_name = d_jeff_win_adjust
 		singer_anim_name = s_jeff_win_adjust
 	}
 	{
-		desc_id = win_hype
-		frontend_desc = qs(0x0b553ad7)
+		desc_id = Win_Hype
+		frontend_desc = qs("\LInsta-Hype")
 		frontend_anim_name = car_wins_crowdhype
 		headtohead_anim_name = car_wins_crowdhype
 		guitarist_anim_name = gsbd_g_win_crowdhype01
@@ -139,8 +139,8 @@ cas_male_win_anim = [
 		singer_anim_name = gsbd_s_win_crowdhype01
 	}
 	{
-		desc_id = win_elvis
-		frontend_desc = qs(0x002bf7e1)
+		desc_id = Win_Elvis
+		frontend_desc = qs("\LKingly Command")
 		frontend_anim_name = car_wins_elvis
 		guitarist_anim_name = gsbd_g_win_elvis01
 		bassist_anim_name = gsbd_b_win_elvis01
@@ -148,8 +148,8 @@ cas_male_win_anim = [
 		singer_anim_name = gsbd_s_win_elvis01
 	}
 	{
-		desc_id = win_generic1
-		frontend_desc = qs(0x58178258)
+		desc_id = Win_Generic1
+		frontend_desc = qs("\LGive It Up")
 		frontend_anim_name = car_wins_generic
 		guitarist_anim_name = g_ringers_take02_wins01
 		bassist_anim_name = b_ringers_take03_wins01
@@ -157,8 +157,8 @@ cas_male_win_anim = [
 		singer_anim_name = s_ringers_take02_wins01
 	}
 	{
-		desc_id = win_generic2
-		frontend_desc = qs(0x53b5b9b9)
+		desc_id = Win_Generic2
+		frontend_desc = qs("\LHow Y'all Doin'?")
 		frontend_anim_name = car_wins_generic_02
 		guitarist_anim_name = g_ringers_take03_wins02
 		bassist_anim_name = b_ringers_take03_wins01
@@ -166,8 +166,8 @@ cas_male_win_anim = [
 		singer_anim_name = s_ringers_take03_wins02
 	}
 	{
-		desc_id = win_generic3
-		frontend_desc = qs(0x609ce735)
+		desc_id = Win_Generic3
+		frontend_desc = qs("\LLine It Up Yo")
 		frontend_anim_name = car_wins_generic_03
 		guitarist_anim_name = gsbd_uj_intro01_g
 		bassist_anim_name = gsbd_uj_intro01_b
@@ -175,17 +175,17 @@ cas_male_win_anim = [
 		singer_anim_name = gsbd_uj_intro01_s
 	}
 	{
-		desc_id = win_generic4
-		frontend_desc = qs(0x54510977)
-		frontend_anim_name = car_wins_generic_04
+		desc_id = Win_Generic4
+		frontend_desc = qs("\LGet On Yer Feet")
+		frontend_anim_name = CAR_wins_generic_04
 		guitarist_anim_name = g_june_win_pointguit
 		bassist_anim_name = b_june_win_pointbass
 		drummer_anim_name = d_june_win_pointdrum
 		singer_anim_name = s_june_win_pointsing
 	}
 	{
-		desc_id = win_kick
-		frontend_desc = qs(0xa3969a77)
+		desc_id = Win_Kick
+		frontend_desc = qs("\LI Kick Ya")
 		frontend_anim_name = car_wins_kicks
 		guitarist_anim_name = g_jeff_win_kick
 		bassist_anim_name = b_jeff_win_kick
@@ -193,17 +193,17 @@ cas_male_win_anim = [
 		singer_anim_name = s_jeff_win_kick
 	}
 	{
-		desc_id = win_kungfu
-		frontend_desc = qs(0xe7fbec8b)
-		frontend_anim_name = car_wins_kungfu
-		guitarist_anim_name = g_jeff_win_kungfu
-		bassist_anim_name = b_jeff_win_kungfu
-		drummer_anim_name = d_jeff_win_kungfu
-		singer_anim_name = s_jeff_win_kungfu
+		desc_id = Win_KungFu
+		frontend_desc = qs("\LSecret Kung Fu")
+		frontend_anim_name = car_wins_KungFu
+		guitarist_anim_name = g_jeff_win_KungFu
+		bassist_anim_name = b_jeff_win_KungFu
+		drummer_anim_name = d_jeff_win_KungFu
+		singer_anim_name = s_jeff_win_KungFu
 	}
 	{
-		desc_id = win_pointing
-		frontend_desc = qs(0x5af74d01)
+		desc_id = Win_Pointing
+		frontend_desc = qs("\LI'm Talkin' To You")
 		frontend_anim_name = car_wins_pointing
 		headtohead_anim_name = car_wins_pointing
 		guitarist_anim_name = gsbd_g_win_pointing01
@@ -212,8 +212,8 @@ cas_male_win_anim = [
 		singer_anim_name = gsbd_s_win_pointing01
 	}
 	{
-		desc_id = win_pretentious
-		frontend_desc = qs(0x5b6a1378)
+		desc_id = Win_Pretentious
+		frontend_desc = qs("\LYeah, What!")
 		frontend_anim_name = car_wins_pretentious
 		headtohead_anim_name = car_wins_pretentious
 		guitarist_anim_name = g_jeff_win_pretentious
@@ -222,8 +222,8 @@ cas_male_win_anim = [
 		singer_anim_name = s_jeff_win_pretentious
 	}
 	{
-		desc_id = win_robot
-		frontend_desc = qs(0x41410a7f)
+		desc_id = Win_Robot
+		frontend_desc = qs("\LRockubot Hustle")
 		frontend_anim_name = car_wins_robot
 		guitarist_anim_name = g_jeff_win_robot
 		bassist_anim_name = b_jeff_win_robot
@@ -231,18 +231,18 @@ cas_male_win_anim = [
 		singer_anim_name = s_jeff_win_robot
 	}
 	{
-		desc_id = win_scary
-		frontend_desc = qs(0x978f0c57)
-		frontend_anim_name = car_wins_scary
-		headtohead_anim_name = car_wins_scary
-		guitarist_anim_name = g_jeff_win_scary
-		bassist_anim_name = b_jeff_win_scary
-		drummer_anim_name = d_jeff_win_scary
-		singer_anim_name = s_jeff_win_scary
+		desc_id = Win_Scary
+		frontend_desc = qs("\LMwah Haha")
+		frontend_anim_name = car_wins_Scary
+		headtohead_anim_name = car_wins_Scary
+		guitarist_anim_name = g_jeff_win_Scary
+		bassist_anim_name = b_jeff_win_Scary
+		drummer_anim_name = d_jeff_win_Scary
+		singer_anim_name = s_jeff_win_Scary
 	}
 	{
-		desc_id = win_waving
-		frontend_desc = qs(0x6bf330d6)
+		desc_id = Win_Waving
+		frontend_desc = qs("\LCrowd Wavin'")
 		frontend_anim_name = car_wins_waving
 		guitarist_anim_name = g_jeff_win_waving
 		bassist_anim_name = b_jeff_win_waving
@@ -290,13 +290,13 @@ cas_male_win_anim = [
 	{
 		desc_id = s_billy_win
 		hidden
-		singer_anim_name = s_billy_win_boss
-		guitarist_anim_name = s_billy_win_boss
-		bassist_anim_name = s_billy_win_boss
+		singer_anim_name = S_Billy_Win_Boss
+		guitarist_anim_name = S_Billy_Win_Boss
+		bassist_anim_name = S_Billy_Win_Boss
 		drummer_anim_name = d_ringers_take03_wins02
 	}
 	{
-		desc_id = g_jimi_win
+		desc_id = G_Jimi_win
 		hidden
 		singer_anim_name = g_jimi_win_01
 		guitarist_anim_name = g_jimi_win_01
@@ -304,7 +304,7 @@ cas_male_win_anim = [
 		drummer_anim_name = d_ringers_take03_wins02
 	}
 	{
-		desc_id = g_sting_win
+		desc_id = g_Sting_win
 		hidden
 		singer_anim_name = s_sting_win_01
 		guitarist_anim_name = s_sting_win_01

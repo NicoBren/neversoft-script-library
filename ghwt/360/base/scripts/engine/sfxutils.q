@@ -2,22 +2,22 @@
 script flashsounds 
 	EnableRemoveSoundEntry \{enable}
 	stars
-	printf \{qs(0x1565cdb1)}
-	UnLoadPak \{'zones/global/global_sfx.pak'
-		Heap = heap_audio}
+	printf \{qs("\LFlashing global_sfx pak")}
+	UnloadPak \{'zones/global/global_sfx.pak'
+		heap = heap_audio}
 	WaitUnloadPak \{'zones/global/global_sfx.pak'}
 	LoadPak \{'zones/global/global_sfx.pak'
 		no_vram
-		Heap = heap_audio}
+		heap = heap_audio}
 	stars
-	printf \{qs(0x2f7fe05d)}
+	printf \{qs("\LSfx Pak flashing done.")}
 endscript
 SfxPreviewEventTree_FAM = {
-	Type = FAM
+	type = FAM
 	[
 		{
-			Type = Source
-			anim = sk9_skater_Default
+			type = Source
+			Anim = sk9_skater_Default
 		}
 	]
 }
@@ -28,12 +28,12 @@ script SfxCreateTestFAMObject
 	endif
 	skater :Obj_GetPosition
 	skater :Obj_GetQuat
-	CreateCompositeObject Priority = COIM_Priority_Permanent Heap = Generic {
-		components = [{component = SetDisplayMatrix} {component = AnimTree}
-			{component = Skeleton} {component = Model}
-			{component = Agent} {component = FAM}]
-		params = {Name = SfxPreviewEventObject Pos = <Pos> orientation = <Quat> cloneFrom = skater
-			skeletonname = sk9_skater species = human voice_profile = TeenMaleSkater1 sex = male
+	CreateCompositeObject priority = COIM_Priority_Permanent heap = generic {
+		Components = [{Component = SetDisplayMatrix} {Component = AnimTree}
+			{Component = skeleton} {Component = Model}
+			{Component = Agent} {Component = FAM}]
+		params = {name = SfxPreviewEventObject pos = <pos> Orientation = <Quat> CloneFrom = skater
+			SkeletonName = sk9_skater species = human voice_profile = TeenMaleSkater1 sex = Male
 			notice_radius = 6.0 agent_stats = stats_player faction = $faction_test}
 	}
 	SfxPreviewEventObject :Anim_InitTree \{Tree = SfxPreviewEventTree_FAM
@@ -49,10 +49,10 @@ script SfxCreateTestObject
 	GetCurrentCameraObject
 	<camid> :Obj_GetPosition
 	<camid> :Obj_GetQuat
-	Pos = (<Pos> + (10 * <Quat>))
-	CreateCompositeObject Priority = COIM_Priority_Permanent Heap = Generic {
-		components = [{component = Sound}]
-		params = {Name = SfxPreviewEventObject Pos = <Pos> orientation = <Quat>}
+	pos = (<pos> + (10 * <Quat>))
+	CreateCompositeObject priority = COIM_Priority_Permanent heap = generic {
+		Components = [{Component = Sound}]
+		params = {name = SfxPreviewEventObject pos = <pos> Orientation = <Quat>}
 	}
 endscript
 
@@ -63,39 +63,39 @@ script SfxDestroyTestObject
 endscript
 
 script PreviewSoundEvent 
-	ExtendCrc <event> '_container' out = container_name
-	if StructureContains structure = $<container_name> Command
-		printf qs(0xf80d42ac) s = <event>
-		if checksumequals a = ($<container_name>.Command) b = PlaySound
-			printf \{qs(0xf19fe69b)}
+	ExtendCRC <event> '_container' out = container_name
+	if StructureContains Structure = $<container_name> command
+		printf qs("\LPreviewing SoundEvent %s") s = <event>
+		if ChecksumEquals a = ($<container_name>.command) b = PlaySound
+			printf \{qs("\LPlaysound!")}
 			SoundEvent event = <event>
-		elseif checksumequals a = ($<container_name>.Command) b = Obj_PlaySound
-			printf \{qs(0xfb51125d)}
+		elseif ChecksumEquals a = ($<container_name>.command) b = Obj_PlaySound
+			printf \{qs("\LObj_Playsound!")}
 			SfxCreateTestObject
 			SoundEvent event = <event> object = SfxPreviewEventObject
-		elseif checksumequals a = ($<container_name>.Command) b = Agent_PlayVO
-			printf \{qs(0x5b7098dd)}
+		elseif ChecksumEquals a = ($<container_name>.command) b = Agent_PlayVO
+			printf \{qs("\LAgent_PlayVO!")}
 			<buss> = Master
 			SfxCreateTestFAMObject
 			SoundEvent event = <event> object = SfxPreviewEventObject <...>
 		else
-			printf \{qs(0x06a01c00)}
+			printf \{qs("\LSound Event Command is invalid")}
 		endif
-		waitTime = 0
+		waittime = 0
 		begin
-		if NOT (IsSoundEventPlaying <event>)
+		if NOT (isSoundEventPlaying <event>)
 			break
 		endif
-		if (<waitTime> > 200)
+		if (<waittime> > 200)
 			StopSoundEvent <event>
 			break
 		endif
 		Wait \{0.1
-			Seconds}
-		waitTime = (<waitTime> + 1)
+			seconds}
+		waittime = (<waittime> + 1)
 		repeat
 		SfxDestroyTestObject
 	else
-		printf qs(0x3154d6a7) s = <container_name>
+		printf qs("\Lsound event does not exist: %s") s = <container_name>
 	endif
 endscript

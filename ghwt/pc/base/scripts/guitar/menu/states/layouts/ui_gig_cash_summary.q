@@ -9,28 +9,28 @@ script ui_create_gig_cash_summary
 	endif
 	set_focus_color
 	set_unfocus_color
-	if screenelementexists \{id = my_gig_summary_id}
-		destroyscreenelement \{id = my_gig_summary_id}
+	if ScreenElementExists \{id = my_gig_summary_id}
+		DestroyScreenElement \{id = my_gig_summary_id}
 	endif
 	get_current_band_info
-	getglobaltags <band_info>
+	GetGlobalTags <band_info>
 	bandname = <name>
 	get_all_exclusive_devices
-	createscreenelement {
+	CreateScreenElement {
 		parent = root_window
 		id = my_gig_summary_id
-		type = descinterface
+		type = DescInterface
 		desc = 'song_complete_gig_cash'
 		band_header_container_pos = {(0.0, -300.0) relative}
 		strips_pos = {(-1100.0, 0.0) relative}
 		title_text = <bandname>
 		exclusive_device = <exclusive_device>
 	}
-	gamemode_gettype
+	GameMode_GetType
 	if (<type> = quickplay)
-		my_gig_summary_id :se_setprops \{gig_cash_text = qs(0xb44c144a)}
+		my_gig_summary_id :SE_SetProps \{gig_cash_text = qs("TOTAL")}
 	endif
-	gamemode_getnumplayersshown
+	GameMode_GetNumPlayersShown
 	num_players = <num_players_shown>
 	strips_rel_pos = (0.0, 0.0)
 	if (<num_players> = 3)
@@ -40,7 +40,7 @@ script ui_create_gig_cash_summary
 	elseif (<num_players> = 1)
 		strips_rel_pos = (0.0, 120.0)
 	endif
-	setscreenelementprops {
+	SetScreenElementProps {
 		id = my_gig_summary_id
 		strips_pos = {<strips_rel_pos> relative}
 	}
@@ -50,35 +50,35 @@ script ui_create_gig_cash_summary
 endscript
 
 script ui_destroy_gig_cash_summary 
-	progression_clearnewcash
+	Progression_ClearNewCash
 	clean_up_user_control_helpers
-	destroyscreenelement \{id = my_gig_summary_id}
+	DestroyScreenElement \{id = my_gig_summary_id}
 endscript
 
 script ui_deinit_gig_cash_summary 
 	ui_gig_cash_clear_gig_earnings
-	progression_cashmilestonesclear
+	Progression_CashMilestonesClear
 endscript
 
 script ui_gig_cash_summary_anim_in_script 
-	setscriptcannotpause
+	SetScriptCannotPause
 	startrendering \{reason = menu_transition}
-	soundevent \{event = menu_song_complete_in}
-	if screenelementexists \{id = my_gig_summary_id}
-		setscreenelementprops \{id = my_gig_summary_id
+	SoundEvent \{event = Menu_Song_Complete_In}
+	if ScreenElementExists \{id = my_gig_summary_id}
+		SetScreenElementProps \{id = my_gig_summary_id
 			band_header_container_pos = {
 				(0.0, 300.0)
 				relative
 			}
 			time = 0.1
-			anim = gentle
+			Anim = gentle
 			strips_pos = {
 				(1100.0, 0.0)
 				relative
 			}
 			time = 0.1
-			anim = gentle}
-		wait \{0.3
+			Anim = gentle}
+		Wait \{0.3
 			second}
 	endif
 endscript
@@ -87,25 +87,25 @@ script ui_gig_cash_summary_anim_out_script
 	startrendering \{reason = menu_transition}
 	clean_up_user_control_helpers
 	generic_menu_pad_choose_sound
-	soundevent \{event = menu_song_complete_out}
-	if screenelementexists \{id = my_gig_summary_id}
-		setscreenelementprops \{id = my_gig_summary_id
+	SoundEvent \{event = Menu_Song_Complete_Out}
+	if ScreenElementExists \{id = my_gig_summary_id}
+		SetScreenElementProps \{id = my_gig_summary_id
 			band_header_container_pos = {
 				(0.0, -330.0)
 				relative
 			}
 			time = 0.1
-			anim = gentle
+			Anim = gentle
 			strips_pos = {
 				(1100.0, 0.0)
 				relative
 			}
 			time = 0.1
-			anim = gentle}
-		wait \{0.3
+			Anim = gentle}
+		Wait \{0.3
 			second}
 	endif
-	gamemode_gettype
+	GameMode_GetType
 	if (<type> = career)
 		generic_event_replace \{no_sound
 			state = uistate_magazine_cover}
@@ -115,44 +115,44 @@ script ui_gig_cash_summary_anim_out_script
 endscript
 
 script ui_gig_cash_summary_hide_player_data 
-	gamemode_getnumplayersshown
+	GameMode_GetNumPlayersShown
 	num_players = <num_players_shown>
 	if (<num_players> < 4)
-		setscreenelementprops \{id = my_gig_summary_id
+		SetScreenElementProps \{id = my_gig_summary_id
 			leather_strips_mask_p4_alpha = 0
 			player_cash_stats_p4_alpha = 0}
 	endif
 	if (<num_players> < 3)
-		setscreenelementprops \{id = my_gig_summary_id
+		SetScreenElementProps \{id = my_gig_summary_id
 			leather_strips_mask_p3_alpha = 0
 			player_cash_stats_p3_alpha = 0}
 	endif
 	if (<num_players> < 2)
-		setscreenelementprops \{id = my_gig_summary_id
+		SetScreenElementProps \{id = my_gig_summary_id
 			leather_strips_mask_p2_alpha = 0
 			player_cash_stats_p2_alpha = 0}
 	endif
 endscript
 
 script ui_gig_cash_summary_assign_strips_data 
-	if my_gig_summary_id :desc_resolvealias \{name = alias_player_stats_element}
+	if my_gig_summary_id :Desc_ResolveAlias \{name = alias_player_stats_element}
 	else
-		scriptassert \{qs(0xcced482f)}
+		ScriptAssert \{qs("\LProblem resolving alias in song breakdown")}
 	endif
-	getscreenelementchildren id = <resolved_id>
-	gamemode_getnumplayersshown
+	GetScreenElementChildren id = <resolved_id>
+	GameMode_GetNumPlayersShown
 	num_players = <num_players_shown>
 	player = 1
 	begin
 	ui_song_breakdown_get_basic_player_data player_index = <player>
-	getplayerinfo <player> cash_rank_up
+	GetPlayerInfo <player> cash_rank_up
 	if (<cash_rank_up> = 1)
-		setplayerinfo <player> cash_rank_up = 0
+		SetPlayerInfo <player> cash_rank_up = 0
 	endif
 	arrow_alpha = <cash_rank_up>
-	formattext textname = gig_cash_txt qs(0x447de8d3) d = ($ui_gig_summary_gig_totals [(<player> -1)])
-	formattext textname = car_earnings_txt qs(0x447de8d3) d = <career_earnings>
-	setscreenelementprops {
+	FormatText TextName = gig_cash_txt qs("$%d") d = ($ui_gig_summary_gig_totals [(<player> -1)])
+	FormatText TextName = car_earnings_txt qs("$%d") d = <career_earnings>
+	SetScreenElementProps {
 		id = (<children> [(<player> - 1)])
 		player_name_text = <player_text>
 		gig_cash_text = <gig_cash_txt>
@@ -169,9 +169,9 @@ script ui_gig_cash_summary_assign_strips_data
 endscript
 
 script ui_gig_cash_summary_add_navigation 
-	add_user_control_helper ($ui_song_breakdown_helper_params) text = qs(0x182f0173) button = green z = 100000
-	add_user_control_helper ($ui_song_breakdown_helper_params) text = qs(0x26568e5a) button = red z = 100000
-	setscreenelementprops \{id = my_gig_summary_id
+	add_user_control_helper ($ui_song_breakdown_helper_params) text = qs("CONTINUE") button = green z = 100000
+	add_user_control_helper ($ui_song_breakdown_helper_params) text = qs("CASH STATS") button = red z = 100000
+	SetScreenElementProps \{id = my_gig_summary_id
 		event_handlers = [
 			{
 				pad_choose
@@ -182,18 +182,18 @@ script ui_gig_cash_summary_add_navigation
 				ui_gig_cash_summary_pull_up_detailed_cash_stats
 			}
 		]}
-	assignalias \{id = my_gig_summary_id
+	AssignAlias \{id = my_gig_summary_id
 		alias = current_menu}
 endscript
 
 script ui_gig_cash_summary_continue_to_next_screen 
-	if NOT scriptisrunning \{ui_gig_cash_summary_anim_out_script}
+	if NOT ScriptIsRunning \{ui_gig_cash_summary_anim_out_script}
 		spawnscriptnow \{ui_gig_cash_summary_anim_out_script}
 	endif
 endscript
 
 script ui_gig_cash_summary_pull_up_detailed_cash_stats 
-	if scriptisrunning \{ui_gig_cash_summary_anim_out_script}
+	if ScriptIsRunning \{ui_gig_cash_summary_anim_out_script}
 		return
 	endif
 	generic_event_choose \{state = uistate_cash_rewards_3
@@ -223,19 +223,19 @@ script ui_gig_cash_clear_gig_earnings
 endscript
 
 script ui_gig_cash_increase_gig_earnings 
-	requireparams \{[
+	RequireParams \{[
 			player
 			amount
 		]
 		all}
 	hello = ($ui_gig_summary_gig_totals)
 	old_amount = (<hello> [(<player> - 1)])
-	setarrayelement arrayname = hello index = (<player> - 1) newvalue = (<amount> + <old_amount>)
+	SetArrayElement ArrayName = hello index = (<player> - 1) newvalue = (<amount> + <old_amount>)
 	change ui_gig_summary_gig_totals = <hello>
 endscript
 
 script ui_gig_cash_grab_gig_earnings 
-	requireparams \{[
+	RequireParams \{[
 			player
 		]
 		all}
@@ -244,10 +244,10 @@ script ui_gig_cash_grab_gig_earnings
 endscript
 
 script ui_gig_cash_increase_earnings_for_all 
-	gamemode_getnumplayersshown
+	GameMode_GetNumPlayersShown
 	i = 1
 	begin
-	getplayerinfo <i> new_cash
+	GetPlayerInfo <i> new_cash
 	ui_gig_cash_increase_gig_earnings amount = <new_cash> player = <i>
 	i = (<i> + 1)
 	repeat <num_players_shown>

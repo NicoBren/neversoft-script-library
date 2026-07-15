@@ -3,7 +3,7 @@ script create_leaving_lobby_dialog \{menu_id = leaving_lobby_dialog_menu
 		vmenu_id = leaving_lobby_dialog_vmenu
 		pad_back_script = leaving_lobby_select_cancel
 		pad_choose_script = leaving_lobby_select_yes
-		Pos = (640.0, 520.0)
+		pos = (640.0, 520.0)
 		z = 110}
 	if (($ui_flow_manager_state [0]) = online_pause_fs)
 		clean_up_user_control_helpers
@@ -14,25 +14,25 @@ script create_leaving_lobby_dialog \{menu_id = leaving_lobby_dialog_menu
 		parent = root_window
 	endif
 	CreateScreenElement {
-		Type = ContainerElement
+		type = ContainerElement
 		parent = <parent>
 		id = warning_message_container
-		Pos = (0.0, 0.0)
+		pos = (0.0, 0.0)
 	}
 	CreateScreenElement {
-		Type = VScrollingMenu
+		type = VScrollingMenu
 		parent = warning_message_container
 		id = <menu_id>
 		just = [center top]
 		dims = (500.0, 150.0)
-		Pos = (640.0, 465.0)
+		pos = (640.0, 465.0)
 		z_priority = 1
 	}
 	CreateScreenElement {
-		Type = VMenu
+		type = VMenu
 		parent = <menu_id>
 		id = <vmenu_id>
-		Pos = (298.0, 0.0)
+		pos = (298.0, 0.0)
 		just = [center top]
 		internal_just = [center top]
 		dims = (500.0, 150.0)
@@ -46,55 +46,55 @@ script create_leaving_lobby_dialog \{menu_id = leaving_lobby_dialog_menu
 	<menu_pos> = (575.0, 487.0)
 	<bookend_r_pos> = (675.0, 533.0)
 	<bookend_l_pos> = (540.0, 533.0)
-	Change \{menu_focus_color = [
+	change \{menu_focus_color = [
 			180
 			50
 			50
 			255
 		]}
-	Change \{menu_unfocus_color = [
+	change \{menu_unfocus_color = [
 			0
 			0
 			0
 			255
 		]}
 	create_pause_menu_frame container_id = net_quit_warning parent = warning_message_container z = <z>
-	displaySprite parent = warning_message_container tex = Dialog_Title_BG Scale = (1.7, 1.7) z = (<z> + 4) Pos = (640.0, 100.0) just = [right top] flip_v
-	displaySprite parent = warning_message_container tex = Dialog_Title_BG Scale = (1.7, 1.7) z = (<z> + 4) Pos = (640.0, 100.0) just = [left top]
-	displaySprite parent = warning_message_container tex = Dialog_Frame_Joiner Pos = (480.0, 510.0) rot_angle = 5 Scale = (1.575, 1.5) z = (<z> + 5)
-	displaySprite parent = warning_message_container tex = Dialog_Frame_Joiner Pos = (750.0, 514.0) flip_v rot_angle = -5 Scale = (1.575, 1.5) z = (<z> + 5)
-	displaySprite parent = warning_message_container tex = dialog_menu_bg Pos = (480.0, 500.0) Scale = (1.25, 1.0) z = (<z> + 4) just = [left botom]
-	displaySprite parent = warning_message_container tex = dialog_menu_bg Pos = (480.0, 530.0) Scale = (1.25, 1.0) z = (<z> + 4) just = [left top] flip_h
+	displaySprite parent = warning_message_container tex = Dialog_Title_BG scale = (1.7, 1.7) z = (<z> + 4) pos = (640.0, 100.0) just = [right top] flip_v
+	displaySprite parent = warning_message_container tex = Dialog_Title_BG scale = (1.7, 1.7) z = (<z> + 4) pos = (640.0, 100.0) just = [left top]
+	displaySprite parent = warning_message_container tex = dialog_frame_joiner pos = (480.0, 510.0) rot_angle = 5 scale = (1.575, 1.5) z = (<z> + 5)
+	displaySprite parent = warning_message_container tex = dialog_frame_joiner pos = (750.0, 514.0) flip_v rot_angle = -5 scale = (1.575, 1.5) z = (<z> + 5)
+	displaySprite parent = warning_message_container tex = dialog_menu_bg pos = (480.0, 500.0) scale = (1.25, 1.0) z = (<z> + 4) just = [left botom]
+	displaySprite parent = warning_message_container tex = dialog_menu_bg pos = (480.0, 530.0) scale = (1.25, 1.0) z = (<z> + 4) just = [left top] flip_h
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = warning_message_container
 		font = fontgrid_title_a1
-		Scale = 1.3
+		scale = 1.3
 		rgba = [223 223 223 250]
-		text = qs(0xaa163738)
+		text = qs("WARNING")
 		just = [center top]
 		z_priority = (<z> + 5)
-		Pos = (640.0, 175.0)
-		Shadow
+		pos = (640.0, 175.0)
+		shadow
 		shadow_offs = (3.0, 3.0)
 		shadow_rgba = [0 0 0 255]
 	}
 	CreateScreenElement {
-		Type = TextBlockElement
+		type = TextBlockElement
 		parent = warning_message_container
 		font = fontgrid_title_a1
-		Scale = 0.6
+		scale = 0.6
 		rgba = [210 210 210 250]
-		text = qs(0x26ab5d06)
+		text = qs("You are about to leave the current game. Are you sure you want to leave?")
 		just = [center top]
 		internal_just = [center top]
 		z_priority = (<z> + 5)
-		Pos = (640.0, 310.0)
+		pos = (640.0, 310.0)
 		dims = (700.0, 320.0)
 		line_spacing = 1.0
 	}
 	CreateScreenElement {
-		Type = ContainerElement
+		type = ContainerElement
 		parent = leaving_lobby_dialog_vmenu
 		dims = (100.0, 50.0)
 		event_handlers = [
@@ -105,43 +105,43 @@ script create_leaving_lobby_dialog \{menu_id = leaving_lobby_dialog_menu
 	}
 	container_id = <id>
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = <container_id>
 		local_id = text
 		font = fontgrid_title_a1
-		Scale = 0.85
+		scale = 0.85
 		rgba = ($menu_unfocus_color)
-		text = qs(0xd2915c27)
+		text = qs("NO")
 		just = [center top]
 		z_priority = (<z> + 5)
 	}
 	fit_text_into_menu_item id = <id> max_width = 240
 	GetScreenElementDims id = <id>
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = <container_id>
 		local_id = bookend_left
 		texture = dialog_menu_hilight
 		alpha = 1.0
 		just = [right center]
-		Pos = ((0.0, 20.0) + (1.0, 0.0) * (<width> / (-2)) + (-5.0, 0.0))
+		pos = ((0.0, 20.0) + (1.0, 0.0) * (<width> / (-2)) + (-5.0, 0.0))
 		z_priority = (<z> + 6)
-		Scale = (1.0, 1.0)
+		scale = (1.0, 1.0)
 		flip_v
 	}
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = <container_id>
 		local_id = bookend_right
 		texture = dialog_menu_hilight
 		alpha = 1.0
 		just = [left center]
-		Pos = ((0.0, 20.0) + (1.0, 0.0) * (<width> / (2)) + (5.0, 0.0))
+		pos = ((0.0, 20.0) + (1.0, 0.0) * (<width> / (2)) + (5.0, 0.0))
 		z_priority = (<z> + 6)
-		Scale = (1.0, 1.0)
+		scale = (1.0, 1.0)
 	}
 	CreateScreenElement {
-		Type = ContainerElement
+		type = ContainerElement
 		parent = leaving_lobby_dialog_vmenu
 		dims = (100.0, 50.0)
 		event_handlers = [
@@ -152,40 +152,40 @@ script create_leaving_lobby_dialog \{menu_id = leaving_lobby_dialog_menu
 	}
 	container_id = <id>
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = <container_id>
 		local_id = text
 		font = fontgrid_title_a1
-		Scale = 0.85
+		scale = 0.85
 		rgba = ($menu_unfocus_color)
-		text = qs(0x58e0a1fb)
+		text = qs("YES")
 		just = [center top]
 		z_priority = (<z> + 5)
 	}
 	fit_text_into_menu_item id = <id> max_width = 240
 	GetScreenElementDims id = <id>
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = <container_id>
 		local_id = bookend_left
 		texture = dialog_menu_hilight
 		just = [right center]
-		Pos = ((0.0, 20.0) + (1.0, 0.0) * (<width> / (-2)) + (-5.0, 0.0))
+		pos = ((0.0, 20.0) + (1.0, 0.0) * (<width> / (-2)) + (-5.0, 0.0))
 		alpha = 0.0
 		z_priority = (<z> + 6)
-		Scale = (1.0, 1.0)
+		scale = (1.0, 1.0)
 		flip_v
 	}
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = <container_id>
 		local_id = bookend_right
 		texture = dialog_menu_hilight
 		just = [left center]
-		Pos = ((0.0, 20.0) + (1.0, 0.0) * (<width> / (2)) + (5.0, 0.0))
+		pos = ((0.0, 20.0) + (1.0, 0.0) * (<width> / (2)) + (5.0, 0.0))
 		alpha = 0.0
 		z_priority = (<z> + 6)
-		Scale = (1.0, 1.0)
+		scale = (1.0, 1.0)
 	}
 	if (($ui_flow_manager_state [0]) = online_pause_fs)
 		set_user_control_color \{text_rgba = [
@@ -200,42 +200,42 @@ script create_leaving_lobby_dialog \{menu_id = leaving_lobby_dialog_menu
 				0
 				200
 			]}
-		add_user_control_helper text = qs(0xc18d5e76) button = green z = (<z> - 10)
-		add_user_control_helper text = qs(0xaf4d5dd2) button = red z = (<z> - 10)
+		add_user_control_helper text = qs("SELECT") button = green z = (<z> - 10)
+		add_user_control_helper text = qs("BACK") button = red z = (<z> - 10)
 	endif
 	leaving_lobby_dialog_focus
 endscript
 
 script net_warning_focus 
 	Obj_GetID
-	if ScreenElementExists id = {<objID> child = text}
-		legacydoscreenelementmorph id = {<objID> child = text} rgba = ($menu_focus_color)
+	if ScreenElementExists id = {<ObjID> child = text}
+		LegacyDoScreenElementMorph id = {<ObjID> child = text} rgba = ($menu_focus_color)
 	endif
-	if ScreenElementExists id = {<objID> child = bookend_right}
-		legacydoscreenelementmorph id = {<objID> child = bookend_right} alpha = 1.0 preserve_flip
+	if ScreenElementExists id = {<ObjID> child = bookend_right}
+		LegacyDoScreenElementMorph id = {<ObjID> child = bookend_right} alpha = 1.0 preserve_flip
 	endif
-	if ScreenElementExists id = {<objID> child = bookend_left}
-		legacydoscreenelementmorph id = {<objID> child = bookend_left} alpha = 1.0 preserve_flip
+	if ScreenElementExists id = {<ObjID> child = bookend_left}
+		LegacyDoScreenElementMorph id = {<ObjID> child = bookend_left} alpha = 1.0 preserve_flip
 	endif
 endscript
 
 script net_warning_unfocus 
 	Obj_GetID
-	if ScreenElementExists id = {<objID> child = text}
-		legacydoscreenelementmorph id = {<objID> child = text} rgba = ($menu_unfocus_color)
+	if ScreenElementExists id = {<ObjID> child = text}
+		LegacyDoScreenElementMorph id = {<ObjID> child = text} rgba = ($menu_unfocus_color)
 	endif
-	if ScreenElementExists id = {<objID> child = bookend_right}
-		legacydoscreenelementmorph id = {<objID> child = bookend_right} alpha = 0.0 preserve_flip
+	if ScreenElementExists id = {<ObjID> child = bookend_right}
+		LegacyDoScreenElementMorph id = {<ObjID> child = bookend_right} alpha = 0.0 preserve_flip
 	endif
-	if ScreenElementExists id = {<objID> child = bookend_left}
-		legacydoscreenelementmorph id = {<objID> child = bookend_left} alpha = 0.0 preserve_flip
+	if ScreenElementExists id = {<ObjID> child = bookend_left}
+		LegacyDoScreenElementMorph id = {<ObjID> child = bookend_left} alpha = 0.0 preserve_flip
 	endif
 endscript
 
 script net_cs_go_back 
-	if (<Player> = 1)
+	if (<player> = 1)
 		create_leaving_lobby_dialog \{z = 300
-			parent = menu_container}
+			parent = Menu_Container}
 	else
 		drop_client_from_character_select
 		if IsHost
@@ -251,12 +251,12 @@ script leaving_lobby_select_yes
 	destroy_leaving_lobby_dialog
 	destroy_net_popup
 	EndGameNetScriptPump
-	KillSpawnedScript \{Name = net_hub_stream}
+	KillSpawnedScript \{name = net_hub_stream}
 	destroy_ready_icons
-	network_player_lobby_message \{Type = character_select
+	network_player_lobby_message \{type = character_select
 		action = deselect}
 	cs_go_back \{params = {
-			Player = 1
+			player = 1
 		}}
 endscript
 
@@ -280,14 +280,14 @@ endscript
 
 script leaving_lobby_dialog_focus 
 	if ScreenElementExists \{id = leaving_lobby_dialog_vmenu}
-		LaunchEvent \{Type = focus
+		LaunchEvent \{type = focus
 			target = leaving_lobby_dialog_vmenu}
 	endif
 endscript
 
 script leaving_lobby_dialog_unfocus 
 	if ScreenElementExists \{id = leaving_lobby_dialog_vmenu}
-		LaunchEvent \{Type = unfocus
+		LaunchEvent \{type = unfocus
 			target = leaving_lobby_dialog_vmenu}
 	endif
 endscript
@@ -297,7 +297,7 @@ script go_to_net_warning_from_pause_menu
 		destroy_pause_menu_frame \{container_id = net_quit_warning}
 		destroy_menu \{menu_id = scrolling_pause}
 		destroy_menu \{menu_id = pause_menu_frame_container}
-		KillSpawnedScript \{Name = animate_bunny_flame}
+		KillSpawnedScript \{name = animate_bunny_flame}
 	endif
 endscript
 
@@ -311,6 +311,6 @@ script pause_menu_really_quit_net_game
 	destroy_leaving_lobby_dialog
 	ui_flow_manager_respond_to_action \{action = select_quit
 		create_params = {
-			Player = 1
+			player = 1
 		}}
 endscript

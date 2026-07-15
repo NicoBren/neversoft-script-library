@@ -1,261 +1,261 @@
-drums_autonotemapping = [
+Drums_AutoNoteMapping = [
 	{
-		midinote = 70
-		scr = countoff_notemap
+		MidiNote = 70
+		Scr = Countoff_NoteMap
 		params = {
 		}
 	}
 ]
-crowd_autonotemapping = [
+Crowd_AutoNoteMapping = [
 	{
-		midinote = 82
-		scr = gh3_crowd_event_listener
+		MidiNote = 82
+		Scr = GH3_Crowd_Event_Listener
 		params = {
 			event_type = 1
 		}
 	}
 	{
-		midinote = 83
-		scr = gh3_crowd_event_listener
+		MidiNote = 83
+		Scr = GH3_Crowd_Event_Listener
 		params = {
 			event_type = 2
 		}
 	}
 	{
-		midinote = 84
-		scr = gh3_crowd_event_listener
+		MidiNote = 84
+		Scr = GH3_Crowd_Event_Listener
 		params = {
 			event_type = 3
 		}
 	}
 	{
-		midinote = 85
-		scr = gh3_crowd_event_listener
+		MidiNote = 85
+		Scr = GH3_Crowd_Event_Listener
 		params = {
 			event_type = 4
 		}
 	}
 	{
-		midinote = 86
-		scr = gh3_crowd_event_listener
+		MidiNote = 86
+		Scr = GH3_Crowd_Event_Listener
 		params = {
 			event_type = 5
 		}
 	}
 	{
-		midinote = 87
-		scr = gh3_crowd_event_listener
+		MidiNote = 87
+		Scr = GH3_Crowd_Event_Listener
 		params = {
 			event_type = 6
 		}
 	}
 	{
-		midinote = 88
-		scr = gh3_crowd_event_listener
+		MidiNote = 88
+		Scr = GH3_Crowd_Event_Listener
 		params = {
 			event_type = 7
 		}
 	}
 	{
-		midinote = 89
-		scr = gh3_crowd_event_listener
+		MidiNote = 89
+		Scr = GH3_Crowd_Event_Listener
 		params = {
 			event_type = 8
 		}
 	}
 	{
-		midinote = 90
-		scr = band_performancecrowdreaction
+		MidiNote = 90
+		Scr = Band_PerformanceCrowdReaction
 		params = {
-			positive
+			Positive
 		}
 	}
 	{
-		midinote = 91
-		scr = trigger_performancecrowdreaction
+		MidiNote = 91
+		Scr = Trigger_PerformanceCrowdReaction
 		params = {
 			part = guitar
-			negative
+			Negative
 		}
 	}
 	{
-		midinote = 92
-		scr = trigger_performancecrowdreaction
+		MidiNote = 92
+		Scr = Trigger_PerformanceCrowdReaction
 		params = {
-			part = bass
-			negative
+			part = Bass
+			Negative
 		}
 	}
 	{
-		midinote = 93
-		scr = trigger_performancecrowdreaction
+		MidiNote = 93
+		Scr = Trigger_PerformanceCrowdReaction
 		params = {
 			part = drum
-			negative
+			Negative
 		}
 	}
 	{
-		midinote = 94
-		scr = gh3_crowd_event_listener
+		MidiNote = 94
+		Scr = GH3_Crowd_Event_Listener
 		params = {
 			event_type = 9
 		}
 	}
 	{
-		midinote = 95
-		scr = gh3_crowd_event_listener
+		MidiNote = 95
+		Scr = GH3_Crowd_Event_Listener
 		params = {
 			event_type = 10
 		}
 	}
 	{
-		midinote = 96
-		scr = gh3_crowd_event_listener
+		MidiNote = 96
+		Scr = GH3_Crowd_Event_Listener
 		params = {
 			event_type = 11
 		}
 	}
 ]
-triggers_autonotemapping = [
+Triggers_AutoNoteMapping = [
 	{
-		midinote = 101
-		scr = trigger_performancecrowdreaction
+		MidiNote = 101
+		Scr = Trigger_PerformanceCrowdReaction
 		params = {
 			part = guitar
-			positive
+			Positive
 		}
 	}
 	{
-		midinote = 102
-		scr = trigger_performancecrowdreaction
+		MidiNote = 102
+		Scr = Trigger_PerformanceCrowdReaction
 		params = {
 			part = guitar
-			negative
+			Negative
 		}
 	}
 	{
-		midinote = 103
-		scr = trigger_performancecrowdreaction
+		MidiNote = 103
+		Scr = Trigger_PerformanceCrowdReaction
 		params = {
 			part = guitar
-			positive
-			negative
+			Positive
+			Negative
 		}
 	}
 	{
-		midinote = 104
-		scr = trigger_performancecrowdreaction
+		MidiNote = 104
+		Scr = Trigger_PerformanceCrowdReaction
 		params = {
-			part = bass
-			positive
+			part = Bass
+			Positive
 		}
 	}
 	{
-		midinote = 105
-		scr = trigger_performancecrowdreaction
+		MidiNote = 105
+		Scr = Trigger_PerformanceCrowdReaction
 		params = {
-			part = bass
-			negative
+			part = Bass
+			Negative
 		}
 	}
 	{
-		midinote = 106
-		scr = trigger_performancecrowdreaction
+		MidiNote = 106
+		Scr = Trigger_PerformanceCrowdReaction
 		params = {
-			part = bass
-			positive
-			negative
+			part = Bass
+			Positive
+			Negative
 		}
 	}
 	{
-		midinote = 107
-		scr = trigger_performancecrowdreaction
-		params = {
-			part = drum
-			positive
-		}
-	}
-	{
-		midinote = 108
-		scr = trigger_performancecrowdreaction
+		MidiNote = 107
+		Scr = Trigger_PerformanceCrowdReaction
 		params = {
 			part = drum
-			negative
+			Positive
 		}
 	}
 	{
-		midinote = 109
-		scr = trigger_performancecrowdreaction
+		MidiNote = 108
+		Scr = Trigger_PerformanceCrowdReaction
 		params = {
 			part = drum
-			positive
-			negative
+			Negative
 		}
 	}
 	{
-		midinote = 110
-		scr = band_performancecrowdreaction
+		MidiNote = 109
+		Scr = Trigger_PerformanceCrowdReaction
 		params = {
-			positive
+			part = drum
+			Positive
+			Negative
+		}
+	}
+	{
+		MidiNote = 110
+		Scr = Band_PerformanceCrowdReaction
+		params = {
+			Positive
 		}
 	}
 ]
 
-script notemap_dummy 
-	printf \{qs(0xa9b4ece2)}
+script NoteMap_Dummy 
+	printf \{qs("\Ldummy")}
 endscript
 
-script countoff_notemap 
-	spawnscriptnow gh_sfx_countoff_logic params = {<...>}
+script Countoff_NoteMap 
+	spawnscriptnow GH_SFX_Countoff_Logic params = {<...>}
 endscript
 
 script notemap_startiterator 
-	formattext checksumname = global_notemapping '%s_AutoNoteMapping' s = <event_string>
-	if NOT globalexists name = <global_notemapping> type = array
+	FormatText checksumname = global_notemapping '%s_AutoNoteMapping' s = <event_string>
+	if NOT GlobalExists name = <global_notemapping> type = array
 		return
 	endif
-	formattext checksumname = event_checksum '%s' s = <event_string>
-	setnotemappings section = <event_checksum> mapping = $<global_notemapping>
+	FormatText checksumname = event_checksum '%s' s = <event_string>
+	SetNoteMappings section = <event_checksum> mapping = $<global_notemapping>
 	spawnscriptnow notemap_iterator params = {<...>}
 endscript
 
 script notemap_deinit 
-	clearnotemappings \{section = all}
-	killspawnedscript \{name = notemap_iterator}
-	killspawnedscript \{name = notemap_startiterator}
+	ClearNoteMappings \{section = all}
+	KillSpawnedScript \{name = notemap_iterator}
+	KillSpawnedScript \{name = notemap_startiterator}
 endscript
 
 script notemap_iterator 
-	notemap_iterator_cfunc_setup
+	Notemap_iterator_CFunc_Setup
 	begin
-	if notemap_iterator_cfunc
+	if Notemap_iterator_CFunc
 		break
 	endif
 	repeat
-	notemap_iterator_cfunc_cleanup
+	Notemap_iterator_CFunc_Cleanup
 endscript
 
-script band_performancecrowdreaction 
+script Band_PerformanceCrowdReaction 
 	if NOT ($game_mode = training)
 		error = 0
-		trigger_performancecrowdreactionget <...> part = drum
+		Trigger_PerformanceCrowdReactionGet <...> part = drum
 		notes_hitd = <notes_hit>
 		total_notesd = <total_notes>
 		player_statusd = <player_status>
-		trigger_performancecrowdreactionget <...> part = bass
+		Trigger_PerformanceCrowdReactionGet <...> part = Bass
 		notes_hitr = <notes_hit>
 		total_notesr = <total_notes>
 		player_statusr = <player_status>
-		trigger_performancecrowdreactionget <...> part = guitar
+		Trigger_PerformanceCrowdReactionGet <...> part = guitar
 		if (<error> = 1)
 			return
 		endif
-		getsongtimems
+		GetSongTimeMs
 		target = (<time> + <length>)
 		begin
-		wait \{1
+		Wait \{1
 			gameframe}
-		getsongtimems
+		GetSongTimeMs
 		if (<time> >= <target>)
 			break
 		endif
@@ -263,38 +263,38 @@ script band_performancecrowdreaction
 		notes_hit_count = (<notes_hit> - $<player_status>.notes_hit)
 		total_notes_count = (<total_notes> - $<player_status>.total_notes)
 		if (<notes_hit_count> = <total_notes_count>)
-			if gotparam \{positive}
-				trigger_positivecrowdreaction
+			if GotParam \{Positive}
+				Trigger_PositiveCrowdReaction
 			endif
 		else
-			if gotparam \{negative}
-				trigger_negativecrowdreaction
+			if GotParam \{Negative}
+				Trigger_NegativeCrowdReaction
 			endif
 		endif
 		succeed = 0
-		if trigger_performancecrowdreactioncheck notes_hit = <notes_hitd> total_notes = <total_notesd> player_status = <player_statusd>
-			if trigger_performancecrowdreactioncheck notes_hit = <notes_hitr> total_notes = <total_notesr> player_status = <player_statusr>
-				if trigger_performancecrowdreactioncheck notes_hit = <notes_hit> total_notes = <total_notes> player_status = <player_status>
+		if Trigger_PerformanceCrowdReactionCheck notes_hit = <notes_hitd> total_notes = <total_notesd> player_status = <player_statusd>
+			if Trigger_PerformanceCrowdReactionCheck notes_hit = <notes_hitr> total_notes = <total_notesr> player_status = <player_statusr>
+				if Trigger_PerformanceCrowdReactionCheck notes_hit = <notes_hit> total_notes = <total_notes> player_status = <player_status>
 					succeed = 1
 				endif
 			endif
 		endif
 		if (<succeed> = 1)
-			if gotparam \{positive}
-				trigger_positivecrowdreaction
+			if GotParam \{Positive}
+				Trigger_PositiveCrowdReaction
 			endif
 		else
-			if gotparam \{negative}
-				trigger_negativecrowdreaction
+			if GotParam \{Negative}
+				Trigger_NegativeCrowdReaction
 			endif
 		endif
 	endif
 endscript
 
-script trigger_performancecrowdreactionget 
+script Trigger_PerformanceCrowdReactionGet 
 	player = 1
 	begin
-	formattext checksumname = player_status 'player%i_status' i = <player>
+	FormatText checksumname = player_status 'player%i_status' i = <player>
 	if ($<player_status>.part = <part>)
 		break
 	endif
@@ -308,7 +308,7 @@ script trigger_performancecrowdreactionget
 	return notes_hit = <notes_hit> total_notes = <total_notes> player_status = <player_status>
 endscript
 
-script trigger_performancecrowdreactioncheck 
+script Trigger_PerformanceCrowdReactionCheck 
 	notes_hit_count = (<notes_hit> - $<player_status>.notes_hit)
 	total_notes_count = (<total_notes> - $<player_status>.total_notes)
 	if (<notes_hit_count> = <total_notes_count>)
@@ -318,52 +318,52 @@ script trigger_performancecrowdreactioncheck
 	endif
 endscript
 
-script trigger_performancecrowdreaction 
+script Trigger_PerformanceCrowdReaction 
 	error = 0
-	trigger_performancecrowdreactionget <...>
+	Trigger_PerformanceCrowdReactionGet <...>
 	if (<error> = 1)
 		return
 	endif
-	getsongtimems
+	GetSongTimeMs
 	target = (<time> + <length>)
 	begin
-	wait \{1
+	Wait \{1
 		gameframe}
-	getsongtimems
+	GetSongTimeMs
 	if (<time> >= <target>)
 		break
 	endif
 	repeat
-	if trigger_performancecrowdreactioncheck <...>
-		if gotparam \{positive}
-			trigger_positivecrowdreaction
+	if Trigger_PerformanceCrowdReactionCheck <...>
+		if GotParam \{Positive}
+			Trigger_PositiveCrowdReaction
 		endif
 	else
-		if gotparam \{negative}
-			trigger_negativecrowdreaction
+		if GotParam \{Negative}
+			Trigger_NegativeCrowdReaction
 		endif
 	endif
 endscript
 
-script trigger_positivecrowdreaction 
-	getpakmancurrent \{map = zones}
-	appendsuffixtochecksum base = <pak> suffixstring = '_sfx_Crowd_Middle_Left'
+script Trigger_PositiveCrowdReaction 
+	GetPakManCurrent \{map = zones}
+	AppendSuffixToChecksum Base = <pak> SuffixString = '_sfx_Crowd_Middle_Left'
 	middleleftobjectname = <appended_id>
-	appendsuffixtochecksum base = <pak> suffixstring = '_sfx_Crowd_Middle_Right'
+	AppendSuffixToChecksum Base = <pak> SuffixString = '_sfx_Crowd_Middle_Right'
 	middlerightobjectname = <appended_id>
 	switch <pak>
 		case z_metalfest
-		if compositeobjectexists name = <middleleftobjectname>
-			soundevent event = lg_ext_crowd_trigger_short_positive_l object = <middleleftobjectname>
+		if CompositeObjectExists name = <middleleftobjectname>
+			SoundEvent event = LG_EXT_Crowd_Trigger_Short_Positive_L object = <middleleftobjectname>
 		endif
-		if compositeobjectexists name = <middlerightobjectname>
-			soundevent event = lg_ext_crowd_trigger_short_positive_r object = <middlerightobjectname>
+		if CompositeObjectExists name = <middlerightobjectname>
+			SoundEvent event = LG_EXT_Crowd_Trigger_Short_Positive_R object = <middlerightobjectname>
 		endif
 		default
-		soundevent \{event = medium_crowd_swell}
+		SoundEvent \{event = Medium_Crowd_Swell}
 	endswitch
-	soundevent \{event = large_ext_crowd_positive_swell_layer}
+	SoundEvent \{event = Large_EXT_Crowd_Positive_Swell_Layer}
 endscript
 
-script trigger_negativecrowdreaction 
+script Trigger_NegativeCrowdReaction 
 endscript

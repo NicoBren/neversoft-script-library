@@ -1,5 +1,5 @@
 
-script fsm_set \{replacement = child}
+script Fsm_Set \{replacement = child}
 	Fsm_Replace {
 		hierarchy = current
 		replacement = <replacement>
@@ -9,15 +9,15 @@ script fsm_set \{replacement = child}
 endscript
 
 script Register_Fsm_States 
-	RegisterState \{Name = State_TestFsm
+	RegisterState \{name = State_TestFsm
 		task = {
-			Name = Task_Debug
+			name = Task_Debug
 			params = {
 				label = State_Message
 				message = 'Fsm Test State'
 			}
 		}
-		transitions = [
+		Transitions = [
 			{
 				events = [
 					Enter_Behavior
@@ -30,9 +30,9 @@ script Register_Fsm_States
 				]
 			}
 		]}
-	RegisterState \{Name = State_TestFsm2
+	RegisterState \{name = State_TestFsm2
 		task = {
-			Name = Task_Debug
+			name = Task_Debug
 			params = {
 				label = State_Message
 				message = 'Fsm Test State 2'

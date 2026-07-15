@@ -1,37 +1,37 @@
-l_guit_dan_joker_anims_set = {
-	stance_a = {
-		idle = {
+L_GUIT_Dan_Joker_anims_set = {
+	Stance_A = {
+		Idle = {
 			good = {
-				slow = [
-					guit_dan_joker_075
+				Slow = [
+					Guit_Dan_Joker_075
 				]
-				med = [
-					guit_dan_joker_100
+				Med = [
+					Guit_Dan_Joker_100
 				]
-				fast = [
-					guit_dan_joker_120
-				]
-			}
-			normal = {
-				slow = [
-					guit_dan_joker_075
-				]
-				med = [
-					guit_dan_joker_100
-				]
-				fast = [
-					guit_dan_joker_120
+				Fast = [
+					Guit_Dan_Joker_120
 				]
 			}
-			bad = {
-				slow = [
-					guit_dan_joker_075
+			Normal = {
+				Slow = [
+					Guit_Dan_Joker_075
 				]
-				med = [
-					guit_dan_joker_100
+				Med = [
+					Guit_Dan_Joker_100
 				]
-				fast = [
-					guit_dan_joker_120
+				Fast = [
+					Guit_Dan_Joker_120
+				]
+			}
+			Bad = {
+				Slow = [
+					Guit_Dan_Joker_075
+				]
+				Med = [
+					Guit_Dan_Joker_100
+				]
+				Fast = [
+					Guit_Dan_Joker_120
 				]
 			}
 		}

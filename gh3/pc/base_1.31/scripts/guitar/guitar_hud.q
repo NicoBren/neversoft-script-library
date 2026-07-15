@@ -1,8 +1,8 @@
 
 script setup_sprites 
-	screenelementsysteminit
+	ScreenElementSystemInit
 	setup_main_button_event_mappings
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = hud_window
 		pos = (0.0, 0.0)
@@ -10,7 +10,7 @@ script setup_sprites
 			left
 			top
 		]}
-	createscreenelement \{type = textelement
+	CreateScreenElement \{type = TextElement
 		parent = root_window
 		id = song_failed_text
 		font = text_a10
@@ -29,7 +29,7 @@ script setup_sprites
 		text = "Song Failed"
 		z_priority = 5.0
 		alpha = 0}
-	createscreenelement \{type = textelement
+	CreateScreenElement \{type = TextElement
 		parent = root_window
 		id = song_won_text
 		font = text_a10
@@ -48,7 +48,7 @@ script setup_sprites
 		text = "You Rock!"
 		z_priority = 71.0
 		alpha = 0}
-	createscreenelement \{type = textelement
+	CreateScreenElement \{type = TextElement
 		parent = root_window
 		id = player1wins_text
 		font = text_a10
@@ -67,7 +67,7 @@ script setup_sprites
 		text = "Player 1 Wins!"
 		z_priority = 5.0
 		alpha = 0}
-	createscreenelement \{type = textelement
+	CreateScreenElement \{type = TextElement
 		parent = root_window
 		id = player2wins_text
 		font = text_a10
@@ -86,7 +86,7 @@ script setup_sprites
 		text = "Player 2 Wins!"
 		z_priority = 5.0
 		alpha = 0}
-	createscreenelement \{type = textelement
+	CreateScreenElement \{type = TextElement
 		parent = root_window
 		id = intro_song_info_text
 		font = text_a10
@@ -107,7 +107,7 @@ script setup_sprites
 		alpha = 0
 		shadow
 		shadow_offs = (1.0, 1.0)}
-	createscreenelement \{type = textelement
+	CreateScreenElement \{type = TextElement
 		parent = root_window
 		id = intro_performed_by_text
 		font = text_a10
@@ -128,7 +128,7 @@ script setup_sprites
 		alpha = 0
 		shadow
 		shadow_offs = (1.0, 1.0)}
-	createscreenelement \{type = textelement
+	CreateScreenElement \{type = TextElement
 		parent = root_window
 		id = intro_artist_info_text
 		font = text_a10
@@ -311,20 +311,20 @@ hud_screen_elements = [
 ]
 
 script setup_hud 
-	extendcrc hud_destroygroup_window <player_text> out = hud_destroygroup
-	createscreenelement {
-		type = containerelement
+	ExtendCRC hud_destroygroup_window <player_text> out = hud_destroygroup
+	CreateScreenElement {
+		type = ContainerElement
 		parent = hud_window
 		id = <hud_destroygroup>
 		pos = (0.0, 0.0)
 		just = [left top]
 	}
-	getarraysize \{$hud_screen_elements}
+	GetArraySize \{$hud_screen_elements}
 	array_entry = 0
 	get_num_players_by_gamemode
 	begin
 	id = ($hud_screen_elements [<array_entry>].id)
-	extendcrc <id> <player_text> out = id
+	ExtendCRC <id> <player_text> out = id
 	pos = ($hud_screen_elements [<array_entry>].pos)
 	yoff = ($hud_screen_elements [<array_entry>].yoff)
 	if (<num_players> = 2)
@@ -334,8 +334,8 @@ script setup_hud
 		py = (<py> - <yoff>)
 		pos = (<px> * (1.0, 0.0) + <py> * (0.0, 1.0))
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <hud_destroygroup>
 		font = text_a6
 		just = [left top]
@@ -360,10 +360,10 @@ script setup_hud
 		else
 			change \{g_hud_2d_struct_used = career_hud_2d_elements}
 		endif
-		extendcrc hud_2d_container <player_text> out = new_2d_container
-		if NOT screenelementexists id = <new_2d_container>
-			createscreenelement {
-				type = containerelement
+		ExtendCRC HUD_2D_Container <player_text> out = new_2d_container
+		if NOT ScreenElementExists id = <new_2d_container>
+			CreateScreenElement {
+				type = ContainerElement
 				parent = root_window
 				pos = (0.0, 0.0)
 				just = [left top]
@@ -374,9 +374,9 @@ script setup_hud
 		create_2d_hud_elements parent = <new_2d_container> player_text = <player_text> elements_structure = $g_hud_2d_struct_used
 	endif
 	if ($display_debug_input = 1)
-		extendcrc input_text <player_text> out = input_id
-		createscreenelement {
-			type = textelement
+		ExtendCRC input_text <player_text> out = input_id
+		CreateScreenElement {
+			type = TextElement
 			parent = <hud_destroygroup>
 			font = text_a1
 			just = [left top]
@@ -392,70 +392,70 @@ script setup_hud
 endscript
 
 script destroy_hud 
-	extendcrc hud_destroygroup_window <player_text> out = hud_destroygroup
-	if screenelementexists id = <hud_destroygroup>
-		destroyscreenelement id = <hud_destroygroup>
+	ExtendCRC hud_destroygroup_window <player_text> out = hud_destroygroup
+	if ScreenElementExists id = <hud_destroygroup>
+		DestroyScreenElement id = <hud_destroygroup>
 	endif
-	extendcrc \{hud_2d_container
+	ExtendCRC \{HUD_2D_Container
 		'p1'
 		out = new_2d_container}
-	if screenelementexists id = <new_2d_container>
-		destroyscreenelement id = <new_2d_container>
+	if ScreenElementExists id = <new_2d_container>
+		DestroyScreenElement id = <new_2d_container>
 	endif
-	extendcrc \{hud_2d_container
+	ExtendCRC \{HUD_2D_Container
 		'p2'
 		out = new_2d_container}
-	if screenelementexists id = <new_2d_container>
-		destroyscreenelement id = <new_2d_container>
+	if ScreenElementExists id = <new_2d_container>
+		DestroyScreenElement id = <new_2d_container>
 	endif
-	formattext checksumname = player_container 'HUD_Note_Streak_Combo%d' d = <player>
+	FormatText checksumname = player_container 'HUD_Note_Streak_Combo%d' d = <player>
 	destroy_menu menu_id = <player_container>
 endscript
 
 script reset_hud_text 
 	name = star_power_ready_text
-	extendcrc <name> <player_text> out = name
-	doscreenelementmorph id = <name> alpha = 0
+	ExtendCRC <name> <player_text> out = name
+	doScreenElementMorph id = <name> alpha = 0
 	name = double_notes_text
-	extendcrc <name> <player_text> out = name
-	doscreenelementmorph id = <name> alpha = 0
+	ExtendCRC <name> <player_text> out = name
+	doScreenElementMorph id = <name> alpha = 0
 	name = difficulty_up_text
-	extendcrc <name> <player_text> out = name
-	doscreenelementmorph id = <name> alpha = 0
+	ExtendCRC <name> <player_text> out = name
+	doScreenElementMorph id = <name> alpha = 0
 	name = lefty_notes_text
-	extendcrc <name> <player_text> out = name
-	doscreenelementmorph id = <name> alpha = 0
+	ExtendCRC <name> <player_text> out = name
+	doScreenElementMorph id = <name> alpha = 0
 	name = broken_string_text
-	extendcrc <name> <player_text> out = name
-	doscreenelementmorph id = <name> alpha = 0
+	ExtendCRC <name> <player_text> out = name
+	doScreenElementMorph id = <name> alpha = 0
 	name = whammy_attack_text
-	extendcrc <name> <player_text> out = name
-	doscreenelementmorph id = <name> alpha = 0
+	ExtendCRC <name> <player_text> out = name
+	doScreenElementMorph id = <name> alpha = 0
 	name = lightning_text
-	extendcrc <name> <player_text> out = name
-	doscreenelementmorph id = <name> alpha = 0
+	ExtendCRC <name> <player_text> out = name
+	doScreenElementMorph id = <name> alpha = 0
 	name = steal_text
-	extendcrc <name> <player_text> out = name
-	doscreenelementmorph id = <name> alpha = 0
+	ExtendCRC <name> <player_text> out = name
+	doScreenElementMorph id = <name> alpha = 0
 	name = steal1_text
-	extendcrc <name> <player_text> out = name
-	doscreenelementmorph id = <name> alpha = 0
+	ExtendCRC <name> <player_text> out = name
+	doScreenElementMorph id = <name> alpha = 0
 	name = steal2_text
-	extendcrc <name> <player_text> out = name
-	doscreenelementmorph id = <name> alpha = 0
+	ExtendCRC <name> <player_text> out = name
+	doScreenElementMorph id = <name> alpha = 0
 	name = coop_raise_axe
-	extendcrc <name> <player_text> out = name
-	doscreenelementmorph id = <name> alpha = 0
+	ExtendCRC <name> <player_text> out = name
+	doScreenElementMorph id = <name> alpha = 0
 	name = coop_raise_axe_cont
-	extendcrc <name> <player_text> out = name
-	doscreenelementmorph id = <name> alpha = 0
-	doscreenelementmorph \{id = song_failed_text
+	ExtendCRC <name> <player_text> out = name
+	doScreenElementMorph id = <name> alpha = 0
+	doScreenElementMorph \{id = song_failed_text
 		alpha = 0}
-	doscreenelementmorph \{id = song_won_text
+	doScreenElementMorph \{id = song_won_text
 		alpha = 0}
-	doscreenelementmorph \{id = player1wins_text
+	doScreenElementMorph \{id = player1wins_text
 		alpha = 0}
-	doscreenelementmorph \{id = player2wins_text
+	doScreenElementMorph \{id = player2wins_text
 		alpha = 0}
 endscript
 
@@ -473,7 +473,7 @@ endscript
 
 script move_2d_elements_to_default 
 	move_time = (<morph_time> * 1000.0)
-	getsongtimems
+	GetSongTimeMs
 	initial_time = (<time> * 1.0)
 	if ($boss_battle = 1)
 		if NOT ($devil_finish = 1)
@@ -481,7 +481,7 @@ script move_2d_elements_to_default
 		endif
 	endif
 	begin
-	getsongtimems
+	GetSongTimeMs
 	delta = ((<time> - <initial_time>) / (<move_time>))
 	if (<delta> > 1.0)
 		delta = 1.0
@@ -490,7 +490,7 @@ script move_2d_elements_to_default
 	if (<delta> = 1.0)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	off_set_drop = (0.0, 0.0)
@@ -501,7 +501,7 @@ script move_2d_elements_to_default
 	rot = -5
 	time_to_move = 0.1
 	morph_2d_hud_elements <...>
-	wait \{0.1
+	Wait \{0.1
 		seconds}
 	<off_set> = (-25.0, 0.0)
 	if ($game_mode = p2_faceoff)
@@ -510,7 +510,7 @@ script move_2d_elements_to_default
 	<rot> = 5
 	<time_to_move> = 0.125
 	morph_2d_hud_elements <...>
-	wait \{0.125
+	Wait \{0.125
 		seconds}
 	<rot> = 0
 	<off_set_drop> = (0.0, 0.0)
@@ -556,38 +556,38 @@ script morph_2d_hud_elements \{off_set = (0.0, 0.0)
 	else
 		move_rock_pos = ((1.0 - <delta>) * (($g_hud_2d_struct_used).<intro_rock_pos>) + (<delta> * ((($g_hud_2d_struct_used).<new_rock_pos>) - <off_set> - <off_set_drop>)))
 	endif
-	if NOT ($cheat_performancemode = 1)
+	if NOT ($Cheat_PerformanceMode = 1)
 		if NOT ($end_credits = 1)
 			if NOT ($game_mode = training)
-				extendcrc \{hud2d_rock_container
+				ExtendCRC \{HUD2D_rock_container
 					'p1'
 					out = new_container}
-				if screenelementexists id = <new_container>
-					doscreenelementmorph id = <new_container> pos = <move_rock_pos> time = <time_to_move> rot_angle = <rot>
+				if ScreenElementExists id = <new_container>
+					doScreenElementMorph id = <new_container> pos = <move_rock_pos> time = <time_to_move> rot_angle = <rot>
 				endif
 			endif
-			extendcrc \{hud2d_score_container
+			ExtendCRC \{HUD2D_score_container
 				'p1'
 				out = new_container}
-			if screenelementexists id = <new_container>
+			if ScreenElementExists id = <new_container>
 				move_score_pos = ((1.0 - <delta>) * (($g_hud_2d_struct_used).<intro_score_pos>) + (<delta> * ((($g_hud_2d_struct_used).<new_score_pos>) + <off_set>)))
-				doscreenelementmorph id = <new_container> pos = <move_score_pos> time = <time_to_move>
+				doScreenElementMorph id = <new_container> pos = <move_score_pos> time = <time_to_move>
 			endif
 		endif
 		if NOT ($devil_finish = 1)
-			extendcrc \{hud2d_rock_container
+			ExtendCRC \{HUD2D_rock_container
 				'p2'
 				out = new_container}
-			if screenelementexists id = <new_container>
+			if ScreenElementExists id = <new_container>
 				move_rock_pos_p2 = ((1.0 - <delta>) * (($g_hud_2d_struct_used).offscreen_rock_pos_p2) + (<delta> * ((($g_hud_2d_struct_used).rock_pos_p2) + <off_set> + <off_set_drop>)))
-				doscreenelementmorph id = <new_container> pos = <move_rock_pos_p2> time = <time_to_move> rot_angle = <rot>
+				doScreenElementMorph id = <new_container> pos = <move_rock_pos_p2> time = <time_to_move> rot_angle = <rot>
 			endif
-			extendcrc \{hud2d_score_container
+			ExtendCRC \{HUD2D_score_container
 				'p2'
 				out = new_container}
-			if screenelementexists id = <new_container>
+			if ScreenElementExists id = <new_container>
 				move_score_pos_p2 = ((1.0 - <delta>) * (($g_hud_2d_struct_used).offscreen_score_pos_p2) + (<delta> * ((($g_hud_2d_struct_used).score_pos_p2) + <off_set>)))
-				doscreenelementmorph id = <new_container> pos = <move_score_pos_p2> time = <time_to_move>
+				doScreenElementMorph id = <new_container> pos = <move_score_pos_p2> time = <time_to_move>
 			endif
 		endif
 	endif
@@ -599,50 +599,50 @@ script split_text_into_array_elements \{text = "OOPS"
 		space_between = (0.0, 0.0)
 		flags = {
 		}}
-	stringtochararray string = <text>
-	getarraysize <char_array>
-	if NOT gotparam \{parent}
+	StringToCharArray string = <text>
+	GetArraySize <char_array>
+	if NOT GotParam \{parent}
 		parent = root_window
 	endif
-	if gotparam \{id}
-		createscreenelement {
-			type = containerelement
+	if GotParam \{id}
+		CreateScreenElement {
+			type = ContainerElement
 			parent = <parent>
 			pos = (0.0, 0.0)
 			id = <id>
 		}
 	else
-		createscreenelement {
-			type = containerelement
+		CreateScreenElement {
+			type = ContainerElement
 			parent = <parent>
 			pos = (0.0, 0.0)
 		}
 	endif
 	parent_container = <id>
 	fit_scale = 1.0
-	if gotparam \{fit_dims}
-		createscreenelement {
-			type = textelement
+	if GotParam \{fit_dims}
+		CreateScreenElement {
+			type = TextElement
 			parent = <parent_container>
 			text = <text>
 			font = text_a1
 			scale = (<flags>.scale)
 		}
-		getscreenelementdims id = <id>
-		stringlength string = <text>
+		GetScreenElementDims id = <id>
+		StringLength string = <text>
 		avg_width = (<width> / <str_len>)
 		fit_scale = (<fit_dims>.(1.0, 0.0) / (<str_len> * <avg_width>))
 		<space_between> = (<space_between> * <fit_scale>)
 		destroy_menu menu_id = <id>
 	endif
-	if gotparam \{centered}
+	if GotParam \{centered}
 		half_width = ((<array_size> - 1) * (<space_between>.(1.0, 0.0)) * 0.5)
 		<text_pos> = (<text_pos> - <half_width> * (1.0, 0.0))
 	endif
 	i = 0
 	begin
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <parent_container>
 		pos = <text_pos>
 		text = (<char_array> [<i>])
@@ -650,8 +650,8 @@ script split_text_into_array_elements \{text = "OOPS"
 		scale = (<flags>.scale * <fit_scale>)
 		alpha = (<flags>.alpha)
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <parent_container>
 		text = (<char_array> [<i>])
 		<flags>
@@ -669,61 +669,61 @@ script split_text_into_array_elements \{text = "OOPS"
 endscript
 
 script jiggle_text_array_elements \{explode = 0}
-	if NOT screenelementexists id = <id>
+	if NOT ScreenElementExists id = <id>
 		return
 	endif
-	getscreenelementchildren id = <id>
-	getarraysize \{children}
+	GetScreenElementChildren id = <id>
+	GetArraySize \{children}
 	i = 0
 	begin
-	if screenelementexists id = (<children> [<i>])
-		getscreenelementprops id = (<children> [<i>])
-		(<children> [<i>]) :settags pos = <pos> scale = <scale>
+	if ScreenElementExists id = (<children> [<i>])
+		GetScreenElementProps id = (<children> [<i>])
+		(<children> [<i>]) :SetTags pos = <pos> scale = <scale>
 	endif
 	<i> = (<i> + 1)
 	repeat <array_size>
-	getstarttime
-	last_time = <starttime>
+	GetStartTime
+	last_time = <StartTime>
 	begin
-	getstarttime
-	if ((<starttime> - <last_time>) >= <wait_time>)
+	GetStartTime
+	if ((<StartTime> - <last_time>) >= <wait_time>)
 		break
 	else
 		i = 0
 		begin
-		if screenelementexists id = (<children> [<i>])
-			(<children> [<i>]) :gettags
-			getrandomvalue \{a = -10
+		if ScreenElementExists id = (<children> [<i>])
+			(<children> [<i>]) :GetTags
+			GetRandomValue \{a = -10
 				b = 10
 				name = rand_x}
-			getrandomvalue \{a = -10
+			GetRandomValue \{a = -10
 				b = -10
 				name = rand_y}
-			getrandomvalue \{a = 0
+			GetRandomValue \{a = 0
 				b = 3
 				name = rand_rot}
-			getrandomvalue \{a = 0.7
+			GetRandomValue \{a = 0.7
 				b = 1.3
 				name = rand_scale}
 			rand_pos = (<rand_x> * (1.0, 0.0) + <rand_y> * (0.0, 1.0))
-			setscreenelementprops id = (<children> [<i>]) pos = (<pos> + <rand_pos>) rot_angle = <rand_rot>
-			doscreenelementmorph id = (<children> [<i>]) scale = <rand_scale> relative_scale
+			SetScreenElementProps id = (<children> [<i>]) pos = (<pos> + <rand_pos>) rot_angle = <rand_rot>
+			doScreenElementMorph id = (<children> [<i>]) scale = <rand_scale> relative_scale
 		endif
 		<i> = (<i> + 1)
 		repeat <array_size>
-		wait \{0.075
+		Wait \{0.075
 			seconds}
 		<i> = 0
 		begin
-		if screenelementexists id = (<children> [<i>])
-			(<children> [<i>]) :gettags
-			setscreenelementprops id = (<children> [<i>]) pos = <pos> rot_angle = <rand_rot>
-			doscreenelementmorph id = (<children> [<i>]) scale = <scale>
+		if ScreenElementExists id = (<children> [<i>])
+			(<children> [<i>]) :GetTags
+			SetScreenElementProps id = (<children> [<i>]) pos = <pos> rot_angle = <rand_rot>
+			doScreenElementMorph id = (<children> [<i>]) scale = <scale>
 		endif
 		<i> = (<i> + 1)
 		repeat <array_size>
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	if (<explode> = 1)
@@ -732,42 +732,42 @@ script jiggle_text_array_elements \{explode = 0}
 endscript
 
 script explode_text_array_elements 
-	if NOT screenelementexists id = <id>
+	if NOT ScreenElementExists id = <id>
 		return
 	endif
-	getscreenelementchildren id = <id>
-	getarraysize \{children}
+	GetScreenElementChildren id = <id>
+	GetArraySize \{children}
 	i = 0
 	explode_dir = 1
 	begin
-	if screenelementexists id = (<children> [<i>])
+	if ScreenElementExists id = (<children> [<i>])
 		switch (<explode_dir>)
 			case 1
-			getrandomvalue \{a = -2000
+			GetRandomValue \{a = -2000
 				b = 0
 				name = rand_x}
-			getrandomvalue \{a = -2000
+			GetRandomValue \{a = -2000
 				b = -200
 				name = rand_y}
 			case 2
-			getrandomvalue \{a = 1280
+			GetRandomValue \{a = 1280
 				b = 3280
 				name = rand_x}
-			getrandomvalue \{a = -2000
+			GetRandomValue \{a = -2000
 				b = -200
 				name = rand_y}
 			case 3
-			getrandomvalue \{a = 1280
+			GetRandomValue \{a = 1280
 				b = 3280
 				name = rand_x}
-			getrandomvalue \{a = 920
+			GetRandomValue \{a = 920
 				b = 2720
 				name = rand_y}
 			case 4
-			getrandomvalue \{a = -2000
+			GetRandomValue \{a = -2000
 				b = 0
 				name = rand_x}
-			getrandomvalue \{a = 920
+			GetRandomValue \{a = 920
 				b = 2720
 				name = rand_y}
 		endswitch
@@ -775,15 +775,15 @@ script explode_text_array_elements
 		if (<explode_dir> > 4)
 			<explode_dir> = 1
 		endif
-		getrandomvalue \{a = 0
+		GetRandomValue \{a = 0
 			b = 180
 			name = rand_rot}
 		rand_pos = (<rand_x> * (1.0, 0.0) + <rand_y> * (0.0, 1.0))
-		doscreenelementmorph id = (<children> [<i>]) pos = <rand_pos> rot_angle = <rand_rot> time = <time> motion = ease_out
+		doScreenElementMorph id = (<children> [<i>]) pos = <rand_pos> rot_angle = <rand_rot> time = <time> motion = ease_out
 	endif
 	<i> = (<i> + 1)
-	if screenelementexists id = (<children> [<i>])
-		doscreenelementmorph id = (<children> [<i>]) pos = <rand_pos> rot_angle = <rand_rot> time = <time>
+	if ScreenElementExists id = (<children> [<i>])
+		doScreenElementMorph id = (<children> [<i>]) pos = <rand_pos> rot_angle = <rand_rot> time = <time>
 	endif
 	<i> = (<i> + 1)
 	repeat (<array_size> / 2)

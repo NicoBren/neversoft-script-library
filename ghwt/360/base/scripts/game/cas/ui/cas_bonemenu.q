@@ -1,29 +1,29 @@
 
 script cas_bonemenu_begin 
 	printf \{'cas_bonemenu_begin'}
-	if NOT checksumequals \{a = $cas_reskin_preview
-			b = None}
+	if NOT ChecksumEquals \{a = $cas_reskin_preview
+			b = none}
 		ScriptAssert \{'bonemenu logic issue'}
 	endif
-	ExtendCrc <part> '_reskin' out = reskin_object
-	Change cas_reskin_preview = <reskin_object>
+	ExtendCRC <part> '_reskin' out = reskin_object
+	change cas_reskin_preview = <reskin_object>
 endscript
 
 script cas_bonemenu_apply_changes 
-	updatecurrentcasmodel buildscript = reskin_model_from_appearance buildscriptparams = {kill_objects = <kill_objects>}
+	UpdateCurrentCASModel buildScript = reskin_model_from_appearance buildscriptparams = {kill_objects = <kill_objects>}
 endscript
 
 script cas_bonemenu_exit 
 	printf \{'cas_bonemenu_exit'}
 	cas_bonemenu_apply_changes \{kill_objects = 1}
-	flushdeadobjects
-	getcurrentcasobject
+	FlushDeadObjects
+	GetCurrentCASObject
 	<cas_object> :Obj_ForceUpdate
-	ExtendCrc <part> '_reskin' out = reskin_object
-	if NOT checksumequals a = $cas_reskin_preview b = <reskin_object>
+	ExtendCRC <part> '_reskin' out = reskin_object
+	if NOT ChecksumEquals a = $cas_reskin_preview b = <reskin_object>
 		ScriptAssert \{'bonemenu logic issue'}
 	endif
-	Change \{cas_reskin_preview = None}
+	change \{cas_reskin_preview = none}
 endscript
 
 script cas_create_bonemenu_slider 
@@ -128,34 +128,34 @@ script cas_refresh_given_bone_slider
 		]
 		all}
 	i = 0
-	GetArraySize <deform_array> globalarray
+	GetArraySize <deform_array> GlobalArray
 	begin
-	if checksumequals a = ($<deform_array> [<i>].group_name) b = <group_name>
+	if ChecksumEquals a = ($<deform_array> [<i>].group_name) b = <group_name>
 		cas_refresh_bone_sliders deform_info = ($<deform_array> [<i>]) part = <part>
 		return
 	endif
 	i = (<i> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 endscript
 
 script cas_refresh_bone_sliders 
 	cas_get_min_bone_slider deform_info = <deform_info>
 	cas_get_max_bone_slider deform_info = <deform_info>
 	cas_get_bone_slider_value part = <part> group_name = (<deform_info>.group_name)
-	sliderbar_rescale_to_bar min = <min_slider> Max = <max_slider> value = <slider> left = $colormenu_wrap_arrow_left right = $colormenu_wrap_arrow_right
+	sliderbar_rescale_to_bar min = <min_slider> max = <max_slider> value = <slider> left = $colormenu_wrap_arrow_left right = $colormenu_wrap_arrow_right
 	cas_get_bone_slider_ids deform_info = <deform_info>
 	if ScreenElementExists id = <up_arrow_id>
 		SetScreenElementProps {
 			id = <up_arrow_id>
-			Pos = ((1.0, 0.0) * <x_val>)
-			Scale = $colormenu_arrow_scale
+			pos = ((1.0, 0.0) * <x_val>)
+			scale = $colormenu_arrow_scale
 		}
 	endif
 	if ScreenElementExists id = <down_arrow_id>
 		SetScreenElementProps {
 			id = <down_arrow_id>
-			Pos = ((1.0, 0.0) * <x_val>)
-			Scale = $colormenu_arrow_scale
+			pos = ((1.0, 0.0) * <x_val>)
+			scale = $colormenu_arrow_scale
 		}
 	endif
 endscript
@@ -163,8 +163,8 @@ endscript
 script cas_bonemenu_focus 
 	GetTags
 	Obj_GetID
-	<id> = <objID>
-	legacydoscreenelementmorph id = {<id> child = 2} alpha = 1.0 time = 0
+	<id> = <ObjID>
+	LegacyDoScreenElementMorph id = {<id> child = 2} alpha = 1.0 time = 0
 	if GotParam \{pad_left_handler}
 		SetScreenElementProps {
 			id = <id>
@@ -187,21 +187,21 @@ script cas_bonemenu_focus
 		id = <color_bar_id>
 		rgba = $colormenu_bar_focus_rgba
 	}
-	legacydoscreenelementmorph {
+	LegacyDoScreenElementMorph {
 		id = <down_arrow_id>
-		Scale = $colormenu_arrow_scale
+		scale = $colormenu_arrow_scale
 	}
-	legacydoscreenelementmorph {
+	LegacyDoScreenElementMorph {
 		id = <up_arrow_id>
-		Scale = $colormenu_arrow_scale
+		scale = $colormenu_arrow_scale
 	}
 endscript
 
 script cas_bonemenu_unfocus 
 	GetTags
 	Obj_GetID
-	<id> = <objID>
-	legacydoscreenelementmorph id = {<id> child = 2} alpha = 0 time = 0
+	<id> = <ObjID>
+	LegacyDoScreenElementMorph id = {<id> child = 2} alpha = 0 time = 0
 	SetScreenElementProps {
 		id = <color_bar_id>
 		rgba = $colormenu_bar_unfocus_rgba

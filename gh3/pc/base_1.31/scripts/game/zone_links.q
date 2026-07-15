@@ -1,5 +1,5 @@
-showpakmap = 0
-showpakmapexpand = 0
+showPakMap = 0
+showPakMapExpand = 0
 zone_extra_budget = 1000000
 zone_texture_budget = 30000000
 zone_scene_budget = 10000000
@@ -10,14 +10,14 @@ zone_object_budget = 200
 zone_model_budget = 5000000
 zone_sfx_budget = 1000000
 zone_gfx_budget = 1000000
-skateparkzones = {
+SkateParkZones = {
 }
-multiplayerzones = {
+MultiplayerZones = {
 }
-netskatezones = {
+NetSkateZones = {
 }
-mainmenuzones = {
-	z_mainmenu = {
+MainMenuZones = {
+	Z_Mainmenu = {
 		name = 'Z_Mainmenu'
 		extra_size = 1058487
 		anim_size = 0
@@ -27,8 +27,8 @@ mainmenuzones = {
 		]
 	}
 }
-bedroomzones = {
-	z_bedroom = {
+BedroomZones = {
+	Z_Bedroom = {
 		name = 'Z_Bedroom'
 		extra_size = 19000
 		anim_size = 228167
@@ -38,8 +38,8 @@ bedroomzones = {
 		]
 	}
 }
-mocapzones = {
-	z_mocap = {
+MocapZones = {
+	Z_Mocap = {
 		name = 'Z_Mocap'
 		extra_size = 19000
 		anim_size = 228167
@@ -49,8 +49,8 @@ mocapzones = {
 		]
 	}
 }
-capzones = {
-	cap_assets = {
+CAPZones = {
+	CAP_assets = {
 		name = 'CAP_assets'
 		extra_size = 0
 		anim_size = 0
@@ -60,17 +60,17 @@ capzones = {
 		]
 	}
 }
-zonepakdir = 'd:\\data\\zones\\'
-zonepakomit = [
+ZonePakDir = 'd:\\data\\zones\\'
+ZonePakOmit = [
 	'z_world.pak'
 ]
-download_zones = {
+Download_Zones = {
 }
-gh3zones = {
-	$download_zones
+GH3Zones = {
+	$Download_Zones
 	z_artdeco = {
 		name = 'Z_ArtDeco'
-		params_struct = z_training_params
+		params_struct = Z_Training_Params
 		extra_size = $zone_extra_budget
 		anim_size = $zone_anim_budget
 		model_size = $zone_model_budget
@@ -83,12 +83,12 @@ gh3zones = {
 		gfx_size = $zone_gfx_budget
 		zones = [
 		]
-		globallodzones = [
+		GlobalLODZones = [
 		]
 	}
 	z_budokan = {
 		name = 'Z_Budokan'
-		params_struct = z_training_params
+		params_struct = Z_Training_Params
 		extra_size = $zone_extra_budget
 		anim_size = $zone_anim_budget
 		model_size = $zone_model_budget
@@ -101,12 +101,12 @@ gh3zones = {
 		gfx_size = $zone_gfx_budget
 		zones = [
 		]
-		globallodzones = [
+		GlobalLODZones = [
 		]
 	}
 	z_credits = {
 		name = 'Z_Credits'
-		params_struct = z_training_params
+		params_struct = Z_Training_Params
 		extra_size = $zone_extra_budget
 		anim_size = $zone_anim_budget
 		model_size = $zone_model_budget
@@ -119,12 +119,12 @@ gh3zones = {
 		gfx_size = $zone_gfx_budget
 		zones = [
 		]
-		globallodzones = [
+		GlobalLODZones = [
 		]
 	}
 	z_dive = {
 		name = 'Z_Dive'
-		params_struct = z_training_params
+		params_struct = Z_Training_Params
 		extra_size = $zone_extra_budget
 		anim_size = $zone_anim_budget
 		model_size = $zone_model_budget
@@ -137,12 +137,12 @@ gh3zones = {
 		gfx_size = $zone_gfx_budget
 		zones = [
 		]
-		globallodzones = [
+		GlobalLODZones = [
 		]
 	}
 	z_hell = {
 		name = 'Z_Hell'
-		params_struct = z_training_params
+		params_struct = Z_Training_Params
 		extra_size = $zone_extra_budget
 		anim_size = $zone_anim_budget
 		model_size = $zone_model_budget
@@ -155,12 +155,12 @@ gh3zones = {
 		gfx_size = $zone_gfx_budget
 		zones = [
 		]
-		globallodzones = [
+		GlobalLODZones = [
 		]
 	}
 	z_party = {
 		name = 'Z_Party'
-		params_struct = z_training_params
+		params_struct = Z_Training_Params
 		extra_size = $zone_extra_budget
 		anim_size = $zone_anim_budget
 		model_size = $zone_model_budget
@@ -173,12 +173,12 @@ gh3zones = {
 		gfx_size = $zone_gfx_budget
 		zones = [
 		]
-		globallodzones = [
+		GlobalLODZones = [
 		]
 	}
 	z_prison = {
 		name = 'Z_Prison'
-		params_struct = z_training_params
+		params_struct = Z_Training_Params
 		extra_size = $zone_extra_budget
 		anim_size = $zone_anim_budget
 		model_size = $zone_model_budget
@@ -191,12 +191,12 @@ gh3zones = {
 		gfx_size = $zone_gfx_budget
 		zones = [
 		]
-		globallodzones = [
+		GlobalLODZones = [
 		]
 	}
 	z_soundcheck = {
 		name = 'Z_Soundcheck'
-		params_struct = z_training_params
+		params_struct = Z_Training_Params
 		extra_size = $zone_extra_budget
 		anim_size = $zone_anim_budget
 		model_size = $zone_model_budget
@@ -209,12 +209,12 @@ gh3zones = {
 		gfx_size = $zone_gfx_budget
 		zones = [
 		]
-		globallodzones = [
+		GlobalLODZones = [
 		]
 	}
 	z_video = {
 		name = 'Z_Video'
-		params_struct = z_training_params
+		params_struct = Z_Training_Params
 		extra_size = $zone_extra_budget
 		anim_size = $zone_anim_budget
 		model_size = $zone_model_budget
@@ -227,12 +227,12 @@ gh3zones = {
 		gfx_size = $zone_gfx_budget
 		zones = [
 		]
-		globallodzones = [
+		GlobalLODZones = [
 		]
 	}
 	z_wikker = {
 		name = 'Z_Wikker'
-		params_struct = z_training_params
+		params_struct = Z_Training_Params
 		extra_size = $zone_extra_budget
 		anim_size = $zone_anim_budget
 		model_size = $zone_model_budget
@@ -245,7 +245,7 @@ gh3zones = {
 		gfx_size = $zone_gfx_budget
 		zones = [
 		]
-		globallodzones = [
+		GlobalLODZones = [
 		]
 	}
 	z_viewer = {
@@ -256,13 +256,13 @@ gh3zones = {
 		scene_size = 8656217
 		zones = [
 		]
-		pak_optional
+		PAK_OPTIONAL
 	}
 }
-skate9zones = {
-	z_fdr = {
+Skate9Zones = {
+	Z_FDR = {
 		name = 'Z_FDR'
-		params_struct = z_fdr_params
+		params_struct = Z_FDR_Params
 		extra_size = $zone_extra_budget
 		anim_size = $zone_anim_budget
 		model_size = $zone_model_budget
@@ -272,23 +272,23 @@ skate9zones = {
 		instance_count = $zone_instance_budget
 		object_count = $zone_object_budget
 		zones = [
-			z_love
-			z_slums
-			z_bell
+			Z_Love
+			Z_Slums
+			Z_Bell
 		]
-		globallodzones = [
-			z_harbor_lod
-			z_lansdowne_lod
-			z_bcity_lod
-			z_museums_lod
-			z_monuments_lod
-			z_pb_bridge_lod
-			z_bw_bridge_lod
+		GlobalLODZones = [
+			Z_Harbor_LOD
+			Z_Lansdowne_LOD
+			Z_BCity_LOD
+			Z_Museums_LOD
+			Z_Monuments_LOD
+			Z_PB_Bridge_LOD
+			Z_BW_Bridge_LOD
 		]
 	}
-	z_slums = {
+	Z_Slums = {
 		name = 'Z_Slums'
-		params_struct = z_slums_params
+		params_struct = Z_Slums_Params
 		extra_size = $zone_extra_budget
 		anim_size = $zone_anim_budget
 		model_size = $zone_model_budget
@@ -298,23 +298,23 @@ skate9zones = {
 		instance_count = $zone_instance_budget
 		object_count = $zone_object_budget
 		zones = [
-			z_love
-			z_fdr
-			z_pb_bridge
+			Z_Love
+			Z_FDR
+			Z_PB_Bridge
 		]
-		globallodzones = [
-			z_harbor_lod
-			z_lansdowne_lod
-			z_bcity_lod
-			z_museums_lod
-			z_monuments_lod
-			z_bw_bridge_lod
-			z_wp_bridge_lod
+		GlobalLODZones = [
+			Z_Harbor_LOD
+			Z_Lansdowne_LOD
+			Z_BCity_LOD
+			Z_Museums_LOD
+			Z_Monuments_LOD
+			Z_BW_Bridge_LOD
+			Z_WP_Bridge_LOD
 		]
 	}
-	z_bell = {
+	Z_Bell = {
 		name = 'Z_Bell'
-		params_struct = z_bell_params
+		params_struct = Z_Bell_Params
 		extra_size = $zone_extra_budget
 		anim_size = $zone_anim_budget
 		model_size = $zone_model_budget
@@ -324,23 +324,23 @@ skate9zones = {
 		instance_count = $zone_instance_budget
 		object_count = $zone_object_budget
 		zones = [
-			z_slums
-			z_love
-			z_wp_bridge
+			Z_Slums
+			Z_Love
+			Z_WP_Bridge
 		]
-		globallodzones = [
-			z_harbor_lod
-			z_lansdowne_lod
-			z_bcity_lod
-			z_museums_lod
-			z_monuments_lod
-			z_pb_bridge_lod
-			z_bw_bridge_lod
+		GlobalLODZones = [
+			Z_Harbor_LOD
+			Z_Lansdowne_LOD
+			Z_BCity_LOD
+			Z_Museums_LOD
+			Z_Monuments_LOD
+			Z_PB_Bridge_LOD
+			Z_BW_Bridge_LOD
 		]
 	}
-	z_love = {
+	Z_Love = {
 		name = 'Z_Love'
-		params_struct = z_love_params
+		params_struct = Z_Love_Params
 		extra_size = $zone_extra_budget
 		anim_size = $zone_anim_budget
 		model_size = $zone_model_budget
@@ -350,23 +350,23 @@ skate9zones = {
 		instance_count = $zone_instance_budget
 		object_count = $zone_object_budget
 		zones = [
-			z_slums
-			z_fdr
-			z_bell
+			Z_Slums
+			Z_FDR
+			Z_Bell
 		]
-		globallodzones = [
-			z_harbor_lod
-			z_lansdowne_lod
-			z_bcity_lod
-			z_museums_lod
-			z_monuments_lod
-			z_pb_bridge_lod
-			z_bw_bridge_lod
+		GlobalLODZones = [
+			Z_Harbor_LOD
+			Z_Lansdowne_LOD
+			Z_BCity_LOD
+			Z_Museums_LOD
+			Z_Monuments_LOD
+			Z_PB_Bridge_LOD
+			Z_BW_Bridge_LOD
 		]
 	}
-	z_bcity = {
+	Z_BCity = {
 		name = 'Z_BCity'
-		params_struct = z_bcity_params
+		params_struct = Z_BCity_Params
 		extra_size = $zone_extra_budget
 		anim_size = $zone_anim_budget
 		model_size = $zone_model_budget
@@ -377,23 +377,23 @@ skate9zones = {
 		object_count = $zone_object_budget
 		zones = [
 			z_harbor
-			z_lansdowne
-			z_pb_bridge
+			Z_Lansdowne
+			Z_PB_Bridge
 		]
-		globallodzones = [
-			z_slums_lod
-			z_bell_lod
-			z_love_lod
-			z_fdr_lod
-			z_museums_lod
-			z_monuments_lod
-			z_bw_bridge_lod
-			z_wp_bridge_lod
+		GlobalLODZones = [
+			Z_Slums_LOD
+			Z_Bell_LOD
+			Z_Love_LOD
+			Z_FDR_LOD
+			Z_Museums_LOD
+			Z_Monuments_LOD
+			Z_BW_Bridge_LOD
+			Z_WP_Bridge_LOD
 		]
 	}
 	z_harbor = {
 		name = 'Z_Harbor'
-		params_struct = z_harbor_params
+		params_struct = Z_Harbor_Params
 		extra_size = $zone_extra_budget
 		anim_size = $zone_anim_budget
 		model_size = $zone_model_budget
@@ -403,24 +403,24 @@ skate9zones = {
 		instance_count = $zone_instance_budget
 		object_count = $zone_object_budget
 		zones = [
-			z_bcity
-			z_lansdowne
-			z_bw_bridge
+			Z_BCity
+			Z_Lansdowne
+			Z_BW_Bridge
 		]
-		globallodzones = [
-			z_slums_lod
-			z_bell_lod
-			z_love_lod
-			z_fdr_lod
-			z_museums_lod
-			z_monuments_lod
-			z_pb_bridge_lod
-			z_wp_bridge_lod
+		GlobalLODZones = [
+			Z_Slums_LOD
+			Z_Bell_LOD
+			Z_Love_LOD
+			Z_FDR_LOD
+			Z_Museums_LOD
+			Z_Monuments_LOD
+			Z_PB_Bridge_LOD
+			Z_WP_Bridge_LOD
 		]
 	}
-	z_lansdowne = {
+	Z_Lansdowne = {
 		name = 'Z_Lansdowne'
-		params_struct = z_lansdowne_params
+		params_struct = Z_Lansdowne_Params
 		extra_size = $zone_extra_budget
 		anim_size = $zone_anim_budget
 		model_size = $zone_model_budget
@@ -430,24 +430,24 @@ skate9zones = {
 		instance_count = $zone_instance_budget
 		object_count = $zone_object_budget
 		zones = [
-			z_bcity
+			Z_BCity
 			z_harbor
-			z_bw_bridge
+			Z_BW_Bridge
 		]
-		globallodzones = [
-			z_slums_lod
-			z_bell_lod
-			z_love_lod
-			z_fdr_lod
-			z_museums_lod
-			z_monuments_lod
-			z_pb_bridge_lod
-			z_wp_bridge_lod
+		GlobalLODZones = [
+			Z_Slums_LOD
+			Z_Bell_LOD
+			Z_Love_LOD
+			Z_FDR_LOD
+			Z_Museums_LOD
+			Z_Monuments_LOD
+			Z_PB_Bridge_LOD
+			Z_WP_Bridge_LOD
 		]
 	}
-	z_mansion = {
+	Z_Mansion = {
 		name = 'Z_Mansion'
-		params_struct = z_mansion_params
+		params_struct = Z_Mansion_Params
 		extra_size = $zone_extra_budget
 		anim_size = $zone_anim_budget
 		model_size = $zone_model_budget
@@ -457,24 +457,24 @@ skate9zones = {
 		instance_count = $zone_instance_budget
 		object_count = $zone_object_budget
 		zones = [
-			z_monuments
+			Z_Monuments
 		]
-		globallodzones = [
-			z_harbor_lod
-			z_lansdowne_lod
-			z_bcity_lod
-			z_fdr_lod
-			z_bell_lod
-			z_love_lod
-			z_fdr_lod
-			z_pb_bridge_lod
-			z_bw_bridge_lod
-			z_wp_bridge_lod
+		GlobalLODZones = [
+			Z_Harbor_LOD
+			Z_Lansdowne_LOD
+			Z_BCity_LOD
+			Z_FDR_LOD
+			Z_Bell_LOD
+			Z_Love_LOD
+			Z_FDR_LOD
+			Z_PB_Bridge_LOD
+			Z_BW_Bridge_LOD
+			Z_WP_Bridge_LOD
 		]
 	}
-	z_monuments = {
+	Z_Monuments = {
 		name = 'Z_Monuments'
-		params_struct = z_monuments_params
+		params_struct = Z_Monuments_Params
 		extra_size = $zone_extra_budget
 		anim_size = $zone_anim_budget
 		model_size = $zone_model_budget
@@ -484,16 +484,16 @@ skate9zones = {
 		instance_count = $zone_instance_budget
 		object_count = $zone_object_budget
 		zones = [
-			z_bw_bridge
-			z_museums
-			z_wp_bridge
+			Z_BW_Bridge
+			Z_Museums
+			Z_WP_Bridge
 		]
-		globallodzones = [
+		GlobalLODZones = [
 		]
 	}
-	z_museums = {
+	Z_Museums = {
 		name = 'Z_Museums'
-		params_struct = z_museums_params
+		params_struct = Z_Museums_Params
 		extra_size = $zone_extra_budget
 		anim_size = $zone_anim_budget
 		model_size = $zone_model_budget
@@ -503,25 +503,25 @@ skate9zones = {
 		instance_count = $zone_instance_budget
 		object_count = $zone_object_budget
 		zones = [
-			z_monuments
-			z_museum_int
-			z_bw_bridge
+			Z_Monuments
+			Z_Museum_Int
+			Z_BW_Bridge
 		]
-		globallodzones = [
-			z_harbor_lod
-			z_lansdowne_lod
-			z_bcity_lod
-			z_slums_lod
-			z_bell_lod
-			z_love_lod
-			z_fdr_lod
-			z_pb_bridge_lod
-			z_bw_bridge_lod
+		GlobalLODZones = [
+			Z_Harbor_LOD
+			Z_Lansdowne_LOD
+			Z_BCity_LOD
+			Z_Slums_LOD
+			Z_Bell_LOD
+			Z_Love_LOD
+			Z_FDR_LOD
+			Z_PB_Bridge_LOD
+			Z_BW_Bridge_LOD
 		]
 	}
-	z_museum_int = {
+	Z_Museum_Int = {
 		name = 'Z_Museum_Int'
-		params_struct = z_museum_int_params
+		params_struct = Z_Museum_Int_Params
 		extra_size = $zone_extra_budget
 		anim_size = $zone_anim_budget
 		model_size = $zone_model_budget
@@ -531,14 +531,14 @@ skate9zones = {
 		instance_count = $zone_instance_budget
 		object_count = $zone_object_budget
 		zones = [
-			z_museums
-			z_bw_bridge
-			z_monuments
+			Z_Museums
+			Z_BW_Bridge
+			Z_Monuments
 		]
 	}
-	z_pb_bridge = {
+	Z_PB_Bridge = {
 		name = 'Z_PB_Bridge'
-		params_struct = z_pb_bridge_params
+		params_struct = Z_PB_Bridge_Params
 		extra_size = $zone_extra_budget
 		anim_size = $zone_anim_budget
 		model_size = $zone_model_budget
@@ -548,24 +548,24 @@ skate9zones = {
 		instance_count = $zone_instance_budget
 		object_count = $zone_object_budget
 		zones = [
-			z_bcity
-			z_slums
+			Z_BCity
+			Z_Slums
 			z_harbor
 		]
-		globallodzones = [
-			z_lansdowne_lod
-			z_bell_lod
-			z_love_lod
-			z_fdr_lod
-			z_museums_lod
-			z_monuments_lod
-			z_bw_bridge_lod
-			z_wp_bridge_lod
+		GlobalLODZones = [
+			Z_Lansdowne_LOD
+			Z_Bell_LOD
+			Z_Love_LOD
+			Z_FDR_LOD
+			Z_Museums_LOD
+			Z_Monuments_LOD
+			Z_BW_Bridge_LOD
+			Z_WP_Bridge_LOD
 		]
 	}
-	z_bw_bridge = {
+	Z_BW_Bridge = {
 		name = 'Z_BW_Bridge'
-		params_struct = z_bw_bridge_params
+		params_struct = Z_BW_Bridge_Params
 		extra_size = $zone_extra_budget
 		anim_size = $zone_anim_budget
 		model_size = $zone_model_budget
@@ -576,23 +576,23 @@ skate9zones = {
 		object_count = $zone_object_budget
 		zones = [
 			z_harbor
-			z_museums
-			z_monuments
+			Z_Museums
+			Z_Monuments
 		]
-		globallodzones = [
-			z_bcity_lod
-			z_slums_lod
-			z_bell_lod
-			z_love_lod
-			z_fdr_lod
-			z_monuments_lod
-			z_pb_bridge_lod
-			z_wp_bridge_lod
+		GlobalLODZones = [
+			Z_BCity_LOD
+			Z_Slums_LOD
+			Z_Bell_LOD
+			Z_Love_LOD
+			Z_FDR_LOD
+			Z_Monuments_LOD
+			Z_PB_Bridge_LOD
+			Z_WP_Bridge_LOD
 		]
 	}
-	z_wp_bridge = {
+	Z_WP_Bridge = {
 		name = 'Z_WP_Bridge'
-		params_struct = z_wp_bridge_params
+		params_struct = Z_WP_Bridge_Params
 		extra_size = $zone_extra_budget
 		anim_size = $zone_anim_budget
 		model_size = $zone_model_budget
@@ -602,21 +602,21 @@ skate9zones = {
 		instance_count = $zone_instance_budget
 		object_count = $zone_object_budget
 		zones = [
-			z_monuments
-			z_bell
-			z_fdr
+			Z_Monuments
+			Z_Bell
+			Z_FDR
 		]
-		globallodzones = [
-			z_harbor_lod
-			z_lansdowne_lod
-			z_bcity_lod
-			z_slums_lod
-			z_monuments_lod
-			z_pb_bridge_lod
-			z_bw_bridge_lod
+		GlobalLODZones = [
+			Z_Harbor_LOD
+			Z_Lansdowne_LOD
+			Z_BCity_LOD
+			Z_Slums_LOD
+			Z_Monuments_LOD
+			Z_PB_Bridge_LOD
+			Z_BW_Bridge_LOD
 		]
 	}
-	z_anim = {
+	Z_Anim = {
 		name = 'Z_Anim'
 		extra_size = 19000
 		anim_size = 228167
@@ -625,7 +625,7 @@ skate9zones = {
 		zones = [
 		]
 	}
-	z_testlevel = {
+	Z_TestLevel = {
 		name = 'Z_TestLevel'
 		extra_size = 19000
 		anim_size = 228167
@@ -634,7 +634,7 @@ skate9zones = {
 		zones = [
 		]
 	}
-	z_testlevel_a1 = {
+	Z_TestLevel_A1 = {
 		name = 'Z_TestLevel_A1'
 		extra_size = 19000
 		anim_size = 228167
@@ -643,7 +643,7 @@ skate9zones = {
 		zones = [
 		]
 	}
-	z_testlevel_a2 = {
+	Z_TestLevel_A2 = {
 		name = 'Z_TestLevel_A2'
 		extra_size = 19000
 		anim_size = 228167
@@ -652,7 +652,7 @@ skate9zones = {
 		zones = [
 		]
 	}
-	z_testlevel_gun = {
+	Z_TestLevel_Gun = {
 		name = 'Z_TestLevel_Gun'
 		extra_size = 19000
 		anim_size = 228167
@@ -661,7 +661,7 @@ skate9zones = {
 		zones = [
 		]
 	}
-	z_testlevel_havok = {
+	Z_TestLevel_Havok = {
 		name = 'Z_TestLevel_Havok'
 		extra_size = 19000
 		anim_size = 228167
@@ -670,7 +670,7 @@ skate9zones = {
 		zones = [
 		]
 	}
-	z_testlevel_mb = {
+	Z_TestLevel_MB = {
 		name = 'Z_TestLevel_MB'
 		extra_size = 19000
 		anim_size = 228167
@@ -679,7 +679,7 @@ skate9zones = {
 		zones = [
 		]
 	}
-	z_testlevel_js = {
+	Z_TestLevel_JS = {
 		name = 'Z_TestLevel_JS'
 		extra_size = 19000
 		anim_size = 228167
@@ -688,7 +688,7 @@ skate9zones = {
 		zones = [
 		]
 	}
-	z_testlevel_ok = {
+	Z_TestLevel_OK = {
 		name = 'Z_TestLevel_OK'
 		extra_size = 19000
 		anim_size = 228167
@@ -697,7 +697,7 @@ skate9zones = {
 		zones = [
 		]
 	}
-	z_testlevel_dk = {
+	Z_TestLevel_DK = {
 		name = 'Z_TestLevel_DK'
 		extra_size = 19000
 		anim_size = 228167
@@ -706,7 +706,7 @@ skate9zones = {
 		zones = [
 		]
 	}
-	z_testlevel_render = {
+	Z_TestLevel_RENDER = {
 		name = 'Z_TestLevel_RENDER'
 		extra_size = 19000
 		anim_size = 228167
@@ -715,7 +715,7 @@ skate9zones = {
 		zones = [
 		]
 	}
-	z_testlevel_tb = {
+	Z_TestLevel_TB = {
 		name = 'Z_TestLevel_TB'
 		extra_size = 19000
 		anim_size = 228167
@@ -724,9 +724,9 @@ skate9zones = {
 		zones = [
 		]
 	}
-	z_mocap = {
+	Z_Mocap = {
 		name = 'Z_Mocap'
-		params_struct = z_mocap_params
+		params_struct = Z_Mocap_Params
 		extra_size = 19000
 		anim_size = 228167
 		model_size = 286064
@@ -734,9 +734,9 @@ skate9zones = {
 		zones = [
 		]
 	}
-	z_bedroom = {
+	Z_Bedroom = {
 		name = 'Z_Bedroom'
-		params_struct = z_bedroom_params
+		params_struct = Z_Bedroom_Params
 		extra_size = 19000
 		anim_size = 228167
 		model_size = 286064
@@ -744,7 +744,7 @@ skate9zones = {
 		zones = [
 		]
 	}
-	z_mainmenu = {
+	Z_Mainmenu = {
 		name = 'Z_Mainmenu'
 		extra_size = 19000
 		anim_size = 228167
@@ -761,284 +761,284 @@ skate9zones = {
 		scene_size = 8656217
 		zones = [
 		]
-		pak_optional
+		PAK_OPTIONAL
 	}
 }
-skate8zones = {
-	z_cartoon = {
+Skate8Zones = {
+	Z_Cartoon = {
 		name = 'Z_Cartoon'
-		params_struct = z_cartoon_params
+		params_struct = Z_Cartoon_Params
 		extra_size = 19000
 		anim_size = 228167
 		model_size = 286064
 		scene_size = 8656217
 		zones = [
-			z_cretepark
-			z_funpark
-			z_parking
+			Z_Cretepark
+			Z_Funpark
+			Z_Parking
 		]
-		globallodzones = [
-			z_center_lod
-			z_citypark_lod
-			z_factory_lod
-			z_s8ghetto_lod
-			z_houses_lod
-			z_inschool_lod
-			z_outschool_lod
-			z_shops_lod
+		GlobalLODZones = [
+			Z_Center_LOD
+			Z_Citypark_LOD
+			Z_Factory_LOD
+			z_s8ghetto_LOD
+			Z_Houses_LOD
+			Z_InSchool_LOD
+			Z_OutSchool_LOD
+			Z_Shops_LOD
 		]
 	}
-	z_center = {
+	Z_Center = {
 		name = 'Z_Center'
-		params_struct = z_center_params
+		params_struct = Z_Center_Params
 		extra_size = 19000
 		anim_size = 228167
 		model_size = 286064
 		scene_size = 8656217
 		zones = [
-			z_shops
-			z_citypark
-			z_parking
+			Z_Shops
+			Z_Citypark
+			Z_Parking
 		]
-		globallodzones = [
-			z_cartoon_lod
-			z_cretepark_lod
-			z_factory_lod
-			z_funpark_lod
-			z_s8ghetto_lod
-			z_houses_lod
-			z_inschool_lod
-			z_outschool_lod
+		GlobalLODZones = [
+			Z_Cartoon_LOD
+			Z_Cretepark_LOD
+			Z_Factory_LOD
+			Z_Funpark_LOD
+			z_s8ghetto_LOD
+			Z_Houses_LOD
+			Z_InSchool_LOD
+			Z_OutSchool_LOD
 		]
 	}
-	z_citypark = {
+	Z_Citypark = {
 		name = 'Z_Citypark'
-		params_struct = z_citypark_params
+		params_struct = Z_Citypark_Params
 		extra_size = 19000
 		anim_size = 228167
 		model_size = 286064
 		scene_size = 8656217
 		zones = [
-			z_center
+			Z_Center
 			z_s8ghetto
-			z_factory
+			Z_Factory
 		]
-		globallodzones = [
-			z_cartoon_lod
-			z_cretepark_lod
-			z_funpark_lod
-			z_houses_lod
-			z_inschool_lod
-			z_outschool_lod
-			z_parking_lod
-			z_shops_lod
+		GlobalLODZones = [
+			Z_Cartoon_LOD
+			Z_Cretepark_LOD
+			Z_Funpark_LOD
+			Z_Houses_LOD
+			Z_InSchool_LOD
+			Z_OutSchool_LOD
+			Z_Parking_LOD
+			Z_Shops_LOD
 		]
 	}
-	z_cretepark = {
+	Z_Cretepark = {
 		name = 'Z_Cretepark'
-		params_struct = z_cretepark_params
+		params_struct = Z_Cretepark_Params
 		extra_size = 19000
 		anim_size = 228167
 		model_size = 286064
 		scene_size = 8656217
 		zones = [
-			z_houses
-			z_cartoon
-			z_outschool
+			Z_Houses
+			Z_Cartoon
+			Z_Outschool
 		]
-		globallodzones = [
-			z_center_lod
-			z_citypark_lod
-			z_factory_lod
-			z_funpark_lod
-			z_s8ghetto_lod
-			z_inschool_lod
-			z_parking_lod
-			z_shops_lod
+		GlobalLODZones = [
+			Z_Center_LOD
+			Z_Citypark_LOD
+			Z_Factory_LOD
+			Z_Funpark_LOD
+			z_s8ghetto_LOD
+			Z_InSchool_LOD
+			Z_Parking_LOD
+			Z_Shops_LOD
 		]
 	}
-	z_factory = {
+	Z_Factory = {
 		name = 'Z_Factory'
-		params_struct = z_factory_params
+		params_struct = Z_Factory_Params
 		extra_size = 19000
 		anim_size = 228167
 		model_size = 286064
 		scene_size = 8656217
 		zones = [
-			z_citypark
+			Z_Citypark
 			z_s8ghetto
 		]
-		globallodzones = [
-			z_cartoon_lod
-			z_center_lod
-			z_cretepark_lod
-			z_funpark_lod
-			z_houses_lod
-			z_inschool_lod
-			z_outschool_lod
-			z_parking_lod
-			z_shops_lod
+		GlobalLODZones = [
+			Z_Cartoon_LOD
+			Z_Center_LOD
+			Z_Cretepark_LOD
+			Z_Funpark_LOD
+			Z_Houses_LOD
+			Z_InSchool_LOD
+			Z_OutSchool_LOD
+			Z_Parking_LOD
+			Z_Shops_LOD
 		]
 	}
-	z_funpark = {
+	Z_Funpark = {
 		name = 'Z_Funpark'
-		params_struct = z_funpark_params
+		params_struct = Z_Funpark_Params
 		extra_size = 19000
 		anim_size = 228167
 		model_size = 286064
 		scene_size = 8656217
 		zones = [
-			z_parking
-			z_cartoon
+			Z_Parking
+			Z_Cartoon
 		]
-		globallodzones = [
-			z_center_lod
-			z_citypark_lod
-			z_cretepark_lod
-			z_factory_lod
-			z_s8ghetto_lod
-			z_houses_lod
-			z_inschool_lod
-			z_outschool_lod
-			z_shops_lod
+		GlobalLODZones = [
+			Z_Center_LOD
+			Z_Citypark_LOD
+			Z_Cretepark_LOD
+			Z_Factory_LOD
+			z_s8ghetto_LOD
+			Z_Houses_LOD
+			Z_InSchool_LOD
+			Z_OutSchool_LOD
+			Z_Shops_LOD
 		]
 	}
 	z_s8ghetto = {
 		name = 'z_s8ghetto'
-		params_struct = z_s8ghetto_params
+		params_struct = z_s8ghetto_Params
 		extra_size = 19000
 		anim_size = 228167
 		model_size = 286064
 		scene_size = 8656217
 		zones = [
-			z_inschool
-			z_citypark
-			z_factory
+			Z_Inschool
+			Z_Citypark
+			Z_Factory
 		]
-		globallodzones = [
-			z_cartoon_lod
-			z_center_lod
-			z_cretepark_lod
-			z_funpark_lod
-			z_houses_lod
-			z_outschool_lod
-			z_parking_lod
-			z_shops_lod
+		GlobalLODZones = [
+			Z_Cartoon_LOD
+			Z_Center_LOD
+			Z_Cretepark_LOD
+			Z_Funpark_LOD
+			Z_Houses_LOD
+			Z_OutSchool_LOD
+			Z_Parking_LOD
+			Z_Shops_LOD
 		]
 	}
-	z_houses = {
+	Z_Houses = {
 		name = 'Z_Houses'
-		params_struct = z_houses_params
+		params_struct = Z_Houses_Params
 		extra_size = 19000
 		anim_size = 228167
 		model_size = 286064
 		scene_size = 8656217
 		zones = [
-			z_shops
-			z_outschool
-			z_cretepark
+			Z_Shops
+			Z_Outschool
+			Z_Cretepark
 		]
-		globallodzones = [
-			z_cartoon_lod
-			z_center_lod
-			z_citypark_lod
-			z_factory_lod
-			z_funpark_lod
-			z_s8ghetto_lod
-			z_inschool_lod
-			z_parking_lod
+		GlobalLODZones = [
+			Z_Cartoon_LOD
+			Z_Center_LOD
+			Z_Citypark_LOD
+			Z_Factory_LOD
+			Z_Funpark_LOD
+			z_s8ghetto_LOD
+			Z_InSchool_LOD
+			Z_Parking_LOD
 		]
 	}
-	z_inschool = {
+	Z_Inschool = {
 		name = 'Z_Inschool'
-		params_struct = z_inschool_params
+		params_struct = Z_Inschool_Params
 		extra_size = 19000
 		anim_size = 228167
 		model_size = 286064
 		scene_size = 8656217
 		zones = [
-			z_outschool
-			z_shops
+			Z_Outschool
+			Z_Shops
 			z_s8ghetto
 		]
-		globallodzones = [
-			z_cartoon_lod
-			z_center_lod
-			z_citypark_lod
-			z_cretepark_lod
-			z_factory_lod
-			z_funpark_lod
-			z_houses_lod
-			z_parking_lod
+		GlobalLODZones = [
+			Z_Cartoon_LOD
+			Z_Center_LOD
+			Z_Citypark_LOD
+			Z_Cretepark_LOD
+			Z_Factory_LOD
+			Z_Funpark_LOD
+			Z_Houses_LOD
+			Z_Parking_LOD
 		]
 	}
-	z_outschool = {
+	Z_Outschool = {
 		name = 'Z_Outschool'
-		params_struct = z_outschool_params
+		params_struct = Z_Outschool_Params
 		extra_size = 19000
 		anim_size = 228167
 		model_size = 286064
 		scene_size = 8656217
 		zones = [
-			z_inschool
-			z_cretepark
-			z_houses
+			Z_Inschool
+			Z_Cretepark
+			Z_Houses
 		]
-		globallodzones = [
-			z_cartoon_lod
-			z_center_lod
-			z_citypark_lod
-			z_factory_lod
-			z_funpark_lod
-			z_s8ghetto_lod
-			z_parking_lod
-			z_shops_lod
+		GlobalLODZones = [
+			Z_Cartoon_LOD
+			Z_Center_LOD
+			Z_Citypark_LOD
+			Z_Factory_LOD
+			Z_Funpark_LOD
+			z_s8ghetto_LOD
+			Z_Parking_LOD
+			Z_Shops_LOD
 		]
 	}
-	z_parking = {
+	Z_Parking = {
 		name = 'Z_Parking'
-		params_struct = z_parking_params
+		params_struct = Z_Parking_Params
 		extra_size = 19000
 		anim_size = 228167
 		model_size = 286064
 		scene_size = 8656217
 		zones = [
-			z_center
-			z_funpark
-			z_cartoon
+			Z_Center
+			Z_Funpark
+			Z_Cartoon
 		]
-		globallodzones = [
-			z_citypark_lod
-			z_cretepark_lod
-			z_factory_lod
-			z_s8ghetto_lod
-			z_houses_lod
-			z_inschool_lod
-			z_outschool_lod
-			z_shops_lod
+		GlobalLODZones = [
+			Z_Citypark_LOD
+			Z_Cretepark_LOD
+			Z_Factory_LOD
+			z_s8ghetto_LOD
+			Z_Houses_LOD
+			Z_InSchool_LOD
+			Z_OutSchool_LOD
+			Z_Shops_LOD
 		]
 	}
-	z_shops = {
+	Z_Shops = {
 		name = 'Z_Shops'
-		params_struct = z_shops_params
+		params_struct = Z_Shops_Params
 		extra_size = 19000
 		anim_size = 228167
 		model_size = 286064
 		scene_size = 8656217
 		zones = [
-			z_houses
-			z_inschool
-			z_center
+			Z_Houses
+			Z_Inschool
+			Z_Center
 		]
-		globallodzones = [
-			z_cartoon_lod
-			z_citypark_lod
-			z_cretepark_lod
-			z_factory_lod
-			z_funpark_lod
-			z_s8ghetto_lod
-			z_outschool_lod
-			z_parking_lod
+		GlobalLODZones = [
+			Z_Cartoon_LOD
+			Z_Citypark_LOD
+			Z_Cretepark_LOD
+			Z_Factory_LOD
+			Z_Funpark_LOD
+			z_s8ghetto_LOD
+			Z_OutSchool_LOD
+			Z_Parking_LOD
 		]
 	}
 }

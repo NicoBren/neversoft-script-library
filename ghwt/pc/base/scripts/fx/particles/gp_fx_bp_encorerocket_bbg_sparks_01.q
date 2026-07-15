@@ -1,53 +1,53 @@
-gp_fx_bp_encorerocket_bbg_sparks_01 = {
+GP_FX_BP_EncoreRocket_BBG_Sparks_01 = {
 	pos = (-28.782347, 25.018358, 49.43626)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	emitrangedims = (0.3, 0.3, 0.3)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	EmitRangeDims = (0.3, 0.3, 0.3)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, -5.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	radiate
-	anglespread = 360.0
-	liferange = (1.3, 1.5)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	Radiate
+	AngleSpread = 360.0
+	LifeRange = (1.3, 1.5)
 	emit_rate = 200.0
 	max = 0
-	timeseed = 0.0
-	lifetime = 0.9
-	emitnum = 0
-	followemitter = 0.0
-	alwaysemit
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 0.9
+	emitNum = 0
+	FollowEmitter = 0.0
+	AlwaysEmit
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.2, 0.2)
 		(0.0, 0.0)
 	]
-	speedrange = (5.0, 7.0)
-	rotvel = (1.0, -1.0)
-	rotveltimescale = 1.0
-	emitdelaystart = 0.0
-	pathfollowtime = 0.0
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (5.0, 7.0)
+	RotVel = (1.0, -1.0)
+	RotVelTimeScale = 1.0
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.0
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -404481
-	lod_default
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = jow_spark02
-		specularpower = 0
+	LOD_Default
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = JOW_Spark02
+		SpecularPower = 0
 		bloom
 		alphacutoff = 1
-		blendmode = add
-		quadanimationfps = 0
+		blendMode = Add
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(1.004494, 0.0, -0.3009)
 		(1.004494, 0.0, -0.3009)
 		(0.33483106, 0.0, -0.1003)
@@ -55,13 +55,13 @@ gp_fx_bp_encorerocket_bbg_sparks_01 = {
 		(-1.004494, 0.0, 0.3009)
 		(-1.004494, 0.0, 0.3009)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-2448385
 		-1076756481
 		-2448385
 		-1076756481
 	]
-	vertexweight = [
+	VertexWeight = [
 		1.0
 	]
 }

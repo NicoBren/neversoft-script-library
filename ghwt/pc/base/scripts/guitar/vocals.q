@@ -156,7 +156,7 @@ vocal_tut_no_star_power = 0
 vocal_phrase_qualities = [
 	{
 		min = 0.0
-		text = qs(0xad88e646)
+		text = qs("BAD!")
 		round_to = 0
 		rgba = [
 			255
@@ -167,11 +167,11 @@ vocal_phrase_qualities = [
 		health = -4.0
 		sp_boost = 0.0
 		sp_max_health = 2.0
-		fx_script = vocals_end_phrase_bad_comet_fx
+		fx_script = vocals_end_phrase_BAD_comet_fx
 	}
 	{
 		min = 0.2
-		text = qs(0x989466aa)
+		text = qs("Weak")
 		rgba = [
 			255
 			140
@@ -181,11 +181,11 @@ vocal_phrase_qualities = [
 		health = -2.0
 		sp_boost = 0.0
 		sp_max_health = 2.0
-		fx_script = vocals_end_phrase_bad_comet_fx
+		fx_script = vocals_end_phrase_BAD_comet_fx
 	}
 	{
 		min = 0.4
-		text = qs(0x0e41fe46)
+		text = qs("OK")
 		rgba = [
 			255
 			255
@@ -195,11 +195,11 @@ vocal_phrase_qualities = [
 		health = 0.0
 		sp_boost = 0.0
 		sp_max_health = 2.0
-		fx_script = vocals_end_phrase_good_comet_fx
+		fx_script = vocals_end_phrase_GOOD_comet_fx
 	}
 	{
 		min = 0.6
-		text = qs(0x22f31f1b)
+		text = qs("Good")
 		rgba = [
 			255
 			255
@@ -209,11 +209,11 @@ vocal_phrase_qualities = [
 		health = 2
 		sp_boost = 8.0
 		sp_max_health = 2.0
-		fx_script = vocals_end_phrase_good_comet_fx
+		fx_script = vocals_end_phrase_GOOD_comet_fx
 	}
 	{
 		min = 0.8
-		text = qs(0x82bb7a47)
+		text = qs("EXCELLENT!")
 		rgba = [
 			0
 			255
@@ -223,7 +223,7 @@ vocal_phrase_qualities = [
 		health = 3
 		sp_boost = 25.0
 		sp_max_health = 2.0
-		fx_script = vocals_end_phrase_good_comet_fx
+		fx_script = vocals_end_phrase_GOOD_comet_fx
 	}
 ]
 vocal_score_inflation = 1
@@ -237,21 +237,21 @@ vocal_bot_semitones_off = 0
 vocal_enable_guitar_samples = 0
 vocal_enable_freeform_always = 0
 vocal_bot_with_mic = 0
-vocal_marker_freeform = qs(0x1cd6e13e)
-vocal_marker_freeform_0 = qs(0x1cd6e13e)
-vocal_marker_freeform_1 = qs(0x1cd6e13e)
-vocal_marker_freeform_2 = qs(0x1cd6e13e)
-vocal_marker_freeform_3 = qs(0x1cd6e13e)
-vocal_marker_freeform_4 = qs(0x1cd6e13e)
-vocal_marker_freeform_5 = qs(0x1cd6e13e)
-vocal_marker_freeform_6 = qs(0x1cd6e13e)
-vocal_marker_freeform_7 = qs(0x1cd6e13e)
-vocal_marker_freeform_8 = qs(0x1cd6e13e)
-vocal_marker_freeform_9 = qs(0x1cd6e13e)
-vocal_marker_freeform_10 = qs(0x1cd6e13e)
-vocal_marker_freeform_11 = qs(0x1cd6e13e)
-vocal_marker_freeform_12 = qs(0x1cd6e13e)
-vocal_marker_freeform_13 = qs(0x1cd6e13e)
+vocal_marker_freeform = qs("Freeform")
+vocal_marker_freeform_0 = qs("Freeform")
+vocal_marker_freeform_1 = qs("Freeform")
+vocal_marker_freeform_2 = qs("Freeform")
+vocal_marker_freeform_3 = qs("Freeform")
+vocal_marker_freeform_4 = qs("Freeform")
+vocal_marker_freeform_5 = qs("Freeform")
+vocal_marker_freeform_6 = qs("Freeform")
+vocal_marker_freeform_7 = qs("Freeform")
+vocal_marker_freeform_8 = qs("Freeform")
+vocal_marker_freeform_9 = qs("Freeform")
+vocal_marker_freeform_10 = qs("Freeform")
+vocal_marker_freeform_11 = qs("Freeform")
+vocal_marker_freeform_12 = qs("Freeform")
+vocal_marker_freeform_13 = qs("Freeform")
 vocal_marker_freeform_rgba = [
 	100
 	80
@@ -262,21 +262,21 @@ vocal_mic_invalid_dist = 0
 
 script vocals_start_mic 
 	printf \{'Vocals: Starting mic.'}
-	netsessionfunc \{func = voice_init}
-	netsessionfunc \{obj = voice
+	NetSessionFunc \{func = voice_init}
+	NetSessionFunc \{obj = voice
 		func = enable}
 endscript
 
 script vocals_init 
-	printf channel = sfx qs(0xc71fb922) p = <player>
+	printf channel = sfx qs("\L#####################   Setting the ui_options_audio_update_mic_volume from script vocals_init player=%p") p = <player>
 	ui_options_audio_update_mic_volume player = <player>
 endscript
 
 script vocals_set_mics_to_user_volumes 
-	gamemode_getnumplayersshown
+	GameMode_GetNumPlayersShown
 	<p> = 1
 	begin
-	if playerinfoequals <p> part = vocals
+	if PlayerInfoEquals <p> part = Vocals
 		ui_options_audio_update_mic_volume player = <p>
 	endif
 	<p> = (<p> + 1)
@@ -284,14 +284,14 @@ script vocals_set_mics_to_user_volumes
 endscript
 
 script controller_has_headset 
-	requireparams \{[
+	RequireParams \{[
 			controller
 		]
 		all}
 	if (<controller> > 3)
 		return \{false}
 	endif
-	if vocals_controllerhasusableheadset controller = <controller>
+	if Vocals_ControllerHasUsableHeadset controller = <controller>
 		return \{true}
 	endif
 	return \{false}
@@ -308,7 +308,7 @@ script get_num_mics_plugged_in
 	repeat 4
 	<mic> = 0
 	begin
-	if ismicrophonepluggedin number = <mic>
+	if IsMicrophonePluggedIn number = <mic>
 		<num_mics_plugged_in> = (<num_mics_plugged_in> + 1)
 	endif
 	<mic> = (<mic> + 1)
@@ -316,10 +316,10 @@ script get_num_mics_plugged_in
 	return num_mics_plugged_in = <num_mics_plugged_in>
 endscript
 
-script has_usb_mic_plugged_in 
+script has_USB_mic_plugged_in 
 	<mic> = 0
 	begin
-	if ismicrophonepluggedin number = <mic>
+	if IsMicrophonePluggedIn number = <mic>
 		return \{true}
 	endif
 	<mic> = (<mic> + 1)
@@ -329,22 +329,22 @@ endscript
 
 script vocals_distribute_mics 
 	change \{vocal_mic_invalid_dist = 0}
-	gamemode_getnumplayersshown
+	GameMode_GetNumPlayersShown
 	<i> = 1
 	begin
-	setplayerinfo <i> mic_type = none
+	SetPlayerInfo <i> mic_type = none
 	<i> = (<i> + 1)
 	repeat <num_players_shown>
 	vocals_get_num_vocalists_onscreen
-	gamemode_getproperty \{prop = faceoff}
-	vocals_getavailablemics
+	GameMode_GetProperty \{prop = faceoff}
+	Vocals_GetAvailableMics
 	<mic_types> = [mic0 mic1]
 	if ((<faceoff> = true) && (<num_vocalists_shown> > 1))
 		if (<available_mics> >= 2)
 			<i> = 1
 			<mic_idx> = 0
 			begin
-			if playerinfoequals <i> part = vocals
+			if PlayerInfoEquals <i> part = Vocals
 				vocals_safely_assign_mic player = <i> mic_type = (<mic_types> [<mic_idx>])
 				<mic_idx> = (<mic_idx> + 1)
 			endif
@@ -353,8 +353,8 @@ script vocals_distribute_mics
 		elseif (<available_mics> = 1)
 			<i> = 1
 			begin
-			if playerinfoequals <i> part = vocals
-				getplayerinfo <i> controller
+			if PlayerInfoEquals <i> part = Vocals
+				GetPlayerInfo <i> controller
 				if NOT controller_has_headset controller = <controller>
 					vocals_safely_assign_mic player = <i> mic_type = any_mic
 				else
@@ -372,7 +372,7 @@ script vocals_distribute_mics
 	elseif (<num_vocalists_shown> = 1)
 		<i> = 1
 		begin
-		if playerinfoequals <i> part = vocals
+		if PlayerInfoEquals <i> part = Vocals
 			break
 		endif
 		<i> = (<i> + 1)
@@ -391,10 +391,10 @@ script vocals_distribute_mics
 endscript
 
 script vocals_mic_distribution_is_valid 
-	gamemode_getnumplayersshown
+	GameMode_GetNumPlayersShown
 	<player> = 1
 	begin
-	if playerinfoequals <player> part = vocals
+	if PlayerInfoEquals <player> part = Vocals
 		if NOT vocals_player_has_mic player = <player>
 			return false invalid_mic_player = <player>
 		endif
@@ -405,14 +405,14 @@ script vocals_mic_distribution_is_valid
 endscript
 
 script vocals_safely_assign_mic 
-	requireparams \{[
+	RequireParams \{[
 			player
 			mic_type
 		]
 		all}
-	getplayerinfo <player> controller
+	GetPlayerInfo <player> controller
 	<is_valid_assignment> = 1
-	if playerinfoequals <player> bot_play = 1
+	if PlayerInfoEquals <player> bot_play = 1
 		<is_valid_assignment> = 0
 	endif
 	switch <mic_type>
@@ -421,16 +421,16 @@ script vocals_safely_assign_mic
 			<is_valid_assignment> = 0
 		endif
 		case mic0
-		if NOT ismicrophonepluggedin \{number = 0}
+		if NOT IsMicrophonePluggedIn \{number = 0}
 			<is_valid_assignment> = 0
 		endif
 		case mic1
-		if NOT ismicrophonepluggedin \{number = 1}
+		if NOT IsMicrophonePluggedIn \{number = 1}
 			<is_valid_assignment> = 0
 		endif
 		case any_mic
-		if NOT ismicrophonepluggedin \{number = 0}
-			if NOT ismicrophonepluggedin \{number = 1}
+		if NOT IsMicrophonePluggedIn \{number = 0}
+			if NOT IsMicrophonePluggedIn \{number = 1}
 				<is_valid_assignment> = 0
 			else
 				<mic_type> = mic1
@@ -442,33 +442,33 @@ script vocals_safely_assign_mic
 		<is_valid_assignment> = 0
 	endswitch
 	if (<is_valid_assignment> = 1)
-		setplayerinfo <player> mic_type = <mic_type>
+		SetPlayerInfo <player> mic_type = <mic_type>
 	else
-		setplayerinfo <player> mic_type = none
+		SetPlayerInfo <player> mic_type = none
 	endif
 endscript
 
 script vocals_player_has_mic 
-	requireparams \{[
+	RequireParams \{[
 			player
 		]
 		all}
-	if NOT playerinfoequals <player> part = vocals
-		softassert 'Player %p is not playing vocals' p = <player>
+	if NOT PlayerInfoEquals <player> part = Vocals
+		SoftAssert 'Player %p is not playing vocals' p = <player>
 		return \{false}
 	endif
-	getplayerinfo <player> mic_type
+	GetPlayerInfo <player> mic_type
 	if (<mic_type> = headset)
-		getplayerinfo <player> controller
+		GetPlayerInfo <player> controller
 		if NOT controller_has_headset controller = <controller>
 			return \{false}
 		endif
 	elseif (<mic_type> = mic0)
-		if NOT ismicrophonepluggedin \{number = 0}
+		if NOT IsMicrophonePluggedIn \{number = 0}
 			return \{false}
 		endif
 	elseif (<mic_type> = mic1)
-		if NOT ismicrophonepluggedin \{number = 1}
+		if NOT IsMicrophonePluggedIn \{number = 1}
 			return \{false}
 		endif
 	elseif (<mic_type> = none)
@@ -481,7 +481,7 @@ script vocals_get_num_vocalists
 	<num_vocalists> = 0
 	<i> = 1
 	begin
-	if playerinfoequals <i> part = vocals
+	if PlayerInfoEquals <i> part = Vocals
 		<num_vocalists> = (<num_vocalists> + 1)
 	endif
 	<i> = (<i> + 1)
@@ -490,11 +490,11 @@ script vocals_get_num_vocalists
 endscript
 
 script vocals_get_num_vocalists_onscreen 
-	gamemode_getnumplayersshown
+	GameMode_GetNumPlayersShown
 	<num_vocalists_shown> = 0
 	<i> = 1
 	begin
-	if playerinfoequals <i> part = vocals
+	if PlayerInfoEquals <i> part = Vocals
 		<num_vocalists_shown> = (<num_vocalists_shown> + 1)
 	endif
 	<i> = (<i> + 1)
@@ -504,13 +504,13 @@ endscript
 
 script get_num_non_vocals_players_onscreen 
 	vocals_get_num_vocalists_onscreen
-	gamemode_getnumplayersshown
+	GameMode_GetNumPlayersShown
 	return num_non_vocals_players = (<num_players_shown> - <num_vocalists_shown>)
 endscript
 
 script vocals_activate_starpower 
 	if ($is_attract_mode = 0)
-		gamemode_gettype
+		GameMode_GetType
 		if (<type> != training)
 			spawnscriptnow star_power_activate_and_drain params = {player_status = <player_status> player = <player> player_text = ($<player_status>.text)}
 		endif
@@ -523,19 +523,19 @@ script vocals_mute_all_mics \{mute = true}
 			mute = true
 		endif
 	endif
-	gamemode_getnumplayersshown
+	GameMode_GetNumPlayersShown
 	<p> = 1
 	begin
-	if playerinfoequals <p> part = vocals
+	if PlayerInfoEquals <p> part = Vocals
 		printf 'Vocals player %p mute=%m' p = <p> m = <mute>
-		vocals_muteoutput player = <p> mute = <mute>
+		Vocals_MuteOutput player = <p> mute = <mute>
 	endif
 	<p> = (<p> + 1)
 	repeat <num_players_shown>
 endscript
 
 script is_mic_volume_shared 
-	gamemode_getproperty \{prop = faceoff}
+	GameMode_GetProperty \{prop = faceoff}
 	if (<faceoff> = true)
 		return \{false}
 	else
@@ -544,27 +544,27 @@ script is_mic_volume_shared
 endscript
 
 script vocals_ingame_change_mic_volume 
-	requireparams \{[
+	RequireParams \{[
 			change
 			player
 		]
 		all}
 	if is_mic_volume_shared
-		if NOT playerinfoequals <player> controller = ($primary_controller)
-			getplayerinfo <player> controller
+		if NOT PlayerInfoEquals <player> controller = ($primary_controller)
+			GetPlayerInfo <player> controller
 			printf 'Vocals: Player %p (controller %c) cannot change mic volume. Primary controller %d' p = <player> c = <controller> d = ($primary_controller)
 			return
 		endif
 	endif
-	getplayerinfo <player> checksum
+	GetPlayerInfo <player> checksum
 	get_savegame_from_player_status player_status = <checksum>
-	getglobaltags savegame = <savegame> user_options param = volumes
+	GetGlobalTags savegame = <savegame> user_options param = volumes
 	mic_volume = (<volumes>.guitar.mic.vol)
-	changespinaltapvolume spinal_tap_volume = <mic_volume> change = <change>
+	ChangeSpinalTapVolume spinal_tap_volume = <mic_volume> change = <change>
 	mic_struct = {(<volumes>.guitar.mic) vol = <volume>}
 	dummy_struct = {(<volumes>.guitar) mic = <mic_struct>}
 	volumes = {<volumes> guitar = <dummy_struct>}
-	setglobaltags savegame = <savegame> user_options params = {volumes = <volumes>}
+	SetGlobalTags savegame = <savegame> user_options params = {volumes = <volumes>}
 	if (<mic_volume> = <volume>)
 		return
 	endif
@@ -575,7 +575,7 @@ script vocals_ingame_change_mic_volume
 	else
 		<rgba> = [240 96 96 255]
 	endif
-	formattext textname = text qs(0xfeedb846) d = <volume>
+	FormatText TextName = text qs("MIC VOLUME %d") d = <volume>
 	vocals_message {
 		player = <player>
 		text = <text>
@@ -584,7 +584,7 @@ script vocals_ingame_change_mic_volume
 endscript
 
 script vocals_controller_uses_headset_for_singing 
-	requireparams \{[
+	RequireParams \{[
 			controller
 		]
 		all}
@@ -592,11 +592,11 @@ script vocals_controller_uses_headset_for_singing
 	if (<player_num> = -1)
 		return \{false}
 	endif
-	getplayerinfo <player_num> part
-	if (<part> != vocals)
+	GetPlayerInfo <player_num> part
+	if (<part> != Vocals)
 		return \{false}
 	endif
-	getplayerinfo <player_num> mic_type
+	GetPlayerInfo <player_num> mic_type
 	if (<mic_type> != headset)
 		return \{false}
 	endif
@@ -611,24 +611,24 @@ script vocals_controller_uses_headset_for_singing
 endscript
 
 script vocals_set_star_power_clap 
-	requireparams \{[
+	RequireParams \{[
 			player
 			clap
 		]
 		all}
-	setplayerinfo <player> vocals_sp_clap = <clap>
+	SetPlayerInfo <player> vocals_sp_clap = <clap>
 	get_savegame_from_controller controller = <controller>
-	setglobaltags savegame = <savegame> user_options params = {vocals_sp_clap_save = <clap>}
+	SetGlobalTags savegame = <savegame> user_options params = {vocals_sp_clap_save = <clap>}
 endscript
 
 script vocals_get_lag_calibration 
 	<gem_offset> = ($time_gem_offset)
 	<input_offset> = ($time_input_offset + $vocal_pitch_detection_lag)
-	getglobaltags \{user_options
+	GetGlobalTags \{user_options
 		attract_mode_fix = 1}
 	if (<lag_calibration> > 999)
-		mod a = <lag_calibration> b = 1000
-		<video_offset> = (0 - <mod>)
+		Mod a = <lag_calibration> b = 1000
+		<video_offset> = (0 - <Mod>)
 		<audio_offset> = ((<lag_calibration> / 1000) - 1)
 		<input_offset> = (<input_offset> - <audio_offset>)
 		<gem_offset> = (<gem_offset> - <audio_offset>)

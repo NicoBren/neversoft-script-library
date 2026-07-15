@@ -1,62 +1,62 @@
-gp_starpower_butterflies01 = {
+GP_StarPower_Butterflies01 = {
 	pos = (0.35688803, 40.385303, 0.071379)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = v
 	active
-	createdatstart
+	CreatedAtStart
 	attach
-	attachobject = guitarist
-	bone = bone_pelvis
-	emitrangedims = (0.7, 0.7, 0.7)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	AttachObject = Guitarist
+	bone = Bone_Pelvis
+	EmitRangeDims = (0.7, 0.7, 0.7)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, 0.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 1.0
-	perparticlewind
-	emittervelocityweight = 0.0
-	radiate
-	elevspread = (90.0, 90.0)
-	sweepspread = (0.0, 360.0)
-	liferange = (2.0, 2.5)
+	WindCoeff = 0.0
+	LocalWindCoeff = 1.0
+	PerParticleWind
+	EmitterVelocityWeight = 0.0
+	Radiate
+	ElevSpread = (90.0, 90.0)
+	SweepSpread = (0.0, 360.0)
+	LifeRange = (2.0, 2.5)
 	emit_rate = 2.0
 	max = 0
-	timeseed = 0.5
-	lifetime = 0.0
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.5
+	lifeTime = 0.0
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.7, 0.2)
 		(0.2, 0.2)
 	]
-	depthrange = (0.2, 0.2)
-	speedrange = (0.5, 1.0)
-	rotvel = (0.0, 0.0)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	alignwithpath
-	pathfollowtime = 0.0
-	history = 2
-	historylistcoordinatespace = world
+	DepthRange = (0.2, 0.2)
+	SpeedRange = (0.5, 1.0)
+	RotVel = (0.0, 0.0)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	AlignWithPath
+	PathFollowTime = 0.0
+	History = 2
+	HistoryListCoordinateSpace = world
 	align_to = (1.0, 0.0, 0.0)
 	color = -1
-	novisibilitytest
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = jow_butterflies01
-		specularpower = 0
-		twoside
+	NoVisibilityTest
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = JOW_Butterflies01
+		SpecularPower = 0
+		TwoSide
 		alphacutoff = 48
-		blendmode = blend
-		burn
-		burnvalue = 0.7
-		quadanimationfps = 15
+		blendMode = blend
+		Burn
+		BurnValue = 0.7
+		QuadAnimationFPS = 15
 	}
-	knot = [
+	Knot = [
 		(-5.710207, 0.0, -0.28551)
 		(-5.710207, 0.0, -0.28551)
 		(-5.3715625, 0.0, -0.26898497)
@@ -70,7 +70,7 @@ gp_starpower_butterflies01 = {
 		(5.852962, 0.0, 0.142755)
 		(5.852962, 0.0, 0.142755)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-256
 		-256
 		-1
@@ -80,22 +80,22 @@ gp_starpower_butterflies01 = {
 		-256
 		-256
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.08788499
 		0.759228
 		1.0
 	]
-	updatescript = starpower_butterflies
+	UpdateScript = starPower_Butterflies
 	params = {
-		sminw = 1.0
-		smaxw = 0.2
-		eminw = 0.2
-		emaxw = 0.1
-		sminh = 0.05
-		smaxh = 0.5
-		eminh = 0.02
-		emaxh = 0.1
-		cycletime = 0.2
-		updatetime = 0.02
+		sMinW = 1.0
+		sMaxW = 0.2
+		eMinW = 0.2
+		eMaxW = 0.1
+		sMinH = 0.05
+		sMaxH = 0.5
+		eMinH = 0.02
+		eMaxH = 0.1
+		cycleTime = 0.2
+		updateTime = 0.02
 	}
 }

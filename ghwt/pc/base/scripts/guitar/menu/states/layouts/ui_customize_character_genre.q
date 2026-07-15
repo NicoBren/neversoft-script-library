@@ -1,18 +1,18 @@
 
 script ui_create_customize_character_genre 
-	make_generic_menu \{title = qs(0x5f98cef0)
+	make_generic_menu \{title = qs("Select Genre")
 		vmenu_id = create_customize_character_genre_vmenu}
-	create_ui_history_header \{text = qs(0x5f98cef0)
+	create_ui_history_header \{text = qs("Select Genre")
 		num_icons = 1}
 	setup_cas_menu_handlers_restricted \{vmenu_id = create_customize_character_genre_vmenu}
-	getarraysize ($genre_list)
+	GetArraySize ($Genre_List)
 	i = 0
 	begin
 	add_generic_menu_text_item {
-		text = (($genre_list) [<i>].frontend_desc)
+		text = (($Genre_List) [<i>].frontend_desc)
 		pad_choose_script = <choose_script>
 		additional_focus_script = select_genre
-		additional_focus_params = {genre = (($genre_list) [<i>].desc_id)}
+		additional_focus_params = {genre = (($Genre_List) [<i>].desc_id)}
 	}
 	i = (<i> + 1)
 	repeat <array_size>
@@ -24,9 +24,9 @@ script ui_destroy_customize_character_genre
 endscript
 
 script select_genre 
-	requireparams \{[
+	RequireParams \{[
 			genre
 		]
 		all}
-	editcasappearance target = setgenre targetparams = {genre = <genre>}
+	EditCASAppearance target = SetGenre targetParams = {genre = <genre>}
 endscript

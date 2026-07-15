@@ -26,7 +26,7 @@ Generic_COIM_Params = {
 	COIM_Kill_Priority = $COIM_Priority_NonPermanent
 	COIM_Initial_Num_Perm_Objects = 36
 	COIM_Permanent_Cleanup_Relevance = 0.5
-	COIM_Type_ID = Generic
+	COIM_Type_ID = generic
 }
 Spawner_Cleanup_Relevance_Amount = 0.4
 Spawner_Cleanup_Min_Count = 2

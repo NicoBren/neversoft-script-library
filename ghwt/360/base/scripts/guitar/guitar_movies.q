@@ -5,24 +5,24 @@ script create_movie_viewport
 endscript
 jumbotron_viewport_params = {
 	viewport = jumbotron_viewport
-	textureasset = `tex\zones\metalfest\jg_mf_tvscreen_d.dds`
+	textureasset = `tex\zones\Metalfest\JG_MF_TVScreen_D.dds`
 	style = jumbotron_rendering
-	Name = jumbotron_cam
+	name = jumbotron_cam
 }
-current_jumbotron = None
+current_jumbotron = none
 
 script create_jumbotron 
-	printf \{qs(0x646713ed)}
+	printf \{qs("\Lcreate_jumbotron")}
 	GetPakManCurrentName \{map = zones}
 	jumbotron = jumbotron_viewport_params
-	if NOT GlobalExists Name = <jumbotron>
+	if NOT GlobalExists name = <jumbotron>
 		return
 	endif
 	AddParams ($<jumbotron>)
-	formatText checksumName = texdict 'zones/%s/%t.tex' s = <pakname> t = <pakname>
-	formatText checksumName = zone_context '%t' t = <pakname>
+	FormatText checksumname = texdict 'zones/%s/%t.tex' s = <pakname> t = <pakname>
+	FormatText checksumname = zone_context '%t' t = <pakname>
 	PushAssetContext context = <zone_context>
-	if NOT isassetloaded Name = <texdict>
+	if NOT IsAssetLoaded name = <texdict>
 		printf \{'Zone texdict not found for jumbotron'}
 		PopAssetContext
 		return
@@ -33,28 +33,28 @@ script create_jumbotron
 		return
 	endif
 	PopAssetContext
-	formatText checksumName = cameraparams '%s_cameras_closeups' s = <pakname>
-	if NOT GlobalExists Name = <cameraparams>
-		formatText checksumName = cameraparams '%s_cameras_singer' s = <pakname>
-		if NOT GlobalExists Name = <cameraparams>
-			printf \{qs(0x78c7dc47)}
+	FormatText checksumname = cameraparams '%s_cameras_closeups' s = <pakname>
+	if NOT GlobalExists name = <cameraparams>
+		FormatText checksumname = cameraparams '%s_cameras_singer' s = <pakname>
+		if NOT GlobalExists name = <cameraparams>
+			printf \{qs("\LCameras not found")}
 			return
 		endif
 	endif
-	Change current_jumbotron = $<jumbotron>
-	printf \{qs(0x998e9bb6)}
-	createviewport {
-		Priority = 6
+	change current_jumbotron = $<jumbotron>
+	printf \{qs("\LCreating Viewport")}
+	CreateViewport {
+		priority = 6
 		id = <viewport>
 		style = <style>
 		jiggle_rendering = 2
 		use_lod_shader = true
 	}
-	printf \{qs(0xd1c957d2)}
-	Change jumbotron_camera_params = $<cameraparams>
-	Change \{jumbotron_camera_index = 0}
+	printf \{qs("\LPlaying IGC Cam")}
+	change jumbotron_camera_params = $<cameraparams>
+	change \{jumbotron_camera_index = 0}
 	jumbotron_camera_startcallback <...>
-	printf \{qs(0xe77df91d)}
+	printf \{qs("\LMapping rendertarget")}
 	SetSearchAllAssetContexts
 	CreateViewportTextureOverride {
 		id = <viewport>
@@ -62,38 +62,38 @@ script create_jumbotron
 		texture = <textureasset>
 		texdict = <texdict>
 	}
-	SetSearchAllAssetContexts \{OFF}
-	printf \{qs(0xd3ab36ed)}
+	SetSearchAllAssetContexts \{off}
+	printf \{qs("\Lcreate_jumbotron done")}
 endscript
 jumbotron_camera_index = 0
-jumbotron_camera_params = None
+jumbotron_camera_params = none
 
 script jumbotron_camera_startcallback 
 	jumbotron = $current_jumbotron
-	if (<jumbotron> = None)
+	if (<jumbotron> = none)
 		return
 	endif
 	AddParams (<jumbotron>)
 	current_index = ($jumbotron_camera_index)
 	GetArraySize ($jumbotron_camera_params)
 	current_index = (<current_index> + 1)
-	if (<current_index> = <array_Size>)
+	if (<current_index> = <array_size>)
 		current_index = 0
 	endif
-	Change jumbotron_camera_index = <current_index>
-	if ($debug_showcameraname = On)
+	change jumbotron_camera_index = <current_index>
+	if ($debug_showcameraname = on)
 		CameraCuts_UpdateDebugCameraName
 	endif
 	force_time = 5
-	if StructureContains structure = (($jumbotron_camera_params) [<current_index>]) params
+	if StructureContains Structure = (($jumbotron_camera_params) [<current_index>]) params
 		params = {(($jumbotron_camera_params) [<current_index>].params) force_time = <force_time>}
 	else
 		params = {CamParams = (($jumbotron_camera_params) [<current_index>]) force_time = <force_time>}
 	endif
 	PlayIGCCam {
-		Name = <Name>
+		name = <name>
 		viewport = <viewport>
-		LockTo = World
+		LockTo = world
 		controlscript = CameraCuts_StaticCamControl
 		(($jumbotron_camera_params) [<current_index>])
 		params = <params>
@@ -102,18 +102,18 @@ script jumbotron_camera_startcallback
 endscript
 
 script destroy_jumbotron 
-	printf \{qs(0xaff0ac37)}
+	printf \{qs("\Ldestroy_jumbotron")}
 	jumbotron = $current_jumbotron
-	if (<jumbotron> = None)
+	if (<jumbotron> = none)
 		return
 	endif
 	AddParams (<jumbotron>)
-	KillCamAnim Name = <Name>
+	KillCamAnim name = <name>
 	SetSearchAllAssetContexts
 	DestroyViewportTextureOverride id = <viewport>
-	SetSearchAllAssetContexts \{OFF}
+	SetSearchAllAssetContexts \{off}
 	DestroyViewport id = <viewport>
-	Change \{current_jumbotron = None}
+	change \{current_jumbotron = none}
 endscript
 
 script destroy_movie_viewport 
@@ -123,18 +123,18 @@ endscript
 magazine_viewport_props = {
 	texture = magazine1_viewport
 	viewport = magazine_viewport
-	Camera = magazine_camera
+	camera = magazine_camera
 	texoverride = magazine_texoverride
 	textureasset = magazine1_viewport
 	style = magazine_rendering
 }
 
 script create_magazine_viewport 
-	printf \{qs(0xbf2057a1)}
+	printf \{qs("\Lcreate_magazine_viewport")}
 	destroy_magazine_viewport
 	AddParams ($magazine_viewport_props)
-	createviewport {
-		Priority = 6
+	CreateViewport {
+		priority = 6
 		id = <viewport>
 		style = <style>
 	}
@@ -145,95 +145,95 @@ script create_magazine_viewport
 		texture = <textureasset>
 		texdict = <texdict>
 	}
-	SetSearchAllAssetContexts \{OFF}
+	SetSearchAllAssetContexts \{off}
 	GetPakManCurrentName \{map = zones}
 	<part> = $current_progression_flag
 	switch $current_progression_flag
-		case career_band
+		case Career_Band
 		PlayIGCCam {
-			Name = <Camera>
+			name = <camera>
 			viewport = <viewport>
-			LockTo = drummer
-			Pos = (-2.97686, 0.521859, 4.564908)
+			LockTo = Drummer
+			pos = (-2.97686, 0.521859, 4.564908)
 			Quat = (-0.078003004, 0.866874, 0.143193)
 			FOV = 102.0
-			LookAt = drummer
+			LookAt = Drummer
 			ScreenOffset = (-0.46714398, 0.784728)
-			play_hold = 1
+			Play_hold = 1
 			interrupt_current
 		}
-		case career_guitar
+		case Career_Guitar
 		PlayIGCCam {
-			Name = <Camera>
+			name = <camera>
 			viewport = <viewport>
-			LockTo = GUITARIST
-			LockToBone = bone_chest
-			LookAt = GUITARIST
-			LookAtBone = bone_head
-			Pos = (-0.156578, 1.539315, 0.349303)
+			LockTo = Guitarist
+			LockToBone = Bone_Chest
+			LookAt = Guitarist
+			LookAtBone = Bone_Head
+			pos = (-0.156578, 1.539315, 0.349303)
 			Quat = (0.50972605, 0.56738, -0.38740703)
 			FOV = 50.0
-			play_hold = 1
+			Play_hold = 1
 			interrupt_current
 		}
-		case career_bass
+		case Career_Bass
 		PlayIGCCam {
-			Name = <Camera>
+			name = <camera>
 			viewport = <viewport>
-			LockTo = BASSIST
-			LockToBone = bone_chest
-			LookAt = BASSIST
-			LookAtBone = bone_head
-			Pos = (-0.156578, 1.539315, 0.349303)
+			LockTo = bassist
+			LockToBone = Bone_Chest
+			LookAt = bassist
+			LookAtBone = Bone_Head
+			pos = (-0.156578, 1.539315, 0.349303)
 			Quat = (0.50972605, 0.56738, -0.38740703)
 			FOV = 50.0
-			play_hold = 1
+			Play_hold = 1
 			interrupt_current
 		}
-		case career_vocals
+		case Career_Vocals
 		PlayIGCCam {
-			Name = <Camera>
+			name = <camera>
 			viewport = <viewport>
 			LockTo = vocalist
-			LockToBone = bone_chest
+			LockToBone = Bone_Chest
 			LookAt = vocalist
-			LookAtBone = bone_head
-			Pos = (-0.156578, 1.539315, 0.349303)
+			LookAtBone = Bone_Head
+			pos = (-0.156578, 1.539315, 0.349303)
 			Quat = (0.50972605, 0.56738, -0.38740703)
 			FOV = 50.0
-			play_hold = 1
+			Play_hold = 1
 			interrupt_current
 		}
-		case career_drum
+		case Career_Drum
 		PlayIGCCam {
-			Name = <Camera>
+			name = <camera>
 			viewport = <viewport>
-			LockTo = drummer
-			Pos = (-0.198893, 1.620875, 1.059207)
+			LockTo = Drummer
+			pos = (-0.198893, 1.620875, 1.059207)
 			Quat = (0.053802997, 0.93876696, -0.23057601)
 			FOV = 82.0
-			LookAt = drummer
+			LookAt = Drummer
 			ScreenOffset = (-0.27065602, 1.2902452)
-			play_hold = 1
+			Play_hold = 1
 			interrupt_current
 		}
 		default
 		PlayIGCCam {
-			Name = <Camera>
+			name = <camera>
 			viewport = <viewport>
-			LockTo = GUITARIST
-			LockToBone = bone_chest
-			LookAt = GUITARIST
-			LookAtBone = bone_head
-			Pos = (-0.156578, 1.539315, 0.349303)
+			LockTo = Guitarist
+			LockToBone = Bone_Chest
+			LookAt = Guitarist
+			LookAtBone = Bone_Head
+			pos = (-0.156578, 1.539315, 0.349303)
 			Quat = (0.50972605, 0.56738, -0.38740703)
 			FOV = 50.0
-			play_hold = 1
+			Play_hold = 1
 			interrupt_current
 		}
 	endswitch
 	SetViewportProperties \{viewport = magazine_viewport
-		Active = FALSE}
+		active = false}
 endscript
 magazine_picture_props = [
 	{
@@ -249,7 +249,7 @@ magazine_picture_props = [
 	{
 		num_players = 1
 		band_members = [
-			BASSIST
+			bassist
 		]
 		anims = [
 			b_winposes01
@@ -259,7 +259,7 @@ magazine_picture_props = [
 	{
 		num_players = 1
 		band_members = [
-			drummer
+			Drummer
 		]
 		anims = [
 			d_winposes01
@@ -269,7 +269,7 @@ magazine_picture_props = [
 	{
 		num_players = 1
 		band_members = [
-			GUITARIST
+			Guitarist
 		]
 		anims = [
 			g_winposes01
@@ -280,7 +280,7 @@ magazine_picture_props = [
 		num_players = 2
 		band_members = [
 			vocalist
-			BASSIST
+			bassist
 		]
 		anims = [
 			sb_winposes01
@@ -290,7 +290,7 @@ magazine_picture_props = [
 		num_players = 2
 		band_members = [
 			vocalist
-			GUITARIST
+			Guitarist
 		]
 		anims = [
 			sg_winposes01
@@ -300,7 +300,7 @@ magazine_picture_props = [
 		num_players = 2
 		band_members = [
 			vocalist
-			drummer
+			Drummer
 		]
 		anims = [
 			sd_winposes01
@@ -309,8 +309,8 @@ magazine_picture_props = [
 	{
 		num_players = 2
 		band_members = [
-			GUITARIST
-			BASSIST
+			Guitarist
+			bassist
 		]
 		anims = [
 			gb_winposes01
@@ -319,8 +319,8 @@ magazine_picture_props = [
 	{
 		num_players = 2
 		band_members = [
-			GUITARIST
-			drummer
+			Guitarist
+			Drummer
 		]
 		anims = [
 			gd_winposes01
@@ -329,8 +329,8 @@ magazine_picture_props = [
 	{
 		num_players = 2
 		band_members = [
-			BASSIST
-			drummer
+			bassist
+			Drummer
 		]
 		anims = [
 			bd_winposes01
@@ -340,8 +340,8 @@ magazine_picture_props = [
 		num_players = 3
 		band_members = [
 			vocalist
-			drummer
-			GUITARIST
+			Drummer
+			Guitarist
 		]
 		anims = [
 			sdg_winposes01
@@ -351,8 +351,8 @@ magazine_picture_props = [
 		num_players = 3
 		band_members = [
 			vocalist
-			drummer
-			BASSIST
+			Drummer
+			bassist
 		]
 		anims = [
 			sdb_winposes01
@@ -362,8 +362,8 @@ magazine_picture_props = [
 		num_players = 3
 		band_members = [
 			vocalist
-			GUITARIST
-			BASSIST
+			Guitarist
+			bassist
 		]
 		anims = [
 			sgb_winposes01
@@ -372,9 +372,9 @@ magazine_picture_props = [
 	{
 		num_players = 3
 		band_members = [
-			drummer
-			GUITARIST
-			BASSIST
+			Drummer
+			Guitarist
+			bassist
 		]
 		anims = [
 			dgb_winposes01
@@ -384,9 +384,9 @@ magazine_picture_props = [
 		num_players = 4
 		band_members = [
 			vocalist
-			GUITARIST
-			BASSIST
-			drummer
+			Guitarist
+			bassist
+			Drummer
 		]
 		anims = [
 			sgbd_winposes01
@@ -395,9 +395,9 @@ magazine_picture_props = [
 ]
 
 script grab_magazine_viewport \{select_index = -1}
-	printf \{qs(0x90aa5f6b)}
+	printf \{qs("\Lgrab_magazine_viewport")}
 	GetArraySize ($magazine_picture_props)
-	magazine_size = <array_Size>
+	magazine_size = <array_size>
 	index = 0
 	begin
 	if ($magazine_picture_props [<index>].num_players = $current_num_players)
@@ -406,19 +406,19 @@ script grab_magazine_viewport \{select_index = -1}
 		member_index = 0
 		begin
 		found = 0
-		Player = 1
+		player = 1
 		begin
-		formatText checksumName = player_status 'player%i_status' i = <Player>
+		FormatText checksumname = player_status 'player%i_status' i = <player>
 		if ($<player_status>.band_member = ($magazine_picture_props [<index>].band_members [<member_index>]))
 			found = 1
 		endif
-		Player = (<Player> + 1)
+		player = (<player> + 1)
 		repeat ($current_num_players)
 		if (<found> = 0)
 			invalid = 1
 		endif
 		member_index = (<member_index> + 1)
-		repeat <array_Size>
+		repeat <array_size>
 		if (<invalid> = 0)
 			break
 		endif
@@ -428,17 +428,17 @@ script grab_magazine_viewport \{select_index = -1}
 	if (<index> >= <magazine_size>)
 		index = 3
 	endif
-	printf qs(0x547efd22) i = <index>
+	printf qs("\LFound Magazine index %i") i = <index>
 	if (<select_index> != -1)
 		index = <select_index>
-		printf qs(0xf294df10) i = <index>
+		printf qs("\LForcing to Magazine index %i") i = <index>
 	endif
 	AddParams ($magazine_picture_props [<index>])
 	GetArraySize <anims>
-	GetRandomValue Name = rand_index integer a = 0 b = (<array_Size> - 1)
-	anim = (<anims> [<rand_index>])
-	printf qs(0xcb15e5e4) i = <anim>
-	Hide_Band
+	GetRandomValue name = rand_index Integer a = 0 b = (<array_size> - 1)
+	Anim = (<anims> [<rand_index>])
+	printf qs("\LPlaying Magazine anim %i") i = <Anim>
+	hide_band
 	GetArraySize (<band_members>)
 	member_index = 0
 	begin
@@ -447,62 +447,62 @@ script grab_magazine_viewport \{select_index = -1}
 		suffix = ''
 	else
 		switch <band_member>
-			case drummer
+			case Drummer
 			suffix = '_d'
-			case BASSIST
+			case bassist
 			suffix = '_b'
 			case vocalist
 			suffix = '_s'
-			case GUITARIST
+			case Guitarist
 			default
 			suffix = '_g'
 		endswitch
 	endif
-	if CompositeObjectExists Name = <band_member>
-		ExtendCrc <anim> <suffix> out = anim_name
+	if CompositeObjectExists name = <band_member>
+		ExtendCRC <Anim> <suffix> out = anim_name
 		target_params = {}
-		if (<band_member> = drummer)
+		if (<band_member> = Drummer)
 			target_params = {target = moment_branch}
 		endif
 		<band_member> :unhide
-		<band_member> :GameObj_PlayAnim anim = <anim_name> BlendDuration = 0 <target_params>
-		<band_member> :Ragdoll_MarkForReset
-		band_movetonode Name = <band_member> node = 'vocalist_start'
+		<band_member> :GameObj_PlayAnim Anim = <anim_name> BlendDuration = 0 <target_params>
+		<band_member> :ragdoll_markforreset
+		Band_MoveToNode name = <band_member> node = 'vocalist_start'
 	endif
 	member_index = (<member_index> + 1)
-	repeat <array_Size>
-	ExtendCrc <anim> '_c01' out = camera_anim_name
+	repeat <array_size>
+	ExtendCRC <Anim> '_c01' out = camera_anim_name
 	lock_target = vocalist_mocap_lock_target_01
-	<lock_target> :GameObj_PlayAnim anim = <camera_anim_name> BlendDuration = 0
+	<lock_target> :GameObj_PlayAnim Anim = <camera_anim_name> BlendDuration = 0
 	AddParams ($magazine_viewport_props)
 	if (<select_index> != -1)
 		if NOT ScreenElementExists \{id = magazine_element}
 			CreateScreenElement {
 				parent = root_window
 				just = [center center]
-				Type = SpriteElement
+				type = SpriteElement
 				id = magazine_element
 				texture = <texture>
-				Pos = (200.0, 200.0)
+				pos = (200.0, 200.0)
 				dims = (200.0, 200.0)
 				alpha = 1
 			}
 		endif
 	endif
 	PlayIGCCam {
-		Name = <Camera>
+		name = <camera>
 		viewport = <viewport>
 		LockTo = <lock_target>
 		LockToBone = bone_camera
-		Pos = (0.0, 0.0, 0.0)
+		pos = (0.0, 0.0, 0.0)
 		Quat = (0.0, 0.0, 0.0)
 		time = 0
-		play_hold = 1
+		Play_hold = 1
 		interrupt_current
 	}
-	bandmanager_enabled \{OFF}
+	BandManager_Enabled \{off}
 	if (<select_index> != -1)
-		fadetoblack \{On
+		fadetoblack \{on
 			time = 0
 			alpha = 1.0
 			z_priority = 1000
@@ -515,72 +515,72 @@ script grab_magazine_viewport \{select_index = -1}
 			]}
 	endif
 	SetViewportProperties \{viewport = magazine_viewport
-		Active = true}
+		active = true}
 	UnPauseGame
 	Wait \{10
 		gameframes}
 	PauseGame
 	SetViewportProperties \{viewport = magazine_viewport
-		Active = FALSE}
-	bandmanager_enabled
-	Unhide_Band
+		active = false}
+	BandManager_Enabled
+	unhide_band
 	if (<select_index> != -1)
-		fadetoblack \{OFF
+		fadetoblack \{off
 			time = 0}
 	endif
 endscript
 
 script destroy_magazine_viewport 
-	printf \{qs(0x73bd28bb)}
+	printf \{qs("\Ldestroy_magazine_viewport")}
 	AddParams ($magazine_viewport_props)
 	if ViewportExists id = <viewport>
 		DestroyViewport id = <viewport>
 		DestroyViewportTextureOverride id = <texoverride>
-		KillCamAnim Name = <Camera>
+		KillCamAnim name = <camera>
 	endif
 	if ScreenElementExists \{id = magazine_element}
 		DestroyScreenElement \{id = magazine_element}
 	endif
 endscript
-current_bandname_viewport = None
+current_bandname_viewport = none
 bandname_viewport_params = {
 	viewport = bandname_viewport
-	textureasset = `tex\zones\z_hotel\rmm_band_name.dds`
+	textureasset = `tex\zones\Z_Hotel\RMM_band_name.dds`
 	texdicts = [
 		'zones/%s/%t.tex'
 		'models/venues/recordstore/encore_bandart_skin.tex'
 		'models/venues/recordstore/encore_record_skin.tex'
 	]
 	style = bandname_rendering
-	Name = bandname_cam
+	name = bandname_cam
 	window_id = bandname_window
 }
 
 script get_bandname_viewport_text 
-	Name = qs(0x03ac90f0)
+	name = qs("\L")
 	if ($is_attract_mode = 0)
 		bandname_id = band_info
 		GetGlobalTags <bandname_id>
 	endif
-	StringRemoveTrailingWhitespace string = <Name>
-	if (<new_string> = qs(0x03ac90f0))
-		new_string = qs(0x945d0d09)
+	StringRemoveTrailingWhitespace string = <name>
+	if (<new_string> = qs("\L"))
+		new_string = qs("\LGuitar Hero")
 	endif
 	return band_name_text_string = <new_string>
 endscript
 
 script create_bandname_viewport 
-	printf \{qs(0xd70bc7ea)}
+	printf \{qs("\Lcreate_bandname_viewport")}
 	GetPakManCurrentName \{map = zones}
 	bandname = bandname_viewport_params
-	if NOT GlobalExists Name = <bandname>
+	if NOT GlobalExists name = <bandname>
 		return
 	endif
 	AddParams ($<bandname>)
-	Change current_bandname_viewport = $<bandname>
-	printf \{qs(0x998e9bb6)}
-	createviewport {
-		Priority = 6
+	change current_bandname_viewport = $<bandname>
+	printf \{qs("\LCreating Viewport")}
+	CreateViewport {
+		priority = 6
 		id = <viewport>
 		style = <style>
 		has_ui = true
@@ -588,38 +588,38 @@ script create_bandname_viewport
 		no_resolve_depthstencilbuffer = true
 	}
 	CreateScreenElement {
-		Type = WindowElement
+		type = WindowElement
 		parent = root_window
 		id = <window_id>
 		viewport = <viewport>
 		dims = (512.0, 128.0)
 	}
 	get_bandname_viewport_text
-	printf qs(0x35322bfb) s = <band_name_text_string>
+	printf qs("\LCreating Band Name '%s'") s = <band_name_text_string>
 	CreateScreenElement {
-		Type = TextBlockElement
+		type = TextBlockElement
 		dims = (480.0, 104.0)
 		parent = <window_id>
 		id = bandname_textelement
-		font = fontgrid_text_a11_b
-		Pos = (256.0, 64.0)
+		font = fontgrid_text_A11_b
+		pos = (256.0, 64.0)
 		just = [center center]
 		internal_just = [center center]
 		rgba = [210 210 210 250]
 		text = <band_name_text_string>
 		z_priority = 1.0
 		alpha = 1
-		fit_width = `scale	each	line	if	larger`
-		fit_height = `scale	to	fit`
+		fit_width = `scale each line if larger`
+		fit_height = `scale to fit`
 		scale_mode = proportional
 	}
 	GetArraySize <texdicts>
 	index = 0
 	begin
-	formatText checksumName = texdict (<texdicts> [<index>]) s = <pakname> t = <pakname> AddToStringLookup = true
+	FormatText checksumname = texdict (<texdicts> [<index>]) s = <pakname> t = <pakname> AddToStringLookup = true
 	valid = 1
 	SetSearchAllAssetContexts
-	if NOT isassetloaded Name = <texdict>
+	if NOT IsAssetLoaded name = <texdict>
 		printf 'texdict %s not found for bandname' s = <texdict>
 		valid = 0
 	endif
@@ -628,8 +628,8 @@ script create_bandname_viewport
 		valid = 0
 	endif
 	if (<valid> = 1)
-		printf \{qs(0xe77df91d)}
-		formatText checksumName = id 'bandnameviewport%i' i = <index>
+		printf \{qs("\LMapping rendertarget")}
+		FormatText checksumname = id 'bandnameviewport%i' i = <index>
 		CreateViewportTextureOverride {
 			id = <id>
 			viewportid = <viewport>
@@ -637,16 +637,16 @@ script create_bandname_viewport
 			texdict = <texdict>
 		}
 	endif
-	SetSearchAllAssetContexts \{OFF}
+	SetSearchAllAssetContexts \{off}
 	index = (<index> + 1)
-	repeat <array_Size>
-	printf \{qs(0x8e81aa5a)}
+	repeat <array_size>
+	printf \{qs("\Lcreate_bandname done")}
 endscript
 
 script destroy_bandname_viewport 
-	printscriptinfo \{qs(0x6415d050)}
+	printscriptinfo \{qs("destroy_bandname_viewport")}
 	bandname = $current_bandname_viewport
-	if (<bandname> = None)
+	if (<bandname> = none)
 		return
 	endif
 	AddParams (<bandname>)
@@ -655,10 +655,10 @@ script destroy_bandname_viewport
 	GetArraySize <texdicts>
 	index = 0
 	begin
-	formatText checksumName = texdict (<texdicts> [<index>]) s = <pakname> t = <pakname>
-	formatText checksumName = id 'bandnameviewport%i' i = <index> AddToStringLookup = true
+	FormatText checksumname = texdict (<texdicts> [<index>]) s = <pakname> t = <pakname>
+	FormatText checksumname = id 'bandnameviewport%i' i = <index> AddToStringLookup = true
 	printf 'Trying to delete %i' i = <id>
-	if isassetloaded Name = <texdict>
+	if IsAssetLoaded name = <texdict>
 		if IsTextureInDictionary dictionary = <texdict> texture = <textureasset>
 			printf 'Succeeded deleting %i' i = <id>
 			DestroyViewportTextureOverride id = <id>
@@ -669,8 +669,8 @@ script destroy_bandname_viewport
 		printf '%i - Asset not loaded' i = <id>
 	endif
 	index = (<index> + 1)
-	repeat <array_Size>
-	SetSearchAllAssetContexts \{OFF}
+	repeat <array_size>
+	SetSearchAllAssetContexts \{off}
 	DestroyViewport id = <viewport>
 	if ScreenElementExists id = <window_id>
 		DestroyScreenElement id = <window_id>
@@ -678,18 +678,18 @@ script destroy_bandname_viewport
 	if ScreenElementExists \{id = bandname_textelement}
 		DestroyScreenElement \{id = bandname_textelement}
 	endif
-	Change \{current_bandname_viewport = None}
+	change \{current_bandname_viewport = none}
 endscript
 
 script PauseFullScreenMovie 
-	if IsMoviePlaying \{textureSlot = 0}
-		PauseMovie \{textureSlot = 0}
+	if IsMoviePlaying \{TextureSlot = 0}
+		PauseMovie \{TextureSlot = 0}
 	endif
 endscript
 
 script UnPauseFullScreenMovie 
-	if IsMoviePlaying \{textureSlot = 0}
-		ResumeMovie \{textureSlot = 0}
+	if IsMoviePlaying \{TextureSlot = 0}
+		ResumeMovie \{TextureSlot = 0}
 	endif
 endscript
 
@@ -701,42 +701,42 @@ script PlayMovieAndWait
 	endif
 	mark_unsafe_for_shutdown
 	if NOT GotParam \{noblack}
-		fadetoblack \{On
+		fadetoblack \{on
 			time = 0
 			alpha = 1.0
 			z_priority = -10}
 	endif
-	printf qs(0x23871deb) s = <movie>
-	PlayMovie {textureSlot = 0
+	printf qs("\LPlaying Movie %s") s = <movie>
+	PlayMovie {TextureSlot = 0
 		TexturePri = 1000
 		no_looping
 		no_hold
 		<...>}
 	Wait \{2
 		gameframes}
-	CreateScreenElement \{Type = ContainerElement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = movie_handler
 		event_handlers = [
 			{
 				pad_start
-				endmovie
+				EndMovie
 			}
 			{
 				pad_choose
-				endmovie
+				EndMovie
 			}
 		]}
-	LaunchEvent \{Type = focus
+	LaunchEvent \{type = focus
 		target = movie_handler}
 	begin
-	if NOT IsMoviePlaying \{textureSlot = 0}
+	if NOT IsMoviePlaying \{TextureSlot = 0}
 		break
 	endif
 	Wait \{1
 		gameframes}
 	repeat
-	SpawnScriptNow \{endmovie}
+	spawnscriptnow \{EndMovie}
 	begin
 	if NOT ScreenElementExists \{id = movie_handler}
 		break
@@ -745,18 +745,18 @@ script PlayMovieAndWait
 		gameframe}
 	repeat
 	if NOT GotParam \{noblack}
-		printf qs(0x27e8073d) s = <movie>
-		fadetoblack \{OFF
+		printf qs("\LFinished Playing Movie %s") s = <movie>
+		fadetoblack \{off
 			time = 0}
 	endif
 	mark_safe_for_shutdown
 endscript
 
-script endmovie 
-	SetSpawnInstanceLimits \{Max = 1
+script EndMovie 
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
-	if IsMoviePlaying \{textureSlot = 0}
-		KillMovie \{textureSlot = 0}
+	if IsMoviePlaying \{TextureSlot = 0}
+		KillMovie \{TextureSlot = 0}
 	endif
 	if ScreenElementExists \{id = movie_handler}
 		movie_handler :Die

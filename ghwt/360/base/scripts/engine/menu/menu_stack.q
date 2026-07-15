@@ -2,7 +2,7 @@
 script menu_stack_push \{menu_params = {
 		}}
 	if NOT GotParam \{menu_script}
-		ScriptAssert \{qs(0xda5fd6f0)}
+		ScriptAssert \{qs("\Lneed menu_script=some_script plz")}
 	endif
 	menu_stack_push_or_pop_menu <...> func = push
 	if NOT GotParam \{no_create}
@@ -11,7 +11,7 @@ script menu_stack_push \{menu_params = {
 endscript
 
 script menu_stack_pop 
-	menu_stack_push_or_pop_menu \{func = pop}
+	menu_stack_push_or_pop_menu \{func = Pop}
 	if NOT GotParam \{no_create}
 		menu_stack_create_latest
 	endif
@@ -25,13 +25,13 @@ script menu_stack_create_latest
 			endif
 		endif
 		menu_stack_get_local_stack
-		pop \{menu_script}
-		pop \{menu_params}
+		Pop \{menu_script}
+		Pop \{menu_params}
 		<menu_script> <menu_params>
 		return \{true}
 	else
-		printf \{qs(0xcac68d70)}
-		return \{FALSE}
+		printf \{qs("\LNo menu to create in menu_stack_create_latest!")}
+		return \{false}
 	endif
 endscript
 
@@ -46,7 +46,7 @@ script menu_stack_can_pop_menu
 	if CanPop \{menu_script}
 		return \{true}
 	else
-		return \{FALSE}
+		return \{false}
 	endif
 endscript
 
@@ -57,7 +57,7 @@ endscript
 
 script menu_stack_push_or_pop_menu \{func = push}
 	menu_stack_get_local_stack
-	printf \{qs(0xc807a75b)}
+	printf \{qs("\L--- menu_stack_push_or_pop_menu")}
 	<func> menu_script
 	<func> menu_params
 	menu_stack_clear

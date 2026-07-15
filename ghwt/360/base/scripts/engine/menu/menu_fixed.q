@@ -2,7 +2,7 @@
 script make_fixed_menu \{shown_rows = 5
 		child_dims = (300.0, 50.0)
 		scroll_time = 0.1
-		Pos = (1024.0, 360.0)
+		pos = (1024.0, 360.0)
 		just = [
 			right
 			center
@@ -11,16 +11,16 @@ script make_fixed_menu \{shown_rows = 5
 		current_menu = current_menu
 		parent = root_window}
 	CreateScreenElement {
-		Type = ContainerElement
+		type = ContainerElement
 		parent = <parent>
-		Pos = <Pos>
+		pos = <pos>
 		dims = (((1.0, 0.0) * (<child_dims> [0])) + ((0.0, 1.0) * <shown_rows> * (<child_dims> [1])))
 		just = <just>
 		child_anchor = <just>
 	}
 	<fixed_menu> = <id>
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = <fixed_menu>
 		just = <just>
 		dims = <child_dims>
@@ -28,10 +28,10 @@ script make_fixed_menu \{shown_rows = 5
 		rgba = [84 64 164 255]
 	}
 	CreateScreenElement {
-		Type = ContainerElement
+		type = ContainerElement
 		parent = <fixed_menu>
 		id = <current_menu>
-		Pos = (0.0, 0.0)
+		pos = (0.0, 0.0)
 		dims = (((1.0, 0.0) * (<child_dims> [0])) + ((0.0, 1.0) * <shown_rows> * (<child_dims> [1])))
 		just = <just>
 		child_anchor = [center center]
@@ -85,7 +85,7 @@ script add_fixed_menu_item \{focusable = 1
 		current_menu = current_menu}
 	<current_menu> :GetTags
 	CreateScreenElement {
-		Type = ContainerElement
+		type = ContainerElement
 		parent = <current_menu>
 		dims = <child_dims>
 		just = [center center]
@@ -104,28 +104,28 @@ script add_fixed_menu_item \{focusable = 1
 	container_id = <id>
 	if GotParam \{text}
 		CreateScreenElement {
-			Type = TextElement
+			type = TextElement
 			parent = <container_id>
 			local_id = text
 			font = <font>
 			text = <text>
 			rgba = ($menu_unfocus_color)
 			just = <just>
-			Pos = <text_pos>
+			pos = <text_pos>
 		}
 	endif
 	if GotParam \{icon}
 		CreateScreenElement {
-			Type = SpriteElement
+			type = SpriteElement
 			parent = <container_id>
 			local_id = icon
 			texture = <icon>
 			just = <just>
-			Pos = <icon_pos>
-			Scale = 1.0
+			pos = <icon_pos>
+			scale = 1.0
 		}
 	endif
-	LaunchEvent Type = focus target = <current_menu>
+	LaunchEvent type = focus target = <current_menu>
 	<current_menu> :SetTags {total_items = (<total_items> + 1)}
 	return {container_id = <container_id>}
 endscript
@@ -136,7 +136,7 @@ script fixed_menu_item_focus
 		SetScreenElementProps id = {<id> child = text} rgba = ($menu_focus_color)
 	endif
 	if ScreenElementExists id = {<id> child = icon}
-		SetScreenElementProps id = {<id> child = icon} Scale = (1.0, 1.0) time = 0.1
+		SetScreenElementProps id = {<id> child = icon} scale = (1.0, 1.0) time = 0.1
 	endif
 endscript
 
@@ -146,7 +146,7 @@ script fixed_menu_item_unfocus
 		SetScreenElementProps id = {<id> child = text} rgba = ($menu_unfocus_color)
 	endif
 	if ScreenElementExists id = {<id> child = icon}
-		SetScreenElementProps id = {<id> child = icon} Scale = 1.0 time = 0.1
+		SetScreenElementProps id = {<id> child = icon} scale = 1.0 time = 0.1
 	endif
 endscript
 
@@ -160,7 +160,7 @@ script finish_fixed_menu \{index = 0
 	fixed_menu_reposition current_menu = <current_menu>
 	i = 0
 	begin
-	ResolveScreenElementID id = {<current_menu> child = <i>}
+	ResolveScreenElementId id = {<current_menu> child = <i>}
 	<resolved_id> :GetTags
 	if NOT (<show> = 0)
 		alpha_mod = (1.0 / <shown_rows>)
@@ -169,18 +169,18 @@ script finish_fixed_menu \{index = 0
 	endif
 	i = (<i> + 1)
 	repeat <total_items>
-	LaunchEvent Type = focus target = {<current_menu> child = <index>}
+	LaunchEvent type = focus target = {<current_menu> child = <index>}
 endscript
 
 script fixed_menu_scroll \{current_menu = current_menu}
 	<current_menu> :GetTags
-	LaunchEvent Type = unfocus target = {<current_menu> child = <current_index>}
+	LaunchEvent type = unfocus target = {<current_menu> child = <current_index>}
 	if GotParam \{down}
-		Dir = 1
+		dir = 1
 	else
-		Dir = -1
+		dir = -1
 	endif
-	current_index = (<current_index> + <Dir>)
+	current_index = (<current_index> + <dir>)
 	if (<current_index> < 0)
 		current_index = (<total_items> - 1)
 	endif
@@ -188,30 +188,30 @@ script fixed_menu_scroll \{current_menu = current_menu}
 		current_index = 0
 	endif
 	<current_menu> :SetTags {current_index = <current_index>}
-	fixed_menu_reposition current_menu = <current_menu> Dir = <Dir>
-	fixed_menu_morph current_menu = <current_menu> Dir = <Dir>
-	Wait <scroll_time> Seconds
-	ResolveScreenElementID id = {<current_menu> child = <current_index>}
+	fixed_menu_reposition current_menu = <current_menu> dir = <dir>
+	fixed_menu_morph current_menu = <current_menu> dir = <dir>
+	Wait <scroll_time> seconds
+	ResolveScreenElementId id = {<current_menu> child = <current_index>}
 	<resolved_id> :GetTags
 	if (<focusable> = 0)
 		fixed_menu_scroll <...>
 		return
 	endif
-	LaunchEvent Type = focus target = {<current_menu> child = <current_index>}
+	LaunchEvent type = focus target = {<current_menu> child = <current_index>}
 endscript
 
 script fixed_menu_reposition \{current_menu = current_menu}
 	<current_menu> :GetTags
 	pos_mod = (0.0, 0.0)
-	if GotParam \{Dir}
-		if (<Dir> = 1)
+	if GotParam \{dir}
+		if (<dir> = 1)
 			pos_mod = ((0.0, 1.0) * <child_height>)
 		else
 			pos_mod = ((0.0, -1.0) * <child_height>)
 		endif
 	endif
-	ResolveScreenElementID id = {<current_menu> child = <current_index>}
-	<resolved_id> :SetProps Pos = ((0.0, 0.0) + <pos_mod>) alpha = 1.0
+	ResolveScreenElementId id = {<current_menu> child = <current_index>}
+	<resolved_id> :SetProps pos = ((0.0, 0.0) + <pos_mod>) alpha = 1.0
 	Loop = ((<total_items> - 1) / 2)
 	shown = (<shown_rows> - 1)
 	i = 1
@@ -222,8 +222,8 @@ script fixed_menu_reposition \{current_menu = current_menu}
 		prev_show = <i>
 		next_show = <i>
 	elseif ((<i> * 2) = (<shown> + 1))
-		if GotParam \{Dir}
-			if (<Dir> = 1)
+		if GotParam \{dir}
+			if (<dir> = 1)
 				next_show = <i>
 			else
 				prev_show = <i>
@@ -238,11 +238,11 @@ script fixed_menu_reposition \{current_menu = current_menu}
 	if (<next_index> >= <total_items>)
 		next_index = (<next_index> - <total_items>)
 	endif
-	ResolveScreenElementID id = {<current_menu> child = <prev_index>}
-	<resolved_id> :SetProps Pos = (((0.0, -1.0) * <i> * <child_height>) + <pos_mod>)
+	ResolveScreenElementId id = {<current_menu> child = <prev_index>}
+	<resolved_id> :SetProps pos = (((0.0, -1.0) * <i> * <child_height>) + <pos_mod>)
 	<resolved_id> :SetTags {show = <prev_show>}
-	ResolveScreenElementID id = {<current_menu> child = <next_index>}
-	<resolved_id> :SetProps Pos = (((0.0, 1.0) * <i> * <child_height>) + <pos_mod>)
+	ResolveScreenElementId id = {<current_menu> child = <next_index>}
+	<resolved_id> :SetProps pos = (((0.0, 1.0) * <i> * <child_height>) + <pos_mod>)
 	<resolved_id> :SetTags {show = <next_show>}
 	i = (<i> + 1)
 	repeat <Loop>
@@ -250,21 +250,21 @@ endscript
 
 script fixed_menu_morph \{current_menu = current_menu}
 	RequireParams \{[
-			Dir
+			dir
 		]
 		all}
 	<current_menu> :GetTags
 	i = 0
 	begin
-	ResolveScreenElementID id = {<current_menu> child = <i>}
-	RunScriptOnScreenElement fixed_menu_item_morph id = <resolved_id> params = {Dir = <Dir> current_menu = <current_menu>}
+	ResolveScreenElementId id = {<current_menu> child = <i>}
+	RunScriptOnScreenElement fixed_menu_item_morph id = <resolved_id> params = {dir = <dir> current_menu = <current_menu>}
 	i = (<i> + 1)
 	repeat <total_items>
 endscript
 
 script fixed_menu_item_morph \{current_menu = current_menu}
 	RequireParams \{[
-			Dir
+			dir
 		]
 		all}
 	GetTags
@@ -274,5 +274,5 @@ script fixed_menu_item_morph \{current_menu = current_menu}
 		alpha_mod = (1.0 / <shown_rows>)
 		alpha = (1.0 - (<show> * <alpha_mod>))
 	endif
-	SetProps Pos = {((0.0, -1.0) * <Dir> * <child_height>) relative} alpha = <alpha> time = <scroll_time>
+	SetProps pos = {((0.0, -1.0) * <dir> * <child_height>) relative} alpha = <alpha> time = <scroll_time>
 endscript

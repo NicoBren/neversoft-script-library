@@ -1,248 +1,248 @@
 
-script skate8_sfx_backgrounds_new_area \{immediate = 0
+script Skate8_SFX_Backgrounds_New_Area \{immediate = 0
 		loading_transition = 0
 		restarting = 0}
-	printf channel = sfx qs(0xa7f0b4b9) s = <bg_sfx_area>
-	change sfx_background_last_area = <bg_sfx_area>
+	printf channel = sfx qs("\LBG SFX Area =  %s") s = <BG_SFX_Area>
+	change SFX_Background_Last_Area = <BG_SFX_Area>
 	if (<immediate> = 0)
-		wait \{1
+		Wait \{1
 			gameframe}
 	endif
-	change sfx_background_requested_area = <bg_sfx_area>
-	check_for_specific_bgs_in_struct
-	spawnscriptnow skate8_sfx_background_play params = {loading_transition = <loading_transition> restarting = <restarting>}
+	change SFX_Background_Requested_Area = <BG_SFX_Area>
+	Check_For_Specific_BGs_In_Struct
+	spawnscriptnow Skate8_SFX_Background_Play params = {loading_transition = <loading_transition> restarting = <restarting>}
 endscript
 
-script skate8_sfx_request_background_area_change 
-	change sfx_background_requested_area = <bg_sfx_area>
+script Skate8_SFX_Request_Background_Area_Change 
+	change SFX_Background_Requested_Area = <BG_SFX_Area>
 endscript
-sfx_background_last_area = `default`
-sfx_background_requested_area = `default`
-sfx_background_requested_checksum = `default`
-sfx_background_requested_volume = 60
-sfx_background_current_area = `default`
-sfx_background_current_checksum = `default`
-sfx_background_current_volume = 100
-sfx_background_previous_area = `default`
-sfx_background_previous_checksum = `default`
-sfx_background_fadein_area = `default`
-sfx_background_fadein_checksum = `default`
-sfx_background_fadein_volume_start = 1.0
-sfx_background_fadein_volume_target = 100.0
-sfx_background_fadein_volume_current = 1.0
-sfx_background_fadein_volume_add = 3.0
-sfx_background_fadingout_area = `default`
-sfx_background_fadingout_checksum = `default`
-sfx_background_fadeout_volume_start = 100.0
-sfx_background_fadeout_volume_target = 0.0
-sfx_background_fadeout_volume_current = 100.0
-sfx_background_fadeout_volume_subtract = 3.0
-sfx_background_crossfade_time = 0.75
-background_crossfade_gameframes = 90
-backgrounds_master_volume = 50.0
-pleasedocrossfade = 1
-sfx_background_is_crossfading = false
-currentlyplayingoneshotsoundevent = donothing_oneshot
-currentoneshotwaittime = 15
+SFX_Background_Last_Area = `default`
+SFX_Background_Requested_Area = `default`
+SFX_Background_Requested_Checksum = `default`
+SFX_Background_Requested_Volume = 60
+SFX_Background_Current_Area = `default`
+SFX_Background_Current_Checksum = `default`
+SFX_Background_Current_Volume = 100
+SFX_Background_Previous_Area = `default`
+SFX_Background_Previous_Checksum = `default`
+SFX_Background_FadeIn_Area = `default`
+SFX_Background_FadeIn_Checksum = `default`
+SFX_Background_FadeIn_Volume_Start = 1.0
+SFX_Background_FadeIn_Volume_Target = 100.0
+SFX_Background_FadeIn_Volume_Current = 1.0
+SFX_Background_FadeIn_Volume_Add = 3.0
+SFX_Background_FadingOut_Area = `default`
+SFX_Background_FadingOut_Checksum = `default`
+SFX_Background_FadeOut_Volume_Start = 100.0
+SFX_Background_FadeOut_Volume_Target = 0.0
+SFX_Background_FadeOut_Volume_Current = 100.0
+SFX_Background_FadeOut_Volume_Subtract = 3.0
+SFX_Background_CrossFade_Time = 0.75
+Background_CrossFade_GameFrames = 90
+Backgrounds_Master_Volume = 50.0
+PleaseDOCrossfade = 1
+SFX_Background_IS_Crossfading = false
+CurrentlyPlayingOneShotSoundEvent = DoNothing_OneShot
+CurrentOneShotWaitTime = 15
 
-script check_for_specific_bgs_in_struct 
-	setspawninstancelimits \{max = 1
+script Check_For_Specific_BGs_In_Struct 
+	SetSpawnInstanceLimits \{max = 1
 		management = kill_oldest}
-	local_var_struct = ($sfx_background_requested_area)
-	if structurecontains structure = $skate8_sfx_background_areas_and_states <local_var_struct>
-		check_for_tod_bgs_in_struct <...>
+	Local_Var_Struct = ($SFX_Background_Requested_Area)
+	if StructureContains Structure = $Skate8_SFX_Background_Areas_And_States <Local_Var_Struct>
+		Check_For_TOD_BGs_In_Struct <...>
 	else
 	endif
 endscript
 
-script check_for_tod_bgs_in_struct 
+script Check_For_TOD_BGs_In_Struct 
 	<current_time> = day
-	this_current_tod_name = <current_time>
-	if structurecontains structure = ($skate8_sfx_background_areas_and_states.<local_var_struct>) <this_current_tod_name>
-		change sfx_background_requested_checksum = ($skate8_sfx_background_areas_and_states.<local_var_struct>.<this_current_tod_name>)
+	this_current_TOD_name = <current_time>
+	if StructureContains Structure = ($Skate8_SFX_Background_Areas_And_States.<Local_Var_Struct>) <this_current_TOD_name>
+		change SFX_Background_Requested_Checksum = ($Skate8_SFX_Background_Areas_And_States.<Local_Var_Struct>.<this_current_TOD_name>)
 	else
-		if structurecontains structure = ($skate8_sfx_background_areas_and_states.<local_var_struct>) afternoon
-			change sfx_background_requested_checksum = ($skate8_sfx_background_areas_and_states.<local_var_struct>.afternoon)
+		if StructureContains Structure = ($Skate8_SFX_Background_Areas_And_States.<Local_Var_Struct>) Afternoon
+			change SFX_Background_Requested_Checksum = ($Skate8_SFX_Background_Areas_And_States.<Local_Var_Struct>.Afternoon)
 		else
-			if structurecontains structure = ($skate8_sfx_background_areas_and_states.<local_var_struct>) `default`
-				change sfx_background_requested_checksum = ($skate8_sfx_background_areas_and_states.<local_var_struct>.`default`)
+			if StructureContains Structure = ($Skate8_SFX_Background_Areas_And_States.<Local_Var_Struct>) `default`
+				change SFX_Background_Requested_Checksum = ($Skate8_SFX_Background_Areas_And_States.<Local_Var_Struct>.`default`)
 			else
 			endif
 		endif
 	endif
 endscript
 
-script skate8_sfx_background_play \{crossfadetime = 0.7
+script Skate8_SFX_Background_Play \{crossfadetime = 0.7
 		newvolumepercent = 100
 		loading_transition = 0
 		restarting = 0}
-	setspawninstancelimits \{max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = kill_oldest}
-	wait \{2
+	Wait \{2
 		gameframes}
-	change sfx_background_fadein_area = ($sfx_background_requested_area)
-	change sfx_background_fadein_checksum = ($sfx_background_requested_checksum)
-	change sfx_background_fadingout_area = ($sfx_background_current_area)
-	change sfx_background_fadingout_checksum = ($sfx_background_current_checksum)
-	local_var_struct_fadein_area = ($sfx_background_fadein_area)
-	local_var_struct_fadein_checksum = ($sfx_background_fadein_checksum)
-	local_var_struct_fadeout_area = ($sfx_background_fadingout_area)
-	local_var_struct_fadeout_checksum = ($sfx_background_fadingout_checksum)
-	change \{sfx_background_crossfade_time = 0.75}
-	if structurecontains structure = ($skate8_sfx_background_areas_and_states.<local_var_struct_fadein_area>) fade_from
-		if structurecontains structure = ($skate8_sfx_background_areas_and_states.<local_var_struct_fadein_area>.fade_from) <local_var_struct_fadeout_area>
-			change sfx_background_crossfade_time = ($skate8_sfx_background_areas_and_states.<local_var_struct_fadein_area>.fade_from.<local_var_struct_fadeout_area>)
+	change SFX_Background_FadeIn_Area = ($SFX_Background_Requested_Area)
+	change SFX_Background_FadeIn_Checksum = ($SFX_Background_Requested_Checksum)
+	change SFX_Background_FadingOut_Area = ($SFX_Background_Current_Area)
+	change SFX_Background_FadingOut_Checksum = ($SFX_Background_Current_Checksum)
+	Local_Var_Struct_FadeIn_Area = ($SFX_Background_FadeIn_Area)
+	Local_Var_Struct_FadeIn_Checksum = ($SFX_Background_FadeIn_Checksum)
+	Local_Var_Struct_FadeOut_Area = ($SFX_Background_FadingOut_Area)
+	Local_Var_Struct_FadeOut_Checksum = ($SFX_Background_FadingOut_Checksum)
+	change \{SFX_Background_CrossFade_Time = 0.75}
+	if StructureContains Structure = ($Skate8_SFX_Background_Areas_And_States.<Local_Var_Struct_FadeIn_Area>) Fade_From
+		if StructureContains Structure = ($Skate8_SFX_Background_Areas_And_States.<Local_Var_Struct_FadeIn_Area>.Fade_From) <Local_Var_Struct_FadeOut_Area>
+			change SFX_Background_CrossFade_Time = ($Skate8_SFX_Background_Areas_And_States.<Local_Var_Struct_FadeIn_Area>.Fade_From.<Local_Var_Struct_FadeOut_Area>)
 		endif
 	endif
-	crossfadetime = $sfx_background_crossfade_time
-	change \{sfx_background_fadein_volume_target = 100}
-	if structurecontains structure = ($skate8_sfx_background_areas_and_states.<local_var_struct_fadein_area>) volume_params
-		if structurecontains structure = ($skate8_sfx_background_areas_and_states.<local_var_struct_fadein_area>.volume_params) <local_var_struct_fadein_checksum>
-			change sfx_background_fadein_volume_target = ($skate8_sfx_background_areas_and_states.<local_var_struct_fadein_area>.volume_params.<local_var_struct_fadein_checksum>)
+	crossfadetime = $SFX_Background_CrossFade_Time
+	change \{SFX_Background_FadeIn_Volume_Target = 100}
+	if StructureContains Structure = ($Skate8_SFX_Background_Areas_And_States.<Local_Var_Struct_FadeIn_Area>) Volume_Params
+		if StructureContains Structure = ($Skate8_SFX_Background_Areas_And_States.<Local_Var_Struct_FadeIn_Area>.Volume_Params) <Local_Var_Struct_FadeIn_Checksum>
+			change SFX_Background_FadeIn_Volume_Target = ($Skate8_SFX_Background_Areas_And_States.<Local_Var_Struct_FadeIn_Area>.Volume_Params.<Local_Var_Struct_FadeIn_Checksum>)
 		endif
 	endif
-	newvolumepercent = $sfx_background_fadein_volume_target
-	appendsuffixtochecksum base = ($sfx_background_current_checksum) suffixstring = '_FT'
+	newvolumepercent = $SFX_Background_FadeIn_Volume_Target
+	AppendSuffixToChecksum Base = ($SFX_Background_Current_Checksum) SuffixString = '_FT'
 	frontchecksumname = <appended_id>
-	appendsuffixtochecksum base = ($sfx_background_current_checksum) suffixstring = '_BK'
+	AppendSuffixToChecksum Base = ($SFX_Background_Current_Checksum) SuffixString = '_BK'
 	backchecksumname = <appended_id>
-	if NOT ($sfx_background_current_checksum = $sfx_background_requested_checksum)
+	if NOT ($SFX_Background_Current_Checksum = $SFX_Background_Requested_Checksum)
 		printf \{channel = sfx
-			qs(0xf299651b)}
-		backgrounds_shared_logic new_fade_time = <crossfadetime> <...>
+			qs("\L**** fading out the old background")}
+		Backgrounds_Shared_Logic new_fade_time = <crossfadetime> <...>
 		printf \{channel = sfx
-			qs(0xb9f91bd6)
-			s = $sfx_background_requested_checksum}
-		playsound <frontchecksumname> vol_percent = <newvolumepercent> pan1x = -1 pan1y = 1 pan2x = 1 pan2y = 1 priority = 105 buss = crowd_beds attack_time = <crossfadetime> attack_function = log_fast num_loops = -1
+			qs("\L******** now starting NEW background looping sound %s")
+			s = $SFX_Background_Requested_Checksum}
+		PlaySound <frontchecksumname> vol_percent = <newvolumepercent> pan1x = -1 pan1y = 1 pan2x = 1 pan2y = 1 priority = 105 buss = Crowd_Beds attack_time = <crossfadetime> attack_function = log_fast num_loops = -1
 		if NOT ($crowd_in_jam_mode_song_state = 1)
 			printf \{channel = sfx
-				qs(0x95d13fb2)}
-			playsound <backchecksumname> vol_percent = <newvolumepercent> pan1x = -1 pan1y = -1 pan2x = 1 pan2y = -1 priority = 105 buss = crowd_beds attack_time = <crossfadetime> attack_function = log_fast num_loops = -1
+				qs("\L******** crowd_in_jam_mode_song_state IS NOT equal to 1 - playing the rears")}
+			PlaySound <backchecksumname> vol_percent = <newvolumepercent> pan1x = -1 pan1y = -1 pan2x = 1 pan2y = -1 priority = 105 buss = Crowd_Beds attack_time = <crossfadetime> attack_function = log_fast num_loops = -1
 		else
 			printf \{channel = sfx
-				qs(0x3cad13d5)}
+				qs("\L******** crowd_in_jam_mode_song_state IS equal to 1 - NOT playing the rears")}
 		endif
 	else
 		printf \{channel = sfx
-			qs(0x2e8957c6)}
+			qs("\L******** just using setsoundparams on currently playing sounds")}
 		if issoundplaying <frontchecksumname>
-			setsoundparams <frontchecksumname> vol_percent = <newvolumepercent> time = <crossfadetime>
+			SetSoundParams <frontchecksumname> vol_percent = <newvolumepercent> time = <crossfadetime>
 		else
-			printf channel = sfx qs(0x30987070) s = <frontchecksumname>
-			playsound <frontchecksumname> vol_percent = <newvolumepercent> pan1x = -1 pan1y = 1 pan2x = 1 pan2y = 1 priority = 105 buss = crowd_beds attack_time = <crossfadetime> attack_function = log_fast num_loops = -1
+			printf channel = sfx qs("\L******* Not playing %s, so going to start playing it now ********") s = <frontchecksumname>
+			PlaySound <frontchecksumname> vol_percent = <newvolumepercent> pan1x = -1 pan1y = 1 pan2x = 1 pan2y = 1 priority = 105 buss = Crowd_Beds attack_time = <crossfadetime> attack_function = log_fast num_loops = -1
 		endif
 		if issoundplaying <backchecksumname>
-			setsoundparams <backchecksumname> vol_percent = <newvolumepercent> time = <crossfadetime>
+			SetSoundParams <backchecksumname> vol_percent = <newvolumepercent> time = <crossfadetime>
 		else
-			printf channel = sfx qs(0x30987070) s = <backchecksumname>
-			playsound <backchecksumname> vol_percent = <newvolumepercent> pan1x = -1 pan1y = -1 pan2x = 1 pan2y = -1 priority = 105 buss = crowd_beds attack_time = <crossfadetime> attack_function = log_fast num_loops = -1
+			printf channel = sfx qs("\L******* Not playing %s, so going to start playing it now ********") s = <backchecksumname>
+			PlaySound <backchecksumname> vol_percent = <newvolumepercent> pan1x = -1 pan1y = -1 pan2x = 1 pan2y = -1 priority = 105 buss = Crowd_Beds attack_time = <crossfadetime> attack_function = log_fast num_loops = -1
 		endif
 	endif
 	if ($current_playing_transition = loading)
 		printf \{channel = sfx
-			qs(0x55587d03)
-			s = $sfx_background_requested_checksum}
-		if NOT ($sfx_background_requested_checksum = silence_front_end_crowd_loop)
+			qs("\L**** going through the loading transition, and requesting this checksum %s")
+			s = $SFX_Background_Requested_Checksum}
+		if NOT ($SFX_Background_Requested_Checksum = Silence_Front_End_Crowd_Loop)
 			printf \{channel = sfx
-				qs(0xb45f42e4)}
+				qs("\L******** requested checksum DOES NOT equal Silence_Front_End_Crowd_Loop")}
 			printf \{channel = sfx
-				qs(0x463d3bfa)}
-			spawnscriptnow \{killsurgingscripts}
+				qs("\L******** Now killing Surging Scripts")}
+			spawnscriptnow \{KillSurgingScripts}
 		endif
 	else
-		if ($crowd_transition_start_of_song_normal = 1)
+		if ($Crowd_Transition_Start_Of_Song_Normal = 1)
 			printf \{channel = sfx
-				qs(0x077fdfe1)}
-			if NOT ($sfx_background_requested_checksum = silence_front_end_crowd_loop)
-				printf channel = sfx qs(0x9daa6935) s = <frontchecksumname>
+				qs("\L**** the currently playing transition is NOT loading, but Crowd_Transition_Start_Of_Song_Normal equals 1")}
+			if NOT ($SFX_Background_Requested_Checksum = Silence_Front_End_Crowd_Loop)
+				printf channel = sfx qs("\L******** requested checksum DOES NOT equal Silence_Front_End_Crowd_Loop fading out current background. front checksumname = %s") s = <frontchecksumname>
 				printf \{channel = sfx
-					qs(0x84edbba2)}
-				change \{crowd_transition_start_of_song_normal = 0}
-				if scriptexists \{crowd_loading_whistle}
+					qs("\L******** changing crowd_transition_start_of_song_normal to equal zero")}
+				change \{Crowd_Transition_Start_Of_Song_Normal = 0}
+				if ScriptExists \{Crowd_Loading_Whistle}
 					printf \{channel = sfx
-						qs(0x50b1ed1f)}
-					killspawnedscript \{name = crowd_loading_whistle}
+						qs("\L************ script Crowd_Loading_Whistle existed - killing it now")}
+					KillSpawnedScript \{name = Crowd_Loading_Whistle}
 				endif
-				if scriptexists \{crowd_loading_surge}
+				if ScriptExists \{Crowd_Loading_Surge}
 					printf \{channel = sfx
-						qs(0x6cc40f41)}
-					killspawnedscript \{name = crowd_loading_surge}
+						qs("\L************ script Crowd_Loading_Surge existed - killing it now")}
+					KillSpawnedScript \{name = Crowd_Loading_Surge}
 				endif
 			endif
 		endif
 	endif
-	if ($backgroundsfxdebugprinttoscreen = 1)
-		formattext textname = my_text qs(0xc87eafca) n = ($sfx_background_requested_checksum) dontassertforchecksums
+	if ($BackgroundSFXDebugPrintToScreen = 1)
+		FormatText TextName = my_text qs("\LBG: %n") n = ($SFX_Background_Requested_Checksum) DontAssertForChecksums
 		create_panel_message {text = <my_text>
 			pos = (300.0, 30.0)
 			rgba = [255 255 255 255]
 			font_face = fontgrid_text_a3
 			time = 180000
 			just = [left left]
-			id = sfx_bg_panel_message
+			id = SFX_BG_PANEL_MESSAGE
 		}
 	endif
-	change sfx_background_current_area = ($sfx_background_requested_area)
-	change sfx_background_current_checksum = ($sfx_background_requested_checksum)
-	change \{sfx_background_requested_checksum = `default`}
+	change SFX_Background_Current_Area = ($SFX_Background_Requested_Area)
+	change SFX_Background_Current_Checksum = ($SFX_Background_Requested_Checksum)
+	change \{SFX_Background_Requested_Checksum = `default`}
 endscript
 
-script backgrounds_shared_logic \{new_fade_time = 3}
-	stopsound <frontchecksumname> fade_time = <new_fade_time> fade_type = log_slow
-	stopsound <backchecksumname> fade_time = <new_fade_time> fade_type = log_slow
-	appendsuffixtochecksum base = ($sfx_background_requested_checksum) suffixstring = '_FT'
+script Backgrounds_Shared_Logic \{new_fade_time = 3}
+	StopSound <frontchecksumname> fade_time = <new_fade_time> fade_type = log_slow
+	StopSound <backchecksumname> fade_time = <new_fade_time> fade_type = log_slow
+	AppendSuffixToChecksum Base = ($SFX_Background_Requested_Checksum) SuffixString = '_FT'
 	frontchecksumname = <appended_id>
-	appendsuffixtochecksum base = ($sfx_background_requested_checksum) suffixstring = '_BK'
+	AppendSuffixToChecksum Base = ($SFX_Background_Requested_Checksum) SuffixString = '_BK'
 	backchecksumname = <appended_id>
 	return <...>
 endscript
 
-script one_shot_soundevent \{waittime = 15
+script One_Shot_SoundEvent \{waittime = 15
 		immediate = 0}
-	getpakmancurrent \{map = zones}
+	GetPakManCurrent \{map = zones}
 	if NOT ((z_studio = <pak>) || (z_studio2 = <pak>) || (z_soundcheck = <pak>) || (z_board_room = <pak>))
-		if gotparam \{soundevent}
-			requestedsoundevent = <soundevent>
+		if GotParam \{SoundEvent}
+			RequestedSoundEvent = <SoundEvent>
 		else
-			requestedsoundevent = donothing_oneshot
+			RequestedSoundEvent = DoNothing_OneShot
 		endif
-		localcurrentlyplaying = $currentlyplayingoneshotsoundevent
-		if (<localcurrentlyplaying> = <requestedsoundevent>)
-			if NOT ($currentoneshotwaittime = <waittime>)
-				doactualchangeingofoneshots <...>
+		LocalCurrentlyPlaying = $CurrentlyPlayingOneShotSoundEvent
+		if (<LocalCurrentlyPlaying> = <RequestedSoundEvent>)
+			if NOT ($CurrentOneShotWaitTime = <waittime>)
+				DoActualChangeingOfOneShots <...>
 			endif
 		else
-			doactualchangeingofoneshots <...>
+			DoActualChangeingOfOneShots <...>
 		endif
 	endif
 endscript
 
-script doactualchangeingofoneshots \{immediate = 0}
-	if issoundeventplaying <localcurrentlyplaying>
-		waitforoneshotsoundeventtoend <...>
+script DoActualChangeingOfOneShots \{immediate = 0}
+	if isSoundEventPlaying <LocalCurrentlyPlaying>
+		WaitForOneShotSoundEventToEnd <...>
 	endif
-	killspawnedscript \{name = spawnedoneshotbeginrepeatloop}
-	spawnscriptnow spawnedoneshotbeginrepeatloop params = {myoneshot = <requestedsoundevent> waittime = <waittime>}
-	change currentlyplayingoneshotsoundevent = <requestedsoundevent>
-	change currentoneshotwaittime = <waittime>
+	KillSpawnedScript \{name = SpawnedOneShotBeginRepeatLoop}
+	spawnscriptnow SpawnedOneShotBeginRepeatLoop params = {myoneshot = <RequestedSoundEvent> waittime = <waittime>}
+	change CurrentlyPlayingOneShotSoundEvent = <RequestedSoundEvent>
+	change CurrentOneShotWaitTime = <waittime>
 endscript
 
-script spawnedoneshotbeginrepeatloop \{waittime = 15}
-	if NOT (<myoneshot> = donothing_oneshot)
-		wait (RandomFloat (0.3, 0.5) * <waittime>) seconds
+script SpawnedOneShotBeginRepeatLoop \{waittime = 15}
+	if NOT (<myoneshot> = DoNothing_OneShot)
+		Wait (RandomFloat (0.3, 0.5) * <waittime>) seconds
 		begin
-		getpakmancurrent \{map = zones}
+		GetPakManCurrent \{map = zones}
 		if NOT ((z_studio = <pak>) || (z_studio2 = <pak>) || (z_soundcheck = <pak>) || (z_board_room = <pak>))
-			soundevent event = <myoneshot>
+			SoundEvent event = <myoneshot>
 			begin
-			if issoundeventplaying <myoneshot>
-				wait \{1
+			if isSoundEventPlaying <myoneshot>
+				Wait \{1
 					gameframe}
 			else
 				break
 			endif
 			repeat
-			wait (RandomFloat (0.9, 1.6) * <waittime>) seconds
+			Wait (RandomFloat (0.9, 1.6) * <waittime>) seconds
 		else
 			break
 		endif
@@ -251,20 +251,20 @@ script spawnedoneshotbeginrepeatloop \{waittime = 15}
 	endif
 endscript
 
-script waitforoneshotsoundeventtoend \{immediate = 0}
+script WaitForOneShotSoundEventToEnd \{immediate = 0}
 	if (<immediate> = 1)
-		printf \{qs(0xc32b16a8)}
-		if (issoundeventplaying <localcurrentlyplaying>)
-			stopsoundevent <localcurrentlyplaying>
+		printf \{qs("\LWaitForOneShotSoundEventToEnd IMMEDIATE")}
+		if (isSoundEventPlaying <LocalCurrentlyPlaying>)
+			StopSoundEvent <LocalCurrentlyPlaying>
 		endif
 		return
 	endif
 	begin
-	if (issoundeventplaying <localcurrentlyplaying>)
+	if (isSoundEventPlaying <LocalCurrentlyPlaying>)
 	else
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript

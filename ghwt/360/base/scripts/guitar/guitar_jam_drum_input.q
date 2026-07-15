@@ -4,14 +4,14 @@ is_percussion_kit = 0
 script jam_input_drums controller = ($player1_status.controller) spawn_id = jam_input_spawns
 	mid_up_strum = 0
 	mid_down_strum = 0
-	jam_input_add_player_server Player = <select_player> spawn_id = <spawn_id>
+	jam_input_add_player_server player = <select_player> spawn_id = <spawn_id>
 endscript
 
 script jam_input_drums_per_frame \{percussion = 0}
 	if (($jam_advanced_record) = 0)
 		jam_check_simple_record_input controller = <controller> select_player = <select_player>
 	endif
-	instrument_controls = [Enabled]
+	instrument_controls = [enabled]
 	if ($game_mode = training)
 		if ScreenElementExists \{id = jam_band_container}
 			jam_band_container :GetTags
@@ -19,10 +19,10 @@ script jam_input_drums_per_frame \{percussion = 0}
 			jam_studio_element :GetTags
 		endif
 	endif
-	if ArrayContains array = <instrument_controls> contains = Enabled
+	if ArrayContains array = <instrument_controls> contains = enabled
 		jam_update_percussion_kit select_player = <select_player> controller = <controller>
-		if isdrumcontroller controller = <controller>
-			if isrbdrum controller = <controller_index>
+		if IsDrumController controller = <controller>
+			if isRBDrum controller = <controller_index>
 				jam_input_drum_strum {
 					hold_pattern = <hold_pattern>
 					controller = <controller>
@@ -98,17 +98,17 @@ script jam_input_drums_per_frame \{percussion = 0}
 			else
 				<mid_down_strum> = 0
 			endif
-			jam_drum_tilt_needle_update velocity = <velocity> Player = <select_player>
+			jam_drum_tilt_needle_update velocity = <velocity> player = <select_player>
 		endif
 	endif
 	return mid_up_strum = <mid_up_strum> mid_down_strum = <mid_down_strum>
 endscript
 
 script jam_drum_tilt_needle_update 
-	formatText checksumName = tilt_id 'jam_tilt_needle_%s' s = <Player>
+	FormatText checksumname = tilt_id 'jam_tilt_needle_%s' s = <player>
 	tilt_value = (60.0 * (<velocity> / 127.0))
 	if (($jam_advanced_record) = 1)
-		ResolveScreenElementID \{id = {
+		ResolveScreenElementId \{id = {
 				jam_studio_element
 				child = {
 					adv_record
@@ -118,64 +118,64 @@ script jam_drum_tilt_needle_update
 					}
 				}
 			}}
-		legacydoscreenelementmorph id = <resolved_id> time = 0.03 rot_angle = (-24 + <tilt_value>)
+		LegacyDoScreenElementMorph id = <resolved_id> time = 0.03 rot_angle = (-24 + <tilt_value>)
 	else
-		legacydoscreenelementmorph id = <tilt_id> time = 0.03 rot_angle = (-24 + <tilt_value>)
+		LegacyDoScreenElementMorph id = <tilt_id> time = 0.03 rot_angle = (-24 + <tilt_value>)
 	endif
 endscript
 jam_percussion_hold_count = 0
 
 script jam_update_percussion_kit 
 	if (($jam_advanced_record) = 0)
-		formatText checksumName = player_info_element 'player_info_element_%a' a = <select_player>
+		FormatText checksumname = player_info_element 'player_info_element_%a' a = <select_player>
 		if ControllerPressed select <controller>
-			Change jam_percussion_hold_count = ($jam_percussion_hold_count + 1)
+			change jam_percussion_hold_count = ($jam_percussion_hold_count + 1)
 		else
 			if ($jam_percussion_hold_count > 0 && $jam_percussion_hold_count < 30)
 				if ($is_percussion_kit = 0)
-					Change \{is_percussion_kit = 1}
-					broadcastevent \{Type = jam_tutorial_percussion
+					change \{is_percussion_kit = 1}
+					BroadcastEvent \{type = jam_tutorial_percussion
 						data = {
 							percussion = 1
 						}}
 					if ScreenElementExists id = <player_info_element>
-						<player_info_element> :se_setprops glow_alpha = 0.65000004
-						<player_info_element> :se_setprops percussion_text = qs(0x6988d970)
+						<player_info_element> :SE_SetProps glow_alpha = 0.65000004
+						<player_info_element> :SE_SetProps percussion_text = qs("Percussion On")
 					endif
 				else
-					Change \{is_percussion_kit = 0}
-					broadcastevent \{Type = jam_tutorial_percussion
+					change \{is_percussion_kit = 0}
+					BroadcastEvent \{type = jam_tutorial_percussion
 						data = {
 							percussion = 0
 						}}
 					if ScreenElementExists id = <player_info_element>
-						<player_info_element> :se_setprops glow_alpha = 0.0
-						<player_info_element> :se_setprops percussion_text = qs(0x26239ec0)
+						<player_info_element> :SE_SetProps glow_alpha = 0.0
+						<player_info_element> :SE_SetProps percussion_text = qs("Percussion Off")
 					endif
 				endif
 			endif
-			Change \{jam_percussion_hold_count = 0}
+			change \{jam_percussion_hold_count = 0}
 		endif
 	else
 		if ControllerPressed select <controller>
-			Change jam_percussion_hold_count = ($jam_percussion_hold_count + 1)
+			change jam_percussion_hold_count = ($jam_percussion_hold_count + 1)
 		else
 			if ($jam_percussion_hold_count > 0 && $jam_percussion_hold_count < 30)
 				if ($is_percussion_kit = 0)
-					Change \{is_percussion_kit = 1}
+					change \{is_percussion_kit = 1}
 					if ScreenElementExists \{id = jam_studio_element}
-						jam_studio_element :se_setprops \{perc_glow_alpha = 0.65000004}
-						jam_studio_element :se_setprops \{percussion_text = qs(0x6988d970)}
+						jam_studio_element :SE_SetProps \{perc_glow_alpha = 0.65000004}
+						jam_studio_element :SE_SetProps \{percussion_text = qs("Percussion On")}
 					endif
 				else
-					Change \{is_percussion_kit = 0}
+					change \{is_percussion_kit = 0}
 					if ScreenElementExists \{id = jam_studio_element}
-						jam_studio_element :se_setprops \{perc_glow_alpha = 0.0}
-						jam_studio_element :se_setprops \{percussion_text = qs(0x26239ec0)}
+						jam_studio_element :SE_SetProps \{perc_glow_alpha = 0.0}
+						jam_studio_element :SE_SetProps \{percussion_text = qs("Percussion Off")}
 					endif
 				endif
 			endif
-			Change \{jam_percussion_hold_count = 0}
+			change \{jam_percussion_hold_count = 0}
 		endif
 	endif
 endscript
@@ -186,17 +186,17 @@ script jam_input_drum_strum \{play_back = 0
 		loop_pitch = 0
 		percussion = 0}
 	if GotParam \{delay}
-		Wait <delay> Seconds
+		Wait <delay> seconds
 	endif
 	if IsTrue \{$g_optimized_jam_input_drum_strum}
-		jaminputdrumstrum_cfunc <...>
+		JamInputDrumStrum_CFunc <...>
 		return
 	endif
 	if GotParam \{buss}
 		got_buss = 1
 	endif
-	getplayerinfo <select_player> controller
-	getplayerinfo <select_player> lefthanded_button_ups
+	GetPlayerInfo <select_player> controller
+	GetPlayerInfo <select_player> lefthanded_button_ups
 	if (<druminput> = 1)
 		if (<lefthanded_button_ups> = 0)
 			snare_pattern = 4096
@@ -206,7 +206,7 @@ script jam_input_drum_strum \{play_back = 0
 			tom2_pattern = 65536
 			kick_pattern = 1048576
 		else
-			if usefourlanehighway Player = <select_player>
+			if UseFourLaneHighway player = <select_player>
 				snare_pattern = 65536
 				hihat_pattern = 16
 				tom1_pattern = 256
@@ -269,66 +269,66 @@ script jam_input_drum_strum \{play_back = 0
 			snare_velocity = ($jam_default_snare_velocity)
 		endif
 		if GotParam \{use_practice_busses}
-			buss = drums_ingame_snare
+			buss = Drums_InGame_Snare
 		elseif NOT GotParam \{got_buss}
-			buss = jammode_drums_snare
+			buss = JamMode_Drums_Snare
 		endif
-		SpawnScriptNow jam_input_snare_sound params = {velocity = <snare_velocity> play_back = <play_back> hold_pattern = <hold_pattern> buss = <buss> select_player = <select_player> loop_pitch = <loop_pitch> percussion = <percussion>}
+		spawnscriptnow jam_input_snare_sound params = {velocity = <snare_velocity> play_back = <play_back> hold_pattern = <hold_pattern> buss = <buss> select_player = <select_player> loop_pitch = <loop_pitch> percussion = <percussion>}
 	endif
 	if (<hold_pattern> && <hihat_pattern>)
 		if NOT GotParam \{hihat_velocity}
 			hihat_velocity = ($jam_default_hihat_velocity)
 		endif
 		if GotParam \{use_practice_busses}
-			buss = drums_ingame_cymbals
+			buss = Drums_InGame_Cymbals
 		elseif NOT GotParam \{got_buss}
-			buss = jammode_drums_cymbals
+			buss = JamMode_Drums_Cymbals
 		endif
-		SpawnScriptNow jam_input_hihat_sound params = {velocity = <hihat_velocity> play_back = <play_back> hold_pattern = <hold_pattern> buss = <buss> select_player = <select_player> loop_pitch = <loop_pitch> percussion = <percussion>}
+		spawnscriptnow jam_input_hihat_sound params = {velocity = <hihat_velocity> play_back = <play_back> hold_pattern = <hold_pattern> buss = <buss> select_player = <select_player> loop_pitch = <loop_pitch> percussion = <percussion>}
 	endif
 	if (<hold_pattern> && <tom1_pattern>)
 		if NOT GotParam \{tom1_velocity}
 			tom1_velocity = ($jam_default_tom1_velocity)
 		endif
 		if GotParam \{use_practice_busses}
-			buss = drums_ingame_toms
+			buss = Drums_InGame_Toms
 		elseif NOT GotParam \{got_buss}
-			buss = jammode_drums_toms
+			buss = JamMode_Drums_Toms
 		endif
-		SpawnScriptNow jam_input_tom1_sound params = {velocity = <tom1_velocity> play_back = <play_back> hold_pattern = <hold_pattern> buss = <buss> select_player = <select_player> loop_pitch = <loop_pitch> percussion = <percussion>}
+		spawnscriptnow jam_input_tom1_sound params = {velocity = <tom1_velocity> play_back = <play_back> hold_pattern = <hold_pattern> buss = <buss> select_player = <select_player> loop_pitch = <loop_pitch> percussion = <percussion>}
 	endif
 	if (<hold_pattern> && <cymbal_pattern>)
 		if NOT GotParam \{crash_velocity}
 			crash_velocity = ($jam_default_cymbal_velocity)
 		endif
 		if GotParam \{use_practice_busses}
-			buss = drums_ingame_cymbals
+			buss = Drums_InGame_Cymbals
 		elseif NOT GotParam \{got_buss}
-			buss = jammode_drums_cymbals
+			buss = JamMode_Drums_Cymbals
 		endif
-		SpawnScriptNow jam_input_cymbal_sound params = {velocity = <crash_velocity> play_back = <play_back> hold_pattern = <hold_pattern> buss = <buss> select_player = <select_player> loop_pitch = <loop_pitch> percussion = <percussion>}
+		spawnscriptnow jam_input_cymbal_sound params = {velocity = <crash_velocity> play_back = <play_back> hold_pattern = <hold_pattern> buss = <buss> select_player = <select_player> loop_pitch = <loop_pitch> percussion = <percussion>}
 	endif
 	if (<hold_pattern> && <tom2_pattern>)
 		if NOT GotParam \{tom2_velocity}
 			tom2_velocity = ($jam_default_tom2_velocity)
 		endif
 		if GotParam \{use_practice_busses}
-			buss = drums_ingame_toms
+			buss = Drums_InGame_Toms
 		elseif NOT GotParam \{got_buss}
-			buss = jammode_drums_toms
+			buss = JamMode_Drums_Toms
 		endif
-		SpawnScriptNow jam_input_tom2_sound params = {velocity = <tom2_velocity> play_back = <play_back> hold_pattern = <hold_pattern> buss = <buss> select_player = <select_player> loop_pitch = <loop_pitch> percussion = <percussion>}
+		spawnscriptnow jam_input_tom2_sound params = {velocity = <tom2_velocity> play_back = <play_back> hold_pattern = <hold_pattern> buss = <buss> select_player = <select_player> loop_pitch = <loop_pitch> percussion = <percussion>}
 	endif
 	if (<hold_pattern> && <kick_pattern>)
 		if NOT GotParam \{kick_velocity}
 			kick_velocity = ($jam_default_kick_velocity)
 		endif
 		if GotParam \{use_practice_busses}
-			buss = drums_ingame_kick
+			buss = Drums_InGame_Kick
 		elseif NOT GotParam \{got_buss}
-			buss = jammode_drums_kick
+			buss = JamMode_Drums_Kick
 		endif
-		SpawnScriptNow jam_input_kick_sound params = {velocity = <kick_velocity> play_back = <play_back> hold_pattern = <hold_pattern> buss = <buss> select_player = <select_player> loop_pitch = <loop_pitch> percussion = <percussion>}
+		spawnscriptnow jam_input_kick_sound params = {velocity = <kick_velocity> play_back = <play_back> hold_pattern = <hold_pattern> buss = <buss> select_player = <select_player> loop_pitch = <loop_pitch> percussion = <percussion>}
 	endif
 endscript
 
@@ -355,11 +355,11 @@ endscript
 debug_drum_velocities = 0
 
 script jam_input_snare_sound 
-	if CompositeObjectExists \{Name = drummer}
-		drummer :Anim_Command target = drumkit Command = applydrumkitdifference_playanim params = {anim = ($drumkit_anims [4]) blend_period = $drum_kit_blend_time}
+	if CompositeObjectExists \{name = Drummer}
+		Drummer :Anim_Command target = DrumKit command = ApplyDrumKitDifference_PlayAnim params = {Anim = ($drumkit_anims [4]) blend_period = $drum_kit_blend_time}
 	endif
 	if ($debug_drum_velocities = 1)
-		printf channel = velocity_debug qs(0x77fbb05b) s = <velocity>
+		printf channel = velocity_debug qs("\LSnare velocity %s") s = <velocity>
 	endif
 	if NOT IsTrue \{$g_optimized_jam_input_drum_strum}
 		jam_get_drum_set <...>
@@ -369,11 +369,11 @@ script jam_input_snare_sound
 endscript
 
 script jam_input_hihat_sound 
-	if CompositeObjectExists \{Name = drummer}
-		drummer :Anim_Command target = drumkit Command = applydrumkitdifference_playanim params = {anim = ($drumkit_anims [6]) blend_period = $drum_kit_blend_time}
+	if CompositeObjectExists \{name = Drummer}
+		Drummer :Anim_Command target = DrumKit command = ApplyDrumKitDifference_PlayAnim params = {Anim = ($drumkit_anims [6]) blend_period = $drum_kit_blend_time}
 	endif
 	if ($debug_drum_velocities = 1)
-		printf channel = velocity_debug qs(0x28e511d7) s = <velocity>
+		printf channel = velocity_debug qs("\LHihat velocity %s") s = <velocity>
 	endif
 	if NOT IsTrue \{$g_optimized_jam_input_drum_strum}
 		jam_get_drum_set <...>
@@ -383,11 +383,11 @@ script jam_input_hihat_sound
 endscript
 
 script jam_input_tom1_sound 
-	if CompositeObjectExists \{Name = drummer}
-		drummer :Anim_Command target = drumkit Command = applydrumkitdifference_playanim params = {anim = ($drumkit_anims [3]) blend_period = $drum_kit_blend_time}
+	if CompositeObjectExists \{name = Drummer}
+		Drummer :Anim_Command target = DrumKit command = ApplyDrumKitDifference_PlayAnim params = {Anim = ($drumkit_anims [3]) blend_period = $drum_kit_blend_time}
 	endif
 	if ($debug_drum_velocities = 1)
-		printf channel = velocity_debug qs(0xb87f57d3) s = <velocity>
+		printf channel = velocity_debug qs("\LTom1 velocity %s") s = <velocity>
 	endif
 	if NOT IsTrue \{$g_optimized_jam_input_drum_strum}
 		jam_get_drum_set <...>
@@ -397,11 +397,11 @@ script jam_input_tom1_sound
 endscript
 
 script jam_input_cymbal_sound 
-	if CompositeObjectExists \{Name = drummer}
-		drummer :Anim_Command target = drumkit Command = applydrumkitdifference_playanim params = {anim = ($drumkit_anims [8]) blend_period = $drum_kit_blend_time}
+	if CompositeObjectExists \{name = Drummer}
+		Drummer :Anim_Command target = DrumKit command = ApplyDrumKitDifference_PlayAnim params = {Anim = ($drumkit_anims [8]) blend_period = $drum_kit_blend_time}
 	endif
 	if ($debug_drum_velocities = 1)
-		printf channel = velocity_debug qs(0x7f27db77) s = <velocity>
+		printf channel = velocity_debug qs("\LCymbal velocity %s") s = <velocity>
 	endif
 	if NOT IsTrue \{$g_optimized_jam_input_drum_strum}
 		jam_get_drum_set <...>
@@ -411,11 +411,11 @@ script jam_input_cymbal_sound
 endscript
 
 script jam_input_tom2_sound 
-	if CompositeObjectExists \{Name = drummer}
-		drummer :Anim_Command target = drumkit Command = applydrumkitdifference_playanim params = {anim = ($drumkit_anims [2]) blend_period = $drum_kit_blend_time}
+	if CompositeObjectExists \{name = Drummer}
+		Drummer :Anim_Command target = DrumKit command = ApplyDrumKitDifference_PlayAnim params = {Anim = ($drumkit_anims [2]) blend_period = $drum_kit_blend_time}
 	endif
 	if ($debug_drum_velocities = 1)
-		printf channel = velocity_debug qs(0x4a28ba2b) s = <velocity>
+		printf channel = velocity_debug qs("\LTom2 velocity %s") s = <velocity>
 	endif
 	if NOT IsTrue \{$g_optimized_jam_input_drum_strum}
 		jam_get_drum_set <...>
@@ -425,11 +425,11 @@ script jam_input_tom2_sound
 endscript
 
 script jam_input_kick_sound 
-	if CompositeObjectExists \{Name = drummer}
-		drummer :Anim_Command target = drumkit Command = applydrumkitdifference_playanim params = {anim = ($drumkit_anims [0]) blend_period = $drum_kit_blend_time}
+	if CompositeObjectExists \{name = Drummer}
+		Drummer :Anim_Command target = DrumKit command = ApplyDrumKitDifference_PlayAnim params = {Anim = ($drumkit_anims [0]) blend_period = $drum_kit_blend_time}
 	endif
 	if ($debug_drum_velocities = 1)
-		printf channel = velocity_debug qs(0x511de9e5) s = <velocity>
+		printf channel = velocity_debug qs("\LKick velocity %s") s = <velocity>
 	endif
 	if NOT IsTrue \{$g_optimized_jam_input_drum_strum}
 		jam_get_drum_set <...>
@@ -440,18 +440,18 @@ endscript
 
 script jam_input_drum_sound \{play_back = 0
 		loop_pitch = 0}
-	if ($jam_tutorial_status = Active)
-		broadcastevent Type = jam_tutorial_drum_hit data = {hold_pattern = <hold_pattern>}
+	if ($jam_tutorial_status = active)
+		BroadcastEvent type = jam_tutorial_drum_hit data = {hold_pattern = <hold_pattern>}
 	endif
 	if (<play_back> = 1)
 		return
 	endif
 	if NOT GotParam \{auto}
-		getplayerinfo <select_player> controller
-		if isdrumcontroller controller = <controller>
-			SpawnScriptNow jam_fretboard_add_note params = {Player = <select_player> gem_pattern = <hold_pattern>}
+		GetPlayerInfo <select_player> controller
+		if IsDrumController controller = <controller>
+			spawnscriptnow jam_fretboard_add_note params = {player = <select_player> gem_pattern = <hold_pattern>}
 		else
-			SpawnScriptNow jam_fretboard_add_note params = {Player = <select_player> gem_pattern = <hold_pattern_color>}
+			spawnscriptnow jam_fretboard_add_note params = {player = <select_player> gem_pattern = <hold_pattern_color>}
 		endif
 		if NOT ($jam_highway_recording = 1)
 			return
@@ -482,24 +482,24 @@ script jam_input_drum_sound \{play_back = 0
 	window_quantize_to = ($jam_quantize [7].value)
 	window_quantize = (<ms_per_beat> / <window_quantize_to>)
 	if NOT GotParam \{auto}
-		getplayerinfo <select_player> jam_instrument
+		GetPlayerInfo <select_player> jam_instrument
 	else
 		jam_instrument = 3
 	endif
 	if NOT (<jam_instrument> = -1)
-		getjamsessionsize track = ($jam_tracks [<jam_instrument>].id)
+		GetJamSessionSize track = ($jam_tracks [<jam_instrument>].id)
 		if ((<track_size> + 1) >= ($gemarraysize))
 			if NOT GotParam \{auto}
 				if ($jam_advanced_record = 1)
 					if NOT ScriptIsRunning \{show_warning_message}
-						SpawnScriptNow \{show_warning_message
+						spawnscriptnow \{show_warning_message
 							id = jam_recording_spawns
 							params = {
-								warning_text = qs(0xdd331019)
+								warning_text = qs("Maximum Note Limit Reached!")
 							}}
 					endif
 				else
-					SpawnScriptNow jam_note_limit_hit id = <limit_msg> params = {Player = <select_player>}
+					spawnscriptnow jam_note_limit_hit id = <limit_msg> params = {player = <select_player>}
 				endif
 			endif
 			return
@@ -525,25 +525,25 @@ script jam_input_drum_sound \{play_back = 0
 		<gem> = (<gem> + 32)
 	endif
 	gem_array = ($jam_tracks [3].gem_array)
-	if NOT GlobalExists Name = <gem_array> Type = array
+	if NOT GlobalExists name = <gem_array> type = array
 		return
 	endif
 	length = 60
-	addnotetrackitem Name = <gem_array> time = <new_time> length = <length> pattern = <gem> update_pattern
+	AddNoteTrackItem name = <gem_array> time = <new_time> length = <length> pattern = <gem> update_pattern
 	new_velocity = <velocity>
 	index = -1
-	findjamsessionsound track = drum time = <new_time>
+	FindJamSessionSound track = drum time = <new_time>
 	if (<index> >= 0)
-		getjamsessionsound track = drum index = <index>
+		GetJamSessionSound track = drum index = <index>
 		if (<new_time> = <time>)
-			deletejamsessionsound track = drum index = <index>
+			DeleteJamSessionSound track = drum index = <index>
 		endif
 	endif
 	CastToInteger \{new_velocity}
 	if NOT ($is_percussion_kit = 1)
-		Type = 0
+		type = 0
 	else
-		Type = 1
+		type = 1
 	endif
 	chord_type = 0
 	if (<loop_pitch> < 0)
@@ -551,18 +551,18 @@ script jam_input_drum_sound \{play_back = 0
 	elseif (<loop_pitch> > 0)
 		chord_type = 2
 	endif
-	addjamsessionsound track = drum time = <new_time> string = 0 fret = 0 Type = <Type> effect = 0 chord_type = <chord_type> velocity = <new_velocity>
-	broadcastevent \{Type = jam_note_hit}
+	AddJamSessionSound track = drum time = <new_time> string = 0 fret = 0 type = <type> effect = 0 chord_type = <chord_type> velocity = <new_velocity>
+	BroadcastEvent \{type = jam_note_hit}
 endscript
 
 script guitar_jam_drum_playback \{start_time = 0}
 	printf \{channel = jam_mode
-		qs(0x921826d7)}
+		qs("\LJAM MODE: Drum Playback Start")}
 	in_game = 0
 	if GotParam \{gem_array}
 		GetArraySize ($<gem_array>)
-		gem_array_size = <array_Size>
-		printf channel = jam_mode qs(0xdb421e13) s = <gem_array_size>
+		gem_array_size = <array_size>
+		printf channel = jam_mode qs("\LJam playback array size %s") s = <gem_array_size>
 		in_game = 1
 	else
 		gem_array = ($jam_tracks [3].gem_array)
@@ -572,7 +572,7 @@ script guitar_jam_drum_playback \{start_time = 0}
 		gem_array_size_id = <appended_id>
 		in_game = 0
 	endif
-	reset_song_time starttime = <start_time>
+	reset_song_time StartTime = <start_time>
 	orig_size = <gem_array_size>
 	if (<gem_array_size> = 0)
 		return
@@ -580,7 +580,7 @@ script guitar_jam_drum_playback \{start_time = 0}
 	track_index = 0
 	start_at_index = -1
 	begin
-	getnotetrackitem Name = <gem_array> index = <track_index>
+	GetNoteTrackItem name = <gem_array> index = <track_index>
 	if (<gem_time> >= <start_time>)
 		start_at_index = <track_index>
 		break
@@ -597,7 +597,7 @@ script guitar_jam_drum_playback \{start_time = 0}
 		<track_index> = <start_at_index>
 		<session_sound_index> = 0
 		begin
-		if NOT jamdrumplayback_process <...>
+		if NOT JamDrumPlayback_Process <...>
 			break
 		endif
 		Wait \{1
@@ -619,19 +619,19 @@ script guitar_jam_drum_playback \{start_time = 0}
 		CastToInteger \{time}
 		curr_song_time = <time>
 		if (<gem_array_size> = <orig_size>)
-			getnotetrackitem Name = <gem_array> index = <track_index>
+			GetNoteTrackItem name = <gem_array> index = <track_index>
 			if (<curr_song_time> >= <gem_time>)
 				GetArraySize <drum_gems>
 				gem_count = 0
 				begin
 				Mod a = <gem_pattern> b = 2
 				if (<Mod> = 1 && <gem_pattern> >= 1)
-					getjamsessionsize \{track = drum}
+					GetJamSessionSize \{track = drum}
 					note_type = 0
 					if ((<track_index> / 2) >= <track_size>)
 						velocity = $jam_default_drum_velocity
 					else
-						getjamsessionsound track = drum index = (<track_index> / 2)
+						GetJamSessionSound track = drum index = (<track_index> / 2)
 					endif
 					loop_pitch = 0
 					if (<chord_type> = 1)
@@ -643,7 +643,7 @@ script guitar_jam_drum_playback \{start_time = 0}
 				endif
 				<gem_pattern> = (<gem_pattern> / 2)
 				<gem_count> = (<gem_count> + 1)
-				repeat <array_Size>
+				repeat <array_size>
 				<track_index> = (<track_index> + 2)
 			endif
 		endif
@@ -662,7 +662,7 @@ script guitar_jam_drum_playback \{start_time = 0}
 		repeat
 	endif
 	printf \{channel = jam_mode
-		qs(0x86f046a8)}
+		qs("\LJAM MODE: Playback Drum Recording Stop")}
 endscript
 g_optimized_guitar_jam_drum_playback = 1
 g_optimized_jam_input_drum_strum = 1

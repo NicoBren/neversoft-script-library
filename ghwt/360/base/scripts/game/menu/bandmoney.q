@@ -2,7 +2,7 @@
 script create_band_money_display 
 	destroy_band_money_display
 	CreateScreenElement \{parent = root_window
-		Type = descinterface
+		type = DescInterface
 		id = band_money_id
 		desc = 'band_money'}
 	refresh_band_money_display savegame = <savegame>
@@ -17,8 +17,8 @@ endscript
 script refresh_band_money_display savegame = ($cas_current_savegame)
 	get_current_band_info
 	GetGlobalTags <band_info> savegame = <savegame>
-	formatText TextName = cash_text qs(0x7e81ee2f) i = <cash>
-	formatText TextName = earnings_text qs(0x7e81ee2f) i = <career_earnings>
+	FormatText TextName = cash_text qs("\L$%i") i = <Cash>
+	FormatText TextName = earnings_text qs("\L$%i") i = <career_earnings>
 	if ScreenElementExists \{id = band_money_id}
 		SetScreenElementProps {
 			id = band_money_id
@@ -35,8 +35,8 @@ script decrease_band_money savegame = ($cas_current_savegame)
 		all}
 	get_current_band_info
 	GetGlobalTags <band_info> savegame = <savegame>
-	cash = (<cash> - <price>)
-	SetGlobalTags <band_info> params = {cash = <cash>} savegame = <savegame>
+	Cash = (<Cash> - <price>)
+	SetGlobalTags <band_info> params = {Cash = <Cash>} savegame = <savegame>
 	refresh_band_money_display savegame = <savegame>
 endscript
 
@@ -47,8 +47,8 @@ script increase_band_money savegame = ($cas_current_savegame)
 		all}
 	get_current_band_info
 	GetGlobalTags <band_info> savegame = <savegame>
-	cash = (<cash> + <amount>)
-	SetGlobalTags <band_info> params = {cash = <cash>} savegame = <savegame>
+	Cash = (<Cash> + <amount>)
+	SetGlobalTags <band_info> params = {Cash = <Cash>} savegame = <savegame>
 	refresh_band_money_display savegame = <savegame>
 endscript
 
@@ -69,14 +69,14 @@ script set_band_money savegame = ($cas_current_savegame)
 		]
 		all}
 	get_current_band_info
-	SetGlobalTags <band_info> params = {cash = <value>} savegame = <savegame>
+	SetGlobalTags <band_info> params = {Cash = <value>} savegame = <savegame>
 	refresh_band_money_display savegame = <savegame>
 endscript
 
-script get_band_money cash = 0 savegame = ($cas_current_savegame)
+script get_band_money Cash = 0 savegame = ($cas_current_savegame)
 	get_current_band_info
 	GetGlobalTags <band_info> savegame = <savegame>
-	return cash = <cash>
+	return Cash = <Cash>
 endscript
 
 script has_enough_money savegame = ($cas_current_savegame)
@@ -86,8 +86,8 @@ script has_enough_money savegame = ($cas_current_savegame)
 		all}
 	get_current_band_info
 	GetGlobalTags <band_info> savegame = <savegame>
-	if (<price> > <cash>)
-		return \{FALSE}
+	if (<price> > <Cash>)
+		return \{false}
 	else
 		return \{true}
 	endif

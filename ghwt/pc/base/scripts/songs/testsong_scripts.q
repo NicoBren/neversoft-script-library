@@ -1,72 +1,72 @@
 
 script testsongmode_startup 
 	begin
-	waitforevent \{type = hit_notes}
-	if controllermake \{l2}
-		if controllerpressed \{l1}
-			soundevent \{event = improv_pentatonic_chord_d5_g5}
-			stopsoundevent \{improv_pentatonic_single_note_g7}
-			stopsoundevent \{improv_pentatonic_single_note_b5}
+	WaitForEvent \{type = hit_notes}
+	if ControllerMake \{L2}
+		if ControllerPressed \{L1}
+			SoundEvent \{event = Improv_Pentatonic_Chord_D5_G5}
+			StopSoundEvent \{Improv_Pentatonic_Single_Note_G7}
+			StopSoundEvent \{Improv_Pentatonic_Single_Note_B5}
 		else
-			soundevent \{event = improv_pentatonic_single_note_g7}
+			SoundEvent \{event = Improv_Pentatonic_Single_Note_G7}
 		endif
 		printf \{'L2'}
 	endif
-	if controllermake \{l1}
-		if controllerpressed \{l2}
-			soundevent \{event = improv_pentatonic_chord_d5_g5}
-			stopsoundevent \{improv_pentatonic_single_note_g7}
-			stopsoundevent \{improv_pentatonic_single_note_b5}
+	if ControllerMake \{L1}
+		if ControllerPressed \{L2}
+			SoundEvent \{event = Improv_Pentatonic_Chord_D5_G5}
+			StopSoundEvent \{Improv_Pentatonic_Single_Note_G7}
+			StopSoundEvent \{Improv_Pentatonic_Single_Note_B5}
 		else
-			if controllerpressed \{r1}
-				soundevent \{event = improv_pentatonic_chord_d7_g7}
-				stopsoundevent \{improv_pentatonic_single_note_b5}
-				stopsoundevent \{improv_pentatonic_single_note_b8}
+			if ControllerPressed \{R1}
+				SoundEvent \{event = Improv_Pentatonic_Chord_D7_G7}
+				StopSoundEvent \{Improv_Pentatonic_Single_Note_B5}
+				StopSoundEvent \{Improv_Pentatonic_Single_Note_B8}
 			else
-				soundevent \{event = improv_pentatonic_single_note_b5}
+				SoundEvent \{event = Improv_Pentatonic_Single_Note_B5}
 			endif
 		endif
 		printf \{'L1'}
 	endif
-	if controllermake \{r1}
-		if controllerpressed \{l1}
-			soundevent \{event = improv_pentatonic_chord_d7_g7}
-			stopsoundevent \{improv_pentatonic_single_note_b5}
-			stopsoundevent \{improv_pentatonic_single_note_b8}
+	if ControllerMake \{R1}
+		if ControllerPressed \{L1}
+			SoundEvent \{event = Improv_Pentatonic_Chord_D7_G7}
+			StopSoundEvent \{Improv_Pentatonic_Single_Note_B5}
+			StopSoundEvent \{Improv_Pentatonic_Single_Note_B8}
 		else
-			if controllerpressed \{r2}
-				soundevent \{event = improv_pentatonic_chord_b5_ee5}
-				stopsoundevent \{improv_pentatonic_single_note_b8}
-				stopsoundevent \{improv_pentatonic_single_note_ee5}
+			if ControllerPressed \{R2}
+				SoundEvent \{event = Improv_Pentatonic_Chord_B5_EE5}
+				StopSoundEvent \{Improv_Pentatonic_Single_Note_B8}
+				StopSoundEvent \{Improv_Pentatonic_Single_Note_EE5}
 			else
-				soundevent \{event = improv_pentatonic_single_note_b8}
+				SoundEvent \{event = Improv_Pentatonic_Single_Note_B8}
 			endif
 		endif
 		printf \{'R1'}
 	endif
-	if controllermake \{r2}
-		if controllerpressed \{r1}
-			soundevent \{event = improv_pentatonic_chord_b5_ee5}
-			stopsoundevent \{improv_pentatonic_single_note_b8}
-			stopsoundevent \{improv_pentatonic_single_note_ee5}
+	if ControllerMake \{R2}
+		if ControllerPressed \{R1}
+			SoundEvent \{event = Improv_Pentatonic_Chord_B5_EE5}
+			StopSoundEvent \{Improv_Pentatonic_Single_Note_B8}
+			StopSoundEvent \{Improv_Pentatonic_Single_Note_EE5}
 		else
-			if controllerpressed \{x}
-				soundevent \{event = improv_pentatonic_chord_b8_ee8}
-				stopsoundevent \{improv_pentatonic_single_note_ee5}
-				stopsoundevent \{improv_pentatonic_single_note_ee8}
+			if ControllerPressed \{x}
+				SoundEvent \{event = Improv_Pentatonic_Chord_B8_EE8}
+				StopSoundEvent \{Improv_Pentatonic_Single_Note_EE5}
+				StopSoundEvent \{Improv_Pentatonic_Single_Note_EE8}
 			else
-				soundevent \{event = improv_pentatonic_single_note_ee5}
+				SoundEvent \{event = Improv_Pentatonic_Single_Note_EE5}
 			endif
 		endif
 		printf \{'R2'}
 	endif
-	if controllermake \{x}
-		if controllerpressed \{r2}
-			soundevent \{event = improv_pentatonic_chord_b8_ee8}
-			stopsoundevent \{improv_pentatonic_single_note_ee5}
-			stopsoundevent \{improv_pentatonic_single_note_ee8}
+	if ControllerMake \{x}
+		if ControllerPressed \{R2}
+			SoundEvent \{event = Improv_Pentatonic_Chord_B8_EE8}
+			StopSoundEvent \{Improv_Pentatonic_Single_Note_EE5}
+			StopSoundEvent \{Improv_Pentatonic_Single_Note_EE8}
 		else
-			soundevent \{event = improv_pentatonic_single_note_ee8}
+			SoundEvent \{event = Improv_Pentatonic_Single_Note_EE8}
 			if ($current_song = testsong)
 				printf \{'%a'
 					a = current_song}
@@ -74,22 +74,22 @@ script testsongmode_startup
 		endif
 		printf \{'X'}
 	endif
-	wait \{1
+	Wait \{1
 		frame}
-	if NOT controllerpressed \{l2}
-		stopsoundevent \{improv_pentatonic_single_note_g7}
+	if NOT ControllerPressed \{L2}
+		StopSoundEvent \{Improv_Pentatonic_Single_Note_G7}
 	endif
-	if NOT controllerpressed \{l1}
-		stopsoundevent \{improv_pentatonic_single_note_b5}
+	if NOT ControllerPressed \{L1}
+		StopSoundEvent \{Improv_Pentatonic_Single_Note_B5}
 	endif
-	if NOT controllerpressed \{r1}
-		stopsoundevent \{improv_pentatonic_single_note_b8}
+	if NOT ControllerPressed \{R1}
+		StopSoundEvent \{Improv_Pentatonic_Single_Note_B8}
 	endif
-	if NOT controllerpressed \{r2}
-		stopsoundevent \{improv_pentatonic_single_note_ee5}
+	if NOT ControllerPressed \{R2}
+		StopSoundEvent \{Improv_Pentatonic_Single_Note_EE5}
 	endif
-	if NOT controllerpressed \{x}
-		stopsoundevent \{improv_pentatonic_single_note_ee8}
+	if NOT ControllerPressed \{x}
+		StopSoundEvent \{Improv_Pentatonic_Single_Note_EE8}
 	endif
 	repeat
 endscript

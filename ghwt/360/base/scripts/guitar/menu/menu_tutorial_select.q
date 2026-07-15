@@ -1,35 +1,35 @@
 
 script create_tutorial_select_menu 
-	Change \{rich_presence_context = presence_tutorial}
+	change \{rich_presence_context = presence_tutorial}
 	if ScreenElementExists \{id = popup_warning_container}
 		destroy_popup_warning_menu
 	endif
 	if (<allowances> = drum)
-		if isrbdrum \{controller = $primary_controller}
+		if isRBDrum \{controller = $primary_controller}
 			create_popup_warning_menu \{no_background
-				title = qs(0x388cd3db)
+				title = qs("DRUMS")
 				textblock = {
-					text = qs(0x97d50180)
+					text = qs("You must use an Official Guitar Hero drum controller to play the drum tutorials.")
 				}
 				options = [
 					{
 						func = tutorials_event_back
-						text = qs(0x320a8d1c)
+						text = qs("GO BACK")
 						no_sound
 					}
 				]}
 			return
 		endif
 	endif
-	make_generic_menu \{title = qs(0xc6510dd1)
+	make_generic_menu \{title = qs("TUTORIALS")
 		pad_back_script = tutorials_event_back
 		vmenu_id = tutorial_select_menu}
-	if generic_menu :desc_resolvealias \{Name = alias_generic_menu_smenu
+	if generic_menu :Desc_ResolveAlias \{name = alias_generic_menu_smenu
 			param = generic_smenu}
 		<generic_smenu> :SetTags treat_not_focusable_as_header
 	endif
 	GetArraySize \{$tutorial_lessons}
-	<total_size> = <array_Size>
+	<total_size> = <array_size>
 	<i> = 0
 	begin
 	<lessons> = ($tutorial_lessons [<i>])
@@ -37,7 +37,7 @@ script create_tutorial_select_menu
 	<i> = (<i> + 1)
 	repeat <total_size>
 	menu_finish
-	LaunchEvent \{Type = focus
+	LaunchEvent \{type = focus
 		target = current_menu}
 	current_menu :Obj_SpawnScriptNow menu_tutorial_select_check_disconnected_controllers params = {allowances = <allowances>}
 endscript
@@ -45,7 +45,7 @@ endscript
 script menu_tutorial_select_check_disconnected_controllers 
 	<my_allowances> = <allowances>
 	begin
-	check_tutorial_allowances \{allow_rb_drums = 0}
+	check_tutorial_allowances \{allow_RB_drums = 0}
 	if NOT (<my_allowances> = <allowances>)
 		destroy_tutorial_select_menu
 		create_tutorial_select_menu allowances = <allowances>
@@ -58,9 +58,9 @@ endscript
 
 script destroy_tutorial_select_menu 
 	printf \{channel = newdebug
-		qs(0xa8f2b97f)}
+		qs("\Ldestroy tutorial select screen......")}
 	if ScreenElementExists \{id = current_menu}
-		LaunchEvent \{Type = unfocus
+		LaunchEvent \{type = unfocus
 			target = current_menu}
 	endif
 	if ScreenElementExists \{id = popup_warning_container}
@@ -78,60 +78,60 @@ tutorial_lessons = [
 ]
 guitar_lessons = [
 	{
-		text = qs(0x14aded97)
+		text = qs("GUITAR/BASS:")
 		item = 'basic'
 		focusable = -1
 	}
 	{
-		text = qs(0xc2c32aa4)
+		text = qs("BASICS")
 		item = 'basic'
 	}
 	{
-		text = qs(0x371c93c9)
+		text = qs("STAR POWER")
 		item = 'star_power'
 	}
 	{
-		text = qs(0xe47db24a)
+		text = qs("ADVANCED")
 		item = 'advanced_techniques'
 	}
 	{
-		text = qs(0x323949fa)
+		text = qs("NEW FEATURES")
 		item = 'new_features'
 	}
 	{
-		text = qs(0xdfa3757d)
+		text = qs("VERSUS")
 		item = 'versus'
 	}
 ]
 drum_lessons = [
 	{
-		text = qs(0x58bf794f)
+		text = qs("DRUMS:")
 		item = 'basic'
 		focusable = -1
 	}
 	{
-		text = qs(0xc2c32aa4)
+		text = qs("BASICS")
 		item = 'drum_basic'
 	}
 	{
-		text = qs(0x500e1674)
+		text = qs("INTERMEDIATE")
 		item = 'drum_int'
 	}
 ]
 vocals_lessons = [
 	{
-		text = qs(0x97626cf4)
+		text = qs("OTHER:")
 		item = 'basic'
 		focusable = -1
 	}
 	{
-		text = qs(0x1b9f6f84)
+		text = qs("VOCALS")
 		item = 'vocals'
 	}
 ]
 band_lessons = [
 	{
-		text = qs(0xdabf99c0)
+		text = qs("BAND")
 		item = 'band'
 	}
 ]
@@ -149,12 +149,12 @@ script add_lesson_menu_item \{focusable = 1}
 			endif
 		elseif (<lesson> = 2)
 			<needs_mic> = 1
-			if NOT (<allowances> = vocals || <allowances> = all)
+			if NOT (<allowances> = Vocals || <allowances> = all)
 				<focusable> = 0
 			endif
 		endif
 	endif
-	formatText checksumName = lesson_tag '%i_lesson' i = <item>
+	FormatText checksumname = lesson_tag '%i_lesson' i = <item>
 	GetGlobalTags \{training}
 	if ((<...>.<lesson_tag>) = complete)
 		<icon> = tutorial_complete
@@ -190,17 +190,17 @@ script menu_tutorial_select_choose \{item = basic
 		ui_get_controller_parts_allowed \{controller = $primary_controller}
 		printf \{'menu_tutorial_select_choose'}
 		printstruct <...>
-		if NOT StructureContains structure = <allowed> vocals
-			LaunchEvent \{Type = unfocus
+		if NOT StructureContains Structure = <allowed> Vocals
+			LaunchEvent \{type = unfocus
 				target = current_menu}
 			if isXenon
-				text = qs(0xec4dbd17)
+				text = qs("You must connect a microphone or Xbox 360 Headset to continue.")
 			else
-				text = qs(0x588788f4)
+				text = qs("You must connect a microphone to continue.")
 			endif
 			create_popup_warning_menu {
 				no_background
-				title = qs(0xaa163738)
+				title = qs("WARNING")
 				textblock = {
 					text = <text>
 				}
@@ -208,16 +208,16 @@ script menu_tutorial_select_choose \{item = basic
 					{
 						func = {ui_event}
 						func_params = {event = menu_refresh}
-						text = qs(0x0e41fe46)
+						text = qs("OK")
 					}
 				]
 			}
 			return
 		endif
 	endif
-	formatText checksumName = tutorial_script 'training_%i_tutorial_script' i = <item>
-	set_training_script Name = <tutorial_script>
-	generic_event_choose \{state = uistate_play_tutorial}
+	FormatText checksumname = tutorial_script 'training_%i_tutorial_script' i = <item>
+	set_training_script name = <tutorial_script>
+	generic_event_choose \{state = UIstate_play_tutorial}
 endscript
 
 script tutorials_event_back 

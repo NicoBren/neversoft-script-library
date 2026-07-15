@@ -1,5 +1,5 @@
-button_widget_up_sound = menu_scroll_up
-button_widget_down_sound = menu_scroll_down
+button_widget_up_sound = Menu_Scroll_Up
+button_widget_down_sound = Menu_Scroll_Down
 button_widget_choose_sound = ui_sfx_select
 button_widget_unchoose_sound = ui_sfx_select
 button_widget_unfocus_rgba = [
@@ -33,11 +33,11 @@ script button_widget_add_item \{widget_id = widget
 		step = 0.0
 		start_value = 0
 		z_priority = 5
-		fill_type = `center up/down`
+		fill_type = `Center Up/Down`
 		text_offset = (75.0, 25.0)
 		text_case = upper}
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <parent_id>
 		id = <widget_id>
 		event_handlers = [
@@ -49,19 +49,19 @@ script button_widget_add_item \{widget_id = widget
 		just = [left , top]
 		dims = <dims>
 	}
-	if NOT gotparam \{no_cas_handlers}
+	if NOT GotParam \{no_cas_handlers}
 		setup_cas_menu_handlers vmenu_id = <widget_id> camera_list = <camera_list> zoom_camera = <zoom_camera>
 	endif
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <widget_id>
 		dims = (70.0, 70.0)
 		just = [left , top]
 		pos = (5.0, 0.0)
 	}
 	icon_id = <id>
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <icon_id>
 		texture = list_highlight
 		pos = <pos>
@@ -75,17 +75,17 @@ script button_widget_add_item \{widget_id = widget
 	fill_texture = white
 	frame = widget_frame
 	rot_angle = 0
-	if checksumequals a = <fill_type> b = `bottom to top`
+	if ChecksumEquals a = <fill_type> b = `Bottom to Top`
 		back_scale = ((1.0, 0.0) + <fill_perc> * (0.0, 1.0))
 		back_pos = ((4.0, 0.0) + 64 * (0.0, 1.0))
 		back_just = [left , bottom]
 		back_pos_anchor = [left , top]
-	elseif checksumequals a = <fill_type> b = `left to right`
+	elseif ChecksumEquals a = <fill_type> b = `Left to Right`
 		back_scale = (<fill_perc> * (1.0, 0.0) + (0.0, 1.0))
 		back_pos = (4.0, 4.0)
 		back_just = [left , top]
 		back_pos_anchor = [left , top]
-	elseif checksumequals a = <fill_type> b = `center left/right`
+	elseif ChecksumEquals a = <fill_type> b = `Center Left/Right`
 		back_scale = ((((<start_value> - <min>) - (<max> - <min>) * 0.5) / (<max> - <min>)) * (1.0, 0.0) + (0.0, 1.0))
 		if (<back_scale>.(1.0, 0.0) < 0)
 			rot_angle = 180
@@ -93,7 +93,7 @@ script button_widget_add_item \{widget_id = widget
 		back_pos = <pos>
 		back_just = [left , center]
 		back_pos_anchor = [center , center]
-	elseif checksumequals a = <fill_type> b = `center up/down`
+	elseif ChecksumEquals a = <fill_type> b = `Center Up/Down`
 		back_scale = ((((<start_value> - <min>) - (<max> - <min>) * 0.5) / (<max> - <min>)) * (0.0, 1.0) + (1.0, 0.0))
 		if (<back_scale>.(0.0, 1.0) < 0)
 			rot_angle = 180
@@ -101,7 +101,7 @@ script button_widget_add_item \{widget_id = widget
 		back_pos = <pos>
 		back_just = [center , bottom]
 		back_pos_anchor = [center , center]
-	elseif checksumequals a = <fill_type> b = `center out`
+	elseif ChecksumEquals a = <fill_type> b = `Center Out`
 		back_just = [center , center]
 		back_pos = (0.0, 0.0)
 		back_pos_anchor = [center , center]
@@ -109,13 +109,13 @@ script button_widget_add_item \{widget_id = widget
 		back_scale = (<fill_perc> * (1.0, 1.0))
 		frame = widget_frame_round
 	else
-		scriptassert \{qs(0xa936665d)}
+		ScriptAssert \{qs("\LNot a valid fill type for button_widget_add_item, check menu definition")}
 	endif
-	if gotparam \{invert}
+	if GotParam \{invert}
 		rot_angle = (<rot_angle> + 180)
 	endif
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <icon_id>
 		texture = <fill_texture>
 		material = null
@@ -130,8 +130,8 @@ script button_widget_add_item \{widget_id = widget
 		rot_angle = <rot_angle>
 	}
 	backing_id = <id>
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <icon_id>
 		texture = <button_icon>
 		z_priority = (<z_priority> + 3)
@@ -142,8 +142,8 @@ script button_widget_add_item \{widget_id = widget
 		pos = (0.0, 0.0)
 	}
 	button_id = <id>
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <icon_id>
 		texture = <frame>
 		z_priority = (<z_priority> + 4)
@@ -151,14 +151,14 @@ script button_widget_add_item \{widget_id = widget
 		just = [left , top]
 	}
 	if (<text_case> = lower)
-		getlowercasestring <text>
+		GetLowerCaseString <text>
 		<text> = <lowercasestring>
 	elseif (<text_case> = upper)
-		getuppercasestring <text>
-		<text> = <uppercasestring>
+		GetUpperCaseString <text>
+		<text> = <UpperCaseString>
 	endif
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = <widget_id>
 		text = <text>
 		pos = <text_offset>
@@ -171,10 +171,10 @@ script button_widget_add_item \{widget_id = widget
 		fit_width = `scale each line if larger`
 	}
 	text_id = <id>
-	if gotparam \{invert}
+	if GotParam \{invert}
 		invert = {invert}
 	endif
-	<widget_id> :settags {
+	<widget_id> :SetTags {
 		parent_id = <parent_id>
 		pad_up_script = <pad_up_script>
 		pad_up_params = {<pad_up_params> widget_id = <widget_id>}
@@ -202,87 +202,87 @@ script button_widget_add_item \{widget_id = widget
 		button_id = <button_id>
 		<invert>
 	}
-	<parent_id> :gettags
-	if gotparam \{total_length}
-		getscreenelementdims id = <parent_id>
-		parent_height = <height>
-		getscreenelementdims id = <widget_id>
-		total_length = (<total_length> + <height>)
+	<parent_id> :GetTags
+	if GotParam \{total_length}
+		GetScreenElementDims id = <parent_id>
+		parent_height = <Height>
+		GetScreenElementDims id = <widget_id>
+		total_length = (<total_length> + <Height>)
 		if (<total_length> > <parent_height>)
-			printf \{qs(0x1be83349)}
-			generic_menu :se_setprops \{generic_menu_scrollbar_alpha = 1.0}
+			printf \{qs("\L##########################TURN ON SCROLL BAR##########################")}
+			generic_menu :SE_SetProps \{generic_menu_scrollbar_alpha = 1.0}
 		endif
-		<parent_id> :settags {total_length = <total_length>}
+		<parent_id> :SetTags {total_length = <total_length>}
 	else
-		getscreenelementdims id = <id>
-		<parent_id> :settags {total_length = <height>}
+		GetScreenElementDims id = <id>
+		<parent_id> :SetTags {total_length = <Height>}
 	endif
 endscript
 
 script init_button_widget 
-	<widget_id> :gettags
-	<widget_id> :settags {start_value = <value>}
-	launchevent type = unfocus target = <parent_id>
-	launchevent type = focus target = <widget_id>
+	<widget_id> :GetTags
+	<widget_id> :SetTags {start_value = <value>}
+	LaunchEvent type = unfocus target = <parent_id>
+	LaunchEvent type = focus target = <widget_id>
 	<event_handlers> = [
 		{pad_back deinit_button_widget params = {widget_id = <widget_id> deinit_helper_text = <deinit_helper_text> run_deinit}}
 		{pad_choose deinit_button_widget params = {widget_id = <widget_id> deinit_helper_text = <deinit_helper_text>}}
 		{pad_up up_button_widget params = {widget_id = <widget_id>}}
 		{pad_down down_button_widget params = {widget_id = <widget_id>}}
 	]
-	if gotparam \{pad_left_script}
+	if GotParam \{pad_left_script}
 		<additional_handlers> = [
 			{pad_right up_button_widget params = {widget_id = <widget_id>}}
 			{pad_left down_button_widget params = {widget_id = <widget_id>}}
 		]
 		event_handlers = (<event_handlers> + <additional_handlers>)
 	endif
-	setscreenelementprops {
+	SetScreenElementProps {
 		id = <widget_id>
 		event_handlers = <event_handlers>
 		replace_handlers
 	}
-	setscreenelementprops {
+	SetScreenElementProps {
 		id = <backing_id>
 		rgba = ($backing_init_rgba)
 	}
-	soundevent event = ($button_widget_choose_sound)
-	setscreenelementprops {
+	SoundEvent event = ($button_widget_choose_sound)
+	SetScreenElementProps {
 		id = <button_id>
 		rgba = [255 255 255 255]
 	}
-	if gotparam \{init_helper_text}
+	if GotParam \{init_helper_text}
 		clean_up_user_control_helpers
 		menu_finish <init_helper_text>
 	endif
-	if gotparam \{init_script}
+	if GotParam \{init_script}
 		<init_script> <init_params>
 	endif
 endscript
 
 script focus_button_widget 
-	<widget_id> :getsingletag highlight_id
-	setscreenelementprops {
+	<widget_id> :GetSingleTag highlight_id
+	SetScreenElementProps {
 		id = <highlight_id>
 		alpha = 1
 	}
-	<widget_id> :getsingletag text_id
-	setscreenelementprops {
+	<widget_id> :GetSingleTag text_id
+	SetScreenElementProps {
 		id = <text_id>
 		font = fontgrid_text_a6_fire
-		material = sys_fontgrid_text_a6_fire_sys_fontgrid_text_a6_fire
+		material = sys_fontgrid_text_A6_fire_sys_fontgrid_text_A6_fire
 	}
 	set_generic_menu_scrollbar_pos id = <widget_id>
 endscript
 
 script unfocus_button_widget 
-	<widget_id> :getsingletag highlight_id
-	setscreenelementprops {
+	<widget_id> :GetSingleTag highlight_id
+	SetScreenElementProps {
 		id = <highlight_id>
 		alpha = 0
 	}
-	<widget_id> :getsingletag text_id
-	setscreenelementprops {
+	<widget_id> :GetSingleTag text_id
+	SetScreenElementProps {
 		id = <text_id>
 		font = ($test_menu_font)
 		material = null
@@ -291,10 +291,10 @@ script unfocus_button_widget
 endscript
 
 script deinit_button_widget 
-	<widget_id> :gettags parent_id
-	launchevent type = unfocus target = <widget_id>
-	launchevent type = focus target = <parent_id>
-	setscreenelementprops {
+	<widget_id> :GetTags parent_id
+	LaunchEvent type = unfocus target = <widget_id>
+	LaunchEvent type = focus target = <parent_id>
+	SetScreenElementProps {
 		id = <widget_id>
 		event_handlers = [
 			{pad_choose init_button_widget params = {widget_id = <widget_id>}}
@@ -305,39 +305,39 @@ script deinit_button_widget
 		]
 		replace_handlers
 	}
-	setscreenelementprops {
+	SetScreenElementProps {
 		id = <button_id>
 		rgba = ($button_widget_unfocus_rgba)
 	}
-	setscreenelementprops {
+	SetScreenElementProps {
 		id = <backing_id>
 		rgba = ($backing_uninit_rgba)
 	}
-	soundevent event = ($button_widget_unchoose_sound)
-	if gotparam \{deinit_helper_text}
+	SoundEvent event = ($button_widget_unchoose_sound)
+	if GotParam \{deinit_helper_text}
 		clean_up_user_control_helpers
 		menu_finish <deinit_helper_text>
 	endif
-	if gotparam \{run_deinit}
+	if GotParam \{run_deinit}
 		button_widget_set_value widget_id = <widget_id> new_value = (<start_value> * 1.0)
-		if gotparam \{pad_left_script}
+		if GotParam \{pad_left_script}
 			<pad_left_script> {<pad_left_params> value = (<start_value> * 1.0)}
 		else
 			<pad_up_script> {<pad_up_params> value = (<start_value> * 1.0)}
 		endif
 	endif
-	if gotparam \{deinit_script}
+	if GotParam \{deinit_script}
 		<deinit_script> <deinit_params>
 	endif
 endscript
 
 script up_button_widget 
-	requireparams \{[
+	RequireParams \{[
 			widget_id
 		]
 		all}
-	<widget_id> :gettags
-	if gotparam \{invert}
+	<widget_id> :GetTags
+	if GotParam \{invert}
 		value = (<value> - <step>)
 		if (<value> < <min>)
 			value = <min>
@@ -350,40 +350,40 @@ script up_button_widget
 	endif
 	button_widget_find_fill value = <value> min = <min> max = <max>
 	rot_angle = 0
-	if checksumequals a = <fill_type> b = `bottom to top`
+	if ChecksumEquals a = <fill_type> b = `Bottom to Top`
 		back_scale = ((1.0, 0.0) + <fill_perc> * (0.0, 1.0))
-	elseif checksumequals a = <fill_type> b = `left to right`
+	elseif ChecksumEquals a = <fill_type> b = `Left to Right`
 		back_scale = (<fill_perc> * (1.0, 0.0) + (0.0, 1.0))
-	elseif checksumequals a = <fill_type> b = `center left/right`
+	elseif ChecksumEquals a = <fill_type> b = `Center Left/Right`
 		back_scale = ((((<value> - <min>) - (<max> - <min>) * 0.5) / (<max> - <min>)) * (1.0, 0.0) + (0.0, 1.0))
 		if (<back_scale>.(1.0, 0.0) < 0)
 			rot_angle = 180
 		else
 			rot_angle = 0
 		endif
-	elseif checksumequals a = <fill_type> b = `center up/down`
+	elseif ChecksumEquals a = <fill_type> b = `Center Up/Down`
 		back_scale = ((((<value> - <min>) - (<max> - <min>) * 0.5) / (<max> - <min>)) * (0.0, 1.0) + (1.0, 0.0))
 		if (<back_scale>.(0.0, 1.0) < 0)
 			rot_angle = 180
 		else
 			rot_angle = 0
 		endif
-	elseif checksumequals a = <fill_type> b = `center out`
+	elseif ChecksumEquals a = <fill_type> b = `Center Out`
 		back_scale = (<fill_perc> * (1.0, 1.0))
 	endif
-	if gotparam \{invert}
+	if GotParam \{invert}
 		rot_angle = (<rot_angle> + 180)
 	endif
-	if screenelementexists id = <backing_id>
-		setscreenelementprops {
+	if ScreenElementExists id = <backing_id>
+		SetScreenElementProps {
 			id = <backing_id>
 			scale = <back_scale>
 			rot_angle = <rot_angle>
 		}
 	endif
-	<widget_id> :settags {value = <value>}
-	playsound menu_entername_scroll_2 vol = -1 pitch_percent = ((<fill_perc> * 40.0) + 60) buss = front_end
-	if gotparam \{pad_left_script}
+	<widget_id> :SetTags {value = <value>}
+	PlaySound Menu_EnterName_Scroll_2 vol = -1 pitch_percent = ((<fill_perc> * 40.0) + 60) buss = front_end
+	if GotParam \{pad_left_script}
 		<pad_left_script> {<pad_left_params> value = <value>}
 	else
 		<pad_up_script> {<pad_up_params> value = <value>}
@@ -391,12 +391,12 @@ script up_button_widget
 endscript
 
 script down_button_widget 
-	requireparams \{[
+	RequireParams \{[
 			widget_id
 		]
 		all}
-	<widget_id> :gettags
-	if gotparam \{invert}
+	<widget_id> :GetTags
+	if GotParam \{invert}
 		value = (<value> + <step>)
 		if (<value> > <max>)
 			value = <max>
@@ -409,40 +409,40 @@ script down_button_widget
 	endif
 	button_widget_find_fill value = <value> min = <min> max = <max>
 	rot_angle = 0
-	if checksumequals a = <fill_type> b = `bottom to top`
+	if ChecksumEquals a = <fill_type> b = `Bottom to Top`
 		back_scale = ((1.0, 0.0) + <fill_perc> * (0.0, 1.0))
-	elseif checksumequals a = <fill_type> b = `left to right`
+	elseif ChecksumEquals a = <fill_type> b = `Left to Right`
 		back_scale = (<fill_perc> * (1.0, 0.0) + (0.0, 1.0))
-	elseif checksumequals a = <fill_type> b = `center left/right`
+	elseif ChecksumEquals a = <fill_type> b = `Center Left/Right`
 		back_scale = ((((<value> - <min>) - (<max> - <min>) * 0.5) / (<max> - <min>)) * (1.0, 0.0) + (0.0, 1.0))
 		if (<back_scale>.(1.0, 0.0) < 0)
 			rot_angle = 180
 		else
 			rot_angle = 0
 		endif
-	elseif checksumequals a = <fill_type> b = `center up/down`
+	elseif ChecksumEquals a = <fill_type> b = `Center Up/Down`
 		back_scale = ((((<value> - <min>) - (<max> - <min>) * 0.5) / (<max> - <min>)) * (0.0, 1.0) + (1.0, 0.0))
 		if (<back_scale>.(0.0, 1.0) < 0)
 			rot_angle = 180
 		else
 			rot_angle = 0
 		endif
-	elseif checksumequals a = <fill_type> b = `center out`
+	elseif ChecksumEquals a = <fill_type> b = `Center Out`
 		back_scale = (<fill_perc> * (1.0, 1.0))
 	endif
-	if gotparam \{invert}
+	if GotParam \{invert}
 		rot_angle = (<rot_angle> + 180)
 	endif
-	if screenelementexists id = <backing_id>
-		setscreenelementprops {
+	if ScreenElementExists id = <backing_id>
+		SetScreenElementProps {
 			id = <backing_id>
 			scale = <back_scale>
 			rot_angle = <rot_angle>
 		}
 	endif
-	<widget_id> :settags {value = <value>}
-	playsound menu_entername_scroll_3 vol = -1 pitch_percent = ((<fill_perc> * 40.0) + 60) buss = front_end
-	if gotparam \{pad_right_script}
+	<widget_id> :SetTags {value = <value>}
+	PlaySound Menu_EnterName_Scroll_3 vol = -1 pitch_percent = ((<fill_perc> * 40.0) + 60) buss = front_end
+	if GotParam \{pad_right_script}
 		<pad_right_script> {<pad_right_params> value = <value>}
 	else
 		<pad_down_script> {<pad_down_params> value = <value>}
@@ -450,68 +450,68 @@ script down_button_widget
 endscript
 
 script button_generic_set_value 
-	requireparams \{[
+	RequireParams \{[
 			id
 			new_value
 		]}
-	if screenelementexists id = <id>
-		<id> :gettags
+	if ScreenElementExists id = <id>
+		<id> :GetTags
 		if (<new_value> = true)
 			alpha = 1
 		else
 			alpha = 0
 		endif
-		setscreenelementprops {
+		SetScreenElementProps {
 			id = <backing_id>
 			alpha = <alpha>
 		}
-		<backing_id> :settags on = <new_value>
+		<backing_id> :SetTags on = <new_value>
 	endif
 endscript
 
 script button_widget_set_value 
-	requireparams \{[
+	RequireParams \{[
 			widget_id
 			new_value
 		]}
-	if screenelementexists id = <widget_id>
-		<widget_id> :gettags
+	if ScreenElementExists id = <widget_id>
+		<widget_id> :GetTags
 		value = <new_value>
 		button_widget_find_fill value = <value> min = <min> max = <max>
-		if checksumequals a = <fill_type> b = `bottom to top`
+		if ChecksumEquals a = <fill_type> b = `Bottom to Top`
 			back_scale = ((1.0, 0.0) + <fill_perc> * (0.0, 1.0))
-		elseif checksumequals a = <fill_type> b = `left to right`
+		elseif ChecksumEquals a = <fill_type> b = `Left to Right`
 			back_scale = (<fill_perc> * (1.0, 0.0) + (0.0, 1.0))
-		elseif checksumequals a = <fill_type> b = `center left/right`
+		elseif ChecksumEquals a = <fill_type> b = `Center Left/Right`
 			back_scale = ((((<value> - <min>) - (<max> - <min>) * 0.5) / (<max> - <min>)) * (1.0, 0.0) + (0.0, 1.0))
 			if (<back_scale>.(1.0, 0.0) < 0)
 				rot_angle = 180
 			else
 				rot_angle = 0
 			endif
-		elseif checksumequals a = <fill_type> b = `center up/down`
+		elseif ChecksumEquals a = <fill_type> b = `Center Up/Down`
 			back_scale = ((((<value> - <min>) - (<max> - <min>) * 0.5) / (<max> - <min>)) * (0.0, 1.0) + (1.0, 0.0))
 			if (<back_scale>.(0.0, 1.0) < 0)
 				rot_angle = 180
 			else
 				rot_angle = 0
 			endif
-		elseif checksumequals a = <fill_type> b = `center out`
+		elseif ChecksumEquals a = <fill_type> b = `Center Out`
 			back_scale = (<fill_perc> * (1.0, 1.0))
 		endif
-		if screenelementexists id = <backing_id>
-			setscreenelementprops {
+		if ScreenElementExists id = <backing_id>
+			SetScreenElementProps {
 				id = <backing_id>
 				scale = <back_scale>
 				rot_angle = <rot_angle>
 			}
 		endif
-		<widget_id> :settags {value = <value>}
+		<widget_id> :SetTags {value = <value>}
 	endif
 endscript
 
 script button_widget_find_fill 
-	requireparams \{[
+	RequireParams \{[
 			value
 			min
 			max
@@ -546,10 +546,10 @@ script rot_widget_add_item \{widget_id = widget
 		text_offset = (75.0, 25.0)
 		text_scale = 1.5
 		text_case = upper
-		fill_type = `counter clockwise`
+		fill_type = `Counter Clockwise`
 		dims = (70.0, 70.0)}
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <parent_id>
 		id = <widget_id>
 		scale = <scale>
@@ -562,19 +562,19 @@ script rot_widget_add_item \{widget_id = widget
 		just = [left , bottom]
 		dims = <dims>
 	}
-	if NOT gotparam \{no_cas_handlers}
+	if NOT GotParam \{no_cas_handlers}
 		setup_cas_menu_handlers vmenu_id = <widget_id> camera_list = <camera_list> zoom_camera = <zoom_camera>
 	endif
 	button_widget_find_fill value = <start_value> min = <min> max = <max>
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <widget_id>
 		dims = (70.0, 70.0)
 		just = [left , top]
 	}
 	icon_id = <id>
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <icon_id>
 		texture = list_highlight
 		pos = <pos>
@@ -584,8 +584,8 @@ script rot_widget_add_item \{widget_id = widget
 		just = [left , top]
 	}
 	highlight_id = <id>
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <icon_id>
 		z_priority = (<z_priority> + 2)
 		dims = (50.0, 50.0)
@@ -594,12 +594,12 @@ script rot_widget_add_item \{widget_id = widget
 		pos_anchor = [center , center]
 	}
 	backing_id = <id>
-	if checksumequals a = <fill_type> b = `counter clockwise`
+	if ChecksumEquals a = <fill_type> b = `Counter Clockwise`
 		rot_dir = -3
-	elseif checksumequals a = <fill_type> b = clockwise
+	elseif ChecksumEquals a = <fill_type> b = Clockwise
 		rot_dir = 3
 	else
-		scriptassert \{qs(0xea7f3c88)}
+		ScriptAssert \{qs("\LNot a valid fill type for rot_widget_add_item, check menu definition")}
 	endif
 	end_inc = (120 * <start_value> / <max>)
 	i = 0
@@ -609,16 +609,16 @@ script rot_widget_add_item \{widget_id = widget
 	else
 		alpha = 1
 	endif
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <backing_id>
 		rot_angle = (<rot_dir> * <i>)
 		alpha = <alpha>
 		just = [center , center]
 		pos_anchor = [center , center]
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <id>
 		texture = white
 		rgba = ($backing_uninit_rgba)
@@ -629,8 +629,8 @@ script rot_widget_add_item \{widget_id = widget
 	}
 	i = (<i> + 1)
 	repeat 120
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <icon_id>
 		texture = <button_icon>
 		pos = <pos>
@@ -642,14 +642,14 @@ script rot_widget_add_item \{widget_id = widget
 	}
 	button_id = <id>
 	if (<text_case> = lower)
-		getlowercasestring <text>
+		GetLowerCaseString <text>
 		<text> = <lowercasestring>
 	elseif (<text_case> = upper)
-		getuppercasestring <text>
-		<text> = <uppercasestring>
+		GetUpperCaseString <text>
+		<text> = <UpperCaseString>
 	endif
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = <widget_id>
 		text = <text>
 		pos = <text_offset>
@@ -662,8 +662,8 @@ script rot_widget_add_item \{widget_id = widget
 		fit_width = `scale each line if larger`
 	}
 	text_id = <id>
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <icon_id>
 		texture = widget_frame_round
 		pos = <pos>
@@ -671,13 +671,13 @@ script rot_widget_add_item \{widget_id = widget
 		dims = (70.0, 70.0)
 		just = [left , top]
 	}
-	if gotparam \{wrap}
+	if GotParam \{wrap}
 		wrap = 1
 	endif
-	if gotparam \{sweep}
+	if GotParam \{sweep}
 		sweep = 1
 	endif
-	<widget_id> :settags {
+	<widget_id> :SetTags {
 		parent_id = <parent_id>
 		pad_up_script = <pad_up_script>
 		pad_up_params = {<pad_up_params> widget_id = <widget_id>}
@@ -702,29 +702,29 @@ script rot_widget_add_item \{widget_id = widget
 		accept_script = <accept_script>
 		accept_params = {<accept_params> widget_id = <widget_id>}
 	}
-	<parent_id> :gettags
-	if gotparam \{total_length}
-		getscreenelementdims id = <parent_id>
-		parent_height = <height>
-		getscreenelementdims id = <widget_id>
-		total_length = (<total_length> + <height>)
+	<parent_id> :GetTags
+	if GotParam \{total_length}
+		GetScreenElementDims id = <parent_id>
+		parent_height = <Height>
+		GetScreenElementDims id = <widget_id>
+		total_length = (<total_length> + <Height>)
 		if (<total_length> > <parent_height>)
-			printf \{qs(0x1be83349)}
-			generic_menu :se_setprops \{generic_menu_scrollbar_alpha = 1.0}
+			printf \{qs("\L##########################TURN ON SCROLL BAR##########################")}
+			generic_menu :SE_SetProps \{generic_menu_scrollbar_alpha = 1.0}
 		endif
-		<parent_id> :settags {total_length = <total_length>}
+		<parent_id> :SetTags {total_length = <total_length>}
 	else
-		getscreenelementdims id = <id>
-		<parent_id> :settags {total_length = <height>}
+		GetScreenElementDims id = <id>
+		<parent_id> :SetTags {total_length = <Height>}
 	endif
 endscript
 
 script init_rotate_widget 
-	<widget_id> :gettags
-	<widget_id> :settags {start_value = <value>}
-	launchevent type = unfocus target = <parent_id>
-	launchevent type = focus target = <widget_id>
-	setscreenelementprops {
+	<widget_id> :GetTags
+	<widget_id> :SetTags {start_value = <value>}
+	LaunchEvent type = unfocus target = <parent_id>
+	LaunchEvent type = focus target = <widget_id>
+	SetScreenElementProps {
 		id = <widget_id>
 		event_handlers = [
 			{pad_up up_rotate_widget params = {widget_id = <widget_id>}}
@@ -734,28 +734,28 @@ script init_rotate_widget
 		]
 		replace_handlers
 	}
-	setscreenelementprops {
+	SetScreenElementProps {
 		id = <button_id>
 		rgba = [255 255 255 255]
 	}
-	getscreenelementchildren id = <backing_id>
-	getarraysize <children>
+	GetScreenElementChildren id = <backing_id>
+	GetArraySize <children>
 	k = 0
 	begin
-	setscreenelementprops id = (<children> [<k>]) rgba = ($backing_init_rgba)
+	SetScreenElementProps id = (<children> [<k>]) rgba = ($backing_init_rgba)
 	k = (<k> + 1)
 	repeat <array_size>
-	soundevent event = ($button_widget_choose_sound)
-	if gotparam \{init_script}
+	SoundEvent event = ($button_widget_choose_sound)
+	if GotParam \{init_script}
 		<init_script> <init_params>
 	endif
 endscript
 
 script deinit_rotate_widget 
-	<widget_id> :gettags parent_id
-	launchevent type = unfocus target = <widget_id>
-	launchevent type = focus target = <parent_id>
-	setscreenelementprops {
+	<widget_id> :GetTags parent_id
+	LaunchEvent type = unfocus target = <widget_id>
+	LaunchEvent type = focus target = <parent_id>
+	SetScreenElementProps {
 		id = <widget_id>
 		event_handlers = [
 			{pad_choose init_rotate_widget params = {widget_id = <widget_id>}}
@@ -764,40 +764,40 @@ script deinit_rotate_widget
 		]
 		replace_handlers
 	}
-	setscreenelementprops {
+	SetScreenElementProps {
 		id = <button_id>
 		rgba = ($button_widget_unfocus_rgba)
 	}
-	getscreenelementchildren id = <backing_id>
-	getarraysize <children>
+	GetScreenElementChildren id = <backing_id>
+	GetArraySize <children>
 	k = 0
 	begin
-	setscreenelementprops id = (<children> [<k>]) rgba = ($backing_uninit_rgba)
+	SetScreenElementProps id = (<children> [<k>]) rgba = ($backing_uninit_rgba)
 	k = (<k> + 1)
 	repeat <array_size>
-	soundevent event = ($button_widget_unchoose_sound)
-	if gotparam \{run_deinit}
+	SoundEvent event = ($button_widget_unchoose_sound)
+	if GotParam \{run_deinit}
 		rotate_widget_set_value widget_id = <widget_id> new_value = (<start_value> * 1.0)
-		if gotparam \{pad_left_script}
+		if GotParam \{pad_left_script}
 			<pad_left_script> {<pad_left_params> value = (<start_value> * 1.0)}
 		else
 			<pad_up_script> {<pad_up_params> value = (<start_value> * 1.0)}
 		endif
 	endif
-	if gotparam \{deinit_script}
+	if GotParam \{deinit_script}
 		<deinit_script> <deinit_params>
 	endif
 endscript
 
 script up_rotate_widget 
-	requireparams \{[
+	RequireParams \{[
 			widget_id
 		]
 		all}
-	<widget_id> :gettags
+	<widget_id> :GetTags
 	value = (<value> + <step>)
 	if (<value> > <max>)
-		if gotparam \{wrap}
+		if GotParam \{wrap}
 			value = <min>
 		else
 			value = <max>
@@ -805,39 +805,39 @@ script up_rotate_widget
 	endif
 	end_inc = (119 * <value> / <max>)
 	button_widget_find_fill value = <value> min = <min> max = <max>
-	getscreenelementchildren id = <backing_id>
-	getarraysize <children>
+	GetScreenElementChildren id = <backing_id>
+	GetArraySize <children>
 	k = 0
 	begin
-	if gotparam \{sweep}
+	if GotParam \{sweep}
 		if ((<k> < (<end_inc> + 1)) && (<k> > (<end_inc> - 1)))
-			setscreenelementprops id = (<children> [<k>]) alpha = 1
+			SetScreenElementProps id = (<children> [<k>]) alpha = 1
 		else
-			setscreenelementprops id = (<children> [<k>]) alpha = 0
+			SetScreenElementProps id = (<children> [<k>]) alpha = 0
 		endif
 	else
 		if (<k> < <end_inc>)
-			setscreenelementprops id = (<children> [<k>]) alpha = 1
+			SetScreenElementProps id = (<children> [<k>]) alpha = 1
 		else
-			setscreenelementprops id = (<children> [<k>]) alpha = 0
+			SetScreenElementProps id = (<children> [<k>]) alpha = 0
 		endif
 	endif
 	k = (<k> + 1)
 	repeat <array_size>
-	<widget_id> :settags {value = <value>}
-	playsound ($button_widget_up_sound) vol_percent = 100 buss = front_end
+	<widget_id> :SetTags {value = <value>}
+	PlaySound ($button_widget_up_sound) vol_percent = 100 buss = front_end
 	<pad_up_script> {<pad_up_params> value = <value>}
 endscript
 
 script down_rotate_widget 
-	requireparams \{[
+	RequireParams \{[
 			widget_id
 		]
 		all}
-	<widget_id> :gettags
+	<widget_id> :GetTags
 	value = (<value> - <step>)
 	if (<value> < <min>)
-		if gotparam \{wrap}
+		if GotParam \{wrap}
 			value = <max>
 		else
 			value = <min>
@@ -845,69 +845,69 @@ script down_rotate_widget
 	endif
 	end_inc = (119 * <value> / <max>)
 	button_widget_find_fill value = <value> min = <min> max = <max>
-	getscreenelementchildren id = <backing_id>
-	getarraysize <children>
+	GetScreenElementChildren id = <backing_id>
+	GetArraySize <children>
 	k = 0
 	begin
-	if gotparam \{sweep}
+	if GotParam \{sweep}
 		if ((<k> < (<end_inc> + 1)) && (<k> > (<end_inc> - 1)))
-			setscreenelementprops id = (<children> [<k>]) alpha = 1
+			SetScreenElementProps id = (<children> [<k>]) alpha = 1
 		else
-			setscreenelementprops id = (<children> [<k>]) alpha = 0
+			SetScreenElementProps id = (<children> [<k>]) alpha = 0
 		endif
 	else
 		if (<k> < <end_inc>)
-			setscreenelementprops id = (<children> [<k>]) alpha = 1
+			SetScreenElementProps id = (<children> [<k>]) alpha = 1
 		else
-			setscreenelementprops id = (<children> [<k>]) alpha = 0
+			SetScreenElementProps id = (<children> [<k>]) alpha = 0
 		endif
 	endif
 	k = (<k> + 1)
 	repeat <array_size>
-	<widget_id> :settags {value = <value>}
-	playsound ($button_widget_down_sound) vol_percent = 100 buss = front_end
+	<widget_id> :SetTags {value = <value>}
+	PlaySound ($button_widget_down_sound) vol_percent = 100 buss = front_end
 	<pad_down_script> {<pad_down_params> value = <value>}
 endscript
 
 script rotate_widget_set_value 
-	requireparams \{[
+	RequireParams \{[
 			widget_id
 			new_value
 		]
 		all}
-	if screenelementexists id = <widget_id>
-		<widget_id> :gettags
+	if ScreenElementExists id = <widget_id>
+		<widget_id> :GetTags
 		value = <new_value>
 		end_inc = (119 * <value> / <max>)
 		button_widget_find_fill value = <value> min = <min> max = <max>
-		getscreenelementchildren id = <backing_id>
-		getarraysize <children>
+		GetScreenElementChildren id = <backing_id>
+		GetArraySize <children>
 		k = 0
 		begin
-		if gotparam \{sweep}
+		if GotParam \{sweep}
 			if ((<k> < (<end_inc> + 1)) && (<k> > (<end_inc> - 1)))
-				setscreenelementprops id = (<children> [<k>]) alpha = 1
+				SetScreenElementProps id = (<children> [<k>]) alpha = 1
 			else
-				setscreenelementprops id = (<children> [<k>]) alpha = 0
+				SetScreenElementProps id = (<children> [<k>]) alpha = 0
 			endif
 		else
 			if (<k> < <end_inc>)
-				setscreenelementprops id = (<children> [<k>]) alpha = 1
+				SetScreenElementProps id = (<children> [<k>]) alpha = 1
 			else
-				setscreenelementprops id = (<children> [<k>]) alpha = 0
+				SetScreenElementProps id = (<children> [<k>]) alpha = 0
 			endif
 		endif
 		k = (<k> + 1)
 		repeat <array_size>
-		<widget_id> :settags {value = <value>}
+		<widget_id> :SetTags {value = <value>}
 	endif
 endscript
 
 script add_generic_menu_button_icon_item \{on = false}
 	add_generic_menu_icon_item <...>
-	createscreenelement {
+	CreateScreenElement {
 		parent = <item_container_id>
-		type = spriteelement
+		type = SpriteElement
 		texture = white
 		dims = (54.0, 54.0)
 		pos = (8.0, 8.0)
@@ -915,14 +915,14 @@ script add_generic_menu_button_icon_item \{on = false}
 		rgba = ($backing_init_rgba)
 		relative_z_priority = -0.5
 	}
-	<id> :settags {on = <on>}
-	<item_container_id> :settags {backing_id = <id>}
+	<id> :SetTags {on = <on>}
+	<item_container_id> :SetTags {backing_id = <id>}
 	if (<on> = false)
-		setscreenelementprops id = <id> alpha = 0
+		SetScreenElementProps id = <id> alpha = 0
 	else
-		setscreenelementprops id = <id> alpha = 1
+		SetScreenElementProps id = <id> alpha = 1
 	endif
-	setscreenelementprops {
+	SetScreenElementProps {
 		id = <item_container_id>
 		event_handlers = [
 			{pad_choose test_button_choose params = {id = <id>}}
@@ -932,13 +932,13 @@ script add_generic_menu_button_icon_item \{on = false}
 endscript
 
 script test_button_choose 
-	<id> :getsingletag on
+	<id> :GetSingleTag on
 	if (<on> = false)
 		on = true
-		setscreenelementprops id = <id> alpha = 1
+		SetScreenElementProps id = <id> alpha = 1
 	else
 		on = false
-		setscreenelementprops id = <id> alpha = 0
+		SetScreenElementProps id = <id> alpha = 0
 	endif
-	<id> :settags {on = <on>}
+	<id> :SetTags {on = <on>}
 endscript

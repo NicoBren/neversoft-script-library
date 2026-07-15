@@ -95,41 +95,41 @@ cas_archive_paks = [
 	'cas_full_parts'
 ]
 
-script cas_rawpaks_pakman_init 
+script cas_rawpaks_PakMan_Init 
 	printf \{'cas_rawpaks_PakMan_Init'}
 	printstruct <...>
 endscript
 
-script cas_rawpaks_pakman_deinit 
+script cas_rawpaks_PakMan_DeInit 
 	printf \{'cas_rawpaks_PakMan_DeInit'}
 	printstruct <...>
 endscript
 
 script cas_rawpak_setup 
-	if NOT existspakmanmap \{map = cas_rawpaks}
-		mempushcontext \{heap_cas}
-		createpakmanmap \{map = cas_rawpaks
+	if NOT ExistsPakManMap \{map = cas_rawpaks}
+		MemPushContext \{heap_cas}
+		CreatePakManMap \{map = cas_rawpaks
 			links = cas_rawpaks
 			folder = 'pak/cas/'
 			is_raw}
-		mempopcontext
+		MemPopContext
 	endif
 endscript
 
 script cas_rawpak_free 
-	if existspakmanmap \{map = cas_rawpaks}
-		blockpendingpakmanloads \{map = cas_rawpaks
+	if ExistsPakManMap \{map = cas_rawpaks}
+		BlockPendingPakManLoads \{map = cas_rawpaks
 			block_scripts = 1}
-		setpakmancurrentblock \{map = cas_rawpaks
+		SetPakManCurrentBlock \{map = cas_rawpaks
 			pak = none
 			block_scripts = 1}
-		destroypakmanmap \{map = cas_rawpaks}
+		DestroyPakManMap \{map = cas_rawpaks}
 	endif
 endscript
 
 script cas_rawpak_is_loading 
-	if existspakmanmap \{map = cas_rawpaks}
-		if ispakmanloading \{map = cas_rawpaks}
+	if ExistsPakManMap \{map = cas_rawpaks}
+		if IsPakManLoading \{map = cas_rawpaks}
 			return \{true}
 		else
 			return \{false}
@@ -138,7 +138,7 @@ script cas_rawpak_is_loading
 endscript
 
 script cas_rawpak_check_current 
-	getpakmancurrent \{map = cas_rawpaks}
+	GetPakManCurrent \{map = cas_rawpaks}
 	if (<pak> = <check>)
 		return \{true}
 	endif
@@ -157,7 +157,7 @@ script cas_rawpak_wait_for_load
 		if NOT cas_rawpak_is_loading
 			break
 		endif
-		wait \{1
+		Wait \{1
 			gameframe}
 		repeat
 	endif
@@ -165,9 +165,9 @@ endscript
 
 script cas_rawpak_clear 
 	change \{cas_queue_rawpak = none}
-	blockpendingpakmanloads \{map = cas_rawpaks
+	BlockPendingPakManLoads \{map = cas_rawpaks
 		block_scripts = 1}
-	setpakmancurrentblock \{map = cas_rawpaks
+	SetPakManCurrentBlock \{map = cas_rawpaks
 		pak = none
 		block_scripts = 1}
 endscript

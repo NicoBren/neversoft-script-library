@@ -4,37 +4,37 @@ graphic_test_axis = 0
 
 script launch_graphic_test 
 	generic_ui_destroy
-	skater :killskater \{no_node}
-	skater :disableplayerinput
+	skater :KillSkater \{no_node}
+	skater :Disableplayerinput
 	change \{graphic_test_selection = test_graphic1}
-	doscreenelementmorph \{id = player1_panel_container
+	doScreenElementMorph \{id = player1_panel_container
 		alpha = 0}
 	lock = off
-	if areassetslocked
-		allowassetloading \{on}
+	if AreAssetsLocked
+		AllowAssetLoading \{on}
 		lock = on
 	endif
-	loadtexture \{'Test\\graphic_test'}
-	loadtexture \{'Test\\graphic_test2'}
-	loadtexture \{'Test\\graphic_test3'}
-	loadtexture \{'Test\\graphic_test4'}
+	LoadTexture \{'Test\\graphic_test'}
+	LoadTexture \{'Test\\graphic_test2'}
+	LoadTexture \{'Test\\graphic_test3'}
+	LoadTexture \{'Test\\graphic_test4'}
 	if (<lock> = on)
-		allowassetloading \{off}
+		AllowAssetLoading \{off}
 	endif
 	kill_start_key_binding
-	setanalogstickactiveformenus \{1}
-	setscreenelementlock \{id = root_window
+	SetAnalogStickActiveForMenus \{1}
+	SetScreenElementLock \{id = root_window
 		off}
-	if NOT screenelementexists \{id = graphic_test_anchor}
-		createscreenelement \{id = graphic_test_anchor
-			type = containerelement
+	if NOT ScreenElementExists \{id = graphic_test_anchor}
+		CreateScreenElement \{id = graphic_test_anchor
+			type = ContainerElement
 			parent = root_window
 			pos = (0.0, 0.0)
 			z_priority = 5000
 			alpha = 1
 			scale = 1}
 	endif
-	setscreenelementprops \{id = graphic_test_anchor
+	SetScreenElementProps \{id = graphic_test_anchor
 		event_handlers = [
 			{
 				pad_start
@@ -134,21 +134,21 @@ script launch_graphic_test
 			}
 		]
 		replace_handlers}
-	doscreenelementmorph \{id = graphic_test_anchor
+	doScreenElementMorph \{id = graphic_test_anchor
 		alpha = 1}
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = graphic_test_anchor}
-	pausegame
+	PauseGame
 	<elements> = [test_graphic1 test_graphic2 test_graphic3 test_graphic4]
 	<textures> = [graphic_test graphic_test2 graphic_test3 graphic_test4]
 	<i> = 0
 	begin
 	<element> = (<elements> [<i>])
-	if NOT screenelementexists id = <element>
-		createscreenelement {
+	if NOT ScreenElementExists id = <element>
+		CreateScreenElement {
 			id = <element>
 			parent = graphic_test_anchor
-			type = spriteelement
+			type = SpriteElement
 			pos = (320.0, 224.0)
 			texture = (<textures> [<i>])
 		}
@@ -172,34 +172,34 @@ script test_graphic_move
 		case left
 		<delta> = ((-1.0, 0.0) * $graphic_test_speed)
 	endswitch
-	getscreenelementprops id = ($graphic_test_selection)
-	doscreenelementmorph id = ($graphic_test_selection) pos = (<delta> + <pos>) time = 0
+	GetScreenElementProps id = ($graphic_test_selection)
+	doScreenElementMorph id = ($graphic_test_selection) pos = (<delta> + <pos>) time = 0
 endscript
 
 script test_graphic_scale 
-	getscreenelementprops id = ($graphic_test_selection)
-	getscreenelementdims id = ($graphic_test_selection)
-	if NOT (ispair <scale>)
+	GetScreenElementProps id = ($graphic_test_selection)
+	GetScreenElementDims id = ($graphic_test_selection)
+	if NOT (IsPair <scale>)
 		<scale> = (<scale> * (1.0, 1.0))
 	endif
 	if ($graphic_test_axis = 0)
 		<delta> = ((1.0, 0.0) * ($graphic_test_speed / (<width> / <scale> [0])))
 	else
-		<delta> = ((0.0, 1.0) * ($graphic_test_speed / (<height> / <scale> [1])))
+		<delta> = ((0.0, 1.0) * ($graphic_test_speed / (<Height> / <scale> [1])))
 	endif
 	if (<dir> = up)
-		doscreenelementmorph id = ($graphic_test_selection) scale = (<scale> + <delta>) time = 0
+		doScreenElementMorph id = ($graphic_test_selection) scale = (<scale> + <delta>) time = 0
 	else
-		doscreenelementmorph id = ($graphic_test_selection) scale = (<scale> - <delta>) time = 0
+		doScreenElementMorph id = ($graphic_test_selection) scale = (<scale> - <delta>) time = 0
 	endif
 endscript
 
 script test_graphic_z 
-	getscreenelementprops id = ($graphic_test_selection)
-	if gotparam \{up}
-		setscreenelementprops id = ($graphic_test_selection) z_priority = (<z_priority> + 1)
+	GetScreenElementProps id = ($graphic_test_selection)
+	if GotParam \{up}
+		SetScreenElementProps id = ($graphic_test_selection) z_priority = (<z_priority> + 1)
 	else
-		setscreenelementprops id = ($graphic_test_selection) z_priority = (<z_priority> - 1)
+		SetScreenElementProps id = ($graphic_test_selection) z_priority = (<z_priority> - 1)
 	endif
 endscript
 
@@ -224,15 +224,15 @@ endscript
 
 script destroy_graphic_test 
 	restore_start_key_binding
-	unpausegame
-	skater :enableplayerinput
-	doscreenelementmorph \{id = player1_panel_container
+	UnPauseGame
+	skater :Enableplayerinput
+	doScreenElementMorph \{id = player1_panel_container
 		alpha = 1}
-	if screenelementexists \{id = graphic_test_anchor}
-		doscreenelementmorph \{id = graphic_test_anchor
+	if ScreenElementExists \{id = graphic_test_anchor}
+		doScreenElementMorph \{id = graphic_test_anchor
 			alpha = 0}
-		launchevent \{type = unfocus
+		LaunchEvent \{type = unfocus
 			target = graphic_test_anchor}
-		setanalogstickactiveformenus \{0}
+		SetAnalogStickActiveForMenus \{0}
 	endif
 endscript

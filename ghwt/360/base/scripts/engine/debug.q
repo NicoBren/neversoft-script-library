@@ -27,14 +27,14 @@ AssertWhenGlobalsChangeType = 0
 
 script controlpadmotion_debug_create 
 	if NOT ScreenElementExists \{id = controlpadmotion_debug}
-		CreateScreenElement \{Type = Element3d
+		CreateScreenElement \{type = Element3d
 			parent = root_window
 			id = controlpadmotion_debug
 			Model = 'HUD_arrow/HUD_Arrow.mdl'
 			CameraZ = -1
-			Scale = 1.0
+			scale = 1.0
 			Active_Viewport = 0
-			Pos = (120.0, 360.0)}
+			pos = (120.0, 360.0)}
 	endif
 endscript
 
@@ -47,20 +47,20 @@ endscript
 script PrintVec 
 	if GotParam \{vec}
 		GetVectorComponents <vec>
-		printf qs(0x1972291f) X = <X> y = <y> z = <z>
+		printf qs("\L(%x, %y, %z)") x = <x> y = <y> z = <z>
 	endif
 endscript
 
-script findreferencedscreenelementparams \{param = Pos}
+script FindReferencedScreenElementParams \{param = pos}
 	RequireParams \{[
 			param
 		]
 		all}
-	findreferencedscreenelementparams_recurse array = [] id = root_window param = <param>
+	FindReferencedScreenElementParams_Recurse array = [] id = root_window param = <param>
 	GetArraySize <array>
-	printf '%s referenced %p(s) found' s = <array_Size> p = <param> channel = params
-	if NOT (<array_Size> = 0)
-		<count> = <array_Size>
+	printf '%s referenced %p(s) found' s = <array_size> p = <param> channel = params
+	if NOT (<array_size> = 0)
+		<count> = <array_size>
 		i = 0
 		begin
 		if IsArray (<array> [<i>].item)
@@ -68,12 +68,12 @@ script findreferencedscreenelementparams \{param = Pos}
 			j = 0
 			text = '['
 			begin
-			formatText TextName = text '%a %b' a = <text> b = ((<array> [<i>].item) [<j>]) DontAssertForChecksums
+			FormatText TextName = text '%a %b' a = <text> b = ((<array> [<i>].item) [<j>]) DontAssertForChecksums
 			j = (<j> + 1)
-			repeat <array_Size>
+			repeat <array_size>
 			text = (<text> + ' ]')
 		else
-			formatText TextName = text '%a' a = (<array> [<i>].item) DontAssertForChecksums
+			FormatText TextName = text '%a' a = (<array> [<i>].item) DontAssertForChecksums
 		endif
 		printf ' - %cx %t' c = (<array> [<i>].count) t = <text> channel = params
 		i = (<i> + 1)
@@ -81,7 +81,7 @@ script findreferencedscreenelementparams \{param = Pos}
 	endif
 endscript
 
-script findreferencedscreenelementparams_recurse 
+script FindReferencedScreenElementParams_Recurse 
 	RequireParams \{[
 			array
 			id
@@ -93,27 +93,27 @@ script findreferencedscreenelementparams_recurse
 		if GotParam <param>
 			GetArraySize <array>
 			i = 0
-			if NOT (<array_Size> = 0)
+			if NOT (<array_size> = 0)
 				begin
 				if ((<...>.<param>) = (<array> [<i>].item))
-					SetArrayElement ArrayName = array index = <i> NewValue = {item = (<...>.<param>) count = ((<array> [<i>].count) + 1)}
+					SetArrayElement ArrayName = array index = <i> newvalue = {item = (<...>.<param>) count = ((<array> [<i>].count) + 1)}
 					break
 				endif
 				i = (<i> + 1)
-				repeat <array_Size>
+				repeat <array_size>
 			endif
-			if (<i> = <array_Size>)
+			if (<i> = <array_size>)
 				AddArrayElement array = <array> element = {item = (<...>.<param>) count = 1}
 			endif
 		endif
 		if GetScreenElementChildren id = <id>
 			GetArraySize <children>
-			if NOT (<array_Size> = 0)
+			if NOT (<array_size> = 0)
 				i = 0
 				begin
-				findreferencedscreenelementparams_recurse array = <array> id = (<children> [<i>]) param = <param>
+				FindReferencedScreenElementParams_Recurse array = <array> id = (<children> [<i>]) param = <param>
 				i = (<i> + 1)
-				repeat <array_Size>
+				repeat <array_size>
 			endif
 		endif
 	endif

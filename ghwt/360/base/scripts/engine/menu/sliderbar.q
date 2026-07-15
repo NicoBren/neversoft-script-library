@@ -1,6 +1,6 @@
 
 script sliderbar_rescale_to_bar 
-	<target1> = ((<value> - <min>) / (<Max> - <min>))
+	<target1> = ((<value> - <min>) / (<max> - <min>))
 	<target2> = (<right> - <left>)
 	<target3> = (<target1> * <target2>)
 	<rescaled_value> = (<target3> + <left>)
@@ -49,7 +49,7 @@ script sliderbar_add_item \{tab = tab1
 		<font> = dialog
 	endswitch
 	SetScreenElementLock \{id = current_menu
-		OFF}
+		off}
 	if NOT GotParam \{pad_choose_params}
 		<pad_choose_params> = <...>
 	endif
@@ -62,7 +62,7 @@ script sliderbar_add_item \{tab = tab1
 	endif
 	<z_priority> = 300
 	CreateScreenElement {
-		Type = ContainerElement
+		type = ContainerElement
 		parent = current_menu
 		id = <anchor_id>
 		dims = <dims>
@@ -86,15 +86,15 @@ script sliderbar_add_item \{tab = tab1
 		rgba = [128 128 128 240]
 	endif
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = <parent_id>
 		font = fontgrid_text_a3
 		text = <text>
-		Scale = 0.5
+		scale = 0.5
 		rgba = [128 , 128 , 128 , 255]
 		just = <text_just>
-		Pos = <text_pos>
-		Shadow
+		pos = <text_pos>
+		shadow
 		shadow_rgba = $UI_text_shadow_color
 		shadow_offs = (1.0, 1.0)
 		replace_handlers
@@ -102,84 +102,84 @@ script sliderbar_add_item \{tab = tab1
 	}
 	highlight_angle = 0
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = <parent_id>
 		texture = DE_highlight_bar
-		Pos = (-25.0, -7.0)
+		pos = (-25.0, -7.0)
 		rgba = [0 0 0 0]
 		just = [center center]
-		Scale = (1.9, 0.7)
+		scale = (1.9, 0.7)
 		z_priority = (3 -1)
 		rot_angle = <highlight_angle>
 	}
-	<Pos> = (-9.0, 0.0)
+	<pos> = (-9.0, 0.0)
 	if GotParam \{bar_pos}
-		<Pos> = <bar_pos>
+		<pos> = <bar_pos>
 	endif
 	bar_rgba = [100 90 80 255]
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = <parent_id>
 		z_priority = (<z_priority> - 2)
-		Pos = (<Pos> + (0.0, 2.0))
-		Scale = (1.2, 1.0)
+		pos = (<pos> + (0.0, 2.0))
+		scale = (1.2, 1.0)
 		texture = menu_highlight
 		rgba = [200 200 200 255]
 	}
-	legacydoscreenelementmorph id = <id> alpha = 0 time = 0
+	LegacyDoScreenElementMorph id = <id> alpha = 0 time = 0
 	if NOT GotParam \{arrow_scale}
 		arrow_scale = 0.0
 	endif
 	CreateScreenElement {
-		Type = ContainerElement
+		type = ContainerElement
 		parent = <anchor_id>
 		just = [center bottom]
 		dims = {200 , 200}
-		Pos = <arrow_pos_down>
+		pos = <arrow_pos_down>
 	}
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = <id>
 		id = <down_arrow_id>
 		texture = <down_arrow_texture>
 		rgba = <arrow_rgba>
-		Scale = <arrow_scale>
+		scale = <arrow_scale>
 	}
 	CreateScreenElement {
-		Type = ContainerElement
+		type = ContainerElement
 		parent = <anchor_id>
 		just = [center top]
 		dims = {200 , 200}
-		Pos = <arrow_pos_up>
+		pos = <arrow_pos_up>
 	}
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = <id>
 		id = <up_arrow_id>
 		texture = <up_arrow_texture>
 		rgba = <arrow_rgba>
-		Scale = <arrow_scale>
+		scale = <arrow_scale>
 	}
 	if GotParam \{child_texture}
 		CreateScreenElement {
-			Type = SpriteElement
+			type = SpriteElement
 			parent = <parent_id>
 			texture = <child_texture>
-			Pos = <icon_pos>
+			pos = <icon_pos>
 			rgba = <icon_rgba>
-			Scale = <icon_scale>
+			scale = <icon_scale>
 			id = <icon_id>
 		}
 	endif
 	SetScreenElementLock \{id = current_menu
-		On}
+		on}
 endscript
 
 script sliderbar_add_text_item 
 	SetScreenElementLock \{id = current_menu
-		OFF}
+		off}
 	CreateScreenElement {
-		Type = ContainerElement
+		type = ContainerElement
 		parent = current_menu
 		event_handlers = [{focus sliderbar_focus_text_item params = <focus_params>}
 			{unfocus sliderbar_unfocus_text_item}
@@ -189,63 +189,63 @@ script sliderbar_add_text_item
 	}
 	<parent_id> = <id>
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = <parent_id>
 		font = fontgrid_text_a3
 		text = <text>
-		Scale = 0.5
+		scale = 0.5
 		rgba = [128 , 128 , 128 , 255]
 		just = [center top]
-		Pos = (-6.0, -6.0)
-		Shadow
+		pos = (-6.0, -6.0)
+		shadow
 		shadow_rgba = $UI_text_shadow_color
 		shadow_offs = (1.0, 1.0)
 	}
 	bar_rgba = [100 90 80 255]
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = <parent_id>
 		z_priority = 1
-		Scale = (8.0, 0.75)
-		Pos = (-34.0, 2.0)
+		scale = (8.0, 0.75)
+		pos = (-34.0, 2.0)
 		texture = roundbar_middle
 		rgba = <bar_rgba>
 	}
-	legacydoscreenelementmorph id = <id> alpha = 0 time = 0
+	LegacyDoScreenElementMorph id = <id> alpha = 0 time = 0
 	SetScreenElementLock \{id = current_menu
-		On}
+		on}
 endscript
 
 script sliderbar_focus_text_item 
 	Obj_GetID
-	id = <objID>
+	id = <ObjID>
 	on_color = [128 123 20 255]
 	SetScreenElementProps {
 		id = {<id> child = 0}
 		rgba = [90 80 70 255]
 		shadow_rgba = [0 , 0 , 0 , 0]
 	}
-	legacydoscreenelementmorph id = {<id> child = 1} alpha = 1 time = 0
+	LegacyDoScreenElementMorph id = {<id> child = 1} alpha = 1 time = 0
 endscript
 
 script sliderbar_unfocus_text_item 
 	Obj_GetID
-	id = <objID>
+	id = <ObjID>
 	SetScreenElementProps {
 		id = {<id> child = 0}
 		rgba = [110 110 110 255]
 		shadow_rgba = $UI_text_shadow_color
 	}
-	legacydoscreenelementmorph id = {<id> child = 1} alpha = 0 time = 0
+	LegacyDoScreenElementMorph id = {<id> child = 1} alpha = 0 time = 0
 endscript
 
 script guitar_select_handler_change 
-	LaunchEvent \{Type = unfocus
+	LaunchEvent \{type = unfocus
 		target = current_menu}
-	cap_focus_script up_arrow_id = <up_arrow_id> down_arrow_id = <down_arrow_id> color_bar_id = <color_bar_id>
+	CAP_focus_script up_arrow_id = <up_arrow_id> down_arrow_id = <down_arrow_id> color_bar_id = <color_bar_id>
 	if NOT ScreenElementExists \{id = guitar_selection_element}
 		CreateScreenElement {
-			Type = ContainerElement
+			type = ContainerElement
 			id = guitar_selection_element
 			parent = root_window
 			event_handlers = [
@@ -258,17 +258,17 @@ script guitar_select_handler_change
 			]
 			z_priority = <z_priority>
 		}
-		LaunchEvent \{Type = focus
+		LaunchEvent \{type = focus
 			target = guitar_selection_element}
 	endif
 endscript
 
 script guitar_select_handler_change_return 
-	LaunchEvent \{Type = unfocus
+	LaunchEvent \{type = unfocus
 		target = guitar_selection_element}
 	if ScreenElementExists \{id = guitar_selection_element}
 		DestroyScreenElement \{id = guitar_selection_element}
 	endif
-	LaunchEvent \{Type = focus
+	LaunchEvent \{type = focus
 		target = current_menu}
 endscript

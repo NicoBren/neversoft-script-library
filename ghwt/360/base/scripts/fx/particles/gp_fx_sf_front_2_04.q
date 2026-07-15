@@ -1,25 +1,25 @@
-gp_fx_sf_front_2_04 = {
-	Pos = (4.67128, 2.4059713, 4.738332)
-	Angles = (0.0, 0.0, 0.0)
+GP_FX_SF_Front_2_04 = {
+	pos = (4.67128, 2.4059713, 4.738332)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
 	EmitRangeDims = (0.2, 0.2, 0.0)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, 0.0, 0.0)
+	force = (0.0, 0.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	AngleSpread = 45.0
 	LifeRange = (0.1, 0.1)
-	Emit_Rate = 5.0
-	Max = 0
+	emit_rate = 5.0
+	max = 0
 	TimeSeed = 0.0
-	LifeTime = 3.0
-	EmitNum = 0
+	lifeTime = 3.0
+	emitNum = 0
 	FollowEmitter = 0.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -33,19 +33,19 @@ gp_fx_sf_front_2_04 = {
 	EmitDelayStart = 0.0
 	PathFollowTime = 0.0
 	History = 2
-	HistoryListCoordinateSpace = World
+	HistoryListCoordinateSpace = world
 	align_to = (0.0, 0.0, 1.0)
-	Color = -101324359
+	color = -101324359
 	LOD_Default
 	QuickMaterial = {
 		DiffuseTextureEnabled
-		DiffuseTexture = jow_flare02
+		DiffuseTexture = JOW_Flare02
 		SpecularPower = 0
 		TwoSide
-		Bloom
+		bloom
 		fillburst
-		AlphaCutoff = 1
-		BlendMode = add
+		alphacutoff = 1
+		blendMode = Add
 		QuadAnimationFPS = 0
 	}
 	Knot = [

@@ -208,13 +208,13 @@ col_hit_blue = [
 	0.0
 	0.0
 ]
-col_lightning_blue = [
+col_lightning_Blue = [
 	0.0
 	0.0
 	0.0
 	0.0
 ]
-col_sideglow_blue = [
+col_Sideglow_blue = [
 	0.0
 	0.0
 	0.0
@@ -229,7 +229,7 @@ col_lightning_red = [
 standard_gems = [
 	{
 		element = col_green
-		Color = [
+		color = [
 			0.0
 			1.0
 			0.0
@@ -238,7 +238,7 @@ standard_gems = [
 	}
 	{
 		element = col_red
-		Color = [
+		color = [
 			1.2
 			0.0
 			0.0
@@ -247,7 +247,7 @@ standard_gems = [
 	}
 	{
 		element = col_yellow
-		Color = [
+		color = [
 			1.15
 			1.0
 			0.0
@@ -256,7 +256,7 @@ standard_gems = [
 	}
 	{
 		element = col_blue
-		Color = [
+		color = [
 			0.0
 			0.6
 			1.5
@@ -265,7 +265,7 @@ standard_gems = [
 	}
 	{
 		element = col_orange
-		Color = [
+		color = [
 			1.3
 			0.7
 			0.0
@@ -274,7 +274,7 @@ standard_gems = [
 	}
 	{
 		element = col_purple
-		Color = [
+		color = [
 			0.75
 			0.0
 			1.0
@@ -283,7 +283,7 @@ standard_gems = [
 	}
 	{
 		element = col_base_green
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -292,7 +292,7 @@ standard_gems = [
 	}
 	{
 		element = col_base_red
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -301,7 +301,7 @@ standard_gems = [
 	}
 	{
 		element = col_base_yellow
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -310,7 +310,7 @@ standard_gems = [
 	}
 	{
 		element = col_base_blue
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -319,7 +319,7 @@ standard_gems = [
 	}
 	{
 		element = col_base_orange
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -328,7 +328,7 @@ standard_gems = [
 	}
 	{
 		element = col_base_purple
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -337,7 +337,7 @@ standard_gems = [
 	}
 	{
 		element = col_now_green_dark
-		Color = [
+		color = [
 			0.0
 			1.0
 			0.0
@@ -346,7 +346,7 @@ standard_gems = [
 	}
 	{
 		element = col_now_green_brite
-		Color = [
+		color = [
 			0.0
 			2.0
 			0.0
@@ -355,7 +355,7 @@ standard_gems = [
 	}
 	{
 		element = col_now_red_dark
-		Color = [
+		color = [
 			1.0
 			0.0
 			0.0
@@ -364,7 +364,7 @@ standard_gems = [
 	}
 	{
 		element = col_now_red_brite
-		Color = [
+		color = [
 			2.0
 			0.0
 			0.0
@@ -373,7 +373,7 @@ standard_gems = [
 	}
 	{
 		element = col_now_yellow_dark
-		Color = [
+		color = [
 			1.1
 			1.0
 			0.0
@@ -382,7 +382,7 @@ standard_gems = [
 	}
 	{
 		element = col_now_yellow_brite
-		Color = [
+		color = [
 			2.2
 			2.0
 			0.0
@@ -391,7 +391,7 @@ standard_gems = [
 	}
 	{
 		element = col_now_blue_dark
-		Color = [
+		color = [
 			0.0
 			0.5
 			1.0
@@ -400,7 +400,7 @@ standard_gems = [
 	}
 	{
 		element = col_now_blue_brite
-		Color = [
+		color = [
 			0.0
 			1.0
 			3.0
@@ -409,7 +409,7 @@ standard_gems = [
 	}
 	{
 		element = col_now_orange_dark
-		Color = [
+		color = [
 			1.0
 			0.5
 			0.0
@@ -418,7 +418,7 @@ standard_gems = [
 	}
 	{
 		element = col_now_orange_brite
-		Color = [
+		color = [
 			2.0
 			1.0
 			0.0
@@ -427,7 +427,7 @@ standard_gems = [
 	}
 	{
 		element = col_now_purple_dark
-		Color = [
+		color = [
 			0.5
 			0.0
 			1.0
@@ -436,7 +436,7 @@ standard_gems = [
 	}
 	{
 		element = col_now_purple_brite
-		Color = [
+		color = [
 			1.0
 			0.0
 			2.0
@@ -447,7 +447,7 @@ standard_gems = [
 pink_gems = [
 	{
 		element = col_green
-		Color = [
+		color = [
 			2.0
 			0.2
 			2.0
@@ -456,7 +456,7 @@ pink_gems = [
 	}
 	{
 		element = col_red
-		Color = [
+		color = [
 			2.0
 			0.2
 			2.0
@@ -465,7 +465,7 @@ pink_gems = [
 	}
 	{
 		element = col_yellow
-		Color = [
+		color = [
 			2.0
 			0.2
 			2.0
@@ -474,7 +474,7 @@ pink_gems = [
 	}
 	{
 		element = col_blue
-		Color = [
+		color = [
 			2.0
 			0.2
 			2.0
@@ -483,7 +483,7 @@ pink_gems = [
 	}
 	{
 		element = col_orange
-		Color = [
+		color = [
 			2.0
 			0.2
 			2.0
@@ -492,7 +492,7 @@ pink_gems = [
 	}
 	{
 		element = col_purple
-		Color = [
+		color = [
 			2.0
 			0.2
 			2.0
@@ -501,7 +501,7 @@ pink_gems = [
 	}
 	{
 		element = col_base_green
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -510,7 +510,7 @@ pink_gems = [
 	}
 	{
 		element = col_base_red
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -519,7 +519,7 @@ pink_gems = [
 	}
 	{
 		element = col_base_yellow
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -528,7 +528,7 @@ pink_gems = [
 	}
 	{
 		element = col_base_blue
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -537,7 +537,7 @@ pink_gems = [
 	}
 	{
 		element = col_base_orange
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -546,7 +546,7 @@ pink_gems = [
 	}
 	{
 		element = col_base_purple
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -555,7 +555,7 @@ pink_gems = [
 	}
 	{
 		element = col_now_green_dark
-		Color = [
+		color = [
 			1.0
 			0.1
 			1.0
@@ -564,7 +564,7 @@ pink_gems = [
 	}
 	{
 		element = col_now_green_brite
-		Color = [
+		color = [
 			2.0
 			0.2
 			2.0
@@ -573,7 +573,7 @@ pink_gems = [
 	}
 	{
 		element = col_now_red_dark
-		Color = [
+		color = [
 			1.0
 			0.1
 			1.0
@@ -582,7 +582,7 @@ pink_gems = [
 	}
 	{
 		element = col_now_red_brite
-		Color = [
+		color = [
 			2.0
 			0.2
 			2.0
@@ -591,7 +591,7 @@ pink_gems = [
 	}
 	{
 		element = col_now_yellow_dark
-		Color = [
+		color = [
 			1.0
 			0.1
 			1.0
@@ -600,7 +600,7 @@ pink_gems = [
 	}
 	{
 		element = col_now_yellow_brite
-		Color = [
+		color = [
 			2.0
 			0.2
 			2.0
@@ -609,7 +609,7 @@ pink_gems = [
 	}
 	{
 		element = col_now_blue_dark
-		Color = [
+		color = [
 			1.0
 			0.1
 			1.0
@@ -618,7 +618,7 @@ pink_gems = [
 	}
 	{
 		element = col_now_blue_brite
-		Color = [
+		color = [
 			2.0
 			0.2
 			2.0
@@ -627,7 +627,7 @@ pink_gems = [
 	}
 	{
 		element = col_now_orange_dark
-		Color = [
+		color = [
 			1.0
 			0.1
 			1.0
@@ -636,7 +636,7 @@ pink_gems = [
 	}
 	{
 		element = col_now_orange_brite
-		Color = [
+		color = [
 			2.0
 			0.2
 			2.0
@@ -645,7 +645,7 @@ pink_gems = [
 	}
 	{
 		element = col_now_purple_dark
-		Color = [
+		color = [
 			1.0
 			0.1
 			1.0
@@ -654,7 +654,7 @@ pink_gems = [
 	}
 	{
 		element = col_now_purple_brite
-		Color = [
+		color = [
 			2.0
 			0.2
 			2.0
@@ -665,7 +665,7 @@ pink_gems = [
 stealth_gems = [
 	{
 		element = col_green
-		Color = [
+		color = [
 			0.1
 			0.1
 			0.1
@@ -674,7 +674,7 @@ stealth_gems = [
 	}
 	{
 		element = col_red
-		Color = [
+		color = [
 			0.1
 			0.1
 			0.1
@@ -683,7 +683,7 @@ stealth_gems = [
 	}
 	{
 		element = col_yellow
-		Color = [
+		color = [
 			0.1
 			0.1
 			0.1
@@ -692,7 +692,7 @@ stealth_gems = [
 	}
 	{
 		element = col_blue
-		Color = [
+		color = [
 			0.1
 			0.1
 			0.1
@@ -701,7 +701,7 @@ stealth_gems = [
 	}
 	{
 		element = col_orange
-		Color = [
+		color = [
 			0.1
 			0.1
 			0.1
@@ -710,7 +710,7 @@ stealth_gems = [
 	}
 	{
 		element = col_purple
-		Color = [
+		color = [
 			0.1
 			0.1
 			0.1
@@ -719,7 +719,7 @@ stealth_gems = [
 	}
 	{
 		element = col_base_green
-		Color = [
+		color = [
 			0.5
 			0.5
 			0.5
@@ -728,7 +728,7 @@ stealth_gems = [
 	}
 	{
 		element = col_base_red
-		Color = [
+		color = [
 			0.5
 			0.5
 			0.5
@@ -737,7 +737,7 @@ stealth_gems = [
 	}
 	{
 		element = col_base_yellow
-		Color = [
+		color = [
 			0.5
 			0.5
 			0.5
@@ -746,7 +746,7 @@ stealth_gems = [
 	}
 	{
 		element = col_base_blue
-		Color = [
+		color = [
 			0.5
 			0.5
 			0.5
@@ -755,7 +755,7 @@ stealth_gems = [
 	}
 	{
 		element = col_base_orange
-		Color = [
+		color = [
 			0.5
 			0.5
 			0.5
@@ -764,7 +764,7 @@ stealth_gems = [
 	}
 	{
 		element = col_base_purple
-		Color = [
+		color = [
 			0.5
 			0.5
 			0.5
@@ -773,7 +773,7 @@ stealth_gems = [
 	}
 	{
 		element = col_now_green_dark
-		Color = [
+		color = [
 			0.1
 			0.1
 			0.1
@@ -782,7 +782,7 @@ stealth_gems = [
 	}
 	{
 		element = col_now_green_brite
-		Color = [
+		color = [
 			2.2
 			0.2
 			0.2
@@ -791,7 +791,7 @@ stealth_gems = [
 	}
 	{
 		element = col_now_red_dark
-		Color = [
+		color = [
 			0.1
 			0.1
 			0.1
@@ -800,7 +800,7 @@ stealth_gems = [
 	}
 	{
 		element = col_now_red_brite
-		Color = [
+		color = [
 			2.2
 			0.2
 			0.2
@@ -809,7 +809,7 @@ stealth_gems = [
 	}
 	{
 		element = col_now_yellow_dark
-		Color = [
+		color = [
 			0.1
 			0.1
 			0.1
@@ -818,7 +818,7 @@ stealth_gems = [
 	}
 	{
 		element = col_now_yellow_brite
-		Color = [
+		color = [
 			2.1
 			0.2
 			0.2
@@ -827,7 +827,7 @@ stealth_gems = [
 	}
 	{
 		element = col_now_blue_dark
-		Color = [
+		color = [
 			0.1
 			0.1
 			0.1
@@ -836,7 +836,7 @@ stealth_gems = [
 	}
 	{
 		element = col_now_blue_brite
-		Color = [
+		color = [
 			2.2
 			0.2
 			0.2
@@ -845,7 +845,7 @@ stealth_gems = [
 	}
 	{
 		element = col_now_orange_dark
-		Color = [
+		color = [
 			0.1
 			0.1
 			0.1
@@ -854,7 +854,7 @@ stealth_gems = [
 	}
 	{
 		element = col_now_orange_brite
-		Color = [
+		color = [
 			2.2
 			0.2
 			0.2
@@ -863,7 +863,7 @@ stealth_gems = [
 	}
 	{
 		element = col_now_purple_dark
-		Color = [
+		color = [
 			0.1
 			0.1
 			0.1
@@ -872,7 +872,7 @@ stealth_gems = [
 	}
 	{
 		element = col_now_purple_brite
-		Color = [
+		color = [
 			2.2
 			0.2
 			0.2
@@ -880,10 +880,10 @@ stealth_gems = [
 		]
 	}
 ]
-eggs_n_bacon_gems = [
+Eggs_N_Bacon_gems = [
 	{
 		element = col_green
-		Color = [
+		color = [
 			2.3
 			2.3
 			2.3
@@ -892,7 +892,7 @@ eggs_n_bacon_gems = [
 	}
 	{
 		element = col_red
-		Color = [
+		color = [
 			2.3
 			2.3
 			2.3
@@ -901,7 +901,7 @@ eggs_n_bacon_gems = [
 	}
 	{
 		element = col_yellow
-		Color = [
+		color = [
 			2.3
 			2.3
 			2.3
@@ -910,7 +910,7 @@ eggs_n_bacon_gems = [
 	}
 	{
 		element = col_blue
-		Color = [
+		color = [
 			2.3
 			2.3
 			2.3
@@ -919,7 +919,7 @@ eggs_n_bacon_gems = [
 	}
 	{
 		element = col_orange
-		Color = [
+		color = [
 			2.3
 			2.3
 			2.3
@@ -928,7 +928,7 @@ eggs_n_bacon_gems = [
 	}
 	{
 		element = col_purple
-		Color = [
+		color = [
 			1.3
 			0.3
 			0.3
@@ -937,7 +937,7 @@ eggs_n_bacon_gems = [
 	}
 	{
 		element = col_base_green
-		Color = [
+		color = [
 			1.2
 			1.0
 			0.3
@@ -946,7 +946,7 @@ eggs_n_bacon_gems = [
 	}
 	{
 		element = col_base_red
-		Color = [
+		color = [
 			1.2
 			1.0
 			0.3
@@ -955,7 +955,7 @@ eggs_n_bacon_gems = [
 	}
 	{
 		element = col_base_yellow
-		Color = [
+		color = [
 			1.2
 			1.0
 			0.3
@@ -964,7 +964,7 @@ eggs_n_bacon_gems = [
 	}
 	{
 		element = col_base_blue
-		Color = [
+		color = [
 			1.2
 			1.0
 			0.3
@@ -973,7 +973,7 @@ eggs_n_bacon_gems = [
 	}
 	{
 		element = col_base_orange
-		Color = [
+		color = [
 			1.2
 			1.0
 			0.3
@@ -982,7 +982,7 @@ eggs_n_bacon_gems = [
 	}
 	{
 		element = col_base_purple
-		Color = [
+		color = [
 			1.0
 			0.3
 			0.3
@@ -991,7 +991,7 @@ eggs_n_bacon_gems = [
 	}
 	{
 		element = col_now_green_dark
-		Color = [
+		color = [
 			1.1
 			0.9
 			0.1
@@ -1000,7 +1000,7 @@ eggs_n_bacon_gems = [
 	}
 	{
 		element = col_now_green_brite
-		Color = [
+		color = [
 			2.1
 			1.5
 			0.1
@@ -1009,7 +1009,7 @@ eggs_n_bacon_gems = [
 	}
 	{
 		element = col_now_red_dark
-		Color = [
+		color = [
 			1.1
 			0.9
 			0.1
@@ -1018,7 +1018,7 @@ eggs_n_bacon_gems = [
 	}
 	{
 		element = col_now_red_brite
-		Color = [
+		color = [
 			2.1
 			1.5
 			0.1
@@ -1027,7 +1027,7 @@ eggs_n_bacon_gems = [
 	}
 	{
 		element = col_now_yellow_dark
-		Color = [
+		color = [
 			1.1
 			0.9
 			0.1
@@ -1036,7 +1036,7 @@ eggs_n_bacon_gems = [
 	}
 	{
 		element = col_now_yellow_brite
-		Color = [
+		color = [
 			2.1
 			1.5
 			0.1
@@ -1045,7 +1045,7 @@ eggs_n_bacon_gems = [
 	}
 	{
 		element = col_now_blue_dark
-		Color = [
+		color = [
 			1.1
 			0.9
 			0.1
@@ -1054,7 +1054,7 @@ eggs_n_bacon_gems = [
 	}
 	{
 		element = col_now_blue_brite
-		Color = [
+		color = [
 			2.1
 			1.5
 			0.1
@@ -1063,7 +1063,7 @@ eggs_n_bacon_gems = [
 	}
 	{
 		element = col_now_orange_dark
-		Color = [
+		color = [
 			1.1
 			0.9
 			0.1
@@ -1072,7 +1072,7 @@ eggs_n_bacon_gems = [
 	}
 	{
 		element = col_now_orange_brite
-		Color = [
+		color = [
 			2.1
 			1.5
 			0.1
@@ -1081,7 +1081,7 @@ eggs_n_bacon_gems = [
 	}
 	{
 		element = col_now_purple_dark
-		Color = [
+		color = [
 			1.1
 			0.9
 			0.1
@@ -1090,7 +1090,7 @@ eggs_n_bacon_gems = [
 	}
 	{
 		element = col_now_purple_brite
-		Color = [
+		color = [
 			2.1
 			1.5
 			0.1
@@ -1101,7 +1101,7 @@ eggs_n_bacon_gems = [
 old_glory_gems = [
 	{
 		element = col_green
-		Color = [
+		color = [
 			0.1
 			0.1
 			1.1
@@ -1110,7 +1110,7 @@ old_glory_gems = [
 	}
 	{
 		element = col_red
-		Color = [
+		color = [
 			1.1
 			0.1
 			0.1
@@ -1119,7 +1119,7 @@ old_glory_gems = [
 	}
 	{
 		element = col_yellow
-		Color = [
+		color = [
 			1.1
 			1.1
 			1.1
@@ -1128,7 +1128,7 @@ old_glory_gems = [
 	}
 	{
 		element = col_blue
-		Color = [
+		color = [
 			1.1
 			0.1
 			0.1
@@ -1137,7 +1137,7 @@ old_glory_gems = [
 	}
 	{
 		element = col_orange
-		Color = [
+		color = [
 			0.1
 			0.1
 			1.1
@@ -1146,7 +1146,7 @@ old_glory_gems = [
 	}
 	{
 		element = col_purple
-		Color = [
+		color = [
 			0.1
 			0.5
 			1.1
@@ -1155,7 +1155,7 @@ old_glory_gems = [
 	}
 	{
 		element = col_base_green
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -1164,7 +1164,7 @@ old_glory_gems = [
 	}
 	{
 		element = col_base_red
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -1173,7 +1173,7 @@ old_glory_gems = [
 	}
 	{
 		element = col_base_yellow
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -1182,7 +1182,7 @@ old_glory_gems = [
 	}
 	{
 		element = col_base_blue
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -1191,7 +1191,7 @@ old_glory_gems = [
 	}
 	{
 		element = col_base_orange
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -1200,7 +1200,7 @@ old_glory_gems = [
 	}
 	{
 		element = col_base_purple
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -1209,7 +1209,7 @@ old_glory_gems = [
 	}
 	{
 		element = col_now_green_dark
-		Color = [
+		color = [
 			0.1
 			0.1
 			1.1
@@ -1218,7 +1218,7 @@ old_glory_gems = [
 	}
 	{
 		element = col_now_green_brite
-		Color = [
+		color = [
 			0.2
 			0.2
 			2.1
@@ -1227,7 +1227,7 @@ old_glory_gems = [
 	}
 	{
 		element = col_now_red_dark
-		Color = [
+		color = [
 			1.1
 			0.1
 			0.1
@@ -1236,7 +1236,7 @@ old_glory_gems = [
 	}
 	{
 		element = col_now_red_brite
-		Color = [
+		color = [
 			2.1
 			0.1
 			0.1
@@ -1245,7 +1245,7 @@ old_glory_gems = [
 	}
 	{
 		element = col_now_yellow_dark
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -1254,7 +1254,7 @@ old_glory_gems = [
 	}
 	{
 		element = col_now_yellow_brite
-		Color = [
+		color = [
 			2.1
 			2.1
 			2.1
@@ -1263,7 +1263,7 @@ old_glory_gems = [
 	}
 	{
 		element = col_now_blue_dark
-		Color = [
+		color = [
 			1.1
 			0.1
 			0.1
@@ -1272,7 +1272,7 @@ old_glory_gems = [
 	}
 	{
 		element = col_now_blue_brite
-		Color = [
+		color = [
 			2.1
 			0.1
 			0.1
@@ -1281,7 +1281,7 @@ old_glory_gems = [
 	}
 	{
 		element = col_now_orange_dark
-		Color = [
+		color = [
 			0.1
 			0.1
 			1.1
@@ -1290,7 +1290,7 @@ old_glory_gems = [
 	}
 	{
 		element = col_now_orange_brite
-		Color = [
+		color = [
 			0.2
 			0.2
 			2.1
@@ -1299,7 +1299,7 @@ old_glory_gems = [
 	}
 	{
 		element = col_now_purple_dark
-		Color = [
+		color = [
 			0.1
 			0.5
 			1.1
@@ -1308,7 +1308,7 @@ old_glory_gems = [
 	}
 	{
 		element = col_now_purple_brite
-		Color = [
+		color = [
 			0.1
 			1.1
 			2.1
@@ -1319,7 +1319,7 @@ old_glory_gems = [
 solid_gold_gems = [
 	{
 		element = col_green
-		Color = [
+		color = [
 			1.3
 			1.0
 			0.3
@@ -1328,7 +1328,7 @@ solid_gold_gems = [
 	}
 	{
 		element = col_red
-		Color = [
+		color = [
 			1.3
 			1.0
 			0.3
@@ -1337,7 +1337,7 @@ solid_gold_gems = [
 	}
 	{
 		element = col_yellow
-		Color = [
+		color = [
 			1.3
 			1.0
 			0.3
@@ -1346,7 +1346,7 @@ solid_gold_gems = [
 	}
 	{
 		element = col_blue
-		Color = [
+		color = [
 			1.3
 			1.0
 			0.3
@@ -1355,7 +1355,7 @@ solid_gold_gems = [
 	}
 	{
 		element = col_orange
-		Color = [
+		color = [
 			1.3
 			1.0
 			0.3
@@ -1364,7 +1364,7 @@ solid_gold_gems = [
 	}
 	{
 		element = col_purple
-		Color = [
+		color = [
 			1.3
 			1.0
 			0.3
@@ -1373,7 +1373,7 @@ solid_gold_gems = [
 	}
 	{
 		element = col_base_green
-		Color = [
+		color = [
 			1.5
 			1.2
 			0.5
@@ -1382,7 +1382,7 @@ solid_gold_gems = [
 	}
 	{
 		element = col_base_red
-		Color = [
+		color = [
 			1.5
 			1.2
 			0.5
@@ -1391,7 +1391,7 @@ solid_gold_gems = [
 	}
 	{
 		element = col_base_yellow
-		Color = [
+		color = [
 			1.5
 			1.2
 			0.5
@@ -1400,7 +1400,7 @@ solid_gold_gems = [
 	}
 	{
 		element = col_base_blue
-		Color = [
+		color = [
 			1.5
 			1.2
 			0.5
@@ -1409,7 +1409,7 @@ solid_gold_gems = [
 	}
 	{
 		element = col_base_orange
-		Color = [
+		color = [
 			1.5
 			1.2
 			0.5
@@ -1418,7 +1418,7 @@ solid_gold_gems = [
 	}
 	{
 		element = col_base_purple
-		Color = [
+		color = [
 			1.5
 			1.2
 			0.5
@@ -1427,7 +1427,7 @@ solid_gold_gems = [
 	}
 	{
 		element = col_now_green_dark
-		Color = [
+		color = [
 			1.1
 			0.9
 			0.1
@@ -1436,7 +1436,7 @@ solid_gold_gems = [
 	}
 	{
 		element = col_now_green_brite
-		Color = [
+		color = [
 			2.1
 			1.5
 			0.1
@@ -1445,7 +1445,7 @@ solid_gold_gems = [
 	}
 	{
 		element = col_now_red_dark
-		Color = [
+		color = [
 			1.1
 			0.9
 			0.1
@@ -1454,7 +1454,7 @@ solid_gold_gems = [
 	}
 	{
 		element = col_now_red_brite
-		Color = [
+		color = [
 			2.1
 			1.5
 			0.1
@@ -1463,7 +1463,7 @@ solid_gold_gems = [
 	}
 	{
 		element = col_now_yellow_dark
-		Color = [
+		color = [
 			1.1
 			0.9
 			0.1
@@ -1472,7 +1472,7 @@ solid_gold_gems = [
 	}
 	{
 		element = col_now_yellow_brite
-		Color = [
+		color = [
 			2.1
 			1.5
 			0.1
@@ -1481,7 +1481,7 @@ solid_gold_gems = [
 	}
 	{
 		element = col_now_blue_dark
-		Color = [
+		color = [
 			1.1
 			0.9
 			0.1
@@ -1490,7 +1490,7 @@ solid_gold_gems = [
 	}
 	{
 		element = col_now_blue_brite
-		Color = [
+		color = [
 			2.1
 			1.5
 			0.1
@@ -1499,7 +1499,7 @@ solid_gold_gems = [
 	}
 	{
 		element = col_now_orange_dark
-		Color = [
+		color = [
 			1.1
 			0.9
 			0.1
@@ -1508,7 +1508,7 @@ solid_gold_gems = [
 	}
 	{
 		element = col_now_orange_brite
-		Color = [
+		color = [
 			2.1
 			1.5
 			0.1
@@ -1517,7 +1517,7 @@ solid_gold_gems = [
 	}
 	{
 		element = col_now_purple_dark
-		Color = [
+		color = [
 			1.1
 			0.9
 			0.1
@@ -1526,7 +1526,7 @@ solid_gold_gems = [
 	}
 	{
 		element = col_now_purple_brite
-		Color = [
+		color = [
 			2.1
 			1.5
 			0.1
@@ -1537,7 +1537,7 @@ solid_gold_gems = [
 platinum_gems = [
 	{
 		element = col_green
-		Color = [
+		color = [
 			1.3
 			1.2
 			1.3
@@ -1546,7 +1546,7 @@ platinum_gems = [
 	}
 	{
 		element = col_red
-		Color = [
+		color = [
 			1.3
 			1.2
 			1.3
@@ -1555,7 +1555,7 @@ platinum_gems = [
 	}
 	{
 		element = col_yellow
-		Color = [
+		color = [
 			1.3
 			1.2
 			1.3
@@ -1564,7 +1564,7 @@ platinum_gems = [
 	}
 	{
 		element = col_blue
-		Color = [
+		color = [
 			1.3
 			1.2
 			1.3
@@ -1573,7 +1573,7 @@ platinum_gems = [
 	}
 	{
 		element = col_orange
-		Color = [
+		color = [
 			1.3
 			1.2
 			1.3
@@ -1582,7 +1582,7 @@ platinum_gems = [
 	}
 	{
 		element = col_purple
-		Color = [
+		color = [
 			1.3
 			1.2
 			1.3
@@ -1591,7 +1591,7 @@ platinum_gems = [
 	}
 	{
 		element = col_base_green
-		Color = [
+		color = [
 			1.5
 			1.4
 			1.5
@@ -1600,7 +1600,7 @@ platinum_gems = [
 	}
 	{
 		element = col_base_red
-		Color = [
+		color = [
 			1.5
 			1.4
 			1.5
@@ -1609,7 +1609,7 @@ platinum_gems = [
 	}
 	{
 		element = col_base_yellow
-		Color = [
+		color = [
 			1.5
 			1.4
 			1.5
@@ -1618,7 +1618,7 @@ platinum_gems = [
 	}
 	{
 		element = col_base_blue
-		Color = [
+		color = [
 			1.5
 			1.4
 			1.5
@@ -1627,7 +1627,7 @@ platinum_gems = [
 	}
 	{
 		element = col_base_orange
-		Color = [
+		color = [
 			1.5
 			1.4
 			1.5
@@ -1636,7 +1636,7 @@ platinum_gems = [
 	}
 	{
 		element = col_base_purple
-		Color = [
+		color = [
 			1.5
 			1.4
 			1.5
@@ -1645,7 +1645,7 @@ platinum_gems = [
 	}
 	{
 		element = col_now_green_dark
-		Color = [
+		color = [
 			1.1
 			1.0
 			1.1
@@ -1654,7 +1654,7 @@ platinum_gems = [
 	}
 	{
 		element = col_now_green_brite
-		Color = [
+		color = [
 			2.1
 			2.0
 			2.1
@@ -1663,7 +1663,7 @@ platinum_gems = [
 	}
 	{
 		element = col_now_red_dark
-		Color = [
+		color = [
 			1.1
 			1.0
 			1.1
@@ -1672,7 +1672,7 @@ platinum_gems = [
 	}
 	{
 		element = col_now_red_brite
-		Color = [
+		color = [
 			2.1
 			2.1
 			2.1
@@ -1681,7 +1681,7 @@ platinum_gems = [
 	}
 	{
 		element = col_now_yellow_dark
-		Color = [
+		color = [
 			1.1
 			1.0
 			1.1
@@ -1690,7 +1690,7 @@ platinum_gems = [
 	}
 	{
 		element = col_now_yellow_brite
-		Color = [
+		color = [
 			2.1
 			2.1
 			2.1
@@ -1699,7 +1699,7 @@ platinum_gems = [
 	}
 	{
 		element = col_now_blue_dark
-		Color = [
+		color = [
 			1.1
 			1.0
 			1.1
@@ -1708,7 +1708,7 @@ platinum_gems = [
 	}
 	{
 		element = col_now_blue_brite
-		Color = [
+		color = [
 			2.1
 			2.1
 			2.1
@@ -1717,7 +1717,7 @@ platinum_gems = [
 	}
 	{
 		element = col_now_orange_dark
-		Color = [
+		color = [
 			1.1
 			1.0
 			1.1
@@ -1726,7 +1726,7 @@ platinum_gems = [
 	}
 	{
 		element = col_now_orange_brite
-		Color = [
+		color = [
 			2.1
 			2.1
 			2.1
@@ -1735,7 +1735,7 @@ platinum_gems = [
 	}
 	{
 		element = col_now_purple_dark
-		Color = [
+		color = [
 			1.1
 			1.0
 			1.1
@@ -1744,7 +1744,7 @@ platinum_gems = [
 	}
 	{
 		element = col_now_purple_brite
-		Color = [
+		color = [
 			2.1
 			2.1
 			2.1
@@ -1755,7 +1755,7 @@ platinum_gems = [
 diabolic_gems = [
 	{
 		element = col_green
-		Color = [
+		color = [
 			1.3
 			0.0
 			0.0
@@ -1764,7 +1764,7 @@ diabolic_gems = [
 	}
 	{
 		element = col_red
-		Color = [
+		color = [
 			1.3
 			0.0
 			0.0
@@ -1773,7 +1773,7 @@ diabolic_gems = [
 	}
 	{
 		element = col_yellow
-		Color = [
+		color = [
 			1.3
 			0.0
 			0.0
@@ -1782,7 +1782,7 @@ diabolic_gems = [
 	}
 	{
 		element = col_blue
-		Color = [
+		color = [
 			1.3
 			0.0
 			0.0
@@ -1791,7 +1791,7 @@ diabolic_gems = [
 	}
 	{
 		element = col_orange
-		Color = [
+		color = [
 			1.3
 			0.0
 			0.0
@@ -1800,7 +1800,7 @@ diabolic_gems = [
 	}
 	{
 		element = col_purple
-		Color = [
+		color = [
 			1.3
 			0.0
 			0.0
@@ -1809,7 +1809,7 @@ diabolic_gems = [
 	}
 	{
 		element = col_base_green
-		Color = [
+		color = [
 			0.5
 			0.0
 			0.0
@@ -1818,7 +1818,7 @@ diabolic_gems = [
 	}
 	{
 		element = col_base_red
-		Color = [
+		color = [
 			0.5
 			0.0
 			0.0
@@ -1827,7 +1827,7 @@ diabolic_gems = [
 	}
 	{
 		element = col_base_yellow
-		Color = [
+		color = [
 			0.5
 			0.0
 			0.0
@@ -1836,7 +1836,7 @@ diabolic_gems = [
 	}
 	{
 		element = col_base_blue
-		Color = [
+		color = [
 			0.5
 			0.0
 			0.0
@@ -1845,7 +1845,7 @@ diabolic_gems = [
 	}
 	{
 		element = col_base_orange
-		Color = [
+		color = [
 			0.5
 			0.0
 			0.0
@@ -1854,7 +1854,7 @@ diabolic_gems = [
 	}
 	{
 		element = col_base_purple
-		Color = [
+		color = [
 			0.5
 			0.0
 			0.0
@@ -1863,7 +1863,7 @@ diabolic_gems = [
 	}
 	{
 		element = col_now_green_dark
-		Color = [
+		color = [
 			0.1
 			0.0
 			0.0
@@ -1872,7 +1872,7 @@ diabolic_gems = [
 	}
 	{
 		element = col_now_green_brite
-		Color = [
+		color = [
 			2.1
 			0.1
 			0.1
@@ -1881,7 +1881,7 @@ diabolic_gems = [
 	}
 	{
 		element = col_now_red_dark
-		Color = [
+		color = [
 			0.1
 			0.0
 			0.0
@@ -1890,7 +1890,7 @@ diabolic_gems = [
 	}
 	{
 		element = col_now_red_brite
-		Color = [
+		color = [
 			2.1
 			0.1
 			0.1
@@ -1899,7 +1899,7 @@ diabolic_gems = [
 	}
 	{
 		element = col_now_yellow_dark
-		Color = [
+		color = [
 			0.1
 			0.0
 			0.0
@@ -1908,7 +1908,7 @@ diabolic_gems = [
 	}
 	{
 		element = col_now_yellow_brite
-		Color = [
+		color = [
 			2.1
 			0.1
 			0.1
@@ -1917,7 +1917,7 @@ diabolic_gems = [
 	}
 	{
 		element = col_now_blue_dark
-		Color = [
+		color = [
 			0.1
 			0.0
 			0.0
@@ -1926,7 +1926,7 @@ diabolic_gems = [
 	}
 	{
 		element = col_now_blue_brite
-		Color = [
+		color = [
 			2.1
 			0.1
 			0.1
@@ -1935,7 +1935,7 @@ diabolic_gems = [
 	}
 	{
 		element = col_now_orange_dark
-		Color = [
+		color = [
 			0.1
 			0.0
 			0.0
@@ -1944,7 +1944,7 @@ diabolic_gems = [
 	}
 	{
 		element = col_now_orange_brite
-		Color = [
+		color = [
 			2.1
 			0.1
 			0.1
@@ -1953,7 +1953,7 @@ diabolic_gems = [
 	}
 	{
 		element = col_now_purple_dark
-		Color = [
+		color = [
 			0.1
 			0.0
 			0.0
@@ -1962,7 +1962,7 @@ diabolic_gems = [
 	}
 	{
 		element = col_now_purple_brite
-		Color = [
+		color = [
 			2.1
 			0.1
 			0.1
@@ -1973,7 +1973,7 @@ diabolic_gems = [
 toxic_waste_gems = [
 	{
 		element = col_green
-		Color = [
+		color = [
 			0.3
 			4.0
 			0.3
@@ -1982,7 +1982,7 @@ toxic_waste_gems = [
 	}
 	{
 		element = col_red
-		Color = [
+		color = [
 			0.3
 			4.0
 			0.3
@@ -1991,7 +1991,7 @@ toxic_waste_gems = [
 	}
 	{
 		element = col_yellow
-		Color = [
+		color = [
 			0.3
 			4.0
 			0.3
@@ -2000,7 +2000,7 @@ toxic_waste_gems = [
 	}
 	{
 		element = col_blue
-		Color = [
+		color = [
 			0.3
 			4.0
 			0.3
@@ -2009,7 +2009,7 @@ toxic_waste_gems = [
 	}
 	{
 		element = col_orange
-		Color = [
+		color = [
 			0.3
 			4.0
 			0.3
@@ -2018,7 +2018,7 @@ toxic_waste_gems = [
 	}
 	{
 		element = col_purple
-		Color = [
+		color = [
 			0.3
 			4.0
 			0.3
@@ -2027,7 +2027,7 @@ toxic_waste_gems = [
 	}
 	{
 		element = col_base_green
-		Color = [
+		color = [
 			0.5
 			1.2
 			0.0
@@ -2036,7 +2036,7 @@ toxic_waste_gems = [
 	}
 	{
 		element = col_base_red
-		Color = [
+		color = [
 			0.5
 			1.2
 			0.0
@@ -2045,7 +2045,7 @@ toxic_waste_gems = [
 	}
 	{
 		element = col_base_yellow
-		Color = [
+		color = [
 			0.5
 			1.2
 			0.0
@@ -2054,7 +2054,7 @@ toxic_waste_gems = [
 	}
 	{
 		element = col_base_blue
-		Color = [
+		color = [
 			0.5
 			1.2
 			0.0
@@ -2063,7 +2063,7 @@ toxic_waste_gems = [
 	}
 	{
 		element = col_base_orange
-		Color = [
+		color = [
 			0.5
 			1.2
 			0.0
@@ -2072,7 +2072,7 @@ toxic_waste_gems = [
 	}
 	{
 		element = col_base_purple
-		Color = [
+		color = [
 			0.5
 			1.2
 			0.0
@@ -2081,7 +2081,7 @@ toxic_waste_gems = [
 	}
 	{
 		element = col_now_green_dark
-		Color = [
+		color = [
 			0.1
 			1.9
 			0.1
@@ -2090,7 +2090,7 @@ toxic_waste_gems = [
 	}
 	{
 		element = col_now_green_brite
-		Color = [
+		color = [
 			0.1
 			2.5
 			0.1
@@ -2099,7 +2099,7 @@ toxic_waste_gems = [
 	}
 	{
 		element = col_now_red_dark
-		Color = [
+		color = [
 			0.1
 			1.9
 			0.1
@@ -2108,7 +2108,7 @@ toxic_waste_gems = [
 	}
 	{
 		element = col_now_red_brite
-		Color = [
+		color = [
 			0.1
 			2.5
 			0.1
@@ -2117,7 +2117,7 @@ toxic_waste_gems = [
 	}
 	{
 		element = col_now_yellow_dark
-		Color = [
+		color = [
 			0.1
 			1.9
 			0.1
@@ -2126,7 +2126,7 @@ toxic_waste_gems = [
 	}
 	{
 		element = col_now_yellow_brite
-		Color = [
+		color = [
 			0.1
 			2.5
 			0.1
@@ -2135,7 +2135,7 @@ toxic_waste_gems = [
 	}
 	{
 		element = col_now_blue_dark
-		Color = [
+		color = [
 			0.1
 			1.9
 			0.1
@@ -2144,7 +2144,7 @@ toxic_waste_gems = [
 	}
 	{
 		element = col_now_blue_brite
-		Color = [
+		color = [
 			0.1
 			2.5
 			0.1
@@ -2153,7 +2153,7 @@ toxic_waste_gems = [
 	}
 	{
 		element = col_now_orange_dark
-		Color = [
+		color = [
 			0.1
 			1.9
 			0.1
@@ -2162,7 +2162,7 @@ toxic_waste_gems = [
 	}
 	{
 		element = col_now_orange_brite
-		Color = [
+		color = [
 			0.1
 			2.5
 			0.1
@@ -2171,7 +2171,7 @@ toxic_waste_gems = [
 	}
 	{
 		element = col_now_purple_dark
-		Color = [
+		color = [
 			0.1
 			1.9
 			0.1
@@ -2180,7 +2180,7 @@ toxic_waste_gems = [
 	}
 	{
 		element = col_now_purple_brite
-		Color = [
+		color = [
 			0.1
 			2.5
 			0.1
@@ -2191,7 +2191,7 @@ toxic_waste_gems = [
 black_gems = [
 	{
 		element = col_green
-		Color = [
+		color = [
 			0.0
 			0.0
 			0.0
@@ -2200,7 +2200,7 @@ black_gems = [
 	}
 	{
 		element = col_red
-		Color = [
+		color = [
 			0.0
 			0.0
 			0.0
@@ -2209,7 +2209,7 @@ black_gems = [
 	}
 	{
 		element = col_yellow
-		Color = [
+		color = [
 			0.0
 			0.0
 			0.0
@@ -2218,7 +2218,7 @@ black_gems = [
 	}
 	{
 		element = col_blue
-		Color = [
+		color = [
 			0.0
 			0.0
 			0.0
@@ -2227,7 +2227,7 @@ black_gems = [
 	}
 	{
 		element = col_orange
-		Color = [
+		color = [
 			0.0
 			0.0
 			0.0
@@ -2236,7 +2236,7 @@ black_gems = [
 	}
 	{
 		element = col_purple
-		Color = [
+		color = [
 			0.0
 			0.0
 			0.0
@@ -2245,7 +2245,7 @@ black_gems = [
 	}
 	{
 		element = col_base_green
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -2254,7 +2254,7 @@ black_gems = [
 	}
 	{
 		element = col_base_red
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -2263,7 +2263,7 @@ black_gems = [
 	}
 	{
 		element = col_base_yellow
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -2272,7 +2272,7 @@ black_gems = [
 	}
 	{
 		element = col_base_blue
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -2281,7 +2281,7 @@ black_gems = [
 	}
 	{
 		element = col_base_orange
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -2290,7 +2290,7 @@ black_gems = [
 	}
 	{
 		element = col_base_purple
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -2299,7 +2299,7 @@ black_gems = [
 	}
 	{
 		element = col_now_green_dark
-		Color = [
+		color = [
 			0.0
 			0.0
 			0.0
@@ -2308,7 +2308,7 @@ black_gems = [
 	}
 	{
 		element = col_now_green_brite
-		Color = [
+		color = [
 			0.0
 			0.0
 			0.0
@@ -2317,7 +2317,7 @@ black_gems = [
 	}
 	{
 		element = col_now_red_dark
-		Color = [
+		color = [
 			0.0
 			0.0
 			0.0
@@ -2326,7 +2326,7 @@ black_gems = [
 	}
 	{
 		element = col_now_red_brite
-		Color = [
+		color = [
 			0.0
 			0.0
 			0.0
@@ -2335,7 +2335,7 @@ black_gems = [
 	}
 	{
 		element = col_now_yellow_dark
-		Color = [
+		color = [
 			0.0
 			0.0
 			0.0
@@ -2344,7 +2344,7 @@ black_gems = [
 	}
 	{
 		element = col_now_yellow_brite
-		Color = [
+		color = [
 			0.0
 			0.0
 			0.0
@@ -2353,7 +2353,7 @@ black_gems = [
 	}
 	{
 		element = col_now_blue_dark
-		Color = [
+		color = [
 			0.0
 			0.0
 			0.0
@@ -2362,7 +2362,7 @@ black_gems = [
 	}
 	{
 		element = col_now_blue_brite
-		Color = [
+		color = [
 			0.0
 			0.0
 			0.0
@@ -2371,7 +2371,7 @@ black_gems = [
 	}
 	{
 		element = col_now_orange_dark
-		Color = [
+		color = [
 			0.0
 			0.0
 			0.0
@@ -2380,7 +2380,7 @@ black_gems = [
 	}
 	{
 		element = col_now_orange_brite
-		Color = [
+		color = [
 			0.0
 			0.0
 			0.0
@@ -2389,7 +2389,7 @@ black_gems = [
 	}
 	{
 		element = col_now_purple_dark
-		Color = [
+		color = [
 			0.0
 			0.0
 			0.0
@@ -2398,7 +2398,7 @@ black_gems = [
 	}
 	{
 		element = col_now_purple_brite
-		Color = [
+		color = [
 			0.0
 			0.0
 			0.0
@@ -2409,7 +2409,7 @@ black_gems = [
 pastel_gems = [
 	{
 		element = col_green
-		Color = [
+		color = [
 			0.8
 			1.2
 			0.8
@@ -2418,7 +2418,7 @@ pastel_gems = [
 	}
 	{
 		element = col_red
-		Color = [
+		color = [
 			1.2
 			0.8
 			0.8
@@ -2427,7 +2427,7 @@ pastel_gems = [
 	}
 	{
 		element = col_yellow
-		Color = [
+		color = [
 			1.3
 			1.2
 			0.8
@@ -2436,7 +2436,7 @@ pastel_gems = [
 	}
 	{
 		element = col_blue
-		Color = [
+		color = [
 			0.8
 			1.25
 			1.5
@@ -2445,7 +2445,7 @@ pastel_gems = [
 	}
 	{
 		element = col_orange
-		Color = [
+		color = [
 			1.2
 			1.0
 			0.8
@@ -2454,7 +2454,7 @@ pastel_gems = [
 	}
 	{
 		element = col_purple
-		Color = [
+		color = [
 			0.9
 			0.8
 			1.0
@@ -2463,7 +2463,7 @@ pastel_gems = [
 	}
 	{
 		element = col_base_green
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -2472,7 +2472,7 @@ pastel_gems = [
 	}
 	{
 		element = col_base_red
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -2481,7 +2481,7 @@ pastel_gems = [
 	}
 	{
 		element = col_base_yellow
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -2490,7 +2490,7 @@ pastel_gems = [
 	}
 	{
 		element = col_base_blue
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -2499,7 +2499,7 @@ pastel_gems = [
 	}
 	{
 		element = col_base_orange
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -2508,7 +2508,7 @@ pastel_gems = [
 	}
 	{
 		element = col_base_purple
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -2517,7 +2517,7 @@ pastel_gems = [
 	}
 	{
 		element = col_now_green_dark
-		Color = [
+		color = [
 			0.8
 			1.2
 			0.8
@@ -2526,7 +2526,7 @@ pastel_gems = [
 	}
 	{
 		element = col_now_green_brite
-		Color = [
+		color = [
 			1.8
 			2.2
 			1.8
@@ -2535,7 +2535,7 @@ pastel_gems = [
 	}
 	{
 		element = col_now_red_dark
-		Color = [
+		color = [
 			1.2
 			0.8
 			0.8
@@ -2544,7 +2544,7 @@ pastel_gems = [
 	}
 	{
 		element = col_now_red_brite
-		Color = [
+		color = [
 			2.2
 			1.8
 			1.8
@@ -2553,7 +2553,7 @@ pastel_gems = [
 	}
 	{
 		element = col_now_yellow_dark
-		Color = [
+		color = [
 			1.3
 			1.2
 			0.8
@@ -2562,7 +2562,7 @@ pastel_gems = [
 	}
 	{
 		element = col_now_yellow_brite
-		Color = [
+		color = [
 			2.3
 			2.2
 			1.8
@@ -2571,7 +2571,7 @@ pastel_gems = [
 	}
 	{
 		element = col_now_blue_dark
-		Color = [
+		color = [
 			0.8
 			1.25
 			1.5
@@ -2580,7 +2580,7 @@ pastel_gems = [
 	}
 	{
 		element = col_now_blue_brite
-		Color = [
+		color = [
 			1.8
 			2.25
 			2.5
@@ -2589,7 +2589,7 @@ pastel_gems = [
 	}
 	{
 		element = col_now_orange_dark
-		Color = [
+		color = [
 			1.2
 			1.0
 			0.8
@@ -2598,7 +2598,7 @@ pastel_gems = [
 	}
 	{
 		element = col_now_orange_brite
-		Color = [
+		color = [
 			2.2
 			2.0
 			1.8
@@ -2607,7 +2607,7 @@ pastel_gems = [
 	}
 	{
 		element = col_now_purple_dark
-		Color = [
+		color = [
 			0.9
 			0.8
 			1.0
@@ -2616,7 +2616,7 @@ pastel_gems = [
 	}
 	{
 		element = col_now_purple_brite
-		Color = [
+		color = [
 			1.9
 			1.8
 			2.0
@@ -2627,7 +2627,7 @@ pastel_gems = [
 dark_gems = [
 	{
 		element = col_green
-		Color = [
+		color = [
 			0.0
 			0.6
 			0.0
@@ -2636,7 +2636,7 @@ dark_gems = [
 	}
 	{
 		element = col_red
-		Color = [
+		color = [
 			0.6
 			0.0
 			0.0
@@ -2645,7 +2645,7 @@ dark_gems = [
 	}
 	{
 		element = col_yellow
-		Color = [
+		color = [
 			0.65000004
 			0.6
 			0.0
@@ -2654,7 +2654,7 @@ dark_gems = [
 	}
 	{
 		element = col_blue
-		Color = [
+		color = [
 			0.0
 			0.375
 			0.75
@@ -2663,7 +2663,7 @@ dark_gems = [
 	}
 	{
 		element = col_orange
-		Color = [
+		color = [
 			0.6
 			0.35000002
 			0.0
@@ -2672,7 +2672,7 @@ dark_gems = [
 	}
 	{
 		element = col_purple
-		Color = [
+		color = [
 			0.375
 			0.0
 			0.5
@@ -2681,7 +2681,7 @@ dark_gems = [
 	}
 	{
 		element = col_base_green
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -2690,7 +2690,7 @@ dark_gems = [
 	}
 	{
 		element = col_base_red
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -2699,7 +2699,7 @@ dark_gems = [
 	}
 	{
 		element = col_base_yellow
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -2708,7 +2708,7 @@ dark_gems = [
 	}
 	{
 		element = col_base_blue
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -2717,7 +2717,7 @@ dark_gems = [
 	}
 	{
 		element = col_base_orange
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -2726,7 +2726,7 @@ dark_gems = [
 	}
 	{
 		element = col_base_purple
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -2735,7 +2735,7 @@ dark_gems = [
 	}
 	{
 		element = col_now_green_dark
-		Color = [
+		color = [
 			0.0
 			0.5
 			0.0
@@ -2744,7 +2744,7 @@ dark_gems = [
 	}
 	{
 		element = col_now_green_brite
-		Color = [
+		color = [
 			0.0
 			1.0
 			0.0
@@ -2753,7 +2753,7 @@ dark_gems = [
 	}
 	{
 		element = col_now_red_dark
-		Color = [
+		color = [
 			0.5
 			0.0
 			0.0
@@ -2762,7 +2762,7 @@ dark_gems = [
 	}
 	{
 		element = col_now_red_brite
-		Color = [
+		color = [
 			1.0
 			0.0
 			0.0
@@ -2771,7 +2771,7 @@ dark_gems = [
 	}
 	{
 		element = col_now_yellow_dark
-		Color = [
+		color = [
 			0.5
 			0.5
 			0.0
@@ -2780,7 +2780,7 @@ dark_gems = [
 	}
 	{
 		element = col_now_yellow_brite
-		Color = [
+		color = [
 			1.0
 			1.0
 			0.0
@@ -2789,7 +2789,7 @@ dark_gems = [
 	}
 	{
 		element = col_now_blue_dark
-		Color = [
+		color = [
 			0.0
 			0.25
 			0.5
@@ -2798,7 +2798,7 @@ dark_gems = [
 	}
 	{
 		element = col_now_blue_brite
-		Color = [
+		color = [
 			0.0
 			0.5
 			1.0
@@ -2807,7 +2807,7 @@ dark_gems = [
 	}
 	{
 		element = col_now_orange_dark
-		Color = [
+		color = [
 			0.5
 			0.25
 			0.0
@@ -2816,7 +2816,7 @@ dark_gems = [
 	}
 	{
 		element = col_now_orange_brite
-		Color = [
+		color = [
 			1.0
 			0.5
 			0.0
@@ -2825,7 +2825,7 @@ dark_gems = [
 	}
 	{
 		element = col_now_purple_dark
-		Color = [
+		color = [
 			0.25
 			0.0
 			0.5
@@ -2834,7 +2834,7 @@ dark_gems = [
 	}
 	{
 		element = col_now_purple_brite
-		Color = [
+		color = [
 			0.5
 			0.0
 			1.0
@@ -2845,7 +2845,7 @@ dark_gems = [
 outline_gems = [
 	{
 		element = col_green
-		Color = [
+		color = [
 			0.0
 			0.0
 			0.0
@@ -2854,7 +2854,7 @@ outline_gems = [
 	}
 	{
 		element = col_red
-		Color = [
+		color = [
 			0.0
 			0.0
 			0.0
@@ -2863,7 +2863,7 @@ outline_gems = [
 	}
 	{
 		element = col_yellow
-		Color = [
+		color = [
 			0.0
 			0.0
 			0.0
@@ -2872,7 +2872,7 @@ outline_gems = [
 	}
 	{
 		element = col_blue
-		Color = [
+		color = [
 			0.0
 			0.0
 			0.0
@@ -2881,7 +2881,7 @@ outline_gems = [
 	}
 	{
 		element = col_orange
-		Color = [
+		color = [
 			0.0
 			0.0
 			0.0
@@ -2890,7 +2890,7 @@ outline_gems = [
 	}
 	{
 		element = col_purple
-		Color = [
+		color = [
 			0.0
 			0.0
 			0.0
@@ -2899,7 +2899,7 @@ outline_gems = [
 	}
 	{
 		element = col_base_green
-		Color = [
+		color = [
 			0.0
 			1.2
 			0.0
@@ -2908,7 +2908,7 @@ outline_gems = [
 	}
 	{
 		element = col_base_red
-		Color = [
+		color = [
 			1.2
 			0.0
 			0.0
@@ -2917,7 +2917,7 @@ outline_gems = [
 	}
 	{
 		element = col_base_yellow
-		Color = [
+		color = [
 			1.3
 			1.2
 			0.0
@@ -2926,7 +2926,7 @@ outline_gems = [
 	}
 	{
 		element = col_base_blue
-		Color = [
+		color = [
 			0.0
 			0.75
 			1.5
@@ -2935,7 +2935,7 @@ outline_gems = [
 	}
 	{
 		element = col_base_orange
-		Color = [
+		color = [
 			1.2
 			0.7
 			0.0
@@ -2944,7 +2944,7 @@ outline_gems = [
 	}
 	{
 		element = col_base_purple
-		Color = [
+		color = [
 			0.75
 			0.0
 			1.0
@@ -2953,7 +2953,7 @@ outline_gems = [
 	}
 	{
 		element = col_now_green_dark
-		Color = [
+		color = [
 			0.0
 			1.0
 			0.0
@@ -2962,7 +2962,7 @@ outline_gems = [
 	}
 	{
 		element = col_now_green_brite
-		Color = [
+		color = [
 			0.0
 			2.0
 			0.0
@@ -2971,7 +2971,7 @@ outline_gems = [
 	}
 	{
 		element = col_now_red_dark
-		Color = [
+		color = [
 			1.0
 			0.0
 			0.0
@@ -2980,7 +2980,7 @@ outline_gems = [
 	}
 	{
 		element = col_now_red_brite
-		Color = [
+		color = [
 			2.0
 			0.0
 			0.0
@@ -2989,7 +2989,7 @@ outline_gems = [
 	}
 	{
 		element = col_now_yellow_dark
-		Color = [
+		color = [
 			1.0
 			1.0
 			0.0
@@ -2998,7 +2998,7 @@ outline_gems = [
 	}
 	{
 		element = col_now_yellow_brite
-		Color = [
+		color = [
 			2.0
 			2.0
 			0.0
@@ -3007,7 +3007,7 @@ outline_gems = [
 	}
 	{
 		element = col_now_blue_dark
-		Color = [
+		color = [
 			0.0
 			0.5
 			1.0
@@ -3016,7 +3016,7 @@ outline_gems = [
 	}
 	{
 		element = col_now_blue_brite
-		Color = [
+		color = [
 			0.0
 			1.0
 			2.0
@@ -3025,7 +3025,7 @@ outline_gems = [
 	}
 	{
 		element = col_now_orange_dark
-		Color = [
+		color = [
 			1.0
 			0.5
 			0.0
@@ -3034,7 +3034,7 @@ outline_gems = [
 	}
 	{
 		element = col_now_orange_brite
-		Color = [
+		color = [
 			2.0
 			1.0
 			0.0
@@ -3043,7 +3043,7 @@ outline_gems = [
 	}
 	{
 		element = col_now_purple_dark
-		Color = [
+		color = [
 			0.5
 			0.0
 			1.0
@@ -3052,7 +3052,7 @@ outline_gems = [
 	}
 	{
 		element = col_now_purple_brite
-		Color = [
+		color = [
 			1.0
 			0.0
 			2.0
@@ -3063,7 +3063,7 @@ outline_gems = [
 standard_fx = [
 	{
 		element = col_hit_orange
-		Color = [
+		color = [
 			1.0
 			0.5
 			0.0
@@ -3072,7 +3072,7 @@ standard_fx = [
 	}
 	{
 		element = col_hit_blue
-		Color = [
+		color = [
 			0.0
 			1.0
 			1.0
@@ -3080,8 +3080,8 @@ standard_fx = [
 		]
 	}
 	{
-		element = col_lightning_blue
-		Color = [
+		element = col_lightning_Blue
+		color = [
 			0.6
 			1.0
 			1.2
@@ -3089,8 +3089,8 @@ standard_fx = [
 		]
 	}
 	{
-		element = col_sideglow_blue
-		Color = [
+		element = col_Sideglow_blue
+		color = [
 			0.8
 			1.5
 			1.7
@@ -3099,7 +3099,7 @@ standard_fx = [
 	}
 	{
 		element = col_lightning_red
-		Color = [
+		color = [
 			1.0
 			0.25
 			0.05
@@ -3110,7 +3110,7 @@ standard_fx = [
 pink_fx = [
 	{
 		element = col_hit_orange
-		Color = [
+		color = [
 			2.0
 			0.2
 			2.0
@@ -3119,7 +3119,7 @@ pink_fx = [
 	}
 	{
 		element = col_hit_blue
-		Color = [
+		color = [
 			2.0
 			0.2
 			2.0
@@ -3127,8 +3127,8 @@ pink_fx = [
 		]
 	}
 	{
-		element = col_lightning_blue
-		Color = [
+		element = col_lightning_Blue
+		color = [
 			2.0
 			0.2
 			2.0
@@ -3136,8 +3136,8 @@ pink_fx = [
 		]
 	}
 	{
-		element = col_sideglow_blue
-		Color = [
+		element = col_Sideglow_blue
+		color = [
 			2.0
 			0.2
 			2.0
@@ -3146,7 +3146,7 @@ pink_fx = [
 	}
 	{
 		element = col_lightning_red
-		Color = [
+		color = [
 			2.0
 			0.2
 			2.0
@@ -3157,7 +3157,7 @@ pink_fx = [
 stealth_fx = [
 	{
 		element = col_hit_orange
-		Color = [
+		color = [
 			2.0
 			0.0
 			0.0
@@ -3166,7 +3166,7 @@ stealth_fx = [
 	}
 	{
 		element = col_hit_blue
-		Color = [
+		color = [
 			2.0
 			0.2
 			0.0
@@ -3174,8 +3174,8 @@ stealth_fx = [
 		]
 	}
 	{
-		element = col_lightning_blue
-		Color = [
+		element = col_lightning_Blue
+		color = [
 			2.0
 			0.2
 			0.0
@@ -3183,8 +3183,8 @@ stealth_fx = [
 		]
 	}
 	{
-		element = col_sideglow_blue
-		Color = [
+		element = col_Sideglow_blue
+		color = [
 			2.0
 			0.2
 			0.0
@@ -3193,7 +3193,7 @@ stealth_fx = [
 	}
 	{
 		element = col_lightning_red
-		Color = [
+		color = [
 			2.0
 			0.2
 			0.0
@@ -3201,10 +3201,10 @@ stealth_fx = [
 		]
 	}
 ]
-eggs_n_bacon_fx = [
+Eggs_N_Bacon_fx = [
 	{
 		element = col_hit_orange
-		Color = [
+		color = [
 			1.2
 			1.0
 			0.0
@@ -3213,7 +3213,7 @@ eggs_n_bacon_fx = [
 	}
 	{
 		element = col_hit_blue
-		Color = [
+		color = [
 			1.0
 			0.2
 			0.0
@@ -3221,8 +3221,8 @@ eggs_n_bacon_fx = [
 		]
 	}
 	{
-		element = col_lightning_blue
-		Color = [
+		element = col_lightning_Blue
+		color = [
 			1.2
 			1.0
 			0.0
@@ -3230,8 +3230,8 @@ eggs_n_bacon_fx = [
 		]
 	}
 	{
-		element = col_sideglow_blue
-		Color = [
+		element = col_Sideglow_blue
+		color = [
 			1.0
 			0.2
 			0.0
@@ -3240,7 +3240,7 @@ eggs_n_bacon_fx = [
 	}
 	{
 		element = col_lightning_red
-		Color = [
+		color = [
 			2.0
 			0.2
 			0.0
@@ -3248,10 +3248,10 @@ eggs_n_bacon_fx = [
 		]
 	}
 ]
-old_glory_fx = [
+Old_Glory_fx = [
 	{
 		element = col_hit_orange
-		Color = [
+		color = [
 			0.0
 			1.0
 			2.0
@@ -3260,7 +3260,7 @@ old_glory_fx = [
 	}
 	{
 		element = col_hit_blue
-		Color = [
+		color = [
 			1.0
 			0.2
 			0.0
@@ -3268,8 +3268,8 @@ old_glory_fx = [
 		]
 	}
 	{
-		element = col_lightning_blue
-		Color = [
+		element = col_lightning_Blue
+		color = [
 			1.2
 			1.0
 			1.0
@@ -3277,8 +3277,8 @@ old_glory_fx = [
 		]
 	}
 	{
-		element = col_sideglow_blue
-		Color = [
+		element = col_Sideglow_blue
+		color = [
 			2.0
 			2.2
 			2.0
@@ -3287,7 +3287,7 @@ old_glory_fx = [
 	}
 	{
 		element = col_lightning_red
-		Color = [
+		color = [
 			2.0
 			0.2
 			0.0
@@ -3295,10 +3295,10 @@ old_glory_fx = [
 		]
 	}
 ]
-toxic_waste_fx = [
+Toxic_Waste_fx = [
 	{
 		element = col_hit_orange
-		Color = [
+		color = [
 			0.0
 			2.0
 			0.0
@@ -3307,7 +3307,7 @@ toxic_waste_fx = [
 	}
 	{
 		element = col_hit_blue
-		Color = [
+		color = [
 			0.0
 			2.2
 			0.0
@@ -3315,8 +3315,8 @@ toxic_waste_fx = [
 		]
 	}
 	{
-		element = col_lightning_blue
-		Color = [
+		element = col_lightning_Blue
+		color = [
 			0.2
 			2.0
 			1.0
@@ -3324,8 +3324,8 @@ toxic_waste_fx = [
 		]
 	}
 	{
-		element = col_sideglow_blue
-		Color = [
+		element = col_Sideglow_blue
+		color = [
 			0.0
 			2.2
 			0.0
@@ -3334,7 +3334,7 @@ toxic_waste_fx = [
 	}
 	{
 		element = col_lightning_red
-		Color = [
+		color = [
 			0.0
 			2.2
 			0.0
@@ -3342,10 +3342,10 @@ toxic_waste_fx = [
 		]
 	}
 ]
-diabolic_fx = [
+Diabolic_fx = [
 	{
 		element = col_hit_orange
-		Color = [
+		color = [
 			2.0
 			0.2
 			0.0
@@ -3354,7 +3354,7 @@ diabolic_fx = [
 	}
 	{
 		element = col_hit_blue
-		Color = [
+		color = [
 			2.0
 			0.2
 			0.0
@@ -3362,8 +3362,8 @@ diabolic_fx = [
 		]
 	}
 	{
-		element = col_lightning_blue
-		Color = [
+		element = col_lightning_Blue
+		color = [
 			2.0
 			0.2
 			0.0
@@ -3371,8 +3371,8 @@ diabolic_fx = [
 		]
 	}
 	{
-		element = col_sideglow_blue
-		Color = [
+		element = col_Sideglow_blue
+		color = [
 			2.0
 			0.2
 			0.0
@@ -3381,7 +3381,7 @@ diabolic_fx = [
 	}
 	{
 		element = col_lightning_red
-		Color = [
+		color = [
 			2.0
 			0.2
 			0.0
@@ -3392,7 +3392,7 @@ diabolic_fx = [
 standard_stars = [
 	{
 		element = col_star
-		Color = [
+		color = [
 			0.0
 			1.2
 			1.4
@@ -3401,7 +3401,7 @@ standard_stars = [
 	}
 	{
 		element = col_kick_star
-		Color = [
+		color = [
 			0.0
 			1.0
 			1.0
@@ -3410,7 +3410,7 @@ standard_stars = [
 	}
 	{
 		element = col_base_star
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -3419,7 +3419,7 @@ standard_stars = [
 	}
 	{
 		element = col_base_kick_star
-		Color = [
+		color = [
 			1.0
 			1.0
 			1.0
@@ -3430,7 +3430,7 @@ standard_stars = [
 gold_stars = [
 	{
 		element = col_star
-		Color = [
+		color = [
 			1.0
 			1.0
 			0.5
@@ -3439,7 +3439,7 @@ gold_stars = [
 	}
 	{
 		element = col_kick_star
-		Color = [
+		color = [
 			1.0
 			1.0
 			0.5
@@ -3448,7 +3448,7 @@ gold_stars = [
 	}
 	{
 		element = col_base_star
-		Color = [
+		color = [
 			1.0
 			1.0
 			0.5
@@ -3457,7 +3457,7 @@ gold_stars = [
 	}
 	{
 		element = col_base_kick_star
-		Color = [
+		color = [
 			1.0
 			1.0
 			0.5
@@ -3468,30 +3468,30 @@ gold_stars = [
 global_materials = [
 	{
 		base_data = {
-			Name = dummy1
-			template = fire2d_noise2
-			technique = fire_2d
-			BlendMode = blend
-			AlphaCutoff = 16
+			name = dummy1
+			Template = Fire2D_Noise2
+			technique = Fire_2D
+			blendMode = blend
+			alphacutoff = 16
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_sampnoisevolume1
-				textureproperty = `tex\models\highway\noise_32x32x32.dds`
+				name = m_sampNoiseVolume1
+				TextureProperty = `tex\models\Highway\noise_32x32x32.dds`
 			}
 			{
-				Name = m_sampnoisevolume2
-				textureproperty = `tex\models\highway\noise_32x32x32.dds`
+				name = m_sampNoiseVolume2
+				TextureProperty = `tex\models\Highway\noise_32x32x32.dds`
 			}
 		]
 		list = [
 			{
-				Name = sys_fontgrid_text_a6_fire_sys_fontgrid_text_a6_fire
+				name = sys_fontgrid_text_A6_fire_sys_fontgrid_text_A6_fire
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = [
+						name = m_psPass0MaterialColor
+						VectorProperty = [
 							1.0
 							1.0
 							1.0
@@ -3499,13 +3499,13 @@ global_materials = [
 						]
 					}
 					{
-						Name = m_sampdiffuse0
-						textureproperty = `fonts\fontgrid_text_a6_fire.dds`
+						name = m_sampDiffuse0
+						TextureProperty = `fonts\fontgrid_text_A6_fire.dds`
 						clamp = (1.0, 1.0, 0.0)
 					}
 					{
-						Name = m_vsnoisevolume1tiling
-						vectorproperty = [
+						name = m_vsNoiseVolume1Tiling
+						VectorProperty = [
 							4.0
 							0.8
 							0.8
@@ -3513,20 +3513,20 @@ global_materials = [
 						]
 					}
 					{
-						Name = m_noise1speedx
-						floatproperty = 0.1
+						name = m_noise1SpeedX
+						FloatProperty = 0.1
 					}
 					{
-						Name = m_noise1speedy
-						floatproperty = 1.0
+						name = m_noise1SpeedY
+						FloatProperty = 1.0
 					}
 					{
-						Name = m_noise1speedz
-						floatproperty = 0.1
+						name = m_noise1SpeedZ
+						FloatProperty = 0.1
 					}
 					{
-						Name = m_vsnoisevolume2tiling
-						vectorproperty = [
+						name = m_vsNoiseVolume2Tiling
+						VectorProperty = [
 							3.0
 							0.9
 							0.9
@@ -3534,65 +3534,65 @@ global_materials = [
 						]
 					}
 					{
-						Name = m_noise2speedx
-						floatproperty = -0.1
+						name = m_noise2SpeedX
+						FloatProperty = -0.1
 					}
 					{
-						Name = m_noise2speedy
-						floatproperty = 0.6
+						name = m_noise2SpeedY
+						FloatProperty = 0.6
 					}
 					{
-						Name = m_noise2speedz
-						floatproperty = 0.0
+						name = m_noise2SpeedZ
+						FloatProperty = 0.0
 					}
 					{
-						Name = m_maskdistortionx
-						floatproperty = 0.001
+						name = m_maskDistortionX
+						FloatProperty = 0.001
 					}
 					{
-						Name = m_maskdistortiony
-						floatproperty = 0.06
+						name = m_maskDistortionY
+						FloatProperty = 0.06
 					}
 					{
-						Name = m_colordistortion
-						floatproperty = 1.0
+						name = m_colorDistortion
+						FloatProperty = 1.0
 					}
 					{
-						Name = m_alphabias
-						floatproperty = 1.0
+						name = m_alphaBias
+						FloatProperty = 1.0
 					}
 					{
-						Name = m_alphanoisescale
-						floatproperty = 1.0
+						name = m_alphaNoiseScale
+						FloatProperty = 1.0
 					}
 					{
-						Name = m_alphapower
-						floatproperty = 1.0
+						name = m_alphaPower
+						FloatProperty = 1.0
 					}
 					{
-						Name = m_noisemasktop
-						floatproperty = 1.0
+						name = m_noiseMaskTop
+						FloatProperty = 1.0
 					}
 					{
-						Name = m_noisemaskbottom
-						floatproperty = 0.0
+						name = m_noiseMaskBottom
+						FloatProperty = 0.0
 					}
 					{
-						Name = m_alphatop
-						floatproperty = 0.1
+						name = m_alphaTop
+						FloatProperty = 0.1
 					}
 					{
-						Name = m_alphabottom
-						floatproperty = 1.0
+						name = m_alphaBottom
+						FloatProperty = 1.0
 					}
 				]
 			}
 			{
-				Name = fontgrid_text_a6_dropshadow
+				name = fontgrid_text_A6_Dropshadow
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = [
+						name = m_psPass0MaterialColor
+						VectorProperty = [
 							0.0
 							0.0
 							0.0
@@ -3600,13 +3600,13 @@ global_materials = [
 						]
 					}
 					{
-						Name = m_sampdiffuse0
-						textureproperty = `fonts\fontgrid_text_a6_fire.dds`
+						name = m_sampDiffuse0
+						TextureProperty = `fonts\fontgrid_text_A6_fire.dds`
 						clamp = (1.0, 1.0, 0.0)
 					}
 					{
-						Name = m_vsnoisevolume1tiling
-						vectorproperty = [
+						name = m_vsNoiseVolume1Tiling
+						VectorProperty = [
 							4.0
 							1.0
 							0.0
@@ -3614,20 +3614,20 @@ global_materials = [
 						]
 					}
 					{
-						Name = m_noise1speedx
-						floatproperty = 0.1
+						name = m_noise1SpeedX
+						FloatProperty = 0.1
 					}
 					{
-						Name = m_noise1speedy
-						floatproperty = 1.0
+						name = m_noise1SpeedY
+						FloatProperty = 1.0
 					}
 					{
-						Name = m_noise1speedz
-						floatproperty = 0.1
+						name = m_noise1SpeedZ
+						FloatProperty = 0.1
 					}
 					{
-						Name = m_vsnoisevolume2tiling
-						vectorproperty = [
+						name = m_vsNoiseVolume2Tiling
+						VectorProperty = [
 							3.0
 							1.0
 							0.0
@@ -3635,56 +3635,56 @@ global_materials = [
 						]
 					}
 					{
-						Name = m_noise2speedx
-						floatproperty = -0.1
+						name = m_noise2SpeedX
+						FloatProperty = -0.1
 					}
 					{
-						Name = m_noise2speedy
-						floatproperty = 0.6
+						name = m_noise2SpeedY
+						FloatProperty = 0.6
 					}
 					{
-						Name = m_noise2speedz
-						floatproperty = 0.0
+						name = m_noise2SpeedZ
+						FloatProperty = 0.0
 					}
 					{
-						Name = m_maskdistortionx
-						floatproperty = 0.001
+						name = m_maskDistortionX
+						FloatProperty = 0.001
 					}
 					{
-						Name = m_maskdistortiony
-						floatproperty = 0.08
+						name = m_maskDistortionY
+						FloatProperty = 0.08
 					}
 					{
-						Name = m_colordistortion
-						floatproperty = 1.0
+						name = m_colorDistortion
+						FloatProperty = 1.0
 					}
 					{
-						Name = m_alphabias
-						floatproperty = 1.0
+						name = m_alphaBias
+						FloatProperty = 1.0
 					}
 					{
-						Name = m_alphanoisescale
-						floatproperty = 1.0
+						name = m_alphaNoiseScale
+						FloatProperty = 1.0
 					}
 					{
-						Name = m_alphapower
-						floatproperty = 1.0
+						name = m_alphaPower
+						FloatProperty = 1.0
 					}
 					{
-						Name = m_noisemasktop
-						floatproperty = 1.0
+						name = m_noiseMaskTop
+						FloatProperty = 1.0
 					}
 					{
-						Name = m_noisemaskbottom
-						floatproperty = 0.0
+						name = m_noiseMaskBottom
+						FloatProperty = 0.0
 					}
 					{
-						Name = m_alphatop
-						floatproperty = 0.0
+						name = m_alphaTop
+						FloatProperty = 0.0
 					}
 					{
-						Name = m_alphabottom
-						floatproperty = 1.0
+						name = m_alphaBottom
+						FloatProperty = 1.0
 					}
 				]
 			}
@@ -3692,30 +3692,30 @@ global_materials = [
 	}
 	{
 		base_data = {
-			Name = dummy
-			template = fire2d_noise2
-			technique = fire_2d
-			BlendMode = blend
-			AlphaCutoff = 16
+			name = dummy
+			Template = Fire2D_Noise2
+			technique = Fire_2D
+			blendMode = blend
+			alphacutoff = 16
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_sampnoisevolume1
-				textureproperty = `tex\models\highway\noise_32x32x32.dds`
+				name = m_sampNoiseVolume1
+				TextureProperty = `tex\models\Highway\noise_32x32x32.dds`
 			}
 			{
-				Name = m_sampnoisevolume2
-				textureproperty = `tex\models\highway\noise_32x32x32.dds`
+				name = m_sampNoiseVolume2
+				TextureProperty = `tex\models\Highway\noise_32x32x32.dds`
 			}
 		]
 		list = [
 			{
-				Name = mat_wipefire_blend01
+				name = Mat_WipeFire_Blend01
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = [
+						name = m_psPass0MaterialColor
+						VectorProperty = [
 							2.0
 							1.0
 							1.0
@@ -3723,13 +3723,13 @@ global_materials = [
 						]
 					}
 					{
-						Name = m_sampdiffuse0
-						textureproperty = `tex\models\highway\fire_gradient02.dds`
+						name = m_sampDiffuse0
+						TextureProperty = `tex\models\Highway\Fire_gradient02.dds`
 						clamp = (1.0, 1.0, 0.0)
 					}
 					{
-						Name = m_vsnoisevolume1tiling
-						vectorproperty = [
+						name = m_vsNoiseVolume1Tiling
+						VectorProperty = [
 							2.3
 							0.6
 							0.6
@@ -3737,20 +3737,20 @@ global_materials = [
 						]
 					}
 					{
-						Name = m_noise1speedx
-						floatproperty = 0.02
+						name = m_noise1SpeedX
+						FloatProperty = 0.02
 					}
 					{
-						Name = m_noise1speedy
-						floatproperty = 1.7
+						name = m_noise1SpeedY
+						FloatProperty = 1.7
 					}
 					{
-						Name = m_noise1speedz
-						floatproperty = 0.1
+						name = m_noise1SpeedZ
+						FloatProperty = 0.1
 					}
 					{
-						Name = m_vsnoisevolume2tiling
-						vectorproperty = [
+						name = m_vsNoiseVolume2Tiling
+						VectorProperty = [
 							3.0
 							0.75
 							0.5
@@ -3758,56 +3758,56 @@ global_materials = [
 						]
 					}
 					{
-						Name = m_noise2speedx
-						floatproperty = -0.01
+						name = m_noise2SpeedX
+						FloatProperty = -0.01
 					}
 					{
-						Name = m_noise2speedy
-						floatproperty = 1.0
+						name = m_noise2SpeedY
+						FloatProperty = 1.0
 					}
 					{
-						Name = m_noise2speedz
-						floatproperty = -1.02
+						name = m_noise2SpeedZ
+						FloatProperty = -1.02
 					}
 					{
-						Name = m_maskdistortionx
-						floatproperty = 0.01
+						name = m_maskDistortionX
+						FloatProperty = 0.01
 					}
 					{
-						Name = m_maskdistortiony
-						floatproperty = 1.2
+						name = m_maskDistortionY
+						FloatProperty = 1.2
 					}
 					{
-						Name = m_colordistortion
-						floatproperty = 0.3
+						name = m_colorDistortion
+						FloatProperty = 0.3
 					}
 					{
-						Name = m_alphabias
-						floatproperty = 1.0
+						name = m_alphaBias
+						FloatProperty = 1.0
 					}
 					{
-						Name = m_alphanoisescale
-						floatproperty = 1.0
+						name = m_alphaNoiseScale
+						FloatProperty = 1.0
 					}
 					{
-						Name = m_alphapower
-						floatproperty = 1.0
+						name = m_alphaPower
+						FloatProperty = 1.0
 					}
 					{
-						Name = m_noisemasktop
-						floatproperty = 1.0
+						name = m_noiseMaskTop
+						FloatProperty = 1.0
 					}
 					{
-						Name = m_noisemaskbottom
-						floatproperty = 0.0
+						name = m_noiseMaskBottom
+						FloatProperty = 0.0
 					}
 					{
-						Name = m_alphatop
-						floatproperty = 2.0
+						name = m_alphaTop
+						FloatProperty = 2.0
 					}
 					{
-						Name = m_alphabottom
-						floatproperty = -2.0
+						name = m_alphaBottom
+						FloatProperty = -2.0
 					}
 				]
 			}
@@ -3815,25 +3815,25 @@ global_materials = [
 	}
 	{
 		base_data = {
-			Name = dummy
-			template = immediatemode_ui
-			technique = ui_col_tex_2d
-			BlendMode = blend
+			name = dummy
+			Template = ImmediateMode_UI
+			technique = UI_Col_Tex_2D
+			blendMode = blend
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_samppass0diffuse
-				textureproperty = `tex\models\highway\wipe_gradient.dds`
+				name = m_sampPass0Diffuse
+				TextureProperty = `tex\models\Highway\Wipe_gradient.dds`
 			}
 		]
 		list = [
 			{
-				Name = mat_wipe_grad01
+				name = Mat_Wipe_Grad01
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = [
+						name = m_psPass0MaterialColor
+						VectorProperty = [
 							1.0
 							1.0
 							1.0
@@ -3843,11 +3843,11 @@ global_materials = [
 				]
 			}
 			{
-				Name = mat_wipe_grad02
+				name = Mat_Wipe_Grad02
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = [
+						name = m_psPass0MaterialColor
+						VectorProperty = [
 							0.0
 							0.0
 							0.0
@@ -3862,30 +3862,30 @@ global_materials = [
 ingame_materials = [
 	{
 		base_data = {
-			Name = dummy1
-			template = fire2d_noise2
-			technique = fire_2d
-			BlendMode = add
-			AlphaCutoff = 16
+			name = dummy1
+			Template = Fire2D_Noise2
+			technique = Fire_2D
+			blendMode = Add
+			alphacutoff = 16
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_sampnoisevolume1
-				textureproperty = `tex\models\highway\noise_32x32x32.dds`
+				name = m_sampNoiseVolume1
+				TextureProperty = `tex\models\Highway\noise_32x32x32.dds`
 			}
 			{
-				Name = m_sampnoisevolume2
-				textureproperty = `tex\models\highway\noise_32x32x32.dds`
+				name = m_sampNoiseVolume2
+				TextureProperty = `tex\models\Highway\noise_32x32x32.dds`
 			}
 		]
 		list = [
 			{
-				Name = fire_2d_notestreak_large
+				name = fire_2D_Notestreak_Large
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = [
+						name = m_psPass0MaterialColor
+						VectorProperty = [
 							1.0
 							1.0
 							1.0
@@ -3893,13 +3893,13 @@ ingame_materials = [
 						]
 					}
 					{
-						Name = m_sampdiffuse0
-						textureproperty = `tex\models\highway\fire_gradient02.dds`
+						name = m_sampDiffuse0
+						TextureProperty = `tex\models\Highway\Fire_gradient02.dds`
 						clamp = (1.0, 1.0, 0.0)
 					}
 					{
-						Name = m_vsnoisevolume1tiling
-						vectorproperty = [
+						name = m_vsNoiseVolume1Tiling
+						VectorProperty = [
 							1.0
 							0.7
 							0.7
@@ -3907,20 +3907,20 @@ ingame_materials = [
 						]
 					}
 					{
-						Name = m_noise1speedx
-						floatproperty = 0.02
+						name = m_noise1SpeedX
+						FloatProperty = 0.02
 					}
 					{
-						Name = m_noise1speedy
-						floatproperty = 1.7
+						name = m_noise1SpeedY
+						FloatProperty = 1.7
 					}
 					{
-						Name = m_noise1speedz
-						floatproperty = 0.1
+						name = m_noise1SpeedZ
+						FloatProperty = 0.1
 					}
 					{
-						Name = m_vsnoisevolume2tiling
-						vectorproperty = [
+						name = m_vsNoiseVolume2Tiling
+						VectorProperty = [
 							2.0
 							0.7
 							0.7
@@ -3928,65 +3928,65 @@ ingame_materials = [
 						]
 					}
 					{
-						Name = m_noise2speedx
-						floatproperty = -0.01
+						name = m_noise2SpeedX
+						FloatProperty = -0.01
 					}
 					{
-						Name = m_noise2speedy
-						floatproperty = 1.0
+						name = m_noise2SpeedY
+						FloatProperty = 1.0
 					}
 					{
-						Name = m_noise2speedz
-						floatproperty = -0.02
+						name = m_noise2SpeedZ
+						FloatProperty = -0.02
 					}
 					{
-						Name = m_maskdistortionx
-						floatproperty = 0.1
+						name = m_maskDistortionX
+						FloatProperty = 0.1
 					}
 					{
-						Name = m_maskdistortiony
-						floatproperty = 3.9
+						name = m_maskDistortionY
+						FloatProperty = 3.9
 					}
 					{
-						Name = m_colordistortion
-						floatproperty = 1.3
+						name = m_colorDistortion
+						FloatProperty = 1.3
 					}
 					{
-						Name = m_alphabias
-						floatproperty = 1.0
+						name = m_alphaBias
+						FloatProperty = 1.0
 					}
 					{
-						Name = m_alphanoisescale
-						floatproperty = 1.0
+						name = m_alphaNoiseScale
+						FloatProperty = 1.0
 					}
 					{
-						Name = m_alphapower
-						floatproperty = 1.0
+						name = m_alphaPower
+						FloatProperty = 1.0
 					}
 					{
-						Name = m_noisemasktop
-						floatproperty = 1.0
+						name = m_noiseMaskTop
+						FloatProperty = 1.0
 					}
 					{
-						Name = m_noisemaskbottom
-						floatproperty = 1.0
+						name = m_noiseMaskBottom
+						FloatProperty = 1.0
 					}
 					{
-						Name = m_alphatop
-						floatproperty = 1.0
+						name = m_alphaTop
+						FloatProperty = 1.0
 					}
 					{
-						Name = m_alphabottom
-						floatproperty = 1.0
+						name = m_alphaBottom
+						FloatProperty = 1.0
 					}
 				]
 			}
 			{
-				Name = fire_2d_notestreak_small
+				name = fire_2D_Notestreak_Small
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = [
+						name = m_psPass0MaterialColor
+						VectorProperty = [
 							1.0
 							1.0
 							1.0
@@ -3994,13 +3994,13 @@ ingame_materials = [
 						]
 					}
 					{
-						Name = m_sampdiffuse0
-						textureproperty = `tex\models\highway\fire_gradient02.dds`
+						name = m_sampDiffuse0
+						TextureProperty = `tex\models\Highway\Fire_gradient02.dds`
 						clamp = (1.0, 1.0, 0.0)
 					}
 					{
-						Name = m_vsnoisevolume1tiling
-						vectorproperty = [
+						name = m_vsNoiseVolume1Tiling
+						VectorProperty = [
 							2.3
 							0.6
 							0.6
@@ -4008,20 +4008,20 @@ ingame_materials = [
 						]
 					}
 					{
-						Name = m_noise1speedx
-						floatproperty = 0.02
+						name = m_noise1SpeedX
+						FloatProperty = 0.02
 					}
 					{
-						Name = m_noise1speedy
-						floatproperty = 1.7
+						name = m_noise1SpeedY
+						FloatProperty = 1.7
 					}
 					{
-						Name = m_noise1speedz
-						floatproperty = 0.1
+						name = m_noise1SpeedZ
+						FloatProperty = 0.1
 					}
 					{
-						Name = m_vsnoisevolume2tiling
-						vectorproperty = [
+						name = m_vsNoiseVolume2Tiling
+						VectorProperty = [
 							3.0
 							0.75
 							0.5
@@ -4029,65 +4029,65 @@ ingame_materials = [
 						]
 					}
 					{
-						Name = m_noise2speedx
-						floatproperty = -0.01
+						name = m_noise2SpeedX
+						FloatProperty = -0.01
 					}
 					{
-						Name = m_noise2speedy
-						floatproperty = 1.0
+						name = m_noise2SpeedY
+						FloatProperty = 1.0
 					}
 					{
-						Name = m_noise2speedz
-						floatproperty = -1.02
+						name = m_noise2SpeedZ
+						FloatProperty = -1.02
 					}
 					{
-						Name = m_maskdistortionx
-						floatproperty = 0.01
+						name = m_maskDistortionX
+						FloatProperty = 0.01
 					}
 					{
-						Name = m_maskdistortiony
-						floatproperty = 1.2
+						name = m_maskDistortionY
+						FloatProperty = 1.2
 					}
 					{
-						Name = m_colordistortion
-						floatproperty = 0.3
+						name = m_colorDistortion
+						FloatProperty = 0.3
 					}
 					{
-						Name = m_alphabias
-						floatproperty = 1.0
+						name = m_alphaBias
+						FloatProperty = 1.0
 					}
 					{
-						Name = m_alphanoisescale
-						floatproperty = 1.0
+						name = m_alphaNoiseScale
+						FloatProperty = 1.0
 					}
 					{
-						Name = m_alphapower
-						floatproperty = 1.0
+						name = m_alphaPower
+						FloatProperty = 1.0
 					}
 					{
-						Name = m_noisemasktop
-						floatproperty = 1.0
+						name = m_noiseMaskTop
+						FloatProperty = 1.0
 					}
 					{
-						Name = m_noisemaskbottom
-						floatproperty = 0.0
+						name = m_noiseMaskBottom
+						FloatProperty = 0.0
 					}
 					{
-						Name = m_alphatop
-						floatproperty = 2.0
+						name = m_alphaTop
+						FloatProperty = 2.0
 					}
 					{
-						Name = m_alphabottom
-						floatproperty = -2.0
+						name = m_alphaBottom
+						FloatProperty = -2.0
 					}
 				]
 			}
 			{
-				Name = fire_2d_starpower
+				name = fire_2D_Starpower
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = [
+						name = m_psPass0MaterialColor
+						VectorProperty = [
 							1.0
 							1.0
 							1.0
@@ -4095,13 +4095,13 @@ ingame_materials = [
 						]
 					}
 					{
-						Name = m_sampdiffuse0
-						textureproperty = `tex\models\highway\fire_gradient02_sp.dds`
+						name = m_sampDiffuse0
+						TextureProperty = `tex\models\Highway\Fire_gradient02_SP.dds`
 						clamp = (1.0, 1.0, 0.0)
 					}
 					{
-						Name = m_vsnoisevolume1tiling
-						vectorproperty = [
+						name = m_vsNoiseVolume1Tiling
+						VectorProperty = [
 							2.3
 							0.6
 							0.6
@@ -4109,20 +4109,20 @@ ingame_materials = [
 						]
 					}
 					{
-						Name = m_noise1speedx
-						floatproperty = 0.02
+						name = m_noise1SpeedX
+						FloatProperty = 0.02
 					}
 					{
-						Name = m_noise1speedy
-						floatproperty = 1.7
+						name = m_noise1SpeedY
+						FloatProperty = 1.7
 					}
 					{
-						Name = m_noise1speedz
-						floatproperty = 0.1
+						name = m_noise1SpeedZ
+						FloatProperty = 0.1
 					}
 					{
-						Name = m_vsnoisevolume2tiling
-						vectorproperty = [
+						name = m_vsNoiseVolume2Tiling
+						VectorProperty = [
 							3.0
 							0.75
 							0.5
@@ -4130,82 +4130,56 @@ ingame_materials = [
 						]
 					}
 					{
-						Name = m_noise2speedx
-						floatproperty = -0.01
+						name = m_noise2SpeedX
+						FloatProperty = -0.01
 					}
 					{
-						Name = m_noise2speedy
-						floatproperty = 1.0
+						name = m_noise2SpeedY
+						FloatProperty = 1.0
 					}
 					{
-						Name = m_noise2speedz
-						floatproperty = -1.02
+						name = m_noise2SpeedZ
+						FloatProperty = -1.02
 					}
 					{
-						Name = m_maskdistortionx
-						floatproperty = 0.01
+						name = m_maskDistortionX
+						FloatProperty = 0.01
 					}
 					{
-						Name = m_maskdistortiony
-						floatproperty = 1.2
+						name = m_maskDistortionY
+						FloatProperty = 1.2
 					}
 					{
-						Name = m_colordistortion
-						floatproperty = 0.3
+						name = m_colorDistortion
+						FloatProperty = 0.3
 					}
 					{
-						Name = m_alphabias
-						floatproperty = 1.0
+						name = m_alphaBias
+						FloatProperty = 1.0
 					}
 					{
-						Name = m_alphanoisescale
-						floatproperty = 1.0
+						name = m_alphaNoiseScale
+						FloatProperty = 1.0
 					}
 					{
-						Name = m_alphapower
-						floatproperty = 1.0
+						name = m_alphaPower
+						FloatProperty = 1.0
 					}
 					{
-						Name = m_noisemasktop
-						floatproperty = 1.0
+						name = m_noiseMaskTop
+						FloatProperty = 1.0
 					}
 					{
-						Name = m_noisemaskbottom
-						floatproperty = 0.0
+						name = m_noiseMaskBottom
+						FloatProperty = 0.0
 					}
 					{
-						Name = m_alphatop
-						floatproperty = 2.0
+						name = m_alphaTop
+						FloatProperty = 2.0
 					}
 					{
-						Name = m_alphabottom
-						floatproperty = -2.0
-					}
-				]
-			}
-		]
-	}
-	{
-		base_data = {
-			Name = mat_hog_smoke
-			template = immediatemode_ui
-			technique = ui_col_tex_2d
-			BlendMode = add
-			MaterialProps = $material_props
-		}
-		base_props = [
-			{
-				Name = m_samppass0diffuse
-				textureproperty = `tex\particles\ph_smoke_singlepuff_blend_02.dds`
-			}
-		]
-		list = [
-			{
-				Name = mat_hog_smoke
-				MaterialProps = [
-					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_alphaBottom
+						FloatProperty = -2.0
 					}
 				]
 			}
@@ -4213,25 +4187,25 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = dummy
-			template = immediatemode_ui
-			technique = ui_col_tex_2d
-			BlendMode = blend
+			name = Mat_HOG_Smoke
+			Template = ImmediateMode_UI
+			technique = UI_Col_Tex_2D
+			blendMode = Add
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_samppass0diffuse
-				textureproperty = `tex\particles\ph_smoke_singlepuff_blend_02.dds`
+				name = m_sampPass0Diffuse
+				TextureProperty = `tex\Particles\PH_Smoke_SinglePuff_Blend_02.dds`
 			}
 		]
 		list = [
 			{
-				Name = mat_particle_smoke01
+				name = Mat_HOG_Smoke
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 				]
 			}
@@ -4239,25 +4213,51 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = dummy
-			template = immediatemode_ui
-			technique = ui_col_tex_2d
-			BlendMode = blend
+			name = dummy
+			Template = ImmediateMode_UI
+			technique = UI_Col_Tex_2D
+			blendMode = blend
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_samppass0diffuse
-				textureproperty = `tex\particles\ph_smoke_singlepuff_blend_02.dds`
+				name = m_sampPass0Diffuse
+				TextureProperty = `tex\Particles\PH_Smoke_SinglePuff_Blend_02.dds`
 			}
 		]
 		list = [
 			{
-				Name = mat_placeholder
+				name = Mat_Particle_Smoke01
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = [
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
+					}
+				]
+			}
+		]
+	}
+	{
+		base_data = {
+			name = dummy
+			Template = ImmediateMode_UI
+			technique = UI_Col_Tex_2D
+			blendMode = blend
+			MaterialProps = $material_props
+		}
+		base_props = [
+			{
+				name = m_sampPass0Diffuse
+				TextureProperty = `tex\Particles\PH_Smoke_SinglePuff_Blend_02.dds`
+			}
+		]
+		list = [
+			{
+				name = Mat_Placeholder
+				MaterialProps = [
+					{
+						name = m_psPass0MaterialColor
+						VectorProperty = [
 							1.0
 							1.0
 							1.0
@@ -4270,32 +4270,32 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = dummy
-			template = immediatemode_alphafade_ui_3pass
-			technique = ui_col_tex_2d
-			BlendMode = blend
+			name = dummy
+			Template = ImmediateMode_AlphaFade_UI_3Pass
+			technique = UI_Col_Tex_2D
+			blendMode = blend
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_samppass0diffuse
-				textureproperty = `tex\models\highway\button_grey_base01.dds`
+				name = m_sampPass0Diffuse
+				TextureProperty = `tex\models\highway\button_grey_Base01.dds`
 			}
 			{
-				Name = m_samppass1diffuse
-				textureproperty = `tex\models\highway\button_grey_collar01.dds`
+				name = m_sampPass1Diffuse
+				TextureProperty = `tex\models\highway\button_grey_Collar01.dds`
 			}
 			{
-				Name = m_pspass2materialcolor
-				vectorproperty = $col_half_alpha
+				name = m_pspass2materialcolor
+				VectorProperty = $col_half_alpha
 			}
 			{
-				Name = m_samppass2diffuse
-				textureproperty = `tex\models\highway\button_grey_highlight_01.dds`
+				name = m_sampPass2Diffuse
+				TextureProperty = `tex\models\highway\Button_Grey_Highlight_01.dds`
 			}
 			{
-				Name = m_startFade
-				vectorproperty = [
+				name = m_startFade
+				VectorProperty = [
 					1.0
 					1.0
 					1.0
@@ -4303,8 +4303,8 @@ ingame_materials = [
 				]
 			}
 			{
-				Name = m_endFade
-				vectorproperty = [
+				name = m_endFade
+				VectorProperty = [
 					1.0
 					1.0
 					1.0
@@ -4314,93 +4314,93 @@ ingame_materials = [
 		]
 		list = [
 			{
-				Name = mat_gem_green
+				name = Mat_Gem_Green
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_green
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_green
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_green
+						name = m_pspass1materialcolor
+						VectorProperty = $col_green
 					}
 				]
 			}
 			{
-				Name = mat_gem_red
+				name = Mat_Gem_Red
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_red
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_red
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_red
+						name = m_pspass1materialcolor
+						VectorProperty = $col_red
 					}
 				]
 			}
 			{
-				Name = mat_gem_yellow
+				name = Mat_Gem_Yellow
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_yellow
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_yellow
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_yellow
+						name = m_pspass1materialcolor
+						VectorProperty = $col_yellow
 					}
 				]
 			}
 			{
-				Name = mat_gem_blue
+				name = Mat_Gem_Blue
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_blue
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_blue
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_blue
+						name = m_pspass1materialcolor
+						VectorProperty = $col_blue
 					}
 				]
 			}
 			{
-				Name = mat_gem_orange
+				name = Mat_Gem_Orange
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_orange
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_orange
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_orange
+						name = m_pspass1materialcolor
+						VectorProperty = $col_orange
 					}
 				]
 			}
 			{
-				Name = mat_gem_star
+				name = Mat_Gem_Star
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_star
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_star
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_star
+						name = m_pspass1materialcolor
+						VectorProperty = $col_star
 					}
 				]
 			}
 			{
-				Name = mat_gem_mine
+				name = mat_gem_mine
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_gray
+						name = m_pspass1materialcolor
+						VectorProperty = $col_gray
 					}
 				]
 			}
@@ -4408,32 +4408,32 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = dummy
-			template = immediatemode_alphafade_ui_3pass
-			technique = ui_col_tex_2d
-			BlendMode = blend
+			name = dummy
+			Template = ImmediateMode_AlphaFade_UI_3Pass
+			technique = UI_Col_Tex_2D
+			blendMode = blend
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_samppass0diffuse
-				textureproperty = `tex\models\highway\button_grey_base01.dds`
+				name = m_sampPass0Diffuse
+				TextureProperty = `tex\models\highway\button_grey_Base01.dds`
 			}
 			{
-				Name = m_samppass1diffuse
-				textureproperty = `tex\models\highway\button_grey_collar01.dds`
+				name = m_sampPass1Diffuse
+				TextureProperty = `tex\models\highway\button_grey_Collar01.dds`
 			}
 			{
-				Name = m_pspass2materialcolor
-				vectorproperty = $col_white
+				name = m_pspass2materialcolor
+				VectorProperty = $col_white
 			}
 			{
-				Name = m_samppass2diffuse
-				textureproperty = `tex\models\highway\button_grey_hammer_halo01.dds`
+				name = m_sampPass2Diffuse
+				TextureProperty = `tex\models\Highway\Button_Grey_Hammer_Halo01.dds`
 			}
 			{
-				Name = m_startFade
-				vectorproperty = [
+				name = m_startFade
+				VectorProperty = [
 					1.0
 					1.0
 					1.0
@@ -4441,8 +4441,8 @@ ingame_materials = [
 				]
 			}
 			{
-				Name = m_endFade
-				vectorproperty = [
+				name = m_endFade
+				VectorProperty = [
 					1.0
 					1.0
 					1.0
@@ -4452,80 +4452,80 @@ ingame_materials = [
 		]
 		list = [
 			{
-				Name = mat_gem_hammer_green
+				name = Mat_Gem_Hammer_Green
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_green
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_green
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_green
+						name = m_pspass1materialcolor
+						VectorProperty = $col_green
 					}
 				]
 			}
 			{
-				Name = mat_gem_hammer_red
+				name = Mat_Gem_Hammer_Red
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_red
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_red
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_red
+						name = m_pspass1materialcolor
+						VectorProperty = $col_red
 					}
 				]
 			}
 			{
-				Name = mat_gem_hammer_yellow
+				name = Mat_Gem_Hammer_Yellow
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_yellow
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_yellow
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_yellow
+						name = m_pspass1materialcolor
+						VectorProperty = $col_yellow
 					}
 				]
 			}
 			{
-				Name = mat_gem_hammer_blue
+				name = Mat_Gem_Hammer_Blue
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_blue
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_blue
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_blue
+						name = m_pspass1materialcolor
+						VectorProperty = $col_blue
 					}
 				]
 			}
 			{
-				Name = mat_gem_hammer_orange
+				name = Mat_Gem_Hammer_Orange
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_orange
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_orange
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_orange
+						name = m_pspass1materialcolor
+						VectorProperty = $col_orange
 					}
 				]
 			}
 			{
-				Name = mat_gem_hammer_star
+				name = Mat_Gem_Hammer_Star
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_star
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_star
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_star
+						name = m_pspass1materialcolor
+						VectorProperty = $col_star
 					}
 				]
 			}
@@ -4533,20 +4533,20 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = dummy
-			template = whammybar_ui
-			technique = whammybar
-			BlendMode = blend
+			name = dummy
+			Template = WhammyBar_UI
+			technique = WhammyBar
+			blendMode = blend
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_samppass0diffuse
-				textureproperty = `tex\models\highway\whammybar_grey.dds`
+				name = m_sampPass0Diffuse
+				TextureProperty = `tex\models\highway\WhammyBAR_Grey.dds`
 			}
 			{
-				Name = m_glowintensity
-				vectorproperty = [
+				name = m_glowintensity
+				VectorProperty = [
 					2.0
 					3.0
 					0.6
@@ -4556,93 +4556,93 @@ ingame_materials = [
 		]
 		list = [
 			{
-				Name = mat_whammy_green
+				name = Mat_Whammy_Green
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_green
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_green
 					}
 					{
-						Name = m_glowcolor
-						vectorproperty = $col_green
+						name = m_glowcolor
+						VectorProperty = $col_green
 					}
 				]
 			}
 			{
-				Name = mat_whammy_red
+				name = Mat_Whammy_Red
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_red
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_red
 					}
 					{
-						Name = m_glowcolor
-						vectorproperty = $col_red
+						name = m_glowcolor
+						VectorProperty = $col_red
 					}
 				]
 			}
 			{
-				Name = mat_whammy_yellow
+				name = Mat_Whammy_Yellow
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_yellow
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_yellow
 					}
 					{
-						Name = m_glowcolor
-						vectorproperty = $col_yellow
+						name = m_glowcolor
+						VectorProperty = $col_yellow
 					}
 				]
 			}
 			{
-				Name = mat_whammy_blue
+				name = Mat_Whammy_Blue
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_blue
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_blue
 					}
 					{
-						Name = m_glowcolor
-						vectorproperty = $col_blue
+						name = m_glowcolor
+						VectorProperty = $col_blue
 					}
 				]
 			}
 			{
-				Name = mat_whammy_orange
+				name = Mat_Whammy_Orange
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_orange
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_orange
 					}
 					{
-						Name = m_glowcolor
-						vectorproperty = $col_orange
+						name = m_glowcolor
+						VectorProperty = $col_orange
 					}
 				]
 			}
 			{
-				Name = mat_whammy_star
+				name = Mat_Whammy_Star
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_star
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_star
 					}
 					{
-						Name = m_glowcolor
-						vectorproperty = $col_star
+						name = m_glowcolor
+						VectorProperty = $col_star
 					}
 				]
 			}
 			{
-				Name = mat_whammy_mine
+				name = mat_whammy_mine
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_gray
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_gray
 					}
 					{
-						Name = m_glowcolor
-						vectorproperty = $col_gray
+						name = m_glowcolor
+						VectorProperty = $col_gray
 					}
 				]
 			}
@@ -4650,20 +4650,20 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = dummy
-			template = whammybar_ui
-			technique = whammybar
-			BlendMode = blend
+			name = dummy
+			Template = WhammyBar_UI
+			technique = WhammyBar
+			blendMode = blend
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_samppass0diffuse
-				textureproperty = `tex\models\highway\whammybar_deadtop.dds`
+				name = m_sampPass0Diffuse
+				TextureProperty = `tex\models\highway\WhammyBAR_DeadTOP.dds`
 			}
 			{
-				Name = m_glowintensity
-				vectorproperty = [
+				name = m_glowintensity
+				VectorProperty = [
 					2.0
 					3.0
 					0.6
@@ -4673,15 +4673,15 @@ ingame_materials = [
 		]
 		list = [
 			{
-				Name = mat_whammy_dead
+				name = Mat_Whammy_Dead
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_glowcolor
-						vectorproperty = $col_white
+						name = m_glowcolor
+						VectorProperty = $col_white
 					}
 				]
 			}
@@ -4689,21 +4689,21 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = dummy
-			template = drumfill_ui
+			name = dummy
+			Template = DrumFill_UI
 			technique = drumfill
-			BlendMode = add
+			blendMode = Add
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_samppass0diffuse
-				textureproperty = `tex\models\highway\drum_fill.dds`
+				name = m_sampPass0Diffuse
+				TextureProperty = `tex\models\highway\Drum_fill.dds`
 				clamp = (0.0, 0.0, 0.0)
 			}
 			{
-				Name = m_vsuvtiling
-				vectorproperty = [
+				name = m_vsUVTiling
+				VectorProperty = [
 					1.0
 					1.5
 					0.0
@@ -4711,45 +4711,45 @@ ingame_materials = [
 				]
 			}
 			{
-				Name = m_velocityu
-				floatproperty = 0.0
+				name = m_velocityU
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_amplitudeu
-				floatproperty = 0.0
+				name = m_amplitudeU
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_frequencyu
-				floatproperty = 1.0
+				name = m_frequencyU
+				FloatProperty = 1.0
 			}
 			{
-				Name = m_phaseu
-				floatproperty = 0.0
+				name = m_phaseU
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_velocityV
-				floatproperty = 0.5
+				name = m_velocityV
+				FloatProperty = 0.5
 			}
 			{
-				Name = m_amplitudev
-				floatproperty = 0.0
+				name = m_amplitudeV
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_frequencyv
-				floatproperty = 1.0
+				name = m_frequencyV
+				FloatProperty = 1.0
 			}
 			{
-				Name = m_phasev
-				floatproperty = 0.0
+				name = m_phaseV
+				FloatProperty = 0.0
 			}
 		]
 		list = [
 			{
-				Name = mat_drum_fill
+				name = mat_drum_fill
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = [
+						name = m_psPass0MaterialColor
+						VectorProperty = [
 							1.0
 							1.0
 							1.0
@@ -4759,11 +4759,11 @@ ingame_materials = [
 				]
 			}
 			{
-				Name = mat_drum_fill2
+				name = mat_drum_fill2
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = [
+						name = m_psPass0MaterialColor
+						VectorProperty = [
 							1.0
 							1.0
 							1.0
@@ -4776,130 +4776,130 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = dummy
-			template = animatedtexture_ui_3pass
+			name = dummy
+			Template = AnimatedTexture_UI_3Pass
 			technique = Loop
-			BlendMode = blend
+			blendMode = blend
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_samppass0diffuse
-				textureproperty = `tex\models\highway\star_grey_base_01.dds`
+				name = m_sampPass0Diffuse
+				TextureProperty = `tex\models\highway\star_grey_base_01.dds`
 			}
 			{
-				Name = m_samppass1diffuse
-				textureproperty = `tex\models\highway\star_grey_collar_01.dds`
+				name = m_sampPass1Diffuse
+				TextureProperty = `tex\models\highway\star_grey_collar_01.dds`
 			}
 			{
-				Name = m_pspass2materialcolor
-				vectorproperty = $col_white
+				name = m_pspass2materialcolor
+				VectorProperty = $col_white
 			}
 			{
-				Name = m_samppass2diffuse
-				textureproperty = `tex\models\highway\star_grey_highlight_01.dds`
+				name = m_sampPass2Diffuse
+				TextureProperty = `tex\models\highway\Star_Grey_Highlight_01.dds`
 			}
 			{
-				Name = m_ucells
-				floatproperty = 4.0
+				name = m_ucells
+				FloatProperty = 4.0
 			}
 			{
-				Name = m_vcells
-				floatproperty = 4.0
+				name = m_vcells
+				FloatProperty = 4.0
 			}
 			{
-				Name = m_FPS
-				floatproperty = 30.0
+				name = m_FPS
+				FloatProperty = 30.0
 			}
 			{
-				Name = m_offset
-				floatproperty = 0.0
+				name = m_Offset
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_startFade
-				floatproperty = 0.0
+				name = m_startFade
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_endFade
-				floatproperty = 0.0
+				name = m_endFade
+				FloatProperty = 0.0
 			}
 		]
 		list = [
 			{
-				Name = mat_star_green
+				name = Mat_Star_Green
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_green
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_green
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_green
+						name = m_pspass1materialcolor
+						VectorProperty = $col_green
 					}
 				]
 			}
 			{
-				Name = mat_star_red
+				name = Mat_Star_Red
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_red
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_red
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_red
+						name = m_pspass1materialcolor
+						VectorProperty = $col_red
 					}
 				]
 			}
 			{
-				Name = mat_star_yellow
+				name = Mat_Star_Yellow
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_yellow
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_yellow
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_yellow
+						name = m_pspass1materialcolor
+						VectorProperty = $col_yellow
 					}
 				]
 			}
 			{
-				Name = mat_star_blue
+				name = Mat_Star_Blue
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_blue
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_blue
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_blue
+						name = m_pspass1materialcolor
+						VectorProperty = $col_blue
 					}
 				]
 			}
 			{
-				Name = mat_star_orange
+				name = Mat_Star_Orange
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_orange
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_orange
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_orange
+						name = m_pspass1materialcolor
+						VectorProperty = $col_orange
 					}
 				]
 			}
 			{
-				Name = mat_star_star
+				name = Mat_Star_Star
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_star
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_star
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_star
+						name = m_pspass1materialcolor
+						VectorProperty = $col_star
 					}
 				]
 			}
@@ -4907,130 +4907,130 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = dummy
-			template = animatedtexture_ui_3pass
+			name = dummy
+			Template = AnimatedTexture_UI_3Pass
 			technique = Loop
-			BlendMode = blend
+			blendMode = blend
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_samppass0diffuse
-				textureproperty = `tex\models\highway\star_grey_base_01.dds`
+				name = m_sampPass0Diffuse
+				TextureProperty = `tex\models\highway\star_grey_base_01.dds`
 			}
 			{
-				Name = m_samppass1diffuse
-				textureproperty = `tex\models\highway\star_grey_collar_01.dds`
+				name = m_sampPass1Diffuse
+				TextureProperty = `tex\models\highway\star_grey_collar_01.dds`
 			}
 			{
-				Name = m_pspass2materialcolor
-				vectorproperty = $col_white
+				name = m_pspass2materialcolor
+				VectorProperty = $col_white
 			}
 			{
-				Name = m_samppass2diffuse
-				textureproperty = `tex\models\highway\star_grey_hammer_halo_01.dds`
+				name = m_sampPass2Diffuse
+				TextureProperty = `tex\models\highway\star_grey_hammer_halo_01.dds`
 			}
 			{
-				Name = m_ucells
-				floatproperty = 4.0
+				name = m_ucells
+				FloatProperty = 4.0
 			}
 			{
-				Name = m_vcells
-				floatproperty = 4.0
+				name = m_vcells
+				FloatProperty = 4.0
 			}
 			{
-				Name = m_FPS
-				floatproperty = 30.0
+				name = m_FPS
+				FloatProperty = 30.0
 			}
 			{
-				Name = m_offset
-				floatproperty = 0.0
+				name = m_Offset
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_startFade
-				floatproperty = 0.0
+				name = m_startFade
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_endFade
-				floatproperty = 0.0
+				name = m_endFade
+				FloatProperty = 0.0
 			}
 		]
 		list = [
 			{
-				Name = mat_star_hammer_green
+				name = Mat_Star_Hammer_Green
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_green
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_green
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_green
+						name = m_pspass1materialcolor
+						VectorProperty = $col_green
 					}
 				]
 			}
 			{
-				Name = mat_star_hammer_red
+				name = Mat_Star_Hammer_Red
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_red
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_red
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_red
+						name = m_pspass1materialcolor
+						VectorProperty = $col_red
 					}
 				]
 			}
 			{
-				Name = mat_star_hammer_yellow
+				name = Mat_Star_Hammer_Yellow
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_yellow
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_yellow
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_yellow
+						name = m_pspass1materialcolor
+						VectorProperty = $col_yellow
 					}
 				]
 			}
 			{
-				Name = mat_star_hammer_blue
+				name = Mat_Star_Hammer_Blue
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_blue
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_blue
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_blue
+						name = m_pspass1materialcolor
+						VectorProperty = $col_blue
 					}
 				]
 			}
 			{
-				Name = mat_star_hammer_orange
+				name = Mat_Star_Hammer_Orange
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_orange
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_orange
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_orange
+						name = m_pspass1materialcolor
+						VectorProperty = $col_orange
 					}
 				]
 			}
 			{
-				Name = mat_star_hammer_star
+				name = Mat_Star_Hammer_Star
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_star
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_star
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_star
+						name = m_pspass1materialcolor
+						VectorProperty = $col_star
 					}
 				]
 			}
@@ -5038,32 +5038,32 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = dummy
-			template = immediatemode_alphafade_ui_3pass
-			technique = ui_col_tex_2d
-			BlendMode = blend
+			name = dummy
+			Template = ImmediateMode_AlphaFade_UI_3Pass
+			technique = UI_Col_Tex_2D
+			blendMode = blend
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_samppass0diffuse
-				textureproperty = `tex\models\highway\button_grey_base01.dds`
+				name = m_sampPass0Diffuse
+				TextureProperty = `tex\models\highway\button_grey_Base01.dds`
 			}
 			{
-				Name = m_samppass1diffuse
-				textureproperty = `tex\models\highway\button_grey_collar_ctrhu01.dds`
+				name = m_sampPass1Diffuse
+				TextureProperty = `tex\models\highway\button_grey_Collar_Ctrhu01.dds`
 			}
 			{
-				Name = m_pspass2materialcolor
-				vectorproperty = $col_zero_alpha
+				name = m_pspass2materialcolor
+				VectorProperty = $col_zero_alpha
 			}
 			{
-				Name = m_samppass2diffuse
-				textureproperty = `tex\models\highway\button_grey_hammer_halo01.dds`
+				name = m_sampPass2Diffuse
+				TextureProperty = `tex\models\Highway\Button_Grey_Hammer_Halo01.dds`
 			}
 			{
-				Name = m_startFade
-				vectorproperty = [
+				name = m_startFade
+				VectorProperty = [
 					1.0
 					1.0
 					1.0
@@ -5071,8 +5071,8 @@ ingame_materials = [
 				]
 			}
 			{
-				Name = m_endFade
-				vectorproperty = [
+				name = m_endFade
+				VectorProperty = [
 					1.0
 					1.0
 					1.0
@@ -5082,80 +5082,80 @@ ingame_materials = [
 		]
 		list = [
 			{
-				Name = mat_solo_gem_green
+				name = Mat_Solo_Gem_Green
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_green
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_green
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_green
+						name = m_pspass1materialcolor
+						VectorProperty = $col_green
 					}
 				]
 			}
 			{
-				Name = mat_solo_gem_red
+				name = Mat_Solo_Gem_Red
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_red
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_red
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_red
+						name = m_pspass1materialcolor
+						VectorProperty = $col_red
 					}
 				]
 			}
 			{
-				Name = mat_solo_gem_yellow
+				name = Mat_Solo_Gem_Yellow
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_yellow
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_yellow
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_yellow
+						name = m_pspass1materialcolor
+						VectorProperty = $col_yellow
 					}
 				]
 			}
 			{
-				Name = mat_solo_gem_blue
+				name = Mat_Solo_Gem_Blue
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_blue
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_blue
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_blue
+						name = m_pspass1materialcolor
+						VectorProperty = $col_blue
 					}
 				]
 			}
 			{
-				Name = mat_solo_gem_orange
+				name = Mat_Solo_Gem_Orange
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_orange
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_orange
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_orange
+						name = m_pspass1materialcolor
+						VectorProperty = $col_orange
 					}
 				]
 			}
 			{
-				Name = mat_solo_gem_star
+				name = Mat_Solo_Gem_Star
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_star
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_star
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_star
+						name = m_pspass1materialcolor
+						VectorProperty = $col_star
 					}
 				]
 			}
@@ -5163,130 +5163,130 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = dummy
-			template = animatedtexture_ui_3pass
+			name = dummy
+			Template = AnimatedTexture_UI_3Pass
 			technique = Loop
-			BlendMode = blend
+			blendMode = blend
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_samppass0diffuse
-				textureproperty = `tex\models\highway\star_grey_base_01.dds`
+				name = m_sampPass0Diffuse
+				TextureProperty = `tex\models\highway\star_grey_base_01.dds`
 			}
 			{
-				Name = m_samppass1diffuse
-				textureproperty = `tex\models\highway\star_grey_collar_cthru01.dds`
+				name = m_sampPass1Diffuse
+				TextureProperty = `tex\models\highway\star_grey_collar_Cthru01.dds`
 			}
 			{
-				Name = m_pspass2materialcolor
-				vectorproperty = $col_white
+				name = m_pspass2materialcolor
+				VectorProperty = $col_white
 			}
 			{
-				Name = m_samppass2diffuse
-				textureproperty = `tex\models\highway\star_grey_highlight_01.dds`
+				name = m_sampPass2Diffuse
+				TextureProperty = `tex\models\highway\Star_Grey_Highlight_01.dds`
 			}
 			{
-				Name = m_ucells
-				floatproperty = 4.0
+				name = m_ucells
+				FloatProperty = 4.0
 			}
 			{
-				Name = m_vcells
-				floatproperty = 4.0
+				name = m_vcells
+				FloatProperty = 4.0
 			}
 			{
-				Name = m_FPS
-				floatproperty = 30.0
+				name = m_FPS
+				FloatProperty = 30.0
 			}
 			{
-				Name = m_offset
-				floatproperty = 0.0
+				name = m_Offset
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_startFade
-				floatproperty = 0.0
+				name = m_startFade
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_endFade
-				floatproperty = 0.0
+				name = m_endFade
+				FloatProperty = 0.0
 			}
 		]
 		list = [
 			{
-				Name = mat_solo_star_green
+				name = Mat_Solo_Star_Green
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_green
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_green
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_green
+						name = m_pspass1materialcolor
+						VectorProperty = $col_green
 					}
 				]
 			}
 			{
-				Name = mat_solo_star_red
+				name = Mat_Solo_Star_Red
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_red
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_red
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_red
+						name = m_pspass1materialcolor
+						VectorProperty = $col_red
 					}
 				]
 			}
 			{
-				Name = mat_solo_star_yellow
+				name = Mat_Solo_Star_Yellow
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_yellow
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_yellow
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_yellow
+						name = m_pspass1materialcolor
+						VectorProperty = $col_yellow
 					}
 				]
 			}
 			{
-				Name = mat_solo_star_blue
+				name = Mat_Solo_Star_Blue
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_blue
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_blue
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_blue
+						name = m_pspass1materialcolor
+						VectorProperty = $col_blue
 					}
 				]
 			}
 			{
-				Name = mat_solo_star_orange
+				name = Mat_Solo_Star_Orange
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_orange
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_orange
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_orange
+						name = m_pspass1materialcolor
+						VectorProperty = $col_orange
 					}
 				]
 			}
 			{
-				Name = mat_solo_star_star
+				name = Mat_Solo_Star_Star
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_star
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_star
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_star
+						name = m_pspass1materialcolor
+						VectorProperty = $col_star
 					}
 				]
 			}
@@ -5294,20 +5294,20 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = dummy
-			template = whammybar_ui
-			technique = whammybar
-			BlendMode = blend
+			name = dummy
+			Template = WhammyBar_UI
+			technique = WhammyBar
+			blendMode = blend
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_samppass0diffuse
-				textureproperty = `tex\models\highway\whammybar_grey_cthru.dds`
+				name = m_sampPass0Diffuse
+				TextureProperty = `tex\models\highway\WhammyBAR_Grey_Cthru.dds`
 			}
 			{
-				Name = m_glowintensity
-				vectorproperty = [
+				name = m_glowintensity
+				VectorProperty = [
 					2.0
 					3.0
 					0.6
@@ -5317,80 +5317,80 @@ ingame_materials = [
 		]
 		list = [
 			{
-				Name = mat_solo_whammy_green
+				name = Mat_Solo_Whammy_Green
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_green
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_green
 					}
 					{
-						Name = m_glowcolor
-						vectorproperty = $col_green
+						name = m_glowcolor
+						VectorProperty = $col_green
 					}
 				]
 			}
 			{
-				Name = mat_solo_whammy_red
+				name = Mat_Solo_Whammy_Red
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_red
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_red
 					}
 					{
-						Name = m_glowcolor
-						vectorproperty = $col_red
+						name = m_glowcolor
+						VectorProperty = $col_red
 					}
 				]
 			}
 			{
-				Name = mat_solo_whammy_yellow
+				name = Mat_Solo_Whammy_Yellow
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_yellow
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_yellow
 					}
 					{
-						Name = m_glowcolor
-						vectorproperty = $col_yellow
+						name = m_glowcolor
+						VectorProperty = $col_yellow
 					}
 				]
 			}
 			{
-				Name = mat_solo_whammy_blue
+				name = Mat_Solo_Whammy_Blue
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_blue
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_blue
 					}
 					{
-						Name = m_glowcolor
-						vectorproperty = $col_blue
+						name = m_glowcolor
+						VectorProperty = $col_blue
 					}
 				]
 			}
 			{
-				Name = mat_solo_whammy_orange
+				name = Mat_Solo_Whammy_Orange
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_orange
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_orange
 					}
 					{
-						Name = m_glowcolor
-						vectorproperty = $col_orange
+						name = m_glowcolor
+						VectorProperty = $col_orange
 					}
 				]
 			}
 			{
-				Name = mat_solo_whammy_star
+				name = Mat_Solo_Whammy_Star
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_star
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_star
 					}
 					{
-						Name = m_glowcolor
-						vectorproperty = $col_star
+						name = m_glowcolor
+						VectorProperty = $col_star
 					}
 				]
 			}
@@ -5398,117 +5398,117 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = dummy
-			template = animatedtexture_ui_3pass
+			name = dummy
+			Template = AnimatedTexture_UI_3Pass
 			technique = Loop
-			BlendMode = blend
+			blendMode = blend
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_samppass0diffuse
-				textureproperty = `tex\models\highway\bmg_grey_base01.dds`
+				name = m_sampPass0Diffuse
+				TextureProperty = `tex\models\highway\BMG_Grey_Base01.dds`
 			}
 			{
-				Name = m_samppass1diffuse
-				textureproperty = `tex\models\highway\bmg_grey_collar01.dds`
+				name = m_sampPass1Diffuse
+				TextureProperty = `tex\models\highway\BMG_Grey_Collar01.dds`
 			}
 			{
-				Name = m_pspass2materialcolor
-				vectorproperty = $col_white
+				name = m_pspass2materialcolor
+				VectorProperty = $col_white
 			}
 			{
-				Name = m_samppass2diffuse
-				textureproperty = `tex\models\highway\bmg_grey_highlight01.dds`
+				name = m_sampPass2Diffuse
+				TextureProperty = `tex\models\highway\BMG_Grey_Highlight01.dds`
 			}
 			{
-				Name = m_ucells
-				floatproperty = 2.0
+				name = m_ucells
+				FloatProperty = 2.0
 			}
 			{
-				Name = m_vcells
-				floatproperty = 4.0
+				name = m_vcells
+				FloatProperty = 4.0
 			}
 			{
-				Name = m_FPS
-				floatproperty = 30.0
+				name = m_FPS
+				FloatProperty = 30.0
 			}
 			{
-				Name = m_offset
-				floatproperty = 0.0
+				name = m_Offset
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_startFade
-				floatproperty = 0.0
+				name = m_startFade
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_endFade
-				floatproperty = 0.0
+				name = m_endFade
+				FloatProperty = 0.0
 			}
 		]
 		list = [
 			{
-				Name = mat_battle_green
+				name = Mat_Battle_Green
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_green
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_green
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_green
+						name = m_pspass1materialcolor
+						VectorProperty = $col_green
 					}
 				]
 			}
 			{
-				Name = mat_battle_red
+				name = Mat_Battle_Red
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_red
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_red
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_red
+						name = m_pspass1materialcolor
+						VectorProperty = $col_red
 					}
 				]
 			}
 			{
-				Name = mat_battle_yellow
+				name = Mat_Battle_Yellow
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_yellow
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_yellow
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_yellow
+						name = m_pspass1materialcolor
+						VectorProperty = $col_yellow
 					}
 				]
 			}
 			{
-				Name = mat_battle_blue
+				name = Mat_Battle_Blue
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_blue
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_blue
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_blue
+						name = m_pspass1materialcolor
+						VectorProperty = $col_blue
 					}
 				]
 			}
 			{
-				Name = mat_battle_orange
+				name = Mat_Battle_Orange
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_orange
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_orange
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_orange
+						name = m_pspass1materialcolor
+						VectorProperty = $col_orange
 					}
 				]
 			}
@@ -5516,117 +5516,117 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = dummy
-			template = animatedtexture_ui_3pass
+			name = dummy
+			Template = AnimatedTexture_UI_3Pass
 			technique = Loop
-			BlendMode = blend
+			blendMode = blend
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_samppass0diffuse
-				textureproperty = `tex\models\highway\bmg_grey_base01.dds`
+				name = m_sampPass0Diffuse
+				TextureProperty = `tex\models\highway\BMG_Grey_Base01.dds`
 			}
 			{
-				Name = m_samppass1diffuse
-				textureproperty = `tex\models\highway\bmg_grey_collar01.dds`
+				name = m_sampPass1Diffuse
+				TextureProperty = `tex\models\highway\BMG_Grey_Collar01.dds`
 			}
 			{
-				Name = m_pspass2materialcolor
-				vectorproperty = $col_double_white
+				name = m_pspass2materialcolor
+				VectorProperty = $col_double_white
 			}
 			{
-				Name = m_samppass2diffuse
-				textureproperty = `tex\models\highway\bmg_grey_hammer_halo01.dds`
+				name = m_sampPass2Diffuse
+				TextureProperty = `tex\models\highway\BMG_Grey_Hammer_Halo01.dds`
 			}
 			{
-				Name = m_ucells
-				floatproperty = 2.0
+				name = m_ucells
+				FloatProperty = 2.0
 			}
 			{
-				Name = m_vcells
-				floatproperty = 4.0
+				name = m_vcells
+				FloatProperty = 4.0
 			}
 			{
-				Name = m_FPS
-				floatproperty = 30.0
+				name = m_FPS
+				FloatProperty = 30.0
 			}
 			{
-				Name = m_offset
-				floatproperty = 0.0
+				name = m_Offset
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_startFade
-				floatproperty = 0.0
+				name = m_startFade
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_endFade
-				floatproperty = 0.0
+				name = m_endFade
+				FloatProperty = 0.0
 			}
 		]
 		list = [
 			{
-				Name = mat_battle_hammer_green
+				name = Mat_Battle_Hammer_Green
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_green
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_green
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_green
+						name = m_pspass1materialcolor
+						VectorProperty = $col_green
 					}
 				]
 			}
 			{
-				Name = mat_battle_hammer_red
+				name = Mat_Battle_Hammer_Red
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_red
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_red
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_red
+						name = m_pspass1materialcolor
+						VectorProperty = $col_red
 					}
 				]
 			}
 			{
-				Name = mat_battle_hammer_yellow
+				name = Mat_Battle_Hammer_Yellow
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_yellow
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_yellow
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_yellow
+						name = m_pspass1materialcolor
+						VectorProperty = $col_yellow
 					}
 				]
 			}
 			{
-				Name = mat_battle_hammer_blue
+				name = Mat_Battle_Hammer_Blue
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_blue
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_blue
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_blue
+						name = m_pspass1materialcolor
+						VectorProperty = $col_blue
 					}
 				]
 			}
 			{
-				Name = mat_battle_hammer_orange
+				name = Mat_Battle_Hammer_Orange
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_orange
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_orange
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_orange
+						name = m_pspass1materialcolor
+						VectorProperty = $col_orange
 					}
 				]
 			}
@@ -5634,117 +5634,117 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = dummy
-			template = animatedtexture_ui_3pass
+			name = dummy
+			Template = AnimatedTexture_UI_3Pass
 			technique = Loop
-			BlendMode = blend
+			blendMode = blend
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_samppass0diffuse
-				textureproperty = `tex\models\highway\bmg_grey_base01.dds`
+				name = m_sampPass0Diffuse
+				TextureProperty = `tex\models\highway\BMG_Grey_Base01.dds`
 			}
 			{
-				Name = m_samppass1diffuse
-				textureproperty = `tex\models\highway\bmg_grey_collar_cthru01.dds`
+				name = m_sampPass1Diffuse
+				TextureProperty = `tex\models\highway\BMG_Grey_Collar_CThru01.dds`
 			}
 			{
-				Name = m_pspass2materialcolor
-				vectorproperty = $col_half_alpha
+				name = m_pspass2materialcolor
+				VectorProperty = $col_half_alpha
 			}
 			{
-				Name = m_samppass2diffuse
-				textureproperty = `tex\models\highway\bmg_grey_highlight01.dds`
+				name = m_sampPass2Diffuse
+				TextureProperty = `tex\models\highway\BMG_Grey_Highlight01.dds`
 			}
 			{
-				Name = m_ucells
-				floatproperty = 2.0
+				name = m_ucells
+				FloatProperty = 2.0
 			}
 			{
-				Name = m_vcells
-				floatproperty = 4.0
+				name = m_vcells
+				FloatProperty = 4.0
 			}
 			{
-				Name = m_FPS
-				floatproperty = 30.0
+				name = m_FPS
+				FloatProperty = 30.0
 			}
 			{
-				Name = m_offset
-				floatproperty = 0.0
+				name = m_Offset
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_startFade
-				floatproperty = 0.0
+				name = m_startFade
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_endFade
-				floatproperty = 0.0
+				name = m_endFade
+				FloatProperty = 0.0
 			}
 		]
 		list = [
 			{
-				Name = mat_battle_solo_green
+				name = Mat_Battle_Solo_Green
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_green
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_green
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_green
+						name = m_pspass1materialcolor
+						VectorProperty = $col_green
 					}
 				]
 			}
 			{
-				Name = mat_battle_solo_red
+				name = Mat_Battle_Solo_Red
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_red
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_red
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_red
+						name = m_pspass1materialcolor
+						VectorProperty = $col_red
 					}
 				]
 			}
 			{
-				Name = mat_battle_solo_yellow
+				name = Mat_Battle_Solo_Yellow
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_yellow
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_yellow
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_yellow
+						name = m_pspass1materialcolor
+						VectorProperty = $col_yellow
 					}
 				]
 			}
 			{
-				Name = mat_battle_solo_blue
+				name = Mat_Battle_Solo_Blue
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_blue
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_blue
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_blue
+						name = m_pspass1materialcolor
+						VectorProperty = $col_blue
 					}
 				]
 			}
 			{
-				Name = mat_battle_solo_orange
+				name = Mat_Battle_Solo_Orange
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_orange
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_orange
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_orange
+						name = m_pspass1materialcolor
+						VectorProperty = $col_orange
 					}
 				]
 			}
@@ -5752,32 +5752,32 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = dummy
-			template = immediatemode_alphafade_ui_3pass
-			technique = ui_col_tex_2d
-			BlendMode = blend
+			name = dummy
+			Template = ImmediateMode_AlphaFade_UI_3Pass
+			technique = UI_Col_Tex_2D
+			blendMode = blend
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_samppass0diffuse
-				textureproperty = `tex\models\highway\button_cymbal_grey_base01.dds`
+				name = m_sampPass0Diffuse
+				TextureProperty = `tex\models\highway\button_cymbal_grey_base01.dds`
 			}
 			{
-				Name = m_samppass1diffuse
-				textureproperty = `tex\models\highway\button_cymbal_grey_collar01.dds`
+				name = m_sampPass1Diffuse
+				TextureProperty = `tex\models\highway\button_cymbal_grey_collar01.dds`
 			}
 			{
-				Name = m_pspass2materialcolor
-				vectorproperty = $col_half_alpha
+				name = m_pspass2materialcolor
+				VectorProperty = $col_half_alpha
 			}
 			{
-				Name = m_samppass2diffuse
-				textureproperty = `tex\models\highway\button_cymbal_grey_highlight01.dds`
+				name = m_sampPass2Diffuse
+				TextureProperty = `tex\models\highway\Button_Cymbal_Grey_Highlight01.dds`
 			}
 			{
-				Name = m_startFade
-				vectorproperty = [
+				name = m_startFade
+				VectorProperty = [
 					1.0
 					1.0
 					1.0
@@ -5785,133 +5785,8 @@ ingame_materials = [
 				]
 			}
 			{
-				Name = m_endFade
-				vectorproperty = [
-					1.0
-					1.0
-					1.0
-					1.0
-				]
-			}
-		]
-		list = [
-			{
-				Name = mat_drum_green
-				MaterialProps = [
-					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_green
-					}
-					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_green
-					}
-				]
-			}
-			{
-				Name = mat_drum_red
-				MaterialProps = [
-					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_red
-					}
-					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_red
-					}
-				]
-			}
-			{
-				Name = mat_drum_yellow
-				MaterialProps = [
-					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_yellow
-					}
-					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_yellow
-					}
-				]
-			}
-			{
-				Name = mat_drum_blue
-				MaterialProps = [
-					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_blue
-					}
-					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_blue
-					}
-				]
-			}
-			{
-				Name = mat_drum_orange
-				MaterialProps = [
-					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_orange
-					}
-					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_orange
-					}
-				]
-			}
-			{
-				Name = mat_drum_star
-				MaterialProps = [
-					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_star
-					}
-					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_star
-					}
-				]
-			}
-		]
-	}
-	{
-		base_data = {
-			Name = dummy
-			template = immediatemode_alphafade_ui_3pass
-			technique = ui_col_tex_2d
-			BlendMode = blend
-			MaterialProps = $material_props
-		}
-		base_props = [
-			{
-				Name = m_samppass0diffuse
-				textureproperty = `tex\models\highway\button_cymbal_grey_base01.dds`
-			}
-			{
-				Name = m_samppass1diffuse
-				textureproperty = `tex\models\highway\button_cymbal_grey_collar01.dds`
-			}
-			{
-				Name = m_pspass2materialcolor
-				vectorproperty = $col_half_alpha
-			}
-			{
-				Name = m_samppass2diffuse
-				textureproperty = `tex\models\highway\button_cymbal_grey_highlight01.dds`
-			}
-			{
-				Name = m_startFade
-				vectorproperty = [
-					1.0
-					1.0
-					1.0
-					1.0
-				]
-			}
-			{
-				Name = m_endFade
-				vectorproperty = [
+				name = m_endFade
+				VectorProperty = [
 					1.0
 					1.0
 					1.0
@@ -5921,41 +5796,80 @@ ingame_materials = [
 		]
 		list = [
 			{
-				Name = mat_cym_yellow
+				name = Mat_Drum_Green
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_yellow
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_green
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_yellow
+						name = m_pspass1materialcolor
+						VectorProperty = $col_green
 					}
 				]
 			}
 			{
-				Name = mat_cym_orange
+				name = Mat_Drum_Red
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_orange
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_red
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_orange
+						name = m_pspass1materialcolor
+						VectorProperty = $col_red
 					}
 				]
 			}
 			{
-				Name = mat_cym_star
+				name = Mat_Drum_Yellow
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_star
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_yellow
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_star
+						name = m_pspass1materialcolor
+						VectorProperty = $col_yellow
+					}
+				]
+			}
+			{
+				name = Mat_Drum_Blue
+				MaterialProps = [
+					{
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_blue
+					}
+					{
+						name = m_pspass1materialcolor
+						VectorProperty = $col_blue
+					}
+				]
+			}
+			{
+				name = Mat_Drum_Orange
+				MaterialProps = [
+					{
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_orange
+					}
+					{
+						name = m_pspass1materialcolor
+						VectorProperty = $col_orange
+					}
+				]
+			}
+			{
+				name = Mat_Drum_Star
+				MaterialProps = [
+					{
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_star
+					}
+					{
+						name = m_pspass1materialcolor
+						VectorProperty = $col_star
 					}
 				]
 			}
@@ -5963,130 +5877,216 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = dummy
-			template = animatedtexture_ui_3pass
+			name = dummy
+			Template = ImmediateMode_AlphaFade_UI_3Pass
+			technique = UI_Col_Tex_2D
+			blendMode = blend
+			MaterialProps = $material_props
+		}
+		base_props = [
+			{
+				name = m_sampPass0Diffuse
+				TextureProperty = `tex\models\highway\button_cymbal_grey_base01.dds`
+			}
+			{
+				name = m_sampPass1Diffuse
+				TextureProperty = `tex\models\highway\button_cymbal_grey_collar01.dds`
+			}
+			{
+				name = m_pspass2materialcolor
+				VectorProperty = $col_half_alpha
+			}
+			{
+				name = m_sampPass2Diffuse
+				TextureProperty = `tex\models\highway\Button_Cymbal_Grey_Highlight01.dds`
+			}
+			{
+				name = m_startFade
+				VectorProperty = [
+					1.0
+					1.0
+					1.0
+					1.0
+				]
+			}
+			{
+				name = m_endFade
+				VectorProperty = [
+					1.0
+					1.0
+					1.0
+					1.0
+				]
+			}
+		]
+		list = [
+			{
+				name = Mat_Cym_Yellow
+				MaterialProps = [
+					{
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_yellow
+					}
+					{
+						name = m_pspass1materialcolor
+						VectorProperty = $col_yellow
+					}
+				]
+			}
+			{
+				name = Mat_Cym_Orange
+				MaterialProps = [
+					{
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_orange
+					}
+					{
+						name = m_pspass1materialcolor
+						VectorProperty = $col_orange
+					}
+				]
+			}
+			{
+				name = Mat_Cym_Star
+				MaterialProps = [
+					{
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_star
+					}
+					{
+						name = m_pspass1materialcolor
+						VectorProperty = $col_star
+					}
+				]
+			}
+		]
+	}
+	{
+		base_data = {
+			name = dummy
+			Template = AnimatedTexture_UI_3Pass
 			technique = Loop
-			BlendMode = blend
+			blendMode = blend
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_samppass0diffuse
-				textureproperty = `tex\models\highway\star_drum_grey_base_01.dds`
+				name = m_sampPass0Diffuse
+				TextureProperty = `tex\models\highway\star_drum_grey_base_01.dds`
 			}
 			{
-				Name = m_samppass1diffuse
-				textureproperty = `tex\models\highway\star_drum_grey_collar_01.dds`
+				name = m_sampPass1Diffuse
+				TextureProperty = `tex\models\highway\star_drum_grey_collar_01.dds`
 			}
 			{
-				Name = m_pspass2materialcolor
-				vectorproperty = $col_white
+				name = m_pspass2materialcolor
+				VectorProperty = $col_white
 			}
 			{
-				Name = m_samppass2diffuse
-				textureproperty = `tex\models\highway\star_drum_grey_hightlight.dds`
+				name = m_sampPass2Diffuse
+				TextureProperty = `tex\models\highway\star_drum_grey_hightlight.dds`
 			}
 			{
-				Name = m_ucells
-				floatproperty = 4.0
+				name = m_ucells
+				FloatProperty = 4.0
 			}
 			{
-				Name = m_vcells
-				floatproperty = 4.0
+				name = m_vcells
+				FloatProperty = 4.0
 			}
 			{
-				Name = m_FPS
-				floatproperty = 30.0
+				name = m_FPS
+				FloatProperty = 30.0
 			}
 			{
-				Name = m_offset
-				floatproperty = 0.0
+				name = m_Offset
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_startFade
-				floatproperty = 0.0
+				name = m_startFade
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_endFade
-				floatproperty = 0.0
+				name = m_endFade
+				FloatProperty = 0.0
 			}
 		]
 		list = [
 			{
-				Name = mat_drum_star_green
+				name = Mat_Drum_Star_Green
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_green
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_green
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_green
+						name = m_pspass1materialcolor
+						VectorProperty = $col_green
 					}
 				]
 			}
 			{
-				Name = mat_drum_star_red
+				name = Mat_Drum_Star_Red
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_red
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_red
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_red
+						name = m_pspass1materialcolor
+						VectorProperty = $col_red
 					}
 				]
 			}
 			{
-				Name = mat_drum_star_yellow
+				name = Mat_Drum_Star_Yellow
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_yellow
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_yellow
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_yellow
+						name = m_pspass1materialcolor
+						VectorProperty = $col_yellow
 					}
 				]
 			}
 			{
-				Name = mat_drum_star_blue
+				name = Mat_Drum_Star_Blue
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_blue
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_blue
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_blue
+						name = m_pspass1materialcolor
+						VectorProperty = $col_blue
 					}
 				]
 			}
 			{
-				Name = mat_drum_star_orange
+				name = Mat_Drum_Star_Orange
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_orange
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_orange
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_orange
+						name = m_pspass1materialcolor
+						VectorProperty = $col_orange
 					}
 				]
 			}
 			{
-				Name = mat_drum_star_star
+				name = Mat_Drum_Star_Star
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_star
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_star
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_star
+						name = m_pspass1materialcolor
+						VectorProperty = $col_star
 					}
 				]
 			}
@@ -6094,32 +6094,32 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = dummy
-			template = immediatemode_alphafade_ui_3pass
-			technique = ui_col_tex_2d
-			BlendMode = blend
+			name = dummy
+			Template = ImmediateMode_AlphaFade_UI_3Pass
+			technique = UI_Col_Tex_2D
+			blendMode = blend
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_samppass0diffuse
-				textureproperty = `tex\models\highway\button_cymbal_grey_base01.dds`
+				name = m_sampPass0Diffuse
+				TextureProperty = `tex\models\highway\button_cymbal_grey_base01.dds`
 			}
 			{
-				Name = m_samppass1diffuse
-				textureproperty = `tex\models\highway\button_cymbal_grey_collar01.dds`
+				name = m_sampPass1Diffuse
+				TextureProperty = `tex\models\highway\button_cymbal_grey_collar01.dds`
 			}
 			{
-				Name = m_pspass2materialcolor
-				vectorproperty = $col_white
+				name = m_pspass2materialcolor
+				VectorProperty = $col_white
 			}
 			{
-				Name = m_samppass2diffuse
-				textureproperty = `tex\models\highway\drum_shield_top.dds`
+				name = m_sampPass2Diffuse
+				TextureProperty = `tex\models\highway\drum_shield_top.dds`
 			}
 			{
-				Name = m_startFade
-				vectorproperty = [
+				name = m_startFade
+				VectorProperty = [
 					1.0
 					1.0
 					1.0
@@ -6127,133 +6127,8 @@ ingame_materials = [
 				]
 			}
 			{
-				Name = m_endFade
-				vectorproperty = [
-					1.0
-					1.0
-					1.0
-					1.0
-				]
-			}
-		]
-		list = [
-			{
-				Name = mat_drum_accent_green
-				MaterialProps = [
-					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_green
-					}
-					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_green
-					}
-				]
-			}
-			{
-				Name = mat_drum_accent_red
-				MaterialProps = [
-					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_red
-					}
-					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_red
-					}
-				]
-			}
-			{
-				Name = mat_drum_accent_yellow
-				MaterialProps = [
-					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_yellow
-					}
-					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_yellow
-					}
-				]
-			}
-			{
-				Name = mat_drum_accent_blue
-				MaterialProps = [
-					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_blue
-					}
-					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_blue
-					}
-				]
-			}
-			{
-				Name = mat_drum_accent_orange
-				MaterialProps = [
-					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_orange
-					}
-					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_orange
-					}
-				]
-			}
-			{
-				Name = mat_drum_accent_star
-				MaterialProps = [
-					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_star
-					}
-					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_star
-					}
-				]
-			}
-		]
-	}
-	{
-		base_data = {
-			Name = dummy
-			template = immediatemode_alphafade_ui_3pass
-			technique = ui_col_tex_2d
-			BlendMode = blend
-			MaterialProps = $material_props
-		}
-		base_props = [
-			{
-				Name = m_samppass0diffuse
-				textureproperty = `tex\models\highway\button_cymbal_grey_base01.dds`
-			}
-			{
-				Name = m_samppass1diffuse
-				textureproperty = `tex\models\highway\button_cymbal_grey_collar01.dds`
-			}
-			{
-				Name = m_pspass2materialcolor
-				vectorproperty = $col_white
-			}
-			{
-				Name = m_samppass2diffuse
-				textureproperty = `tex\models\highway\drum_shield_top.dds`
-			}
-			{
-				Name = m_startFade
-				vectorproperty = [
-					1.0
-					1.0
-					1.0
-					1.0
-				]
-			}
-			{
-				Name = m_endFade
-				vectorproperty = [
+				name = m_endFade
+				VectorProperty = [
 					1.0
 					1.0
 					1.0
@@ -6263,41 +6138,80 @@ ingame_materials = [
 		]
 		list = [
 			{
-				Name = mat_cym_accent_yellow
+				name = Mat_Drum_Accent_Green
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_yellow
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_green
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_yellow
+						name = m_pspass1materialcolor
+						VectorProperty = $col_green
 					}
 				]
 			}
 			{
-				Name = mat_cym_accent_orange
+				name = Mat_Drum_Accent_Red
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_orange
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_red
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_orange
+						name = m_pspass1materialcolor
+						VectorProperty = $col_red
 					}
 				]
 			}
 			{
-				Name = mat_cym_accent_star
+				name = Mat_Drum_Accent_Yellow
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_star
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_yellow
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_star
+						name = m_pspass1materialcolor
+						VectorProperty = $col_yellow
+					}
+				]
+			}
+			{
+				name = Mat_Drum_Accent_Blue
+				MaterialProps = [
+					{
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_blue
+					}
+					{
+						name = m_pspass1materialcolor
+						VectorProperty = $col_blue
+					}
+				]
+			}
+			{
+				name = Mat_Drum_Accent_Orange
+				MaterialProps = [
+					{
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_orange
+					}
+					{
+						name = m_pspass1materialcolor
+						VectorProperty = $col_orange
+					}
+				]
+			}
+			{
+				name = Mat_Drum_Accent_Star
+				MaterialProps = [
+					{
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_star
+					}
+					{
+						name = m_pspass1materialcolor
+						VectorProperty = $col_star
 					}
 				]
 			}
@@ -6305,130 +6219,216 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = dummy
-			template = animatedtexture_ui_3pass
+			name = dummy
+			Template = ImmediateMode_AlphaFade_UI_3Pass
+			technique = UI_Col_Tex_2D
+			blendMode = blend
+			MaterialProps = $material_props
+		}
+		base_props = [
+			{
+				name = m_sampPass0Diffuse
+				TextureProperty = `tex\models\highway\button_cymbal_grey_base01.dds`
+			}
+			{
+				name = m_sampPass1Diffuse
+				TextureProperty = `tex\models\highway\button_cymbal_grey_collar01.dds`
+			}
+			{
+				name = m_pspass2materialcolor
+				VectorProperty = $col_white
+			}
+			{
+				name = m_sampPass2Diffuse
+				TextureProperty = `tex\models\highway\drum_shield_top.dds`
+			}
+			{
+				name = m_startFade
+				VectorProperty = [
+					1.0
+					1.0
+					1.0
+					1.0
+				]
+			}
+			{
+				name = m_endFade
+				VectorProperty = [
+					1.0
+					1.0
+					1.0
+					1.0
+				]
+			}
+		]
+		list = [
+			{
+				name = Mat_Cym_Accent_Yellow
+				MaterialProps = [
+					{
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_yellow
+					}
+					{
+						name = m_pspass1materialcolor
+						VectorProperty = $col_yellow
+					}
+				]
+			}
+			{
+				name = Mat_Cym_Accent_Orange
+				MaterialProps = [
+					{
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_orange
+					}
+					{
+						name = m_pspass1materialcolor
+						VectorProperty = $col_orange
+					}
+				]
+			}
+			{
+				name = Mat_Cym_Accent_Star
+				MaterialProps = [
+					{
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_star
+					}
+					{
+						name = m_pspass1materialcolor
+						VectorProperty = $col_star
+					}
+				]
+			}
+		]
+	}
+	{
+		base_data = {
+			name = dummy
+			Template = AnimatedTexture_UI_3Pass
 			technique = Loop
-			BlendMode = blend
+			blendMode = blend
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_samppass0diffuse
-				textureproperty = `tex\models\highway\star_drum_grey_base_01.dds`
+				name = m_sampPass0Diffuse
+				TextureProperty = `tex\models\highway\star_drum_grey_base_01.dds`
 			}
 			{
-				Name = m_samppass1diffuse
-				textureproperty = `tex\models\highway\star_drum_grey_collar_01.dds`
+				name = m_sampPass1Diffuse
+				TextureProperty = `tex\models\highway\star_drum_grey_collar_01.dds`
 			}
 			{
-				Name = m_pspass2materialcolor
-				vectorproperty = $col_star
+				name = m_pspass2materialcolor
+				VectorProperty = $col_star
 			}
 			{
-				Name = m_samppass2diffuse
-				textureproperty = `tex\models\highway\star_drum_grey_accent_01.dds`
+				name = m_sampPass2Diffuse
+				TextureProperty = `tex\models\highway\Star_Drum_Grey_Accent_01.dds`
 			}
 			{
-				Name = m_ucells
-				floatproperty = 4.0
+				name = m_ucells
+				FloatProperty = 4.0
 			}
 			{
-				Name = m_vcells
-				floatproperty = 4.0
+				name = m_vcells
+				FloatProperty = 4.0
 			}
 			{
-				Name = m_FPS
-				floatproperty = 30.0
+				name = m_FPS
+				FloatProperty = 30.0
 			}
 			{
-				Name = m_offset
-				floatproperty = 0.0
+				name = m_Offset
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_startFade
-				floatproperty = 0.0
+				name = m_startFade
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_endFade
-				floatproperty = 0.0
+				name = m_endFade
+				FloatProperty = 0.0
 			}
 		]
 		list = [
 			{
-				Name = mat_drum_star_accent_green
+				name = Mat_Drum_Star_Accent_Green
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_green
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_green
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_green
+						name = m_pspass1materialcolor
+						VectorProperty = $col_green
 					}
 				]
 			}
 			{
-				Name = mat_drum_star_accent_red
+				name = Mat_Drum_Star_Accent_Red
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_red
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_red
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_red
+						name = m_pspass1materialcolor
+						VectorProperty = $col_red
 					}
 				]
 			}
 			{
-				Name = mat_drum_star_accent_yellow
+				name = Mat_Drum_Star_Accent_Yellow
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_yellow
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_yellow
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_yellow
+						name = m_pspass1materialcolor
+						VectorProperty = $col_yellow
 					}
 				]
 			}
 			{
-				Name = mat_drum_star_accent_blue
+				name = Mat_Drum_Star_Accent_Blue
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_blue
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_blue
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_blue
+						name = m_pspass1materialcolor
+						VectorProperty = $col_blue
 					}
 				]
 			}
 			{
-				Name = mat_drum_star_accent_orange
+				name = Mat_Drum_Star_Accent_Orange
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_orange
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_orange
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_orange
+						name = m_pspass1materialcolor
+						VectorProperty = $col_orange
 					}
 				]
 			}
 			{
-				Name = mat_drum_star_accent_star
+				name = Mat_Drum_Star_Accent_Star
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_base_star
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_base_star
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_star
+						name = m_pspass1materialcolor
+						VectorProperty = $col_star
 					}
 				]
 			}
@@ -6436,81 +6436,81 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = dummy
-			template = immediatemode_alphafade_ui_wibble_3pass
-			technique = ui_col_tex_2d
-			BlendMode = blend
+			name = dummy
+			Template = ImmediateMode_AlphaFade_UI_Wibble_3Pass
+			technique = UI_Col_Tex_2D
+			blendMode = blend
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_samppass2diffuse
-				textureproperty = `tex\models\highway\button_drum_kick_highlight01.dds`
+				name = m_sampPass2Diffuse
+				TextureProperty = `tex\models\highway\Button_Drum_Kick_highlight01.dds`
 			}
 			{
-				Name = m_startFade
-				floatproperty = 0.0
+				name = m_startFade
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_endFade
-				floatproperty = 0.0
+				name = m_endFade
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_amplitudeu
-				floatproperty = 0.0
+				name = m_amplitudeU
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_frequencyu
-				floatproperty = 0.0
+				name = m_frequencyU
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_phaseu
-				floatproperty = 0.0
+				name = m_phaseU
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_velocityV
-				floatproperty = 0.0
+				name = m_velocityV
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_amplitudev
-				floatproperty = 0.0
+				name = m_amplitudeV
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_frequencyv
-				floatproperty = 0.0
+				name = m_frequencyV
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_phasev
-				floatproperty = 0.0
+				name = m_phaseV
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_drot
-				floatproperty = 0.0
+				name = m_drot
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_centerx
-				floatproperty = 0.5
+				name = m_centerx
+				FloatProperty = 0.5
 			}
 			{
-				Name = m_centery
-				floatproperty = -0.5
+				name = m_centery
+				FloatProperty = -0.5
 			}
 		]
 		list = [
 			{
-				Name = mat_drum_kickdrum
+				name = Mat_Drum_Kickdrum
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_purple
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_purple
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\button_drum_kick_base01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\Button_Drum_Kick_Base01.dds`
 					}
 					{
-						Name = m_pspass0tiling
-						vectorproperty = [
+						name = m_psPass0Tiling
+						VectorProperty = [
 							1.0
 							1.0
 							1.0
@@ -6518,37 +6518,37 @@ ingame_materials = [
 						]
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_white
+						name = m_pspass1materialcolor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\button_drum_kick_collar01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\Button_Drum_Kick_Collar01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_base_purple
+						name = m_pspass2materialcolor
+						VectorProperty = $col_base_purple
 					}
 					{
-						Name = m_velocityu
-						floatproperty = 0.0
+						name = m_velocityU
+						FloatProperty = 0.0
 					}
 				]
 			}
 			{
-				Name = mat_drum_kickdrum_star
+				name = Mat_Drum_Kickdrum_Star
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_purple
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_purple
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\button_drum_kick_sp01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\Button_Drum_Kick_SP01.dds`
 					}
 					{
-						Name = m_pspass0tiling
-						vectorproperty = [
+						name = m_psPass0Tiling
+						VectorProperty = [
 							1.0
 							1.0
 							1.0
@@ -6556,37 +6556,37 @@ ingame_materials = [
 						]
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_white
+						name = m_pspass1materialcolor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\button_drum_kick_collar01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\Button_Drum_Kick_Collar01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_kick_star
+						name = m_pspass2materialcolor
+						VectorProperty = $col_kick_star
 					}
 					{
-						Name = m_velocityu
-						floatproperty = 0.5
+						name = m_velocityU
+						FloatProperty = 0.5
 					}
 				]
 			}
 			{
-				Name = mat_drum_kickdrum_star_power
+				name = Mat_Drum_Kickdrum_Star_Power
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_kick_star
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_kick_star
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\button_drum_kick_base01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\Button_Drum_Kick_Base01.dds`
 					}
 					{
-						Name = m_pspass0tiling
-						vectorproperty = [
+						name = m_psPass0Tiling
+						VectorProperty = [
 							1.0
 							1.0
 							1.0
@@ -6594,37 +6594,37 @@ ingame_materials = [
 						]
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_white
+						name = m_pspass1materialcolor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\button_drum_kick_collar01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\Button_Drum_Kick_Collar01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_base_purple
+						name = m_pspass2materialcolor
+						VectorProperty = $col_base_purple
 					}
 					{
-						Name = m_velocityu
-						floatproperty = 0.0
+						name = m_velocityU
+						FloatProperty = 0.0
 					}
 				]
 			}
 			{
-				Name = mat_drum_kickdrum_star_power_star
+				name = Mat_Drum_Kickdrum_Star_Power_Star
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_kick_star
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_kick_star
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\button_drum_kick_sp01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\Button_Drum_Kick_SP01.dds`
 					}
 					{
-						Name = m_pspass0tiling
-						vectorproperty = [
+						name = m_psPass0Tiling
+						VectorProperty = [
 							1.0
 							1.0
 							1.0
@@ -6632,37 +6632,37 @@ ingame_materials = [
 						]
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_white
+						name = m_pspass1materialcolor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\button_drum_kick_collar01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\Button_Drum_Kick_Collar01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_kick_star
+						name = m_pspass2materialcolor
+						VectorProperty = $col_kick_star
 					}
 					{
-						Name = m_velocityu
-						floatproperty = 0.5
+						name = m_velocityU
+						FloatProperty = 0.5
 					}
 				]
 			}
 			{
-				Name = mat_drum_kickdrum_hammer
+				name = Mat_Drum_Kickdrum_Hammer
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_purple
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_purple
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\button_drum_kick_base01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\Button_Drum_Kick_Base01.dds`
 					}
 					{
-						Name = m_pspass0tiling
-						vectorproperty = [
+						name = m_psPass0Tiling
+						VectorProperty = [
 							1.0
 							1.0
 							1.0
@@ -6670,37 +6670,37 @@ ingame_materials = [
 						]
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_white
+						name = m_pspass1materialcolor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\button_drum_kick_hammer01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\Button_Drum_Kick_Hammer01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_base_purple
+						name = m_pspass2materialcolor
+						VectorProperty = $col_base_purple
 					}
 					{
-						Name = m_velocityu
-						floatproperty = 0.0
+						name = m_velocityU
+						FloatProperty = 0.0
 					}
 				]
 			}
 			{
-				Name = mat_drum_kickdrum_star_hammer
+				name = Mat_Drum_Kickdrum_Star_Hammer
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_purple
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_purple
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\button_drum_kick_sp01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\Button_Drum_Kick_SP01.dds`
 					}
 					{
-						Name = m_pspass0tiling
-						vectorproperty = [
+						name = m_psPass0Tiling
+						VectorProperty = [
 							1.0
 							1.0
 							1.0
@@ -6708,37 +6708,37 @@ ingame_materials = [
 						]
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_white
+						name = m_pspass1materialcolor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\button_drum_kick_hammer01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\Button_Drum_Kick_Hammer01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_kick_star
+						name = m_pspass2materialcolor
+						VectorProperty = $col_kick_star
 					}
 					{
-						Name = m_velocityu
-						floatproperty = 0.5
+						name = m_velocityU
+						FloatProperty = 0.5
 					}
 				]
 			}
 			{
-				Name = mat_drum_kickdrum_star_power_hammer
+				name = Mat_Drum_Kickdrum_Star_Power_Hammer
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_kick_star
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_kick_star
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\button_drum_kick_base01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\Button_Drum_Kick_Base01.dds`
 					}
 					{
-						Name = m_pspass0tiling
-						vectorproperty = [
+						name = m_psPass0Tiling
+						VectorProperty = [
 							1.0
 							1.0
 							1.0
@@ -6746,37 +6746,37 @@ ingame_materials = [
 						]
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_white
+						name = m_pspass1materialcolor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\button_drum_kick_hammer01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\Button_Drum_Kick_Hammer01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_base_purple
+						name = m_pspass2materialcolor
+						VectorProperty = $col_base_purple
 					}
 					{
-						Name = m_velocityu
-						floatproperty = 0.0
+						name = m_velocityU
+						FloatProperty = 0.0
 					}
 				]
 			}
 			{
-				Name = mat_drum_kickdrum_star_power_star_hammer
+				name = Mat_Drum_Kickdrum_Star_Power_Star_Hammer
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_kick_star
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_kick_star
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\button_drum_kick_sp01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\Button_Drum_Kick_SP01.dds`
 					}
 					{
-						Name = m_pspass0tiling
-						vectorproperty = [
+						name = m_psPass0Tiling
+						VectorProperty = [
 							1.0
 							1.0
 							1.0
@@ -6784,37 +6784,37 @@ ingame_materials = [
 						]
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_white
+						name = m_pspass1materialcolor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\button_drum_kick_hammer01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\Button_Drum_Kick_Hammer01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_kick_star
+						name = m_pspass2materialcolor
+						VectorProperty = $col_kick_star
 					}
 					{
-						Name = m_velocityu
-						floatproperty = 0.5
+						name = m_velocityU
+						FloatProperty = 0.5
 					}
 				]
 			}
 			{
-				Name = mat_drum_kickdrum_battle
+				name = Mat_Drum_Kickdrum_Battle
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_purple
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_purple
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\button_drum_kick_sp01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\Button_Drum_Kick_SP01.dds`
 					}
 					{
-						Name = m_pspass0tiling
-						vectorproperty = [
+						name = m_psPass0Tiling
+						VectorProperty = [
 							1.0
 							1.0
 							1.0
@@ -6822,16 +6822,16 @@ ingame_materials = [
 						]
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_white
+						name = m_pspass1materialcolor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\button_drum_kick_battle01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\Button_Drum_Kick_Battle01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = [
+						name = m_pspass2materialcolor
+						VectorProperty = [
 							2.0
 							0.0
 							0.0
@@ -6839,8 +6839,8 @@ ingame_materials = [
 						]
 					}
 					{
-						Name = m_velocityu
-						floatproperty = 1.0
+						name = m_velocityU
+						FloatProperty = 1.0
 					}
 				]
 			}
@@ -6848,81 +6848,81 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = dummy
-			template = immediatemode_alphafade_ui_wibble_3pass
-			technique = ui_col_tex_2d
-			BlendMode = blend
+			name = dummy
+			Template = ImmediateMode_AlphaFade_UI_Wibble_3Pass
+			technique = UI_Col_Tex_2D
+			blendMode = blend
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_samppass2diffuse
-				textureproperty = `tex\models\highway\button_drum_kick_highlight01.dds`
+				name = m_sampPass2Diffuse
+				TextureProperty = `tex\models\highway\Button_Drum_Kick_highlight01.dds`
 			}
 			{
-				Name = m_startFade
-				floatproperty = 0.0
+				name = m_startFade
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_endFade
-				floatproperty = 0.0
+				name = m_endFade
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_amplitudeu
-				floatproperty = 0.0
+				name = m_amplitudeU
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_frequencyu
-				floatproperty = 0.0
+				name = m_frequencyU
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_phaseu
-				floatproperty = 0.0
+				name = m_phaseU
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_velocityV
-				floatproperty = 0.0
+				name = m_velocityV
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_amplitudev
-				floatproperty = 0.0
+				name = m_amplitudeV
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_frequencyv
-				floatproperty = 0.0
+				name = m_frequencyV
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_phasev
-				floatproperty = 0.0
+				name = m_phaseV
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_drot
-				floatproperty = 0.0
+				name = m_drot
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_centerx
-				floatproperty = 0.5
+				name = m_centerx
+				FloatProperty = 0.5
 			}
 			{
-				Name = m_centery
-				floatproperty = -0.5
+				name = m_centery
+				FloatProperty = -0.5
 			}
 		]
 		list = [
 			{
-				Name = mat_kid_gem
+				name = Mat_Kid_Gem
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\rainbow1.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\Rainbow1.dds`
 					}
 					{
-						Name = m_pspass0tiling
-						vectorproperty = [
+						name = m_psPass0Tiling
+						VectorProperty = [
 							0.3
 							0.3
 							0.3
@@ -6930,37 +6930,37 @@ ingame_materials = [
 						]
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_white
+						name = m_pspass1materialcolor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\button_drum_kick_collar01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\Button_Drum_Kick_Collar01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_white
+						name = m_pspass2materialcolor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_velocityu
-						floatproperty = 0.5
+						name = m_velocityU
+						FloatProperty = 0.5
 					}
 				]
 			}
 			{
-				Name = mat_kid_gem_star
+				name = Mat_Kid_Gem_Star
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\rainbow1.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\Rainbow1.dds`
 					}
 					{
-						Name = m_pspass0tiling
-						vectorproperty = [
+						name = m_psPass0Tiling
+						VectorProperty = [
 							0.3
 							0.3
 							0.3
@@ -6968,37 +6968,37 @@ ingame_materials = [
 						]
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_kick_star
+						name = m_pspass1materialcolor
+						VectorProperty = $col_kick_star
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\button_drum_kick_hammer01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\Button_Drum_Kick_Hammer01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_kick_star
+						name = m_pspass2materialcolor
+						VectorProperty = $col_kick_star
 					}
 					{
-						Name = m_velocityu
-						floatproperty = 0.5
+						name = m_velocityU
+						FloatProperty = 0.5
 					}
 				]
 			}
 			{
-				Name = mat_kid_gem_star_power
+				name = Mat_Kid_Gem_Star_Power
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_kick_star
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_kick_star
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\button_drum_kick_base01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\Button_Drum_Kick_Base01.dds`
 					}
 					{
-						Name = m_pspass0tiling
-						vectorproperty = [
+						name = m_psPass0Tiling
+						VectorProperty = [
 							1.0
 							1.0
 							1.0
@@ -7006,37 +7006,37 @@ ingame_materials = [
 						]
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_white
+						name = m_pspass1materialcolor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\button_drum_kick_collar01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\Button_Drum_Kick_Collar01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_white
+						name = m_pspass2materialcolor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_velocityu
-						floatproperty = 0.0
+						name = m_velocityU
+						FloatProperty = 0.0
 					}
 				]
 			}
 			{
-				Name = mat_kid_gem_star_power_star
+				name = Mat_Kid_Gem_Star_Power_Star
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_kick_star
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_kick_star
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\button_drum_kick_sp01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\Button_Drum_Kick_SP01.dds`
 					}
 					{
-						Name = m_pspass0tiling
-						vectorproperty = [
+						name = m_psPass0Tiling
+						VectorProperty = [
 							1.0
 							1.0
 							1.0
@@ -7044,20 +7044,20 @@ ingame_materials = [
 						]
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_white
+						name = m_pspass1materialcolor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\button_drum_kick_collar01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\Button_Drum_Kick_Collar01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_kick_star
+						name = m_pspass2materialcolor
+						VectorProperty = $col_kick_star
 					}
 					{
-						Name = m_velocityu
-						floatproperty = 0.5
+						name = m_velocityU
+						FloatProperty = 0.5
 					}
 				]
 			}
@@ -7065,62 +7065,62 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = dummy
-			template = animatedtexture_ui
-			technique = oneshot_zerostart
-			BlendMode = add
+			name = dummy
+			Template = AnimatedTexture_UI
+			technique = OneShot_ZeroStart
+			blendMode = Add
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_sampanimation
-				textureproperty = `tex\models\highway\note_hit01.dds`
+				name = m_sampAnimation
+				TextureProperty = `tex\models\highway\Note_Hit01.dds`
 			}
 			{
-				Name = m_ucells
-				floatproperty = 4.0
+				name = m_ucells
+				FloatProperty = 4.0
 			}
 			{
-				Name = m_vcells
-				floatproperty = 4.0
+				name = m_vcells
+				FloatProperty = 4.0
 			}
 			{
-				Name = m_offset
-				floatproperty = 0.0
+				name = m_Offset
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_startFade
-				floatproperty = 1.0
+				name = m_startFade
+				FloatProperty = 1.0
 			}
 			{
-				Name = m_endFade
-				floatproperty = 1.0
+				name = m_endFade
+				FloatProperty = 1.0
 			}
 		]
 		list = [
 			{
-				Name = sys_note_hit01_sys_note_hit01
+				name = sys_note_hit01_sys_note_hit01
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_hit_orange
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_hit_orange
 					}
 					{
-						Name = m_FPS
-						floatproperty = 60.0
+						name = m_FPS
+						FloatProperty = 60.0
 					}
 				]
 			}
 			{
-				Name = sys_note_hit_blue_01_sys_note_hit_blue_01
+				name = sys_note_hit_blue_01_sys_note_hit_blue_01
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_hit_blue
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_hit_blue
 					}
 					{
-						Name = m_FPS
-						floatproperty = 60.0
+						name = m_FPS
+						FloatProperty = 60.0
 					}
 				]
 			}
@@ -7128,50 +7128,50 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = dummy
-			template = animatedtexture_ui
-			technique = oneshot_zerostart
-			BlendMode = add
+			name = dummy
+			Template = AnimatedTexture_UI
+			technique = OneShot_ZeroStart
+			blendMode = Add
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_FPS
-				floatproperty = 30.0
+				name = m_FPS
+				FloatProperty = 30.0
 			}
 			{
-				Name = m_offset
-				floatproperty = 0.0
+				name = m_Offset
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_startFade
-				floatproperty = 0.0
+				name = m_startFade
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_endFade
-				floatproperty = 0.0
+				name = m_endFade
+				FloatProperty = 0.0
 			}
 		]
 		list = [
 			{
-				Name = mat_sidebar_glow_01
+				name = Mat_sidebar_GLOW_01
 				MaterialProps = [
 					{
-						Name = m_sampanimation
-						textureproperty = `tex\models\highway\sidebar01_glow01.dds`
+						name = m_sampAnimation
+						TextureProperty = `tex\models\highway\sidebar01_glow01.dds`
 						clamp = (1.0, 1.0, 0.0)
 					}
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_hit_orange
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_hit_orange
 					}
 					{
-						Name = m_ucells
-						floatproperty = 16.0
+						name = m_ucells
+						FloatProperty = 16.0
 					}
 					{
-						Name = m_vcells
-						floatproperty = 1.0
+						name = m_vcells
+						FloatProperty = 1.0
 					}
 				]
 			}
@@ -7179,26 +7179,26 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = dummy
-			template = immediatemode_ui
-			technique = ui_col_tex_2d
-			BlendMode = blend
+			name = dummy
+			Template = ImmediateMode_UI
+			technique = UI_Col_Tex_2D
+			blendMode = blend
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_samppass0diffuse
-				textureproperty = `tex\models\highway\starpower_sidegrade.dds`
+				name = m_sampPass0Diffuse
+				TextureProperty = `tex\models\highway\starpower_sidegrade.dds`
 				clamp = (1.0, 1.0, 0.0)
 			}
 		]
 		list = [
 			{
-				Name = sys_Starpower_SDGLOW_sys_Starpower_SDGLOW
+				name = sys_Starpower_SDGLOW_sys_Starpower_SDGLOW
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_sideglow_blue
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_Sideglow_blue
 					}
 				]
 			}
@@ -7206,58 +7206,58 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = dummy
-			template = animatedtexture_ui
+			name = dummy
+			Template = AnimatedTexture_UI
 			technique = Loop
-			BlendMode = add
+			blendMode = Add
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_ucells
-				floatproperty = 8.0
+				name = m_ucells
+				FloatProperty = 8.0
 			}
 			{
-				Name = m_vcells
-				floatproperty = 1.0
+				name = m_vcells
+				FloatProperty = 1.0
 			}
 			{
-				Name = m_FPS
-				floatproperty = 15.0
+				name = m_FPS
+				FloatProperty = 15.0
 			}
 			{
-				Name = m_offset
-				floatproperty = 1.0
+				name = m_Offset
+				FloatProperty = 1.0
 			}
 			{
-				Name = m_startFade
-				floatproperty = 0.0
+				name = m_startFade
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_endFade
-				floatproperty = 0.0
+				name = m_endFade
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_sampanimation
-				textureproperty = `tex\models\highway\big_lighning01.dds`
+				name = m_sampAnimation
+				TextureProperty = `tex\models\highway\big_lighning01.dds`
 			}
 		]
 		list = [
 			{
-				Name = sys_Big_Bolt01_sys_Big_Bolt01
+				name = sys_Big_Bolt01_sys_Big_Bolt01
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_lightning_blue
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_lightning_Blue
 					}
 				]
 			}
 			{
-				Name = sys_Big_Bolt01_Red_sys_Big_Bolt01_Red
+				name = sys_Big_Bolt01_Red_sys_Big_Bolt01_Red
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_lightning_red
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_lightning_red
 					}
 				]
 			}
@@ -7265,34 +7265,34 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = dummy
-			template = immediatemode_ui
-			technique = ui_col_tex_2d
-			BlendMode = add
+			name = dummy
+			Template = ImmediateMode_UI
+			technique = UI_Col_Tex_2D
+			blendMode = Add
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_psPass0MaterialColor
-				vectorproperty = $col_white
+				name = m_psPass0MaterialColor
+				VectorProperty = $col_white
 			}
 		]
 		list = [
 			{
-				Name = sys_particle_kickhit01_sys_particle_kickhit01
+				name = sys_Particle_Kickhit01_sys_Particle_Kickhit01
 				MaterialProps = [
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\kick_hit_particle04.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\Kick_hit_particle04.dds`
 					}
 				]
 			}
 			{
-				Name = mat_particle_kickhit01_noroland
+				name = Mat_Particle_Kickhit01_NORoland
 				MaterialProps = [
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\kick_hit_particle04_rb.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\Kick_hit_particle04_RB.dds`
 					}
 				]
 			}
@@ -7300,25 +7300,25 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = dummy
-			template = immediatemode_ui
-			technique = ui_col_tex_2d
-			BlendMode = add
+			name = dummy
+			Template = ImmediateMode_UI
+			technique = UI_Col_Tex_2D
+			blendMode = Add
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_samppass0diffuse
-				textureproperty = `tex\models\highway\vh_lightning_fx.dds`
+				name = m_sampPass0Diffuse
+				TextureProperty = `tex\models\Highway\VH_Lightning_fx.dds`
 			}
 		]
 		list = [
 			{
-				Name = vh_sp_fx01
+				name = VH_SP_FX01
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 				]
 			}
@@ -7326,16 +7326,16 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = dummy
-			template = immediatemode_alphafade_ui_wibble_3pass
-			technique = ui_col_tex_2d
-			BlendMode = add
+			name = dummy
+			Template = ImmediateMode_AlphaFade_UI_Wibble_3Pass
+			technique = UI_Col_Tex_2D
+			blendMode = Add
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_psPass0MaterialColor
-				vectorproperty = [
+				name = m_psPass0MaterialColor
+				VectorProperty = [
 					1.0
 					1.0
 					1.0
@@ -7343,13 +7343,13 @@ ingame_materials = [
 				]
 			}
 			{
-				Name = m_samppass0diffuse
-				textureproperty = `tex\models\highway\vh_freeform01.dds`
+				name = m_sampPass0Diffuse
+				TextureProperty = `tex\models\Highway\VH_freeform01.dds`
 				clamp = (0.0, 0.0, 0.0)
 			}
 			{
-				Name = m_pspass0tiling
-				vectorproperty = [
+				name = m_psPass0Tiling
+				VectorProperty = [
 					1.0
 					1.0
 					1.0
@@ -7357,8 +7357,8 @@ ingame_materials = [
 				]
 			}
 			{
-				Name = m_pspass1materialcolor
-				vectorproperty = [
+				name = m_pspass1materialcolor
+				VectorProperty = [
 					1.0
 					1.0
 					1.0
@@ -7366,13 +7366,13 @@ ingame_materials = [
 				]
 			}
 			{
-				Name = m_samppass1diffuse
-				textureproperty = `tex\models\highway\vh_freeform02.dds`
+				name = m_sampPass1Diffuse
+				TextureProperty = `tex\models\Highway\VH_freeform02.dds`
 				clamp = (0.0, 0.0, 0.0)
 			}
 			{
-				Name = m_pspass2materialcolor
-				vectorproperty = [
+				name = m_pspass2materialcolor
+				VectorProperty = [
 					0.0
 					0.0
 					0.0
@@ -7380,65 +7380,65 @@ ingame_materials = [
 				]
 			}
 			{
-				Name = m_samppass2diffuse
-				textureproperty = `tex\models\highway\vh_freeform02.dds`
+				name = m_sampPass2Diffuse
+				TextureProperty = `tex\models\Highway\VH_freeform02.dds`
 			}
 		]
 		list = [
 			{
-				Name = vh_ff_fx01
+				name = VH_FF_FX01
 				MaterialProps = [
 					{
-						Name = m_startFade
-						floatproperty = 0.0
+						name = m_startFade
+						FloatProperty = 0.0
 					}
 					{
-						Name = m_endFade
-						floatproperty = 0.0
+						name = m_endFade
+						FloatProperty = 0.0
 					}
 					{
-						Name = m_velocityu
-						floatproperty = -0.0333
+						name = m_velocityU
+						FloatProperty = -0.0333
 					}
 					{
-						Name = m_amplitudeu
-						floatproperty = 0.0
+						name = m_amplitudeU
+						FloatProperty = 0.0
 					}
 					{
-						Name = m_frequencyu
-						floatproperty = 0.0
+						name = m_frequencyU
+						FloatProperty = 0.0
 					}
 					{
-						Name = m_phaseu
-						floatproperty = 0.0
+						name = m_phaseU
+						FloatProperty = 0.0
 					}
 					{
-						Name = m_velocityV
-						floatproperty = 0.0
+						name = m_velocityV
+						FloatProperty = 0.0
 					}
 					{
-						Name = m_amplitudev
-						floatproperty = 0.0
+						name = m_amplitudeV
+						FloatProperty = 0.0
 					}
 					{
-						Name = m_frequencyv
-						floatproperty = 0.0
+						name = m_frequencyV
+						FloatProperty = 0.0
 					}
 					{
-						Name = m_phasev
-						floatproperty = 0.0
+						name = m_phaseV
+						FloatProperty = 0.0
 					}
 					{
-						Name = m_drot
-						floatproperty = 0.0
+						name = m_drot
+						FloatProperty = 0.0
 					}
 					{
-						Name = m_centerx
-						floatproperty = 0.5
+						name = m_centerx
+						FloatProperty = 0.5
 					}
 					{
-						Name = m_centery
-						floatproperty = -0.5
+						name = m_centery
+						FloatProperty = -0.5
 					}
 				]
 			}
@@ -7446,49 +7446,49 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = dummy
-			template = animatedtexture_ui
+			name = dummy
+			Template = AnimatedTexture_UI
 			technique = pingpong
-			BlendMode = blend
+			blendMode = blend
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_ucells
-				floatproperty = 2.0
+				name = m_ucells
+				FloatProperty = 2.0
 			}
 			{
-				Name = m_vcells
-				floatproperty = 4.0
+				name = m_vcells
+				FloatProperty = 4.0
 			}
 			{
-				Name = m_FPS
-				floatproperty = 20.0
+				name = m_FPS
+				FloatProperty = 20.0
 			}
 			{
-				Name = m_offset
-				floatproperty = 1.0
+				name = m_Offset
+				FloatProperty = 1.0
 			}
 			{
-				Name = m_startFade
-				floatproperty = 0.0
+				name = m_startFade
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_endFade
-				floatproperty = 0.0
+				name = m_endFade
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_sampanimation
-				textureproperty = `tex\models\highway\vh_crowdraz.dds`
+				name = m_sampAnimation
+				TextureProperty = `tex\models\highway\VH_crowdraz.dds`
 			}
 		]
 		list = [
 			{
-				Name = vh_crowd_noise
+				name = VH_Crowd_Noise
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = [
+						name = m_psPass0MaterialColor
+						VectorProperty = [
 							0.0
 							1.0
 							1.0
@@ -7501,25 +7501,25 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = highway_slide_01
-			template = immediatemode_ui
-			technique = ui_col_tex_2d
-			BlendMode = add
+			name = highway_slide_01
+			Template = ImmediateMode_UI
+			technique = UI_Col_Tex_2D
+			blendMode = Add
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_samppass0diffuse
-				textureproperty = `tex\models\highway\highway_slide_01.dds`
+				name = m_sampPass0Diffuse
+				TextureProperty = `tex\models\Highway\highway_slide_01.dds`
 			}
 		]
 		list = [
 			{
-				Name = highway_slide_01
+				name = highway_slide_01
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 				]
 			}
@@ -7527,25 +7527,25 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = highway_slide_02
-			template = immediatemode_ui
-			technique = ui_col_tex_2d
-			BlendMode = add
+			name = highway_slide_02
+			Template = ImmediateMode_UI
+			technique = UI_Col_Tex_2D
+			blendMode = Add
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_samppass0diffuse
-				textureproperty = `tex\models\highway\highway_slide_02.dds`
+				name = m_sampPass0Diffuse
+				TextureProperty = `tex\models\Highway\highway_slide_02.dds`
 			}
 		]
 		list = [
 			{
-				Name = highway_slide_02
+				name = highway_slide_02
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 				]
 			}
@@ -7553,25 +7553,25 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = highway_slide_03
-			template = immediatemode_ui
-			technique = ui_col_tex_2d
-			BlendMode = add
+			name = highway_slide_03
+			Template = ImmediateMode_UI
+			technique = UI_Col_Tex_2D
+			blendMode = Add
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_samppass0diffuse
-				textureproperty = `tex\models\highway\highway_slide_03.dds`
+				name = m_sampPass0Diffuse
+				TextureProperty = `tex\models\Highway\highway_slide_03.dds`
 			}
 		]
 		list = [
 			{
-				Name = highway_slide_03
+				name = highway_slide_03
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 				]
 			}
@@ -7579,53 +7579,53 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = dummy
-			template = immediatemode_alphafade_ui
-			technique = ui_col_tex_2d
-			BlendMode = blend
+			name = dummy
+			Template = ImmediateMode_AlphaFade_UI
+			technique = UI_Col_Tex_2D
+			blendMode = blend
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_psPass0MaterialColor
-				vectorproperty = $col_white
+				name = m_psPass0MaterialColor
+				VectorProperty = $col_white
 			}
 			{
-				Name = m_startFade
-				floatproperty = 0.0
+				name = m_startFade
+				FloatProperty = 0.0
 			}
 			{
-				Name = m_endFade
-				floatproperty = 0.0
+				name = m_endFade
+				FloatProperty = 0.0
 			}
 		]
 		list = [
 			{
-				Name = sys_fretbar_large_sys_fretbar_large
+				name = sys_fretbar_large_sys_fretbar_large
 				MaterialProps = [
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\fretbar_large01_dnc.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\Highway\FretBar_large01_DNC.dds`
 						clamp = (1.0, 1.0, 1.0)
 					}
 				]
 			}
 			{
-				Name = sys_fretbar_medium_sys_fretbar_medium
+				name = sys_fretbar_medium_sys_fretbar_medium
 				MaterialProps = [
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\fretbar_med01_dnc.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\Highway\FretBar_Med01_DNC.dds`
 						clamp = (1.0, 1.0, 1.0)
 					}
 				]
 			}
 			{
-				Name = sys_fretbar_small_sys_fretbar_small
+				name = sys_fretbar_small_sys_fretbar_small
 				MaterialProps = [
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\fretbar_small01_dnc.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\Highway\FretBar_Small01_DNC.dds`
 						clamp = (1.0, 1.0, 1.0)
 					}
 				]
@@ -7634,26 +7634,26 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = dummy
-			template = immediatemode_ui
-			technique = ui_col_tex_2d
-			BlendMode = blend
+			name = dummy
+			Template = ImmediateMode_UI
+			technique = UI_Col_Tex_2D
+			blendMode = blend
 			MaterialProps = $material_props
 		}
 		base_props = [
 			{
-				Name = m_samppass0diffuse
-				textureproperty = `tex\models\highway\sidebar01.dds`
+				name = m_sampPass0Diffuse
+				TextureProperty = `tex\models\Highway\sidebar01.dds`
 				clamp = (1.0, 1.0, 1.0)
 			}
 		]
 		list = [
 			{
-				Name = sys_sidebar2D_sys_sidebar2D
+				name = sys_sidebar2D_sys_sidebar2D
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 				]
 			}
@@ -7661,207 +7661,207 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = dummy
-			template = immediatemode_ui
-			technique = ui_col_tex_2d
-			BlendMode = blend
+			name = dummy
+			Template = ImmediateMode_UI
+			technique = UI_Col_Tex_2D
+			blendMode = blend
 			MaterialProps = $material_props
 		}
 		base_props = [
 		]
 		list = [
 			{
-				Name = mat_nb_neck
+				name = Mat_NB_Neck
 				MaterialProps = [
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nowbar_neck.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\Highway\NowBar_Neck.dds`
 					}
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 				]
 			}
 			{
-				Name = mat_nb_green_rim_pos1
+				name = Mat_NB_Green_rim_POS1
 				MaterialProps = [
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup1_ring_02.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\Highway\NB_Cup1_Ring_02.dds`
 					}
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_now_green_dark
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_now_green_dark
 					}
 				]
 			}
 			{
-				Name = mat_nb_red_rim_pos2
+				name = Mat_NB_Red_rim_POS2
 				MaterialProps = [
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup2_ring_02.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\Highway\NB_Cup2_Ring_02.dds`
 					}
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_now_red_dark
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_now_red_dark
 					}
 				]
 			}
 			{
-				Name = mat_nb_yellow_rim_pos3
+				name = Mat_NB_Yellow_rim_POS3
 				MaterialProps = [
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup3_ring_02.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\Highway\NB_Cup3_Ring_02.dds`
 					}
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_now_yellow_dark
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_now_yellow_dark
 					}
 				]
 			}
 			{
-				Name = mat_nb_blue_rim_pos2
+				name = Mat_NB_Blue_rim_POS2
 				MaterialProps = [
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup2_ring_02.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\Highway\NB_Cup2_Ring_02.dds`
 					}
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_now_blue_dark
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_now_blue_dark
 					}
 				]
 			}
 			{
-				Name = mat_nb_orange_rim_pos1
+				name = Mat_NB_Orange_rim_POS1
 				MaterialProps = [
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup1_ring_02.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\Highway\NB_Cup1_Ring_02.dds`
 					}
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_now_orange_dark
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_now_orange_dark
 					}
 				]
 			}
 			{
-				Name = mat_nb_4d_red_rim_pos1
+				name = Mat_NB_4D_Red_rim_POS1
 				MaterialProps = [
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup1_ring_02.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\Highway\NB_Cup1_Ring_02.dds`
 					}
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_now_red_dark
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_now_red_dark
 					}
 				]
 			}
 			{
-				Name = mat_nb_4d_yellow_rim_pos2
+				name = Mat_NB_4D_Yellow_rim_POS2
 				MaterialProps = [
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup2_ring_02.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\Highway\NB_Cup2_Ring_02.dds`
 					}
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_now_yellow_dark
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_now_yellow_dark
 					}
 				]
 			}
 			{
-				Name = mat_nb_4d_blue_rim_pos2
+				name = Mat_NB_4D_Blue_rim_POS2
 				MaterialProps = [
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup2_ring_02.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\Highway\NB_Cup2_Ring_02.dds`
 					}
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_now_blue_dark
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_now_blue_dark
 					}
 				]
 			}
 			{
-				Name = mat_nb_4d_green_rim_pos1
+				name = Mat_NB_4D_Green_rim_POS1
 				MaterialProps = [
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup1_ring_02.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\Highway\NB_Cup1_Ring_02.dds`
 					}
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_now_green_dark
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_now_green_dark
 					}
 				]
 			}
 			{
-				Name = mat_nb_5d_red_rim_pos1
+				name = Mat_NB_5D_Red_rim_POS1
 				MaterialProps = [
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup1_ring_02.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\Highway\NB_Cup1_Ring_02.dds`
 					}
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_now_red_dark
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_now_red_dark
 					}
 				]
 			}
 			{
-				Name = mat_nb_5d_yellow_rim_pos2
+				name = Mat_NB_5D_Yellow_rim_POS2
 				MaterialProps = [
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup2_ring_02.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\Highway\NB_Cup2_Ring_02.dds`
 					}
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_now_yellow_dark
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_now_yellow_dark
 					}
 				]
 			}
 			{
-				Name = mat_nb_5d_blue_rim_pos3
+				name = Mat_NB_5D_Blue_rim_POS3
 				MaterialProps = [
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup3_ring_02.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\Highway\NB_Cup3_Ring_02.dds`
 					}
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_now_blue_dark
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_now_blue_dark
 					}
 				]
 			}
 			{
-				Name = mat_nb_5d_orange_rim_pos2
+				name = Mat_NB_5D_Orange_rim_POS2
 				MaterialProps = [
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup2_ring_02.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\Highway\NB_Cup2_Ring_02.dds`
 					}
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_now_orange_dark
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_now_orange_dark
 					}
 				]
 			}
 			{
-				Name = mat_nb_5d_green_rim_pos1
+				name = Mat_NB_5D_Green_rim_POS1
 				MaterialProps = [
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup1_ring_02.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\Highway\NB_Cup1_Ring_02.dds`
 					}
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_now_green_dark
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_now_green_dark
 					}
 				]
 			}
@@ -7869,1723 +7869,1723 @@ ingame_materials = [
 	}
 	{
 		base_data = {
-			Name = dummy
-			template = immediatemode_ui_3pass
-			technique = ui_col_tex_2d
-			BlendMode = blend
+			name = dummy
+			Template = ImmediateMode_UI_3Pass
+			technique = UI_Col_Tex_2D
+			blendMode = blend
 			MaterialProps = $material_props
 		}
 		base_props = [
 		]
 		list = [
 			{
-				Name = mat_nb_green_cap_lit_pos1
+				name = Mat_NB_Green_Cap_LIT_POS1
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cap1_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_green_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_green_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cap1_collar_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_collar_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_green_brite
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_green_brite
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cap1_glow_cm0_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_glow_cm0_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_red_cap_lit_pos2
+				name = Mat_NB_Red_Cap_LIT_POS2
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cap2_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_red_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_red_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cap2_collar_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_collar_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_red_brite
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_red_brite
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cap2_glow_cm0_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_glow_cm0_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_yellow_cap_lit_pos3
+				name = Mat_NB_Yellow_Cap_LIT_POS3
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cap3_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\nb_cap3_base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_yellow_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_yellow_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cap3_collar_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_cap3_collar_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_yellow_brite
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_yellow_brite
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cap3_glow_cm0_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\nb_cap3_glow_cm0_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_blue_cap_lit_pos2
+				name = Mat_NB_Blue_Cap_LIT_POS2
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cap2_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_blue_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_blue_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cap2_collar_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_collar_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_blue_brite
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_blue_brite
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cap2_glow_cm0_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_glow_cm0_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_orange_cap_lit_pos1
+				name = Mat_NB_Orange_Cap_LIT_POS1
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cap1_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_orange_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_orange_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cap1_collar_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_collar_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_orange_brite
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_orange_brite
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cap1_glow_cm0_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_glow_cm0_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_purple_cap_lit_pos1
+				name = Mat_NB_Purple_Cap_LIT_POS1
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cap1_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_purple_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_purple_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cap1_collar_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_collar_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_purple_brite
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_purple_brite
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cap1_glow_cm0_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_glow_cm0_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_purple_cap_lit_pos2
+				name = Mat_NB_Purple_Cap_LIT_POS2
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cap2_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_purple_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_purple_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cap2_collar_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_collar_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_purple_brite
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_purple_brite
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cap2_glow_cm0_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_glow_cm0_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_purple_cap_lit_pos3
+				name = Mat_NB_Purple_Cap_LIT_POS3
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cap3_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\nb_cap3_base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_purple_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_purple_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cap3_collar_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_cap3_collar_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_purple_brite
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_purple_brite
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cap3_glow_cm0_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\nb_cap3_glow_cm0_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_4d_red_cap_lit_pos1
+				name = Mat_NB_4D_Red_Cap_LIT_POS1
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cap1_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_red_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_red_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cap1_collar_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_collar_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_red_brite
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_red_brite
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cap1_glow_cm0_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_glow_cm0_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_4d_yellow_cap_lit_pos2
+				name = Mat_NB_4D_Yellow_Cap_LIT_POS2
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cap2_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_yellow_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_yellow_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cap2_collar_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_collar_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_yellow_brite
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_yellow_brite
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cap2_glow_cm0_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_glow_cm0_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_4d_blue_cap_lit_pos2
+				name = Mat_NB_4D_Blue_Cap_LIT_POS2
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cap2_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_blue_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_blue_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cap2_collar_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_collar_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_blue_brite
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_blue_brite
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cap2_glow_cm0_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_glow_cm0_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_4d_green_cap_lit_pos1
+				name = Mat_NB_4D_Green_Cap_LIT_POS1
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cap1_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_green_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_green_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cap1_collar_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_collar_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_green_brite
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_green_brite
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cap1_glow_cm0_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_glow_cm0_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_5d_red_cap_lit_pos1
+				name = Mat_NB_5D_Red_Cap_LIT_POS1
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cap1_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_red_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_red_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cap1_collar_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_collar_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_red_brite
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_red_brite
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cap1_glow_cm0_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_glow_cm0_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_5d_yellow_cap_lit_pos2
+				name = Mat_NB_5D_Yellow_Cap_LIT_POS2
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cap2_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_yellow_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_yellow_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cap2_collar_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_collar_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_yellow_brite
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_yellow_brite
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cap2_glow_cm0_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_glow_cm0_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_5d_blue_cap_lit_pos3
+				name = Mat_NB_5D_Blue_Cap_LIT_POS3
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cap3_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\nb_cap3_base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_blue_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_blue_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cap3_collar_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_cap3_collar_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_blue_brite
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_blue_brite
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cap3_glow_cm0_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\nb_cap3_glow_cm0_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_5d_orange_cap_lit_pos2
+				name = Mat_NB_5D_Orange_Cap_LIT_POS2
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cap2_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_orange_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_orange_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cap2_collar_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_collar_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_orange_brite
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_orange_brite
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cap2_glow_cm0_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_glow_cm0_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_5d_green_cap_lit_pos1
+				name = Mat_NB_5D_Green_Cap_LIT_POS1
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cap1_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_green_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_green_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cap1_base_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_base_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_green_brite
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_green_brite
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cap1_glow_cm0_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_glow_cm0_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_green_cap_pos1
+				name = Mat_NB_Green_Cap_POS1
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cap1_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_green_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_green_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cap1_collar_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_collar_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_zero_alpha
+						name = m_pspass2materialcolor
+						VectorProperty = $col_zero_alpha
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cap1_glow_cm0_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_glow_cm0_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_red_cap_pos2
+				name = Mat_NB_Red_Cap_POS2
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cap2_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_red_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_red_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cap2_collar_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_collar_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_zero_alpha
+						name = m_pspass2materialcolor
+						VectorProperty = $col_zero_alpha
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cap2_glow_cm0_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_glow_cm0_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_yellow_cap_pos3
+				name = Mat_NB_Yellow_Cap_POS3
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cap3_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\nb_cap3_base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_yellow_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_yellow_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cap3_collar_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_cap3_collar_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_zero_alpha
+						name = m_pspass2materialcolor
+						VectorProperty = $col_zero_alpha
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cap3_glow_cm0_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\nb_cap3_glow_cm0_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_blue_cap_pos2
+				name = Mat_NB_Blue_Cap_POS2
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cap2_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_blue_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_blue_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cap2_collar_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_collar_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_zero_alpha
+						name = m_pspass2materialcolor
+						VectorProperty = $col_zero_alpha
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cap2_glow_cm0_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_glow_cm0_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_orange_cap_pos1
+				name = Mat_NB_Orange_Cap_POS1
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cap1_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_orange_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_orange_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cap1_collar_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_collar_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_zero_alpha
+						name = m_pspass2materialcolor
+						VectorProperty = $col_zero_alpha
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cap1_glow_cm0_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_glow_cm0_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_4d_red_cap_pos1
+				name = Mat_NB_4D_Red_Cap_POS1
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cap1_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_red_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_red_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cap1_collar_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_collar_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_zero_alpha
+						name = m_pspass2materialcolor
+						VectorProperty = $col_zero_alpha
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cap1_glow_cm0_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_glow_cm0_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_4d_yellow_cap_pos2
+				name = Mat_NB_4D_Yellow_Cap_POS2
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cap2_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_yellow_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_yellow_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cap2_collar_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_collar_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_zero_alpha
+						name = m_pspass2materialcolor
+						VectorProperty = $col_zero_alpha
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cap2_glow_cm0_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_glow_cm0_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_4d_blue_cap_pos2
+				name = Mat_NB_4D_Blue_Cap_POS2
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cap2_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_blue_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_blue_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cap2_collar_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_collar_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_zero_alpha
+						name = m_pspass2materialcolor
+						VectorProperty = $col_zero_alpha
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cap2_glow_cm0_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_glow_cm0_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_4d_green_cap_pos1
+				name = Mat_NB_4D_Green_Cap_POS1
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cap1_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_green_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_green_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cap1_collar_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_collar_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_zero_alpha
+						name = m_pspass2materialcolor
+						VectorProperty = $col_zero_alpha
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cap1_glow_cm0_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_glow_cm0_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_5d_red_cap_pos1
+				name = Mat_NB_5D_Red_Cap_POS1
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cap1_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_red_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_red_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cap1_collar_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_collar_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_zero_alpha
+						name = m_pspass2materialcolor
+						VectorProperty = $col_zero_alpha
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cap1_glow_cm0_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_glow_cm0_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_5d_yellow_cap_pos2
+				name = Mat_NB_5D_Yellow_Cap_POS2
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cap2_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_yellow_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_yellow_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cap2_collar_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_collar_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_zero_alpha
+						name = m_pspass2materialcolor
+						VectorProperty = $col_zero_alpha
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cap2_glow_cm0_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_glow_cm0_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_5d_blue_cap_pos3
+				name = Mat_NB_5D_Blue_Cap_POS3
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cap3_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\nb_cap3_base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_blue_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_blue_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cap3_collar_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_cap3_collar_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_zero_alpha
+						name = m_pspass2materialcolor
+						VectorProperty = $col_zero_alpha
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cap3_glow_cm0_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\nb_cap3_glow_cm0_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_5d_orange_cap_pos2
+				name = Mat_NB_5D_Orange_Cap_POS2
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cap2_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_orange_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_orange_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cap2_collar_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_collar_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_zero_alpha
+						name = m_pspass2materialcolor
+						VectorProperty = $col_zero_alpha
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cap2_glow_cm0_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\nb_cap2_glow_cm0_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_5d_green_cap_pos1
+				name = Mat_NB_5D_Green_Cap_POS1
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cap1_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_green_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_green_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cap1_collar_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_collar_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_zero_alpha
+						name = m_pspass2materialcolor
+						VectorProperty = $col_zero_alpha
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cap1_glow_cm0_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\nb_cap1_glow_cm0_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_green_cup_pos1
+				name = Mat_NB_Green_Cup_POS1
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup1_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup1_Base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_white
+						name = m_pspass1materialcolor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cup1_hook_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_Cup1_Hook_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_green_dark
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_green_dark
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cup1_ring_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup1_Ring_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_red_cup_pos2
+				name = Mat_NB_Red_Cup_POS2
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup2_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup2_Base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_white
+						name = m_pspass1materialcolor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cup2_hook_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_Cup2_Hook_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_red_dark
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_red_dark
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cup2_ring_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup2_Ring_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_yellow_cup_pos3
+				name = Mat_NB_Yellow_Cup_POS3
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup3_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup3_Base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_white
+						name = m_pspass1materialcolor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cup3_hook_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_Cup3_Hook_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_yellow_dark
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_yellow_dark
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cup3_ring_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup3_Ring_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_blue_cup_pos2
+				name = Mat_NB_Blue_Cup_POS2
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup2_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup2_Base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_white
+						name = m_pspass1materialcolor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cup2_hook_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_Cup2_Hook_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_blue_dark
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_blue_dark
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cup2_ring_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup2_Ring_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_orange_cup_pos1
+				name = Mat_NB_Orange_Cup_POS1
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup1_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup1_Base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_white
+						name = m_pspass1materialcolor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cup1_hook_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\nb_Cup1_Hook_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_orange_dark
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_orange_dark
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cup1_ring_01.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup1_Ring_01.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_4d_red_cup_pos1
+				name = Mat_NB_4D_Red_Cup_POS1
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup1_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup1_Base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_red_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_red_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cup1_ring_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup1_Ring_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_zero_alpha
+						name = m_pspass2materialcolor
+						VectorProperty = $col_zero_alpha
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cup1_ring_02.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\Highway\NB_Cup1_Ring_02.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_4d_yellow_cup_pos2
+				name = Mat_NB_4D_Yellow_Cup_POS2
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup2_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup2_Base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_yellow_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_yellow_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cup2_ring_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup2_Ring_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_zero_alpha
+						name = m_pspass2materialcolor
+						VectorProperty = $col_zero_alpha
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cup2_ring_02.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\Highway\NB_Cup2_Ring_02.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_4d_blue_cup_pos2
+				name = Mat_NB_4D_Blue_Cup_POS2
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup2_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup2_Base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_blue_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_blue_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cup2_ring_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup2_Ring_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_zero_alpha
+						name = m_pspass2materialcolor
+						VectorProperty = $col_zero_alpha
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cup2_ring_02.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\Highway\NB_Cup2_Ring_02.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_4d_green_cup_pos1
+				name = Mat_NB_4D_Green_Cup_POS1
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup1_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup1_Base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_green_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_green_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cup1_ring_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup1_Ring_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_zero_alpha
+						name = m_pspass2materialcolor
+						VectorProperty = $col_zero_alpha
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cup1_ring_02.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\Highway\NB_Cup1_Ring_02.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_5d_red_cup_pos1
+				name = Mat_NB_5D_Red_Cup_POS1
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup1_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup1_Base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_red_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_red_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cup1_ring_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup1_Ring_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_zero_alpha
+						name = m_pspass2materialcolor
+						VectorProperty = $col_zero_alpha
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cup1_ring_02.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\Highway\NB_Cup1_Ring_02.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_5d_yellow_cup_pos2
+				name = Mat_NB_5D_Yellow_Cup_POS2
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup2_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup2_Base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_yellow_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_yellow_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cup2_ring_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup2_Ring_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_zero_alpha
+						name = m_pspass2materialcolor
+						VectorProperty = $col_zero_alpha
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cup2_ring_02.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\Highway\NB_Cup2_Ring_02.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_5d_blue_cup_pos3
+				name = Mat_NB_5D_Blue_Cup_POS3
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup3_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup3_Base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_blue_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_blue_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cup3_ring_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup3_Ring_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_zero_alpha
+						name = m_pspass2materialcolor
+						VectorProperty = $col_zero_alpha
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cup3_ring_02.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\Highway\NB_Cup3_Ring_02.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_5d_orange_cup_pos2
+				name = Mat_NB_5D_Orange_Cup_POS2
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup2_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup2_Base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_orange_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_orange_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cup2_ring_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup2_Ring_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_zero_alpha
+						name = m_pspass2materialcolor
+						VectorProperty = $col_zero_alpha
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cup2_ring_02.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\Highway\NB_Cup2_Ring_02.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_5d_green_cup_pos1
+				name = Mat_NB_5D_Green_Cup_POS1
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup1_base_01.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup1_Base_01.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_green_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_green_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cup1_ring_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup1_Ring_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_zero_alpha
+						name = m_pspass2materialcolor
+						VectorProperty = $col_zero_alpha
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cup1_ring_02.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\Highway\NB_Cup1_Ring_02.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_green_cup_dwn_pos1
+				name = Mat_NB_Green_Cup_DWN_POS1
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup1_base_02.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup1_Base_02.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_green_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_green_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cup1_ring_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup1_Ring_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_green_brite
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_green_brite
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cup1_base_glow_02.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup1_Base_GLOW_02.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_red_cup_dwn_pos2
+				name = Mat_NB_Red_Cup_DWN_POS2
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup2_base_02.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup2_Base_02.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_red_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_red_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cup2_ring_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup2_Ring_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_red_brite
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_red_brite
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cup2_base_glow_02.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup2_Base_GLOW_02.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_yellow_cup_dwn_pos3
+				name = Mat_NB_Yellow_Cup_DWN_POS3
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup3_base_02.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup3_Base_02.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_yellow_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_yellow_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cup3_ring_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup3_Ring_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_yellow_brite
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_yellow_brite
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cup3_base_glow_02.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup3_Base_GLOW_02.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_blue_cup_dwn_pos2
+				name = Mat_NB_Blue_Cup_DWN_POS2
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup2_base_02.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup2_Base_02.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_blue_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_blue_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cup2_ring_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup2_Ring_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_blue_brite
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_blue_brite
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cup2_base_glow_02.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup2_Base_GLOW_02.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_orange_cup_dwn_pos1
+				name = Mat_NB_Orange_Cup_DWN_POS1
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup1_base_02.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup1_Base_02.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_orange_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_orange_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cup1_ring_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup1_Ring_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_orange_brite
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_orange_brite
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cup1_base_glow_02.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup1_Base_GLOW_02.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_4d_red_cup_dwn_pos1
+				name = Mat_NB_4D_Red_Cup_DWN_POS1
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup1_base_02.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup1_Base_02.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_red_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_red_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cup1_ring_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup1_Ring_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_red_brite
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_red_brite
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cup1_base_glow_02.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup1_Base_GLOW_02.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_4d_yellow_cup_dwn_pos2
+				name = Mat_NB_4D_Yellow_Cup_DWN_POS2
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup2_base_02.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup2_Base_02.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_yellow_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_yellow_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cup2_ring_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup2_Ring_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_yellow_brite
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_yellow_brite
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cup2_base_glow_02.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup2_Base_GLOW_02.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_4d_blue_cup_dwn_pos2
+				name = Mat_NB_4D_Blue_Cup_DWN_POS2
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup2_base_02.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup2_Base_02.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_blue_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_blue_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cup2_ring_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup2_Ring_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_blue_brite
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_blue_brite
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cup2_base_glow_02.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup2_Base_GLOW_02.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_4d_green_cup_dwn_pos1
+				name = Mat_NB_4D_Green_Cup_DWN_POS1
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup1_base_02.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup1_Base_02.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_green_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_green_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cup1_ring_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup1_Ring_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_green_brite
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_green_brite
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cup1_base_glow_02.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup1_Base_GLOW_02.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_5d_red_cup_dwn_pos1
+				name = Mat_NB_5D_Red_Cup_DWN_POS1
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup1_base_02.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup1_Base_02.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_red_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_red_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cup1_ring_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup1_Ring_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_red_brite
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_red_brite
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cup1_base_glow_02.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup1_Base_GLOW_02.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_5d_yellow_cup_dwn_pos2
+				name = Mat_NB_5D_Yellow_Cup_DWN_POS2
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup2_base_02.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup2_Base_02.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_yellow_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_yellow_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cup2_ring_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup2_Ring_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_yellow_brite
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_yellow_brite
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cup2_base_glow_02.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup2_Base_GLOW_02.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_5d_blue_cup_dwn_pos3
+				name = Mat_NB_5D_Blue_Cup_DWN_POS3
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup3_base_02.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup3_Base_02.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_blue_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_blue_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cup3_ring_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup3_Ring_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_blue_brite
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_blue_brite
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cup3_base_glow_02.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup3_Base_GLOW_02.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_5d_orange_cup_dwn_pos2
+				name = Mat_NB_5D_Orange_Cup_DWN_POS2
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup2_base_02.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup2_Base_02.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_orange_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_orange_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cup2_ring_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup2_Ring_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_orange_brite
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_orange_brite
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cup2_base_glow_02.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup2_Base_GLOW_02.dds`
 					}
 				]
 			}
 			{
-				Name = mat_nb_5d_green_cup_dwn_pos1
+				name = Mat_NB_5D_Green_Cup_DWN_POS1
 				MaterialProps = [
 					{
-						Name = m_psPass0MaterialColor
-						vectorproperty = $col_white
+						name = m_psPass0MaterialColor
+						VectorProperty = $col_white
 					}
 					{
-						Name = m_samppass0diffuse
-						textureproperty = `tex\models\highway\nb_cup1_base_02.dds`
+						name = m_sampPass0Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup1_Base_02.dds`
 					}
 					{
-						Name = m_pspass1materialcolor
-						vectorproperty = $col_now_green_dark
+						name = m_pspass1materialcolor
+						VectorProperty = $col_now_green_dark
 					}
 					{
-						Name = m_samppass1diffuse
-						textureproperty = `tex\models\highway\nb_cup1_ring_01.dds`
+						name = m_sampPass1Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup1_Ring_01.dds`
 					}
 					{
-						Name = m_pspass2materialcolor
-						vectorproperty = $col_now_green_brite
+						name = m_pspass2materialcolor
+						VectorProperty = $col_now_green_brite
 					}
 					{
-						Name = m_samppass2diffuse
-						textureproperty = `tex\models\highway\nb_cup1_base_glow_02.dds`
+						name = m_sampPass2Diffuse
+						TextureProperty = `tex\models\highway\NB_Cup1_Base_GLOW_02.dds`
 					}
 				]
 			}
@@ -9598,11 +9598,11 @@ g_optimized_create_materials_from_list = 1
 
 script create_materials_from_list 
 	if IsTrue \{$g_optimized_create_materials_from_list}
-		creatematerialsfromlist_cfunc materials = <materials>
+		CreateMaterialsFromList_CFunc materials = <materials>
 		return
 	endif
 	GetArraySize $<materials>
-	<material_array_size> = <array_Size>
+	<material_array_size> = <array_size>
 	<index> = 0
 	if (<material_array_size> > 0)
 		begin
@@ -9610,14 +9610,14 @@ script create_materials_from_list
 		<props> = ($<materials> [<index>].base_props)
 		<list> = ($<materials> [<index>].list)
 		GetArraySize <list>
-		<list_array_size> = <array_Size>
+		<list_array_size> = <array_size>
 		<item> = 0
 		begin
 		<prop> = (<list> [<item>])
-		Change material_props = (<props> + (<prop>.MaterialProps))
-		AddParam structure_name = material Name = Name value = (<prop>.Name)
-		printf qs(0xd1f787aa) a = (<prop>.Name)
-		creatematerial {<material>}
+		change material_props = (<props> + (<prop>.MaterialProps))
+		AddParam structure_name = material name = name value = (<prop>.name)
+		printf qs("\LCreating material: %a") a = (<prop>.name)
+		CreateMaterial {<material>}
 		<item> = (<item> + 1)
 		repeat <list_array_size>
 		<index> = (<index> + 1)
@@ -9627,7 +9627,7 @@ endscript
 
 script destroy_materials_from_list 
 	GetArraySize $<materials>
-	<material_array_size> = <array_Size>
+	<material_array_size> = <array_size>
 	<index> = 0
 	if (<material_array_size> > 0)
 		begin
@@ -9635,12 +9635,12 @@ script destroy_materials_from_list
 		<props> = ($<materials> [<index>].base_props)
 		<list> = ($<materials> [<index>].list)
 		GetArraySize <list>
-		<list_array_size> = <array_Size>
+		<list_array_size> = <array_size>
 		<item> = 0
 		begin
 		<prop> = (<list> [<item>])
-		printf qs(0x7f297553) a = (<prop>.Name)
-		destroymaterial Name = (<prop>.Name)
+		printf qs("\LDestroying material: %a") a = (<prop>.name)
+		DestroyMaterial name = (<prop>.name)
 		<item> = (<item> + 1)
 		repeat <list_array_size>
 		<index> = (<index> + 1)
@@ -9649,7 +9649,7 @@ script destroy_materials_from_list
 endscript
 
 script create_in_game_materials 
-	SpawnScriptNow create_in_game_materials_spawned params = {<...>}
+	spawnscriptnow create_in_game_materials_spawned params = {<...>}
 endscript
 
 script create_in_game_materials_spawned 
@@ -9661,37 +9661,37 @@ script create_in_game_materials_spawned
 	index = 0
 	begin
 	<element> = ($<array> [<index>].element)
-	<Color> = ($<array> [<index>].Color)
-	SetArrayElement ArrayName = <element> globalarray index = 0 NewValue = (<Color> [0])
-	SetArrayElement ArrayName = <element> globalarray index = 1 NewValue = (<Color> [1])
-	SetArrayElement ArrayName = <element> globalarray index = 2 NewValue = (<Color> [2])
-	SetArrayElement ArrayName = <element> globalarray index = 3 NewValue = (<Color> [3])
+	<color> = ($<array> [<index>].color)
+	SetArrayElement ArrayName = <element> GlobalArray index = 0 newvalue = (<color> [0])
+	SetArrayElement ArrayName = <element> GlobalArray index = 1 newvalue = (<color> [1])
+	SetArrayElement ArrayName = <element> GlobalArray index = 2 newvalue = (<color> [2])
+	SetArrayElement ArrayName = <element> GlobalArray index = 3 newvalue = (<color> [3])
 	<index> = (<index> + 1)
-	repeat <array_Size>
-	array = <fx_set>
+	repeat <array_size>
+	array = <FX_Set>
 	GetArraySize $<array>
 	index = 0
 	begin
 	<element> = ($<array> [<index>].element)
-	<Color> = ($<array> [<index>].Color)
-	SetArrayElement ArrayName = <element> globalarray index = 0 NewValue = (<Color> [0])
-	SetArrayElement ArrayName = <element> globalarray index = 1 NewValue = (<Color> [1])
-	SetArrayElement ArrayName = <element> globalarray index = 2 NewValue = (<Color> [2])
-	SetArrayElement ArrayName = <element> globalarray index = 3 NewValue = (<Color> [3])
+	<color> = ($<array> [<index>].color)
+	SetArrayElement ArrayName = <element> GlobalArray index = 0 newvalue = (<color> [0])
+	SetArrayElement ArrayName = <element> GlobalArray index = 1 newvalue = (<color> [1])
+	SetArrayElement ArrayName = <element> GlobalArray index = 2 newvalue = (<color> [2])
+	SetArrayElement ArrayName = <element> GlobalArray index = 3 newvalue = (<color> [3])
 	<index> = (<index> + 1)
-	repeat <array_Size>
-	array = <star_set>
+	repeat <array_size>
+	array = <Star_Set>
 	GetArraySize $<array>
 	index = 0
 	begin
 	<element> = ($<array> [<index>].element)
-	<Color> = ($<array> [<index>].Color)
-	SetArrayElement ArrayName = <element> globalarray index = 0 NewValue = (<Color> [0])
-	SetArrayElement ArrayName = <element> globalarray index = 1 NewValue = (<Color> [1])
-	SetArrayElement ArrayName = <element> globalarray index = 2 NewValue = (<Color> [2])
-	SetArrayElement ArrayName = <element> globalarray index = 3 NewValue = (<Color> [3])
+	<color> = ($<array> [<index>].color)
+	SetArrayElement ArrayName = <element> GlobalArray index = 0 newvalue = (<color> [0])
+	SetArrayElement ArrayName = <element> GlobalArray index = 1 newvalue = (<color> [1])
+	SetArrayElement ArrayName = <element> GlobalArray index = 2 newvalue = (<color> [2])
+	SetArrayElement ArrayName = <element> GlobalArray index = 3 newvalue = (<color> [3])
 	<index> = (<index> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	create_materials_from_list \{materials = ingame_materials}
 endscript
 
@@ -9708,42 +9708,42 @@ script destroy_global_materials
 	destroy_materials_from_list \{materials = global_materials}
 endscript
 
-script create_highway_material \{Player = 1
+script create_highway_material \{player = 1
 		texture = blah}
-	destroy_highway_material Player = <Player>
-	formatText checksumName = material_name 'Material_Highway_p%p' p = <Player>
-	creatematerial {
-		Name = <material_name>
-		template = highway_ui
-		technique = ui_col_tex_2d
-		BlendMode = blend
+	destroy_highway_material player = <player>
+	FormatText checksumname = material_name 'Material_Highway_p%p' p = <player>
+	CreateMaterial {
+		name = <material_name>
+		Template = Highway_UI
+		technique = UI_Col_Tex_2D
+		blendMode = blend
 		MaterialProps = [
-			{Name = m_psPass0MaterialColor vectorproperty = [1.0 1.0 1.0 1.0]}
-			{Name = m_tiling vectorproperty = [3.0 0.0 0.0 0.0]}
-			{Name = m_amplitudev vectorproperty = [0.0 0.0 0.0 0.0]}
-			{Name = m_phaseu vectorproperty = [0.0 0.0 0.0 0.0]}
-			{Name = m_frequencyu vectorproperty = [0.0 0.0 0.0 0.0]}
-			{Name = m_widthperspfactor vectorproperty = [2.2 0.0 0.0 0.0]}
-			{Name = m_samppass0diffuse textureproperty = <texture>}
-			{Name = m_velocityV vectorproperty = [0.0 0.0 0.0 0.0]}
-			{Name = m_tesselation vectorproperty = [1.0 0.0 0.0 0.0]}
-			{Name = m_numframes vectorproperty = [128.0 0.0 0.0 0.0]}
-			{Name = m_amplitudeu vectorproperty = [0.0 0.0 0.0 0.0]}
-			{Name = m_startFade vectorproperty = [0.0 0.0 0.0 0.0]}
-			{Name = m_additivecolor vectorproperty = [0.0 0.0 0.0 0.0]}
-			{Name = m_phasev vectorproperty = [0.0 0.0 0.0 0.0]}
-			{Name = m_endFade vectorproperty = [0.0 0.0 0.0 0.0]}
-			{Name = m_frequencyv vectorproperty = [0.0 0.0 0.0 0.0]}
-			{Name = m_playerIndex vectorproperty = [1.0 0.0 0.0 0.0]}
-			{Name = m_heightperspfactor vectorproperty = [1.0 0.0 0.0 0.0]}
-			{Name = m_heightperspexp vectorproperty = [1.0 0.0 0.0 0.0]}
-			{Name = m_velocityu vectorproperty = [0.0 0.0 0.0 0.0]}
+			{name = m_psPass0MaterialColor VectorProperty = [1.0 1.0 1.0 1.0]}
+			{name = m_tiling VectorProperty = [3.0 0.0 0.0 0.0]}
+			{name = m_amplitudeV VectorProperty = [0.0 0.0 0.0 0.0]}
+			{name = m_phaseU VectorProperty = [0.0 0.0 0.0 0.0]}
+			{name = m_frequencyU VectorProperty = [0.0 0.0 0.0 0.0]}
+			{name = m_widthPerspFactor VectorProperty = [2.2 0.0 0.0 0.0]}
+			{name = m_sampPass0Diffuse TextureProperty = <texture>}
+			{name = m_velocityV VectorProperty = [0.0 0.0 0.0 0.0]}
+			{name = m_tesselation VectorProperty = [1.0 0.0 0.0 0.0]}
+			{name = m_numFrames VectorProperty = [128.0 0.0 0.0 0.0]}
+			{name = m_amplitudeU VectorProperty = [0.0 0.0 0.0 0.0]}
+			{name = m_startFade VectorProperty = [0.0 0.0 0.0 0.0]}
+			{name = m_additiveColor VectorProperty = [0.0 0.0 0.0 0.0]}
+			{name = m_phaseV VectorProperty = [0.0 0.0 0.0 0.0]}
+			{name = m_endFade VectorProperty = [0.0 0.0 0.0 0.0]}
+			{name = m_frequencyV VectorProperty = [0.0 0.0 0.0 0.0]}
+			{name = m_playerIndex VectorProperty = [1.0 0.0 0.0 0.0]}
+			{name = m_heightPerspFactor VectorProperty = [1.0 0.0 0.0 0.0]}
+			{name = m_heightPerspExp VectorProperty = [1.0 0.0 0.0 0.0]}
+			{name = m_velocityU VectorProperty = [0.0 0.0 0.0 0.0]}
 		]
 	}
 	return highway_material = <material_name>
 endscript
 
-script destroy_highway_material \{Player = 1}
-	formatText checksumName = material_name 'Material_Highway_p%p' p = <Player>
-	destroymaterial Name = <material_name>
+script destroy_highway_material \{player = 1}
+	FormatText checksumname = material_name 'Material_Highway_p%p' p = <player>
+	DestroyMaterial name = <material_name>
 endscript

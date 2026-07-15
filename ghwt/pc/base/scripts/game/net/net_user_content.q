@@ -162,13 +162,13 @@ net_user_content_banned_users_board = user_content_banned_users
 net_user_content_uid_to_gamertag_board = user_content_uid_to_gamertag
 net_user_content_genre_lookup_struct = {
 	alternative = 'alternative'
-	pop = 'pop'
+	Pop = 'pop'
 	experimental = 'experimental'
 	hip_hop = 'hip_hop'
-	rock = 'rock'
+	Rock = 'rock'
 	metal = 'metal'
 	electronic = 'electronic'
-	other = 'other'
+	Other = 'other'
 }
 net_user_content_super_user_list = [
 	[
@@ -186,15 +186,15 @@ net_user_content_super_user_list = [
 ]
 
 script is_super_user 
-	if ($cheat_superuser = 1)
-		netsessionfunc func = get_user_id params = {controller_index = <controller>}
-		getarraysize ($net_user_content_super_user_list)
+	if ($Cheat_SuperUser = 1)
+		NetSessionFunc func = get_user_id params = {controller_index = <controller>}
+		GetArraySize ($net_user_content_super_user_list)
 		index = 0
 		begin
 		curr_user_id = ($net_user_content_super_user_list [<index>])
 		if (<curr_user_id> [0] = <user_id> [0] && <curr_user_id> [1] = <user_id> [1])
 			printf \{channel = jam_mode
-				qs(0xd6e13a78)}
+				qs("\LSUPER USER VALID")}
 			return \{true}
 		endif
 		<index> = (<index> + 1)
@@ -204,49 +204,49 @@ script is_super_user
 endscript
 
 script net_user_content_get_write_leaderboards 
-	requireparams \{[
+	RequireParams \{[
 			genre
 		]
 		all}
 	array = []
-	getarraysize \{$net_user_content_leaderboards}
+	GetArraySize \{$net_user_content_leaderboards}
 	genre_board_name = nullchecksum
-	formattext checksumname = genre_board_name 'user_content_%d' d = ($net_user_content_genre_lookup_struct.<genre>)
+	FormatText checksumname = genre_board_name 'user_content_%d' d = ($net_user_content_genre_lookup_struct.<genre>)
 	got_genre = 0
 	i = 0
 	begin
-	if NOT structurecontains structure = ($net_user_content_leaderboards [<i>]) do_not_write
+	if NOT StructureContains Structure = ($net_user_content_leaderboards [<i>]) do_not_write
 		if (<download_rerate> = 0)
 			if ($net_user_content_leaderboards [<i>].genre = 0)
 				if (<remove_list> = 1)
-					if NOT structurecontains structure = ($net_user_content_leaderboards [<i>]) do_not_remove
-						addarrayelement array = <array> element = ($net_user_content_leaderboards [<i>])
+					if NOT StructureContains Structure = ($net_user_content_leaderboards [<i>]) do_not_remove
+						AddArrayElement array = <array> element = ($net_user_content_leaderboards [<i>])
 					endif
 				else
-					addarrayelement array = <array> element = ($net_user_content_leaderboards [<i>])
+					AddArrayElement array = <array> element = ($net_user_content_leaderboards [<i>])
 				endif
 			else
-				if checksumequals a = <genre_board_name> b = ($net_user_content_leaderboards [<i>].checksum)
-					addarrayelement array = <array> element = ($net_user_content_leaderboards [<i>])
+				if ChecksumEquals a = <genre_board_name> b = ($net_user_content_leaderboards [<i>].checksum)
+					AddArrayElement array = <array> element = ($net_user_content_leaderboards [<i>])
 					got_genre = 1
 				endif
 			endif
 		else
 			if ($net_user_content_leaderboards [<i>].download_rerate = 1)
-				addarrayelement array = <array> element = ($net_user_content_leaderboards [<i>])
+				AddArrayElement array = <array> element = ($net_user_content_leaderboards [<i>])
 			endif
 		endif
 	endif
 	i = (<i> + 1)
 	repeat <array_size>
 	if (<got_genre> = 1)
-		printf \{qs(0xc8ad4543)}
+		printf \{qs("\LWARNING! Did not find genre for leaderboard write!")}
 	endif
 	return leaderboard_array = <array>
 endscript
 
 script net_user_content_standard_rate_function 
-	requireparams \{[
+	RequireParams \{[
 			vote0
 			vote1
 			vote2
@@ -267,6 +267,6 @@ script net_user_content_standard_rate_function
 	endif
 	stars = (($net_user_content_ratings_average * $net_user_content_weighting_factor + <total_votes> * <unadjusted_rating>) / ($net_user_content_weighting_factor + <total_votes> * 1.0))
 	rating = (<stars> * $net_user_content_stars_to_rating_conversion)
-	casttointeger \{rating}
+	CastToInteger \{rating}
 	return rating = <rating> stars = <stars>
 endscript

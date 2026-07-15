@@ -60,10 +60,10 @@ script difficulty_setup
 		scroll_time_factor = ($p2_scroll_time_factor)
 		game_speed_factor = ($p2_game_speed_factor)
 	endif
-	if ($cheat_hyperspeed > 0)
+	if ($Cheat_Hyperspeed > 0)
 		if NOT ($is_network_game)
 			hyperspeed_scale = -1
-			switch $cheat_hyperspeed
+			switch $Cheat_Hyperspeed
 				case 1
 				<hyperspeed_scale> = 0.88
 				case 2
@@ -81,7 +81,7 @@ script difficulty_setup
 			endif
 		endif
 	endif
-	addparams ($difficulty_list_props.<difficulty>)
+	AddParams ($difficulty_list_props.<difficulty>)
 	change structurename = <player_status> scroll_time = (<scroll_time> * <scroll_time_factor>)
 	change structurename = <player_status> game_speed = (<game_speed> * <game_speed_factor>)
 endscript

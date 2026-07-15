@@ -1,4 +1,4 @@
-skylinks = {
+SkyLinks = {
 	default_sky = {
 		name = 'default_sky'
 	}

@@ -7,7 +7,7 @@ script find_unlocked_guitar_info_by_id
 		return icon_texture = ($Secret_Guitars [<i>].icon_texture)
 	endif
 	<i> = (<i> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	GetArraySize ($Secret_Basses)
 	i = 0
 	begin
@@ -15,26 +15,26 @@ script find_unlocked_guitar_info_by_id
 		return icon_texture = ($Secret_Basses [<i>].icon_texture)
 	endif
 	<i> = (<i> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 endscript
 
 script create_unlock_menu 
-	CreateScreenElement \{Type = ContainerElement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = unlock_container
-		Pos = (0.0, 0.0)}
+		pos = (0.0, 0.0)}
 	find_unlocked_guitar_info_by_id id = ($progression_unlocked_guitar)
 	get_instrument_name_and_index id = ($progression_unlocked_guitar)
-	Change progression_unlocked_guitar = ($progression_unlocked_guitar2)
-	Change \{progression_unlocked_guitar2 = -1}
+	change progression_unlocked_guitar = ($progression_unlocked_guitar2)
+	change \{progression_unlocked_guitar2 = -1}
 	unlock_item_tex = <icon_texture>
 	GetUpperCaseString <instrument_name>
-	unlock_item_name = <UppercaseString>
+	unlock_item_name = <UpperCaseString>
 	unlock_font = fontgrid_text_a8
 	padlock_pos_start = (850.0, 430.0)
 	padlock_pos_end = (850.0, 412.0)
 	create_menu_backdrop \{texture = reward_unlock_bg}
-	CreateScreenElement \{Type = SpriteElement
+	CreateScreenElement \{type = SpriteElement
 		id = unlock_velvet_backdrop
 		parent = unlock_container
 		texture = reward_unlock_velvet
@@ -44,7 +44,7 @@ script create_unlock_menu
 			255
 			255
 		]
-		Pos = (640.0, 320.0)
+		pos = (640.0, 320.0)
 		dims = (865.0, 420.0)
 		just = [
 			center
@@ -52,18 +52,18 @@ script create_unlock_menu
 		]
 		z_priority = -0.1}
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		id = unlock_item
 		parent = unlock_container
 		texture = <unlock_item_tex>
 		rgba = [255 255 255 255]
-		Pos = (640.0, 330.0)
+		pos = (640.0, 330.0)
 		dims = (650.0, 325.0)
 		just = [center center]
 	}
 	RunScriptOnScreenElement \{id = unlock_item
 		unlock_guitar_hover}
-	CreateScreenElement \{Type = SpriteElement
+	CreateScreenElement \{type = SpriteElement
 		id = unlock_dialog_backdrop
 		parent = unlock_container
 		texture = reward_unlock_dlogbg
@@ -73,26 +73,26 @@ script create_unlock_menu
 			255
 			255
 		]
-		Pos = (850.0, 550.0)
+		pos = (850.0, 550.0)
 		just = [
 			center
 			center
 		]}
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		id = unlock_dialog_padlock
 		parent = unlock_container
 		texture = reward_unlock_padlock
 		rgba = [255 255 255 255]
-		Pos = <padlock_pos_start>
+		pos = <padlock_pos_start>
 		just = [center center]
 	}
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		id = unlock_text_congrats
 		parent = unlock_container
-		Scale = (1.0, 1.0)
-		text = qs(0x987236f1)
+		scale = (1.0, 1.0)
+		text = qs("CONGRATULATIONS!")
 		font_spacing = 0
 		font = <unlock_font>
 		rgba = [128 128 128 255]
@@ -101,13 +101,13 @@ script create_unlock_menu
 	}
 	fit_text_in_rectangle \{id = unlock_text_congrats
 		dims = (350.0, 32.0)
-		Pos = (680.0, 483.0)}
+		pos = (680.0, 483.0)}
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		id = unlock_text_buyitinthestore
 		parent = unlock_container
-		Scale = (1.0, 1.0)
-		text = qs(0x320fe855)
+		scale = (1.0, 1.0)
+		text = qs("BUY IT IN THE STORE")
 		font_spacing = 0
 		font = <unlock_font>
 		rgba = [128 128 128 255]
@@ -116,14 +116,14 @@ script create_unlock_menu
 	}
 	fit_text_in_rectangle \{id = unlock_text_buyitinthestore
 		dims = (350.0, 32.0)
-		Pos = (680.0, 555.0)}
+		pos = (680.0, 555.0)}
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		id = unlock_text_name
 		parent = unlock_container
-		Scale = (1.0, 1.0)
+		scale = (1.0, 1.0)
 		text = <unlock_item_name>
-		Pos = (850.0, 505.0)
+		pos = (850.0, 505.0)
 		font_spacing = 0
 		font = <unlock_font>
 		rgba = [128 32 32 255]
@@ -133,13 +133,13 @@ script create_unlock_menu
 	fit_text_in_rectangle \{id = unlock_text_name
 		only_if_larger_x = 1
 		dims = (345.0, 64.0)
-		Pos = (850.0, 497.0)}
+		pos = (850.0, 497.0)}
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = unlock_container
 		id = continue_button
-		Scale = 0.8
-		Pos = (400.0, 590.0)
+		scale = 0.8
+		pos = (400.0, 590.0)
 		font = <unlock_font>
 		rgba = [223 223 223 255]
 		just = [left top]
@@ -149,27 +149,27 @@ script create_unlock_menu
 		]
 	}
 	Wait \{2
-		Seconds}
-	legacydoscreenelementmorph id = unlock_dialog_padlock Pos = <padlock_pos_end> time = 0.1 motion = ease_in
+		seconds}
+	LegacyDoScreenElementMorph id = unlock_dialog_padlock pos = <padlock_pos_end> time = 0.1 motion = ease_in
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		id = unlock_dialog_starburst
 		parent = unlock_container
 		texture = reward_unlock_starburst
 		rgba = [255 255 255 255]
-		Pos = <padlock_pos_end>
+		pos = <padlock_pos_end>
 		just = [center center]
 		z_priority = 3.1
-		Scale = 0.1
+		scale = 0.1
 		alpha = 1
 	}
 	rot = 180
-	Scale = 5
+	scale = 5
 	alpha = 0.0
-	legacydoscreenelementmorph id = unlock_dialog_starburst rot_angle = <rot> Scale = <Scale> alpha = <alpha> Pos = <padlock_pos_end> time = 0.7 motion = ease_out
-	LaunchEvent \{Type = focus
+	LegacyDoScreenElementMorph id = unlock_dialog_starburst rot_angle = <rot> scale = <scale> alpha = <alpha> pos = <padlock_pos_end> time = 0.7 motion = ease_out
+	LaunchEvent \{type = focus
 		target = continue_button}
-	CreateScreenElement \{Type = SpriteElement
+	CreateScreenElement \{type = SpriteElement
 		id = unlock_twinkle_1
 		parent = unlock_container
 		texture = reward_unlock_starburst
@@ -179,17 +179,17 @@ script create_unlock_menu
 			255
 			255
 		]
-		Pos = (350.0, 350.0)
+		pos = (350.0, 350.0)
 		just = [
 			center
 			center
 		]
 		z_priority = 0
-		Scale = 0.5
+		scale = 0.5
 		alpha = 0}
 	RunScriptOnScreenElement \{id = unlock_twinkle_1
 		unlock_twinkle_anim}
-	add_user_control_helper \{text = qs(0x182f0173)
+	add_user_control_helper \{text = qs("CONTINUE")
 		button = green
 		z = 10000}
 endscript
@@ -199,28 +199,28 @@ script unlock_guitar_hover
 		return
 	endif
 	begin
-	unlock_item :legacydomorph \{Pos = {
+	unlock_item :LegacyDoMorph \{pos = {
 			(0.0, -5.0)
 			relative
 		}
 		rot_angle = 0
 		motion = ease_out
 		time = 1}
-	unlock_item :legacydomorph \{Pos = {
+	unlock_item :LegacyDoMorph \{pos = {
 			(0.0, 5.0)
 			relative
 		}
 		rot_angle = 1
 		motion = ease_in
 		time = 1}
-	unlock_item :legacydomorph \{Pos = {
+	unlock_item :LegacyDoMorph \{pos = {
 			(0.0, -5.0)
 			relative
 		}
 		rot_angle = 2
 		motion = ease_out
 		time = 1}
-	unlock_item :legacydomorph \{Pos = {
+	unlock_item :LegacyDoMorph \{pos = {
 			(0.0, 5.0)
 			relative
 		}
@@ -235,25 +235,25 @@ script unlock_twinkle_anim
 		return
 	endif
 	twinkle_time = 0.3
-	printf \{qs(0xde14d0d7)}
+	printf \{qs("\Ltwinkling!")}
 	begin
-	unlock_twinkle_1 :legacydomorph \{Pos = (350.0, 400.0)
-		Scale = 0
+	unlock_twinkle_1 :LegacyDoMorph \{pos = (350.0, 400.0)
+		scale = 0
 		alpha = 0.5
 		rot_angle = 0}
-	unlock_twinkle_1 :legacydomorph rot_angle = -180 Scale = 1 alpha = 0 motion = ease_out time = <twinkle_time>
-	unlock_twinkle_1 :legacydomorph \{Pos = (600.0, 200.0)
-		Scale = 0
+	unlock_twinkle_1 :LegacyDoMorph rot_angle = -180 scale = 1 alpha = 0 motion = ease_out time = <twinkle_time>
+	unlock_twinkle_1 :LegacyDoMorph \{pos = (600.0, 200.0)
+		scale = 0
 		alpha = 0.5
 		rot_angle = 0}
-	unlock_twinkle_1 :legacydomorph rot_angle = -180 Scale = 1 alpha = 0 motion = ease_out time = <twinkle_time>
-	unlock_twinkle_1 :legacydomorph \{Pos = (900.0, 250.0)
-		Scale = 0
+	unlock_twinkle_1 :LegacyDoMorph rot_angle = -180 scale = 1 alpha = 0 motion = ease_out time = <twinkle_time>
+	unlock_twinkle_1 :LegacyDoMorph \{pos = (900.0, 250.0)
+		scale = 0
 		alpha = 0.5
 		rot_angle = 0}
-	unlock_twinkle_1 :legacydomorph rot_angle = -180 Scale = 1 alpha = 0 motion = ease_out time = <twinkle_time>
+	unlock_twinkle_1 :LegacyDoMorph rot_angle = -180 scale = 1 alpha = 0 motion = ease_out time = <twinkle_time>
 	Wait \{3
-		Seconds}
+		seconds}
 	repeat
 endscript
 

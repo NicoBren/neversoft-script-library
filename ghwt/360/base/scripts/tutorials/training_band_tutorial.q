@@ -73,18 +73,18 @@ training_band_tutorial_script = [
 ]
 
 script training_band_tutorial_startup 
-	printf \{qs(0xaae3f9b5)}
+	printf \{qs("\Lstarting training_band_tutorial_startup")}
 	training_init_session
-	LaunchEvent \{Type = unfocus
+	LaunchEvent \{type = unfocus
 		target = root_window}
 	create_training_pause_handler
 	training_create_narrator_icons
 endscript
 
 script training_band_tutorial_show_title 
-	Change \{g_training_lessons_completed = 0}
-	printf \{qs(0x95219d18)}
-	training_show_title \{title = qs(0xab248876)}
+	change \{g_training_lessons_completed = 0}
+	printf \{qs("\Lstarting training_band_tutorial_show_title")}
+	training_show_title \{title = qs("Band Mode Tutorial")}
 	begin
 	if ($transitions_locked = 0)
 		break
@@ -94,44 +94,44 @@ script training_band_tutorial_show_title
 	repeat
 	create_training_pause_handler
 	Wait \{3
-		Seconds}
+		seconds}
 	training_destroy_title
 endscript
 
 script training_6_1_show_lesson_header 
-	printf \{qs(0x04db6b22)}
-	training_set_lesson_header_text \{number = qs(0x22ee76e7)
-		text = qs(0x80328de0)}
+	printf \{qs("\Lstarting training_6_1_show_lesson_header")}
+	training_set_lesson_header_text \{number = qs("\L1")
+		text = qs("Introduction to Band Play")}
 	training_show_lesson_header
 	create_training_pause_handler
 	training_show_narrator \{narrator = 'bassist'}
 	training_play_sound \{Sound = 'Tut_Band_Intro_01_BAS'
 		Wait}
 	Wait \{0.25
-		Seconds}
+		seconds}
 	training_play_sound \{Sound = 'Tut_Band_Intro_02_BAS'
 		Wait}
 	training_hide_narrator
 endscript
 
 script training_6_1_complete_message 
-	printf \{qs(0xd0cfce15)}
+	printf \{qs("\Lstarting training_6_1_complete_message")}
 	training_generic_lesson_complete
 endscript
 
 script training_6_2_show_lesson_header 
-	printf \{qs(0x2e67dbaa)}
-	training_set_lesson_header_text \{number = qs(0x09c32524)
-		text = qs(0x9a21156c)}
+	printf \{qs("\Lstarting training_6_2_show_lesson_header")}
+	training_set_lesson_header_text \{number = qs("\L2")
+		text = qs("Playing as a Band")}
 	training_show_lesson_header
 	create_training_pause_handler
 endscript
 
 script training_6_2_show_instruments 
-	printf \{qs(0x31bac6ed)}
+	printf \{qs("\Lstarting training_6_2_show_instruments")}
 	create_training_pause_handler
 	if ScreenElementExists \{id = menu_tutorial}
-		LaunchEvent \{Type = unfocus
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif
@@ -145,43 +145,43 @@ script training_6_2_show_instruments
 		use_backdrop = 0
 		event_handlers = <event_handlers>
 	}
-	LaunchEvent \{Type = focus
+	LaunchEvent \{type = focus
 		target = menu_tutorial}
 	CreateScreenElement \{parent = menu_tutorial
 		id = training_instrument_select_hub
-		Type = descinterface
+		type = DescInterface
 		desc = 'band_play'}
-	training_instrument_select_hub :se_getprops
-	if training_instrument_select_hub :desc_resolvealias \{Name = alias_hmenu}
+	training_instrument_select_hub :SE_GetProps
+	if training_instrument_select_hub :Desc_ResolveAlias \{name = alias_hmenu}
 		band_hmenu = <resolved_id>
 	endif
 	menu_array = []
 	desc_array = []
 	i = 0
 	begin
-	ResolveScreenElementID id = [
+	ResolveScreenElementId id = [
 		{id = <band_hmenu>}
 		{index = <i>}
 	]
 	AddArrayElement array = <desc_array> element = <resolved_id>
 	desc_array = <array>
-	<resolved_id> :desc_resolvealias Name = alias_menu
+	<resolved_id> :Desc_ResolveAlias name = alias_menu
 	if ScreenElementExists id = <resolved_id>
-		allowed = {guitar bass drum vocals}
+		allowed = {guitar Bass drum Vocals}
 		<resolved_id> :SetTags {
 			menu = instrument
-			instrument = None
-			difficulty = None
+			instrument = none
+			difficulty = none
 			controller = <i>
 			allowed = <allowed>
 			index = <i>
 		}
 		DestroyScreenElement id = <resolved_id> preserve_parent
-		LaunchEvent Type = focus target = <resolved_id> data = {child_index = 0}
+		LaunchEvent type = focus target = <resolved_id> data = {child_index = 0}
 		text_params = {
-			Type = TextBlockElement
-			fit_width = `scale	each	line	if	larger`
-			fit_height = `scale	down	if	larger`
+			type = TextBlockElement
+			fit_width = `scale each line if larger`
+			fit_height = `scale down if larger`
 			parent = <resolved_id>
 			event_handlers = [
 				{focus retail_menu_focus}
@@ -196,25 +196,25 @@ script training_6_2_show_instruments
 		}
 		CreateScreenElement {
 			<text_params>
-			text = qs(0x9504b94a)
+			text = qs("GUITAR")
 		}
 		CreateScreenElement {
 			<text_params>
-			text = qs(0x7d4f9214)
+			text = qs("BASS")
 		}
 		CreateScreenElement {
 			<text_params>
-			text = qs(0x388cd3db)
+			text = qs("DRUMS")
 		}
 		CreateScreenElement {
 			<text_params>
-			text = qs(0x1b9f6f84)
+			text = qs("VOCALS")
 		}
 		AddArrayElement array = <menu_array> element = <resolved_id>
 		menu_array = <array>
 		if (<i> > 0)
 			begin
-			LaunchEvent Type = pad_down target = <resolved_id>
+			LaunchEvent type = pad_down target = <resolved_id>
 			repeat <i>
 		endif
 	endif
@@ -232,11 +232,11 @@ script training_6_2_show_instruments
 endscript
 
 script training_6_2_show_highway 
-	printf \{qs(0x1c3cf369)}
-	setplayerinfo \{2
+	printf \{qs("\Lstarting training_6_2_show_highway")}
+	SetPlayerInfo \{2
 		four_lane_highway = 0}
 	training_start_gem_scroller \{players = 4
-		song = tut_demo
+		song = Tut_Demo
 		bot_array = [
 			1
 			1
@@ -244,192 +244,192 @@ script training_6_2_show_highway
 			1
 		]}
 	if ScreenElementExists \{id = menu_tutorial}
-		LaunchEvent \{Type = unfocus
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif
 	create_training_pause_handler
-	Change \{structurename = band1_status
+	change \{structurename = band1_status
 		score = 3141975}
 	training_wait_for_gem_scroller_startup
 endscript
 
 script training_6_2_show_items_on_highway 
-	printf \{qs(0x71e0d9db)}
+	printf \{qs("\Lstarting training_6_2_show_items_on_highway")}
 	create_training_pause_handler
 	Wait \{3.6
-		Seconds
+		seconds
 		ignoreslomo}
 	training_pause_gem_scroller
 	training_play_sound \{Sound = 'Tut_Band_Star_01_BAS'}
 	Wait \{2
-		Seconds
+		seconds
 		ignoreslomo}
 	training_add_arrow \{id = training_arrow2
 		life = 2
-		Pos = (640.0, 120.0)
-		Scale = 0.7
+		pos = (640.0, 120.0)
+		scale = 0.7
 		rot = 180}
 	Wait \{2
-		Seconds
+		seconds
 		ignoreslomo}
 	training_add_arrow \{id = training_arrow2
 		life = 2
-		Pos = (235.0, 360.0)
-		Scale = 0.7}
+		pos = (235.0, 360.0)
+		scale = 0.7}
 	training_add_arrow \{id = training_arrow2
 		life = 2
-		Pos = (1045.0, 360.0)
-		Scale = 0.7}
+		pos = (1045.0, 360.0)
+		scale = 0.7}
 	training_add_arrow \{id = training_arrow2
 		life = 2
-		Pos = (640.0, 360.0)
-		Scale = 0.7}
+		pos = (640.0, 360.0)
+		scale = 0.7}
 	Wait \{3
-		Seconds
+		seconds
 		ignoreslomo}
 	training_destroy_all_arrows
 endscript
 
 script training_6_2_spawn_meter_changing 
-	printf \{qs(0xc0dd28fb)}
+	printf \{qs("\Lstarting training_6_2_spawn_meter_changing")}
 	training_add_arrow \{id = training_arrow2
 		life = 4
-		Pos = (275.0, 100.0)
-		Scale = 0.7
+		pos = (275.0, 100.0)
+		scale = 0.7
 		rot = 90}
 	Wait \{9
-		Seconds
+		seconds
 		ignoreslomo}
 	Wait \{2
-		Seconds
+		seconds
 		ignoreslomo}
-	KillSpawnedScript \{Name = training_set_health}
-	SpawnScriptNow \{training_set_health
+	KillSpawnedScript \{name = training_set_health}
+	spawnscriptnow \{training_set_health
 		params = {
 			health = 1.6
 		}
 		id = training_spawned_script}
 	Wait \{2
-		Seconds
+		seconds
 		ignoreslomo}
-	KillSpawnedScript \{Name = training_set_health}
-	SpawnScriptNow \{training_set_health
+	KillSpawnedScript \{name = training_set_health}
+	spawnscriptnow \{training_set_health
 		params = {
 			health = 0.4
 		}
 		id = training_spawned_script}
 	Wait \{2
-		Seconds
+		seconds
 		ignoreslomo}
-	training_start_hud_flashing_red
+	training_start_HUD_flashing_red
 endscript
 
 script training_6_2_show_bands_rock_meter_and_demo 
-	printf \{qs(0x2a61bac4)}
+	printf \{qs("\Lstarting training_6_2_show_bands_rock_meter_and_demo")}
 	create_training_pause_handler
-	SpawnScriptNow \{training_6_2_spawn_meter_changing
+	spawnscriptnow \{training_6_2_spawn_meter_changing
 		id = training_spawned_script}
 	training_play_sound \{Sound = 'Tut_Band_Star_02_BAS'
 		Wait}
-	training_stop_hud_flashing_red
+	training_stop_HUD_flashing_red
 endscript
 
 script training_6_2_move_individual_indicators 
-	printf \{qs(0xd59f0428)}
+	printf \{qs("\Lstarting training_6_2_move_individual_indicators")}
 	training_add_arrow \{id = training_arrow2
 		life = 4
-		Pos = (275.0, 170.0)
-		Scale = 0.7
+		pos = (275.0, 170.0)
+		scale = 0.7
 		rot = 90}
 	player_status = player1_status
-	SpawnScriptNow training_set_health params = {player_status = <player_status> health = 0.5 ignore_band_members} id = training_spawned_script
+	spawnscriptnow training_set_health params = {player_status = <player_status> health = 0.5 ignore_band_members} id = training_spawned_script
 	player_status = player2_status
-	SpawnScriptNow training_set_health params = {player_status = <player_status> health = 0.2 ignore_band_members} id = training_spawned_script
+	spawnscriptnow training_set_health params = {player_status = <player_status> health = 0.2 ignore_band_members} id = training_spawned_script
 	player_status = player3_status
-	SpawnScriptNow training_set_health params = {player_status = <player_status> health = 1.4 ignore_band_members} id = training_spawned_script
+	spawnscriptnow training_set_health params = {player_status = <player_status> health = 1.4 ignore_band_members} id = training_spawned_script
 	player_status = player4_status
-	SpawnScriptNow training_set_health params = {player_status = <player_status> health = 0.8 ignore_band_members} id = training_spawned_script
+	spawnscriptnow training_set_health params = {player_status = <player_status> health = 0.8 ignore_band_members} id = training_spawned_script
 	Wait \{2.0
-		Seconds
+		seconds
 		ignoreslomo}
-	KillSpawnedScript \{Name = training_set_health}
+	KillSpawnedScript \{name = training_set_health}
 	player_status = player1_status
-	SpawnScriptNow training_set_health params = {player_status = <player_status> health = 0.2 ignore_band_members} id = training_spawned_script
+	spawnscriptnow training_set_health params = {player_status = <player_status> health = 0.2 ignore_band_members} id = training_spawned_script
 	player_status = player2_status
-	SpawnScriptNow training_set_health params = {player_status = <player_status> health = 1.1 ignore_band_members} id = training_spawned_script
+	spawnscriptnow training_set_health params = {player_status = <player_status> health = 1.1 ignore_band_members} id = training_spawned_script
 	player_status = player3_status
-	SpawnScriptNow training_set_health params = {player_status = <player_status> health = 0.8 ignore_band_members} id = training_spawned_script
+	spawnscriptnow training_set_health params = {player_status = <player_status> health = 0.8 ignore_band_members} id = training_spawned_script
 	player_status = player4_status
-	SpawnScriptNow training_set_health params = {player_status = <player_status> health = 1.6 ignore_band_members} id = training_spawned_script
+	spawnscriptnow training_set_health params = {player_status = <player_status> health = 1.6 ignore_band_members} id = training_spawned_script
 	Wait \{2.0
-		Seconds
+		seconds
 		ignoreslomo}
-	KillSpawnedScript \{Name = training_set_health}
+	KillSpawnedScript \{name = training_set_health}
 	player_status = player1_status
-	SpawnScriptNow training_set_health params = {player_status = <player_status> health = 1.1 ignore_band_members} id = training_spawned_script
+	spawnscriptnow training_set_health params = {player_status = <player_status> health = 1.1 ignore_band_members} id = training_spawned_script
 	player_status = player2_status
-	SpawnScriptNow training_set_health params = {player_status = <player_status> health = 0.6 ignore_band_members} id = training_spawned_script
+	spawnscriptnow training_set_health params = {player_status = <player_status> health = 0.6 ignore_band_members} id = training_spawned_script
 	player_status = player3_status
-	SpawnScriptNow training_set_health params = {player_status = <player_status> health = 1.6 ignore_band_members} id = training_spawned_script
+	spawnscriptnow training_set_health params = {player_status = <player_status> health = 1.6 ignore_band_members} id = training_spawned_script
 	player_status = player4_status
-	SpawnScriptNow training_set_health params = {player_status = <player_status> health = 0.2 ignore_band_members} id = training_spawned_script
+	spawnscriptnow training_set_health params = {player_status = <player_status> health = 0.2 ignore_band_members} id = training_spawned_script
 	Wait \{2.0
-		Seconds
+		seconds
 		ignoreslomo}
-	KillSpawnedScript \{Name = training_set_health}
+	KillSpawnedScript \{name = training_set_health}
 	player_status = player1_status
-	SpawnScriptNow training_set_health params = {player_status = <player_status> health = 0.2 ignore_band_members} id = training_spawned_script
+	spawnscriptnow training_set_health params = {player_status = <player_status> health = 0.2 ignore_band_members} id = training_spawned_script
 	player_status = player2_status
-	SpawnScriptNow training_set_health params = {player_status = <player_status> health = 0.2 ignore_band_members} id = training_spawned_script
+	spawnscriptnow training_set_health params = {player_status = <player_status> health = 0.2 ignore_band_members} id = training_spawned_script
 	player_status = player3_status
-	SpawnScriptNow training_set_health params = {player_status = <player_status> health = 0.2 ignore_band_members} id = training_spawned_script
+	spawnscriptnow training_set_health params = {player_status = <player_status> health = 0.2 ignore_band_members} id = training_spawned_script
 	player_status = player4_status
-	SpawnScriptNow training_set_health params = {player_status = <player_status> health = 0.2 ignore_band_members} id = training_spawned_script
+	spawnscriptnow training_set_health params = {player_status = <player_status> health = 0.2 ignore_band_members} id = training_spawned_script
 endscript
 
 script training_6_2_show_individual_indicators_and_demo 
-	printf \{qs(0xa1ff24fe)}
+	printf \{qs("\Lstarting training_6_2_show_individual_indicators_and_demo")}
 	create_training_pause_handler
 	Wait \{2.0
-		Seconds
+		seconds
 		ignoreslomo}
-	SpawnScriptNow \{training_6_2_move_individual_indicators
+	spawnscriptnow \{training_6_2_move_individual_indicators
 		id = training_spawned_script}
 	training_play_sound \{Sound = 'Tut_Band_Star_03_BAS'
 		Wait}
 	Wait \{1.0
-		Seconds
+		seconds
 		ignoreslomo}
 endscript
 
 script training_6_2_show_note_streak_indicator 
-	printf \{qs(0x92f63a99)}
+	printf \{qs("\Lstarting training_6_2_show_note_streak_indicator")}
 	Wait \{4.0
-		Seconds
+		seconds
 		ignoreslomo}
 	training_add_arrow \{id = training_arrow2
 		life = 4
-		Pos = (275.0, 250.0)
-		Scale = 0.7
+		pos = (275.0, 250.0)
+		scale = 0.7
 		rot = 90}
 endscript
 
 script training_6_2_show_individual_note_streak_and_demo 
-	printf \{qs(0x1423492e)}
+	printf \{qs("\Lstarting training_6_2_show_individual_note_streak_and_demo")}
 	create_training_pause_handler
-	gamemode_updatecooperative \{cooperative = 1}
-	tutorialsetbandstreak \{streak = 50}
-	SpawnScriptNow \{training_6_2_show_note_streak_indicator
+	GameMode_UpdateCooperative \{cooperative = 1}
+	TutorialSetBandStreak \{streak = 50}
+	spawnscriptnow \{training_6_2_show_note_streak_indicator
 		id = training_spawned_script}
 	training_play_sound \{Sound = 'Tut_Band_Star_04_BAS'
 		Wait}
-	tutorialsetbandstreak \{streak = 0}
-	gamemode_updatecooperative \{cooperative = 0}
+	TutorialSetBandStreak \{streak = 0}
+	GameMode_UpdateCooperative \{cooperative = 0}
 endscript
 
 script training_6_2_complete_message 
-	printf \{qs(0xb42fb5eb)}
+	printf \{qs("\Lstarting training_6_2_complete_message")}
 	training_play_sound \{Sound = 'Tut_Band_Star_05_BAS'
 		Wait}
 	training_resume_gem_scroller
@@ -440,18 +440,18 @@ script training_6_2_complete_message
 endscript
 
 script training_6_3_show_lesson_header 
-	printf \{qs(0x812349ed)}
-	training_set_lesson_header_text \{number = qs(0x10d81465)
-		text = qs(0x9b6522a5)}
+	printf \{qs("\Lstarting training_6_3_show_lesson_header")}
+	training_set_lesson_header_text \{number = qs("\L3")
+		text = qs("The Band's Star Power")}
 	create_training_pause_handler
 endscript
 
 script training_6_3_show_highway 
-	printf \{qs(0x1d890e74)}
-	setplayerinfo \{2
+	printf \{qs("\Lstarting training_6_3_show_highway")}
+	SetPlayerInfo \{2
 		four_lane_highway = 0}
 	training_start_gem_scroller \{players = 4
-		song = tut_demo
+		song = Tut_Demo
 		bot_array = [
 			1
 			1
@@ -459,7 +459,7 @@ script training_6_3_show_highway
 			1
 		]}
 	if ScreenElementExists \{id = menu_tutorial}
-		LaunchEvent \{Type = unfocus
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif
@@ -473,77 +473,77 @@ script training_6_3_show_highway
 		use_backdrop = 0
 		event_handlers = <event_handlers>
 	}
-	LaunchEvent \{Type = focus
+	LaunchEvent \{type = focus
 		target = menu_tutorial}
-	Change \{structurename = band1_status
+	change \{structurename = band1_status
 		score = 3141975}
 	training_wait_for_gem_scroller_startup
 endscript
 
 script training_6_3_trigger_band_star_power 
-	printf \{qs(0x5f8ac941)}
-	Change \{structurename = band1_status
+	printf \{qs("\Lstarting training_6_3_trigger_band_star_power")}
+	change \{structurename = band1_status
 		star_power_display_amount = 100}
 	<i> = 1
 	begin
-	getplayerinfo <i> checksum
-	getplayerinfo <i> Player
-	getplayerinfo <i> text
-	Change structurename = <checksum> star_power_amount = 100
-	SpawnScriptNow star_power_activate_and_drain params = {player_status = <checksum> Player = <Player> player_text = <text>}
+	GetPlayerInfo <i> checksum
+	GetPlayerInfo <i> player
+	GetPlayerInfo <i> text
+	change structurename = <checksum> star_power_amount = 100
+	spawnscriptnow star_power_activate_and_drain params = {player_status = <checksum> player = <player> player_text = <text>}
 	<i> = (<i> + 1)
 	repeat 4
 endscript
 
 script training_6_3_show_arrow_pointing_to_bulbs 
-	printf \{qs(0xf7834447)}
+	printf \{qs("\Lstarting training_6_3_show_arrow_pointing_to_bulbs")}
 	Wait \{3.0
-		Seconds
+		seconds
 		ignoreslomo}
 	training_add_arrow \{id = training_arrow2
 		life = 4
-		Pos = (275.0, 75.0)
-		Scale = 0.7
+		pos = (275.0, 75.0)
+		scale = 0.7
 		rot = 90}
 endscript
 
 script training_6_3_show_bands_rock_meter_and_demo 
-	printf \{qs(0xa5549751)}
+	printf \{qs("\Lstarting training_6_3_show_bands_rock_meter_and_demo")}
 	create_training_pause_handler
 	Wait \{3.6
-		Seconds
+		seconds
 		ignoreslomo}
 	training_pause_gem_scroller
-	SpawnScriptNow \{training_6_3_show_arrow_pointing_to_bulbs
+	spawnscriptnow \{training_6_3_show_arrow_pointing_to_bulbs
 		id = training_spawned_script}
 	training_play_sound \{Sound = 'Tut_Band_Star_06_BAS'
 		Wait}
 endscript
 
 script training_6_3_show_band_playing_in_unison 
-	printf \{qs(0x83499e86)}
+	printf \{qs("\Lstarting training_6_3_show_band_playing_in_unison")}
 	create_training_pause_handler
 	training_6_3_trigger_band_star_power
 	Wait \{4.0
-		Seconds
+		seconds
 		ignoreslomo}
 	training_play_sound \{Sound = 'Tut_Band_Star_07_BAS'
 		Wait}
 	Wait \{0.5
-		Seconds
+		seconds
 		ignoreslomo}
 	training_play_sound \{Sound = 'Tut_Band_Star_08_BAS'
 		Wait}
 	training_clear_out_star_power
 	Wait \{3.0
-		Seconds
+		seconds
 		ignoreslomo}
 	training_play_sound \{Sound = 'Tut_Band_Star_09_BAS'
 		Wait}
 endscript
 
 script training_6_3_complete_message 
-	printf \{qs(0x215f617e)}
+	printf \{qs("\Lstarting training_6_3_complete_message")}
 	training_play_sound \{Sound = 'Tut_Band_Star_10_BAS'
 		Wait}
 	destroy_menu \{menu_id = menu_tutorial}
@@ -552,39 +552,39 @@ script training_6_3_complete_message
 endscript
 
 script training_6_4_show_lesson_header 
-	printf \{qs(0x7b1ebaba)}
-	training_set_lesson_header_text \{number = qs(0x5f9982a2)
-		text = qs(0x05c40f31)}
+	printf \{qs("\Lstarting training_6_4_show_lesson_header")}
+	training_set_lesson_header_text \{number = qs("\L4")
+		text = qs("Band versus Band")}
 	training_show_lesson_header
 	create_training_pause_handler
 endscript
 
 script training_6_4_show_highway 
-	printf \{qs(0x1980fd27)}
+	printf \{qs("\Lstarting training_6_4_show_highway")}
 endscript
 
 script set_faked_ui_to_final_player_slots \{slot = 0}
 	GetPlatform
-	if (<Platform> = Xenon)
-		<player_1_name> = qs(0x7c104666)
-		<player_2_name> = qs(0x573d15a5)
-		<player_3_name> = qs(0x4e2624e4)
-		<player_4_name> = qs(0x0167b223)
-		<player_5_name> = qs(0x187c8362)
-		<player_6_name> = qs(0x3351d0a1)
-		<player_7_name> = qs(0x2a4ae1e0)
-		<player_8_name> = qs(0xadd2fd2f)
-	elseif (<Platform> = PS3)
-		<player_1_name> = qs(0xddcad4ac)
-		<player_2_name> = qs(0xf6e7876f)
-		<player_3_name> = qs(0xeffcb62e)
-		<player_4_name> = qs(0xa0bd20e9)
-		<player_5_name> = qs(0xb9a611a8)
-		<player_6_name> = qs(0x928b426b)
-		<player_7_name> = qs(0x8b90732a)
-		<player_8_name> = qs(0x0c086fe5)
+	if (<platform> = xenon)
+		<player_1_name> = qs("Player 1")
+		<player_2_name> = qs("Player 2")
+		<player_3_name> = qs("Player 3")
+		<player_4_name> = qs("Player 4")
+		<player_5_name> = qs("Player 5")
+		<player_6_name> = qs("Player 6")
+		<player_7_name> = qs("Player 7")
+		<player_8_name> = qs("Player 8")
+	elseif (<platform> = ps3)
+		<player_1_name> = qs("Profile 1")
+		<player_2_name> = qs("Profile 2")
+		<player_3_name> = qs("Profile 3")
+		<player_4_name> = qs("Profile 4")
+		<player_5_name> = qs("Profile 5")
+		<player_6_name> = qs("Profile 6")
+		<player_7_name> = qs("Profile 7")
+		<player_8_name> = qs("Profile 8")
 	else
-		ScriptAssert \{qs(0x34a7da06)}
+		ScriptAssert \{qs("\LUnknown platform")}
 	endif
 	<player_1_cash> = 3620
 	<player_2_cash> = 16462
@@ -602,20 +602,20 @@ script set_faked_ui_to_final_player_slots \{slot = 0}
 	<player_6_color> = $online_player_slot_bg_team2
 	<player_7_color> = $online_player_slot_bg_team2
 	<player_8_color> = $online_player_slot_bg_team2
-	<player_1_instrument> = logo_guitar_grayscale
-	<player_2_instrument> = logo_bass_grayscale
-	<player_3_instrument> = logo_drum_grayscale
-	<player_4_instrument> = logo_vocal_grayscale
-	<player_5_instrument> = logo_guitar_grayscale
-	<player_6_instrument> = logo_bass_grayscale
-	<player_7_instrument> = logo_drum_grayscale
-	<player_8_instrument> = logo_vocal_grayscale
-	onlinelobbyinterface :GetTags
+	<player_1_instrument> = Logo_Guitar_GrayScale
+	<player_2_instrument> = Logo_Bass_GrayScale
+	<player_3_instrument> = Logo_Drum_GrayScale
+	<player_4_instrument> = Logo_Vocal_GrayScale
+	<player_5_instrument> = Logo_Guitar_GrayScale
+	<player_6_instrument> = Logo_Bass_GrayScale
+	<player_7_instrument> = Logo_Drum_GrayScale
+	<player_8_instrument> = Logo_Vocal_GrayScale
+	OnlineLobbyInterface :GetTags
 	cash_get_info_from_earnings earnings = <player_1_cash>
-	formatText TextName = cash_text qs(0x76b3fda7) d = <rank>
-	printf qs(0x7576a4ea) s = <cash_icon_id>
+	FormatText TextName = cash_text qs("\L%d") d = <rank>
+	printf qs("\Lplayer1 cash_icon_id: %s") s = <cash_icon_id>
 	online_lobby_add_player_slot {
-		Name = <player_1_name>
+		name = <player_1_name>
 		controller_texture = <player_1_instrument>
 		bg_rgba = <player_1_color>
 		parent = <player_slots_menu_id>
@@ -623,10 +623,10 @@ script set_faked_ui_to_final_player_slots \{slot = 0}
 		cash_icon_id = <cash_icon_id>
 	}
 	cash_get_info_from_earnings earnings = <player_2_cash>
-	formatText TextName = cash_text qs(0x76b3fda7) d = <rank>
-	printf qs(0x1196df14) s = <cash_icon_id>
+	FormatText TextName = cash_text qs("\L%d") d = <rank>
+	printf qs("\Lplayer2 cash_icon_id: %s") s = <cash_icon_id>
 	online_lobby_add_player_slot {
-		Name = <player_2_name>
+		name = <player_2_name>
 		controller_texture = <player_2_instrument>
 		bg_rgba = <player_2_color>
 		parent = <player_slots_menu_id>
@@ -634,10 +634,10 @@ script set_faked_ui_to_final_player_slots \{slot = 0}
 		cash_icon_id = <cash_icon_id>
 	}
 	cash_get_info_from_earnings earnings = <player_3_cash>
-	formatText TextName = cash_text qs(0x76b3fda7) d = <rank>
-	printf qs(0x84e60b81) s = <cash_icon_id>
+	FormatText TextName = cash_text qs("\L%d") d = <rank>
+	printf qs("\Lplayer3 cash_icon_id: %s") s = <cash_icon_id>
 	online_lobby_add_player_slot {
-		Name = <player_3_name>
+		name = <player_3_name>
 		controller_texture = <player_3_instrument>
 		bg_rgba = <player_3_color>
 		parent = <player_slots_menu_id>
@@ -645,10 +645,10 @@ script set_faked_ui_to_final_player_slots \{slot = 0}
 		cash_icon_id = <cash_icon_id>
 	}
 	cash_get_info_from_earnings earnings = <player_4_cash>
-	formatText TextName = cash_text qs(0x76b3fda7) d = <rank>
-	printf qs(0xd85628e8) s = <cash_icon_id>
+	FormatText TextName = cash_text qs("\L%d") d = <rank>
+	printf qs("\Lplayer4 cash_icon_id: %s") s = <cash_icon_id>
 	online_lobby_add_player_slot {
-		Name = <player_4_name>
+		name = <player_4_name>
 		controller_texture = <player_4_instrument>
 		bg_rgba = <player_4_color>
 		parent = <player_slots_menu_id>
@@ -656,10 +656,10 @@ script set_faked_ui_to_final_player_slots \{slot = 0}
 		cash_icon_id = <cash_icon_id>
 	}
 	cash_get_info_from_earnings earnings = <player_5_cash>
-	formatText TextName = cash_text qs(0x76b3fda7) d = <rank>
-	printf qs(0x4d26fc7d) s = <cash_icon_id>
+	FormatText TextName = cash_text qs("\L%d") d = <rank>
+	printf qs("\Lplayer5 cash_icon_id: %s") s = <cash_icon_id>
 	online_lobby_add_player_slot {
-		Name = <player_5_name>
+		name = <player_5_name>
 		controller_texture = <player_5_instrument>
 		bg_rgba = <player_5_color>
 		parent = <player_slots_menu_id>
@@ -667,10 +667,10 @@ script set_faked_ui_to_final_player_slots \{slot = 0}
 		cash_icon_id = <cash_icon_id>
 	}
 	cash_get_info_from_earnings earnings = <player_6_cash>
-	formatText TextName = cash_text qs(0x76b3fda7) d = <rank>
-	printf qs(0x29c68783) s = <cash_icon_id>
+	FormatText TextName = cash_text qs("\L%d") d = <rank>
+	printf qs("\Lplayer6 cash_icon_id: %s") s = <cash_icon_id>
 	online_lobby_add_player_slot {
-		Name = <player_6_name>
+		name = <player_6_name>
 		controller_texture = <player_6_instrument>
 		bg_rgba = <player_6_color>
 		parent = <player_slots_menu_id>
@@ -678,10 +678,10 @@ script set_faked_ui_to_final_player_slots \{slot = 0}
 		cash_icon_id = <cash_icon_id>
 	}
 	cash_get_info_from_earnings earnings = <player_7_cash>
-	formatText TextName = cash_text qs(0x76b3fda7) d = <rank>
-	printf qs(0xbcb65316) s = <cash_icon_id>
+	FormatText TextName = cash_text qs("\L%d") d = <rank>
+	printf qs("\Lplayer7 cash_icon_id: %s") s = <cash_icon_id>
 	online_lobby_add_player_slot {
-		Name = <player_7_name>
+		name = <player_7_name>
 		controller_texture = <player_7_instrument>
 		bg_rgba = <player_7_color>
 		parent = <player_slots_menu_id>
@@ -689,10 +689,10 @@ script set_faked_ui_to_final_player_slots \{slot = 0}
 		cash_icon_id = <cash_icon_id>
 	}
 	cash_get_info_from_earnings earnings = <player_8_cash>
-	formatText TextName = cash_text qs(0x76b3fda7) d = <rank>
-	printf qs(0x90a6c151) s = <cash_icon_id>
+	FormatText TextName = cash_text qs("\L%d") d = <rank>
+	printf qs("\Lplayer8 cash_icon_id: %s") s = <cash_icon_id>
 	online_lobby_add_player_slot {
-		Name = <player_8_name>
+		name = <player_8_name>
 		controller_texture = <player_8_instrument>
 		bg_rgba = <player_8_color>
 		parent = <player_slots_menu_id>
@@ -702,16 +702,16 @@ script set_faked_ui_to_final_player_slots \{slot = 0}
 endscript
 
 script create_faked_net_matchmaking_menu 
-	printf \{qs(0x5468a3f9)}
+	printf \{qs("\Lstarting create_faked_net_matchmaking_menu")}
 	CreateScreenElement \{parent = training_container
-		id = onlinelobbyinterface
-		Type = descinterface
+		id = OnlineLobbyInterface
+		type = DescInterface
 		desc = 'online_lobby'
-		Pos = (0.0, 0.0)
+		pos = (0.0, 0.0)
 		z_priority = 500
 		tags = {
 			menu_index = 0
-			menu_items = 0
+			Menu_items = 0
 			slots_index = 0
 			slot_items = 0
 			player_slots_menu_id = 0
@@ -719,15 +719,15 @@ script create_faked_net_matchmaking_menu
 		}}
 	set_focus_color rgba = ($online_lobby_item_text_color)
 	set_unfocus_color rgba = ($online_lobby_item_text_color)
-	onlinelobbyinterface :desc_checkversion \{desired = 16
-		assertif = mismatch}
+	OnlineLobbyInterface :Desc_CheckVersion \{desired = 16
+		AssertIf = Mismatch}
 	create_matchmaking_menu_and_items
-	if onlinelobbyinterface :desc_resolvealias \{Name = alias_player_slots_vmenu}
+	if OnlineLobbyInterface :Desc_ResolveAlias \{name = alias_player_slots_vmenu}
 		<player_slots_menu_id> = <resolved_id>
-		onlinelobbyinterface :SetTags player_slots_menu_id = <player_slots_menu_id>
+		OnlineLobbyInterface :SetTags player_slots_menu_id = <player_slots_menu_id>
 	endif
-	onlinelobbyinterface :se_setprops \{matchmaking_game_mode_text = qs(0xb39401d6)}
-	SpawnScriptNow \{task_menu_default_anim_in
+	OnlineLobbyInterface :SE_SetProps \{matchmaking_game_mode_text = qs("BAND v BAND")}
+	spawnscriptnow \{task_menu_default_anim_in
 		params = {
 			base_name = 'band_hub'
 		}}
@@ -736,38 +736,38 @@ script create_faked_net_matchmaking_menu
 endscript
 
 script training_6_4_show_band_vs_band 
-	printf \{qs(0x7300307c)}
+	printf \{qs("\Lstarting training_6_4_show_band_vs_band")}
 	create_training_pause_handler
 	Wait \{2.0
-		Seconds
+		seconds
 		ignoreslomo}
 	training_play_sound \{Sound = 'Tut_Band_Vs_01_BAS'}
 	training_hide_lesson_header
 	Wait \{3
-		Seconds}
+		seconds}
 	create_faked_net_matchmaking_menu
 	Wait \{3
-		Seconds}
+		seconds}
 	training_add_arrow \{id = training_arrow2
 		life = 2
 		z = 510
-		Pos = (536.0, 204.0)
-		Scale = 0.7
+		pos = (536.0, 204.0)
+		scale = 0.7
 		rot = 90}
 	Wait \{7
-		Seconds}
+		seconds}
 	training_add_arrow \{id = training_arrow2
 		life = 2
 		z = 510
-		Pos = (791.0, 88.0)
-		Scale = 0.7
+		pos = (791.0, 88.0)
+		scale = 0.7
 		rot = 270}
 	training_wait_for_sound \{Sound = 'Tut_Band_Vs_01_BAS'}
-	if ScreenElementExists \{id = onlinelobbyinterface}
-		DestroyScreenElement \{id = onlinelobbyinterface}
+	if ScreenElementExists \{id = OnlineLobbyInterface}
+		DestroyScreenElement \{id = OnlineLobbyInterface}
 	endif
 	Wait \{1
-		Seconds
+		seconds
 		ignoreslomo}
 	training_resume_gem_scroller
 	destroy_menu \{menu_id = menu_tutorial}
@@ -776,106 +776,106 @@ script training_6_4_show_band_vs_band
 endscript
 
 script training_6_4_animate_band_vs_band 
-	printf \{qs(0x7300307c)}
+	printf \{qs("\Lstarting training_6_4_show_band_vs_band")}
 	Wait \{13.0
-		Seconds
+		seconds
 		ignoreslomo}
 	training_add_arrow \{id = training_arrow2
 		life = 2
-		Pos = (500.0, 360.0)
-		Scale = 0.7
+		pos = (500.0, 360.0)
+		scale = 0.7
 		rot = 180}
 	training_add_arrow \{id = training_arrow2
 		life = 2
-		Pos = (780.0, 360.0)
-		Scale = 0.7
+		pos = (780.0, 360.0)
+		scale = 0.7
 		rot = 180}
 	printstruct \{$band1_status}
-	Change \{structurename = player1_status
+	change \{structurename = player1_status
 		score = 1000}
-	Change \{structurename = player2_status
+	change \{structurename = player2_status
 		score = 1000}
-	Change \{structurename = player3_status
+	change \{structurename = player3_status
 		score = 1000}
-	Change \{structurename = player4_status
+	change \{structurename = player4_status
 		score = 1000}
-	Change \{structurename = band1_status
+	change \{structurename = band1_status
 		score = 4000}
 	Wait \{0.5
-		Seconds
+		seconds
 		ignoreslomo}
-	Change \{structurename = player5_status
+	change \{structurename = player5_status
 		score = 2000}
-	Change \{structurename = player6_status
+	change \{structurename = player6_status
 		score = 2000}
-	Change \{structurename = player7_status
+	change \{structurename = player7_status
 		score = 2000}
-	Change \{structurename = player8_status
+	change \{structurename = player8_status
 		score = 2000}
-	Change \{structurename = band2_status
+	change \{structurename = band2_status
 		score = 8000}
 	Wait \{0.5
-		Seconds
+		seconds
 		ignoreslomo}
-	Change \{structurename = player1_status
+	change \{structurename = player1_status
 		score = 10000}
-	Change \{structurename = player2_status
+	change \{structurename = player2_status
 		score = 10000}
-	Change \{structurename = player3_status
+	change \{structurename = player3_status
 		score = 10000}
-	Change \{structurename = player4_status
+	change \{structurename = player4_status
 		score = 10000}
-	Change \{structurename = band1_status
+	change \{structurename = band1_status
 		score = 44000}
 	Wait \{0.5
-		Seconds
+		seconds
 		ignoreslomo}
-	Change \{structurename = player5_status
+	change \{structurename = player5_status
 		score = 20000}
-	Change \{structurename = player6_status
+	change \{structurename = player6_status
 		score = 20000}
-	Change \{structurename = player7_status
+	change \{structurename = player7_status
 		score = 20000}
-	Change \{structurename = player8_status
+	change \{structurename = player8_status
 		score = 20000}
-	Change \{structurename = band2_status
+	change \{structurename = band2_status
 		score = 88000}
 	Wait \{0.5
-		Seconds
+		seconds
 		ignoreslomo}
-	Change \{structurename = player1_status
+	change \{structurename = player1_status
 		score = 1000000}
-	Change \{structurename = player2_status
+	change \{structurename = player2_status
 		score = 1000000}
-	Change \{structurename = player3_status
+	change \{structurename = player3_status
 		score = 1000000}
-	Change \{structurename = player4_status
+	change \{structurename = player4_status
 		score = 1000000}
-	Change \{structurename = band1_status
+	change \{structurename = band1_status
 		score = 4152001}
 	Wait \{0.5
-		Seconds
+		seconds
 		ignoreslomo}
-	Change \{structurename = player5_status
+	change \{structurename = player5_status
 		score = 2000000}
-	Change \{structurename = player6_status
+	change \{structurename = player6_status
 		score = 2000000}
-	Change \{structurename = player7_status
+	change \{structurename = player7_status
 		score = 2000000}
-	Change \{structurename = player8_status
+	change \{structurename = player8_status
 		score = 2000000}
-	Change \{structurename = band2_status
+	change \{structurename = band2_status
 		score = 8061997}
 	Wait \{0.5
-		Seconds
+		seconds
 		ignoreslomo}
 endscript
 
 script training_6_4_complete_message 
-	printf \{qs(0x7def4217)}
+	printf \{qs("\Lstarting training_6_4_complete_message")}
 	training_destroy_title
 	if ScreenElementExists \{id = menu_tutorial}
-		LaunchEvent \{Type = unfocus
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 		create_training_pause_handler
@@ -883,32 +883,32 @@ script training_6_4_complete_message
 	training_hide_lesson_header
 	training_destroy_gem_scroller
 	SoundEvent \{event = Tutorial_Mode_Finish_Chord}
-	SpawnScriptNow \{create_exploding_text
+	spawnscriptnow \{create_exploding_text
 		id = training_spawned_script
 		params = {
 			parent = 'lesson_complete'
-			text = qs(0x9e47f4d7)
+			text = qs("Band Mode Lesson")
 			text_physics = 0
 			placement = top
 		}}
-	SpawnScriptNow \{create_exploding_text
+	spawnscriptnow \{create_exploding_text
 		id = training_spawned_script
 		params = {
 			parent = 'complete_text'
-			text = qs(0x232d1eaf)
+			text = qs("Complete!")
 			text_physics = 0
 			placement = bottom
 		}}
 	Wait \{7
-		Seconds
+		seconds
 		ignoreslomo}
-	KillSpawnedScript \{Name = create_exploding_text}
+	KillSpawnedScript \{name = create_exploding_text}
 	destroy_all_exploding_text
-	Change g_training_lessons_completed = ($g_training_lessons_completed + 1)
+	change g_training_lessons_completed = ($g_training_lessons_completed + 1)
 endscript
 
 script training_band_tutorial_1_end 
-	printf \{qs(0x04000b8b)}
+	printf \{qs("\Lstarting training_band_tutorial_1_end")}
 	training_container :GetTags
 	if ($g_training_lessons_completed = 4)
 		SetGlobalTags \{training
@@ -918,7 +918,7 @@ script training_band_tutorial_1_end
 	endif
 	training_kill_session
 	if ScreenElementExists \{id = menu_tutorial}
-		LaunchEvent \{Type = unfocus
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif

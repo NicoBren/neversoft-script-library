@@ -1,7 +1,7 @@
 is_in_debug = 0
 
 script ui_init_debug 
-	Change \{is_in_debug = 1}
+	change \{is_in_debug = 1}
 endscript
 
 script ui_create_debug 
@@ -26,5 +26,5 @@ script ui_deinit_debug
 		i = (<i> + 1)
 		repeat <stack_size>
 	endif
-	Change \{is_in_debug = 0}
+	change \{is_in_debug = 0}
 endscript

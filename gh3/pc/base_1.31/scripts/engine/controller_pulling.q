@@ -5,53 +5,53 @@ script controller_unplugged
 	printf \{"--- controller_unplugged"}
 	change unplugged_controller = <device_num>
 	if ($playing_song = 1)
-		if NOT gameispaused
+		if NOT GameIsPaused
 			ui_flow_manager_respond_to_action \{action = controller_disconnect}
 			change \{check_for_unplugged_controllers = 0}
 		endif
 	else
-		if isps3
+		if IsPs3
 			create_controller_disconnect_menu
 			change \{check_for_unplugged_controllers = 0}
 		endif
 	endif
-	if NOT gameispaused
+	if NOT GameIsPaused
 		gh3_start_pressed \{no_back}
 	endif
 endscript
 
 script create_controller_unplugged_dialog \{pad_choose_script = controller_refresh}
 	printf \{"--- create_controller_unplugged_dialog"}
-	if screenelementexists \{id = ui_mainmenu_wait_anchor}
+	if ScreenElementExists \{id = ui_mainmenu_wait_anchor}
 		return
 	endif
-	if isxenon
-		if infrontend
+	if isXenon
+		if InFrontend
 			return
 		endif
 	endif
-	if innetgame
+	if InNetGame
 		return
 	endif
-	if screenelementexists \{id = link_lost_dialog_anchor}
+	if ScreenElementExists \{id = link_lost_dialog_anchor}
 		dialog_box_exit \{anchor_id = link_lost_dialog_anchor}
 	endif
 	sysnotify_wait_until_safe
-	wait \{1
+	Wait \{1
 		frame}
 	sysnotify_handle_pause
-	setscreenelementlock \{id = root_window
+	SetScreenElementLock \{id = root_window
 		off}
-	if NOT infrontend
-		if ismovieplaying \{textureslot = 0}
-			pausemovie \{textureslot = 0}
+	if NOT InFrontend
+		if IsMoviePlaying \{TextureSlot = 0}
+			PauseMovie \{TextureSlot = 0}
 		endif
-		if ismovieplaying \{textureslot = 1}
-			pausemovie \{textureslot = 1}
+		if IsMoviePlaying \{TextureSlot = 1}
+			PauseMovie \{TextureSlot = 1}
 		endif
 	endif
-	if gotparam \{leaving_net_game}
-		createplatformmessagebox {
+	if GotParam \{leaving_net_game}
+		CreatePlatformMessageBox {
 			title = "CONTROLLER DISCONNECTED"
 			message = "Please reconnect the controller."
 			buttons = [
@@ -62,7 +62,7 @@ script create_controller_unplugged_dialog \{pad_choose_script = controller_refre
 		}
 		controller_reconnected \{leaving_net_game}
 	else
-		createplatformmessagebox {
+		CreatePlatformMessageBox {
 			title = "CONTROLLER"
 			message = "Please reconnect the controller."
 			buttons = [
@@ -73,12 +73,12 @@ script create_controller_unplugged_dialog \{pad_choose_script = controller_refre
 		}
 		controller_reconnected
 	endif
-	if NOT infrontend
-		if ismovieplaying \{textureslot = 0}
-			resumemovie \{textureslot = 0}
+	if NOT InFrontend
+		if IsMoviePlaying \{TextureSlot = 0}
+			ResumeMovie \{TextureSlot = 0}
 		endif
-		if ismovieplaying \{textureslot = 1}
-			resumemovie \{textureslot = 1}
+		if IsMoviePlaying \{TextureSlot = 1}
+			ResumeMovie \{TextureSlot = 1}
 		endif
 	endif
 endscript
@@ -86,59 +86,59 @@ endscript
 script controller_refresh 
 	if (<original_device_num> = <device_num>)
 		controller_reconnected <...>
-		if NOT (abortscript = defaultabortscript)
+		if NOT (AbortScript = DefaultAbortScript)
 			goto \{reload_anims_then_run_abort_script}
 		endif
 	endif
 endscript
 
 script controller_reconnected 
-	if NOT gotparam \{leaving_net_game}
-		if NOT infrontend
-			if NOT screenelementexists \{id = view_goals_root}
-				if NOT screenelementexists \{id = timeline_vmenu}
-					restore_skater_camera
+	if NOT GotParam \{leaving_net_game}
+		if NOT InFrontend
+			if NOT ScreenElementExists \{id = view_goals_root}
+				if NOT ScreenElementExists \{id = timeline_vmenu}
+					Restore_skater_camera
 				endif
 			endif
 		endif
 	endif
 	dialog_box_exit \{anchor_id = link_lost_dialog_anchor
 		dont_focus}
-	if screenelementexists \{id = controller_unplugged_dialog_anchor}
-		destroyscreenelement \{id = controller_unplugged_dialog_anchor}
+	if ScreenElementExists \{id = controller_unplugged_dialog_anchor}
+		DestroyScreenElement \{id = controller_unplugged_dialog_anchor}
 	endif
-	if screenelementexists \{id = keyboard_vmenu}
-		launchevent \{type = focus
+	if ScreenElementExists \{id = keyboard_vmenu}
+		LaunchEvent \{type = focus
 			target = keyboard_vmenu}
 	endif
-	if NOT gotparam \{leaving_net_game}
+	if NOT GotParam \{leaving_net_game}
 		sysnotify_handle_unpause
 	endif
-	if screenelementexists \{id = dialog_box_anchor}
-		launchevent \{type = focus
+	if ScreenElementExists \{id = dialog_box_anchor}
+		LaunchEvent \{type = focus
 			target = dialog_box_vmenu}
-		doscreenelementmorph \{id = dialog_box_anchor
+		doScreenElementMorph \{id = dialog_box_anchor
 			alpha = 1}
 	else
-		if screenelementexists \{id = current_menu_anchor}
-			launchevent \{type = focus
+		if ScreenElementExists \{id = current_menu_anchor}
+			LaunchEvent \{type = focus
 				target = current_menu_anchor}
-			if screenelementexists \{id = current_menu}
-				launchevent \{type = focus
+			if ScreenElementExists \{id = current_menu}
+				LaunchEvent \{type = focus
 					target = current_menu}
 			endif
 		endif
 	endif
-	if gotparam \{leaving_net_game}
+	if GotParam \{leaving_net_game}
 		printf \{"quitting network game!!!!!!!!!!!!!!!!!!!"}
-		unpausegame
+		UnPauseGame
 		quit_network_game
 	else
-		spawnscriptlater \{wait_and_check_for_unplugged_controllers}
+		SpawnScriptLater \{wait_and_check_for_unplugged_controllers}
 	endif
 endscript
 
 script wait_and_check_for_unplugged_controllers \{time = 50}
-	wait <time>
+	Wait <time>
 	change \{check_for_unplugged_controllers = 1}
 endscript

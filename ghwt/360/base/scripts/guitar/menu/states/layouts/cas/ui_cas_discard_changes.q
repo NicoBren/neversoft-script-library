@@ -1,18 +1,18 @@
 
 script ui_create_cas_discard_changes 
-	create_popup_warning_menu \{title = qs(0x2352550a)
+	create_popup_warning_menu \{title = qs("Discard Changes?")
 		textblock = {
-			text = qs(0x51b96069)
+			text = qs("Would you like to discard these changes?")
 		}
 		no_background
 		options = [
 			{
 				func = discard_changes_continue
-				text = qs(0x6d562a67)
+				text = qs("Yes")
 			}
 			{
 				func = generic_event_back
-				text = qs(0x47157885)
+				text = qs("No")
 			}
 		]
 		popup_event_handlers = [
@@ -43,16 +43,16 @@ script ui_destroy_cas_discard_changes
 endscript
 
 script discard_changes_continue 
-	restoretoptemporarycasappearance
+	RestoreTopTemporaryCASAppearance
 	generic_event_back \{data = {
 			num_states = 2
 		}}
 endscript
 
 script discard_changes_prompt 
-	if NOT comparetoptemporarycasappearance
+	if NOT CompareTopTemporaryCASAppearance
 		generic_event_choose \{data = {
-				state = uistate_cas_discard_changes
+				state = UIstate_cas_discard_changes
 				is_popup
 			}}
 	else

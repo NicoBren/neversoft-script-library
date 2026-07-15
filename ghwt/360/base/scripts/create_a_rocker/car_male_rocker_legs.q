@@ -1,804 +1,804 @@
-cas_male_legs = [
+CAS_Male_Legs = [
 	{
-		desc_id = m_pop_legs_baggy
-		frontend_desc = qs(0x505794b0)
+		desc_id = M_Pop_Legs_Baggy
+		frontend_desc = qs("\LRebel Belt")
 		mesh = 'models/CAR/Male/M_Pop_Legs_Baggy.skin'
 		random_weight = 1.0
 		materials = [
-			m_pop_legs_baggy_primary
-			m_pop_legs_baggy_secondary
+			M_Pop_Legs_Baggy_Primary
+			M_Pop_Legs_Baggy_Secondary
 		]
-		acc_skeleton = skel_m_pop_legs_baggy
-		acc_ragdoll = rag_m_pop_legs_baggy
+		acc_skeleton = Skel_M_Pop_Legs_Baggy
+		acc_ragdoll = Rag_M_Pop_Legs_Baggy
 		acc_bones = [
-			bone_acc_legs_01
-			bone_acc_legs_02
-			bone_acc_legs_03
-			bone_acc_legs_04
+			Bone_ACC_Legs_01
+			Bone_ACC_Legs_02
+			Bone_ACC_Legs_03
+			Bone_ACC_Legs_04
 		]
 		genre = [
-			pop
+			Pop
 		]
 		price = 150
 	}
 	{
-		desc_id = m_pop_legs_bjeans
-		frontend_desc = qs(0x8501b76d)
+		desc_id = M_Pop_Legs_BJeans
+		frontend_desc = qs("\LLowriders")
 		mesh = 'models/CAR/Male/M_Pop_Legs_BJeans.skin'
 		materials = [
-			m_pop_legs_bjeans_primary
-			m_pop_legs_bjeans_secondary
+			M_Pop_Legs_BJeans_Primary
+			M_Pop_Legs_BJeans_Secondary
 		]
 		random_weight = 1.0
-		acc_skeleton = skel_m_pop_legs_bjeans
-		acc_ragdoll = rag_m_pop_legs_bjeans
+		acc_skeleton = Skel_M_Pop_Legs_BJeans
+		acc_ragdoll = Rag_M_Pop_Legs_BJeans
 		acc_bones = [
-			bone_acc_legs_01
-			bone_acc_legs_02
-			bone_acc_legs_03
-			bone_acc_legs_04
+			Bone_ACC_Legs_01
+			Bone_ACC_Legs_02
+			Bone_ACC_Legs_03
+			Bone_ACC_Legs_04
 		]
 		genre = [
-			pop
+			Pop
 		]
 	}
 	{
-		desc_id = m_pop_legs_jeans
-		frontend_desc = qs(0x887f7c74)
+		desc_id = M_Pop_Legs_Jeans
+		frontend_desc = qs("\LDeez Denims")
 		mesh = 'models/CAR/Male/M_Pop_Legs_Jeans.skin'
 		materials = [
-			m_pop_legs_jeans_primary
-			m_pop_legs_jeans_secondary
+			M_Pop_Legs_Jeans_Primary
+			M_Pop_Legs_Jeans_Secondary
 		]
 		random_weight = 1.0
 		genre = [
-			pop
+			Pop
 		]
 	}
 	{
-		desc_id = m_pop_legs_pants
-		frontend_desc = qs(0x0b725cf9)
+		desc_id = M_Pop_Legs_Pants
+		frontend_desc = qs("\LBrilliant Whites")
 		mesh = 'models/CAR/Male/M_Pop_Legs_Pants.skin'
 		random_weight = 1.0
 		genre = [
-			pop
+			Pop
 		]
 		materials = [
-			m_pop_legs_pants_primary
+			M_Pop_Legs_Pants_Primary
 		]
-		acc_skeleton = skel_m_pop_legs_pants
-		acc_ragdoll = rag_m_pop_legs_pants
+		acc_skeleton = Skel_M_Pop_Legs_Pants
+		acc_ragdoll = Rag_M_Pop_Legs_Pants
 		acc_bones = [
-			bone_acc_legs_01
-			bone_acc_legs_02
-			bone_acc_legs_03
-			bone_acc_legs_04
+			Bone_ACC_Legs_01
+			Bone_ACC_Legs_02
+			Bone_ACC_Legs_03
+			Bone_ACC_Legs_04
 		]
 	}
 	{
-		desc_id = m_pop_legs_slacks
-		frontend_desc = qs(0x9b10f031)
+		desc_id = M_Pop_Legs_Slacks
+		frontend_desc = qs("\LSensible Pants")
 		mesh = 'models/CAR/Male/M_Pop_Legs_Slacks.skin'
 		materials = [
-			m_pop_legs_slacks_primary
-			m_pop_legs_slacks_secondary
+			M_Pop_Legs_Slacks_Primary
+			M_Pop_Legs_Slacks_Secondary
 		]
 		random_weight = 1.0
 		genre = [
-			pop
+			Pop
 		]
 		price = 175
 	}
 	{
-		desc_id = m_punk_legs_camo
-		frontend_desc = qs(0xcb247ff3)
+		desc_id = M_Punk_Legs_Camo
+		frontend_desc = qs("\LRaggedy Camo")
 		mesh = 'models/CAR/Male/M_Punk_Legs_Camo.skin'
 		random_weight = 1.0
 		genre = [
-			punk
+			Punk
 		]
-		acc_skeleton = skel_m_punk_legs_camo
-		acc_ragdoll = rag_m_punk_legs_camo
+		acc_skeleton = Skel_M_Punk_Legs_Camo
+		acc_ragdoll = Rag_M_Punk_Legs_Camo
 		acc_bones = [
-			bone_acc_legs_01
-			bone_acc_legs_02
-			bone_acc_legs_03
-			bone_acc_legs_04
+			Bone_ACC_Legs_01
+			Bone_ACC_Legs_02
+			Bone_ACC_Legs_03
+			Bone_ACC_Legs_04
 		]
 		price = 100
 	}
 	{
-		desc_id = m_punk_legs_camo_02
-		frontend_desc = qs(0x8fadbe17)
+		desc_id = M_Punk_Legs_Camo_02
+		frontend_desc = qs("\LIrish Wool")
 		mesh = 'models/CAR/Male/M_Punk_Legs_Camo_02.skin'
 		random_weight = 1.0
 		genre = [
-			punk
+			Punk
 		]
-		acc_skeleton = skel_m_punk_legs_camo
-		acc_ragdoll = rag_m_punk_legs_camo
+		acc_skeleton = Skel_M_Punk_Legs_Camo
+		acc_ragdoll = Rag_M_Punk_Legs_Camo
 		acc_bones = [
-			bone_acc_legs_01
-			bone_acc_legs_02
-			bone_acc_legs_03
-			bone_acc_legs_04
+			Bone_ACC_Legs_01
+			Bone_ACC_Legs_02
+			Bone_ACC_Legs_03
+			Bone_ACC_Legs_04
 		]
 		price = 100
 	}
 	{
-		desc_id = m_punk_legs_camo_03
-		frontend_desc = qs(0xb5c13c6f)
+		desc_id = M_Punk_Legs_Camo_03
+		frontend_desc = qs("\LWater Worn")
 		mesh = 'models/CAR/Male/M_Punk_Legs_Camo_03.skin'
 		random_weight = 1.0
 		genre = [
-			punk
+			Punk
 		]
-		acc_skeleton = skel_m_punk_legs_camo
-		acc_ragdoll = rag_m_punk_legs_camo
+		acc_skeleton = Skel_M_Punk_Legs_Camo
+		acc_ragdoll = Rag_M_Punk_Legs_Camo
 		acc_bones = [
-			bone_acc_legs_01
-			bone_acc_legs_02
-			bone_acc_legs_03
-			bone_acc_legs_04
+			Bone_ACC_Legs_01
+			Bone_ACC_Legs_02
+			Bone_ACC_Legs_03
+			Bone_ACC_Legs_04
 		]
 		price = 100
 	}
 	{
 		desc_id = m_punk_legs_riding
-		frontend_desc = qs(0x103c7f11)
+		frontend_desc = qs("\LPunk Rock Riders")
 		mesh = 'models/CAR/Male/M_Punk_Legs_Riding.skin'
 		random_weight = 1.0
 		genre = [
-			punk
+			Punk
 		]
-		acc_skeleton = skel_m_punk_legs_riding_03
-		acc_ragdoll = rag_m_punk_legs_riding_03
+		acc_skeleton = Skel_M_Punk_Legs_Riding_03
+		acc_ragdoll = Rag_M_Punk_Legs_Riding_03
 		acc_bones = [
-			bone_acc_legs_01
-			bone_acc_legs_02
+			Bone_ACC_Legs_01
+			Bone_ACC_Legs_02
 		]
 		price = 250
 	}
 	{
-		desc_id = m_punk_legs_riding_02
-		frontend_desc = qs(0x681153df)
+		desc_id = M_Punk_Legs_Riding_02
+		frontend_desc = qs("\LJaguars")
 		mesh = 'models/CAR/Male/M_Punk_Legs_Riding_02.skin'
 		random_weight = 1.0
 		genre = [
-			punk
+			Punk
 		]
-		acc_skeleton = skel_m_punk_legs_riding_03
-		acc_ragdoll = rag_m_punk_legs_riding_03
+		acc_skeleton = Skel_M_Punk_Legs_Riding_03
+		acc_ragdoll = Rag_M_Punk_Legs_Riding_03
 		acc_bones = [
-			bone_acc_legs_01
-			bone_acc_legs_02
+			Bone_ACC_Legs_01
+			Bone_ACC_Legs_02
 		]
 		price = 250
 	}
 	{
-		desc_id = m_punk_legs_riding_03
-		frontend_desc = qs(0xcd942375)
+		desc_id = M_Punk_Legs_Riding_03
+		frontend_desc = qs("\LEasy Fix")
 		mesh = 'models/CAR/Male/M_Punk_Legs_Riding_03.skin'
 		random_weight = 1.0
 		genre = [
-			punk
+			Punk
 		]
-		acc_skeleton = skel_m_punk_legs_riding_03
-		acc_ragdoll = rag_m_punk_legs_riding_03
+		acc_skeleton = Skel_M_Punk_Legs_Riding_03
+		acc_ragdoll = Rag_M_Punk_Legs_Riding_03
 		acc_bones = [
-			bone_acc_legs_01
-			bone_acc_legs_02
+			Bone_ACC_Legs_01
+			Bone_ACC_Legs_02
 		]
 		price = 250
 	}
 	{
-		desc_id = m_punk_legs_cuff
-		frontend_desc = qs(0x31368878)
+		desc_id = M_Punk_Legs_Cuff
+		frontend_desc = qs("\LRatty Rod Jeans")
 		mesh = 'models/CAR/Male/M_Punk_Legs_Cuff.skin'
 		materials = [
-			m_punk_legs_cuff_primary
+			M_Punk_Legs_Cuff_Primary
 		]
 		random_weight = 1.0
-		acc_skeleton = skel_m_punk_legs_cuff
-		acc_ragdoll = rag_m_punk_legs_cuff
+		acc_skeleton = Skel_M_Punk_Legs_Cuff
+		acc_ragdoll = Rag_M_Punk_Legs_Cuff
 		acc_bones = [
-			bone_acc_legs_01
-			bone_acc_legs_02
-			bone_acc_legs_03
-			bone_acc_legs_04
+			Bone_ACC_Legs_01
+			Bone_ACC_Legs_02
+			Bone_ACC_Legs_03
+			Bone_ACC_Legs_04
 		]
 		genre = [
-			punk
+			Punk
 		]
 	}
 	{
 		desc_id = m_punk_legs_johnny1
-		frontend_desc = qs(0x5b8f114a)
+		frontend_desc = qs("\LUnion Jack Jeans")
 		mesh = 'models/CAR/Male/M_Punk_Legs_Johnny1.skin'
 		random_weight = 1.0
 		genre = [
-			punk
+			Punk
 		]
-		acc_skeleton = skel_m_punk_legs_johnny1
-		acc_ragdoll = rag_m_punk_legs_johnny1
+		acc_skeleton = Skel_M_Punk_Legs_Johnny1
+		acc_ragdoll = Rag_M_Punk_Legs_Johnny1
 		acc_bones = [
-			bone_acc_legs_01
-			bone_acc_legs_02
-			bone_acc_legs_03
-			bone_acc_legs_04
+			Bone_ACC_Legs_01
+			Bone_ACC_Legs_02
+			Bone_ACC_Legs_03
+			Bone_ACC_Legs_04
 		]
 	}
 	{
 		desc_id = m_punk_legs_johnny1_02
-		frontend_desc = qs(0x2db9bb22)
+		frontend_desc = qs("\LLoose Chains")
 		mesh = 'models/CAR/Male/M_Punk_Legs_Johnny1_02.skin'
 		random_weight = 1.0
 		genre = [
-			punk
+			Punk
 		]
-		acc_skeleton = skel_m_punk_legs_johnny1
-		acc_ragdoll = rag_m_punk_legs_johnny1
+		acc_skeleton = Skel_M_Punk_Legs_Johnny1
+		acc_ragdoll = Rag_M_Punk_Legs_Johnny1
 		acc_bones = [
-			bone_acc_legs_01
-			bone_acc_legs_02
-			bone_acc_legs_03
-			bone_acc_legs_04
+			Bone_ACC_Legs_01
+			Bone_ACC_Legs_02
+			Bone_ACC_Legs_03
+			Bone_ACC_Legs_04
 		]
 		price = 200
 	}
 	{
 		desc_id = m_punk_legs_johnny1_03
-		frontend_desc = qs(0x0106b1c4)
+		frontend_desc = qs("\LInmate")
 		mesh = 'models/CAR/Male/M_Punk_Legs_Johnny1_03.skin'
 		random_weight = 1.0
 		genre = [
-			punk
+			Punk
 		]
-		acc_skeleton = skel_m_punk_legs_johnny1
-		acc_ragdoll = rag_m_punk_legs_johnny1
+		acc_skeleton = Skel_M_Punk_Legs_Johnny1
+		acc_ragdoll = Rag_M_Punk_Legs_Johnny1
 		acc_bones = [
-			bone_acc_legs_01
-			bone_acc_legs_02
-			bone_acc_legs_03
-			bone_acc_legs_04
+			Bone_ACC_Legs_01
+			Bone_ACC_Legs_02
+			Bone_ACC_Legs_03
+			Bone_ACC_Legs_04
 		]
 		price = 200
 	}
 	{
-		desc_id = m_punk_legs_cutoff
-		frontend_desc = qs(0x753df1b8)
+		desc_id = M_Punk_Legs_Cutoff
+		frontend_desc = qs("\LBeach Slacks")
 		mesh = 'models/CAR/Male/M_Punk_Legs_Cutoff.skin'
 		random_weight = 1.0
 		genre = [
-			punk
+			Punk
 		]
-		acc_skeleton = skel_m_punk_legs_cutoff
-		acc_ragdoll = rag_m_punk_legs_cutoff
+		acc_skeleton = Skel_M_Punk_Legs_Cutoff
+		acc_ragdoll = Rag_M_Punk_Legs_Cutoff
 		acc_bones = [
-			bone_acc_legs_01
-			bone_acc_legs_02
+			Bone_ACC_Legs_01
+			Bone_ACC_Legs_02
 		]
 		materials = [
-			punk_shortscutoff_primary
+			Punk_ShortsCutoff_Primary
 		]
 	}
 	{
-		desc_id = m_clsc_legs_whtbells
-		frontend_desc = qs(0x6fca794c)
+		desc_id = M_Clsc_Legs_whtbells
+		frontend_desc = qs("\LButton Flyers")
 		mesh = 'models/CAR/Male/M_Clsc_Legs_whtbells.skin'
 		random_weight = 1.0
 		genre = [
-			`classic	rock`
+			`Classic Rock`
 		]
 		materials = [
-			m_clsc_legs_whtbells_primary
+			M_Clsc_Legs_whtbells_Primary
 		]
 	}
 	{
-		desc_id = m_clsc_legs_ltjeans
-		frontend_desc = qs(0x5b5d7626)
+		desc_id = M_Clsc_Legs_Ltjeans
+		frontend_desc = qs("\LNashville Jeans")
 		mesh = 'models/CAR/Male/M_Clsc_Legs_Ltjeans.skin'
 		random_weight = 1.0
 		genre = [
-			`classic	rock`
+			`Classic Rock`
 		]
 		materials = [
-			m_clsc_legs_ltjeans_primary
-			m_clsc_legs_ltjeans_secondary
+			M_Clsc_Legs_Ltjeans_Primary
+			M_Clsc_Legs_Ltjeans_Secondary
 		]
 	}
 	{
-		desc_id = m_clsc_legs_scrfpants
-		frontend_desc = qs(0x24334767)
+		desc_id = M_Clsc_Legs_Scrfpants
+		frontend_desc = qs("\LBells With Scarf")
 		mesh = 'models/CAR/Male/M_Clsc_Legs_Scrfpants.skin'
 		random_weight = 1.0
 		genre = [
-			`classic	rock`
+			`Classic Rock`
 		]
 		materials = [
-			m_clsc_legs_scrfpants_primary
-			m_clsc_legs_scrfpants_secondary
+			M_Clsc_Legs_Scrfpants_Primary
+			M_Clsc_Legs_Scrfpants_Secondary
 		]
-		acc_skeleton = skel_m_clsc_legs_scrfpants
-		acc_ragdoll = rag_m_clsc_legs_scrfpants
+		acc_skeleton = Skel_M_Clsc_Legs_Scrfpants
+		acc_ragdoll = Rag_M_Clsc_Legs_Scrfpants
 		acc_bones = [
-			bone_acc_legs_01
-			bone_acc_legs_02
-			bone_acc_legs_03
-			bone_acc_legs_04
+			Bone_ACC_Legs_01
+			Bone_ACC_Legs_02
+			Bone_ACC_Legs_03
+			Bone_ACC_Legs_04
 		]
 	}
 	{
-		desc_id = m_clsc_legs_jimi
-		frontend_desc = qs(0xd7e377c0)
+		desc_id = M_Clsc_Legs_Jimi
+		frontend_desc = qs("\LDrearily Sweeping")
 		mesh = 'models/CAR/Male/M_Clsc_Legs_Jimi.skin'
 		random_weight = 1.0
 		genre = [
-			`classic	rock`
+			`Classic Rock`
 		]
 		price = 170
-		acc_skeleton = skel_m_clsc_legs_jimi
-		acc_ragdoll = rag_m_clsc_legs_jimi
+		acc_skeleton = Skel_M_Clsc_Legs_Jimi
+		acc_ragdoll = Rag_M_Clsc_Legs_Jimi
 		acc_bones = [
-			bone_acc_legs_01
-			bone_acc_legs_02
-			bone_acc_legs_03
-			bone_acc_legs_04
+			Bone_ACC_Legs_01
+			Bone_ACC_Legs_02
+			Bone_ACC_Legs_03
+			Bone_ACC_Legs_04
 		]
 		materials = [
-			m_clsc_legs_jimi_primary
+			M_Clsc_Legs_Jimi_Primary
 		]
 	}
 	{
 		desc_id = m_goth_legs_strait
-		frontend_desc = qs(0x5eeea3b9)
+		frontend_desc = qs("\LStraight Pants")
 		mesh = 'models/CAR/Male/M_Goth_Legs_Strait.skin'
 		random_weight = 1.0
 		genre = [
-			goth
+			Goth
 		]
 		materials = [
-			m_goth_legs_strait_primary
-			m_goth_legs_strait_secondary
-			m_goth_legs_strait_jock
+			M_Goth_Legs_Strait_Primary
+			M_Goth_Legs_Strait_Secondary
+			M_Goth_Legs_Strait_Jock
 		]
-		acc_skeleton = skel_m_goth_legs_strait
-		acc_ragdoll = rag_m_goth_legs_strait
+		acc_skeleton = Skel_M_Goth_Legs_Strait
+		acc_ragdoll = Rag_M_Goth_Legs_Strait
 		acc_bones = [
-			bone_acc_legs_01
-			bone_acc_legs_02
-			bone_acc_legs_03
+			Bone_ACC_Legs_01
+			Bone_ACC_Legs_02
+			Bone_ACC_Legs_03
 		]
 		price = 550
 	}
 	{
 		desc_id = m_goth_legs_holster
-		frontend_desc = qs(0xbeafb309)
+		frontend_desc = qs("\LHang On!")
 		mesh = 'models/CAR/Male/M_Goth_Legs_Holster.skin'
 		materials = [
-			m_goth_legs_holster_jeans
+			M_Goth_Legs_Holster_Jeans
 		]
 		random_weight = 1.0
 		genre = [
-			goth
+			Goth
 		]
-		acc_skeleton = skel_m_goth_legs_holster
-		acc_ragdoll = rag_m_goth_legs_holster
+		acc_skeleton = Skel_M_Goth_Legs_Holster
+		acc_ragdoll = Rag_M_Goth_Legs_Holster
 		acc_bones = [
-			bone_acc_legs_01
-			bone_acc_legs_02
-			bone_acc_legs_03
-			bone_acc_legs_04
+			Bone_ACC_Legs_01
+			Bone_ACC_Legs_02
+			Bone_ACC_Legs_03
+			Bone_ACC_Legs_04
 		]
 		price = 300
 	}
 	{
 		desc_id = m_goth_legs_tux
-		frontend_desc = qs(0xbb19b927)
+		frontend_desc = qs("\LTux Pants")
 		mesh = 'models/CAR/Male/M_Goth_Legs_Tux.skin'
-		$cas_male_hair_common_settings
+		$CAS_Male_Hair_Common_Settings
 		material_groups = [
 			{
 				materials = [
-					m_goth_legs_tux_primary
+					M_Goth_Legs_Tux_Primary
 				]
 				shader = $cas_shader_hair
 			}
 			{
 				materials = [
-					m_goth_legs_tux_secondary
+					M_Goth_Legs_Tux_Secondary
 				]
 				shader = $cas_shader_skin
 			}
 		]
 		random_weight = 1.0
 		genre = [
-			goth
+			Goth
 		]
 	}
 	{
 		desc_id = m_goth_legs_skirted
-		frontend_desc = qs(0x3c93b51c)
+		frontend_desc = qs("\LPatchy Tassets")
 		mesh = 'models/CAR/Male/M_Goth_Legs_Skirted.skin'
 		random_weight = 0.25
 		genre = [
-			goth
+			Goth
 		]
-		acc_skeleton = skel_m_goth_legs_skirted
-		acc_ragdoll = rag_m_goth_legs_skirted
+		acc_skeleton = Skel_M_Goth_Legs_Skirted
+		acc_ragdoll = Rag_M_Goth_Legs_Skirted
 		acc_bones = [
-			bone_acc_legs_01
-			bone_acc_legs_02
-			bone_acc_legs_03
-			bone_acc_legs_04
+			Bone_ACC_Legs_01
+			Bone_ACC_Legs_02
+			Bone_ACC_Legs_03
+			Bone_ACC_Legs_04
 		]
 		price = 200
 	}
 	{
 		desc_id = m_goth_legs_vinyl
-		frontend_desc = qs(0xb78e84f3)
+		frontend_desc = qs("\LLeather Ringers")
 		mesh = 'models/CAR/Male/M_Goth_Legs_Vinyl.skin'
 		materials = [
-			m_goth_legs_vinyl_primary
+			M_Goth_Legs_Vinyl_Primary
 		]
 		random_weight = 1.0
 		genre = [
-			goth
+			Goth
 		]
-		acc_skeleton = skel_m_goth_legs_vinyl
-		acc_ragdoll = rag_m_goth_legs_vinyl
+		acc_skeleton = Skel_M_Goth_Legs_Vinyl
+		acc_ragdoll = Rag_M_Goth_Legs_Vinyl
 		acc_bones = [
-			bone_acc_legs_01
-			bone_acc_legs_02
-			bone_acc_legs_03
-			bone_acc_legs_04
+			Bone_ACC_Legs_01
+			Bone_ACC_Legs_02
+			Bone_ACC_Legs_03
+			Bone_ACC_Legs_04
 		]
 	}
 	{
 		desc_id = m_legs_ninja
-		frontend_desc = qs(0x5f0ba890)
+		frontend_desc = qs("\LNinja Duds")
 		mesh = 'models/CAR/Male/M_Legs_Ninja.skin'
 		materials = [
-			m_legs_ninja_primary
-			m_legs_ninja_secondary
+			M_Legs_Ninja_Primary
+			M_Legs_Ninja_Secondary
 		]
 		random_weight = 0.1
 		genre = [
-			goth
+			Goth
 		]
 		price = 450
 	}
 	{
-		desc_id = m_rock_legs_jeans
-		frontend_desc = qs(0x0481cbb8)
+		desc_id = M_Rock_Legs_Jeans
+		frontend_desc = qs("\LBull Ya")
 		mesh = 'models/CAR/Male/M_Rock_Legs_Jeans.skin'
 		materials = [
-			m_rock_legs_jeans_primary
-			m_rock_legs_jeans_secondary
+			M_Rock_Legs_Jeans_Primary
+			M_Rock_Legs_Jeans_Secondary
 		]
 		random_weight = 1.0
 		genre = [
-			rock
+			Rock
 		]
 	}
 	{
 		desc_id = m_rock_legs_rings
-		frontend_desc = qs(0x38ccca91)
+		frontend_desc = qs("\LLeg Loops")
 		mesh = 'models/CAR/Male/M_Rock_Legs_Rings.skin'
 		materials = [
-			m_rock_legs_rings_primary
-			m_rock_legs_rings_secondary
+			M_Rock_Legs_Rings_Primary
+			M_Rock_Legs_Rings_Secondary
 		]
 		random_weight = 1.0
 		genre = [
-			rock
+			Rock
 		]
-		acc_skeleton = skel_m_rock_legs_rings
-		acc_ragdoll = rag_m_rock_legs_rings
+		acc_skeleton = Skel_M_Rock_Legs_Rings
+		acc_ragdoll = Rag_M_Rock_Legs_Rings
 		acc_bones = [
-			bone_acc_legs_01
-			bone_acc_legs_02
-			bone_acc_legs_03
-			bone_acc_legs_04
+			Bone_ACC_Legs_01
+			Bone_ACC_Legs_02
+			Bone_ACC_Legs_03
+			Bone_ACC_Legs_04
 		]
 		price = 160
 	}
 	{
 		desc_id = m_rock_legs_cargoscarf
-		frontend_desc = qs(0x6cf75098)
+		frontend_desc = qs("\LBandolero Camos")
 		mesh = 'models/CAR/Male/M_Rock_Legs_CargoScarf.skin'
 		random_weight = 1.0
 		genre = [
-			rock
+			Rock
 		]
-		acc_skeleton = skel_m_rock_legs_cargoscarf
-		acc_ragdoll = rag_m_rock_legs_cargoscarf
+		acc_skeleton = Skel_M_Rock_Legs_CargoScarf
+		acc_ragdoll = Rag_M_Rock_Legs_CargoScarf
 		acc_bones = [
-			bone_acc_legs_01
-			bone_acc_legs_02
-			bone_acc_legs_03
-			bone_acc_legs_04
+			Bone_ACC_Legs_01
+			Bone_ACC_Legs_02
+			Bone_ACC_Legs_03
+			Bone_ACC_Legs_04
 		]
 		price = 250
 	}
 	{
 		desc_id = m_rock_legs_ozzypants
-		frontend_desc = qs(0x60b69fcf)
+		frontend_desc = qs("\LBuckles & Studs")
 		mesh = 'models/CAR/Male/M_Rock_Legs_Ozzypants.skin'
 		random_weight = 1.0
 		genre = [
-			rock
+			Rock
 		]
 		locked
 	}
 	{
-		desc_id = m_rock_legs_ripjeans
-		frontend_desc = qs(0xf590b4f5)
+		desc_id = M_Rock_Legs_RipJeans
+		frontend_desc = qs("\LAired Out")
 		mesh = 'models/CAR/Male/M_Rock_Legs_RipJeans.skin'
 		materials = [
-			m_rock_legs_ripjeans_primary
+			M_Rock_Legs_RipJeans_Primary
 		]
 		random_weight = 1.0
-		acc_skeleton = skel_m_rock_legs_ripjeans
-		acc_ragdoll = rag_m_rock_legs_ripjeans
+		acc_skeleton = Skel_M_Rock_Legs_RipJeans
+		acc_ragdoll = Rag_M_Rock_Legs_RipJeans
 		acc_bones = [
-			bone_acc_legs_01
-			bone_acc_legs_02
+			Bone_ACC_Legs_01
+			Bone_ACC_Legs_02
 		]
 		genre = [
-			rock
+			Rock
 		]
 	}
 	{
 		desc_id = m_rock_legs_rockbot
-		frontend_desc = qs(0x232d89bd)
+		frontend_desc = qs("\LRockubots")
 		mesh = 'models/CAR/Male/M_Rock_Legs_RockBot.skin'
 		materials = [
-			m_rock_legs_rockbot_primary
+			M_Rock_Legs_RockBot_Primary
 		]
 		random_weight = 0.0
 		price = 5000
 	}
 	{
-		desc_id = m_glam_legs_stripes
-		frontend_desc = qs(0x46610ad9)
+		desc_id = M_Glam_Legs_Stripes
+		frontend_desc = qs("\LCuffs And Stripes")
 		mesh = 'models/CAR/Male/M_Glam_Legs_Stripes.skin'
 		materials = [
-			m_glam_legs_stripes_primary
-			m_glam_legs_stripes_secondary
+			M_Glam_Legs_Stripes_Primary
+			M_Glam_Legs_Stripes_Secondary
 		]
 		random_weight = 1.0
 		genre = [
-			`glam	rock`
+			`Glam Rock`
 		]
-		acc_skeleton = skel_m_glam_legs_leopard
-		acc_ragdoll = rag_m_glam_legs_leopard
+		acc_skeleton = Skel_M_Glam_Legs_Leopard
+		acc_ragdoll = Rag_M_Glam_Legs_Leopard
 		acc_bones = [
-			bone_acc_legs_01
-			bone_acc_legs_02
-			bone_acc_legs_03
-			bone_acc_legs_04
+			Bone_ACC_Legs_01
+			Bone_ACC_Legs_02
+			Bone_ACC_Legs_03
+			Bone_ACC_Legs_04
 		]
 	}
 	{
 		desc_id = m_glam_legs_leopard
-		frontend_desc = qs(0x104e5546)
+		frontend_desc = qs("\LLeopard Skins")
 		mesh = 'models/CAR/Male/M_Glam_Legs_Leopard.skin'
 		random_weight = 1.0
 		genre = [
-			`glam	rock`
+			`Glam Rock`
 		]
-		acc_skeleton = skel_m_glam_legs_leopard
-		acc_ragdoll = rag_m_glam_legs_leopard
+		acc_skeleton = Skel_M_Glam_Legs_Leopard
+		acc_ragdoll = Rag_M_Glam_Legs_Leopard
 		acc_bones = [
-			bone_acc_legs_01
-			bone_acc_legs_02
-			bone_acc_legs_03
-			bone_acc_legs_04
+			Bone_ACC_Legs_01
+			Bone_ACC_Legs_02
+			Bone_ACC_Legs_03
+			Bone_ACC_Legs_04
 		]
 		price = 250
 	}
 	{
 		desc_id = m_glam_legs_spandex
-		frontend_desc = qs(0x795add2f)
+		frontend_desc = qs("\LNice Spandex")
 		mesh = 'models/CAR/Male/M_Glam_Legs_spandex.skin'
 		random_weight = 1.0
 		genre = [
-			`glam	rock`
+			`Glam Rock`
 		]
 		materials = [
-			m_glam_legs_spandex_primary
+			M_Glam_Legs_spandex_Primary
 		]
 	}
 	{
-		desc_id = m_glam_legs_chaps
-		frontend_desc = qs(0xdd7236a9)
+		desc_id = M_Glam_Legs_Chaps
+		frontend_desc = qs("\LHurricane Chaps")
 		mesh = 'models/CAR/Male/M_Glam_Legs_Chaps.skin'
 		random_weight = 1.0
 		genre = [
-			`glam	rock`
+			`Glam Rock`
 		]
 		materials = [
-			m_glam_legs_chaps_primary
-			m_glam_legs_chaps_secondary
+			M_Glam_Legs_Chaps_Primary
+			M_Glam_Legs_Chaps_Secondary
 		]
 		price = 175
 	}
 	{
-		desc_id = m_glam_legs_tiger
-		frontend_desc = qs(0x983eff72)
+		desc_id = M_Glam_Legs_Tiger
+		frontend_desc = qs("\LAnimal Instinct")
 		mesh = 'models/CAR/Male/M_Glam_Legs_Tiger.skin'
 		materials = [
-			m_glam_legs_tiger_primary
+			M_Glam_Legs_Tiger_Primary
 		]
 		random_weight = 1.0
 		genre = [
-			`glam	rock`
+			`Glam Rock`
 		]
-		acc_skeleton = skel_m_glam_legs_tiger
-		acc_ragdoll = rag_m_glam_legs_tiger
+		acc_skeleton = Skel_M_Glam_Legs_Tiger
+		acc_ragdoll = Rag_M_Glam_Legs_Tiger
 		acc_bones = [
-			bone_acc_legs_01
-			bone_acc_legs_02
-			bone_acc_legs_03
-			bone_acc_legs_04
+			Bone_ACC_Legs_01
+			Bone_ACC_Legs_02
+			Bone_ACC_Legs_03
+			Bone_ACC_Legs_04
 		]
 		price = 235
 	}
 	{
 		desc_id = m_glam_legs_gold
-		frontend_desc = qs(0x0ae851ae)
+		frontend_desc = qs("\LGilded Vinyl")
 		mesh = 'models/CAR/Male/M_Glam_Legs_Gold.skin'
 		materials = [
-			m_glam_legs_gold_primary
+			M_Glam_Legs_Gold_Primary
 		]
 		random_weight = 1.0
 		genre = [
-			`glam	rock`
+			`Glam Rock`
 		]
 		price = 300
 	}
 	{
-		desc_id = m_glam_legs_kiss
-		frontend_desc = qs(0x7766603b)
+		desc_id = M_Glam_Legs_Kiss
+		frontend_desc = qs("\LStar Chaps")
 		mesh = 'models/CAR/Male/M_Glam_Legs_Kiss.skin'
 		materials = [
-			m_glam_legs_kiss_primary
-			m_glam_legs_kiss_secondary
+			M_Glam_Legs_Kiss_Primary
+			M_Glam_Legs_Kiss_Secondary
 		]
 		random_weight = 1.0
 		genre = [
-			`glam	rock`
+			`Glam Rock`
 		]
 		price = 750
 	}
 	{
 		desc_id = m_bmtl_legs_lars
-		frontend_desc = qs(0x229ff04f)
+		frontend_desc = qs("\LWell Protected")
 		mesh = 'models/CAR/Male/M_Bmtl_Legs_Lars.skin'
 		random_weight = 1.0
 		genre = [
-			`black	metal`
+			`Black Metal`
 		]
 	}
 	{
 		desc_id = m_bmtl_legs_netpants
-		frontend_desc = qs(0xced5d006)
+		frontend_desc = qs("\LDiamond Chaps")
 		mesh = 'models/CAR/Male/M_Bmtl_Legs_NetPants.skin'
 		materials = [
-			m_bmtl_legs_netpants_primary
+			M_Bmtl_Legs_NetPants_Primary
 		]
 		random_weight = 1.0
 		genre = [
-			`black	metal`
+			`Black Metal`
 		]
 		price = 200
 	}
 	{
-		desc_id = m_bmtl_legs_beltpants
-		frontend_desc = qs(0x8daa6601)
+		desc_id = M_Bmtl_Legs_BeltPants
+		frontend_desc = qs("\LDangling Straps")
 		mesh = 'models/CAR/Male/M_Bmtl_Legs_BeltPants.skin'
 		materials = [
-			m_bmtl_legs_beltpant_primary
+			M_Bmtl_Legs_BeltPant_Primary
 		]
 		random_weight = 1.0
 		genre = [
-			`black	metal`
+			`Black Metal`
 		]
 		price = 175
 	}
 	{
-		desc_id = m_bmtl_legs_plate
-		frontend_desc = qs(0xbb025710)
+		desc_id = M_Bmtl_Legs_Plate
+		frontend_desc = qs("\LPlated Leathers")
 		mesh = 'models/CAR/Male/M_Bmtl_Legs_Plate.skin'
 		random_weight = 1.0
 		materials = [
-			m_bmtl_platepants_primary
+			M_Bmtl_PlatePants_Primary
 		]
 		genre = [
-			`black	metal`
+			`Black Metal`
 		]
 	}
 	{
-		desc_id = m_bmtl_legs_rippads
-		frontend_desc = qs(0xba8ff0c6)
+		desc_id = M_Bmtl_Legs_RipPads
+		frontend_desc = qs("\LTorn Leathers")
 		mesh = 'models/CAR/Male/M_Bmtl_Legs_RipPads.skin'
 		materials = [
-			m_bmtl_legs_ripwpads_primary
-			m_bmtl_legs_ripwpads_secondary
+			M_Bmtl_Legs_RipWPads_Primary
+			M_Bmtl_Legs_RipWPads_Secondary
 		]
 		random_weight = 1.0
 		genre = [
-			`black	metal`
+			`Black Metal`
 		]
 		price = 160
 	}
 	{
 		desc_id = m_metl_legs_zakk
-		frontend_desc = qs(0xcc07a679)
+		frontend_desc = qs("\LMan Skirt")
 		mesh = 'models/CAR/Male/M_Metl_Legs_Zakk.skin'
 		materials = [
-			m_metl_legs_zakk_primary
+			M_Metl_Legs_Zakk_Primary
 		]
 		random_weight = 0.0
 		genre = [
-			`heavy	metal`
+			`Heavy Metal`
 		]
-		acc_skeleton = skel_m_metl_legs_zakk
-		acc_ragdoll = rag_m_metl_legs_zakk
+		acc_skeleton = Skel_M_Metl_Legs_Zakk
+		acc_ragdoll = Rag_M_Metl_Legs_Zakk
 		acc_bones = [
-			bone_acc_legs_01
-			bone_acc_legs_02
-			bone_acc_legs_03
-			bone_acc_legs_04
+			Bone_ACC_Legs_01
+			Bone_ACC_Legs_02
+			Bone_ACC_Legs_03
+			Bone_ACC_Legs_04
 		]
 		locked
 	}
 	{
 		desc_id = m_metl_legs_axel2
-		frontend_desc = qs(0xc629f7b2)
+		frontend_desc = qs("\LCamo Whamo!")
 		mesh = 'models/CAR/Male/M_Metl_Legs_Axel2.skin'
 		materials = [
-			m_metl_legs_axel2_primary
+			M_metl_legs_axel2_Primary
 		]
 		random_weight = 1.0
 		genre = [
-			`heavy	metal`
+			`Heavy Metal`
 		]
-		acc_skeleton = skel_m_metl_legs_axel2
-		acc_ragdoll = rag_m_metl_legs_axel2
+		acc_skeleton = Skel_M_Metl_Legs_Axel2
+		acc_ragdoll = Rag_M_Metl_Legs_Axel2
 		acc_bones = [
-			bone_acc_legs_01
-			bone_acc_legs_02
-			bone_acc_legs_03
-			bone_acc_legs_04
+			Bone_ACC_Legs_01
+			Bone_ACC_Legs_02
+			Bone_ACC_Legs_03
+			Bone_ACC_Legs_04
 		]
 	}
 	{
 		desc_id = m_metl_legs_flaplthr
-		frontend_desc = qs(0x25206033)
+		frontend_desc = qs("\LWarrior")
 		mesh = 'models/CAR/Male/M_Metl_Legs_FlapLthr.skin'
 		materials = [
-			m_metl_legs_flaplthr_primary
-			m_metl_legs_flaplthr_secondary
-			m_metl_legs_flaplthr_belt
+			M_Metl_Legs_FlapLthr_Primary
+			M_Metl_Legs_FlapLthr_Secondary
+			M_Metl_Legs_FlapLthr_Belt
 		]
 		random_weight = 1.0
 		genre = [
-			`heavy	metal`
+			`Heavy Metal`
 		]
 		price = 500
 	}
 	{
-		desc_id = m_mtl_legs_axel1
-		frontend_desc = qs(0x9b2c1509)
+		desc_id = M_Mtl_Legs_Axel1
+		frontend_desc = qs("\LMetal Head Basics")
 		mesh = 'models/CAR/Male/M_Mtl_Legs_Axel1.skin'
 		materials = [
-			m_metl_legs_axel1_primary
+			M_Metl_Legs_Axel1_Primary
 		]
 		random_weight = 1.0
 		genre = [
-			`heavy	metal`
+			`Heavy Metal`
 		]
 	}
 ]

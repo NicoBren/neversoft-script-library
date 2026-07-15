@@ -1,7 +1,7 @@
 
 script CreateMaskedScreenElements 
 	if NOT GotParam \{mask_element}
-		script_assert \{qs(0x178b9b17)}
+		script_assert \{qs("\LMust pass mask_element to CreateMaskedScreenElements")}
 	endif
 	if NOT GotParam \{z_priority}
 		<z_priority> = 0
@@ -13,10 +13,10 @@ script CreateMaskedScreenElements
 	if NOT GotParam \{debug}
 		CreateScreenElement {
 			<mask_element>
-			Type = SpriteElement
+			type = SpriteElement
 			rgba = <mask_rgba>
 			alpha = <mask_alpha>
-			blend = add
+			blend = Add
 			z_priority = (<z_priority> + 1)
 			base_pass
 		}
@@ -29,7 +29,7 @@ script CreateMaskedScreenElements
 	if GotParam \{elements}
 		GetArraySize \{elements}
 		<i> = 0
-		if (<array_Size> > 0)
+		if (<array_size> > 0)
 			begin
 			<element> = (<elements> [<i>])
 			CreateMaskedScreenElement {
@@ -37,7 +37,7 @@ script CreateMaskedScreenElements
 				z_priority = (<z_priority> + 2)
 			}
 			<i> = (<i> + 1)
-			repeat <array_Size>
+			repeat <array_size>
 		endif
 	endif
 endscript
@@ -57,9 +57,9 @@ endscript
 
 script GetScreenElementMaskParams 
 	GetPlatform
-	switch <Platform>
-		case Xenon
-		case PS3
+	switch <platform>
+		case xenon
+		case ps3
 		<mask_rgba> = [128 128 128 0]
 		<mask_alpha> = 0.0
 		<multi_blend> = blend

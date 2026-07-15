@@ -1,21 +1,21 @@
-logintextcolor = [
+loginTextColor = [
 	255
 	200
 	0
 	255
 ]
-gprivatematchid = 0
+gPrivateMatchId = 0
 
 script create_winport_connection_status_screen 
 	printf \{"--- create_winport_connection_status_screen"}
-	create_menu_backdrop \{texture = online_background}
+	create_menu_backdrop \{texture = Online_Background}
 	z = 110
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
-		id = connectionstatuscontainer
+		id = connectionStatusContainer
 		pos = (0.0, 0.0)}
-	createscreenelement \{type = vscrollingmenu
-		parent = connectionstatuscontainer
+	CreateScreenElement \{type = VScrollingMenu
+		parent = connectionStatusContainer
 		just = [
 			center
 			top
@@ -24,8 +24,8 @@ script create_winport_connection_status_screen
 		pos = (640.0, 465.0)
 		z_priority = 1}
 	menu_id = <id>
-	createscreenelement {
-		type = vmenu
+	CreateScreenElement {
+		type = VMenu
 		parent = <menu_id>
 		pos = (298.0, 0.0)
 		just = [center top]
@@ -50,10 +50,10 @@ script create_winport_connection_status_screen
 			0
 			255
 		]}
-	create_pause_menu_frame \{parent = connectionstatuscontainer
+	create_pause_menu_frame \{parent = connectionStatusContainer
 		z = 5}
-	displaysprite \{parent = connectionstatuscontainer
-		tex = dialog_title_bg
+	displaySprite \{parent = connectionStatusContainer
+		tex = Dialog_Title_BG
 		dims = (224.0, 224.0)
 		z = 9
 		pos = (640.0, 100.0)
@@ -62,8 +62,8 @@ script create_winport_connection_status_screen
 			top
 		]
 		flip_v}
-	displaysprite \{parent = connectionstatuscontainer
-		tex = dialog_title_bg
+	displaySprite \{parent = connectionStatusContainer
+		tex = Dialog_Title_BG
 		dims = (224.0, 224.0)
 		z = 9
 		pos = (640.0, 100.0)
@@ -71,8 +71,8 @@ script create_winport_connection_status_screen
 			left
 			top
 		]}
-	createscreenelement \{type = textelement
-		parent = connectionstatuscontainer
+	CreateScreenElement \{type = TextElement
+		parent = connectionStatusContainer
 		font = fontgrid_title_gh3
 		scale = 1.2
 		rgba = [
@@ -96,10 +96,10 @@ script create_winport_connection_status_screen
 			0
 			255
 		]}
-	createscreenelement {
-		type = textblockelement
-		parent = connectionstatuscontainer
-		id = statusmessage
+	CreateScreenElement {
+		type = TextBlockElement
+		parent = connectionStatusContainer
+		id = statusMessage
 		font = text_a4
 		scale = 0.8
 		rgba = [210 210 210 250]
@@ -111,50 +111,50 @@ script create_winport_connection_status_screen
 		dims = (800.0, 320.0)
 		line_spacing = 1.0
 	}
-	if NOT (netsessionfunc func = isconnected)
+	if NOT (NetSessionFunc func = IsConnected)
 		add_user_control_helper \{text = "CANCEL"
 			button = red
 			z = 100}
-		launchevent type = focus target = <vmenu_id>
-		netsessionfunc \{func = onlinesignin}
+		LaunchEvent type = focus target = <vmenu_id>
+		NetSessionFunc \{func = onlinesignin}
 		begin
-		netsessionfunc \{func = getnetworkstatus}
-		switch (<currentnetworktask>)
+		NetSessionFunc \{func = GetNetworkStatus}
+		switch (<CurrentNetworkTask>)
 			case "START_NETWORK"
-			switch (<currentnetworkstatus>)
+			switch (<CurrentNetworkStatus>)
 				case "PENDING"
-				statustext = "Initializing Online Services"
+				statusText = "Initializing Online Services"
 				case "DONE"
-				statustext = "Online Services Ready"
+				statusText = "Online Services Ready"
 				case "FAILED"
-				statustext = "Unable to Initialize Online Services"
+				statusText = "Unable to Initialize Online Services"
 				success = false
 				default
-				statustext = "Internal Error: Unexpected Network State!"
+				statusText = "Internal Error: Unexpected Network State!"
 				success = false
 			endswitch
 			case "CHECK_DNS"
-			switch (<currentnetworkstatus>)
+			switch (<CurrentNetworkStatus>)
 				case "PENDING"
-				statustext = "Locating Game Servers"
+				statusText = "Locating Game Servers"
 				case "DONE"
-				statustext = "Game Servers Located"
+				statusText = "Game Servers Located"
 				success = true
 				case "FAILED"
-				statustext = "Unable to locate Game Servers"
+				statusText = "Unable to locate Game Servers"
 				success = false
 				default
-				statustext = "Internal Error: Unexpected Network State!"
+				statusText = "Internal Error: Unexpected Network State!"
 				success = false
 			endswitch
 			default
-			statustext = "Internal Error: Unexpected Network State!"
+			statusText = "Internal Error: Unexpected Network State!"
 			success = false
 		endswitch
-		setscreenelementprops id = statusmessage text = <statustext>
-		fit_text_into_menu_item \{id = statusmessage
+		SetScreenElementProps id = statusMessage text = <statusText>
+		fit_text_into_menu_item \{id = statusMessage
 			max_width = 480}
-		if gotparam \{success}
+		if GotParam \{success}
 			clean_up_user_control_helpers
 			if (<success> = false)
 				add_user_control_helper \{text = "BACK"
@@ -164,19 +164,19 @@ script create_winport_connection_status_screen
 			endif
 			break
 		endif
-		wait \{1
+		Wait \{1
 			frame}
-		if NOT (screenelementexists id = connectionstatuscontainer)
+		if NOT (ScreenElementExists id = connectionStatusContainer)
 			return
 		endif
 		repeat
 	endif
-	if NOT (netsessionfunc func = hasexistinglogin)
-		setscreenelementprops \{id = statusmessage
+	if NOT (NetSessionFunc func = HasExistingLogin)
+		SetScreenElementProps \{id = statusMessage
 			text = "Existing Login Not Found.\\nDo you want to Create a New Account or Use an Existing Account?"}
-		fit_text_into_menu_item \{id = statusmessage
+		fit_text_into_menu_item \{id = statusMessage
 			max_width = 480}
-		displaysprite \{parent = connectionstatuscontainer
+		displaySprite \{parent = connectionStatusContainer
 			id = options_bg_1
 			tex = dialog_bg
 			pos = (640.0, 500.0)
@@ -186,7 +186,7 @@ script create_winport_connection_status_screen
 				center
 				botom
 			]}
-		displaysprite \{parent = connectionstatuscontainer
+		displaySprite \{parent = connectionStatusContainer
 			id = options_bg_2
 			tex = dialog_bg
 			pos = (640.0, 530.0)
@@ -197,8 +197,8 @@ script create_winport_connection_status_screen
 				top
 			]
 			flip_h}
-		createscreenelement {
-			type = containerelement
+		CreateScreenElement {
+			type = ContainerElement
 			parent = <vmenu_id>
 			dims = (100.0, 50.0)
 			event_handlers = [
@@ -209,8 +209,8 @@ script create_winport_connection_status_screen
 			]
 		}
 		container_id = <id>
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = <container_id>
 			local_id = text
 			font = fontgrid_title_gh3
@@ -221,12 +221,12 @@ script create_winport_connection_status_screen
 			z_priority = (<z> + 0.1)
 		}
 		fit_text_into_menu_item id = <id> max_width = 200
-		getscreenelementdims id = <id>
-		createscreenelement {
-			type = spriteelement
+		GetScreenElementDims id = <id>
+		CreateScreenElement {
+			type = SpriteElement
 			parent = <container_id>
 			local_id = bookend_left
-			texture = dialog_highlight
+			texture = Dialog_Highlight
 			alpha = 0.0
 			just = [right center]
 			pos = ((0.0, 20.0) + (1.0, 0.0) * (<width> / (-2)) + (-5.0, 0.0))
@@ -234,19 +234,19 @@ script create_winport_connection_status_screen
 			scale = (1.0, 1.0)
 			flip_v
 		}
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			parent = <container_id>
 			local_id = bookend_right
-			texture = dialog_highlight
+			texture = Dialog_Highlight
 			alpha = 0.0
 			just = [left center]
 			pos = ((0.0, 20.0) + (1.0, 0.0) * (<width> / (2)) + (5.0, 0.0))
 			z_priority = (<z> + 0.1)
 			scale = (1.0, 1.0)
 		}
-		createscreenelement {
-			type = containerelement
+		CreateScreenElement {
+			type = ContainerElement
 			parent = <vmenu_id>
 			dims = (100.0, 50.0)
 			event_handlers = [
@@ -257,8 +257,8 @@ script create_winport_connection_status_screen
 			]
 		}
 		container_id = <id>
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = <container_id>
 			local_id = text
 			font = fontgrid_title_gh3
@@ -269,12 +269,12 @@ script create_winport_connection_status_screen
 			z_priority = (<z> + 0.1)
 		}
 		fit_text_into_menu_item id = <id> max_width = 200
-		getscreenelementdims id = <id>
-		createscreenelement {
-			type = spriteelement
+		GetScreenElementDims id = <id>
+		CreateScreenElement {
+			type = SpriteElement
 			parent = <container_id>
 			local_id = bookend_left
-			texture = dialog_highlight
+			texture = Dialog_Highlight
 			alpha = 0.0
 			just = [right center]
 			pos = ((0.0, 20.0) + (1.0, 0.0) * (<width> / (-2)) + (-5.0, 0.0))
@@ -282,11 +282,11 @@ script create_winport_connection_status_screen
 			scale = (1.0, 1.0)
 			flip_v
 		}
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			parent = <container_id>
 			local_id = bookend_right
-			texture = dialog_highlight
+			texture = Dialog_Highlight
 			alpha = 0.0
 			just = [left center]
 			pos = ((0.0, 20.0) + (1.0, 0.0) * (<width> / (2)) + (5.0, 0.0))
@@ -302,34 +302,34 @@ script create_winport_connection_status_screen
 		add_user_control_helper \{text = "UP/DOWN"
 			button = strumbar
 			z = 100}
-		launchevent type = focus target = <vmenu_id>
+		LaunchEvent type = focus target = <vmenu_id>
 		return
 	endif
-	if NOT (netsessionfunc func = isloggedin)
+	if NOT (NetSessionFunc func = IsLoggedIn)
 		ui_flow_manager_respond_to_action \{action = account_login}
 	endif
 	ui_flow_manager_respond_to_action \{action = goto_online_menu}
 endscript
 
 script destroy_winport_connection_status_screen 
-	destroyscreenelement \{id = connectionstatuscontainer}
+	DestroyScreenElement \{id = connectionStatusContainer}
 	clean_up_user_control_helpers
 	destroy_menu_backdrop
 endscript
 
 script cancel_winport_connection_status_screen 
-	netsessionfunc \{func = resetnetwork}
+	NetSessionFunc \{func = ResetNetwork}
 	ui_flow_manager_respond_to_action \{action = back}
 endscript
 
 script create_winport_account_create_screen 
-	create_winport_account_management_screen \{mode = createaccount
+	create_winport_account_management_screen \{mode = createAccount
 		title = "Account Creation"
-		container = accountcreatecontainer}
+		container = accountCreateContainer}
 endscript
 
 script destroy_winport_account_create_screen 
-	destroy_winport_account_management_screen \{container = accountcreatecontainer}
+	destroy_winport_account_management_screen \{container = accountCreateContainer}
 endscript
 
 script start_winport_account_create_screen 
@@ -337,26 +337,26 @@ script start_winport_account_create_screen
 endscript
 
 script create_winport_account_login_screen 
-	netsessionfunc \{func = getautologinsetting}
-	if (<autologinsetting> = autologinon && netsessionfunc func = hasexistinglogin)
-		netsessionfunc \{func = initializeloginfields
+	NetSessionFunc \{func = GetAutoLoginSetting}
+	if (<autoLoginSetting> = autoLoginOn && NetSessionFunc func = HasExistingLogin)
+		NetSessionFunc \{func = InitializeLoginFields
 			params = {
-				loginmode = loginaccount
+				loginMode = loginAccount
 			}}
-		ui_flow_manager_respond_to_action \{action = executelogin}
+		ui_flow_manager_respond_to_action \{action = executeLogin}
 	else
-		create_winport_account_management_screen \{mode = loginaccount
+		create_winport_account_management_screen \{mode = loginAccount
 			title = "Account Login"
-			container = accountlogincontainer
-			yellowbuttontext = "CHANGE PASSWORD"
-			yellowbuttonaction = start_winport_account_change_screen
-			bluebuttontext = "NEW ACCOUNT"
-			bluebuttonaction = start_winport_account_create_screen}
+			container = accountLoginContainer
+			yellowButtonText = "CHANGE PASSWORD"
+			yellowButtonAction = start_winport_account_change_screen
+			blueButtonText = "NEW ACCOUNT"
+			blueButtonAction = start_winport_account_create_screen}
 	endif
 endscript
 
 script destroy_winport_account_login_screen 
-	destroy_winport_account_management_screen \{container = accountlogincontainer}
+	destroy_winport_account_management_screen \{container = accountLoginContainer}
 endscript
 
 script start_winport_account_login_screen 
@@ -364,15 +364,15 @@ script start_winport_account_login_screen
 endscript
 
 script create_winport_account_change_screen 
-	create_winport_account_management_screen \{mode = changeaccount
+	create_winport_account_management_screen \{mode = changeAccount
 		title = "Change Password"
-		container = accountchangecontainer
-		yellowbuttontext = "RESET PASSWORD"
-		yellowbuttonaction = start_winport_account_reset_screen}
+		container = accountChangeContainer
+		yellowButtonText = "RESET PASSWORD"
+		yellowButtonAction = start_winport_account_reset_screen}
 endscript
 
 script destroy_winport_account_change_screen 
-	destroy_winport_account_management_screen \{container = accountchangecontainer}
+	destroy_winport_account_management_screen \{container = accountChangeContainer}
 endscript
 
 script start_winport_account_change_screen 
@@ -380,15 +380,15 @@ script start_winport_account_change_screen
 endscript
 
 script create_winport_account_reset_screen 
-	create_winport_account_management_screen \{mode = resetaccount
+	create_winport_account_management_screen \{mode = resetAccount
 		title = "Reset Password"
-		container = accountresetcontainer
-		yellowbuttontext = "DELETE ACCOUNT"
-		yellowbuttonaction = start_winport_account_delete_screen}
+		container = accountResetContainer
+		yellowButtonText = "DELETE ACCOUNT"
+		yellowButtonAction = start_winport_account_delete_screen}
 endscript
 
 script destroy_winport_account_reset_screen 
-	destroy_winport_account_management_screen \{container = accountresetcontainer}
+	destroy_winport_account_management_screen \{container = accountResetContainer}
 endscript
 
 script start_winport_account_reset_screen 
@@ -396,13 +396,13 @@ script start_winport_account_reset_screen
 endscript
 
 script create_winport_account_delete_screen 
-	create_winport_account_management_screen \{mode = deleteaccount
+	create_winport_account_management_screen \{mode = deleteAccount
 		title = "Delete Account"
-		container = accountdeletecontainer}
+		container = accountDeleteContainer}
 endscript
 
 script destroy_winport_account_delete_screen 
-	destroy_winport_account_management_screen \{container = accountdeletecontainer}
+	destroy_winport_account_management_screen \{container = accountDeleteContainer}
 endscript
 
 script start_winport_account_delete_screen 
@@ -410,25 +410,25 @@ script start_winport_account_delete_screen
 endscript
 
 script create_change_password_submenu 
-	create_winport_account_management_screen \{mode = changeaccount
+	create_winport_account_management_screen \{mode = changeAccount
 		title = "Change Password"
-		container = accountchangecontainer
-		yellowbuttonaction = winport_null_action}
+		container = accountChangeContainer
+		yellowButtonAction = winport_null_action}
 endscript
 
 script destroy_change_password_submenu 
-	destroy_winport_account_management_screen \{container = accountchangecontainer}
+	destroy_winport_account_management_screen \{container = accountChangeContainer}
 endscript
 
 script create_account_delete_submenu 
-	create_winport_account_management_screen \{mode = deleteaccount
+	create_winport_account_management_screen \{mode = deleteAccount
 		title = "Delete Account"
-		container = accountdeletesubmenucontainer
-		yellowbuttonaction = winport_null_action}
+		container = accountDeleteSubmenuContainer
+		yellowButtonAction = winport_null_action}
 endscript
 
 script destroy_account_delete_submenu 
-	destroy_winport_account_management_screen \{container = accountdeletesubmenucontainer}
+	destroy_winport_account_management_screen \{container = accountDeleteSubmenuContainer}
 endscript
 
 script winport_null_action 
@@ -437,52 +437,52 @@ endscript
 script create_winport_account_management_screen 
 	printf \{"--- create_winport_account_management_screen"}
 	z = 110
-	create_menu_backdrop \{texture = online_background}
-	if ((gotparam yellowbuttonaction) && (gotparam bluebuttonaction))
-		handlers = [
+	create_menu_backdrop \{texture = Online_Background}
+	if ((GotParam yellowButtonAction) && (GotParam blueButtonAction))
+		Handlers = [
 			{focus net_warning_focus}
 			{unfocus net_warning_unfocus}
-			{pad_choose ui_flow_manager_respond_to_action params = {action = executelogin}}
-			{pad_option2 <yellowbuttonaction>}
-			{pad_option <bluebuttonaction>}
+			{pad_choose ui_flow_manager_respond_to_action params = {action = executeLogin}}
+			{pad_option2 <yellowButtonAction>}
+			{pad_option <blueButtonAction>}
 			{pad_back cancel_winport_account_management_screen params = {mode = <mode>}}
 		]
-	elseif (gotparam yellowbuttonaction)
-		handlers = [
+	elseif (GotParam yellowButtonAction)
+		Handlers = [
 			{focus net_warning_focus}
 			{unfocus net_warning_unfocus}
-			{pad_choose ui_flow_manager_respond_to_action params = {action = executelogin}}
-			{pad_option2 <yellowbuttonaction>}
+			{pad_choose ui_flow_manager_respond_to_action params = {action = executeLogin}}
+			{pad_option2 <yellowButtonAction>}
 			{pad_back cancel_winport_account_management_screen params = {mode = <mode>}}
 		]
-	elseif (gotparam bluebuttonaction)
-		handlers = [
+	elseif (GotParam blueButtonAction)
+		Handlers = [
 			{focus net_warning_focus}
 			{unfocus net_warning_unfocus}
-			{pad_choose ui_flow_manager_respond_to_action params = {action = executelogin}}
-			{pad_option <bluebuttonaction>}
+			{pad_choose ui_flow_manager_respond_to_action params = {action = executeLogin}}
+			{pad_option <blueButtonAction>}
 			{pad_back cancel_winport_account_management_screen params = {mode = <mode>}}
 		]
 	else
-		handlers = [
+		Handlers = [
 			{focus net_warning_focus}
 			{unfocus net_warning_unfocus}
-			{pad_choose ui_flow_manager_respond_to_action params = {action = executelogin}}
+			{pad_choose ui_flow_manager_respond_to_action params = {action = executeLogin}}
 			{pad_back cancel_winport_account_management_screen params = {mode = <mode>}}
 		]
 	endif
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = root_window
 		id = <container>
 		pos = (0.0, 0.0)
-		event_handlers = <handlers>
+		event_handlers = <Handlers>
 	}
-	netsessionfunc func = initializeloginfields params = {loginmode = <mode>}
-	displaysprite parent = <container> tex = dialog_title_bg dims = (300.0, 230.0) z = 9 pos = (640.0, 40.0) just = [right top] flip_v
-	displaysprite parent = <container> tex = dialog_title_bg dims = (300.0, 230.0) z = 9 pos = (640.0, 40.0) just = [left top]
-	createscreenelement {
-		type = textelement
+	NetSessionFunc func = InitializeLoginFields params = {loginMode = <mode>}
+	displaySprite parent = <container> tex = Dialog_Title_BG dims = (300.0, 230.0) z = 9 pos = (640.0, 40.0) just = [right top] flip_v
+	displaySprite parent = <container> tex = Dialog_Title_BG dims = (300.0, 230.0) z = 9 pos = (640.0, 40.0) just = [left top]
+	CreateScreenElement {
+		type = TextElement
 		parent = <container>
 		font = fontgrid_title_gh3
 		scale = 1.0
@@ -496,10 +496,10 @@ script create_winport_account_management_screen
 		shadow_rgba = [0 0 0 255]
 	}
 	fit_text_in_rectangle id = <id> dims = (400.0, 75.0) pos = (640.0, 125.0) only_if_larger_x = 1 only_if_larger_y = 1 just = center
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <container>
-		id = capslockfield
+		id = capsLockField
 		font = text_a4
 		scale = 0.6
 		rgba = [255 0 0 255]
@@ -511,8 +511,8 @@ script create_winport_account_management_screen
 		shadow_offs = (1.0, 1.0)
 		shadow_rgba = [0 0 0 255]
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <container>
 		font = text_a4
 		scale = 0.6
@@ -525,8 +525,8 @@ script create_winport_account_management_screen
 		shadow_offs = (1.0, 1.0)
 		shadow_rgba = [0 0 0 255]
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <container>
 		font = text_a4
 		scale = 1.0
@@ -541,22 +541,22 @@ script create_winport_account_management_screen
 	}
 	fit_text_in_rectangle id = <id> dims = (600.0, 25.0) pos = (640.0, 595.0) only_if_larger_x = 1 only_if_larger_y = 1 just = center keep_ar = 1
 	<pos> = (375.0, 290.0)
-	create_winport_login_field container = <container> pos = <pos> label = "Username: " labelid = usernamelabelid prefixid = usernameprefixid cursorid = usernamecursorid suffixid = usernamesuffixid ang = -2.0
-	getscreenelementdims \{id = usernamelabelid}
-	lineheight = (<height> + 8)
-	if (<mode> = loginaccount || <mode> = deleteaccount || <mode> = changeaccount)
-		pos = (<pos> + ((0.0, 1.0) * <lineheight>))
-		create_winport_login_field container = <container> pos = <pos> label = "Password: " labelid = passwordlabelid prefixid = passwordprefixid cursorid = passwordcursorid suffixid = passwordsuffixid ang = 0.2
+	create_winport_login_field container = <container> pos = <pos> label = "Username: " labelId = usernameLabelId prefixId = usernamePrefixId cursorId = usernameCursorId suffixId = usernameSuffixId ang = -2.0
+	GetScreenElementDims \{id = usernameLabelId}
+	lineHeight = (<Height> + 8)
+	if (<mode> = loginAccount || <mode> = deleteAccount || <mode> = changeAccount)
+		pos = (<pos> + ((0.0, 1.0) * <lineHeight>))
+		create_winport_login_field container = <container> pos = <pos> label = "Password: " labelId = passwordLabelId prefixId = passwordPrefixId cursorId = passwordCursorId suffixId = passwordSuffixId ang = 0.2
 	endif
-	if (<mode> = createaccount || <mode> = changeaccount || <mode> = resetaccount)
-		pos = (<pos> + ((0.0, 1.0) * <lineheight>))
-		create_winport_login_field container = <container> pos = <pos> label = "New Password: " labelid = newpassword1labelid prefixid = newpassword1prefixid cursorid = newpassword1cursorid suffixid = newpassword1suffixid ang = -0.6
-		pos = (<pos> + ((0.0, 1.0) * <lineheight>))
-		create_winport_login_field container = <container> pos = <pos> label = "Repeat New Password: " labelid = newpassword2labelid prefixid = newpassword2prefixid cursorid = newpassword2cursorid suffixid = newpassword2suffixid ang = 0.5
+	if (<mode> = createAccount || <mode> = changeAccount || <mode> = resetAccount)
+		pos = (<pos> + ((0.0, 1.0) * <lineHeight>))
+		create_winport_login_field container = <container> pos = <pos> label = "New Password: " labelId = newPassword1LabelId prefixId = newPassword1PrefixId cursorId = newPassword1CursorId suffixId = newPassword1SuffixId ang = -0.6
+		pos = (<pos> + ((0.0, 1.0) * <lineHeight>))
+		create_winport_login_field container = <container> pos = <pos> label = "Repeat New Password: " labelId = newPassword2LabelId prefixId = newPassword2PrefixId cursorId = newPassword2CursorId suffixId = newPassword2SuffixId ang = 0.5
 	endif
-	if (<mode> = createaccount || <mode> = resetaccount)
-		pos = (<pos> + ((0.0, 1.0) * <lineheight>))
-		create_winport_login_field container = <container> pos = <pos> label = "License: " labelid = licenselabelid prefixid = licenseprefixid cursorid = licensecursorid suffixid = licensesuffixid ang = 1.5
+	if (<mode> = createAccount || <mode> = resetAccount)
+		pos = (<pos> + ((0.0, 1.0) * <lineHeight>))
+		create_winport_login_field container = <container> pos = <pos> label = "License: " labelId = licenseLabelId prefixId = licensePrefixId cursorId = licenseCursorId suffixId = licenseSuffixId ang = 1.5
 	endif
 	add_user_control_helper \{text = "ACCEPT"
 		button = green
@@ -564,93 +564,93 @@ script create_winport_account_management_screen
 	add_user_control_helper \{text = "BACK"
 		button = red
 		z = 100}
-	if gotparam \{yellowbuttontext}
-		add_user_control_helper text = <yellowbuttontext> button = yellow z = 100
+	if GotParam \{yellowButtonText}
+		add_user_control_helper text = <yellowButtonText> button = Yellow z = 100
 	endif
-	if gotparam \{bluebuttontext}
-		add_user_control_helper text = <bluebuttontext> button = blue z = 100
+	if GotParam \{blueButtonText}
+		add_user_control_helper text = <blueButtonText> button = Blue z = 100
 	endif
-	launchevent type = focus target = <container>
+	LaunchEvent type = focus target = <container>
 	begin
-	if (iscapslockon)
-		setscreenelementprops \{id = capslockfield
+	if (IsCapsLockOn)
+		SetScreenElementProps \{id = capsLockField
 			alpha = 1.0}
 	else
-		setscreenelementprops \{id = capslockfield
+		SetScreenElementProps \{id = capsLockField
 			alpha = 0.0}
 	endif
-	update_winport_login_field \{field = username
-		labelid = usernamelabelid
-		prefixid = usernameprefixid
-		cursorid = usernamecursorid
-		suffixid = usernamesuffixid}
+	update_winport_login_field \{field = UserName
+		labelId = usernameLabelId
+		prefixId = usernamePrefixId
+		cursorId = usernameCursorId
+		suffixId = usernameSuffixId}
 	update_winport_login_field \{field = password
-		labelid = passwordlabelid
-		prefixid = passwordprefixid
-		cursorid = passwordcursorid
-		suffixid = passwordsuffixid}
-	update_winport_login_field \{field = newpassword1
-		labelid = newpassword1labelid
-		prefixid = newpassword1prefixid
-		cursorid = newpassword1cursorid
-		suffixid = newpassword1suffixid}
-	update_winport_login_field \{field = newpassword2
-		labelid = newpassword2labelid
-		prefixid = newpassword2prefixid
-		cursorid = newpassword2cursorid
-		suffixid = newpassword2suffixid}
+		labelId = passwordLabelId
+		prefixId = passwordPrefixId
+		cursorId = passwordCursorId
+		suffixId = passwordSuffixId}
+	update_winport_login_field \{field = newPassword1
+		labelId = newPassword1LabelId
+		prefixId = newPassword1PrefixId
+		cursorId = newPassword1CursorId
+		suffixId = newPassword1SuffixId}
+	update_winport_login_field \{field = newPassword2
+		labelId = newPassword2LabelId
+		prefixId = newPassword2PrefixId
+		cursorId = newPassword2CursorId
+		suffixId = newPassword2SuffixId}
 	update_winport_login_field \{field = license
-		labelid = licenselabelid
-		prefixid = licenseprefixid
-		cursorid = licensecursorid
-		suffixid = licensesuffixid}
-	wait \{1
+		labelId = licenseLabelId
+		prefixId = licensePrefixId
+		cursorId = licenseCursorId
+		suffixId = licenseSuffixId}
+	Wait \{1
 		frame}
-	if NOT (screenelementexists id = <container>)
+	if NOT (ScreenElementExists id = <container>)
 		return
 	endif
-	netsessionfunc \{func = getloginentry}
-	if (<loginentry> = loginaccepted)
+	NetSessionFunc \{func = GetLoginEntry}
+	if (<loginEntry> = loginAccepted)
 		break
 	endif
-	if (<loginentry> = loginaborted)
+	if (<loginEntry> = loginAborted)
 		break
 	endif
-	if ((gotparam yellowbuttonaction) && (<loginentry> = loginoption1))
+	if ((GotParam yellowButtonAction) && (<loginEntry> = loginOption1))
 		printf \{"Got yellowButtonAction button"}
 		break
 	endif
-	if ((gotparam bluebuttonaction) && (<loginentry> = loginoption2))
+	if ((GotParam blueButtonAction) && (<loginEntry> = loginOption2))
 		printf \{"Got blueButtonAction button"}
 		break
 	endif
 	repeat
-	switch <loginentry>
-		case loginaccepted
-		ui_flow_manager_respond_to_action \{action = executelogin}
-		case loginoption1
+	switch <loginEntry>
+		case loginAccepted
+		ui_flow_manager_respond_to_action \{action = executeLogin}
+		case loginOption1
 		printf \{"Executing option 1"}
-		ui_flow_manager_respond_to_action \{action = executeoption1}
-		case loginoption2
+		ui_flow_manager_respond_to_action \{action = executeOption1}
+		case loginOption2
 		printf \{"Executing option 2"}
-		ui_flow_manager_respond_to_action \{action = executeoption2}
-		case loginaborted
+		ui_flow_manager_respond_to_action \{action = executeOption2}
+		case loginAborted
 		cancel_winport_account_management_screen mode = <mode>
 	endswitch
 endscript
 
 script destroy_winport_account_management_screen 
-	netsessionfunc \{func = destroyloginfields}
-	if (screenelementexists id = <container>)
-		destroyscreenelement id = <container>
+	NetSessionFunc \{func = DestroyLoginFields}
+	if (ScreenElementExists id = <container>)
+		DestroyScreenElement id = <container>
 	endif
 	clean_up_user_control_helpers
 	destroy_menu_backdrop
 endscript
 
 script cancel_winport_account_management_screen 
-	if (<mode> = loginaccount)
-		if (netsessionfunc func = hasexistinglogin)
+	if (<mode> = loginAccount)
+		if (NetSessionFunc func = HasExistingLogin)
 			ui_flow_manager_respond_to_action \{action = back_to_main}
 		else
 			ui_flow_manager_respond_to_action \{action = back_to_connection_status}
@@ -661,19 +661,19 @@ script cancel_winport_account_management_screen
 endscript
 
 script create_winport_login_field 
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <container>
 		rot_angle = <ang>
 	}
-	rotcontainer = <id>
-	createscreenelement {
-		type = textelement
-		parent = <rotcontainer>
-		id = <labelid>
+	rotContainer = <id>
+	CreateScreenElement {
+		type = TextElement
+		parent = <rotContainer>
+		id = <labelId>
 		font = fontgrid_title_gh3
 		scale = 0.8
-		rgba = $logintextcolor
+		rgba = $loginTextColor
 		text = <label>
 		just = [left top]
 		z_priority = 10.0
@@ -682,13 +682,13 @@ script create_winport_login_field
 		shadow_offs = (3.0, 3.0)
 		shadow_rgba = [0 0 0 255]
 	}
-	createscreenelement {
-		type = textelement
-		parent = <rotcontainer>
-		id = <prefixid>
+	CreateScreenElement {
+		type = TextElement
+		parent = <rotContainer>
+		id = <prefixId>
 		font = fontgrid_title_gh3
 		scale = 0.8
-		rgba = $logintextcolor
+		rgba = $loginTextColor
 		text = ""
 		just = [left top]
 		z_priority = 10.0
@@ -697,13 +697,13 @@ script create_winport_login_field
 		shadow_offs = (3.0, 3.0)
 		shadow_rgba = [0 0 0 255]
 	}
-	createscreenelement {
-		type = textelement
-		parent = <rotcontainer>
-		id = <cursorid>
+	CreateScreenElement {
+		type = TextElement
+		parent = <rotContainer>
+		id = <cursorId>
 		font = fontgrid_title_gh3
 		scale = (0.5, 0.8)
-		rgba = $logintextcolor
+		rgba = $loginTextColor
 		text = "I"
 		just = [left top]
 		z_priority = 10.0
@@ -712,13 +712,13 @@ script create_winport_login_field
 		shadow_offs = (3.0, 3.0)
 		shadow_rgba = [0 0 0 255]
 	}
-	createscreenelement {
-		type = textelement
-		parent = <rotcontainer>
-		id = <suffixid>
+	CreateScreenElement {
+		type = TextElement
+		parent = <rotContainer>
+		id = <suffixId>
 		font = fontgrid_title_gh3
 		scale = 0.8
-		rgba = $logintextcolor
+		rgba = $loginTextColor
 		text = ""
 		just = [left top]
 		z_priority = 10.0
@@ -727,50 +727,50 @@ script create_winport_login_field
 		shadow_offs = (3.0, 3.0)
 		shadow_rgba = [0 0 0 255]
 	}
-	runscriptonscreenelement id = <cursorid> winport_cursor_blinker params = {blinkid = <cursorid>}
+	RunScriptOnScreenElement id = <cursorId> winport_cursor_blinker params = {blinkId = <cursorId>}
 endscript
 
 script update_winport_login_field 
-	if NOT (screenelementexists id = <labelid>)
+	if NOT (ScreenElementExists id = <labelId>)
 		return
 	endif
-	netsessionfunc func = getloginfield params = {field = <field>}
+	NetSessionFunc func = GetLoginField params = {field = <field>}
 	if (<active> = 1)
-		setscreenelementprops id = <prefixid> text = <prefix>
-		setscreenelementprops id = <cursorid> text = "I"
-		setscreenelementprops id = <suffixid> text = <suffix>
+		SetScreenElementProps id = <prefixId> text = <prefix>
+		SetScreenElementProps id = <cursorId> text = "I"
+		SetScreenElementProps id = <suffixId> text = <suffix>
 	else
-		setscreenelementprops id = <prefixid> text = <prefix>
-		setscreenelementprops id = <cursorid> text = ""
-		setscreenelementprops id = <suffixid> text = ""
+		SetScreenElementProps id = <prefixId> text = <prefix>
+		SetScreenElementProps id = <cursorId> text = ""
+		SetScreenElementProps id = <suffixId> text = ""
 	endif
-	getscreenelementdims id = <labelid>
-	getscreenelementposition id = <labelid>
+	GetScreenElementDims id = <labelId>
+	GetScreenElementPosition id = <labelId>
 	pos = (<screenelementpos> + ((1.0, 0.0) * <width>))
-	setscreenelementprops id = <prefixid> pos = <pos>
-	getscreenelementposition id = <prefixid>
-	getscreenelementdims id = <prefixid>
+	SetScreenElementProps id = <prefixId> pos = <pos>
+	GetScreenElementPosition id = <prefixId>
+	GetScreenElementDims id = <prefixId>
 	pos = (<screenelementpos> + ((1.0, 0.0) * <width>))
-	setscreenelementprops id = <cursorid> pos = <pos>
-	getscreenelementposition id = <cursorid>
-	getscreenelementdims id = <cursorid>
+	SetScreenElementProps id = <cursorId> pos = <pos>
+	GetScreenElementPosition id = <cursorId>
+	GetScreenElementDims id = <cursorId>
 	pos = (<screenelementpos> + ((1.0, 0.0) * <width>))
-	setscreenelementprops id = <suffixid> pos = <pos>
+	SetScreenElementProps id = <suffixId> pos = <pos>
 endscript
 
 script winport_cursor_blinker 
 	begin
-	if NOT (screenelementexists id = <blinkid>)
+	if NOT (ScreenElementExists id = <blinkId>)
 		return
 	endif
-	doscreenelementmorph id = <blinkid> alpha = 0 time = 0.5
-	wait \{0.5
+	doScreenElementMorph id = <blinkId> alpha = 0 time = 0.5
+	Wait \{0.5
 		seconds}
-	if NOT (screenelementexists id = <blinkid>)
+	if NOT (ScreenElementExists id = <blinkId>)
 		return
 	endif
-	doscreenelementmorph id = <blinkid> alpha = 1.0 time = 0.5
-	wait \{0.5
+	doScreenElementMorph id = <blinkId> alpha = 1.0 time = 0.5
+	Wait \{0.5
 		seconds}
 	repeat
 endscript
@@ -833,14 +833,14 @@ endscript
 
 script create_winport_account_management_status_screen 
 	printf \{"--- create_winport_account_management_status_screen"}
-	create_menu_backdrop \{texture = online_background}
+	create_menu_backdrop \{texture = Online_Background}
 	z = 110
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
-		id = accountstatuscontainer
+		id = accountStatusContainer
 		pos = (0.0, 0.0)}
-	createscreenelement \{type = vscrollingmenu
-		parent = accountstatuscontainer
+	CreateScreenElement \{type = VScrollingMenu
+		parent = accountStatusContainer
 		just = [
 			center
 			top
@@ -849,8 +849,8 @@ script create_winport_account_management_status_screen
 		pos = (640.0, 465.0)
 		z_priority = 1}
 	menu_id = <id>
-	createscreenelement {
-		type = vmenu
+	CreateScreenElement {
+		type = VMenu
 		parent = <menu_id>
 		id = <vmenu_id>
 		pos = (298.0, 0.0)
@@ -875,10 +875,10 @@ script create_winport_account_management_status_screen
 			0
 			255
 		]}
-	create_pause_menu_frame \{parent = accountstatuscontainer
+	create_pause_menu_frame \{parent = accountStatusContainer
 		z = 5}
-	displaysprite \{parent = accountstatuscontainer
-		tex = dialog_title_bg
+	displaySprite \{parent = accountStatusContainer
+		tex = Dialog_Title_BG
 		dims = (224.0, 224.0)
 		z = 9
 		pos = (640.0, 100.0)
@@ -887,8 +887,8 @@ script create_winport_account_management_status_screen
 			top
 		]
 		flip_v}
-	displaysprite \{parent = accountstatuscontainer
-		tex = dialog_title_bg
+	displaySprite \{parent = accountStatusContainer
+		tex = Dialog_Title_BG
 		dims = (224.0, 224.0)
 		z = 9
 		pos = (640.0, 100.0)
@@ -896,8 +896,8 @@ script create_winport_account_management_status_screen
 			left
 			top
 		]}
-	createscreenelement \{type = textelement
-		parent = accountstatuscontainer
+	CreateScreenElement \{type = TextElement
+		parent = accountStatusContainer
 		font = fontgrid_title_gh3
 		scale = 1.2
 		rgba = [
@@ -921,10 +921,10 @@ script create_winport_account_management_status_screen
 			0
 			255
 		]}
-	createscreenelement {
-		type = textblockelement
-		parent = accountstatuscontainer
-		id = statusmessage
+	CreateScreenElement {
+		type = TextBlockElement
+		parent = accountStatusContainer
+		id = statusMessage
 		font = text_a4
 		scale = 0.8
 		rgba = [210 210 210 250]
@@ -936,155 +936,155 @@ script create_winport_account_management_status_screen
 		dims = (800.0, 320.0)
 		line_spacing = 1.0
 	}
-	launchevent type = focus target = <vmenu_id>
-	netsessionfunc \{func = executelogintask}
+	LaunchEvent type = focus target = <vmenu_id>
+	NetSessionFunc \{func = ExecuteLoginTask}
 	begin
-	netsessionfunc \{func = getnetworkstatus}
-	switch (<currentnetworktask>)
+	NetSessionFunc \{func = GetNetworkStatus}
+	switch (<CurrentNetworkTask>)
 		case "CREATE_ACCOUNT"
-		switch (<currentnetworkstatus>)
+		switch (<CurrentNetworkStatus>)
 			case "PENDING"
-			statustext = "Requesting Account Creation"
+			statusText = "Requesting Account Creation"
 			case "DONE"
-			statustext = "Account Created"
+			statusText = "Account Created"
 			success = true
 			case "FAILED"
-			statustext = "Unable to Create Account"
+			statusText = "Unable to Create Account"
 			success = false
 			default
-			statustext = "Internal Error: Unexpected Network State!"
+			statusText = "Internal Error: Unexpected Network State!"
 			success = false
 		endswitch
 		case "LOGIN_ACCOUNT"
-		switch (<currentnetworkstatus>)
+		switch (<CurrentNetworkStatus>)
 			case "PENDING"
-			statustext = "Authorizing Account"
+			statusText = "Authorizing Account"
 			case "DONE"
-			statustext = "Account Authorized"
+			statusText = "Account Authorized"
 			success = true
 			case "FAILED"
-			statustext = "Unable to Authorize Account"
+			statusText = "Unable to Authorize Account"
 			success = false
 			default
-			statustext = "Internal Error: Unexpected Network State!"
+			statusText = "Internal Error: Unexpected Network State!"
 			success = false
 		endswitch
 		case "CHANGE_ACCOUNT"
-		switch (<currentnetworkstatus>)
+		switch (<CurrentNetworkStatus>)
 			case "PENDING"
-			statustext = "Requesting Password Change"
+			statusText = "Requesting Password Change"
 			case "DONE"
-			statustext = "Password Changed"
+			statusText = "Password Changed"
 			success = true
 			case "FAILED"
-			statustext = "Unable to Change Password"
+			statusText = "Unable to Change Password"
 			success = false
 			default
-			statustext = "Internal Error: Unexpected Network State!"
+			statusText = "Internal Error: Unexpected Network State!"
 			success = false
 		endswitch
 		case "RESET_ACCOUNT"
-		switch (<currentnetworkstatus>)
+		switch (<CurrentNetworkStatus>)
 			case "PENDING"
-			statustext = "Requesting Account Reset"
+			statusText = "Requesting Account Reset"
 			case "DONE"
-			statustext = "Account Password Reset"
+			statusText = "Account Password Reset"
 			success = true
 			case "FAILED"
-			statustext = "Unable to Reset Account"
+			statusText = "Unable to Reset Account"
 			success = false
 			default
-			statustext = "Internal Error: Unexpected Network State!"
+			statusText = "Internal Error: Unexpected Network State!"
 			success = false
 		endswitch
 		case "DELETE_ACCOUNT"
-		switch (<currentnetworkstatus>)
+		switch (<CurrentNetworkStatus>)
 			case "PENDING"
-			statustext = "Requesting Account Deletion"
+			statusText = "Requesting Account Deletion"
 			case "DONE"
-			statustext = "Account Deleted"
+			statusText = "Account Deleted"
 			success = true
 			case "FAILED"
-			statustext = "Unable to Delete Account"
+			statusText = "Unable to Delete Account"
 			success = false
 			default
-			statustext = "Internal Error: Unexpected Network State!"
+			statusText = "Internal Error: Unexpected Network State!"
 			success = false
 		endswitch
 		default
-		printf "Unexpected state = %s" s = <currentnetworktask>
-		statustext = "Internal Error: Unexpected Network State!"
+		printf "Unexpected state = %s" s = <CurrentNetworkTask>
+		statusText = "Internal Error: Unexpected Network State!"
 		success = false
 	endswitch
-	setscreenelementprops id = statusmessage text = <statustext>
-	fit_text_into_menu_item \{id = statusmessage
+	SetScreenElementProps id = statusMessage text = <statusText>
+	fit_text_into_menu_item \{id = statusMessage
 		max_width = 480}
-	if gotparam \{success}
+	if GotParam \{success}
 		break
 	endif
-	wait \{1
+	Wait \{1
 		frame}
-	if NOT (screenelementexists id = accountstatuscontainer)
+	if NOT (ScreenElementExists id = accountStatusContainer)
 		return
 	endif
 	repeat
 	if (<success> = false)
-		netsessionfunc \{func = getautologinsetting}
-		if (<autologinsetting> = autologinon && netsessionfunc func = hasexistinglogin)
-			netsessionfunc \{func = setautologinsetting
+		NetSessionFunc \{func = GetAutoLoginSetting}
+		if (<autoLoginSetting> = autoLoginOn && NetSessionFunc func = HasExistingLogin)
+			NetSessionFunc \{func = SetAutoLoginSetting
 				params = {
-					autologinsetting = autologinprompt
+					autoLoginSetting = autoLoginPrompt
 				}}
 		endif
-		netsessionfunc \{func = getfailurecode}
-		switch <failurecode>
+		NetSessionFunc \{func = GetFailureCode}
+		switch <FailureCode>
 			case 666
-			statustext = "New password fields do not match"
+			statusText = "New password fields do not match"
 			case 667
-			statustext = "Authorization Service failed"
+			statusText = "Authorization Service failed"
 			case 668
-			statustext = "Usernames must be between 6 and 16 characters long"
+			statusText = "Usernames must be between 6 and 16 characters long"
 			case 669
-			statustext = "Passwords must be between 6 and 16 characters long"
+			statusText = "Passwords must be between 6 and 16 characters long"
 			case 700
-			statustext = "Task Succeeded"
+			statusText = "Task Succeeded"
 			case 701
-			statustext = "Bad Authorization Request"
+			statusText = "Bad Authorization Request"
 			case 702
-			statustext = "Server Configuration Error"
+			statusText = "Server Configuration Error"
 			case 703
-			statustext = "Invalid Game Title Id"
+			statusText = "Invalid Game Title Id"
 			case 704
-			statustext = "Invalid Account Information"
+			statusText = "Invalid Account Information"
 			case 705
-			statustext = "Illegal Authorization Request"
+			statusText = "Illegal Authorization Request"
 			case 706
-			statustext = "Invalid License Code"
+			statusText = "Invalid License Code"
 			case 707
-			statustext = "Username Already Exists"
+			statusText = "Username Already Exists"
 			case 708
-			statustext = "Invalid Username Format"
+			statusText = "Invalid Username Format"
 			case 709
-			statustext = "Username Declined"
+			statusText = "Username Declined"
 			case 710
-			statustext = "Too Many Accounts for License Code"
+			statusText = "Too Many Accounts for License Code"
 			case 711
-			statustext = "Account Migration not Supported"
+			statusText = "Account Migration not Supported"
 			case 712
-			statustext = "Title has been disabled"
+			statusText = "Title has been disabled"
 			case 713
-			statustext = "Account has Expired"
+			statusText = "Account has Expired"
 			case 714
-			statustext = "Account is Locked"
+			statusText = "Account is Locked"
 			case 715
-			statustext = "Authentication Error: Online functions will not be available until Guitar Hero III is quit and relaunched."
+			statusText = "Authentication Error: Online functions will not be available until Guitar Hero III is quit and relaunched."
 			case 716
-			statustext = "Incorrect Password"
+			statusText = "Incorrect Password"
 		endswitch
-		setscreenelementprops id = statusmessage text = <statustext>
-		fit_text_into_menu_item \{id = statusmessage
+		SetScreenElementProps id = statusMessage text = <statusText>
+		fit_text_into_menu_item \{id = statusMessage
 			max_width = 480}
-		displaysprite \{parent = accountstatuscontainer
+		displaySprite \{parent = accountStatusContainer
 			id = options_bg_1
 			tex = dialog_bg
 			pos = (640.0, 500.0)
@@ -1094,7 +1094,7 @@ script create_winport_account_management_status_screen
 				center
 				botom
 			]}
-		displaysprite \{parent = accountstatuscontainer
+		displaySprite \{parent = accountStatusContainer
 			id = options_bg_2
 			tex = dialog_bg
 			pos = (640.0, 530.0)
@@ -1105,20 +1105,20 @@ script create_winport_account_management_status_screen
 				top
 			]
 			flip_h}
-		createscreenelement {
-			type = containerelement
+		CreateScreenElement {
+			type = ContainerElement
 			parent = <vmenu_id>
 			dims = (100.0, 50.0)
 			event_handlers = [
 				{focus net_warning_focus}
 				{unfocus net_warning_unfocus}
-				{pad_choose ui_flow_manager_respond_to_action params = {action = erroraction}}
-				{pad_back ui_flow_manager_respond_to_action params = {action = erroraction}}
+				{pad_choose ui_flow_manager_respond_to_action params = {action = errorAction}}
+				{pad_back ui_flow_manager_respond_to_action params = {action = errorAction}}
 			]
 		}
 		container_id = <id>
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = <container_id>
 			local_id = text
 			font = fontgrid_title_gh3
@@ -1129,12 +1129,12 @@ script create_winport_account_management_status_screen
 			z_priority = (<z> + 0.1)
 		}
 		fit_text_into_menu_item id = <id> max_width = 480
-		getscreenelementdims id = <id>
-		createscreenelement {
-			type = spriteelement
+		GetScreenElementDims id = <id>
+		CreateScreenElement {
+			type = SpriteElement
 			parent = <container_id>
 			local_id = bookend_left
-			texture = dialog_highlight
+			texture = Dialog_Highlight
 			alpha = 0.0
 			just = [right center]
 			pos = ((0.0, 20.0) + (1.0, 0.0) * (<width> / (-2)) + (-5.0, 0.0))
@@ -1142,11 +1142,11 @@ script create_winport_account_management_status_screen
 			scale = (1.0, 1.0)
 			flip_v
 		}
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			parent = <container_id>
 			local_id = bookend_right
-			texture = dialog_highlight
+			texture = Dialog_Highlight
 			alpha = 0.0
 			just = [left center]
 			pos = ((0.0, 20.0) + (1.0, 0.0) * (<width> / (2)) + (5.0, 0.0))
@@ -1160,18 +1160,18 @@ script create_winport_account_management_status_screen
 		add_user_control_helper \{text = "BACK"
 			button = red
 			z = 100}
-		launchevent type = focus target = <vmenu_id>
+		LaunchEvent type = focus target = <vmenu_id>
 		return
 	endif
-	wait \{3
+	Wait \{3
 		seconds}
-	ui_flow_manager_respond_to_action \{action = successaction}
-	netsessionfunc \{func = stats_init}
+	ui_flow_manager_respond_to_action \{action = successAction}
+	NetSessionFunc \{func = stats_init}
 endscript
 
 script destroy_winport_account_management_status_screen 
-	if (screenelementexists id = accountstatuscontainer)
-		destroyscreenelement \{id = accountstatuscontainer}
+	if (ScreenElementExists id = accountStatusContainer)
+		DestroyScreenElement \{id = accountStatusContainer}
 	endif
 	clean_up_user_control_helpers
 	destroy_menu_backdrop
@@ -1180,8 +1180,8 @@ endscript
 script create_join_private_menu 
 	printf \{"--- create_join_private_menu"}
 	z = 110
-	create_menu_backdrop \{texture = online_background}
-	createscreenelement \{type = containerelement
+	create_menu_backdrop \{texture = Online_Background}
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = private_menu_container
 		pos = (0.0, 0.0)
@@ -1196,7 +1196,7 @@ script create_join_private_menu
 			}
 			{
 				pad_choose
-				executejoinattempt
+				executeJoinAttempt
 			}
 			{
 				pad_back
@@ -1206,12 +1206,12 @@ script create_join_private_menu
 				}
 			}
 		]}
-	netsessionfunc \{func = initializeloginfields
+	NetSessionFunc \{func = InitializeLoginFields
 		params = {
-			loginmode = matchusername
+			loginMode = matchUsername
 		}}
-	displaysprite \{parent = private_menu_container
-		tex = dialog_title_bg
+	displaySprite \{parent = private_menu_container
+		tex = Dialog_Title_BG
 		dims = (300.0, 250.0)
 		z = 9
 		pos = (640.0, 50.0)
@@ -1220,8 +1220,8 @@ script create_join_private_menu
 			top
 		]
 		flip_v}
-	displaysprite \{parent = private_menu_container
-		tex = dialog_title_bg
+	displaySprite \{parent = private_menu_container
+		tex = Dialog_Title_BG
 		dims = (300.0, 250.0)
 		z = 9
 		pos = (640.0, 50.0)
@@ -1229,7 +1229,7 @@ script create_join_private_menu
 			left
 			top
 		]}
-	createscreenelement \{type = textelement
+	CreateScreenElement \{type = TextElement
 		parent = private_menu_container
 		font = fontgrid_title_gh3
 		scale = 1.0
@@ -1255,7 +1255,7 @@ script create_join_private_menu
 			255
 		]}
 	fit_text_in_rectangle id = <id> dims = (400.0, 75.0) pos = (640.0, 145.0) only_if_larger_x = 1 only_if_larger_y = 1 just = center
-	createscreenelement \{type = textelement
+	CreateScreenElement \{type = TextElement
 		parent = private_menu_container
 		font = text_a4
 		scale = 1.0
@@ -1282,62 +1282,62 @@ script create_join_private_menu
 		]}
 	fit_text_in_rectangle id = <id> dims = (600.0, 25.0) pos = (640.0, 590.0) only_if_larger_x = 1 only_if_larger_y = 1 just = center keep_ar = 1
 	<pos> = (375.0, 320.0)
-	create_winport_login_field container = private_menu_container pos = <pos> label = "Match Username: " labelid = usernamelabelid prefixid = usernameprefixid cursorid = usernamecursorid suffixid = usernamesuffixid ang = -2.0
+	create_winport_login_field container = private_menu_container pos = <pos> label = "Match Username: " labelId = usernameLabelId prefixId = usernamePrefixId cursorId = usernameCursorId suffixId = usernameSuffixId ang = -2.0
 	add_user_control_helper \{text = "ACCEPT"
 		button = green
 		z = 100}
 	add_user_control_helper \{text = "BACK"
 		button = red
 		z = 100}
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = private_menu_container}
 	begin
-	update_winport_login_field \{field = matchusername
-		labelid = usernamelabelid
-		prefixid = usernameprefixid
-		cursorid = usernamecursorid
-		suffixid = usernamesuffixid}
-	wait \{1
+	update_winport_login_field \{field = matchUsername
+		labelId = usernameLabelId
+		prefixId = usernamePrefixId
+		cursorId = usernameCursorId
+		suffixId = usernameSuffixId}
+	Wait \{1
 		frame}
-	if NOT (screenelementexists id = private_menu_container)
+	if NOT (ScreenElementExists id = private_menu_container)
 		return
 	endif
-	netsessionfunc \{func = getloginentry}
-	if ((<loginentry> = loginaccepted) || (<loginentry> = loginaborted))
+	NetSessionFunc \{func = GetLoginEntry}
+	if ((<loginEntry> = loginAccepted) || (<loginEntry> = loginAborted))
 		break
 	endif
 	repeat
-	switch <loginentry>
-		case loginaccepted
-		executejoinattempt
-		case loginaborted
+	switch <loginEntry>
+		case loginAccepted
+		executeJoinAttempt
+		case loginAborted
 		ui_flow_manager_respond_to_action \{action = back}
 	endswitch
 endscript
 
-script executejoinattempt 
-	netsessionfunc \{func = generateprivatematchid}
-	change gprivatematchid = <privatematchid>
+script executeJoinAttempt 
+	NetSessionFunc \{func = GeneratePrivateMatchId}
+	change gPrivateMatchId = <privateMatchId>
 	ui_flow_manager_respond_to_action \{action = attempt_join}
 endscript
 
 script destroy_join_private_menu 
-	netsessionfunc \{func = destroyloginfields}
-	destroyscreenelement \{id = private_menu_container}
+	NetSessionFunc \{func = DestroyLoginFields}
+	DestroyScreenElement \{id = private_menu_container}
 	clean_up_user_control_helpers
 	destroy_menu_backdrop
 endscript
 
 script create_logout_submenu 
 	printf \{"--- create_logout_submenu"}
-	create_menu_backdrop \{texture = online_background}
+	create_menu_backdrop \{texture = Online_Background}
 	z = 110
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
-		id = logoutcontainer
+		id = logoutContainer
 		pos = (0.0, 0.0)}
-	createscreenelement \{type = vscrollingmenu
-		parent = logoutcontainer
+	CreateScreenElement \{type = VScrollingMenu
+		parent = logoutContainer
 		just = [
 			center
 			top
@@ -1346,8 +1346,8 @@ script create_logout_submenu
 		pos = (640.0, 465.0)
 		z_priority = 1}
 	menu_id = <id>
-	createscreenelement {
-		type = vmenu
+	CreateScreenElement {
+		type = VMenu
 		parent = <menu_id>
 		pos = (298.0, 0.0)
 		just = [center top]
@@ -1372,10 +1372,10 @@ script create_logout_submenu
 			0
 			255
 		]}
-	create_pause_menu_frame \{parent = logoutcontainer
+	create_pause_menu_frame \{parent = logoutContainer
 		z = 5}
-	displaysprite \{parent = logoutcontainer
-		tex = dialog_title_bg
+	displaySprite \{parent = logoutContainer
+		tex = Dialog_Title_BG
 		dims = (224.0, 224.0)
 		z = 9
 		pos = (640.0, 100.0)
@@ -1384,8 +1384,8 @@ script create_logout_submenu
 			top
 		]
 		flip_v}
-	displaysprite \{parent = logoutcontainer
-		tex = dialog_title_bg
+	displaySprite \{parent = logoutContainer
+		tex = Dialog_Title_BG
 		dims = (224.0, 224.0)
 		z = 9
 		pos = (640.0, 100.0)
@@ -1393,8 +1393,8 @@ script create_logout_submenu
 			left
 			top
 		]}
-	createscreenelement \{type = textelement
-		parent = logoutcontainer
+	CreateScreenElement \{type = TextElement
+		parent = logoutContainer
 		font = fontgrid_title_gh3
 		scale = 1.2
 		rgba = [
@@ -1418,10 +1418,10 @@ script create_logout_submenu
 			0
 			255
 		]}
-	createscreenelement {
-		type = textblockelement
-		parent = logoutcontainer
-		id = statusmessage
+	CreateScreenElement {
+		type = TextBlockElement
+		parent = logoutContainer
+		id = statusMessage
 		text = "Selecting Logout will end your current Online session.  Your scores will not be tracked in the leaderboard until you login again."
 		font = text_a4
 		scale = 0.8
@@ -1434,9 +1434,9 @@ script create_logout_submenu
 		dims = (800.0, 320.0)
 		line_spacing = 1.0
 	}
-	fit_text_into_menu_item \{id = statusmessage
+	fit_text_into_menu_item \{id = statusMessage
 		max_width = 470}
-	displaysprite \{parent = logoutcontainer
+	displaySprite \{parent = logoutContainer
 		id = options_bg_1
 		tex = dialog_bg
 		pos = (640.0, 500.0)
@@ -1446,7 +1446,7 @@ script create_logout_submenu
 			center
 			botom
 		]}
-	displaysprite \{parent = logoutcontainer
+	displaySprite \{parent = logoutContainer
 		id = options_bg_2
 		tex = dialog_bg
 		pos = (640.0, 530.0)
@@ -1457,20 +1457,20 @@ script create_logout_submenu
 			top
 		]
 		flip_h}
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <vmenu_id>
 		dims = (100.0, 50.0)
 		event_handlers = [
 			{focus net_warning_focus}
 			{unfocus net_warning_unfocus}
-			{pad_choose executelogout}
+			{pad_choose executeLogout}
 			{pad_back ui_flow_manager_respond_to_action params = {action = back}}
 		]
 	}
 	container_id = <id>
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <container_id>
 		local_id = text
 		font = fontgrid_title_gh3
@@ -1481,12 +1481,12 @@ script create_logout_submenu
 		z_priority = (<z> + 0.1)
 	}
 	fit_text_into_menu_item id = <id> max_width = 200
-	getscreenelementdims id = <id>
-	createscreenelement {
-		type = spriteelement
+	GetScreenElementDims id = <id>
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <container_id>
 		local_id = bookend_left
-		texture = dialog_highlight
+		texture = Dialog_Highlight
 		alpha = 0.0
 		just = [right center]
 		pos = ((0.0, 20.0) + (1.0, 0.0) * (<width> / (-2)) + (-5.0, 0.0))
@@ -1494,19 +1494,19 @@ script create_logout_submenu
 		scale = (1.0, 1.0)
 		flip_v
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <container_id>
 		local_id = bookend_right
-		texture = dialog_highlight
+		texture = Dialog_Highlight
 		alpha = 0.0
 		just = [left center]
 		pos = ((0.0, 20.0) + (1.0, 0.0) * (<width> / (2)) + (5.0, 0.0))
 		z_priority = (<z> + 0.1)
 		scale = (1.0, 1.0)
 	}
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <vmenu_id>
 		dims = (100.0, 50.0)
 		event_handlers = [
@@ -1517,8 +1517,8 @@ script create_logout_submenu
 		]
 	}
 	container_id = <id>
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <container_id>
 		local_id = text
 		font = fontgrid_title_gh3
@@ -1529,12 +1529,12 @@ script create_logout_submenu
 		z_priority = (<z> + 0.1)
 	}
 	fit_text_into_menu_item id = <id> max_width = 200
-	getscreenelementdims id = <id>
-	createscreenelement {
-		type = spriteelement
+	GetScreenElementDims id = <id>
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <container_id>
 		local_id = bookend_left
-		texture = dialog_highlight
+		texture = Dialog_Highlight
 		alpha = 0.0
 		just = [right center]
 		pos = ((0.0, 20.0) + (1.0, 0.0) * (<width> / (-2)) + (-5.0, 0.0))
@@ -1542,11 +1542,11 @@ script create_logout_submenu
 		scale = (1.0, 1.0)
 		flip_v
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <container_id>
 		local_id = bookend_right
-		texture = dialog_highlight
+		texture = Dialog_Highlight
 		alpha = 0.0
 		just = [left center]
 		pos = ((0.0, 20.0) + (1.0, 0.0) * (<width> / (2)) + (5.0, 0.0))
@@ -1562,18 +1562,18 @@ script create_logout_submenu
 	add_user_control_helper \{text = "UP/DOWN"
 		button = strumbar
 		z = 100}
-	launchevent type = focus target = <vmenu_id>
+	LaunchEvent type = focus target = <vmenu_id>
 endscript
 
 script destroy_logout_submenu 
-	destroyscreenelement \{id = logoutcontainer}
+	DestroyScreenElement \{id = logoutContainer}
 	clean_up_user_control_helpers
 	destroy_menu_backdrop
 endscript
 
-script executelogout 
-	netsessionfunc \{func = resetnetwork}
-	wait \{1.0
+script executeLogout 
+	NetSessionFunc \{func = ResetNetwork}
+	Wait \{1.0
 		second}
 	destroy_logout_submenu
 	start_flow_manager \{flow_state = main_menu_fs}
@@ -1583,12 +1583,12 @@ script create_account_submenu \{menu_title = "ACCOUNT MANAGEMENT"
 		menu_id = online_account_menu
 		vmenu_id = online_account_vmenu}
 	change \{online_main_menu_pos = (640.0, 110.0)}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = account_submenu_anchor
 		pos = (0.0, 0.0)}
-	createscreenelement {
-		type = vscrollingmenu
+	CreateScreenElement {
+		type = VScrollingMenu
 		parent = account_submenu_anchor
 		id = <menu_id>
 		just = [center top]
@@ -1596,8 +1596,8 @@ script create_account_submenu \{menu_title = "ACCOUNT MANAGEMENT"
 		pos = (($online_main_menu_pos) + (0.0, 75.0))
 		z_priority = 1
 	}
-	createscreenelement {
-		type = vmenu
+	CreateScreenElement {
+		type = VMenu
 		parent = <menu_id>
 		id = <vmenu_id>
 		pos = (47.5, 0.0)
@@ -1611,23 +1611,23 @@ script create_account_submenu \{menu_title = "ACCOUNT MANAGEMENT"
 			{pad_down generic_menu_up_or_down_sound params = {down}}
 		]
 	}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = account_submenu_anchor
 		id = online_account_submenu_container
 		pos = (0.0, 0.0)}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = online_account_submenu_container
 		id = online_account_submenu_text_container
 		pos = (0.0, 0.0)}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = account_submenu_anchor
 		id = online_info_pane_container
 		pos = (0.0, 0.0)}
-	create_menu_backdrop \{texture = online_background}
-	displaysprite id = online_frame parent = online_account_submenu_container tex = online_frame_large pos = ($online_main_menu_pos) dims = (660.0, 480.0) just = [center top] z = 2
-	displaysprite id = online_frame_crown parent = online_account_submenu_container tex = online_frame_crown pos = (($online_main_menu_pos) + (0.0, -62.0)) dims = (256.0, 105.0) just = [center top] z = 3
-	createscreenelement {
-		type = textelement
+	create_menu_backdrop \{texture = Online_Background}
+	displaySprite id = online_frame parent = online_account_submenu_container tex = Online_Frame_Large pos = ($online_main_menu_pos) dims = (660.0, 480.0) just = [center top] z = 2
+	displaySprite id = online_frame_crown parent = online_account_submenu_container tex = online_frame_crown pos = (($online_main_menu_pos) + (0.0, -62.0)) dims = (256.0, 105.0) just = [center top] z = 3
+	CreateScreenElement {
+		type = TextElement
 		parent = online_account_submenu_text_container
 		id = online_title
 		font = fontgrid_title_gh3
@@ -1638,34 +1638,34 @@ script create_account_submenu \{menu_title = "ACCOUNT MANAGEMENT"
 		just = [center top]
 		z_priority = 4.0
 	}
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	if (<width> > 420)
-		setscreenelementprops {
+		SetScreenElementProps {
 			id = <id>
 			scale = 1.0
 		}
 		scale_element_to_size {
 			id = <id>
 			target_width = 420
-			target_height = <height>
+			target_height = <Height>
 		}
 	endif
 	net_add_item_to_main_menu {
-		vmenu = <vmenu_id>
+		VMenu = <vmenu_id>
 		text = "Log Out"
 		pad_choose_script = ui_flow_manager_respond_to_action
 		choose_script_params = {action = execute_logout}
 		line_spacing = 50
 	}
 	net_add_item_to_main_menu {
-		vmenu = <vmenu_id>
+		VMenu = <vmenu_id>
 		text = "Change Password"
 		pad_choose_script = ui_flow_manager_respond_to_action
 		choose_script_params = {action = execute_change_password}
 		line_spacing = 50
 	}
 	net_add_item_to_main_menu {
-		vmenu = <vmenu_id>
+		VMenu = <vmenu_id>
 		text = "Delete Account"
 		pad_choose_script = ui_flow_manager_respond_to_action
 		choose_script_params = {action = execute_delete_account}
@@ -1674,13 +1674,13 @@ script create_account_submenu \{menu_title = "ACCOUNT MANAGEMENT"
 	set_focus_color rgba = ($online_dark_purple)
 	set_unfocus_color rgba = ($online_light_blue)
 	create_online_main_menu_helper_buttons
-	launchevent type = focus target = <vmenu_id>
+	LaunchEvent type = focus target = <vmenu_id>
 endscript
 
 script destroy_account_submenu 
 	clean_up_user_control_helpers
 	destroy_menu_backdrop
-	if screenelementexists \{id = account_submenu_anchor}
-		destroyscreenelement \{id = account_submenu_anchor}
+	if ScreenElementExists \{id = account_submenu_anchor}
+		DestroyScreenElement \{id = account_submenu_anchor}
 	endif
 endscript

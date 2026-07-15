@@ -2,28 +2,28 @@ store_menu_font = fontgrid_title_gh3
 soundcheck_in_store = 0
 store_camera_props = {
 	main_store_menu = {
-		lockto = world
+		LockTo = world
 		pos = (27.390575, 0.374346, 10.101139)
-		quat = (-0.0021890001, 0.997191, 0.032329)
-		fov = 72.0
+		Quat = (-0.0021890001, 0.997191, 0.032329)
+		FOV = 72.0
 	}
 	guitar_selection = {
-		lockto = world
+		LockTo = world
 		pos = (28.865236, 1.268629, 3.7361782)
-		quat = (-0.00024999998, 0.99804497, 0.062374)
-		fov = 90.0
+		Quat = (-0.00024999998, 0.99804497, 0.062374)
+		FOV = 90.0
 	}
 	song_selection = {
-		lockto = world
+		LockTo = world
 		pos = (27.147392, 0.59662694, 8.347746)
-		quat = (-0.000703, 0.87414604, 0.0012660001)
-		fov = 72.0
+		Quat = (-0.000703, 0.87414604, 0.0012660001)
+		FOV = 72.0
 	}
 	outfits_selection = {
-		lockto = world
+		LockTo = world
 		pos = (29.334492, 0.15719901, 7.960009)
-		quat = (-0.00127, -0.864339, -0.0021790003)
-		fov = 72.0
+		Quat = (-0.00127, -0.864339, -0.0021790003)
+		FOV = 72.0
 	}
 }
 current_store_camera_prop = none
@@ -33,34 +33,34 @@ store_view_cam_created = 0
 
 script store_camera_script 
 	change \{current_store_camera_prop = main_store_menu}
-	ccam_domorph {
+	CCam_DoMorph {
 		($store_camera_props.main_store_menu)
 	}
 	begin
 	if NOT ($current_store_camera_prop = $target_store_camera_prop)
 		change \{store_camera_changing = 1}
-		ccam_domorph {
+		CCam_DoMorph {
 			($store_camera_props.($target_store_camera_prop))
 			time = 0.5
 			motion = smooth
 		}
-		ccam_waitmorph
+		CCam_WaitMorph
 		change current_store_camera_prop = ($target_store_camera_prop)
 		change \{store_camera_changing = 0}
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
 script store_camera_wait 
-	wait \{5
+	Wait \{5
 		gameframes}
 	begin
 	if ($store_camera_changing = 0)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
@@ -77,7 +77,7 @@ script create_store_window_frame \{pos = (0.0, 0.0)
 			255
 		]
 		z = 10}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = store_frame_container}
 	<dims> = (<dims> - (0.0, 128.0))
@@ -88,8 +88,8 @@ script create_store_window_frame \{pos = (0.0, 0.0)
 		frame_body_tex = window_frame_body_short
 		frane_body_fill_tex = window_fill_body_short
 	endif
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = store_frame_container
 		pos = <pos>
 		just = [center center]
@@ -98,8 +98,8 @@ script create_store_window_frame \{pos = (0.0, 0.0)
 		rgba = <frame_rgba>
 		z_priority = <z>
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = store_frame_container
 		pos = <pos>
 		just = [center center]
@@ -110,8 +110,8 @@ script create_store_window_frame \{pos = (0.0, 0.0)
 	}
 	header_pos = (<pos> - (<dims>.(0.0, 1.0)) * (0.0, 0.5) - (0.0, 32.0))
 	header_dims = ((<dims>.(1.0, 0.0) * (1.0, 0.0)) + (0.0, 64.0))
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = store_frame_container
 		pos = <header_pos>
 		dims = <header_dims>
@@ -121,8 +121,8 @@ script create_store_window_frame \{pos = (0.0, 0.0)
 		z_priority = <z>
 	}
 	<header_pos> = (<pos> - (<dims>.(0.0, 1.0)) * (0.0, 0.5))
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = store_frame_container
 		pos = <header_pos>
 		dims = <header_dims>
@@ -131,8 +131,8 @@ script create_store_window_frame \{pos = (0.0, 0.0)
 		rgba = <frame_rgba>
 		z_priority = <z>
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = store_frame_container
 		pos = <header_pos>
 		dims = <header_dims>
@@ -143,8 +143,8 @@ script create_store_window_frame \{pos = (0.0, 0.0)
 	}
 	footer_pos = (<pos> + (<dims>.(0.0, 1.0)) * (0.0, 0.5) - (4.0, 36.0))
 	footer_dims = ((<dims>.(1.0, 0.0) * (0.90999997, 0.0)) + (0.0, 128.0))
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = store_frame_container
 		pos = <footer_pos>
 		dims = <footer_dims>
@@ -155,15 +155,15 @@ script create_store_window_frame \{pos = (0.0, 0.0)
 		flip_h
 		flip_v
 	}
-	if NOT gotparam \{no_hilite}
-		createscreenelement {
-			type = containerelement
+	if NOT GotParam \{no_hilite}
+		CreateScreenElement {
+			type = ContainerElement
 			parent = store_frame_container
 			id = store_hilite_container
 			pos = <hilite_pos>
 		}
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			parent = store_hilite_container
 			texture = white
 			dims = <hilite_dims>
@@ -171,8 +171,8 @@ script create_store_window_frame \{pos = (0.0, 0.0)
 			rgba = [255 255 205 255]
 			just = [center center]
 		}
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			parent = store_hilite_container
 			texture = character_hub_hilite_bookend
 			pos = (<dims>.(-1.0, 0.0) * (0.5, 0.0) + <hilite_off>)
@@ -181,8 +181,8 @@ script create_store_window_frame \{pos = (0.0, 0.0)
 			just = [center center]
 		}
 		<hilite_off> = (<hilite_off> * 0.5)
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			parent = store_hilite_container
 			texture = character_hub_hilite_bookend
 			pos = (<dims>.(1.0, 0.0) * (0.5, 0.0) - <hilite_off>)
@@ -193,10 +193,10 @@ script create_store_window_frame \{pos = (0.0, 0.0)
 	else
 		box_pos = (<pos> - (<dims>.(0.0, 1.0)) * (0.0, 0.5) + (-5.0, 16.0))
 		box_dims = ((<dims>.(1.0, 0.0) * (1.0, 0.0)) + (0.0, 128.0))
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			parent = store_frame_container
-			texture = char_select_frame_bg
+			texture = Char_Select_Frame_BG
 			pos = <box_pos>
 			dims = <box_dims>
 			z_priority = (<z> + 3)
@@ -223,16 +223,16 @@ script create_store_menu
 		unload_band
 		destroy_bg_viewport
 		setup_bg_viewport
-		playigccam \{name = store_view_cam
+		PlayIGCCam \{name = store_view_cam
 			viewport = bg_viewport
 			controlscript = store_camera_script
-			play_hold = 1}
+			Play_hold = 1}
 		change \{store_view_cam_created = 1}
 	endif
 	change \{target_store_camera_prop = main_store_menu}
 	setup_store_hub \{cash_pos = (-2000.0, -2000.0)}
 	store_camera_wait
-	setscreenelementprops \{id = store_cash_text
+	SetScreenElementProps \{id = store_cash_text
 		pos = (900.0, 505.0)}
 	hilite_pos = [
 		(897.0, 155.0)
@@ -265,12 +265,12 @@ script create_store_menu
 		]}
 	text_params = {
 		parent = ms_vmenu
-		type = textelement
+		type = TextElement
 		font = ($store_menu_font)
 		rgba = ($menu_unfocus_color)
 		no_shadow
 	}
-	createscreenelement {
+	CreateScreenElement {
 		<text_params>
 		text = "GUITARS"
 		event_handlers = [
@@ -281,12 +281,12 @@ script create_store_menu
 			{pad_left store_debug_givebandcash}
 		]
 	}
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	if (<width> > 270)
-		setscreenelementprops id = <id> scale = 1
+		SetScreenElementProps id = <id> scale = 1
 		fit_text_in_rectangle id = <id> dims = (250.0, 60.0)
 	endif
-	createscreenelement {
+	CreateScreenElement {
 		<text_params>
 		text = "FINISHES"
 		event_handlers = [
@@ -296,12 +296,12 @@ script create_store_menu
 			{pad_l3 store_debug_givebandcash}
 		]
 	}
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	if (<width> > 270)
-		setscreenelementprops id = <id> scale = 1
+		SetScreenElementProps id = <id> scale = 1
 		fit_text_in_rectangle id = <id> dims = (250.0, 60.0)
 	endif
-	createscreenelement {
+	CreateScreenElement {
 		<text_params>
 		text = "SONGS"
 		event_handlers = [
@@ -311,12 +311,12 @@ script create_store_menu
 			{pad_l3 store_debug_givebandcash}
 		]
 	}
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	if (<width> > 270)
-		setscreenelementprops id = <id> scale = 1
+		SetScreenElementProps id = <id> scale = 1
 		fit_text_in_rectangle id = <id> dims = (250.0, 60.0)
 	endif
-	createscreenelement {
+	CreateScreenElement {
 		<text_params>
 		text = "CHARACTERS"
 		event_handlers = [
@@ -326,12 +326,12 @@ script create_store_menu
 			{pad_l3 store_debug_givebandcash}
 		]
 	}
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	if (<width> > 270)
-		setscreenelementprops id = <id> scale = 1
+		SetScreenElementProps id = <id> scale = 1
 		fit_text_in_rectangle id = <id> dims = (250.0, 60.0)
 	endif
-	createscreenelement {
+	CreateScreenElement {
 		<text_params>
 		text = "OUTFITS"
 		event_handlers = [
@@ -341,12 +341,12 @@ script create_store_menu
 			{pad_l3 store_debug_givebandcash}
 		]
 	}
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	if (<width> > 270)
-		setscreenelementprops id = <id> scale = 1
+		SetScreenElementProps id = <id> scale = 1
 		fit_text_in_rectangle id = <id> dims = (250.0, 60.0)
 	endif
-	createscreenelement {
+	CreateScreenElement {
 		<text_params>
 		text = "STYLES"
 		event_handlers = [
@@ -356,21 +356,21 @@ script create_store_menu
 			{pad_l3 store_debug_givebandcash}
 		]
 	}
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	if (<width> > 270)
-		setscreenelementprops id = <id> scale = 1
+		SetScreenElementProps id = <id> scale = 1
 		fit_text_in_rectangle id = <id> dims = (250.0, 60.0)
 	endif
 	last_hilite_index = 7
-	getplatform
+	GetPlatform
 	show_videos = 1
-	if NOT english
-		if (<platform> = ps2 || <platform> = ps3)
+	if NOT English
+		if (<platform> = Ps2 || <platform> = ps3)
 			<show_videos> = 0
 		endif
 	endif
 	if (<show_videos> = 1)
-		createscreenelement {
+		CreateScreenElement {
 			<text_params>
 			text = "VIDEOS"
 			event_handlers = [
@@ -380,9 +380,9 @@ script create_store_menu
 				{pad_l3 store_debug_givebandcash}
 			]
 		}
-		getscreenelementdims id = <id>
+		GetScreenElementDims id = <id>
 		if (<width> > 270)
-			setscreenelementprops id = <id> scale = 1
+			SetScreenElementProps id = <id> scale = 1
 			fit_text_in_rectangle id = <id> dims = (250.0, 60.0)
 		endif
 	else
@@ -390,14 +390,14 @@ script create_store_menu
 	endif
 	if (<platform> = xenon)
 		param_flags = {}
-		if iswinport
+		if IsWinPort
 			<param_flags> = {not_focusable rgba = [100 100 100 255]}
 		else
-			if NOT checkforsignin \{local}
+			if NOT CheckForSignIn \{local}
 				<param_flags> = {not_focusable rgba = [100 100 100 255]}
 			endif
 		endif
-		createscreenelement {
+		CreateScreenElement {
 			<text_params>
 			text = "DOWNLOADS"
 			event_handlers = [
@@ -409,9 +409,9 @@ script create_store_menu
 			]
 			<param_flags>
 		}
-		getscreenelementdims id = <id>
+		GetScreenElementDims id = <id>
 		if (<width> > 270)
-			setscreenelementprops id = <id> scale = 1
+			SetScreenElementProps id = <id> scale = 1
 			fit_text_in_rectangle id = <id> dims = (250.0, 60.0)
 		endif
 	endif
@@ -430,27 +430,27 @@ endscript
 
 script menu_store_focus 
 	retail_menu_focus
-	if screenelementexists \{id = store_hilite_container}
-		store_hilite_container :setprops pos = <hilite_pos>
+	if ScreenElementExists \{id = store_hilite_container}
+		store_hilite_container :SetProps pos = <hilite_pos>
 	endif
 endscript
 
 script menu_store_go_back 
-	killcamanim \{name = store_view_cam}
+	KillCamAnim \{name = store_view_cam}
 	change \{store_view_cam_created = 0}
 	clean_up_user_control_helpers
 	change \{soundcheck_in_store = 0}
 	change structurename = player1_status instrument_id = ($store_saved_guitar_id)
-	formattext \{checksumname = player_status
+	FormatText \{checksumname = player_status
 		'player%i_status'
 		i = 1}
 	if find_profile_by_id id = ($<player_status>.character_id)
 		get_musician_profile_struct index = <index>
-		formattext checksumname = default_characterguitartag 'character_%c_player_%p_guitar_tags' c = (<profile_struct>.name) p = 1 addtostringlookup = true
-		if getglobaltags <default_characterguitartag> noassert = 1
+		FormatText checksumname = default_characterguitartag 'character_%c_player_%p_guitar_tags' c = (<profile_struct>.name) p = 1 AddToStringLookup = true
+		if GetGlobalTags <default_characterguitartag> noassert = 1
 			change structurename = <player_status> outfit = <current_outfit>
 			change structurename = <player_status> style = <current_style>
-			formattext \{checksumname = change_flag
+			FormatText \{checksumname = change_flag
 				'generic_select_monitor_p%i_changed'
 				i = 1}
 			change globalname = <change_flag> newvalue = 1
@@ -470,22 +470,22 @@ endscript
 script setup_store_hub \{cash_pos = (0.0, 0.0)}
 	change \{game_mode = p1_career}
 	destroy_crowd_models
-	getpakmancurrentname \{map = zones}
-	if gotparam \{pakname}
+	GetPakManCurrentName \{map = zones}
+	if GotParam \{pakname}
 		if NOT (<pakname> = "z_soundcheck")
-			resetwaypoints
-			setpakmancurrentblock \{map = zones
+			ResetWaypoints
+			SetPakManCurrentBlock \{map = zones
 				pak = z_soundcheck
 				block_scripts = 1}
 		endif
 	else
-		resetwaypoints
-		setpakmancurrentblock \{map = zones
+		ResetWaypoints
+		SetPakManCurrentBlock \{map = zones
 			pak = z_soundcheck
 			block_scripts = 1}
 	endif
 	disable_pause
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		pos = (0.0, 0.0)
 		just = [
@@ -493,8 +493,8 @@ script setup_store_hub \{cash_pos = (0.0, 0.0)}
 			top
 		]
 		id = store_container}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		pos = <cash_pos>
 		parent = store_container
 		font = text_a4
@@ -515,44 +515,44 @@ endscript
 
 script store_update_band_cash 
 	get_current_band_info
-	getglobaltags <band_info>
-	formattext textname = user_cash_amount "$%d" d = (<cash>) usecommas
-	setscreenelementprops {
+	GetGlobalTags <band_info>
+	FormatText TextName = user_cash_amount "$%d" d = (<Cash>) usecommas
+	SetScreenElementProps {
 		id = store_cash_text
 		text = (<user_cash_amount>)
 	}
-	achievement_checkbuyachievements
+	Achievement_CheckBuyAchievements
 endscript
 
 script set_store_purchase_price \{price = 0}
-	if screenelementexists \{id = store_price_tag_text}
-		formattext textname = price_text "$%d" d = (<price>)
-		store_price_tag_text :setprops text = <price_text>
-		store_price_tag_text :settags tag_price = <price>
+	if ScreenElementExists \{id = store_price_tag_text}
+		FormatText TextName = price_text "$%d" d = (<price>)
+		store_price_tag_text :SetProps text = <price_text>
+		store_price_tag_text :SetTags tag_price = <price>
 	endif
 endscript
 
 script create_store_songs_menu 
 	mark_unsafe_for_shutdown
-	menu_music_off
+	Menu_Music_Off
 	change \{target_store_camera_prop = song_selection}
 	setup_store_hub \{cash_pos = (-2000.0, -2000.0)}
 	store_camera_wait
-	setscreenelementprops \{id = store_cash_text
+	SetScreenElementProps \{id = store_cash_text
 		pos = (900.0, 550.0)}
 	create_store_window_frame \{pos = (900.0, 360.0)
 		dims = (300.0, 600.0)
 		no_hilite}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = select_guitar_container
 		pos = (893.0, -100.0)}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = store_songs_container
 		pos = (900.0, 210.0)}
-	createscreenelement {
-		type = windowelement
+	CreateScreenElement {
+		type = WindowElement
 		parent = root_window
 		id = store_info_scroll_window
 		pos = ($store_window_pos + (0.0, 60.0))
@@ -560,8 +560,8 @@ script create_store_songs_menu
 	}
 	new_menu \{scrollid = ss_scroll
 		vmenuid = ss_vmenu}
-	text_params = {parent = ss_vmenu type = textelement font = ($store_menu_font) rgba = [170 90 35 255] z_priority = 50 no_shadow}
-	createscreenelement {
+	text_params = {parent = ss_vmenu type = TextElement font = ($store_menu_font) rgba = [170 90 35 255] z_priority = 50 no_shadow}
+	CreateScreenElement {
 		<text_params>
 		text = ""
 		event_handlers = [
@@ -574,8 +574,8 @@ script create_store_songs_menu
 		]
 		id = store_songs_menu_holder
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = store_songs_container
 		just = [center center]
 		font = ($store_menu_font)
@@ -586,8 +586,8 @@ script create_store_songs_menu
 		z_priority = (<text_params>.z_priority)
 		pos = (-5.0, -62.0)
 	}
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = store_songs_container
 		just = [center center]
 		font = text_a6
@@ -599,7 +599,7 @@ script create_store_songs_menu
 		rgba = [255 255 205 255]
 		z_priority = (<text_params>.z_priority)
 	}
-	createscreenelement \{type = spriteelement
+	CreateScreenElement \{type = SpriteElement
 		parent = store_songs_container
 		just = [
 			center
@@ -610,7 +610,7 @@ script create_store_songs_menu
 		dims = (300.0, 295.0)
 		id = store_songs_album_frame
 		z_priority = 1}
-	createscreenelement \{type = spriteelement
+	CreateScreenElement \{type = SpriteElement
 		parent = store_songs_container
 		just = [
 			center
@@ -619,9 +619,9 @@ script create_store_songs_menu
 		pos = (-512.0, 128.0)
 		id = store_songs_album_cover
 		z_priority = 1}
-	createscreenelement \{type = spriteelement
+	CreateScreenElement \{type = SpriteElement
 		parent = store_songs_container
-		texture = char_select_hilite1
+		texture = Char_Select_Hilite1
 		pos = (-460.0, 128.0)
 		dims = (730.0, 500.0)
 		rgba = [
@@ -631,13 +631,13 @@ script create_store_songs_menu
 			255
 		]
 		z_priority = 0}
-	createscreenelement \{type = spriteelement
+	CreateScreenElement \{type = SpriteElement
 		parent = store_songs_container
 		texture = store_song_45
 		pos = (-380.0, 128.0)
 		id = store_songs_album_45
 		z_priority = 1}
-	runscriptonscreenelement \{id = store_songs_album_45
+	RunScriptOnScreenElement \{id = store_songs_album_45
 		rotate_element_360
 		params = {
 			id = store_songs_album_45
@@ -646,14 +646,14 @@ script create_store_songs_menu
 	store_show_price_tag \{parent = store_songs_album_cover
 		pos = (260.0, -80.0)
 		rot = -10}
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = ss_vmenu}
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = store_songs_menu_holder}
 	store_show_already_owned
 	change \{current_setlist_songpreview = none}
 	set_store_song_title \{index = 0}
-	spawnscriptlater \{setlist_songpreview_monitor}
+	SpawnScriptLater \{setlist_songpreview_monitor}
 	mark_safe_for_shutdown
 endscript
 
@@ -663,18 +663,18 @@ script destroy_store_songs_menu
 	if ($setlist_songpreview_changing = 0)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
-	killspawnedscript \{name = setlist_songpreview_monitor}
+	KillSpawnedScript \{name = setlist_songpreview_monitor}
 	if NOT ($current_setlist_songpreview = none)
 		get_song_prefix song = ($current_setlist_songpreview)
-		formattext checksumname = song_preview '%s_preview' s = <song_prefix>
-		stopsound <song_preview>
-		songunloadfsbifdownloaded
+		FormatText checksumname = song_preview '%s_preview' s = <song_prefix>
+		StopSound <song_preview>
+		SongUnLoadFSBIfDownloaded
 	endif
 	destroy_store_price_tag
-	killspawnedscript \{name = select_guitar_scroll_instrument_info}
+	KillSpawnedScript \{name = select_guitar_scroll_instrument_info}
 	destroy_menu \{menu_id = gs_instrument_info_scroll_window}
 	destroy_menu \{menu_id = select_guitar_container}
 	destroy_menu \{menu_id = store_info_scroll_window}
@@ -687,8 +687,8 @@ endscript
 script store_scroll_info \{scroll_time = 20
 		info_block_text = "NO TEXT AVAILABLE."}
 	destroy_menu \{menu_id = store_info_block_text_id}
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		id = store_info_block_text_id
 		parent = <parent>
 		just = [left top]
@@ -703,25 +703,25 @@ script store_scroll_info \{scroll_time = 20
 		line_spacing = 1.25
 	}
 	<this_id> = <id>
-	getscreenelementdims id = <id>
-	end_pos = (<height> * (0.0, -1.5))
+	GetScreenElementDims id = <id>
+	end_pos = (<Height> * (0.0, -1.5))
 	begin
-	wait \{5
+	Wait \{5
 		seconds}
-	doscreenelementmorph id = <this_id> pos = <end_pos> time = <scroll_time>
-	wait (<scroll_time> * 0.8) seconds
-	setscreenelementprops id = <this_id> pos = (0.0, 0.0)
+	doScreenElementMorph id = <this_id> pos = <end_pos> time = <scroll_time>
+	Wait (<scroll_time> * 0.8) seconds
+	SetScreenElementProps id = <this_id> pos = (0.0, 0.0)
 	repeat
 endscript
 
 script find_bonus_info 
-	array = bonus_songs_info
-	if gotparam \{guitar}
-		scriptassert \{"Shouldn't be calling this function (find_bonus_info) for guitars!"}
-	elseif gotparam \{character}
-		array = bonus_characters_info
+	array = Bonus_Songs_Info
+	if GotParam \{guitar}
+		ScriptAssert \{"Shouldn't be calling this function (find_bonus_info) for guitars!"}
+	elseif GotParam \{character}
+		array = Bonus_Characters_Info
 	endif
-	getarraysize ($<array>)
+	GetArraySize ($<array>)
 	i = 0
 	begin
 	if (<item_checksum> = ((($<array>) [<i>]).item))
@@ -734,7 +734,7 @@ endscript
 
 script menu_store_find_guitar_index_for_blurb 
 	<i> = 0
-	getarraysize ($musician_instrument)
+	GetArraySize ($musician_instrument)
 	begin
 	if (<id> = (($musician_instrument [<i>]).desc_id))
 		return guitar_index = <i>
@@ -745,49 +745,49 @@ endscript
 
 script set_store_song_title \{index = 0}
 	store_hide_already_owned
-	get_progression_globals game_mode = ($game_mode) bonus
-	store_song_artist :settags song_index = <index>
+	get_progression_globals game_mode = ($game_mode) Bonus
+	store_song_artist :SetTags song_index = <index>
 	song_checksum = ($<tier_global>.tier1.songs [<index>])
 	find_bonus_info item_checksum = <song_checksum> song
-	select_guitar_change_blurb_text text = ($bonus_songs_info [<info_index>].text) x_dims = 430 pos = (-115.0, 375.0) z = 50
-	album_texture = ($bonus_songs_info [<info_index>].album_cover)
+	select_guitar_change_blurb_text text = ($Bonus_Songs_Info [<info_index>].text) x_dims = 430 pos = (-115.0, 375.0) z = 50
+	album_texture = ($Bonus_Songs_Info [<info_index>].album_cover)
 	if (<album_texture> = store_song_default)
-		if english
+		if English
 			<album_texture> = store_song_default
-		elseif french
-			<album_texture> = store_song_default_fr
-		elseif german
-			<album_texture> = store_song_default_de
-		elseif italian
-			<album_texture> = store_song_default_it
-		elseif spanish
-			<album_texture> = store_song_default_sp
-		elseif korean
+		elseif French
+			<album_texture> = store_song_default_FR
+		elseif German
+			<album_texture> = store_song_default_DE
+		elseif Italian
+			<album_texture> = store_song_default_IT
+		elseif Spanish
+			<album_texture> = store_song_default_SP
+		elseif Korean
 			<album_texture> = store_song_default
 		endif
 	endif
-	store_songs_album_cover :setprops texture = <album_texture>
+	store_songs_album_cover :SetProps texture = <album_texture>
 	get_song_title song = (<song_checksum>)
-	setscreenelementprops {
+	SetScreenElementProps {
 		id = store_song_title
 		text = (<song_title>)
 	}
 	get_song_artist song = (<song_checksum>) with_year = 0
-	setscreenelementprops {
+	SetScreenElementProps {
 		id = store_song_artist
 		text = (<song_artist>)
 	}
-	store_song_artist :setprops \{scale = (1.0, 1.0)
+	store_song_artist :SetProps \{scale = (1.0, 1.0)
 		relative_scale}
-	getscreenelementdims \{id = store_song_artist}
+	GetScreenElementDims \{id = store_song_artist}
 	if (<width> >= 280.0)
 		new_scale = ((280.0 / <width>) * (1.0, 0.0) + (0.0, 1.0))
-		store_song_artist :setprops scale = <new_scale> relative_scale
+		store_song_artist :SetProps scale = <new_scale> relative_scale
 	endif
 	song_price = ($store_song_data.<song_checksum>.price)
 	set_store_purchase_price price = (<song_price>)
-	formattext checksumname = bonus_song_checksum '%p_song%i_tier%s' p = 'bonus' i = (<index> + 1) s = 1
-	getglobaltags <song_checksum>
+	FormatText checksumname = bonus_song_checksum '%p_song%i_tier%s' p = 'bonus' i = (<index> + 1) s = 1
+	GetGlobalTags <song_checksum>
 	if (<unlocked> = 1)
 		store_show_already_owned
 	endif
@@ -795,9 +795,9 @@ script set_store_song_title \{index = 0}
 endscript
 
 script store_songs_left 
-	if screenelementexists \{id = store_songs_album_45}
-		store_songs_album_45 :domorph rot_angle = RandomRange (180.0, -30.0)
-		runscriptonscreenelement \{id = store_songs_album_45
+	if ScreenElementExists \{id = store_songs_album_45}
+		store_songs_album_45 :DoMorph rot_angle = RandomRange (180.0, -30.0)
+		RunScriptOnScreenElement \{id = store_songs_album_45
 			rotate_element_360
 			params = {
 				id = store_songs_album_45
@@ -805,16 +805,16 @@ script store_songs_left
 				element_angle = -360
 			}}
 	endif
-	store_song_artist :gettags
-	get_progression_globals game_mode = ($game_mode) bonus
-	getarraysize ($<tier_global>.tier1.songs)
+	store_song_artist :GetTags
+	get_progression_globals game_mode = ($game_mode) Bonus
+	GetArraySize ($<tier_global>.tier1.songs)
 	<song_index> = (<song_index> - 1)
 	if (<song_index> < 0)
 		<song_index> = (<song_index> + <array_size>)
 	endif
 	song_checksum = ($<tier_global>.tier1.songs [<song_index>])
 	if NOT find_bonus_info item_checksum = <song_checksum> song
-		store_song_artist :settags song_index = <song_index>
+		store_song_artist :SetTags song_index = <song_index>
 		store_songs_left
 		return
 	endif
@@ -826,25 +826,25 @@ script store_songs_left
 endscript
 
 script store_songs_right 
-	if screenelementexists \{id = store_songs_album_45}
-		store_songs_album_45 :domorph rot_angle = RandomRange (30.0, 180.0)
-		runscriptonscreenelement \{id = store_songs_album_45
+	if ScreenElementExists \{id = store_songs_album_45}
+		store_songs_album_45 :DoMorph rot_angle = RandomRange (30.0, 180.0)
+		RunScriptOnScreenElement \{id = store_songs_album_45
 			rotate_element_360
 			params = {
 				id = store_songs_album_45
 				time = 2
 			}}
 	endif
-	store_song_artist :gettags
-	get_progression_globals game_mode = ($game_mode) bonus
-	getarraysize ($<tier_global>.tier1.songs)
+	store_song_artist :GetTags
+	get_progression_globals game_mode = ($game_mode) Bonus
+	GetArraySize ($<tier_global>.tier1.songs)
 	<song_index> = (<song_index> + 1)
 	if (<song_index> = <array_size>)
 		<song_index> = 0
 	endif
 	song_checksum = ($<tier_global>.tier1.songs [<song_index>])
 	if NOT find_bonus_info item_checksum = <song_checksum> song
-		store_song_artist :settags song_index = <song_index>
+		store_song_artist :SetTags song_index = <song_index>
 		store_songs_right
 		return
 	endif
@@ -856,30 +856,30 @@ script store_songs_right
 endscript
 
 script store_songs_buy 
-	store_song_artist :gettags
-	get_progression_globals game_mode = ($game_mode) bonus
+	store_song_artist :GetTags
+	get_progression_globals game_mode = ($game_mode) Bonus
 	song_checksum = ($<tier_global>.tier1.songs [<song_index>])
-	formattext checksumname = bonus_song_checksum '%p_song%i_tier%s' p = 'bonus' i = (<song_index> + 1) s = 1
-	getglobaltags <song_checksum>
+	FormatText checksumname = bonus_song_checksum '%p_song%i_tier%s' p = 'bonus' i = (<song_index> + 1) s = 1
+	GetGlobalTags <song_checksum>
 	if (<unlocked> = 0)
 		get_current_band_info
-		getglobaltags <band_info>
+		GetGlobalTags <band_info>
 		song_price = ($store_song_data.<song_checksum>.price)
-		if ((<cash> > <song_price>) || (<cash> = <song_price>))
-			<cash> = (<cash> - <song_price>)
-			setglobaltags <band_info> params = {cash = <cash>}
-			setglobaltags <bonus_song_checksum> params = {unlocked = 1}
-			setglobaltags <song_checksum> params = {unlocked = 1}
+		if ((<Cash> > <song_price>) || (<Cash> = <song_price>))
+			<Cash> = (<Cash> - <song_price>)
+			SetGlobalTags <band_info> params = {Cash = <Cash>}
+			SetGlobalTags <bonus_song_checksum> params = {unlocked = 1}
+			SetGlobalTags <song_checksum> params = {unlocked = 1}
 			progression_push_current \{force_gamemode = p1_career}
 			progression_pop_current \{force_gamemode = p2_career}
-			setglobaltags <bonus_song_checksum> params = {unlocked = 1}
-			setglobaltags <song_checksum> params = {unlocked = 1}
+			SetGlobalTags <bonus_song_checksum> params = {unlocked = 1}
+			SetGlobalTags <song_checksum> params = {unlocked = 1}
 			progression_push_current \{force_gamemode = p2_career}
 			progression_pop_current \{force_gamemode = p1_career}
 			store_update_band_cash
 			set_store_song_title index = (<song_index>)
 			change \{store_autosave_required = 1}
-			soundevent \{event = cash_sound}
+			SoundEvent \{event = Cash_Sound}
 		endif
 	endif
 endscript
@@ -889,7 +889,7 @@ store_character_original_style_id_p1 = 0
 
 script create_store_character_menu \{for_outfits = 0
 		for_styles = 0}
-	setscreenelementprops \{id = store_cash_text
+	SetScreenElementProps \{id = store_cash_text
 		pos = (900.0, 550.0)}
 	create_store_window_frame \{pos = (900.0, 360.0)
 		dims = (300.0, 600.0)
@@ -901,18 +901,18 @@ script create_store_character_menu \{for_outfits = 0
 	if (<for_styles> = 1)
 		<menu_pos> = (800.0, 85.0)
 	endif
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = select_guitar_container
 		pos = (893.0, -100.0)}
-	createscreenelement \{type = windowelement
+	CreateScreenElement \{type = WindowElement
 		parent = root_window
 		id = store_info_scroll_window
 		pos = $store_window_pos
 		dims = $store_window_dims}
 	new_menu scrollid = cs_scroll vmenuid = cs_vmenu menu_pos = <menu_pos>
-	text_params = {parent = cs_vmenu type = textelement font = ($store_menu_font) rgba = [170 90 35 255] z_priority = 50 no_shadow}
-	createscreenelement {
+	text_params = {parent = cs_vmenu type = TextElement font = ($store_menu_font) rgba = [170 90 35 255] z_priority = 50 no_shadow}
+	CreateScreenElement {
 		<text_params>
 		text = <character_full_name>
 		id = character_name_text
@@ -925,9 +925,9 @@ script create_store_character_menu \{for_outfits = 0
 			{pad_choose store_buy_character}
 		]
 	}
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = cs_vmenu}
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = character_name_text}
 	store_show_price_tag \{pos = (580.0, 400.0)
 		rot = -10}
@@ -945,7 +945,7 @@ endscript
 
 script create_store_characters_menu 
 	mark_unsafe_for_shutdown
-	kill \{name = z_soundcheck_g_rmm_kill_me}
+	kill \{name = z_SoundCheck_G_RMM_Kill_me}
 	change store_character_original_id_p1 = ($player1_status.character_id)
 	change store_character_original_outfit_id_p1 = ($player1_status.outfit)
 	change store_character_original_style_id_p1 = ($player1_status.style)
@@ -953,21 +953,21 @@ script create_store_characters_menu
 	setup_store_hub \{cash_pos = (-2000.0, -2000.0)}
 	store_camera_wait
 	create_store_character_menu
-	character_name_text :settags \{current_character = -1}
-	character_name_text :settags \{last_character_change = 0}
-	character_name_text :settags \{goal_character = 0}
-	character_name_text :settags character_array = ($secret_characters)
+	character_name_text :SetTags \{current_character = -1}
+	character_name_text :SetTags \{last_character_change = 0}
+	character_name_text :SetTags \{goal_character = 0}
+	character_name_text :SetTags character_array = ($Secret_Characters)
 	store_update_already_bought_for_character
-	store_get_name_from_id character_id = ($secret_characters [0].id)
-	set_store_purchase_price price = ($secret_characters [0].price)
-	formattext checksumname = character_id '%s' s = <character_name>
+	store_get_name_from_id character_id = ($Secret_Characters [0].id)
+	set_store_purchase_price price = ($Secret_Characters [0].price)
+	FormatText checksumname = character_id '%s' s = <character_name>
 	change structurename = player1_status character_id = <character_id>
 	change \{structurename = guitarist_info
 		stance = stance_frontend}
 	change \{structurename = guitarist_info
 		next_stance = stance_frontend}
 	change \{structurename = guitarist_info
-		current_anim = idle}
+		current_anim = Idle}
 	change \{structurename = guitarist_info
 		cycle_anim = true}
 	change \{structurename = guitarist_info
@@ -977,7 +977,7 @@ script create_store_characters_menu
 	change \{structurename = bassist_info
 		next_stance = stance_frontend}
 	change \{structurename = bassist_info
-		current_anim = idle}
+		current_anim = Idle}
 	change \{structurename = bassist_info
 		cycle_anim = true}
 	change \{structurename = bassist_info
@@ -985,18 +985,18 @@ script create_store_characters_menu
 	change \{store_shadow_character = 1}
 	change \{store_shadow_change = 1}
 	spawnscriptnow \{monitor_store_shadow_character}
-	store_show_character character_index = 0 character_id = ($secret_characters [0].id) for_outfits = 0
+	store_show_character character_index = 0 character_id = ($Secret_Characters [0].id) for_outfits = 0
 	spawnscriptnow \{generic_select_monitor
 		params = {
 			player = 1
 			player_status = player1_status
 			change_flag = generic_select_monitor_p1_changed
-			name = guitarist
+			name = Guitarist
 			node_flags = {
-				node_name = z_soundcheck_trg_waypoint_character_start
+				node_name = z_SoundCheck_TRG_Waypoint_Character_Start
 			}
 		}}
-	wait \{1
+	Wait \{1
 		gameframe}
 	store_next_character
 	store_previous_character
@@ -1004,8 +1004,8 @@ script create_store_characters_menu
 endscript
 
 script destroy_store_characters_menu 
-	killspawnedscript \{name = monitor_store_shadow_character}
-	killspawnedscript \{name = select_guitar_scroll_instrument_info}
+	KillSpawnedScript \{name = monitor_store_shadow_character}
+	KillSpawnedScript \{name = select_guitar_scroll_instrument_info}
 	destroy_menu \{menu_id = gs_instrument_info_scroll_window}
 	destroy_menu \{menu_id = select_guitar_container}
 	destroy_store_price_tag
@@ -1021,42 +1021,42 @@ script destroy_store_characters_menu
 		outfit = $store_character_original_outfit_id_p1}
 	change \{structurename = player1_status
 		style = $store_character_original_style_id_p1}
-	create \{name = z_soundcheck_g_rmm_kill_me}
+	create \{name = z_SoundCheck_G_RMM_Kill_me}
 endscript
 
 script create_store_outfits_menu 
 	mark_unsafe_for_shutdown
-	kill \{name = z_soundcheck_g_rmm_kill_me}
+	kill \{name = z_SoundCheck_G_RMM_Kill_me}
 	change store_character_original_id_p1 = ($player1_status.character_id)
 	change store_character_original_outfit_id_p1 = ($player1_status.outfit)
 	change \{target_store_camera_prop = outfits_selection}
 	setup_store_hub \{cash_pos = (-2000.0, -2000.0)}
 	store_camera_wait
-	store_build_character_outfit_name profile_name = ($bonus_outfits [0].profile_name) character_id = ($bonus_outfits [0].id)
-	set_store_purchase_price price = ($bonus_outfits [0].price)
-	store_get_outfit_name_from_id character_id = ($bonus_outfits [0].id)
-	formattext checksumname = character_id '%s' s = <character_name>
+	store_build_character_outfit_name profile_name = ($Bonus_Outfits [0].profile_name) character_id = ($Bonus_Outfits [0].id)
+	set_store_purchase_price price = ($Bonus_Outfits [0].price)
+	store_get_outfit_name_from_id character_id = ($Bonus_Outfits [0].id)
+	FormatText checksumname = character_id '%s' s = <character_name>
 	change structurename = player1_status character_id = <character_id>
 	change \{structurename = guitarist_info
 		stance = stance_frontend}
 	change \{structurename = guitarist_info
 		next_stance = stance_frontend}
 	change \{structurename = guitarist_info
-		current_anim = idle}
+		current_anim = Idle}
 	change \{structurename = guitarist_info
 		cycle_anim = true}
 	change \{structurename = guitarist_info
 		next_anim = none}
-	enablelightgroup \{name = guitar_center_band}
+	EnableLightGroup \{name = Guitar_center_band}
 	create_store_character_menu \{for_outfits = 1}
-	character_name_text :settags \{current_character = -1}
-	character_name_text :settags \{last_character_change = 0}
-	character_name_text :settags \{goal_character = 0}
-	character_name_text :settags character_array = ($bonus_outfits)
+	character_name_text :SetTags \{current_character = -1}
+	character_name_text :SetTags \{last_character_change = 0}
+	character_name_text :SetTags \{goal_character = 0}
+	character_name_text :SetTags character_array = ($Bonus_Outfits)
 	store_update_already_bought_for_character
 	store_show_character {
 		character_index = 0
-		character_id = ($bonus_outfits [0].id)
+		character_id = ($Bonus_Outfits [0].id)
 		for_outfits = 1
 	}
 	spawnscriptnow \{generic_select_monitor
@@ -1064,13 +1064,13 @@ script create_store_outfits_menu
 			player = 1
 			player_status = player1_status
 			change_flag = generic_select_monitor_p1_changed
-			name = guitarist
+			name = Guitarist
 			for_outfits = 1
 			node_flags = {
-				node_name = z_soundcheck_trg_waypoint_character_start
+				node_name = z_SoundCheck_TRG_Waypoint_Character_Start
 			}
 		}}
-	wait \{1
+	Wait \{1
 		gameframe}
 	store_next_character \{for_outfits = 1}
 	store_previous_character \{for_outfits = 1}
@@ -1078,8 +1078,8 @@ script create_store_outfits_menu
 endscript
 
 script destroy_store_outfits_menu 
-	killspawnedscript \{name = monitor_store_shadow_character}
-	killspawnedscript \{name = select_guitar_scroll_instrument_info}
+	KillSpawnedScript \{name = monitor_store_shadow_character}
+	KillSpawnedScript \{name = select_guitar_scroll_instrument_info}
 	destroy_menu \{menu_id = gs_instrument_info_scroll_window}
 	destroy_menu \{menu_id = select_guitar_container}
 	destroy_store_price_tag
@@ -1093,12 +1093,12 @@ script destroy_store_outfits_menu
 		character_id = $store_character_original_id_p1}
 	change \{structurename = player1_status
 		outfit = $store_character_original_outfit_id_p1}
-	create \{name = z_soundcheck_g_rmm_kill_me}
+	create \{name = z_SoundCheck_G_RMM_Kill_me}
 endscript
 
 script create_store_styles_menu 
 	mark_unsafe_for_shutdown
-	kill \{name = z_soundcheck_g_rmm_kill_me}
+	kill \{name = z_SoundCheck_G_RMM_Kill_me}
 	change store_character_original_id_p1 = ($player1_status.character_id)
 	change store_character_original_outfit_id_p1 = ($player1_status.outfit)
 	change store_character_original_style_id_p1 = ($player1_status.style)
@@ -1109,15 +1109,15 @@ script create_store_styles_menu
 	store_build_character_outfit_name profile_name = (<styles_array> [0].profile_name) character_id = (<styles_array> [0].id)
 	set_store_purchase_price price = (<styles_array> [0].price)
 	store_get_outfit_name_from_id character_id = (<styles_array> [0].id) array = <styles_array>
-	formattext checksumname = character_id '%s' s = <character_name>
+	FormatText checksumname = character_id '%s' s = <character_name>
 	change structurename = player1_status character_id = <character_id>
 	create_store_character_menu \{for_outfits = 1
 		for_styles = 1}
-	character_name_text :settags \{current_character = -1}
-	character_name_text :settags \{last_character_change = 0}
-	character_name_text :settags \{goal_character = 0}
-	character_name_text :settags character_array = <styles_array>
-	enablelightgroup \{name = guitar_center_band}
+	character_name_text :SetTags \{current_character = -1}
+	character_name_text :SetTags \{last_character_change = 0}
+	character_name_text :SetTags \{goal_character = 0}
+	character_name_text :SetTags character_array = <styles_array>
+	EnableLightGroup \{name = Guitar_center_band}
 	store_update_already_bought_for_character
 	store_show_character {
 		character_index = 0
@@ -1130,13 +1130,13 @@ script create_store_styles_menu
 			player = 1
 			player_status = player1_status
 			change_flag = generic_select_monitor_p1_changed
-			name = guitarist
+			name = Guitarist
 			for_outfits = 1
 			node_flags = {
-				node_name = z_soundcheck_trg_waypoint_character_start
+				node_name = z_SoundCheck_TRG_Waypoint_Character_Start
 			}
 		}}
-	wait \{1
+	Wait \{1
 		gameframe}
 	store_next_character \{for_outfits = 1
 		for_styles = 1}
@@ -1146,8 +1146,8 @@ script create_store_styles_menu
 endscript
 
 script destroy_store_styles_menu 
-	killspawnedscript \{name = monitor_store_shadow_character}
-	killspawnedscript \{name = select_guitar_scroll_instrument_info}
+	KillSpawnedScript \{name = monitor_store_shadow_character}
+	KillSpawnedScript \{name = select_guitar_scroll_instrument_info}
 	destroy_menu \{menu_id = gs_instrument_info_scroll_window}
 	destroy_menu \{menu_id = select_guitar_container}
 	destroy_store_price_tag
@@ -1163,7 +1163,7 @@ script destroy_store_styles_menu
 		outfit = $store_character_original_outfit_id_p1}
 	change \{structurename = player1_status
 		style = $store_character_original_style_id_p1}
-	create \{name = z_soundcheck_g_rmm_kill_me}
+	create \{name = z_SoundCheck_G_RMM_Kill_me}
 endscript
 
 script store_get_name_from_id 
@@ -1177,11 +1177,11 @@ script store_get_name_from_id
 	<index> = (<index> + 1)
 	repeat <array_size>
 	printstruct <...>
-	scriptassert \{"Entry not found!"}
+	ScriptAssert \{"Entry not found!"}
 endscript
 
-script store_get_outfit_name_from_id \{array = $bonus_outfits}
-	getarraysize (<array>)
+script store_get_outfit_name_from_id \{array = $Bonus_Outfits}
+	GetArraySize (<array>)
 	index = 0
 	begin
 	if (<character_id> = (<array> [<index>].id))
@@ -1190,33 +1190,33 @@ script store_get_outfit_name_from_id \{array = $bonus_outfits}
 	<index> = (<index> + 1)
 	repeat <array_size>
 	printstruct <...>
-	scriptassert \{"Entry not found!"}
+	ScriptAssert \{"Entry not found!"}
 endscript
 
 script store_buy_character 
-	character_name_text :gettags
+	character_name_text :GetTags
 	character_id = (<character_array> [<goal_character>].id)
-	getglobaltags <character_id>
+	GetGlobalTags <character_id>
 	if (<unlocked> = 0)
 		price = (<character_array> [<goal_character>].price)
 		get_current_band_info
-		getglobaltags <band_info>
-		if (<character_id> = guitarist_satan_outfit2_style1)
-			getglobaltags \{guitarist_satan_outfit1_style1}
+		GetGlobalTags <band_info>
+		if (<character_id> = Guitarist_Satan_Outfit2_Style1)
+			GetGlobalTags \{Guitarist_Satan_Outfit1_Style1}
 			if NOT (<unlocked> = 1)
 				return
 			endif
 		endif
-		if ((<cash> > <price>) || (<cash> = <price>))
-			<cash> = (<cash> - <price>)
-			setglobaltags <band_info> params = {cash = <cash>}
-			setglobaltags <character_id> params = {unlocked = 1}
-			getarraysize \{$musician_profiles}
+		if ((<Cash> > <price>) || (<Cash> = <price>))
+			<Cash> = (<Cash> - <price>)
+			SetGlobalTags <band_info> params = {Cash = <Cash>}
+			SetGlobalTags <character_id> params = {unlocked = 1}
+			GetArraySize \{$Musician_Profiles}
 			<i> = 0
 			begin
-			if (($musician_profiles [<i>].musician_body.desc_id) = <character_id>)
-				<guitar_id> = ($musician_profiles [<i>].musician_instrument.desc_id)
-				setglobaltags <guitar_id> params = {unlocked = 1}
+			if (($Musician_Profiles [<i>].musician_body.desc_id) = <character_id>)
+				<guitar_id> = ($Musician_Profiles [<i>].musician_instrument.desc_id)
+				SetGlobalTags <guitar_id> params = {unlocked = 1}
 				break
 			endif
 			<i> = (<i> + 1)
@@ -1224,7 +1224,7 @@ script store_buy_character
 			store_update_band_cash
 			store_update_already_bought_for_character
 			change \{store_autosave_required = 1}
-			soundevent \{event = cash_sound}
+			SoundEvent \{event = Cash_Sound}
 			change \{store_shadow_change = 1}
 			change \{store_shadow_character = 0}
 		endif
@@ -1235,13 +1235,13 @@ script monitor_store_shadow_character
 	begin
 	if ($store_shadow_change = 1)
 		if ($store_shadow_character = 1)
-			disablelightgroup \{name = guitar_center_band}
+			DisableLightGroup \{name = Guitar_center_band}
 		else
-			enablelightgroup \{name = guitar_center_band}
+			EnableLightGroup \{name = Guitar_center_band}
 		endif
 		change \{store_shadow_change = 0}
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
@@ -1249,9 +1249,9 @@ store_shadow_character = 1
 store_shadow_change = 1
 
 script store_update_already_bought_for_character 
-	character_name_text :gettags
+	character_name_text :GetTags
 	character_id = (<character_array> [<goal_character>].id)
-	getglobaltags <character_id>
+	GetGlobalTags <character_id>
 	if (<unlocked>)
 		change \{store_shadow_character = 0}
 		store_show_already_owned unlocked_for_purchase = <unlocked_for_purchase> for_character = 1
@@ -1262,71 +1262,71 @@ script store_update_already_bought_for_character
 endscript
 
 script get_instrument_from_character 
-	getarraysize ($musician_profiles)
+	GetArraySize ($Musician_Profiles)
 	i = 0
 	begin
-	if (<name> = ($musician_profiles [<i>].name))
-		return instrument_id = ($musician_profiles [<i>].musician_instrument.desc_id)
+	if (<name> = ($Musician_Profiles [<i>].name))
+		return instrument_id = ($Musician_Profiles [<i>].musician_instrument.desc_id)
 	endif
 	<i> = (<i> + 1)
 	repeat <array_size>
 	printstruct <...>
-	scriptassert \{"Didn't find the character by id!"}
+	ScriptAssert \{"Didn't find the character by id!"}
 endscript
 
 script store_show_character \{for_outfits = 0
 		for_styles = 0}
-	character_name_text :gettags
-	getarraysize <character_array>
+	character_name_text :GetTags
+	GetArraySize <character_array>
 	if (<for_styles>)
 		store_build_character_outfit_name profile_name = (<character_array> [<character_index>].profile_name) character_id = (<character_array> [<character_index>].id)
-		setscreenelementprops id = character_name_text text = <fullname>
+		SetScreenElementProps id = character_name_text text = <fullname>
 	else
 		if (<for_outfits>)
 			store_build_character_outfit_name profile_name = (<character_array> [<character_index>].profile_name) character_id = (<character_array> [<character_index>].id)
-			setscreenelementprops id = character_name_text text = <character_outfit_name>
-			killspawnedscript \{name = store_update_player_status}
-			spawnscriptnow \{store_update_player_status
+			SetScreenElementProps id = character_name_text text = <character_outfit_name>
+			KillSpawnedScript \{name = Store_Update_Player_Status}
+			spawnscriptnow \{Store_Update_Player_Status
 				params = {
 					style = 1
 				}}
 		else
 			store_get_name_from_id character_id = <character_id>
-			setscreenelementprops id = character_name_text text = <character_full_name>
-			formattext checksumname = character_id '%s' s = <character_name>
+			SetScreenElementProps id = character_name_text text = <character_full_name>
+			FormatText checksumname = character_id '%s' s = <character_name>
 			get_instrument_from_character name = <character_name>
-			killspawnedscript \{name = store_update_player_status}
-			spawnscriptnow store_update_player_status params = {character_id = <character_id>
+			KillSpawnedScript \{name = Store_Update_Player_Status}
+			spawnscriptnow Store_Update_Player_Status params = {character_id = <character_id>
 				instrument_id = <instrument_id>
 				outfit = 1
 				style = 1}
 		endif
 	endif
-	character_name_text :setprops \{scale = 1}
-	getscreenelementdims \{id = character_name_text}
+	character_name_text :SetProps \{scale = 1}
+	GetScreenElementDims \{id = character_name_text}
 	if (<width> > 280)
 		new_scale = ((280.0 / <width>) * (1.0, 0.0) + (0.0, 1.0))
-		character_name_text :setprops scale = <new_scale> relative_scale
+		character_name_text :SetProps scale = <new_scale> relative_scale
 	endif
 	if (<for_styles>)
-		store_get_outfit_name_from_id character_id = <character_id> array = $bonus_styles
-		formattext checksumname = character_id '%s' s = <character_name>
+		store_get_outfit_name_from_id character_id = <character_id> array = $Bonus_Styles
+		FormatText checksumname = character_id '%s' s = <character_name>
 		get_instrument_from_character name = <character_name>
 		store_find_outfit_and_style_indices {
 			profile_name = (<character_array> [<character_index>].profile_name)
 			character_id = (<character_array> [<character_index>].id)
 		}
-		killspawnedscript \{name = store_update_player_status}
-		spawnscriptnow store_update_player_status params = {character_id = <character_id>
+		KillSpawnedScript \{name = Store_Update_Player_Status}
+		spawnscriptnow Store_Update_Player_Status params = {character_id = <character_id>
 			instrument_id = <instrument_id>
 			outfit = (<outfit_index> + 1)
 			style = (<style_index> + 1)}
 	elseif (<for_outfits>)
-		store_get_outfit_name_from_id character_id = <character_id> array = $bonus_outfits
-		formattext checksumname = character_id '%s' s = <character_name>
+		store_get_outfit_name_from_id character_id = <character_id> array = $Bonus_Outfits
+		FormatText checksumname = character_id '%s' s = <character_name>
 		get_instrument_from_character name = <character_name>
-		killspawnedscript \{name = store_update_player_status}
-		spawnscriptnow store_update_player_status params = {character_id = <character_id>
+		KillSpawnedScript \{name = Store_Update_Player_Status}
+		spawnscriptnow Store_Update_Player_Status params = {character_id = <character_id>
 			instrument_id = <instrument_id>
 			outfit = <outfit_num>}
 	else
@@ -1337,72 +1337,72 @@ script store_show_character \{for_outfits = 0
 	else
 		if (<for_outfits>)
 			find_bonus_info item_checksum = (<character_array> [<character_index>].info_name) character
-			select_guitar_change_blurb_text text = ($bonus_characters_info [<info_index>].text) x_dims = 430 pos = (-115.0, 320.0) dims = (388.0, 300.0) z = 50 lines_in_window = 9
+			select_guitar_change_blurb_text text = ($Bonus_Characters_Info [<info_index>].text) x_dims = 430 pos = (-115.0, 320.0) dims = (388.0, 300.0) z = 50 lines_in_window = 9
 		else
 			store_find_character_blurb_by_id id = (<character_array> [<character_index>].id)
 			select_guitar_change_blurb_text text = <blurb_text> x_dims = 430 pos = (-115.0, 320.0) dims = (388.0, 300.0) z = 50
 		endif
 	endif
-	character_name_text :settags goal_character = <character_index>
-	character_name_text :settags last_character_change = <starttime>
+	character_name_text :SetTags goal_character = <character_index>
+	character_name_text :SetTags last_character_change = <StartTime>
 	store_update_already_bought_for_character
 endscript
 
-script store_update_player_status \{player = 1}
-	formattext checksumname = player_status 'player%p_status' p = <player>
-	formattext checksumname = generic_select_monitor_changed 'generic_select_monitor_p%p_changed' p = <player>
+script Store_Update_Player_Status \{player = 1}
+	FormatText checksumname = player_status 'player%p_status' p = <player>
+	FormatText checksumname = generic_select_monitor_changed 'generic_select_monitor_p%p_changed' p = <player>
 	begin
-	wait \{1
+	Wait \{1
 		gameframe}
 	if ($<generic_select_monitor_changed> != 1)
 		break
 	endif
 	repeat
-	if gotparam \{character_id}
+	if GotParam \{character_id}
 		change structurename = <player_status> character_id = <character_id>
 	endif
-	if gotparam \{instrument_id}
+	if GotParam \{instrument_id}
 		change structurename = <player_status> instrument_id = <instrument_id>
 	endif
-	if gotparam \{outfit}
+	if GotParam \{outfit}
 		change structurename = <player_status> outfit = <outfit>
 	endif
-	if gotparam \{style}
+	if GotParam \{style}
 		change structurename = <player_status> style = <style>
 	endif
 	change globalname = <generic_select_monitor_changed> newvalue = 1
 endscript
 
 script store_find_character_blurb_by_id 
-	getarraysize ($musician_profiles)
+	GetArraySize ($Musician_Profiles)
 	i = 0
 	begin
-	if (($musician_profiles [<i>].musician_body.desc_id) = <id>)
-		return blurb_text = ($musician_profiles [<i>].blurb)
+	if (($Musician_Profiles [<i>].musician_body.desc_id) = <id>)
+		return blurb_text = ($Musician_Profiles [<i>].blurb)
 	endif
 	<i> = (<i> + 1)
 	repeat <array_size>
 	printstruct <...>
-	scriptassert \{"Couldn't find the character blurb by id!"}
+	ScriptAssert \{"Couldn't find the character blurb by id!"}
 endscript
 
 script store_next_character \{for_outfits = 0
 		for_styles = 0}
-	character_name_text :gettags
+	character_name_text :GetTags
 	<goal_character> = (<goal_character> + 1)
-	getarraysize <character_array>
+	GetArraySize <character_array>
 	if (<goal_character> = <array_size>)
 		<goal_character> = 0
 	endif
 	unlocked_for_purchase = 1
-	getglobaltags (<character_array> [<goal_character>].id)
-	if ((<character_array> [<goal_character>].id) = guitarist_satan_outfit2_style1)
-		getglobaltags \{guitarist_satan_outfit1_style1
+	GetGlobalTags (<character_array> [<goal_character>].id)
+	if ((<character_array> [<goal_character>].id) = Guitarist_Satan_Outfit2_Style1)
+		GetGlobalTags \{Guitarist_Satan_Outfit1_Style1
 			param = unlocked}
 		<unlocked_for_purchase> = <unlocked>
 	endif
 	if (<unlocked_for_purchase> = 0)
-		character_name_text :settags goal_character = <goal_character>
+		character_name_text :SetTags goal_character = <goal_character>
 		store_next_character for_outfits = <for_outfits> for_styles = <for_styles>
 		return
 	endif
@@ -1417,21 +1417,21 @@ endscript
 
 script store_previous_character \{for_outfits = 0
 		for_styles = 0}
-	character_name_text :gettags
+	character_name_text :GetTags
 	<goal_character> = (<goal_character> - 1)
-	getarraysize <character_array>
+	GetArraySize <character_array>
 	if (<goal_character> = -1)
 		<goal_character> = (<array_size> - 1)
 	endif
 	unlocked_for_purchase = 1
-	getglobaltags (<character_array> [<goal_character>].id)
-	if ((<character_array> [<goal_character>].id) = guitarist_satan_outfit2_style1)
-		getglobaltags \{guitarist_satan_outfit1_style1
+	GetGlobalTags (<character_array> [<goal_character>].id)
+	if ((<character_array> [<goal_character>].id) = Guitarist_Satan_Outfit2_Style1)
+		GetGlobalTags \{Guitarist_Satan_Outfit1_Style1
 			param = unlocked}
 		<unlocked_for_purchase> = <unlocked>
 	endif
 	if (<unlocked_for_purchase> = 0)
-		character_name_text :settags goal_character = <goal_character>
+		character_name_text :SetTags goal_character = <goal_character>
 		store_previous_character for_outfits = <for_outfits> for_styles = <for_styles>
 		return
 	endif
@@ -1456,17 +1456,17 @@ script store_build_character_outfit_name
 	endif
 	<index> = (<index> + 1)
 	repeat (<array_size>)
-	if NOT gotparam \{outfit_array}
+	if NOT GotParam \{outfit_array}
 		printstruct <...>
-		scriptassert \{"Couldn't find matching musician profile!"}
+		ScriptAssert \{"Couldn't find matching musician profile!"}
 	else
 		if (<style_index> = 0)
 			outfit_name = (<outfit_array> [<outfit_index>].name)
-			formattext textname = character_outfit_name "%o" o = <outfit_name>
+			FormatText TextName = character_outfit_name "%o" o = <outfit_name>
 			return character_outfit_name = <character_outfit_name> outfit_num = (<outfit_index> + 1) profile_name = <profile_name> fullname = (<profile_struct>.fullname)
 		else
 			style_name = (<outfit_array> [<outfit_index>].styles [<style_index>])
-			formattext textname = character_outfit_name "%o" o = <style_name>
+			FormatText TextName = character_outfit_name "%o" o = <style_name>
 			return character_outfit_name = <character_outfit_name> outfit_num = (<outfit_index> + 1) profile_name = <profile_name> fullname = (<profile_struct>.fullname)
 		endif
 	endif
@@ -1477,7 +1477,7 @@ script store_find_outfit_and_style_indices
 	begin
 	style_index = 1
 	begin
-	formattext checksumname = test_outfit_style_cs 'Guitarist_%n_Outfit%o_Style%s' n = <profile_name> o = <outfit_index> s = <style_index>
+	FormatText checksumname = test_outfit_style_cs 'Guitarist_%n_Outfit%o_Style%s' n = <profile_name> o = <outfit_index> s = <style_index>
 	if (<test_outfit_style_cs> = <character_id>)
 		return outfit_index = (<outfit_index> -1) style_index = (<style_index> -1)
 	endif
@@ -1486,25 +1486,25 @@ script store_find_outfit_and_style_indices
 	<outfit_index> = (<outfit_index> + 1)
 	repeat 2
 	printstruct <...>
-	scriptassert \{"Couldn't figure out the outfit and style indices!"}
+	ScriptAssert \{"Couldn't figure out the outfit and style indices!"}
 endscript
 
 script store_prune_styles_array 
-	styles_array = ($bonus_styles)
-	getarraysize (<styles_array>)
+	styles_array = ($Bonus_Styles)
+	GetArraySize (<styles_array>)
 	<mod_a> = 0
 	<i> = 0
 	begin
-	mod a = <mod_a> b = 6
-	if (<mod> = 0)
-		removearrayelement array = (<styles_array>) index = <i>
+	Mod a = <mod_a> b = 6
+	if (<Mod> = 0)
+		RemoveArrayElement array = (<styles_array>) index = <i>
 		<styles_array> = (<array>)
 		<i> = (<i> - 1)
 	endif
 	<mod_a> = (<mod_a> + 1)
 	<i> = (<i> + 1)
 	repeat <array_size>
-	getarraysize (<styles_array>)
+	GetArraySize (<styles_array>)
 	index = 0
 	begin
 	profile_name = (<styles_array> [<index>].profile_name)
@@ -1513,10 +1513,10 @@ script store_prune_styles_array
 	<outfit_index> = (<outfit_index> + 1)
 	<style_index> = (<style_index> + 1)
 	if NOT (<outfit_index> = 1)
-		formattext checksumname = outfit_cs 'Guitarist_%n_Outfit%o_Style1' n = <profile_name> o = <outfit_index>
-		getglobaltags <outfit_cs>
+		FormatText checksumname = outfit_cs 'Guitarist_%n_Outfit%o_Style1' n = <profile_name> o = <outfit_index>
+		GetGlobalTags <outfit_cs>
 		if (<unlocked> = 0)
-			removearrayelement array = (<styles_array>) index = <index>
+			RemoveArrayElement array = (<styles_array>) index = <index>
 			<styles_array> = (<array>)
 			<index> = (<index> - 1)
 		endif
@@ -1532,16 +1532,16 @@ script store_debug_givebandcash \{add_cash = 1000000}
 		enable_cheat = 1
 	endif
 	if (<enable_cheat> = 1)
-		add_cash = <cash>
+		add_cash = <Cash>
 		get_current_band_info
-		getglobaltags <band_info>
-		<cash> = (<cash> + <add_cash>)
-		setglobaltags <band_info> params = {cash = <cash>}
-		setglobaltags \{achievement_info
+		GetGlobalTags <band_info>
+		<Cash> = (<Cash> + <add_cash>)
+		SetGlobalTags <band_info> params = {Cash = <Cash>}
+		SetGlobalTags \{achievement_info
 			params = {
 				total_cash_in_career_mode = 1000000
 			}}
-		achievements_checkcareertotals
+		Achievements_CheckCareerTotals
 	endif
 	destroy_store_menu
 	create_store_menu
@@ -1555,21 +1555,21 @@ script create_store_guitars_menu
 	change \{target_store_camera_prop = guitar_selection}
 	setup_store_hub \{cash_pos = (-2000.0, -2000.0)}
 	store_camera_wait
-	setscreenelementprops \{id = store_cash_text
+	SetScreenElementProps \{id = store_cash_text
 		pos = (900.0, 550.0)}
 	create_store_window_frame \{pos = (900.0, 360.0)
 		dims = (300.0, 600.0)
 		no_hilite}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = select_guitar_container
 		pos = (893.0, -100.0)}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = store_guitar_container
 		pos = (893.0, 200.0)}
-	createscreenelement {
-		type = windowelement
+	CreateScreenElement {
+		type = WindowElement
 		parent = root_window
 		id = store_info_scroll_window
 		pos = ($store_window_pos + (0.0, 80.0))
@@ -1578,10 +1578,10 @@ script create_store_guitars_menu
 	new_menu \{scrollid = sg_scroll
 		vmenuid = sg_vmenu
 		menu_pos = (895.0, 117.0)}
-	text_params = {parent = sg_vmenu type = textelement font = ($store_menu_font) rgba = [170 90 35 255] z_priority = 50 no_shadow}
-	createscreenelement {
+	text_params = {parent = sg_vmenu type = TextElement font = ($store_menu_font) rgba = [170 90 35 255] z_priority = 50 no_shadow}
+	CreateScreenElement {
 		<text_params>
-		type = containerelement
+		type = ContainerElement
 		text = ""
 		id = store_guitar_name_container
 		dims = (100.0, 0.0)
@@ -1594,7 +1594,7 @@ script create_store_guitars_menu
 			{pad_back store_go_back}
 		]
 	}
-	createscreenelement {
+	CreateScreenElement {
 		<text_params>
 		font = text_a4
 		parent = store_guitar_name_container
@@ -1602,13 +1602,13 @@ script create_store_guitars_menu
 		just = [center center]
 		pos = (0.0, 2.0)
 	}
-	createscreenelement {
+	CreateScreenElement {
 		<text_params>
-		type = containerelement
+		type = ContainerElement
 		id = store_guitar_name_brand_container
 		dims = (100.0, 0.0)
 	}
-	createscreenelement {
+	CreateScreenElement {
 		<text_params>
 		font = text_a4
 		rgba = [10 10 10 255]
@@ -1618,8 +1618,8 @@ script create_store_guitars_menu
 		pos = (0.0, 32.0)
 		just = [center center]
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = store_guitar_container
 		just = [center center]
 		font = text_a4
@@ -1630,14 +1630,14 @@ script create_store_guitars_menu
 		z_priority = (<text_params>.z_priority)
 		pos = (0.0, 20.0)
 	}
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = sg_vmenu}
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = store_guitar_name_container}
-	guitar_array = ($bonus_guitars)
+	guitar_array = ($Bonus_Guitars)
 	store_add_secret_guitars_and_basses guitar_array = (<guitar_array>)
-	store_guitar_name :settags \{guitar_index = 0}
-	store_guitar_name :settags guitar_array = <guitar_array>
+	store_guitar_name :SetTags \{guitar_index = 0}
+	store_guitar_name :SetTags guitar_array = <guitar_array>
 	change \{store_true_index = -1}
 	find_guitar_index_by_id id = (<guitar_array> [0].id)
 	store_show_guitar guitar_index = <guitar_index> price = (<guitar_array> [0].price)
@@ -1650,7 +1650,7 @@ script create_store_guitars_menu
 endscript
 
 script destroy_store_guitars_menu 
-	killspawnedscript \{name = select_guitar_scroll_instrument_info}
+	KillSpawnedScript \{name = select_guitar_scroll_instrument_info}
 	destroy_menu \{menu_id = gs_instrument_info_scroll_window}
 	destroy_menu \{menu_id = select_guitar_container}
 	destroy_store_price_tag
@@ -1664,21 +1664,21 @@ script destroy_store_guitars_menu
 endscript
 
 script store_guitar_buy_guitar 
-	store_guitar_name :gettags
+	store_guitar_name :GetTags
 	guitar_id = (<guitar_array> [<guitar_index>].id)
-	getglobaltags <guitar_id>
+	GetGlobalTags <guitar_id>
 	if ((<unlocked> = 0) && (<unlocked_for_purchase> = 1))
 		guitar_price = (<guitar_array> [<guitar_index>].price)
 		get_current_band_info
-		getglobaltags <band_info>
-		if ((<cash> > <guitar_price>) || (<cash> = <guitar_price>))
-			<cash> = (<cash> - <guitar_price>)
-			setglobaltags <band_info> params = {cash = <cash>}
-			setglobaltags <guitar_id> params = {unlocked = 1}
+		GetGlobalTags <band_info>
+		if ((<Cash> > <guitar_price>) || (<Cash> = <guitar_price>))
+			<Cash> = (<Cash> - <guitar_price>)
+			SetGlobalTags <band_info> params = {Cash = <Cash>}
+			SetGlobalTags <guitar_id> params = {unlocked = 1}
 			store_update_band_cash
 			store_update_already_bought_for_guitar
 			change \{store_autosave_required = 1}
-			soundevent \{event = cash_sound}
+			SoundEvent \{event = Cash_Sound}
 		endif
 	endif
 endscript
@@ -1690,13 +1690,13 @@ script store_guitar_previous_guitar \{for_finishes = 0}
 	endif
 	change \{store_guitar_scroll_ready = 0}
 	generic_menu_up_or_down_sound
-	store_guitar_name :gettags
+	store_guitar_name :GetTags
 	<guitar_index> = (<guitar_index> - 1)
-	getarraysize (<guitar_array>)
+	GetArraySize (<guitar_array>)
 	if (<guitar_index> < 0)
 		<guitar_index> = (<guitar_index> + <array_size>)
 	endif
-	store_guitar_name :settags guitar_index = <guitar_index>
+	store_guitar_name :SetTags guitar_index = <guitar_index>
 	bonus_index = <guitar_index>
 	find_guitar_index_by_id id = (<guitar_array> [<bonus_index>].id)
 	store_show_guitar guitar_index = <guitar_index> price = (<guitar_array> [<bonus_index>].price) for_finishes = <for_finishes>
@@ -1709,13 +1709,13 @@ script store_guitar_next_guitar \{for_finishes = 0}
 	endif
 	change \{store_guitar_scroll_ready = 0}
 	generic_menu_up_or_down_sound
-	store_guitar_name :gettags
+	store_guitar_name :GetTags
 	<guitar_index> = (<guitar_index> + 1)
-	getarraysize (<guitar_array>)
+	GetArraySize (<guitar_array>)
 	if (<guitar_index> = <array_size>)
 		<guitar_index> = 0
 	endif
-	store_guitar_name :settags guitar_index = <guitar_index>
+	store_guitar_name :SetTags guitar_index = <guitar_index>
 	bonus_index = <guitar_index>
 	find_guitar_index_by_id id = (<guitar_array> [<bonus_index>].id)
 	store_show_guitar guitar_index = <guitar_index> price = (<guitar_array> [<bonus_index>].price) for_finishes = <for_finishes>
@@ -1733,7 +1733,7 @@ script find_guitar_index_by_id
 	<find_index> = (<find_index> + 1)
 	repeat (<array_size>)
 	printstruct <...>
-	scriptassert \{"Didn't find the guitar!"}
+	ScriptAssert \{"Didn't find the guitar!"}
 endscript
 store_last_index_update = 0
 store_goal_index = 0
@@ -1743,45 +1743,45 @@ script store_show_guitar \{guitar_index = 0
 		for_finishes = 0}
 	store_update_guitar_blackout
 	get_musician_instrument_struct index = <guitar_index>
-	getuppercasestring (<info_struct>.name)
-	setscreenelementprops id = store_guitar_name text = <uppercasestring>
-	getscreenelementdims \{id = store_guitar_name}
-	store_guitar_name :setprops \{scale = (1.0, 1.0)
+	GetUpperCaseString (<info_struct>.name)
+	SetScreenElementProps id = store_guitar_name text = <UpperCaseString>
+	GetScreenElementDims \{id = store_guitar_name}
+	store_guitar_name :SetProps \{scale = (1.0, 1.0)
 		relative_scale}
-	getscreenelementdims \{id = store_guitar_name}
+	GetScreenElementDims \{id = store_guitar_name}
 	if (<width> >= 280.0)
 		new_scale = ((280.0 / <width>) * (1.0, 0.0) + (0.0, 1.0))
-		store_guitar_name :setprops scale = <new_scale> relative_scale
+		store_guitar_name :SetProps scale = <new_scale> relative_scale
 	endif
-	getuppercasestring (<info_struct>.logo)
-	setscreenelementprops id = store_guitar_name_brand text = <uppercasestring>
+	GetUpperCaseString (<info_struct>.logo)
+	SetScreenElementProps id = store_guitar_name_brand text = <UpperCaseString>
 	if (<for_finishes> = 1)
-		getuppercasestring (<info_struct>.finish)
+		GetUpperCaseString (<info_struct>.finish)
 	else
-		getuppercasestring (<info_struct>.name2)
+		GetUpperCaseString (<info_struct>.name2)
 	endif
-	store_guitar_finish_name :setprops text = <uppercasestring>
-	store_guitar_finish_name :setprops \{scale = (1.0, 1.0)
+	store_guitar_finish_name :SetProps text = <UpperCaseString>
+	store_guitar_finish_name :SetProps \{scale = (1.0, 1.0)
 		relative_scale}
-	getscreenelementdims \{id = store_guitar_finish_name}
+	GetScreenElementDims \{id = store_guitar_finish_name}
 	if (<width> >= 250.0)
 		new_scale = ((250.0 / <width>) * (1.0, 0.0) + (0.0, 1.0))
-		store_guitar_finish_name :setprops scale = <new_scale> relative_scale
+		store_guitar_finish_name :SetProps scale = <new_scale> relative_scale
 	endif
 	set_store_purchase_price price = <price>
 	change store_goal_index = <guitar_index>
-	store_guitar_name :gettags
-	getstarttime
-	change store_last_index_update = (<starttime>)
+	store_guitar_name :GetTags
+	GetStartTime
+	change store_last_index_update = (<StartTime>)
 	store_update_already_bought_for_guitar
 	menu_store_find_guitar_index_for_blurb id = ((<guitar_array> [<guitar_index>]).id)
-	select_guitar_change_blurb_text inst_id = (($musician_instrument [<guitar_index>]).desc_id) x_dims = 430 pos = (-115.0, 355.0) dims = (388.0, 265.0) z = 50
+	select_guitar_change_blurb_text inst_ID = (($musician_instrument [<guitar_index>]).desc_id) x_dims = 430 pos = (-115.0, 355.0) dims = (388.0, 265.0) z = 50
 endscript
 
 script store_update_guitar_blackout 
-	store_guitar_name :gettags
+	store_guitar_name :GetTags
 	guitar_id = (<guitar_array> [<guitar_index>].id)
-	getglobaltags <guitar_id>
+	GetGlobalTags <guitar_id>
 endscript
 store_guitar_loading = 0
 
@@ -1793,7 +1793,7 @@ script store_monitor_goal_guitar_index
 		store_do_guitar_load guitar_index = ($store_goal_index)
 		change \{store_guitar_loading = 0}
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
@@ -1804,23 +1804,23 @@ script store_monitor_goal_guitar_finish
 	if ($store_guitar_loading = 0)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	change \{store_guitar_loading = 1}
-	killspawnedscript \{name = store_monitor_goal_guitar_index}
-	if compositeobjectexists \{store_display_guitar}
-		store_display_guitar :die
+	KillSpawnedScript \{name = store_monitor_goal_guitar_index}
+	if CompositeObjectExists \{store_display_guitar}
+		store_display_guitar :Die
 	endif
-	unloadpakasync pak_name = ($store_loaded_guitar_pak) heap = heap_instrument1 async = 1
+	UnloadPakAsync pak_name = ($store_loaded_guitar_pak) heap = heap_instrument1 async = 1
 	change \{store_guitar_loading = 0}
 endscript
 store_loaded_guitar_pak = ''
 
 script store_update_already_bought_for_guitar 
-	store_guitar_name :gettags
+	store_guitar_name :GetTags
 	guitar_id = (<guitar_array> [<guitar_index>].id)
-	getglobaltags <guitar_id>
+	GetGlobalTags <guitar_id>
 	if (<unlocked>)
 		store_show_already_owned unlocked_for_purchase = <unlocked_for_purchase>
 	else
@@ -1833,20 +1833,20 @@ script create_store_guitar_finishes_menu
 	change \{target_store_camera_prop = guitar_selection}
 	setup_store_hub \{cash_pos = (-2000.0, -2000.0)}
 	store_camera_wait
-	setscreenelementprops \{id = store_cash_text
+	SetScreenElementProps \{id = store_cash_text
 		pos = (900.0, 550.0)}
 	create_store_window_frame \{pos = (900.0, 360.0)
 		dims = (300.0, 600.0)
 		no_hilite}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = select_guitar_container
 		pos = (893.0, -100.0)}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = store_guitar_container
 		pos = (893.0, 200.0)}
-	createscreenelement \{type = windowelement
+	CreateScreenElement \{type = WindowElement
 		parent = root_window
 		id = store_info_scroll_window
 		pos = $store_window_pos
@@ -1854,10 +1854,10 @@ script create_store_guitar_finishes_menu
 	new_menu \{scrollid = sgf_scroll
 		vmenuid = sgf_vmenu
 		menu_pos = (895.0, 117.0)}
-	text_params = {parent = sgf_vmenu type = textelement font = ($store_menu_font) rgba = [170 90 35 255] z_priority = 50 no_shadow}
-	createscreenelement {
+	text_params = {parent = sgf_vmenu type = TextElement font = ($store_menu_font) rgba = [170 90 35 255] z_priority = 50 no_shadow}
+	CreateScreenElement {
 		<text_params>
-		type = containerelement
+		type = ContainerElement
 		text = ""
 		id = store_guitar_name_container
 		dims = (100.0, 0.0)
@@ -1870,7 +1870,7 @@ script create_store_guitar_finishes_menu
 			{pad_back store_go_back}
 		]
 	}
-	createscreenelement {
+	CreateScreenElement {
 		<text_params>
 		font = text_a4
 		parent = store_guitar_name_container
@@ -1878,13 +1878,13 @@ script create_store_guitar_finishes_menu
 		just = [center center]
 		pos = (0.0, 2.0)
 	}
-	createscreenelement {
+	CreateScreenElement {
 		<text_params>
-		type = containerelement
+		type = ContainerElement
 		id = store_guitar_name_brand_container
 		dims = (100.0, 0.0)
 	}
-	createscreenelement {
+	CreateScreenElement {
 		<text_params>
 		font = text_a4
 		rgba = [10 10 10 255]
@@ -1894,8 +1894,8 @@ script create_store_guitar_finishes_menu
 		pos = (0.0, 32.0)
 		just = [center center]
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = store_guitar_container
 		just = [center center]
 		font = text_a4
@@ -1906,21 +1906,21 @@ script create_store_guitar_finishes_menu
 		z_priority = (<text_params>.z_priority)
 		pos = (0.0, 20.0)
 	}
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = sgf_vmenu}
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = store_guitar_name_container}
-	guitar_array = ($bonus_guitar_finishes)
-	getarraysize ($bonus_bass_finishes)
+	guitar_array = ($Bonus_Guitar_Finishes)
+	GetArraySize ($Bonus_Bass_Finishes)
 	index = 0
 	begin
-	addarrayelement array = (<guitar_array>) element = ($bonus_bass_finishes [<index>])
+	AddArrayElement array = (<guitar_array>) element = ($Bonus_Bass_Finishes [<index>])
 	<guitar_array> = (<array>)
 	<index> = (<index> + 1)
 	repeat <array_size>
 	store_prune_guitar_finishes guitar_array = <guitar_array>
-	store_guitar_name :settags \{guitar_index = 0}
-	store_guitar_name :settags guitar_array = <guitar_array>
+	store_guitar_name :SetTags \{guitar_index = 0}
+	store_guitar_name :SetTags guitar_array = <guitar_array>
 	change \{store_true_index = -1}
 	find_guitar_index_by_id id = (<guitar_array> [0].id)
 	store_show_guitar guitar_index = <guitar_index> price = (<guitar_array> [0].price) for_finishes = 1
@@ -1928,13 +1928,13 @@ script create_store_guitar_finishes_menu
 	store_show_price_tag pos = (520.0, 260.0) price = (<guitar_array> [0].price) rot = -10 z3d = 2
 	store_update_already_bought_for_guitar
 	menu_store_find_guitar_index_for_blurb id = ((<guitar_array> [0]).id)
-	select_guitar_change_blurb_text inst_id = (($musician_instrument [<guitar_index>]).desc_id) x_dims = 430 pos = (-115.0, 355.0) dims = (388.0, 265.0) z = 50
+	select_guitar_change_blurb_text inst_ID = (($musician_instrument [<guitar_index>]).desc_id) x_dims = 430 pos = (-115.0, 355.0) dims = (388.0, 265.0) z = 50
 	change \{store_guitar_scroll_ready = 1}
 	mark_safe_for_shutdown
 endscript
 
 script destroy_store_guitar_finishes_menu 
-	killspawnedscript \{name = select_guitar_scroll_instrument_info}
+	KillSpawnedScript \{name = select_guitar_scroll_instrument_info}
 	destroy_menu \{menu_id = select_guitar_container}
 	destroy_menu \{menu_id = gs_instrument_info_scroll_window}
 	destroy_menu \{menu_id = store_guitar_container}
@@ -1948,76 +1948,76 @@ endscript
 
 script store_prune_guitar_finishes 
 	unlocked_guitar_types = [none]
-	find_guitar_index_by_id id = ($free_guitars [0])
+	find_guitar_index_by_id id = ($Free_Guitars [0])
 	get_musician_instrument_struct index = <guitar_index>
-	setarrayelement arrayname = unlocked_guitar_types index = 0 newvalue = (<info_struct>.guitar)
-	getarraysize ($free_guitars)
+	SetArrayElement ArrayName = unlocked_guitar_types index = 0 newvalue = (<info_struct>.guitar)
+	GetArraySize ($Free_Guitars)
 	type_index = 1
 	begin
-	find_guitar_index_by_id id = ($free_guitars [<type_index>])
+	find_guitar_index_by_id id = ($Free_Guitars [<type_index>])
 	get_musician_instrument_struct index = <guitar_index>
-	addarrayelement array = (<unlocked_guitar_types>) element = (<info_struct>.guitar)
+	AddArrayElement array = (<unlocked_guitar_types>) element = (<info_struct>.guitar)
 	<unlocked_guitar_types> = (<array>)
 	<type_index> = (<type_index> + 1)
 	repeat (<array_size> - 1)
-	getarraysize ($free_basses)
+	GetArraySize ($Free_Basses)
 	type_index = 0
 	begin
-	find_guitar_index_by_id id = ($free_basses [<type_index>])
+	find_guitar_index_by_id id = ($Free_Basses [<type_index>])
 	get_musician_instrument_struct index = <guitar_index>
-	if NOT arraycontains array = (<unlocked_guitar_types>) contains = (<info_struct>.bass)
-		addarrayelement array = (<unlocked_guitar_types>) element = (<info_struct>.bass)
+	if NOT ArrayContains array = (<unlocked_guitar_types>) contains = (<info_struct>.Bass)
+		AddArrayElement array = (<unlocked_guitar_types>) element = (<info_struct>.Bass)
 		<unlocked_guitar_types> = (<array>)
 	endif
 	<type_index> = (<type_index> + 1)
 	repeat (<array_size>)
-	getarraysize ($bonus_basses)
+	GetArraySize ($Bonus_Basses)
 	type_index = 0
 	begin
-	guitar_id = ($bonus_basses [<type_index>].id)
-	getglobaltags <guitar_id>
+	guitar_id = ($Bonus_Basses [<type_index>].id)
+	GetGlobalTags <guitar_id>
 	if (<unlocked>)
 		find_guitar_index_by_id id = <guitar_id>
 		get_musician_instrument_struct index = <guitar_index>
 		if (<info_struct>.type = guitar)
-			addarrayelement array = (<unlocked_guitar_types>) element = (<info_struct>.guitar)
+			AddArrayElement array = (<unlocked_guitar_types>) element = (<info_struct>.guitar)
 		else
-			addarrayelement array = (<unlocked_guitar_types>) element = (<info_struct>.bass)
+			AddArrayElement array = (<unlocked_guitar_types>) element = (<info_struct>.Bass)
 		endif
 		<unlocked_guitar_types> = (<array>)
 	endif
 	<type_index> = (<type_index> + 1)
 	repeat <array_size>
-	getarraysize ($bonus_guitars)
+	GetArraySize ($Bonus_Guitars)
 	type_index = 0
 	begin
-	guitar_id = ($bonus_guitars [<type_index>].id)
-	getglobaltags <guitar_id>
+	guitar_id = ($Bonus_Guitars [<type_index>].id)
+	GetGlobalTags <guitar_id>
 	if (<unlocked>)
 		find_guitar_index_by_id id = <guitar_id>
 		get_musician_instrument_struct index = <guitar_index>
 		if (<info_struct>.type = guitar)
-			addarrayelement array = (<unlocked_guitar_types>) element = (<info_struct>.guitar)
+			AddArrayElement array = (<unlocked_guitar_types>) element = (<info_struct>.guitar)
 		else
-			addarrayelement array = (<unlocked_guitar_types>) element = (<info_struct>.bass)
+			AddArrayElement array = (<unlocked_guitar_types>) element = (<info_struct>.Bass)
 		endif
 		<unlocked_guitar_types> = (<array>)
 	endif
 	<type_index> = (<type_index> + 1)
 	repeat <array_size>
-	getarraysize (<guitar_array>)
+	GetArraySize (<guitar_array>)
 	index = 0
 	begin
 	guitar_id = (<guitar_array> [<index>].id)
 	find_guitar_index_by_id id = <guitar_id>
 	get_musician_instrument_struct index = <guitar_index>
-	if structurecontains structure = (<info_struct>) guitar
+	if StructureContains Structure = (<info_struct>) guitar
 		guitar_type = (<info_struct>.guitar)
 	else
-		guitar_type = (<info_struct>.bass)
+		guitar_type = (<info_struct>.Bass)
 	endif
-	if NOT arraycontains array = (<unlocked_guitar_types>) contains = <guitar_type>
-		removearrayelement array = (<guitar_array>) index = <index>
+	if NOT ArrayContains array = (<unlocked_guitar_types>) contains = <guitar_type>
+		RemoveArrayElement array = (<guitar_array>) index = <index>
 		<index> = (<index> - 1)
 		<guitar_array> = (<array>)
 	endif
@@ -2027,32 +2027,32 @@ script store_prune_guitar_finishes
 endscript
 
 script store_add_secret_guitars_and_basses 
-	getarraysize ($secret_guitars)
+	GetArraySize ($Secret_Guitars)
 	index = 0
 	begin
-	guitar_id = ($secret_guitars [<index>].id)
-	getglobaltags <guitar_id>
+	guitar_id = ($Secret_Guitars [<index>].id)
+	GetGlobalTags <guitar_id>
 	if (<unlocked_for_purchase> = 1)
-		addarrayelement array = (<guitar_array>) element = ($secret_guitars [<index>])
+		AddArrayElement array = (<guitar_array>) element = ($Secret_Guitars [<index>])
 		<guitar_array> = (<array>)
 	endif
 	<index> = (<index> + 1)
 	repeat <array_size>
-	getarraysize ($secret_basses)
+	GetArraySize ($Secret_Basses)
 	index = 0
 	begin
-	guitar_id = ($secret_basses [<index>].id)
-	getglobaltags <guitar_id>
+	guitar_id = ($Secret_Basses [<index>].id)
+	GetGlobalTags <guitar_id>
 	if (<unlocked_for_purchase> = 1)
-		addarrayelement array = (<guitar_array>) element = ($secret_basses [<index>])
+		AddArrayElement array = (<guitar_array>) element = ($Secret_Basses [<index>])
 		<guitar_array> = (<array>)
 	endif
 	<index> = (<index> + 1)
 	repeat <array_size>
-	getarraysize ($bonus_basses)
+	GetArraySize ($Bonus_Basses)
 	index = 0
 	begin
-	addarrayelement array = (<guitar_array>) element = ($bonus_basses [<index>])
+	AddArrayElement array = (<guitar_array>) element = ($Bonus_Basses [<index>])
 	<guitar_array> = (<array>)
 	<index> = (<index> + 1)
 	repeat <array_size>
@@ -2060,22 +2060,22 @@ script store_add_secret_guitars_and_basses
 endscript
 
 script store_do_guitar_load \{pos = (0.0, 0.0, 0.0)
-		node_name = z_soundcheck_trg_waypoint_guitar_start}
-	if gotparam \{guitar_index}
-		if gotparam \{node_index}
+		node_name = z_SoundCheck_TRG_Waypoint_Guitar_Start}
+	if GotParam \{guitar_index}
+		if GotParam \{node_index}
 			get_waypoint_id index = <node_index>
-			getwaypointpos name = <waypoint_id>
+			GetWaypointPos name = <waypoint_id>
 		else
-			if gotparam \{node_name}
-				getwaypointpos name = <node_name>
+			if GotParam \{node_name}
+				GetWaypointPos name = <node_name>
 			endif
 		endif
 		existed = 0
-		if compositeobjectexists \{store_display_guitar}
-			if gotparam \{useoldpos}
-				store_display_guitar :obj_getposition
+		if CompositeObjectExists \{store_display_guitar}
+			if GotParam \{useOldPos}
+				store_display_guitar :Obj_GetPosition
 			endif
-			store_display_guitar :die
+			store_display_guitar :Die
 			<existed> = 1
 		endif
 		guitar_pos = <pos>
@@ -2085,32 +2085,32 @@ script store_do_guitar_load \{pos = (0.0, 0.0, 0.0)
 		find_loaded_pak_file type = instrument desc_id = (<info_struct>.desc_id)
 		if (<found> = 0)
 			if (<existed> = 1)
-				unloadpakasync pak_name = ($store_loaded_guitar_pak) heap = heap_instrument1 async = 1
+				UnloadPakAsync pak_name = ($store_loaded_guitar_pak) heap = heap_instrument1 async = 1
 			endif
-			loadpakasync pak_name = (<info_struct>.pak) heap = heap_instrument1 async = 1
+			LoadPakAsync pak_name = (<info_struct>.pak) heap = heap_instrument1 async = 1
 			change store_loaded_guitar_pak = (<info_struct>.pak)
 		endif
-		if gotparam \{meshname}
+		if GotParam \{meshname}
 			scale = 1.25
-			if (<info_struct>.desc_id = instrument_guitar_demonik)
+			if (<info_struct>.desc_id = Instrument_Guitar_Demonik)
 				<scale> = 0.8
 				<guitar_pos> = (<guitar_pos> + (0.0, 0.15, 0.0))
 			endif
-			if (<info_struct>.desc_id = instrument_pend)
+			if (<info_struct>.desc_id = Instrument_Pend)
 				<guitar_pos> = (<guitar_pos> - (0.0, 0.1, 0.0))
 			endif
-			createcompositeobject {
-				components = [
+			CreateCompositeObject {
+				Components = [
 					{
-						component = skeleton
-						skeletonname = gh3_guitarist_axel
+						Component = skeleton
+						SkeletonName = GH3_Guitarist_Axel
 					}
 					{
-						component = setdisplaymatrix
+						Component = SetDisplayMatrix
 					}
 					{
-						component = model
-						lightgroup = guitar_center
+						Component = Model
+						lightgroup = Guitar_center
 					}
 				]
 				params = {
@@ -2118,7 +2118,7 @@ script store_do_guitar_load \{pos = (0.0, 0.0, 0.0)
 					<info_struct>
 					object_type = hud_model_3d
 					name = store_display_guitar
-					model = <meshname>
+					Model = <meshname>
 					scale = <scale>
 				}
 			}
@@ -2126,31 +2126,31 @@ script store_do_guitar_load \{pos = (0.0, 0.0, 0.0)
 				<info_struct>
 				musician_instrument = {desc_id = (<info_struct>.desc_id)}
 			}
-			store_display_guitar :obj_spawnscriptnow rotateguitar params = {guitar_pos = <guitar_pos> scale = (<scale> / 1.25)}
-			store_display_guitar :obj_initmodelfromprofile {
+			store_display_guitar :Obj_SpawnScriptNow RotateGuitar params = {guitar_pos = <guitar_pos> scale = (<scale> / 1.25)}
+			store_display_guitar :Obj_InitModelFromProfile {
 				struct = <profile>
-				buildscript = create_ped_model_from_appearance
+				buildScript = create_ped_model_from_appearance
 				params = {
-					lightgroup = guitar_center_guitar
+					lightgroup = Guitar_Center_Guitar
 				}
 			}
 		endif
 	endif
 endscript
 
-script rotateguitar 
+script RotateGuitar 
 	pos = (<guitar_pos> + (0.0, -0.14, 0.2))
 	rotation = -75.0
 	begin
 	vrotate = ((0.0, 0.0, 0.53) * <scale>)
-	rotatevector vector = <vrotate> ry = (90 - <rotation>)
-	store_display_guitar :obj_setorientation z = -90 x = <rotation>
-	store_display_guitar :obj_setposition position = (<pos> + <result_vector>)
+	RotateVector vector = <vrotate> ry = (90 - <rotation>)
+	store_display_guitar :Obj_SetOrientation z = -90 x = <rotation>
+	store_display_guitar :Obj_SetPosition position = (<pos> + <result_vector>)
 	rotation = (<rotation> + 1.0)
 	if (<rotation> > 360.0)
 		<rotation> = (<rotation> - 360.0)
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
@@ -2162,8 +2162,8 @@ script store_show_price_tag \{parent = root_window
 		rot = 0
 		z3d = 1}
 	destroy_store_price_tag
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <parent>
 		pos = <pos>
 		id = store_price_tag_container
@@ -2171,12 +2171,12 @@ script store_show_price_tag \{parent = root_window
 		rot_angle = <rot>
 	}
 	tex = store_tag_price
-	if gotparam \{sold}
+	if GotParam \{sold}
 		<tex> = store_tag_sold
 	else
-		formattext textname = price_text "$%d" d = <price>
-		createscreenelement {
-			type = textelement
+		FormatText TextName = price_text "$%d" d = <price>
+		CreateScreenElement {
+			type = TextElement
 			parent = store_price_tag_container
 			id = store_price_tag_text
 			text = <price_text>
@@ -2186,10 +2186,10 @@ script store_show_price_tag \{parent = root_window
 			rgba = [7 108 4 255]
 			rot_angle = 7
 		}
-		<id> :settags tag_price = 0
+		<id> :SetTags tag_price = 0
 	endif
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = store_price_tag_container
 		id = store_price_tag
 		texture = <tex>
@@ -2198,8 +2198,8 @@ script store_show_price_tag \{parent = root_window
 		dims = (384.0, 192.0)
 		z_priority = 0
 	}
-	store_price_tag :setprops z3d = <z3d>
-	store_price_tag_text :setprops z3d = (<z3d> - 0.1)
+	store_price_tag :SetProps z3d = <z3d>
+	store_price_tag_text :SetProps z3d = (<z3d> - 0.1)
 endscript
 
 script destroy_store_price_tag 
@@ -2208,23 +2208,23 @@ endscript
 
 script store_show_already_owned \{unlocked_for_purchase = 1
 		for_character = 0}
-	if screenelementexists \{id = store_price_tag}
+	if ScreenElementExists \{id = store_price_tag}
 		if (<for_character> = 0)
-			store_price_tag :setprops \{texture = store_tag_sold
+			store_price_tag :SetProps \{texture = store_tag_sold
 				z3d = 1}
 		else
-			store_price_tag :setprops \{texture = store_tag_sold
+			store_price_tag :SetProps \{texture = store_tag_sold
 				z3d = 1}
 		endif
 	endif
-	if screenelementexists \{id = store_price_tag_text}
+	if ScreenElementExists \{id = store_price_tag_text}
 		if (<for_character> = 0)
-			store_price_tag_text :setprops \{z3d = 0.9}
+			store_price_tag_text :SetProps \{z3d = 0.9}
 		else
-			store_price_tag_text :setprops \{z3d = 0.9}
+			store_price_tag_text :SetProps \{z3d = 0.9}
 		endif
 		if (<unlocked_for_purchase>)
-			store_price_tag_text :setprops \{text = "SOLD"
+			store_price_tag_text :SetProps \{text = "SOLD"
 				rgba = [
 					170
 					90
@@ -2232,7 +2232,7 @@ script store_show_already_owned \{unlocked_for_purchase = 1
 					255
 				]}
 		endif
-		setscreenelementprops \{id = store_price_tag_text
+		SetScreenElementProps \{id = store_price_tag_text
 			scale = 1}
 		fit_text_in_rectangle \{id = store_price_tag_text
 			dims = (130.0, 90.0)}
@@ -2240,17 +2240,17 @@ script store_show_already_owned \{unlocked_for_purchase = 1
 endscript
 
 script store_hide_already_owned \{for_character = 0}
-	if screenelementexists \{id = store_price_tag}
+	if ScreenElementExists \{id = store_price_tag}
 		if (<for_character> = 0)
-			store_price_tag :setprops \{texture = store_tag_price
+			store_price_tag :SetProps \{texture = store_tag_price
 				z3d = 2}
 		else
-			store_price_tag :setprops \{texture = store_tag_price
+			store_price_tag :SetProps \{texture = store_tag_price
 				z3d = 5}
 		endif
-		if screenelementexists \{id = store_price_tag_text}
+		if ScreenElementExists \{id = store_price_tag_text}
 			if (<for_character> = 0)
-				store_price_tag_text :setprops \{rgba = [
+				store_price_tag_text :SetProps \{rgba = [
 						7
 						108
 						4
@@ -2258,7 +2258,7 @@ script store_hide_already_owned \{for_character = 0}
 					]
 					z3d = 1.9}
 			else
-				store_price_tag_text :setprops \{rgba = [
+				store_price_tag_text :SetProps \{rgba = [
 						7
 						108
 						4
@@ -2266,7 +2266,7 @@ script store_hide_already_owned \{for_character = 0}
 					]
 					z3d = 4.9}
 			endif
-			setscreenelementprops \{id = store_price_tag_text
+			SetScreenElementProps \{id = store_price_tag_text
 				scale = 1}
 			fit_text_in_rectangle \{id = store_price_tag_text
 				dims = (150.0, 90.0)}
@@ -2279,21 +2279,21 @@ script create_store_videos_menu
 	change \{target_store_camera_prop = song_selection}
 	setup_store_hub \{cash_pos = (-2000.0, -2000.0)}
 	store_camera_wait
-	setscreenelementprops \{id = store_cash_text
+	SetScreenElementProps \{id = store_cash_text
 		pos = (900.0, 550.0)}
 	create_store_window_frame \{pos = (900.0, 360.0)
 		dims = (300.0, 600.0)
 		no_hilite}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = select_guitar_container
 		pos = (893.0, -100.0)}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = store_videos_container
 		pos = (900.0, 215.0)}
-	createscreenelement {
-		type = windowelement
+	CreateScreenElement {
+		type = WindowElement
 		parent = root_window
 		id = store_info_scroll_window
 		pos = ($store_window_pos + (0.0, 60.0))
@@ -2301,8 +2301,8 @@ script create_store_videos_menu
 	}
 	new_menu \{scrollid = sv_scroll
 		vmenuid = sv_vmenu}
-	text_params = {parent = sv_vmenu type = textelement font = ($store_menu_font) rgba = [170 90 35 255] z_priority = 50 no_shadow}
-	createscreenelement {
+	text_params = {parent = sv_vmenu type = TextElement font = ($store_menu_font) rgba = [170 90 35 255] z_priority = 50 no_shadow}
+	CreateScreenElement {
 		<text_params>
 		text = ""
 		event_handlers = [
@@ -2315,8 +2315,8 @@ script create_store_videos_menu
 		]
 		id = store_videos_menu_holder
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = store_videos_container
 		just = [center center]
 		font = ($store_menu_font)
@@ -2327,8 +2327,8 @@ script create_store_videos_menu
 		z_priority = (<text_params>.z_priority)
 		pos = (-5.0, -67.0)
 	}
-	<id> :settags videos_index = 0
-	createscreenelement \{type = spriteelement
+	<id> :SetTags videos_index = 0
+	CreateScreenElement \{type = SpriteElement
 		parent = store_videos_container
 		texture = store_video_generic
 		pos = (-500.0, 120.0)
@@ -2341,16 +2341,16 @@ script create_store_videos_menu
 	store_show_price_tag \{parent = store_videos_container
 		pos = (-340.0, 100.0)
 		rot = -10}
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = sv_vmenu}
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = store_videos_menu_holder}
 	set_store_videos_title \{index = 0}
 	mark_safe_for_shutdown
 endscript
 
 script destroy_store_videos_menu 
-	killspawnedscript \{name = select_guitar_scroll_instrument_info}
+	KillSpawnedScript \{name = select_guitar_scroll_instrument_info}
 	destroy_menu \{menu_id = select_guitar_container}
 	destroy_menu \{menu_id = gs_instrument_info_scroll_window}
 	destroy_store_price_tag
@@ -2362,33 +2362,33 @@ script destroy_store_videos_menu
 endscript
 
 script set_store_videos_title \{index = 0}
-	store_videos_artist :settags videos_index = <index>
-	videos_checksum = ($bonus_videos [<index>].id)
-	select_guitar_change_blurb_text text = ($bonus_videos [<index>].info) x_dims = 430 pos = (-115.0, 320.0) dims = (388.0, 300.0) z = 50 lines_in_window = 9
-	setscreenelementprops {
+	store_videos_artist :SetTags videos_index = <index>
+	videos_checksum = ($Bonus_Videos [<index>].id)
+	select_guitar_change_blurb_text text = ($Bonus_Videos [<index>].info) x_dims = 430 pos = (-115.0, 320.0) dims = (388.0, 300.0) z = 50 lines_in_window = 9
+	SetScreenElementProps {
 		id = store_videos_artist
-		text = ($bonus_videos [<index>].name)
+		text = ($Bonus_Videos [<index>].name)
 	}
-	store_videos_artist :setprops \{scale = (1.0, 1.0)
+	store_videos_artist :SetProps \{scale = (1.0, 1.0)
 		relative_scale}
-	getscreenelementdims \{id = store_videos_artist}
+	GetScreenElementDims \{id = store_videos_artist}
 	if (<width> >= 280.0)
 		new_scale = ((280.0 / <width>) * (1.0, 0.0) + (0.0, 1.0))
-		store_videos_artist :setprops scale = <new_scale> relative_scale
+		store_videos_artist :SetProps scale = <new_scale> relative_scale
 	endif
-	video_price = ($bonus_videos [<index>].price)
+	video_price = ($Bonus_Videos [<index>].price)
 	set_store_purchase_price price = (<video_price>)
 	store_hide_already_owned
-	getglobaltags <videos_checksum>
+	GetGlobalTags <videos_checksum>
 	if (<unlocked> = 1)
 		store_show_already_owned
 	endif
 endscript
 
 script store_videos_left 
-	store_videos_artist :gettags
+	store_videos_artist :GetTags
 	<videos_index> = (<videos_index> - 1)
-	getarraysize ($bonus_videos)
+	GetArraySize ($Bonus_Videos)
 	if (<videos_index> < 0)
 		<videos_index> = (<videos_index> + <array_size>)
 	endif
@@ -2397,10 +2397,10 @@ script store_videos_left
 endscript
 
 script store_videos_right 
-	store_videos_artist :gettags
+	store_videos_artist :GetTags
 	<videos_index> = (<videos_index> + 1)
-	get_progression_globals game_mode = ($game_mode) bonus
-	getarraysize ($bonus_videos)
+	get_progression_globals game_mode = ($game_mode) Bonus
+	GetArraySize ($Bonus_Videos)
 	if (<videos_index> = <array_size>)
 		<videos_index> = 0
 	endif
@@ -2409,21 +2409,21 @@ script store_videos_right
 endscript
 
 script store_videos_buy 
-	store_videos_artist :gettags
-	video_checksum = ($bonus_videos [<videos_index>].id)
-	video_price = ($bonus_videos [<videos_index>].price)
-	getglobaltags <video_checksum>
+	store_videos_artist :GetTags
+	video_checksum = ($Bonus_Videos [<videos_index>].id)
+	video_price = ($Bonus_Videos [<videos_index>].price)
+	GetGlobalTags <video_checksum>
 	if (<unlocked> = 0)
 		get_current_band_info
-		getglobaltags <band_info>
-		if ((<cash> > <video_price>) || (<cash> = <video_price>))
-			<cash> = (<cash> - <video_price>)
-			setglobaltags <band_info> params = {cash = <cash>}
-			setglobaltags <video_checksum> params = {unlocked = 1}
+		GetGlobalTags <band_info>
+		if ((<Cash> > <video_price>) || (<Cash> = <video_price>))
+			<Cash> = (<Cash> - <video_price>)
+			SetGlobalTags <band_info> params = {Cash = <Cash>}
+			SetGlobalTags <video_checksum> params = {unlocked = 1}
 			store_update_band_cash
 			set_store_videos_title index = (<videos_index>)
 			change \{store_autosave_required = 1}
-			soundevent \{event = cash_sound}
+			SoundEvent \{event = Cash_Sound}
 		endif
 	endif
 endscript
@@ -2431,9 +2431,9 @@ endscript
 script rotate_element_360 \{id = store_songs_album_45
 		time = 5
 		element_angle = 360}
-	if screenelementexists id = <id>
-		getscreenelementprops id = <id>
+	if ScreenElementExists id = <id>
+		GetScreenElementProps id = <id>
 		rot_360 = (<rot_angle> + <element_angle>)
-		<id> :domorph rot_angle = <rot_360> time = <time> motion = ease_out
+		<id> :DoMorph rot_angle = <rot_360> time = <time> motion = ease_out
 	endif
 endscript

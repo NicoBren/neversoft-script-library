@@ -22,7 +22,7 @@ num_private_slots = [
 		num = 2
 	}
 ]
-filtertypes = {
+FilterTypes = {
 	diff = {
 		values = [
 			"ANY"
@@ -90,8 +90,8 @@ filtertypes = {
 		]
 		checksum = [
 			dont_care
-			host
-			client
+			HOST
+			CLIENT
 			song_rand
 		]
 	}
@@ -122,7 +122,7 @@ filtertypes = {
 		]
 	}
 }
-leaderboard_difficulty_lookup_table = {
+Leaderboard_Difficulty_Lookup_Table = {
 	easy = 'easy'
 	medium = 'medium'
 	hard = 'hard'
@@ -235,31 +235,31 @@ player1_max_song_selections = 0
 player1_current_song_selections = 0
 player2_max_song_selections = 0
 player2_current_song_selections = 0
-player1_selected_guitar = instrument_les_paul_black
-player1_selected_bass = instrument_lp_vbrst
-player2_selected_guitar = instrument_les_paul_black
-player2_selected_bass = instrument_lp_vbrst
+player1_selected_guitar = Instrument_Les_Paul_Black
+player1_selected_bass = Instrument_LP_VBRST
+player2_selected_guitar = Instrument_Les_Paul_Black
+player2_selected_bass = Instrument_LP_VBRST
 retrieved_message_of_the_day = 0
 message_of_the_day = ""
-optionsgamemodevalue = 0
-optionsdifficultyvalue = 0
-optionsnumsongsvalue = 0
-optionstiebreakervalue = 0
-optionshighwayvalue = 0
-leaderboardsearchvalue = 0
-leaderboardsongtypevalue = 0
-leaderboarddiffvalue = 3
-copyofglobal = 0
-searchmatchtypevalue = 0
-searchgamemodevalue = 0
-searchdifficultyvalue = 0
-searchnumsongsvalue = 0
-searchtiebreakervalue = 0
-tempgamemodevalue = 0
-tempdifficultyvalue = 0
-tempnumsongsvalue = 0
-temptiebreakervalue = 0
-temphighwayvalue = 0
+OptionsGameModeValue = 0
+OptionsDifficultyValue = 0
+OptionsNumSongsValue = 0
+OptionsTieBreakerValue = 0
+OptionsHighwayValue = 0
+LeaderboardSearchValue = 0
+LeaderboardSongTypeValue = 0
+LeaderboardDiffValue = 3
+CopyOfGlobal = 0
+SearchMatchTypeValue = 0
+SearchGameModeValue = 0
+SearchDifficultyValue = 0
+SearchNumSongsValue = 0
+SearchTieBreakerValue = 0
+TempGameModeValue = 0
+TempDifficultyValue = 0
+TempNumSongsValue = 0
+TempTieBreakerValue = 0
+TempHighwayValue = 0
 net_game_type_info = [
 	{
 		name = "PRO FACEOFF"
@@ -296,20 +296,20 @@ xenon_invite_confirm_inactive_ok = "OK"
 xenon_session_confirm_inactive_title = "JOIN SESSION"
 xenon_session_confirm_inactive_dialog = "This title doesn't support inactive controllers joining an online game, so you cannot join this session."
 xenon_session_confirm_inactive_ok = "OK"
-no_net_mode = 0
-lan_mode = 1
-internet_mode = 2
+NO_NET_MODE = 0
+LAN_MODE = 1
+INTERNET_MODE = 2
 new_net_logic = 0
 
 script quit_network_game 
 	printf \{"------ quitting network game"}
-	leaveserver
-	wait \{0.5
+	LeaveServer
+	Wait \{0.5
 		seconds}
-	removetimesynctask
-	netsessionfunc \{obj = session
+	RemoveTimeSyncTask
+	NetSessionFunc \{obj = session
 		func = unpost_game}
-	endgamenetscriptpump
+	EndGameNetScriptPump
 	change \{battle_sudden_death = 0}
 	if ($game_mode = p2_battle)
 		change \{save_current_powerups_p1 = [
@@ -331,8 +331,8 @@ script quit_network_game
 		change \{structurename = player2_status
 			save_health = 0.0}
 	endif
-	setnetworkpreference {field = 'private_slots' string = ($num_private_slots [0].name) checksum = ($num_private_slots [0].checksum) num = 0}
-	setnetworkpreference \{field = 'ranked'
+	SetNetworkPreference {field = 'private_slots' string = ($num_private_slots [0].name) checksum = ($num_private_slots [0].checksum) num = 0}
+	SetNetworkPreference \{field = 'ranked'
 		string = "player"
 		checksum = player
 		num = 1}
@@ -364,13 +364,13 @@ script shut_down_net_play
 	printf \{"shut_down_net_play"}
 	change \{is_network_game = 0}
 	change \{new_net_logic = 0}
-	setnetworkmode
-	netsessionfunc \{obj = match
+	SetNetworkMode
+	NetSessionFunc \{obj = match
 		func = stop_server_list}
-	netsessionfunc \{obj = match
+	NetSessionFunc \{obj = match
 		func = free_server_list}
-	netsessionfunc \{func = match_uninit}
-	netsessionfunc \{func = voice_uninit}
+	NetSessionFunc \{func = match_uninit}
+	NetSessionFunc \{func = voice_uninit}
 	destroy_gamertags
 	destroy_net_popup
 	cleanup_sessionfuncs
@@ -381,11 +381,11 @@ script shut_down_net_play
 endscript
 
 script select_quit_network_game 
-	if screenelementexists \{id = yourock_text}
-		destroyscreenelement \{id = yourock_text}
+	if ScreenElementExists \{id = yourock_text}
+		DestroyScreenElement \{id = yourock_text}
 	endif
-	if screenelementexists \{id = yourock_text_2}
-		destroyscreenelement \{id = yourock_text_2}
+	if ScreenElementExists \{id = yourock_text_2}
+		DestroyScreenElement \{id = yourock_text_2}
 	endif
 	quit_network_game_early
 endscript
@@ -396,15 +396,15 @@ script quit_network_game_early
 		return
 	endif
 	if ($is_network_game)
-		change \{gisinnetgame = 0}
+		change \{gIsInNetGame = 0}
 	endif
 	if ($playing_song)
 		send_fail_song_message \{wait_frames = 1
 			quit_early = 1}
 	endif
-	pausegame
+	PauseGame
 	quit_network_game
-	if gotparam \{signin_change}
+	if GotParam \{signin_change}
 		shut_down_net_play
 	else
 		kill_gem_scroller
@@ -413,26 +413,26 @@ endscript
 
 script cancel_join_server 
 	printf \{"---cancel_join_server"}
-	leaveserver
-	netsessionfunc \{obj = session
+	LeaveServer
+	NetSessionFunc \{obj = session
 		func = unpost_game}
-	netsessionfunc \{obj = match
+	NetSessionFunc \{obj = match
 		func = free_server_list}
-	netsessionfunc \{obj = match
+	NetSessionFunc \{obj = match
 		func = cancel_join_server}
 endscript
 
 script post_network_game 
-	if (netsessionfunc obj = match func = get_gamertag)
-		setnetworkpreference field = 'network_id' string = <name>
-		setnetworkpreference field = 'server_name' string = <name>
+	if (NetSessionFunc obj = match func = get_gamertag)
+		SetNetworkPreference field = 'network_id' string = <name>
+		SetNetworkPreference field = 'server_name' string = <name>
 	endif
-	netsessionfunc \{obj = session
+	NetSessionFunc \{obj = session
 		func = post_game}
-	setservermode
-	startserver
-	setjoinmode \{$join_mode_play}
-	joinserver
+	SetServerMode
+	StartServer
+	SetJoinMode \{$JOIN_MODE_PLAY}
+	JoinServer
 endscript
 
 script set_match_values 
@@ -446,13 +446,13 @@ endscript
 script set_network_preferences 
 	if (($match_type) = player)
 		printf \{"set_network_preferences - setting 'player' match"}
-		setnetworkpreference \{field = 'ranked'
+		SetNetworkPreference \{field = 'ranked'
 			string = "player"
 			checksum = player
 			num = 1}
 	else
 		printf \{"set_network_preferences - setting 'ranked' match"}
-		setnetworkpreference \{field = 'ranked'
+		SetNetworkPreference \{field = 'ranked'
 			string = "ranked"
 			checksum = ranked
 			num = 0}
@@ -461,7 +461,7 @@ endscript
 
 script send_game_info_to_client 
 	prepare_lobby_message
-	sendnetmessage {
+	SendNetMessage {
 		type = lobby_setup
 		game_mode_index = <game_mode_index>
 		venue = ($current_level)
@@ -481,11 +481,11 @@ script send_game_info_to_client
 	change \{structurename = player2_status
 		style = 1}
 	change \{structurename = player2_status
-		instrument_id = instrument_les_paul_black}
+		instrument_id = Instrument_Les_Paul_Black}
 	change \{net_match_send_available_items_dirty = 1}
 	change \{character_select_highlighted_character_p2_dirty = 1}
 	net_match_send_available_items
-	if compositeobjectexists \{name = bassist}
+	if CompositeObjectExists \{name = bassist}
 		bassist :unhide
 		bassist :ragdoll_markforreset
 	endif
@@ -494,7 +494,7 @@ endscript
 script client_lobby_setup 
 	printf \{"--- client_lobby_setup"}
 	change \{current_num_players = 2}
-	killspawnedscript \{name = coop_fail_song}
+	KillSpawnedScript \{name = coop_fail_song}
 	set_character_hub_dirty
 	change current_level = <venue>
 	translate_lobby_message {
@@ -515,7 +515,7 @@ script client_lobby_setup
 	change \{structurename = player1_status
 		style = 1}
 	change \{structurename = player1_status
-		instrument_id = instrument_les_paul_black}
+		instrument_id = Instrument_Les_Paul_Black}
 	change \{net_match_send_available_items_dirty = 1}
 	change \{character_select_highlighted_character_p2_dirty = 1}
 	change \{generic_select_monitor_p1_changed = 1}
@@ -557,9 +557,9 @@ script prepare_lobby_message
 		<number_of_songs_index> = 7
 	endswitch
 	switch ($tie_breaker)
-		case host
+		case HOST
 		<tie_breaker_index> = 1
-		case client
+		case CLIENT
 		<tie_breaker_index> = 2
 	endswitch
 	switch ($ui_flow_manager_state [0])
@@ -624,9 +624,9 @@ script translate_lobby_message
 	endswitch
 	switch (<tie_breaker_index>)
 		case 1
-		change \{tie_breaker = host}
+		change \{tie_breaker = HOST}
 		case 2
-		change \{tie_breaker = client}
+		change \{tie_breaker = CLIENT}
 	endswitch
 	switch (<p2_flow_state>)
 		case 1
@@ -648,7 +648,7 @@ script translate_lobby_message
 endscript
 
 script resolve_current_flow_state 
-	if compositeobjectexists \{name = bassist}
+	if CompositeObjectExists \{name = bassist}
 		bassist :unhide
 		bassist :ragdoll_markforreset
 	endif
@@ -658,38 +658,38 @@ script resolve_current_flow_state
 endscript
 
 script choose_selected_server 
-	netsessionfunc obj = match func = choose_server params = <...>
+	NetSessionFunc obj = match func = choose_server params = <...>
 endscript
 
 script cleanup_sessionfuncs 
 	printf \{"---cleanup sessionfuncs"}
-	netsessionfunc \{func = match_uninit}
-	netsessionfunc \{func = voice_uninit}
-	netsessionfunc \{func = motd_uninit}
+	NetSessionFunc \{func = match_uninit}
+	NetSessionFunc \{func = voice_uninit}
+	NetSessionFunc \{func = motd_uninit}
 endscript
 
 script setup_sessionfuncs 
 	printf \{"---setup_sessionfuncs"}
-	netsessionfunc \{func = match_init}
-	netsessionfunc \{func = stats_init}
-	netsessionfunc \{func = voice_init}
-	netsessionfunc \{func = motd_init}
-	netsessionfunc \{obj = voice
+	NetSessionFunc \{func = match_init}
+	NetSessionFunc \{func = stats_init}
+	NetSessionFunc \{func = voice_init}
+	NetSessionFunc \{func = motd_init}
+	NetSessionFunc \{obj = voice
 		func = enable}
-	if netsessionfunc \{obj = match
+	if NetSessionFunc \{obj = match
 			func = get_gamertag}
-		setnetworkpreference field = 'network_id' string = <name>
-		setnetworkpreference field = 'server_name' string = <name>
+		SetNetworkPreference field = 'network_id' string = <name>
+		SetNetworkPreference field = 'server_name' string = <name>
 	endif
-	massiveinit \{sku = 'atvi_guitar_hero_3_pc_na'
+	MassiveInit \{sku = 'atvi_guitar_hero_3_pc_na'
 		startzone = 'GlobalZone'}
 endscript
 
 script get_current_level_name 
-	return level_name = ($levelzones.($current_level).title) level = 1
+	return level_name = ($LevelZones.($current_level).title) level = 1
 endscript
 
-script getcurrentareastringandchecksum 
+script GetCurrentAreaStringAndChecksum 
 	<area_string> = 'z_online_venue'
 	<area_checksum> = dummy_value
 endscript
@@ -702,26 +702,26 @@ script dispatch_player_state
 	endif
 	if ($<other_player_status>.highway_layout = solo_highway)
 		begin
-		formattext \{checksumname = type
+		FormatText \{checksumname = type
 			'%s'
 			s = 'player_state_light'}
-		sendnetmessage {
+		SendNetMessage {
 			type = <type>
 			score = ($<player_status>.score)
 			current_run = ($<player_status>.current_run)
 			star_power_amount = ($<player_status>.star_power_amount)
 			current_health = ($<player_status>.current_health)
 		}
-		wait \{0.1
+		Wait \{0.1
 			seconds}
 		repeat
 	else
 		begin
-		getheldpattern controller = ($<player_status>.controller) player_status = <player_status>
-		formattext \{checksumname = type
+		GetHeldPattern controller = ($<player_status>.controller) player_status = <player_status>
+		FormatText \{checksumname = type
 			'%s'
 			s = 'player_state'}
-		sendnetmessage {
+		SendNetMessage {
 			type = <type>
 			guitar_volume = ($<player_status>.guitar_volume)
 			star_power_toggle = ($<player_status>.star_power_used)
@@ -732,7 +732,7 @@ script dispatch_player_state
 			whammy_length = ($<player_status>.net_whammy)
 			current_health = ($<player_status>.current_health)
 		}
-		wait \{0.1
+		Wait \{0.1
 			seconds}
 		repeat
 	endif
@@ -744,16 +744,16 @@ script load_and_sync_timing \{start_delay = 4000}
 	else
 		change \{current_num_players = 2}
 	endif
-	endgamenetscriptpump
+	EndGameNetScriptPump
 	set_rich_presence_game_mode \{online = 1}
 	change \{structurename = player2_status
 		is_local_client = 0}
-	load_venue
+	Load_Venue
 	printf \{"Starting Song with Zone = %i\\n"
 		i = $current_level}
 	change \{net_ready_to_start = 0}
 	change \{current_transition = intro}
-	spawnscriptlater restart_gem_scroller params = {
+	SpawnScriptLater restart_gem_scroller params = {
 		song_name = ($current_song)
 		difficulty = ($current_difficulty)
 		difficulty2 = ($current_difficulty2)
@@ -770,17 +770,17 @@ script ranked_quit_fix_scores
 	song_index = 0
 	begin
 	if ($game_mode = p2_battle)
-		setarrayelement arrayname = g_p1_scores globalarray index = <song_index> newvalue = 8
-		setarrayelement arrayname = g_p2_scores globalarray index = <song_index> newvalue = -1
+		SetArrayElement ArrayName = g_p1_scores GlobalArray index = <song_index> newvalue = 8
+		SetArrayElement ArrayName = g_p2_scores GlobalArray index = <song_index> newvalue = -1
 	else
-		setarrayelement arrayname = g_p2_scores globalarray index = <song_index> newvalue = 0
+		SetArrayElement ArrayName = g_p2_scores GlobalArray index = <song_index> newvalue = 0
 	endif
 	<song_index> = (<song_index> + 1)
 	repeat <num_songs>
 endscript
 
 script network_player_update 
-	if ((gameisover) || ($playing_song = 0))
+	if ((GameIsOver) || ($playing_song = 0))
 		return
 	endif
 	change structurename = <player_status> score = <score>
@@ -802,9 +802,9 @@ script network_player_update
 	if NOT ($player1_status.highway_layout = solo_highway)
 		if NOT (($<player_status>.guitar_volume) = <volume>)
 			change structurename = <player_status> guitar_volume = <volume>
-			updateguitarvolume
+			UpdateGuitarVolume
 		endif
-		broadcastevent type = net_button_check_p2 data = {hold_pattern = <hold_pattern> player_status = <player_status> whammy_len = <whammy_length>}
+		BroadcastEvent type = net_button_check_p2 data = {hold_pattern = <hold_pattern> player_status = <player_status> whammy_len = <whammy_length>}
 		if ($game_mode = p2_coop)
 			return
 		endif
@@ -821,28 +821,28 @@ endscript
 
 script net_check_buttons 
 	get_song_prefix song = <song_name>
-	formattext checksumname = guitar_stream '%s_guitar' s = <song_prefix> addtostringlookup
-	guitarinputlogicinit player_status = <player_status> guitar_stream = <guitar_stream> time_offset = <time_offset>
-	extendcrc button_up_pixel_array ($<player_status>.text) out = pixel_array
+	FormatText checksumname = guitar_stream '%s_guitar' s = <song_prefix> AddToStringLookup
+	GuitarInputLogicInit player_status = <player_status> guitar_stream = <guitar_stream> time_offset = <time_offset>
+	ExtendCRC button_up_pixel_array ($<player_status>.text) out = pixel_array
 	<player_text> = ($<player_status>.text)
-	getarraysize \{$gem_colors}
+	GetArraySize \{$gem_colors}
 	begin
 	array_count = 0
 	begin
 	color = ($gem_colors [<array_count>])
 	pixels = ($<pixel_array> [<array_count>])
 	button_lip_name = ($button_up_models.<color>.name)
-	extendcrc <button_lip_name> '_lip' out = button_lip_name
-	extendcrc <button_lip_name> <player_text> out = button_lip_name
+	ExtendCRC <button_lip_name> '_lip' out = button_lip_name
+	ExtendCRC <button_lip_name> <player_text> out = button_lip_name
 	button_mid_name = ($button_up_models.<color>.name)
-	extendcrc <button_mid_name> '_mid' out = button_mid_name
-	extendcrc <button_mid_name> <player_text> out = button_mid_name
+	ExtendCRC <button_mid_name> '_mid' out = button_mid_name
+	ExtendCRC <button_mid_name> <player_text> out = button_mid_name
 	button_neck_name = ($button_up_models.<color>.name)
-	extendcrc <button_neck_name> '_neck' out = button_neck_name
-	extendcrc <button_neck_name> <player_text> out = button_neck_name
+	ExtendCRC <button_neck_name> '_neck' out = button_neck_name
+	ExtendCRC <button_neck_name> <player_text> out = button_neck_name
 	button_head_name = ($button_up_models.<color>.name)
-	extendcrc <button_head_name> '_head' out = button_head_name
-	extendcrc <button_head_name> <player_text> out = button_head_name
+	ExtendCRC <button_head_name> '_head' out = button_head_name
+	ExtendCRC <button_head_name> <player_text> out = button_head_name
 	now_scale = (($nowbar_scale_x * (1.0, 0.0)) + ($nowbar_scale_y * (0.0, 1.0)))
 	if ($<player_status>.lefthanded_button_ups = 1)
 		<pos2d> = ($button_up_models.<color>.left_pos_2d)
@@ -857,22 +857,22 @@ script net_check_buttons
 	<y_scale> = ((<pixels> + $neck_lip_add) / $neck_sprite_size)
 	<neck_scale> = (((<playline_scale>.(1.0, 0.0)) * (1.0, 0.0)) + (<y_scale> * (0.0, 1.0)))
 	<head_pos> = (<pos2d> - (<pixels> * (0.0, 1.0)))
-	if screenelementexists id = <button_lip_name>
-		setscreenelementprops id = <button_lip_name> z_priority = 4.9
+	if ScreenElementExists id = <button_lip_name>
+		SetScreenElementProps id = <button_lip_name> z_priority = 4.9
 	endif
-	if screenelementexists id = <button_mid_name>
-		setscreenelementprops id = <button_mid_name> z_priority = 4.6
+	if ScreenElementExists id = <button_mid_name>
+		SetScreenElementProps id = <button_mid_name> z_priority = 4.6
 	endif
-	if screenelementexists id = <button_neck_name>
-		setscreenelementprops id = <button_neck_name> z_priority = 4.7 scale = <neck_scale>
+	if ScreenElementExists id = <button_neck_name>
+		SetScreenElementProps id = <button_neck_name> z_priority = 4.7 scale = <neck_scale>
 	endif
-	if screenelementexists id = <button_head_name>
-		setscreenelementprops id = <button_head_name> z_priority = 4.8 pos = <head_pos>
+	if ScreenElementExists id = <button_head_name>
+		SetScreenElementProps id = <button_head_name> z_priority = 4.8 pos = <head_pos>
 	endif
 	array_count = (<array_count> + 1)
 	repeat <array_size>
 	array_count = 0
-	getdeltatime
+	GetDeltaTime
 	sub_amount = (($button_up_pixels * <delta_time>) / $button_sink_time)
 	begin
 	pixels = ($<pixel_array> [<array_count>])
@@ -880,23 +880,23 @@ script net_check_buttons
 	if (<pixels> < 0.0)
 		<pixels> = 0.0
 	endif
-	setarrayelement arrayname = <pixel_array> globalarray index = <array_count> newvalue = <pixels>
+	SetArrayElement ArrayName = <pixel_array> GlobalArray index = <array_count> newvalue = <pixels>
 	array_count = (<array_count> + 1)
 	repeat <array_size>
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
 script network_events 
-	seteventhandler \{response = call_script
+	SetEventHandler \{response = call_script
 		event = net_button_check_p2
-		scr = network_player_buttons}
-	block
+		Scr = network_player_buttons}
+	Block
 endscript
 
 script network_player_buttons 
-	getarraysize \{$gem_colors}
+	GetArraySize \{$gem_colors}
 	check_button = 65536
 	<mask> = ($player2_status.broken_string_mask)
 	array_count = 0
@@ -904,13 +904,13 @@ script network_player_buttons
 	if NOT (<mask> && <check_button>)
 		color = ($gem_colors [<array_count>])
 		button_head_name = ($button_up_models.<color>.name)
-		extendcrc <button_head_name> '_head' out = button_head_name
-		extendcrc <button_head_name> ($<player_status>.text) out = button_head_name
-		if screenelementexists id = <button_head_name>
+		ExtendCRC <button_head_name> '_head' out = button_head_name
+		ExtendCRC <button_head_name> ($<player_status>.text) out = button_head_name
+		if ScreenElementExists id = <button_head_name>
 			if (<hold_pattern> && <check_button>)
-				setscreenelementprops id = <button_head_name> material = ($button_up_models.<color>.material_down)
+				SetScreenElementProps id = <button_head_name> material = ($button_up_models.<color>.material_down)
 			else
-				setscreenelementprops id = <button_head_name> material = ($button_up_models.<color>.material_head)
+				SetScreenElementProps id = <button_head_name> material = ($button_up_models.<color>.material_head)
 			endif
 		endif
 	endif
@@ -923,41 +923,41 @@ script network_player_buttons
 endscript
 
 script net_check_note_hold 
-	checknoteholdinit player = <player> player_status = <player_status> array_entry = <array_entry> time = <time> guitar_stream = <guitar_stream> song = <song> pattern = <pattern>
+	CheckNoteHoldInit player = <player> player_status = <player_status> array_entry = <array_entry> time = <time> guitar_stream = <guitar_stream> song = <song> pattern = <pattern>
 	begin
-	if NOT checknoteholdwait player = <player>
+	if NOT CheckNoteHoldWait player = <player>
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
-	checknoteholdstart player = <player>
-	spawnscriptlater net_control_whammy_pitch_loop params = {song = <song> array_entry = <array_entry> pattern = <pattern> player_status = <player_status> time = <time>}
+	CheckNoteHoldStart player = <player>
+	SpawnScriptLater net_control_whammy_pitch_loop params = {song = <song> array_entry = <array_entry> pattern = <pattern> player_status = <player_status> time = <time>}
 	begin
-	if NOT checknoteholdperframe player = <player>
+	if NOT CheckNoteHoldPerFrame player = <player>
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
-	killspawnedscript \{name = net_whammy_pitch_shift}
-	killspawnedscript \{name = net_control_whammy_pitch_loop}
-	checknoteholdend player = <player>
+	KillSpawnedScript \{name = net_whammy_pitch_shift}
+	KillSpawnedScript \{name = net_control_whammy_pitch_loop}
+	CheckNoteHoldEnd player = <player>
 endscript
 
 script net_control_whammy_pitch_loop 
 	change \{pitch_dirty = 1}
 	begin
-	getsongtime
+	GetSongTime
 	start_time = <songtime>
-	block \{type = net_button_check_p2}
-	getsongtime
+	Block \{type = net_button_check_p2}
+	GetSongTime
 	delta_time = (<songtime> - <start_time>)
 	<time> = (<time> - (<delta_time> * 1000))
-	killspawnedscript \{name = net_whammy_pitch_shift}
+	KillSpawnedScript \{name = net_whammy_pitch_shift}
 	spawnscriptnow net_whammy_pitch_shift params = {song = <song> array_entry = <array_entry> pattern = <pattern> player_status = <player_status> net_whammy_length = (<event_data>.whammy_len) time = <time>}
 	repeat
-	killspawnedscript \{name = net_whammy_pitch_shift}
+	KillSpawnedScript \{name = net_whammy_pitch_shift}
 endscript
 pitch_dirty = 1
 prev_len = 0
@@ -968,7 +968,7 @@ script net_whammy_pitch_shift
 		change prev_len = <net_whammy_length>
 		begin
 		control_whammy_pitchshift song = <song> array_entry = <array_entry> pattern = <pattern> player_status = <player_status> net_whammy_length = <net_whammy_length> time = <time>
-		wait \{1
+		Wait \{1
 			gameframe}
 		repeat
 	else
@@ -982,16 +982,16 @@ script net_whammy_pitch_shift
 		<len> = (<len_base> + (<len_delta> * <scale>))
 		set_whammy_pitchshift control = <len> player_status = <player_status>
 		<whammy_scale> = (((<len> * 0.5) + 0.5) * 2.0)
-		setnewwhammyvalue value = <whammy_scale> time_remaining = <time> player_status = <player_status> player = (<player_status>.player)
+		SetNewWhammyValue value = <whammy_scale> time_remaining = <time> player_status = <player_status> player = (<player_status>.player)
 		<scale> = (<scale> + <scale_step>)
-		wait \{1
+		Wait \{1
 			gameframe}
 		repeat <frames>
 		begin
 		set_whammy_pitchshift control = <net_whammy_length> player_status = <player_status>
 		<whammy_scale> = (((<net_whammy_length> * 0.5) + 0.5) * 2.0)
-		setnewwhammyvalue value = <whammy_scale> time_remaining = <time> player_status = <player_status> player = (<player_status>.player)
-		wait \{1
+		SetNewWhammyValue value = <whammy_scale> time_remaining = <time> player_status = <player_status> player = (<player_status>.player)
+		Wait \{1
 			gameframe}
 		repeat
 	endif
@@ -1013,18 +1013,18 @@ script finalize_connection_to_peer
 	change structurename = player1_status net_id_second = <p1_net_id_second>
 	change structurename = player2_status net_id_first = <p2_net_id_first>
 	change structurename = player2_status net_id_second = <p2_net_id_second>
-	formattext \{checksumname = player_status
+	FormatText \{checksumname = player_status
 		'player1_status'}
-	getglobaltags \{user_options}
-	sendnetmessage {
+	GetGlobalTags \{user_options}
+	SendNetMessage {
 		type = lefty_update
 		lefty_flag = (<lefty_flip_p1>)
 	}
-	if ishost
-		resetlobbyready
+	if IsHost
+		ResetLobbyReady
 		send_game_info_to_client
 	endif
-	startgamenetscriptpump
+	StartGameNetScriptPump
 endscript
 
 script net_copy_intial_params 
@@ -1032,13 +1032,13 @@ script net_copy_intial_params
 endscript
 
 script net_commit_or_reset_params 
-	if gotparam \{commit}
+	if GotParam \{commit}
 		change globalname = <copy_to> newvalue = $<copy_from>
 	else
 		if (<type> = loc)
-			<text> :setprops text = ($levelzones.($levelzonearray [$<global>]).title)
+			<text> :SetProps text = ($LevelZones.($LevelZoneArray [$<global>]).title)
 		else
-			<text> :setprops text = ($filtertypes.<type>.values [$<global>])
+			<text> :SetProps text = ($FilterTypes.<type>.values [$<global>])
 		endif
 	endif
 	change_coop_value_if_ranked
@@ -1046,9 +1046,9 @@ endscript
 
 script net_custom_up_down \{direction = up}
 	if (<type> = loc)
-		getarraysize ($levelzonearray)
+		GetArraySize ($LevelZoneArray)
 	else
-		getarraysize ($filtertypes.<type>.values)
+		GetArraySize ($FilterTypes.<type>.values)
 	endif
 	if (<direction> = up)
 		if ((<array_size> -1) = $<global>)
@@ -1064,58 +1064,58 @@ script net_custom_up_down \{direction = up}
 		endif
 	endif
 	if (<type> = loc)
-		<text> :setprops text = ($levelzones.($levelzonearray [$<global>]).title) scale = 1.0
+		<text> :SetProps text = ($LevelZones.($LevelZoneArray [$<global>]).title) scale = 1.0
 		fit_text_into_menu_item id = <text> max_width = 375
 	else
-		<text> :setprops text = ($filtertypes.<type>.values [$<global>]) scale = 1.0
+		<text> :SetProps text = ($FilterTypes.<type>.values [$<global>]) scale = 1.0
 		fit_text_into_menu_item id = <text> max_width = 375
 	endif
-	if (($searchmatchtypevalue = 1) && (<type> = mode) && ($<global> = 4) && ($ui_flow_manager_state [0] = custom_match_fs))
+	if (($SearchMatchTypeValue = 1) && (<type> = mode) && ($<global> = 4) && ($ui_flow_manager_state [0] = custom_match_fs))
 		net_custom_up_down <...>
 	endif
 	if (($<global> = 2) && (<type> = search))
-		if NOT isxenon
+		if NOT isXenon
 			net_custom_up_down <...>
 		endif
 	endif
 endscript
 
 script change_coop_value_if_ranked 
-	if (($searchmatchtypevalue = 1) && ($searchgamemodevalue = 4))
+	if (($SearchMatchTypeValue = 1) && ($SearchGameModeValue = 4))
 		net_custom_up_down \{direction = up
 			type = mode
-			global = searchgamemodevalue
+			global = SearchGameModeValue
 			text = game_mode_selection_text}
 	endif
 endscript
 
 script block_unblock_difficulty_actions \{diff_focus = off
 		menu = search}
-	if gotparam \{diff_focus}
+	if GotParam \{diff_focus}
 		<change_color> = ($online_light_blue)
 	else
 		<change_color> = ($online_dark_purple)
 	endif
 	if (<menu> = search)
-		<gamemode> = ($searchgamemodevalue)
-		<new_text> = ($filtertypes.diff.values [($searchdifficultyvalue)])
+		<gamemode> = ($SearchGameModeValue)
+		<new_text> = ($FilterTypes.diff.values [($SearchDifficultyValue)])
 	else
-		<gamemode> = ($optionsgamemodevalue)
-		<new_text> = ($filtertypes.diff.values [($optionsdifficultyvalue)])
+		<gamemode> = ($OptionsGameModeValue)
+		<new_text> = ($FilterTypes.diff.values [($OptionsDifficultyValue)])
 	endif
 	if ((<gamemode> = 0) || (<gamemode> = 2))
-		if screenelementexists \{id = difficulty}
-			difficulty :setprops rgba = <change_color> unblock_events
+		if ScreenElementExists \{id = difficulty}
+			difficulty :SetProps rgba = <change_color> unblock_events
 		endif
-		if screenelementexists \{id = difficulty_selection_text}
-			difficulty_selection_text :setprops rgba = <change_color> text = <new_text> unblock_events
+		if ScreenElementExists \{id = difficulty_selection_text}
+			difficulty_selection_text :SetProps rgba = <change_color> text = <new_text> unblock_events
 		endif
 	else
-		if screenelementexists \{id = difficulty}
-			difficulty :setprops rgba = ($online_grey) block_events
+		if ScreenElementExists \{id = difficulty}
+			difficulty :SetProps rgba = ($online_grey) block_events
 		endif
-		if screenelementexists \{id = difficulty_selection_text}
-			difficulty_selection_text :setprops rgba = ($online_grey) text = "N/A" block_events
+		if ScreenElementExists \{id = difficulty_selection_text}
+			difficulty_selection_text :SetProps rgba = ($online_grey) text = "N/A" block_events
 		endif
 	endif
 endscript
@@ -1133,30 +1133,30 @@ script online_menu_init
 		part = guitar}
 	change \{structurename = player2_status
 		part = guitar}
-	create_guitarist \{name = guitarist
-		useoldpos
+	create_guitarist \{name = Guitarist
+		useOldPos
 		no_strum
 		animpak = 0}
 	create_guitarist \{name = bassist
-		useoldpos
+		useOldPos
 		no_strum
 		animpak = 0}
-	setnetworkmode \{$internet_mode}
+	SetNetworkMode \{$INTERNET_MODE}
 	cleanup_sessionfuncs
 	setup_sessionfuncs
-	netsessionfunc \{func = getnumplayers}
-	create_menu_backdrop \{texture = online_background}
+	NetSessionFunc \{func = getnumplayers}
+	create_menu_backdrop \{texture = Online_Background}
 	begin
-	if ($demonware_is_ready = 1)
+	if ($DEMONWARE_IS_READY = 1)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		frame}
 	repeat
 endscript
 
 script setup_online_player_settings 
-	getglobaltags \{user_options}
+	GetGlobalTags \{user_options}
 	switch (<online_highway>)
 		case 0
 		change \{structurename = player1_status
@@ -1171,7 +1171,7 @@ script get_random_song
 	first_song_index = (-1)
 	last_song_index = (-1)
 	array_entry = 0
-	getarraysize \{$gh3_songlist}
+	GetArraySize \{$gh3_songlist}
 	begin
 	song_checksum = ($gh3_songlist [<array_entry>])
 	get_song_struct song = <song_checksum>
@@ -1183,12 +1183,12 @@ script get_random_song
 	<array_entry> = (<array_entry> + 1)
 	repeat <array_size>
 	<last_song_index> = (<array_entry> - 1)
-	getrandomvalue name = random_value integer a = <first_song_index> b = <last_song_index>
+	GetRandomValue name = random_value Integer a = <first_song_index> b = <last_song_index>
 	return random_song = ($gh3_songlist [<random_value>])
 endscript
 
 script start_network_game 
-	if ishost
+	if IsHost
 		startnetworkgame
 	endif
 endscript
@@ -1196,14 +1196,14 @@ endscript
 script check_for_final_song_selection 
 	if (($tie_breaker) = song_rand)
 		return \{can_select_final_song = false}
-	elseif (($tie_breaker) = host)
-		if ishost
+	elseif (($tie_breaker) = HOST)
+		if IsHost
 			return \{can_select_final_song = true}
 		else
 			return \{can_select_final_song = false}
 		endif
-	elseif (($tie_breaker) = client)
-		if ishost
+	elseif (($tie_breaker) = CLIENT)
+		if IsHost
 			return \{can_select_final_song = false}
 		else
 			return \{can_select_final_song = true}
@@ -1214,16 +1214,16 @@ endscript
 script online_fail_song 
 	printf \{"---online fail song"}
 	change \{disable_attacks = 1}
-	if (gameisover)
+	if (GameIsOver)
 		change \{current_num_players = 2}
 		return
 	endif
-	if (ishost)
+	if (IsHost)
 		loser = 0
 	else
 		loser = 1
 	endif
-	sendnetmessage {
+	SendNetMessage {
 		type = fail_song
 		stars = ($player1_status.stars)
 		note_streak = ($player1_status.best_run)
@@ -1247,7 +1247,7 @@ script online_win_song
 	change structurename = <player_status> notes_hit = <notes_hit>
 	if (<quit_early>)
 		change \{player2_present = 0}
-		formattext textname = notification_text "%n\\n has quit" n = ($opponent_gamertag)
+		FormatText TextName = notification_text "%n\\n has quit" n = ($opponent_gamertag)
 		if ($match_type = ranked)
 			ranked_quit_fix_scores
 		endif
@@ -1261,7 +1261,7 @@ script online_win_song
 				score = 0.0}
 		endif
 		create_net_popup popup_text = <notification_text>
-		wait \{3
+		Wait \{3
 			seconds}
 		destroy_net_popup
 	endif
@@ -1279,10 +1279,10 @@ script online_win_song
 			change \{structurename = player2_status
 				current_health = 0.0}
 		endif
-		guitarevent_songwon \{battle_win = 1}
+		GuitarEvent_SongWon \{battle_win = 1}
 	else
-		extendcrc song_won <player_text> out = type
-		broadcastevent type = <type>
+		ExtendCRC song_won <player_text> out = type
+		BroadcastEvent type = <type>
 	endif
 endscript
 
@@ -1328,19 +1328,19 @@ script set_rich_presence_game_mode \{online = 0}
 endscript
 
 script get_custom_match_search_params 
-	getpreferencechecksum \{ranked}
+	GetPreferenceChecksum \{ranked}
 	ranked = <checksum>
-	getpreferencevalue \{ranked}
+	GetPreferenceValue \{ranked}
 	ranked_value = <value>
-	if (($searchgamemodevalue = 0) || ($searchgamemodevalue = 2))
-		difficulty_checksum = ($filtertypes.diff.checksum [($searchdifficultyvalue)])
+	if (($SearchGameModeValue = 0) || ($SearchGameModeValue = 2))
+		difficulty_checksum = ($FilterTypes.diff.checksum [($SearchDifficultyValue)])
 	else
 		difficulty_checksum = dont_care
 	endif
 	return {
 		difficulty = <difficulty_checksum>
-		gamemode = ($filtertypes.mode.checksum [($searchgamemodevalue)])
-		num_songs = ($filtertypes.num_songs.checksum [($searchnumsongsvalue)])
+		gamemode = ($FilterTypes.mode.checksum [($SearchGameModeValue)])
+		num_songs = ($FilterTypes.num_songs.checksum [($SearchNumSongsValue)])
 		tie_breaker = dont_care
 		ranked = <ranked>
 		ranked_value = <ranked_value>
@@ -1348,20 +1348,20 @@ script get_custom_match_search_params
 endscript
 
 script get_quick_match_search_params 
-	getglobaltags \{user_options}
-	getpreferencechecksum \{ranked}
+	GetGlobalTags \{user_options}
+	GetPreferenceChecksum \{ranked}
 	ranked = <checksum>
-	getpreferencevalue \{ranked}
+	GetPreferenceValue \{ranked}
 	ranked_value = <value>
 	if ((<online_game_mode> = 0) || (<online_game_mode> = 2))
-		difficulty_checksum = ($filtertypes.diff.checksum [<online_difficulty>])
+		difficulty_checksum = ($FilterTypes.diff.checksum [<online_difficulty>])
 	else
 		difficulty_checksum = dont_care
 	endif
 	return {
 		difficulty = <difficulty_checksum>
-		gamemode = ($filtertypes.mode.checksum [<online_game_mode>])
-		num_songs = ($filtertypes.num_songs.checksum [<online_num_songs>])
+		gamemode = ($FilterTypes.mode.checksum [<online_game_mode>])
+		num_songs = ($FilterTypes.num_songs.checksum [<online_num_songs>])
 		tie_breaker = dont_care
 		ranked = <ranked>
 		ranked_value = <ranked_value>
@@ -1370,30 +1370,30 @@ endscript
 
 script get_private_match_search_params 
 	return {
-		privatematchid = ($gprivatematchid)
+		privateMatchId = ($gPrivateMatchId)
 	}
 endscript
-bps3singlesignoncheckcomplete = 0
+bPS3SingleSignOnCheckComplete = 0
 
 script xenon_singleplayer_session_init \{ps3_signin_callback = xenon_singleplayer_session_init}
 	printscriptinfo \{"--- MJS xenon_singleplayer_session_init"}
-	if checkforsignin
+	if CheckForSignIn
 		if ($is_network_game = 1)
-			netsessionfunc \{func = motd_uninit}
-			netsessionfunc \{func = motd_init}
-			if isxenon
-				netsessionfunc \{func = start_singleplayer_session
+			NetSessionFunc \{func = motd_uninit}
+			NetSessionFunc \{func = motd_init}
+			if isXenon
+				NetSessionFunc \{func = start_singleplayer_session
 					obj = session}
-				massiveinit \{sku = 'atvi_guitar_hero_3_pc_na'
+				MassiveInit \{sku = 'atvi_guitar_hero_3_pc_na'
 					startzone = 'GlobalZone'}
 			endif
 		endif
 	else
 		if ($is_attract_mode = 0)
-			if NOT gotparam \{from_callback}
-				if (0 = $bps3singlesignoncheckcomplete)
-					netsessionfunc func = onlinesignin params = {callback = <ps3_signin_callback>}
-					change \{bps3singlesignoncheckcomplete = 1}
+			if NOT GotParam \{from_callback}
+				if (0 = $bPS3SingleSignOnCheckComplete)
+					NetSessionFunc func = onlinesignin params = {callback = <ps3_signin_callback>}
+					change \{bPS3SingleSignOnCheckComplete = 1}
 				endif
 			else
 				printf \{"PS3: unable to signin in to the network platform"}
@@ -1403,16 +1403,16 @@ script xenon_singleplayer_session_init \{ps3_signin_callback = xenon_singleplaye
 endscript
 
 script begin_singleplayer_game 
-	if netsessionfunc \{obj = session
+	if NetSessionFunc \{obj = session
 			func = has_active_session}
-		netsessionfunc \{obj = session
+		NetSessionFunc \{obj = session
 			func = begin_singleplayer_game}
 	endif
 endscript
 
 script xenon_singleplayer_session_begin_uninit 
-	if isxenon
-		netsessionfunc \{func = stop_singleplayer_session
+	if isXenon
+		NetSessionFunc \{func = stop_singleplayer_session
 			obj = session}
 	endif
 endscript
@@ -1420,10 +1420,10 @@ endscript
 script xenon_singleplayer_session_complete_uninit 
 	printf \{"--- xenon_singleplayer_session_complete_uninit"}
 	change \{net_safe_to_enter_net_play = 0}
-	netsessionfunc \{obj = session
+	NetSessionFunc \{obj = session
 		func = unpost_game}
-	netsessionfunc \{func = match_uninit}
-	netsessionfunc \{func = motd_uninit}
+	NetSessionFunc \{func = match_uninit}
+	NetSessionFunc \{func = motd_uninit}
 	change \{net_safe_to_enter_net_play = 1}
 endscript
 
@@ -1443,9 +1443,9 @@ script send_leader_board_message
 	endswitch
 	if ($game_mode = p1_career)
 		controller = ($primary_controller)
-		getnetid player = <controller>
-		setarrayelement arrayname = player1_xuid index = 0 newvalue = <net_id_first>
-		setarrayelement arrayname = player1_xuid index = 1 newvalue = <net_id_second>
+		GetNetID player = <controller>
+		SetArrayElement ArrayName = player1_xuid index = 0 newvalue = <net_id_first>
+		SetArrayElement ArrayName = player1_xuid index = 1 newvalue = <net_id_second>
 		switch (<diff>)
 			case easy
 			<career_leaderboard_id> = lb_career_easy
@@ -1516,9 +1516,9 @@ script send_leader_board_message
 		]
 	elseif (($game_mode = p2_career) && ($coop_dlc_active = 0))
 		controller = ($primary_controller)
-		getnetid player = <controller>
-		setarrayelement arrayname = player1_xuid index = 0 newvalue = <net_id_first>
-		setarrayelement arrayname = player1_xuid index = 1 newvalue = <net_id_second>
+		GetNetID player = <controller>
+		SetArrayElement ArrayName = player1_xuid index = 0 newvalue = <net_id_first>
+		SetArrayElement ArrayName = player1_xuid index = 1 newvalue = <net_id_second>
 		net_get_highest_coop_difficulty
 		switch <highest_diff>
 			case easy
@@ -1568,9 +1568,9 @@ script send_leader_board_message
 		]
 	else
 		controller = ($primary_controller)
-		getnetid player = <controller>
-		setarrayelement arrayname = player1_xuid index = 0 newvalue = <net_id_first>
-		setarrayelement arrayname = player1_xuid index = 1 newvalue = <net_id_second>
+		GetNetID player = <controller>
+		SetArrayElement ArrayName = player1_xuid index = 0 newvalue = <net_id_first>
+		SetArrayElement ArrayName = player1_xuid index = 1 newvalue = <net_id_second>
 		player_list = [
 			{
 				player_xuid = <player1_xuid>
@@ -1591,7 +1591,7 @@ script send_leader_board_message
 			}
 		]
 	endif
-	netsessionfunc func = stats_write_multiplayer obj = stats params = {player_list = <player_list>}
+	NetSessionFunc func = stats_write_multiplayer obj = stats params = {player_list = <player_list>}
 endscript
 
 script net_write_single_player_stats 
@@ -1599,15 +1599,15 @@ script net_write_single_player_stats
 	primary_player_score = <primary_score>
 	secondary_player_score = <secondary_score>
 	if (<primary_player_score> > 0)
-		if NOT (($game_mode = p2_battle) || ($game_mode = practice) || $cheat_nofail = 1 || $cheat_easyexpert = 1)
+		if NOT (($game_mode = p2_battle) || ($game_mode = practice) || $Cheat_NoFail = 1 || $Cheat_EasyExpert = 1)
 			if ($game_mode = p2_career)
 				primary_player_score = (<primary_player_score> + <secondary_player_score>)
-				casttointeger \{primary_player_score}
+				CastToInteger \{primary_player_score}
 				get_song_struct song = ($current_song)
-				formattext checksumname = coop_song_checksum 'lb_coop_%s' s = (<song_struct>.name)
+				FormatText checksumname = coop_song_checksum 'lb_coop_%s' s = (<song_struct>.name)
 				send_leader_board_message score = <primary_player_score> leaderboard_id = <coop_song_checksum> diff = ($current_difficulty)
 			else
-				casttointeger \{primary_player_score}
+				CastToInteger \{primary_player_score}
 				send_leader_board_message score = <primary_player_score> leaderboard_id = ($current_song) diff = ($current_difficulty)
 			endif
 		else
@@ -1634,13 +1634,13 @@ script summation_career_score
 	career_score = 0
 	tier = 1
 	begin
-	formattext checksumname = tiername '%ptier%i' p = <setlist_prefix> i = <tier>
-	formattext checksumname = tier_checksum 'tier%s' s = <tier>
-	getarraysize ($<tier_global>.<tier_checksum>.songs)
+	FormatText checksumname = tiername '%ptier%i' p = <setlist_prefix> i = <tier>
+	FormatText checksumname = tier_checksum 'tier%s' s = <tier>
+	GetArraySize ($<tier_global>.<tier_checksum>.songs)
 	array_count = 0
 	begin
-	formattext checksumname = song_checksum '%p_song%i_tier%s' p = <setlist_prefix> i = (<array_count> + 1) s = <tier>
-	getglobaltags <song_checksum> param = score
+	FormatText checksumname = song_checksum '%p_song%i_tier%s' p = <setlist_prefix> i = (<array_count> + 1) s = <tier>
+	GetGlobalTags <song_checksum> param = score
 	<career_score> = (<career_score> + <score>)
 	array_count = (<array_count> + 1)
 	repeat <array_size>
@@ -1652,11 +1652,11 @@ endscript
 script online_song_end_write_stats \{song_type = single}
 	printscriptinfo \{"MJS --- online_song_end_write_stats"}
 	player1_score = ($player1_status.score)
-	casttointeger \{player1_score}
+	CastToInteger \{player1_score}
 	if (<player1_score> > 0)
 		player1_xuid = [0 0]
-		setarrayelement arrayname = player1_xuid index = 0 newvalue = ($player1_status.net_id_first)
-		setarrayelement arrayname = player1_xuid index = 1 newvalue = ($player1_status.net_id_second)
+		SetArrayElement ArrayName = player1_xuid index = 0 newvalue = ($player1_status.net_id_first)
+		SetArrayElement ArrayName = player1_xuid index = 1 newvalue = ($player1_status.net_id_second)
 		if (<song_type> = coop)
 			net_get_highest_coop_difficulty
 			switch <highest_diff>
@@ -1670,7 +1670,7 @@ script online_song_end_write_stats \{song_type = single}
 				<player1_difficulty_index> = 4
 			endswitch
 			get_song_struct song = ($net_setlist_songs [($net_song_num)])
-			formattext checksumname = leaderboard_id 'lb_coop_%s' s = (<song_struct>.name)
+			FormatText checksumname = leaderboard_id 'lb_coop_%s' s = (<song_struct>.name)
 		else
 			switch ($current_difficulty)
 				case easy
@@ -1704,8 +1704,8 @@ script online_song_end_write_stats \{song_type = single}
 			}
 		]
 	endif
-	if gotparam \{player_list}
-		netsessionfunc func = stats_write_multiplayer obj = stats params = {player_list = <player_list> dontendsessionafterwrite}
+	if GotParam \{player_list}
+		NetSessionFunc func = stats_write_multiplayer obj = stats params = {player_list = <player_list> dontendsessionafterwrite}
 	endif
 endscript
 
@@ -1720,7 +1720,7 @@ script online_match_end_write_stats
 	printscriptinfo \{"MJS --- checking write_stats"}
 	if (<write_stats> = 1)
 		printscriptinfo \{"MJS --- <write_stats> = 1"}
-		getglobaltags \{net}
+		GetGlobalTags \{net}
 		net_get_game_mode_leaderboard_id
 		switch ($game_mode)
 			case p2_faceoff
@@ -1755,16 +1755,16 @@ script online_match_end_write_stats
 			wins = <wins>
 			loses = <loses>
 		}
-		if gotparam \{player_list}
+		if GotParam \{player_list}
 			printscriptinfo \{"MJS --- calling stats_write_multiplayer"}
 			printstruct <player_list>
-			netsessionfunc func = stats_write_multiplayer obj = stats params = {player_list = <player_list> dontendsessionafterwrite}
+			NetSessionFunc func = stats_write_multiplayer obj = stats params = {player_list = <player_list> dontendsessionafterwrite}
 		endif
 	endif
 	printscriptinfo \{"MJS --- end_write_stats"}
-	wait \{3
+	Wait \{3
 		seconds}
-	netsessionfunc \{obj = stats
+	NetSessionFunc \{obj = stats
 		func = end_write_stats}
 endscript
 
@@ -1782,25 +1782,25 @@ script net_get_highest_coop_difficulty
 endscript
 
 script online_set_win_losses_streak \{out_come = lose}
-	getglobaltags \{net}
+	GetGlobalTags \{net}
 	switch ($game_mode)
 		case p2_battle
 		if (<out_come> = win)
-			setglobaltags net params = {battle_streak = (<battle_streak> + 1) battle_wins = (<battle_wins> + 1)}
+			SetGlobalTags net params = {battle_streak = (<battle_streak> + 1) battle_wins = (<battle_wins> + 1)}
 		else
-			setglobaltags net params = {battle_streak = 0 battle_loses = (<battle_loses> + 1)}
+			SetGlobalTags net params = {battle_streak = 0 battle_loses = (<battle_loses> + 1)}
 		endif
 		case p2_faceoff
 		if (<out_come> = win)
-			setglobaltags net params = {face_off_streak = (<face_off_streak> + 1) faceoff_wins = (<faceoff_wins> + 1)}
+			SetGlobalTags net params = {face_off_streak = (<face_off_streak> + 1) faceoff_wins = (<faceoff_wins> + 1)}
 		else
-			setglobaltags net params = {face_off_streak = 0 faceoff_loses = (<faceoff_loses> + 1)}
+			SetGlobalTags net params = {face_off_streak = 0 faceoff_loses = (<faceoff_loses> + 1)}
 		endif
 		case p2_pro_faceoff
 		if (<out_come> = win)
-			setglobaltags net params = {pro_face_off_streak = (<pro_face_off_streak> + 1) pro_faceoff_wins = (<pro_faceoff_wins> + 1)}
+			SetGlobalTags net params = {pro_face_off_streak = (<pro_face_off_streak> + 1) pro_faceoff_wins = (<pro_faceoff_wins> + 1)}
 		else
-			setglobaltags net params = {pro_face_off_streak = 0 pro_faceoff_loses = (<pro_faceoff_loses> + 1)}
+			SetGlobalTags net params = {pro_face_off_streak = 0 pro_faceoff_loses = (<pro_faceoff_loses> + 1)}
 		endif
 	endswitch
 endscript
@@ -1809,14 +1809,14 @@ script net_get_game_mode_leaderboard_id
 	printf \{"net_get_game_mode_leaderboard_id"}
 	switch ($game_mode)
 		case p2_faceoff
-		formattext checksumname = leaderboard_id_p1 'lb_faceoff_%s' s = ($leaderboard_difficulty_lookup_table.($current_difficulty))
-		formattext checksumname = leaderboard_id_p2 'lb_faceoff_%s' s = ($leaderboard_difficulty_lookup_table.($current_difficulty2))
+		FormatText checksumname = leaderboard_id_p1 'lb_faceoff_%s' s = ($Leaderboard_Difficulty_Lookup_Table.($current_difficulty))
+		FormatText checksumname = leaderboard_id_p2 'lb_faceoff_%s' s = ($Leaderboard_Difficulty_Lookup_Table.($current_difficulty2))
 		case p2_pro_faceoff
-		formattext checksumname = leaderboard_id_p1 'lb_pro_faceoff_%s' s = ($leaderboard_difficulty_lookup_table.($current_difficulty))
-		formattext checksumname = leaderboard_id_p2 'lb_pro_faceoff_%s' s = ($leaderboard_difficulty_lookup_table.($current_difficulty2))
+		FormatText checksumname = leaderboard_id_p1 'lb_pro_faceoff_%s' s = ($Leaderboard_Difficulty_Lookup_Table.($current_difficulty))
+		FormatText checksumname = leaderboard_id_p2 'lb_pro_faceoff_%s' s = ($Leaderboard_Difficulty_Lookup_Table.($current_difficulty2))
 		case p2_battle
-		formattext checksumname = leaderboard_id_p1 'lb_battle_%s' s = ($leaderboard_difficulty_lookup_table.($current_difficulty))
-		formattext checksumname = leaderboard_id_p2 'lb_battle_%s' s = ($leaderboard_difficulty_lookup_table.($current_difficulty2))
+		FormatText checksumname = leaderboard_id_p1 'lb_battle_%s' s = ($Leaderboard_Difficulty_Lookup_Table.($current_difficulty))
+		FormatText checksumname = leaderboard_id_p2 'lb_battle_%s' s = ($Leaderboard_Difficulty_Lookup_Table.($current_difficulty2))
 	endswitch
 	return {p1_leaderboard_id = <leaderboard_id_p1> p2_leaderboard_id = <leaderboard_id_p2>}
 endscript
@@ -1826,10 +1826,10 @@ script prepare_player_list_array
 	net_stats_calculate_wins
 	player1_xuid = [0 0]
 	player2_xuid = [0 0]
-	setarrayelement arrayname = player1_xuid index = 0 newvalue = ($player1_status.net_id_first)
-	setarrayelement arrayname = player1_xuid index = 1 newvalue = ($player1_status.net_id_second)
-	setarrayelement arrayname = player2_xuid index = 0 newvalue = ($player2_status.net_id_first)
-	setarrayelement arrayname = player2_xuid index = 1 newvalue = ($player2_status.net_id_second)
+	SetArrayElement ArrayName = player1_xuid index = 0 newvalue = ($player1_status.net_id_first)
+	SetArrayElement ArrayName = player1_xuid index = 1 newvalue = ($player1_status.net_id_second)
+	SetArrayElement ArrayName = player2_xuid index = 0 newvalue = ($player2_status.net_id_first)
+	SetArrayElement ArrayName = player2_xuid index = 1 newvalue = ($player2_status.net_id_second)
 	printscriptinfo \{"MJS --- checking wins"}
 	printf "p1=%a p2=%b" a = <p1_wins> b = <p2_wins>
 	if (<p1_wins> = <p2_wins>)
@@ -1841,7 +1841,7 @@ script prepare_player_list_array
 			p1_loses_value = 0
 			p2_wins_value = 0
 			p2_loses_value = 1}
-		getleaderboardwinlosevalue win = (<wins> + 1) lose = <loses>
+		GetLeaderboardWinLoseValue win = (<wins> + 1) lose = <loses>
 		online_set_win_losses_streak \{out_come = win}
 		player_list = [
 			{
@@ -1908,7 +1908,7 @@ script prepare_player_list_array
 			p1_loses_value = 1
 			p2_wins_value = 1
 			p2_loses_value = 0}
-		getleaderboardwinlosevalue win = <wins> lose = (<loses> + 1)
+		GetLeaderboardWinLoseValue win = <wins> lose = (<loses> + 1)
 		online_set_win_losses_streak \{outcome = lose}
 		player_list = [
 			{
@@ -1977,9 +1977,9 @@ script get_match_type_leaderboard_info
 	if NOT ($game_mode = p2_battle)
 		net_stats_calculate_total_scores
 		player1_score = <p1_score>
-		casttointeger \{player1_score}
+		CastToInteger \{player1_score}
 		player2_score = <p2_score>
-		casttointeger \{player2_score}
+		CastToInteger \{player2_score}
 		return {
 			write_type = max
 			score1 = <player1_score>
@@ -2038,22 +2038,22 @@ script network_player_lobby_message
 		case select
 		<selection_action> = 2
 	endswitch
-	if gotparam \{value1}
+	if GotParam \{value1}
 		<selection_index1> = <value1>
 	else
 		<selection_index1> = 0
 	endif
-	if gotparam \{value2}
+	if GotParam \{value2}
 		<selection_index2> = <value2>
 	else
 		<selection_index2> = 0
 	endif
-	if gotparam \{checksum}
+	if GotParam \{checksum}
 		<checksum_value> = <checksum>
 	else
 		<checksum_value> = null
 	endif
-	sendnetmessage {
+	SendNetMessage {
 		type = lobby_selection
 		selection_type = <selection_type>
 		selection_action = <selection_action>
@@ -2069,22 +2069,22 @@ script net_request_play_show
 	endif
 	if (<action> = 1)
 		if ($p1_ready = 0)
-			if screenelementexists \{id = vmenu_character_hub_p1}
-				launchevent \{type = unfocus
+			if ScreenElementExists \{id = vmenu_character_hub_p1}
+				LaunchEvent \{type = unfocus
 					target = vmenu_character_hub_p1}
 			endif
-			sendnetmessage {
+			SendNetMessage {
 				type = lobby_ready
 				ready_status = <action>
 			}
 		endif
 	else
 		if ($p1_ready = 1)
-			if screenelementexists \{id = vmenu_character_hub_p1}
-				launchevent \{type = unfocus
+			if ScreenElementExists \{id = vmenu_character_hub_p1}
+				LaunchEvent \{type = unfocus
 					target = vmenu_character_hub_p1}
 			endif
-			sendnetmessage {
+			SendNetMessage {
 				type = lobby_ready
 				ready_status = <action>
 			}
@@ -2098,7 +2098,7 @@ script net_request_play_show_ack
 	if (($p1_ready = 1) && ($p2_ready = 1))
 		return
 	endif
-	if gotparam \{action}
+	if GotParam \{action}
 		if (<action> = 0)
 			if (<player> = 1)
 				character_hub_go_back player = <player>
@@ -2108,8 +2108,8 @@ script net_request_play_show_ack
 		else
 			if (<player> = 1)
 				character_hub_select_play_show player = <player>
-				if screenelementexists \{id = vmenu_character_hub_p1}
-					launchevent \{type = focus
+				if ScreenElementExists \{id = vmenu_character_hub_p1}
+					LaunchEvent \{type = focus
 						target = vmenu_character_hub_p1}
 				endif
 			else
@@ -2155,7 +2155,7 @@ script network_player_lobby_update
 				character_hub_select_change_guitar \{player = 2}
 				case 3
 				character_hub_select_change_guitar \{player = 2
-					bass}
+					Bass}
 			endswitch
 		endswitch
 		case 2
@@ -2242,7 +2242,7 @@ script net_lobby_state_message
 		case approval
 		selection_action = 1
 	endswitch
-	if gotparam \{request_state}
+	if GotParam \{request_state}
 		switch <request_state>
 			case leaving_lobby
 			value = 0
@@ -2258,7 +2258,7 @@ script net_lobby_state_message
 	else
 		value = 1
 	endif
-	sendnetmessage {
+	SendNetMessage {
 		type = lobby_state
 		selection_type = <selection_type>
 		selection_action = <selection_action>
@@ -2276,45 +2276,45 @@ script net_lobby_state_update
 			part = guitar}
 		change \{structurename = player2_status
 			part = guitar}
-		create_guitarist \{name = guitarist
-			useoldpos
+		create_guitarist \{name = Guitarist
+			useOldPos
 			no_strum
 			animpak = 0}
 		create_guitarist \{name = bassist
-			useoldpos
+			useOldPos
 			no_strum
 			animpak = 0}
-		if ishost
-			resetlobbyready
+		if IsHost
+			ResetLobbyReady
 		endif
-		launchevent \{type = focus
+		LaunchEvent \{type = focus
 			target = si_vmenu_p1}
 		change \{net_current_flow_state = instrument}
 		change \{net_can_send_approval = 1}
 		case 3
-		if ishost
-			resetlobbyready
+		if IsHost
+			ResetLobbyReady
 		endif
-		launchevent \{type = focus
+		LaunchEvent \{type = focus
 			target = vmenu_select_difficulty}
 		change \{net_current_flow_state = difficulty}
 		change \{net_can_send_approval = 1}
 		case 4
-		if (ishost)
-			resetlobbyready
+		if (IsHost)
+			ResetLobbyReady
 			if ($host_songs_to_pick = 0)
-				launchevent \{type = focus
+				LaunchEvent \{type = focus
 					target = ready_container_p1}
 			else
-				launchevent \{type = focus
+				LaunchEvent \{type = focus
 					target = vmenu_setlist}
 			endif
 		else
 			if ($client_songs_to_pick = 0)
-				launchevent \{type = focus
+				LaunchEvent \{type = focus
 					target = ready_container_p1}
 			else
-				launchevent \{type = focus
+				LaunchEvent \{type = focus
 					target = vmenu_setlist}
 			endif
 		endif
@@ -2325,7 +2325,7 @@ endscript
 
 script net_pausegh3 
 	ui_flow_manager_respond_to_action \{action = pause_game}
-	wait \{1
+	Wait \{1
 		gameframe}
 endscript
 
@@ -2368,7 +2368,7 @@ script createjoinrefuseddialog
 		case net_reason_full
 		<connection_msg> = "THIS SERVER IS NOW FULL"
 	endswitch
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = net_popup_container
 		just = [
@@ -2376,7 +2376,7 @@ script createjoinrefuseddialog
 			center
 		]
 		pos = (0.0, 0.0)}
-	createscreenelement \{type = vscrollingmenu
+	CreateScreenElement \{type = VScrollingMenu
 		parent = net_popup_container
 		id = connection_dialog_scroller
 		just = [
@@ -2386,8 +2386,8 @@ script createjoinrefuseddialog
 		dims = (400.0, 480.0)
 		pos = (640.0, 400.0)
 		z_priority = 1.0}
-	createscreenelement {
-		type = vmenu
+	CreateScreenElement {
+		type = VMenu
 		parent = connection_dialog_scroller
 		id = connection_dialog_vmenu
 		pos = (0.0, 0.0)
@@ -2406,8 +2406,8 @@ script createjoinrefuseddialog
 		choose_script = empty_script
 		z = 200.1
 		text = "CONTINUE"}
-	displaysprite id = connect_message_top parent = net_popup_container tex = window_frame_cap rgba = ($online_medium_blue) pos = (640.0, 200.0) dims = (448.0, 64.0) just = [center top] z = 200
-	displaysprite \{id = connect_message_top_fill
+	displaySprite id = connect_message_top parent = net_popup_container tex = window_frame_cap rgba = ($online_medium_blue) pos = (640.0, 200.0) dims = (448.0, 64.0) just = [center top] z = 200
+	displaySprite \{id = connect_message_top_fill
 		parent = net_popup_container
 		tex = window_fill_cap
 		rgba = [
@@ -2423,8 +2423,8 @@ script createjoinrefuseddialog
 			top
 		]
 		z = 200}
-	displaysprite id = connect_message_body parent = net_popup_container tex = window_frame_body_tall rgba = ($online_medium_blue) pos = (640.0, 264.0) dims = (448.0, 128.0) just = [center top] z = 200 flip_h
-	displaysprite \{id = connect_message_body_fill
+	displaySprite id = connect_message_body parent = net_popup_container tex = window_frame_body_tall rgba = ($online_medium_blue) pos = (640.0, 264.0) dims = (448.0, 128.0) just = [center top] z = 200 flip_h
+	displaySprite \{id = connect_message_body_fill
 		parent = net_popup_container
 		tex = window_fill_body_large
 		rgba = [
@@ -2441,8 +2441,8 @@ script createjoinrefuseddialog
 		]
 		z = 200
 		flip_h}
-	displaysprite id = connect_message_bottom parent = net_popup_container tex = window_frame_cap rgba = ($online_medium_blue) pos = (640.0, 392.0) dims = (448.0, 64.0) just = [center top] z = 200 flip_h
-	displaysprite \{id = connect_message_bottom_fill
+	displaySprite id = connect_message_bottom parent = net_popup_container tex = window_frame_cap rgba = ($online_medium_blue) pos = (640.0, 392.0) dims = (448.0, 64.0) just = [center top] z = 200 flip_h
+	displaySprite \{id = connect_message_bottom_fill
 		parent = net_popup_container
 		tex = window_fill_cap
 		rgba = [
@@ -2459,8 +2459,8 @@ script createjoinrefuseddialog
 		]
 		z = 200
 		flip_h}
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = net_popup_container
 		font = fontgrid_title_gh3
 		scale = 1.0
@@ -2471,44 +2471,44 @@ script createjoinrefuseddialog
 		z_priority = 200.0
 		just = [center center]
 	}
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = connection_dialog_vmenu}
 endscript
 
 script create_connection_lost_dialog 
 	printf \{"---create_connection_lost_dialog"}
 	change \{player2_present = 0}
-	killspawnedscript \{name = net_hub_stream}
+	KillSpawnedScript \{name = net_hub_stream}
 	if ($ui_flow_manager_state [0] = online_loading_fs)
-		removetimesynctask
+		RemoveTimeSyncTask
 		change \{net_ready_to_start = 1}
 	endif
 	wait_for_safe_shutdown
-	if (gotparam from_invite)
-		formattext \{textname = gt_lost_connection_text
+	if (GotParam from_invite)
+		FormatText \{TextName = gt_lost_connection_text
 			"The invite server has been filled."
-			dontassertforchecksums}
-	elseif (gotparam player_quit)
+			DontAssertForChecksums}
+	elseif (GotParam player_quit)
 		if ($opponent_gamertag = null)
-			formattext \{textname = gt_lost_connection_text
+			FormatText \{TextName = gt_lost_connection_text
 				"Your opponent has quit"
-				dontassertforchecksums}
+				DontAssertForChecksums}
 		else
-			formattext textname = gt_lost_connection_text "%n\\n has quit" n = ($opponent_gamertag) dontassertforchecksums
+			FormatText TextName = gt_lost_connection_text "%n\\n has quit" n = ($opponent_gamertag) DontAssertForChecksums
 		endif
 	else
 		if ($opponent_gamertag = null)
-			formattext \{textname = gt_lost_connection_text
+			FormatText \{TextName = gt_lost_connection_text
 				"LOST CONNECTION TO YOUR OPPONENT"
-				dontassertforchecksums}
+				DontAssertForChecksums}
 		else
-			formattext textname = gt_lost_connection_text "LOST CONNECTION TO\\n%g" g = ($opponent_gamertag) dontassertforchecksums
+			FormatText TextName = gt_lost_connection_text "LOST CONNECTION TO\\n%g" g = ($opponent_gamertag) DontAssertForChecksums
 		endif
 	endif
 	create_net_popup popup_text = <gt_lost_connection_text>
 	if ($playing_song = 1)
-		if ($ghandlingwindowclosed = 0)
-			wait \{2
+		if ($gHandlingWindowClosed = 0)
+			Wait \{2
 				seconds}
 		endif
 		if ($ui_flow_manager_state [0] = online_play_song_fs)
@@ -2521,15 +2521,15 @@ script create_connection_lost_dialog
 			leaving_lobby_select_yes
 			return
 		endif
-		wait \{2
+		Wait \{2
 			seconds}
 	else
 		if (($ui_flow_manager_state [0] = online_fail_song_fs) || ($ui_flow_manager_state [0] = online_win_song_fs))
 			cleanup_newspaper_other_player_quit
-			wait \{4
+			Wait \{4
 				seconds}
 		else
-			wait \{4
+			Wait \{4
 				seconds}
 			lobby_connection_lost
 		endif
@@ -2543,21 +2543,21 @@ script create_net_popup \{parent = root_window
 	destroy_pause_menu_frame
 	destroy_menu \{menu_id = pu_warning_scroll}
 	destroy_menu \{menu_id = popup_warning_container}
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <parent>
 		id = net_popup_container
 		just = [center center]
 		pos = (0.0, 0.0)
 	}
-	displaysprite id = connect_message_top parent = net_popup_container tex = window_frame_cap rgba = ($online_medium_blue) pos = (<pos> - (0.0, 125.0)) dims = (448.0, 64.0) just = [center top] z = 200
-	displaysprite id = connect_message_top_fill parent = net_popup_container tex = window_fill_cap rgba = ($online_trans_grey) pos = (<pos> - (0.0, 125.0)) dims = (448.0, 64.0) just = [center top] z = 200
-	displaysprite id = connect_message_body parent = net_popup_container tex = window_frame_body_tall rgba = ($online_medium_blue) pos = (<pos> - (0.0, 61.0)) dims = (448.0, 128.0) just = [center top] z = 200 flip_h
-	displaysprite id = connect_message_body_fill parent = net_popup_container tex = window_fill_body_large rgba = ($online_trans_grey) pos = (<pos> - (0.0, 61.0)) dims = (448.0, 128.0) just = [center top] z = 200 flip_h
-	displaysprite id = connect_message_bottom parent = net_popup_container tex = window_frame_cap rgba = ($online_medium_blue) pos = (<pos> + (0.0, 67.0)) dims = (448.0, 64.0) just = [center top] z = 200 flip_h
-	displaysprite id = connect_message_bottom_fill parent = net_popup_container tex = window_fill_cap rgba = ($online_trans_grey) pos = (<pos> + (0.0, 67.0)) dims = (448.0, 64.0) just = [center top] z = 200 flip_h
-	createscreenelement {
-		type = textblockelement
+	displaySprite id = connect_message_top parent = net_popup_container tex = window_frame_cap rgba = ($online_medium_blue) pos = (<pos> - (0.0, 125.0)) dims = (448.0, 64.0) just = [center top] z = 200
+	displaySprite id = connect_message_top_fill parent = net_popup_container tex = window_fill_cap rgba = ($online_trans_grey) pos = (<pos> - (0.0, 125.0)) dims = (448.0, 64.0) just = [center top] z = 200
+	displaySprite id = connect_message_body parent = net_popup_container tex = window_frame_body_tall rgba = ($online_medium_blue) pos = (<pos> - (0.0, 61.0)) dims = (448.0, 128.0) just = [center top] z = 200 flip_h
+	displaySprite id = connect_message_body_fill parent = net_popup_container tex = window_fill_body_large rgba = ($online_trans_grey) pos = (<pos> - (0.0, 61.0)) dims = (448.0, 128.0) just = [center top] z = 200 flip_h
+	displaySprite id = connect_message_bottom parent = net_popup_container tex = window_frame_cap rgba = ($online_medium_blue) pos = (<pos> + (0.0, 67.0)) dims = (448.0, 64.0) just = [center top] z = 200 flip_h
+	displaySprite id = connect_message_bottom_fill parent = net_popup_container tex = window_fill_cap rgba = ($online_trans_grey) pos = (<pos> + (0.0, 67.0)) dims = (448.0, 64.0) just = [center top] z = 200 flip_h
+	CreateScreenElement {
+		type = TextBlockElement
 		id = net_popup_text
 		parent = net_popup_container
 		font = fontgrid_title_gh3
@@ -2569,32 +2569,32 @@ script create_net_popup \{parent = root_window
 		z_priority = 200.1
 		just = [center center]
 	}
-	if gotparam \{add_waiting_dots}
-		runscriptonscreenelement id = net_popup_text append_animating_dots params = {id = net_popup_text text = <popup_text>}
+	if GotParam \{add_waiting_dots}
+		RunScriptOnScreenElement id = net_popup_text append_animating_dots params = {id = net_popup_text text = <popup_text>}
 	endif
 endscript
 
 script append_animating_dots 
 	printf \{"---append_animating_dots"}
 	num_dots = 0
-	if screenelementexists id = <id>
+	if ScreenElementExists id = <id>
 		begin
-		formattext textname = new_text "%a\\n%b" a = <text> b = ($dots_array [<num_dots>])
-		<id> :setprops text = <new_text>
+		FormatText TextName = new_text "%a\\n%b" a = <text> b = ($dots_array [<num_dots>])
+		<id> :SetProps text = <new_text>
 		if (<num_dots> = 3)
 			<num_dots> = 0
 		else
 			<num_dots> = (<num_dots> + 1)
 		endif
-		wait \{0.5
+		Wait \{0.5
 			second}
 		repeat
 	endif
 endscript
 
 script destroy_net_popup 
-	if screenelementexists \{id = net_popup_container}
-		destroyscreenelement \{id = net_popup_container}
+	if ScreenElementExists \{id = net_popup_container}
+		DestroyScreenElement \{id = net_popup_container}
 	endif
 endscript
 
@@ -2617,8 +2617,8 @@ script failedtocreategame
 endscript
 
 script destroy_connection_dialog_scroller 
-	if screenelementexists \{id = connection_dialog_scroller}
-		destroyscreenelement \{id = connection_dialog_scroller}
+	if ScreenElementExists \{id = connection_dialog_scroller}
+		DestroyScreenElement \{id = connection_dialog_scroller}
 	endif
 	destroy_net_popup
 endscript
@@ -2627,7 +2627,7 @@ script create_timeout_dialog
 	destroy_pause_menu_frame
 	destroy_menu \{menu_id = pu_warning_scroll}
 	destroy_menu \{menu_id = popup_warning_container}
-	createscreenelement \{type = vscrollingmenu
+	CreateScreenElement \{type = VScrollingMenu
 		parent = root_window
 		id = connection_dialog_scroller
 		just = [
@@ -2637,8 +2637,8 @@ script create_timeout_dialog
 		dims = (400.0, 480.0)
 		pos = (640.0, 400.0)
 		z_priority = 1.0}
-	createscreenelement {
-		type = vmenu
+	CreateScreenElement {
+		type = VMenu
 		parent = connection_dialog_scroller
 		id = connection_dialog_vmenu
 		pos = (0.0, 0.0)
@@ -2655,7 +2655,7 @@ script create_timeout_dialog
 		choose_script = empty_script
 		z = 200.1
 		text = "CONTINUE"}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = net_popup_container
 		just = [
@@ -2663,8 +2663,8 @@ script create_timeout_dialog
 			center
 		]
 		pos = (0.0, 0.0)}
-	displaysprite id = connect_message_top parent = net_popup_container tex = window_frame_cap rgba = ($online_medium_blue) pos = (640.0, 200.0) dims = (448.0, 64.0) just = [center top] z = 200
-	displaysprite \{id = connect_message_top_fill
+	displaySprite id = connect_message_top parent = net_popup_container tex = window_frame_cap rgba = ($online_medium_blue) pos = (640.0, 200.0) dims = (448.0, 64.0) just = [center top] z = 200
+	displaySprite \{id = connect_message_top_fill
 		parent = net_popup_container
 		tex = window_fill_cap
 		rgba = [
@@ -2680,8 +2680,8 @@ script create_timeout_dialog
 			top
 		]
 		z = 200}
-	displaysprite id = connect_message_body parent = net_popup_container tex = window_frame_body_tall rgba = ($online_medium_blue) pos = (640.0, 264.0) dims = (448.0, 128.0) just = [center top] z = 200 flip_h
-	displaysprite \{id = connect_message_body_fill
+	displaySprite id = connect_message_body parent = net_popup_container tex = window_frame_body_tall rgba = ($online_medium_blue) pos = (640.0, 264.0) dims = (448.0, 128.0) just = [center top] z = 200 flip_h
+	displaySprite \{id = connect_message_body_fill
 		parent = net_popup_container
 		tex = window_fill_body_large
 		rgba = [
@@ -2698,8 +2698,8 @@ script create_timeout_dialog
 		]
 		z = 200
 		flip_h}
-	displaysprite id = connect_message_bottom parent = net_popup_container tex = window_frame_cap rgba = ($online_medium_blue) pos = (640.0, 392.0) dims = (448.0, 64.0) just = [center top] z = 200 flip_h
-	displaysprite \{id = connect_message_bottom_fill
+	displaySprite id = connect_message_bottom parent = net_popup_container tex = window_frame_cap rgba = ($online_medium_blue) pos = (640.0, 392.0) dims = (448.0, 64.0) just = [center top] z = 200 flip_h
+	displaySprite \{id = connect_message_bottom_fill
 		parent = net_popup_container
 		tex = window_fill_cap
 		rgba = [
@@ -2716,8 +2716,8 @@ script create_timeout_dialog
 		]
 		z = 200
 		flip_h}
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = net_popup_container
 		font = fontgrid_title_gh3
 		scale = 1.0
@@ -2728,7 +2728,7 @@ script create_timeout_dialog
 		z_priority = 200.0
 		just = [center center]
 	}
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = connection_dialog_vmenu}
 endscript
 
@@ -2736,7 +2736,7 @@ script create_failed_connection_dialog
 	destroy_pause_menu_frame
 	destroy_menu \{menu_id = pu_warning_scroll}
 	destroy_menu \{menu_id = popup_warning_container}
-	createscreenelement \{type = vscrollingmenu
+	CreateScreenElement \{type = VScrollingMenu
 		parent = root_window
 		id = connection_dialog_scroller
 		just = [
@@ -2746,8 +2746,8 @@ script create_failed_connection_dialog
 		dims = (400.0, 480.0)
 		pos = (640.0, 400.0)
 		z_priority = 1.0}
-	createscreenelement {
-		type = vmenu
+	CreateScreenElement {
+		type = VMenu
 		parent = connection_dialog_scroller
 		id = connection_dialog_vmenu
 		pos = (0.0, 0.0)
@@ -2765,7 +2765,7 @@ script create_failed_connection_dialog
 		choose_script = empty_script
 		z = 200.1
 		text = "CONTINUE"}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = net_popup_container
 		just = [
@@ -2773,8 +2773,8 @@ script create_failed_connection_dialog
 			center
 		]
 		pos = (0.0, 0.0)}
-	displaysprite id = connect_message_top parent = net_popup_container tex = window_frame_cap rgba = ($online_medium_blue) pos = (640.0, 200.0) dims = (448.0, 64.0) just = [center top] z = 200
-	displaysprite \{id = connect_message_top_fill
+	displaySprite id = connect_message_top parent = net_popup_container tex = window_frame_cap rgba = ($online_medium_blue) pos = (640.0, 200.0) dims = (448.0, 64.0) just = [center top] z = 200
+	displaySprite \{id = connect_message_top_fill
 		parent = net_popup_container
 		tex = window_fill_cap
 		rgba = [
@@ -2790,8 +2790,8 @@ script create_failed_connection_dialog
 			top
 		]
 		z = 200}
-	displaysprite id = connect_message_body parent = net_popup_container tex = window_frame_body_tall rgba = ($online_medium_blue) pos = (640.0, 264.0) dims = (448.0, 128.0) just = [center top] z = 200 flip_h
-	displaysprite \{id = connect_message_body_fill
+	displaySprite id = connect_message_body parent = net_popup_container tex = window_frame_body_tall rgba = ($online_medium_blue) pos = (640.0, 264.0) dims = (448.0, 128.0) just = [center top] z = 200 flip_h
+	displaySprite \{id = connect_message_body_fill
 		parent = net_popup_container
 		tex = window_fill_body_large
 		rgba = [
@@ -2808,8 +2808,8 @@ script create_failed_connection_dialog
 		]
 		z = 200
 		flip_h}
-	displaysprite id = connect_message_bottom parent = net_popup_container tex = window_frame_cap rgba = ($online_medium_blue) pos = (640.0, 392.0) dims = (448.0, 64.0) just = [center top] z = 200 flip_h
-	displaysprite \{id = connect_message_bottom_fill
+	displaySprite id = connect_message_bottom parent = net_popup_container tex = window_frame_cap rgba = ($online_medium_blue) pos = (640.0, 392.0) dims = (448.0, 64.0) just = [center top] z = 200 flip_h
+	displaySprite \{id = connect_message_bottom_fill
 		parent = net_popup_container
 		tex = window_fill_cap
 		rgba = [
@@ -2826,8 +2826,8 @@ script create_failed_connection_dialog
 		]
 		z = 200
 		flip_h}
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = net_popup_container
 		font = fontgrid_title_gh3
 		scale = 1.0
@@ -2838,29 +2838,29 @@ script create_failed_connection_dialog
 		z_priority = 200.0
 		just = [center center]
 	}
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = connection_dialog_vmenu}
 endscript
 
 script net_repeat_last_search 
-	wait \{1
+	Wait \{1
 		gameframe}
 	ui_flow_manager_respond_to_action \{action = select_done}
 endscript
 
 script check_if_selecting_tie_breaker \{player = 1}
-	if ishost
-		if (($tie_breaker = host) && (<player> = 1))
+	if IsHost
+		if (($tie_breaker = HOST) && (<player> = 1))
 			return \{selecting_tiebreaker = 1}
 		endif
-		if (($tie_breaker = client) && (<player> = 2))
+		if (($tie_breaker = CLIENT) && (<player> = 2))
 			return \{selecting_tiebreaker = 1}
 		endif
 	else
-		if (($tie_breaker = host) && (<player> = 2))
+		if (($tie_breaker = HOST) && (<player> = 2))
 			return \{selecting_tiebreaker = 1}
 		endif
-		if (($tie_breaker = client) && (<player> = 1))
+		if (($tie_breaker = CLIENT) && (<player> = 1))
 			return \{selecting_tiebreaker = 1}
 		endif
 	endif
@@ -2886,19 +2886,19 @@ script connection_lost_end_song
 			current_health = 1.0}
 		change \{structurename = player2_status
 			current_health = 0.0}
-		guitarevent_songwon \{battle_win = 1}
+		GuitarEvent_SongWon \{battle_win = 1}
 	else
-		extendcrc \{song_won
+		ExtendCRC \{song_won
 			'p1'
 			out = type}
-		broadcastevent type = <type>
+		BroadcastEvent type = <type>
 	endif
 endscript
 
 script test_events \{passed_in_value = 'test value'}
 	printf \{"test_events"}
 	printstruct <...>
-	netsessionfunc \{obj = stats
+	NetSessionFunc \{obj = stats
 		func = write_key_value
 		params = {
 			wtf_value = 'test value'
@@ -2919,10 +2919,10 @@ endscript
 script xbox360_live_not_allowed 
 	clean_up_user_control_helpers
 	destroy_menu_backdrop
-	if screenelementexists \{id = warning_message_container}
-		destroyscreenelement \{id = warning_message_container}
+	if ScreenElementExists \{id = warning_message_container}
+		DestroyScreenElement \{id = warning_message_container}
 	endif
-	create_menu_backdrop \{texture = online_background}
+	create_menu_backdrop \{texture = Online_Background}
 	event_handlers = [
 		{pad_up generic_menu_up_or_down_sound params = {up}}
 		{pad_down generic_menu_up_or_down_sound params = {down}}
@@ -2933,7 +2933,7 @@ script xbox360_live_not_allowed
 	<bookend_r_pos> = (710.0, 533.0)
 	<bookend_l_pos> = (500.0, 533.0)
 	new_menu scrollid = sign_in_scoller vmenuid = sign_in_vmenu use_backdrop = (0) menu_pos = <menu_pos> just = [left top] event_handlers = <event_handlers> spacing = -45
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = signin_container
 		pos = (0.0, 0.0)}
@@ -2951,8 +2951,8 @@ script xbox360_live_not_allowed
 		]}
 	create_pause_menu_frame \{parent = signin_container
 		z = 5}
-	displaysprite \{parent = signin_container
-		tex = dialog_title_bg
+	displaySprite \{parent = signin_container
+		tex = Dialog_Title_BG
 		dims = (224.0, 224.0)
 		z = 9
 		pos = (640.0, 100.0)
@@ -2961,8 +2961,8 @@ script xbox360_live_not_allowed
 			top
 		]
 		flip_v}
-	displaysprite \{parent = signin_container
-		tex = dialog_title_bg
+	displaySprite \{parent = signin_container
+		tex = Dialog_Title_BG
 		dims = (224.0, 224.0)
 		z = 9
 		pos = (640.0, 100.0)
@@ -2970,7 +2970,7 @@ script xbox360_live_not_allowed
 			left
 			top
 		]}
-	displaysprite \{parent = signin_container
+	displaySprite \{parent = signin_container
 		id = options_bg_1
 		tex = dialog_bg
 		pos = (640.0, 500.0)
@@ -2980,7 +2980,7 @@ script xbox360_live_not_allowed
 			center
 			botom
 		]}
-	displaysprite \{parent = signin_container
+	displaySprite \{parent = signin_container
 		id = options_bg_2
 		tex = dialog_bg
 		pos = (640.0, 530.0)
@@ -2991,7 +2991,7 @@ script xbox360_live_not_allowed
 			top
 		]
 		flip_h}
-	createscreenelement \{type = textelement
+	CreateScreenElement \{type = TextElement
 		parent = signin_container
 		font = fontgrid_title_gh3
 		scale = 1.3
@@ -3016,23 +3016,23 @@ script xbox360_live_not_allowed
 			0
 			255
 		]}
-	if isxenon
+	if isXenon
 		<sign_in_text> = "The current Gamer Profile is not enabled for Xbox LIVE multiplayer game play."
 	else
-		if gotparam \{age_restricted}
+		if GotParam \{age_restricted}
 			<sign_in_text> = "Online service is disabled on your PLAYSTATION®Network account due to parental control restrictions."
 		else
 			<sign_in_text> = "You must be signed in to enter the lobby."
 		endif
 	endif
 	scale = 1
-	stringlength string = <sign_in_text>
+	StringLength string = <sign_in_text>
 	printf "len = %d" d = <str_len>
 	if (<str_len> >= 135)
 		<scale> = 0.8
 	endif
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = signin_container
 		font = fontgrid_title_gh3
 		scale = 0.6
@@ -3046,7 +3046,7 @@ script xbox360_live_not_allowed
 		dims = (800.0, 320.0)
 		line_spacing = 1.0
 	}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = sign_in_vmenu
 		dims = (0.0, 100.0)
 		event_handlers = [
@@ -3067,8 +3067,8 @@ script xbox360_live_not_allowed
 			}
 		]}
 	container_id = <id>
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <container_id>
 		local_id = text
 		font = fontgrid_title_gh3
@@ -3079,12 +3079,12 @@ script xbox360_live_not_allowed
 		z_priority = (<z> + 5)
 	}
 	fit_text_into_menu_item id = <id> max_width = 240
-	getscreenelementdims id = <id>
-	createscreenelement {
-		type = spriteelement
+	GetScreenElementDims id = <id>
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <container_id>
 		local_id = bookend_left
-		texture = dialog_highlight
+		texture = Dialog_Highlight
 		just = [right center]
 		pos = ((0.0, 20.0) + (1.0, 0.0) * (<width> / (-2)))
 		alpha = 0.0
@@ -3092,11 +3092,11 @@ script xbox360_live_not_allowed
 		scale = (1.0, 1.0)
 		flip_v
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <container_id>
 		local_id = bookend_right
-		texture = dialog_highlight
+		texture = Dialog_Highlight
 		just = [left center]
 		pos = ((0.0, 20.0) + (1.0, 0.0) * (<width> / (2)))
 		alpha = 0.0
@@ -3109,7 +3109,7 @@ script xbox360_live_not_allowed
 	add_user_control_helper \{text = "BACK"
 		button = red
 		z = 100}
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = sign_in_vmenu}
 endscript
 
@@ -3124,19 +3124,19 @@ script xenon_auto_load_progress
 				alpha = 1.0
 				z_priority = 20000
 				id = invite_screenfader}
-			wait \{1
+			Wait \{1
 				gameframe}
 			stoprendering
 			shutdown_game_for_signin_change \{signin_change = 1}
-			launchevent \{type = unfocus
+			LaunchEvent \{type = unfocus
 				target = root_window}
 			startrendering
-			wait \{1
+			Wait \{1
 				gameframe}
 			fadetoblack \{off
 				time = 0
 				id = invite_screenfader}
-			wait \{1
+			Wait \{1
 				gameframe}
 			change invite_controller = ($primary_controller)
 			start_flow_manager \{flow_state = bootup_press_any_button_fs}
@@ -3147,42 +3147,42 @@ script xenon_auto_load_progress
 endscript
 
 script scale_element_to_size \{time = 0}
-	if NOT gotparam \{id}
+	if NOT GotParam \{id}
 		printf \{'Did not pass in id to scale_element_to_size! Returning'}
 		return
 	endif
-	getscreenelementdims id = <id>
-	orig_height = <height>
+	GetScreenElementDims id = <id>
+	orig_height = <Height>
 	orig_width = <width>
-	if NOT gotparam \{target_width}
+	if NOT GotParam \{target_width}
 		target_width = <orig_width>
 	endif
-	if NOT gotparam \{target_height}
+	if NOT GotParam \{target_height}
 		target_height = <orig_height>
 	endif
-	xscale = (<target_width> / (<orig_width> * 1.0))
-	yscale = (<target_height> / (<orig_height> * 1.0))
-	<id> :domorph scale = (<xscale> * (1.0, 0.0) + <yscale> * (0.0, 1.0)) time = <time>
+	xScale = (<target_width> / (<orig_width> * 1.0))
+	yScale = (<target_height> / (<orig_height> * 1.0))
+	<id> :DoMorph scale = (<xScale> * (1.0, 0.0) + <yScale> * (0.0, 1.0)) time = <time>
 endscript
 
 script translate_screen_element \{time = 0}
-	if NOT gotparam \{id}
+	if NOT GotParam \{id}
 		printf \{'Did not pass in id to translate_screen_element! Returning'}
 		return
 	endif
-	if NOT gotparam \{pos}
-		getscreenelementposition id = <id>
+	if NOT GotParam \{pos}
+		GetScreenElementPosition id = <id>
 		new_position = <screenelementpos>
 	else
 		new_position = <pos>
 	endif
-	<id> :domorph pos = <new_position> time = <time>
+	<id> :DoMorph pos = <new_position> time = <time>
 endscript
 
 script get_my_highway_layout 
 	player = 1
 	begin
-	formattext checksumname = player_status 'player%p_status' p = <player>
+	FormatText checksumname = player_status 'player%p_status' p = <player>
 	if ($<player_status>.is_local_client)
 		return my_highway = ($<player_status>.highway_layout)
 	endif
@@ -3196,10 +3196,10 @@ script agora_update
 	endif
 	get_game_mode_name
 	get_current_band_info
-	getglobaltags <band_info>
+	GetGlobalTags <band_info>
 	band_id = <band_unique_id>
-	formattext textname = band_name '%s' s = <name>
-	if NOT gotparam \{new_band}
+	FormatText TextName = band_name '%s' s = <name>
+	if NOT GotParam \{new_band}
 		get_difficulty_text_nl difficulty = ($current_difficulty)
 		if (<game_mode_name> = p2_career)
 			coop_difficulty = <difficulty_text_nl>
@@ -3228,20 +3228,20 @@ script agora_update
 			career_score_overall_expert = (<diff_completion_score> [3])
 		endif
 	endif
-	getglobaltags \{achievement_info}
+	GetGlobalTags \{achievement_info}
 	printstruct <...>
-	casttointeger \{total_points_in_career_mode_easy}
+	CastToInteger \{total_points_in_career_mode_easy}
 	campaign_score_easy = <total_points_in_career_mode_easy>
-	casttointeger \{total_points_in_career_mode_medium}
+	CastToInteger \{total_points_in_career_mode_medium}
 	campaign_score_medium = <total_points_in_career_mode_medium>
-	casttointeger \{total_points_in_career_mode_hard}
+	CastToInteger \{total_points_in_career_mode_hard}
 	campaign_score_hard = <total_points_in_career_mode_hard>
-	casttointeger \{total_points_in_career_mode_expert}
+	CastToInteger \{total_points_in_career_mode_expert}
 	campaign_score_expert = <total_points_in_career_mode_expert>
 	campaign_score_overall = (<total_points_in_career_mode_expert> + <total_points_in_career_mode_hard> + <total_points_in_career_mode_medium> + <total_points_in_career_mode_easy>)
 	achievements = 'what achievements?'
 	purchases = 'test purchases'
-	writeupdate <...>
+	WriteUpdate <...>
 endscript
 
 script agora_write_stats 
@@ -3258,16 +3258,16 @@ script agora_write_stats
 	endif
 	player_id = ($player1_status.controller)
 	get_num_players_by_gamemode
-	getglobaltags \{user_options
+	GetGlobalTags \{user_options
 		param = lefty_flip_p1}
 	get_current_band_info
-	getglobaltags <band_info>
+	GetGlobalTags <band_info>
 	band_id = <band_unique_id>
 	if ($is_network_game)
-		if (netsessionfunc obj = match func = get_gamertag)
-			formattext textname = gamertag1 '%s' s = <name>
+		if (NetSessionFunc obj = match func = get_gamertag)
+			FormatText TextName = gamertag1 '%s' s = <name>
 		endif
-		formattext textname = gamertag2 '%s' s = ($opponent_gamertag)
+		FormatText TextName = gamertag2 '%s' s = ($opponent_gamertag)
 		p1_name = <gamertag1>
 		p2_name = <gamertag2>
 		retrieve_player_net_id \{player = 2}
@@ -3277,15 +3277,15 @@ script agora_write_stats
 		if ($coop_dlc_active = 0)
 			if (($game_mode = p1_career) || ($game_mode = p2_career))
 				menu_ebn_get_band_name_text
-				stringremovetrailingwhitespace string = <band_name_text_string>
-				formattext textname = band_text '%s' s = <band_name_text_string>
+				StringRemoveTrailingWhitespace string = <band_name_text_string>
+				FormatText TextName = band_text '%s' s = <band_name_text_string>
 				<p1_name> = <band_text>
 				<p2_name> = <band_text>
 			else
 			endif
 		endif
 	endif
-	venue = (($levelzones.$current_level).name)
+	venue = (($LevelZones.$current_level).name)
 	get_game_mode_name
 	switch <game_mode_name>
 		case 'p2_battle'
@@ -3307,7 +3307,7 @@ script agora_write_stats
 	title = <song_prefix>
 	if ($player1_status.part = guitar)
 		part = 'guitar'
-	elseif ($player1_status.part = bass)
+	elseif ($player1_status.part = Bass)
 		part = 'bass'
 	else
 		part = 'rhythm'
@@ -3315,7 +3315,7 @@ script agora_write_stats
 	get_difficulty_text_nl difficulty = ($current_difficulty)
 	difficulty = <difficulty_text_nl>
 	score = ($player1_status.score)
-	casttointeger \{score}
+	CastToInteger \{score}
 	stars = ($player1_status.stars)
 	notes_hit = ($player1_status.notes_hit)
 	notes_missed = (($player1_status.total_notes) - ($player1_status.notes_hit))
@@ -3343,7 +3343,7 @@ script agora_write_stats
 		endif
 		if ($player2_status.part = guitar)
 			part2 = 'guitar'
-		elseif ($player2_status.part = bass)
+		elseif ($player2_status.part = Bass)
 			part2 = 'bass'
 		else
 			part2 = 'rhythm'
@@ -3351,7 +3351,7 @@ script agora_write_stats
 		get_difficulty_text_nl difficulty = ($current_difficulty2)
 		difficulty2 = <difficulty_text_nl>
 		score2 = ($player2_status.score)
-		casttointeger \{score2}
+		CastToInteger \{score2}
 		stars2 = ($player2_status.stars)
 		notes_hit2 = ($player2_status.notes_hit)
 		notes_missed2 = (($player2_status.total_notes) - ($player2_status.notes_hit))
@@ -3371,21 +3371,21 @@ script agora_write_stats
 		guitar2 = <instrument_name>
 		skin2 = <instrument_name>
 		character_name = <p1_character_name>
-		writemultiperformance <...>
+		WriteMultiPerformance <...>
 	else
 		winner = <p1_name>
-		writeperformance <...>
+		WritePerformance <...>
 	endif
 endscript
 
-script writeperformance \{band_id = default_band_id
+script WritePerformance \{band_id = default_band_id
 		venue = 'test venue'
 		mode = 'test mode'
 		submode = 'test submode'
 		cheats = 'all cheats'
 		title = 'killing me softly'
 		difficulty = 'test'
-		speed = 'test'
+		Speed = 'test'
 		star_power_available = 0
 		player_id = 0
 		part = 'guitar'
@@ -3401,38 +3401,38 @@ script writeperformance \{band_id = default_band_id
 		guitar = 'test'
 		skin = 'test'
 		outfit = 'test'}
-	if ($cheat_airguitar = 1)
+	if ($Cheat_AirGuitar = 1)
 		air_guitar_active = air_guitar_active
 	endif
-	if ($cheat_performancemode = 1)
+	if ($Cheat_PerformanceMode = 1)
 		performance_mode = performance_mode
 	endif
-	if ($cheat_hyperspeed > 0)
+	if ($Cheat_Hyperspeed > 0)
 		hyper_speed = hyper_speed
 	endif
-	if ($cheat_nofail = 1)
+	if ($Cheat_NoFail = 1)
 		no_fail = no_fail
 	endif
-	if ($cheat_easyexpert = 1)
+	if ($Cheat_EasyExpert = 1)
 		easy_expert = easy_expert
 	endif
-	if ($cheat_precisionmode = 1)
+	if ($Cheat_PrecisionMode = 1)
 		precision_mode = precision_mode
 	endif
-	if ($cheat_bretmichaels = 1)
+	if ($Cheat_BretMichaels = 1)
 		bret_michaels = bret_michaels
 	endif
 	printf \{"WritePerformance"}
-	netsessionfunc obj = stats func = write_performance params = {<...>}
+	NetSessionFunc obj = stats func = write_performance params = {<...>}
 endscript
 
-script writemultiperformance \{winner = 'participant_1'
+script WriteMultiPerformance \{winner = 'participant_1'
 		venue = 'test venue'
 		mode = 'test mode'
 		cheats = 'all cheats'
 		title = 'killing me softly'
 		difficulty = 'test'
-		speed = 'test'
+		Speed = 'test'
 		star_power_available = 0
 		player_id = 0
 		part = 'guitar'
@@ -3462,19 +3462,19 @@ script writemultiperformance \{winner = 'participant_1'
 		guitar2 = 'test'
 		skin2 = 'test'
 		outfit2 = 'test'}
-	netsessionfunc obj = stats func = write_multi_match params = {<...>}
+	NetSessionFunc obj = stats func = write_multi_match params = {<...>}
 endscript
 
-script writeupdate \{band_id = 0
+script WriteUpdate \{band_id = 0
 		band_name = 'test name'
-		cash = 100
+		Cash = 100
 		campaign_score_easy = 0
 		campaign_score_medium = 0
 		campaign_score_hard = 0
 		campaign_score_expert = 0
 		campaign_score_overall = 0
 		achievements = 'temp achievement string'}
-	netsessionfunc obj = stats func = write_update params = {<...>}
+	NetSessionFunc obj = stats func = write_update params = {<...>}
 endscript
 
 script invite_accepted 
@@ -3486,7 +3486,7 @@ script invite_accepted
 	endif
 	if ((($is_network_game = 0) && ($playing_song)) &&
 			(($game_mode = p2_battle) || ($game_mode = p2_faceoff) || ($game_mode = p2_pro_faceoff) || ($game_mode = p2_career)))
-		if (gameispaused)
+		if (GameIsPaused)
 			destroy_pause_menu
 		endif
 		create_popup_warning_menu {
@@ -3515,7 +3515,7 @@ script invite_accepted
 endscript
 
 script accepted_invite_agree 
-	if (gameispaused)
+	if (GameIsPaused)
 		unpausegh3
 	endif
 	do_join_invite_stuff <...> accepted_invite
@@ -3523,7 +3523,7 @@ endscript
 
 script accepted_invite_disagree 
 	destroy_popup_warning_menu
-	if (gameispaused)
+	if (GameIsPaused)
 		create_pause_menu
 	else
 		pausegh3
@@ -3532,12 +3532,12 @@ endscript
 
 script send_fail_song_message \{wait_frames = 30
 		quit_early = 0}
-	if (ishost)
+	if (IsHost)
 		loser = 0
 	else
 		loser = 1
 	endif
-	sendnetmessage {
+	SendNetMessage {
 		type = fail_song
 		stars = ($player1_status.stars)
 		note_streak = ($player1_status.best_run)
@@ -3546,12 +3546,12 @@ script send_fail_song_message \{wait_frames = 30
 		quit_early_flag = <quit_early>
 		loser = <loser>
 	}
-	wait <wait_frames> gameframes
+	Wait <wait_frames> gameframes
 endscript
 
 script do_join_invite_stuff 
 	printf \{"--- do_join_invite_stuff"}
-	if gotparam \{accepted_invite}
+	if GotParam \{accepted_invite}
 		printf \{"accepted invite"}
 		change \{online_signin_autoload_required = 0}
 		wait_for_safe_shutdown
@@ -3563,37 +3563,37 @@ script do_join_invite_stuff
 				alpha = 1.0
 				z_priority = 20000
 				id = invite_screenfader}
-			wait \{1
+			Wait \{1
 				gameframe}
 			stoprendering
 			shutdown_game_for_signin_change \{signin_change = 1}
-			launchevent \{type = unfocus
+			LaunchEvent \{type = unfocus
 				target = root_window}
 			startrendering
-			wait \{1
+			Wait \{1
 				gameframe}
 			fadetoblack \{off
 				time = 0
 				id = invite_screenfader}
-			wait \{1
+			Wait \{1
 				gameframe}
 			start_flow_manager \{flow_state = bootup_press_any_button_fs}
 		else
 			stoprendering
 			shutdown_game_for_signin_change \{unloadcontent = 0}
 			change \{invite_controller = -1}
-			launchevent \{type = unfocus
+			LaunchEvent \{type = unfocus
 				target = root_window}
 			online_menu_init
 			start_flow_manager \{flow_state = invite_joining_game_fs}
 			startrendering
 			if NOT ($primary_controller = $player1_status.controller)
 				change structurename = player1_status controller = ($primary_controller)
-				getglobaltags \{user_options}
+				GetGlobalTags \{user_options}
 				change structurename = player1_status lefthanded_gems = <lefty_flip_p2>
 				change structurename = player1_status lefthanded_button_ups = <lefty_flip_p2>
 			endif
-			joininviteserver
+			JoinInviteServer
 		endif
 	else
 		printf \{"didn't get an invite"}
@@ -3614,21 +3614,21 @@ script ui_print_gamertags \{pos1 = (235.0, 100.0)
 			top
 		]
 		offscreen = 0}
-	if (netsessionfunc obj = match func = get_gamertag)
+	if (NetSessionFunc obj = match func = get_gamertag)
 		ui_print_gamertag name = <name> start_pos = <pos1> color = ($player1_color) player = 1 just = <just1> dims = <dims> offscreen = <offscreen>
 	endif
 	ui_print_gamertag name = ($opponent_gamertag) start_pos = <pos2> color = ($player2_color) player = 2 just = <just2> dims = <dims> offscreen = <offscreen>
 endscript
 
 script ui_print_gamertag start_pos = (235.0, 100.0) color = ($player1_color) player = 1 dims = (450.0, 35.0) z = 60 offscreen = 0
-	if NOT gotparam \{name}
+	if NOT GotParam \{name}
 		get_character_name player = <player>
 		name = <display_name>
 	endif
-	if NOT screenelementexists \{id = gamertag_container}
+	if NOT ScreenElementExists \{id = gamertag_container}
 		if (<offscreen> = 1)
-			createscreenelement {
-				type = containerelement
+			CreateScreenElement {
+				type = ContainerElement
 				id = gamertag_container
 				parent = root_window
 				pos = (0.0, -400.0)
@@ -3636,8 +3636,8 @@ script ui_print_gamertag start_pos = (235.0, 100.0) color = ($player1_color) pla
 				z_priority = <z>
 			}
 		else
-			createscreenelement {
-				type = containerelement
+			CreateScreenElement {
+				type = ContainerElement
 				id = gamertag_container
 				parent = root_window
 				pos = (0.0, 0.0)
@@ -3646,21 +3646,21 @@ script ui_print_gamertag start_pos = (235.0, 100.0) color = ($player1_color) pla
 			}
 		endif
 	endif
-	formattext checksumname = gamertag_text_px 'gamertag_text_p%d' d = <player>
-	formattext checksumname = debug_gamertag_container_px 'debug_gamertag_container_p%d' d = <player>
-	formattext checksumname = gt_frame_top 'gt_frame_top_p%d' d = <player>
-	formattext checksumname = gt_frame_top_fill 'gt_frame_top_fill_p%d' d = <player>
-	formattext checksumname = gt_frame_bottom 'gt_frame_bottom_p%d' d = <player>
-	formattext checksumname = gt_frame_bottom_fill 'gt_frame_bottom_fill_p%d' d = <player>
-	if (screenelementexists id = <gamertag_text_px>)
-		if screenelementexists \{id = gamertag_icon_container}
-			setscreenelementprops \{id = gamertag_icon_container
+	FormatText checksumname = gamertag_text_px 'gamertag_text_p%d' d = <player>
+	FormatText checksumname = debug_gamertag_container_px 'debug_gamertag_container_p%d' d = <player>
+	FormatText checksumname = gt_frame_top 'gt_frame_top_p%d' d = <player>
+	FormatText checksumname = gt_frame_top_fill 'gt_frame_top_fill_p%d' d = <player>
+	FormatText checksumname = gt_frame_bottom 'gt_frame_bottom_p%d' d = <player>
+	FormatText checksumname = gt_frame_bottom_fill 'gt_frame_bottom_fill_p%d' d = <player>
+	if (ScreenElementExists id = <gamertag_text_px>)
+		if ScreenElementExists \{id = gamertag_icon_container}
+			SetScreenElementProps \{id = gamertag_icon_container
 				alpha = 1}
 		endif
 		return
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = gamertag_container
 		font = fontgrid_title_gh3
 		rgba = <color>
@@ -3671,7 +3671,7 @@ script ui_print_gamertag start_pos = (235.0, 100.0) color = ($player1_color) pla
 		scale = 0.75
 		z_priority = (<z> + 1)
 	}
-	getscreenelementdims id = <gamertag_text_px>
+	GetScreenElementDims id = <gamertag_text_px>
 	x_dim = ((<dims>.(1.0, 0.0)) * 0.5625)
 	y_dim = (<dims>.(0.0, 1.0) * 0.75)
 	x_scale = 1.0
@@ -3679,12 +3679,12 @@ script ui_print_gamertag start_pos = (235.0, 100.0) color = ($player1_color) pla
 	if (<width> > <x_dim>)
 		<x_scale> = (<x_dim> / <width>)
 	endif
-	if (<height> > <y_dim>)
-		<y_scale> = (<y_dim> / <height>)
+	if (<Height> > <y_dim>)
+		<y_scale> = (<y_dim> / <Height>)
 	endif
 	scale_pair = ((1.0, 0.0) * <x_scale> + (0.0, 1.0) * <y_scale>)
-	setscreenelementprops {id = <gamertag_text_px> scale = <scale_pair>}
-	displaysprite {
+	SetScreenElementProps {id = <gamertag_text_px> scale = <scale_pair>}
+	displaySprite {
 		id = <gt_frame_top>
 		parent = gamertag_container
 		tex = window_frame_cap
@@ -3693,7 +3693,7 @@ script ui_print_gamertag start_pos = (235.0, 100.0) color = ($player1_color) pla
 		just = <just>
 		z = <z>
 	}
-	displaysprite {
+	displaySprite {
 		id = <gt_frame_top_fill>
 		parent = gamertag_container
 		tex = window_fill_cap
@@ -3702,17 +3702,17 @@ script ui_print_gamertag start_pos = (235.0, 100.0) color = ($player1_color) pla
 		just = <just>
 		z = <z>
 	}
-	getscreenelementdims id = <gamertag_text_px>
+	GetScreenElementDims id = <gamertag_text_px>
 	text_w = (<width> + 80)
 	text_h = (<dims>.(0.0, 1.0) + 10)
-	getscreenelementdims id = <gt_frame_top>
+	GetScreenElementDims id = <gt_frame_top>
 	frame_w = (<width> / 1.0)
-	frame_h = (<height> / 1.0)
+	frame_h = (<Height> / 1.0)
 	frame_scale_x = (<text_w> / <frame_w>)
 	frame_scale_y = (<text_h> / <frame_h>)
 	frame_scale = ((<frame_scale_x> * (1.0, 0.0)) + (<frame_scale_y> * (0.0, 0.5625)))
-	setscreenelementprops {id = <gt_frame_top> scale = <frame_scale>}
-	setscreenelementprops {id = <gt_frame_top_fill> scale = <frame_scale>}
+	SetScreenElementProps {id = <gt_frame_top> scale = <frame_scale>}
+	SetScreenElementProps {id = <gt_frame_top_fill> scale = <frame_scale>}
 	x_adjust = (0.0, 0.0)
 	y_adjust = (0.0, 0.0)
 	y_adjust = ((0.0, 1.0) * ((-5 * <y_scale>) -5))
@@ -3722,66 +3722,66 @@ script ui_print_gamertag start_pos = (235.0, 100.0) color = ($player1_color) pla
 		x_adjust = ((1.0, 0.0) * -40)
 	endif
 	new_pos = (<start_pos> + (<x_adjust> + <y_adjust>))
-	setscreenelementprops {id = <gt_frame_top> pos = <new_pos>}
-	setscreenelementprops {id = <gt_frame_top_fill> pos = <new_pos>}
-	getscreenelementprops id = <gt_frame_top>
-	getscreenelementdims id = <gt_frame_top>
-	displaysprite {
+	SetScreenElementProps {id = <gt_frame_top> pos = <new_pos>}
+	SetScreenElementProps {id = <gt_frame_top_fill> pos = <new_pos>}
+	GetScreenElementProps id = <gt_frame_top>
+	GetScreenElementDims id = <gt_frame_top>
+	displaySprite {
 		id = <gt_frame_bottom>
 		parent = gamertag_container
 		tex = window_frame_cap
 		rgba = ($online_medium_blue)
-		pos = (<pos> + (<height> * (0.0, 1.0)))
+		pos = (<pos> + (<Height> * (0.0, 1.0)))
 		just = <just>
 		scale = <scale>
 		z = (<z> + 5)
 		flip_h
 	}
-	displaysprite {
+	displaySprite {
 		id = <gt_frame_bottom_fill>
 		parent = gamertag_container
 		tex = window_fill_cap
 		rgba = ($online_trans_grey)
-		pos = (<pos> + (<height> * (0.0, 1.0)))
+		pos = (<pos> + (<Height> * (0.0, 1.0)))
 		just = <just>
 		scale = <scale>
 		z = <z>
 		flip_h
 	}
-	getplatform
+	GetPlatform
 endscript
 
 script destroy_gamertags 
-	if screenelementexists \{id = gamertag_container}
-		destroyscreenelement \{id = gamertag_container}
+	if ScreenElementExists \{id = gamertag_container}
+		DestroyScreenElement \{id = gamertag_container}
 	endif
-	if screenelementexists \{id = gamertag_container_p1}
-		destroyscreenelement \{id = gamertag_container_p1}
+	if ScreenElementExists \{id = gamertag_container_p1}
+		DestroyScreenElement \{id = gamertag_container_p1}
 	endif
-	if screenelementexists \{id = gamertag_container_p2}
-		destroyscreenelement \{id = gamertag_container_p2}
+	if ScreenElementExists \{id = gamertag_container_p2}
+		DestroyScreenElement \{id = gamertag_container_p2}
 	endif
-	if screenelementexists \{id = debug_gamertag_container_p1}
-		destroyscreenelement \{id = debug_gamertag_container_p1}
+	if ScreenElementExists \{id = debug_gamertag_container_p1}
+		DestroyScreenElement \{id = debug_gamertag_container_p1}
 	endif
-	if screenelementexists \{id = debug_gamertag_container_p2}
-		destroyscreenelement \{id = debug_gamertag_container_p2}
+	if ScreenElementExists \{id = debug_gamertag_container_p2}
+		DestroyScreenElement \{id = debug_gamertag_container_p2}
 	endif
 endscript
 
 script destroy_gamertag_container \{player = 1}
-	formattext checksumname = gamertag_container 'gamertag_container_p%d' d = <player>
-	if screenelementexists id = <gamertag_container>
-		destroyscreenelement id = <gamertag_container>
+	FormatText checksumname = gamertag_container 'gamertag_container_p%d' d = <player>
+	if ScreenElementExists id = <gamertag_container>
+		DestroyScreenElement id = <gamertag_container>
 	endif
 endscript
 
 script morph_gamertags 
-	if screenelementexists \{id = gamertag_container}
+	if ScreenElementExists \{id = gamertag_container}
 		move_gamertag_pos = ((1.0 - <delta>) * (($g_hud_2d_struct_used).offscreen_gamertag_pos) + (<delta> * ((($g_hud_2d_struct_used).final_gamertag_pos) + <off_set>)))
-		doscreenelementmorph id = gamertag_container pos = <move_gamertag_pos> time = <time_to_move>
-		if screenelementexists \{id = gamertag_icon_container}
-			setscreenelementprops \{id = gamertag_icon_container
+		doScreenElementMorph id = gamertag_container pos = <move_gamertag_pos> time = <time_to_move>
+		if ScreenElementExists \{id = gamertag_icon_container}
+			SetScreenElementProps \{id = gamertag_icon_container
 				alpha = 0}
 		endif
 	endif
@@ -3793,8 +3793,8 @@ script coop_attempt_star_power
 		return
 	endif
 	change \{net_star_power_pending = 1}
-	sendnetmessage \{type = coop_star_power_notify}
-	wait \{30
+	SendNetMessage \{type = coop_star_power_notify}
+	Wait \{30
 		frames}
 	change \{net_star_power_pending = 0}
 endscript
@@ -3802,17 +3802,17 @@ endscript
 script test_write_leaderboards 
 	printf \{"test_write_leaderboards"}
 	begin_singleplayer_game
-	wait \{0.3
+	Wait \{0.3
 		seconds
 		ignoreslomo}
 	if NOT should_update_stats_leader_board
 		return
 	endif
-	netsessionfunc obj = stats func = write_stats params = {leaderboard_id = anarchy_in_the_uk score = 10000 rating = <rating_val>}
+	NetSessionFunc obj = stats func = write_stats params = {leaderboard_id = anarchy_in_the_uk score = 10000 rating = <rating_val>}
 endscript
 
 script test_read_leaderboards 
-	netsessionfunc \{obj = stats
+	NetSessionFunc \{obj = stats
 		func = get_stats
 		params = {
 			leaderboard_id = m_test_gh3
@@ -3825,19 +3825,19 @@ script test_read_leaderboards
 endscript
 
 script menu_show_gamercard 
-	if NOT (($is_network_game) && (isxenon))
+	if NOT (($is_network_game) && (isXenon))
 		return
 	endif
 	retrieve_player_net_id \{player = 2}
-	netsessionfunc func = showgamercard params = {player_xuid = <net_id>}
+	NetSessionFunc func = showGamerCard params = {player_xuid = <net_id>}
 endscript
 
 script menu_show_gamercard_from_netid 
 	if NOT ($is_network_game = 1)
 		return
 	endif
-	if gotparam \{net_id}
-		netsessionfunc func = showgamercard params = {player_xuid = <net_id>}
+	if GotParam \{net_id}
+		NetSessionFunc func = showGamerCard params = {player_xuid = <net_id>}
 	endif
 endscript
 
@@ -3862,17 +3862,17 @@ script new_net_logic_deinit
 endscript
 
 script win_now 
-	extendcrc \{song_won
+	ExtendCRC \{song_won
 		'p1'
 		out = type}
-	broadcastevent type = <type>
+	BroadcastEvent type = <type>
 endscript
 new_message_of_the_day = 0
 
 script splash_callback 
 	printf \{"splash_callback"}
 	printstruct <...>
-	if gotparam \{motd_text}
+	if GotParam \{motd_text}
 		change \{new_message_of_the_day = 1}
 	else
 		change \{new_message_of_the_day = 0}
@@ -3881,10 +3881,10 @@ endscript
 
 script test_send 
 	test1 = 'does this get sent?'
-	test2 = doesthisgetsent
-	test3 = doesthisgetsent2
+	test2 = DoesThisGetSent
+	test3 = DoesThisGetSent2
 	printstruct <...>
-	sendstructure callback = test_callback data_to_send = <...>
+	SendStructure callback = test_callback data_to_send = <...>
 endscript
 
 script test_callback 
@@ -3895,18 +3895,18 @@ endscript
 script cleanup_online_lobby_select 
 	shut_down_character_hub
 	destroy_pause_menu_frame \{container_id = net_quit_warning}
-	if screenelementexists \{id = ready_container_p1}
-		destroyscreenelement \{id = ready_container_p1}
+	if ScreenElementExists \{id = ready_container_p1}
+		DestroyScreenElement \{id = ready_container_p1}
 	endif
-	if screenelementexists \{id = ready_container_p2}
-		destroyscreenelement \{id = ready_container_p2}
+	if ScreenElementExists \{id = ready_container_p2}
+		DestroyScreenElement \{id = ready_container_p2}
 	endif
 	destroy_pause_menu_frame
-	if screenelementexists \{id = warning_message_container}
-		destroyscreenelement \{id = warning_message_container}
+	if ScreenElementExists \{id = warning_message_container}
+		DestroyScreenElement \{id = warning_message_container}
 	endif
-	if screenelementexists \{id = leaving_lobby_dialog_menu}
-		destroyscreenelement \{id = leaving_lobby_dialog_menu}
+	if ScreenElementExists \{id = leaving_lobby_dialog_menu}
+		DestroyScreenElement \{id = leaving_lobby_dialog_menu}
 	endif
 	destroy_gamertags
 	shut_down_flow_manager \{player = 2}
@@ -3915,19 +3915,19 @@ script cleanup_online_lobby_select
 	destroy_menu \{menu_id = character_hub_p1_container}
 	destroy_menu \{menu_id = scrolling_character_hub_p2}
 	destroy_menu \{menu_id = character_hub_p2_container}
-	killcamanim \{name = gs_view_cam}
+	KillCamAnim \{name = gs_view_cam}
 	<player> = 1
 	begin
-	formattext checksumname = scrolling_select_outfit 'scrolling_select_outfit_p%i' i = <player>
-	formattext checksumname = s_container 's_container_p%i' i = <player>
+	FormatText checksumname = scrolling_select_outfit 'scrolling_select_outfit_p%i' i = <player>
+	FormatText checksumname = s_container 's_container_p%i' i = <player>
 	destroy_menu menu_id = <scrolling_select_outfit>
 	destroy_menu menu_id = <s_container>
 	<player> = (<player> + 1)
 	repeat 2
 	<player> = 1
 	begin
-	formattext checksumname = scrolling_select_style 'scrolling_select_style_p%i' i = <player>
-	formattext checksumname = s_container 's_container_p%i' i = <player>
+	FormatText checksumname = scrolling_select_style 'scrolling_select_style_p%i' i = <player>
+	FormatText checksumname = s_container 's_container_p%i' i = <player>
 	destroy_menu menu_id = <scrolling_select_style>
 	destroy_menu menu_id = <s_container>
 	<player> = (<player> + 1)
@@ -3943,29 +3943,29 @@ script cleanup_online_lobby_select
 	destroy_menu \{menu_id = select_finish_container_p2}
 	<player> = 1
 	begin
-	formattext checksumname = player_status 'player%i_status' i = <player>
+	FormatText checksumname = player_status 'player%i_status' i = <player>
 	<band_member> = ($<player_status>.band_member)
-	if compositeobjectexists name = <band_member>
-		if <band_member> :anim_animnodeexists id = bodytimer
-			<band_member> :anim_command target = bodytimer command = timer_setspeed params = {speed = 1.0}
+	if CompositeObjectExists name = <band_member>
+		if <band_member> :Anim_AnimNodeExists id = BodyTimer
+			<band_member> :Anim_Command target = BodyTimer command = Timer_SetSpeed params = {Speed = 1.0}
 		endif
 	endif
 	<player> = (<player> + 1)
 	repeat 2
 	<player> = 1
 	begin
-	formattext checksumname = scrolling_select_finish 'scrolling_select_finish_p%i' i = <player>
+	FormatText checksumname = scrolling_select_finish 'scrolling_select_finish_p%i' i = <player>
 	destroy_menu menu_id = <scrolling_select_finish>
 	<player> = (<player> + 1)
 	repeat 2
 	ui_flow_manager_respond_to_action \{action = continue}
 endscript
-gsavedelementinfocus = 0
+gSavedElementInFocus = 0
 
 script create_link_unplugged_dialog 
-	pausegame
-	saveandclearfocus
-	if (gotparam reason)
+	PauseGame
+	SaveAndClearFocus
+	if (GotParam reason)
 		if ($winport_is_in_online_menu_system = 1)
 			text = "Your username has been used to login elsewhere. Your network connection is being disconnected. Returning to the main menu."
 		else
@@ -3979,26 +3979,26 @@ script create_link_unplugged_dialog
 		endif
 	endif
 	z = 999
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = root_window
-		id = connectionlostcontainer
+		id = connectionLostContainer
 		pos = (0.0, 0.0)
 		z_priority = <z>
 	}
-	createscreenelement {
-		type = vscrollingmenu
-		parent = connectionlostcontainer
+	CreateScreenElement {
+		type = VScrollingMenu
+		parent = connectionLostContainer
 		just = [center top]
 		dims = (500.0, 150.0)
 		pos = (640.0, 465.0)
 		z_priority = <z>
 	}
 	menu_id = <id>
-	createscreenelement {
-		type = vmenu
+	CreateScreenElement {
+		type = VMenu
 		parent = <menu_id>
-		id = connectionlostmenu
+		id = connectionLostMenu
 		pos = (298.0, 0.0)
 		just = [center top]
 		internal_just = [center top]
@@ -4008,12 +4008,12 @@ script create_link_unplugged_dialog
 			{pad_choose connection_lost_resume_play}
 		]
 	}
-	create_pause_menu_frame parent = connectionlostcontainer container_id = connectionlostframe z = (<z> -10)
-	displaysprite parent = connectionlostcontainer tex = dialog_title_bg dims = (224.0, 224.0) pos = (640.0, 100.0) just = [right top] flip_v z = (<z> -5)
-	displaysprite parent = connectionlostcontainer tex = dialog_title_bg dims = (224.0, 224.0) pos = (640.0, 100.0) just = [left top] z = (<z> -5)
-	createscreenelement {
-		type = textelement
-		parent = connectionlostcontainer
+	create_pause_menu_frame parent = connectionLostContainer container_id = connectionLostFrame z = (<z> -10)
+	displaySprite parent = connectionLostContainer tex = Dialog_Title_BG dims = (224.0, 224.0) pos = (640.0, 100.0) just = [right top] flip_v z = (<z> -5)
+	displaySprite parent = connectionLostContainer tex = Dialog_Title_BG dims = (224.0, 224.0) pos = (640.0, 100.0) just = [left top] z = (<z> -5)
+	CreateScreenElement {
+		type = TextElement
+		parent = connectionLostContainer
 		font = fontgrid_title_gh3
 		scale = 0.8
 		rgba = [223 223 223 250]
@@ -4025,10 +4025,10 @@ script create_link_unplugged_dialog
 		shadow_offs = (3.0, 3.0)
 		shadow_rgba = [0 0 0 255]
 	}
-	createscreenelement {
-		type = textblockelement
-		parent = connectionlostcontainer
-		id = statusmessage
+	CreateScreenElement {
+		type = TextBlockElement
+		parent = connectionLostContainer
+		id = statusMessage
 		text = <text>
 		font = text_a4
 		scale = 0.8
@@ -4042,10 +4042,10 @@ script create_link_unplugged_dialog
 		line_spacing = 1.0
 	}
 	fit_text_into_menu_item id = <id> max_width = 420
-	displaysprite parent = connectionlostcontainer id = options_bg_1 tex = dialog_bg pos = (640.0, 500.0) dims = (320.0, 64.0) z = (<z> + 0.1) just = [center botom]
-	displaysprite parent = connectionlostcontainer id = options_bg_2 tex = dialog_bg pos = (640.0, 530.0) dims = (320.0, 64.0) z = (<z> + 0.1) just = [center top] flip_h
-	createscreenelement \{type = containerelement
-		parent = connectionlostmenu
+	displaySprite parent = connectionLostContainer id = options_bg_1 tex = dialog_bg pos = (640.0, 500.0) dims = (320.0, 64.0) z = (<z> + 0.1) just = [center botom]
+	displaySprite parent = connectionLostContainer id = options_bg_2 tex = dialog_bg pos = (640.0, 530.0) dims = (320.0, 64.0) z = (<z> + 0.1) just = [center top] flip_h
+	CreateScreenElement \{type = ContainerElement
+		parent = connectionLostMenu
 		dims = (100.0, 50.0)
 		event_handlers = [
 			{
@@ -4062,8 +4062,8 @@ script create_link_unplugged_dialog
 			}
 		]}
 	container_id = <id>
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <container_id>
 		local_id = text_continue
 		font = fontgrid_title_gh3
@@ -4077,37 +4077,37 @@ script create_link_unplugged_dialog
 		shadow_rgba = [0 0 0 255]
 	}
 	fit_text_into_menu_item id = <id> max_width = 200
-	getscreenelementdims id = <id>
-	createscreenelement {
-		type = spriteelement
+	GetScreenElementDims id = <id>
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <container_id>
 		local_id = bookend_left
-		texture = dialog_highlight
+		texture = Dialog_Highlight
 		just = [right center]
 		pos = ((0.0, 20.0) + (1.0, 0.0) * (<width> / (-2)) + (-5.0, 0.0))
 		z_priority = (<z> + 20.0)
 		scale = (1.0, 1.0)
 		flip_v
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <container_id>
 		local_id = bookend_right
-		texture = dialog_highlight
+		texture = Dialog_Highlight
 		just = [left center]
 		pos = ((0.0, 20.0) + (1.0, 0.0) * (<width> / (2)) + (5.0, 0.0))
 		z_priority = (<z> + 20.0)
 		scale = (1.0, 1.0)
 	}
-	launchevent \{type = focus
-		target = connectionlostmenu}
+	LaunchEvent \{type = focus
+		target = connectionLostMenu}
 endscript
 
 script connection_lost_resume_play 
 	printf \{"---connection_lost_resume_play"}
-	destroyscreenelement \{id = connectionlostcontainer}
-	restorefocus
-	unpausegame
+	DestroyScreenElement \{id = connectionLostContainer}
+	RestoreFocus
+	UnPauseGame
 	change \{g_connection_loss_dialogue = 0}
 	if ($winport_is_in_online_menu_system = 1)
 		shut_down_flow_manager
@@ -4125,9 +4125,9 @@ script coop_fail_song
 	disable_pause
 	if (<quit_early>)
 		change \{player2_present = 0}
-		formattext textname = notification_text "%n\\n has quit" n = ($opponent_gamertag)
+		FormatText TextName = notification_text "%n\\n has quit" n = ($opponent_gamertag)
 		create_net_popup popup_text = <notification_text>
-		wait \{3
+		Wait \{3
 			seconds}
 		destroy_net_popup
 	endif
@@ -4136,14 +4136,14 @@ script coop_fail_song
 	change structurename = <player_status> total_notes = <total_notes>
 	change structurename = <player_status> notes_hit = <notes_hit>
 	player_text = (<player_status>.text)
-	killspawnedscript \{name = guitarevent_songwon_spawned}
-	spawnscriptnow \{guitarevent_songfailed_spawned}
+	KillSpawnedScript \{name = GuitarEvent_SongWon_Spawned}
+	spawnscriptnow \{GuitarEvent_SongFailed_Spawned}
 endscript
 
 script add_searching_menu_item \{z = 2.1}
-	if gotparam \{vmenu_id}
-		createscreenelement {
-			type = containerelement
+	if GotParam \{vmenu_id}
+		CreateScreenElement {
+			type = ContainerElement
 			parent = <vmenu_id>
 			dims = (210.0, 35.0)
 			pos = (0.0, 0.0)
@@ -4151,15 +4151,15 @@ script add_searching_menu_item \{z = 2.1}
 			internal_just = [center top]
 		}
 		<container_element> = <id>
-		<id> :setprops {
+		<id> :SetProps {
 			event_handlers = [
 				{focus searching_menu_focus params = {parent = <id>}}
 				{unfocus searching_menu_unfocus params = {parent = <id>}}
 				{pad_choose <choose_script>}
 			]
 		}
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = <container_element>
 			local_id = text_string
 			font = fontgrid_title_gh3
@@ -4170,8 +4170,8 @@ script add_searching_menu_item \{z = 2.1}
 			pos = (105.0, 0.0)
 			z_priority = <z>
 		}
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			parent = <container_element>
 			local_id = highlight_bar
 			texture = white
@@ -4182,8 +4182,8 @@ script add_searching_menu_item \{z = 2.1}
 			z_priority = <z>
 			alpha = 0.0
 		}
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			parent = <container_element>
 			local_id = left_bookend
 			texture = character_hub_hilite_bookend
@@ -4194,8 +4194,8 @@ script add_searching_menu_item \{z = 2.1}
 			z_priority = <z>
 			alpha = 0.0
 		}
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			parent = <container_element>
 			local_id = right_bookend
 			texture = character_hub_hilite_bookend
@@ -4211,7 +4211,7 @@ endscript
 
 script start_final_song 
 	change current_song = ($net_setlist_songs [($net_song_num)])
-	spawnscriptlater \{load_and_sync_timing
+	SpawnScriptLater \{load_and_sync_timing
 		params = {
 			start_delay = 3000
 			player_status = player1_status
@@ -4225,7 +4225,7 @@ script server_disconnection_cleanup
 	if ($ui_flow_manager_state [0] = online_loading_fs)
 	elseif ($playing_song = 0)
 		if (($ui_flow_manager_state [0] = online_win_song_fs) || ($ui_flow_manager_state [0] = online_fail_song_fs) || ($ui_flow_manager_state [0] = online_match_stats_fs))
-			if NOT screenelementexists \{net_popup_container}
+			if NOT ScreenElementExists \{net_popup_container}
 				get_number_of_songs
 				if NOT (<game_over>)
 					create_connection_lost_dialog \{player_quit}
@@ -4238,34 +4238,34 @@ script server_disconnection_cleanup
 endscript
 
 script searching_menu_focus 
-	obj_getid
-	if screenelementexists id = {<objid> child = text_string}
-		doscreenelementmorph id = {<objid> child = text_string} rgba = ($online_dark_purple)
+	Obj_GetID
+	if ScreenElementExists id = {<ObjID> child = text_string}
+		doScreenElementMorph id = {<ObjID> child = text_string} rgba = ($online_dark_purple)
 	endif
-	if screenelementexists id = {<objid> child = highlight_bar}
-		doscreenelementmorph id = {<objid> child = highlight_bar} alpha = 1.0
+	if ScreenElementExists id = {<ObjID> child = highlight_bar}
+		doScreenElementMorph id = {<ObjID> child = highlight_bar} alpha = 1.0
 	endif
-	if screenelementexists id = {<objid> child = left_bookend}
-		doscreenelementmorph id = {<objid> child = left_bookend} alpha = 1.0
+	if ScreenElementExists id = {<ObjID> child = left_bookend}
+		doScreenElementMorph id = {<ObjID> child = left_bookend} alpha = 1.0
 	endif
-	if screenelementexists id = {<objid> child = right_bookend}
-		doscreenelementmorph id = {<objid> child = right_bookend} alpha = 1.0
+	if ScreenElementExists id = {<ObjID> child = right_bookend}
+		doScreenElementMorph id = {<ObjID> child = right_bookend} alpha = 1.0
 	endif
 endscript
 
 script searching_menu_unfocus 
-	obj_getid
-	if screenelementexists id = {<objid> child = text_string}
-		doscreenelementmorph id = {<objid> child = text_string} rgba = ($online_light_blue)
+	Obj_GetID
+	if ScreenElementExists id = {<ObjID> child = text_string}
+		doScreenElementMorph id = {<ObjID> child = text_string} rgba = ($online_light_blue)
 	endif
-	if screenelementexists id = {<objid> child = highlight_bar}
-		doscreenelementmorph id = {<objid> child = highlight_bar} alpha = 0.0
+	if ScreenElementExists id = {<ObjID> child = highlight_bar}
+		doScreenElementMorph id = {<ObjID> child = highlight_bar} alpha = 0.0
 	endif
-	if screenelementexists id = {<objid> child = left_bookend}
-		doscreenelementmorph id = {<objid> child = left_bookend} alpha = 0.0
+	if ScreenElementExists id = {<ObjID> child = left_bookend}
+		doScreenElementMorph id = {<ObjID> child = left_bookend} alpha = 0.0
 	endif
-	if screenelementexists id = {<objid> child = right_bookend}
-		doscreenelementmorph id = {<objid> child = right_bookend} alpha = 0.0
+	if ScreenElementExists id = {<ObjID> child = right_bookend}
+		doScreenElementMorph id = {<ObjID> child = right_bookend} alpha = 0.0
 	endif
 endscript
 
@@ -4275,8 +4275,8 @@ script set_other_player_present
 		change \{player2_present = 1}
 		spawnscriptnow \{net_hub_stream}
 	endif
-	if screenelementexists \{id = character_hub_p1_continue}
-		character_hub_p1_continue :setprops \{rgba = [
+	if ScreenElementExists \{id = character_hub_p1_continue}
+		character_hub_p1_continue :SetProps \{rgba = [
 				180
 				100
 				60
@@ -4328,18 +4328,18 @@ script test_multi_leaderboards
 			]
 		}
 	]
-	netsessionfunc obj = stats func = stats_write_multiplayer params = {dontendsessionafterwrite <...>}
+	NetSessionFunc obj = stats func = stats_write_multiplayer params = {dontendsessionafterwrite <...>}
 endscript
 
 script retrieve_player_net_id 
 	net_id = [0 0]
-	if gotparam \{player}
-		formattext checksumname = player_status 'player%i_status' i = <player>
-		setarrayelement arrayname = net_id index = 0 newvalue = ($<player_status>.net_id_first)
-		setarrayelement arrayname = net_id index = 1 newvalue = ($<player_status>.net_id_second)
+	if GotParam \{player}
+		FormatText checksumname = player_status 'player%i_status' i = <player>
+		SetArrayElement ArrayName = net_id index = 0 newvalue = ($<player_status>.net_id_first)
+		SetArrayElement ArrayName = net_id index = 1 newvalue = ($<player_status>.net_id_second)
 	else
-		setarrayelement arrayname = net_id index = 0 newvalue = ($player1_status.net_id_first)
-		setarrayelement arrayname = net_id index = 1 newvalue = ($player1_status.net_id_second)
+		SetArrayElement ArrayName = net_id index = 0 newvalue = ($player1_status.net_id_first)
+		SetArrayElement ArrayName = net_id index = 1 newvalue = ($player1_status.net_id_second)
 	endif
 	printf \{"retrieve_player_net_id"}
 	printstruct <...>
@@ -4350,17 +4350,17 @@ script host_handle_dropped_client
 	printf \{"---host_handle_dropped_client"}
 	determine_if_game_over
 	change \{player2_present = 0}
-	killspawnedscript \{name = net_hub_stream}
-	endgamenetscriptpump
+	KillSpawnedScript \{name = net_hub_stream}
+	EndGameNetScriptPump
 	if ($ui_flow_manager_state [0] = online_character_select_fs)
 		drop_client_from_character_select
 		net_lobby_state_message \{current_state = character_hub
 			action = request
 			request_state = leaving_lobby}
-		resetlobbyready
+		ResetLobbyReady
 	elseif ($ui_flow_manager_state [0] = online_loading_fs)
 	elseif (($ui_flow_manager_state [0] = online_fail_song_fs) || ($ui_flow_manager_state [0] = online_win_song_fs) || ($ui_flow_manager_state [0] = online_match_stats_fs))
-		if NOT screenelementexists \{net_popup_container}
+		if NOT ScreenElementExists \{net_popup_container}
 			get_number_of_songs
 			if NOT (<game_over>)
 				create_connection_lost_dialog \{player_quit}
@@ -4372,12 +4372,12 @@ script host_handle_dropped_client
 				part = guitar}
 			change \{structurename = player2_status
 				part = guitar}
-			create_guitarist \{name = guitarist
-				useoldpos
+			create_guitarist \{name = Guitarist
+				useOldPos
 				no_strum
 				animpak = 0}
 			create_guitarist \{name = bassist
-				useoldpos
+				useOldPos
 				no_strum
 				animpak = 0}
 		endif
@@ -4386,20 +4386,20 @@ script host_handle_dropped_client
 			action = request
 			request_state = leaving_lobby
 		}
-		wait \{2
+		Wait \{2
 			frame}
 		if ($playing_song = 0)
 			destroy_gamertags
-			if (netsessionfunc obj = match func = get_gamertag)
+			if (NetSessionFunc obj = match func = get_gamertag)
 				ui_print_gamertag name = <name> start_pos = (235.0, 50.0) color = ($player1_color) player = 1 just = [left top] dims = (450.0, 35.0)
 			endif
 		endif
-		resetlobbyready
+		ResetLobbyReady
 		change \{net_can_send_approval = 1}
 		ui_flow_manager_respond_to_action \{action = handle_dropped_client}
 	endif
 	if ($playing_song = 0)
-		if compositeobjectexists \{name = bassist}
+		if CompositeObjectExists \{name = bassist}
 			bassist :hide
 		endif
 	endif
@@ -4407,10 +4407,10 @@ endscript
 
 script drop_client_from_character_select 
 	destroy_gamertags
-	if (netsessionfunc obj = match func = get_gamertag)
+	if (NetSessionFunc obj = match func = get_gamertag)
 		ui_print_gamertag name = <name> start_pos = (235.0, 50.0) color = ($player1_color) player = 1 just = [left top] dims = (450.0, 35.0)
 	endif
-	killspawnedscript \{name = cs_rotate_hilites_p2}
+	KillSpawnedScript \{name = cs_rotate_hilites_p2}
 	change \{g_cs_scroll_ready_p2 = 1}
 	change \{g_cs_choose_ready_p2 = 0}
 	destroy_menu \{menu_id = char_select_character_container_p2}
@@ -4420,13 +4420,13 @@ script drop_client_from_character_select
 	change \{player2_present = 0}
 	change \{opponent_gamertag = null}
 	destroy_menu \{menu_id = ready_container_p2}
-	if compositeobjectexists \{name = bassist}
+	if CompositeObjectExists \{name = bassist}
 		bassist :hide
 	endif
 endscript
 
 script host_wait_for_client 
-	if NOT (ishost)
+	if NOT (IsHost)
 		return
 	endif
 	create_net_popup \{popup_text = "Waiting for other player to join"
@@ -4436,7 +4436,7 @@ script host_wait_for_client
 	if ($player2_present = 1)
 		break
 	endif
-	wait \{30
+	Wait \{30
 		gameframes}
 	repeat
 	destroy_net_popup
@@ -4447,16 +4447,16 @@ script host_wait_for_client
 		{pad_choose character_select_choose params = {player = 1}}
 		{pad_start menu_show_gamercard}
 	]
-	setscreenelementprops id = vmenu_character_select_p1 event_handlers = <cs_event_handlers> replace_handlers
+	SetScreenElementProps id = vmenu_character_select_p1 event_handlers = <cs_event_handlers> replace_handlers
 endscript
 
 script net_battle_select_icon 
 	begin
-	if screenelementexists id = <icon_id>
-		<icon_id> :setprops texture = <icon_texture>
+	if ScreenElementExists id = <icon_id>
+		<icon_id> :SetProps texture = <icon_texture>
 		return
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat 600
 	printf "Couldn't find battle icon id=%i" i = <icon_id>
@@ -4471,8 +4471,8 @@ script net_hub_stream
 		style = ($player1_status.style)
 		instrument_id = ($player1_status.instrument_id)
 	}
-	sendstructure callback = update_net_character data_to_send = {char_data = <char_data>}
-	wait \{1
+	SendStructure callback = update_net_character data_to_send = {char_data = <char_data>}
+	Wait \{1
 		second}
 	repeat
 endscript
@@ -4504,7 +4504,7 @@ script update_net_character
 	endif
 	if (<valid> = 0)
 		printf \{"Invalid Instrument found - changing to les paul black"}
-		instrument_id = instrument_les_paul_black
+		instrument_id = Instrument_Les_Paul_Black
 	endif
 	if NOT ($<player_status>.character_id = <char_id>)
 		change structurename = <player_status> character_id = <char_id>
@@ -4520,7 +4520,7 @@ script update_net_character
 	endif
 	if NOT ($<player_status>.instrument_id = <instrument_id>)
 		get_musician_instrument_type desc_id = <instrument_id>
-		if gotparam (instrument_type)
+		if GotParam (instrument_type)
 			if (<instrument_type> = guitar)
 				if NOT (<instrument_id> = ($player2_selected_guitar))
 					change player2_selected_guitar = <instrument_id>
@@ -4540,25 +4540,25 @@ script update_net_character
 endscript
 
 script character_hub_net_ready 
-	if NOT (screenelementexists id = ready_container_p2)
+	if NOT (ScreenElementExists id = ready_container_p2)
 		create_ready_icons \{pos2 = (825.0, 450.0)
 			parent2 = root_window}
 	endif
 	if ($p2_ready = 0)
 		change \{p2_ready = 1}
-		if screenelementexists \{id = ready_container_p2}
-			ready_container_p2 :obj_spawnscriptlater \{drop_in_ready_sign
+		if ScreenElementExists \{id = ready_container_p2}
+			ready_container_p2 :Obj_SpawnScriptLater \{drop_in_ready_sign
 				params = {
 					player = 2
 				}}
 		endif
 	endif
 	if (($p1_ready = 1) && ($p2_ready = 1))
-		if screenelementexists \{id = vmenu_character_hub_p1}
-			launchevent \{type = unfocus
+		if ScreenElementExists \{id = vmenu_character_hub_p1}
+			LaunchEvent \{type = unfocus
 				target = vmenu_character_hub_p1}
 		endif
-		wait \{0.4
+		Wait \{0.4
 			seconds}
 		clean_up_user_control_helpers
 		shut_down_flow_manager \{player = 2}
@@ -4566,7 +4566,7 @@ script character_hub_net_ready
 		destroy_ready_icons
 		change \{p1_ready = 0}
 		change \{p2_ready = 0}
-		killspawnedscript \{name = net_hub_stream}
+		KillSpawnedScript \{name = net_hub_stream}
 		ui_flow_manager_respond_to_action \{action = select_ready
 			player = 1
 			create_params = {
@@ -4577,7 +4577,7 @@ endscript
 
 script character_hub_net_ready_back 
 	change \{p2_ready = 0}
-	if NOT (screenelementexists id = ready_container_p2)
+	if NOT (ScreenElementExists id = ready_container_p2)
 		create_ready_icons \{pos2 = (825.0, 450.0)
 			parent2 = root_window}
 	endif
@@ -4612,12 +4612,12 @@ script get_musician_instrument_type
 endscript
 
 script scale_element_width_to_size \{max_text_width = 400}
-	if NOT gotparam \{id}
+	if NOT GotParam \{id}
 		return
 	endif
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	if (<width> > <max_text_width>)
-		setscreenelementprops {
+		SetScreenElementProps {
 			id = <id>
 			scale = ((1.0, 0.0) + (0.0, 1.0) * (<text_scale>.(0.0, 1.0)))
 		}
@@ -4629,35 +4629,35 @@ script scale_element_width_to_size \{max_text_width = 400}
 endscript
 
 script net_dl_content_compatabilty_warning_fade_out 
-	wait \{10
+	Wait \{10
 		seconds}
-	if screenelementexists id = <id>
-		<id> :domorph alpha = 0.0 time = 1.0
+	if ScreenElementExists id = <id>
+		<id> :DoMorph alpha = 0.0 time = 1.0
 	endif
-	wait \{1
+	Wait \{1
 		frame}
-	if screenelementexists \{id = dl_content_warning}
-		destroyscreenelement \{id = dl_content_warning}
+	if ScreenElementExists \{id = dl_content_warning}
+		DestroyScreenElement \{id = dl_content_warning}
 	endif
 endscript
 
 script net_dl_content_compatabilty_warning \{z = 100
 		pos = (0.0, 0.0)}
-	if NOT gotparam \{parent}
+	if NOT GotParam \{parent}
 		return
 	endif
-	if screenelementexists \{id = dl_content_warning}
-		destroyscreenelement \{id = dl_content_warning}
+	if ScreenElementExists \{id = dl_content_warning}
+		DestroyScreenElement \{id = dl_content_warning}
 	endif
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		id = dl_content_warning
 		parent = <parent>
 		pos = <pos>
 	}
 	menu_anchor = <id>
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <menu_anchor>
 		texture = window_frame_cap
 		dims = (128.0, 64.0)
@@ -4668,8 +4668,8 @@ script net_dl_content_compatabilty_warning \{z = 100
 		rot_angle = -90
 		alpha = 1.0
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <menu_anchor>
 		texture = window_fill_cap
 		dims = (128.0, 64.0)
@@ -4680,8 +4680,8 @@ script net_dl_content_compatabilty_warning \{z = 100
 		rot_angle = -90
 		alpha = 1.0
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <menu_anchor>
 		texture = window_frame_body_tall
 		dims = (128.0, 512.0)
@@ -4692,8 +4692,8 @@ script net_dl_content_compatabilty_warning \{z = 100
 		rot_angle = -90
 		alpha = 1.0
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <menu_anchor>
 		texture = window_fill_body_large
 		dims = (128.0, 512.0)
@@ -4704,8 +4704,8 @@ script net_dl_content_compatabilty_warning \{z = 100
 		rot_angle = -90
 		alpha = 1.0
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <menu_anchor>
 		texture = window_frame_cap
 		dims = (128.0, 64.0)
@@ -4717,8 +4717,8 @@ script net_dl_content_compatabilty_warning \{z = 100
 		alpha = 1.0
 		flip_h
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <menu_anchor>
 		texture = window_fill_cap
 		dims = (128.0, 64.0)
@@ -4731,8 +4731,8 @@ script net_dl_content_compatabilty_warning \{z = 100
 		flip_h
 	}
 	text = "Both players need to have the same Downloaded Songs in order to use them in multiplayer games."
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = <menu_anchor>
 		font = text_a4
 		scale = (0.7, 0.55)
@@ -4744,21 +4744,21 @@ script net_dl_content_compatabilty_warning \{z = 100
 		dims = (830.0, 185.0)
 		allow_expansion
 	}
-	<menu_anchor> :obj_spawnscriptlater net_dl_content_compatabilty_warning_fade_out params = {id = <menu_anchor>}
+	<menu_anchor> :Obj_SpawnScriptLater net_dl_content_compatabilty_warning_fade_out params = {id = <menu_anchor>}
 endscript
 
 script fit_text_into_menu_item 
-	if screenelementexists id = <id>
-		getscreenelementdims id = <id>
+	if ScreenElementExists id = <id>
+		GetScreenElementDims id = <id>
 		if (<width> > <max_width>)
-			setscreenelementprops {
+			SetScreenElementProps {
 				id = <id>
 				scale = 1.0
 			}
 			scale_element_to_size {
 				id = <id>
 				target_width = <max_width>
-				target_height = <height>
+				target_height = <Height>
 			}
 		endif
 	endif
@@ -4781,30 +4781,30 @@ script net_coop_init_star_power
 			}}
 	endif
 endscript
-demonware_is_ready = 1
+DEMONWARE_IS_READY = 1
 
 script set_ready_for_input 
-	change \{demonware_is_ready = 1}
+	change \{DEMONWARE_IS_READY = 1}
 endscript
 
 script set_demonware_failed 
-	change \{demonware_is_ready = 1}
+	change \{DEMONWARE_IS_READY = 1}
 endscript
 
 script set_disable_demonware_input 
-	change \{demonware_is_ready = 0}
+	change \{DEMONWARE_IS_READY = 0}
 endscript
 
 script online_end_song 
 	printf \{"---online_end_song"}
-	if gameisover
+	if GameIsOver
 		printf \{"Game is over already, no song win event"}
 		return
 	endif
 	if ($game_mode = p2_battle)
-		if (ishost)
+		if (IsHost)
 			printf \{"Host sending end_song to client"}
-			sendendsong
+			SendEndSong
 			client_handle_end_song
 		endif
 	else
@@ -4814,19 +4814,19 @@ endscript
 
 script client_handle_end_song 
 	printf \{"client_handle_end_song - Broadcasting song won event."}
-	extendcrc \{song_won
+	ExtendCRC \{song_won
 		'p1'
 		out = type}
-	broadcastevent type = <type>
+	BroadcastEvent type = <type>
 endscript
-ghandlingwindowclosed = 0
-gisinnetgame = 0
+gHandlingWindowClosed = 0
+gIsInNetGame = 0
 
-script netnotifywindowclosed 
+script netNotifyWindowClosed 
 	printf \{"GTB - netNotifyWindowClosed"}
-	if ($gisinnetgame = 1)
-		if ($ghandlingwindowclosed = 0)
-			change \{ghandlingwindowclosed = 1}
+	if ($gIsInNetGame = 1)
+		if ($gHandlingWindowClosed = 0)
+			change \{gHandlingWindowClosed = 1}
 			create_connection_lost_dialog
 		endif
 	endif

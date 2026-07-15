@@ -23,57 +23,57 @@ winport_bb_text_disable_color = [
 	17
 	255
 ]
-winport_bb_kb_menuitems = [
+winport_bb_kb_menuItems = [
 	{
 		text = "Green Fret / Confirm"
 		handler = winport_bb_choose_control
-		actionnum = 0
+		actionNum = 0
 	}
 	{
 		text = "Red Fret / Cancel"
 		handler = winport_bb_choose_control
-		actionnum = 1
+		actionNum = 1
 	}
 	{
 		text = "Yellow Fret"
 		handler = winport_bb_choose_control
-		actionnum = 2
+		actionNum = 2
 	}
 	{
 		text = "Blue Fret"
 		handler = winport_bb_choose_control
-		actionnum = 3
+		actionNum = 3
 	}
 	{
 		text = "Orange Fret"
 		handler = winport_bb_choose_control
-		actionnum = 4
+		actionNum = 4
 	}
 	{
 		text = "Star Power"
 		handler = winport_bb_choose_control
-		actionnum = 5
+		actionNum = 5
 	}
 	{
 		text = "Whammy"
 		handler = winport_bb_choose_control
-		actionnum = 12
+		actionNum = 12
 	}
 	{
 		text = "Mouse Whammy"
-		controlname = "X-Axis"
+		controlName = "X-Axis"
 		handler = winport_null_script
 		disable
 	}
 	{
 		text = "Strum Up / Menu Up"
 		handler = winport_bb_choose_control
-		actionnum = 10
+		actionNum = 10
 	}
 	{
 		text = "Strum Down / Menu Down"
 		handler = winport_bb_choose_control
-		actionnum = 9
+		actionNum = 9
 	}
 	{
 		text = ""
@@ -89,28 +89,28 @@ winport_bb_kb_menuitems = [
 		handler = winport_bb_reset_to_config2
 	}
 ]
-winport_bb_menuitems = [
+winport_bb_menuItems = [
 ]
 
 script winport_null_script 
 endscript
 
 script winport_create_bind_buttons 
-	change \{winport_bb_menuitems = $winport_bb_kb_menuitems}
-	menudim = (600.0, 500.0)
-	menupos = (640.0, 370.0)
-	menuitemdim = (600.0, 32.0)
-	menuitemoptiondim = (250.0, 32.0)
-	menuitemoptionpos = (0.0, 16.0)
-	menuitemoptionjust = [left center]
-	menuitemvaluedim = (300.0, 32.0)
-	menuitemvaluepos = (630.0, 16.0)
-	menuitemvaluejust = [right center]
-	menuitemhilitedim = (665.0, 50.0)
-	menuitemhilitepos = (-25.0, 34.0)
-	menuitemhilitejust = [left center]
-	menuitemhiliterot = -0.5
-	createscreenelement \{type = containerelement
+	change \{winport_bb_menuItems = $winport_bb_kb_menuItems}
+	menuDim = (600.0, 500.0)
+	menuPos = (640.0, 370.0)
+	menuItemDim = (600.0, 32.0)
+	menuItemOptionDim = (250.0, 32.0)
+	menuItemOptionPos = (0.0, 16.0)
+	menuItemOptionJust = [left center]
+	menuItemValueDim = (300.0, 32.0)
+	menuItemValuePos = (630.0, 16.0)
+	menuItemValueJust = [right center]
+	menuItemHiliteDim = (665.0, 50.0)
+	menuItemHilitePos = (-25.0, 34.0)
+	menuItemHiliteJust = [left center]
+	menuItemHiliteRot = -0.5
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = screen_container
 		pos = (0.0, 0.0)
@@ -118,8 +118,8 @@ script winport_create_bind_buttons
 			left
 			top
 		]}
-	create_menu_backdrop \{texture = venue_bg}
-	createscreenelement \{type = spriteelement
+	create_menu_backdrop \{texture = Venue_BG}
+	CreateScreenElement \{type = SpriteElement
 		id = light_overlay
 		parent = screen_container
 		texture = venue_overlay
@@ -130,7 +130,7 @@ script winport_create_bind_buttons
 			center
 		]
 		z_priority = 100}
-	displaysprite \{parent = screen_container
+	displaySprite \{parent = screen_container
 		tex = controller_config_poster
 		pos = (640.0, 360.0)
 		scale = (1.5, 1.7)
@@ -140,7 +140,7 @@ script winport_create_bind_buttons
 		]
 		z = 1
 		rot_angle = -2}
-	createscreenelement \{type = textelement
+	CreateScreenElement \{type = TextElement
 		parent = screen_container
 		text = "KEYBOARD"
 		pos = (830.0, 100.0)
@@ -166,14 +166,14 @@ script winport_create_bind_buttons
 			255
 		]
 		shadow_offs = (-3.0, 3.0)}
-	displaysprite \{parent = screen_container
-		tex = tape_v_01
+	displaySprite \{parent = screen_container
+		tex = Tape_V_01
 		pos = (205.0, 65.0)
 		dims = (96.0, 192.0)
 		z = 5
 		rot_angle = -1}
-	displaysprite \{parent = screen_container
-		tex = tape_v_01
+	displaySprite \{parent = screen_container
+		tex = Tape_V_01
 		rgba = [
 			0
 			0
@@ -184,14 +184,14 @@ script winport_create_bind_buttons
 		dims = (96.0, 192.0)
 		z = 4
 		rot_angle = -1}
-	displaysprite \{parent = screen_container
-		tex = tape_h_02
+	displaySprite \{parent = screen_container
+		tex = Tape_H_02
 		pos = (945.0, 550.0)
 		dims = (132.0, 64.0)
 		z = 5
 		rot_angle = 8}
-	displaysprite \{parent = screen_container
-		tex = tape_h_02
+	displaySprite \{parent = screen_container
+		tex = Tape_H_02
 		rgba = [
 			0
 			0
@@ -202,18 +202,18 @@ script winport_create_bind_buttons
 		dims = (132.0, 64.0)
 		z = 4
 		rot_angle = 8}
-	createscreenelement {
-		type = vmenu
+	CreateScreenElement {
+		type = VMenu
 		id = menu
 		parent = screen_container
-		pos = <menupos>
-		dims = <menudim>
+		pos = <menuPos>
+		dims = <menuDim>
 		rot_angle = -2
 		just = [center center]
 		event_handlers = $default_event_handlers
 	}
-	menutextprops = {
-		type = textelement
+	menuTextProps = {
+		type = TextElement
 		font = text_a11
 		scale = (0.7, 0.5)
 		rgba = $winport_bb_text_color
@@ -222,66 +222,66 @@ script winport_create_bind_buttons
 		shadow_rgba = $winport_bb_text_dropshadow_color
 		shadow_offs = (-1.5, 1.5)
 	}
-	getarraysize \{$winport_bb_menuitems}
+	GetArraySize \{$winport_bb_menuItems}
 	i = 0
 	begin
-	formattext checksumname = itemid 'item%d' d = <i>
-	formattext checksumname = actionid 'action%d' d = <i>
-	formattext checksumname = controlid 'control%d' d = <i>
-	formattext checksumname = hiliteid 'hilite%d' d = <i>
-	createscreenelement {
-		type = containerelement
-		id = <itemid>
+	FormatText checksumname = itemId 'item%d' d = <i>
+	FormatText checksumname = actionId 'action%d' d = <i>
+	FormatText checksumname = controlId 'control%d' d = <i>
+	FormatText checksumname = hiliteId 'hilite%d' d = <i>
+	CreateScreenElement {
+		type = ContainerElement
+		id = <itemId>
 		parent = menu
-		dims = <menuitemdim>
+		dims = <menuItemDim>
 	}
-	setscreenelementprops {
-		id = <itemid>
+	SetScreenElementProps {
+		id = <itemId>
 		event_handlers = [
-			{pad_choose (($winport_bb_menuitems [<i>]).handler) params = {index = <i> menuitem = ($winport_bb_menuitems [<i>])}}
+			{pad_choose (($winport_bb_menuItems [<i>]).handler) params = {index = <i> menuItem = ($winport_bb_menuItems [<i>])}}
 			{focus winport_bb_focus params = {index = <i>}}
 			{unfocus winport_bb_unfocus params = {index = <i>}}
 		]
 	}
-	createscreenelement {
-		type = spriteelement
-		id = <hiliteid>
-		parent = <itemid>
+	CreateScreenElement {
+		type = SpriteElement
+		id = <hiliteId>
+		parent = <itemId>
 		texture = controller_config_highlight
-		pos = <menuitemhilitepos>
-		dims = <menuitemhilitedim>
-		just = <menuitemhilitejust>
-		rot_angle = <menuitemhiliterot>
+		pos = <menuItemHilitePos>
+		dims = <menuItemHiliteDim>
+		just = <menuItemHiliteJust>
+		rot_angle = <menuItemHiliteRot>
 		alpha = 0
 		z_priority = 3
 	}
-	createscreenelement {
-		<menutextprops>
-		id = <actionid>
-		text = (($winport_bb_menuitems [<i>]).text)
-		parent = <itemid>
-		dims = <menuitemoptiondim>
-		pos = <menuitemoptionpos>
-		just = <menuitemoptionjust>
+	CreateScreenElement {
+		<menuTextProps>
+		id = <actionId>
+		text = (($winport_bb_menuItems [<i>]).text)
+		parent = <itemId>
+		dims = <menuItemOptionDim>
+		pos = <menuItemOptionPos>
+		just = <menuItemOptionJust>
 	}
-	createscreenelement {
-		<menutextprops>
-		id = <controlid>
+	CreateScreenElement {
+		<menuTextProps>
+		id = <controlId>
 		text = ""
-		parent = <itemid>
-		dims = <menuitemvaluedim>
-		pos = <menuitemvaluepos>
-		just = <menuitemvaluejust>
+		parent = <itemId>
+		dims = <menuItemValueDim>
+		pos = <menuItemValuePos>
+		just = <menuItemValueJust>
 	}
-	if structurecontains structure = ($winport_bb_menuitems [<i>]) name = disable
-		setscreenelementprops id = <itemid> not_focusable
-		setscreenelementprops id = <actionid> rgba = $winport_bb_text_disable_color
-		setscreenelementprops id = <controlid> rgba = $winport_bb_text_disable_color
+	if StructureContains Structure = ($winport_bb_menuItems [<i>]) name = disable
+		SetScreenElementProps id = <itemId> not_focusable
+		SetScreenElementProps id = <actionId> rgba = $winport_bb_text_disable_color
+		SetScreenElementProps id = <controlId> rgba = $winport_bb_text_disable_color
 	endif
 	i = (<i> + 1)
 	repeat <array_size>
 	winport_bb_update_option_values
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = menu}
 	change \{user_control_pill_text_color = [
 			0
@@ -307,48 +307,48 @@ script winport_create_bind_buttons
 endscript
 
 script winport_destroy_bind_buttons 
-	destroyscreenelement \{id = screen_container}
+	DestroyScreenElement \{id = screen_container}
 	clean_up_user_control_helpers
 endscript
 
 script winport_bb_update_option_values 
-	getarraysize \{$winport_bb_menuitems}
+	GetArraySize \{$winport_bb_menuItems}
 	i = 0
 	begin
-	formattext checksumname = controlid 'control%d' d = <i>
-	if structurecontains structure = ($winport_bb_menuitems [<i>]) name = actionnum
-		winportsiogetcontrolbinding devicenum = $winport_bb_device_num actionnum = (($winport_bb_menuitems [<i>]).actionnum)
-		winportsiogetcontrolname devicenum = $winport_bb_device_num controlnum = <controlnum>
-		setscreenelementprops id = <controlid> text = <controlname>
-	elseif structurecontains structure = ($winport_bb_menuitems [<i>]) name = controlname
-		setscreenelementprops id = <controlid> text = (($winport_bb_menuitems [<i>]).controlname)
+	FormatText checksumname = controlId 'control%d' d = <i>
+	if StructureContains Structure = ($winport_bb_menuItems [<i>]) name = actionNum
+		WinPortSioGetControlBinding deviceNum = $winport_bb_device_num actionNum = (($winport_bb_menuItems [<i>]).actionNum)
+		WinPortSioGetControlName deviceNum = $winport_bb_device_num controlNum = <controlNum>
+		SetScreenElementProps id = <controlId> text = <controlName>
+	elseif StructureContains Structure = ($winport_bb_menuItems [<i>]) name = controlName
+		SetScreenElementProps id = <controlId> text = (($winport_bb_menuItems [<i>]).controlName)
 	endif
 	i = (<i> + 1)
 	repeat <array_size>
 endscript
 
 script winport_bb_choose_control 
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = menu}
 	winport_bb_focus index = <index>
-	formattext checksumname = controlid 'control%d' d = <index>
-	setscreenelementprops id = <controlid> rgba = $winport_bb_text_highlight_color
-	winport_wait_for_no_control_press devicenum = $winport_bb_device_num actionnum = (<menuitem>.actionnum)
-	winport_wait_for_control_press devicenum = $winport_bb_device_num actionnum = (<menuitem>.actionnum)
-	winport_wait_for_no_control_press devicenum = $winport_bb_device_num actionnum = (<menuitem>.actionnum)
-	winportsiosetcontrolbinding devicenum = $winport_bb_device_num actionnum = (<menuitem>.actionnum) controlnum = <controlnum>
-	setscreenelementprops id = <controlid> rgba = $winport_bb_text_color
+	FormatText checksumname = controlId 'control%d' d = <index>
+	SetScreenElementProps id = <controlId> rgba = $winport_bb_text_highlight_color
+	winport_wait_for_no_control_press deviceNum = $winport_bb_device_num actionNum = (<menuItem>.actionNum)
+	winport_wait_for_control_press deviceNum = $winport_bb_device_num actionNum = (<menuItem>.actionNum)
+	winport_wait_for_no_control_press deviceNum = $winport_bb_device_num actionNum = (<menuItem>.actionNum)
+	WinPortSioSetControlBinding deviceNum = $winport_bb_device_num actionNum = (<menuItem>.actionNum) controlNum = <controlNum>
+	SetScreenElementProps id = <controlId> rgba = $winport_bb_text_color
 	winport_bb_update_option_values
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = menu}
 endscript
 
 script winport_bb_reset_to_config1 
-	getarraysize \{$winport_bb_menuitems}
+	GetArraySize \{$winport_bb_menuItems}
 	i = 0
 	begin
-	if structurecontains structure = ($winport_bb_menuitems [<i>]) name = actionnum
-		winportsiosetcontrolbinding devicenum = $winport_bb_device_num actionnum = (($winport_bb_menuitems [<i>]).actionnum) controlnum = -1
+	if StructureContains Structure = ($winport_bb_menuItems [<i>]) name = actionNum
+		WinPortSioSetControlBinding deviceNum = $winport_bb_device_num actionNum = (($winport_bb_menuItems [<i>]).actionNum) controlNum = -1
 	endif
 	i = (<i> + 1)
 	repeat <array_size>
@@ -356,11 +356,11 @@ script winport_bb_reset_to_config1
 endscript
 
 script winport_bb_reset_to_config2 
-	getarraysize \{$winport_bb_menuitems}
+	GetArraySize \{$winport_bb_menuItems}
 	i = 0
 	begin
-	if structurecontains structure = ($winport_bb_menuitems [<i>]) name = actionnum
-		winportsiosetcontrolbinding devicenum = $winport_bb_device_num actionnum = (($winport_bb_menuitems [<i>]).actionnum) controlnum = -2
+	if StructureContains Structure = ($winport_bb_menuItems [<i>]) name = actionNum
+		WinPortSioSetControlBinding deviceNum = $winport_bb_device_num actionNum = (($winport_bb_menuItems [<i>]).actionNum) controlNum = -2
 	endif
 	i = (<i> + 1)
 	repeat <array_size>
@@ -368,32 +368,32 @@ script winport_bb_reset_to_config2
 endscript
 
 script winport_bb_focus 
-	formattext checksumname = hiliteid 'hilite%d' d = <index>
-	setscreenelementprops id = <hiliteid> alpha = 1
+	FormatText checksumname = hiliteId 'hilite%d' d = <index>
+	SetScreenElementProps id = <hiliteId> alpha = 1
 endscript
 
 script winport_bb_unfocus 
-	formattext checksumname = hiliteid 'hilite%d' d = <index>
-	setscreenelementprops id = <hiliteid> alpha = 0
+	FormatText checksumname = hiliteId 'hilite%d' d = <index>
+	SetScreenElementProps id = <hiliteId> alpha = 0
 endscript
 
 script winport_wait_for_no_control_press 
 	begin
-	if NOT winportsiogetcontrolpress devicenum = <devicenum> actionnum = <actionnum>
+	if NOT WinPortSioGetControlPress deviceNum = <deviceNum> actionNum = <actionNum>
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
 script winport_wait_for_control_press 
 	begin
-	if winportsiogetcontrolpress devicenum = <devicenum> actionnum = <actionnum>
+	if WinPortSioGetControlPress deviceNum = <deviceNum> actionNum = <actionNum>
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
-	return controlnum = <controlnum>
+	return controlNum = <controlNum>
 endscript

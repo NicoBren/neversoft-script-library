@@ -1,37 +1,37 @@
-l_guit_matt_bulls_anims_set = {
+L_GUIT_Matt_Bulls_anims_set = {
 	Stance_A = {
 		Idle = {
 			good = {
-				slow = [
-					guit_matt_bulls_075_01
+				Slow = [
+					guit_Matt_Bulls_075_01
 				]
-				med = [
-					guit_matt_bulls_100_01
+				Med = [
+					guit_Matt_Bulls_100_01
 				]
-				FAST = [
-					guit_matt_bulls_120_01
+				Fast = [
+					guit_Matt_Bulls_120_01
 				]
 			}
 			Normal = {
-				slow = [
-					guit_matt_bulls_075_01
+				Slow = [
+					guit_Matt_Bulls_075_01
 				]
-				med = [
-					guit_matt_bulls_100_01
+				Med = [
+					guit_Matt_Bulls_100_01
 				]
-				FAST = [
-					guit_matt_bulls_120_01
+				Fast = [
+					guit_Matt_Bulls_120_01
 				]
 			}
-			bad = {
-				slow = [
-					guit_matt_bulls_075_01
+			Bad = {
+				Slow = [
+					guit_Matt_Bulls_075_01
 				]
-				med = [
-					guit_matt_bulls_100_01
+				Med = [
+					guit_Matt_Bulls_100_01
 				]
-				FAST = [
-					guit_matt_bulls_120_01
+				Fast = [
+					guit_Matt_Bulls_120_01
 				]
 			}
 		}

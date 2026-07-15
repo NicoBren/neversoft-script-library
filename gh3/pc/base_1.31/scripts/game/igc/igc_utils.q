@@ -1,8 +1,8 @@
 igc_custom_camera_name = custom_igc_cam
 
-script playigccamscene 
+script PlayIGCCamScene 
 	hide_all_hud_sprites
-	playigccam {
+	PlayIGCCam {
 		name = $igc_custom_camera_name
 		<...>
 		exitscript = show_all_hud_sprites
@@ -10,28 +10,28 @@ script playigccamscene
 	}
 endscript
 
-script playigccamscenewithhud 
-	playigccam {
+script PlayIGCCamSceneWithHUD 
+	PlayIGCCam {
 		<...>
 		allow_pause = 1
 	}
 endscript
 
 script freeze_skater_for_cinematic 
-	skater :switchoffatomic \{board}
-	skater :pausephysics
-	skater :pause
-	skater :disableplayerinput
-	skater :skaterloopingsound_turnoff
+	skater :SwitchOffAtomic \{Board}
+	skater :PausePhysics
+	skater :Pause
+	skater :Disableplayerinput
+	skater :SkaterLoopingSound_TurnOff
 endscript
 
 script unfreeze_skater_after_cinematic 
-	skater :unpausephysics
-	skater :enableplayerinput
-	skater :unpause
-	skater :input_debounce \{x}
+	skater :UnPausePhysics
+	skater :Enableplayerinput
+	skater :UnPause
+	skater :Input_Debounce \{x}
 	if NOT skater :walking
-		skater :skaterloopingsound_turnon
+		skater :SkaterLoopingSound_TurnOn
 	endif
 endscript
 
@@ -49,12 +49,12 @@ script fadetoblack \{time = 0.5
 		id = screenfader
 		pos = (320.0, 240.0)
 		parent = root_window}
-	if gotparam \{on}
-		if NOT screenelementexists id = <id>
-			setscreenelementlock off id = <parent>
-			if NOT gotparam \{create_script}
-				createscreenelement {
-					type = spriteelement
+	if GotParam \{on}
+		if NOT ScreenElementExists id = <id>
+			SetScreenElementLock off id = <parent>
+			if NOT GotParam \{create_script}
+				CreateScreenElement {
+					type = SpriteElement
 					parent = <parent>
 					id = <id>
 					texture = <texture>
@@ -70,25 +70,25 @@ script fadetoblack \{time = 0.5
 				<create_script>
 			endif
 		else
-			terminateobjectsscripts id = <id>
-			<id> :removetags [waiting_to_die]
+			TerminateObjectsScripts id = <id>
+			<id> :RemoveTags [waiting_to_die]
 		endif
-		doscreenelementmorph id = <id> time = <time> alpha = <alpha>
+		doScreenElementMorph id = <id> time = <time> alpha = <alpha>
 	endif
-	if gotparam \{off}
-		if screenelementexists id = <id>
-			doscreenelementmorph id = <id> time = <time> alpha = 0
-			if gotparam \{no_wait}
-				runscriptonscreenelement id = <id> fadetoblack_wait_and_die params = {time = <time>}
+	if GotParam \{off}
+		if ScreenElementExists id = <id>
+			doScreenElementMorph id = <id> time = <time> alpha = 0
+			if GotParam \{no_wait}
+				RunScriptOnScreenElement id = <id> fadetoblack_wait_and_die params = {time = <time>}
 			else
-				<id> :settags waiting_to_die
+				<id> :SetTags waiting_to_die
 				if (<time> > 0.0)
 					printf \{"waiting"}
-					wait <time> seconds
+					Wait <time> seconds
 				endif
-				if screenelementexists id = <id>
-					if <id> :getsingletag waiting_to_die
-						destroyscreenelement id = <id>
+				if ScreenElementExists id = <id>
+					if <id> :GetSingleTag waiting_to_die
+						DestroyScreenElement id = <id>
 					endif
 				endif
 			endif
@@ -97,15 +97,15 @@ script fadetoblack \{time = 0.5
 endscript
 
 script fadetoblack_wait_and_die 
-	if gotparam \{time}
-		wait <time> seconds
+	if GotParam \{time}
+		Wait <time> seconds
 	endif
-	die
+	Die
 endscript
 
 script igc_fadeout \{time = 0.75}
 	fadetoblack on alpha = 1.0 time = <time>
-	wait (<time> + 0.1) seconds
+	Wait (<time> + 0.1) seconds
 endscript
 
 script igc_fadeout_fast 

@@ -7,7 +7,7 @@ script create_network_prompt_menu
 			dims = (800.0, 400.0)
 			scale = 0.5
 		}
-		textelement = {
+		TextElement = {
 			text = "Do you want to go online at this time?"
 			pos = (640.0, 465.0)
 			scale = 0.6
@@ -64,25 +64,25 @@ script destroy_autologin_prompt_menu
 endscript
 
 script set_autologin_yes_result 
-	netsessionfunc \{func = setautologinsetting
+	NetSessionFunc \{func = SetAutoLoginSetting
 		params = {
-			autologinsetting = autologinon
+			autoLoginSetting = autoLoginOn
 		}}
 	ui_flow_manager_respond_to_action \{action = continue}
 endscript
 
 script set_autologin_no_result 
-	netsessionfunc \{func = setautologinsetting
+	NetSessionFunc \{func = SetAutoLoginSetting
 		params = {
-			autologinsetting = autologinoff
+			autoLoginSetting = autoLoginOff
 		}}
 	ui_flow_manager_respond_to_action \{action = continue}
 endscript
 
 script set_autologin_prompt_result 
-	netsessionfunc \{func = setautologinsetting
+	NetSessionFunc \{func = SetAutoLoginSetting
 		params = {
-			autologinsetting = autologinprompt
+			autoLoginSetting = autoLoginPrompt
 		}}
 	ui_flow_manager_respond_to_action \{action = continue}
 endscript
@@ -114,7 +114,7 @@ endscript
 script signin_warning_select_cws 
 	start_checking_for_signin_change
 	change \{enable_saving = 0}
-	setglobaltags \{user_options
+	SetGlobalTags \{user_options
 		params = {
 			autosave = 0
 		}}
@@ -159,7 +159,7 @@ endscript
 
 script create_online_signin_warning_menu 
 	memcard_cleanup_messages
-	if isxenon
+	if isXenon
 		<text> = "You must be signed in."
 	else
 		<text> = "You must be signed in to access PLAYSTATION®Network features."
@@ -186,10 +186,10 @@ endscript
 
 script create_storagedevice_warning_menu 
 	memcard_cleanup_messages
-	if isps3
+	if IsPs3
 		memcard_sequence_quit
 	else
-		if ($memcardsavingorloading = saving)
+		if ($MemcardSavingOrLoading = Saving)
 			desc_text = "No storage device selected or found. If no storage device is available, progress will not be saved."
 			continue_text = "CONTINUE WITHOUT SAVING"
 			continue_func = memcard_disable_saves_and_quit
@@ -211,7 +211,7 @@ script create_storagedevice_warning_menu
 			dialgo
 			options = [
 				{
-					func = {memcard_sequence_retry params = {storageselectorforce = 1}}
+					func = {memcard_sequence_retry params = {StorageSelectorForce = 1}}
 					text = "SELECT STORAGE DEVICE"
 				}
 				{
@@ -225,7 +225,7 @@ endscript
 
 script create_checking_memory_card_screen 
 	memcard_cleanup_messages
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
 		create_popup_warning_menu \{title = "CHECKING..."
@@ -242,7 +242,7 @@ endscript
 
 script create_confirm_overwrite_menu 
 	memcard_cleanup_messages
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
 		text = "Are you sure you want to overwrite this Save Data? All progress within this Save Data will be lost."
@@ -258,7 +258,7 @@ script create_confirm_overwrite_menu
 		dialog_dims = (350.0, 64.0)
 		options = [
 			{
-				func = {memcard_save_file params = {overwriteconfirmed = 1}}
+				func = {memcard_save_file params = {OverwriteConfirmed = 1}}
 				text = "OVERWRITE"
 			}
 			{
@@ -271,7 +271,7 @@ endscript
 
 script create_confirm_load_menu 
 	memcard_cleanup_messages
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
 		text = "Are you sure you want to load this Save Data? All progress since your last save will be lost."
@@ -287,7 +287,7 @@ script create_confirm_load_menu
 		dialog_dims = (256.0, 64.0)
 		options = [
 			{
-				func = {memcard_load_file params = {loadconfirmed = 1}}
+				func = {memcard_load_file params = {LoadConfirmed = 1}}
 				text = "LOAD"
 			}
 			{
@@ -316,14 +316,14 @@ endscript
 
 script create_corrupted_data_menu 
 	memcard_cleanup_messages
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
 		text = "Save Data is damaged and cannot be used. Do you want to delete this Save Data? All progress within this Save Data will be lost."
 		case xenon
 		text = "Game content is damaged and cannot be used. Do you want to delete this content? All progress within this save content will be lost."
 	endswitch
-	if ($memcardsavingorloading = saving)
+	if ($MemcardSavingOrLoading = Saving)
 		options = [
 			{
 				func = memcard_delete_file
@@ -365,7 +365,7 @@ endscript
 
 script create_delete_file_menu 
 	memcard_cleanup_messages
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
 		create_popup_warning_menu \{title = "DELETING..."
@@ -382,7 +382,7 @@ endscript
 
 script create_delete_success_menu 
 	memcard_cleanup_messages
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
 		create_popup_warning_menu \{title = "SUCCESSFUL"
@@ -399,7 +399,7 @@ endscript
 
 script create_load_success_menu 
 	memcard_cleanup_messages
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
 		create_popup_warning_menu \{title = "SUCCESSFUL"
@@ -416,7 +416,7 @@ endscript
 
 script create_save_success_menu 
 	memcard_cleanup_messages
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
 		create_popup_warning_menu \{title = "SUCCESSFUL"
@@ -433,7 +433,7 @@ endscript
 
 script create_overwrite_success_menu 
 	memcard_cleanup_messages
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
 		create_popup_warning_menu \{title = "SUCCESSFUL"
@@ -450,7 +450,7 @@ endscript
 
 script create_delete_failed_menu 
 	memcard_cleanup_messages
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
 		create_popup_warning_menu \{title = "DELETE FAILED!"
@@ -491,7 +491,7 @@ endscript
 
 script create_load_failed_menu 
 	memcard_cleanup_messages
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
 		create_popup_warning_menu \{textblock = {
@@ -532,7 +532,7 @@ endscript
 
 script create_save_failed_menu 
 	memcard_cleanup_messages
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
 		create_popup_warning_menu \{textblock = {
@@ -573,7 +573,7 @@ endscript
 
 script create_overwrite_failed_menu 
 	memcard_cleanup_messages
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
 		create_popup_warning_menu \{textblock = {
@@ -614,11 +614,11 @@ endscript
 
 script create_out_of_space_menu 
 	memcard_cleanup_messages
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
-		mc_spacefornewfolder \{desc = guitarcontent}
-		formattext textname = message "Insufficient HDD space to save games. Guitar Hero 3 requires %dKB HDD space for a single save. If you choose to proceed, you will be unable to save your progress in the game." d = <spacerequired>
+		MC_SpaceForNewFolder \{desc = GuitarContent}
+		FormatText TextName = message "Insufficient HDD space to save games. Guitar Hero 3 requires %dKB HDD space for a single save. If you choose to proceed, you will be unable to save your progress in the game." d = <SpaceRequired>
 		create_popup_warning_menu {
 			textblock = {
 				text = <message>
@@ -640,7 +640,7 @@ script create_out_of_space_menu
 			]
 		}
 		case xenon
-		if ($memcardsavingorloading = saving)
+		if ($MemcardSavingOrLoading = Saving)
 			create_popup_warning_menu \{textblock = {
 					text = [
 						"No space to save"
@@ -667,7 +667,7 @@ endscript
 
 script create_load_file_menu 
 	memcard_cleanup_messages
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
 		create_popup_warning_menu \{title = "LOADING..."
@@ -684,7 +684,7 @@ endscript
 
 script create_overwrite_menu 
 	memcard_cleanup_messages
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
 		create_popup_warning_menu \{title = "OVERWRITING..."
@@ -702,7 +702,7 @@ endscript
 
 script create_save_menu 
 	memcard_cleanup_messages
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
 		create_popup_warning_menu \{title = "SAVING..."

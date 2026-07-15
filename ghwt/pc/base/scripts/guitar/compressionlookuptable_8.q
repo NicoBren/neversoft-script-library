@@ -1,63 +1,63 @@
-writetobuffer_compressionlookuptable_8 = [
+WriteToBuffer_CompressionLookupTable_8 = [
 	cas_physique
-	cas_body
-	cas_full_body
-	cas_eyes
-	cas_female_hair
-	cas_female_hat_hair
-	cas_female_hat
-	cas_female_facial_hair
-	cas_female_torso
-	cas_female_legs
-	cas_female_shoes
-	cas_female_acc_left
-	cas_female_acc_right
-	cas_female_acc_face
-	cas_female_acc_ears
-	cas_female_intro_anim
-	cas_female_win_anim
-	cas_female_lose_anim
-	cas_female_age
-	cas_male_hair
-	cas_male_hat_hair
-	cas_male_hat
-	cas_male_facial_hair
-	cas_male_torso
-	cas_male_legs
-	cas_male_shoes
-	cas_male_acc_left
-	cas_male_acc_right
-	cas_male_acc_face
-	cas_male_acc_ears
-	cas_male_intro_anim
-	cas_male_win_anim
-	cas_male_lose_anim
-	cas_male_age
-	cas_full_instrument
-	cas_guitar_body
-	cas_guitar_neck
-	cas_guitar_head
-	cas_guitar_pickguards
-	cas_guitar_bridges
-	cas_guitar_knobs
-	cas_guitar_pickups
-	cas_guitar_strings
-	cas_guitar_highway
-	cas_bass_body
-	cas_bass_neck
-	cas_bass_head
-	cas_bass_pickguards
-	cas_bass_pickups
-	cas_bass_bridges
-	cas_bass_knobs
-	cas_bass_strings
-	cas_bass_highway
-	cas_drums
-	cas_drums_sticks
-	cas_drums_highway
-	cas_mic
-	cas_mic_stand
-	cas_band_logo
+	CAS_Body
+	CAS_Full_Body
+	CAS_Eyes
+	CAS_Female_Hair
+	CAS_Female_Hat_Hair
+	CAS_Female_Hat
+	CAS_Female_Facial_Hair
+	CAS_Female_Torso
+	CAS_Female_Legs
+	CAS_Female_Shoes
+	CAS_Female_Acc_Left
+	CAS_Female_Acc_Right
+	CAS_Female_Acc_Face
+	CAS_Female_Acc_Ears
+	CAS_Female_Intro_Anim
+	CAS_Female_Win_Anim
+	CAS_Female_Lose_Anim
+	CAS_Female_Age
+	CAS_Male_Hair
+	CAS_Male_Hat_Hair
+	CAS_Male_Hat
+	CAS_Male_Facial_Hair
+	CAS_Male_Torso
+	CAS_Male_Legs
+	CAS_Male_Shoes
+	CAS_Male_Acc_Left
+	CAS_Male_Acc_Right
+	CAS_Male_Acc_Face
+	CAS_Male_Acc_Ears
+	CAS_Male_Intro_Anim
+	CAS_Male_Win_Anim
+	CAS_Male_Lose_Anim
+	CAS_Male_Age
+	CAS_Full_Instrument
+	CAS_Guitar_Body
+	CAS_Guitar_Neck
+	CAS_Guitar_Head
+	CAS_Guitar_Pickguards
+	CAS_Guitar_Bridges
+	CAS_Guitar_Knobs
+	CAS_Guitar_Pickups
+	CAS_Guitar_Strings
+	CAS_Guitar_Highway
+	CAS_Bass_Body
+	CAS_Bass_Neck
+	CAS_Bass_Head
+	CAS_Bass_Pickguards
+	CAS_Bass_Pickups
+	CAS_Bass_Bridges
+	CAS_Bass_Knobs
+	CAS_Bass_Strings
+	CAS_Bass_Highway
+	CAS_Drums
+	CAS_Drums_Sticks
+	CAS_Drums_Highway
+	CAS_Mic
+	CAS_Mic_Stand
+	CAS_Band_Logo
 	cap
 	desc_id
 	base_tex
@@ -79,7 +79,7 @@ writetobuffer_compressionlookuptable_8 = [
 	normal_map
 	diffuse
 	specular
-	cas_1
+	Cas_1
 	cas_2
 	a
 	none
@@ -92,42 +92,42 @@ writetobuffer_compressionlookuptable_8 = [
 	material2
 	material3
 	material4
-	headsize
-	facefullness
-	jawscale
-	chinsize
-	earangle
-	eartip
-	nosesize
-	nosetip
-	nosewidth
-	noseangle
-	nosedepth
-	nosebridge
-	noseposition
-	cheekboneshape
-	mouthscale
-	mouthposition
-	mouthdepth
-	mouthangle
-	lipshape
-	upperlipthickness
-	lowerlipthickness
-	eyeangle
-	eyeshape
-	eyeposition
-	eyedepth
-	eyescale
-	eyedistance
-	eyebrowshape
-	eyebrowsize
-	eyebrowangle
-	eyebrowdistance
-	browposition
-	browdepth
-	physique
-	chest
-	height
+	HeadSize
+	FaceFullness
+	JawScale
+	ChinSize
+	EarAngle
+	EarTip
+	NoseSize
+	NoseTip
+	NoseWidth
+	NoseAngle
+	NoseDepth
+	NoseBridge
+	NosePosition
+	CheekboneShape
+	MouthScale
+	MouthPosition
+	MouthDepth
+	MouthAngle
+	LipShape
+	UpperLipThickness
+	LowerLipThickness
+	EyeAngle
+	EyeShape
+	EyePosition
+	EyeDepth
+	EyeScale
+	EyeDistance
+	EyebrowShape
+	EyebrowSize
+	EyebrowAngle
+	EyebrowDistance
+	BrowPosition
+	BrowDepth
+	Physique
+	Chest
+	Height
 	bone
 	bones
 	additional_bone_transforms

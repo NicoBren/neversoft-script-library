@@ -1,26 +1,26 @@
 
-script create_mp_select_match_type_menu \{menu_title = qs(0x4d968017)
-		menu_subtitle = qs(0xc23080be)
+script create_mp_select_match_type_menu \{menu_title = qs("CREATE MATCH")
+		menu_subtitle = qs("MATCH TYPE")
 		menu_id = create_match_type_menu
 		vmenu_id = create_match_type_vmenu}
-	CreateScreenElement \{Type = ContainerElement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = online_menu_ui_container
-		Pos = (0.0, 0.0)}
+		pos = (0.0, 0.0)}
 	CreateScreenElement {
-		Type = VScrollingMenu
+		type = VScrollingMenu
 		parent = online_menu_ui_container
 		id = <menu_id>
 		just = [center top]
 		dims = (256.0, 350.0)
-		Pos = (($online_general_menu_pos) + (0.0, 182.0))
+		pos = (($online_general_menu_pos) + (0.0, 182.0))
 		z_priority = 1
 	}
 	CreateScreenElement {
-		Type = VMenu
+		type = VMenu
 		parent = <menu_id>
 		id = <vmenu_id>
-		Pos = ((128.0, 0.0) + (-8.0, 0.0))
+		pos = ((128.0, 0.0) + (-8.0, 0.0))
 		just = [center top]
 		internal_just = [center center]
 		dims = (256.0, 350.0)
@@ -35,67 +35,67 @@ script create_mp_select_match_type_menu \{menu_title = qs(0x4d968017)
 	}
 	create_menu_backdrop \{texture = xb_online_bg}
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = online_menu_ui_container
 		font = fontgrid_text_a8
-		Scale = (0.65000004, 0.75)
+		scale = (0.65000004, 0.75)
 		rgba = ($online_medium_blue)
 		text = <menu_title>
 		just = [center top]
-		Pos = (($online_general_menu_pos) + (-5.0, 32.0))
+		pos = (($online_general_menu_pos) + (-5.0, 32.0))
 		z_priority = 3.0
 	}
 	fit_text_into_menu_item id = <id> max_width = 223
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = online_menu_ui_container
 		font = fontgrid_title_a1
-		Scale = (0.7, 0.75)
+		scale = (0.7, 0.75)
 		rgba = ($online_dark_purple)
 		text = <menu_subtitle>
 		just = [center top]
-		Pos = (($online_general_menu_pos) + (0.0, 115.0))
+		pos = (($online_general_menu_pos) + (0.0, 115.0))
 		z_priority = 4.0
 	}
 	fit_text_into_menu_item id = <id> max_width = 223
 	selectable_menu_items = 0
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = <vmenu_id>
 		font = fontgrid_title_a1
-		Scale = (0.65000004, 0.75)
+		scale = (0.65000004, 0.75)
 		rgba = ($online_light_blue)
-		text = qs(0x3489402d)
+		text = qs("PLAYER MATCH")
 		just = [left top]
 		z_priority = 4.0
 	}
 	fit_text_into_menu_item id = <id> max_width = 223
 	<id> :SetTags menu_item = <selectable_menu_items>
-	<id> :se_setprops event_handlers = [
+	<id> :SE_SetProps event_handlers = [
 		{focus online_general_menu_focus params = {id = <id>}}
 		{unfocus retail_menu_unfocus}
-		{pad_choose select_match_type params = {Type = Player}}
+		{pad_choose select_match_type params = {type = player}}
 	]
 	<selectable_menu_items> = (<selectable_menu_items> + 1)
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = <vmenu_id>
 		font = fontgrid_title_a1
-		Scale = (0.65000004, 0.75)
+		scale = (0.65000004, 0.75)
 		rgba = ($online_light_blue)
-		text = qs(0xd6e06d82)
+		text = qs("RANKED MATCH")
 		just = [left top]
 		z_priority = 4.0
 	}
 	fit_text_into_menu_item id = <id> max_width = 223
 	<id> :SetTags menu_item = <selectable_menu_items>
-	<id> :se_setprops event_handlers = [
+	<id> :SE_SetProps event_handlers = [
 		{focus online_general_menu_focus params = {id = <id>}}
 		{unfocus retail_menu_unfocus}
-		{pad_choose select_match_type params = {Type = Ranked}}
+		{pad_choose select_match_type params = {type = ranked}}
 	]
 	<selectable_menu_items> = (<selectable_menu_items> + 1)
-	set_online_menu_highlight_pos menu_items = <selectable_menu_items>
+	set_online_menu_highlight_pos Menu_items = <selectable_menu_items>
 	set_focus_color rgba = ($online_dark_purple)
 	set_unfocus_color rgba = ($online_light_blue)
 	set_user_control_color \{text_rgba = [
@@ -110,13 +110,13 @@ script create_mp_select_match_type_menu \{menu_title = qs(0x4d968017)
 			0
 			200
 		]}
-	add_user_control_helper \{text = qs(0xc18d5e76)
+	add_user_control_helper \{text = qs("SELECT")
 		button = green
 		z = 100}
-	add_user_control_helper \{text = qs(0xaf4d5dd2)
+	add_user_control_helper \{text = qs("BACK")
 		button = red
 		z = 100}
-	LaunchEvent Type = focus target = <vmenu_id>
+	LaunchEvent type = focus target = <vmenu_id>
 endscript
 
 script destroy_mp_select_match_type_menu 
@@ -128,13 +128,13 @@ script destroy_mp_select_match_type_menu
 endscript
 
 script select_match_type 
-	Change match_type = <Type>
-	if (<Type> = Ranked)
-		netoptions :pref_choose \{Name = Ranked
-			checksum = Ranked}
+	change match_type = <type>
+	if (<type> = ranked)
+		NetOptions :Pref_Choose \{name = ranked
+			checksum = ranked}
 	else
-		netoptions :pref_choose \{Name = Ranked
-			checksum = Player}
+		NetOptions :Pref_Choose \{name = ranked
+			checksum = player}
 	endif
 	ui_flow_manager_respond_to_action \{action = select_match_type}
 endscript
@@ -143,52 +143,52 @@ script online_general_menu_focus
 	if ScreenElementExists id = <id>
 		retail_menu_focus
 		<id> :GetTags
-		online_highlight :se_setprops Pos = ((($online_general_menu_hi_lite_ypos [<menu_item>]) * (0.0, 1.0)) + (632.0, 0.0))
-		online_bookend1 :se_setprops Pos = ((($online_general_menu_hi_lite_ypos [<menu_item>]) * (0.0, 1.0)) + (485.0, 20.0))
-		online_bookend2 :se_setprops Pos = ((($online_general_menu_hi_lite_ypos [<menu_item>]) * (0.0, 1.0)) + (789.0, 20.0))
+		online_highlight :SE_SetProps pos = ((($online_general_menu_hi_lite_ypos [<menu_item>]) * (0.0, 1.0)) + (632.0, 0.0))
+		online_bookend1 :SE_SetProps pos = ((($online_general_menu_hi_lite_ypos [<menu_item>]) * (0.0, 1.0)) + (485.0, 20.0))
+		online_bookend2 :SE_SetProps pos = ((($online_general_menu_hi_lite_ypos [<menu_item>]) * (0.0, 1.0)) + (789.0, 20.0))
 	endif
 endscript
 
-script set_online_menu_highlight_pos \{menu_items = 2}
-	switch <menu_items>
+script set_online_menu_highlight_pos \{Menu_items = 2}
+	switch <Menu_items>
 		case 2
 		SetArrayElement \{ArrayName = online_general_menu_hi_lite_ypos
-			globalarray
+			GlobalArray
 			index = 0
-			NewValue = 368.875}
+			newvalue = 368.875}
 		SetArrayElement \{ArrayName = online_general_menu_hi_lite_ypos
-			globalarray
+			GlobalArray
 			index = 1
-			NewValue = 439.75}
+			newvalue = 439.75}
 		case 3
 		SetArrayElement \{ArrayName = online_general_menu_hi_lite_ypos
-			globalarray
+			GlobalArray
 			index = 0
-			NewValue = 332.75}
+			newvalue = 332.75}
 		SetArrayElement \{ArrayName = online_general_menu_hi_lite_ypos
-			globalarray
+			GlobalArray
 			index = 1
-			NewValue = 403.625}
+			newvalue = 403.625}
 		SetArrayElement \{ArrayName = online_general_menu_hi_lite_ypos
-			globalarray
+			GlobalArray
 			index = 2
-			NewValue = 474.5}
+			newvalue = 474.5}
 		case 4
 		SetArrayElement \{ArrayName = online_general_menu_hi_lite_ypos
-			globalarray
+			GlobalArray
 			index = 0
-			NewValue = 298.0}
+			newvalue = 298.0}
 		SetArrayElement \{ArrayName = online_general_menu_hi_lite_ypos
-			globalarray
+			GlobalArray
 			index = 1
-			NewValue = 368.875}
+			newvalue = 368.875}
 		SetArrayElement \{ArrayName = online_general_menu_hi_lite_ypos
-			globalarray
+			GlobalArray
 			index = 2
-			NewValue = 439.75}
+			newvalue = 439.75}
 		SetArrayElement \{ArrayName = online_general_menu_hi_lite_ypos
-			globalarray
+			GlobalArray
 			index = 3
-			NewValue = 510.625}
+			newvalue = 510.625}
 	endswitch
 endscript

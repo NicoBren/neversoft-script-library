@@ -4,172 +4,172 @@ jam_max_user_songs = 0
 jam_max_downloaded_songs = 0
 
 script set_plat_jam_maximums 
-	if isps3
-		Change \{jam_max_user_songs = 40}
-		Change \{jam_max_downloaded_songs = 50}
+	if IsPs3
+		change \{jam_max_user_songs = 40}
+		change \{jam_max_downloaded_songs = 50}
 	else
-		Change \{jam_max_user_songs = 50}
-		Change \{jam_max_downloaded_songs = 100}
+		change \{jam_max_user_songs = 50}
+		change \{jam_max_downloaded_songs = 100}
 	endif
 endscript
 jam_song_assets = [
 	{
-		display_name = qs(0x2e2ffa47)
-		FileName = qs(0x2e2ffa47)
-		artist = qs(0x0978b483)
+		display_name = qs("\LAmazing")
+		filename = qs("\LAmazing")
+		artist = qs("\LNeversoft")
 		playback_track1 = 1
 		playback_track2 = 2
 		playback_track_drums = 1
 		playback_track_vocals = 1
 	}
 	{
-		display_name = qs(0x978d1559)
-		FileName = qs(0x978d1559)
-		artist = qs(0x0978b483)
+		display_name = qs("\LBee")
+		filename = qs("\LBee")
+		artist = qs("\LNeversoft")
 		playback_track1 = 1
 		playback_track2 = 2
 		playback_track_drums = 1
 		playback_track_vocals = 0
 	}
 	{
-		display_name = qs(0x5def14a5)
-		FileName = qs(0x5def14a5)
-		artist = qs(0x0978b483)
+		display_name = qs("\LBouree")
+		filename = qs("\LBouree")
+		artist = qs("\LNeversoft")
 		playback_track1 = 1
 		playback_track2 = 2
 		playback_track_drums = 1
 		playback_track_vocals = 0
 	}
 	{
-		display_name = qs(0x8491b68c)
-		FileName = qs(0x3a28b18f)
-		artist = qs(0x0978b483)
+		display_name = qs("\LFur Elise")
+		filename = qs("\LFurElise")
+		artist = qs("\LNeversoft")
 		playback_track1 = 1
 		playback_track2 = 2
 		playback_track_drums = 1
 		playback_track_vocals = 0
 	}
 	{
-		display_name = qs(0x4bb1ceda)
-		FileName = qs(0x7c727098)
-		artist = qs(0x0978b483)
+		display_name = qs("\LFuture Freak")
+		filename = qs("\LFutureFreak")
+		artist = qs("\LNeversoft")
 		playback_track1 = 0
 		playback_track2 = 4
 		playback_track_drums = 1
 		playback_track_vocals = 1
 	}
 	{
-		display_name = qs(0xb47cc6e1)
-		FileName = qs(0xb47cc6e1)
-		artist = qs(0x0978b483)
+		display_name = qs("\LGreensleeves")
+		filename = qs("\LGreensleeves")
+		artist = qs("\LNeversoft")
 		playback_track1 = 1
 		playback_track2 = 2
 		playback_track_drums = 1
 		playback_track_vocals = 0
 	}
 	{
-		display_name = qs(0xd466cff3)
-		FileName = qs(0xb85d73e0)
-		artist = qs(0x0978b483)
+		display_name = qs("\LI Like Dirt")
+		filename = qs("\LILikeDirt")
+		artist = qs("\LNeversoft")
 		playback_track1 = 0
 		playback_track2 = 2
 		playback_track_drums = 1
 		playback_track_vocals = 0
 	}
 	{
-		display_name = qs(0x9b0ab726)
-		FileName = qs(0x7bee8fe8)
-		artist = qs(0x0978b483)
+		display_name = qs("\LJam and Toast")
+		filename = qs("\LJamAndToast")
+		artist = qs("\LNeversoft")
 		playback_track1 = 0
 		playback_track2 = 2
 		playback_track_drums = 1
 		playback_track_vocals = 1
 	}
 	{
-		display_name = qs(0x312973ab)
-		FileName = qs(0xa014beb7)
-		artist = qs(0x0978b483)
+		display_name = qs("\LLa Noche")
+		filename = qs("\LLaNoche")
+		artist = qs("\LNeversoft")
 		playback_track1 = 1
 		playback_track2 = 4
 		playback_track_drums = 1
 		playback_track_vocals = 1
 	}
 	{
-		display_name = qs(0x25c195a9)
-		FileName = qs(0x4c5d2fb4)
-		artist = qs(0x0978b483)
+		display_name = qs("\LLaser Bop")
+		filename = qs("\LLaserBop")
+		artist = qs("\LNeversoft")
 		playback_track1 = 1
 		playback_track2 = 2
 		playback_track_drums = 1
 		playback_track_vocals = 1
 	}
 	{
-		display_name = qs(0x0acafca2)
-		FileName = qs(0x8f83e40d)
-		artist = qs(0x0978b483)
+		display_name = qs("\LMaple Leaf")
+		filename = qs("\LMapleLeaf")
+		artist = qs("\LNeversoft")
 		playback_track1 = 1
 		playback_track2 = 2
 		playback_track_drums = 1
 		playback_track_vocals = 0
 	}
 	{
-		display_name = qs(0xe6defecf)
-		FileName = qs(0xe6defecf)
-		artist = qs(0x0978b483)
+		display_name = qs("\LPorto")
+		filename = qs("\LPorto")
+		artist = qs("\LNeversoft")
 		playback_track1 = 1
 		playback_track2 = 2
 		playback_track_drums = 1
 		playback_track_vocals = 0
 	}
 	{
-		display_name = qs(0xf896c03a)
-		FileName = qs(0x3cf5557f)
-		artist = qs(0x0978b483)
+		display_name = qs("\LRaja Funshine")
+		filename = qs("\LRajaFunshine")
+		artist = qs("\LNeversoft")
 		playback_track1 = 1
 		playback_track2 = 2
 		playback_track_drums = 1
 		playback_track_vocals = 1
 	}
 	{
-		display_name = qs(0xe52ab893)
-		FileName = qs(0x1deca987)
-		artist = qs(0x0978b483)
+		display_name = qs("\LRock Hop")
+		filename = qs("\LRockHop")
+		artist = qs("\LNeversoft")
 		playback_track1 = 1
 		playback_track2 = 2
 		playback_track_drums = 1
 		playback_track_vocals = 0
 	}
 	{
-		display_name = qs(0xc626bb8d)
-		FileName = qs(0xc626bb8d)
-		artist = qs(0x0978b483)
+		display_name = qs("\LRondo")
+		filename = qs("\LRondo")
+		artist = qs("\LNeversoft")
 		playback_track1 = 1
 		playback_track2 = 2
 		playback_track_drums = 1
 		playback_track_vocals = 0
 	}
 	{
-		display_name = qs(0xb879a2d4)
-		FileName = qs(0x5617ba48)
-		artist = qs(0x0978b483)
+		display_name = qs("\LStar Spangled")
+		filename = qs("\LStarSpangled")
+		artist = qs("\LNeversoft")
 		playback_track1 = 1
 		playback_track2 = 2
 		playback_track_drums = 1
 		playback_track_vocals = 1
 	}
 	{
-		display_name = qs(0x804425bc)
-		FileName = qs(0x897d90fe)
-		artist = qs(0x0978b483)
+		display_name = qs("\LY and Z")
+		filename = qs("\LYandZ")
+		artist = qs("\LNeversoft")
 		playback_track1 = 0
 		playback_track2 = 2
 		playback_track_drums = 1
 		playback_track_vocals = 1
 	}
 	{
-		display_name = qs(0x1e7dec68)
-		FileName = qs(0xe6561adf)
-		artist = qs(0x508c3746)
+		display_name = qs("\LStudio Example 1")
+		filename = qs("\LStudioExample1")
+		artist = qs("\LMusicStudio")
 		no_qp
 		playback_track1 = -1
 		playback_track2 = 2
@@ -177,9 +177,9 @@ jam_song_assets = [
 		playback_track_vocals = 0
 	}
 	{
-		display_name = qs(0x3550bfab)
-		FileName = qs(0xcd7b491c)
-		artist = qs(0x508c3746)
+		display_name = qs("\LStudio Example 2")
+		filename = qs("\LStudioExample2")
+		artist = qs("\LMusicStudio")
 		no_qp
 		playback_track1 = 0
 		playback_track2 = 2
@@ -219,12 +219,12 @@ jam_tracks = [
 		id = rhythm
 		gem_array = editable_song_expert
 		in_game_gem_array = jamsession_song_in_game
-		name_text = qs(0x1f0659c1)
-		alt_text = qs(0xdfa3a913)
+		name_text = qs("RHYTHM")
+		alt_text = qs("RHYTHM GUITAR")
 		ui_create_func = jam_setup_fretboard
 		ui_destroy_func = jam_destroy_fretboard
 		input_func = jam_input_rhythm
-		Color = [
+		color = [
 			255
 			100
 			100
@@ -235,12 +235,12 @@ jam_tracks = [
 		id = lead
 		gem_array = editable_song_rhythm_expert
 		in_game_gem_array = jamsession_song_rhythm_in_game
-		name_text = qs(0x0cc7d9b2)
-		alt_text = qs(0x15d22c2f)
+		name_text = qs("LEAD")
+		alt_text = qs("LEAD GUITAR")
 		ui_create_func = jam_setup_fretboard
 		ui_destroy_func = jam_destroy_fretboard
 		input_func = jam_input_lead
-		Color = [
+		color = [
 			100
 			255
 			100
@@ -248,15 +248,15 @@ jam_tracks = [
 		]
 	}
 	{
-		id = bass
+		id = Bass
 		gem_array = editable_song_guitarcoop_expert
 		in_game_gem_array = jamsession_song_guitarcoop_in_game
-		name_text = qs(0x7d4f9214)
-		alt_text = qs(0x7d4f9214)
+		name_text = qs("BASS")
+		alt_text = qs("BASS")
 		ui_create_func = jam_setup_fretboard
 		ui_destroy_func = jam_destroy_fretboard
 		input_func = jam_input_bass_recording
-		Color = [
+		color = [
 			100
 			100
 			255
@@ -267,12 +267,12 @@ jam_tracks = [
 		id = drum
 		gem_array = editable_song_drum_expert
 		in_game_gem_array = jamsession_song_drum_in_game
-		name_text = qs(0x388cd3db)
-		alt_text = qs(0x388cd3db)
+		name_text = qs("DRUMS")
+		alt_text = qs("DRUMS")
 		ui_create_func = jam_setup_fretboard
 		ui_destroy_func = jam_destroy_fretboard
 		input_func = jam_input_drums
-		Color = [
+		color = [
 			100
 			255
 			255
@@ -283,12 +283,12 @@ jam_tracks = [
 		id = melody
 		gem_array = editable_song_rhythmcoop_expert
 		in_game_gem_array = jamsession_song_rhythmcoop_in_game
-		name_text = qs(0x58ce03d1)
-		alt_text = qs(0x58ce03d1)
+		name_text = qs("KEYBOARD")
+		alt_text = qs("KEYBOARD")
 		ui_create_func = jam_setup_fretboard
 		ui_destroy_func = jam_destroy_fretboard
 		input_func = jam_input_melody
-		Color = [
+		color = [
 			155
 			10
 			200
@@ -298,61 +298,61 @@ jam_tracks = [
 ]
 jam_genre_list = [
 	{
-		name_text = qs(0x5222d1db)
-		abrev_text = qs(0xef861323)
+		name_text = qs("Alternative")
+		abrev_text = qs("Alt.")
 		checksum = alternative
 		leaderboard = user_content_alternative
 	}
 	{
-		name_text = qs(0x0ec9c808)
-		abrev_text = qs(0x0ec9c808)
-		checksum = pop
+		name_text = qs("Pop")
+		abrev_text = qs("Pop")
+		checksum = Pop
 		leaderboard = user_content_pop
 	}
 	{
-		name_text = qs(0xe829168a)
-		abrev_text = qs(0xf72c525e)
+		name_text = qs("Experimental")
+		abrev_text = qs("Exper.")
 		checksum = experimental
 		leaderboard = user_content_experimental
 	}
 	{
-		name_text = qs(0x4911c80a)
-		abrev_text = qs(0x4911c80a)
+		name_text = qs("Hip Hop")
+		abrev_text = qs("Hip Hop")
 		checksum = hip_hop
 		leaderboard = user_content_hip_hop
 	}
 	{
-		name_text = qs(0xdbe68323)
-		abrev_text = qs(0xdbe68323)
-		checksum = rock
+		name_text = qs("Rock")
+		abrev_text = qs("Rock")
+		checksum = Rock
 		leaderboard = user_content_rock
 	}
 	{
-		name_text = qs(0x355b4e5c)
-		abrev_text = qs(0x355b4e5c)
+		name_text = qs("Metal")
+		abrev_text = qs("Metal")
 		checksum = metal
 		leaderboard = user_content_metal
 	}
 	{
-		name_text = qs(0x40f5ecbc)
-		abrev_text = qs(0x6dd8f8f0)
+		name_text = qs("Electronic")
+		abrev_text = qs("Electro.")
 		checksum = electronic
 		leaderboard = user_content_electronic
 	}
 	{
-		name_text = qs(0xae88c5bc)
-		abrev_text = qs(0xae88c5bc)
-		checksum = other
+		name_text = qs("Other")
+		abrev_text = qs("Other")
+		checksum = Other
 		leaderboard = user_content_other
 	}
 ]
 default_album_cover = [
 	{
-		base_tex = `tex\models\characters\global\global_blank_logo.dds`
-		material = band_logo_primary
+		base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+		material = Band_Logo_Primary
 		layers = [
 			{
-				texture = `tex/models/characters/skater_male/decals/cag_graphics034.img`
+				texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics034.img`
 				flags = 3
 			}
 		]
@@ -378,56 +378,56 @@ jam_highway_measurebar_color = [
 jam_recording_metaview_length = 470.0
 jam_camera_props = {
 	jam_look_at_mixer = {
-		LockTo = World
-		Pos = (0.507738, 1.892075, 16.786266)
+		LockTo = world
+		pos = (0.507738, 1.892075, 16.786266)
 		Quat = (0.02289, -0.948689, 0.070403)
 		FOV = 72.0
 	}
 	jam_song_select = {
-		LockTo = World
-		Pos = (-2.208166, 1.7454499, 13.966361)
+		LockTo = world
+		pos = (-2.208166, 1.7454499, 13.966361)
 		Quat = (0.001762, -0.99729997, 0.025651002)
 		FOV = 72.0
 	}
 	jam_ghmix_song_select = {
-		LockTo = World
-		Pos = (-2.130476, 1.888687, 14.1753235)
+		LockTo = world
+		pos = (-2.130476, 1.888687, 14.1753235)
 		Quat = (0.028432999, -0.78749603, 0.036445998)
 		FOV = 72.0
 	}
 	jam_band = {
-		LockTo = World
-		Pos = (-0.51169395, 1.7524859, 9.7445545)
+		LockTo = world
+		pos = (-0.51169395, 1.7524859, 9.7445545)
 		Quat = (0.001013, 0.9969439, -0.076838)
 		FOV = 72.0
 	}
 	jam_publish = {
-		LockTo = World
-		Pos = (-0.536864, 2.1043458, 15.148574)
+		LockTo = world
+		pos = (-0.536864, 2.1043458, 15.148574)
 		Quat = (0.0052940003, 0.02768, -0.000218)
 		FOV = 72.0
 	}
 	jam_tutorials = {
-		LockTo = World
-		Pos = (-3.6637907, 1.6212071, 12.313894)
+		LockTo = world
+		pos = (-3.6637907, 1.6212071, 12.313894)
 		Quat = (0.020512, -0.966841, 0.076533005)
 		FOV = 72.0
 	}
 	jam_advanced_recording = {
-		LockTo = World
-		Pos = (-3.9595852, 1.8264489, 13.100554)
+		LockTo = world
+		pos = (-3.9595852, 1.8264489, 13.100554)
 		Quat = (0.011898, -0.70952004, 0.0119940005)
 		FOV = 72.0
 	}
 	jam_gh_tunes = {
-		LockTo = World
-		Pos = (-3.222695, 1.3334249, 11.540949)
+		LockTo = world
+		pos = (-3.222695, 1.3334249, 11.540949)
 		Quat = (0.019791, 0.941012, -0.056126006)
 		FOV = 72.0
 	}
 	jam_song_wizard = {
-		LockTo = World
-		Pos = (-2.3648896, 1.668748, 12.441849)
+		LockTo = world
+		pos = (-2.3648896, 1.668748, 12.441849)
 		Quat = (0.002055, 0.98574096, -0.167789)
 		FOV = 72.0
 	}
@@ -498,91 +498,91 @@ jam_button_patterns_bonus = [
 	4113
 	273
 ]
-rhythm_pitch_shift = {
+Rhythm_Pitch_Shift = {
 	effect = whammy
-	Name = jamrhythmpitchshift
+	name = JamRhythmPitchShift
 	pitch = 1.0
 	maxchannels = 0
 }
 jam_special_chords = [
 	{
-		special_up = sg_b_hrm_s1_f12
-		special_down = sg_b_hrm_s1_f12
-		note_txt = qs(0x74dfd1b0)
+		special_up = sg_b_hrm_S1_F12
+		special_down = sg_b_hrm_S1_F12
+		note_txt = qs("\L!!")
 		pattern = 65552
 	}
 	{
-		special_up = sg_b_hrm_s2_f12
-		special_down = sg_b_hrm_s2_f12
-		note_txt = qs(0x74dfd1b0)
+		special_up = sg_b_hrm_S2_F12
+		special_down = sg_b_hrm_S2_F12
+		note_txt = qs("\L!!")
 		pattern = 4097
 	}
 	{
-		special_up = sg_b_hrm_s3_f12
-		special_down = sg_b_hrm_s3_f12
-		note_txt = qs(0x74dfd1b0)
+		special_up = sg_b_hrm_S3_F12
+		special_down = sg_b_hrm_S3_F12
+		note_txt = qs("\L!!")
 		pattern = 65537
 	}
 	{
 		special_up = sg_b_stringmute_up
 		special_down = sg_b_stringmute_down
-		note_txt = qs(0x74dfd1b0)
+		note_txt = qs("\L!!")
 		pattern = 69904
 	}
 	{
-		special_up = sg_b_divebomb_down
-		special_down = sg_b_divebomb_down
-		note_txt = qs(0x74dfd1b0)
+		special_up = sg_b_DiveBomb_Down
+		special_down = sg_b_DiveBomb_Down
+		note_txt = qs("\L!!")
 		pattern = 4369
 	}
 	{
-		special_up = sg_b_hrm_s4_f12
-		special_down = sg_b_hrm_s4_f12
-		note_txt = qs(0x74dfd1b0)
+		special_up = sg_b_hrm_S4_F12
+		special_down = sg_b_hrm_S4_F12
+		note_txt = qs("\L!!")
 		pattern = 69889
 	}
 	{
-		special_up = sg_b_hrm_s5_f12
-		special_down = sg_b_hrm_s5_f12
-		note_txt = qs(0x74dfd1b0)
+		special_up = sg_b_hrm_S5_F12
+		special_down = sg_b_hrm_S5_F12
+		note_txt = qs("\L!!")
 		pattern = 65809
 	}
 	{
-		special_up = sg_b_hrm_s6_f12
-		special_down = sg_b_hrm_s6_f12
-		note_txt = qs(0x74dfd1b0)
+		special_up = sg_b_hrm_S6_F12
+		special_down = sg_b_hrm_S6_F12
+		note_txt = qs("\L!!")
 		pattern = 69633
 	}
 	{
 		special_up = sg_b_pkslideslow
 		special_down = sg_b_pkslideslow
-		note_txt = qs(0x74dfd1b0)
+		note_txt = qs("\L!!")
 		pattern = 65553
 	}
 	{
 		special_up = sg_b_pkslidefast
 		special_down = sg_b_pkslidefast
-		note_txt = qs(0x74dfd1b0)
+		note_txt = qs("\L!!")
 		pattern = 69649
 	}
 	{
 		special_up = sg_b_fingerslide
 		special_down = sg_b_fingerslide
-		note_txt = qs(0x74dfd1b0)
+		note_txt = qs("\L!!")
 		pattern = 69905
 	}
 	{
-		special_up = sg_b_divebomb_updown
-		special_down = sg_b_divebomb_updown
-		note_txt = qs(0x74dfd1b0)
+		special_up = sg_b_DiveBomb_UpDown
+		special_down = sg_b_DiveBomb_UpDown
+		note_txt = qs("\L!!")
 		pattern = 65793
 	}
 ]
 jam_tilt_lead = 0
 jam_lead_octave_range = 1
-lead_pitch_shift = {
+Lead_Pitch_Shift = {
 	effect = whammy
-	Name = jamleadpitchshift
+	name = JamLeadPitchShift
 	pitch = 1.0
 	maxchannels = 0
 }
@@ -590,9 +590,9 @@ jam_hopo_initial_check_frames = 20
 jam_hopo_check_frames = 40
 jam_lead_vibrato_depth = 10
 jam_tilt_bass = 0
-bass_pitch_shift = {
+Bass_Pitch_Shift = {
 	effect = whammy
-	Name = jambasspitchshift
+	name = JamBassPitchShift
 	pitch = 1.0
 	maxchannels = 0
 }
@@ -613,12 +613,12 @@ drum_humanizer_low_bound = 10
 drum_humanizer_high_bound = 10
 jam_tilt_melody = 0
 jam_melody_octave_range = 0
-loadedmelodykitpak = 'none'
+LoadedMelodyKitPak = 'none'
 jam_current_melody_kit = 0
 melody_sample = deepsh101
-melody_pitch_shift = {
+Melody_Pitch_Shift = {
 	effect = whammy
-	Name = jammelodypitchshift
+	name = JamMelodyPitchShift
 	pitch = 1.0
 	maxchannels = 0
 }
@@ -648,48 +648,48 @@ jam_scales_new = [
 		pattern2 = major_pattern2
 		pattern_rhythm = major_pattern_rhythm
 		chord_pattern = major_chord_pattern
-		Name = qs(0xbc536ba1)
+		name = qs("Major")
 	}
 	{
 		pattern = pent_major_pattern
 		pattern2 = pent_major_pattern2
 		pattern_rhythm = pent_major_pattern_rhythm
 		chord_pattern = pent_major_chord_pattern
-		Name = qs(0x34d995a1)
+		name = qs("Mjr. Pent")
 	}
 	{
 		pattern = pent_minor_pattern
 		pattern2 = pent_minor_pattern2
 		pattern_rhythm = pent_minor_pattern_rhythm
 		chord_pattern = pent_minor_chord_pattern
-		Name = qs(0xe0e8d926)
+		name = qs("Mnr. Pent")
 	}
 	{
 		pattern = blues_pattern
 		pattern2 = blues_pattern2
 		pattern_rhythm = blues_pattern_rhythm
 		chord_pattern = blues_chord_pattern
-		Name = qs(0x527b4496)
+		name = qs("Blues")
 	}
 	{
 		pattern = minor_pattern
 		pattern2 = minor_pattern2
 		pattern_rhythm = minor_pattern_rhythm
 		chord_pattern = minor_chord_pattern
-		Name = qs(0xf4273202)
+		name = qs("Minor")
 	}
 	{
 		pattern = chromatic_pattern
 		pattern_rhythm = chromatic_pattern_rhythm
 		chord_pattern = chromatic_chord_pattern
-		Name = qs(0x736feb36)
+		name = qs("Chromatic")
 		chromatic
 	}
 	{
-		pattern = NULL
-		pattern_rhythm = NULL
+		pattern = null
+		pattern_rhythm = null
 		chord_pattern = custom_chord_pattern
-		Name = qs(0xd2cd3957)
+		name = qs("Custom")
 		custom
 	}
 ]

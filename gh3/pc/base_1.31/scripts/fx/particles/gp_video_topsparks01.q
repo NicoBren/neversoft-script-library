@@ -1,53 +1,53 @@
-gp_video_topsparks01 = {
+GP_Video_TopSparks01 = {
 	pos = (-7.745538, 8.674683, -1.5655788)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	emitrangedims = (0.1, 0.1, 0.1)
-	emit_target = (0.0, -0.2, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	EmitRangeDims = (0.1, 0.1, 0.1)
+	emit_Target = (0.0, -0.2, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, -4.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	radiate
-	anglespread = 45.0
-	liferange = (1.5, 2.0)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	Radiate
+	AngleSpread = 45.0
+	LifeRange = (1.5, 2.0)
 	emit_rate = 200.0
 	max = 0
-	timeseed = 0.5
-	lifetime = 1.0
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.5
+	lifeTime = 1.0
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.15, 0.15)
 		(0.02, 0.15)
 	]
-	speedrange = (1.0, 4.0)
-	rotvel = (0.0, 0.0)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	alignwithpath
-	pathfollowtime = 0.05
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (1.0, 4.0)
+	RotVel = (0.0, 0.0)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	AlignWithPath
+	PathFollowTime = 0.05
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -9559553
-	lod_distances = (20.0, 30.0)
-	novisibilitytest
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = jow_spark01
-		specularpower = 0
+	LOD_Distances = (20.0, 30.0)
+	NoVisibilityTest
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = JOW_Spark01
+		SpecularPower = 0
 		alphacutoff = 16
-		blendmode = add
-		quadanimationfps = 0
+		blendMode = Add
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.46765104, 0.0, -0.0)
 		(-0.46765104, 0.0, -0.0)
 		(-0.24335201, 0.0, -0.0)
@@ -58,7 +58,7 @@ gp_video_topsparks01 = {
 		(0.46765104, 0.0, -0.0)
 		(0.46765104, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-1
 		-1
 		-1
@@ -66,7 +66,7 @@ gp_video_topsparks01 = {
 		-256
 		-256
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.719445
 		1.0
 	]

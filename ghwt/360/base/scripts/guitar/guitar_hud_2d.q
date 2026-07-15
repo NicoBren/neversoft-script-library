@@ -2,19 +2,19 @@ g_flash_red_going_p1 = 0
 g_flash_red_going_p2 = 0
 g_flash_red_going_p3 = 0
 g_flash_red_going_p4 = 0
-g_hud_2d_struct_used = NULL
+g_hud_2d_struct_used = null
 
 script create_2d_hud_elements \{player_text = 'p1'}
-	Change \{g_flash_red_going_p1 = 0}
-	Change \{g_flash_red_going_p2 = 0}
-	Change \{old_animate_bulbs_star_power_p1 = 0.0}
-	Change \{old_animate_bulbs_star_power_p2 = 0.0}
-	if StructureContains \{structure = $g_hud_2d_struct_used
+	change \{g_flash_red_going_p1 = 0}
+	change \{g_flash_red_going_p2 = 0}
+	change \{old_animate_bulbs_star_power_p1 = 0.0}
+	change \{old_animate_bulbs_star_power_p2 = 0.0}
+	if StructureContains \{Structure = $g_hud_2d_struct_used
 			elements}
 		GetArraySize (($g_hud_2d_struct_used).elements)
-		parent_scale = (($g_hud_2d_struct_used).Scale)
+		parent_scale = (($g_hud_2d_struct_used).scale)
 		old_parent = <parent>
-		if NOT (<array_Size> = 0)
+		if NOT (<array_size> = 0)
 			i = 0
 			begin
 			just = [left top]
@@ -24,34 +24,34 @@ script create_2d_hud_elements \{player_text = 'p1'}
 			pos_off = (0.0, 0.0)
 			AddParams (($g_hud_2d_struct_used).elements [<i>])
 			element_struct = (($g_hud_2d_struct_used).elements [<i>])
-			if StructureContains structure = <element_struct> parent_container
-				if StructureContains structure = <element_struct> element_parent
-					ExtendCrc <element_parent> <player_text> out = container_parent
+			if StructureContains Structure = <element_struct> parent_container
+				if StructureContains Structure = <element_struct> element_parent
+					ExtendCRC <element_parent> <player_text> out = container_parent
 					if NOT ScreenElementExists id = <container_parent>
-						ExtendCrc <element_parent> 'p1' out = container_parent
+						ExtendCRC <element_parent> 'p1' out = container_parent
 					endif
 				else
 					container_parent = <old_parent>
 				endif
 				container_pos = (0.0, 0.0)
-				if StructureContains structure = <element_struct> pos_type
+				if StructureContains Structure = <element_struct> pos_type
 					<container_pos> = (($g_hud_2d_struct_used).<pos_type>)
 					if (<player_text> = 'p2')
-						ExtendCrc <pos_type> '_p2' out = new_pos_type
+						ExtendCRC <pos_type> '_p2' out = new_pos_type
 						<container_pos> = (($g_hud_2d_struct_used).<new_pos_type>)
 					elseif (<player_text> = 'p3')
-						ExtendCrc <pos_type> '_p3' out = new_pos_type
+						ExtendCRC <pos_type> '_p3' out = new_pos_type
 						<container_pos> = (($g_hud_2d_struct_used).<new_pos_type>)
 					elseif (<player_text> = 'p4')
-						ExtendCrc <pos_type> '_p4' out = new_pos_type
+						ExtendCRC <pos_type> '_p4' out = new_pos_type
 						<container_pos> = (($g_hud_2d_struct_used).<new_pos_type>)
 					elseif NOT ($current_num_players = 1)
-						ExtendCrc <pos_type> '_p1' out = new_pos_type
+						ExtendCRC <pos_type> '_p1' out = new_pos_type
 						<container_pos> = (($g_hud_2d_struct_used).<new_pos_type>)
 					endif
 				endif
-				if StructureContains structure = <element_struct> note_streak_bar
-					if StructureContains structure = ($g_hud_2d_struct_used) offscreen_note_streak_bar_off
+				if StructureContains Structure = <element_struct> note_streak_bar
+					if StructureContains Structure = ($g_hud_2d_struct_used) offscreen_note_streak_bar_off
 						<container_pos> = (<container_pos> + (($g_hud_2d_struct_used).offscreen_note_streak_bar_off))
 					else
 						if (<player_text> = 'p1')
@@ -66,55 +66,55 @@ script create_2d_hud_elements \{player_text = 'p1'}
 					endif
 				endif
 				<container_pos> = (<container_pos> + <pos_off>)
-				ExtendCrc <element_id> <player_text> out = new_id
+				ExtendCRC <element_id> <player_text> out = new_id
 				<create_it> = 1
-				if StructureContains structure = <element_struct> create_once
-					ExtendCrc <element_id> 'p1' out = p1_id
+				if StructureContains Structure = <element_struct> create_once
+					ExtendCRC <element_id> 'p1' out = p1_id
 					if ScreenElementExists id = <p1_id>
 						<create_it> = 0
 					endif
 				endif
-				if ((StructureContains structure = <element_struct> rot_p2) && (<player_text> = 'p2'))
+				if ((StructureContains Structure = <element_struct> rot_p2) && (<player_text> = 'p2'))
 					<rot> = <rot_p2>
 				endif
 				if (<create_it>)
 					CreateScreenElement {
-						Type = ContainerElement
+						type = ContainerElement
 						parent = <container_parent>
 						id = <new_id>
-						Pos = <container_pos>
+						pos = <container_pos>
 						rot_angle = <rot>
 						z_priority = <z_off>
 					}
 				endif
 				parent = <new_id>
 			endif
-			if StructureContains structure = <element_struct> container
-				if NOT StructureContains structure = <element_struct> parent_container
-					ExtendCrc <element_id> <player_text> out = new_id
-					ExtendCrc <element_parent> <player_text> out = myParent
-					if StructureContains structure = <element_struct> small_bulb
+			if StructureContains Structure = <element_struct> container
+				if NOT StructureContains Structure = <element_struct> parent_container
+					ExtendCRC <element_id> <player_text> out = new_id
+					ExtendCRC <element_parent> <player_text> out = myparent
+					if StructureContains Structure = <element_struct> small_bulb
 						scaled_dims = (<element_dims> * (($g_hud_2d_struct_used).small_bulb_scale))
 					else
 						scaled_dims = (<element_dims> * (($g_hud_2d_struct_used).big_bulb_scale))
 					endif
-					if ((StructureContains structure = <element_struct> pos_off_p2) && (<player_text> = 'p2'))
+					if ((StructureContains Structure = <element_struct> pos_off_p2) && (<player_text> = 'p2'))
 						<pos_off> = <pos_off_p2>
 					endif
 					<create_it> = 1
-					if StructureContains structure = <element_struct> create_once
-						ExtendCrc <element_id> 'p1' out = p1_id
+					if StructureContains Structure = <element_struct> create_once
+						ExtendCRC <element_id> 'p1' out = p1_id
 						if ScreenElementExists id = <p1_id>
 							<create_it> = 0
 						endif
 					endif
 					if (<create_it>)
 						CreateScreenElement {
-							Type = SpriteElement
-							parent = <myParent>
+							type = SpriteElement
+							parent = <myparent>
 							id = <new_id>
 							texture = <texture>
-							Pos = <pos_off>
+							pos = <pos_off>
 							just = <just>
 							rgba = [255 255 255 255]
 							rot_angle = <rot>
@@ -125,60 +125,60 @@ script create_2d_hud_elements \{player_text = 'p1'}
 						<new_id> :SetTags morph = 0 index = <i>
 						<parent> = <id>
 						<rot> = 0.0
-						<Pos> = (0.0, 0.0)
-						if StructureContains structure = <element_struct> initial_pos
-							if ((StructureContains structure = <element_struct> initial_pos_p2) && (<player_text> = 'p2'))
-								SetScreenElementProps id = <new_id> Pos = <initial_pos_p2>
+						<pos> = (0.0, 0.0)
+						if StructureContains Structure = <element_struct> initial_pos
+							if ((StructureContains Structure = <element_struct> initial_pos_p2) && (<player_text> = 'p2'))
+								SetScreenElementProps id = <new_id> pos = <initial_pos_p2>
 								<new_id> :SetTags final_pos = <pos_off_p2> initial_pos = <initial_pos_p2> morph = 1
 							else
-								SetScreenElementProps id = <new_id> Pos = <initial_pos>
+								SetScreenElementProps id = <new_id> pos = <initial_pos>
 								<new_id> :SetTags final_pos = <pos_off> initial_pos = <initial_pos> morph = 1
 							endif
 						endif
 					endif
 				endif
 			else
-				if NOT StructureContains structure = <element_struct> parent_container
-					ExtendCrc <element_id> <player_text> out = new_id
-					if StructureContains structure = <element_struct> initial_pos
+				if NOT StructureContains Structure = <element_struct> parent_container
+					ExtendCRC <element_id> <player_text> out = new_id
+					if StructureContains Structure = <element_struct> initial_pos
 						<pos_off> = <initial_pos>
 					endif
-					if StructureContains structure = <element_struct> battle_pos
+					if StructureContains Structure = <element_struct> battle_pos
 						if (<player_text> = 'p4')
 							<container_pos> = (($g_hud_2d_struct_used).rock_pos_p4)
-							ExtendCrc <pos_type> '_p4' out = new_pos_type
+							ExtendCRC <pos_type> '_p4' out = new_pos_type
 							<pos_off> = ((($g_hud_2d_struct_used).<new_pos_type>))
 						elseif (<player_text> = 'p3')
 							<container_pos> = (($g_hud_2d_struct_used).rock_pos_p3)
-							ExtendCrc <pos_type> '_p3' out = new_pos_type
+							ExtendCRC <pos_type> '_p3' out = new_pos_type
 							<pos_off> = ((($g_hud_2d_struct_used).<new_pos_type>))
 						elseif (<player_text> = 'p2')
 							<container_pos> = (($g_hud_2d_struct_used).rock_pos_p2)
-							ExtendCrc <pos_type> '_p2' out = new_pos_type
+							ExtendCRC <pos_type> '_p2' out = new_pos_type
 							<pos_off> = ((($g_hud_2d_struct_used).<new_pos_type>))
 						else
 							<container_pos> = (($g_hud_2d_struct_used).rock_pos_p1)
-							ExtendCrc <pos_type> '_p1' out = new_pos_type
+							ExtendCRC <pos_type> '_p1' out = new_pos_type
 							<pos_off> = ((($g_hud_2d_struct_used).<new_pos_type>))
 						endif
 					endif
-					ExtendCrc <element_parent> <player_text> out = myParent
+					ExtendCRC <element_parent> <player_text> out = myparent
 					flags = {}
-					if StructureContains structure = <element_struct> flags
-						if StructureContains structure = (<element_struct>.flags) flip_v
-							if StructureContains structure = (<element_struct>.flags) p1
+					if StructureContains Structure = <element_struct> flags
+						if StructureContains Structure = (<element_struct>.flags) flip_v
+							if StructureContains Structure = (<element_struct>.flags) p1
 								if (<player_text> = 'p1')
 									<flags> = flip_v
 								endif
 							endif
 						endif
-						if StructureContains structure = (<element_struct>.flags) flip_h
-							if StructureContains structure = (<element_struct>.flags) p1
+						if StructureContains Structure = (<element_struct>.flags) flip_h
+							if StructureContains Structure = (<element_struct>.flags) p1
 								if (<player_text> = 'p1')
 									<flags> = flip_h
 								endif
 							endif
-							if StructureContains structure = (<element_struct>.flags) p2
+							if StructureContains Structure = (<element_struct>.flags) p2
 								if (<player_text> = 'p2')
 									<flags> = flip_h
 								endif
@@ -186,32 +186,32 @@ script create_2d_hud_elements \{player_text = 'p1'}
 						endif
 					endif
 					mydims = {}
-					if StructureContains structure = <element_struct> dims
+					if StructureContains Structure = <element_struct> dims
 						<mydims> = <dims>
 					endif
 					<create_it> = 1
-					if StructureContains structure = <element_struct> create_once
-						ExtendCrc <element_id> 'p1' out = p1_id
+					if StructureContains Structure = <element_struct> create_once
+						ExtendCRC <element_id> 'p1' out = p1_id
 						if ScreenElementExists id = <p1_id>
 							<create_it> = 0
 						endif
 					endif
-					if ((StructureContains structure = <element_struct> initial_pos_p2) && (<player_text> = 'p2'))
+					if ((StructureContains Structure = <element_struct> initial_pos_p2) && (<player_text> = 'p2'))
 						<pos_off> = <initial_pos_p2>
-					elseif ((StructureContains structure = <element_struct> pos_off_p2) && (<player_text> = 'p2'))
+					elseif ((StructureContains Structure = <element_struct> pos_off_p2) && (<player_text> = 'p2'))
 						<pos_off> = <pos_off_p2>
 					endif
 					my_rgba = [255 255 255 255]
-					if (StructureContains structure = <element_struct> rgba)
+					if (StructureContains Structure = <element_struct> rgba)
 						<my_rgba> = <rgba>
 					endif
 					if (<create_it>)
 						CreateScreenElement {
-							Type = SpriteElement
-							parent = <myParent>
+							type = SpriteElement
+							parent = <myparent>
 							id = <new_id>
 							texture = <texture>
-							Pos = <pos_off>
+							pos = <pos_off>
 							rgba = <my_rgba>
 							just = <just>
 							z_priority = <zoff>
@@ -221,33 +221,33 @@ script create_2d_hud_elements \{player_text = 'p1'}
 							dims = <mydims>
 						}
 					endif
-					if StructureContains structure = <element_struct> Scale
+					if StructureContains Structure = <element_struct> scale
 						if (<create_it>)
 							GetScreenElementDims id = <new_id>
-							new_width = (<width> * <Scale>)
-							new_height = (<height> * <Scale>)
+							new_width = (<width> * <scale>)
+							new_height = (<Height> * <scale>)
 							SetScreenElementProps id = <new_id> dims = (((1.0, 0.0) * <new_width>) + ((0.0, 1.0) * <new_height>))
 						endif
 					endif
 				endif
 			endif
-			if StructureContains structure = <element_struct> tube
-				ExtendCrc <new_id> 'tube' out = new_child_id
+			if StructureContains Structure = <element_struct> tube
+				ExtendCRC <new_id> 'tube' out = new_child_id
 				<zoff> = (<tube>.zoff)
 				<alpha> = (<tube>.alpha)
-				ExtendCrc <element_parent> <player_text> out = myParent
-				if StructureContains structure = <element_struct> small_bulb
+				ExtendCRC <element_parent> <player_text> out = myparent
+				if StructureContains Structure = <element_struct> small_bulb
 					scaled_dims = (<tube>.element_dims * (($g_hud_2d_struct_used).small_bulb_scale))
 				else
 					scaled_dims = (<tube>.element_dims * (($g_hud_2d_struct_used).big_bulb_scale))
 				endif
-				if ScreenElementExists id = <myParent>
+				if ScreenElementExists id = <myparent>
 					CreateScreenElement {
-						Type = SpriteElement
-						parent = <myParent>
+						type = SpriteElement
+						parent = <myparent>
 						id = <new_child_id>
 						texture = (<tube>.texture)
-						Pos = (<pos_off> + (<tube>.pos_off))
+						pos = (<pos_off> + (<tube>.pos_off))
 						rgba = [255 255 255 255]
 						dims = <scaled_dims>
 						just = [center bottom]
@@ -256,8 +256,8 @@ script create_2d_hud_elements \{player_text = 'p1'}
 					}
 					<parent> = <id>
 					<new_child_id> :SetTags morph = 0 old_dims = <element_dims>
-					if StructureContains structure = <element_struct> initial_pos
-						SetScreenElementProps id = <new_child_id> Pos = (<initial_pos> + (<tube>.pos_off))
+					if StructureContains Structure = <element_struct> initial_pos
+						SetScreenElementProps id = <new_child_id> pos = (<initial_pos> + (<tube>.pos_off))
 						<new_child_id> :SetTags {
 							final_pos = (<pos_off> + (<tube>.pos_off))
 							initial_pos = (<initial_pos> + (<tube>.pos_off))
@@ -266,23 +266,23 @@ script create_2d_hud_elements \{player_text = 'p1'}
 					endif
 				endif
 			endif
-			if StructureContains structure = <element_struct> full
-				ExtendCrc <new_id> 'full' out = new_child_id
+			if StructureContains Structure = <element_struct> full
+				ExtendCRC <new_id> 'full' out = new_child_id
 				<zoff> = (<full>.zoff)
 				<alpha> = (<full>.alpha)
-				ExtendCrc <element_parent> <player_text> out = myParent
-				if StructureContains structure = <element_struct> small_bulb
+				ExtendCRC <element_parent> <player_text> out = myparent
+				if StructureContains Structure = <element_struct> small_bulb
 					scaled_dims = (<element_dims> * (($g_hud_2d_struct_used).small_bulb_scale))
 				else
 					scaled_dims = (<element_dims> * (($g_hud_2d_struct_used).big_bulb_scale))
 				endif
-				if ScreenElementExists id = <myParent>
+				if ScreenElementExists id = <myparent>
 					CreateScreenElement {
-						Type = SpriteElement
-						parent = <myParent>
+						type = SpriteElement
+						parent = <myparent>
 						id = <new_child_id>
 						texture = (<full>.texture)
-						Pos = <pos_off>
+						pos = <pos_off>
 						rgba = [255 255 255 255]
 						dims = <scaled_dims>
 						just = <just>
@@ -290,19 +290,19 @@ script create_2d_hud_elements \{player_text = 'p1'}
 						alpha = <alpha>
 					}
 					<new_child_id> :SetTags morph = 0
-					if StructureContains structure = <element_struct> initial_pos
-						SetScreenElementProps id = <new_child_id> Pos = <initial_pos>
+					if StructureContains Structure = <element_struct> initial_pos
+						SetScreenElementProps id = <new_child_id> pos = <initial_pos>
 						<new_child_id> :SetTags final_pos = <pos_off> initial_pos = <initial_pos> morph = 1
 					endif
 				endif
 			endif
 			<i> = (<i> + 1)
-			repeat <array_Size>
+			repeat <array_size>
 		endif
 	endif
 	if NOT ($game_mode = p2_battle || $boss_battle = 1)
-		ExtendCrc HUD2D_Score_Text <player_text> out = new_id
-		ExtendCrc HUD2D_score_container <player_text> out = new_score_container
+		ExtendCRC HUD2D_Score_Text <player_text> out = new_id
+		ExtendCRC HUD2D_score_container <player_text> out = new_score_container
 		score_text_pos = (222.0, 70.0)
 		if ($game_mode = p2_career || $game_mode = p2_coop || $game_mode = p2_quickplay)
 			<score_text_pos> = (226.0, 85.0)
@@ -312,9 +312,9 @@ script create_2d_hud_elements \{player_text = 'p1'}
 				parent = <new_score_container>
 				id = <new_id>
 				font = fontgrid_numeral_a9
-				Pos = <score_text_pos>
+				pos = <score_text_pos>
 				z = 20
-				Scale = (1.1, 1.1)
+				scale = (1.1, 1.1)
 				just = [right right]
 				rgba = [255 255 255 255]
 			}
@@ -322,9 +322,9 @@ script create_2d_hud_elements \{player_text = 'p1'}
 		endif
 		i = 1
 		begin
-		formatText checksumName = note_streak_text_id 'HUD2D_Note_Streak_Text_%d' d = <i>
-		ExtendCrc <note_streak_text_id> <player_text> out = new_id
-		ExtendCrc HUD2D_note_container <player_text> out = new_note_container
+		FormatText checksumname = note_streak_text_id 'HUD2D_Note_Streak_Text_%d' d = <i>
+		ExtendCRC <note_streak_text_id> <player_text> out = new_id
+		ExtendCRC HUD2D_note_container <player_text> out = new_note_container
 		if ScreenElementExists id = <new_note_container>
 			if (<i> = 1)
 				rgba = [15 15 70 200]
@@ -337,8 +337,8 @@ script create_2d_hud_elements \{player_text = 'p1'}
 				parent = <new_note_container>
 				id = <new_id>
 				font = fontgrid_numeral_a7
-				text = qs(0x3bf547a6)
-				Pos = ((222.0, 78.0) + (<i> * <note_text_spacing>))
+				text = qs("\L0")
+				pos = ((222.0, 78.0) + (<i> * <note_text_spacing>))
 				z = 25
 				just = [center center]
 				rgba = <rgba>
@@ -355,35 +355,35 @@ script rock_meter_star_power_on
 	if ($game_mode = p2_career || $game_mode = p2_quickplay)
 		<player_status> = player1_status
 	endif
-	formatText TextName = player_text 'p%d' d = ($<player_status>.Player)
-	SpawnScriptNow rock_back_and_forth_star_meter params = {player_status = <player_status> player_text = <player_text>}
-	formatText checksumName = player_spawned_scriptid 'player_spawned_scriptid_p%d' d = ($<player_status>.Player)
-	SpawnScriptNow {
-		pulsate_all_star_power_bulbs params = {Player = ($<player_status>.Player) player_status = <player_status> player_text = <player_text>}
+	FormatText TextName = player_text 'p%d' d = ($<player_status>.player)
+	spawnscriptnow rock_back_and_forth_star_meter params = {player_status = <player_status> player_text = <player_text>}
+	FormatText checksumname = player_spawned_scriptid 'player_spawned_scriptid_p%d' d = ($<player_status>.player)
+	spawnscriptnow {
+		pulsate_all_star_power_bulbs params = {player = ($<player_status>.player) player_status = <player_status> player_text = <player_text>}
 		id = <player_spawned_scriptid>
 	}
 	i = 1
 	begin
-	formatText checksumName = id 'HUD2D_rock_tube_%d' d = <i>
-	ExtendCrc <id> <player_text> out = parent_id
+	FormatText checksumname = id 'HUD2D_rock_tube_%d' d = <i>
+	ExtendCRC <id> <player_text> out = parent_id
 	if ScreenElementExists id = <parent_id>
 		<parent_id> :GetTags
 		if (<morph> = 1)
-			SetScreenElementProps id = <parent_id> Pos = <final_pos> time = 0.4
+			SetScreenElementProps id = <parent_id> pos = <final_pos> time = 0.4
 		endif
-		ExtendCrc <parent_id> 'tube' out = child_id
+		ExtendCRC <parent_id> 'tube' out = child_id
 		<child_id> :GetTags
 		SetScreenElementProps id = <child_id> texture = (($g_hud_2d_struct_used).elements [<index>].tube.star_texture)
 		if (<morph> = 1)
-			SetScreenElementProps id = <child_id> Pos = <final_pos> time = 0.4
+			SetScreenElementProps id = <child_id> pos = <final_pos> time = 0.4
 		endif
-		ExtendCrc <parent_id> 'full' out = child_id
+		ExtendCRC <parent_id> 'full' out = child_id
 		<child_id> :GetTags
 		SetScreenElementProps id = <child_id> texture = (($g_hud_2d_struct_used).elements [<index>].full.star_texture)
 		if (<morph> = 1)
-			SetScreenElementProps id = <child_id> Pos = <final_pos> time = 0.4
+			SetScreenElementProps id = <child_id> pos = <final_pos> time = 0.4
 			Wait \{0.2
-				Seconds}
+				seconds}
 		endif
 	endif
 	<i> = (<i> + 1)
@@ -391,36 +391,36 @@ script rock_meter_star_power_on
 endscript
 
 script kill_pulsate_star_power_bulbs 
-	formatText checksumName = player_spawned_scriptid 'player_spawned_scriptid_p%d' d = <Player>
+	FormatText checksumname = player_spawned_scriptid 'player_spawned_scriptid_p%d' d = <player>
 	KillSpawnedScript id = <player_spawned_scriptid>
-	KillPulsateStarPowerBulbs Player = <Player>
+	KillPulsateStarPowerBulbs player = <player>
 endscript
 
 script pulsate_star_power_bulb 
 	begin
 	alpha_time = Random (@ 0.1 @*2 0.5 )
 	if ScreenElementExists id = <bulb_checksum>
-		ExtendCrc <bulb_checksum> 'tube' out = child_id
-		legacydoscreenelementmorph id = <child_id> alpha = 0.3 time = <alpha_time> motion = ease_in
-		ExtendCrc <bulb_checksum> 'full' out = child_id
-		legacydoscreenelementmorph id = <child_id> alpha = 0.3 time = <alpha_time> motion = ease_in
+		ExtendCRC <bulb_checksum> 'tube' out = child_id
+		LegacyDoScreenElementMorph id = <child_id> alpha = 0.3 time = <alpha_time> motion = ease_in
+		ExtendCRC <bulb_checksum> 'full' out = child_id
+		LegacyDoScreenElementMorph id = <child_id> alpha = 0.3 time = <alpha_time> motion = ease_in
 	endif
-	Wait <alpha_time> Seconds
+	Wait <alpha_time> seconds
 	alpha_time = Random (@ 0.1 @*2 0.5 )
 	if ScreenElementExists id = <bulb_checksum>
-		ExtendCrc <bulb_checksum> 'tube' out = child_id
+		ExtendCRC <bulb_checksum> 'tube' out = child_id
 		<child_id> :GetTags
-		legacydoscreenelementmorph id = <child_id> alpha = <old_alpha> time = <alpha_time> motion = ease_out
-		ExtendCrc <bulb_checksum> 'full' out = child_id
+		LegacyDoScreenElementMorph id = <child_id> alpha = <old_alpha> time = <alpha_time> motion = ease_out
+		ExtendCRC <bulb_checksum> 'full' out = child_id
 		<child_id> :GetTags
-		legacydoscreenelementmorph id = <child_id> alpha = <old_alpha> time = <alpha_time> motion = ease_out
+		LegacyDoScreenElementMorph id = <child_id> alpha = <old_alpha> time = <alpha_time> motion = ease_out
 	endif
-	Wait <alpha_time> Seconds
+	Wait <alpha_time> seconds
 	repeat
 endscript
 
 script pulsate_big_glow 
-	ExtendCrc HUD2D_rock_glow <player_text> out = parent_id
+	ExtendCRC HUD2D_rock_glow <player_text> out = parent_id
 	if NOT ScreenElementExists id = <parent_id>
 		return
 	endif
@@ -428,32 +428,32 @@ script pulsate_big_glow
 	if NOT ScreenElementExists id = <parent_id>
 		return
 	endif
-	<parent_id> :legacydomorph alpha = 0 rgba = [95 205 255 255] time = 1 motion = ease_in
+	<parent_id> :LegacyDoMorph alpha = 0 rgba = [95 205 255 255] time = 1 motion = ease_in
 	if NOT ScreenElementExists id = <parent_id>
 		return
 	endif
-	<parent_id> :legacydomorph alpha = 1 rgba = [255 255 255 255] time = 1 motion = ease_out
+	<parent_id> :LegacyDoMorph alpha = 1 rgba = [255 255 255 255] time = 1 motion = ease_out
 	repeat
 endscript
 
 script pulsate_all_star_power_bulbs 
 	<i> = 1
 	begin
-	formatText checksumName = id 'HUD2D_rock_tube_%d' d = <i>
-	ExtendCrc <id> <player_text> out = parent_id
+	FormatText checksumname = id 'HUD2D_rock_tube_%d' d = <i>
+	ExtendCRC <id> <player_text> out = parent_id
 	if ScreenElementExists id = <parent_id>
-		formatText checksumName = player_spawned_scriptid 'player_spawned_scriptid_p%d' d = <Player>
-		SpawnScriptNow {
+		FormatText checksumname = player_spawned_scriptid 'player_spawned_scriptid_p%d' d = <player>
+		spawnscriptnow {
 			pulsate_star_power_bulb params = {bulb_checksum = <parent_id>}
 			id = <player_spawned_scriptid>
 		}
 	endif
 	<i> = (<i> + 1)
 	repeat 6
-	ExtendCrc HUD2D_rock_glow <player_text> out = parent_id
+	ExtendCRC HUD2D_rock_glow <player_text> out = parent_id
 	if ScreenElementExists id = <parent_id>
-		formatText checksumName = player_spawned_scriptid 'player_spawned_scriptid_p%d' d = <Player>
-		SpawnScriptNow {
+		FormatText checksumname = player_spawned_scriptid 'player_spawned_scriptid_p%d' d = <player>
+		spawnscriptnow {
 			pulsate_big_glow params = {<...>}
 			id = <player_spawned_scriptid>
 		}
@@ -463,9 +463,9 @@ endscript
 script rock_back_and_forth_star_meter 
 	move_up_and_down = 1
 	if ($game_mode = p1_career || $game_mode = p1_quickplay || $game_mode = p2_quickplay || $game_mode = p2_career || $game_mode = p2_coop)
-		ExtendCrc HUD2D_rock_container <player_text> out = shake_container
+		ExtendCRC HUD2D_rock_container <player_text> out = shake_container
 	elseif ($game_mode = p2_faceoff || $game_mode = p2_pro_faceoff)
-		ExtendCrc HUD2D_score_container <player_text> out = shake_container
+		ExtendCRC HUD2D_score_container <player_text> out = shake_container
 		<move_up_and_down> = 0
 	endif
 	if ScreenElementExists id = <shake_container>
@@ -473,27 +473,27 @@ script rock_back_and_forth_star_meter
 		time_to_shake = 0.15
 		if (<move_up_and_down> = 1)
 			if ScreenElementExists id = <shake_container>
-				legacydoscreenelementmorph id = <shake_container> Pos = (<Pos> - (0.0, 50.0)) Scale = 1.5 rot_angle = 10 time = <time_to_shake> motion = ease_in
-				Wait <time_to_shake> Seconds
+				LegacyDoScreenElementMorph id = <shake_container> pos = (<pos> - (0.0, 50.0)) scale = 1.5 rot_angle = 10 time = <time_to_shake> motion = ease_in
+				Wait <time_to_shake> seconds
 			endif
 			if ScreenElementExists id = <shake_container>
-				legacydoscreenelementmorph id = <shake_container> Pos = (<Pos> + (0.0, 75.0)) Scale = 0.5 rot_angle = -15 time = <time_to_shake> motion = ease_in
-				Wait <time_to_shake> Seconds
+				LegacyDoScreenElementMorph id = <shake_container> pos = (<pos> + (0.0, 75.0)) scale = 0.5 rot_angle = -15 time = <time_to_shake> motion = ease_in
+				Wait <time_to_shake> seconds
 			endif
 			if ScreenElementExists id = <shake_container>
-				legacydoscreenelementmorph id = <shake_container> Pos = (<Pos>) Scale = 1.0 rot_angle = 0 time = <time_to_shake>
+				LegacyDoScreenElementMorph id = <shake_container> pos = (<pos>) scale = 1.0 rot_angle = 0 time = <time_to_shake>
 			endif
 		else
 			if ScreenElementExists id = <shake_container>
-				legacydoscreenelementmorph id = <shake_container> Pos = (<Pos> - (50.0, 0.0)) Scale = 1.5 rot_angle = 10 time = <time_to_shake> motion = ease_in
-				Wait <time_to_shake> Seconds
+				LegacyDoScreenElementMorph id = <shake_container> pos = (<pos> - (50.0, 0.0)) scale = 1.5 rot_angle = 10 time = <time_to_shake> motion = ease_in
+				Wait <time_to_shake> seconds
 			endif
 			if ScreenElementExists id = <shake_container>
-				legacydoscreenelementmorph id = <shake_container> Pos = (<Pos> + (75.0, 0.0)) Scale = 0.5 rot_angle = -15 time = <time_to_shake> motion = ease_in
-				Wait <time_to_shake> Seconds
+				LegacyDoScreenElementMorph id = <shake_container> pos = (<pos> + (75.0, 0.0)) scale = 0.5 rot_angle = -15 time = <time_to_shake> motion = ease_in
+				Wait <time_to_shake> seconds
 			endif
 			if ScreenElementExists id = <shake_container>
-				legacydoscreenelementmorph id = <shake_container> Pos = (<Pos>) Scale = 1.0 rot_angle = 0 time = <time_to_shake> motion = ease_out
+				LegacyDoScreenElementMorph id = <shake_container> pos = (<pos>) scale = 1.0 rot_angle = 0 time = <time_to_shake> motion = ease_out
 			endif
 		endif
 	endif
@@ -505,36 +505,36 @@ script rock_meter_star_power_off \{player_text = 'p1'}
 	endif
 	j = 6
 	begin
-	formatText checksumName = id 'HUD2D_rock_tube_%d' d = <j>
-	ExtendCrc <id> <player_text> out = parent_id
+	FormatText checksumname = id 'HUD2D_rock_tube_%d' d = <j>
+	ExtendCRC <id> <player_text> out = parent_id
 	if ScreenElementExists id = <parent_id>
 		<parent_id> :GetTags
 		if (<morph> = 1)
 			if ScreenElementExists id = <parent_id>
-				legacydoscreenelementmorph id = <parent_id> Pos = (<final_pos> + <final_pos> * 0.1) time = 0.1
+				LegacyDoScreenElementMorph id = <parent_id> pos = (<final_pos> + <final_pos> * 0.1) time = 0.1
 			endif
 			Wait \{0.1
-				Seconds}
+				seconds}
 			if ScreenElementExists id = <parent_id>
-				legacydoscreenelementmorph id = <parent_id> Pos = <initial_pos> time = 0.4
+				LegacyDoScreenElementMorph id = <parent_id> pos = <initial_pos> time = 0.4
 			endif
 			Wait \{0.1
-				Seconds}
+				seconds}
 		endif
-		ExtendCrc <parent_id> 'tube' out = child_id
+		ExtendCRC <parent_id> 'tube' out = child_id
 		if ScreenElementExists id = <child_id>
 			<child_id> :GetTags
 			SetScreenElementProps id = <child_id> texture = (($g_hud_2d_struct_used).elements [<index>].tube.texture)
 			if (<morph>)
-				SetScreenElementProps id = <child_id> Pos = <initial_pos>
+				SetScreenElementProps id = <child_id> pos = <initial_pos>
 			endif
 		endif
-		ExtendCrc <parent_id> 'full' out = child_id
+		ExtendCRC <parent_id> 'full' out = child_id
 		if ScreenElementExists id = <child_id>
 			<child_id> :GetTags
 			SetScreenElementProps id = <child_id> texture = (($g_hud_2d_struct_used).elements [<index>].full.texture)
 			if (<morph>)
-				SetScreenElementProps id = <child_id> Pos = <initial_pos>
+				SetScreenElementProps id = <child_id> pos = <initial_pos>
 			endif
 		endif
 	endif
@@ -542,44 +542,44 @@ script rock_meter_star_power_off \{player_text = 'p1'}
 	repeat 6
 endscript
 
-script hud_activated_star_power \{Player = 1
+script hud_activated_star_power \{player = 1
 		time = 0.2}
-	SpawnScriptNow hud_activated_star_power_spawned params = {<...>}
+	spawnscriptnow hud_activated_star_power_spawned params = {<...>}
 endscript
 
 script hud_activated_star_power_spawned 
 	Wait \{1
 		gameframe}
-	SpawnScriptNow kill_pulsate_star_power_bulbs params = {Player = <Player>}
-	ExtendCrc HUD2D_score_flash <player_text> out = new_flash
+	spawnscriptnow kill_pulsate_star_power_bulbs params = {player = <player>}
+	ExtendCRC HUD2D_score_flash <player_text> out = new_flash
 	if ScreenElementExists id = <new_flash>
-		legacydoscreenelementmorph id = <new_flash> alpha = 1 Scale = 5 time = <time>
-		Wait <time> Seconds
+		LegacyDoScreenElementMorph id = <new_flash> alpha = 1 scale = 5 time = <time>
+		Wait <time> seconds
 		if ScreenElementExists id = <new_flash>
-			legacydoscreenelementmorph id = <new_flash> alpha = 0 Scale = 1 time = (<time> / 2.0)
+			LegacyDoScreenElementMorph id = <new_flash> alpha = 0 scale = 1 time = (<time> / 2.0)
 		endif
-		UpdateNixie Player = <Player>
+		UpdateNixie player = <player>
 	endif
 endscript
 
-script hud_move_note_scorebar \{Player = 1
+script hud_move_note_scorebar \{player = 1
 		time = 0.5
 		in = 1}
 	if ($game_mode = p2_battle || $boss_battle = 1 || $end_credits = 1 || $Cheat_PerformanceMode = 1)
 		return
 	endif
-	if (($game_mode = p2_career || $game_mode = p2_coop || $game_mode = p2_quickplay) && (<Player> = 2))
+	if (($game_mode = p2_career || $game_mode = p2_coop || $game_mode = p2_quickplay) && (<player> = 2))
 		return
 	endif
-	if NOT StructureContains structure = ($g_hud_2d_struct_used) offscreen_note_streak_bar_off
-		if NOT StructureContains structure = ($g_hud_2d_struct_used) offscreen_note_streak_bar_off_p1
+	if NOT StructureContains Structure = ($g_hud_2d_struct_used) offscreen_note_streak_bar_off
+		if NOT StructureContains Structure = ($g_hud_2d_struct_used) offscreen_note_streak_bar_off_p1
 			return
 		endif
 	endif
 	morph_miss_off = (0.0, 60.0)
 	ease_off = (0.0, 10.0)
 	count_off = offscreen_note_streak_bar_off
-	if (<Player> = 1)
+	if (<player> = 1)
 		player_text = 'p1'
 		if ($game_mode = p2_career || $game_mode = p2_coop || $game_mode = p2_quickplay)
 			count_pos = counter_pos
@@ -591,19 +591,19 @@ script hud_move_note_scorebar \{Player = 1
 		else
 			count_pos = counter_pos
 		endif
-	elseif (<Player> = 2)
+	elseif (<player> = 2)
 		player_text = 'p2'
 		count_pos = counter_pos_p2
 		morph_miss_off = (-60.0, 0.0)
 		ease_off = (-10.0, 0.0)
 		count_off = offscreen_note_streak_bar_off_p2
-	elseif (<Player> = 3)
+	elseif (<player> = 3)
 		player_text = 'p3'
 		count_pos = counter_pos_p3
 		morph_miss_off = (-60.0, 0.0)
 		ease_off = (-10.0, 0.0)
 		count_off = offscreen_note_streak_bar_off_p3
-	elseif (<Player> = 4)
+	elseif (<player> = 4)
 		player_text = 'p4'
 		count_pos = counter_pos_p4
 		morph_miss_off = (-60.0, 0.0)
@@ -613,27 +613,27 @@ script hud_move_note_scorebar \{Player = 1
 		return
 	endif
 	if (<in> = 1)
-		ExtendCrc HUD2D_note_container <player_text> out = new_container
+		ExtendCRC HUD2D_note_container <player_text> out = new_container
 		if ScreenElementExists id = <new_container>
-			legacydoscreenelementmorph id = <new_container> Pos = ((($g_hud_2d_struct_used).<count_pos>) - <morph_miss_off>) time = <time> motion = ease_out
-			Wait <time> Seconds
+			LegacyDoScreenElementMorph id = <new_container> pos = ((($g_hud_2d_struct_used).<count_pos>) - <morph_miss_off>) time = <time> motion = ease_out
+			Wait <time> seconds
 			if ScreenElementExists id = <new_container>
-				legacydoscreenelementmorph id = <new_container> Pos = (($g_hud_2d_struct_used).<count_pos>) time = (<time> / 3) motion = ease_in
-				<new_container> :legacydomorph Pos = {<ease_off> relative} time = 0.1 motion = ease_out
-				<new_container> :legacydomorph Pos = {(<ease_off> * -1) relative} time = 0.1 motion = ease_in
+				LegacyDoScreenElementMorph id = <new_container> pos = (($g_hud_2d_struct_used).<count_pos>) time = (<time> / 3) motion = ease_in
+				<new_container> :LegacyDoMorph pos = {<ease_off> relative} time = 0.1 motion = ease_out
+				<new_container> :LegacyDoMorph pos = {(<ease_off> * -1) relative} time = 0.1 motion = ease_in
 			endif
 		endif
 	else
-		ExtendCrc HUD2D_note_container <player_text> out = new_container
+		ExtendCRC HUD2D_note_container <player_text> out = new_container
 		if ScreenElementExists id = <new_container>
 			if ($game_mode = p1_career || $game_mode = p2_career || $game_mode = p1_quickplay || $game_mode = p2_quickplay || $game_mode = p2_coop)
-				legacydoscreenelementmorph id = <new_container> Pos = ((($g_hud_2d_struct_used).<count_pos>) - <morph_miss_off>) time = (<time> / 2.0) motion = ease_out
+				LegacyDoScreenElementMorph id = <new_container> pos = ((($g_hud_2d_struct_used).<count_pos>) - <morph_miss_off>) time = (<time> / 2.0) motion = ease_out
 			else
-				legacydoscreenelementmorph id = <new_container> Pos = ((($g_hud_2d_struct_used).<count_pos>) + <morph_miss_off>) time = (<time> / 2.0) motion = ease_in
+				LegacyDoScreenElementMorph id = <new_container> pos = ((($g_hud_2d_struct_used).<count_pos>) + <morph_miss_off>) time = (<time> / 2.0) motion = ease_in
 			endif
-			Wait <time> Seconds
+			Wait <time> seconds
 			if ScreenElementExists id = <new_container>
-				legacydoscreenelementmorph id = <new_container> Pos = ((($g_hud_2d_struct_used).<count_pos>) + (($g_hud_2d_struct_used).<count_off>)) time = <time>
+				LegacyDoScreenElementMorph id = <new_container> pos = ((($g_hud_2d_struct_used).<count_pos>) + (($g_hud_2d_struct_used).<count_off>)) time = <time>
 			endif
 		endif
 	endif
@@ -647,45 +647,45 @@ script hud_flash_red_bg_p1 \{time = 0.2}
 	if ($g_flash_red_going_p1 = 1)
 		return
 	else
-		Change \{g_flash_red_going_p1 = 1}
+		change \{g_flash_red_going_p1 = 1}
 	endif
 	if ($game_mode = p2_career || $game_mode = p2_coop || $game_mode = p2_quickplay)
-		ExtendCrc \{HUD2D_rock_lights_red
+		ExtendCRC \{HUD2D_rock_lights_red
 			'p1'
 			out = new_bg}
 		<time> = 0.15
 	else
-		ExtendCrc \{HUD2D_rock_BG_red
+		ExtendCRC \{HUD2D_rock_BG_red
 			'p1'
 			out = new_bg}
 	endif
 	begin
 	if ($game_mode = p2_career || $game_mode = p2_coop || $game_mode = p2_quickplay)
 		if ScreenElementExists id = <new_bg>
-			legacydoscreenelementmorph id = <new_bg> rgba = [0 0 0 255] time = <time>
-			Wait <time> Seconds
+			LegacyDoScreenElementMorph id = <new_bg> rgba = [0 0 0 255] time = <time>
+			Wait <time> seconds
 		endif
 		if ScreenElementExists id = <new_bg>
-			legacydoscreenelementmorph id = <new_bg> rgba = [225 225 225 255] time = <time>
+			LegacyDoScreenElementMorph id = <new_bg> rgba = [225 225 225 255] time = <time>
 		endif
-		Wait <time> Seconds
+		Wait <time> seconds
 	else
 		if ScreenElementExists id = <new_bg>
-			legacydoscreenelementmorph id = <new_bg> rgba = [0 0 0 255] time = <time>
-			Wait <time> Seconds
+			LegacyDoScreenElementMorph id = <new_bg> rgba = [0 0 0 255] time = <time>
+			Wait <time> seconds
 		endif
 		if ScreenElementExists id = <new_bg>
-			legacydoscreenelementmorph id = <new_bg> rgba = [225 225 225 255] time = <time>
-			Wait <time> Seconds
+			LegacyDoScreenElementMorph id = <new_bg> rgba = [225 225 225 255] time = <time>
+			Wait <time> seconds
 		endif
 		if ScreenElementExists id = <new_bg>
-			legacydoscreenelementmorph id = <new_bg> rgba = [0 0 0 255] time = <time>
-			Wait <time> Seconds
+			LegacyDoScreenElementMorph id = <new_bg> rgba = [0 0 0 255] time = <time>
+			Wait <time> seconds
 		endif
 		if ScreenElementExists id = <new_bg>
-			legacydoscreenelementmorph id = <new_bg> rgba = [225 225 225 255] time = <time>
+			LegacyDoScreenElementMorph id = <new_bg> rgba = [225 225 225 255] time = <time>
 		endif
-		Wait (<time> * 2.5) Seconds
+		Wait (<time> * 2.5) seconds
 	endif
 	repeat
 endscript
@@ -694,28 +694,28 @@ script hud_flash_red_bg_p2 \{time = 0.2}
 	if ($g_flash_red_going_p2 = 1)
 		return
 	else
-		Change \{g_flash_red_going_p2 = 1}
+		change \{g_flash_red_going_p2 = 1}
 	endif
-	ExtendCrc \{HUD2D_rock_BG_red
+	ExtendCRC \{HUD2D_rock_BG_red
 		'p2'
 		out = new_bg}
 	begin
 	if ScreenElementExists id = <new_bg>
-		legacydoscreenelementmorph id = <new_bg> rgba = [0 0 0 255] time = <time>
-		Wait <time> Seconds
+		LegacyDoScreenElementMorph id = <new_bg> rgba = [0 0 0 255] time = <time>
+		Wait <time> seconds
 	endif
 	if ScreenElementExists id = <new_bg>
-		legacydoscreenelementmorph id = <new_bg> rgba = [225 225 225 255] time = <time>
-		Wait <time> Seconds
+		LegacyDoScreenElementMorph id = <new_bg> rgba = [225 225 225 255] time = <time>
+		Wait <time> seconds
 	endif
 	if ScreenElementExists id = <new_bg>
-		legacydoscreenelementmorph id = <new_bg> rgba = [0 0 0 255] time = <time>
-		Wait <time> Seconds
+		LegacyDoScreenElementMorph id = <new_bg> rgba = [0 0 0 255] time = <time>
+		Wait <time> seconds
 	endif
 	if ScreenElementExists id = <new_bg>
-		legacydoscreenelementmorph id = <new_bg> rgba = [225 225 225 255] time = <time>
+		LegacyDoScreenElementMorph id = <new_bg> rgba = [225 225 225 255] time = <time>
 	endif
-	Wait (<time> * 2.5) Seconds
+	Wait (<time> * 2.5) seconds
 	repeat
 endscript
 
@@ -723,28 +723,28 @@ script hud_flash_red_bg_p3 \{time = 0.2}
 	if ($g_flash_red_going_p3 = 1)
 		return
 	else
-		Change \{g_flash_red_going_p3 = 1}
+		change \{g_flash_red_going_p3 = 1}
 	endif
-	ExtendCrc \{HUD2D_rock_BG_red
+	ExtendCRC \{HUD2D_rock_BG_red
 		'p3'
 		out = new_bg}
 	begin
 	if ScreenElementExists id = <new_bg>
-		legacydoscreenelementmorph id = <new_bg> rgba = [0 0 0 255] time = <time>
-		Wait <time> Seconds
+		LegacyDoScreenElementMorph id = <new_bg> rgba = [0 0 0 255] time = <time>
+		Wait <time> seconds
 	endif
 	if ScreenElementExists id = <new_bg>
-		legacydoscreenelementmorph id = <new_bg> rgba = [225 225 225 255] time = <time>
-		Wait <time> Seconds
+		LegacyDoScreenElementMorph id = <new_bg> rgba = [225 225 225 255] time = <time>
+		Wait <time> seconds
 	endif
 	if ScreenElementExists id = <new_bg>
-		legacydoscreenelementmorph id = <new_bg> rgba = [0 0 0 255] time = <time>
-		Wait <time> Seconds
+		LegacyDoScreenElementMorph id = <new_bg> rgba = [0 0 0 255] time = <time>
+		Wait <time> seconds
 	endif
 	if ScreenElementExists id = <new_bg>
-		legacydoscreenelementmorph id = <new_bg> rgba = [225 225 225 255] time = <time>
+		LegacyDoScreenElementMorph id = <new_bg> rgba = [225 225 225 255] time = <time>
 	endif
-	Wait (<time> * 2.5) Seconds
+	Wait (<time> * 2.5) seconds
 	repeat
 endscript
 
@@ -752,56 +752,56 @@ script hud_flash_red_bg_p4 \{time = 0.2}
 	if ($g_flash_red_going_p4 = 1)
 		return
 	else
-		Change \{g_flash_red_going_p4 = 1}
+		change \{g_flash_red_going_p4 = 1}
 	endif
-	ExtendCrc \{HUD2D_rock_BG_red
+	ExtendCRC \{HUD2D_rock_BG_red
 		'p4'
 		out = new_bg}
 	begin
 	if ScreenElementExists id = <new_bg>
-		legacydoscreenelementmorph id = <new_bg> rgba = [0 0 0 255] time = <time>
-		Wait <time> Seconds
+		LegacyDoScreenElementMorph id = <new_bg> rgba = [0 0 0 255] time = <time>
+		Wait <time> seconds
 	endif
 	if ScreenElementExists id = <new_bg>
-		legacydoscreenelementmorph id = <new_bg> rgba = [225 225 225 255] time = <time>
-		Wait <time> Seconds
+		LegacyDoScreenElementMorph id = <new_bg> rgba = [225 225 225 255] time = <time>
+		Wait <time> seconds
 	endif
 	if ScreenElementExists id = <new_bg>
-		legacydoscreenelementmorph id = <new_bg> rgba = [0 0 0 255] time = <time>
-		Wait <time> Seconds
+		LegacyDoScreenElementMorph id = <new_bg> rgba = [0 0 0 255] time = <time>
+		Wait <time> seconds
 	endif
 	if ScreenElementExists id = <new_bg>
-		legacydoscreenelementmorph id = <new_bg> rgba = [225 225 225 255] time = <time>
+		LegacyDoScreenElementMorph id = <new_bg> rgba = [225 225 225 255] time = <time>
 	endif
-	Wait (<time> * 2.5) Seconds
+	Wait (<time> * 2.5) seconds
 	repeat
 endscript
 
 script hud_flash_red_band 
 	<time> = 0.2
 	Obj_GetID
-	OnExitRun hud_flash_red_band_done params = {id = <objID>}
+	OnExitRun hud_flash_red_band_done params = {id = <ObjID>}
 	begin
-	se_setprops alpha = 0 time = <time>
-	se_waitprops
-	se_setprops alpha = 1 time = <time>
-	se_waitprops
+	SE_SetProps alpha = 0 time = <time>
+	SE_WaitProps
+	SE_SetProps alpha = 1 time = <time>
+	SE_WaitProps
 	repeat
 endscript
 
 script hud_flash_red_band_done 
 	if ScreenElementExists id = <id>
-		<id> :se_setprops alpha = 1
+		<id> :SE_SetProps alpha = 1
 	endif
 endscript
 
-script hud_flash_red_bg_kill \{Player = 1}
-	if (<Player> = 1)
+script hud_flash_red_bg_kill \{player = 1}
+	if (<player> = 1)
 		if ($g_flash_red_going_p1 = 0)
 			return
 		endif
 		player_text = 'p1'
-	elseif (<Player> = 2)
+	elseif (<player> = 2)
 		if ($g_flash_red_going_p2 = 0)
 			return
 		endif
@@ -809,84 +809,84 @@ script hud_flash_red_bg_kill \{Player = 1}
 	else
 		return
 	endif
-	ExtendCrc HUD2D_rock_BG_red <player_text> out = new_bg
+	ExtendCRC HUD2D_rock_BG_red <player_text> out = new_bg
 	if ScreenElementExists id = <new_bg>
 		SetScreenElementProps id = <new_bg> rgba = [225 225 225 255]
-		if (<Player> = 1)
-			KillSpawnedScript \{Name = hud_flash_red_bg_p1}
+		if (<player> = 1)
+			KillSpawnedScript \{name = hud_flash_red_bg_p1}
 		else
-			KillSpawnedScript \{Name = hud_flash_red_bg_p2}
+			KillSpawnedScript \{name = hud_flash_red_bg_p2}
 		endif
 	endif
-	if (<Player> = 1)
-		Change \{g_flash_red_going_p1 = 0}
+	if (<player> = 1)
+		change \{g_flash_red_going_p1 = 0}
 	else
-		Change \{g_flash_red_going_p2 = 0}
+		change \{g_flash_red_going_p2 = 0}
 	endif
 endscript
 
-script hud_show_note_streak_combo \{Player = 1
+script hud_show_note_streak_combo \{player = 1
 		combo = 0}
 	if ($end_credits = 1 || $Cheat_PerformanceMode = 1)
 		return
 	endif
-	if gamemode_isbandscoring
+	if GameMode_IsBandScoring
 		return
 	endif
-	if (<Player> = 1)
+	if (<player> = 1)
 		printf \{channel = sfx
-			qs(0x3f8e0b79)}
+			qs("\LThis is player 1")}
 		if isSinglePlayerGame
-			Pos = (640.0, 211.0)
+			pos = (640.0, 211.0)
 			<base_scale> = 1.0
-			SpawnScriptNow GH_SFX_Note_Streak_SinglePlayer params = {combo = <combo>}
+			spawnscriptnow GH_SFX_Note_Streak_SinglePlayer params = {combo = <combo>}
 		elseif ($game_mode = p2_career || $game_mode = p2_quickplay)
-			Pos = (640.0, 170.0)
+			pos = (640.0, 170.0)
 			<base_scale> = 1.0
-			SpawnScriptNow GH_SFX_Note_Streak_P1 params = {combo = <combo>}
+			spawnscriptnow GH_SFX_Note_Streak_P1 params = {combo = <combo>}
 		elseif ($is_network_game && $game_mode = p2_coop)
-			Pos = (640.0, 170.0)
+			pos = (640.0, 170.0)
 			<base_scale> = 1.0
-			SpawnScriptNow GH_SFX_Note_Streak_P1 params = {combo = <combo>}
+			spawnscriptnow GH_SFX_Note_Streak_P1 params = {combo = <combo>}
 		else
 			<s> = 0.35000002
-			Pos = (415.0, 170.0)
-			SpawnScriptNow GH_SFX_Note_Streak_P1 params = {combo = <combo>}
+			pos = (415.0, 170.0)
+			spawnscriptnow GH_SFX_Note_Streak_P1 params = {combo = <combo>}
 		endif
 	else
 		printf \{channel = sfx
-			qs(0xa30807c8)}
+			qs("\LThis is player multple")}
 		if ($game_mode = p2_career || $game_mode = p2_quickplay)
-			Pos = (640.0, 170.0)
+			pos = (640.0, 170.0)
 			<base_scale> = 1.0
-			SpawnScriptNow GH_SFX_Note_Streak_P2 params = {combo = <combo>}
+			spawnscriptnow GH_SFX_Note_Streak_P2 params = {combo = <combo>}
 		elseif ($is_network_game && $game_mode = p2_coop)
-			Pos = (640.0, 170.0)
+			pos = (640.0, 170.0)
 			<base_scale> = 1.0
-			SpawnScriptNow GH_SFX_Note_Streak_P2 params = {combo = <combo>}
+			spawnscriptnow GH_SFX_Note_Streak_P2 params = {combo = <combo>}
 		else
 			<s> = 0.35000002
-			Pos = (865.0, 170.0)
-			SpawnScriptNow GH_SFX_Note_Streak_P2 params = {combo = <combo>}
+			pos = (865.0, 170.0)
+			spawnscriptnow GH_SFX_Note_Streak_P2 params = {combo = <combo>}
 		endif
 	endif
 	if ScreenElementExists \{id = hud_root}
 		if ($current_num_players = 1)
 			style_script = hud_message_flame_style_note_streak
 		endif
-		formatText TextName = text qs(0xfb053f5e) d = <combo>
+		FormatText TextName = text qs("%d Note Streak!") d = <combo>
 		hud_create_message {
-			Player = <Player>
+			player = <player>
 			text = <text>
 			style_script = <style_script>
 		}
 		return
 	endif
 	if ($game_mode = p2_career || $game_mode = p2_coop)
-		<Player> = 1
+		<player> = 1
 	endif
 	begin
-	if (<Player> = 1)
+	if (<player> = 1)
 		if ($star_power_ready_on_p1 = 0)
 			break
 		endif
@@ -898,113 +898,113 @@ script hud_show_note_streak_combo \{Player = 1
 	Wait \{1
 		gameframe}
 	repeat
-	formatText checksumName = player_container 'HUD_Note_Streak_Combo%d' d = <Player>
+	FormatText checksumname = player_container 'HUD_Note_Streak_Combo%d' d = <player>
 	if ScreenElementExists id = <player_container>
 		return
 	endif
-	get_player_status_checksum Player = <Player>
-	ExtendCrc hud_destroygroup_window ($<player_status>.text) out = hud_destroygroup
+	get_player_status_checksum player = <player>
+	ExtendCRC hud_destroygroup_window ($<player_status>.text) out = hud_destroygroup
 	CreateScreenElement {
-		Type = ContainerElement
+		type = ContainerElement
 		parent = <hud_destroygroup>
 		id = <player_container>
 	}
 	base_scale = 0.8
 	s = 0.8
-	formatText TextName = text qs(0xfb053f5e) d = <combo>
-	formatText checksumName = note_streak_alert 'note_streak_alert_%d' d = <Player>
+	FormatText TextName = text qs("%d Note Streak!") d = <combo>
+	FormatText checksumname = note_streak_alert 'note_streak_alert_%d' d = <player>
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		id = <note_streak_alert>
 		parent = <player_container>
 		font = fontgrid_text_a6
 		text = <text>
 		rgba = [223 223 223 255]
-		Pos = <Pos>
-		Scale = (<base_scale> * 3)
+		pos = <pos>
+		scale = (<base_scale> * 3)
 		just = [center top]
 		z_priority = 50
 		alpha = 0
-		Shadow
+		shadow
 		shadow_offs = (2.0, 2.0)
 		shadow_rgba = [0 0 0 255]
 	}
-	<id> :se_setprops Scale = <base_scale> time = 0.2 alpha = 1 motion = ease_in
-	<id> :se_waitprops
+	<id> :SE_SetProps scale = <base_scale> time = 0.2 alpha = 1 motion = ease_in
+	<id> :SE_WaitProps
 	if NOT ScreenElementExists id = <id>
 		destroy_menu menu_id = <player_container>
 		return
 	endif
-	SpawnScriptNow hud_glowburst_alert params = {player_status = <player_status>}
+	spawnscriptnow hud_glowburst_alert params = {player_status = <player_status>}
 	color0 = [245 255 120 255]
 	color1 = [245 255 160 255]
 	if ScreenElementExists id = <id>
-		<id> :se_setprops Scale = (<base_scale> + <s>) time = 0.4 rgba = <color1> rot_angle = 3 motion = ease_out
-		<id> :se_waitprops
+		<id> :SE_SetProps scale = (<base_scale> + <s>) time = 0.4 rgba = <color1> rot_angle = 3 motion = ease_out
+		<id> :SE_WaitProps
 	endif
 	if ScreenElementExists id = <id>
-		<id> :se_setprops Scale = <base_scale> time = 0.4 rgba = <color0> rot_angle = 2 motion = ease_in
-		<id> :se_waitprops
+		<id> :SE_SetProps scale = <base_scale> time = 0.4 rgba = <color0> rot_angle = 2 motion = ease_in
+		<id> :SE_WaitProps
 	endif
 	if ScreenElementExists id = <id>
-		<id> :se_setprops Scale = (<base_scale> + (<s> / 1.5)) time = 0.3 rgba = <color1> rot_angle = -2 motion = ease_out
-		<id> :se_waitprops
+		<id> :SE_SetProps scale = (<base_scale> + (<s> / 1.5)) time = 0.3 rgba = <color1> rot_angle = -2 motion = ease_out
+		<id> :SE_WaitProps
 	endif
 	if ScreenElementExists id = <id>
-		<id> :se_setprops Scale = <base_scale> time = 0.3 rgba = <color0> rot_angle = -1 motion = ease_in
-		<id> :se_waitprops
+		<id> :SE_SetProps scale = <base_scale> time = 0.3 rgba = <color0> rot_angle = -1 motion = ease_in
+		<id> :SE_WaitProps
 	endif
 	if ScreenElementExists id = <id>
-		<id> :se_setprops Scale = (<base_scale> + (<s> / 2.0)) time = 0.2 rgba = <color1> rot_angle = 2 motion = ease_out
-		<id> :se_waitprops
+		<id> :SE_SetProps scale = (<base_scale> + (<s> / 2.0)) time = 0.2 rgba = <color1> rot_angle = 2 motion = ease_out
+		<id> :SE_WaitProps
 	endif
 	if ScreenElementExists id = <id>
-		<id> :se_setprops Scale = <base_scale> time = 0.2 rgba = <color0> rot_angle = 1 motion = ease_in
-		<id> :se_waitprops
+		<id> :SE_SetProps scale = <base_scale> time = 0.2 rgba = <color0> rot_angle = 1 motion = ease_in
+		<id> :SE_WaitProps
 	endif
 	if ScreenElementExists id = <id>
-		<id> :se_setprops Scale = (<base_scale> + (<s> / 2.5)) time = 0.1 rgba = <color1> rot_angle = -1 motion = ease_out
-		<id> :se_waitprops
+		<id> :SE_SetProps scale = (<base_scale> + (<s> / 2.5)) time = 0.1 rgba = <color1> rot_angle = -1 motion = ease_out
+		<id> :SE_WaitProps
 	endif
 	if ScreenElementExists id = <id>
-		<id> :se_setprops Scale = <base_scale> time = 0.1 rgba = <color0> rot_angle = 1 motion = ease_in
-		<id> :se_waitprops
+		<id> :SE_SetProps scale = <base_scale> time = 0.1 rgba = <color0> rot_angle = 1 motion = ease_in
+		<id> :SE_WaitProps
 	endif
 	if ScreenElementExists id = <id>
-		<id> :se_setprops rot_angle = 0 Scale = <base_scale> motion = smooth time = 0
+		<id> :SE_SetProps rot_angle = 0 scale = <base_scale> motion = smooth time = 0
 	endif
 	if ScreenElementExists id = <id>
-		<id> :se_setprops Pos = (<Pos> - (0.0, 230.0)) Scale = (<base_scale> * 0.8) time = 0.35000002 motion = ease_in
-		<id> :se_waitprops
+		<id> :SE_SetProps pos = (<pos> - (0.0, 230.0)) scale = (<base_scale> * 0.8) time = 0.35000002 motion = ease_in
+		<id> :SE_WaitProps
 	endif
 	destroy_menu menu_id = <player_container>
 endscript
 
 script hud_lightning_alert 
-	if (($<player_status>.part) = vocals)
-		vocals_lightning_alert Player = <Player>
+	if (($<player_status>.part) = Vocals)
+		vocals_lightning_alert player = <player>
 		return
 	endif
 	if NOT ScreenElementExists id = <alert_id>
 		return
 	endif
-	formatText checksumName = streak_lightning_01 'HUD_lightning_01_%d' d = <Player>
-	formatText checksumName = streak_lightning_03 'HUD_lightning_03_%d' d = <Player>
-	formatText checksumName = streak_lightning_05 'HUD_lightning_05_%d' d = <Player>
-	formatText checksumName = streak_lightning_07 'HUD_lightning_07_%d' d = <Player>
+	FormatText checksumname = streak_lightning_01 'HUD_lightning_01_%d' d = <player>
+	FormatText checksumname = streak_lightning_03 'HUD_lightning_03_%d' d = <player>
+	FormatText checksumname = streak_lightning_05 'HUD_lightning_05_%d' d = <player>
+	FormatText checksumname = streak_lightning_07 'HUD_lightning_07_%d' d = <player>
 	GetScreenElementProps id = <alert_id>
-	lightning_pos = (<Pos> - (0.0, 20.0))
+	lightning_pos = (<pos> - (0.0, 20.0))
 	lightning_dims = (800.0, 100.0)
 	lightning_time = 0.2
 	if ScreenElementExists id = <streak_lightning_01>
 		DestroyScreenElement id = <streak_lightning_01>
 	endif
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		id = <streak_lightning_01>
 		texture = streak_lightning_01
 		parent = <player_container>
-		Pos = <lightning_pos>
+		pos = <lightning_pos>
 		dims = <lightning_dims>
 		just = [center top]
 		z_priority = 45
@@ -1014,11 +1014,11 @@ script hud_lightning_alert
 		DestroyScreenElement id = <streak_lightning_03>
 	endif
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		id = <streak_lightning_03>
 		texture = streak_lightning_03
 		parent = <player_container>
-		Pos = <lightning_pos>
+		pos = <lightning_pos>
 		dims = <lightning_dims>
 		just = [center top]
 		z_priority = 45
@@ -1028,11 +1028,11 @@ script hud_lightning_alert
 		DestroyScreenElement id = <streak_lightning_05>
 	endif
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		id = <streak_lightning_05>
 		texture = streak_lightning_05
 		parent = <player_container>
-		Pos = <lightning_pos>
+		pos = <lightning_pos>
 		dims = <lightning_dims>
 		just = [center top]
 		z_priority = 45
@@ -1042,44 +1042,44 @@ script hud_lightning_alert
 		DestroyScreenElement id = <streak_lightning_07>
 	endif
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		id = <streak_lightning_07>
 		texture = streak_lightning_07
 		parent = <player_container>
-		Pos = <lightning_pos>
+		pos = <lightning_pos>
 		dims = <lightning_dims>
 		just = [center top]
 		z_priority = 45
 		alpha = 0
 	}
 	if ScreenElementExists id = <streak_lightning_01>
-		legacydoscreenelementmorph id = <streak_lightning_01> alpha = 1 time = <lightning_time>
-		Wait <lightning_time> Seconds
+		LegacyDoScreenElementMorph id = <streak_lightning_01> alpha = 1 time = <lightning_time>
+		Wait <lightning_time> seconds
 	endif
 	if ScreenElementExists id = <streak_lightning_01>
-		legacydoscreenelementmorph id = <streak_lightning_01> alpha = 0 time = <lightning_time>
+		LegacyDoScreenElementMorph id = <streak_lightning_01> alpha = 0 time = <lightning_time>
 		if ScreenElementExists id = <streak_lightning_03>
-			legacydoscreenelementmorph id = <streak_lightning_03> alpha = 1 time = <lightning_time>
+			LegacyDoScreenElementMorph id = <streak_lightning_03> alpha = 1 time = <lightning_time>
 		endif
-		Wait <lightning_time> Seconds
+		Wait <lightning_time> seconds
 	endif
 	if ScreenElementExists id = <streak_lightning_03>
-		legacydoscreenelementmorph id = <streak_lightning_03> alpha = 0 time = <lightning_time>
+		LegacyDoScreenElementMorph id = <streak_lightning_03> alpha = 0 time = <lightning_time>
 		if ScreenElementExists id = <streak_lightning_05>
-			legacydoscreenelementmorph id = <streak_lightning_05> alpha = 1 time = <lightning_time>
+			LegacyDoScreenElementMorph id = <streak_lightning_05> alpha = 1 time = <lightning_time>
 		endif
-		Wait <lightning_time> Seconds
+		Wait <lightning_time> seconds
 	endif
 	if ScreenElementExists id = <streak_lightning_05>
-		legacydoscreenelementmorph id = <streak_lightning_05> alpha = 0 time = <lightning_time>
+		LegacyDoScreenElementMorph id = <streak_lightning_05> alpha = 0 time = <lightning_time>
 		if ScreenElementExists id = <streak_lightning_07>
-			legacydoscreenelementmorph id = <streak_lightning_07> alpha = 1 time = <lightning_time>
+			LegacyDoScreenElementMorph id = <streak_lightning_07> alpha = 1 time = <lightning_time>
 		endif
-		Wait <lightning_time> Seconds
+		Wait <lightning_time> seconds
 	endif
 	if ScreenElementExists id = <streak_lightning_07>
-		legacydoscreenelementmorph id = <streak_lightning_07> alpha = 0 time = <lightning_time>
-		Wait <lightning_time> Seconds
+		LegacyDoScreenElementMorph id = <streak_lightning_07> alpha = 0 time = <lightning_time>
+		Wait <lightning_time> seconds
 	endif
 	if ScreenElementExists id = <streak_lightning_01>
 		DestroyScreenElement id = <streak_lightning_01>
@@ -1096,16 +1096,16 @@ script hud_lightning_alert
 endscript
 
 script hud_glowburst_alert \{player_status = player1_status}
-	formatText checksumName = hud_star_power_ready_glow 'star_power_ready_glow_%d' d = ($<player_status>.Player)
-	ExtendCrc hud_destroygroup_window ($<player_status>.text) out = hud_destroygroup
+	FormatText checksumname = hud_star_power_ready_glow 'star_power_ready_glow_%d' d = ($<player_status>.player)
+	ExtendCRC hud_destroygroup_window ($<player_status>.text) out = hud_destroygroup
 	if ScreenElementExists id = <hud_star_power_ready_glow>
 		DestroyScreenElement id = <hud_star_power_ready_glow>
 	endif
 	if (($game_mode = p2_faceoff) || ($game_mode = p2_pro_faceoff))
-		if (($<player_status>.Player) = 1)
-			original_pos = (($hud_screen_elements [0].Pos) - (225.0, 37.0))
+		if (($<player_status>.player) = 1)
+			original_pos = (($hud_screen_elements [0].pos) - (225.0, 37.0))
 		else
-			original_pos = (($hud_screen_elements [0].Pos) + (225.0, -37.0))
+			original_pos = (($hud_screen_elements [0].pos) + (225.0, -37.0))
 		endif
 		base_scale = (7.5, 0.5)
 		scale2 = (10.0, 2.5)
@@ -1113,9 +1113,9 @@ script hud_glowburst_alert \{player_status = player1_status}
 		scale4 = (40.0, 0.0)
 	else
 		if ($game_mode = p2_career || $game_mode = p2_coop || $game_mode = p2_quickplay)
-			original_pos = (($hud_screen_elements [0].Pos) - (0.0, 36.0))
+			original_pos = (($hud_screen_elements [0].pos) - (0.0, 36.0))
 		else
-			original_pos = (($hud_screen_elements [0].Pos) + (0.0, 7.0))
+			original_pos = (($hud_screen_elements [0].pos) + (0.0, 7.0))
 		endif
 		base_scale = (15.0, 1.0)
 		scale2 = (20.0, 5.0)
@@ -1124,26 +1124,26 @@ script hud_glowburst_alert \{player_status = player1_status}
 	endif
 	if ScreenElementExists id = <hud_destroygroup>
 		CreateScreenElement {
-			Type = SpriteElement
+			type = SpriteElement
 			id = <hud_star_power_ready_glow>
 			parent = <hud_destroygroup>
 			texture = hud_star_power_ready_glow
 			just = [center center]
-			Pos = <original_pos>
+			pos = <original_pos>
 			rgba = [245 255 200 255]
-			Scale = <base_scale>
+			scale = <base_scale>
 			alpha = 1
 			z_priority = 50
 		}
 	endif
 	if ScreenElementExists id = <hud_star_power_ready_glow>
-		<hud_star_power_ready_glow> :legacydomorph Scale = <scale2> alpha = 0.5 motion = ease_out time = 0.1
+		<hud_star_power_ready_glow> :LegacyDoMorph scale = <scale2> alpha = 0.5 motion = ease_out time = 0.1
 	endif
 	if ScreenElementExists id = <hud_star_power_ready_glow>
-		<hud_star_power_ready_glow> :legacydomorph Scale = <scale3> alpha = 0.5 rgba = [245 255 160 255] motion = ease_out time = 0.1
+		<hud_star_power_ready_glow> :LegacyDoMorph scale = <scale3> alpha = 0.5 rgba = [245 255 160 255] motion = ease_out time = 0.1
 	endif
 	if ScreenElementExists id = <hud_star_power_ready_glow>
-		<hud_star_power_ready_glow> :legacydomorph Scale = <scale4> alpha = 0 motion = ease_in time = 0.8
+		<hud_star_power_ready_glow> :LegacyDoMorph scale = <scale4> alpha = 0 motion = ease_in time = 0.8
 	endif
 	if ScreenElementExists id = <hud_star_power_ready_glow>
 		DestroyScreenElement id = <hud_star_power_ready_glow>
@@ -1153,15 +1153,15 @@ endscript
 script hud_flip_note_streak_num 
 	repeat_num = <dial_num>
 	begin
-	formatText checksumName = id 'HUD2D_Note_Streak_Text_%dp%i' d = <dial_num> i = <Player>
+	FormatText checksumname = id 'HUD2D_Note_Streak_Text_%dp%i' d = <dial_num> i = <player>
 	if NOT ScreenElementExists id = <id>
 		return
 	endif
 	<id> :GetTags
 	GetScreenElementProps id = <id>
-	basePos = <Pos>
-	SetScreenElementProps id = <id> Pos = (<basePos> + (0.0, 10.0)) alpha = 0
-	SetScreenElementProps id = <id> Pos = <intial_pos> alpha = 1 time = 0.1
+	basePos = <pos>
+	SetScreenElementProps id = <id> pos = (<basePos> + (0.0, 10.0)) alpha = 0
+	SetScreenElementProps id = <id> pos = <intial_pos> alpha = 1 time = 0.1
 	<dial_num> = (<dial_num> - 1)
 	repeat <repeat_num>
 endscript
@@ -1169,36 +1169,36 @@ endscript
 script hud_hide_optional_vocals 
 	vocals_get_num_vocalists
 	if (<num_vocalists> = 0)
-		if hud_root :desc_resolvealias \{Name = alias_v1
+		if hud_root :Desc_ResolveAlias \{name = alias_v1
 				param = vocals_id}
-			<vocals_id> :se_setprops Hide
+			<vocals_id> :SE_SetProps hide
 		endif
 	endif
 endscript
 
 script hud_show_drumfill_score 
 	if ($current_num_players = 1)
-		formatText TextName = text qs(0x9b704576) d = <score>
-		hud_create_message Player = <Player> text = <text>
+		FormatText TextName = text qs("%d Point Drum Fill!") d = <score>
+		hud_create_message player = <player> text = <text>
 	endif
 endscript
 
 script hud_show_drumsolo_score 
-	formatText TextName = text qs(0x8e2da9b3) d = <score>
-	hud_create_message Player = <Player> text = <text>
+	FormatText TextName = text qs("%d Point Drum Solo!") d = <score>
+	hud_create_message player = <player> text = <text>
 endscript
 
 script hud_show_drumfill_challenge 
-	hud_create_message Player = <Player> text = qs(0x200e0af0)
+	hud_create_message player = <player> text = qs("Drum Fill Challenge Complete!")
 endscript
 
-script hud_move_flame_container \{Pos = (0.0, 0.0)
-		Scale = (1.0, 1.0)
+script HUD_move_flame_container \{pos = (0.0, 0.0)
+		scale = (1.0, 1.0)
 		time = 0.3
 		highway_num = 1}
-	formatText checksumName = alias_checksum 'alias_hud_message_fire_p%h' h = <highway_num>
-	if hud_root :desc_resolvealias Name = <alias_checksum> param = flame_container
-		<flame_container> :desc_resolvealias Name = alias_flame_container param = flame_id
+	FormatText checksumname = alias_checksum 'alias_hud_message_fire_p%h' h = <highway_num>
+	if hud_root :Desc_ResolveAlias name = <alias_checksum> param = flame_container
+		<flame_container> :Desc_ResolveAlias name = alias_flame_container param = flame_id
 	endif
 	if GotParam \{flame_id}
 		if ScreenElementExists id = <flame_id>
@@ -1223,8 +1223,8 @@ script hud_move_flame_container \{Pos = (0.0, 0.0)
 			endif
 			SetScreenElementProps {
 				id = <flame_id>
-				Pos = <Pos>
-				Scale = <Scale>
+				pos = <pos>
+				scale = <scale>
 				time = <time>
 			}
 		endif

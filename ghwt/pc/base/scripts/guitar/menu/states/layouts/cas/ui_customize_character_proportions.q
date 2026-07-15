@@ -1,14 +1,14 @@
 
 script ui_create_customize_character_proportions 
-	if NOT getcasappearancepart \{part = cas_physique}
-		scriptassert \{'%s not found'
+	if NOT GetCASAppearancePart \{part = cas_physique}
+		ScriptAssert \{'%s not found'
 			s = cas_physique}
 	endif
-	if NOT getactualcasoptionstruct part = cas_physique desc_id = <desc_id>
-		scriptassert '%s %t not found' s = cas_physique t = <desc_id>
+	if NOT GetActualCASOptionStruct part = cas_physique desc_id = <desc_id>
+		ScriptAssert '%s %t not found' s = cas_physique t = <desc_id>
 	endif
 	make_generic_menu \{vmenu_id = create_customize_character_proportions_vmenu
-		title = qs(0xfbc67840)
+		title = qs("Proportions")
 		num_icons = 2
 		show_history}
 	setup_cas_menu_handlers \{vmenu_id = create_customize_character_proportions_vmenu
@@ -19,14 +19,14 @@ script ui_create_customize_character_proportions
 			'customize_character_L'
 		]
 		zoom_camera = 'customize_character_Zoom'}
-	if gotparam \{preset_builds}
+	if GotParam \{preset_builds}
 		find_phyique_number
 		printstruct <physique_num>
-		printf \{qs(0xbbd11188)}
-		getarraysize \{preset_builds}
+		printf \{qs("\L#################Preset Physiques! ######################")}
+		GetArraySize \{preset_builds}
 		button_widget_add_item {
-			widget_id = physique_widget
-			text = qs(0xdad18e9b)
+			widget_id = Physique_widget
+			text = qs("PHYSIQUE")
 			button_icon = widget_spread
 			start_value = <physique_num>
 			min = 0
@@ -36,7 +36,7 @@ script ui_create_customize_character_proportions
 			pad_left_params = {part = cas_physique preset_builds = <preset_builds>}
 			pad_right_script = update_physique
 			pad_right_params = {part = cas_physique preset_builds = <preset_builds>}
-			fill_type = `left to right`
+			fill_type = `Left to Right`
 			deinit_script = widget_restore_cap
 			accept_script = widget_accept_cap
 			init_script = widget_init_cap
@@ -44,14 +44,14 @@ script ui_create_customize_character_proportions
 			zoom_camera = 'customize_character_Zoom'
 		}
 	endif
-	getarraysize ($cas_physique_bone_options)
+	GetArraySize ($cas_physique_bone_options)
 	i = 0
 	begin
-	if structurecontains structure = (($cas_physique_bone_options) [<i>]) bonemenu
+	if StructureContains Structure = (($cas_physique_bone_options) [<i>]) bonemenu
 		if find_bone_deform_info deform_bones = (<deform_bones>) group_name = ((($cas_physique_bone_options) [<i>]).group_name)
-			if structurecontains structure = (($cas_physique_bone_options) [<i>]) icon
+			if StructureContains Structure = (($cas_physique_bone_options) [<i>]) icon
 				cas_get_bone_slider_value part = cas_physique group_name = ((($cas_physique_bone_options) [<i>]).group_name)
-				formattext checksumname = widget_id 'widget_%i' i = <i>
+				FormatText checksumname = widget_id 'widget_%i' i = <i>
 				button_widget_add_item {
 					widget_id = <widget_id>
 					text = ((($cas_physique_bone_options) [<i>]).text)
@@ -85,10 +85,10 @@ script ui_create_customize_character_proportions
 	repeat <array_size>
 	add_generic_menu_icon_item {
 		icon = widget_default
-		text = qs(0xb90eb5a2)
+		text = qs("RESTORE DEFAULTS")
 		pad_choose_script = reset_physique_to_default
 		pad_choose_params = {part = cas_physique deform_bones = <deform_bones>}
-		pad_choose_sound = nullsound
+		pad_choose_sound = NullSound
 	}
 	cas_bonemenu_begin \{part = cas_physique}
 	menu_finish \{car_helper_text_back}
@@ -99,22 +99,22 @@ script ui_destroy_customize_character_proportions
 endscript
 
 script ui_init_customize_character_proportions 
-	pushtemporarycasappearance
+	PushTemporaryCASAppearance
 endscript
 
 script ui_deinit_customize_character_proportions 
 	cas_bonemenu_exit \{part = cas_physique}
-	poptemporarycasappearance
+	PopTemporaryCASAppearance
 endscript
 
 script reset_physique_to_default 
 	reset_bone_deform_info part = <part>
 	reset_additional_bone_deform_info part = <part>
-	soundevent \{event = character_reset}
-	getarraysize ($cas_physique_bone_options)
+	SoundEvent \{event = character_reset}
+	GetArraySize ($cas_physique_bone_options)
 	i = 0
 	begin
-	if structurecontains structure = (($cas_physique_bone_options) [<i>]) bonemenu
+	if StructureContains Structure = (($cas_physique_bone_options) [<i>]) bonemenu
 		cas_refresh_given_bone_slider {
 			part = <part>
 			deform_array = <deform_bones>
@@ -127,52 +127,52 @@ script reset_physique_to_default
 endscript
 
 script update_physique 
-	getcasappearancepart part = <part>
-	casttointeger \{value}
-	setcasappearanceadditionalbones part = <part> additional_bone_transforms = (<preset_builds> [<value>].additional_bone_transforms)
-	updatecurrentcasmodel buildscript = reskin_model_from_appearance buildscriptparams = {kill_objects = <kill_objects>}
+	GetCASAppearancePart part = <part>
+	CastToInteger \{value}
+	SetCASAppearanceAdditionalBones part = <part> additional_bone_transforms = (<preset_builds> [<value>].additional_bone_transforms)
+	UpdateCurrentCASModel buildScript = reskin_model_from_appearance buildscriptparams = {kill_objects = <kill_objects>}
 endscript
 
 script reset_proportion_widget 
-	if structurecontains structure = (($cas_physique_bone_options) [<i>]) icon
-		formattext checksumname = widget_id 'widget_%i' i = <i>
+	if StructureContains Structure = (($cas_physique_bone_options) [<i>]) icon
+		FormatText checksumname = widget_id 'widget_%i' i = <i>
 		button_widget_set_value widget_id = <widget_id> new_value = 0
 	endif
-	button_widget_set_value \{widget_id = physique_widget
+	button_widget_set_value \{widget_id = Physique_widget
 		new_value = 0}
 endscript
 
 script find_phyique_number 
-	if NOT getcasappearancepart \{part = cas_physique}
-		scriptassert \{'%s not found'
+	if NOT GetCASAppearancePart \{part = cas_physique}
+		ScriptAssert \{'%s not found'
 			s = cas_physique}
 	endif
-	if NOT getactualcasoptionstruct part = cas_physique desc_id = <desc_id>
-		scriptassert '%s %t not found' s = cas_physique t = <desc_id>
+	if NOT GetActualCASOptionStruct part = cas_physique desc_id = <desc_id>
+		ScriptAssert '%s %t not found' s = cas_physique t = <desc_id>
 	endif
-	if gotparam \{additional_bone_transforms}
-		generatechecksumfromarray \{arrayname = additional_bone_transforms}
+	if GotParam \{additional_bone_transforms}
+		GenerateChecksumFromArray \{ArrayName = additional_bone_transforms}
 		add_bone_checksum = <array_checksum>
-		if gotparam \{preset_builds}
-			getarraysize <preset_builds>
+		if GotParam \{preset_builds}
+			GetArraySize <preset_builds>
 			i = 0
 			begin
 			preset_bones = ((<preset_builds> [<i>]).additional_bone_transforms)
-			generatechecksumfromarray \{arrayname = preset_bones}
-			if (checksumequals a = <add_bone_checksum> b = <array_checksum>)
-				printf qs(0x90df78c6) i = <i>
+			GenerateChecksumFromArray \{ArrayName = preset_bones}
+			if (ChecksumEquals a = <add_bone_checksum> b = <array_checksum>)
+				printf qs("\LPhysique matches preset number %i") i = <i>
 				return physique_num = <i>
 			endif
 			i = (<i> + 1)
 			repeat <array_size>
 		endif
 	endif
-	printf \{qs(0x4d5c2957)}
+	printf \{qs("\LUnable to find Physique match")}
 	return \{physique_num = 0}
 endscript
 
 script find_physique_height \{slider = 0}
 	cas_get_bone_slider_value \{part = cas_physique
-		group_name = height}
-	return height = <slider>
+		group_name = Height}
+	return Height = <slider>
 endscript

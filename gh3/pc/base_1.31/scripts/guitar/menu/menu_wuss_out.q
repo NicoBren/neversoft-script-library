@@ -1,7 +1,7 @@
 
 script create_wuss_out_menu 
 	change \{boss_wuss_out = 0}
-	if iswinport
+	if IsWinPort
 		player_device = ($primary_controller)
 	else
 		player_device = ($last_start_pressed_device)

@@ -12,7 +12,7 @@ guitar_motion_new_motion_mult = [
 guitar_motions = {
 	bounce = {
 		id = motion_bounce
-		debug_text = qs(0xb87813a4)
+		debug_text = qs("\LBounce!")
 		score_logic = beat
 		sequence = [
 			{
@@ -48,9 +48,9 @@ guitar_motions = {
 			}
 		]
 	}
-	jump = {
+	Jump = {
 		id = motion_jump
-		debug_text = qs(0x2831879f)
+		debug_text = qs("\LJump!")
 		score_logic = beat
 		sequence = [
 			{
@@ -89,7 +89,7 @@ guitar_motions = {
 	}
 	big_jump = {
 		id = motion_big_jump
-		debug_text = qs(0x2e560688)
+		debug_text = qs("\LLeap!")
 		score_logic = always
 		sequence = [
 			{
@@ -128,7 +128,7 @@ guitar_motions = {
 	}
 	behind_the_head_fast = {
 		id = motion_behind_the_head
-		debug_text = qs(0xeaddda2a)
+		debug_text = qs("\LBehind the Head!")
 		score_logic = sustained
 		sequence = [
 			{
@@ -156,7 +156,7 @@ guitar_motions = {
 	}
 	sniper = {
 		id = motion_sniper
-		debug_text = qs(0x97544c95)
+		debug_text = qs("\LSniper!")
 		score_logic = sustained
 		sequence = [
 			{
@@ -194,7 +194,7 @@ guitar_motions = {
 	}
 	invert = {
 		id = motion_invert
-		debug_text = qs(0x7416debf)
+		debug_text = qs("\LInverted!")
 		score_logic = sustained
 		no_repeat = 800
 		sequence = [
@@ -226,7 +226,7 @@ guitar_motions = {
 	}
 	battlecry = {
 		id = motion_battlecry
-		debug_text = qs(0x99cf9691)
+		debug_text = qs("\LBattle Cry!")
 		score_logic = always
 		sequence = [
 			{
@@ -272,7 +272,7 @@ guitar_motions = {
 	}
 	snap = {
 		id = motion_snap
-		debug_text = qs(0xa599c0bb)
+		debug_text = qs("\LSnap!")
 		score_logic = always
 		sequence = [
 			{
@@ -310,7 +310,7 @@ guitar_motions = {
 	}
 	guitarspin = {
 		id = motion_guitarspin
-		debug_text = qs(0x78945283)
+		debug_text = qs("\LGuitar Spin")
 		score_logic = always
 		sequence = [
 			{
@@ -348,7 +348,7 @@ guitar_motions = {
 	}
 	powerslide = {
 		id = motion_powerslide
-		debug_text = qs(0xc8259dbb)
+		debug_text = qs("\LPowerslide!")
 		score_logic = sustained
 		sequence = [
 			{
@@ -381,7 +381,7 @@ guitar_motions = {
 	}
 	activate_starpower = {
 		id = motion_activate_starpower
-		debug_text = qs(0xc7e5f609)
+		debug_text = qs("\LActivate Star Power!")
 		score_logic = sustained
 		sequence = [
 			{
@@ -403,7 +403,7 @@ guitar_motions = {
 	}
 	dig = {
 		id = motion_dig
-		debug_text = qs(0x919f81ef)
+		debug_text = qs("\LDig!")
 		score_logic = always
 		no_repeat = 200
 		sequence = [
@@ -434,7 +434,7 @@ guitar_motions = {
 	}
 	jam_dig = {
 		id = jam_motion_dig
-		debug_text = qs(0xf9357f28)
+		debug_text = qs("\LStomp!")
 		no_repeat = 1000
 		score_logic = jam_mode
 		sequence = [
@@ -457,7 +457,7 @@ guitar_motions = {
 	}
 	lefty = {
 		id = motion_lefty
-		debug_text = qs(0x094be081)
+		debug_text = qs("\LLefty!")
 		score_logic = sustained
 		sequence = [
 			{
@@ -481,73 +481,73 @@ guitar_motions = {
 }
 guitar_motion_ids = {
 	motion_behind_the_head = {
-		text = qs(0x88a4da2f)
+		text = qs("Behind the Head")
 		score = 50.0
 	}
 	motion_sniper = {
-		text = qs(0xd5962fbb)
+		text = qs("Sniper")
 		score = 50.0
 	}
 	motion_invert = {
-		text = qs(0x5ead5229)
+		text = qs("Invert")
 		score = 50.0
 	}
 	motion_battlecry = {
-		text = qs(0x86602cef)
+		text = qs("Battlecry")
 		score = 50.0
 	}
 	motion_snap = {
-		text = qs(0xdf2f5309)
+		text = qs("Snap")
 		score = 50.0
 	}
 	motion_guitarspin = {
-		text = qs(0xf3b3823c)
+		text = qs("Guitar Spin")
 		score = 50.0
 	}
 	motion_powerslide = {
-		text = qs(0xcf3f9c71)
+		text = qs("Powerslide")
 		score = 50.0
 	}
 	motion_activate_starpower = {
-		text = qs(0x3d1d0b36)
+		text = qs("Activate Starpower")
 		score = 50.0
 	}
 	motion_dig = {
-		text = qs(0xb66653cf)
+		text = qs("Dig")
 		score = 50.0
 	}
 	motion_lefty = {
-		text = qs(0xc4f5c74b)
+		text = qs("Lefty")
 		score = 50.0
 	}
 	motion_bounce = {
-		text = qs(0x9fc979d3)
+		text = qs("Bounce")
 		score = 10.0
 	}
 	motion_jump = {
-		text = qs(0x9f1c34e9)
+		text = qs("Jump")
 		score = 10.0
 	}
 	motion_big_jump = {
-		text = qs(0x8e478572)
+		text = qs("Big Jump")
 		score = 10.0
 	}
 	jam_motion_dig = {
-		text = qs(0x2b096b30)
+		text = qs("Jam Dig")
 	}
 }
 guitar_motions_test_performed = {
 }
 
 script guitar_motion_test 
-	setscriptcannotpause
-	onexitrun \{guitar_motion_test_end}
+	SetScriptCannotPause
+	OnExitRun \{guitar_motion_test_end}
 	change \{guitar_motions_test_performed = {
 		}}
-	destroyscreenelement \{id = guitar_motion_test_bg}
-	createscreenelement \{id = guitar_motion_test_bg
+	DestroyScreenElement \{id = guitar_motion_test_bg}
+	CreateScreenElement \{id = guitar_motion_test_bg
 		parent = root_window
-		type = spriteelement
+		type = SpriteElement
 		pos = (0.0, 0.0)
 		dims = (1280.0, 250.0)
 		texture = white
@@ -562,10 +562,10 @@ script guitar_motion_test
 			top
 		]
 		z_priority = 1004}
-	destroyscreenelement \{id = guitar_motion_test_text}
-	createscreenelement \{id = guitar_motion_test_text
+	DestroyScreenElement \{id = guitar_motion_test_text}
+	CreateScreenElement \{id = guitar_motion_test_text
 		parent = root_window
-		type = containerelement
+		type = ContainerElement
 		pos = (250.0, 120.0)
 		dims = (1280.0, 720.0)
 		just = [
@@ -573,9 +573,9 @@ script guitar_motion_test
 			top
 		]
 		z_priority = 1005}
-	createscreenelement \{parent = guitar_motion_test_text
-		type = textblockelement
-		text = qs(0xc5651163)
+	CreateScreenElement \{parent = guitar_motion_test_text
+		type = TextBlockElement
+		text = qs("neck (up/down)")
 		pos = (300.0, -70.0)
 		dims = (1280.0, 720.0)
 		just = [
@@ -584,9 +584,9 @@ script guitar_motion_test
 		]
 		font = fontgrid_text_a8
 		scale = 0.6}
-	createscreenelement \{parent = guitar_motion_test_text
-		type = textblockelement
-		text = qs(0x6368dba4)
+	CreateScreenElement \{parent = guitar_motion_test_text
+		type = TextBlockElement
+		text = qs("neck (left/right)")
 		pos = (500.0, -70.0)
 		dims = (1280.0, 720.0)
 		just = [
@@ -595,9 +595,9 @@ script guitar_motion_test
 		]
 		font = fontgrid_text_a8
 		scale = 0.6}
-	createscreenelement \{parent = guitar_motion_test_text
-		type = textblockelement
-		text = qs(0x29ec13d5)
+	CreateScreenElement \{parent = guitar_motion_test_text
+		type = TextBlockElement
+		text = qs("face (up/down)")
 		pos = (700.0, -70.0)
 		dims = (1280.0, 720.0)
 		just = [
@@ -606,10 +606,10 @@ script guitar_motion_test
 		]
 		font = fontgrid_text_a8
 		scale = 0.6}
-	createscreenelement \{id = guitar_motion_test_text_up
+	CreateScreenElement \{id = guitar_motion_test_text_up
 		parent = guitar_motion_test_text
-		type = textblockelement
-		text = qs(0x03ac90f0)
+		type = TextBlockElement
+		text = qs("\L")
 		pos = (0.0, 0.0)
 		dims = (1280.0, 720.0)
 		just = [
@@ -618,10 +618,10 @@ script guitar_motion_test
 		]
 		font = fontgrid_text_a8
 		scale = 0.7}
-	createscreenelement \{id = guitar_motion_test_text_left
+	CreateScreenElement \{id = guitar_motion_test_text_left
 		parent = guitar_motion_test_text
-		type = textblockelement
-		text = qs(0x03ac90f0)
+		type = TextBlockElement
+		text = qs("\L")
 		pos = (0.0, 30.0)
 		dims = (1280.0, 720.0)
 		just = [
@@ -630,10 +630,10 @@ script guitar_motion_test
 		]
 		font = fontgrid_text_a8
 		scale = 0.7}
-	createscreenelement \{id = guitar_motion_test_text_face
+	CreateScreenElement \{id = guitar_motion_test_text_face
 		parent = guitar_motion_test_text
-		type = textblockelement
-		text = qs(0x03ac90f0)
+		type = TextBlockElement
+		text = qs("\L")
 		pos = (0.0, 60.0)
 		dims = (1280.0, 720.0)
 		just = [
@@ -643,53 +643,53 @@ script guitar_motion_test
 		font = fontgrid_text_a8
 		scale = 0.7}
 	begin
-	if NOT guitarmotion_test \{func = prototype
+	if NOT GuitarMotion_Test \{func = prototype
 			player = 1}
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
 script guitar_motion_test_end 
-	guitarmotion_test \{func = prototype_end
+	GuitarMotion_Test \{func = prototype_end
 		player = 1}
-	destroyscreenelement \{id = guitar_motion_test_text}
-	destroyscreenelement \{id = guitar_motion_test_bg}
+	DestroyScreenElement \{id = guitar_motion_test_text}
+	DestroyScreenElement \{id = guitar_motion_test_bg}
 endscript
 
 script guitar_motion_got_pattern 
-	getplayerinfo <player> text
-	formattext checksumname = points_id 'guitar_performance_debug_%s' s = <text>
-	if NOT screenelementexists id = <points_id>
+	GetPlayerInfo <player> text
+	FormatText checksumname = points_id 'guitar_performance_debug_%s' s = <text>
+	if NOT ScreenElementExists id = <points_id>
 		return
 	endif
-	if gotparam \{pattern}
-		if structurecontains structure = $guitar_motions_test_performed <pattern>
+	if GotParam \{pattern}
+		if StructureContains Structure = $guitar_motions_test_performed <pattern>
 			<pattern_count> = ($guitar_motions_test_performed.<pattern>.value + 1)
 		else
 			<pattern_count> = 1
 		endif
 		<gmtp> = $guitar_motions_test_performed
 		<pattern_struct> = {value = <pattern_count>}
-		addparam name = <pattern> value = <pattern_struct> type = structure structure_name = gmtp
+		AddParam name = <pattern> value = <pattern_struct> type = Structure structure_name = gmtp
 		change guitar_motions_test_performed = <gmtp>
 		guitar_motion_message text = ($guitar_motions.<pattern>.debug_text)
-	elseif gotparam \{pattern_id}
-		if structurecontains structure = $guitar_motion_ids <pattern_id>
+	elseif GotParam \{pattern_id}
+		if StructureContains Structure = $guitar_motion_ids <pattern_id>
 			guitar_motion_message text = ($guitar_motion_ids.<pattern_id>.text)
 		else
 			printf 'WARNING: unknown guitar motion pattern id %s' s = <pattern_id>
-			guitar_motion_message \{text = qs(0x95d0b0f7)}
+			guitar_motion_message \{text = qs("Motion")}
 		endif
 	endif
 endscript
 
 script guitar_motion_message 
-	createscreenelement {
+	CreateScreenElement {
 		parent = root_window
-		type = textblockelement
+		type = TextBlockElement
 		text = <text>
 		font = fontgrid_text_a8
 		just = [left center]
@@ -701,25 +701,25 @@ script guitar_motion_message
 		shadow
 		shadow_offs = (3.0, 3.0)
 	}
-	runscriptonscreenelement guitar_motion_message_wait_and_die id = <id>
+	RunScriptOnScreenElement guitar_motion_message_wait_and_die id = <id>
 endscript
 
 script guitar_motion_message_wait_and_die 
-	se_setprops \{alpha = 0.1
+	SE_SetProps \{alpha = 0.1
 		pos = {
 			(0.0, -70.0)
 			relative
 		}
 		time = 1}
-	se_waitprops
-	die
+	SE_WaitProps
+	Die
 endscript
 
 script guitar_motion_show_performance_tally 
-	formattext textname = tally_text qs(0x11a2f5cd) s = ($guitar_motions.<foreachin_name>.debug_text) v = <value>
-	createscreenelement {
+	FormatText TextName = tally_text qs("%s %v times.") s = ($guitar_motions.<foreachin_name>.debug_text) v = <value>
+	CreateScreenElement {
 		parent = guitar_motion_performance_menu
-		type = textelement
+		type = TextElement
 		dims = (100.0, 10.0)
 		text = <tally_text>
 		font = fontgrid_text_a8
@@ -730,15 +730,15 @@ script guitar_motion_show_performance_tally
 endscript
 
 script guitar_performance_debug_points 
-	getplayerinfo <player> text
-	formattext checksumname = points_id 'guitar_performance_debug_%s' s = <text>
-	if NOT screenelementexists id = <points_id>
+	GetPlayerInfo <player> text
+	FormatText checksumname = points_id 'guitar_performance_debug_%s' s = <text>
+	if NOT ScreenElementExists id = <points_id>
 		return
 	endif
-	formattext textname = text qs(0x581d2af2) p = <points>
-	createscreenelement {
+	FormatText TextName = text qs("\L%p") p = <points>
+	CreateScreenElement {
 		parent = <points_id>
-		type = textblockelement
+		type = TextBlockElement
 		text = <text>
 		font = fontgrid_text_a8
 		just = [top left]
@@ -751,32 +751,32 @@ script guitar_performance_debug_points
 		shadow
 		shadow_offs = (3.0, 3.0)
 	}
-	runscriptonscreenelement guitar_performance_debug_points_wait_and_die id = <id>
+	RunScriptOnScreenElement guitar_performance_debug_points_wait_and_die id = <id>
 endscript
 
 script guitar_performance_debug_points_wait_and_die 
-	se_setprops \{alpha = 0.0
+	SE_SetProps \{alpha = 0.0
 		pos = {
 			(0.0, -50.0)
 			relative
 		}
 		motion = ease_in
 		time = 1}
-	se_waitprops
-	die
+	SE_WaitProps
+	Die
 endscript
 
 script guitar_performance_debug_display 
-	formattext checksumname = points_id 'guitar_performance_debug_%s' s = ($<player_status>.text)
-	if screenelementexists id = <points_id>
-		destroyscreenelement id = <points_id>
+	FormatText checksumname = points_id 'guitar_performance_debug_%s' s = ($<player_status>.text)
+	if ScreenElementExists id = <points_id>
+		DestroyScreenElement id = <points_id>
 	endif
-	createscreenelement {
+	CreateScreenElement {
 		id = <points_id>
 		parent = <parent>
-		type = textblockelement
+		type = TextBlockElement
 		dims = (200.0, 80.0)
-		text = qs(0x03ac90f0)
+		text = qs("\L")
 		rgba = [192 255 0 255]
 		pos = (240.0, 370.0)
 		font = fontgrid_text_a8
@@ -786,11 +786,11 @@ script guitar_performance_debug_display
 		shadow
 		shadow_offs = (3.0, 3.0)
 	}
-	createscreenelement {
+	CreateScreenElement {
 		parent = <parent>
-		type = textblockelement
+		type = TextBlockElement
 		dims = (200.0, 80.0)
-		text = qs(0xbcb2fc3b)
+		text = qs("\Lperformance")
 		rgba = [192 255 0 255]
 		pos = (240.0, 250.0)
 		font = fontgrid_text_a8

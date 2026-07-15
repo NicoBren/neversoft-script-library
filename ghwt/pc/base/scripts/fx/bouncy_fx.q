@@ -1,264 +1,264 @@
-numplywoodsmall = 0
-maxplywoodsmall = 4
+numPlywoodSmall = 0
+maxPlywoodSmall = 4
 
-script contact_settle_die 
-	settags \{contact_made}
-	contact_terraineffects <...>
+script Contact_Settle_Die 
+	SetTags \{CONTACT_MADE}
+	Contact_TerrainEffects <...>
 endscript
 
-script deactivate_settle_die 
-	gettags
-	if gotparam \{contact_made}
-		removetags \{[
-				contact_made
+script Deactivate_Settle_Die 
+	GetTags
+	if GotParam \{CONTACT_MADE}
+		RemoveTags \{[
+				CONTACT_MADE
 			]}
-		removeparameter \{contact_made}
+		RemoveParameter \{CONTACT_MADE}
 	endif
-	wait RandomFloat (2.0, 4.0) seconds
-	gettags
-	if NOT gotparam \{contact_made}
-		die
+	Wait RandomFloat (2.0, 4.0) seconds
+	GetTags
+	if NOT GotParam \{CONTACT_MADE}
+		Die
 	endif
 endscript
 
-script deactivate_plywoodsmall 
-	gettags
-	if gotparam \{contact_made}
-		removetags \{[
-				contact_made
+script Deactivate_PlywoodSmall 
+	GetTags
+	if GotParam \{CONTACT_MADE}
+		RemoveTags \{[
+				CONTACT_MADE
 			]}
-		removeparameter \{contact_made}
+		RemoveParameter \{CONTACT_MADE}
 	endif
-	wait RandomFloat (2.0, 4.0) seconds
-	gettags
-	if NOT gotparam \{contact_made}
-		change numplywoodsmall = ($numplywoodsmall -1)
-		die
+	Wait RandomFloat (2.0, 4.0) seconds
+	GetTags
+	if NOT GotParam \{CONTACT_MADE}
+		change numPlywoodSmall = ($numPlywoodSmall -1)
+		Die
 	endif
 endscript
 
-script contact_go_cafe_chair 
-	if (<skatercollision> = true)
+script Contact_GO_Cafe_Chair 
+	if (<SkaterCollision> = true)
 		return
 	endif
-	contact_terraineffects <...>
-	<objid1> :obj_getvelocity
-	normalizevector <vel>
+	Contact_TerrainEffects <...>
+	<objID1> :Obj_GetVelocity
+	NormalizeVector <vel>
 	if (<length> > 7)
-		<objid1> :obj_getposition
-		getuniquecompositeobjectid \{preferredid = go_cafe_chair_bits}
-		createglobalflexparticlesystem name = <uniqueid> pos = <pos> params_script = $gp_ho_cafe_chair_bits
-		getuniquecompositeobjectid \{preferredid = go_cafe_chair_dust}
-		createglobalflexparticlesystem name = <uniqueid> pos = <pos> params_script = $gp_ho_cafe_chair_dust
-		getuniquecompositeobjectid \{preferredid = chairexplodesound}
-		if createcompositeobject priority = coim_priority_sound heap = gameobj oldheap = com components = [{component = sound}] params = {
-				name = <uniqueid>
+		<objID1> :Obj_GetPosition
+		GetUniqueCompositeObjectID \{preferredID = GO_Cafe_Chair_Bits}
+		CreateGlobalFlexParticlesystem name = <uniqueID> pos = <pos> params_Script = $GP_HO_Cafe_Chair_Bits
+		GetUniqueCompositeObjectID \{preferredID = GO_Cafe_Chair_Dust}
+		CreateGlobalFlexParticlesystem name = <uniqueID> pos = <pos> params_Script = $GP_HO_Cafe_Chair_Dust
+		GetUniqueCompositeObjectID \{preferredID = ChairExplodeSound}
+		if CreateCompositeObject priority = COIM_Priority_Sound heap = GameObj OldHeap = COM Components = [{Component = Sound}] params = {
+				name = <uniqueID>
 				pos = <pos>
 			}
-			soundevent event = chair_break_sfx object = <uniqueid>
+			SoundEvent event = Chair_Break_SFX object = <uniqueID>
 		endif
-		wait \{1
+		Wait \{1
 			frame}
-		die
+		Die
 	endif
 endscript
 
-script contact_plywood 
-	contact_terraineffects <...>
-	<objid1> :obj_getvelocity
-	normalizevector <vel>
+script Contact_Plywood 
+	Contact_TerrainEffects <...>
+	<objID1> :Obj_GetVelocity
+	NormalizeVector <vel>
 	if (<length> > 7)
-		if NOT getsingletag \{plywood_break}
-			settags \{plywood_break}
-			if (<skatercollision> = true)
-				newtarget = (-1 * <norm>)
+		if NOT GetSingleTag \{PLYWOOD_BREAK}
+			SetTags \{PLYWOOD_BREAK}
+			if (<SkaterCollision> = true)
+				NewTarget = (-1 * <norm>)
 			else
-				newtarget = <norm>
+				NewTarget = <norm>
 			endif
-			<objid1> :obj_getposition
-			getuniquecompositeobjectid \{preferredid = plywoodbits}
-			createglobalflexparticlesystem name = <uniqueid> pos = <pos> params_script = $gp_plywood_bits01
-			if iscreated <uniqueid>
-				orient object = <uniqueid> relativeto = <objid1> offset = (0.0, 1.0, 0.0)
+			<objID1> :Obj_GetPosition
+			GetUniqueCompositeObjectID \{preferredID = PlywoodBits}
+			CreateGlobalFlexParticlesystem name = <uniqueID> pos = <pos> params_Script = $GP_Plywood_Bits01
+			if IsCreated <uniqueID>
+				Orient object = <uniqueID> relativeTo = <objID1> offset = (0.0, 1.0, 0.0)
 			endif
-			getuniquecompositeobjectid \{preferredid = plywooddust}
-			createglobalflexparticlesystem name = <uniqueid> pos = <pos> params_script = $gp_plywood_dust01
-			if iscreated <uniqueid>
-				orient object = <uniqueid> relativeto = <objid1> offset = (0.0, 1.0, 0.0)
+			GetUniqueCompositeObjectID \{preferredID = PlywoodDust}
+			CreateGlobalFlexParticlesystem name = <uniqueID> pos = <pos> params_Script = $GP_Plywood_Dust01
+			if IsCreated <uniqueID>
+				Orient object = <uniqueID> relativeTo = <objID1> offset = (0.0, 1.0, 0.0)
 			endif
-			if ($numplywoodsmall < $maxplywoodsmall)
+			if ($numPlywoodSmall < $maxPlywoodSmall)
 				begin
-				getuniquecompositeobjectid \{preferredid = plywoodsmall01}
-				createfromstructure {
-					name = <uniqueid>
+				GetUniqueCompositeObjectID \{preferredID = PlywoodSmall01}
+				CreateFromStructure {
+					name = <uniqueID>
 					pos = (<pos> + RandomFloat (-1.0, 1.0) * (1.0, 0.0, 0.0) + RandomFloat (-1.0, 1.0) * (0.0, 1.0, 0.0) + RandomFloat (-1.0, 1.0) * (0.0, 0.0, 1.0))
 					angles = (RandomFloat (-3.1399999, 3.1399999) * (1.0, 0.0, 0.0) + RandomFloat (-3.1399999, 3.1399999) * (0.0, 1.0, 0.0) + RandomFloat (-3.1399999, 3.1399999) * (0.0, 0.0, 1.0))
-					class = gameobject
-					type = go_plywood_small_piece
-					bouncy
-					profile = $profile_go_plywood_small_piece
+					Class = GameObject
+					type = GO_Plywood_Small_Piece
+					Bouncy
+					profile = $profile_GO_Plywood_Small_Piece
 				}
-				if iscreated <uniqueid>
-					<uniqueid> :rigidbody_linearimpulse impulse = (2.5 * <length> * (<newtarget> + (0.0, 0.25, 0.0)))
-					change numplywoodsmall = ($numplywoodsmall + 1)
-					if NOT ($numplywoodsmall < $maxplywoodsmall)
+				if IsCreated <uniqueID>
+					<uniqueID> :RigidBody_LinearImpulse impulse = (2.5 * <length> * (<NewTarget> + (0.0, 0.25, 0.0)))
+					change numPlywoodSmall = ($numPlywoodSmall + 1)
+					if NOT ($numPlywoodSmall < $maxPlywoodSmall)
 						break
 					endif
 				endif
 				repeat RandomInteger (1.0, 2.0)
 			endif
-			getuniquecompositeobjectid \{preferredid = shortpottedplantexplodesound}
-			if createcompositeobject priority = coim_priority_sound heap = gameobj oldheap = com components = [{component = sound}] params = {
-					name = <uniqueid>
+			GetUniqueCompositeObjectID \{preferredID = ShortPottedPlantExplodeSound}
+			if CreateCompositeObject priority = COIM_Priority_Sound heap = GameObj OldHeap = COM Components = [{Component = Sound}] params = {
+					name = <uniqueID>
 					pos = <pos>
 				}
-				soundevent event = plywood_break_sfx object = <uniqueid>
+				SoundEvent event = Plywood_Break_SFX object = <uniqueID>
 			endif
-			wait \{1
+			Wait \{1
 				frame}
-			die
+			Die
 		endif
 	endif
 endscript
 
-script contact_pottedplant_short 
-	if (<skatercollision> = true)
+script Contact_PottedPlant_Short 
+	if (<SkaterCollision> = true)
 		return
 	endif
-	contact_terraineffects <...>
-	<objid1> :obj_getvelocity
-	normalizevector <vel>
+	Contact_TerrainEffects <...>
+	<objID1> :Obj_GetVelocity
+	NormalizeVector <vel>
 	if (<length> > 7)
-		<objid1> :obj_getposition
-		getuniquecompositeobjectid \{preferredid = pottedplant_dirt}
-		createglobalflexparticlesystem name = <uniqueid> pos = <pos> params_script = $gp_pot_dust01
-		if iscreated <uniqueid>
-			orient object = <uniqueid> relativeto = <objid1> offset = (0.0, 0.5, 0.0)
+		<objID1> :Obj_GetPosition
+		GetUniqueCompositeObjectID \{preferredID = PottedPlant_Dirt}
+		CreateGlobalFlexParticlesystem name = <uniqueID> pos = <pos> params_Script = $GP_Pot_Dust01
+		if IsCreated <uniqueID>
+			Orient object = <uniqueID> relativeTo = <objID1> offset = (0.0, 0.5, 0.0)
 		endif
-		getuniquecompositeobjectid \{preferredid = pottedplant_dirt}
-		createglobalflexparticlesystem name = <uniqueid> pos = <pos> params_script = $gp_pot_bits01
-		getuniquecompositeobjectid \{preferredid = pottedplant_leaves}
-		createglobalflexparticlesystem name = <uniqueid> pos = <pos> params_script = $gp_leaves_short01
-		if iscreated <uniqueid>
-			orient object = <uniqueid> relativeto = <objid1> offset = (0.0, 1.0, 0.0)
+		GetUniqueCompositeObjectID \{preferredID = PottedPlant_Dirt}
+		CreateGlobalFlexParticlesystem name = <uniqueID> pos = <pos> params_Script = $GP_Pot_Bits01
+		GetUniqueCompositeObjectID \{preferredID = PottedPlant_Leaves}
+		CreateGlobalFlexParticlesystem name = <uniqueID> pos = <pos> params_Script = $GP_Leaves_Short01
+		if IsCreated <uniqueID>
+			Orient object = <uniqueID> relativeTo = <objID1> offset = (0.0, 1.0, 0.0)
 		endif
-		getuniquecompositeobjectid \{preferredid = shortpottedplantexplodesound}
-		if createcompositeobject priority = coim_priority_sound heap = gameobj oldheap = com components = [{component = sound}] params = {
-				name = <uniqueid>
+		GetUniqueCompositeObjectID \{preferredID = ShortPottedPlantExplodeSound}
+		if CreateCompositeObject priority = COIM_Priority_Sound heap = GameObj OldHeap = COM Components = [{Component = Sound}] params = {
+				name = <uniqueID>
 				pos = <pos>
 			}
-			soundevent event = pottedplant_explode_sfx object = <uniqueid>
+			SoundEvent event = PottedPlant_Explode_SFX object = <uniqueID>
 		endif
-		wait \{1
+		Wait \{1
 			frame}
-		die
+		Die
 	endif
 endscript
 
-script contact_pottedplant_tall 
-	if (<skatercollision> = true)
+script Contact_PottedPlant_Tall 
+	if (<SkaterCollision> = true)
 		return
 	endif
-	contact_terraineffects <...>
-	<objid1> :obj_getvelocity
-	normalizevector <vel>
+	Contact_TerrainEffects <...>
+	<objID1> :Obj_GetVelocity
+	NormalizeVector <vel>
 	if (<length> > 7)
-		<objid1> :obj_getposition
-		getuniquecompositeobjectid \{preferredid = pottedplant_dirt}
-		createglobalflexparticlesystem name = <uniqueid> pos = <pos> params_script = $gp_pot_dust01
-		if iscreated <uniqueid>
-			orient object = <uniqueid> relativeto = <objid1> offset = (0.0, 0.7, 0.0)
+		<objID1> :Obj_GetPosition
+		GetUniqueCompositeObjectID \{preferredID = PottedPlant_Dirt}
+		CreateGlobalFlexParticlesystem name = <uniqueID> pos = <pos> params_Script = $GP_Pot_Dust01
+		if IsCreated <uniqueID>
+			Orient object = <uniqueID> relativeTo = <objID1> offset = (0.0, 0.7, 0.0)
 		endif
-		getuniquecompositeobjectid \{preferredid = pottedplant_dirt}
-		createglobalflexparticlesystem name = <uniqueid> pos = <pos> params_script = $gp_pot_bits01
-		getuniquecompositeobjectid \{preferredid = pottedplant_leaves}
-		createglobalflexparticlesystem name = <uniqueid> pos = <pos> params_script = $gp_leaves_tall01
-		if iscreated <uniqueid>
-			orient object = <uniqueid> relativeto = <objid1> offset = (0.0, 2.0, 0.0)
+		GetUniqueCompositeObjectID \{preferredID = PottedPlant_Dirt}
+		CreateGlobalFlexParticlesystem name = <uniqueID> pos = <pos> params_Script = $GP_Pot_Bits01
+		GetUniqueCompositeObjectID \{preferredID = PottedPlant_Leaves}
+		CreateGlobalFlexParticlesystem name = <uniqueID> pos = <pos> params_Script = $GP_Leaves_Tall01
+		if IsCreated <uniqueID>
+			Orient object = <uniqueID> relativeTo = <objID1> offset = (0.0, 2.0, 0.0)
 		endif
-		getuniquecompositeobjectid \{preferredid = shortpottedplantexplodesound}
-		if createcompositeobject priority = coim_priority_sound heap = gameobj oldheap = com components = [{component = sound}] params = {
-				name = <uniqueid>
+		GetUniqueCompositeObjectID \{preferredID = ShortPottedPlantExplodeSound}
+		if CreateCompositeObject priority = COIM_Priority_Sound heap = GameObj OldHeap = COM Components = [{Component = Sound}] params = {
+				name = <uniqueID>
 				pos = <pos>
 			}
-			soundevent event = pottedplant_explode_sfx object = <uniqueid>
+			SoundEvent event = PottedPlant_Explode_SFX object = <uniqueID>
 		endif
-		wait \{1
+		Wait \{1
 			frame}
-		die
+		Die
 	endif
 endscript
 
-script contact_terraineffects 
-	if (<skatercollision> = true)
+script Contact_TerrainEffects 
+	if (<SkaterCollision> = true)
 		return
 	endif
-	<objid1> :obj_getvelocity
-	normalizevector <vel>
+	<objID1> :Obj_GetVelocity
+	NormalizeVector <vel>
 	if (<length> < 3)
 		return
 	endif
-	terrain1 = (($terrain_types [<terrain1>]).checksum)
-	terrain2 = (($terrain_types [<terrain2>]).checksum)
-	getterraintypeparam param = treadactions terrain = <terrain2>
+	terrain1 = (($Terrain_Types [<terrain1>]).checksum)
+	terrain2 = (($Terrain_Types [<terrain2>]).checksum)
+	GetTerrainTypeParam param = treadActions terrain = <terrain2>
 	begin
-	if getnextarrayelement (<treadactions>.skaterjumplandparticleparms)
-		getuniquecompositeobjectid \{preferredid = bounceterrain01}
-		if ((<element>.type) = newflat)
-			createglobalfastparticlesystem name = <uniqueid> params_script = <element> pos = <pos>
+	if GetNextArrayElement (<treadActions>.SkaterJumpLandParticleParms)
+		GetUniqueCompositeObjectID \{preferredID = BounceTerrain01}
+		if ((<element>.type) = NewFlat)
+			CreateGlobalFastParticleSystem name = <uniqueID> params_Script = <element> pos = <pos>
 		else
-			createglobalflexparticlesystem name = <uniqueid> params_script = <element> pos = <pos>
+			CreateGlobalFlexParticlesystem name = <uniqueID> params_Script = <element> pos = <pos>
 		endif
 	else
 		break
 	endif
 	repeat
 	switch <terrain1>
-		case terrain_metalcar
-		case terrain_metal
-		case terrain_metalpole
-		case terrain_metaltin
-		case terrain_metallockers
-		case terrain_metalthin
-		case terrain_metalpipelarge
-		case terrain_mailbox
-		case terrain_metalgrate
+		case TERRAIN_METALCAR
+		case TERRAIN_METAL
+		case TERRAIN_METALPOLE
+		case TERRAIN_METALTIN
+		case TERRAIN_METALLOCKERS
+		case TERRAIN_METALTHIN
+		case TERRAIN_METALPIPELARGE
+		case TERRAIN_MAILBOX
+		case TERRAIN_METALGRATE
 		switch <terrain2>
-			case terrain_default
-			case terrain_asphalt
-			case terrain_asphaltrough
-			case terrain_asphaltsmooth
-			case terrain_asphaltsmooth_hf
-			case terrain_brick
-			case terrain_brick_1ft
-			case terrain_brick_2ft
-			case terrain_brick_4ft
-			case terrain_brick_6in
-			case terrain_cobblestone
-			case terrain_concsmooth
-			case terrain_concrough
-			case terrain_goldcoins
-			case terrain_highfriction
-			case terrain_mailbox
-			case terrain_metalcar
-			case terrain_metal
-			case terrain_metalgrate
-			case terrain_metallockers
-			case terrain_metalpipelarge
-			case terrain_metalpole
-			case terrain_metalthin
-			case terrain_metaltin
-			case terrain_shinglestile
-			case terrain_sidewalk_1ft
-			case terrain_sidewalk_2ft
-			case terrain_sidewalk_4ft
-			case terrain_sidewalk_4ft_hf
-			case terrain_sidewalk_8ft
-			case terrain_tile_2ft
-			case terrain_tile_4ft
-			case terrain_tile_6in
-			getuniquecompositeobjectid \{preferredid = bouncysparks01}
-			createglobalflexparticlesystem name = <uniqueid> pos = <pos> params_script = {$gp_bouncy_sparks01 emit_target = ((-1 * <norm>) + (0.0, 0.25, 0.0))}
+			case TERRAIN_DEFAULT
+			case TERRAIN_ASPHALT
+			case TERRAIN_ASPHALTROUGH
+			case TERRAIN_ASPHALTSMOOTH
+			case TERRAIN_ASPHALTSMOOTH_HF
+			case TERRAIN_BRICK
+			case TERRAIN_BRICK_1FT
+			case TERRAIN_BRICK_2FT
+			case TERRAIN_BRICK_4FT
+			case TERRAIN_BRICK_6IN
+			case TERRAIN_COBBLESTONE
+			case TERRAIN_CONCSMOOTH
+			case TERRAIN_CONCROUGH
+			case TERRAIN_GOLDCOINS
+			case TERRAIN_HIGHFRICTION
+			case TERRAIN_MAILBOX
+			case TERRAIN_METALCAR
+			case TERRAIN_METAL
+			case TERRAIN_METALGRATE
+			case TERRAIN_METALLOCKERS
+			case TERRAIN_METALPIPELARGE
+			case TERRAIN_METALPOLE
+			case TERRAIN_METALTHIN
+			case TERRAIN_METALTIN
+			case TERRAIN_SHINGLESTILE
+			case TERRAIN_SIDEWALK_1FT
+			case TERRAIN_SIDEWALK_2FT
+			case TERRAIN_SIDEWALK_4FT
+			case TERRAIN_SIDEWALK_4FT_HF
+			case TERRAIN_SIDEWALK_8FT
+			case TERRAIN_TILE_2FT
+			case TERRAIN_TILE_4FT
+			case TERRAIN_TILE_6IN
+			GetUniqueCompositeObjectID \{preferredID = BouncySparks01}
+			CreateGlobalFlexParticlesystem name = <uniqueID> pos = <pos> params_Script = {$GP_Bouncy_Sparks01 emit_Target = ((-1 * <norm>) + (0.0, 0.25, 0.0))}
 		endswitch
 	endswitch
 endscript

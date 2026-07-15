@@ -2,18 +2,18 @@
 script ui_create_net_zero_search_results_popup 
 	ui_band_mode_change_menu_focus_all \{focus_type = unfocus}
 	create_popup_warning_menu {
-		title = qs(0x9b97c7b2)
+		title = qs("Searching")
 		textblock = {
-			text = qs(0xced13a93)
+			text = qs("Couldn't find any bands. Do you want to search again?")
 		}
 		options = [
 			{
 				func = refresh_band_search
-				text = qs(0xa22c24d9)
+				text = qs("SEARCH")
 			}
 			{
 				func = cancel_net_career_mode_search
-				text = qs(0xf7723015)
+				text = qs("CANCEL")
 			}
 		]
 		no_background
@@ -24,7 +24,7 @@ script ui_create_net_zero_search_results_popup
 		]
 		player_device = <device_num>
 	}
-	add_user_control_helper \{text = qs(0xaf4d5dd2)
+	add_user_control_helper \{text = qs("BACK")
 		button = red
 		z = 100}
 endscript
@@ -39,8 +39,8 @@ endscript
 
 script refresh_band_search 
 	Obj_GetID
-	<objID> :se_setprops block_events
-	NetSessionFunc \{Obj = match
+	<ObjID> :SE_SetProps block_events
+	NetSessionFunc \{obj = match
 		func = stop_server_list}
 	cancel_join_server
 	destroy_popup_warning_menu

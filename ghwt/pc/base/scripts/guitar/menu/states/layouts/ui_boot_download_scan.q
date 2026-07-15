@@ -13,17 +13,17 @@ script ui_create_boot_download_scan
 	endif
 	change store_respond_to_signin_changed = ($respond_to_signin_changed)
 	change \{respond_to_signin_changed = 1}
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
 		create_popup_warning_menu {
 			textblock = {
-				text = qs(0x75e1afbf)
+				text = qs("Checking the HDD. Do not switch off your system.")
 			}
 			player_device = <controller>
 		}
 		case xenon
-		if iswinport
+		if IsWinPort
 			create_popup_warning_menu {
 				textblock = {
 					text = qs(0x37da3a1e)
@@ -33,7 +33,7 @@ script ui_create_boot_download_scan
 		else
 			create_popup_warning_menu {
 				textblock = {
-					text = qs(0xeef4272c)
+					text = qs("Checking for downloadable content. Please don't turn off your Xbox 360 console.")
 				}
 				player_device = <controller>
 			}
@@ -48,31 +48,31 @@ script boot_download_scan \{event_params = {
 				state = uistate_boot_guitar
 			}
 		}}
-	wait \{1
+	Wait \{1
 		gameframes}
 	startrendering \{reason = menu_transition}
 	if NOT ui_event_exists_in_stack \{name = 'mainmenu'}
-		if controllerpressed x <controller>
-			if controllerpressed circle <controller>
-				if controllerpressed square <controller>
-					if controllerpressed triangle <controller>
-						printf \{qs(0xa1f3a821)}
-						removecontentfiles \{playerid = -1
+		if ControllerPressed x <controller>
+			if ControllerPressed circle <controller>
+				if ControllerPressed square <controller>
+					if ControllerPressed triangle <controller>
+						printf \{qs("\LClearing download cache")}
+						RemoveContentFiles \{playerid = -1
 							clear_cache}
 					endif
 				endif
 			endif
 		endif
 	endif
-	getstarttime
-	downloads_enumcontent controller = <controller>
+	GetStartTime
+	Downloads_EnumContent controller = <controller>
 	get_current_first_play
 	begin
-	getelapsedtime starttime = <starttime>
-	if (<elapsedtime> > 1000)
+	GetElapsedTime StartTime = <StartTime>
+	if (<ElapsedTime> > 1000)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	if ($shutdown_game_for_signin_change_flag = 1)

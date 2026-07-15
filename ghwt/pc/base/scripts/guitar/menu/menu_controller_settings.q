@@ -2,41 +2,41 @@
 script winport_wait_for_device_press 
 	begin
 	begin
-	if NOT winportsiogetdevicepress
+	if NOT WinPortSioGetDevicePress
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	begin
-	if winportsiogetdevicepress
+	if WinPortSioGetDevicePress
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
-	if (<devicenum> = -2)
-		if gotparam \{backscript}
-			<backscript>
+	if (<deviceNum> = -2)
+		if GotParam \{backScript}
+			<backScript>
 			break
 		endif
 	else
-		if gotparam \{bindable}
-			if ((winportsioisdirectinputgamepad devicenum = <devicenum>) || (winportsioiskeyboard devicenum = <devicenum>))
-				if gotparam \{proceedscript}
-					<proceedscript> devicenum = <devicenum>
+		if GotParam \{bindable}
+			if ((WinPortSioIsDirectInputGamepad deviceNum = <deviceNum>) || (WinPortSioIsKeyboard deviceNum = <deviceNum>))
+				if GotParam \{proceedScript}
+					<proceedScript> deviceNum = <deviceNum>
 				endif
 				break
 			endif
 		else
-			if gotparam \{proceedscript}
-				<proceedscript> devicenum = <devicenum>
+			if GotParam \{proceedScript}
+				<proceedScript> deviceNum = <deviceNum>
 			endif
 			break
 		endif
 	endif
 	repeat
-	return devicenum = <devicenum>
+	return deviceNum = <deviceNum>
 endscript
 
 script winport_select_p1_controller 
@@ -44,7 +44,7 @@ script winport_select_p1_controller
 endscript
 
 script winport_create_p1_controller_popup 
-	create_popup_warning_menu \{title = qs(0x5cf43a27)
+	create_popup_warning_menu \{title = qs("Select Controller")
 		textblock = {
 			text = qs(0x43de0b07)
 			dims = (800.0, 400.0)
@@ -53,13 +53,13 @@ script winport_create_p1_controller_popup
 		no_background
 		menu_pos = (640.0, 520.0)
 		dialog_dims = (600.0, 80.0)}
-	add_user_control_helper \{text = qs(0xaf4d5dd2)
+	add_user_control_helper \{text = qs("BACK")
 		button = red
 		z = 100}
 	spawnscriptnow \{winport_wait_for_device_press
 		params = {
-			backscript = winport_p1_controller_back
-			proceedscript = winport_p1_controller_proceed
+			backScript = winport_p1_controller_back
+			proceedScript = winport_p1_controller_proceed
 		}}
 endscript
 
@@ -73,24 +73,24 @@ script winport_p1_controller_back
 endscript
 
 script winport_p1_controller_proceed 
-	winportsiosetdevice0 devicenum = <devicenum>
+	WinPortSioSetDevice0 deviceNum = <deviceNum>
 	ui_flow_manager_respond_to_action \{action = go_back}
 endscript
 
 script winport_select_bind_buttons 
-	devicenum = 0
+	deviceNum = 0
 	begin
-	if winportsioiskeyboard devicenum = <devicenum>
-		change winport_bb_device_num = <devicenum>
+	if WinPortSioIsKeyboard deviceNum = <deviceNum>
+		change winport_bb_device_num = <deviceNum>
 		break
 	endif
-	devicenum = (<devicenum> + 1)
+	deviceNum = (<deviceNum> + 1)
 	repeat 4
 	ui_flow_manager_respond_to_action \{action = winport_select_bind_buttons}
 endscript
 
 script winport_create_bind_buttons_popup 
-	create_popup_warning_menu \{title = qs(0x5cf43a27)
+	create_popup_warning_menu \{title = qs("Select Controller")
 		textblock = {
 			text = qs(0x0d4f4246)
 			dims = (800.0, 400.0)
@@ -99,14 +99,14 @@ script winport_create_bind_buttons_popup
 		no_background
 		menu_pos = (640.0, 520.0)
 		dialog_dims = (600.0, 80.0)}
-	add_user_control_helper \{text = qs(0xaf4d5dd2)
+	add_user_control_helper \{text = qs("BACK")
 		button = red
 		z = 100}
 	spawnscriptnow \{winport_wait_for_device_press
 		params = {
 			bindable
-			backscript = winport_bind_buttons_back
-			proceedscript = winport_bind_buttons_proceed
+			backScript = winport_bind_buttons_back
+			proceedScript = winport_bind_buttons_proceed
 		}}
 endscript
 
@@ -120,14 +120,14 @@ script winport_bind_buttons_back
 endscript
 
 script winport_bind_buttons_proceed 
-	if ((winportsioisdirectinputgamepad devicenum = <devicenum>) || (winportsioiskeyboard devicenum = <devicenum>))
-		change winport_bb_device_num = <devicenum>
+	if ((WinPortSioIsDirectInputGamepad deviceNum = <deviceNum>) || (WinPortSioIsKeyboard deviceNum = <deviceNum>))
+		change winport_bb_device_num = <deviceNum>
 		ui_flow_manager_respond_to_action \{action = proceed}
 	else
 		spawnscriptnow \{winport_wait_for_device_press
 			params = {
-				backscript = winport_bind_buttons_back
-				proceedscript = winport_bind_buttons_proceed
+				backScript = winport_bind_buttons_back
+				proceedScript = winport_bind_buttons_proceed
 			}}
 	endif
 endscript
@@ -148,7 +148,7 @@ script create_controller_settings_menu \{popup = 0}
 	else
 		menu_pos = (465.0, 310.0)
 	endif
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = cs_container
 		pos = (0.0, 0.0)
@@ -160,31 +160,31 @@ script create_controller_settings_menu \{popup = 0}
 		z = 100
 		change \{cs_is_popup = 1}
 		new_menu menu_parent = cs_container scrollid = cs_scroll vmenuid = current_menu menu_pos = <menu_pos> spacing = -10 exclusive_device = ($last_start_pressed_device)
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			font = ($cs_menu_font)
 			parent = cs_scroll
 			pos = (180.0, -30.0)
 			scale = 1.3
-			text = qs(0x8b69cff8)
+			text = qs("CONTROLLER SETTINGS")
 			rgba = ($menu_unfocus_color)
 			z_priority = <z>
 		}
 		create_pause_menu_frame x_scale = 1.3 z = (<z> - 10)
-		text_params = {parent = current_menu type = textelement font = ($cs_menu_font) rgba = ($menu_unfocus_color) z_priority = <z> scale = (0.9, 0.8)}
+		text_params = {parent = current_menu type = TextElement font = ($cs_menu_font) rgba = ($menu_unfocus_color) z_priority = <z> scale = (0.9, 0.8)}
 		<exclusive_params> = {exclusive_device = ($last_start_pressed_device)}
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			parent = cs_container
 			texture = menu_pause_frame_banner
 			pos = (640.0, 540.0)
 			just = [center center]
 			z_priority = (<z> + 100)
 		}
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = <id>
-			text = qs(0x662aaaf7)
+			text = qs("PAUSED")
 			font = fontgrid_text_a6
 			pos = (125.0, 53.0)
 			rgba = [170 90 30 255]
@@ -209,7 +209,7 @@ script create_controller_settings_menu \{popup = 0}
 				255
 			]}
 		create_menu_backdrop \{texture = menu_venue_bg}
-		createscreenelement \{type = spriteelement
+		CreateScreenElement \{type = SpriteElement
 			parent = cs_container
 			id = cs_light_overlay
 			texture = menu_venue_overlay
@@ -220,24 +220,24 @@ script create_controller_settings_menu \{popup = 0}
 				center
 			]
 			z_priority = 99}
-		displaysprite \{parent = cs_container
-			tex = options_controller_poster
+		displaySprite \{parent = cs_container
+			tex = Options_Controller_Poster
 			pos = (135.0, 30.0)
 			dims = (640.0, 620.0)
 			rot_angle = -1.5
 			z = 5}
-		displaysprite \{parent = cs_container
-			tex = options_controller_poster2
+		displaySprite \{parent = cs_container
+			tex = Options_Controller_Poster2
 			pos = (525.0, 130.0)
 			dims = (552.0, 266.0)}
-		displaysprite \{parent = cs_container
-			tex = tape_h_03
+		displaySprite \{parent = cs_container
+			tex = tape_H_03
 			pos = (610.0, 0.0)
 			dims = (120.0, 60.0)
 			z = 6
 			rot_angle = 60}
-		displaysprite \{parent = cs_container
-			tex = tape_h_03
+		displaySprite \{parent = cs_container
+			tex = tape_H_03
 			rgba = [
 				0
 				0
@@ -248,13 +248,13 @@ script create_controller_settings_menu \{popup = 0}
 			dims = (120.0, 60.0)
 			z = 6
 			rot_angle = 60}
-		displaysprite \{parent = cs_container
-			tex = tape_h_04
+		displaySprite \{parent = cs_container
+			tex = tape_H_04
 			pos = (760.0, 106.0)
 			dims = (140.0, 65.0)
 			z = 4}
-		displaysprite \{parent = cs_container
-			tex = tape_h_04
+		displaySprite \{parent = cs_container
+			tex = tape_H_04
 			rgba = [
 				0
 				0
@@ -264,15 +264,15 @@ script create_controller_settings_menu \{popup = 0}
 			pos = (763.0, 111.0)
 			dims = (140.0, 65.0)
 			z = 4}
-		displaysprite \{parent = cs_container
-			tex = tape_v_01
+		displaySprite \{parent = cs_container
+			tex = Tape_V_01
 			pos = (250.0, 360.0)
 			dims = (80.0, 142.0)
 			z = 6
 			flip_v
 			rot_angle = -10}
-		displaysprite \{parent = cs_container
-			tex = tape_v_01
+		displaySprite \{parent = cs_container
+			tex = Tape_V_01
 			rgba = [
 				0
 				0
@@ -284,14 +284,14 @@ script create_controller_settings_menu \{popup = 0}
 			z = 6
 			flip_v
 			rot_angle = -10}
-		displaysprite \{parent = cs_container
-			tex = tape_h_02
+		displaySprite \{parent = cs_container
+			tex = Tape_H_02
 			pos = (1090.0, 300.0)
 			dims = (112.0, 54.0)
 			z = 4
 			rot_angle = -80}
-		displaysprite \{parent = cs_container
-			tex = tape_h_02
+		displaySprite \{parent = cs_container
+			tex = Tape_H_02
 			rgba = [
 				0
 				0
@@ -302,59 +302,59 @@ script create_controller_settings_menu \{popup = 0}
 			dims = (112.0, 54.0)
 			z = 4
 			rot_angle = -80}
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			id = cs_controller_text
 			parent = cs_container
 			pos = (465.0, 571.0)
 			scale = (0.65000004, 0.8)
-			text = qs(0x90d184e2)
+			text = qs("Controller")
 			font = fontgrid_text_a6
 			rgba = ($menu_unfocus_color)
 			z_priority = 6
 			rot_angle = -1.5
 		}
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			id = cs_options_text
 			parent = cs_container
 			pos = (460.0, 293.0)
 			scale = (0.5, 0.4)
-			text = qs(0x0b6ccd33)
+			text = qs("Options")
 			font = fontgrid_text_a6
 			rgba = ($menu_unfocus_color)
 			z_priority = 6
 			rot_angle = -16
 		}
-		displaysprite \{parent = cs_container
-			tex = options_controller_checkbg
+		displaySprite \{parent = cs_container
+			tex = Options_Controller_CheckBG
 			pos = (945.0, 190.0)
 			z = 4
 			flip_h
 			rot_angle = -5
 			scale = 0.7}
-		displaysprite \{parent = cs_container
+		displaySprite \{parent = cs_container
 			id = cs_check_1
-			tex = options_controller_x
+			tex = Options_Controller_X
 			pos = (975.0, 197.0)
 			z = 6
 			scale = 0.7}
-		displaysprite \{parent = cs_container
-			tex = options_controller_checkbg
+		displaySprite \{parent = cs_container
+			tex = Options_Controller_CheckBG
 			pos = (950.0, 236.0)
 			z = 5
 			rot_angle = -5
 			scale = 0.7}
-		displaysprite \{parent = cs_container
+		displaySprite \{parent = cs_container
 			id = cs_check_2
-			tex = options_controller_x
+			tex = Options_Controller_X
 			pos = (970.0, 230.0)
 			z = 6
 			scale = 0.7}
-		displaysprite {
+		displaySprite {
 			parent = cs_container
 			id = cs_highlighter
-			tex = options_controller_highlight
+			tex = Options_Controller_Highlight
 			pos = ($cs_highlighter_positions [0])
 			dims = (460.0, 58.0)
 			z = 4
@@ -362,7 +362,7 @@ script create_controller_settings_menu \{popup = 0}
 		}
 		font = fontgrid_text_a6
 		z = 5
-		text_params = {parent = current_menu type = textelement font = <font> scale = 0.7 rgba = ($menu_unfocus_color) z_priority = <z> rot_angle = 1.5}
+		text_params = {parent = current_menu type = TextElement font = <font> scale = 0.7 rgba = ($menu_unfocus_color) z_priority = <z> rot_angle = 1.5}
 		<exclusive_params> = {exclusive_device = ($primary_controller)}
 		set_user_control_color \{text_rgba = [
 				200
@@ -376,21 +376,21 @@ script create_controller_settings_menu \{popup = 0}
 				0
 				200
 			]}
-		add_user_control_helper \{text = qs(0xc18d5e76)
+		add_user_control_helper \{text = qs("SELECT")
 			button = green
 			z = 100}
-		add_user_control_helper \{text = qs(0xaf4d5dd2)
+		add_user_control_helper \{text = qs("BACK")
 			button = red
 			z = 100}
 	endif
 	if (<popup>)
-		<p1_l_flip_text> = qs(0x1332c72f)
-		<p2_l_flip_text> = qs(0x7eb43475)
+		<p1_l_flip_text> = qs("P1 Lefty Flip: OFF")
+		<p2_l_flip_text> = qs("P2 Lefty Flip: OFF")
 	else
-		<p1_l_flip_text> = qs(0xd5a4e5b5)
-		<p2_l_flip_text> = qs(0x27f3084d)
+		<p1_l_flip_text> = qs("P1 Lefty Flip:")
+		<p2_l_flip_text> = qs("P2 Lefty Flip:")
 	endif
-	createscreenelement {
+	CreateScreenElement {
 		<text_params>
 		text = <p1_l_flip_text>
 		event_handlers = [
@@ -403,13 +403,13 @@ script create_controller_settings_menu \{popup = 0}
 		<exclusive_params>
 	}
 	if NOT (<popup>)
-		getscreenelementdims id = <id>
+		GetScreenElementDims id = <id>
 		if (<width> > 300)
-			setscreenelementprops id = <id> scale = 1
-			fit_text_in_rectangle id = <id> only_if_larger_x = 1 dims = ((300.0, 0.0) + <height> * (0.0, 1.0))
+			SetScreenElementProps id = <id> scale = 1
+			fit_text_in_rectangle id = <id> only_if_larger_x = 1 dims = ((300.0, 0.0) + <Height> * (0.0, 1.0))
 		endif
 	endif
-	createscreenelement {
+	CreateScreenElement {
 		<text_params>
 		text = <p2_l_flip_text>
 		event_handlers = [
@@ -422,28 +422,28 @@ script create_controller_settings_menu \{popup = 0}
 		<exclusive_params>
 	}
 	if NOT (<popup>)
-		getscreenelementdims id = <id>
+		GetScreenElementDims id = <id>
 		if (<width> > 300)
-			setscreenelementprops id = <id> scale = 1
-			fit_text_in_rectangle id = <id> only_if_larger_x = 1 dims = ((300.0, 0.0) + <height> * (0.0, 1.0))
+			SetScreenElementProps id = <id> scale = 1
+			fit_text_in_rectangle id = <id> only_if_larger_x = 1 dims = ((300.0, 0.0) + <Height> * (0.0, 1.0))
 		endif
 	endif
-	getglobaltags \{user_options}
-	getplayerinfo \{1
+	GetGlobalTags \{user_options}
+	GetPlayerInfo \{1
 		lefty_flip}
 	controller_settings_menu_update_lefty_flip_p1_value lefty_flip_p1 = <lefty_flip>
 	controller_settings_menu_update_lefty_flip_p2_value lefty_flip_p2 = <lefty_flip_p2>
 	if NOT (<popup>)
-		getscreenelementdims id = <id>
+		GetScreenElementDims id = <id>
 		if (<width> > 300)
-			setscreenelementprops id = <id> scale = 1
-			fit_text_in_rectangle id = <id> only_if_larger_x = 1 dims = ((300.0, 0.0) + <height> * (0.0, 1.0))
+			SetScreenElementProps id = <id> scale = 1
+			fit_text_in_rectangle id = <id> only_if_larger_x = 1 dims = ((300.0, 0.0) + <Height> * (0.0, 1.0))
 		endif
 	endif
-	createscreenelement {
+	CreateScreenElement {
 		id = cs_calibrate_sensors_menu_item
 		<text_params>
-		text = qs(0x232aa75f)
+		text = qs("Calibrate Guitar Sensors")
 		event_handlers = [
 			{pad_choose controller_settings_menu_choose_sensors params = {popup = <popup>}}
 			{focus retail_menu_focus}
@@ -453,13 +453,13 @@ script create_controller_settings_menu \{popup = 0}
 		<exclusive_params>
 	}
 	if NOT (<popup>)
-		getscreenelementdims id = <id>
+		GetScreenElementDims id = <id>
 		if (<width> > 300)
-			setscreenelementprops id = <id> scale = 1
-			fit_text_in_rectangle id = <id> only_if_larger_x = 1 dims = ((300.0, 0.0) + <height> * (0.0, 1.0))
+			SetScreenElementProps id = <id> scale = 1
+			fit_text_in_rectangle id = <id> only_if_larger_x = 1 dims = ((300.0, 0.0) + <Height> * (0.0, 1.0))
 		endif
 	endif
-	createscreenelement {
+	CreateScreenElement {
 		id = cs_bind_buttons_menu_item
 		<text_params>
 		text = qs(0x87c5d354)
@@ -472,13 +472,13 @@ script create_controller_settings_menu \{popup = 0}
 		<exclusive_params>
 	}
 	if NOT (<popup>)
-		getscreenelementdims id = <id>
+		GetScreenElementDims id = <id>
 		if (<width> > 300)
-			setscreenelementprops id = <id> scale = 1
-			fit_text_in_rectangle id = <id> only_if_larger_x = 1 dims = ((300.0, 0.0) + <height> * (0.0, 1.0))
+			SetScreenElementProps id = <id> scale = 1
+			fit_text_in_rectangle id = <id> only_if_larger_x = 1 dims = ((300.0, 0.0) + <Height> * (0.0, 1.0))
 		endif
 	endif
-	createscreenelement {
+	CreateScreenElement {
 		id = cs_show_default_keyboard_layout_menu_item
 		<text_params>
 		text = qs(0x968eb7dc)
@@ -491,14 +491,14 @@ script create_controller_settings_menu \{popup = 0}
 		<exclusive_params>
 	}
 	if NOT (<popup>)
-		getscreenelementdims id = <id>
+		GetScreenElementDims id = <id>
 		if (<width> > 300)
-			setscreenelementprops id = <id> scale = 1
-			fit_text_in_rectangle id = <id> only_if_larger_x = 1 dims = ((300.0, 0.0) + <height> * (0.0, 1.0))
+			SetScreenElementProps id = <id> scale = 1
+			fit_text_in_rectangle id = <id> only_if_larger_x = 1 dims = ((300.0, 0.0) + <Height> * (0.0, 1.0))
 		endif
 	endif
-	if NOT isguitarcontroller controller = ($primary_controller)
-		setscreenelementprops \{id = cs_calibrate_whammy_menu_item
+	if NOT IsGuitarController controller = ($primary_controller)
+		SetScreenElementProps \{id = cs_calibrate_whammy_menu_item
 			rgba = [
 				128
 				128
@@ -506,7 +506,7 @@ script create_controller_settings_menu \{popup = 0}
 				255
 			]
 			not_focusable}
-		setscreenelementprops \{id = cs_calibrate_sensors_menu_item
+		SetScreenElementProps \{id = cs_calibrate_sensors_menu_item
 			rgba = [
 				128
 				128
@@ -515,8 +515,8 @@ script create_controller_settings_menu \{popup = 0}
 			]
 			not_focusable}
 	endif
-	if winportsioiskeyboard devicenum = ($primary_controller)
-		setscreenelementprops \{id = cs_calibrate_whammy_menu_item
+	if WinPortSioIsKeyboard deviceNum = ($primary_controller)
+		SetScreenElementProps \{id = cs_calibrate_whammy_menu_item
 			rgba = [
 				128
 				128
@@ -529,7 +529,7 @@ endscript
 
 script controller_settings_menu_highlighter \{index = 0}
 	if NOT ($cs_is_popup)
-		setscreenelementprops id = cs_highlighter pos = ($cs_highlighter_positions [<index>])
+		SetScreenElementProps id = cs_highlighter pos = ($cs_highlighter_positions [<index>])
 	endif
 endscript
 
@@ -543,21 +543,21 @@ endscript
 script controller_settings_menu_update_lefty_flip_p1_value \{lefty_flip_p1 = 0}
 	if (<lefty_flip_p1>)
 		if NOT ($cs_is_popup)
-			setscreenelementprops \{id = cs_check_1
-				texture = options_controller_check}
+			SetScreenElementProps \{id = cs_check_1
+				texture = Options_Controller_Check}
 			change \{pad_event_up_inversion = true}
 		else
-			setscreenelementprops \{id = lefty_flip_p1_se
-				text = qs(0x49599c36)}
+			SetScreenElementProps \{id = lefty_flip_p1_se
+				text = qs("P1 Lefty Flip: ON")}
 		endif
 	else
 		if NOT ($cs_is_popup)
-			setscreenelementprops \{id = cs_check_1
-				texture = options_controller_x}
+			SetScreenElementProps \{id = cs_check_1
+				texture = Options_Controller_X}
 			change \{pad_event_up_inversion = false}
 		else
-			setscreenelementprops \{id = lefty_flip_p1_se
-				text = qs(0x1332c72f)}
+			SetScreenElementProps \{id = lefty_flip_p1_se
+				text = qs("P1 Lefty Flip: OFF")}
 		endif
 	endif
 endscript
@@ -565,19 +565,19 @@ endscript
 script controller_settings_menu_update_lefty_flip_p2_value \{lefty_flip_p2 = 0}
 	if (<lefty_flip_p2>)
 		if NOT ($cs_is_popup)
-			setscreenelementprops \{id = cs_check_2
-				texture = options_controller_check}
+			SetScreenElementProps \{id = cs_check_2
+				texture = Options_Controller_Check}
 		else
-			setscreenelementprops \{id = lefty_flip_p2_se
-				text = qs(0x80469489)}
+			SetScreenElementProps \{id = lefty_flip_p2_se
+				text = qs("P2 Lefty Flip: ON")}
 		endif
 	else
 		if NOT ($cs_is_popup)
-			setscreenelementprops \{id = cs_check_2
-				texture = options_controller_x}
+			SetScreenElementProps \{id = cs_check_2
+				texture = Options_Controller_X}
 		else
-			setscreenelementprops \{id = lefty_flip_p2_se
-				text = qs(0x7eb43475)}
+			SetScreenElementProps \{id = lefty_flip_p2_se
+				text = qs("P2 Lefty Flip: OFF")}
 		endif
 	endif
 endscript
@@ -589,16 +589,16 @@ script controller_settings_menu_choose_lefty_flip_p1
 				player = 1
 			}}
 	else
-		getglobaltags \{user_options}
+		GetGlobalTags \{user_options}
 		if (<lefty_flip_p1> = 1)
 			<lefty_flip_p1> = 0
-			soundevent \{event = checkbox_sfx}
+			SoundEvent \{event = checkbox_sfx}
 		else
 			<lefty_flip_p1> = 1
-			soundevent \{event = checkbox_check_sfx}
+			SoundEvent \{event = CheckBox_Check_SFX}
 		endif
 		change strcturename = player1_status lefty_flip = <lefty_flip_p1>
-		setglobaltags user_options params = {lefty_flip_save = <lefty_flip_p1>}
+		SetGlobalTags user_options params = {lefty_flip_save = <lefty_flip_p1>}
 		controller_settings_menu_update_lefty_flip_p1_value lefty_flip_p1 = <lefty_flip_p1>
 	endif
 endscript
@@ -610,21 +610,21 @@ script controller_settings_menu_choose_lefty_flip_p2
 				player = 2
 			}}
 	else
-		getglobaltags \{user_options}
+		GetGlobalTags \{user_options}
 		if (<lefty_flip_p2> = 1)
 			<lefty_flip_p2> = 0
-			soundevent \{event = checkbox_sfx}
+			SoundEvent \{event = checkbox_sfx}
 		else
 			<lefty_flip_p2> = 1
-			soundevent \{event = checkbox_check_sfx}
+			SoundEvent \{event = CheckBox_Check_SFX}
 		endif
-		setglobaltags user_options params = {lefty_flip_p2 = <lefty_flip_p2>}
+		SetGlobalTags user_options params = {lefty_flip_p2 = <lefty_flip_p2>}
 		controller_settings_menu_update_lefty_flip_p2_value lefty_flip_p2 = <lefty_flip_p2>
 	endif
 endscript
 
 script controller_settings_menu_choose_star_power 
-	generic_event_choose state = uistate_options_controller_star_power data = {controller = <device_num> popup = <popup>}
+	generic_event_choose state = UIstate_options_controller_star_power data = {controller = <device_num> popup = <popup>}
 endscript
 
 script controller_settings_menu_choose_whammy_bar 

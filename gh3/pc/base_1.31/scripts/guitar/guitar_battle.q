@@ -10,7 +10,7 @@ battlemode_powerups = [
 		weight = 10
 		weight_low = 0
 		weight_losing = 0
-		scr = battle_lightning
+		Scr = battle_lightning
 		params = {
 		}
 		card_texture = icon_attack_blast
@@ -23,12 +23,12 @@ battlemode_powerups = [
 		fire_bolt = 1
 	}
 	{
-		name = difficultyup
+		name = DifficultyUp
 		name_text = "Difficulty Up"
 		weight = 10
 		weight_low = 0
 		weight_losing = 0
-		scr = battle_up_difficulty
+		Scr = battle_up_difficulty
 		params = {
 		}
 		card_texture = icon_attack_difficulty
@@ -36,12 +36,12 @@ battlemode_powerups = [
 		fire_bolt = 1
 	}
 	{
-		name = doublenotes
+		name = DoubleNotes
 		name_text = "Double Notes"
 		weight = 10
 		weight_low = 0
 		weight_losing = 0
-		scr = battle_double_notes
+		Scr = battle_double_notes
 		params = {
 		}
 		card_texture = icon_attack_addnote
@@ -49,12 +49,12 @@ battlemode_powerups = [
 		fire_bolt = 1
 	}
 	{
-		name = powerupsteal
+		name = PowerUpSteal
 		name_text = "Powerup Steal"
 		weight = 10
 		weight_low = 0
 		weight_losing = 10
-		scr = battle_steal
+		Scr = battle_steal
 		params = {
 		}
 		card_texture = icon_attack_drain
@@ -62,13 +62,13 @@ battlemode_powerups = [
 		fire_bolt = 0
 	}
 	{
-		name = leftynotes
+		name = LeftyNotes
 		name_text = "Lefty Flip"
 		alt_name_text = "Righty Flip"
 		weight = 10
 		weight_low = 0
 		weight_losing = 10
-		scr = battle_lefty_notes
+		Scr = battle_lefty_notes
 		params = {
 		}
 		card_texture = icon_attack_leftyrighty
@@ -76,12 +76,12 @@ battlemode_powerups = [
 		fire_bolt = 1
 	}
 	{
-		name = brokenstring
+		name = BrokenString
 		name_text = "Broken String"
 		weight = 10
 		weight_low = 0
 		weight_losing = 0
-		scr = battle_broken_string
+		Scr = battle_broken_string
 		params = {
 		}
 		card_texture = icon_attack_string
@@ -94,12 +94,12 @@ battlemode_powerups = [
 		fire_bolt = 1
 	}
 	{
-		name = whammyattack
+		name = WhammyAttack
 		name_text = "Whammy"
 		weight = 10
 		weight_low = 0
 		weight_losing = 10
-		scr = battle_whammy_attack
+		Scr = battle_whammy_attack
 		params = {
 		}
 		card_texture = icon_attack_whammy
@@ -113,12 +113,12 @@ battlemode_powerups = [
 		fire_bolt = 1
 	}
 	{
-		name = deathlick
+		name = DeathLick
 		name_text = "Death Drain"
 		weight = 0
 		weight_low = 0
 		weight_losing = 0
-		scr = battle_death_lick
+		Scr = battle_death_lick
 		params = {
 		}
 		card_texture = icon_attack_deth
@@ -132,7 +132,7 @@ battlemode_powerups = [
 ]
 
 script battlemode_init 
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = battlemode_container
 		pos = (0.0, 0.0)
@@ -142,7 +142,7 @@ script battlemode_init
 		]}
 	player = 1
 	begin
-	formattext checksumname = player_status 'player%i_status' i = <player> addtostringlookup
+	FormatText checksumname = player_status 'player%i_status' i = <player> AddToStringLookup
 	change structurename = <player_status> battlemode_creation_selection = -1
 	change structurename = <player_status> current_num_powerups = 0
 	change structurename = <player_status> final_blow_powerup = -1
@@ -184,9 +184,9 @@ endscript
 
 script battlemode_deinit 
 	change \{disable_attacks = 1}
-	gh_battlemode_stop_heartbeat_p1
-	gh_battlemode_stop_heartbeat_p2
-	killspawnedscript \{id = battlemode}
+	GH_BattleMode_Stop_Heartbeat_P1
+	GH_BattleMode_Stop_Heartbeat_P2
+	KillSpawnedScript \{id = battlemode}
 	change structurename = <player_status> battlemode_creation_selection = -1
 	change structurename = <player_status> current_num_powerups = 0
 	change structurename = <player_status> battle_text_count = 0
@@ -212,8 +212,8 @@ script battlemode_deinit
 	if NOT (($<player_status>.lefthanded_button_ups_flip_save) = ($<player_status>.lefthanded_button_ups))
 		change structurename = <player_status> lefthanded_button_ups = ($<player_status>.lefthanded_button_ups_flip_save)
 	endif
-	if screenelementexists \{id = battlemode_container}
-		destroyscreenelement \{id = battlemode_container}
+	if ScreenElementExists \{id = battlemode_container}
+		DestroyScreenElement \{id = battlemode_container}
 	endif
 	change \{current_battle_text_p1 = [
 			id
@@ -231,27 +231,27 @@ script battlemode_deinit
 endscript
 
 script battlemode_killspawnedscripts 
-	killspawnedscript \{name = animate_open_hand}
-	killspawnedscript \{name = animate_stealing_hand}
-	killspawnedscript \{name = net_battle_trigger}
-	killspawnedscript \{name = animate_arrow}
-	killspawnedscript \{name = update_broken_button}
-	killspawnedscript \{name = animate_whammy_bar}
-	killspawnedscript \{name = remove_hud_difficulty_up}
-	killspawnedscript \{name = remove_hud_double_notes}
-	killspawnedscript \{name = remove_hud_lefty_notes}
-	killspawnedscript \{name = animate_steal}
-	killspawnedscript \{name = flicker_gems}
-	killspawnedscript \{name = shake_highway}
-	killspawnedscript \{name = hammer_highway}
-	killspawnedscript \{name = attack_ready_text}
-	killspawnedscript \{name = animate_death_icon}
-	killspawnedscript \{name = shake_rock_meter}
-	killspawnedscript \{name = shake_highway_death}
-	killspawnedscript \{name = death_text}
-	killspawnedscript \{name = attack_bolt}
-	killspawnedscript \{name = death_text_wing_flap}
-	killspawnedscript \{name = bite_particle}
+	KillSpawnedScript \{name = animate_open_hand}
+	KillSpawnedScript \{name = animate_stealing_hand}
+	KillSpawnedScript \{name = net_battle_trigger}
+	KillSpawnedScript \{name = animate_arrow}
+	KillSpawnedScript \{name = update_broken_button}
+	KillSpawnedScript \{name = animate_whammy_bar}
+	KillSpawnedScript \{name = remove_hud_difficulty_up}
+	KillSpawnedScript \{name = remove_hud_double_notes}
+	KillSpawnedScript \{name = remove_hud_lefty_notes}
+	KillSpawnedScript \{name = animate_steal}
+	KillSpawnedScript \{name = flicker_gems}
+	KillSpawnedScript \{name = shake_highway}
+	KillSpawnedScript \{name = hammer_highway}
+	KillSpawnedScript \{name = attack_ready_text}
+	KillSpawnedScript \{name = animate_death_icon}
+	KillSpawnedScript \{name = shake_rock_meter}
+	KillSpawnedScript \{name = shake_highway_death}
+	KillSpawnedScript \{name = death_text}
+	KillSpawnedScript \{name = attack_bolt}
+	KillSpawnedScript \{name = death_text_wing_flap}
+	KillSpawnedScript \{name = bite_particle}
 endscript
 
 script restore_saved_powerups 
@@ -292,10 +292,10 @@ script battlemode_select \{player_status = player1_status}
 			<next_attack> = ($current_powerups_p2 [($<player_status>.current_num_powerups - 1)])
 		endif
 	endif
-	getarraysize \{$battlemode_powerups}
+	GetArraySize \{$battlemode_powerups}
 	array_count = 0
 	begin
-	if NOT ((<other_player_difficulty> = expert) && ($battlemode_powerups [<array_count>].name = difficultyup))
+	if NOT ((<other_player_difficulty> = expert) && ($battlemode_powerups [<array_count>].name = DifficultyUp))
 		if ($<player_status>.current_health > 0.5)
 			if ($<player_status>.last_selected_attack = <array_count> || <next_attack> = <array_count>)
 				total_weight = (<total_weight> + $battlemode_powerups [<array_count>].weight_low)
@@ -311,7 +311,7 @@ script battlemode_select \{player_status = player1_status}
 	endif
 	array_count = (<array_count> + 1)
 	repeat <array_size>
-	getrandomvalue name = select_weight a = 0 b = (<total_weight> -1) integer
+	GetRandomValue name = select_weight a = 0 b = (<total_weight> -1) Integer
 	if (<num_attacks> = 0)
 		change structurename = <player_status> battlemode_creation_selection = 0
 		return
@@ -319,7 +319,7 @@ script battlemode_select \{player_status = player1_status}
 	array_count = 0
 	begin
 	if NOT ($battle_sudden_death = 1)
-		if NOT ((<other_player_difficulty> = expert) && ($battlemode_powerups [<array_count>].name = difficultyup))
+		if NOT ((<other_player_difficulty> = expert) && ($battlemode_powerups [<array_count>].name = DifficultyUp))
 			if (($<player_status>.current_health) > 0.5)
 				if ($<player_status>.last_selected_attack = <array_count> || <next_attack> = <array_count>)
 					select_weight = (<select_weight> - $battlemode_powerups [<array_count>].weight_low)
@@ -343,7 +343,7 @@ script battlemode_select \{player_status = player1_status}
 	repeat <array_size>
 	if ($<player_status>.battlemode_creation_selection = -1)
 		printstruct <...>
-		scriptassert \{"Battlemode selection not found"}
+		ScriptAssert \{"Battlemode selection not found"}
 	endif
 endscript
 medium_scale = 0.55
@@ -351,14 +351,14 @@ small_scale = 0.4
 
 script print_powerup_arrays 
 	printf "Current powerups p1(%a):" a = ($player1_status.current_num_powerups)
-	getarraysize \{$current_powerups_p1}
+	GetArraySize \{$current_powerups_p1}
 	array_count = 0
 	begin
 	printf "    %c: %p" c = <array_count> p = ($current_powerups_p1 [<array_count>])
 	<array_count> = (<array_count> + 1)
 	repeat <array_size>
 	printf "Current powerups p2(%a):" a = ($player2_status.current_num_powerups)
-	getarraysize \{$current_powerups_p2}
+	GetArraySize \{$current_powerups_p2}
 	<array_count> = 0
 	begin
 	printf "    %c: %p" c = <array_count> p = ($current_powerups_p2 [<array_count>])
@@ -372,21 +372,21 @@ script battlemode_ready \{battle_gem = 0
 		battle_text = 1}
 	printstruct <...>
 	if ($<player_status>.player = 1)
-		soundevent \{event = battle_power_awarded_sfx_p1}
+		SoundEvent \{event = Battle_Power_Awarded_SFX_P1}
 	else
-		soundevent \{event = battle_power_awarded_sfx_p2}
+		SoundEvent \{event = Battle_Power_Awarded_SFX_P2}
 	endif
 	current_num_powerups = ($<player_status>.current_num_powerups)
 	if (<current_num_powerups> >= $max_num_powerups)
-		formattext checksumname = card_checksum 'battlecard_%i_%s' i = ($<player_status>.current_num_powerups - 1) s = ($<player_status>.player)
-		if screenelementexists id = <card_checksum>
-			destroyscreenelement id = <card_checksum>
+		FormatText checksumname = card_checksum 'battlecard_%i_%s' i = ($<player_status>.current_num_powerups - 1) s = ($<player_status>.player)
+		if ScreenElementExists id = <card_checksum>
+			DestroyScreenElement id = <card_checksum>
 		endif
 		change structurename = <player_status> current_num_powerups = ($<player_status>.current_num_powerups - 1)
 		printf "battlemode_ready - decremented p%n's current_num_powerups to %a" n = ($<player_status>.player) a = ($<player_status>.current_num_powerups)
 		update_battlecards_remove player_status = <player_status>
 	endif
-	if NOT (screenelementexists id = battlemode_container)
+	if NOT (ScreenElementExists id = battlemode_container)
 		return
 	endif
 	if (<current_num_powerups> < 0)
@@ -397,10 +397,10 @@ script battlemode_ready \{battle_gem = 0
 	current_num_powerups = ($<player_status>.current_num_powerups)
 	select = <battle_gem>
 	if ($<player_status>.player = 1)
-		setarrayelement arrayname = current_powerups_p1 globalarray index = <current_num_powerups> newvalue = <select>
+		SetArrayElement ArrayName = current_powerups_p1 GlobalArray index = <current_num_powerups> newvalue = <select>
 		card_pos = (($battle_hud_2d_elements.rock_pos_p1) + ($battle_hud_2d_elements.card_1_off_p1))
 	else
-		setarrayelement arrayname = current_powerups_p2 globalarray index = <current_num_powerups> newvalue = <select>
+		SetArrayElement ArrayName = current_powerups_p2 GlobalArray index = <current_num_powerups> newvalue = <select>
 		card_pos = (($battle_hud_2d_elements.rock_pos_p2) + ($battle_hud_2d_elements.card_1_off_p2))
 	endif
 	change structurename = <player_status> current_num_powerups = ($<player_status>.current_num_powerups + 1)
@@ -419,9 +419,9 @@ script battlemode_ready \{battle_gem = 0
 	else
 		<begin_pos> = (<begin_pos> + (225.0, 0.0))
 	endif
-	formattext checksumname = card_checksum 'battlecard_%i_%s' i = <current_num_powerups> s = ($<player_status>.player)
-	createscreenelement {
-		type = spriteelement
+	FormatText checksumname = card_checksum 'battlecard_%i_%s' i = <current_num_powerups> s = ($<player_status>.player)
+	CreateScreenElement {
+		type = SpriteElement
 		id = <card_checksum>
 		parent = battlemode_container
 		texture = ($battlemode_powerups [<select>].card_texture)
@@ -433,14 +433,14 @@ script battlemode_ready \{battle_gem = 0
 		z_priority = (($battle_hud_2d_elements.z) + 19)
 	}
 	if (<steal> > 0)
-		doscreenelementmorph {
+		doScreenElementMorph {
 			id = <card_checksum>
 			pos = <card_pos>
 			alpha = 1
 			time = 0
 		}
 	else
-		doscreenelementmorph {
+		doScreenElementMorph {
 			id = <card_checksum>
 			pos = <card_pos>
 			alpha = 1
@@ -461,14 +461,14 @@ script attack_ready_text
 	else
 		<other_player_status> = player1_status
 	endif
-	wait \{0.3
+	Wait \{0.3
 		seconds}
-	formattext checksumname = text_checksum 'attack_ready_text_%s' s = ($<player_status>.player)
-	if screenelementexists id = <text_checksum>
-		destroyscreenelement id = <text_checksum>
+	FormatText checksumname = text_checksum 'attack_ready_text_%s' s = ($<player_status>.player)
+	if ScreenElementExists id = <text_checksum>
+		DestroyScreenElement id = <text_checksum>
 	endif
 	attack_name = ($battlemode_powerups [<select>].name_text)
-	if ($battlemode_powerups [<select>].name = leftynotes)
+	if ($battlemode_powerups [<select>].name = LeftyNotes)
 		if NOT ($<other_player_status>.lefty_notes < 1)
 			if ($<other_player_status>.lefthanded_button_ups = 0)
 				<attack_name> = ($battlemode_powerups [<select>].alt_name_text)
@@ -481,8 +481,8 @@ script attack_ready_text
 	endif
 	if ($<player_status>.player = 1)
 		text_pos = ($battle_hud_2d_elements.attack_ready_text_pos_p1)
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			id = <text_checksum>
 			parent = battlemode_container
 			pos = <text_pos>
@@ -495,8 +495,8 @@ script attack_ready_text
 		}
 	else
 		text_pos = ($battle_hud_2d_elements.attack_ready_text_pos_p2)
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			id = <text_checksum>
 			parent = battlemode_container
 			pos = <text_pos>
@@ -508,9 +508,9 @@ script attack_ready_text
 			z_priority = 25
 		}
 	endif
-	wait \{3
+	Wait \{3
 		seconds}
-	doscreenelementmorph {
+	doScreenElementMorph {
 		id = <text_checksum>
 		alpha = 0
 		time = 0.3
@@ -528,23 +528,23 @@ script update_battlecards_add
 		small_pos = ($battle_hud_2d_elements.card_3_off_p2)
 	endif
 	if (<current_num_powerups> > 0)
-		formattext checksumname = card_checksum 'battlecard_0_%s' s = ($<player_status>.player)
-		doscreenelementmorph {
+		FormatText checksumname = card_checksum 'battlecard_0_%s' s = ($<player_status>.player)
+		doScreenElementMorph {
 			id = <card_checksum>
 			pos = (<player_pos> + <medium_pos>)
 			scale = $medium_scale
 			time = 0.3
 		}
 		if (<current_num_powerups> > 1)
-			formattext checksumname = card_checksum 'battlecard_1_%s' s = ($<player_status>.player)
-			doscreenelementmorph {
+			FormatText checksumname = card_checksum 'battlecard_1_%s' s = ($<player_status>.player)
+			doScreenElementMorph {
 				id = <card_checksum>
 				pos = (<player_pos> + <medium_pos>)
 				scale = $medium_scale
 				time = 0.3
 			}
-			formattext checksumname = card_checksum 'battlecard_0_%s' s = ($<player_status>.player)
-			doscreenelementmorph {
+			FormatText checksumname = card_checksum 'battlecard_0_%s' s = ($<player_status>.player)
+			doScreenElementMorph {
 				id = <card_checksum>
 				pos = (<player_pos> + <small_pos>)
 				scale = $small_scale
@@ -565,23 +565,23 @@ script update_battlecards_remove
 		small_pos = ($battle_hud_2d_elements.card_3_off_p2)
 	endif
 	if ($<player_status>.current_num_powerups > 0)
-		formattext checksumname = card_checksum 'battlecard_0_%s' s = ($<player_status>.player)
-		doscreenelementmorph {
+		FormatText checksumname = card_checksum 'battlecard_0_%s' s = ($<player_status>.player)
+		doScreenElementMorph {
 			id = <card_checksum>
 			pos = <player_pos>
 			scale = 1
 			time = 0.3
 		}
 		if ($<player_status>.current_num_powerups > 1)
-			formattext checksumname = card_checksum 'battlecard_1_%s' s = ($<player_status>.player)
-			doscreenelementmorph {
+			FormatText checksumname = card_checksum 'battlecard_1_%s' s = ($<player_status>.player)
+			doScreenElementMorph {
 				id = <card_checksum>
 				pos = <player_pos>
 				scale = 1
 				time = 0.3
 			}
-			formattext checksumname = card_checksum 'battlecard_0_%s' s = ($<player_status>.player)
-			doscreenelementmorph {
+			FormatText checksumname = card_checksum 'battlecard_0_%s' s = ($<player_status>.player)
+			doScreenElementMorph {
 				id = <card_checksum>
 				pos = (<player_pos> + <medium_pos>)
 				scale = $medium_scale
@@ -593,7 +593,7 @@ endscript
 
 script add_battle_text 
 	if (($<send_to_player>.battle_text_count) < 3)
-		extendcrc <battle_text> ($<send_to_player>.text) out = id
+		ExtendCRC <battle_text> ($<send_to_player>.text) out = id
 		count = 0
 		begin
 		if ($<send_to_player>.player = 1)
@@ -608,17 +608,17 @@ script add_battle_text
 		<count> = (<count> + 1)
 		repeat 3
 		if ($<send_to_player>.player = 1)
-			<id> :setprops z_priority = -1
-			doscreenelementmorph id = <id> alpha = 1 pos = (380.0, 35.0)
+			<id> :SetProps z_priority = -1
+			doScreenElementMorph id = <id> alpha = 1 pos = (380.0, 35.0)
 		else
-			<id> :setprops z_priority = -1
-			doscreenelementmorph id = <id> alpha = 1 pos = (890.0, 35.0)
+			<id> :SetProps z_priority = -1
+			doScreenElementMorph id = <id> alpha = 1 pos = (890.0, 35.0)
 		endif
 		battle_count = ($<send_to_player>.battle_text_count)
 		if ($<send_to_player>.player = 1)
-			setarrayelement arrayname = current_battle_text_p1 globalarray index = <battle_count> newvalue = <id>
+			SetArrayElement ArrayName = current_battle_text_p1 GlobalArray index = <battle_count> newvalue = <id>
 		else
-			setarrayelement arrayname = current_battle_text_p2 globalarray index = <battle_count> newvalue = <id>
+			SetArrayElement ArrayName = current_battle_text_p2 GlobalArray index = <battle_count> newvalue = <id>
 		endif
 		change structurename = <send_to_player> battle_text_count = (($<send_to_player>.battle_text_count) + 1)
 		if (($<send_to_player>.battle_text_count) > 1)
@@ -630,10 +630,10 @@ script add_battle_text
 				else
 					battle_text_to_move = ($current_battle_text_p2 [<count>])
 				endif
-				getscreenelementdims id = <battle_text_to_move>
-				getscreenelementposition id = <battle_text_to_move>
+				GetScreenElementDims id = <battle_text_to_move>
+				GetScreenElementPosition id = <battle_text_to_move>
 				x_offset = (<width> / 2)
-				doscreenelementmorph {
+				doScreenElementMorph {
 					id = <battle_text_to_move>
 					pos = (<screenelementpos> + (0.0, 30.0) + (<x_offset> * (1.0, 0.0)))
 					just = [center top]
@@ -649,7 +649,7 @@ endscript
 
 script remove_battle_text 
 	remove_text = -1
-	if NOT gotparam \{id}
+	if NOT GotParam \{id}
 		return
 	endif
 	count = 0
@@ -668,11 +668,11 @@ script remove_battle_text
 		return
 	endif
 	if ($<send_to_player>.player = 1)
-		doscreenelementmorph id = ($current_battle_text_p1 [<remove_text>]) alpha = 0 time = 0.3
-		setarrayelement arrayname = current_battle_text_p1 globalarray index = <remove_text> newvalue = id
+		doScreenElementMorph id = ($current_battle_text_p1 [<remove_text>]) alpha = 0 time = 0.3
+		SetArrayElement ArrayName = current_battle_text_p1 GlobalArray index = <remove_text> newvalue = id
 	else
-		doscreenelementmorph id = ($current_battle_text_p2 [<remove_text>]) alpha = 0 time = 0.3
-		setarrayelement arrayname = current_battle_text_p2 globalarray index = <remove_text> newvalue = id
+		doScreenElementMorph id = ($current_battle_text_p2 [<remove_text>]) alpha = 0 time = 0.3
+		SetArrayElement ArrayName = current_battle_text_p2 GlobalArray index = <remove_text> newvalue = id
 	endif
 	change structurename = <send_to_player> battle_text_count = ($<send_to_player>.battle_text_count - 1)
 	if (<remove_text> < 2)
@@ -681,12 +681,12 @@ script remove_battle_text
 		if NOT (<count> >= ($<send_to_player>.battle_text_count))
 			if ($<send_to_player>.player = 1)
 				battle_text_to_move = ($current_battle_text_p1 [(<count> + 1)])
-				setarrayelement arrayname = current_battle_text_p1 globalarray index = (<count> + 1) newvalue = id
-				setarrayelement arrayname = current_battle_text_p1 globalarray index = <count> newvalue = <battle_text_to_move>
+				SetArrayElement ArrayName = current_battle_text_p1 GlobalArray index = (<count> + 1) newvalue = id
+				SetArrayElement ArrayName = current_battle_text_p1 GlobalArray index = <count> newvalue = <battle_text_to_move>
 			else
 				battle_text_to_move = ($current_battle_text_p2 [(<count> + 1)])
-				setarrayelement arrayname = current_battle_text_p2 globalarray index = (<count> + 1) newvalue = id
-				setarrayelement arrayname = current_battle_text_p2 globalarray index = <count> newvalue = <battle_text_to_move>
+				SetArrayElement ArrayName = current_battle_text_p2 GlobalArray index = (<count> + 1) newvalue = id
+				SetArrayElement ArrayName = current_battle_text_p2 GlobalArray index = <count> newvalue = <battle_text_to_move>
 			endif
 		endif
 		<count> = (<count> + 1)
@@ -701,10 +701,10 @@ script remove_battle_text
 			else
 				battle_text_to_move = ($current_battle_text_p2 [<count>])
 			endif
-			getscreenelementdims id = <battle_text_to_move>
-			getscreenelementposition id = <battle_text_to_move>
+			GetScreenElementDims id = <battle_text_to_move>
+			GetScreenElementPosition id = <battle_text_to_move>
 			x_offset = (<width> / 2)
-			doscreenelementmorph {
+			doScreenElementMorph {
 				id = <battle_text_to_move>
 				pos = (<screenelementpos> - (0.0, 30.0) + (<x_offset> * (1.0, 0.0)))
 				just = [center top]
@@ -718,16 +718,16 @@ endscript
 
 script test_battle_trigger 
 	battlemode_fill
-	wait \{5
+	Wait \{5
 		seconds}
 	battle_trigger_on \{player_status = player2_status}
-	wait \{1
+	Wait \{1
 		gameframe}
 	battle_trigger_on \{player_status = player2_status}
-	wait \{1
+	Wait \{1
 		gameframe}
 	battle_trigger_on \{player_status = player1_status}
-	wait \{1
+	Wait \{1
 		gameframe}
 	battle_trigger_on \{player_status = player1_status}
 endscript
@@ -742,10 +742,10 @@ script battle_trigger_on
 		<other_difficulty> = $current_difficulty2
 		<other_player_status> = player2_status
 		select = ($current_powerups_p1 [($<player_status>.current_num_powerups - 1)])
-		gh3_battle_play_crowd_reaction_sfx receiving_player = 2 receiving_player_current_crowd_level = ($<other_player_status>.current_health)
+		GH3_Battle_Play_Crowd_Reaction_SFX receiving_player = 2 receiving_player_current_crowd_level = ($<other_player_status>.current_health)
 		if ($is_network_game)
 			if NOT (<select> = 3)
-				sendnetmessage {
+				SendNetMessage {
 					type = battle_trigger_on
 					select = <select>
 				}
@@ -757,11 +757,11 @@ script battle_trigger_on
 		<other_difficulty> = $current_difficulty
 		<other_player_status> = player1_status
 		select = ($current_powerups_p2 [($<player_status>.current_num_powerups - 1)])
-		gh3_battle_play_crowd_reaction_sfx receiving_player = 1 receiving_player_current_crowd_level = ($<other_player_status>.current_health)
+		GH3_Battle_Play_Crowd_Reaction_SFX receiving_player = 1 receiving_player_current_crowd_level = ($<other_player_status>.current_health)
 	endif
-	formattext checksumname = card_checksum 'battlecard_%i_%s' i = ($<player_status>.current_num_powerups - 1) s = ($<player_status>.player)
-	if screenelementexists id = <card_checksum>
-		destroyscreenelement id = <card_checksum>
+	FormatText checksumname = card_checksum 'battlecard_%i_%s' i = ($<player_status>.current_num_powerups - 1) s = ($<player_status>.player)
+	if ScreenElementExists id = <card_checksum>
+		DestroyScreenElement id = <card_checksum>
 	endif
 	change structurename = <player_status> current_num_powerups = ($<player_status>.current_num_powerups - 1)
 	printf "battle_trigger_on - decremented p%n's current_num_powerups to %a" n = ($<player_status>.player) a = ($<player_status>.current_num_powerups)
@@ -790,7 +790,7 @@ script battle_trigger_on
 	endswitch
 	change structurename = <player_status> final_blow_powerup = <select>
 	if NOT ($<player_status>.highway_layout = solo_highway)
-		spawnscriptnow ($battlemode_powerups [<select>].scr) id = battlemode params = {drain_time = <drain_time>
+		spawnscriptnow ($battlemode_powerups [<select>].Scr) id = battlemode params = {drain_time = <drain_time>
 			player = <other_player>
 			player_text = <other_player_text>
 			other_player_status = <other_player_status>
@@ -799,8 +799,8 @@ script battle_trigger_on
 			($battlemode_powerups [<select>].params)}
 	endif
 	change structurename = <player_status> battle_num_attacks = ($<player_status>.battle_num_attacks + 1)
-	band_playattackanim name = ($<player_status>.band_member) type = <select>
-	band_playresponseanim name = ($<other_player_status>.band_member) type = <select>
+	Band_PlayAttackAnim name = ($<player_status>.band_member) type = <select>
+	Band_PlayResponseAnim name = ($<other_player_status>.band_member) type = <select>
 	if ($<player_status>.highway_layout = solo_highway)
 		spawnscriptnow hammer_rock_meter params = {other_player_text = <other_player_text>}
 	else
@@ -814,9 +814,9 @@ endscript
 script attack_bolt \{bolt_angle = 60}
 	bolt_pos_middle = (640.0, 230.0)
 	bolt_pos_offset = (330.0, 0.0)
-	formattext checksumname = attack_bolt 'attack_bolt%p' p = ($<player_status>.text) addtostringlookup = true
-	if screenelementexists id = <attack_bolt>
-		destroyscreenelement id = <attack_bolt>
+	FormatText checksumname = attack_bolt 'attack_bolt%p' p = ($<player_status>.text) AddToStringLookup = true
+	if ScreenElementExists id = <attack_bolt>
+		DestroyScreenElement id = <attack_bolt>
 	endif
 	if ($<player_status>.player = 1)
 		bolt_angle = (-1 * <bolt_angle>)
@@ -829,11 +829,11 @@ script attack_bolt \{bolt_angle = 60}
 		bolt_just = [middle top]
 		bolt_pos = (<bolt_pos_middle> + <bolt_pos_offset>)
 	endif
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		id = <attack_bolt>
 		parent = battlemode_container
-		material = sys_big_bolt01_red_sys_big_bolt01_red
+		material = sys_Big_Bolt01_Red_sys_Big_Bolt01_Red
 		rgba = [255 255 255 255]
 		pos = <bolt_pos>
 		rot_angle = <bolt_angle>
@@ -841,8 +841,8 @@ script attack_bolt \{bolt_angle = 60}
 		just = <bolt_just>
 		z_priority = 10
 	}
-	getsongtimems
-	formattext checksumname = attack_bolt_particle 'attack_bolt_particle_%s_%t' s = ($<player_status>.text) t = <time> addtostringlook = true
+	GetSongTimeMs
+	FormatText checksumname = attack_bolt_particle 'attack_bolt_particle_%s_%t' s = ($<player_status>.text) t = <time> AddToStringLook = true
 	if ($<player_status>.player = 1)
 		emit_direction = 300
 		bolt_hit_pos = (<bolt_pos> + (455.0, 0.0) + (0.0, 250.0))
@@ -850,12 +850,12 @@ script attack_bolt \{bolt_angle = 60}
 		emit_direction = -300
 		bolt_hit_pos = (<bolt_pos> - (455.0, 0.0) + (0.0, 250.0))
 	endif
-	create2dparticlesystem {
+	Create2DParticleSystem {
 		id = <attack_bolt_particle>
 		pos = (<bolt_hit_pos>)
 		parent = battlemode_container
 		z_priority = 8.0
-		material = sys_particle_spark01_sys_particle_spark01
+		material = sys_Particle_Spark01_sys_Particle_Spark01
 		start_color = [255 66 0 255]
 		end_color = [128 0 0 0]
 		start_scale = (2.0, 2.0)
@@ -872,14 +872,14 @@ script attack_bolt \{bolt_angle = 60}
 		friction = (0.0, 24.0)
 		time = 1
 	}
-	wait \{8
+	Wait \{8
 		gameframes}
-	if screenelementexists id = <attack_bolt>
-		destroyscreenelement id = <attack_bolt>
+	if ScreenElementExists id = <attack_bolt>
+		DestroyScreenElement id = <attack_bolt>
 	endif
-	wait \{2
+	Wait \{2
 		gameframes}
-	destroy2dparticlesystem id = <attack_bolt_particle> kill_when_empty
+	Destroy2DParticleSystem id = <attack_bolt_particle> kill_when_empty
 endscript
 
 script battle_death_lick \{death_speed = 0.2}
@@ -897,11 +897,11 @@ script battle_death_lick \{death_speed = 0.2}
 	endif
 	spawnscriptnow attack_bolt params = {bolt_angle = 80 player_status = <player_status> other_player_status = <other_player_status>}
 	if ($<other_player_status>.player = 1)
-		spawnscriptnow \{gh_battlemode_start_heartbeat_p1}
-		spawnscriptnow gh_battlemode_player1_sfx_death_drain params = {holdtime = (<drain_time> / 1000.0)} id = battlemode
+		spawnscriptnow \{GH_BattleMode_Start_Heartbeat_P1}
+		spawnscriptnow GH_BattleMode_Player1_SFX_Death_Drain params = {holdtime = (<drain_time> / 1000.0)} id = battlemode
 	else
-		spawnscriptnow \{gh_battlemode_start_heartbeat_p2}
-		spawnscript gh_battlemode_player2_sfx_death_drain params = {holdtime = (<drain_time> / 1000.0)} id = battlemode
+		spawnscriptnow \{GH_BattleMode_Start_Heartbeat_P2}
+		SpawnScript GH_BattleMode_Player2_SFX_Death_Drain params = {holdtime = (<drain_time> / 1000.0)} id = battlemode
 	endif
 	player1_pos = (310.0, 170.0)
 	player2_pos = (981.0, 170.0)
@@ -912,19 +912,19 @@ script battle_death_lick \{death_speed = 0.2}
 		start_pos = <player1_pos>
 		end_pos = <player2_pos>
 	endif
-	getsongtimems
-	formattext checksumname = death_icon_checksum 'death_icon_%s_%t' s = ($<other_player_status>.player) t = <time>
-	if screenelementexists id = <death_icon_checksum>
-		destroyscreenelement id = <death_icon_checksum>
+	GetSongTimeMs
+	FormatText checksumname = death_icon_checksum 'death_icon_%s_%t' s = ($<other_player_status>.player) t = <time>
+	if ScreenElementExists id = <death_icon_checksum>
+		DestroyScreenElement id = <death_icon_checksum>
 	endif
 	deth_icon_texture = icon_attack_deth_128
-	if checksumequals a = ($current_song) b = bossslash
+	if ChecksumEquals a = ($current_song) b = bossslash
 		<deth_icon_texture> = icon_attack_deth_boss_slash
-	elseif checksumequals a = ($current_song) b = bosstom
+	elseif ChecksumEquals a = ($current_song) b = bosstom
 		<deth_icon_texture> = icon_attack_deth_boss_morello
 	endif
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		id = <death_icon_checksum>
 		parent = battlemode_container
 		texture = <deth_icon_texture>
@@ -935,19 +935,19 @@ script battle_death_lick \{death_speed = 0.2}
 		just = [center center]
 		z_priority = 25
 	}
-	killspawnedscript \{name = update_battle_death_meter}
-	killspawnedscript \{name = update_battle_death_meter_wings}
-	formattext \{checksumname = death_meter
+	KillSpawnedScript \{name = update_battle_death_meter}
+	KillSpawnedScript \{name = update_battle_death_meter_wings}
+	FormatText \{checksumname = death_meter
 		'battle_death_meter'
-		addtostringlookup = true}
-	if screenelementexists id = <death_meter>
-		destroyscreenelement id = <death_meter>
+		AddToStringLookup = true}
+	if ScreenElementExists id = <death_meter>
+		DestroyScreenElement id = <death_meter>
 	endif
 	if ($<other_player_status>.death_lick_attack < 0)
 		spawnscriptnow death_text params = {other_player_status = <other_player_status>}
 	endif
-	if screenelementexists id = <id>
-		doscreenelementmorph id = <id> pos = <end_pos> scale = 1.2 alpha = 0.95 relative_scale
+	if ScreenElementExists id = <id>
+		doScreenElementMorph id = <id> pos = <end_pos> scale = 1.2 alpha = 0.95 relative_scale
 	endif
 	if ($boss_battle = 1)
 		change \{structurename = player2_status
@@ -957,15 +957,15 @@ script battle_death_lick \{death_speed = 0.2}
 		spawnscriptnow animate_death_icon params = {other_player_status = <other_player_status> id = <id>}
 		change structurename = <other_player_status> death_lick_attack = <death_speed>
 		begin
-		crowddecrease player_status = <other_player_status>
+		CrowdDecrease player_status = <other_player_status>
 		if ($<other_player_status>.current_health <= 0.0)
 			break
 		endif
-		wait ($<other_player_status>.death_lick_attack) seconds
+		Wait ($<other_player_status>.death_lick_attack) seconds
 		repeat
 	else
-		if screenelementexists id = <death_icon_checksum>
-			destroyscreenelement id = <death_icon_checksum>
+		if ScreenElementExists id = <death_icon_checksum>
+			DestroyScreenElement id = <death_icon_checksum>
 		endif
 		change structurename = <other_player_status> death_lick_attack = ($<other_player_status>.death_lick_attack * 0.5)
 	endif
@@ -973,11 +973,11 @@ endscript
 
 script test_fight_death 
 	begin
-	crowdincrease \{player_status = player2_status}
+	CrowdIncrease \{player_status = player2_status}
 	if ($player2_status.current_health <= 0.0)
 		break
 	endif
-	wait \{0.2
+	Wait \{0.2
 		seconds}
 	repeat
 endscript
@@ -989,17 +989,17 @@ script animate_death_icon
 		break
 	endif
 	if (<pulse_on> = 0)
-		if screenelementexists id = <id>
-			doscreenelementmorph id = <id> time = 0.1 alpha = 0.1 scale = 1.1 relative_scale
+		if ScreenElementExists id = <id>
+			doScreenElementMorph id = <id> time = 0.1 alpha = 0.1 scale = 1.1 relative_scale
 		endif
 		<pulse_on> = 1
 	else
-		if screenelementexists id = <id>
-			doscreenelementmorph id = <id> time = 0.1 alpha = 0.95 scale = 1.2 relative_scale
+		if ScreenElementExists id = <id>
+			doScreenElementMorph id = <id> time = 0.1 alpha = 0.95 scale = 1.2 relative_scale
 		endif
 		<pulse_on> = 0
 	endif
-	wait \{0.15
+	Wait \{0.15
 		seconds}
 	repeat
 endscript
@@ -1012,19 +1012,19 @@ script death_text
 	else
 		<text_start_pos> = (<text_start_pos> + <text_offset>)
 	endif
-	formattext checksumname = text_bg_checksum 'sudden_death_text_bg_%s' s = ($<other_player_status>.text)
-	formattext checksumname = text_wing_r_checksum 'sudden_death_wing_r_%s' s = ($<other_player_status>.text)
-	formattext checksumname = text_wing_l_checksum 'sudden_death_wing_l_%s' s = ($<other_player_status>.text)
-	formattext checksumname = text_checksum 'sudden_death_text_%s' s = ($<other_player_status>.text)
-	formattext checksumname = text_checksum2 'sudden_death_text2_%s' s = ($<other_player_status>.text)
-	if screenelementexists id = <text_bg_checksum>
-		destroyscreenelement id = <text_bg_checksum>
+	FormatText checksumname = text_bg_checksum 'sudden_death_text_bg_%s' s = ($<other_player_status>.text)
+	FormatText checksumname = text_wing_r_checksum 'sudden_death_wing_r_%s' s = ($<other_player_status>.text)
+	FormatText checksumname = text_wing_l_checksum 'sudden_death_wing_l_%s' s = ($<other_player_status>.text)
+	FormatText checksumname = text_checksum 'sudden_death_text_%s' s = ($<other_player_status>.text)
+	FormatText checksumname = text_checksum2 'sudden_death_text2_%s' s = ($<other_player_status>.text)
+	if ScreenElementExists id = <text_bg_checksum>
+		DestroyScreenElement id = <text_bg_checksum>
 	endif
-	if screenelementexists id = <text_checksum>
-		destroyscreenelement id = <text_checksum>
+	if ScreenElementExists id = <text_checksum>
+		DestroyScreenElement id = <text_checksum>
 	endif
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		id = <text_bg_checksum>
 		parent = battlemode_container
 		texture = battle_alert_death
@@ -1035,8 +1035,8 @@ script death_text
 		just = [center bottom]
 		z_priority = 52
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		id = <text_wing_r_checksum>
 		parent = <text_bg_checksum>
 		texture = battle_alert_death_wing
@@ -1047,8 +1047,8 @@ script death_text
 		just = [left top]
 		z_priority = 52
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		id = <text_wing_l_checksum>
 		parent = <text_bg_checksum>
 		texture = battle_alert_death_wing
@@ -1059,8 +1059,8 @@ script death_text
 		just = [right top]
 		z_priority = 52
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		id = <text_checksum>
 		parent = <text_bg_checksum>
 		pos = (130.0, -53.0)
@@ -1074,8 +1074,8 @@ script death_text
 		shadow_offs = (3.0, 3.0)
 		shadow_rgba = [0 0 0 255]
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		id = <text_checksum2>
 		parent = <text_bg_checksum>
 		pos = (130.0, 5.0)
@@ -1089,13 +1089,13 @@ script death_text
 		shadow_offs = (3.0, 3.0)
 		shadow_rgba = [0 0 0 255]
 	}
-	doscreenelementmorph {
+	doScreenElementMorph {
 		id = <text_bg_checksum>
 		time = 0.02
 		scale = 0.9
 		alpha = 1
 	}
-	wait \{0.02
+	Wait \{0.02
 		seconds}
 	spawnscriptnow death_text_wing_flap params = {text_start_pos = <text_start_pos> text_bg_checksum = <text_bg_checksum> text_wing_l_checksum = <text_wing_l_checksum> text_wing_r_checksum = <text_wing_r_checksum> other_player_status = <other_player_status>}
 endscript
@@ -1110,35 +1110,35 @@ script death_text_wing_flap
 		<player_health> = (1.0 - <player_health>)
 		new_scale = (0.9 + (0.3 * <player_health>))
 		new_pos = (<text_start_pos> + ((0.0, 220.0) * <player_health>))
-		doscreenelementmorph {id = <text_bg_checksum> pos = <new_pos> scale = <new_scale>}
+		doScreenElementMorph {id = <text_bg_checksum> pos = <new_pos> scale = <new_scale>}
 	endif
 	if (<wing_count> = 4)
-		getrandomvalue name = random_rot a = (<hover_sim_rot> * -1) b = <hover_sim_rot> integer
-		doscreenelementmorph {
+		GetRandomValue name = random_rot a = (<hover_sim_rot> * -1) b = <hover_sim_rot> Integer
+		doScreenElementMorph {
 			id = <text_bg_checksum>
 			rot_angle = <random_rot>
 			time = 0.02
 		}
 		spawnscriptnow bite_particle params = {other_player_status = <other_player_status> random_rot = <random_rot> text_bg_checksum = <text_bg_checksum>}
 		if (<wing_up> = 0)
-			doscreenelementmorph {
+			doScreenElementMorph {
 				id = <text_wing_r_checksum>
 				rot_angle = -40
 				time = 0.02
 			}
-			doscreenelementmorph {
+			doScreenElementMorph {
 				id = <text_wing_l_checksum>
 				rot_angle = 40
 				time = 0.02
 			}
 			<wing_up> = 1
 		else
-			doscreenelementmorph {
+			doScreenElementMorph {
 				id = <text_wing_r_checksum>
 				rot_angle = -10
 				time = 0.02
 			}
-			doscreenelementmorph {
+			doScreenElementMorph {
 				id = <text_wing_l_checksum>
 				rot_angle = 10
 				time = 0.02
@@ -1148,30 +1148,30 @@ script death_text_wing_flap
 		<wing_count> = 0
 	endif
 	<wing_count> = (<wing_count> + 1)
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
 script bite_particle 
 	if (<random_rot> > 0)
-		formattext checksumname = death_bite 'death_bite_r_%s' s = ($<other_player_status>.text) addtostringlook = true
+		FormatText checksumname = death_bite 'death_bite_r_%s' s = ($<other_player_status>.text) AddToStringLook = true
 		spawnscriptnow hammer_highway params = {push_p1 = (0.0, 30.0) push_p2 = (0.0, 30.0) other_player_text = ($<other_player_status>.text) time = 0.01}
 		pos = (190.0, 120.0)
 	else
 		if NOT (<random_rot> = 0)
-			formattext checksumname = death_bite 'death_bite_l_%s' s = ($<other_player_status>.text) addtostringlook = true
+			FormatText checksumname = death_bite 'death_bite_l_%s' s = ($<other_player_status>.text) AddToStringLook = true
 			spawnscriptnow hammer_highway params = {push_p1 = (0.0, 30.0) push_p2 = (0.0, 30.0) other_player_text = ($<other_player_status>.text) time = 0.01}
 			pos = (65.0, 120.0)
 		endif
 	endif
 	if NOT (<random_rot> = 0)
-		create2dparticlesystem {
+		Create2DParticleSystem {
 			id = <death_bite>
 			pos = <pos>
 			parent = <text_bg_checksum>
 			z_priority = 12.0
-			material = sys_particle_spark01_sys_particle_spark01
+			material = sys_Particle_Spark01_sys_Particle_Spark01
 			start_color = [255 0 0 255]
 			end_color = [128 0 0 0]
 			start_scale = (2.0, 2.0)
@@ -1188,9 +1188,9 @@ script bite_particle
 			friction = (0.0, 50.0)
 			time = 0.25
 		}
-		wait \{7
+		Wait \{7
 			frames}
-		destroy2dparticlesystem id = <death_bite>
+		Destroy2DParticleSystem id = <death_bite>
 	endif
 endscript
 
@@ -1211,13 +1211,13 @@ script battle_lightning
 	endswitch
 	if ($<other_player_status>.player = 1)
 		change battle_flicker_difficulty_p1 = <flicker_ammount>
-		spawnscript gh_battlemode_player1_sfx_shake_start params = {holdtime = (<drain_time> / 1000.0)} id = battlemode
+		SpawnScript GH_BattleMode_Player1_SFX_Shake_Start params = {holdtime = (<drain_time> / 1000.0)} id = battlemode
 	else
 		change battle_flicker_difficulty_p2 = <flicker_ammount>
-		spawnscript gh_battlemode_player2_sfx_shake_start params = {holdtime = (<drain_time> / 1000.0)} id = battlemode
+		SpawnScript GH_BattleMode_Player2_SFX_Shake_Start params = {holdtime = (<drain_time> / 1000.0)} id = battlemode
 	endif
-	getsongtimems
-	casttointeger \{time}
+	GetSongTimeMs
+	CastToInteger \{time}
 	if ($<other_player_status>.shake_notes > -1)
 		change structurename = <other_player_status> shake_notes = (($<other_player_status>.shake_notes) + <drain_time>)
 	else
@@ -1225,34 +1225,34 @@ script battle_lightning
 		spawnscriptnow flicker_gems params = {player = <player> other_player_status = <other_player_status>}
 		spawnscriptnow shake_highway params = {player_text = <player_text> other_player_status = <other_player_status>}
 		begin
-		getsongtimems
+		GetSongTimeMs
 		if (<time> > $<other_player_status>.shake_notes)
 			change structurename = <other_player_status> shake_notes = -1
 			break
 		endif
-		wait \{1
+		Wait \{1
 			gameframe}
 		repeat
-		guitarevent_battleattackfinished <...>
+		GuitarEvent_BattleAttackFinished <...>
 	endif
 endscript
 
 script flicker_gems 
 	begin
 	if ($<other_player_status>.shake_notes > -1)
-		launchgemevent event = flicker_on player = <player>
+		LaunchGemEvent event = flicker_on player = <player>
 	else
-		launchgemevent event = flicker_off player = <player>
+		LaunchGemEvent event = flicker_off player = <player>
 		break
 	endif
-	wait \{3
+	Wait \{3
 		gameframes}
 	repeat
 endscript
 
 script shake_highway 
-	formattext checksumname = container_id 'gem_container%p' p = <player_text> addtostringlookup = true
-	getscreenelementposition id = <container_id>
+	FormatText checksumname = container_id 'gem_container%p' p = <player_text> AddToStringLookup = true
+	GetScreenElementPosition id = <container_id>
 	original_position = <screenelementpos>
 	shake_frequency = 0.05
 	begin
@@ -1262,51 +1262,51 @@ script shake_highway
 		mid_hammer_highway = $battle_p2_highway_hammer
 	endif
 	if NOT (<mid_hammer_highway> = 1)
-		getscreenelementposition id = <container_id>
+		GetScreenElementPosition id = <container_id>
 		original_position = <screenelementpos>
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	pulse_on = 0
 	begin
 	if ($<other_player_status>.shake_notes > -1)
 		if (<pulse_on> = 0)
-			doscreenelementmorph {
+			doScreenElementMorph {
 				id = <container_id>
 				pos = (<original_position> + (0.0, 8.0))
 				just = [center bottom]
 				time = <shake_frequency>
 			}
-			wait <shake_frequency> seconds
+			Wait <shake_frequency> seconds
 			<pulse_on> = 1
 		else
-			doscreenelementmorph {
+			doScreenElementMorph {
 				id = <container_id>
 				pos = (<original_position> - (0.0, 8.0))
 				just = [center bottom]
 				time = <shake_frequency>
 			}
-			wait <shake_frequency> seconds
+			Wait <shake_frequency> seconds
 			<pulse_on> = 0
 		endif
 	else
-		doscreenelementmorph {
+		doScreenElementMorph {
 			id = <container_id>
 			pos = <original_position>
 			just = [center bottom]
 		}
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframes}
 	repeat
 endscript
 
 script shake_highway_death 
-	formattext checksumname = container_id 'gem_container%p' p = ($<other_player_status>.text) addtostringlookup = true
-	getscreenelementposition id = <container_id>
+	FormatText checksumname = container_id 'gem_container%p' p = ($<other_player_status>.text) AddToStringLookup = true
+	GetScreenElementPosition id = <container_id>
 	original_position = <screenelementpos>
 	shake_frequency = 0.05
 	begin
@@ -1316,35 +1316,35 @@ script shake_highway_death
 		mid_hammer_highway = $battle_p2_highway_hammer
 	endif
 	if NOT (<mid_hammer_highway> = 1)
-		getscreenelementposition id = <container_id>
+		GetScreenElementPosition id = <container_id>
 		original_position = <screenelementpos>
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	pulse_on = 0
 	begin
 	if (<pulse_on> = 0)
-		doscreenelementmorph {
+		doScreenElementMorph {
 			id = <container_id>
 			pos = (<original_position> + (7.0, 0.0))
 			just = [center bottom]
 			time = <shake_frequency>
 		}
-		wait <shake_frequency> seconds
+		Wait <shake_frequency> seconds
 		<pulse_on> = 1
 	else
-		doscreenelementmorph {
+		doScreenElementMorph {
 			id = <container_id>
 			pos = (<original_position> - (7.0, 0.0))
 			just = [center bottom]
 			time = <shake_frequency>
 		}
-		wait <shake_frequency> seconds
+		Wait <shake_frequency> seconds
 		<pulse_on> = 0
 	endif
-	wait \{1
+	Wait \{1
 		gameframes}
 	repeat
 endscript
@@ -1365,23 +1365,23 @@ script hammer_highway \{push_p1 = (-70.0, 50.0)
 		else
 			change \{battle_p2_highway_hammer = 1}
 		endif
-		formattext checksumname = container_id 'gem_container%p' p = <other_player_text> addtostringlookup = true
-		getscreenelementposition id = <container_id>
+		FormatText checksumname = container_id 'gem_container%p' p = <other_player_text> AddToStringLookup = true
+		GetScreenElementPosition id = <container_id>
 		original_position = <screenelementpos>
-		doscreenelementmorph {
+		doScreenElementMorph {
 			id = <container_id>
 			pos = (<original_position> + <push_pos>)
 			just = [center bottom]
 			time = <time>
 		}
-		wait <time> seconds
-		doscreenelementmorph {
+		Wait <time> seconds
+		doScreenElementMorph {
 			id = <container_id>
 			pos = <original_position>
 			just = [center bottom]
 			time = <time>
 		}
-		wait <time> seconds
+		Wait <time> seconds
 		if (<other_player_text> = 'p1')
 			change \{battle_p1_highway_hammer = 0}
 		else
@@ -1404,18 +1404,18 @@ script hammer_rock_meter
 		else
 			change \{battle_p2_highway_hammer = 1}
 		endif
-		formattext checksumname = container_id 'HUD2D_rock_container%p' p = <other_player_text> addtostringlookup = true
-		getscreenelementposition id = <container_id>
+		FormatText checksumname = container_id 'HUD2D_rock_container%p' p = <other_player_text> AddToStringLookup = true
+		GetScreenElementPosition id = <container_id>
 		original_position = <screenelementpos>
-		doscreenelementmorph {
+		doScreenElementMorph {
 			id = <container_id>
 			pos = (<original_position> + <push_pos>)
 			just = [center bottom]
 			time = 0.1
 		}
-		wait \{0.1
+		Wait \{0.1
 			seconds}
-		doscreenelementmorph {
+		doScreenElementMorph {
 			id = <container_id>
 			pos = <original_position>
 			just = [center bottom]
@@ -1431,34 +1431,34 @@ endscript
 
 script shake_rock_meter 
 	shake_ammount = (3.0, 0.0)
-	formattext checksumname = container_id 'HUD2D_rock_container%p' p = ($<other_player_status>.text) addtostringlookup = true
-	getscreenelementposition id = <container_id>
+	FormatText checksumname = container_id 'HUD2D_rock_container%p' p = ($<other_player_status>.text) AddToStringLookup = true
+	GetScreenElementPosition id = <container_id>
 	original_position = <screenelementpos>
 	begin
-	doscreenelementmorph {
+	doScreenElementMorph {
 		id = <container_id>
 		pos = (<original_position> + <shake_ammount>)
 		just = [center bottom]
 		time = 0.1
 	}
-	wait \{0.1
+	Wait \{0.1
 		seconds}
-	doscreenelementmorph {
+	doScreenElementMorph {
 		id = <container_id>
 		pos = (<original_position> - <shake_ammount>)
 		just = [center bottom]
 		time = 0.1
 	}
-	wait \{0.1
+	Wait \{0.1
 		seconds}
 	repeat
 endscript
 
 script battle_up_difficulty 
 	if ($<other_player_status>.player = 1)
-		spawnscript gh_battlemode_player1_sfx_diffup_start params = {holdtime = (<drain_time> / 1000.0)} id = battlemode
+		SpawnScript GH_BattleMode_Player1_SFX_DiffUp_Start params = {holdtime = (<drain_time> / 1000.0)} id = battlemode
 	else
-		spawnscript gh_battlemode_player2_sfx_diffup_start params = {holdtime = (<drain_time> / 1000.0)} id = battlemode
+		SpawnScript GH_BattleMode_Player2_SFX_DiffUp_Start params = {holdtime = (<drain_time> / 1000.0)} id = battlemode
 	endif
 	if (<difficulty> = expert)
 		battle_double_notes <...>
@@ -1468,86 +1468,86 @@ script battle_up_difficulty
 		change structurename = <other_player_status> diffup_notes = ($<other_player_status>.diffup_notes + <drain_time>)
 		return
 	endif
-	getsongtimems
-	casttointeger \{time}
+	GetSongTimeMs
+	CastToInteger \{time}
 	change structurename = <other_player_status> diffup_notes = (<time> + <drain_time>)
 	update_hud_difficulty_up other_player_status = <other_player_status> difficulty = <difficulty>
 	hold_difficulty_up = ($<other_player_status>.hold_difficulty_up)
 	begin
-	getsongtimems
-	casttointeger \{time}
+	GetSongTimeMs
+	CastToInteger \{time}
 	if (<time> > <hold_difficulty_up>)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
-	extendcrc change_difficulty <player_text> out = type
+	ExtendCRC change_difficulty <player_text> out = type
 	original_difficulty = <difficulty>
 	switch <difficulty>
 		case easy
-		broadcastevent type = <type> data = {difficulty = medium difficulty_text_nl = 'medium'}
+		BroadcastEvent type = <type> data = {difficulty = medium difficulty_text_nl = 'medium'}
 		case medium
-		broadcastevent type = <type> data = {difficulty = hard difficulty_text_nl = 'hard'}
+		BroadcastEvent type = <type> data = {difficulty = hard difficulty_text_nl = 'hard'}
 		case hard
-		broadcastevent type = <type> data = {difficulty = expert difficulty_text_nl = 'expert'}
+		BroadcastEvent type = <type> data = {difficulty = expert difficulty_text_nl = 'expert'}
 	endswitch
-	getsongtimems
-	casttointeger \{time}
+	GetSongTimeMs
+	CastToInteger \{time}
 	change structurename = <other_player_status> diffup_notes = (<time> + <drain_time>)
 	begin
-	getsongtimems
+	GetSongTimeMs
 	if (<time> > $<other_player_status>.diffup_notes)
 		printf \{"end battle"}
-		extendcrc change_difficulty <player_text> out = type
+		ExtendCRC change_difficulty <player_text> out = type
 		original_difficulty = <difficulty>
 		switch <original_difficulty>
 			case easy
-			broadcastevent type = <type> data = {difficulty = easy difficulty_text_nl = 'easy'}
+			BroadcastEvent type = <type> data = {difficulty = easy difficulty_text_nl = 'easy'}
 			case medium
-			broadcastevent type = <type> data = {difficulty = medium difficulty_text_nl = 'medium'}
+			BroadcastEvent type = <type> data = {difficulty = medium difficulty_text_nl = 'medium'}
 			case hard
-			broadcastevent type = <type> data = {difficulty = hard difficulty_text_nl = 'hard'}
+			BroadcastEvent type = <type> data = {difficulty = hard difficulty_text_nl = 'hard'}
 		endswitch
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	change structurename = <other_player_status> diffup_notes = -1
-	guitarevent_battleattackfinished <...>
+	GuitarEvent_BattleAttackFinished <...>
 endscript
 
 script battle_double_notes 
 	if ($<other_player_status>.player = 1)
-		spawnscript gh_battlemode_player1_sfx_doublenotes_start params = {holdtime = (<drain_time> / 1000.0)} id = battlemode
+		SpawnScript GH_BattleMode_Player1_SFX_DoubleNotes_Start params = {holdtime = (<drain_time> / 1000.0)} id = battlemode
 	else
-		spawnscript gh_battlemode_player2_sfx_doublenotes_start params = {holdtime = (<drain_time> / 1000.0)} id = battlemode
+		SpawnScript GH_BattleMode_Player2_SFX_DoubleNotes_Start params = {holdtime = (<drain_time> / 1000.0)} id = battlemode
 	endif
 	if NOT ($<other_player_status>.double_notes = -1)
 		change structurename = <other_player_status> double_notes = ($<other_player_status>.double_notes + <drain_time>)
 		return
 	endif
-	getsongtimems
-	casttointeger \{time}
+	GetSongTimeMs
+	CastToInteger \{time}
 	change structurename = <other_player_status> double_notes = (<time> + <drain_time>)
 	update_hud_double_notes other_player_status = <other_player_status>
 	begin
-	getsongtimems
+	GetSongTimeMs
 	if (<time> > $<other_player_status>.double_notes)
 		printf \{"end battle"}
 		change structurename = <other_player_status> double_notes = -1
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
-	guitarevent_battleattackfinished <...>
+	GuitarEvent_BattleAttackFinished <...>
 endscript
 
 script battle_steal 
 	if ($<other_player_status>.player = 1)
-		spawnscript \{gh_battlemode_player1_sfx_steal
+		SpawnScript \{GH_BattleMode_Player1_SFX_Steal
 			params = {
 				holdtime = 1.0
 			}
@@ -1555,7 +1555,7 @@ script battle_steal
 		morph_to_pos = (($battle_hud_2d_elements.rock_pos_p2) + ($battle_hud_2d_elements.card_1_off_p2))
 		start_pos = (($battle_hud_2d_elements.rock_pos_p1) + ($battle_hud_2d_elements.card_1_off_p1))
 	else
-		spawnscript \{gh_battlemode_player2_sfx_steal
+		SpawnScript \{GH_BattleMode_Player2_SFX_Steal
 			params = {
 				holdtime = 1.0
 			}
@@ -1578,15 +1578,15 @@ script animate_steal
 		hand_y_offset = (0.0, -10.0)
 		hand_x_offset = (40.0, 0.0)
 	endif
-	formattext checksumname = steal_hand_open_checksum 'steal_hand_open_%i_%p' i = ($<other_player_status>.stealing_powerup) p = ($<other_player_status>.player)
-	if screenelementexists id = <steal_hand_open_checksum>
-		destroyscreenelement id = <steal_hand_open_checksum>
+	FormatText checksumname = steal_hand_open_checksum 'steal_hand_open_%i_%p' i = ($<other_player_status>.stealing_powerup) p = ($<other_player_status>.player)
+	if ScreenElementExists id = <steal_hand_open_checksum>
+		DestroyScreenElement id = <steal_hand_open_checksum>
 	endif
-	formattext checksumname = steal_hand_checksum 'steal_hand_%i_%p' i = ($<other_player_status>.stealing_powerup) p = ($<other_player_status>.player)
-	wait \{1
+	FormatText checksumname = steal_hand_checksum 'steal_hand_%i_%p' i = ($<other_player_status>.stealing_powerup) p = ($<other_player_status>.player)
+	Wait \{1
 		gameframe}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		id = <steal_hand_open_checksum>
 		parent = battlemode_container
 		texture = battle_hud_steal_hand_open
@@ -1597,16 +1597,16 @@ script animate_steal
 		just = [center center]
 		z_priority = 25
 	}
-	doscreenelementmorph {
+	doScreenElementMorph {
 		id = <steal_hand_open_checksum>
 		pos = (<start_pos> + <hand_y_offset> - <hand_x_offset>)
 		alpha = 1
 		time = 0.5
 	}
-	wait \{0.5
+	Wait \{0.5
 		seconds}
-	if screenelementexists id = <steal_hand_open_checksum>
-		destroyscreenelement id = <steal_hand_open_checksum>
+	if ScreenElementExists id = <steal_hand_open_checksum>
+		DestroyScreenElement id = <steal_hand_open_checksum>
 	endif
 	if NOT ($<other_player_status>.current_num_powerups = 0)
 		if ($<other_player_status>.player = 1)
@@ -1614,17 +1614,17 @@ script animate_steal
 		else
 			select = ($current_powerups_p2 [($<other_player_status>.current_num_powerups - 1)])
 		endif
-		formattext checksumname = card_checksum 'battlecard_%i_%s' i = ($<other_player_status>.current_num_powerups - 1) s = ($<other_player_status>.player)
-		if screenelementexists id = <card_checksum>
-			destroyscreenelement id = <card_checksum>
+		FormatText checksumname = card_checksum 'battlecard_%i_%s' i = ($<other_player_status>.current_num_powerups - 1) s = ($<other_player_status>.player)
+		if ScreenElementExists id = <card_checksum>
+			DestroyScreenElement id = <card_checksum>
 		endif
 		change structurename = <other_player_status> current_num_powerups = ($<other_player_status>.current_num_powerups - 1)
 		printf "animate_steal - decremented p%n's current_num_powerups to %a" n = ($<other_player_status>.player) a = ($<other_player_status>.current_num_powerups)
 		update_battlecards_remove player_status = <other_player_status>
-		getsongtimems
-		formattext checksumname = held_card_checksum 'held_battlecard_%i_%s_%t' i = ($<other_player_status>.current_num_powerups - 1) s = ($<other_player_status>.player) t = <time>
-		createscreenelement {
-			type = spriteelement
+		GetSongTimeMs
+		FormatText checksumname = held_card_checksum 'held_battlecard_%i_%s_%t' i = ($<other_player_status>.current_num_powerups - 1) s = ($<other_player_status>.player) t = <time>
+		CreateScreenElement {
+			type = SpriteElement
 			id = <held_card_checksum>
 			parent = battlemode_container
 			texture = ($battlemode_powerups [<select>].card_texture)
@@ -1634,16 +1634,16 @@ script animate_steal
 			just = [center center]
 			z_priority = (($battle_hud_2d_elements.z) + 19)
 		}
-		doscreenelementmorph {
+		doScreenElementMorph {
 			id = <held_card_checksum>
 			pos = <morph_to_pos>
 			time = 0.5
 		}
-		if screenelementexists id = <steal_hand_checksum>
-			destroyscreenelement id = <steal_hand_checksum>
+		if ScreenElementExists id = <steal_hand_checksum>
+			DestroyScreenElement id = <steal_hand_checksum>
 		endif
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			id = <steal_hand_checksum>
 			parent = battlemode_container
 			texture = battle_hud_steal_hand
@@ -1654,26 +1654,26 @@ script animate_steal
 			just = [center center]
 			z_priority = 25
 		}
-		doscreenelementmorph {
+		doScreenElementMorph {
 			id = <steal_hand_checksum>
 			texture = battle_hud_steal_hand
 			pos = (<morph_to_pos> + <hand_y_offset> - <hand_x_offset>)
 			time = 0.5
 		}
-		wait \{0.4
+		Wait \{0.4
 			seconds}
-		doscreenelementmorph {
+		doScreenElementMorph {
 			id = <steal_hand_checksum>
 			alpha = 0
 			time = 0.1
 		}
-		wait \{0.1
+		Wait \{0.1
 			seconds}
-		if screenelementexists id = <held_card_checksum>
-			destroyscreenelement id = <held_card_checksum>
+		if ScreenElementExists id = <held_card_checksum>
+			DestroyScreenElement id = <held_card_checksum>
 		endif
-		if screenelementexists id = <steal_hand_checksum>
-			destroyscreenelement id = <steal_hand_checksum>
+		if ScreenElementExists id = <steal_hand_checksum>
+			DestroyScreenElement id = <steal_hand_checksum>
 		endif
 		battlemode_ready player_status = <player_status> battle_gem = <select> steal = 1
 	endif
@@ -1681,9 +1681,9 @@ endscript
 
 script battle_lefty_notes 
 	if ($<other_player_status>.player = 1)
-		spawnscript gh_battlemode_player1_sfx_leftynotes_start params = {holdtime = (<drain_time> / 1000.0)} id = battlemode
+		SpawnScript GH_BattleMode_Player1_SFX_LeftyNotes_Start params = {holdtime = (<drain_time> / 1000.0)} id = battlemode
 	else
-		spawnscript gh_battlemode_player2_sfx_leftynotes_start params = {holdtime = (<drain_time> / 1000.0)} id = battlemode
+		SpawnScript GH_BattleMode_Player2_SFX_LeftyNotes_Start params = {holdtime = (<drain_time> / 1000.0)} id = battlemode
 	endif
 	if NOT ($<other_player_status>.lefty_notes = -1)
 		change structurename = <other_player_status> lefty_notes = ($<other_player_status>.lefty_notes + <drain_time>)
@@ -1692,14 +1692,14 @@ script battle_lefty_notes
 	change structurename = <other_player_status> lefthanded_gems_flip_save = ($<other_player_status>.lefthanded_gems)
 	change structurename = <other_player_status> lefthanded_button_ups_flip_save = ($<other_player_status>.lefthanded_button_ups)
 	change structurename = <other_player_status> lefthanded_gems = (1 + $<other_player_status>.lefthanded_gems * -1)
-	getsongtimems
-	casttointeger \{time}
+	GetSongTimeMs
+	CastToInteger \{time}
 	change structurename = <other_player_status> lefty_notes = (<time> + <drain_time>)
 	start_time = (<time> + (($<other_player_status>.scroll_time - $destroy_time) * 1000.0))
 	end_time = -1
 	update_hud_lefty_notes other_player_status = <other_player_status>
 	begin
-	getsongtimems
+	GetSongTimeMs
 	if NOT (<start_time> = -1)
 		if (<time> > (<start_time> - 500))
 			animate_lefty_flip other_player_status = <other_player_status> player_text = <player_text>
@@ -1713,11 +1713,11 @@ script battle_lefty_notes
 		change structurename = <other_player_status> lefthanded_gems = (1 + $<other_player_status>.lefthanded_gems * -1)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	begin
-	getsongtimems
+	GetSongTimeMs
 	if NOT (<start_time> = -1)
 		if (<time> > <start_time>)
 			animate_lefty_flip other_player_status = <other_player_status> player_text = <player_text>
@@ -1731,10 +1731,10 @@ script battle_lefty_notes
 		change structurename = <other_player_status> lefty_notes = -1
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
-	guitarevent_battleattackfinished <...>
+	GuitarEvent_BattleAttackFinished <...>
 endscript
 
 script battle_whammy_attack 
@@ -1750,9 +1750,9 @@ script battle_whammy_attack
 		<repair_ammount> = ($battlemode_powerups [6].expert_repair)
 	endswitch
 	if ($<other_player_status>.player = 1)
-		spawnscript gh_battlemode_player1_sfx_whammy_start params = {holdtime = (<drain_time> / 1000.0)} id = battlemode
+		SpawnScript GH_BattleMode_Player1_SFX_Whammy_Start params = {holdtime = (<drain_time> / 1000.0)} id = battlemode
 	else
-		spawnscript gh_battlemode_player2_sfx_whammy_start params = {holdtime = (<drain_time> / 1000.0)} id = battlemode
+		SpawnScript GH_BattleMode_Player2_SFX_Whammy_Start params = {holdtime = (<drain_time> / 1000.0)} id = battlemode
 	endif
 	if ($<other_player_status>.whammy_attack < 1)
 		change structurename = <other_player_status> whammy_attack = <repair_ammount>
@@ -1776,8 +1776,8 @@ script battle_whammy_attack
 			if ($<other_player_status>.whammy_attack = 0)
 				break
 			endif
-			if guitargetanalogueinfo controller = ($<other_player_status>.controller)
-				if isguitarcontroller controller = ($<other_player_status>.controller)
+			if GuitarGetAnalogueInfo controller = ($<other_player_status>.controller)
+				if IsGuitarController controller = ($<other_player_status>.controller)
 					<len> = ((<rightx> + 1.0) / 2.0)
 				else
 					if (<leftlength> > 0)
@@ -1795,8 +1795,8 @@ script battle_whammy_attack
 			endif
 			if ($boss_battle = 1 &&
 					<other_player_status>.player = 2)
-				getsongtimems
-				if (<time> - $boss_lastwhammytime > $current_boss.whammyspeed.($current_difficulty))
+				GetSongTimeMs
+				if (<time> - $boss_lastwhammytime > $current_boss.WhammySpeed.($current_difficulty))
 					len = 0.5
 					change boss_lastwhammytime = <time>
 				else
@@ -1806,12 +1806,12 @@ script battle_whammy_attack
 			if (<len> >= 0.5)
 				if (<whammy_on> = 0)
 					change structurename = <other_player_status> whammy_attack = ($<other_player_status>.whammy_attack - 1)
-					gh3_battle_play_whammy_pitch_up_sound <...>
+					GH3_Battle_Play_Whammy_Pitch_Up_Sound <...>
 					if ($<other_player_status>.whammy_attack <= 5)
 						<shake_frequency> = (<shake_frequency> + 1)
 					endif
 					if (($is_network_game) && ($<other_player_status>.whammy_attack <= 5))
-						sendnetmessage {type = whammy_attack_update whammy_count = ($<other_player_status>.whammy_attack)}
+						SendNetMessage {type = whammy_attack_update whammy_count = ($<other_player_status>.whammy_attack)}
 					endif
 					<whammy_on> = 1
 				endif
@@ -1820,13 +1820,13 @@ script battle_whammy_attack
 					<whammy_on> = 0
 				endif
 			endif
-			wait \{1
+			Wait \{1
 				gameframe}
 			repeat
 		else
 			net_whammy_attack player_text = <player_text> other_player_status = <other_player_status> difficulty = <difficulty>
 		endif
-		getarraysize \{$gem_colors}
+		GetArraySize \{$gem_colors}
 		array_count = 0
 		begin
 		broken_string_id = ($broken_strings [<array_count>])
@@ -1852,7 +1852,7 @@ script battle_whammy_attack
 		array_count = (<array_count> + 1)
 		repeat <array_size>
 		change structurename = <other_player_status> whammy_attack = -1
-		guitarevent_battleattackfinished <...>
+		GuitarEvent_BattleAttackFinished <...>
 	else
 		if ($<other_player_status>.whammy_attack < 15)
 			change structurename = <other_player_status> whammy_attack = ($<other_player_status>.whammy_attack + <repair_ammount>)
@@ -1885,15 +1885,15 @@ script break_string
 	else
 		<begin_pos> = (<begin_pos> + (230.0, 0.0))
 	endif
-	formattext checksumname = name 'String_break_%p' p = ($<other_player_status>.text) addtostringlookup = true
-	if screenelementexists id = <name>
-		destroyscreenelement id = <name>
+	FormatText checksumname = name 'String_break_%p' p = ($<other_player_status>.text) AddToStringLookup = true
+	if ScreenElementExists id = <name>
+		DestroyScreenElement id = <name>
 	endif
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		id = <name>
 		parent = battlemode_container
-		material = sys_bm_snap01_sys_bm_snap01
+		material = sys_BM_Snap01_sys_BM_Snap01
 		rgba = [200 200 200 200]
 		pos = (<begin_pos>)
 		scale = (1.3, 1.6)
@@ -1904,28 +1904,28 @@ script break_string
 	if ($<other_player_status>.lefthanded_button_ups = 1)
 		switch <color>
 			case green
-			<color> = orange
+			<color> = Orange
 			case red
-			<color> = blue
-			case yellow
-			<color> = yellow
-			case blue
+			<color> = Blue
+			case Yellow
+			<color> = Yellow
+			case Blue
 			<color> = red
-			case orange
+			case Orange
 			<color> = green
 		endswitch
 	endif
-	formattext checksumname = name_string '%s_string%p' s = ($button_up_models.<color>.name_string) p = ($<other_player_status>.text) addtostringlookup = true
-	if screenelementexists id = <name_string>
-		doscreenelementmorph {
+	FormatText checksumname = name_string '%s_string%p' s = ($button_up_models.<color>.name_string) p = ($<other_player_status>.text) AddToStringLookup = true
+	if ScreenElementExists id = <name_string>
+		doScreenElementMorph {
 			id = <name_string>
 			alpha = 0
 		}
 	endif
-	wait \{15
+	Wait \{15
 		gameframe}
-	if screenelementexists id = <id>
-		destroyscreenelement id = <id>
+	if ScreenElementExists id = <id>
+		DestroyScreenElement id = <id>
 	endif
 endscript
 
@@ -1934,20 +1934,20 @@ script repair_string
 	if ($<other_player_status>.lefthanded_button_ups = 1)
 		switch <color>
 			case green
-			<color> = orange
+			<color> = Orange
 			case red
-			<color> = blue
-			case yellow
-			<color> = yellow
-			case blue
+			<color> = Blue
+			case Yellow
+			<color> = Yellow
+			case Blue
 			<color> = red
-			case orange
+			case Orange
 			<color> = green
 		endswitch
 	endif
-	formattext checksumname = name_string '%s_string%p' s = ($button_up_models.<color>.name_string) p = ($<other_player_status>.text) addtostringlookup = true
-	if screenelementexists id = <name_string>
-		doscreenelementmorph {
+	FormatText checksumname = name_string '%s_string%p' s = ($button_up_models.<color>.name_string) p = ($<other_player_status>.text) AddToStringLookup = true
+	if ScreenElementExists id = <name_string>
+		doScreenElementMorph {
 			id = <name_string>
 			alpha = 1
 		}
@@ -1956,7 +1956,7 @@ endscript
 
 script battle_broken_string 
 	if (($is_network_game = 1) && ($<other_player_status>.player = 1))
-		if NOT gotparam \{string_to_break}
+		if NOT GotParam \{string_to_break}
 			return
 		endif
 	endif
@@ -1973,12 +1973,12 @@ script battle_broken_string
 	endswitch
 	victim_is_local = 1
 	if ($<other_player_status>.player = 1)
-		spawnscript gh_battlemode_player1_sfx_brokenstring_start params = {holdtime = <drain_time>} id = battlemode
+		SpawnScript GH_BattleMode_Player1_SFX_BrokenString_Start params = {holdtime = <drain_time>} id = battlemode
 	else
 		if ($is_network_game)
 			<victim_is_local> = 0
 		endif
-		spawnscript gh_battlemode_player2_sfx_brokenstring_start params = {holdtime = <drain_time>} id = battlemode
+		SpawnScript GH_BattleMode_Player2_SFX_BrokenString_Start params = {holdtime = <drain_time>} id = battlemode
 	endif
 	if (<difficulty> = easy)
 		highest_value = 3
@@ -1992,7 +1992,7 @@ script battle_broken_string
 	if (($is_network_game) && ($<other_player_status>.player = 1))
 		x = <string_to_break>
 	else
-		getarraysize \{$gem_colors}
+		GetArraySize \{$gem_colors}
 		gem_color = 0
 		non_broken_index = 0
 		non_broken_strings = [-1 -1 -1 -1 -1]
@@ -2000,36 +2000,36 @@ script battle_broken_string
 		switch <gem_color>
 			case 0
 			if ($<other_player_status>.broken_string_green = 0)
-				setarrayelement arrayname = non_broken_strings index = <non_broken_index> newvalue = <gem_color>
+				SetArrayElement ArrayName = non_broken_strings index = <non_broken_index> newvalue = <gem_color>
 				<non_broken_index> = (<non_broken_index> + 1)
 			endif
 			case 1
 			if ($<other_player_status>.broken_string_red = 0)
-				setarrayelement arrayname = non_broken_strings index = <non_broken_index> newvalue = <gem_color>
+				SetArrayElement ArrayName = non_broken_strings index = <non_broken_index> newvalue = <gem_color>
 				<non_broken_index> = (<non_broken_index> + 1)
 			endif
 			case 2
 			if ($<other_player_status>.broken_string_yellow = 0)
-				setarrayelement arrayname = non_broken_strings index = <non_broken_index> newvalue = <gem_color>
+				SetArrayElement ArrayName = non_broken_strings index = <non_broken_index> newvalue = <gem_color>
 				<non_broken_index> = (<non_broken_index> + 1)
 			endif
 			case 3
 			if ($<other_player_status>.broken_string_blue = 0)
-				setarrayelement arrayname = non_broken_strings index = <non_broken_index> newvalue = <gem_color>
+				SetArrayElement ArrayName = non_broken_strings index = <non_broken_index> newvalue = <gem_color>
 				<non_broken_index> = (<non_broken_index> + 1)
 			endif
 			case 4
 			if ($<other_player_status>.broken_string_orange = 0)
-				setarrayelement arrayname = non_broken_strings index = <non_broken_index> newvalue = <gem_color>
+				SetArrayElement ArrayName = non_broken_strings index = <non_broken_index> newvalue = <gem_color>
 				<non_broken_index> = (<non_broken_index> + 1)
 			endif
 		endswitch
 		<gem_color> = (<gem_color> + 1)
 		repeat <highest_value>
 		if (<non_broken_index> = 0)
-			getrandomvalue name = x a = 1 b = <highest_value> integer
+			GetRandomValue name = x a = 1 b = <highest_value> Integer
 		else
-			getrandomvalue name = random_index a = 0 b = (<non_broken_index> - 1) integer
+			GetRandomValue name = random_index a = 0 b = (<non_broken_index> - 1) Integer
 			x = ((<non_broken_strings> [<random_index>]) + 1)
 		endif
 	endif
@@ -2065,12 +2065,12 @@ script battle_broken_string
 	if (<bail>)
 		return
 	endif
-	getheldpattern controller = ($<other_player_status>.controller) nobrokenstring
+	GetHeldPattern controller = ($<other_player_status>.controller) nobrokenstring
 	total_broken_strings = 1
-	getarraysize \{$gem_colors}
+	GetArraySize \{$gem_colors}
 	begin
 	last_hold_pattern = <hold_pattern>
-	getheldpattern controller = ($<other_player_status>.controller) nobrokenstring
+	GetHeldPattern controller = ($<other_player_status>.controller) nobrokenstring
 	net_update_flags = 0
 	if NOT (<last_hold_pattern> = <hold_pattern>)
 		check_button = 65536
@@ -2085,7 +2085,7 @@ script battle_broken_string
 						change structurename = <other_player_status> broken_string_green = ($<other_player_status>.broken_string_green - 1)
 						mask = 4369
 						<net_update_flags> = (<net_update_flags> || <check_button>)
-						battle_sfx_repair_broken_string num_strums = ($<other_player_status>.broken_string_green) player_pan = ($<other_player_status>.player) difficulty = <difficulty>
+						Battle_SFX_Repair_Broken_String num_strums = ($<other_player_status>.broken_string_green) player_pan = ($<other_player_status>.player) difficulty = <difficulty>
 						if ($<other_player_status>.broken_string_green = 0)
 							repair_string other_player_status = <other_player_status> id = <array_count>
 						endif
@@ -2093,7 +2093,7 @@ script battle_broken_string
 						change structurename = <other_player_status> broken_string_red = ($<other_player_status>.broken_string_red - 1)
 						mask = 65809
 						<net_update_flags> = (<net_update_flags> || <check_button>)
-						battle_sfx_repair_broken_string num_strums = ($<other_player_status>.broken_string_red) player_pan = ($<other_player_status>.player) difficulty = <difficulty>
+						Battle_SFX_Repair_Broken_String num_strums = ($<other_player_status>.broken_string_red) player_pan = ($<other_player_status>.player) difficulty = <difficulty>
 						if ($<other_player_status>.broken_string_red = 0)
 							repair_string other_player_status = <other_player_status> id = <array_count>
 						endif
@@ -2101,7 +2101,7 @@ script battle_broken_string
 						change structurename = <other_player_status> broken_string_yellow = ($<other_player_status>.broken_string_yellow - 1)
 						mask = 69649
 						<net_update_flags> = (<net_update_flags> || <check_button>)
-						battle_sfx_repair_broken_string num_strums = ($<other_player_status>.broken_string_yellow) player_pan = ($<other_player_status>.player) difficulty = <difficulty>
+						Battle_SFX_Repair_Broken_String num_strums = ($<other_player_status>.broken_string_yellow) player_pan = ($<other_player_status>.player) difficulty = <difficulty>
 						if ($<other_player_status>.broken_string_yellow = 0)
 							repair_string other_player_status = <other_player_status> id = <array_count>
 						endif
@@ -2109,7 +2109,7 @@ script battle_broken_string
 						change structurename = <other_player_status> broken_string_blue = ($<other_player_status>.broken_string_blue - 1)
 						mask = 69889
 						<net_update_flags> = (<net_update_flags> || <check_button>)
-						battle_sfx_repair_broken_string num_strums = ($<other_player_status>.broken_string_blue) player_pan = ($<other_player_status>.player) difficulty = <difficulty>
+						Battle_SFX_Repair_Broken_String num_strums = ($<other_player_status>.broken_string_blue) player_pan = ($<other_player_status>.player) difficulty = <difficulty>
 						if ($<other_player_status>.broken_string_blue = 0)
 							repair_string other_player_status = <other_player_status> id = <array_count>
 						endif
@@ -2117,14 +2117,14 @@ script battle_broken_string
 						change structurename = <other_player_status> broken_string_orange = ($<other_player_status>.broken_string_orange - 1)
 						mask = 69904
 						<net_update_flags> = (<net_update_flags> || <check_button>)
-						battle_sfx_repair_broken_string num_strums = ($<other_player_status>.broken_string_orange) player_pan = ($<other_player_status>.player) difficulty = <difficulty>
+						Battle_SFX_Repair_Broken_String num_strums = ($<other_player_status>.broken_string_orange) player_pan = ($<other_player_status>.player) difficulty = <difficulty>
 						if ($<other_player_status>.broken_string_orange = 0)
 							repair_string other_player_status = <other_player_status> id = <array_count>
 						endif
 					endswitch
 					if ($<other_player_status>.<broken_string_id> = 0)
 						if ($<other_player_status>.whammy_attack < 1)
-							wait \{1
+							Wait \{1
 								gameframe}
 							change structurename = <other_player_status> broken_string_mask = ($<other_player_status>.broken_string_mask && <mask>)
 						endif
@@ -2144,7 +2144,7 @@ script battle_broken_string
 	if ($is_network_game)
 		if NOT (<net_update_flags> = 0)
 			if NOT ($<other_player_status>.highway_layout = solo_highway)
-				sendnetmessage {
+				SendNetMessage {
 					type = repair_string
 					flags = <net_update_flags>
 				}
@@ -2157,8 +2157,8 @@ script battle_broken_string
 	if ($boss_battle = 1 &&
 			<other_player_status>.player = 2)
 		if ($<other_player_status>.whammy_attack < 1)
-			getsongtimems
-			if (<time> - $boss_lastbrokenstringtime > $current_boss.brokenstringspeed.($current_difficulty))
+			GetSongTimeMs
+			if (<time> - $boss_lastbrokenstringtime > $current_boss.BrokenStringSpeed.($current_difficulty))
 				change boss_pattern = ($<other_player_status>.broken_string_mask)
 				change boss_lastbrokenstringtime = <time>
 			else
@@ -2166,23 +2166,23 @@ script battle_broken_string
 			endif
 		endif
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	if ($<other_player_status>.whammy_attack < 1)
 		change structurename = <other_player_status> broken_string_mask = 0
 	endif
-	guitarevent_battleattackfinished <...>
+	GuitarEvent_BattleAttackFinished <...>
 endscript
 
 script animate_lefty_flip 
-	getarraysize \{$gem_colors}
+	GetArraySize \{$gem_colors}
 	array_count = 0
-	extendcrc button_up_pixel_array ($<other_player_status>.text) out = pixel_array
+	ExtendCRC button_up_pixel_array ($<other_player_status>.text) out = pixel_array
 	begin
 	color = ($gem_colors [<array_count>])
 	pixels = ($<pixel_array> [<array_count>])
-	formattext checksumname = name_base '%s_base%p' s = ($button_up_models.<color>.name_string) p = ($<other_player_status>.text) addtostringlookup = true
+	FormatText checksumname = name_base '%s_base%p' s = ($button_up_models.<color>.name_string) p = ($<other_player_status>.text) AddToStringLookup = true
 	if ($<other_player_status>.lefthanded_button_ups = 1)
 		start_bottom_bar_pos = ($button_up_models.<color>.left_pos_2d)
 		end_bottom_bar_pos = ($button_up_models.<color>.pos_2d)
@@ -2190,10 +2190,10 @@ script animate_lefty_flip
 		start_bottom_bar_pos = ($button_up_models.<color>.pos_2d)
 		end_bottom_bar_pos = ($button_up_models.<color>.left_pos_2d)
 	endif
-	getscreenelementposition id = <name_base>
+	GetScreenElementPosition id = <name_base>
 	bottom_bar_offset = (<end_bottom_bar_pos> - <start_bottom_bar_pos>)
 	<bottom_bar_pos> = (<screenelementpos> + <bottom_bar_offset> - (<pixels> * (0.0, 1.0)))
-	doscreenelementmorph {
+	doScreenElementMorph {
 		id = <name_base>
 		pos = (<bottom_bar_pos>)
 		just = [center center]
@@ -2201,13 +2201,13 @@ script animate_lefty_flip
 	}
 	array_count = (<array_count> + 1)
 	repeat <array_size>
-	wait \{0.15
+	Wait \{0.15
 		seconds}
 	<array_count> = 0
 	begin
 	color = ($gem_colors [<array_count>])
-	formattext checksumname = name_base '%s_base%p' s = ($button_up_models.<color>.name_string) p = ($<other_player_status>.text) addtostringlookup = true
-	doscreenelementmorph {
+	FormatText checksumname = name_base '%s_base%p' s = ($button_up_models.<color>.name_string) p = ($<other_player_status>.text) AddToStringLookup = true
+	doScreenElementMorph {
 		id = <name_base>
 		pos = (0.0, 0.0)
 		just = [center center]
@@ -2217,13 +2217,13 @@ script animate_lefty_flip
 endscript
 
 script update_training_whammy_bar 
-	formattext checksumname = training_whammy_checksum 'training_whammy_bar_%s' s = ($<other_player_status>.player)
-	formattext checksumname = training_whammy_text_checksum 'training_whammy_bar_text_%s' s = ($<other_player_status>.player)
-	if screenelementexists id = <training_whammy_checksum>
-		destroyscreenelement id = <training_whammy_checksum>
+	FormatText checksumname = training_whammy_checksum 'training_whammy_bar_%s' s = ($<other_player_status>.player)
+	FormatText checksumname = training_whammy_text_checksum 'training_whammy_bar_text_%s' s = ($<other_player_status>.player)
+	if ScreenElementExists id = <training_whammy_checksum>
+		DestroyScreenElement id = <training_whammy_checksum>
 	endif
-	if screenelementexists id = <training_whammy_text_checksum>
-		destroyscreenelement id = <training_whammy_text_checksum>
+	if ScreenElementExists id = <training_whammy_text_checksum>
+		DestroyScreenElement id = <training_whammy_text_checksum>
 	endif
 	if ($<other_player_status>.player = 1)
 		player_offset = (0.0, 0.0)
@@ -2232,8 +2232,8 @@ script update_training_whammy_bar
 	endif
 	training_whammy_pos = ((610.0, 700.0) + <player_offset>)
 	training_whammy_angle = -25
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		id = <training_whammy_checksum>
 		parent = battlemode_container
 		texture = battle_hud_whammy_bar
@@ -2245,8 +2245,8 @@ script update_training_whammy_bar
 		just = [center bottom]
 		z_priority = 6
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <training_whammy_checksum>
 		id = <training_whammy_text_checksum>
 		pos = (120.0, 145.0)
@@ -2264,16 +2264,16 @@ endscript
 script animate_whammy_bar 
 	pulse_on = 0
 	begin
-	getarraysize \{$gem_colors}
+	GetArraySize \{$gem_colors}
 	array_count = 0
 	begin
 	color = ($gem_colors [<array_count>])
-	formattext checksumname = name_base '%s_base%p' s = ($button_up_models.<color>.name_string) p = ($<other_player_status>.text) addtostringlookup = true
+	FormatText checksumname = name_base '%s_base%p' s = ($button_up_models.<color>.name_string) p = ($<other_player_status>.text) AddToStringLookup = true
 	original_bottom_bar_pos = (0.0, 0.0)
 	bottom_bar_pos = (<original_bottom_bar_pos> - ((0.0, 15.0) * ($<other_player_status>.whammy_attack)))
 	if NOT ($<other_player_status>.whammy_attack < 1)
 		if (<pulse_on> = 0)
-			doscreenelementmorph {
+			doScreenElementMorph {
 				id = <name_base>
 				alpha = 0.5
 				pos = (<bottom_bar_pos> + (0.0, 5.0))
@@ -2281,7 +2281,7 @@ script animate_whammy_bar
 				time = 0.15
 			}
 		else
-			doscreenelementmorph {
+			doScreenElementMorph {
 				id = <name_base>
 				alpha = 0.5
 				pos = (<bottom_bar_pos> - (0.0, 5.0))
@@ -2290,7 +2290,7 @@ script animate_whammy_bar
 			}
 		endif
 	else
-		doscreenelementmorph {
+		doScreenElementMorph {
 			id = <name_base>
 			alpha = 1
 			pos = (<original_bottom_bar_pos> + (0.0, 30.0))
@@ -2301,14 +2301,14 @@ script animate_whammy_bar
 	array_count = (<array_count> + 1)
 	repeat <array_size>
 	training_whammy_pos_new = (<training_whammy_pos> - ((0.0, 15.0) * ($<other_player_status>.whammy_attack)))
-	doscreenelementmorph {
+	doScreenElementMorph {
 		id = <id>
 		pos = <training_whammy_pos_new>
 		time = 0.15
 	}
 	if NOT ($<other_player_status>.whammy_attack < 1)
 		if (<pulse_on> = 0)
-			doscreenelementmorph {
+			doScreenElementMorph {
 				id = <id>
 				rot_angle = (<training_whammy_angle> - 20)
 				just = [center bottom]
@@ -2316,7 +2316,7 @@ script animate_whammy_bar
 			}
 			<pulse_on> = 1
 		else
-			doscreenelementmorph {
+			doScreenElementMorph {
 				id = <id>
 				rot_angle = <training_whammy_angle>
 				just = [center bottom]
@@ -2325,21 +2325,21 @@ script animate_whammy_bar
 			<pulse_on> = 0
 		endif
 	else
-		doscreenelementmorph {
+		doScreenElementMorph {
 			id = <id>
 			rot_angle = <training_whammy_angle>
 			just = [center bottom]
 			alpha = 0
 			time = 0.3
 		}
-		wait \{0.15
+		Wait \{0.15
 			seconds}
-		getarraysize \{$gem_colors}
+		GetArraySize \{$gem_colors}
 		array_count = 0
 		begin
 		color = ($gem_colors [<array_count>])
-		formattext checksumname = name_base '%s_base%p' s = ($button_up_models.<color>.name_string) p = ($<other_player_status>.text) addtostringlookup = true
-		doscreenelementmorph {
+		FormatText checksumname = name_base '%s_base%p' s = ($button_up_models.<color>.name_string) p = ($<other_player_status>.text) AddToStringLookup = true
+		doScreenElementMorph {
 			id = <name_base>
 			alpha = 1
 			pos = <original_bottom_bar_pos>
@@ -2350,7 +2350,7 @@ script animate_whammy_bar
 		repeat <array_size>
 		break
 	endif
-	wait \{0.15
+	Wait \{0.15
 		seconds}
 	repeat
 endscript
@@ -2359,7 +2359,7 @@ script update_broken_button
 	broken_string_id = ($broken_strings [<id>])
 	color = ($gem_colors [<id>])
 	button_up_name = ($button_up_models.<color>.name)
-	extendcrc button_up_pixel_array ($<other_player_status>.text) out = pixel_array
+	ExtendCRC button_up_pixel_array ($<other_player_status>.text) out = pixel_array
 	<player_text> = ($<other_player_status>.text)
 	begin
 	<num_hammers> = 0
@@ -2381,8 +2381,8 @@ script update_broken_button
 		break
 	endif
 	<up_pixels> = (<num_hammers> * 5)
-	setarrayelement arrayname = <pixel_array> globalarray index = <id> newvalue = <up_pixels>
-	wait \{1
+	SetArrayElement ArrayName = <pixel_array> GlobalArray index = <id> newvalue = <up_pixels>
+	Wait \{1
 		gameframe}
 	repeat
 endscript
@@ -2390,15 +2390,15 @@ endscript
 script update_broken_string_arrows 
 	broken_string_id = ($broken_strings [<id>])
 	string_id = <id>
-	formattext checksumname = arrow_checksum 'broken_string_arrow_%i_%s' i = <id> s = ($<other_player_status>.player)
-	formattext checksumname = text_checksum 'broken_string_text_%i_%s' i = <id> s = ($<other_player_status>.player)
-	if screenelementexists id = <arrow_checksum>
-		destroyscreenelement id = <arrow_checksum>
+	FormatText checksumname = arrow_checksum 'broken_string_arrow_%i_%s' i = <id> s = ($<other_player_status>.player)
+	FormatText checksumname = text_checksum 'broken_string_text_%i_%s' i = <id> s = ($<other_player_status>.player)
+	if ScreenElementExists id = <arrow_checksum>
+		DestroyScreenElement id = <arrow_checksum>
 	endif
-	if screenelementexists id = <text_checksum>
-		destroyscreenelement id = <text_checksum>
+	if ScreenElementExists id = <text_checksum>
+		DestroyScreenElement id = <text_checksum>
 	endif
-	formattext checksumname = container_id 'gem_container%p' p = ($<other_player_status>.text) addtostringlookup = true
+	FormatText checksumname = container_id 'gem_container%p' p = ($<other_player_status>.text) AddToStringLookup = true
 	color = ($gem_colors [<id>])
 	arrow_pos = (($button_up_models.<color>.pos_2d) - (0.0, 30.0))
 	lefty_arrow_pos = (($button_up_models.<color>.left_pos_2d) - (0.0, 30.0))
@@ -2414,8 +2414,8 @@ script update_broken_string_arrows
 	else
 		start_pos = <arrow_pos>
 	endif
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		id = <arrow_checksum>
 		parent = battlemode_container
 		texture = battle_hud_arrow
@@ -2426,10 +2426,10 @@ script update_broken_string_arrows
 		just = [center bottom]
 		z_priority = 7
 	}
-	getscreenelementdims id = <arrow_checksum>
+	GetScreenElementDims id = <arrow_checksum>
 	x_offset = (<width> / 2)
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <arrow_checksum>
 		id = <text_checksum>
 		pos = ((53.0, 150.0) + (<x_offset> * (1.0, 0.0)))
@@ -2473,34 +2473,34 @@ script animate_arrow
 	endif
 	if NOT ($<other_player_status>.<broken_string_id> = 0)
 		if (<pulse_on> = 0)
-			if screenelementexists id = <arrow_id>
-				doscreenelementmorph {
+			if ScreenElementExists id = <arrow_id>
+				doScreenElementMorph {
 					id = <arrow_id>
 					pos = (<animate_pos> - (0.0, 10.0))
 					just = [center bottom]
 					time = 0.1
 				}
 			endif
-			wait \{0.1
+			Wait \{0.1
 				seconds}
 			<pulse_on> = 1
 		else
-			if screenelementexists id = <arrow_id>
-				doscreenelementmorph {
+			if ScreenElementExists id = <arrow_id>
+				doScreenElementMorph {
 					id = <arrow_id>
 					pos = <animate_pos>
 					just = [center bottom]
 					time = 0.1
 				}
 			endif
-			wait \{0.1
+			Wait \{0.1
 				seconds}
 			<pulse_on> = 0
 		endif
 		<frame_count> = 0
 	else
-		if screenelementexists id = <arrow_id>
-			doscreenelementmorph {
+		if ScreenElementExists id = <arrow_id>
+			doScreenElementMorph {
 				id = <arrow_id>
 				pos = <animate_pos>
 				just = [center bottom]
@@ -2508,14 +2508,14 @@ script animate_arrow
 				time = 0.3
 			}
 		endif
-		wait \{0.3
+		Wait \{0.3
 			seconds}
-		if screenelementexists id = <arrow_id>
-			destroyscreenelement id = <arrow_id>
+		if ScreenElementExists id = <arrow_id>
+			DestroyScreenElement id = <arrow_id>
 		endif
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframes}
 	repeat
 endscript
@@ -2534,13 +2534,13 @@ script create_battlemode_highway_effects
 	rangle = (0.0 - ($sidebar_angle))
 	scale = (($sidebar_x_scale * (1.0, 0.0)) + ($sidebar_y_scale * (0.0, 1.0)))
 	rscale = (((0 - $sidebar_x_scale) * (1.0, 0.0)) + ($sidebar_y_scale * (0.0, 1.0)))
-	formattext checksumname = container_id 'gem_container%p' p = <player_text> addtostringlookup = true
-	formattext checksumname = cont 'battle_sidebar_container_left%p' p = <player_text> addtostringlookup = true
-	if screenelementexists id = <cont>
-		destroyscreenelement id = <cont>
+	FormatText checksumname = container_id 'gem_container%p' p = <player_text> AddToStringLookup = true
+	FormatText checksumname = cont 'battle_sidebar_container_left%p' p = <player_text> AddToStringLookup = true
+	if ScreenElementExists id = <cont>
+		DestroyScreenElement id = <cont>
 	endif
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		id = <cont>
 		parent = <container_id>
 		pos = <lpos>
@@ -2550,12 +2550,12 @@ script create_battlemode_highway_effects
 	}
 	starpower_pos = (((-55.0 * $starpower_fx_scale) * (1.0, 0.0)) + ((55.0 * $starpower_fx_scale) * (0.0, 1.0)))
 	starpower_scale = (((2.0 * $starpower_fx_scale) * (1.0, 0.0)) + ((1.1 * $starpower_fx_scale) * (0.0, 1.0)))
-	formattext checksumname = name 'battle_sidebar_left_glow%p' p = <player_text> addtostringlookup = true
-	createscreenelement {
-		type = spriteelement
+	FormatText checksumname = name 'battle_sidebar_left_glow%p' p = <player_text> AddToStringLookup = true
+	CreateScreenElement {
+		type = SpriteElement
 		id = <name>
 		parent = <cont>
-		material = sys_starpower_sdglow_sys_starpower_sdglow
+		material = sys_Starpower_SDGLOW_sys_Starpower_SDGLOW
 		rgba = [255 255 255 255]
 		pos = <starpower_pos>
 		scale = <starpower_scale>
@@ -2564,12 +2564,12 @@ script create_battlemode_highway_effects
 	}
 	starpower_pos = (((0.0 * $starpower_fx_scale) * (1.0, 0.0)) + ((0 * $starpower_fx_scale) * (0.0, 1.0)))
 	starpower_scale = (((-2.0 * $starpower_fx_scale) * (1.0, 0.0)) + ((0.9 * $starpower_fx_scale) * (0.0, 1.0)))
-	formattext checksumname = name 'battle_sidebar_left_Lightning01%p' p = <player_text> addtostringlookup = true
-	createscreenelement {
-		type = spriteelement
+	FormatText checksumname = name 'battle_sidebar_left_Lightning01%p' p = <player_text> AddToStringLookup = true
+	CreateScreenElement {
+		type = SpriteElement
 		id = <name>
 		parent = <cont>
-		material = sys_big_bolt01_sys_big_bolt01
+		material = sys_Big_Bolt01_sys_Big_Bolt01
 		rgba = [0 0 128 128]
 		pos = <starpower_pos>
 		rot_angle = (180)
@@ -2577,12 +2577,12 @@ script create_battlemode_highway_effects
 		just = [center top]
 		z_priority = 0
 	}
-	formattext checksumname = cont 'battle_sidebar_container_right%p' p = <player_text> addtostringlookup = true
-	if screenelementexists id = <cont>
-		destroyscreenelement id = <cont>
+	FormatText checksumname = cont 'battle_sidebar_container_right%p' p = <player_text> AddToStringLookup = true
+	if ScreenElementExists id = <cont>
+		DestroyScreenElement id = <cont>
 	endif
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		id = <cont>
 		parent = <container_id>
 		pos = <rpos>
@@ -2592,12 +2592,12 @@ script create_battlemode_highway_effects
 	}
 	starpower_pos = (((55.0 * $starpower_fx_scale) * (1.0, 0.0)) + ((55.0 * $starpower_fx_scale) * (0.0, 1.0)))
 	starpower_scale = (((-2.0 * $starpower_fx_scale) * (1.0, 0.0)) + ((1.1 * $starpower_fx_scale) * (0.0, 1.0)))
-	formattext checksumname = name 'battle_sidebar_Right_glow%p' p = <player_text> addtostringlookup = true
-	createscreenelement {
-		type = spriteelement
+	FormatText checksumname = name 'battle_sidebar_Right_glow%p' p = <player_text> AddToStringLookup = true
+	CreateScreenElement {
+		type = SpriteElement
 		id = <name>
 		parent = <cont>
-		material = sys_starpower_sdglow_sys_starpower_sdglow
+		material = sys_Starpower_SDGLOW_sys_Starpower_SDGLOW
 		rgba = [255 255 255 255]
 		pos = <starpower_pos>
 		scale = <starpower_scale>
@@ -2606,12 +2606,12 @@ script create_battlemode_highway_effects
 	}
 	starpower_pos = (((0.0 * $starpower_fx_scale) * (1.0, 0.0)) + ((0 * $starpower_fx_scale) * (0.0, 1.0)))
 	starpower_scale = (((2.0 * $starpower_fx_scale) * (1.0, 0.0)) + ((0.9 * $starpower_fx_scale) * (0.0, 1.0)))
-	formattext checksumname = name 'battle_sidebar_Right_Lightning01%p' p = <player_text> addtostringlookup = true
-	createscreenelement {
-		type = spriteelement
+	FormatText checksumname = name 'battle_sidebar_Right_Lightning01%p' p = <player_text> AddToStringLookup = true
+	CreateScreenElement {
+		type = SpriteElement
 		id = <name>
 		parent = <cont>
-		material = sys_big_bolt01_sys_big_bolt01
+		material = sys_Big_Bolt01_sys_Big_Bolt01
 		rgba = [0 0 128 128]
 		pos = <starpower_pos>
 		rot_angle = (180)

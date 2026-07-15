@@ -2,14 +2,14 @@ control_pelvis_offset_assert = 0
 control_pelvis_max_offset = 2.5
 control_pelvis_render_offset = 0
 
-script togglecontrolpelvisrender 
+script ToggleControlPelvisRender 
 	if ($control_pelvis_render_offset = 0)
 		change \{control_pelvis_render_offset = 1}
 	else
 		change \{control_pelvis_render_offset = 0}
 	endif
 endscript
-qspakmarginforotherlanguages = 100
+QSPakMarginForOtherLanguages = 100
 engine_startup_params = [
 	{
 		platform = xenon
@@ -23,7 +23,7 @@ engine_startup_params = [
 		max_sound_effects = 64
 		fmod_memory_size = 12582912
 		num_mix_ahead_blocks = 2
-		tcr_music_buss = music_frontend
+		tcr_music_buss = Music_FrontEnd
 		max_cscript_instances_per_script = 500
 		primary_ring_buffer_size = 0
 		secondary_ring_buffer_size = 2048
@@ -53,7 +53,7 @@ engine_startup_params = [
 		node_statics_buff = 150
 		node_sort_buff = 119
 		node_misc_buff = 700
-		node_2d_buff = 320
+		node_2D_buff = 320
 		node_particle_buff = 2048
 		node_prim_buff = 1024
 		node_light_buff = 100
@@ -70,7 +70,7 @@ engine_startup_params = [
 		max_sound_effects = 64
 		fmod_memory_size = 13107200
 		num_mix_ahead_blocks = 5
-		tcr_music_buss = music_frontend
+		tcr_music_buss = Music_FrontEnd
 		max_cscript_instances_per_script = 500
 		primary_ring_buffer_size = 0
 		secondary_ring_buffer_size = 4096
@@ -105,7 +105,7 @@ engine_startup_params = [
 		node_statics_buff = 150
 		node_sort_buff = 119
 		node_misc_buff = 700
-		node_2d_buff = 320
+		node_2D_buff = 320
 		node_particle_buff = 1300
 		node_prim_buff = 1024
 		node_light_buff = 100

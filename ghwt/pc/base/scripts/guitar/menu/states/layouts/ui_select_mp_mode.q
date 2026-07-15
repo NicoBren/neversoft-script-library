@@ -5,22 +5,22 @@ script ui_create_select_mp_mode
 	change \{respond_to_signin_changed_func = none}
 	cas_reset_random_human_picking
 	change \{band_mode_menu_tags = none}
-	make_menu_frontend \{title = qs(0x7c0cd641)
-		screen = drummer
+	make_menu_frontend \{title = qs("Choose Multiplayer Mode")
+		screen = Drummer
 		use_all_controllers}
-	add_menu_frontend_item \{text = qs(0x0952b48b)
+	add_menu_frontend_item \{text = qs("FACE-OFF")
 		pad_choose_script = mp_select_mode_menu_select_mode
 		pad_choose_params = {
 			mode = p2_faceoff
 		}}
-	add_menu_frontend_item \{text = qs(0x46577877)
+	add_menu_frontend_item \{text = qs("PRO FACE-OFF")
 		pad_choose_script = mp_select_mode_menu_select_mode
 		pad_choose_params = {
 			mode = p2_pro_faceoff
 			friendly
 		}}
-	if ($g_head_to_head_instrument_type != vocals && $g_head_to_head_instrument_type != drums)
-		add_menu_frontend_item \{text = qs(0x33b59779)
+	if ($g_head_to_head_instrument_type != Vocals && $g_head_to_head_instrument_type != Drums)
+		add_menu_frontend_item \{text = qs("BATTLE")
 			pad_choose_script = mp_select_mode_menu_select_mode
 			pad_choose_params = {
 				mode = p2_battle

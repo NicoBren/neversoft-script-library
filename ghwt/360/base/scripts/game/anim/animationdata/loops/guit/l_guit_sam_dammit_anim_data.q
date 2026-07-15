@@ -1,37 +1,37 @@
-l_guit_sam_dammit_anims_set = {
+L_GUIT_Sam_Dammit_anims_set = {
 	Stance_A = {
 		Idle = {
 			good = {
-				slow = [
-					guit_sam_dammit_075_01
+				Slow = [
+					Guit_Sam_Dammit_075_01
 				]
-				med = [
-					guit_sam_dammit_100_01
+				Med = [
+					Guit_Sam_Dammit_100_01
 				]
-				FAST = [
-					guit_sam_dammit_120_01
+				Fast = [
+					Guit_Sam_Dammit_120_01
 				]
 			}
 			Normal = {
-				slow = [
-					guit_sam_dammit_075_01
+				Slow = [
+					Guit_Sam_Dammit_075_01
 				]
-				med = [
-					guit_sam_dammit_100_01
+				Med = [
+					Guit_Sam_Dammit_100_01
 				]
-				FAST = [
-					guit_sam_dammit_120_01
+				Fast = [
+					Guit_Sam_Dammit_120_01
 				]
 			}
-			bad = {
-				slow = [
-					guit_sam_dammit_075_01
+			Bad = {
+				Slow = [
+					Guit_Sam_Dammit_075_01
 				]
-				med = [
-					guit_sam_dammit_100_01
+				Med = [
+					Guit_Sam_Dammit_100_01
 				]
-				FAST = [
-					guit_sam_dammit_120_01
+				Fast = [
+					Guit_Sam_Dammit_120_01
 				]
 			}
 		}

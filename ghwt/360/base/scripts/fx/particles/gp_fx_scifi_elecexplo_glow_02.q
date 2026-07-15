@@ -1,26 +1,26 @@
-gp_fx_scifi_elecexplo_glow_02 = {
-	Pos = (4.67534, 2.0851018, 0.58356106)
-	Angles = (0.0, 0.0, 0.0)
+GP_FX_SciFi_ElecExplo_Glow_02 = {
+	pos = (4.67534, 2.0851018, 0.58356106)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
-	Attach
+	attach
 	EmitRangeDims = (0.1, 0.1, 0.1)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, 0.0, 0.0)
+	force = (0.0, 0.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	AngleSpread = 45.0
 	LifeRange = (0.4, 0.08)
-	Emit_Rate = 8.0
-	Max = 2
+	emit_rate = 8.0
+	max = 2
 	TimeSeed = 0.0
-	LifeTime = 4.0
-	EmitNum = 0
+	lifeTime = 4.0
+	emitNum = 0
 	FollowEmitter = 0.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -34,16 +34,16 @@ gp_fx_scifi_elecexplo_glow_02 = {
 	EmitDelayStart = 0.0
 	PathFollowTime = 0.0
 	History = 2
-	HistoryListCoordinateSpace = World
-	Color = -2843520
+	HistoryListCoordinateSpace = world
+	color = -2843520
 	LOD_Default
 	QuickMaterial = {
 		DiffuseTextureEnabled
-		DiffuseTexture = ph_radialglow_01
+		DiffuseTexture = PH_RadialGlow_01
 		SpecularPower = 0
 		fillburst
-		AlphaCutoff = 1
-		BlendMode = add
+		alphacutoff = 1
+		blendMode = Add
 		SoftEdge
 		SoftedgeScale = 0.1
 		QuadAnimationFPS = 0

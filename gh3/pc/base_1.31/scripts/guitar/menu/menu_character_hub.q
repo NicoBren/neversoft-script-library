@@ -10,45 +10,45 @@ endscript
 script do_character_hub_dirty 
 	<player> = 1
 	begin
-	formattext checksumname = player_status 'player%i_status' i = <player>
+	FormatText checksumname = player_status 'player%i_status' i = <player>
 	if find_profile_by_id id = ($<player_status>.character_id)
 		get_musician_profile_struct index = <index>
-		formattext checksumname = default_characterguitartag 'character_%c_player_%p_guitar_tags' c = (<profile_struct>.name) p = <player> addtostringlookup = true
-		if getglobaltags <default_characterguitartag> noassert = 1
+		FormatText checksumname = default_characterguitartag 'character_%c_player_%p_guitar_tags' c = (<profile_struct>.name) p = <player> AddToStringLookup = true
+		if GetGlobalTags <default_characterguitartag> noassert = 1
 			printf <current_instrument>
 			printf \{$game_mode}
 			if (<current_instrument> = guitar)
-				<inst_id> = <current_selected_guitar>
+				<inst_ID> = <current_selected_guitar>
 			else
 				if NOT ($game_mode = p2_career)
-					setglobaltags <default_characterguitartag> params = {current_instrument = guitar}
-					<inst_id> = <current_selected_guitar>
+					SetGlobalTags <default_characterguitartag> params = {current_instrument = guitar}
+					<inst_ID> = <current_selected_guitar>
 				else
-					<inst_id> = <current_selected_bass>
+					<inst_ID> = <current_selected_bass>
 				endif
 			endif
-			change structurename = <player_status> instrument_id = <inst_id>
+			change structurename = <player_status> instrument_id = <inst_ID>
 			change structurename = <player_status> outfit = <current_outfit>
 			change structurename = <player_status> style = <current_style>
 		endif
 	endif
 	<player> = 2
 	repeat 2
-	create_guitarist \{name = guitarist
-		useoldpos
+	create_guitarist \{name = Guitarist
+		useOldPos
 		no_strum
 		animpak = 0}
 	create_guitarist \{name = bassist
-		useoldpos
+		useOldPos
 		no_strum
 		animpak = 0}
 	if ($current_num_players = 1)
-		if compositeobjectexists \{name = bassist}
+		if CompositeObjectExists \{name = bassist}
 			bassist :hide
 		endif
 	endif
 	if (($is_network_game = 1) && ($player2_present = 0))
-		if compositeobjectexists name = ($player2_status.band_member)
+		if CompositeObjectExists name = ($player2_status.band_member)
 			($player2_status.band_member) :hide
 		endif
 	endif
@@ -124,8 +124,8 @@ script create_character_hub_menu \{player = 1}
 		ch_change_outfit_id = ch_change_outfit_id_p1
 		ch_change_guitar_id = ch_change_guitar_id_p1
 		ch_change_bass_id = ch_change_bass_id_p1
-		createscreenelement {
-			type = containerelement
+		CreateScreenElement {
+			type = ContainerElement
 			parent = root_window
 			id = character_hub_p1_container
 			just = [left top]
@@ -134,7 +134,7 @@ script create_character_hub_menu \{player = 1}
 		create_ready_icons \{pos1 = (400.0, 500.0)
 			parent1 = character_hub_p1_container}
 		if ($is_network_game)
-			if NOT (screenelementexists id = ready_container_p2)
+			if NOT (ScreenElementExists id = ready_container_p2)
 				create_ready_icons \{pos2 = (825.0, 450.0)
 					parent2 = root_window}
 			endif
@@ -155,11 +155,11 @@ script create_character_hub_menu \{player = 1}
 		ch_change_guitar_id = ch_change_guitar_id_p2
 		ch_change_bass_id = ch_change_bass_id_p2
 		if (($is_network_game) = 1)
-			launchevent \{type = unfocus
+			LaunchEvent \{type = unfocus
 				target = vmenu_character_hub_p2}
 		endif
-		createscreenelement {
-			type = containerelement
+		CreateScreenElement {
+			type = ContainerElement
 			parent = root_window
 			id = character_hub_p2_container
 			just = [left top]
@@ -176,7 +176,7 @@ script create_character_hub_menu \{player = 1}
 		find_profile_by_id id = ($player2_status.character_id)
 	endif
 	get_musician_profile_struct index = <index>
-	if NOT structurecontains structure = (<profile_struct>) outfits
+	if NOT StructureContains Structure = (<profile_struct>) outfits
 		<show_change_outfit> = 0
 	endif
 	if ($current_num_players = 2)
@@ -187,7 +187,7 @@ script create_character_hub_menu \{player = 1}
 		endif
 		<ch_focus_color> = [125 0 0 255]
 		<ch_unfocus_color> = [180 100 60 255]
-		displaysprite {
+		displaySprite {
 			parent = <myparent>
 			tex = character_hub_hilite_bookend
 			dims = (24.0, 24.0)
@@ -195,8 +195,8 @@ script create_character_hub_menu \{player = 1}
 			rgba = [255 255 205 255]
 			z = 4
 		}
-		<bookend1id> = <id>
-		displaysprite {
+		<bookEnd1ID> = <id>
+		displaySprite {
 			parent = <myparent>
 			tex = character_hub_hilite_bookend
 			dims = (24.0, 24.0)
@@ -204,8 +204,8 @@ script create_character_hub_menu \{player = 1}
 			rgba = [255 255 205 255]
 			z = 4
 		}
-		<bookend2id> = <id>
-		displaysprite {
+		<bookEnd2ID> = <id>
+		displaySprite {
 			parent = <myparent>
 			tex = white
 			just = [left top]
@@ -214,7 +214,7 @@ script create_character_hub_menu \{player = 1}
 			pos = (226.0, 136.0)
 			z = 2
 		}
-		<whitetexhighlightid> = <id>
+		<whiteTexHighlightID> = <id>
 		<brown_window_color> = [120 60 10 255]
 		<window_fill_color> = [0 0 0 200]
 		if (<player> = 1)
@@ -225,7 +225,7 @@ script create_character_hub_menu \{player = 1}
 		if ($game_mode = p2_career || $game_mode = p2_coop || $coop_dlc_active = 1)
 			<hub_menu_starting_pos> = (<hub_menu_starting_pos> + (0.0, -46.0))
 		endif
-		displaysprite {
+		displaySprite {
 			parent = <myparent>
 			tex = window_frame_cap
 			pos = <hub_menu_starting_pos>
@@ -234,7 +234,7 @@ script create_character_hub_menu \{player = 1}
 			rgba = <brown_window_color>
 			z = 0
 		}
-		displaysprite {
+		displaySprite {
 			parent = <myparent>
 			tex = window_fill_cap
 			pos = <hub_menu_starting_pos>
@@ -243,7 +243,7 @@ script create_character_hub_menu \{player = 1}
 			rgba = <window_fill_color>
 			z = 0
 		}
-		displaysprite {
+		displaySprite {
 			parent = <myparent>
 			tex = window_header_01
 			pos = (<hub_menu_starting_pos> + (0.0, -40.0))
@@ -263,7 +263,7 @@ script create_character_hub_menu \{player = 1}
 			<mid_section_dims> = (<mid_section_dims> + (0.0, 46.0))
 			<bottom_cap_pos> = (<bottom_cap_pos> + (0.0, 46.0))
 		endif
-		displaysprite {
+		displaySprite {
 			parent = <myparent>
 			tex = window_frame_body_short
 			pos = (<hub_menu_starting_pos> + (0.0, 20.0))
@@ -272,7 +272,7 @@ script create_character_hub_menu \{player = 1}
 			rgba = <brown_window_color>
 			z = 0
 		}
-		displaysprite {
+		displaySprite {
 			parent = <myparent>
 			tex = window_fill_body_short
 			pos = (<hub_menu_starting_pos> + (0.0, 20.0))
@@ -281,7 +281,7 @@ script create_character_hub_menu \{player = 1}
 			rgba = <window_fill_color>
 			z = 0
 		}
-		displaysprite {
+		displaySprite {
 			parent = <myparent>
 			tex = window_frame_cap
 			pos = <bottom_cap_pos>
@@ -291,7 +291,7 @@ script create_character_hub_menu \{player = 1}
 			z = 0
 			flip_h
 		}
-		displaysprite {
+		displaySprite {
 			parent = <myparent>
 			tex = window_fill_cap
 			pos = <bottom_cap_pos>
@@ -301,10 +301,10 @@ script create_character_hub_menu \{player = 1}
 			z = 0
 			flip_h
 		}
-		<ch_menuitemselected> = 0
+		<ch_menuItemSelected> = 0
 		<ch_show_change_outfit> = 0
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = <vparent>
 			id = <continue_id>
 			font = fontgrid_title_gh3
@@ -314,16 +314,16 @@ script create_character_hub_menu \{player = 1}
 			just = [center top]
 			event_handlers = [
 				{focus character_hub_highlighter params = {
-						menuitemnum = <ch_menuitemselected>
-						be1id = <bookend1id>
-						be2id = <bookend2id>
-						wthlid = <whitetexhighlightid>
+						menuItemNum = <ch_menuItemSelected>
+						be1ID = <bookEnd1ID>
+						be2ID = <bookEnd2ID>
+						wthlID = <whiteTexHighlightID>
 						chh_mp = 1
 						chh_player = <player>
 					}
 				}
-				{focus setscreenelementprops params = {id = <continue_id> rgba = <ch_focus_color>}}
-				{unfocus setscreenelementprops params = {id = <continue_id> rgba = <ch_unfocus_color>}}
+				{focus SetScreenElementProps params = {id = <continue_id> rgba = <ch_focus_color>}}
+				{unfocus SetScreenElementProps params = {id = <continue_id> rgba = <ch_unfocus_color>}}
 				{pad_choose character_hub_select_play_show params = {player = <player>}}
 				{pad_start menu_show_gamercard}
 			]
@@ -332,29 +332,29 @@ script create_character_hub_menu \{player = 1}
 		if (($is_network_game) = 1)
 			net_event_handlers = [
 				{focus character_hub_highlighter params = {
-						menuitemnum = <ch_menuitemselected>
-						be1id = <bookend1id>
-						be2id = <bookend2id>
-						wthlid = <whitetexhighlightid>
+						menuItemNum = <ch_menuItemSelected>
+						be1ID = <bookEnd1ID>
+						be2ID = <bookEnd2ID>
+						wthlID = <whiteTexHighlightID>
 						chh_mp = 1
 						chh_player = <player>
 					}
 				}
-				{focus setscreenelementprops params = {id = <continue_id> rgba = <ch_focus_color>}}
-				{unfocus setscreenelementprops params = {id = <continue_id> rgba = <ch_unfocus_color>}}
+				{focus SetScreenElementProps params = {id = <continue_id> rgba = <ch_focus_color>}}
+				{unfocus SetScreenElementProps params = {id = <continue_id> rgba = <ch_unfocus_color>}}
 				{pad_choose net_request_play_show params = {action = 1}}
 				{pad_start menu_show_gamercard}
 			]
-			<continue_id> :setprops text = "Ready" rgba = [128 128 128 255] event_handlers = <net_event_handlers> replace_handlers block_events
+			<continue_id> :SetProps text = "Ready" rgba = [128 128 128 255] event_handlers = <net_event_handlers> replace_handlers block_events
 			if (($player2_present) = 1)
-				<continue_id> :setprops rgba = [180 100 60 255] unblock_events
+				<continue_id> :SetProps rgba = [180 100 60 255] unblock_events
 			endif
 		endif
-		<ch_menuitemselected> = (<ch_menuitemselected> + 1)
-		getscreenelementdims id = <id>
-		fit_text_in_rectangle id = <id> dims = ((160.0, 0.0) + (<height> * (0.0, 0.75)))
-		createscreenelement {
-			type = textelement
+		<ch_menuItemSelected> = (<ch_menuItemSelected> + 1)
+		GetScreenElementDims id = <id>
+		fit_text_in_rectangle id = <id> dims = ((160.0, 0.0) + (<Height> * (0.0, 0.75)))
+		CreateScreenElement {
+			type = TextElement
 			parent = <vparent>
 			id = <ch_change_char_id>
 			font = fontgrid_title_gh3
@@ -364,29 +364,29 @@ script create_character_hub_menu \{player = 1}
 			just = [center top]
 			event_handlers = [
 				{focus character_hub_highlighter params = {
-						menuitemnum = <ch_menuitemselected>
-						be1id = <bookend1id>
-						be2id = <bookend2id>
-						wthlid = <whitetexhighlightid>
+						menuItemNum = <ch_menuItemSelected>
+						be1ID = <bookEnd1ID>
+						be2ID = <bookEnd2ID>
+						wthlID = <whiteTexHighlightID>
 						comi = <ch_show_change_outfit>
 						chh_mp = 1
 						chh_player = <player>
 					}
 				}
-				{focus setscreenelementprops params = {id = <ch_change_char_id> rgba = <ch_focus_color>}}
-				{unfocus setscreenelementprops params = {id = <ch_change_char_id> rgba = <ch_unfocus_color>}}
+				{focus SetScreenElementProps params = {id = <ch_change_char_id> rgba = <ch_focus_color>}}
+				{unfocus SetScreenElementProps params = {id = <ch_change_char_id> rgba = <ch_unfocus_color>}}
 				{pad_choose character_hub_go_back params = {player = <player>}}
 				{pad_start menu_show_gamercard}
 			]
 			exclusive_device = <exclusive_dev>
 		}
-		<ch_menuitemselected> = (<ch_menuitemselected> + 1)
-		getscreenelementdims id = <id>
-		fit_text_in_rectangle id = <id> dims = ((160.0, 0.0) + (<height> * (0.0, 0.75)))
+		<ch_menuItemSelected> = (<ch_menuItemSelected> + 1)
+		GetScreenElementDims id = <id>
+		fit_text_in_rectangle id = <id> dims = ((160.0, 0.0) + (<Height> * (0.0, 0.75)))
 		if (<show_change_outfit>)
 			<ch_show_change_outfit> = 1
-			createscreenelement {
-				type = textelement
+			CreateScreenElement {
+				type = TextElement
 				parent = <vparent>
 				id = <ch_change_outfit_id>
 				font = fontgrid_title_gh3
@@ -396,28 +396,28 @@ script create_character_hub_menu \{player = 1}
 				just = [center top]
 				event_handlers = [
 					{focus character_hub_highlighter params = {
-							menuitemnum = <ch_menuitemselected>
-							be1id = <bookend1id>
-							be2id = <bookend2id>
-							wthlid = <whitetexhighlightid>
+							menuItemNum = <ch_menuItemSelected>
+							be1ID = <bookEnd1ID>
+							be2ID = <bookEnd2ID>
+							wthlID = <whiteTexHighlightID>
 							comi = <ch_show_change_outfit>
 							chh_mp = 1
 							chh_player = <player>
 						}
 					}
-					{focus setscreenelementprops params = {id = <ch_change_outfit_id> rgba = <ch_focus_color>}}
-					{unfocus setscreenelementprops params = {id = <ch_change_outfit_id> rgba = <ch_unfocus_color>}}
+					{focus SetScreenElementProps params = {id = <ch_change_outfit_id> rgba = <ch_focus_color>}}
+					{unfocus SetScreenElementProps params = {id = <ch_change_outfit_id> rgba = <ch_unfocus_color>}}
 					{pad_choose character_hub_select_change_outfit params = {player = <player>}}
 					{pad_start menu_show_gamercard}
 				]
 				exclusive_device = <exclusive_dev>
 			}
-			<ch_menuitemselected> = (<ch_menuitemselected> + 1)
-			getscreenelementdims id = <id>
-			fit_text_in_rectangle id = <id> dims = ((160.0, 0.0) + (<height> * (0.0, 0.75)))
+			<ch_menuItemSelected> = (<ch_menuItemSelected> + 1)
+			GetScreenElementDims id = <id>
+			fit_text_in_rectangle id = <id> dims = ((160.0, 0.0) + (<Height> * (0.0, 0.75)))
 		endif
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = <vparent>
 			id = <ch_change_guitar_id>
 			font = fontgrid_title_gh3
@@ -427,28 +427,28 @@ script create_character_hub_menu \{player = 1}
 			just = [center top]
 			event_handlers = [
 				{focus character_hub_highlighter params = {
-						menuitemnum = <ch_menuitemselected>
-						be1id = <bookend1id>
-						be2id = <bookend2id>
-						wthlid = <whitetexhighlightid>
+						menuItemNum = <ch_menuItemSelected>
+						be1ID = <bookEnd1ID>
+						be2ID = <bookEnd2ID>
+						wthlID = <whiteTexHighlightID>
 						comi = <ch_show_change_outfit>
 						chh_mp = 1
 						chh_player = <player>
 					}
 				}
-				{focus setscreenelementprops params = {id = <ch_change_guitar_id> rgba = <ch_focus_color>}}
-				{unfocus setscreenelementprops params = {id = <ch_change_guitar_id> rgba = <ch_unfocus_color>}}
+				{focus SetScreenElementProps params = {id = <ch_change_guitar_id> rgba = <ch_focus_color>}}
+				{unfocus SetScreenElementProps params = {id = <ch_change_guitar_id> rgba = <ch_unfocus_color>}}
 				{pad_choose character_hub_select_change_guitar params = {player = <player> vparent = <vparent>}}
 				{pad_start menu_show_gamercard}
 			]
 			exclusive_device = <exclusive_dev>
 		}
-		<ch_menuitemselected> = (<ch_menuitemselected> + 1)
-		getscreenelementdims id = <id>
-		fit_text_in_rectangle id = <id> dims = ((160.0, 0.0) + (<height> * (0.0, 0.75)))
+		<ch_menuItemSelected> = (<ch_menuItemSelected> + 1)
+		GetScreenElementDims id = <id>
+		fit_text_in_rectangle id = <id> dims = ((160.0, 0.0) + (<Height> * (0.0, 0.75)))
 		if ($game_mode = p2_career || $game_mode = p2_coop || $coop_dlc_active = 1)
-			createscreenelement {
-				type = textelement
+			CreateScreenElement {
+				type = TextElement
 				parent = <vparent>
 				id = <ch_change_bass_id>
 				font = fontgrid_title_gh3
@@ -458,25 +458,25 @@ script create_character_hub_menu \{player = 1}
 				just = [center top]
 				event_handlers = [
 					{focus character_hub_highlighter params = {
-							menuitemnum = <ch_menuitemselected>
-							be1id = <bookend1id>
-							be2id = <bookend2id>
-							wthlid = <whitetexhighlightid>
+							menuItemNum = <ch_menuItemSelected>
+							be1ID = <bookEnd1ID>
+							be2ID = <bookEnd2ID>
+							wthlID = <whiteTexHighlightID>
 							comi = <ch_show_change_outfit>
 							chh_mp = 1
 							chh_player = <player>
 						}
 					}
-					{focus setscreenelementprops params = {id = <ch_change_bass_id> rgba = <ch_focus_color>}}
-					{unfocus setscreenelementprops params = {id = <ch_change_bass_id> rgba = <ch_unfocus_color>}}
-					{pad_choose character_hub_select_change_guitar params = {player = <player> bass vparent = <vparent>}}
+					{focus SetScreenElementProps params = {id = <ch_change_bass_id> rgba = <ch_focus_color>}}
+					{unfocus SetScreenElementProps params = {id = <ch_change_bass_id> rgba = <ch_unfocus_color>}}
+					{pad_choose character_hub_select_change_guitar params = {player = <player> Bass vparent = <vparent>}}
 					{pad_start menu_show_gamercard}
 				]
 				exclusive_device = <exclusive_dev>
 			}
-			<ch_menuitemselected> = (<ch_menuitemselected> + 1)
-			getscreenelementdims id = <id>
-			fit_text_in_rectangle id = <id> dims = ((160.0, 0.0) + (<height> * (0.0, 0.75)))
+			<ch_menuItemSelected> = (<ch_menuItemSelected> + 1)
+			GetScreenElementDims id = <id>
+			fit_text_in_rectangle id = <id> dims = ((160.0, 0.0) + (<Height> * (0.0, 0.75)))
 		endif
 	else
 		set_focus_color \{rgba = [
@@ -491,7 +491,7 @@ script create_character_hub_menu \{player = 1}
 				60
 				255
 			]}
-		displaysprite \{parent = character_hub_p1_container
+		displaySprite \{parent = character_hub_p1_container
 			tex = character_hub_hilite_bookend
 			pos = (320.0, 175.0)
 			dims = (24.0, 24.0)
@@ -506,8 +506,8 @@ script create_character_hub_menu \{player = 1}
 				255
 			]
 			z = 4}
-		<bookend1id> = <id>
-		displaysprite \{parent = character_hub_p1_container
+		<bookEnd1ID> = <id>
+		displaySprite \{parent = character_hub_p1_container
 			tex = character_hub_hilite_bookend
 			pos = (588.0, 175.0)
 			dims = (24.0, 24.0)
@@ -522,8 +522,8 @@ script create_character_hub_menu \{player = 1}
 				255
 			]
 			z = 4}
-		<bookend2id> = <id>
-		displaysprite \{parent = character_hub_p1_container
+		<bookEnd2ID> = <id>
+		displaySprite \{parent = character_hub_p1_container
 			tex = white
 			rgba = [
 				255
@@ -538,11 +538,11 @@ script create_character_hub_menu \{player = 1}
 				top
 			]
 			z = 2}
-		<whitetexhighlightid> = <id>
+		<whiteTexHighlightID> = <id>
 		<brown_window_color> = [120 60 10 255]
 		<window_fill_color> = [0 0 0 200]
 		<hub_menu_starting_pos> = (450.0, 140.0)
-		displaysprite {
+		displaySprite {
 			parent = character_hub_p1_container
 			tex = window_frame_cap
 			pos = <hub_menu_starting_pos>
@@ -551,7 +551,7 @@ script create_character_hub_menu \{player = 1}
 			rgba = <brown_window_color>
 			z = 0
 		}
-		displaysprite {
+		displaySprite {
 			parent = character_hub_p1_container
 			tex = window_fill_cap
 			pos = <hub_menu_starting_pos>
@@ -560,7 +560,7 @@ script create_character_hub_menu \{player = 1}
 			rgba = <window_fill_color>
 			z = 0
 		}
-		displaysprite {
+		displaySprite {
 			parent = character_hub_p1_container
 			tex = window_header_01
 			pos = (<hub_menu_starting_pos> + (0.0, -40.0))
@@ -577,7 +577,7 @@ script create_character_hub_menu \{player = 1}
 			<bottom_cap_pos> = (<hub_menu_starting_pos> + (1.0, 314.0))
 		endif
 		<mid_section_dims> = (<mid_section_dims> + (0.0, 100.0))
-		displaysprite {
+		displaySprite {
 			parent = character_hub_p1_container
 			tex = window_frame_body_short
 			pos = (<hub_menu_starting_pos> + (0.0, 32.0))
@@ -586,7 +586,7 @@ script create_character_hub_menu \{player = 1}
 			rgba = <brown_window_color>
 			z = 0
 		}
-		displaysprite {
+		displaySprite {
 			parent = character_hub_p1_container
 			tex = window_fill_body_short
 			pos = (<hub_menu_starting_pos> + (0.0, 32.0))
@@ -595,8 +595,8 @@ script create_character_hub_menu \{player = 1}
 			rgba = <window_fill_color>
 			z = 0
 		}
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			parent = character_hub_p1_container
 			pos = <bottom_cap_pos>
 			dims = (242.0, 128.0)
@@ -608,10 +608,10 @@ script create_character_hub_menu \{player = 1}
 			flip_v
 		}
 		get_current_band_info
-		getglobaltags <band_info>
-		formattext textname = user_cash_amount "$%d" d = (<cash>) usecommas
-		createscreenelement {
-			type = textelement
+		GetGlobalTags <band_info>
+		FormatText TextName = user_cash_amount "$%d" d = (<Cash>) usecommas
+		CreateScreenElement {
+			type = TextElement
 			parent = character_hub_p1_container
 			pos = (<bottom_cap_pos> + (0.0, 53.0))
 			font = text_a4
@@ -620,10 +620,10 @@ script create_character_hub_menu \{player = 1}
 			z_priority = 2
 			just = [center center]
 		}
-		<ch_menuitemselected> = 0
+		<ch_menuItemSelected> = 0
 		<ch_show_change_outfit> = 0
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = <vparent>
 			font = fontgrid_title_gh3
 			scale = (0.8, 0.75)
@@ -632,10 +632,10 @@ script create_character_hub_menu \{player = 1}
 			just = [center top]
 			event_handlers = [
 				{focus character_hub_highlighter params = {
-						menuitemnum = <ch_menuitemselected>
-						be1id = <bookend1id>
-						be2id = <bookend2id>
-						wthlid = <whitetexhighlightid>
+						menuItemNum = <ch_menuItemSelected>
+						be1ID = <bookEnd1ID>
+						be2ID = <bookEnd2ID>
+						wthlID = <whiteTexHighlightID>
 					}
 				}
 				{unfocus retail_menu_unfocus}
@@ -643,11 +643,11 @@ script create_character_hub_menu \{player = 1}
 				{pad_start menu_show_gamercard}
 			]
 		}
-		<ch_menuitemselected> = (<ch_menuitemselected> + 1)
-		getscreenelementdims id = <id>
-		fit_text_in_rectangle id = <id> dims = ((160.0, 0.0) + (<height> * (0.0, 0.75)))
-		createscreenelement {
-			type = textelement
+		<ch_menuItemSelected> = (<ch_menuItemSelected> + 1)
+		GetScreenElementDims id = <id>
+		fit_text_in_rectangle id = <id> dims = ((160.0, 0.0) + (<Height> * (0.0, 0.75)))
+		CreateScreenElement {
+			type = TextElement
 			parent = <vparent>
 			font = fontgrid_title_gh3
 			scale = (0.8, 0.75)
@@ -656,10 +656,10 @@ script create_character_hub_menu \{player = 1}
 			just = [center top]
 			event_handlers = [
 				{focus character_hub_highlighter params = {
-						menuitemnum = <ch_menuitemselected>
-						be1id = <bookend1id>
-						be2id = <bookend2id>
-						wthlid = <whitetexhighlightid>
+						menuItemNum = <ch_menuItemSelected>
+						be1ID = <bookEnd1ID>
+						be2ID = <bookEnd2ID>
+						wthlID = <whiteTexHighlightID>
 					}
 				}
 				{unfocus retail_menu_unfocus}
@@ -667,13 +667,13 @@ script create_character_hub_menu \{player = 1}
 				{pad_start menu_show_gamercard}
 			]
 		}
-		<ch_menuitemselected> = (<ch_menuitemselected> + 1)
-		getscreenelementdims id = <id>
-		fit_text_in_rectangle id = <id> dims = ((160.0, 0.0) + (<height> * (0.0, 0.75)))
+		<ch_menuItemSelected> = (<ch_menuItemSelected> + 1)
+		GetScreenElementDims id = <id>
+		fit_text_in_rectangle id = <id> dims = ((160.0, 0.0) + (<Height> * (0.0, 0.75)))
 		if (<show_change_outfit>)
 			<ch_show_change_outfit> = 1
-			createscreenelement {
-				type = textelement
+			CreateScreenElement {
+				type = TextElement
 				parent = <vparent>
 				font = fontgrid_title_gh3
 				scale = (0.8, 0.75)
@@ -682,10 +682,10 @@ script create_character_hub_menu \{player = 1}
 				just = [center top]
 				event_handlers = [
 					{focus character_hub_highlighter params = {
-							menuitemnum = <ch_menuitemselected>
-							be1id = <bookend1id>
-							be2id = <bookend2id>
-							wthlid = <whitetexhighlightid>
+							menuItemNum = <ch_menuItemSelected>
+							be1ID = <bookEnd1ID>
+							be2ID = <bookEnd2ID>
+							wthlID = <whiteTexHighlightID>
 							comi = <ch_show_change_outfit>
 						}
 					}
@@ -694,12 +694,12 @@ script create_character_hub_menu \{player = 1}
 					{pad_start menu_show_gamercard}
 				]
 			}
-			<ch_menuitemselected> = (<ch_menuitemselected> + 1)
-			getscreenelementdims id = <id>
-			fit_text_in_rectangle id = <id> dims = ((160.0, 0.0) + (<height> * (0.0, 0.75)))
+			<ch_menuItemSelected> = (<ch_menuItemSelected> + 1)
+			GetScreenElementDims id = <id>
+			fit_text_in_rectangle id = <id> dims = ((160.0, 0.0) + (<Height> * (0.0, 0.75)))
 		endif
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = <vparent>
 			font = fontgrid_title_gh3
 			scale = (0.8, 0.75)
@@ -708,10 +708,10 @@ script create_character_hub_menu \{player = 1}
 			just = [center top]
 			event_handlers = [
 				{focus character_hub_highlighter params = {
-						menuitemnum = <ch_menuitemselected>
-						be1id = <bookend1id>
-						be2id = <bookend2id>
-						wthlid = <whitetexhighlightid>
+						menuItemNum = <ch_menuItemSelected>
+						be1ID = <bookEnd1ID>
+						be2ID = <bookEnd2ID>
+						wthlID = <whiteTexHighlightID>
 						comi = <ch_show_change_outfit>
 					}
 				}
@@ -720,16 +720,16 @@ script create_character_hub_menu \{player = 1}
 				{pad_start menu_show_gamercard}
 			]
 		}
-		<ch_menuitemselected> = (<ch_menuitemselected> + 1)
-		getscreenelementdims id = <id>
-		fit_text_in_rectangle id = <id> dims = ((160.0, 0.0) + (<height> * (0.0, 0.75)))
+		<ch_menuItemSelected> = (<ch_menuItemSelected> + 1)
+		GetScreenElementDims id = <id>
+		fit_text_in_rectangle id = <id> dims = ((160.0, 0.0) + (<Height> * (0.0, 0.75)))
 		if ($is_demo_mode = 1)
 			demo_mode_disable = {rgba = [80 80 80 255] not_focusable}
 		else
 			demo_mode_disable = {}
 		endif
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = <vparent>
 			font = fontgrid_title_gh3
 			scale = (0.8, 0.75)
@@ -738,29 +738,29 @@ script create_character_hub_menu \{player = 1}
 			just = [center top]
 			event_handlers = [
 				{focus character_hub_highlighter params = {
-						menuitemnum = <ch_menuitemselected>
-						be1id = <bookend1id>
-						be2id = <bookend2id>
-						wthlid = <whitetexhighlightid>
+						menuItemNum = <ch_menuItemSelected>
+						be1ID = <bookEnd1ID>
+						be2ID = <bookEnd2ID>
+						wthlID = <whiteTexHighlightID>
 					}
 				}
-				{focus setscreenelementprops params = {id = ch_gc_logo rgba = [255 255 205 255]}}
+				{focus SetScreenElementProps params = {id = ch_gc_logo rgba = [255 255 205 255]}}
 				{unfocus retail_menu_unfocus}
-				{unfocus setscreenelementprops params = {id = ch_gc_logo rgba = ($menu_unfocus_color)}}
+				{unfocus SetScreenElementProps params = {id = ch_gc_logo rgba = ($menu_unfocus_color)}}
 				{pad_choose character_hub_select_the_store params = {player = <player>}}
 				{pad_start menu_show_gamercard}
 			]
 			<demo_mode_disable>
 		}
-		getscreenelementdims id = <id>
-		fit_text_in_rectangle id = <id> dims = ((160.0, 0.0) + (<height> * (0.0, 0.75)))
+		GetScreenElementDims id = <id>
+		fit_text_in_rectangle id = <id> dims = ((160.0, 0.0) + (<Height> * (0.0, 0.75)))
 		if (<show_change_outfit>)
 			<logo_pos> = (450.0, 410.0)
 		else
 			<logo_pos> = (450.0, 365.0)
 		endif
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			id = ch_gc_logo
 			parent = character_hub_p1_container
 			pos = <logo_pos>
@@ -773,46 +773,46 @@ script create_character_hub_menu \{player = 1}
 	endif
 	change \{g_hub_destroy = 0}
 	if ($using_guitar_select_camera = 1)
-		setscreenelementprops id = <bookend1id> hide
-		setscreenelementprops id = <bookend2id> hide
-		setscreenelementprops id = <whitetexhighlightid> hide
-		launchevent type = unfocus target = <vparent>
+		SetScreenElementProps id = <bookEnd1ID> hide
+		SetScreenElementProps id = <bookEnd2ID> hide
+		SetScreenElementProps id = <whiteTexHighlightID> hide
+		LaunchEvent type = unfocus target = <vparent>
 		change \{using_guitar_select_camera = 0}
-		playigccam \{id = gs_view_cam_id
+		PlayIGCCam \{id = gs_view_cam_id
 			name = gs_view_cam
 			viewport = bg_viewport
 			controlscript = guitar_select_exit_camera_morph
-			play_hold = 1
+			Play_hold = 1
 			interrupt_current}
 		wait_for_guitar_select_exit_camera
-		killcamanim \{name = gs_view_cam}
-		if compositeobjectexists \{name = guitarist}
+		KillCamAnim \{name = gs_view_cam}
+		if CompositeObjectExists \{name = Guitarist}
 			if NOT ($guitarist_info.stance = stance_frontend)
 				change \{structurename = guitarist_info
-					current_anim = idle}
+					current_anim = Idle}
 				change \{structurename = guitarist_info
 					cycle_anim = true}
 				change \{structurename = guitarist_info
 					next_anim = none}
-				guitarist :handle_change_stance \{stance = stance_frontend
-					speed = 2.0
+				Guitarist :handle_change_stance \{stance = stance_frontend
+					Speed = 2.0
 					no_wait}
 			endif
 		endif
-		if compositeobjectexists \{name = bassist}
+		if CompositeObjectExists \{name = bassist}
 			if NOT ($bassist_info.stance = stance_frontend)
-				if compositeobjectexists \{name = bassist}
+				if CompositeObjectExists \{name = bassist}
 					bassist :handle_change_stance \{stance = stance_frontend
-						speed = 2.0
+						Speed = 2.0
 						no_wait}
 				endif
 			endif
 		endif
-		setscreenelementprops id = <bookend1id> unhide
-		setscreenelementprops id = <bookend2id> unhide
-		setscreenelementprops id = <whitetexhighlightid> unhide
+		SetScreenElementProps id = <bookEnd1ID> unhide
+		SetScreenElementProps id = <bookEnd2ID> unhide
+		SetScreenElementProps id = <whiteTexHighlightID> unhide
 	endif
-	launchevent type = focus target = <vparent>
+	LaunchEvent type = focus target = <vparent>
 	change \{menu_flow_locked = 0}
 endscript
 
@@ -823,33 +823,33 @@ script character_hub_highlighter \{comi = 0
 		retail_menu_focus
 	endif
 	if (<chh_mp> = 0)
-		switch <menuitemnum>
+		switch <menuItemNum>
 			case 0
-			setscreenelementprops id = <be1id> pos = (303.0, 175.0)
-			setscreenelementprops id = <be2id> pos = (602.0, 175.0)
-			setscreenelementprops id = <wthlid> pos = (317.0, 171.0)
+			SetScreenElementProps id = <be1ID> pos = (303.0, 175.0)
+			SetScreenElementProps id = <be2ID> pos = (602.0, 175.0)
+			SetScreenElementProps id = <wthlID> pos = (317.0, 171.0)
 			case 1
-			setscreenelementprops id = <be1id> pos = (303.0, 222.0)
-			setscreenelementprops id = <be2id> pos = (602.0, 222.0)
-			setscreenelementprops id = <wthlid> pos = (317.0, 218.0)
+			SetScreenElementProps id = <be1ID> pos = (303.0, 222.0)
+			SetScreenElementProps id = <be2ID> pos = (602.0, 222.0)
+			SetScreenElementProps id = <wthlID> pos = (317.0, 218.0)
 			case 2
-			setscreenelementprops id = <be1id> pos = (303.0, 269.0)
-			setscreenelementprops id = <be2id> pos = (602.0, 269.0)
-			setscreenelementprops id = <wthlid> pos = (317.0, 265.0)
+			SetScreenElementProps id = <be1ID> pos = (303.0, 269.0)
+			SetScreenElementProps id = <be2ID> pos = (602.0, 269.0)
+			SetScreenElementProps id = <wthlID> pos = (317.0, 265.0)
 			case 3
 			if (<comi>)
-				setscreenelementprops id = <be1id> pos = (303.0, 317.0)
-				setscreenelementprops id = <be2id> pos = (602.0, 317.0)
-				setscreenelementprops id = <wthlid> pos = (317.0, 313.0)
+				SetScreenElementProps id = <be1ID> pos = (303.0, 317.0)
+				SetScreenElementProps id = <be2ID> pos = (602.0, 317.0)
+				SetScreenElementProps id = <wthlID> pos = (317.0, 313.0)
 			elseif (<comi> = 0)
-				setscreenelementprops id = <be1id> pos = (303.0, 317.0)
-				setscreenelementprops id = <be2id> pos = (602.0, 317.0)
-				setscreenelementprops id = <wthlid> pos = (317.0, 313.0)
+				SetScreenElementProps id = <be1ID> pos = (303.0, 317.0)
+				SetScreenElementProps id = <be2ID> pos = (602.0, 317.0)
+				SetScreenElementProps id = <wthlID> pos = (317.0, 313.0)
 			endif
 			case 4
-			setscreenelementprops id = <be1id> pos = (303.0, 364.0)
-			setscreenelementprops id = <be2id> pos = (602.0, 364.0)
-			setscreenelementprops id = <wthlid> pos = (317.0, 360.0)
+			SetScreenElementProps id = <be1ID> pos = (303.0, 364.0)
+			SetScreenElementProps id = <be2ID> pos = (602.0, 364.0)
+			SetScreenElementProps id = <wthlID> pos = (317.0, 360.0)
 		endswitch
 	elseif (<chh_mp> = 1)
 		if (<chh_player> = 1)
@@ -864,28 +864,28 @@ script character_hub_highlighter \{comi = 0
 		if ($game_mode = p2_career || $game_mode = p2_coop || $coop_dlc_active = 1)
 			<initial_pos> = (<initial_pos> + (0.0, -46.0))
 		endif
-		switch <menuitemnum>
+		switch <menuItemNum>
 			case 0
-			setscreenelementprops id = <be1id> pos = (<initial_pos> + <offset_pos>)
-			setscreenelementprops id = <be2id> pos = (<initial_pos> + <r_bookend_offset> + <offset_pos>)
-			setscreenelementprops id = <wthlid> pos = (<initial_pos> + <highlight_offset> + <offset_pos>)
+			SetScreenElementProps id = <be1ID> pos = (<initial_pos> + <offset_pos>)
+			SetScreenElementProps id = <be2ID> pos = (<initial_pos> + <r_bookend_offset> + <offset_pos>)
+			SetScreenElementProps id = <wthlID> pos = (<initial_pos> + <highlight_offset> + <offset_pos>)
 			case 1
-			setscreenelementprops id = <be1id> pos = (<initial_pos> + <vertical_offset> + <offset_pos>)
-			setscreenelementprops id = <be2id> pos = (<initial_pos> + <vertical_offset> + <r_bookend_offset> + <offset_pos>)
-			setscreenelementprops id = <wthlid> pos = (<initial_pos> + <vertical_offset> + <highlight_offset> + <offset_pos>)
+			SetScreenElementProps id = <be1ID> pos = (<initial_pos> + <vertical_offset> + <offset_pos>)
+			SetScreenElementProps id = <be2ID> pos = (<initial_pos> + <vertical_offset> + <r_bookend_offset> + <offset_pos>)
+			SetScreenElementProps id = <wthlID> pos = (<initial_pos> + <vertical_offset> + <highlight_offset> + <offset_pos>)
 			case 2
-			setscreenelementprops id = <be1id> pos = (<initial_pos> + (2 * <vertical_offset>) + <offset_pos>)
-			setscreenelementprops id = <be2id> pos = (<initial_pos> + (2 * <vertical_offset>) + <r_bookend_offset> + <offset_pos>)
-			setscreenelementprops id = <wthlid> pos = (<initial_pos> + (2 * <vertical_offset>) + <highlight_offset> + <offset_pos>)
+			SetScreenElementProps id = <be1ID> pos = (<initial_pos> + (2 * <vertical_offset>) + <offset_pos>)
+			SetScreenElementProps id = <be2ID> pos = (<initial_pos> + (2 * <vertical_offset>) + <r_bookend_offset> + <offset_pos>)
+			SetScreenElementProps id = <wthlID> pos = (<initial_pos> + (2 * <vertical_offset>) + <highlight_offset> + <offset_pos>)
 			case 3
-			setscreenelementprops id = <be1id> pos = (<initial_pos> + (3 * <vertical_offset>) + <offset_pos>)
-			setscreenelementprops id = <be2id> pos = (<initial_pos> + (3 * <vertical_offset>) + <r_bookend_offset> + <offset_pos>)
-			setscreenelementprops id = <wthlid> pos = (<initial_pos> + (3 * <vertical_offset>) + <highlight_offset> + <offset_pos>)
+			SetScreenElementProps id = <be1ID> pos = (<initial_pos> + (3 * <vertical_offset>) + <offset_pos>)
+			SetScreenElementProps id = <be2ID> pos = (<initial_pos> + (3 * <vertical_offset>) + <r_bookend_offset> + <offset_pos>)
+			SetScreenElementProps id = <wthlID> pos = (<initial_pos> + (3 * <vertical_offset>) + <highlight_offset> + <offset_pos>)
 			case 4
 			if (<comi>)
-				setscreenelementprops id = <be1id> pos = (<initial_pos> + (4 * <vertical_offset>) + <offset_pos>)
-				setscreenelementprops id = <be2id> pos = (<initial_pos> + (4 * <vertical_offset>) + <r_bookend_offset> + <offset_pos>)
-				setscreenelementprops id = <wthlid> pos = (<initial_pos> + (4 * <vertical_offset>) + <highlight_offset> + <offset_pos>)
+				SetScreenElementProps id = <be1ID> pos = (<initial_pos> + (4 * <vertical_offset>) + <offset_pos>)
+				SetScreenElementProps id = <be2ID> pos = (<initial_pos> + (4 * <vertical_offset>) + <r_bookend_offset> + <offset_pos>)
+				SetScreenElementProps id = <wthlID> pos = (<initial_pos> + (4 * <vertical_offset>) + <highlight_offset> + <offset_pos>)
 			endif
 		endswitch
 	endif
@@ -900,7 +900,7 @@ script destroy_character_hub_menu \{player = 1
 		destroy_menu \{menu_id = scrolling_character_hub_p2}
 		destroy_menu \{menu_id = character_hub_p2_container}
 	endif
-	killcamanim \{name = gs_view_cam}
+	KillCamAnim \{name = gs_view_cam}
 endscript
 
 script character_hub_generic_sound 
@@ -918,12 +918,12 @@ endscript
 script character_hub_select_play_show 
 	if (($current_num_players) = 2)
 		if ((<player> = 1) && ($p1_ready = 0))
-			setscreenelementprops \{id = vmenu_character_hub_p1
+			SetScreenElementProps \{id = vmenu_character_hub_p1
 				disable_pad_handling}
 			change \{p1_ready = 1}
 			if ($is_network_game = 1)
-				if screenelementexists \{id = ready_container_p2}
-					runscriptonscreenelement \{id = ready_container_p2
+				if ScreenElementExists \{id = ready_container_p2}
+					RunScriptOnScreenElement \{id = ready_container_p2
 						pos2 = (825.0, 450.0)
 						drop_in_ready_sign
 						params = {
@@ -935,7 +935,7 @@ script character_hub_select_play_show
 			endif
 		endif
 		if ((<player> = 2) && ($p2_ready = 0))
-			setscreenelementprops \{id = vmenu_character_hub_p2
+			SetScreenElementProps \{id = vmenu_character_hub_p2
 				disable_pad_handling}
 			change \{p2_ready = 1}
 			drop_in_ready_sign \{player = 2}
@@ -943,12 +943,12 @@ script character_hub_select_play_show
 	endif
 	if ((($p1_ready = 1) && ($p2_ready = 1)) || ($current_num_players = 1))
 		if ($is_network_game = 1)
-			killspawnedscript \{name = net_hub_stream}
-			if screenelementexists \{id = vmenu_character_hub_p1}
-				launchevent \{type = unfocus
+			KillSpawnedScript \{name = net_hub_stream}
+			if ScreenElementExists \{id = vmenu_character_hub_p1}
+				LaunchEvent \{type = unfocus
 					target = vmenu_character_hub_p1}
 			endif
-			wait \{0.4
+			Wait \{0.4
 				seconds}
 		endif
 		clean_up_user_control_helpers
@@ -987,43 +987,43 @@ script character_hub_select_change_outfit
 endscript
 
 script net_info_panel_hide 
-	if screenelementexists \{id = net_game_info_panel}
-		doscreenelementmorph \{id = net_game_info_panel
+	if ScreenElementExists \{id = net_game_info_panel}
+		doScreenElementMorph \{id = net_game_info_panel
 			alpha = 0.5
 			time = 0}
 	endif
 endscript
 
 script net_info_panel_show 
-	if NOT screenelementexists \{id = net_game_info_panel}
+	if NOT ScreenElementExists \{id = net_game_info_panel}
 		return
 	endif
 	can_show = 1
-	if screenelementexists \{id = scrolling_select_outfit_p1}
+	if ScreenElementExists \{id = scrolling_select_outfit_p1}
 		can_show = 0
-	elseif screenelementexists \{id = scrolling_select_outfit_p2}
+	elseif ScreenElementExists \{id = scrolling_select_outfit_p2}
 		can_show = 0
-	elseif screenelementexists \{id = scrolling_select_guitar_p1}
+	elseif ScreenElementExists \{id = scrolling_select_guitar_p1}
 		can_show = 0
-	elseif screenelementexists \{id = scrolling_select_guitar_p2}
+	elseif ScreenElementExists \{id = scrolling_select_guitar_p2}
 		can_show = 0
 	endif
 	if (<can_show> = 1)
-		doscreenelementmorph \{id = net_game_info_panel
+		doScreenElementMorph \{id = net_game_info_panel
 			alpha = 1
 			time = 0}
 	endif
 endscript
 
 script character_hub_select_change_guitar 
-	launchevent type = unfocus target = <vparent>
+	LaunchEvent type = unfocus target = <vparent>
 	if ($is_network_game)
 		net_info_panel_hide
 	endif
 	if ($current_num_players = 1)
 		generic_select_monitor_wait
 	endif
-	if gotparam \{bass}
+	if GotParam \{Bass}
 		ui_flow_manager_respond_to_action action = select_change_bass player = <player> create_params = {player = <player>}
 	else
 		ui_flow_manager_respond_to_action action = select_change_guitar player = <player> create_params = {player = <player>}
@@ -1032,10 +1032,10 @@ endscript
 
 script generic_select_monitor_wait 
 	unpausespawnedscript \{generic_select_monitor}
-	formattext \{checksumname = change_flag
+	FormatText \{checksumname = change_flag
 		'generic_select_monitor_p%i_changed'
 		i = 1}
-	formattext \{checksumname = change_flag2
+	FormatText \{checksumname = change_flag2
 		'generic_select_monitor_p%i_changed'
 		i = 2}
 	begin
@@ -1045,7 +1045,7 @@ script generic_select_monitor_wait
 			break
 		endif
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
@@ -1053,7 +1053,7 @@ endscript
 script generic_select_monitor_finish 
 	printf \{"generic_select_monitor_finish"}
 	generic_select_monitor_wait
-	killspawnedscript \{name = generic_select_monitor}
+	KillSpawnedScript \{name = generic_select_monitor}
 endscript
 generic_select_monitor_p1_changed = 0
 generic_select_monitor_p2_changed = 0
@@ -1068,35 +1068,35 @@ script generic_select_monitor \{initial_load = 1
 	begin
 	if ($<change_flag> = 1)
 		change globalname = <change_flag> newvalue = 2
-		if NOT preload_band_member name = <name> useoldpos async = <async> animpak = 0
+		if NOT preload_band_member name = <name> useOldPos async = <async> animpak = 0
 			change globalname = <change_flag> newvalue = 0
-			downloadcontentlost
+			DownloadContentLost
 			return
 		endif
 		printf "preload_band_member %i" i = <name>
 		if ($<change_flag> = 2)
-			if NOT create_guitarist name = <name> useoldpos no_strum async = <async> animpak = 0 <node_flags>
+			if NOT create_guitarist name = <name> useOldPos no_strum async = <async> animpak = 0 <node_flags>
 				change globalname = <change_flag> newvalue = 0
-				downloadcontentlost
+				DownloadContentLost
 				return
 			endif
 			printf "create_guitarist %i" i = <name>
 		endif
-		preload_band_member_finish name = <name> useoldpos async = <async> animpak = 0 filename_crc = <filename_crc> instrument_crc = <instrument_crc>
+		preload_band_member_finish name = <name> useOldPos async = <async> animpak = 0 filename_crc = <filename_crc> instrument_crc = <instrument_crc>
 		if ($<change_flag> = 2 &&
 				<async> = 1)
-			<name> :obj_getposition
-			<name> :obj_setposition position = (0.0, -200.0, 0.0)
-			wait \{1
+			<name> :Obj_GetPosition
+			<name> :Obj_SetPosition position = (0.0, -200.0, 0.0)
+			Wait \{1
 				gameframe}
-			<name> :obj_setposition position = <pos>
+			<name> :Obj_SetPosition position = <pos>
 			change \{store_shadow_change = 1}
 		endif
 		if ($<change_flag> = 2)
 			change globalname = <change_flag> newvalue = 0
 		endif
 	else
-		wait \{1
+		Wait \{1
 			gameframe}
 	endif
 	async = 1
@@ -1130,8 +1130,8 @@ script create_select_guitar_finish_menu \{player = 1}
 		vparent = vmenu_select_finish_p2
 	endif
 	if ($current_num_players = 2)
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = <vparent>
 			font = text_a1
 			scale = 0.75
@@ -1146,8 +1146,8 @@ script create_select_guitar_finish_menu \{player = 1}
 			]
 			exclusive_device = <exclusive_dev>
 		}
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = <vparent>
 			font = text_a1
 			scale = 0.75
@@ -1163,8 +1163,8 @@ script create_select_guitar_finish_menu \{player = 1}
 			exclusive_device = <exclusive_dev>
 		}
 	else
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = <vparent>
 			font = text_a1
 			scale = 0.75
@@ -1178,8 +1178,8 @@ script create_select_guitar_finish_menu \{player = 1}
 				{pad_start menu_show_gamercard}
 			]
 		}
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = <vparent>
 			font = text_a1
 			scale = 0.75
@@ -1197,7 +1197,7 @@ script create_select_guitar_finish_menu \{player = 1}
 endscript
 
 script destroy_select_guitar_finish_menu \{player = 1}
-	formattext checksumname = scrolling_select_finish 'scrolling_select_finish_p%i' i = <player>
+	FormatText checksumname = scrolling_select_finish 'scrolling_select_finish_p%i' i = <player>
 	destroy_menu menu_id = <scrolling_select_finish>
 endscript
 
@@ -1219,34 +1219,34 @@ script setup_character_hub
 	destroy_bg_viewport
 	setup_bg_viewport
 	destroy_crowd_models
-	getpakmancurrentname \{map = zones}
-	if gotparam \{pakname}
+	GetPakManCurrentName \{map = zones}
+	if GotParam \{pakname}
 		if NOT (<pakname> = "z_soundcheck")
-			resetwaypoints
-			setpakmancurrentblock \{map = zones
+			ResetWaypoints
+			SetPakManCurrentBlock \{map = zones
 				pak = z_soundcheck
 				block_scripts = 1}
 		endif
 	else
-		resetwaypoints
-		setpakmancurrentblock \{map = zones
+		ResetWaypoints
+		SetPakManCurrentBlock \{map = zones
 			pak = z_soundcheck
 			block_scripts = 1}
 	endif
-	player2_spotlight = z_soundcheck_gfx_trg_lh_hotspot_p2
+	player2_spotlight = Z_SoundCheck_GFX_TRG_LH_HotSpot_P2
 	if ($current_num_players = 2)
-		safecreate nodename = <player2_spotlight>
+		SafeCreate nodeName = <player2_spotlight>
 	else
-		safekill nodename = <player2_spotlight>
+		SafeKill nodeName = <player2_spotlight>
 	endif
-	unpausegame
+	UnPauseGame
 	disable_pause
 	destroy_band
 	printf \{"Creating generic_select_monitor"}
 	player = 1
 	begin
-	formattext checksumname = player_status 'player%i_status' i = <player>
-	formattext checksumname = change_flag 'generic_select_monitor_p%i_changed' i = <player>
+	FormatText checksumname = player_status 'player%i_status' i = <player>
+	FormatText checksumname = change_flag 'generic_select_monitor_p%i_changed' i = <player>
 	if (<player> = 1)
 		name = ($player1_status.band_member)
 	else
@@ -1258,53 +1258,53 @@ script setup_character_hub
 	stoprendering
 	generic_select_monitor_wait
 	startrendering
-	if compositeobjectexists \{name = drummer}
-		drummer :hide
+	if CompositeObjectExists \{name = Drummer}
+		Drummer :hide
 	endif
-	if compositeobjectexists \{name = guitarist2}
+	if CompositeObjectExists \{name = guitarist2}
 		guitarist2 :hide
 	endif
-	if compositeobjectexists \{name = vocalist}
+	if CompositeObjectExists \{name = vocalist}
 		vocalist :hide
 	endif
 	if ($current_num_players = 1)
-		if compositeobjectexists \{name = bassist}
+		if CompositeObjectExists \{name = bassist}
 			bassist :hide
 		endif
 	else
-		if compositeobjectexists \{name = bassist}
+		if CompositeObjectExists \{name = bassist}
 			bassist :unhide
 			bassist :ragdoll_markforreset
 		endif
 		if (($is_network_game = 1) && ($player2_present = 0))
-			if compositeobjectexists \{name = bassist}
+			if CompositeObjectExists \{name = bassist}
 				bassist :hide
 			endif
 		endif
 	endif
 	printf \{"Moving guitarist to correct position"}
-	if compositeobjectexists \{name = guitarist}
+	if CompositeObjectExists \{name = Guitarist}
 		printf \{"Moving guitarist to correct position2"}
 		if ($current_num_players = 1)
 			printf \{"Moving guitarist to correct position3"}
-			guitarist :obj_setposition position = ($<character_hub_pos>.p1_pos)
+			Guitarist :Obj_SetPosition position = ($<character_hub_pos>.p1_pos)
 		endif
 	endif
 	if ($current_num_players = 2)
-		($player1_status.band_member) :obj_setposition position = ($<character_hub_pos>.p1_2ppos)
-		($player2_status.band_member) :obj_setposition position = ($<character_hub_pos>.p2_2ppos)
+		($player1_status.band_member) :Obj_SetPosition position = ($<character_hub_pos>.p1_2ppos)
+		($player2_status.band_member) :Obj_SetPosition position = ($<character_hub_pos>.p2_2ppos)
 	endif
-	playigccam \{id = cs_view_cam_id
+	PlayIGCCam \{id = cs_view_cam_id
 		name = ch_view_cam
 		viewport = bg_viewport
-		lockto = world
+		LockTo = world
 		pos = (2.503113, 1.0385579, 2.869411)
-		quat = (0.028074998, -0.999026, 0.020287)
-		fov = 78.0
-		play_hold = 1
+		Quat = (0.028074998, -0.999026, 0.020287)
+		FOV = 78.0
+		Play_hold = 1
 		interrupt_current}
 	change \{g_hub_created = 1}
-	setshadowdirfromlight \{name = z_soundcheck_gfx_char_front01}
+	SetShadowDirFromLight \{name = Z_SoundCheck_GFX_Char_front01}
 endscript
 
 script shut_down_character_hub 
@@ -1314,24 +1314,24 @@ script shut_down_character_hub
 	change \{p1_ready = 0}
 	change \{p2_ready = 0}
 	if ($shutdown_game_for_signin_change_flag = 1)
-		killspawnedscript \{name = setup_character_hub}
+		KillSpawnedScript \{name = setup_character_hub}
 		change \{using_guitar_select_camera = 0}
 	endif
 	generic_select_monitor_finish
-	killcamanim \{name = ch_view_cam}
-	killcamanim \{name = gs_view_cam}
+	KillCamAnim \{name = ch_view_cam}
+	KillCamAnim \{name = gs_view_cam}
 	destroy_bg_viewport
 	disable_pause
-	if compositeobjectexists \{name = drummer}
-		drummer :unhide
+	if CompositeObjectExists \{name = Drummer}
+		Drummer :unhide
 	endif
-	if compositeobjectexists \{name = guitarist2}
+	if CompositeObjectExists \{name = guitarist2}
 		guitarist2 :unhide
 	endif
-	if compositeobjectexists \{name = vocalist}
+	if CompositeObjectExists \{name = vocalist}
 		vocalist :unhide
 	endif
-	if compositeobjectexists \{name = bassist}
+	if CompositeObjectExists \{name = bassist}
 		bassist :unhide
 	endif
 	destroy_band
@@ -1343,7 +1343,7 @@ script character_hub_go_back
 		leaving_character_hub = 1
 		if ($game_mode = p2_career || $game_mode = p2_coop)
 			find_coop_career_character_hub_ancestor
-			if checksumequals a = <flow_state> b = coop_career_character_select_fs
+			if ChecksumEquals a = <flow_state> b = coop_career_character_select_fs
 				leaving_character_hub = 0
 			endif
 		elseif ($current_num_players = 2)
@@ -1351,12 +1351,12 @@ script character_hub_go_back
 		endif
 		if (<leaving_character_hub> = 0)
 			if (<player> = 1)
-				setscreenelementprops \{id = vmenu_character_hub_p1
+				SetScreenElementProps \{id = vmenu_character_hub_p1
 					enable_pad_handling}
 				change \{p1_ready = 0}
 				if ($is_network_game = 1)
-					if screenelementexists \{id = ready_container_p1}
-						runscriptonscreenelement \{id = ready_container_p1
+					if ScreenElementExists \{id = ready_container_p1}
+						RunScriptOnScreenElement \{id = ready_container_p1
 							drop_out_ready_sign
 							params = {
 								player = 1
@@ -1366,7 +1366,7 @@ script character_hub_go_back
 					drop_out_ready_sign \{player = 1}
 				endif
 			else
-				setscreenelementprops \{id = vmenu_character_hub_p2
+				SetScreenElementProps \{id = vmenu_character_hub_p2
 					enable_pad_handling}
 				change \{p2_ready = 0}
 				drop_out_ready_sign \{player = 2}
@@ -1392,7 +1392,7 @@ script get_num_character_outfits
 	begin
 	get_musician_profile_struct index = <index>
 	if (<profile_struct>.name = <name>)
-		getarraysize (<profile_struct>.outfits)
+		GetArraySize (<profile_struct>.outfits)
 		return num_character_outfits = <array_size>
 	endif
 	<index> = (<index> + 1)
@@ -1413,7 +1413,7 @@ script get_num_outfit_styles \{outfit = 1}
 	get_musician_profile_struct index = <index>
 	if (<profile_struct>.name = <name>)
 		outfits = (<profile_struct>.outfits)
-		getarraysize (<outfits> [(<outfit> -1)].styles)
+		GetArraySize (<outfits> [(<outfit> -1)].styles)
 		return num_outfit_styles = <array_size>
 	endif
 	<index> = (<index> + 1)
@@ -1458,7 +1458,7 @@ script get_character_outfit_name \{player = 1}
 		outfit_index = ($player2_status.outfit - 1)
 	endif
 	get_musician_profile_struct index = <index>
-	if structurecontains structure = <profile_struct> name = outfits
+	if StructureContains Structure = <profile_struct> name = outfits
 		return outfit_name = (<profile_struct>.outfits [<outfit_index>].id)
 	else
 		return outfit_name = (<profile_struct>.name)

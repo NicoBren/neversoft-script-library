@@ -1,51 +1,51 @@
-gp_fx_streamrockets_00 = {
+GP_FX_StreamRockets_00 = {
 	pos = (-7.1834717, -0.60480905, -0.95629895)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = textureribbontrail
 	active
-	createdatstart
-	emitrangedims = (0.1, 0.1, 0.1)
-	emit_target = (0.0, 1.0, 0.0)
-	enablerotate
-	emitangle = (0.0, 0.0, 20.0)
+	CreatedAtStart
+	EmitRangeDims = (0.1, 0.1, 0.1)
+	emit_Target = (0.0, 1.0, 0.0)
+	EnableRotate
+	EmitAngle = (0.0, 0.0, 20.0)
 	force = (0.0, -40.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 1.0
-	liferange = (1.0, 1.0)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 1.0
+	LifeRange = (1.0, 1.0)
 	emit_rate = 5.0
 	max = 0
-	timeseed = 0.0
-	lifetime = 3.0
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 3.0
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.5, 0.3)
 		(0.5, 0.1)
 	]
-	speedrange = (40.0, 40.0)
-	rotvel = (0.0, 0.0)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	pathfollowtime = 0.62
-	history = 20
-	historylistcoordinatespace = world
+	SpeedRange = (40.0, 40.0)
+	RotVel = (0.0, 0.0)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.62
+	History = 20
+	HistoryListCoordinateSpace = world
 	color = -3158017
-	lod_default
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = jow_spark01
-		specularpower = 0
+	LOD_Default
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = JOW_Spark01
+		SpecularPower = 0
 		alphacutoff = 1
-		blendmode = add
-		quadanimationfps = 0
+		blendMode = Add
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.78973395, 0.0, -0.0)
 		(-0.78973395, 0.0, -0.0)
 		(-0.68621796, 0.0, -0.0)
@@ -59,7 +59,7 @@ gp_fx_streamrockets_00 = {
 		(0.83136, 0.0, -0.0)
 		(0.83136, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-1
 		-1
 		-1
@@ -69,7 +69,7 @@ gp_fx_streamrockets_00 = {
 		-256
 		-256
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.191566
 		0.757078
 		1.0

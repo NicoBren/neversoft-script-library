@@ -1,179 +1,179 @@
 drum_sample_test = 0
-drum_input_current_cymbal = NULL
-drum_input_current_hihat = NULL
-drum_input_current_kick = NULL
-drum_input_current_snare = NULL
-drum_input_current_tom = NULL
+drum_input_current_cymbal = null
+drum_input_current_hihat = null
+drum_input_current_kick = null
+drum_input_current_snare = null
+drum_input_current_tom = null
 drum_pads = [
 	{
 		id = snare
 		string_id = 'snare'
-		name_text = qs(0x91233341)
+		name_text = qs("Snare")
 	}
 	{
 		id = kick
 		string_id = 'kick'
-		name_text = qs(0x6e4b4a3e)
+		name_text = qs("Kick")
 	}
 	{
 		id = tom1
 		string_id = 'tom1'
-		name_text = qs(0xbd024849)
+		name_text = qs("Tom1")
 	}
 	{
 		id = tom2
 		string_id = 'tom2'
-		name_text = qs(0x962f1b8a)
+		name_text = qs("Tom2")
 	}
 	{
 		id = hihat
 		string_id = 'hihat'
-		name_text = qs(0xd6060436)
+		name_text = qs("Hi-Hat")
 	}
 	{
 		id = cymbal
 		string_id = 'cymbal'
-		name_text = qs(0x95ba86cc)
+		name_text = qs("cymbal")
 	}
 ]
 drum_kits = [
 	{
 		id = heavyrock
 		string_id = 'heavyrock'
-		name_text = qs(0x083da487)
+		name_text = qs("\LHeavy Rock")
 		percussion_id = rockpercussion
 		percussion_string_id = 'rockpercussion'
 	}
 	{
 		id = classicrock
 		string_id = 'classicrock'
-		name_text = qs(0x8c4362ac)
+		name_text = qs("\LClassic Rock")
 		percussion_id = rockpercussion
 		percussion_string_id = 'rockpercussion'
 	}
 	{
 		id = fusion
 		string_id = 'fusion'
-		name_text = qs(0x4d52fc8b)
+		name_text = qs("\LFusion")
 		percussion_id = brazilianpercussion
 		percussion_string_id = 'brazilianpercussion'
 	}
 	{
 		id = hiphop
 		string_id = 'hiphop'
-		name_text = qs(0xfe3a0ec0)
+		name_text = qs("\LHip Hop")
 		percussion_id = hiphoppercussion
 		percussion_string_id = 'hiphoppercussion'
 	}
 	{
 		id = modernrock
 		string_id = 'modernrock'
-		name_text = qs(0xdc91cbc7)
+		name_text = qs("\LModern Rock")
 		percussion_id = latinpercussion
 		percussion_string_id = 'latinpercussion'
 	}
 	{
-		id = bliphop
+		id = Bliphop
 		string_id = 'Bliphop'
-		name_text = qs(0x3d9fff99)
-		percussion_id = robot
+		name_text = qs("\LBliphop")
+		percussion_id = Robot
 		percussion_string_id = 'robot'
 	}
 	{
-		id = electrobass
+		id = Electrobass
 		string_id = 'Electro'
-		name_text = qs(0xab67c023)
+		name_text = qs("\LElectro")
 		percussion_id = electropercussion
 		percussion_string_id = 'electropercussion'
 	}
 	{
-		id = housekit
+		id = Housekit
 		string_id = 'House'
-		name_text = qs(0xa89adf58)
+		name_text = qs("\LHouse")
 		percussion_id = electropercussion
 		percussion_string_id = 'electropercussion'
 	}
 	{
-		id = oldschool
+		id = Oldschool
 		string_id = 'Oldschool'
-		name_text = qs(0x22fbae34)
+		name_text = qs("\LOld School")
 		percussion_id = oldschoolpercussion
 		percussion_string_id = 'oldschoolpercussion'
 	}
 	{
-		id = cheesy
+		id = Cheesy
 		string_id = 'Cheesy'
-		name_text = qs(0xd5fb15a5)
-		percussion_id = eightysdrums
+		name_text = qs("\LCheesy")
+		percussion_id = Eightysdrums
 		percussion_string_id = 'Eightys'
 	}
 	{
-		id = eightys
+		id = Eightys
 		string_id = 'Eightys'
-		name_text = qs(0x5b2da104)
-		percussion_id = computight
+		name_text = qs("\LEightys")
+		percussion_id = Computight
 		percussion_string_id = 'Computight'
 	}
 	{
-		id = computight
+		id = Computight
 		string_id = 'Computight'
-		name_text = qs(0xec704d64)
-		percussion_id = robot
+		name_text = qs("\LComputight")
+		percussion_id = Robot
 		percussion_string_id = 'robot'
 	}
 	{
-		id = india
+		id = India
 		string_id = 'India'
-		name_text = qs(0x18b01739)
+		name_text = qs("\LIndia")
 		percussion_id = brazilianpercussion
 		percussion_string_id = 'brazilianpercussion'
 	}
 	{
-		id = jazzy
+		id = Jazzy
 		string_id = 'Jazzy'
-		name_text = qs(0xd3ccbd55)
+		name_text = qs("\LJazzy")
 		percussion_id = brazilianpercussion
 		percussion_string_id = 'brazilianpercussion'
 	}
 	{
-		id = orchestral
+		id = Orchestral
 		string_id = 'Orchestral'
-		name_text = qs(0x3255a109)
+		name_text = qs("\LOrchestral")
 		percussion_id = latinpercussion
 		percussion_string_id = 'latinpercussion'
 	}
 	{
 		id = scratch
 		string_id = 'scratch'
-		name_text = qs(0x67301359)
+		name_text = qs("\LScratch")
 		percussion_id = electro
 		percussion_string_id = 'Electro'
 	}
 	{
-		id = scratch_electro
+		id = Scratch_Electro
 		string_id = 'scratch_electro'
-		name_text = qs(0xbd5c5092)
+		name_text = qs("\LScratch Electro")
 		percussion_id = electro
 		percussion_string_id = 'Electro'
 	}
 	{
 		id = dub
 		string_id = 'dub'
-		name_text = qs(0x5e8c371c)
+		name_text = qs("\LDub")
 		percussion_id = pigmy
 		percussion_string_id = 'pigmy'
 	}
 	{
 		id = conga
 		string_id = 'conga'
-		name_text = qs(0xa3f7d085)
+		name_text = qs("\LLatin")
 		percussion_id = latinpercussion
 		percussion_string_id = 'latinpercussion'
 	}
 	{
 		id = gunshot
 		string_id = 'gunshot'
-		name_text = qs(0x20b29f07)
+		name_text = qs("\LGunshot")
 		percussion_id = rockpercussion
 		percussion_string_id = 'rockpercussion'
 	}
@@ -182,7 +182,7 @@ drum_kits = [
 		string_id = 'pigmy'
 	}
 	{
-		id = indiagirl
+		id = Indiagirl
 		string_id = 'Indiagirl'
 	}
 	{
@@ -214,7 +214,7 @@ drum_kits = [
 		string_id = 'electropercussion'
 	}
 	{
-		id = robot
+		id = Robot
 		string_id = 'Robot'
 	}
 ]
@@ -222,7 +222,7 @@ drum_kits = [
 script play_drum_sample 
 	if ($game_mode = training)
 		if NOT ($current_speedfactor = 1.0)
-			if NOT playerinfoequals \{1
+			if NOT PlayerInfoEquals \{1
 					part = drum}
 				if ($current_time * 1000 < $current_starttime)
 					return
@@ -230,7 +230,7 @@ script play_drum_sample
 			endif
 		endif
 	endif
-	playdrumsample_cfunc <...>
+	PlayDrumSample_CFunc <...>
 	return drum_sample = <drum_sample>
 endscript
 
@@ -238,26 +238,26 @@ script play_drum_sample_unoptimized \{drum_set = heavyrock
 		pad = snare
 		velocity = 127
 		second_pedal_position = 127
-		buss = drums_ingame
+		buss = Drums_InGame
 		scale_volume = 5
 		loop_pitch = 0
 		pan_left = -1.0
 		pan_right = 1.0
 		pan_mono = 0.0}
 endscript
-loadeddrumkitpaks_cymbal = 'none'
-loadeddrumkitpaks_floortom = 'none'
-loadeddrumkitpaks_hihat = 'none'
-loadeddrumkitpaks_hitom = 'none'
-loadeddrumkitpaks_kick = 'none'
-loadeddrumkitpaks_snare = 'none'
-loadeddrumkitpaks_cymbal_percussion = 'none'
-loadeddrumkitpaks_floortom_percussion = 'none'
-loadeddrumkitpaks_hihat_percussion = 'none'
-loadeddrumkitpaks_hitom_percussion = 'none'
-loadeddrumkitpaks_kick_percussion = 'none'
-loadeddrumkitpaks_snare_percussion = 'none'
-drumkitparts = {
+LoadedDrumKitPaks_cymbal = 'none'
+LoadedDrumKitPaks_floortom = 'none'
+LoadedDrumKitPaks_hihat = 'none'
+LoadedDrumKitPaks_hitom = 'none'
+LoadedDrumKitPaks_kick = 'none'
+LoadedDrumKitPaks_snare = 'none'
+LoadedDrumKitPaks_cymbal_percussion = 'none'
+LoadedDrumKitPaks_floortom_percussion = 'none'
+LoadedDrumKitPaks_hihat_percussion = 'none'
+LoadedDrumKitPaks_hitom_percussion = 'none'
+LoadedDrumKitPaks_kick_percussion = 'none'
+LoadedDrumKitPaks_snare_percussion = 'none'
+DrumKitParts = {
 	cymbal = 'cymbal'
 	floortom = 'floortom'
 	hihat = 'hihat'
@@ -266,97 +266,97 @@ drumkitparts = {
 	cymbal = 'cymbal'
 	snare = 'snare'
 }
-last_drum_kit_loaded = None
+last_drum_kit_loaded = none
 
-script loaddrumkitall \{drum_kit = 'heavyrock'
+script LoadDrumKitAll \{drum_kit = 'heavyrock'
 		async = 1
 		reset_percussion = 1}
 	if (<reset_percussion> = 1)
-		Change \{is_percussion_kit = 0}
+		change \{is_percussion_kit = 0}
 	endif
-	formatText checksumName = csum '%s' s = <drum_kit>
+	FormatText checksumname = csum '%s' s = <drum_kit>
 	if (<csum> = $last_drum_kit_loaded)
 		printf 'LoadDrumKitAll - %s already loaded' s = <drum_kit>
 		return
 	endif
-	unloaddrumkitall
-	loaddrumkit Type = cymbal drum_kit = <drum_kit> async = <async>
-	loaddrumkit Type = floortom drum_kit = <drum_kit> async = <async>
-	loaddrumkit Type = hihat drum_kit = <drum_kit> async = <async>
-	loaddrumkit Type = hitom drum_kit = <drum_kit> async = <async>
-	loaddrumkit Type = kick drum_kit = <drum_kit> async = <async>
-	loaddrumkit Type = snare drum_kit = <drum_kit> async = <async>
+	UnLoadDrumKitAll
+	LoadDrumKit type = cymbal drum_kit = <drum_kit> async = <async>
+	LoadDrumKit type = floortom drum_kit = <drum_kit> async = <async>
+	LoadDrumKit type = hihat drum_kit = <drum_kit> async = <async>
+	LoadDrumKit type = hitom drum_kit = <drum_kit> async = <async>
+	LoadDrumKit type = kick drum_kit = <drum_kit> async = <async>
+	LoadDrumKit type = snare drum_kit = <drum_kit> async = <async>
 	if GotParam \{percussion_kit}
-		loaddrumkit Type = cymbal drum_kit = <percussion_kit> async = <async> percussion
-		loaddrumkit Type = floortom drum_kit = <percussion_kit> async = <async> percussion
-		loaddrumkit Type = hihat drum_kit = <percussion_kit> async = <async> percussion
-		loaddrumkit Type = hitom drum_kit = <percussion_kit> async = <async> percussion
-		loaddrumkit Type = kick drum_kit = <percussion_kit> async = <async> percussion
-		loaddrumkit Type = snare drum_kit = <percussion_kit> async = <async> percussion
+		LoadDrumKit type = cymbal drum_kit = <percussion_kit> async = <async> percussion
+		LoadDrumKit type = floortom drum_kit = <percussion_kit> async = <async> percussion
+		LoadDrumKit type = hihat drum_kit = <percussion_kit> async = <async> percussion
+		LoadDrumKit type = hitom drum_kit = <percussion_kit> async = <async> percussion
+		LoadDrumKit type = kick drum_kit = <percussion_kit> async = <async> percussion
+		LoadDrumKit type = snare drum_kit = <percussion_kit> async = <async> percussion
 	endif
-	Change last_drum_kit_loaded = <csum>
+	change last_drum_kit_loaded = <csum>
 endscript
 
-script loaddrumkit \{Type = snare
+script LoadDrumKit \{type = snare
 		drum_kit = 'heavyrock'
 		async = 1}
-	if StructureContains structure = $drumkitparts <Type>
+	if StructureContains Structure = $DrumKitParts <type>
 		if GotParam \{percussion}
-			formatText checksumName = global_pak_crc 'LoadedDrumKitPaks_%s_percussion' s = ($drumkitparts.<Type>)
+			FormatText checksumname = global_pak_crc 'LoadedDrumKitPaks_%s_percussion' s = ($DrumKitParts.<type>)
 		else
-			formatText checksumName = global_pak_crc 'LoadedDrumKitPaks_%s' s = ($drumkitparts.<Type>)
+			FormatText checksumname = global_pak_crc 'LoadedDrumKitPaks_%s' s = ($DrumKitParts.<type>)
 		endif
 		if NOT ($<global_pak_crc> = 'none')
-			unloaddrumkit Type = <Type>
+			UnLoadDrumKit type = <type>
 		endif
-		formatText TextName = drumkit_pakname 'pak/drumkits/%s_%t.pak' s = <drum_kit> t = ($drumkitparts.<Type>)
-		if NOT LoadPakAsync pak_name = <drumkit_pakname> Heap = heap_drumkitaudio async = <async>
+		FormatText TextName = drumkit_pakname 'pak/drumkits/%s_%t.pak' s = <drum_kit> t = ($DrumKitParts.<type>)
+		if NOT LoadPakAsync pak_name = <drumkit_pakname> heap = heap_drumkitaudio async = <async>
 			DownloadContentLost
 			return
 		endif
-		Change GlobalName = <global_pak_crc> NewValue = <drumkit_pakname>
+		change globalname = <global_pak_crc> newvalue = <drumkit_pakname>
 	else
-		printscriptinfo \{qs(0x6d0085b6)}
-		ScriptAssert \{qs(0x0d594f4d)}
+		printscriptinfo \{qs("LoadDrumKit")}
+		ScriptAssert \{qs("\LInvalid Drumkit type")}
 	endif
 endscript
 
-script unloaddrumkitall 
-	Change \{last_drum_kit_loaded = None}
-	unloaddrumkit \{Type = cymbal}
-	unloaddrumkit \{Type = floortom}
-	unloaddrumkit \{Type = hihat}
-	unloaddrumkit \{Type = hitom}
-	unloaddrumkit \{Type = kick}
-	unloaddrumkit \{Type = snare}
-	unloaddrumkit \{Type = cymbal
+script UnLoadDrumKitAll 
+	change \{last_drum_kit_loaded = none}
+	UnLoadDrumKit \{type = cymbal}
+	UnLoadDrumKit \{type = floortom}
+	UnLoadDrumKit \{type = hihat}
+	UnLoadDrumKit \{type = hitom}
+	UnLoadDrumKit \{type = kick}
+	UnLoadDrumKit \{type = snare}
+	UnLoadDrumKit \{type = cymbal
 		percussion}
-	unloaddrumkit \{Type = floortom
+	UnLoadDrumKit \{type = floortom
 		percussion}
-	unloaddrumkit \{Type = hihat
+	UnLoadDrumKit \{type = hihat
 		percussion}
-	unloaddrumkit \{Type = hitom
+	UnLoadDrumKit \{type = hitom
 		percussion}
-	unloaddrumkit \{Type = kick
+	UnLoadDrumKit \{type = kick
 		percussion}
-	unloaddrumkit \{Type = snare
+	UnLoadDrumKit \{type = snare
 		percussion}
 endscript
 
-script unloaddrumkit \{Type = snare}
-	if StructureContains structure = $drumkitparts <Type>
+script UnLoadDrumKit \{type = snare}
+	if StructureContains Structure = $DrumKitParts <type>
 		if GotParam \{percussion}
-			formatText checksumName = global_pak_crc 'LoadedDrumKitPaks_%s_percussion' s = ($drumkitparts.<Type>)
+			FormatText checksumname = global_pak_crc 'LoadedDrumKitPaks_%s_percussion' s = ($DrumKitParts.<type>)
 		else
-			formatText checksumName = global_pak_crc 'LoadedDrumKitPaks_%s' s = ($drumkitparts.<Type>)
+			FormatText checksumname = global_pak_crc 'LoadedDrumKitPaks_%s' s = ($DrumKitParts.<type>)
 		endif
 		if NOT ($<global_pak_crc> = 'none')
-			UnLoadPak ($<global_pak_crc>)
-			Change GlobalName = <global_pak_crc> NewValue = 'none'
+			UnloadPak ($<global_pak_crc>)
+			change globalname = <global_pak_crc> newvalue = 'none'
 		endif
 	else
-		printscriptinfo \{qs(0x73feec57)}
-		ScriptAssert \{qs(0x0d594f4d)}
+		printscriptinfo \{qs("UnLoadDrumKit")}
+		ScriptAssert \{qs("\LInvalid Drumkit type")}
 	endif
 endscript
 
@@ -465,7 +465,7 @@ script classicrock_snare_startup
 	LoadSound \{'drums/classicrockkit/classicRockSnare_Lvl_2_01'}
 endscript
 
-script fusion_cymbal_startup 
+script Fusion_cymbal_startup 
 	LoadSound \{'drums/Fusionkit/FusionCrash_Lvl_10_01'}
 	LoadSound \{'drums/Fusionkit/FusionCrash_Lvl_8_01'}
 	LoadSound \{'drums/Fusionkit/FusionCrash_Lvl_6_01'}
@@ -474,14 +474,14 @@ script fusion_cymbal_startup
 	LoadSound \{'drums/Fusionkit/FusionRide_Lvl_6_01'}
 endscript
 
-script fusion_floortom_startup 
+script Fusion_floortom_startup 
 	LoadSound \{'drums/Fusionkit/FusionFlTom_Lvl_10_01'}
 	LoadSound \{'drums/Fusionkit/FusionFlTom_Lvl_8_01'}
 	LoadSound \{'drums/Fusionkit/FusionFlTom_Lvl_6_01'}
 	LoadSound \{'drums/Fusionkit/FusionFlTom_Lvl_4_01'}
 endscript
 
-script fusion_hihat_startup 
+script Fusion_hihat_startup 
 	LoadSound \{'drums/Fusionkit/FusionHHClosed_Lvl_10_01'}
 	LoadSound \{'drums/Fusionkit/FusionHHClosed_Lvl_8_01'}
 	LoadSound \{'drums/Fusionkit/FusionHHClosed_Lvl_6_01'}
@@ -492,20 +492,20 @@ script fusion_hihat_startup
 	LoadSound \{'drums/Fusionkit/FusionHHOpen_Lvl_2_01'}
 endscript
 
-script fusion_hitom_startup 
+script Fusion_hitom_startup 
 	LoadSound \{'drums/Fusionkit/FusionHiTom_Lvl_10_01'}
 	LoadSound \{'drums/Fusionkit/FusionHiTom_Lvl_8_01'}
 	LoadSound \{'drums/Fusionkit/FusionHiTom_Lvl_6_01'}
 	LoadSound \{'drums/Fusionkit/FusionHiTom_Lvl_4_01'}
 endscript
 
-script fusion_kick_startup 
+script Fusion_kick_startup 
 	LoadSound \{'drums/Fusionkit/FusionKick_Lvl_10_01'}
 	LoadSound \{'drums/Fusionkit/FusionKick_Lvl_6_01'}
 	LoadSound \{'drums/Fusionkit/FusionKick_Lvl_2_01'}
 endscript
 
-script fusion_snare_startup 
+script Fusion_snare_startup 
 	LoadSound \{'drums/Fusionkit/FusionSnare_Lvl_12_01'}
 	LoadSound \{'drums/Fusionkit/FusionSnare_Lvl_12_02'}
 	LoadSound \{'drums/Fusionkit/FusionSnare_Lvl_12_03'}
@@ -693,7 +693,7 @@ script latinpercussion_snare_startup
 	LoadSound \{'drums/latinpercussion/LatinPercussion_Conga_Lvl_2_01'}
 endscript
 
-script brazilianpercussion_cymbal_startup 
+script Brazilianpercussion_cymbal_startup 
 	LoadSound \{'drums/Brazilianpercussion/BrazilianPercussion_WhistleHi_Lvl_10_01'}
 	LoadSound \{'drums/Brazilianpercussion/BrazilianPercussion_WhistleHi_Lvl_10_02'}
 	LoadSound \{'drums/Brazilianpercussion/BrazilianPercussion_WhistleHi_Lvl_10_03'}
@@ -702,32 +702,32 @@ script brazilianpercussion_cymbal_startup
 	LoadSound \{'drums/Brazilianpercussion/BrazilianPercussion_WhistleLow_Lvl_10_03'}
 endscript
 
-script brazilianpercussion_floortom_startup 
+script Brazilianpercussion_floortom_startup 
 	LoadSound \{'drums/Brazilianpercussion/BrazilianPercussion_QuicaLow_Lvl_10_01'}
 	LoadSound \{'drums/Brazilianpercussion/BrazilianPercussion_QuicaLow_Lvl_8_01'}
 	LoadSound \{'drums/Brazilianpercussion/BrazilianPercussion_QuicaLow_Lvl_6_01'}
 endscript
 
-script brazilianpercussion_hihat_startup 
+script Brazilianpercussion_hihat_startup 
 	LoadSound \{'drums/Brazilianpercussion/BrazilianPercussion_Pandiero_Lvl_10_01'}
 	LoadSound \{'drums/Brazilianpercussion/BrazilianPercussion_Pandiero_Lvl_8_01'}
 	LoadSound \{'drums/Brazilianpercussion/BrazilianPercussion_Pandiero_Lvl_6_01'}
 	LoadSound \{'drums/Brazilianpercussion/BrazilianPercussion_Pandiero_Lvl_4_01'}
 endscript
 
-script brazilianpercussion_hitom_startup 
+script Brazilianpercussion_hitom_startup 
 	LoadSound \{'drums/Brazilianpercussion/BrazilianPercussion_QuicaHigh_Lvl_10_01'}
 	LoadSound \{'drums/Brazilianpercussion/BrazilianPercussion_QuicaHigh_Lvl_8_01'}
 	LoadSound \{'drums/Brazilianpercussion/BrazilianPercussion_QuicaHigh_Lvl_6_01'}
 endscript
 
-script brazilianpercussion_kick_startup 
+script Brazilianpercussion_kick_startup 
 	LoadSound \{'drums/Brazilianpercussion/BrazilianPercussion_Surdo_Lvl_10_01'}
 	LoadSound \{'drums/Brazilianpercussion/BrazilianPercussion_Surdo_Lvl_8_01'}
 	LoadSound \{'drums/Brazilianpercussion/BrazilianPercussion_Surdo_Lvl_6_01'}
 endscript
 
-script brazilianpercussion_snare_startup 
+script Brazilianpercussion_snare_startup 
 	LoadSound \{'drums/Brazilianpercussion/BrazilianPercussion_CiaxaDeGuerra_Lvl_12_01'}
 	LoadSound \{'drums/Brazilianpercussion/BrazilianPercussion_CiaxaDeGuerra_Lvl_12_02'}
 	LoadSound \{'drums/Brazilianpercussion/BrazilianPercussion_CiaxaDeGuerra_Lvl_12_03'}
@@ -738,14 +738,14 @@ script brazilianpercussion_snare_startup
 	LoadSound \{'drums/Brazilianpercussion/BrazilianPercussion_CiaxaDeGuerra_Lvl_2_01'}
 endscript
 
-script hiphoppercussion_cymbal_startup 
+script HipHopPercussion_cymbal_startup 
 	LoadSound \{'drums/HipHopPercussion/HipHopPercussion_Cymbal_Lvl_10_01'}
 	LoadSound \{'drums/HipHopPercussion/HipHopPercussion_Cymbal_Lvl_8_01'}
 	LoadSound \{'drums/HipHopPercussion/HipHopPercussion_Cymbal_Lvl_6_01'}
 	LoadSound \{'drums/HipHopPercussion/HipHopPercussion_Cymbal_Lvl_4_01'}
 endscript
 
-script hiphoppercussion_floortom_startup 
+script HipHopPercussion_floortom_startup 
 	LoadSound \{'drums/HipHopPercussion/HipHopPercussion_Scratch_Lvl_10_01'}
 	LoadSound \{'drums/HipHopPercussion/HipHopPercussion_Scratch_Lvl_8_01'}
 	LoadSound \{'drums/HipHopPercussion/HipHopPercussion_Scratch_Lvl_6_01'}
@@ -753,7 +753,7 @@ script hiphoppercussion_floortom_startup
 	LoadSound \{'drums/HipHopPercussion/HipHopPercussion_Scratch_Lvl_2_01'}
 endscript
 
-script hiphoppercussion_hihat_startup 
+script HipHopPercussion_hihat_startup 
 	LoadSound \{'drums/HipHopPercussion/HipHopPercussion_HiHat_Lvl_10_01'}
 	LoadSound \{'drums/HipHopPercussion/HipHopPercussion_HiHat_Lvl_8_01'}
 	LoadSound \{'drums/HipHopPercussion/HipHopPercussion_HiHat_Lvl_6_01'}
@@ -761,365 +761,365 @@ script hiphoppercussion_hihat_startup
 	LoadSound \{'drums/HipHopPercussion/HipHopPercussion_HiHat_Lvl_2_01'}
 endscript
 
-script hiphoppercussion_hitom_startup 
+script HipHopPercussion_hitom_startup 
 	LoadSound \{'drums/HipHopPercussion/HipHopPercussion_Vocal_Lvl_10_01'}
 	LoadSound \{'drums/HipHopPercussion/HipHopPercussion_Vocal_Lvl_8_01'}
 	LoadSound \{'drums/HipHopPercussion/HipHopPercussion_Vocal_Lvl_6_01'}
 endscript
 
-script hiphoppercussion_kick_startup 
+script HipHopPercussion_kick_startup 
 	LoadSound \{'drums/HipHopPercussion/HipHopPercussion_Kick_Lvl_10_01'}
 	LoadSound \{'drums/HipHopPercussion/HipHopPercussion_Kick_Lvl_8_01'}
 	LoadSound \{'drums/HipHopPercussion/HipHopPercussion_Kick_Lvl_6_01'}
 endscript
 
-script hiphoppercussion_snare_startup 
+script HipHopPercussion_snare_startup 
 	LoadSound \{'drums/HipHopPercussion/HipHopPercussion_Snare_Lvl_10_01'}
 	LoadSound \{'drums/HipHopPercussion/HipHopPercussion_Snare_Lvl_8_01'}
 	LoadSound \{'drums/HipHopPercussion/HipHopPercussion_Snare_Lvl_6_01'}
 endscript
 
-script bliphop_cymbal_startup 
+script Bliphop_cymbal_startup 
 	LoadSound \{'drums/Bliphop/Bliphop_Crash'}
 endscript
 
-script bliphop_floortom_startup 
+script Bliphop_floortom_startup 
 	LoadSound \{'drums/Bliphop/Bliphop_Tom2'}
 endscript
 
-script bliphop_hihat_startup 
+script Bliphop_hihat_startup 
 	LoadSound \{'drums/Bliphop/Bliphop_Hihat_10'}
 endscript
 
-script bliphop_hitom_startup 
+script Bliphop_hitom_startup 
 	LoadSound \{'drums/Bliphop/Bliphop_Tom1'}
 endscript
 
-script bliphop_kick_startup 
+script Bliphop_kick_startup 
 	LoadSound \{'drums/Bliphop/Bliphop_kick_10'}
 endscript
 
-script bliphop_snare_startup 
+script Bliphop_snare_startup 
 	LoadSound \{'drums/Bliphop/Bliphop_snare_10'}
 endscript
 
-script electro_cymbal_startup 
+script Electro_cymbal_startup 
 	LoadSound \{'drums/Electro/Electro_cowbell'}
 endscript
 
-script electro_floortom_startup 
+script Electro_floortom_startup 
 	LoadSound \{'drums/Electro/Electro_tomlow'}
 endscript
 
-script electro_hihat_startup 
+script Electro_hihat_startup 
 	LoadSound \{'drums/Electro/Electro_hhclose'}
 	LoadSound \{'drums/Electro/Electro_hhopen'}
 endscript
 
-script electro_hitom_startup 
+script Electro_hitom_startup 
 	LoadSound \{'drums/Electro/Electro_tommed'}
 	LoadSound \{'drums/Electro/Electro_tomhigh'}
 endscript
 
-script electro_kick_startup 
+script Electro_kick_startup 
 	LoadSound \{'drums/Electro/Electro_kick'}
 endscript
 
-script electro_snare_startup 
+script Electro_snare_startup 
 	LoadSound \{'drums/Electro/Electro_snare'}
 endscript
 
-script electropercussion_cymbal_startup 
+script Electropercussion_cymbal_startup 
 	LoadSound \{'drums/Electropercussion/Elecperc_clap'}
 endscript
 
-script electropercussion_floortom_startup 
+script Electropercussion_floortom_startup 
 	LoadSound \{'drums/Electropercussion/Elecperc_conga'}
 endscript
 
-script electropercussion_hihat_startup 
+script Electropercussion_hihat_startup 
 	LoadSound \{'drums/Electropercussion/Elecperc_cabasa'}
 endscript
 
-script electropercussion_hitom_startup 
+script Electropercussion_hitom_startup 
 	LoadSound \{'drums/Electropercussion/Elecperc_conga2'}
 endscript
 
-script electropercussion_kick_startup 
+script Electropercussion_kick_startup 
 	LoadSound \{'drums/Electropercussion/Elecperc_kick'}
 endscript
 
-script electropercussion_snare_startup 
+script Electropercussion_snare_startup 
 	LoadSound \{'drums/Electropercussion/Elecperc_rimshot'}
 endscript
 
-script oldschoolpercussion_cymbal_startup 
+script Oldschoolpercussion_cymbal_startup 
 	LoadSound \{'drums/Oldschoolpercussion/Oldschoolperc_clap'}
 endscript
 
-script oldschoolpercussion_floortom_startup 
+script Oldschoolpercussion_floortom_startup 
 	LoadSound \{'drums/Oldschoolpercussion/Oldschoolperc_timbalelow'}
 endscript
 
-script oldschoolpercussion_hihat_startup 
+script Oldschoolpercussion_hihat_startup 
 	LoadSound \{'drums/Oldschoolpercussion/Oldschoolperc_hhclose'}
 	LoadSound \{'drums/Oldschoolpercussion/Oldschoolperc_hhopen'}
 endscript
 
-script oldschoolpercussion_hitom_startup 
+script Oldschoolpercussion_hitom_startup 
 	LoadSound \{'drums/Oldschoolpercussion/Oldschoolperc_timbalemed'}
 endscript
 
-script oldschoolpercussion_kick_startup 
+script Oldschoolpercussion_kick_startup 
 	LoadSound \{'drums/Oldschoolpercussion/Oldschoolperc_kick'}
 endscript
 
-script oldschoolpercussion_snare_startup 
+script Oldschoolpercussion_snare_startup 
 	LoadSound \{'drums/Oldschoolpercussion/Oldschoolperc_timbalehigh'}
 endscript
 
-script computight_cymbal_startup 
+script Computight_cymbal_startup 
 	LoadSound \{'drums/Computight/Compukit_cowbell'}
 endscript
 
-script computight_floortom_startup 
+script Computight_floortom_startup 
 	LoadSound \{'drums/Computight/Compukit_woodlow'}
 endscript
 
-script computight_hihat_startup 
+script Computight_hihat_startup 
 	LoadSound \{'drums/Computight/Compukit_hhclose'}
 	LoadSound \{'drums/Computight/Compukit_hhopen'}
 endscript
 
-script computight_hitom_startup 
+script Computight_hitom_startup 
 	LoadSound \{'drums/Computight/Compukit_woodhigh'}
 endscript
 
-script computight_kick_startup 
+script Computight_kick_startup 
 	LoadSound \{'drums/Computight/Compukit_kick'}
 endscript
 
-script computight_snare_startup 
+script Computight_snare_startup 
 	LoadSound \{'drums/Computight/Compukit_snare'}
 endscript
 
-script cheesy_cymbal_startup 
+script Cheesy_cymbal_startup 
 	LoadSound \{'drums/Cheesy/Cheesy_scratch2'}
 	LoadSound \{'drums/Cheesy/Cheesy_scratch1'}
 	LoadSound \{'drums/Cheesy/Cheesy_cowbell'}
 endscript
 
-script cheesy_floortom_startup 
+script Cheesy_floortom_startup 
 	LoadSound \{'drums/Cheesy/Cheesy_vocode1'}
 	LoadSound \{'drums/Cheesy/Cheesy_vocode2'}
 endscript
 
-script cheesy_hihat_startup 
+script Cheesy_hihat_startup 
 	LoadSound \{'drums/Cheesy/Cheesy_hhat1'}
 	LoadSound \{'drums/Cheesy/Cheesy_hhat2'}
 endscript
 
-script cheesy_hitom_startup 
+script Cheesy_hitom_startup 
 	LoadSound \{'drums/Cheesy/Cheesy_brass'}
 	LoadSound \{'drums/Cheesy/Cheesy_orch'}
 endscript
 
-script cheesy_kick_startup 
+script Cheesy_kick_startup 
 	LoadSound \{'drums/Cheesy/Cheesy_kick'}
 endscript
 
-script cheesy_snare_startup 
+script Cheesy_snare_startup 
 	LoadSound \{'drums/Cheesy/Cheesy_snare'}
 endscript
 
-script eightys_cymbal_startup 
+script Eightys_cymbal_startup 
 	LoadSound \{'drums/Eightys/Eightys_crash3'}
 	LoadSound \{'drums/Eightys/Eightys_crash2'}
 	LoadSound \{'drums/Eightys/Eightys_crash1'}
 endscript
 
-script eightys_floortom_startup 
+script Eightys_floortom_startup 
 	LoadSound \{'drums/Eightys/Eightys_tomlow'}
 endscript
 
-script eightys_hihat_startup 
+script Eightys_hihat_startup 
 	LoadSound \{'drums/Eightys/Eightys_hhclosed'}
 	LoadSound \{'drums/Eightys/Eightys_hhopen'}
 endscript
 
-script eightys_hitom_startup 
+script Eightys_hitom_startup 
 	LoadSound \{'drums/Eightys/Eightys_tomhigh'}
 	LoadSound \{'drums/Eightys/Eightys_tommed'}
 endscript
 
-script eightys_kick_startup 
+script Eightys_kick_startup 
 	LoadSound \{'drums/Eightys/Eightys_kick'}
 endscript
 
-script eightys_snare_startup 
+script Eightys_snare_startup 
 	LoadSound \{'drums/Eightys/Eightys_snare1'}
 	LoadSound \{'drums/Eightys/Eightys_snare2'}
 endscript
 
-script oldschool_cymbal_startup 
+script Oldschool_cymbal_startup 
 	LoadSound \{'drums/Oldschool/Oldschool_crash'}
 	LoadSound \{'drums/Oldschool/Oldschool_ride'}
 endscript
 
-script oldschool_floortom_startup 
+script Oldschool_floortom_startup 
 	LoadSound \{'drums/Oldschool/Oldschool_tomlow'}
 endscript
 
-script oldschool_hihat_startup 
+script Oldschool_hihat_startup 
 	LoadSound \{'drums/Oldschool/Oldschool_hhclose'}
 	LoadSound \{'drums/Oldschool/Oldschool_hhopen'}
 endscript
 
-script oldschool_hitom_startup 
+script Oldschool_hitom_startup 
 	LoadSound \{'drums/Oldschool/Oldschool_tomhi'}
 	LoadSound \{'drums/Oldschool/Oldschool_tommed'}
 endscript
 
-script oldschool_kick_startup 
+script Oldschool_kick_startup 
 	LoadSound \{'drums/Oldschool/Oldschool_kick1'}
 	LoadSound \{'drums/Oldschool/Oldschool_kick2'}
 endscript
 
-script oldschool_snare_startup 
+script Oldschool_snare_startup 
 	LoadSound \{'drums/Oldschool/Oldschool_snare1'}
 	LoadSound \{'drums/Oldschool/Oldschool_snare2'}
 	LoadSound \{'drums/Oldschool/Oldschool_snare3'}
 endscript
 
-script house_cymbal_startup 
+script House_cymbal_startup 
 	LoadSound \{'drums/House/House_crash'}
 	LoadSound \{'drums/House/House_ride'}
 endscript
 
-script house_floortom_startup 
+script House_floortom_startup 
 	LoadSound \{'drums/House/House_tomlow'}
 endscript
 
-script house_hihat_startup 
+script House_hihat_startup 
 	LoadSound \{'drums/House/House_hhclose'}
 	LoadSound \{'drums/House/House_hhopen'}
 endscript
 
-script house_hitom_startup 
+script House_hitom_startup 
 	LoadSound \{'drums/House/House_tomhigh'}
 	LoadSound \{'drums/House/House_tommed'}
 endscript
 
-script house_kick_startup 
+script House_kick_startup 
 	LoadSound \{'drums/House/House_kick1'}
 	LoadSound \{'drums/House/House_kick2'}
 	LoadSound \{'drums/House/House_kick3'}
 endscript
 
-script house_snare_startup 
+script House_snare_startup 
 	LoadSound \{'drums/House/House_snare1'}
 	LoadSound \{'drums/House/House_snare2'}
 	LoadSound \{'drums/House/House_clap'}
 endscript
 
-script india_kick_startup 
+script India_kick_startup 
 	LoadSound \{'drums/India/india_kick'}
 endscript
 
-script india_hitom_startup 
+script India_hitom_startup 
 	LoadSound \{'drums/India/india_tom1'}
 endscript
 
-script india_cymbal_startup 
+script India_cymbal_startup 
 	LoadSound \{'drums/India/india_crash'}
 endscript
 
-script india_hihat_startup 
+script India_hihat_startup 
 	LoadSound \{'drums/India/india_ping'}
 endscript
 
-script india_snare_startup 
+script India_snare_startup 
 	LoadSound \{'drums/India/india_snare'}
 endscript
 
-script india_floortom_startup 
+script India_floortom_startup 
 	LoadSound \{'drums/India/india_tom2'}
 endscript
 
-script indiagirl_kick_startup 
+script Indiagirl_kick_startup 
 	LoadSound \{'drums/Indiagirl/India_girlkick'}
 endscript
 
-script indiagirl_hitom_startup 
+script Indiagirl_hitom_startup 
 	LoadSound \{'drums/Indiagirl/India_girl4'}
 endscript
 
-script indiagirl_cymbal_startup 
+script Indiagirl_cymbal_startup 
 	LoadSound \{'drums/Indiagirl/India_girl_longer2'}
 endscript
 
-script indiagirl_hihat_startup 
+script Indiagirl_hihat_startup 
 	LoadSound \{'drums/Indiagirl/India_girl2'}
 	LoadSound \{'drums/Indiagirl/India_girl_longer'}
 endscript
 
-script indiagirl_snare_startup 
+script Indiagirl_snare_startup 
 	LoadSound \{'drums/Indiagirl/India_girl1'}
 endscript
 
-script indiagirl_floortom_startup 
+script Indiagirl_floortom_startup 
 	LoadSound \{'drums/Indiagirl/India_girl3'}
 endscript
 
-script orchestral_kick_startup 
+script Orchestral_kick_startup 
 	LoadSound \{'drums/Orchestral/orch_kick'}
 endscript
 
-script orchestral_hitom_startup 
+script Orchestral_hitom_startup 
 	LoadSound \{'drums/Orchestral/orch_tom1'}
 endscript
 
-script orchestral_cymbal_startup 
+script Orchestral_cymbal_startup 
 	LoadSound \{'drums/Orchestral/orch_crash'}
 endscript
 
-script orchestral_hihat_startup 
+script Orchestral_hihat_startup 
 	LoadSound \{'drums/Orchestral/orch_hihat'}
 endscript
 
-script orchestral_snare_startup 
+script Orchestral_snare_startup 
 	LoadSound \{'drums/Orchestral/orch_snare'}
 endscript
 
-script orchestral_floortom_startup 
+script Orchestral_floortom_startup 
 	LoadSound \{'drums/Orchestral/orch_tom2'}
 endscript
 
-script jazzy_kick_startup 
+script Jazzy_kick_startup 
 	LoadSound \{'drums/Jazzy/j_kick'}
 endscript
 
-script jazzy_hitom_startup 
+script Jazzy_hitom_startup 
 	LoadSound \{'drums/Jazzy/j_tom1'}
 endscript
 
-script jazzy_cymbal_startup 
+script Jazzy_cymbal_startup 
 	LoadSound \{'drums/Jazzy/j_crash'}
 endscript
 
-script jazzy_hihat_startup 
+script Jazzy_hihat_startup 
 	LoadSound \{'drums/Jazzy/j_hihat'}
 endscript
 
-script jazzy_snare_startup 
+script Jazzy_snare_startup 
 	LoadSound \{'drums/Jazzy/j_snare'}
 endscript
 
-script jazzy_floortom_startup 
+script Jazzy_floortom_startup 
 	LoadSound \{'drums/Jazzy/j_tom2'}
 endscript
 
-script scratch_floortom_startup 
+script Scratch_floortom_startup 
 	LoadSound \{'drums/Scratch/DJ_aahh1'}
 	LoadSound \{'drums/Scratch/DJ_aahh7'}
 	LoadSound \{'drums/Scratch/DJ_Laser10'}
@@ -1127,7 +1127,7 @@ script scratch_floortom_startup
 	LoadSound \{'drums/Scratch/DJ_blast18'}
 endscript
 
-script scratch_snare_startup 
+script Scratch_snare_startup 
 	LoadSound \{'drums/Scratch/DJ_aahh2'}
 	LoadSound \{'drums/Scratch/DJ_aahh8'}
 	LoadSound \{'drums/Scratch/DJ_Laser11'}
@@ -1135,7 +1135,7 @@ script scratch_snare_startup
 	LoadSound \{'drums/Scratch/DJ_blast19'}
 endscript
 
-script scratch_hihat_startup 
+script Scratch_hihat_startup 
 	LoadSound \{'drums/Scratch/DJ_aahh3'}
 	LoadSound \{'drums/Scratch/DJ_aahh9'}
 	LoadSound \{'drums/Scratch/DJ_stab12'}
@@ -1143,7 +1143,7 @@ script scratch_hihat_startup
 	LoadSound \{'drums/Scratch/DJ_ahhya20'}
 endscript
 
-script scratch_hitom_startup 
+script Scratch_hitom_startup 
 	LoadSound \{'drums/Scratch/DJ_aahh4'}
 	LoadSound \{'drums/Scratch/DJ_whew26'}
 	LoadSound \{'drums/Scratch/DJ_stab13'}
@@ -1151,7 +1151,7 @@ script scratch_hitom_startup
 	LoadSound \{'drums/Scratch/DJ_ahhya21'}
 endscript
 
-script scratch_cymbal_startup 
+script Scratch_cymbal_startup 
 	LoadSound \{'drums/Scratch/DJ_aahh5'}
 	LoadSound \{'drums/Scratch/DJ_aahh6'}
 	LoadSound \{'drums/Scratch/DJ_shortbaby23'}
@@ -1159,7 +1159,7 @@ script scratch_cymbal_startup
 	LoadSound \{'drums/Scratch/DJ_whistle28'}
 endscript
 
-script scratch_kick_startup 
+script Scratch_kick_startup 
 	LoadSound \{'drums/Scratch/DJ_aahhfull31'}
 	LoadSound \{'drums/Scratch/DJ_rewind29'}
 	LoadSound \{'drums/Scratch/DJ_backspin22'}
@@ -1312,45 +1312,45 @@ script conga_floortom_startup
 	LoadSound \{'drums/conga/conga_tom2'}
 endscript
 
-script gunshot_cymbal_startup 
+script Gunshot_cymbal_startup 
 	LoadSound \{'drums/Gunshot/Gun_ricocrash'}
 	LoadSound \{'drums/Gunshot/Gun_ricochet'}
 endscript
 
-script gunshot_floortom_startup 
+script Gunshot_floortom_startup 
 	LoadSound \{'drums/Gunshot/Gun_tom2'}
 endscript
 
-script gunshot_hihat_startup 
+script Gunshot_hihat_startup 
 	LoadSound \{'drums/Gunshot/Gun_hihat'}
 	LoadSound \{'drums/Gunshot/Gun_hihat_open'}
 endscript
 
-script gunshot_hitom_startup 
+script Gunshot_hitom_startup 
 	LoadSound \{'drums/Gunshot/Gun_tom1'}
 endscript
 
-script gunshot_kick_startup 
+script Gunshot_kick_startup 
 	LoadSound \{'drums/Gunshot/Gun_kickheavy'}
 	LoadSound \{'drums/Gunshot/Gun_kickheavy2'}
 endscript
 
-script gunshot_snare_startup 
+script Gunshot_snare_startup 
 	LoadSound \{'drums/Gunshot/Gun_robosnare'}
 	LoadSound \{'drums/Gunshot/Gun_heavysnare'}
 	LoadSound \{'drums/Gunshot/Gun_snare'}
 endscript
 
-script play_all_drum_samples 
-	waitTime = 0.3
+script Play_All_Drum_Samples 
+	waittime = 0.3
 	velocity = 7
 	pad = snare
-	printf channel = sfx qs(0xc7e8d4d3) s = <drumset>
-	printf channel = sfx qs(0x674e9fff) s = <pad_type>
+	printf channel = sfx qs("\LDrum Set = %s") s = <drumset>
+	printf channel = sfx qs("\LPad = %s") s = <pad_type>
 	begin
 	play_drum_sample drum_set = <drumset> pad = <pad> velocity = <velocity>
 	<velocity> = (<velocity> + 2)
-	Wait <waitTime> Seconds
+	Wait <waittime> seconds
 	if (<velocity> = 127)
 		if (<pad> = snare)
 			<pad> = kick
@@ -1374,84 +1374,84 @@ script play_all_drum_samples
 	repeat
 endscript
 
-script play_kick_samples 
-	waitTime = 0.3
+script Play_Kick_Samples 
+	waittime = 0.3
 	velocity = 7
 	pad = kick
 	begin
 	play_drum_sample drum_set = <drumset> pad = <pad> velocity = <velocity>
 	<velocity> = (<velocity> + 2)
-	Wait <waitTime> Seconds
+	Wait <waittime> seconds
 	if (<velocity> = 127)
 		break
 	endif
 	repeat
 endscript
 
-script play_snare_samples 
-	waitTime = 0.3
+script Play_Snare_Samples 
+	waittime = 0.3
 	velocity = 7
 	pad = snare
 	begin
 	play_drum_sample drum_set = <drumset> pad = <pad> velocity = <velocity>
 	<velocity> = (<velocity> + 2)
-	Wait <waitTime> Seconds
+	Wait <waittime> seconds
 	if (<velocity> = 127)
 		break
 	endif
 	repeat
 endscript
 
-script play_hitom_samples 
-	waitTime = 0.3
+script Play_hitom_Samples 
+	waittime = 0.3
 	velocity = 7
 	pad = tom1
 	begin
 	play_drum_sample drum_set = <drumset> pad = <pad> velocity = <velocity>
 	<velocity> = (<velocity> + 2)
-	Wait <waitTime> Seconds
+	Wait <waittime> seconds
 	if (<velocity> = 127)
 		break
 	endif
 	repeat
 endscript
 
-script play_fltom_samples 
-	waitTime = 0.3
+script Play_FlTom_Samples 
+	waittime = 0.3
 	velocity = 7
 	pad = tom2
 	begin
 	play_drum_sample drum_set = <drumset> pad = <pad> velocity = <velocity>
 	<velocity> = (<velocity> + 2)
-	Wait <waitTime> Seconds
+	Wait <waittime> seconds
 	if (<velocity> = 127)
 		break
 	endif
 	repeat
 endscript
 
-script play_hihat_samples 
-	waitTime = 0.3
+script Play_hihat_Samples 
+	waittime = 0.3
 	velocity = 7
 	pad = hihat
 	begin
 	play_drum_sample drum_set = <drumset> pad = <pad> velocity = <velocity>
 	<velocity> = (<velocity> + 2)
-	Wait <waitTime> Seconds
+	Wait <waittime> seconds
 	if (<velocity> = 127)
 		break
 	endif
 	repeat
 endscript
 
-script play_cymbal_samples 
-	waitTime = 0.3
+script Play_cymbal_Samples 
+	waittime = 0.3
 	velocity = 7
 	pad = cymbal
 	begin
 	play_drum_sample drum_set = <drumset> pad = <pad> velocity = <velocity>
 	<velocity> = (<velocity> + 2)
-	Wait <waitTime> Seconds
+	Wait <waittime> seconds
 	if (<velocity> = 127)
 		break
 	endif

@@ -1,214 +1,214 @@
 
-script band_playsimpleanim \{name = guitarist}
-	if NOT compositeobjectexists name = <name>
+script Band_PlaysimpleAnim \{name = Guitarist}
+	if NOT CompositeObjectExists name = <name>
 		return
 	endif
-	if NOT gotparam \{anim}
+	if NOT GotParam \{Anim}
 		return
 	endif
-	<name> :obj_killspawnedscript name = play_simple_anim
-	<name> :obj_spawnscriptnow play_simple_anim params = {<...>}
+	<name> :Obj_KillSpawnedScript name = play_simple_anim
+	<name> :Obj_SpawnScriptNow play_simple_anim params = {<...>}
 endscript
 
-script band_playanim \{name = guitarist
-		anim = idle}
-	if NOT compositeobjectexists name = <name>
+script Band_PlayAnim \{name = Guitarist
+		Anim = Idle}
+	if NOT CompositeObjectExists name = <name>
 		return
 	endif
 	if bassist_should_use_guitarist_commands
-		if (<name> = guitarist)
-			if compositeobjectexists \{name = bassist}
-				launchevent type = play_anim target = bassist data = {<...>}
+		if (<name> = Guitarist)
+			if CompositeObjectExists \{name = bassist}
+				LaunchEvent type = play_anim target = bassist data = {<...>}
 			endif
 		elseif (<name> = bassist)
 			return
 		endif
 	endif
-	launchevent type = play_anim target = <name> data = {<...>}
+	LaunchEvent type = play_anim target = <name> data = {<...>}
 endscript
 
-script band_playidle \{name = guitarist}
-	band_playanim name = <name> anim = idle cycle
+script band_playidle \{name = Guitarist}
+	Band_PlayAnim name = <name> Anim = Idle Cycle
 endscript
 
-script band_playfacialanim \{name = guitarist}
-	if compositeobjectexists name = <name>
-		<name> :obj_killspawnedscript name = play_special_facial_anim
-		<name> :obj_spawnscriptnow play_special_facial_anim params = {anim = <anim>}
+script Band_PlayFacialAnim \{name = Guitarist}
+	if CompositeObjectExists name = <name>
+		<name> :Obj_KillSpawnedScript name = play_special_facial_anim
+		<name> :Obj_SpawnScriptNow play_special_facial_anim params = {Anim = <Anim>}
 	endif
 endscript
 
-script band_setstrumstyle \{name = guitarist
-		style = long}
-	if NOT compositeobjectexists name = <name>
+script Band_SetStrumStyle \{name = Guitarist
+		style = Long}
+	if NOT CompositeObjectExists name = <name>
 		return
 	endif
-	extendcrc <name> '_Info' out = info_struct
+	ExtendCRC <name> '_Info' out = info_struct
 	change structurename = <info_struct> strum = <style>
 endscript
 
-script band_changestance \{name = guitarist
-		stance = stance_a}
-	if NOT compositeobjectexists name = <name>
+script Band_ChangeStance \{name = Guitarist
+		stance = Stance_A}
+	if NOT CompositeObjectExists name = <name>
 		return
 	endif
 	if bassist_should_use_guitarist_commands
-		if (<name> = guitarist)
-			if compositeobjectexists \{name = bassist}
-				launchevent type = change_stance target = bassist data = {<...>}
+		if (<name> = Guitarist)
+			if CompositeObjectExists \{name = bassist}
+				LaunchEvent type = change_stance target = bassist data = {<...>}
 			endif
 		elseif (<name> = bassist)
 			return
 		endif
 	endif
-	launchevent type = change_stance target = <name> data = {<...>}
+	LaunchEvent type = change_stance target = <name> data = {<...>}
 endscript
 
-script band_stopstrumming \{name = guitarist}
-	if NOT compositeobjectexists name = <name>
+script Band_StopStrumming \{name = Guitarist}
+	if NOT CompositeObjectExists name = <name>
 		return
 	endif
-	extendcrc <name> '_Info' out = info_struct
+	ExtendCRC <name> '_Info' out = info_struct
 	change structurename = <info_struct> strum = none
 endscript
 
-script band_enablearms \{name = guitarist
+script Band_EnableArms \{name = Guitarist
 		blend_time = 0.25}
-	if NOT compositeobjectexists name = <name>
+	if NOT CompositeObjectExists name = <name>
 		return
 	endif
-	if (<name> = guitarist || <name> = bassist)
+	if (<name> = Guitarist || <name> = bassist)
 		<name> :hero_toggle_arms num_arms = 2 pre_num_arms = 0 blend_time = <blend_time>
 	else
 		<name> :hero_enable_arms blend_time = <blend_time>
 	endif
-	extendcrc <name> '_Info' out = info_struct
+	ExtendCRC <name> '_Info' out = info_struct
 	change structurename = <info_struct> arms_disabled = 0
 	change structurename = <info_struct> disable_arms = 0
 endscript
 
-script band_disablearms \{name = guitarist
+script Band_DisableArms \{name = Guitarist
 		blend_time = 0.25}
-	if NOT compositeobjectexists name = <name>
+	if NOT CompositeObjectExists name = <name>
 		return
 	endif
-	if (<name> = guitarist || <name> = bassist)
+	if (<name> = Guitarist || <name> = bassist)
 		<name> :hero_toggle_arms num_arms = 0 pre_num_arms = 2 blend_time = <blend_time>
 	else
 		<name> :hero_disable_arms blend_time = <blend_time>
 	endif
-	extendcrc <name> '_Info' out = info_struct
+	ExtendCRC <name> '_Info' out = info_struct
 	change structurename = <info_struct> arms_disabled = 2
 	change structurename = <info_struct> disable_arms = 2
 endscript
 
-script band_setposition 
-	if NOT compositeobjectexists name = <name>
+script Band_SetPosition 
+	if NOT CompositeObjectExists name = <name>
 		return
 	endif
-	extendcrc <name> '_Info' out = info_struct
+	ExtendCRC <name> '_Info' out = info_struct
 	char_name = <name>
-	if gotparam \{index}
+	if GotParam \{index}
 		get_waypoint_id index = <index>
-		getwaypointpos name = <waypoint_id>
+		GetWaypointPos name = <waypoint_id>
 		change structurename = <info_struct> target_node = <waypoint_id>
-	elseif gotparam \{node}
-		getwaypointpos name = <node>
+	elseif GotParam \{node}
+		GetWaypointPos name = <node>
 		change structurename = <info_struct> target_node = <node>
 	endif
-	<char_name> :obj_setposition position = <pos>
+	<char_name> :Obj_SetPosition position = <pos>
 endscript
 
-script band_disablemovement 
-	if NOT compositeobjectexists name = <name>
+script Band_DisableMovement 
+	if NOT CompositeObjectExists name = <name>
 		return
 	endif
-	extendcrc <name> '_Info' out = info_struct
+	ExtendCRC <name> '_Info' out = info_struct
 	change structurename = <info_struct> allow_movement = false
 endscript
 
-script band_enablemovement 
-	if NOT compositeobjectexists name = <name>
+script Band_EnableMovement 
+	if NOT CompositeObjectExists name = <name>
 		return
 	endif
-	extendcrc <name> '_Info' out = info_struct
+	ExtendCRC <name> '_Info' out = info_struct
 	change structurename = <info_struct> allow_movement = true
 endscript
 
-script band_walktonode \{name = guitarist
-		faceaudience = true}
-	if NOT compositeobjectexists name = <name>
+script Band_WalkToNode \{name = Guitarist
+		faceAudience = true}
+	if NOT CompositeObjectExists name = <name>
 		return
 	endif
 	if ($current_num_players = 2)
 		return
 	endif
-	getpakmancurrent \{map = zones}
-	getpakmancurrentname \{map = zones}
-	formattext \{textname = suffix
+	GetPakManCurrent \{map = zones}
+	GetPakManCurrentName \{map = zones}
+	FormatText \{TextName = suffix
 		'_TRG_Waypoint_Guitarist_Walk01'}
-	appendsuffixtochecksum base = <pak> suffixstring = <suffix>
+	AppendSuffixToChecksum Base = <pak> SuffixString = <suffix>
 	waypoint_id = <appended_id>
-	if NOT doeswaypointexist name = <waypoint_id>
+	if NOT DoesWayPointExist name = <waypoint_id>
 		return
 	endif
-	if checksumequals a = <name> b = guitarist
-		if localizedstringequals a = <node> b = "guitarist_start"
-			spawnscriptlater \{lightshow_waitandenablespotlights
+	if ChecksumEquals a = <name> b = Guitarist
+		if LocalizedStringEquals a = <node> b = "guitarist_start"
+			SpawnScriptLater \{LightShow_WaitAndEnableSpotlights
 				params = {
 					enable = false
 					time = 4.0
 				}}
 		else
-			spawnscriptlater \{lightshow_waitandenablespotlights
+			SpawnScriptLater \{LightShow_WaitAndEnableSpotlights
 				params = {
 					enable = true
 					time = 1.5
 				}}
 		endif
 	endif
-	launchevent type = walk target = <name> data = {<...> anim_set = $normal_walk_data}
+	LaunchEvent type = walk target = <name> data = {<...> anim_set = $normal_walk_data}
 endscript
 
-script band_turntoface \{name = guitarist
+script Band_TurnToFace \{name = Guitarist
 		node = 1}
-	if NOT compositeobjectexists name = <name>
+	if NOT CompositeObjectExists name = <name>
 		return
 	endif
 	get_waypoint_id index = <node>
-	getwaypointpos name = <waypoint_id>
+	GetWaypointPos name = <waypoint_id>
 	<name> :turn_to_face pos = <pos>
 endscript
 
-script band_rotatetofacenode \{name = guitarist
+script Band_RotateToFaceNode \{name = Guitarist
 		node = 1}
-	if NOT compositeobjectexists name = <name>
+	if NOT CompositeObjectExists name = <name>
 		return
 	endif
 	get_waypoint_id index = <node>
-	getwaypointpos name = <waypoint_id>
+	GetWaypointPos name = <waypoint_id>
 	<name> :turn_to_face pos = <pos>
 endscript
 
-script band_facenode \{name = guitarist
+script Band_FaceNode \{name = Guitarist
 		node = 1}
-	if NOT compositeobjectexists name = <name>
+	if NOT CompositeObjectExists name = <name>
 		return
 	endif
 	get_waypoint_id index = <node>
-	getwaypointpos name = <waypoint_id>
+	GetWaypointPos name = <waypoint_id>
 	<name> :turn_to_face pos = <pos>
 endscript
 
-script band_faceaudience \{name = guitarist}
-	if NOT compositeobjectexists name = <name>
+script Band_FaceAudience \{name = Guitarist}
+	if NOT CompositeObjectExists name = <name>
 		return
 	endif
 	<name> :face_audience
 endscript
 
-script band_playattackanim 
-	if NOT compositeobjectexists name = <name>
+script Band_PlayAttackAnim 
+	if NOT CompositeObjectExists name = <name>
 		return
 	endif
 	attack_type = ($battlemode_powerups [<type>].name)
@@ -219,17 +219,17 @@ script band_playattackanim
 	else
 		return
 	endif
-	if NOT structurecontains structure = $<battle_anims> name = <attack_type>
+	if NOT StructureContains Structure = $<battle_anims> name = <attack_type>
 		return
 	endif
-	anim = ($<battle_anims>.<attack_type>.attack_anim)
-	if NOT (<anim> = none)
-		launchevent type = play_battle_anim target = <name> data = {<...> no_wait}
+	Anim = ($<battle_anims>.<attack_type>.attack_anim)
+	if NOT (<Anim> = none)
+		LaunchEvent type = play_battle_anim target = <name> data = {<...> no_wait}
 	endif
 endscript
 
-script band_playresponseanim 
-	if NOT compositeobjectexists name = <name>
+script Band_PlayResponseAnim 
+	if NOT CompositeObjectExists name = <name>
 		return
 	endif
 	attack_type = ($battlemode_powerups [<type>].name)
@@ -240,12 +240,12 @@ script band_playresponseanim
 	else
 		return
 	endif
-	if NOT structurecontains structure = $<battle_anims> name = <attack_type>
+	if NOT StructureContains Structure = $<battle_anims> name = <attack_type>
 		return
 	endif
-	anim = ($<battle_anims>.<attack_type>.response_anim)
-	if NOT (<anim> = none)
-		launchevent type = play_battle_anim target = <name> data = {<...>}
+	Anim = ($<battle_anims>.<attack_type>.response_anim)
+	if NOT (<Anim> = none)
+		LaunchEvent type = play_battle_anim target = <name> data = {<...>}
 	endif
 endscript
 

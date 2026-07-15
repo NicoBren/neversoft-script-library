@@ -6,7 +6,7 @@ script ui_create_customize_character_mic
 		ui_event_add_params old_save_checksum = <old_save_checksum>
 	endif
 	make_generic_menu \{vmenu_id = create_customize_character_mic_vmenu
-		title = qs(0xc0b34c9f)
+		title = qs("MIC")
 		num_icons = 2
 		show_history}
 	setup_cas_menu_handlers \{vmenu_id = create_customize_character_mic_vmenu
@@ -19,44 +19,44 @@ script ui_create_customize_character_mic
 		zoom_camera = 'customize_mic_Zoom'}
 	add_generic_menu_icon_item {
 		icon = icon_customize
-		text = qs(0xc23883c4)
-		choose_state = uistate_customize_character_mic_main
+		text = qs("CUSTOMIZE")
+		choose_state = UIstate_customize_character_mic_main
 		choose_state_data = {instrument_info = <instrument_info>}
 	}
 	dim_save_option_for_guest <...>
 	add_generic_menu_icon_item {
 		icon = icon_save
-		text = qs(0xe618e644)
-		choose_state = uistate_cas_save_slots
-		choose_state_data = {savegame = ($cas_current_savegame) text = qs(0xe618e644) slot_list = player_mic_save instrument_info = <instrument_info> save_guitar loaded_index = <loaded_index> hist_tex = icon_save}
+		text = qs("SAVE")
+		choose_state = UIstate_cas_save_slots
+		choose_state_data = {savegame = ($cas_current_savegame) text = qs("SAVE") slot_list = player_mic_save instrument_info = <instrument_info> save_guitar loaded_index = <loaded_index> hist_tex = icon_save}
 		not_focusable = <not_focusable>
 	}
 	add_generic_menu_icon_item {
 		icon = icon_load
-		text = qs(0xad5cfad4)
-		choose_state = uistate_cas_save_slots
-		choose_state_data = {savegame = ($cas_current_savegame) text = qs(0xc65afe4f) slot_list = player_mic_save instrument_info = <instrument_info> load_guitar hist_tex = icon_load}
+		text = qs("LOAD")
+		choose_state = UIstate_cas_save_slots
+		choose_state_data = {savegame = ($cas_current_savegame) text = qs("LOAD MIC") slot_list = player_mic_save instrument_info = <instrument_info> load_guitar hist_tex = icon_load}
 		not_focusable = <not_focusable>
 	}
 	add_generic_menu_icon_item \{icon = icon_random
-		text = qs(0x0b6c701b)
+		text = qs("RANDOM")
 		pad_choose_script = generate_random_instrument
 		pad_choose_params = {
-			Type = vocals
+			type = Vocals
 			rebuild
 		}
 		pad_choose_sound = nullscript}
 	CreateScreenElement \{parent = create_customize_character_mic_vmenu
-		Type = descinterface
-		axesmith_menu_item_img_texture = micdrum_sponsor
+		type = DescInterface
+		AxeSmith_Menu_Item_img_texture = micdrum_sponsor
 		desc = 'Axesmith_menu_item'
 		not_focusable
-		autosizedims = true}
+		autoSizeDims = true}
 	menu_finish \{car_helper_text}
-	getcurrentcasobject
-	printf \{qs(0xcb0dee4f)}
-	bandmanager_changestance Name = <cas_object> stance = stance_select_mic no_wait
-	LaunchEvent Type = focus target = create_customize_character_mic_vmenu data = {child_index = <selected_index>}
+	GetCurrentCASObject
+	printf \{qs("\L---------------------------------Mic-------------------------------------------")}
+	BandManager_ChangeStance name = <cas_object> stance = Stance_Select_Mic no_wait
+	LaunchEvent type = focus target = create_customize_character_mic_vmenu data = {child_index = <selected_index>}
 endscript
 
 script ui_return_customize_character_mic 
@@ -68,11 +68,11 @@ script ui_destroy_customize_character_mic
 endscript
 
 script ui_init_customize_character_mic 
-	change_cas_instrument_if_necessary \{instrument = vocals}
+	change_cas_instrument_if_necessary \{instrument = Vocals}
 endscript
 
 script ui_deinit_customize_character_mic 
-	change_cas_instrument_if_necessary \{instrument = None}
+	change_cas_instrument_if_necessary \{instrument = none}
 endscript
 
 script customize_character_mic_exit_save 

@@ -2,7 +2,7 @@
 script create_quickmatch_searching_dialog {
 		menu_id = quickmatch_searching_dialog_menu
 		vmenu_id = quickmatch_searching_dialog_vmenu
-		Pos = (($menu_pos) + (-400.0, 100.0))
+		pos = (($menu_pos) + (-400.0, 100.0))
 	}
 	if ScreenElementExists \{id = quickmatch_options_menu}
 		destroy_menu \{menu_id = quickmatch_options_menu}
@@ -10,50 +10,50 @@ script create_quickmatch_searching_dialog {
 	if ScreenElementExists \{id = online_main_menu}
 		destroy_menu \{menu_id = online_main_menu}
 	endif
-	new_menu scrollid = <menu_id> vmenuid = <vmenu_id> use_backdrop = (1) menu_pos = <Pos>
+	new_menu scrollid = <menu_id> vmenuid = <vmenu_id> use_backdrop = (1) menu_pos = <pos>
 	if isXenon
 		CreateScreenElement {
-			Type = TextElement
+			type = TextElement
 			parent = <vmenu_id>
 			font = fontgrid_text_a3
-			Scale = 0.5
+			scale = 0.5
 			rgba = [210 210 210 250]
-			text = qs(0x2725b21f)
+			text = qs("Xbox LIVE")
 			just = [left top]
 			z_priority = 100.0
 			block_events
 		}
 	else
 		CreateScreenElement {
-			Type = TextElement
+			type = TextElement
 			parent = <vmenu_id>
 			font = fontgrid_text_a3
-			Scale = 0.5
+			scale = 0.5
 			rgba = [210 210 210 250]
-			text = qs(0xad8568cd)
+			text = qs("PLAYSTATION®Network")
 			just = [left top]
 			z_priority = 100.0
 			block_events
 		}
 	endif
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = <vmenu_id>
 		font = fontgrid_text_a3
-		Scale = 0.5
+		scale = 0.5
 		rgba = [210 210 210 250]
-		text = qs(0x6c6b4e5b)
+		text = qs("Finding sessions...")
 		just = [left top]
 		z_priority = 100.0
 		block_events
 	}
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = <vmenu_id>
 		font = fontgrid_text_a3
-		Scale = 0.5
+		scale = 0.5
 		rgba = [210 210 210 250]
-		text = qs(0xf7723015)
+		text = qs("CANCEL")
 		just = [left top]
 		z_priority = 100.0
 		event_handlers = [
@@ -62,17 +62,17 @@ script create_quickmatch_searching_dialog {
 			{pad_choose quickmatch_searching_dialog_select_cancel}
 		]
 	}
-	LaunchEvent Type = focus target = <vmenu_id>
-	NetSessionFunc \{Obj = match
+	LaunchEvent type = focus target = <vmenu_id>
+	NetSessionFunc \{obj = match
 		func = stop_server_list}
-	NetSessionFunc \{Obj = match
+	NetSessionFunc \{obj = match
 		func = free_server_list}
-	NetSessionFunc \{Obj = match
+	NetSessionFunc \{obj = match
 		func = set_server_list_mode
 		params = {
 			quickmatch
 		}}
-	NetSessionFunc \{Obj = match
+	NetSessionFunc \{obj = match
 		func = start_server_list
 		params = {
 			callback = xboxlive_menu_optimatch_results_item_add
@@ -92,52 +92,52 @@ endscript
 script create_quickmatch_create_match_dialog {
 		menu_id = quickmatch_create_match_dialog_menu
 		vmenu_id = quickmatch_create_match_dialog_vmenu
-		Pos = (($menu_pos) + (-400.0, 100.0))
+		pos = (($menu_pos) + (-400.0, 100.0))
 	}
-	new_menu scrollid = <menu_id> vmenuid = <vmenu_id> use_backdrop = (1) menu_pos = <Pos>
+	new_menu scrollid = <menu_id> vmenuid = <vmenu_id> use_backdrop = (1) menu_pos = <pos>
 	if isXenon
 		CreateScreenElement {
-			Type = TextElement
+			type = TextElement
 			parent = <vmenu_id>
 			font = fontgrid_text_a3
-			Scale = 0.5
+			scale = 0.5
 			rgba = [210 210 210 250]
-			text = qs(0x2725b21f)
+			text = qs("Xbox LIVE")
 			just = [left top]
 			z_priority = 100.0
 			block_events
 		}
 	else
 		CreateScreenElement {
-			Type = TextElement
+			type = TextElement
 			parent = <vmenu_id>
 			font = fontgrid_text_a3
-			Scale = 0.5
+			scale = 0.5
 			rgba = [210 210 210 250]
-			text = qs(0xad8568cd)
+			text = qs("PLAYSTATION®Network")
 			just = [left top]
 			z_priority = 100.0
 			block_events
 		}
 	endif
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = <vmenu_id>
 		font = fontgrid_text_a3
-		Scale = 0.5
+		scale = 0.5
 		rgba = [210 210 210 250]
-		text = qs(0x271d2665)
+		text = qs("No sessions are available. Would you like to Create a Match?")
 		just = [left top]
 		z_priority = 100.0
 		block_events
 	}
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = <vmenu_id>
 		font = fontgrid_text_a3
-		Scale = 0.5
+		scale = 0.5
 		rgba = [210 210 210 250]
-		text = qs(0x4d968017)
+		text = qs("CREATE MATCH")
 		just = [left top]
 		z_priority = 100.0
 		event_handlers = [
@@ -147,12 +147,12 @@ script create_quickmatch_create_match_dialog {
 		]
 	}
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = <vmenu_id>
 		font = fontgrid_text_a3
-		Scale = 0.5
+		scale = 0.5
 		rgba = [210 210 210 250]
-		text = qs(0xf7723015)
+		text = qs("CANCEL")
 		just = [left top]
 		z_priority = 100.0
 		event_handlers = [
@@ -161,7 +161,7 @@ script create_quickmatch_create_match_dialog {
 			{pad_choose quickmatch_dialog_select_cancel}
 		]
 	}
-	LaunchEvent Type = focus target = <vmenu_id>
+	LaunchEvent type = focus target = <vmenu_id>
 endscript
 
 script destroy_quickmatch_create_match_dialog 

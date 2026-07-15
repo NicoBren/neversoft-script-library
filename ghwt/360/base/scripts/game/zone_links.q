@@ -2,7 +2,7 @@ showPakMap = 0
 showPakMapExpand = 0
 Download_Zones = {
 }
-common_gh_zone_params = {
+Common_GH_Zone_Params = {
 	xenon_budgets = {
 		extra_size = 1000000
 		texture_size = 30000000
@@ -32,250 +32,250 @@ common_gh_zone_params = {
 	zones = [
 	]
 }
-ghzones = {
+GHZones = {
 	z_soundcheck = {
-		Name = 'Z_Soundcheck'
+		name = 'Z_Soundcheck'
 		path = 'Z_Soundcheck/'
-		$common_gh_zone_params
+		$Common_GH_Zone_Params
 		zones = [
 			z_frontend
 		]
 	}
 	z_frontend = {
-		Name = 'Z_Frontend'
+		name = 'Z_Frontend'
 		path = 'Z_Frontend/'
-		$common_gh_zone_params
+		$Common_GH_Zone_Params
 		zones = [
 			z_soundcheck
 		]
 	}
 	z_soundcheck_cas = {
-		Name = 'Z_Soundcheck'
+		name = 'Z_Soundcheck'
 		pakname_checksum = z_soundcheck
 		links_only
-		$common_gh_zone_params
+		$Common_GH_Zone_Params
 		zones = [
 			z_soundcheck
 		]
 	}
 	z_soundcheck_practice = {
-		Name = 'Z_Soundcheck'
+		name = 'Z_Soundcheck'
 		pakname_checksum = z_soundcheck
 		links_only
-		$common_gh_zone_params
+		$Common_GH_Zone_Params
 		zones = [
 			z_soundcheck
-			z_in_game
+			Z_In_Game
 		]
 	}
 	z_credits = {
-		Name = 'Z_Credits'
+		name = 'Z_Credits'
 		path = 'Z_Credits/'
-		$common_gh_zone_params
+		$Common_GH_Zone_Params
 		zones = [
-			z_in_game
+			Z_In_Game
 		]
 	}
 	z_template = {
-		Name = 'Z_Template'
+		name = 'Z_Template'
 		path = 'Z_Template/'
-		$common_gh_zone_params
+		$Common_GH_Zone_Params
 		zones = [
-			z_in_game
+			Z_In_Game
 		]
 	}
 	z_bayou = {
-		Name = 'Z_Bayou'
+		name = 'Z_Bayou'
 		path = 'Z_Bayou/'
-		$common_gh_zone_params
+		$Common_GH_Zone_Params
 		zones = [
-			z_in_game
+			Z_In_Game
 		]
 	}
 	z_castle = {
-		Name = 'Z_Castle'
+		name = 'Z_Castle'
 		path = 'Z_Castle/'
-		$common_gh_zone_params
+		$Common_GH_Zone_Params
 		zones = [
-			z_in_game
+			Z_In_Game
 		]
 	}
 	z_fairgrounds = {
-		Name = 'Z_Fairgrounds'
+		name = 'Z_Fairgrounds'
 		path = 'Z_Fairgrounds/'
-		$common_gh_zone_params
+		$Common_GH_Zone_Params
 		zones = [
-			z_in_game
+			Z_In_Game
 		]
 	}
 	z_frathouse = {
-		Name = 'Z_Frathouse'
+		name = 'Z_Frathouse'
 		path = 'Z_Frathouse/'
-		$common_gh_zone_params
+		$Common_GH_Zone_Params
 		zones = [
-			z_in_game
+			Z_In_Game
 		]
 	}
 	z_goth = {
-		Name = 'Z_Goth'
+		name = 'Z_Goth'
 		path = 'Z_Goth/'
-		$common_gh_zone_params
+		$Common_GH_Zone_Params
 		zones = [
-			z_in_game
+			Z_In_Game
 		]
 	}
 	z_newyork = {
-		Name = 'Z_NewYork'
+		name = 'Z_NewYork'
 		path = 'Z_NewYork/'
-		$common_gh_zone_params
+		$Common_GH_Zone_Params
 		zones = [
-			z_in_game
+			Z_In_Game
 		]
 	}
 	z_recordstore = {
-		Name = 'Z_Recordstore'
+		name = 'Z_Recordstore'
 		path = 'Z_Recordstore/'
-		$common_gh_zone_params
+		$Common_GH_Zone_Params
 		zones = [
-			z_in_game
+			Z_In_Game
 		]
 	}
 	z_metalfest = {
-		Name = 'Z_Metalfest'
+		name = 'Z_Metalfest'
 		path = 'Z_Metalfest/'
-		$common_gh_zone_params
+		$Common_GH_Zone_Params
 		zones = [
-			z_in_game
+			Z_In_Game
 		]
 	}
 	z_ballpark = {
-		Name = 'Z_Ballpark'
+		name = 'Z_Ballpark'
 		path = 'Z_Ballpark/'
-		$common_gh_zone_params
+		$Common_GH_Zone_Params
 		zones = [
-			z_in_game
+			Z_In_Game
 		]
 	}
 	z_military = {
-		Name = 'Z_Military'
+		name = 'Z_Military'
 		path = 'Z_Military/'
-		$common_gh_zone_params
+		$Common_GH_Zone_Params
 		zones = [
-			z_in_game
+			Z_In_Game
 		]
 	}
 	z_hotel = {
-		Name = 'Z_Hotel'
+		name = 'Z_Hotel'
 		path = 'Z_Hotel/'
-		$common_gh_zone_params
+		$Common_GH_Zone_Params
 		zones = [
-			z_in_game
+			Z_In_Game
 		]
 	}
 	z_cathedral = {
-		Name = 'Z_Cathedral'
+		name = 'Z_Cathedral'
 		path = 'Z_Cathedral/'
-		$common_gh_zone_params
+		$Common_GH_Zone_Params
 		zones = [
-			z_in_game
+			Z_In_Game
 		]
 	}
-	Z_Harbor = {
-		Name = 'Z_Harbor'
+	z_harbor = {
+		name = 'Z_Harbor'
 		path = 'Z_Harbor/'
-		$common_gh_zone_params
+		$Common_GH_Zone_Params
 		zones = [
-			z_in_game
+			Z_In_Game
 		]
 	}
 	z_test01 = {
-		Name = 'Z_Test01'
+		name = 'Z_Test01'
 		path = 'Z_Test01/'
-		$common_gh_zone_params
+		$Common_GH_Zone_Params
 		zones = [
-			z_in_game
+			Z_In_Game
 		]
 	}
 	z_hob = {
-		Name = 'Z_HoB'
+		name = 'Z_HoB'
 		path = 'Z_HoB/'
-		$common_gh_zone_params
+		$Common_GH_Zone_Params
 		zones = [
-			z_in_game
+			Z_In_Game
 		]
 	}
 	z_tool = {
-		Name = 'Z_Tool'
+		name = 'Z_Tool'
 		path = 'Z_Tool/'
-		$common_gh_zone_params
+		$Common_GH_Zone_Params
 		zones = [
-			z_in_game
+			Z_In_Game
 		]
 	}
-	z_whitebox = {
-		Name = 'Z_Whitebox'
+	z_Whitebox = {
+		name = 'Z_Whitebox'
 		path = 'Z_Whitebox/'
-		$common_gh_zone_params
+		$Common_GH_Zone_Params
 		zones = [
-			z_in_game
+			Z_In_Game
 		]
 	}
 	z_studio = {
-		Name = 'Z_Studio'
+		name = 'Z_Studio'
 		path = 'Z_Studio/'
-		$common_gh_zone_params
+		$Common_GH_Zone_Params
 		zones = [
-			z_in_game
+			Z_In_Game
 		]
 	}
 	z_studio2 = {
-		Name = 'Z_Studio2'
+		name = 'Z_Studio2'
 		path = 'Z_Studio2/'
-		$common_gh_zone_params
+		$Common_GH_Zone_Params
 		zones = [
-			z_in_game
+			Z_In_Game
 		]
 	}
 	z_board_room = {
-		Name = 'Z_Board_Room'
+		name = 'Z_Board_Room'
 		path = 'Z_Board_Room/'
-		$common_gh_zone_params
+		$Common_GH_Zone_Params
 		zones = [
 		]
 	}
-	z_studio_album_art = {
-		Name = 'Z_Studio'
+	Z_Studio_album_art = {
+		name = 'Z_Studio'
 		pakname_checksum = z_studio
 		links_only
-		$common_gh_zone_params
+		$Common_GH_Zone_Params
 		zones = [
 			z_studio
 		]
 	}
 	z_scifi = {
-		Name = 'Z_Scifi'
+		name = 'Z_Scifi'
 		path = 'Z_Scifi/'
-		$common_gh_zone_params
+		$Common_GH_Zone_Params
 		zones = [
-			z_in_game
+			Z_In_Game
 		]
 	}
 	z_viewer = {
-		Name = 'Z_Viewer'
+		name = 'Z_Viewer'
 		path = 'Z_Viewer/'
 		extra_size = 19000
 		anim_size = 228167
 		model_size = 286064
 		scene_size = 8656217
 		zones = [
-			z_in_game
+			Z_In_Game
 		]
 		PAK_OPTIONAL
 	}
 	$Download_Zones
-	z_in_game = {
-		Name = 'Z_In_Game'
+	Z_In_Game = {
+		name = 'Z_In_Game'
 		path = 'Z_In_Game/'
-		$common_gh_zone_params
+		$Common_GH_Zone_Params
 	}
 }

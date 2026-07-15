@@ -63,7 +63,7 @@ winport_confirm_exit_fs = {
 	actions = [
 		{
 			action = continue
-			func = exitgameconfirmed
+			func = ExitGameConfirmed
 			use_last_flow_state
 		}
 		{
@@ -74,10 +74,10 @@ winport_confirm_exit_fs = {
 	]
 }
 
-script exitgameconfirmed 
-	resetengine
+script ExitGameConfirmed 
+	ResetEngine
 	begin
-	wait \{1.0
+	Wait \{1.0
 		seconds}
 	repeat
 endscript
@@ -95,8 +95,8 @@ script main_menu_get_any_band_names_exist
 	band_index = 1
 	begin
 	get_band_game_mode_name
-	formattext checksumname = bandname_id 'band%i_info_%g' i = <band_index> g = <game_mode_name>
-	getglobaltags <bandname_id> param = name
+	FormatText checksumname = bandname_id 'band%i_info_%g' i = <band_index> g = <game_mode_name>
+	GetGlobalTags <bandname_id> param = name
 	if NOT (<name> = "")
 		return \{name_exists = 1}
 	endif
@@ -170,7 +170,7 @@ script controller_disconnect_quit_warning_decider
 	endswitch
 	if ($end_credits = 1)
 		change \{end_credits = 0}
-		progression_endcredits_done
+		Progression_EndCredits_Done
 		career_song_ended_select_quit
 		return \{flow_state = main_menu_fs}
 	endif

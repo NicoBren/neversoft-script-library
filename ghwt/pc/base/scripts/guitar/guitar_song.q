@@ -1,42 +1,42 @@
 stream_config = gh1
 song_is_waiting_to_start = 0
 
-script preload_song \{starttime = 0
+script preload_song \{StartTime = 0
 		fadeintime = 0.0}
-	printf qs(0xd4f5c87b) s = <song_name>
+	printf qs("\Lsong %s") s = <song_name>
 	get_song_prefix song = <song_name>
 	get_song_struct song = <song_name>
-	if structurecontains structure = <song_struct> streamname
+	if StructureContains Structure = <song_struct> streamname
 		song_prefix = (<song_struct>.streamname)
 	endif
-	if songcheckifdownloaded filename = <song_prefix>
-		if NOT downloads_opencontentfolder content_index = <content_index>
+	if SongCheckIfDownloaded filename = <song_prefix>
+		if NOT Downloads_OpenContentFolder content_index = <content_index>
 			return \{false}
 		endif
 	endif
-	if NOT songload filename = <song_prefix> content_index = <content_index>
-		if NOT cd
-			scriptassert 'Failed to load song: %s' s = <song_prefix>
+	if NOT SongLoad filename = <song_prefix> content_index = <content_index>
+		if NOT CD
+			ScriptAssert 'Failed to load song: %s' s = <song_prefix>
 		endif
 		destroy_loading_screen
-		downloadcontentlost
+		DownloadContentLost
 		return \{false}
 	endif
 	change \{song_is_waiting_to_start = 1}
-	setseekposition_song position = <starttime>
+	SetSeekPosition_Song position = <StartTime>
 	if NOT ($current_song = jamsession)
 		if NOT ($game_mode = training)
-			createeffectsendstack slot = ($starpower_sendeffect_slot) effects = [{$starpower_echo} {$starpower_reverb} {$highpass_starpower}]
+			CreateEffectSendStack slot = ($starpower_sendeffect_slot) effects = [{$Starpower_Echo} {$Starpower_Reverb} {$HighPass_StarPower}]
 		endif
 	endif
-	if structurecontains structure = <song_struct> overall_song_volume
-		songsetmastervolume vol = (<song_struct>.overall_song_volume)
+	if StructureContains Structure = <song_struct> overall_song_volume
+		SongSetMasterVolume vol = (<song_struct>.overall_song_volume)
 	endif
-	songsetcrowdpan pan1x = ($crowd_singalong_pan1x) pan1y = ($crowd_singalong_pan1y) pan2x = ($crowd_singalong_pan2x) pan2y = ($crowd_singalong_pan2y)
+	SongSetCrowdPan pan1x = ($Crowd_Singalong_Pan1x) pan1y = ($Crowd_Singalong_Pan1y) pan2x = ($Crowd_Singalong_Pan2x) pan2y = ($Crowd_Singalong_Pan2y)
 	return \{true}
 endscript
 
-script setupsongdspnetworks 
+script SetupSongDSPNetworks 
 	get_song_prefix song = <song_name>
 	get_song_struct song = <song_name>
 	mode = $game_mode
@@ -47,7 +47,7 @@ script setupsongdspnetworks
 		mode = attract_mode
 	endif
 	num_players = $current_num_players
-	gamemode_getnumplayersshown
+	GameMode_GetNumPlayersShown
 	if (<num_players_shown> < <num_players>)
 		<num_players> = <num_players_shown>
 	endif
@@ -55,78 +55,78 @@ script setupsongdspnetworks
 	player2_part = ($player2_status.part)
 	player3_part = ($player3_status.part)
 	player4_part = ($player4_status.part)
-	getplayerinfo \{1
+	GetPlayerInfo \{1
 		highway_position}
 	p1_highway_position = <highway_position>
-	getplayerinfo \{2
+	GetPlayerInfo \{2
 		highway_position}
 	p2_highway_position = <highway_position>
-	getplayerinfo \{3
+	GetPlayerInfo \{3
 		highway_position}
 	p3_highway_position = <highway_position>
-	getplayerinfo \{4
+	GetPlayerInfo \{4
 		highway_position}
 	p4_highway_position = <highway_position>
 	mono_drums = 0
-	if structurecontains structure = <song_struct> mono_drums
+	if StructureContains Structure = <song_struct> mono_drums
 		mono_drums = (<song_struct>.mono_drums)
 	endif
-	speed = ($current_speedfactor)
-	songsetupplayerparts <...>
-	songsetplayereqsettings
-	getpakmancurrentname \{map = zones}
-	printf qs(0x666d6b87) s = <pakname>
-	formattext checksumname = reverbparams 'Reverb_Crowd_Buss_%t' t = <pakname> donotresolve
-	if globalexists name = <reverbparams> type = structure
-		printf qs(0xe3bab4b1) f = <reverbparams> donotresolve
-		songsetcrowdreverbparams ($<reverbparams>)
+	Speed = ($current_speedfactor)
+	SongSetupPlayerParts <...>
+	SongSetPlayerEQSettings
+	GetPakManCurrentName \{map = zones}
+	printf qs("\LSetting up crowd DSP for zone: %s") s = <pakname>
+	FormatText checksumname = ReverbParams 'Reverb_Crowd_Buss_%t' t = <pakname> DoNotResolve
+	if GlobalExists name = <ReverbParams> type = Structure
+		printf qs("\LUsing Reverb Params: %f") f = <ReverbParams> DoNotResolve
+		SongSetCrowdReverbParams ($<ReverbParams>)
 	else
-		printf qs(0x77b4943a) s = <reverbparams> donotresolve
+		printf qs("\LNot setting crowd reverb params, as no params exist for: %s") s = <ReverbParams> DoNotResolve
 	endif
 endscript
 
-script songsetplayereqsettings 
+script SongSetPlayerEQSettings 
 	primary_profile = 1
 	player = 1
 	begin
-	getplayerinfo <player> controller
+	GetPlayerInfo <player> controller
 	if ((<controller>) = ($primary_controller))
 		primary_profile = <player>
 	endif
 	player = (<player> + 1)
 	repeat $current_num_players
-	printf qs(0x9747ab48) c = ($primary_controller)
-	getplayerinfo <primary_profile> part
+	printf qs("\LEntering SongSetPlayerEQSettings...Primary Controller: %c") c = ($primary_controller)
+	GetPlayerInfo <primary_profile> part
 	active_profile_part = <part>
-	printf qs(0xcebfeb82) p = <primary_profile> a = <part>
-	getglobaltags \{user_options
+	printf qs("\LPrimary Profile = %p part= %a") p = <primary_profile> a = <part>
+	GetGlobalTags \{user_options
 		attract_mode_fix = 1}
 	index = (<volumes>.guitar.guitar.eq - 1)
-	printf qs(0x406cd5d8) i = <index> p = <active_profile_part>
-	songsetplayerparteq part = guitar {((($playerparteqlookup)).(guitar) [<index>])}
-	index = (<volumes>.guitar.bass.eq - 1)
-	printf qs(0x0f04ac35) i = <index> p = <active_profile_part>
-	songsetplayerparteq part = guitar {((($playerparteqlookup)).(guitar) [<index>])}
+	printf qs("\LSetting guitar eq to eq index: %i with %p as the active profile") i = <index> p = <active_profile_part>
+	SongSetPlayerPartEQ part = guitar {((($PlayerPartEQLookup)).(guitar) [<index>])}
+	index = (<volumes>.guitar.Bass.eq - 1)
+	printf qs("\LSetting bass eq to eq index: %i with %p as the active profile") i = <index> p = <active_profile_part>
+	SongSetPlayerPartEQ part = guitar {((($PlayerPartEQLookup)).(guitar) [<index>])}
 	index = (<volumes>.guitar.drum.eq - 1)
-	printf qs(0xe166ecec) i = <index> p = <active_profile_part>
-	songsetplayerparteq part = guitar {((($playerparteqlookup)).(guitar) [<index>])}
+	printf qs("\LSetting drum eq to eq index: %i with %p as the active profile") i = <index> p = <active_profile_part>
+	SongSetPlayerPartEQ part = guitar {((($PlayerPartEQLookup)).(guitar) [<index>])}
 endscript
 
 script waitforseek_song 
-	wait \{15
+	Wait \{15
 		gameframe}
 	return
 endscript
 
 script setslomo_song 
-	songsetpitch pitch_percent = (<slomo> * 100.0)
+	SongSetPitch pitch_percent = (<slomo> * 100.0)
 endscript
 
-script begin_jam_song \{pause = 0}
-	getsongtimems
-	casttointeger \{time}
+script begin_jam_song \{Pause = 0}
+	GetSongTimeMs
+	CastToInteger \{time}
 	printf \{channel = jam_mode
-		qs(0xca536e9e)}
+		qs("\Ljam session playback (begin_song)")}
 	spawnscriptnow guitar_jam_playback_recording params = {jam_instrument = 0 start_time = <time> in_game = 1}
 	spawnscriptnow guitar_jam_playback_recording params = {jam_instrument = 1 start_time = <time> in_game = 1}
 	spawnscriptnow guitar_jam_playback_recording params = {jam_instrument = 2 start_time = <time> in_game = 1}
@@ -144,90 +144,90 @@ script begin_jam_song \{pause = 0}
 	change \{song_is_waiting_to_start = 0}
 endscript
 
-script begin_song \{pause = 0}
+script begin_song \{Pause = 0}
 	if NOT ($current_song_qpak = jamsession)
-		if (<pause> = 0)
-			songunpause
+		if (<Pause> = 0)
+			SongUnPause
 		else
-			songpause
+			SongPause
 		endif
 	endif
 	change \{song_is_waiting_to_start = 0}
 endscript
 
-script setseekposition_song \{position = 0}
-	songseek time = <position>
+script SetSeekPosition_Song \{position = 0}
+	SongSeek time = <position>
 endscript
-waiting_for_pitching = 0
+Waiting_For_Pitching = 0
 
-script failed_song_pitch_down 
-	songsetpitch \{pitch = -8
+script Failed_Song_Pitch_Down 
+	SongSetPitch \{pitch = -8
 		time = 3}
-	songsetmastervolume \{vol = -20
+	SongSetMasterVolume \{vol = -20
 		time = 3}
-	change \{waiting_for_pitching = 1}
-	wait \{3
+	change \{Waiting_For_Pitching = 1}
+	Wait \{3
 		seconds}
 	spawnscriptnow \{end_song}
 endscript
 
 script end_song \{song_failed_pitch_streams = 0}
-	if iswinport
-		winportsonghighwaysync \{sync = 0}
+	if IsWinPort
+		WinPortSongHighwaySync \{sync = 0}
 	endif
 	if NOT (<song_failed_pitch_streams> = 1)
-		killspawnedscript \{name = failed_song_pitch_down}
-		if ($waiting_for_pitching = 1)
-			change \{waiting_for_pitching = 0}
+		KillSpawnedScript \{name = Failed_Song_Pitch_Down}
+		if ($Waiting_For_Pitching = 1)
+			change \{Waiting_For_Pitching = 0}
 		endif
-		destroyeffectsendstack slot = ($starpower_sendeffect_slot)
-		songstop
+		DestroyEffectSendStack slot = ($starpower_sendeffect_slot)
+		SongStop
 	else
 		printf \{channel = sfx
-			qs(0xc2b5a42d)}
-		spawnscriptnow \{failed_song_pitch_down}
+			qs("\LWe are pitching the stream down because we failed")}
+		spawnscriptnow \{Failed_Song_Pitch_Down}
 	endif
 	change \{song_is_waiting_to_start = 0}
 endscript
 
 script set_whammy_pitchshift 
-	songsetplayerwhammy player = ($<player_status>.player) whammy_value = (1 - (<control> * 0.057))
+	SongSetPlayerWhammy player = ($<player_status>.player) whammy_value = (1 - (<control> * 0.057))
 endscript
 
-script pausegh3sounds 
-	songpause
-	muteeffectsend slot = ($starpower_sendeffect_slot)
-	vocaldspsetparams \{mute_all}
-	pausesoundsbybuss \{master}
+script PauseGh3Sounds 
+	SongPause
+	MuteEffectSend slot = ($starpower_sendeffect_slot)
+	VocalDSPSetParams \{mute_all}
+	PauseSoundsByBuss \{Master}
 	if ($drum_solo_songtime_paused = 1)
 		return
 	endif
-	if NOT gotparam \{no_seek}
-		getsongtimems
-		casttointeger \{time}
+	if NOT GotParam \{no_seek}
+		GetSongTimeMs
+		CastToInteger \{time}
 		if (<time> > $current_starttime)
-			if NOT gotparam \{seek_on_unpause}
-				songseek time = <time>
+			if NOT GotParam \{seek_on_unpause}
+				SongSeek time = <time>
 			endif
 		endif
 	endif
 endscript
 
-script unpausegh3sounds 
+script UnpauseGh3Sounds 
 	if ($drum_solo_songtime_paused = 1)
 		return
 	endif
-	unmuteeffectsend slot = ($starpower_sendeffect_slot)
-	vocaldspsetparams \{unmute_all}
-	if gotparam \{seek_on_unpause}
-		getsongtimems
-		casttointeger \{time}
+	UnMuteEffectSend slot = ($starpower_sendeffect_slot)
+	VocalDSPSetParams \{unmute_all}
+	if GotParam \{seek_on_unpause}
+		GetSongTimeMs
+		CastToInteger \{time}
 		if (<time> > $current_starttime)
-			songseek time = <time>
+			SongSeek time = <time>
 		endif
 	endif
 	if ($song_is_waiting_to_start = 0)
-		songunpause
+		SongUnPause
 	endif
-	unpausesoundsbybuss \{master}
+	UnpauseSoundsByBuss \{Master}
 endscript

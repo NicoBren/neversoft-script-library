@@ -8,8 +8,8 @@ endscript
 
 script do_jam_quickplay_event 
 	($default_loading_screen.create)
-	getsonginfo
-	gettrackinfo \{track = rhythm}
+	GetSongInfo
+	GetTrackInfo \{track = rhythm}
 	change jam_current_bpm = <bpm>
 	change jam_current_tuning = <tuning>
 	change \{jam_current_instrument_effects = [
@@ -29,12 +29,12 @@ script do_jam_quickplay_event
 	jam_load_effect
 	jam_recording_create_jamsession_arrays
 	song_prefix = 'editable'
-	formattext checksumname = arraylist '%s_arraylist' s = <song_prefix> addtostringlookup = true
+	FormatText checksumname = arraylist '%s_arraylist' s = <song_prefix> AddToStringLookup = true
 	song_prefix = 'jamsession'
-	formattext checksumname = arraylist2 '%s_arraylist' s = <song_prefix> addtostringlookup = true
+	FormatText checksumname = arraylist2 '%s_arraylist' s = <song_prefix> AddToStringLookup = true
 	jamsession_copymarkerarrays \{song = editable}
 	jamsession_copyfinalscriptarrays arraylist = <arraylist> arraylist2 = <arraylist2>
-	getplayerinfo \{1
+	GetPlayerInfo \{1
 		part}
 	<players> = ($current_num_players)
 	end_time = 0
@@ -42,18 +42,18 @@ script do_jam_quickplay_event
 		switch (<part>)
 			case guitar
 			inst = 0
-			case bass
+			case Bass
 			inst = 2
 			case drum
 			inst = 3
-			case vocals
+			case Vocals
 			inst = 4
 		endswitch
 		setup_jam_song difficulty = ($player1_status.difficulty) inst = <inst> end_time = <end_time>
 	else
-		setup_jam_song_qp players = <players> end_time = <end_time>
+		setup_jam_song_QP players = <players> end_time = <end_time>
 	endif
-	getsonginfo
+	GetSongInfo
 	change_jamsession_songlist_props_struct title = $jam_selected_song artist = <artist>
 	start_song song_name = jamsession endtime = <end_time> difficulty = ($player1_status.difficulty) difficulty2 = ($player2_status.difficulty) difficulty3 = ($player3_status.difficulty) difficulty4 = ($player4_status.difficulty)
 	ui_event_wait \{event = menu_replace

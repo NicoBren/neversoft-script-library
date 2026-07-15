@@ -1,38 +1,38 @@
-cas_male_torso = [
+CAS_Male_Torso = [
 	{
-		desc_id = m_torso_tshirt
-		frontend_desc = qs(0x80c803f2)
+		desc_id = M_Torso_TShirt
+		frontend_desc = qs("\LVery Casual")
 		mesh = 'models/CAR/Male/M_Torso_TShirt.skin'
 		random_weight = 1.0
 		genre = [
-			rock
-			pop
+			Rock
+			Pop
 		]
 		materials = [
-			m_torso_tshirt_primary
+			M_Torso_TShirt_Primary
 		]
 		sections = [
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x5f195878)
+				frontend_desc = qs("Tshirt Logos")
 				base_tex = 'tex/models/Characters/CAR/Male/m_torso_tshirt_o_dnc.dds'
-				material = m_torso_tshirt_primary
+				material = M_Torso_TShirt_Primary
 				mask = $car_graphics
-				cas_1
+				Cas_1
 				userlayer
 			}
 		]
 		sections = [
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex/models/Characters/CAR/Male/m_torso_tshirt_o_dnc.dds'
-				material = m_torso_tshirt_primary
+				material = M_Torso_TShirt_Primary
 				mask = $car_basic_primitives_1
 				userlayer
 				omit_base_tex
 				wrap_u
-				cas_1
+				Cas_1
 				initial_values = {
 					x_scale = 21
 					y_scale = 30
@@ -40,14 +40,14 @@ cas_male_torso = [
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex/models/Characters/CAR/Male/m_torso_tshirt_o_dnc.dds'
-				material = m_torso_tshirt_primary
+				material = M_Torso_TShirt_Primary
 				mask = $car_basic_primitives_2
 				userlayer
 				omit_base_tex
 				wrap_u
-				cas_1
+				Cas_1
 				initial_values = {
 					x_scale = 21
 					y_scale = 30
@@ -55,14 +55,14 @@ cas_male_torso = [
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex/models/Characters/CAR/Male/m_torso_tshirt_o_dnc.dds'
-				material = m_torso_tshirt_primary
+				material = M_Torso_TShirt_Primary
 				mask = $car_gradiant_shapes
 				userlayer
 				omit_base_tex
 				wrap_u
-				cas_1
+				Cas_1
 				initial_values = {
 					x_scale = 21
 					y_scale = 30
@@ -70,14 +70,14 @@ cas_male_torso = [
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex/models/Characters/CAR/Male/m_torso_tshirt_o_dnc.dds'
-				material = m_torso_tshirt_primary
+				material = M_Torso_TShirt_Primary
 				mask = $car_icons
 				userlayer
 				omit_base_tex
 				wrap_u
-				cas_1
+				Cas_1
 				initial_values = {
 					x_scale = 21
 					y_scale = 30
@@ -85,14 +85,14 @@ cas_male_torso = [
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex/models/Characters/CAR/Male/m_torso_tshirt_o_dnc.dds'
-				material = m_torso_tshirt_primary
+				material = M_Torso_TShirt_Primary
 				mask = $car_living_shapes
 				userlayer
 				omit_base_tex
 				wrap_u
-				cas_1
+				Cas_1
 				initial_values = {
 					x_scale = 21
 					y_scale = 30
@@ -100,14 +100,14 @@ cas_male_torso = [
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex/models/Characters/CAR/Male/m_torso_tshirt_o_dnc.dds'
-				material = m_torso_tshirt_primary
+				material = M_Torso_TShirt_Primary
 				mask = $car_graphics
 				userlayer
 				omit_base_tex
 				wrap_u
-				cas_1
+				Cas_1
 				initial_values = {
 					x_scale = 21
 					y_scale = 30
@@ -115,26 +115,26 @@ cas_male_torso = [
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex/models/Characters/CAR/Male/m_torso_tshirt_o_dnc.dds'
-				material = m_torso_tshirt_primary
+				material = M_Torso_TShirt_Primary
 				mask = $car_sponsors
 				userlayer
 				omit_base_tex
 				wrap_u
-				cas_1
+				Cas_1
 				initial_values = {
 					x_scale = 21
 					y_scale = 30
 				}
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex/models/Characters/CAR/Male/m_torso_tshirt_o_dnc.dds'
-				material = m_torso_tshirt_primary
+				material = M_Torso_TShirt_Primary
 				mask = $car_fontgrid_title_a1
-				cas_1
+				Cas_1
 				omit_base_tex
 				wrap_u
 				userlayer
@@ -144,12 +144,12 @@ cas_male_torso = [
 				}
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex/models/Characters/CAR/Male/m_torso_tshirt_o_dnc.dds'
-				material = m_torso_tshirt_primary
+				material = M_Torso_TShirt_Primary
 				mask = $car_fontgrid_text_a3
-				cas_1
+				Cas_1
 				omit_base_tex
 				wrap_u
 				userlayer
@@ -159,12 +159,12 @@ cas_male_torso = [
 				}
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex/models/Characters/CAR/Male/m_torso_tshirt_o_dnc.dds'
-				material = m_torso_tshirt_primary
+				material = M_Torso_TShirt_Primary
 				mask = $car_fontgrid_text_a6
-				cas_1
+				Cas_1
 				omit_base_tex
 				wrap_u
 				userlayer
@@ -174,12 +174,12 @@ cas_male_torso = [
 				}
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex/models/Characters/CAR/Male/m_torso_tshirt_o_dnc.dds'
-				material = m_torso_tshirt_primary
+				material = M_Torso_TShirt_Primary
 				mask = $car_fontgrid_text_a8
-				cas_1
+				Cas_1
 				omit_base_tex
 				wrap_u
 				userlayer
@@ -191,609 +191,609 @@ cas_male_torso = [
 		]
 	}
 	{
-		desc_id = shirtless
-		frontend_desc = qs(0xb404a80c)
+		desc_id = Shirtless
+		frontend_desc = qs("\LShirtless")
 		random_weight = 0.0
 	}
 	{
-		desc_id = m_torso_layered
-		frontend_desc = qs(0x75e1cc5d)
+		desc_id = M_Torso_Layered
+		frontend_desc = qs("\LLayered T")
 		mesh = 'models/CAR/Male/M_Torso_Layered.skin'
 		random_weight = 1.0
 		materials = [
-			m_torso_layered_primary
-			m_torso_layered_secondary
+			M_Torso_Layered_Primary
+			M_Torso_Layered_Secondary
 		]
 		genre = [
-			rock
+			Rock
 		]
 	}
 	{
-		desc_id = m_torso_layerednostripe
-		frontend_desc = qs(0xfa670229)
+		desc_id = M_Torso_LayeredNoStripe
+		frontend_desc = qs("\LStone-Washed Star")
 		mesh = 'models/CAR/Male/M_Torso_LayeredNoStripe.skin'
 		random_weight = 1.0
 		materials = [
-			m_torso_layerednostripe_primary
-			m_torso_layerednostripe_secondary
+			M_Torso_LayeredNoStripe_Primary
+			M_Torso_LayeredNoStripe_Secondary
 		]
 		genre = [
-			rock
+			Rock
 		]
 	}
 	{
 		desc_id = m_torso_hoodie
-		frontend_desc = qs(0xc5fa8f19)
+		frontend_desc = qs("\LHoodie")
 		mesh = 'models/CAR/Male/M_Torso_Hoodie.skin'
 		random_weight = 1.0
 		materials = [
-			m_torso_hoodie_primary
-			m_torso_hoodie_secondary
+			M_Torso_Hoodie_Primary
+			M_Torso_Hoodie_Secondary
 		]
 		genre = [
-			rock
+			Rock
 		]
-		acc_skeleton = skel_m_torso_hoodie
-		acc_ragdoll = rag_m_torso_hoodie
+		acc_skeleton = Skel_M_Torso_Hoodie
+		acc_ragdoll = Rag_M_Torso_Hoodie
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
-			bone_acc_torso_04
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
+			Bone_ACC_Torso_04
 		]
 	}
 	{
 		desc_id = m_torso_ninja
-		frontend_desc = qs(0xd296152e)
+		frontend_desc = qs("\LNinja Gi")
 		mesh = 'models/CAR/Male/M_Torso_Ninja.skin'
 		random_weight = 0.0
 		materials = [
-			m_torso_ninja_primary
-			m_torso_ninja_secondary
-			m_torso_ninja_arms
+			M_Torso_Ninja_Primary
+			M_Torso_Ninja_Secondary
+			M_Torso_Ninja_Arms
 		]
 		genre = [
-			goth
+			Goth
 		]
 		price = 1750
 	}
 	{
-		desc_id = m_pop_torso_dragon
-		frontend_desc = qs(0x66d76586)
+		desc_id = M_Pop_Torso_Dragon
+		frontend_desc = qs("\LDragon Blades")
 		mesh = 'models/CAR/Male/M_Pop_Torso_Dragon.skin'
 		materials = [
-			m_pop_torso_dragon_primary
-			m_pop_torso_dragon_secondary
+			M_Pop_Torso_Dragon_Primary
+			M_Pop_Torso_Dragon_Secondary
 		]
-		acc_skeleton = skel_m_pop_torso_dragon
-		acc_ragdoll = rag_m_pop_torso_dragon
+		acc_skeleton = Skel_M_Pop_Torso_Dragon
+		acc_ragdoll = Rag_M_Pop_Torso_Dragon
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
-			bone_acc_torso_04
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
+			Bone_ACC_Torso_04
 		]
 		random_weight = 0.0
 		price = 8000
 	}
 	{
-		desc_id = m_pop_torso_leather
-		frontend_desc = qs(0xca431d9a)
+		desc_id = M_Pop_Torso_Leather
+		frontend_desc = qs("\LLeather And A T")
 		mesh = 'models/CAR/Male/M_Pop_Torso_Leather.skin'
 		materials = [
-			m_pop_torso_leather_primary
-			m_pop_torso_leather_secondary
+			M_Pop_Torso_Leather_Primary
+			M_Pop_Torso_Leather_Secondary
 		]
 		random_weight = 1.0
-		acc_skeleton = skel_m_pop_torso_leather
-		acc_ragdoll = rag_m_pop_torso_leather
+		acc_skeleton = Skel_M_Pop_Torso_Leather
+		acc_ragdoll = Rag_M_Pop_Torso_Leather
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
-			bone_acc_torso_04
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
+			Bone_ACC_Torso_04
 		]
 		genre = [
-			pop
+			Pop
 		]
 		price = 150
 	}
 	{
-		desc_id = m_pop_torso_openshirt
-		frontend_desc = qs(0x903c37b0)
+		desc_id = M_Pop_Torso_OpenShirt
+		frontend_desc = qs("\LButton Down Tank")
 		mesh = 'models/CAR/Male/M_Pop_Torso_OpenShirt.skin'
 		materials = [
-			m_pop_torso_openshirt_primary
-			m_pop_torso_openshirt_secondary
+			M_Pop_Torso_OpenShirt_Primary
+			M_Pop_Torso_OpenShirt_Secondary
 		]
 		random_weight = 1.0
-		acc_skeleton = skel_m_pop_torso_openshirt
-		acc_ragdoll = rag_m_pop_torso_openshirt
+		acc_skeleton = Skel_M_Pop_Torso_OpenShirt
+		acc_ragdoll = Rag_M_Pop_Torso_OpenShirt
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
 		]
 		genre = [
-			pop
+			Pop
 		]
 	}
 	{
-		desc_id = m_pop_torso_suit
-		frontend_desc = qs(0x7b3b9bbd)
+		desc_id = M_Pop_Torso_Suit
+		frontend_desc = qs("\LCoat Disorder")
 		mesh = 'models/CAR/Male/M_Pop_Torso_Suit.skin'
 		materials = [
-			m_pop_torso_suit_primary
-			m_pop_torso_suit_secondary
+			M_Pop_Torso_Suit_Primary
+			M_Pop_Torso_Suit_Secondary
 		]
 		random_weight = 1.0
 		genre = [
-			pop
+			Pop
 		]
 		price = 300
 	}
 	{
-		desc_id = m_pop_torso_turtleshirt
-		frontend_desc = qs(0x483148bd)
+		desc_id = M_Pop_Torso_TurtleShirt
+		frontend_desc = qs("\LButton Down Mess")
 		mesh = 'models/CAR/Male/M_Pop_Torso_TurtleShirt.skin'
 		random_weight = 1.0
 		materials = [
-			m_pop_torso_turtleshirt_primary
-			m_pop_torso_turtleshirt_secondary
+			M_Pop_Torso_TurtleShirt_Primary
+			M_Pop_Torso_TurtleShirt_Secondary
 		]
-		acc_skeleton = skel_m_pop_torso_turtleshirt
-		acc_ragdoll = rag_m_pop_torso_turtleshirt
+		acc_skeleton = Skel_M_Pop_Torso_TurtleShirt
+		acc_ragdoll = Rag_M_Pop_Torso_TurtleShirt
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
-			bone_acc_torso_04
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
+			Bone_ACC_Torso_04
 		]
 		genre = [
-			pop
+			Pop
 		]
 		price = 225
 	}
 	{
-		desc_id = m_pop_torso_vest
-		frontend_desc = qs(0x3b3d04c5)
+		desc_id = M_Pop_Torso_Vest
+		frontend_desc = qs("\LRebel Pop Star")
 		mesh = 'models/CAR/Male/M_Pop_Torso_Vest.skin'
 		random_weight = 1.0
 		genre = [
-			pop
+			Pop
 		]
 		materials = [
-			m_pop_torso_vest_primary
-			m_pop_torso_vest_secondary
+			M_Pop_Torso_Vest_Primary
+			M_Pop_Torso_Vest_Secondary
 		]
-		acc_skeleton = skel_m_pop_torso_vest
-		acc_ragdoll = rag_m_pop_torso_vest
+		acc_skeleton = Skel_M_Pop_Torso_Vest
+		acc_ragdoll = Rag_M_Pop_Torso_Vest
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
-			bone_acc_torso_04
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
+			Bone_ACC_Torso_04
 		]
 		price = 175
 	}
 	{
-		desc_id = m_punk_torso_jacket
-		frontend_desc = qs(0xdec0d31b)
+		desc_id = M_Punk_Torso_Jacket
+		frontend_desc = qs("\LVested Punk")
 		mesh = 'models/CAR/Male/M_Punk_Torso_Jacket.skin'
 		random_weight = 1.0
 		genre = [
-			punk
+			Punk
 		]
-		acc_skeleton = skel_m_punk_torso_jacket
-		acc_ragdoll = rag_m_punk_torso_jacket
+		acc_skeleton = Skel_M_Punk_Torso_Jacket
+		acc_ragdoll = Rag_M_Punk_Torso_Jacket
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
-			bone_acc_torso_04
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
+			Bone_ACC_Torso_04
 		]
 		price = 150
 	}
 	{
-		desc_id = m_punk_torso_jacket_02
-		frontend_desc = qs(0xd58d8dcd)
+		desc_id = M_Punk_Torso_Jacket_02
+		frontend_desc = qs("\LVested In Denim")
 		mesh = 'models/CAR/Male/M_Punk_Torso_Jacket_02.skin'
 		random_weight = 1.0
 		genre = [
-			punk
+			Punk
 		]
-		acc_skeleton = skel_m_punk_torso_jacket
-		acc_ragdoll = rag_m_punk_torso_jacket
+		acc_skeleton = Skel_M_Punk_Torso_Jacket
+		acc_ragdoll = Rag_M_Punk_Torso_Jacket
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
-			bone_acc_torso_04
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
+			Bone_ACC_Torso_04
 		]
 		price = 150
 	}
 	{
-		desc_id = m_punk_torso_jacket_03
-		frontend_desc = qs(0x718e92e2)
+		desc_id = M_Punk_Torso_Jacket_03
+		frontend_desc = qs("\LVested In Leather")
 		mesh = 'models/CAR/Male/M_Punk_Torso_Jacket_03.skin'
 		random_weight = 1.0
 		genre = [
-			punk
+			Punk
 		]
-		acc_skeleton = skel_m_punk_torso_jacket
-		acc_ragdoll = rag_m_punk_torso_jacket
+		acc_skeleton = Skel_M_Punk_Torso_Jacket
+		acc_ragdoll = Rag_M_Punk_Torso_Jacket
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
-			bone_acc_torso_04
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
+			Bone_ACC_Torso_04
 		]
 		price = 150
 	}
 	{
 		desc_id = m_punk_torso_hood
-		frontend_desc = qs(0xd017a37b)
+		frontend_desc = qs("\LNeed More Layers")
 		mesh = 'models/CAR/Male/M_Punk_Torso_Hood.skin'
 		random_weight = 1.0
 		genre = [
-			punk
+			Punk
 		]
-		acc_skeleton = skel_m_punk_torso_hood_03
-		acc_ragdoll = rag_m_punk_torso_hood_03
+		acc_skeleton = Skel_M_Punk_Torso_hood_03
+		acc_ragdoll = Rag_M_Punk_Torso_hood_03
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
-			bone_acc_torso_04
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
+			Bone_ACC_Torso_04
 		]
 	}
 	{
-		desc_id = m_punk_torso_hood_03
-		frontend_desc = qs(0xdb1ea893)
+		desc_id = M_Punk_Torso_Hood_03
+		frontend_desc = qs("\LCrow")
 		mesh = 'models/CAR/Male/M_Punk_Torso_Hood_03.skin'
 		random_weight = 1.0
 		genre = [
-			punk
+			Punk
 		]
-		acc_skeleton = skel_m_punk_torso_hood_03
-		acc_ragdoll = rag_m_punk_torso_hood_03
+		acc_skeleton = Skel_M_Punk_Torso_hood_03
+		acc_ragdoll = Rag_M_Punk_Torso_hood_03
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
-			bone_acc_torso_04
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
+			Bone_ACC_Torso_04
 		]
 		price = 250
 	}
 	{
-		desc_id = m_punk_torso_hood_02
-		frontend_desc = qs(0xc2641269)
+		desc_id = M_Punk_Torso_Hood_02
+		frontend_desc = qs("\LCity Lumberjack")
 		mesh = 'models/CAR/Male/M_Punk_Torso_Hood_02.skin'
 		random_weight = 1.0
 		genre = [
-			punk
+			Punk
 		]
-		acc_skeleton = skel_m_punk_torso_hood_03
-		acc_ragdoll = rag_m_punk_torso_hood_03
+		acc_skeleton = Skel_M_Punk_Torso_hood_03
+		acc_ragdoll = Rag_M_Punk_Torso_hood_03
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
-			bone_acc_torso_04
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
+			Bone_ACC_Torso_04
 		]
 		price = 250
 	}
 	{
-		desc_id = m_punk_torso_beater
-		frontend_desc = qs(0x61e6dc36)
+		desc_id = M_Punk_Torso_Beater
+		frontend_desc = qs("\LBeater")
 		mesh = 'models/CAR/Male/M_Punk_Torso_Beater.skin'
 		materials = [
-			m_punk_torso_beater_primary
+			M_Punk_Torso_Beater_Primary
 		]
 		random_weight = 1.0
 		genre = [
-			punk
+			Punk
 		]
 	}
 	{
 		desc_id = m_punk_torso_bowling
-		frontend_desc = qs(0x6c89158b)
+		frontend_desc = qs("\LRatty Rod Top")
 		mesh = 'models/CAR/Male/M_Punk_Torso_Bowling.skin'
 		materials = [
-			m_punk_torso_bowling_primary
-			m_punk_torso_bowling_secondary
+			M_Punk_Torso_Bowling_Primary
+			M_Punk_Torso_Bowling_Secondary
 		]
 		random_weight = 1.0
 		genre = [
-			punk
+			Punk
 		]
-		acc_skeleton = skel_m_punk_torso_bowling
-		acc_ragdoll = rag_m_punk_torso_bowling
+		acc_skeleton = Skel_M_Punk_Torso_Bowling
+		acc_ragdoll = Rag_M_Punk_Torso_Bowling
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
-			bone_acc_torso_04
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
+			Bone_ACC_Torso_04
 		]
 	}
 	{
 		desc_id = m_punk_torso_johnny1
-		frontend_desc = qs(0xfb918590)
+		frontend_desc = qs("\LAngry Zebra")
 		mesh = 'models/CAR/Male/M_Punk_Torso_Johnny1.skin'
 		random_weight = 1.0
 		genre = [
-			punk
+			Punk
 		]
-		acc_skeleton = skel_m_punk_torso_johnny1
-		acc_ragdoll = rag_m_punk_torso_johnny1
+		acc_skeleton = Skel_M_Punk_Torso_Johnny1
+		acc_ragdoll = Rag_M_Punk_Torso_Johnny1
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
-			bone_acc_torso_04
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
+			Bone_ACC_Torso_04
 		]
 	}
 	{
 		desc_id = m_punk_torso_johnny1_02
-		frontend_desc = qs(0x59773dda)
+		frontend_desc = qs("\LAce Of Spades")
 		mesh = 'models/CAR/Male/M_Punk_Torso_Johnny1_02.skin'
 		random_weight = 1.0
 		genre = [
-			punk
+			Punk
 		]
-		acc_skeleton = skel_m_punk_torso_johnny1
-		acc_ragdoll = rag_m_punk_torso_johnny1
+		acc_skeleton = Skel_M_Punk_Torso_Johnny1
+		acc_ragdoll = Rag_M_Punk_Torso_Johnny1
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
-			bone_acc_torso_04
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
+			Bone_ACC_Torso_04
 		]
 		price = 850
 	}
 	{
 		desc_id = m_punk_torso_johnny1_03
-		frontend_desc = qs(0x936f53d8)
+		frontend_desc = qs("\LDIY Leather Punk")
 		mesh = 'models/CAR/Male/M_Punk_Torso_Johnny1_03.skin'
 		random_weight = 1.0
 		genre = [
-			punk
+			Punk
 		]
-		acc_skeleton = skel_m_punk_torso_johnny1
-		acc_ragdoll = rag_m_punk_torso_johnny1
+		acc_skeleton = Skel_M_Punk_Torso_Johnny1
+		acc_ragdoll = Rag_M_Punk_Torso_Johnny1
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
-			bone_acc_torso_04
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
+			Bone_ACC_Torso_04
 		]
 	}
 	{
 		desc_id = m_clsc_torso_scarf
-		frontend_desc = qs(0x98fd55e5)
+		frontend_desc = qs("\LOne Size Fits Small")
 		mesh = 'models/CAR/Male/M_Clsc_Torso_scarf.skin'
 		random_weight = 1.0
 		genre = [
-			`classic	rock`
+			`Classic Rock`
 		]
 		materials = [
-			m_clsc_torso_scarf_primary
-			m_clsc_torso_scarf_vest
-			m_clsc_torso_scarf_secondary
+			M_Clsc_Torso_scarf_Primary
+			M_Clsc_Torso_scarf_Vest
+			M_Clsc_Torso_scarf_Secondary
 		]
-		acc_skeleton = skel_m_clsc_torso_scarf
-		acc_ragdoll = rag_m_clsc_torso_scarf
+		acc_skeleton = Skel_M_Clsc_Torso_scarf
+		acc_ragdoll = Rag_M_Clsc_Torso_scarf
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
-			bone_acc_torso_04
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
+			Bone_ACC_Torso_04
 		]
 	}
 	{
-		desc_id = m_clsc_torso_confed
-		frontend_desc = qs(0x2ec68eb5)
+		desc_id = M_Clsc_Torso_confed
+		frontend_desc = qs("\LRebel Charm")
 		mesh = 'models/CAR/Male/M_Clsc_Torso_confed.skin'
 		random_weight = 1.0
 		genre = [
-			`classic	rock`
+			`Classic Rock`
 		]
 		materials = [
-			m_clsc_torso_confed_primary
+			M_Clsc_Torso_confed_Primary
 		]
-		acc_skeleton = skel_m_clsc_torso_confed
-		acc_ragdoll = rag_m_clsc_torso_confed
+		acc_skeleton = Skel_M_Clsc_Torso_confed
+		acc_ragdoll = Rag_M_Clsc_Torso_confed
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
-			bone_acc_torso_04
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
+			Bone_ACC_Torso_04
 		]
 		price = 350
 	}
 	{
 		desc_id = m_clsc_torso_clrdjakt
-		frontend_desc = qs(0x5ef3da0a)
+		frontend_desc = qs("\LCorduroy Coat")
 		mesh = 'models/CAR/Male/M_Clsc_Torso_Clrdjakt.skin'
 		random_weight = 1.0
 		genre = [
-			`classic	rock`
+			`Classic Rock`
 		]
 		materials = [
-			m_clsc_torso_clrdjakt_primary
-			m_clsc_torso_clrdjakt_secondary
+			M_Clsc_Torso_Clrdjakt_Primary
+			M_Clsc_Torso_Clrdjakt_Secondary
 		]
-		acc_skeleton = skel_m_clsc_torso_clrdjakt
-		acc_ragdoll = rag_m_clsc_torso_clrdjakt
+		acc_skeleton = Skel_M_Clsc_Torso_Clrdjakt
+		acc_ragdoll = Rag_M_Clsc_Torso_Clrdjakt
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_03
-			bone_acc_torso_04
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_03
+			Bone_ACC_Torso_04
 		]
 	}
 	{
 		desc_id = m_clsc_torso_jimi
-		frontend_desc = qs(0xebfe5def)
+		frontend_desc = qs("\LKiss The Sky")
 		mesh = 'models/CAR/Male/M_Clsc_Torso_Jimi.skin'
 		genre = [
-			`classic	rock`
+			`Classic Rock`
 		]
 		price = 5
-		acc_skeleton = skel_m_clsc_torso_jimi
-		acc_ragdoll = rag_m_clsc_torso_jimi
+		acc_skeleton = Skel_M_Clsc_Torso_Jimi
+		acc_ragdoll = Rag_M_Clsc_Torso_Jimi
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
-			bone_acc_torso_04
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
+			Bone_ACC_Torso_04
 		]
 		materials = [
-			m_clsc_torso_jimi_primary
+			M_Clsc_Torso_Jimi_Primary
 		]
 		price = 2000
 		random_weight = 0.0
 	}
 	{
 		desc_id = m_goth_torso_strait
-		frontend_desc = qs(0xcb53adfe)
+		frontend_desc = qs("\LStraight Jacket")
 		mesh = 'models/CAR/Male/M_Goth_Torso_Strait.skin'
 		random_weight = 1.0
 		genre = [
-			goth
+			Goth
 		]
 		price = 5
 		materials = [
-			m_goth_torso_strait_primary
-			m_goth_torso_strait_secondary
-			m_goth_torso_strait_metal
+			M_Goth_Torso_Strait_Primary
+			M_Goth_Torso_Strait_Secondary
+			M_Goth_Torso_Strait_Metal
 		]
-		acc_skeleton = skel_m_goth_torso_strait
-		acc_ragdoll = rag_m_goth_torso_strait
+		acc_skeleton = Skel_M_Goth_Torso_Strait
+		acc_ragdoll = Rag_M_Goth_Torso_Strait
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
-			bone_acc_torso_04
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
+			Bone_ACC_Torso_04
 		]
 		price = 1500
 	}
 	{
 		desc_id = m_goth_torso_madmax
-		frontend_desc = qs(0x010fa69b)
+		frontend_desc = qs("\LStraps & Bullets")
 		mesh = 'models/CAR/Male/M_Goth_Torso_MadMax.skin'
 		materials = [
-			m_goth_torso_madmax_leather
-			m_goth_torso_madmax_sleeve
+			M_Goth_Torso_MadMax_Leather
+			M_Goth_Torso_MadMax_Sleeve
 		]
 		random_weight = 1.0
 		genre = [
-			goth
+			Goth
 		]
-		acc_skeleton = skel_m_goth_torso_madmax
-		acc_ragdoll = rag_m_goth_torso_madmax
+		acc_skeleton = Skel_M_Goth_Torso_MadMax
+		acc_ragdoll = Rag_M_Goth_Torso_MadMax
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
-			bone_acc_torso_04
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
+			Bone_ACC_Torso_04
 		]
 		price = 450
 	}
 	{
 		desc_id = m_goth_torso_tux
-		frontend_desc = qs(0x3a5a5695)
+		frontend_desc = qs("\LTux Tails")
 		mesh = 'models/CAR/Male/M_Goth_Torso_Tux.skin'
-		$cas_male_hair_common_settings
+		$CAS_Male_Hair_Common_Settings
 		material_groups = [
 			{
 				materials = [
-					m_goth_torso_tux_primary
+					M_Goth_Torso_Tux_Primary
 				]
 				shader = $cas_shader_hair
 			}
 			{
 				materials = [
-					m_goth_torso_tux_secondary
+					M_Goth_Torso_Tux_Secondary
 				]
 				shader = $cas_shader_skin
 			}
 			{
 				materials = [
-					m_goth_torso_tux_shirt
+					M_Goth_Torso_Tux_Shirt
 				]
 				shader = $cas_shader_skin
 			}
 			{
 				materials = [
-					m_goth_torso_tux_tie
+					M_Goth_Torso_Tux_Tie
 				]
 				shader = $cas_shader_skin
 			}
 		]
 		random_weight = 1.0
 		genre = [
-			goth
+			Goth
 		]
-		acc_skeleton = skel_m_goth_torso_tux
-		acc_ragdoll = rag_m_goth_torso_tux
+		acc_skeleton = Skel_M_Goth_Torso_Tux
+		acc_ragdoll = Rag_M_Goth_Torso_Tux
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
 		]
 	}
 	{
-		desc_id = m_goth_torso_poet
-		frontend_desc = qs(0x5ad056ff)
+		desc_id = M_Goth_Torso_Poet
+		frontend_desc = qs("\LFang Gang Fluff")
 		mesh = 'models/CAR/Male/M_Goth_Torso_Poet.skin'
 		materials = [
-			m_goth_torso_poet_primary
+			M_Goth_Torso_Poet_Primary
 		]
 		random_weight = 1.0
 		genre = [
-			goth
+			Goth
 		]
-		acc_skeleton = skel_m_goth_torso_poet
-		acc_ragdoll = rag_m_goth_torso_poet
+		acc_skeleton = Skel_M_Goth_Torso_Poet
+		acc_ragdoll = Rag_M_Goth_Torso_Poet
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
 		]
 	}
 	{
 		desc_id = m_goth_torso_vest
-		frontend_desc = qs(0x283675e8)
+		frontend_desc = qs("\LPatchy Duds")
 		mesh = 'models/CAR/Male/M_Goth_Torso_Vest.skin'
 		random_weight = 1.0
 		genre = [
-			goth
+			Goth
 		]
-		acc_skeleton = skel_m_goth_torso_vest
-		acc_ragdoll = rag_m_goth_torso_vest
+		acc_skeleton = Skel_M_Goth_Torso_Vest
+		acc_ragdoll = Rag_M_Goth_Torso_Vest
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
 		]
 		price = 300
 	}
 	{
 		desc_id = m_fun_torso_angelw
-		frontend_desc = qs(0xc8fe9880)
+		frontend_desc = qs("\LAngel Wings")
 		mesh = 'models/CAR/male/M_Fun_Torso_AngelW.skin'
 		materials = [
-			m_fun_torso_angelw_wing
+			M_Fun_Torso_AngelW_Wing
 		]
 		genre = [
-			goth
+			Goth
 		]
-		acc_skeleton = skel_m_fun_torso_angelw
-		acc_ragdoll = rag_m_fun_torso_angelw
+		acc_skeleton = Skel_M_Fun_Torso_AngelW
+		acc_ragdoll = Rag_M_Fun_Torso_AngelW
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
-			bone_acc_torso_04
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
+			Bone_ACC_Torso_04
 		]
 		price = 7500
 		locked
@@ -801,46 +801,46 @@ cas_male_torso = [
 		random_weight = 0.0
 	}
 	{
-		desc_id = m_mtl_torso_axel1
-		frontend_desc = qs(0x89954397)
+		desc_id = M_Mtl_Torso_Axel1
+		frontend_desc = qs("\LFire Proof")
 		mesh = 'models/CAR/Male/M_Mtl_Torso_Axel1.skin'
 		materials = [
-			m_metl_torso_axel1_primary
-			m_metl_torso_axel1_secondary
+			M_Metl_Torso_Axel1_primary
+			M_Metl_Torso_Axel1_secondary
 		]
 		random_weight = 1.0
 		genre = [
-			`heavy	metal`
+			`Heavy Metal`
 		]
-		acc_skeleton = skel_m_metl_torso_axel1
-		acc_ragdoll = rag_m_metl_torso_axel1
+		acc_skeleton = Skel_M_Metl_Torso_Axel1
+		acc_ragdoll = Rag_M_Metl_Torso_Axel1
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
-			bone_acc_torso_04
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
+			Bone_ACC_Torso_04
 		]
 	}
 	{
 		desc_id = m_metl_torso_axel2
-		frontend_desc = qs(0xd3caf88a)
+		frontend_desc = qs("\LNo Sleeves, Please")
 		mesh = 'models/CAR/Male/M_Metl_Torso_Axel2.skin'
 		random_weight = 1.0
 		genre = [
-			`heavy	metal`
+			`Heavy Metal`
 		]
-		acc_skeleton = skel_m_metl_torso_axel2
-		acc_ragdoll = rag_m_metl_torso_axel2
+		acc_skeleton = Skel_M_Metl_Torso_Axel2
+		acc_ragdoll = Rag_M_Metl_Torso_Axel2
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
-			bone_acc_torso_04
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
+			Bone_ACC_Torso_04
 		]
 	}
 	{
 		desc_id = m_metl_torso_zakk
-		frontend_desc = qs(0xc3ab6498)
+		frontend_desc = qs("\LBLS")
 		mesh = 'models/CAR/Male/M_Metl_Torso_Zakk.skin'
 		materials = [
 			m_metl_torso_zakk_primary
@@ -848,15 +848,15 @@ cas_male_torso = [
 		]
 		random_weight = 1.0
 		genre = [
-			`heavy	metal`
+			`Heavy Metal`
 		]
-		acc_skeleton = skel_m_metl_torso_zakk
-		acc_ragdoll = rag_m_metl_torso_zakk
+		acc_skeleton = Skel_M_Metl_Torso_Zakk
+		acc_ragdoll = Rag_M_Metl_Torso_Zakk
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
-			bone_acc_torso_04
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
+			Bone_ACC_Torso_04
 		]
 		random_weight = 0.25
 		random_weight_cpu = 0.0
@@ -864,101 +864,101 @@ cas_male_torso = [
 	}
 	{
 		desc_id = m_metl_torso_straps
-		frontend_desc = qs(0xd7d98d81)
+		frontend_desc = qs("\LMetro Studly")
 		mesh = 'models/CAR/Male/M_Metl_Torso_Straps.skin'
 		random_weight = 1.0
 		genre = [
-			`heavy	metal`
+			`Heavy Metal`
 		]
-		acc_skeleton = skel_m_metl_torso_axel1
-		acc_ragdoll = rag_m_metl_torso_axel1
+		acc_skeleton = Skel_M_Metl_Torso_Axel1
+		acc_ragdoll = Rag_M_Metl_Torso_Axel1
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
-			bone_acc_torso_04
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
+			Bone_ACC_Torso_04
 		]
 		price = 350
 	}
 	{
 		desc_id = m_metl_torso_lthrjkt
-		frontend_desc = qs(0x6a7176b4)
+		frontend_desc = qs("\LCycler")
 		mesh = 'models/CAR/Male/M_Metl_Torso_LthrJkt.skin'
 		materials = [
-			m_metl_torso_lthrjkt_primary
-			m_metl_torso_lthrjkt_secondary
-			m_metl_torso_lthrjkt_stripe
+			M_Metl_Torso_LthrJkt_primary
+			M_Metl_Torso_LthrJkt_secondary
+			M_Metl_Torso_LthrJkt_stripe
 		]
 		random_weight = 1.0
 		genre = [
-			`heavy	metal`
+			`Heavy Metal`
 		]
-		acc_skeleton = skel_m_metl_torso_lthrjkt
-		acc_ragdoll = rag_m_metl_torso_lthrjkt
+		acc_skeleton = Skel_M_Metl_Torso_LthrJkt
+		acc_ragdoll = Rag_M_Metl_Torso_LthrJkt
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
-			bone_acc_torso_04
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
+			Bone_ACC_Torso_04
 		]
 	}
 	{
-		desc_id = m_rock_torso_tie
-		frontend_desc = qs(0xa0d0d3bb)
+		desc_id = M_Rock_Torso_Tie
+		frontend_desc = qs("\LFast Tie")
 		mesh = 'models/CAR/Male/M_Rock_Torso_Tie.skin'
 		materials = [
-			m_rock_torso_tie_primary
-			m_rock_torso_tie_secondary
-			m_rock_torso_tie_tertiary
+			M_Rock_Torso_Tie_Primary
+			M_Rock_Torso_Tie_Secondary
+			M_Rock_Torso_Tie_Tertiary
 		]
 		random_weight = 1.0
 		genre = [
-			rock
+			Rock
 		]
-		acc_skeleton = skel_m_rock_torso_tie
-		acc_ragdoll = rag_m_rock_torso_tie
+		acc_skeleton = Skel_M_Rock_Torso_Tie
+		acc_ragdoll = Rag_M_Rock_Torso_Tie
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
-			bone_acc_torso_04
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
+			Bone_ACC_Torso_04
 		]
 		price = 150
 	}
 	{
-		desc_id = m_rock_torso_bandana
-		frontend_desc = qs(0x5c95d8b1)
+		desc_id = M_Rock_Torso_Bandana
+		frontend_desc = qs("\LSkullduggery")
 		mesh = 'models/CAR/Male/M_Rock_Torso_Bandana.skin'
 		random_weight = 1.0
 		genre = [
-			rock
+			Rock
 		]
-		acc_skeleton = skel_m_rock_torso_bandana
-		acc_ragdoll = rag_m_rock_torso_bandana
+		acc_skeleton = Skel_M_Rock_Torso_Bandana
+		acc_ragdoll = Rag_M_Rock_Torso_Bandana
 		acc_bones = [
-			bone_acc_torso_01
+			Bone_ACC_Torso_01
 		]
 		price = 100
 	}
 	{
 		desc_id = m_rock_torso_ozzycoat
-		frontend_desc = qs(0x0fd4c4e4)
+		frontend_desc = qs("\LIn The Trenches")
 		mesh = 'models/CAR/Male/M_Rock_Torso_OzzyCoat.skin'
 		materials = [
-			m_rock_torso_ozzycoat_primary
-			m_rock_torso_ozzycoat_secondary
+			M_Rock_Torso_OzzyCoat_Primary
+			M_Rock_Torso_OzzyCoat_Secondary
 		]
 		random_weight = 1.0
-		acc_skeleton = skel_m_rock_torso_ozzycoat
-		acc_ragdoll = rag_m_rock_torso_ozzycoat
+		acc_skeleton = Skel_M_Rock_Torso_OzzyCoat
+		acc_ragdoll = Rag_M_Rock_Torso_OzzyCoat
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
-			bone_acc_torso_04
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
+			Bone_ACC_Torso_04
 		]
 		genre = [
-			rock
+			Rock
 		]
 		random_weight = 0.25
 		random_weight_cpu = 0.0
@@ -966,270 +966,270 @@ cas_male_torso = [
 	}
 	{
 		desc_id = m_rock_torso_sleeveless
-		frontend_desc = qs(0xd8b0b44a)
+		frontend_desc = qs("\LRowdy Cut")
 		mesh = 'models/CAR/Male/M_Rock_Torso_Sleeveless.skin'
 		materials = [
-			m_rock_torso_sleeveless_primary
+			M_Rock_Torso_Sleeveless_Primary
 		]
 		random_weight = 1.0
-		acc_skeleton = skel_m_rock_torso_sleeveless
-		acc_ragdoll = rag_m_rock_torso_sleeveless
+		acc_skeleton = Skel_M_Rock_Torso_Sleeveless
+		acc_ragdoll = Rag_M_Rock_Torso_Sleeveless
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
 		]
 		genre = [
-			rock
+			Rock
 		]
 	}
 	{
-		desc_id = m_rock_torso_ljacket
-		frontend_desc = qs(0x368fb7d4)
+		desc_id = M_Rock_Torso_LJacket
+		frontend_desc = qs("\LThe Wreckless One")
 		mesh = 'models/CAR/Male/M_Rock_Torso_LJacket.skin'
 		materials = [
-			m_rock_torso_ljacket_primary
-			m_rock_torso_ljacket_secondary
+			M_Rock_Torso_LJacket_Primary
+			M_Rock_Torso_LJacket_Secondary
 		]
 		random_weight = 1.0
-		acc_skeleton = skel_m_rock_torso_ljacket
-		acc_ragdoll = rag_m_rock_torso_ljacket
+		acc_skeleton = Skel_M_Rock_Torso_LJacket
+		acc_ragdoll = Rag_M_Rock_Torso_LJacket
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
-			bone_acc_torso_04
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
+			Bone_ACC_Torso_04
 		]
 		genre = [
-			rock
+			Rock
 		]
 		price = 250
 	}
 	{
-		desc_id = m_rock_torso_ripshirt
-		frontend_desc = qs(0xac86e5d7)
+		desc_id = M_Rock_Torso_RipShirt
+		frontend_desc = qs("\LAshby Dagur")
 		mesh = 'models/CAR/Male/M_Rock_Torso_RipShirt.skin'
 		materials = [
-			m_rock_torso_ripshirt_primary
+			M_Rock_Torso_RipShirt_Primary
 		]
 		random_weight = 1.0
 		genre = [
-			rock
+			Rock
 		]
 	}
 	{
-		desc_id = m_rock_torso_rolledslvs
-		frontend_desc = qs(0x2d4d7f8a)
+		desc_id = M_Rock_Torso_RolledSlvs
+		frontend_desc = qs("\LRolled Up")
 		mesh = 'models/CAR/Male/M_Rock_Torso_RolledSlvs.skin'
 		materials = [
-			m_rock_torso_rolledslvs_primary
+			M_Rock_Torso_RolledSlvs_Primary
 		]
 		random_weight = 1.0
 		genre = [
-			rock
+			Rock
 		]
 	}
 	{
-		desc_id = m_torso_tasselvest
-		frontend_desc = qs(0xa559f15c)
+		desc_id = M_Torso_TasselVest
+		frontend_desc = qs("\LTassel Fever")
 		mesh = 'models/CAR/Male/M_Torso_TasselVest.skin'
 		materials = [
-			m_torso_tasselvest_primary
-			m_torso_tasselvest_secondary
+			M_Torso_TasselVest_Primary
+			M_Torso_TasselVest_Secondary
 		]
 		random_weight = 0.1
-		acc_skeleton = skel_m_torso_tasselvest
-		acc_ragdoll = rag_m_torso_tasselvest
+		acc_skeleton = Skel_M_Torso_TasselVest
+		acc_ragdoll = Rag_M_Torso_TasselVest
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
-			bone_acc_torso_04
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
+			Bone_ACC_Torso_04
 		]
 		genre = [
-			rock
+			Rock
 		]
 	}
 	{
-		desc_id = m_rock_torso_rockbot
-		frontend_desc = qs(0x3ab7a665)
+		desc_id = M_Rock_Torso_RockBot
+		frontend_desc = qs("\LRockubot")
 		mesh = 'models/CAR/Male/M_Rock_Torso_RockBot.skin'
 		materials = [
-			m_rock_torso_rockbot_primary
+			M_Rock_Torso_RockBot_Primary
 		]
 		random_weight = 0.0
 		price = 15000
 	}
 	{
-		desc_id = m_glam_torso_rags
-		frontend_desc = qs(0x56b233aa)
+		desc_id = M_Glam_Torso_Rags
+		frontend_desc = qs("\LLeftovers")
 		mesh = 'models/CAR/Male/M_Glam_Torso_Rags.skin'
 		materials = [
-			m_glam_torso_rags_primary
+			M_Glam_Torso_Rags_Primary
 		]
 		random_weight = 1.0
 		genre = [
-			`glam	rock`
+			`Glam Rock`
 		]
 	}
 	{
-		desc_id = m_glam_torso_champ
-		frontend_desc = qs(0x59c78648)
+		desc_id = M_Glam_Torso_Champ
+		frontend_desc = qs("\LGlam Champ")
 		mesh = 'models/CAR/Male/M_Glam_Torso_Champ.skin'
 		materials = [
-			m_glam_torso_champ_primary
+			M_Glam_Torso_Champ_Primary
 		]
 		random_weight = 1.0
 		genre = [
-			`glam	rock`
+			`Glam Rock`
 		]
-		acc_skeleton = skel_m_glam_torso_champ
-		acc_ragdoll = rag_m_glam_torso_champ
+		acc_skeleton = Skel_M_Glam_Torso_Champ
+		acc_ragdoll = Rag_M_Glam_Torso_Champ
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
-			bone_acc_torso_04
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
+			Bone_ACC_Torso_04
 		]
 		price = 400
 	}
 	{
-		desc_id = m_glam_torso_tiger
-		frontend_desc = qs(0x71c4b537)
+		desc_id = M_Glam_Torso_Tiger
+		frontend_desc = qs("\LGlam Tiger")
 		mesh = 'models/CAR/Male/M_Glam_Torso_Tiger.skin'
 		materials = [
-			m_glam_torso_tiger_primary
-			m_glam_torso_tiger_secondary
+			M_Glam_Torso_Tiger_Primary
+			M_Glam_Torso_Tiger_Secondary
 		]
 		random_weight = 1.0
 		genre = [
-			`glam	rock`
+			`Glam Rock`
 		]
-		acc_skeleton = skel_m_glam_torso_tiger
-		acc_ragdoll = rag_m_glam_torso_tiger
+		acc_skeleton = Skel_M_Glam_Torso_Tiger
+		acc_ragdoll = Rag_M_Glam_Torso_Tiger
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
 		]
 	}
 	{
-		desc_id = m_glam_torso_gold
-		frontend_desc = qs(0xd14cda2e)
+		desc_id = M_Glam_Torso_Gold
+		frontend_desc = qs("\LGilded Glam")
 		mesh = 'models/CAR/Male/M_Glam_Torso_Gold.skin'
 		materials = [
-			m_glam_torso_gold_primary
+			M_Glam_Torso_Gold_Primary
 		]
 		random_weight = 1.0
 		genre = [
-			`glam	rock`
+			`Glam Rock`
 		]
-		acc_skeleton = skel_m_glam_torso_gold
-		acc_ragdoll = rag_m_glam_torso_gold
+		acc_skeleton = Skel_M_Glam_Torso_Gold
+		acc_ragdoll = Rag_M_Glam_Torso_Gold
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
-			bone_acc_torso_04
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
+			Bone_ACC_Torso_04
 		]
 	}
 	{
-		desc_id = m_glam_torso_kiss
-		frontend_desc = qs(0x1a6924a3)
+		desc_id = M_Glam_Torso_Kiss
+		frontend_desc = qs("\LStar Power")
 		mesh = 'models/CAR/Male/M_Glam_Torso_Kiss.skin'
 		materials = [
-			m_glam_torso_kiss_primary
-			m_glam_torso_kiss_secondary
+			M_Glam_Torso_Kiss_Primary
+			M_Glam_Torso_Kiss_Secondary
 		]
 		random_weight = 1.0
 		genre = [
-			`glam	rock`
+			`Glam Rock`
 		]
-		acc_skeleton = skel_m_glam_torso_kiss
-		acc_ragdoll = rag_m_glam_torso_kiss
+		acc_skeleton = Skel_M_Glam_Torso_Kiss
+		acc_ragdoll = Rag_M_Glam_Torso_Kiss
 		acc_bones = [
-			bone_acc_torso_01
+			Bone_ACC_Torso_01
 		]
 		price = 2500
 	}
 	{
 		desc_id = m_bmtl_torso_lars
-		frontend_desc = qs(0x7fbbd35c)
+		frontend_desc = qs("\LBlack Metal Warrior")
 		mesh = 'models/CAR/Male/M_Bmtl_Torso_Lars.skin'
 		random_weight = 1.0
 		genre = [
-			`black	metal`
+			`Black Metal`
 		]
 	}
 	{
 		desc_id = m_bmtl_torso_skeleton
-		frontend_desc = qs(0xeb74999f)
+		frontend_desc = qs("\LFishnets & Bones")
 		mesh = 'models/CAR/Male/M_Bmtl_Torso_Skeleton.skin'
 		random_weight = 1.0
 		genre = [
-			`black	metal`
+			`Black Metal`
 		]
 		price = 1400
 	}
 	{
-		desc_id = m_bmtl_torso_skeletonbelt
-		frontend_desc = qs(0xd1f5c120)
+		desc_id = M_Bmtl_Torso_SkeletonBelt
+		frontend_desc = qs("\LReady For Battle")
 		mesh = 'models/CAR/Male/M_Bmtl_Torso_SkeletonBelt.skin'
 		materials = [
-			m_bmtl_torso_skeletonbelt_primary
-			m_bmtl_torso_skeletonbelt_secondary
+			M_Bmtl_Torso_SkeletonBelt_Primary
+			M_Bmtl_Torso_SkeletonBelt_Secondary
 		]
 		random_weight = 1.0
-		acc_skeleton = skel_m_bmtl_torso_skeletonbelt
-		acc_ragdoll = rag_m_bmtl_torso_skeletonbelt
+		acc_skeleton = Skel_M_Bmtl_Torso_SkeletonBelt
+		acc_ragdoll = Rag_M_Bmtl_Torso_SkeletonBelt
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
 		]
 		genre = [
-			`black	metal`
+			`Black Metal`
 		]
 		price = 1500
 	}
 	{
-		desc_id = m_bmtl_torso_patternjacket
-		frontend_desc = qs(0x12daf194)
+		desc_id = M_Bmtl_Torso_PatternJacket
+		frontend_desc = qs("\LLeathery Mold")
 		mesh = 'models/CAR/Male/M_Bmtl_Torso_PatternJacket.skin'
 		random_weight = 1.0
 		materials = [
-			m_bmtl_patternjacket_primary
+			M_Bmtl_PatternJacket_Primary
 		]
-		acc_skeleton = skel_m_bmtl_torso_patternjacket
-		acc_ragdoll = rag_m_bmtl_torso_patternjacket
+		acc_skeleton = Skel_M_Bmtl_Torso_PatternJacket
+		acc_ragdoll = Rag_M_Bmtl_Torso_PatternJacket
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
 		]
 		genre = [
-			`black	metal`
+			`Black Metal`
 		]
 	}
 	{
-		desc_id = m_bmtl_torso_coatring
-		frontend_desc = qs(0x5b5d16b9)
+		desc_id = M_Bmtl_Torso_CoatRing
+		frontend_desc = qs("\LLace 'er Up")
 		mesh = 'models/CAR/Male/M_Bmtl_Torso_CoatRing.skin'
 		materials = [
-			m_metl_torso_coatring_primary
-			m_metl_torso_coatring_secondary
-			m_metl_torso_coatring_belt
+			M_Metl_Torso_CoatRing_Primary
+			M_Metl_Torso_CoatRing_Secondary
+			M_Metl_Torso_CoatRing_Belt
 		]
 		random_weight = 1.0
-		acc_skeleton = skel_m_bmtl_torso_coatring
-		acc_ragdoll = rag_m_bmtl_torso_coatring
+		acc_skeleton = Skel_M_BMTL_Torso_CoatRing
+		acc_ragdoll = Rag_M_BMTL_Torso_CoatRing
 		acc_bones = [
-			bone_acc_torso_01
-			bone_acc_torso_02
-			bone_acc_torso_03
-			bone_acc_torso_04
+			Bone_ACC_Torso_01
+			Bone_ACC_Torso_02
+			Bone_ACC_Torso_03
+			Bone_ACC_Torso_04
 		]
 		genre = [
-			`black	metal`
+			`Black Metal`
 		]
 		price = 1550
 	}

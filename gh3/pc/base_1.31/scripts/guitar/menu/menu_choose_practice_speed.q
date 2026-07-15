@@ -3,12 +3,12 @@ menu_choose_practice_speed_font = text_a3
 
 script create_choose_practice_speed_menu 
 	disable_pause
-	if screenelementexists \{id = cps_menu}
-		launchevent \{type = unfocus
+	if ScreenElementExists \{id = cps_menu}
+		LaunchEvent \{type = unfocus
 			target = cps_menu}
 	endif
-	if screenelementexists \{id = newspaper_vmenu}
-		launchevent \{type = unfocus
+	if ScreenElementExists \{id = newspaper_vmenu}
+		LaunchEvent \{type = unfocus
 			target = newspaper_vmenu}
 	endif
 	event_handlers = [
@@ -31,7 +31,7 @@ script create_choose_practice_speed_menu
 		]}
 	text_params = {
 		parent = cps_vmenu
-		type = textelement
+		type = TextElement
 		font = ($menu_choose_practice_speed_font)
 		rgba = ($menu_unfocus_color)
 		z_priority = 700
@@ -39,11 +39,11 @@ script create_choose_practice_speed_menu
 		just = [center center]
 	}
 	menu_z = 500
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		id = cps_speed_container
 		parent = root_window
 		pos = (0.0, 0.0)}
-	displaysprite \{parent = cps_speed_container
+	displaySprite \{parent = cps_speed_container
 		pos = (640.0, 360.0)
 		just = [
 			right
@@ -53,7 +53,7 @@ script create_choose_practice_speed_menu
 		dims = (320.0, 320.0)
 		z = 600
 		flip_v}
-	displaysprite \{parent = cps_speed_container
+	displaySprite \{parent = cps_speed_container
 		pos = (640.0, 360.0)
 		just = [
 			left
@@ -62,7 +62,7 @@ script create_choose_practice_speed_menu
 		tex = practice_speed_bg
 		dims = (320.0, 320.0)
 		z = 600}
-	displaysprite \{parent = cps_speed_container
+	displaySprite \{parent = cps_speed_container
 		pos = (640.0, 360.0)
 		just = [
 			left
@@ -72,7 +72,7 @@ script create_choose_practice_speed_menu
 		dims = (320.0, 320.0)
 		z = 600
 		flip_h}
-	createscreenelement \{type = spriteelement
+	CreateScreenElement \{type = SpriteElement
 		parent = cps_speed_container
 		pos = (640.0, 360.0)
 		just = [
@@ -84,7 +84,7 @@ script create_choose_practice_speed_menu
 		z_priority = 600
 		flip_v
 		flip_h}
-	displaysprite \{parent = cps_speed_container
+	displaySprite \{parent = cps_speed_container
 		id = cps_hilite
 		tex = white
 		z = 550
@@ -99,7 +99,7 @@ script create_choose_practice_speed_menu
 			center
 		]
 		z = 699}
-	displaysprite \{parent = cps_speed_container
+	displaySprite \{parent = cps_speed_container
 		id = cps_hilite_be1
 		tex = character_hub_hilite_bookend
 		z = 550
@@ -114,7 +114,7 @@ script create_choose_practice_speed_menu
 			center
 		]
 		z = 699}
-	displaysprite \{parent = cps_speed_container
+	displaySprite \{parent = cps_speed_container
 		id = cps_hilite_be2
 		tex = character_hub_hilite_bookend
 		z = 550
@@ -129,7 +129,7 @@ script create_choose_practice_speed_menu
 			center
 		]
 		z = 699}
-	createscreenelement \{type = spriteelement
+	CreateScreenElement \{type = SpriteElement
 		parent = cps_speed_container
 		texture = gradient_128
 		rgba = [
@@ -145,7 +145,7 @@ script create_choose_practice_speed_menu
 			top
 		]
 		z_priority = 500}
-	createscreenelement \{type = textelement
+	CreateScreenElement \{type = TextElement
 		parent = cps_speed_container
 		text = "Select Speed"
 		font = text_a10
@@ -162,65 +162,65 @@ script create_choose_practice_speed_menu
 			center
 		]
 		z_priority = 700}
-	createscreenelement {
+	CreateScreenElement {
 		<text_params>
-		type = containerelement
+		type = ContainerElement
 		dims = (0.0, 100.0)
 		event_handlers = [
 			{focus practice_choose_speed_hilite params = {id = ps_fullspeed pos = (640.0, 337.0)}}
 			{unfocus retail_menu_unfocus params = {id = ps_fullspeed}}
-			{pad_choose menu_choose_practice_speed_set_speed params = {speed = full}}
+			{pad_choose menu_choose_practice_speed_set_speed params = {Speed = full}}
 		]
 	}
-	createscreenelement {
+	CreateScreenElement {
 		<text_params>
 		parent = <id>
 		id = ps_fullspeed
 		text = "Full Speed"
 	}
-	createscreenelement {
+	CreateScreenElement {
 		<text_params>
-		type = containerelement
+		type = ContainerElement
 		dims = (0.0, 100.0)
 		event_handlers = [
 			{focus practice_choose_speed_hilite params = {id = ps_slow pos = (640.0, 385.0)}}
 			{unfocus retail_menu_unfocus params = {id = ps_slow}}
-			{pad_choose menu_choose_practice_speed_set_speed params = {speed = slow}}
+			{pad_choose menu_choose_practice_speed_set_speed params = {Speed = Slow}}
 		]
 	}
-	createscreenelement {
+	CreateScreenElement {
 		<text_params>
 		parent = <id>
 		id = ps_slow
 		text = "Slow"
 	}
-	createscreenelement {
+	CreateScreenElement {
 		<text_params>
-		type = containerelement
+		type = ContainerElement
 		dims = (0.0, 100.0)
 		event_handlers = [
 			{focus practice_choose_speed_hilite params = {id = ps_slower pos = (640.0, 434.0)}}
 			{unfocus retail_menu_unfocus params = {id = ps_slower}}
-			{pad_choose menu_choose_practice_speed_set_speed params = {speed = slower}}
+			{pad_choose menu_choose_practice_speed_set_speed params = {Speed = slower}}
 		]
 	}
-	createscreenelement {
+	CreateScreenElement {
 		<text_params>
 		parent = <id>
 		id = ps_slower
 		text = "Slower"
 	}
-	createscreenelement {
+	CreateScreenElement {
 		<text_params>
-		type = containerelement
+		type = ContainerElement
 		dims = (0.0, 100.0)
 		event_handlers = [
 			{focus practice_choose_speed_hilite params = {id = ps_slowest pos = (640.0, 484.0)}}
 			{unfocus retail_menu_unfocus params = {id = ps_slowest}}
-			{pad_choose menu_choose_practice_speed_set_speed params = {speed = slowest}}
+			{pad_choose menu_choose_practice_speed_set_speed params = {Speed = slowest}}
 		]
 	}
-	createscreenelement {
+	CreateScreenElement {
 		<text_params>
 		parent = <id>
 		id = ps_slowest
@@ -245,30 +245,30 @@ script practice_speed_go_back
 endscript
 
 script practice_choose_speed_hilite 
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	new_dims = (<width> * (1.25, 0.0) + (0.0, 45.0))
-	setscreenelementprops id = cps_hilite pos = <pos> dims = <new_dims>
-	setscreenelementprops id = cps_hilite_be1 pos = (<pos> - (<new_dims>.(0.5, 0.0) * (1.0, 0.0)) + (12.0, 0.0))
-	setscreenelementprops id = cps_hilite_be2 pos = (<pos> + (<new_dims>.(0.5, 0.0) * (1.0, 0.0)) - (4.0, 0.0))
+	SetScreenElementProps id = cps_hilite pos = <pos> dims = <new_dims>
+	SetScreenElementProps id = cps_hilite_be1 pos = (<pos> - (<new_dims>.(0.5, 0.0) * (1.0, 0.0)) + (12.0, 0.0))
+	SetScreenElementProps id = cps_hilite_be2 pos = (<pos> + (<new_dims>.(0.5, 0.0) * (1.0, 0.0)) - (4.0, 0.0))
 endscript
 
-script menu_choose_practice_speed_set_speed \{speed = full}
-	switch <speed>
+script menu_choose_practice_speed_set_speed \{Speed = full}
+	switch <Speed>
 		case full
 		change \{current_speedfactor = 1.0}
-		change \{structurename = pitchshiftslow1
+		change \{structurename = PitchShiftSlow1
 			pitch = 1.0}
-		case slow
+		case Slow
 		change \{current_speedfactor = 0.8}
-		change \{structurename = pitchshiftslow1
+		change \{structurename = PitchShiftSlow1
 			pitch = 1.25}
 		case slower
 		change \{current_speedfactor = 0.66666675}
-		change \{structurename = pitchshiftslow1
+		change \{structurename = PitchShiftSlow1
 			pitch = 1.5}
 		case slowest
 		change \{current_speedfactor = 0.5}
-		change \{structurename = pitchshiftslow1
+		change \{structurename = PitchShiftSlow1
 			pitch = 2.0}
 	endswitch
 	change \{menu_choose_practice_destroy_previous_menu = 1}

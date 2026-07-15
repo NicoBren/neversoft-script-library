@@ -1,57 +1,57 @@
-gp_fx_cathedralsparks_01 = {
+GP_FX_CathedralSparks_01 = {
 	pos = (-2.634338, 0.0, 4.5144744)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	emitrangedims = (0.01, 0.01, 0.01)
-	docircularemit
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	EmitRangeDims = (0.01, 0.01, 0.01)
+	DoCircularEmit
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, -8.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 10.0
-	bounceheight = 0.0
-	bouncecoeff = 0.2
-	bouncecallbackrate = 0.0
-	liferange = (1.5, 2.0)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 10.0
+	BounceHeight = 0.0
+	BounceCoeff = 0.2
+	BounceCallbackRate = 0.0
+	LifeRange = (1.5, 2.0)
 	emit_rate = 100.0
 	max = 0
-	timeseed = 2.0
-	lifetime = 0.3
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 2.0
+	lifeTime = 0.3
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.04, 0.05)
 		(0.0, 0.0)
 	]
-	speedrange = (6.0, 10.0)
-	rotvel = (0.0, 0.0)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	alignwithpath
-	pathfollowtime = 0.05
-	history = 18
-	historylistcoordinatespace = world
+	SpeedRange = (6.0, 10.0)
+	RotVel = (0.0, 0.0)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	AlignWithPath
+	PathFollowTime = 0.05
+	History = 18
+	HistoryListCoordinateSpace = world
 	color = -1719041
-	lod_default
-	quickmaterial = {
-		texturelayout = layout2x2
-		diffusetextureenabled
-		diffusetexture = jow_confetti01
-		specularpower = 0
+	LOD_Default
+	QuickMaterial = {
+		TextureLayout = Layout2x2
+		DiffuseTextureEnabled
+		DiffuseTexture = JOW_Confetti01
+		SpecularPower = 0
 		bloom
 		alphacutoff = 55
-		blendmode = add
-		quadanimationfps = 0
+		blendMode = Add
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-1.1173441, 0.0, -0.0)
 		(-1.1173441, 0.0, -0.0)
 		(-0.965606, 0.0, -0.0)
@@ -65,7 +65,7 @@ gp_fx_cathedralsparks_01 = {
 		(1.200111, 0.0, -0.0)
 		(1.200111, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-1
 		-1
 		-1
@@ -75,7 +75,7 @@ gp_fx_cathedralsparks_01 = {
 		-1
 		-1
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.196428
 		0.7321429
 		1.0

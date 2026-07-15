@@ -104,14 +104,14 @@ training_basic_tutorial_script = [
 
 script training_basic_tutorial_startup 
 	training_init_session
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = root_window}
 	training_create_narrator_icons
 endscript
 
 script training_create_narrator_icons 
-	createscreenelement \{parent = training_container
-		type = spriteelement
+	CreateScreenElement \{parent = training_container
+		type = SpriteElement
 		id = god_icon
 		just = [
 			center
@@ -128,8 +128,8 @@ script training_create_narrator_icons
 		]
 		scale = (1.4, 1.4)
 		z_priority = 5}
-	createscreenelement \{parent = training_container
-		type = spriteelement
+	CreateScreenElement \{parent = training_container
+		type = SpriteElement
 		id = lou_icon
 		just = [
 			center
@@ -161,19 +161,19 @@ script training_basic_tutorial_show_title
 	if ($transitions_locked = 0)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	create_training_pause_handler
 	safe_show \{id = god_icon}
-	training_play_sound \{sound = 'Tutorial_1_Intro_01_God'
-		wait}
+	training_play_sound \{Sound = 'Tutorial_1_Intro_01_God'
+		Wait}
 	training_destroy_title
 endscript
 
 script training_1_1_show_guitar 
-	createscreenelement \{parent = training_container
-		type = spriteelement
+	CreateScreenElement \{parent = training_container
+		type = SpriteElement
 		id = guitar_sprite
 		just = [
 			center
@@ -196,15 +196,15 @@ script training_1_1_show_guitar
 endscript
 
 script training_1_1_start_guitar_vo 
-	training_play_sound \{sound = 'Tutorial_1_Intro_02_God'
-		wait}
+	training_play_sound \{Sound = 'Tutorial_1_Intro_02_God'
+		Wait}
 endscript
 
 script training_create_fret_finger_sprites 
 	wrist_pos = (455.0, 362.0)
-	createscreenelement {
+	CreateScreenElement {
 		parent = training_container
-		type = spriteelement
+		type = SpriteElement
 		id = hand_wrist
 		just = [center center]
 		texture = training_hand_wrist
@@ -215,9 +215,9 @@ script training_create_fret_finger_sprites
 		z_priority = 5
 	}
 	hand_pos = (407.0, 430.0)
-	createscreenelement {
+	CreateScreenElement {
 		parent = training_container
-		type = spriteelement
+		type = SpriteElement
 		id = fret_none_sprite
 		just = [center center]
 		texture = training_hand_button_none
@@ -227,9 +227,9 @@ script training_create_fret_finger_sprites
 		scale = (0.4, 0.4)
 		z_priority = 5
 	}
-	createscreenelement {
+	CreateScreenElement {
 		parent = training_container
-		type = spriteelement
+		type = SpriteElement
 		id = fret_green_sprite
 		just = [center center]
 		texture = training_hand_button_g
@@ -239,9 +239,9 @@ script training_create_fret_finger_sprites
 		scale = (0.4, 0.4)
 		z_priority = 5
 	}
-	createscreenelement {
+	CreateScreenElement {
 		parent = training_container
-		type = spriteelement
+		type = SpriteElement
 		id = fret_red_sprite
 		just = [center center]
 		texture = training_hand_button_r
@@ -251,9 +251,9 @@ script training_create_fret_finger_sprites
 		scale = (0.4, 0.4)
 		z_priority = 5
 	}
-	createscreenelement {
+	CreateScreenElement {
 		parent = training_container
-		type = spriteelement
+		type = SpriteElement
 		id = fret_yellow_sprite
 		just = [center center]
 		texture = training_hand_button_y
@@ -263,9 +263,9 @@ script training_create_fret_finger_sprites
 		scale = (0.4, 0.4)
 		z_priority = 5
 	}
-	createscreenelement {
+	CreateScreenElement {
 		parent = training_container
-		type = spriteelement
+		type = SpriteElement
 		id = fret_green_red_sprite
 		just = [center center]
 		texture = training_hand_button_gr
@@ -275,9 +275,9 @@ script training_create_fret_finger_sprites
 		scale = (0.4, 0.4)
 		z_priority = 5
 	}
-	createscreenelement {
+	CreateScreenElement {
 		parent = training_container
-		type = spriteelement
+		type = SpriteElement
 		id = fret_green_red_yellow_sprite
 		just = [center center]
 		texture = training_hand_button_gry
@@ -311,24 +311,24 @@ script training_1_1_show_fret_placement
 endscript
 
 script training_animate_fret_fingers 
-	wait \{2
+	Wait \{2
 		seconds
 		ignoreslomo}
 	begin
 	pose_fret_fingers \{color = green}
-	wait \{0.5
+	Wait \{0.5
 		seconds
 		ignoreslomo}
 	pose_fret_fingers \{color = red}
-	wait \{0.5
+	Wait \{0.5
 		seconds
 		ignoreslomo}
-	pose_fret_fingers \{color = yellow}
-	wait \{0.5
+	pose_fret_fingers \{color = Yellow}
+	Wait \{0.5
 		seconds
 		ignoreslomo}
 	pose_fret_fingers \{color = red}
-	wait \{0.5
+	Wait \{0.5
 		seconds
 		ignoreslomo}
 	repeat 2
@@ -344,7 +344,7 @@ script pose_fret_fingers
 		safe_show \{id = fret_green_sprite}
 		case red
 		safe_show \{id = fret_red_sprite}
-		case yellow
+		case Yellow
 		safe_show \{id = fret_yellow_sprite}
 		case green_red
 		safe_show \{id = fret_green_red_sprite}
@@ -367,24 +367,24 @@ endscript
 
 script training_animate_strum_fingers 
 	pose_strum_fingers \{pos = middle}
-	wait \{2
+	Wait \{2
 		seconds
 		ignoreslomo}
 	begin
 	pose_strum_fingers \{pos = middle}
-	wait \{0.5
+	Wait \{0.5
 		seconds
 		ignoreslomo}
 	pose_strum_fingers \{pos = up}
-	wait \{0.5
+	Wait \{0.5
 		seconds
 		ignoreslomo}
 	pose_strum_fingers \{pos = middle}
-	wait \{0.5
+	Wait \{0.5
 		seconds
 		ignoreslomo}
 	pose_strum_fingers \{pos = down}
-	wait \{0.5
+	Wait \{0.5
 		seconds
 		ignoreslomo}
 	repeat 2
@@ -404,8 +404,8 @@ script pose_strum_fingers
 		id = strum_down_sprite
 		hand_id = hand_strum_up_sprite
 	endswitch
-	doscreenelementmorph id = <id> alpha = 1
-	doscreenelementmorph id = <hand_id> alpha = 1
+	doScreenElementMorph id = <id> alpha = 1
+	doScreenElementMorph id = <hand_id> alpha = 1
 endscript
 
 script hide_strum_fingers 
@@ -418,14 +418,14 @@ script hide_strum_fingers
 endscript
 
 script training_create_strum_sprites 
-	if iswinport
+	if IsWinPort
 		strum_pos = (830.0, 398.0)
 	else
 		strum_pos = (850.0, 400.0)
 	endif
-	createscreenelement {
+	CreateScreenElement {
 		parent = training_container
-		type = spriteelement
+		type = SpriteElement
 		id = strum_middle_sprite
 		just = [center center]
 		texture = training_guitar_strum
@@ -435,9 +435,9 @@ script training_create_strum_sprites
 		scale = (0.4, 0.4)
 		z_priority = 5
 	}
-	createscreenelement {
+	CreateScreenElement {
 		parent = training_container
-		type = spriteelement
+		type = SpriteElement
 		id = strum_up_sprite
 		just = [center center]
 		texture = training_guitar_strum_up
@@ -447,9 +447,9 @@ script training_create_strum_sprites
 		scale = (0.4, 0.4)
 		z_priority = 5
 	}
-	createscreenelement {
+	CreateScreenElement {
 		parent = training_container
-		type = spriteelement
+		type = SpriteElement
 		id = strum_down_sprite
 		just = [center center]
 		texture = training_guitar_strum_down
@@ -459,14 +459,14 @@ script training_create_strum_sprites
 		scale = (0.4, 0.4)
 		z_priority = 5
 	}
-	if iswinport
+	if IsWinPort
 		hand_strum_pos = (925.0, 358.0)
 	else
 		hand_strum_pos = (945.0, 360.0)
 	endif
-	createscreenelement {
+	CreateScreenElement {
 		parent = training_container
-		type = spriteelement
+		type = SpriteElement
 		id = hand_strum_middle_sprite
 		just = [center center]
 		texture = training_hand_strum
@@ -476,9 +476,9 @@ script training_create_strum_sprites
 		scale = (0.4, 0.4)
 		z_priority = 6
 	}
-	createscreenelement {
+	CreateScreenElement {
 		parent = training_container
-		type = spriteelement
+		type = SpriteElement
 		id = hand_strum_up_sprite
 		just = [center center]
 		texture = training_hand_strum_up
@@ -488,9 +488,9 @@ script training_create_strum_sprites
 		scale = (0.4, 0.4)
 		z_priority = 6
 	}
-	createscreenelement {
+	CreateScreenElement {
 		parent = training_container
-		type = spriteelement
+		type = SpriteElement
 		id = hand_strum_down_sprite
 		just = [center center]
 		texture = training_hand_strum_down
@@ -512,7 +512,7 @@ script training_destory_strum_sprites
 endscript
 
 script training_1_1_show_strum 
-	if iswinport
+	if IsWinPort
 		training_add_arrow \{id = training_strum_arrow
 			life = 7
 			pos = (830.0, 358.0)
@@ -532,8 +532,8 @@ script training_1_1_show_lesson_header
 	training_set_lesson_header_body \{text = "1. HOLD Fret Button to CHOOSE note\\n2. PRESS Strum Bar up or down to PLAY note"}
 	training_set_task_header_body \{text = "Play each note 3 times to continue"}
 	training_show_lesson_header
-	training_play_sound \{sound = 'Tutorial_1_Intro_03_god'
-		wait}
+	training_play_sound \{Sound = 'Tutorial_1_Intro_03_god'
+		Wait}
 endscript
 
 script training_1_1_zoom_guitar 
@@ -545,26 +545,26 @@ script training_1_1_zoom_guitar
 			0
 		]}
 	change \{total_notes_strummed = 0}
-	training_play_sound \{sound = 'tutorial_1a_01_god'}
-	killspawnedscript \{name = training_animate_fret_fingers}
-	killspawnedscript \{name = training_animate_strum_fingers}
+	training_play_sound \{Sound = 'tutorial_1a_01_god'}
+	KillSpawnedScript \{name = training_animate_fret_fingers}
+	KillSpawnedScript \{name = training_animate_strum_fingers}
 	hide_strum_fingers
 	hide_fret_fingers
-	if screenelementexists \{id = guitar_sprite}
-		guitar_sprite :domorph \{scale = (1.0, 1.0)
+	if ScreenElementExists \{id = guitar_sprite}
+		guitar_sprite :DoMorph \{scale = (1.0, 1.0)
 			pos = (1100.0, 400.0)
 			time = 0.75}
 	endif
-	setmenuautorepeattimes \{(60.0, 60.0)}
+	SetMenuAutoRepeatTimes \{(60.0, 60.0)}
 	spawnscriptnow \{training_watch_buttons
 		id = training_spawned_script}
-	training_wait_for_sound \{sound = 'en_tutorial_1a_01_god'}
+	training_wait_for_sound \{Sound = 'en_tutorial_1a_01_god'}
 endscript
 
 script training_1_1_wait_for_tuning_complete 
 	training_show_task_header
-	if screenelementexists \{id = menu_tutorial}
-		launchevent \{type = unfocus
+	if ScreenElementExists \{id = menu_tutorial}
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif
@@ -580,21 +580,21 @@ script training_1_1_wait_for_tuning_complete
 		use_backdrop = 0
 		event_handlers = <event_handlers>
 	}
-	change \{lesson_complete = 0}
+	change \{LESSON_COMPLETE = 0}
 	begin
-	if ($lesson_complete = 1)
+	if ($LESSON_COMPLETE = 1)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = menu_tutorial}
 	destroy_menu \{menu_id = menu_tutorial}
 	create_training_pause_handler
-	killspawnedscript \{name = training_watch_buttons}
-	setmenuautorepeattimes \{(0.3, 0.05)}
-	wait \{2
+	KillSpawnedScript \{name = training_watch_buttons}
+	SetMenuAutoRepeatTimes \{(0.3, 0.05)}
+	Wait \{2
 		seconds
 		ignoreslomo}
 endscript
@@ -609,7 +609,7 @@ total_notes_strummed = 0
 total_notes_tuned = 0
 
 script training_strummed_guitar 
-	getheldpattern controller = ($player1_status.controller) nobrokenstring
+	GetHeldPattern controller = ($player1_status.controller) nobrokenstring
 	check_button = 65536
 	array_count = 0
 	note_played = 0
@@ -624,16 +624,16 @@ script training_strummed_guitar
 	repeat 5
 	if (<notes_played> = 1)
 		if ($training_notes_strummed [<note_played>] < 3)
-			setarrayelement arrayname = training_notes_strummed globalarray index = <note_played> newvalue = ($training_notes_strummed [<note_played>] + 1)
+			SetArrayElement ArrayName = training_notes_strummed GlobalArray index = <note_played> newvalue = ($training_notes_strummed [<note_played>] + 1)
 			change total_notes_strummed = ($total_notes_strummed + 1)
 			training_hit_note note = <note_played>
-			spawnscriptnow gh_sfx_training_tuning_strings params = {note_played = <note_played> training_notes_strummed = ($training_notes_strummed [<note_played>])}
+			spawnscriptnow GH_SFX_Training_Tuning_Strings params = {note_played = <note_played> training_notes_strummed = ($training_notes_strummed [<note_played>])}
 			if ($training_notes_strummed [<note_played>] = 3)
-				formattext checksumname = note_tuned 'note_tuned_%a' a = <note_played>
+				FormatText checksumname = note_tuned 'note_tuned_%a' a = <note_played>
 				change total_notes_tuned = ($total_notes_tuned + 1)
-				createscreenelement {
+				CreateScreenElement {
 					parent = training_container
-					type = spriteelement
+					type = SpriteElement
 					id = <note_tuned>
 					just = [center center]
 					texture = training_guitar_button_tuned
@@ -644,31 +644,31 @@ script training_strummed_guitar
 					z_priority = 7
 				}
 				if (($total_notes_tuned = 1) || ($total_notes_tuned = 4))
-					getrandomvalue \{name = random_value
+					GetRandomValue \{name = random_value
 						a = 0
 						b = 10}
 					if (<random_value> < 5)
-						training_play_sound \{sound = 'Tutorial_God_Positive_01'}
+						training_play_sound \{Sound = 'Tutorial_God_Positive_01'}
 					else
-						training_play_sound \{sound = 'Tutorial_God_Positive_02'}
+						training_play_sound \{Sound = 'Tutorial_God_Positive_02'}
 					endif
 				endif
 			endif
 			if ($total_notes_strummed >= 15)
-				change \{lesson_complete = 1}
+				change \{LESSON_COMPLETE = 1}
 			endif
 		endif
 	endif
 endscript
 
 script training_1_1_tuning_complete_message 
-	if screenelementexists \{id = menu_tutorial}
-		launchevent \{type = unfocus
+	if ScreenElementExists \{id = menu_tutorial}
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 		create_training_pause_handler
 	endif
-	soundevent \{event = tutorial_mode_finish_chord}
+	SoundEvent \{event = Tutorial_Mode_Finish_Chord}
 	safe_destroy \{id = guitar_sprite}
 	training_destroy_fret_finger_sprites
 	training_destroy_pressed_notes
@@ -683,8 +683,8 @@ script training_1_1_tuning_complete_message
 	safe_destroy \{id = note_tuned_4}
 	training_hide_lesson_header
 	training_hide_task_header
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = training_container
 		id = tuning_complete_text
 		just = [center center]
@@ -694,7 +694,7 @@ script training_1_1_tuning_complete_message
 		scale = 1.0
 		rgba = ($training_text_color)
 	}
-	wait \{2
+	Wait \{2
 		seconds
 		ignoreslomo}
 	safe_destroy \{id = tuning_complete_text}
@@ -702,12 +702,12 @@ endscript
 
 script training_wait_for_gem_scroller_startup 
 	begin
-	getsongtime
+	GetSongTime
 	printf channel = tutorial "song time is %a " a = <songtime>
 	if (<songtime> > 0)
 		return
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
@@ -715,11 +715,11 @@ endscript
 script training_1_2_start_gem_scroller 
 	destroy_band
 	change \{tutorial_disable_hud = 1}
-	training_start_gem_scroller \{song = tutorial_1b
+	training_start_gem_scroller \{song = Tutorial_1B
 		no_score_update}
-	killspawnedscript \{name = update_score_fast}
-	if screenelementexists \{id = menu_tutorial}
-		launchevent \{type = unfocus
+	KillSpawnedScript \{name = update_score_fast}
+	if ScreenElementExists \{id = menu_tutorial}
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif
@@ -744,12 +744,12 @@ script training_1_2_start_gem_scroller
 endscript
 
 script training_1_2_show_lesson 
-	wait \{3.6
+	Wait \{3.6
 		seconds
 		ignoreslomo}
 	training_pause_gem_scroller
-	training_play_sound \{sound = 'Tutorial_1B_01_God'}
-	wait \{7.1
+	training_play_sound \{Sound = 'Tutorial_1B_01_God'}
+	Wait \{7.1
 		seconds
 		ignoreslomo}
 	if training_are_notes_flipped
@@ -763,7 +763,7 @@ script training_1_2_show_lesson
 			pos = (525.0, 370.0)
 			scale = 0.7}
 	endif
-	wait \{7.5
+	Wait \{7.5
 		seconds
 		ignoreslomo}
 	if training_are_notes_flipped
@@ -779,17 +779,17 @@ script training_1_2_show_lesson
 			scale = 0.7
 			rot = -90}
 	endif
-	wait \{6
+	Wait \{6
 		seconds
 		ignoreslomo}
 	training_set_task_header_body \{text = "Play 8 notes to continue"}
 	training_show_task_header
 	training_display_notes_hit \{notes_hit = 0}
-	wait \{1
+	Wait \{1
 		seconds
 		ignoreslomo}
-	training_play_sound \{sound = 'Tutorial_1B_02_God'}
-	wait \{2
+	training_play_sound \{Sound = 'Tutorial_1B_02_God'}
+	Wait \{2
 		seconds
 		ignoreslomo}
 	training_resume_gem_scroller
@@ -799,20 +799,20 @@ notes_hit = 0
 script lesson1_hit_note 
 	change notes_hit = ($notes_hit + 1)
 	if (($notes_hit = 1) || ($notes_hit = 4))
-		getrandomvalue \{name = random_value
+		GetRandomValue \{name = random_value
 			a = 0
 			b = 10}
 		if (<random_value> < 5)
-			if gotparam \{use_lou}
-				training_play_sound \{sound = 'Tutorial_lou_Positive_01'}
+			if GotParam \{use_lou}
+				training_play_sound \{Sound = 'Tutorial_lou_Positive_01'}
 			else
-				training_play_sound \{sound = 'Tutorial_God_Positive_01'}
+				training_play_sound \{Sound = 'Tutorial_God_Positive_01'}
 			endif
 		elseif (<random_value> < 10)
-			if gotparam \{use_lou}
-				training_play_sound \{sound = 'Tutorial_lou_Positive_02'}
+			if GotParam \{use_lou}
+				training_play_sound \{Sound = 'Tutorial_lou_Positive_02'}
 			else
-				training_play_sound \{sound = 'Tutorial_God_Positive_02'}
+				training_play_sound \{Sound = 'Tutorial_God_Positive_02'}
 			endif
 		endif
 	endif
@@ -823,7 +823,7 @@ notes_missed = 0
 script lesson1_missed_note 
 	change notes_missed = ($notes_missed + 1)
 	if (($notes_missed = 3) || ($notes_missed = 6))
-		if gotparam \{use_lou}
+		if GotParam \{use_lou}
 			training_play_negative \{who = lou}
 		else
 			training_play_negative \{who = god}
@@ -835,7 +835,7 @@ long_notes_missed = 0
 script lesson4_check_long_note 
 	if (<finished> = 1)
 		change notes_hit = ($notes_hit + 1)
-		if NOT training_is_sound_playing \{sound = 'Tutorial_1D_02_God'}
+		if NOT training_is_sound_playing \{Sound = 'Tutorial_1D_02_God'}
 			if (($notes_hit = 1) || ($notes_hit = 4))
 				training_play_positive \{who = god}
 			endif
@@ -843,7 +843,7 @@ script lesson4_check_long_note
 	else
 		change long_notes_missed = ($long_notes_missed + 1)
 		if ($long_notes_missed = 2)
-			training_play_sound \{sound = 'Tutorial_1D_02_God'}
+			training_play_sound \{Sound = 'Tutorial_1D_02_God'}
 		endif
 	endif
 	if ($notes_hit = 0)
@@ -860,7 +860,7 @@ script training_1_2_wait_for_hit_notes
 	if ($notes_hit >= 8)
 		return
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
@@ -868,16 +868,16 @@ endscript
 script training_1_2_show_complete_message 
 	destroy_menu \{menu_id = menu_tutorial}
 	create_training_pause_handler
-	wait \{0.75
+	Wait \{0.75
 		seconds
 		ignoreslomo}
-	soundevent \{event = tutorial_mode_finish_chord}
+	SoundEvent \{event = Tutorial_Mode_Finish_Chord}
 	safe_destroy \{id = notes_hit_text}
 	training_hide_lesson_header
 	training_hide_task_header
 	training_destroy_gem_scroller
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = training_container
 		id = tuning_complete_text
 		just = [center center]
@@ -887,24 +887,24 @@ script training_1_2_show_complete_message
 		scale = 1.0
 		rgba = ($training_text_color)
 	}
-	wait \{0.5
+	Wait \{0.5
 		seconds
 		ignoreslomo}
-	training_play_sound \{sound = 'Tutorial_1B_03_God'
-		wait}
+	training_play_sound \{Sound = 'Tutorial_1B_03_God'
+		Wait}
 	safe_destroy \{id = tuning_complete_text}
 endscript
 
 script training_1_3_start_gem_scroller 
 	destroy_band
-	change \{lesson_complete = 0}
+	change \{LESSON_COMPLETE = 0}
 	change \{tutorial_disable_hud = 1}
-	training_start_gem_scroller \{song = tutorial_1c
+	training_start_gem_scroller \{song = Tutorial_1C
 		disable_hud
 		no_score_update}
-	killspawnedscript \{name = update_score_fast}
-	if screenelementexists \{id = menu_tutorial}
-		launchevent \{type = unfocus
+	KillSpawnedScript \{name = update_score_fast}
+	if ScreenElementExists \{id = menu_tutorial}
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif
@@ -927,7 +927,7 @@ script training_1_3_start_gem_scroller
 endscript
 
 script training_1_3_show_lesson 
-	wait \{1
+	Wait \{1
 		seconds
 		ignoreslomo}
 	training_pause_gem_scroller
@@ -935,26 +935,26 @@ script training_1_3_show_lesson
 	training_set_lesson_header_body \{text = "1. Match the note colors to play different notes"}
 	training_show_lesson_header
 	safe_show \{id = god_icon}
-	training_play_sound \{sound = 'Tutorial_1C_01_God'
-		wait}
+	training_play_sound \{Sound = 'Tutorial_1C_01_God'
+		Wait}
 	training_set_task_header_body \{text = "Play some different notes, hit 8 to continue"}
 	training_show_task_header
-	wait \{2
+	Wait \{2
 		seconds
 		ignoreslomo}
 	training_resume_gem_scroller
 endscript
 
 script training_1_3_wait_for_lesson_complete 
-	change \{lesson_complete = 0}
+	change \{LESSON_COMPLETE = 0}
 	begin
 	if ($training_song_over = 1)
 		return
 	endif
-	if ($lesson_complete = 1)
+	if ($LESSON_COMPLETE = 1)
 		return
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
@@ -964,16 +964,16 @@ script training_1_3_show_complete_message
 		"training_1_3_show_complete_message"}
 	destroy_menu \{menu_id = menu_tutorial}
 	create_training_pause_handler
-	wait \{0.75
+	Wait \{0.75
 		seconds
 		ignoreslomo}
 	safe_destroy \{id = notes_hit_text}
-	soundevent \{event = tutorial_mode_finish_chord}
+	SoundEvent \{event = Tutorial_Mode_Finish_Chord}
 	training_hide_lesson_header
 	training_hide_task_header
 	training_destroy_gem_scroller
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = training_container
 		id = tuning_complete_text
 		just = [center center]
@@ -983,20 +983,20 @@ script training_1_3_show_complete_message
 		scale = 1.0
 		rgba = ($training_text_color)
 	}
-	training_play_sound \{sound = 'Tutorial_1C_02_God'
-		wait}
+	training_play_sound \{Sound = 'Tutorial_1C_02_God'
+		Wait}
 	safe_destroy \{id = tuning_complete_text}
 endscript
 
 script training_1_4_start_gem_scroller 
 	destroy_band
 	change \{tutorial_disable_hud = 1}
-	training_start_gem_scroller \{song = tutorial_1d
+	training_start_gem_scroller \{song = Tutorial_1D
 		disable_hud
 		no_score_update}
-	killspawnedscript \{name = update_score_fast}
-	if screenelementexists \{id = menu_tutorial}
-		launchevent \{type = unfocus
+	KillSpawnedScript \{name = update_score_fast}
+	if ScreenElementExists \{id = menu_tutorial}
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif
@@ -1021,14 +1021,14 @@ script training_1_4_start_gem_scroller
 endscript
 
 script training_1_4_show_lesson 
-	wait \{3.55
+	Wait \{3.55
 		seconds
 		ignoreslowmo}
 	training_pause_gem_scroller
 	training_set_lesson_header_body \{text = "1. Hold fret buttons down\\n2. Strum\\n3. Keep fret down until the whole note has played"}
 	training_show_lesson_header
-	training_play_sound \{sound = 'Tutorial_1D_01_God'}
-	wait \{0.75
+	training_play_sound \{Sound = 'Tutorial_1D_01_God'}
+	Wait \{0.75
 		seconds
 		ignoreslomo}
 	if training_are_notes_flipped
@@ -1044,12 +1044,12 @@ script training_1_4_show_lesson
 			scale = 0.7
 			rot = 45}
 	endif
-	training_wait_for_sound \{sound = 'Tutorial_1D_01_God'
-		wait}
+	training_wait_for_sound \{Sound = 'Tutorial_1D_01_God'
+		Wait}
 	training_set_task_header_body \{text = "Play 8 long notes to continue"}
 	training_show_task_header
 	training_display_notes_hit \{notes_hit = 0}
-	wait \{2
+	Wait \{2
 		seconds
 		ignoreslomo}
 	training_resume_gem_scroller
@@ -1057,20 +1057,20 @@ script training_1_4_show_lesson
 endscript
 
 script training_1_4_show_complete_message 
-	if screenelementexists \{id = menu_tutorial}
+	if ScreenElementExists \{id = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 		create_training_pause_handler
 	endif
-	wait \{0.75
+	Wait \{0.75
 		seconds
 		ignoreslomo}
-	soundevent \{event = tutorial_mode_finish_chord}
+	SoundEvent \{event = Tutorial_Mode_Finish_Chord}
 	safe_destroy \{id = notes_hit_text}
 	training_hide_lesson_header
 	training_hide_task_header
 	training_destroy_gem_scroller
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = training_container
 		id = tuning_complete_text
 		just = [center center]
@@ -1080,10 +1080,10 @@ script training_1_4_show_complete_message
 		scale = 1.0
 		rgba = ($training_text_color)
 	}
-	unpausegh3sounds
-	unpausegame
-	training_play_sound \{sound = 'Tutorial_1D_03_God'
-		wait}
+	UnpauseGh3Sounds
+	UnPauseGame
+	training_play_sound \{Sound = 'Tutorial_1D_03_God'
+		Wait}
 	safe_hide \{id = god_icon}
 	safe_destroy \{id = tuning_complete_text}
 endscript
@@ -1091,12 +1091,12 @@ endscript
 script training_1_5_start_gem_scroller 
 	destroy_band
 	change \{tutorial_disable_hud = 1}
-	training_start_gem_scroller \{song = tutorial_1e
+	training_start_gem_scroller \{song = Tutorial_1E
 		disable_hud
 		no_score_update}
-	killspawnedscript \{name = update_score_fast}
-	if screenelementexists \{id = menu_tutorial}
-		launchevent \{type = unfocus
+	KillSpawnedScript \{name = update_score_fast}
+	if ScreenElementExists \{id = menu_tutorial}
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif
@@ -1123,14 +1123,14 @@ script training_1_5_start_gem_scroller
 endscript
 
 script training_1_5_show_lesson 
-	wait \{3.5
+	Wait \{3.5
 		seconds
 		ignoreslomo}
 	training_pause_gem_scroller
 	training_set_lesson_header_body \{text = "Two notes played at the same time"}
 	training_show_lesson_header
-	training_play_sound \{sound = 'Tutorial_1E_01_lou'}
-	wait \{6.65
+	training_play_sound \{Sound = 'Tutorial_1E_01_lou'}
+	Wait \{6.65
 		seconds
 		ignoreslomo}
 	if training_are_notes_flipped
@@ -1144,31 +1144,31 @@ script training_1_5_show_lesson
 			pos = (556.0, 375.0)
 			scale = 0.7}
 	endif
-	training_wait_for_sound \{sound = 'Tutorial_1E_01_lou'}
+	training_wait_for_sound \{Sound = 'Tutorial_1E_01_lou'}
 	training_set_task_header_body \{text = "Play 8 chords to continue"}
 	training_show_task_header
 	training_display_notes_hit \{notes_hit = 0}
-	wait \{2
+	Wait \{2
 		seconds
 		ignoreslomo}
 	training_resume_gem_scroller
 endscript
 
 script training_1_5_show_complete_message 
-	if screenelementexists \{id = menu_tutorial}
+	if ScreenElementExists \{id = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 		create_training_pause_handler
 	endif
-	wait \{0.75
+	Wait \{0.75
 		seconds
 		ignoreslomo}
-	soundevent \{event = tutorial_mode_finish_chord}
+	SoundEvent \{event = Tutorial_Mode_Finish_Chord}
 	safe_destroy \{id = notes_hit_text}
 	training_hide_lesson_header
 	training_hide_task_header
 	training_destroy_gem_scroller
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = training_container
 		id = tuning_complete_text
 		just = [center center]
@@ -1178,7 +1178,7 @@ script training_1_5_show_complete_message
 		scale = 1.0
 		rgba = ($training_text_color)
 	}
-	wait \{3
+	Wait \{3
 		seconds
 		ignoreslomo}
 	safe_hide \{id = lou_icon}
@@ -1186,24 +1186,24 @@ script training_1_5_show_complete_message
 endscript
 
 script training_destroy_gem_scroller \{delay = 0.5}
-	pausegame
-	pausegh3sounds
-	wait <delay> seconds ignoreslomo
-	killcamanim \{name = ch_view_cam}
+	PauseGame
+	PauseGh3Sounds
+	Wait <delay> seconds ignoreslomo
+	KillCamAnim \{name = ch_view_cam}
 	kill_gem_scroller
 	destroy_bg_viewport
 	setup_bg_viewport
-	playigccam \{id = cs_view_cam_id
+	PlayIGCCam \{id = cs_view_cam_id
 		name = ch_view_cam
 		viewport = bg_viewport
-		lockto = world
+		LockTo = world
 		pos = (-0.068807, 1.5990009, 5.7975965)
-		quat = (0.000506, 0.99942994, -0.017537998)
-		fov = 72.0
-		play_hold = 1
+		Quat = (0.000506, 0.99942994, -0.017537998)
+		FOV = 72.0
+		Play_hold = 1
 		interrupt_current}
-	unpausegh3sounds
-	unpausegame
+	UnpauseGh3Sounds
+	UnPauseGame
 endscript
 
 script training_1_6_show_hud 
@@ -1211,8 +1211,8 @@ script training_1_6_show_hud
 	training_set_lesson_header_body \{text = ""}
 	training_show_lesson_header
 	safe_show \{id = god_icon}
-	training_play_sound \{sound = 'Tutorial_1F_01_god'}
-	wait \{6.0
+	training_play_sound \{Sound = 'Tutorial_1F_01_god'}
+	Wait \{6.0
 		seconds
 		ignoreslomo}
 	player_text = 'p1'
@@ -1220,10 +1220,10 @@ script training_1_6_show_hud
 	player = 1
 	change \{structurename = player1_status
 		current_health = 1.0}
-	spawnscriptlater update_score_fast params = {<...>} id = training_spawned_script
+	SpawnScriptLater update_score_fast params = {<...>} id = training_spawned_script
 	setup_hud <...>
 	move_hud_to_default <...> time = 0.5
-	wait \{1.5
+	Wait \{1.5
 		seconds
 		ignoreslomo}
 	training_add_arrow \{id = training_arrow2
@@ -1231,44 +1231,44 @@ script training_1_6_show_hud
 		pos = (880.0, 590.0)
 		scale = 0.7
 		rot = -90}
-	wait \{8.0
+	Wait \{8.0
 		seconds
 		ignoreslomo}
 	training_set_lesson_header_body \{text = "Yellow = OK Performance"}
-	wait \{5.5
+	Wait \{5.5
 		seconds
 		ignoreslomo}
-	killspawnedscript \{name = training_set_health}
+	KillSpawnedScript \{name = training_set_health}
 	spawnscriptnow \{training_set_health
 		params = {
 			health = 1.6
 		}
 		id = training_spawned_script}
 	training_set_lesson_header_body \{text = "Yellow = OK Performance\\nGreen = Good Performance"}
-	wait \{5
+	Wait \{5
 		seconds
 		ignoreslomo}
-	killspawnedscript \{name = training_set_health}
+	KillSpawnedScript \{name = training_set_health}
 	spawnscriptnow \{training_set_health
 		params = {
 			health = 0.4
 		}
 		id = training_spawned_script}
 	training_set_lesson_header_body \{text = "Yellow = OK Performance\\nGreen = Good Performance\\nRed = Bad Performance"}
-	wait \{6.5
+	Wait \{6.5
 		seconds
 		ignoreslomo}
-	killspawnedscript \{name = training_set_health}
+	KillSpawnedScript \{name = training_set_health}
 	spawnscriptnow \{training_set_health
 		params = {
 			health = 0.0
 		}
 		id = training_spawned_script}
 	training_set_lesson_header_body \{text = "Yellow = OK Performance\\nGreen = Good Performance\\nRed = Bad Performance\\nBlinking Red = Danger!"}
-	wait \{6.5
+	Wait \{6.5
 		seconds
 		ignoreslomo}
-	killspawnedscript \{name = training_set_health}
+	KillSpawnedScript \{name = training_set_health}
 	spawnscriptnow \{training_set_health
 		params = {
 			health = 1.0
@@ -1279,7 +1279,7 @@ script training_1_6_show_hud
 		pos = (285.0, 460.0)
 		scale = 0.7}
 	training_set_lesson_header_body \{text = "Yellow = OK Performance\\nGreen = Good Performance\\nRed = Bad Performance\\nBlinking Red = Danger!\\nPlay Notes = Score Points"}
-	training_wait_for_sound \{sound = 'Tutorial_1F_01_god'}
+	training_wait_for_sound \{Sound = 'Tutorial_1F_01_god'}
 	safe_hide \{id = god_icon}
 endscript
 
@@ -1300,7 +1300,7 @@ script training_set_health
 			change structurename = player1_status current_health = (<current_health> - <inc>)
 		endif
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
@@ -1309,15 +1309,15 @@ script training_1_6_hide_hud
 	player_text = 'p1'
 	player_status = player1_status
 	destroy_hud <...>
-	killspawnedscript \{name = update_score_fast}
+	KillSpawnedScript \{name = update_score_fast}
 	training_hide_lesson_header
 endscript
 
 script training_1_6_complete 
-	soundevent \{event = tutorial_mode_finish_chord}
-	killspawnedscript \{name = training_set_health}
-	createscreenelement {
-		type = textelement
+	SoundEvent \{event = Tutorial_Mode_Finish_Chord}
+	KillSpawnedScript \{name = training_set_health}
+	CreateScreenElement {
+		type = TextElement
 		parent = training_container
 		id = lesson_title_text
 		just = [center center]
@@ -1327,26 +1327,26 @@ script training_1_6_complete
 		scale = 1.0
 		rgba = ($training_text_color)
 	}
-	training_play_sound \{sound = 'Tutorial_1_outro'
-		wait}
+	training_play_sound \{Sound = 'Tutorial_1_outro'
+		Wait}
 	safe_hide \{id = god_icon}
 endscript
 
 script training_basic_tutorial_1_end 
 	training_kill_session
-	killspawnedscript \{name = training_watch_buttons}
-	killspawnedscript \{name = training_animate_fret_fingers}
-	killspawnedscript \{name = training_animate_strum_fingers}
+	KillSpawnedScript \{name = training_watch_buttons}
+	KillSpawnedScript \{name = training_animate_fret_fingers}
+	KillSpawnedScript \{name = training_animate_strum_fingers}
 	safe_destroy \{id = training_container}
 	safe_destroy \{id = training_arrow}
 	safe_destroy \{id = training_strum_arrow}
-	if screenelementexists \{id = menu_tutorial}
-		launchevent \{type = unfocus
+	if ScreenElementExists \{id = menu_tutorial}
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif
 	training_destroy_narrator_icons
-	setscreenelementprops \{id = root_window
+	SetScreenElementProps \{id = root_window
 		event_handlers = [
 			{
 				pad_start
@@ -1354,9 +1354,9 @@ script training_basic_tutorial_1_end
 			}
 		]
 		replace_handlers}
-	setmenuautorepeattimes \{(0.3, 0.05)}
+	SetMenuAutoRepeatTimes \{(0.3, 0.05)}
 	change \{tutorial_disable_hud = 0}
-	setglobaltags \{training
+	SetGlobalTags \{training
 		params = {
 			basic_lesson = complete
 		}}
@@ -1365,8 +1365,8 @@ script training_basic_tutorial_1_end
 endscript
 
 script create_pressed_note_sprites 
-	createscreenelement \{parent = training_container
-		type = spriteelement
+	CreateScreenElement \{parent = training_container
+		type = SpriteElement
 		id = green_pressed_sprite
 		just = [
 			center
@@ -1383,8 +1383,8 @@ script create_pressed_note_sprites
 		]
 		scale = (0.36, 0.36)
 		z_priority = 5}
-	createscreenelement \{parent = training_container
-		type = spriteelement
+	CreateScreenElement \{parent = training_container
+		type = SpriteElement
 		id = red_pressed_sprite
 		just = [
 			center
@@ -1401,8 +1401,8 @@ script create_pressed_note_sprites
 		]
 		scale = (0.36, 0.36)
 		z_priority = 5}
-	createscreenelement \{parent = training_container
-		type = spriteelement
+	CreateScreenElement \{parent = training_container
+		type = SpriteElement
 		id = yellow_pressed_sprite
 		just = [
 			center
@@ -1419,8 +1419,8 @@ script create_pressed_note_sprites
 		]
 		scale = (0.36, 0.36)
 		z_priority = 5}
-	createscreenelement \{parent = training_container
-		type = spriteelement
+	CreateScreenElement \{parent = training_container
+		type = SpriteElement
 		id = blue_pressed_sprite
 		just = [
 			center
@@ -1437,8 +1437,8 @@ script create_pressed_note_sprites
 		]
 		scale = (0.36, 0.36)
 		z_priority = 5}
-	createscreenelement \{parent = training_container
-		type = spriteelement
+	CreateScreenElement \{parent = training_container
+		type = SpriteElement
 		id = orange_pressed_sprite
 		just = [
 			center
@@ -1515,14 +1515,14 @@ script training_hit_note
 		id = hit_orange_sprite
 		rgba = [215 120 40 255]
 	endswitch
-	if screenelementexists id = <id>
-		destroyscreenelement id = <id>
+	if ScreenElementExists id = <id>
+		DestroyScreenElement id = <id>
 	endif
 	scale = (0.36, 0.36)
 	pos = ((442.0, 396.0) + (1.0, 0.0) * (<note> * 67))
-	createscreenelement {
+	CreateScreenElement {
 		parent = training_container
-		type = spriteelement
+		type = SpriteElement
 		id = <id>
 		just = [center center]
 		texture = training_guitar_button_down
@@ -1532,20 +1532,20 @@ script training_hit_note
 		scale = <scale>
 		z_priority = 6
 	}
-	doscreenelementmorph id = <id> scale = (<scale> * 1.8499999) alpha = 0 time = 0.25
+	doScreenElementMorph id = <id> scale = (<scale> * 1.8499999) alpha = 0 time = 0.25
 endscript
 
 script training_watch_buttons 
 	create_pressed_note_sprites
 	begin
-	getheldpattern controller = ($player1_status.controller) nobrokenstring
+	GetHeldPattern controller = ($player1_status.controller) nobrokenstring
 	hide_pressed_notes
 	check_button = 65536
 	array_count = 0
 	begin
-	formattext checksumname = new_arrow 'arrow_%a' a = <array_count>
-	if screenelementexists id = <new_arrow>
-		destroyscreenelement id = <new_arrow>
+	FormatText checksumname = new_arrow 'arrow_%a' a = <array_count>
+	if ScreenElementExists id = <new_arrow>
+		DestroyScreenElement id = <new_arrow>
 	endif
 	if (<hold_pattern> && <check_button>)
 		show_pressed_note note = <array_count>
@@ -1554,7 +1554,7 @@ script training_watch_buttons
 	<check_button> = (<check_button> / 16)
 	array_count = (<array_count> + 1)
 	repeat 5
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript

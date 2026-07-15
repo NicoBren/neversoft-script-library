@@ -1,21 +1,21 @@
 
 script ui_create_character_hub 
 	set_cas_loading_setup \{setup = h2h}
-	SpawnScriptNow ui_create_character_hub_spawned params = {<...>}
+	spawnscriptnow ui_create_character_hub_spawned params = {<...>}
 endscript
 
 script ui_create_character_hub_spawned 
 	cas_free_resources_camera_fix \{base_name = 'character_hub'}
-	cas_set_object_node_pos \{Player = 1
-		node = z_soundcheck_trg_waypoint_player1_start}
-	cas_set_object_node_pos \{Player = 2
-		node = z_soundcheck_trg_waypoint_player4_start}
-	Change band_mode_current_leader = ($player1_status.controller)
-	ui_band_mode_show_character \{Player = 1}
-	ui_band_mode_show_character \{Player = 2}
+	cas_set_object_node_pos \{player = 1
+		node = z_Soundcheck_TRG_Waypoint_Player1_Start}
+	cas_set_object_node_pos \{player = 2
+		node = z_Soundcheck_TRG_Waypoint_Player4_Start}
+	change band_mode_current_leader = ($player1_status.controller)
+	ui_band_mode_show_character \{player = 1}
+	ui_band_mode_show_character \{player = 2}
 	CreateScreenElement \{parent = root_window
-		id = myinterfaceelement
-		Type = descinterface
+		id = MyInterfaceElement
+		type = DescInterface
 		desc = 'band_play'}
 	if NOT ($is_network_game)
 		if isXenon
@@ -32,13 +32,13 @@ script ui_create_character_hub_spawned
 			AddArrayElement array = <array> element = {pad_start net_ui_band_mode_continue}
 		endif
 	endif
-	myinterfaceelement :SetProps event_handlers = <array>
-	if myinterfaceelement :desc_resolvealias \{Name = alias_hmenu}
+	MyInterfaceElement :SetProps event_handlers = <array>
+	if MyInterfaceElement :Desc_ResolveAlias \{name = alias_hmenu}
 		band_hmenu = <resolved_id>
 	endif
-	<band_hmenu> :se_setprops spacing_between = 400
+	<band_hmenu> :SE_SetProps spacing_between = 400
 	begin
-	ResolveScreenElementID id = [
+	ResolveScreenElementId id = [
 		{id = <band_hmenu>}
 		{index = 2}
 	]
@@ -48,17 +48,17 @@ script ui_create_character_hub_spawned
 	desc_array = []
 	i = 0
 	begin
-	ResolveScreenElementID id = [
+	ResolveScreenElementId id = [
 		{id = <band_hmenu>}
 		{index = <i>}
 	]
 	AddArrayElement array = <desc_array> element = <resolved_id>
 	desc_array = <array>
-	<resolved_id> :desc_resolvealias Name = alias_menu
-	getplayerinfo (<i> + 1) controller
+	<resolved_id> :Desc_ResolveAlias name = alias_menu
+	GetPlayerInfo (<i> + 1) controller
 	<resolved_id> :SetTags {
 		menu = p2_root
-		instrument = None
+		instrument = none
 		difficulty = easy
 		controller = <controller>
 		allowed = <allowed>
@@ -72,14 +72,14 @@ script ui_create_character_hub_spawned
 	menu_array = <array>
 	i = (<i> + 1)
 	repeat 2
-	myinterfaceelement :SetTags {menus = <menu_array> descs = <desc_array>}
+	MyInterfaceElement :SetTags {menus = <menu_array> descs = <desc_array>}
 	i = 0
 	begin
-	ResolveScreenElementID id = [
+	ResolveScreenElementId id = [
 		{id = <band_hmenu>}
 		{index = <i>}
 	]
-	<resolved_id> :desc_resolvealias Name = alias_menu
+	<resolved_id> :Desc_ResolveAlias name = alias_menu
 	if (($game_mode = p2_battle) || ($game_mode = p2_faceoff) || ($game_mode = p2_pro_faceoff))
 		RunScriptOnScreenElement id = <resolved_id> ui_band_mode_create_menu params = {player_index = <i>}
 	else
@@ -88,15 +88,15 @@ script ui_create_character_hub_spawned
 	i = (<i> + 1)
 	repeat 2
 	if (($game_mode = p2_battle) || ($game_mode = p2_faceoff) || ($game_mode = p2_pro_faceoff))
-		myinterfaceelement :se_setprops \{ticker_alpha = 0.0}
+		MyInterfaceElement :SE_SetProps \{ticker_alpha = 0.0}
 	endif
-	LaunchEvent \{Type = focus
-		target = myinterfaceelement}
+	LaunchEvent \{type = focus
+		target = MyInterfaceElement}
 	ui_band_mode_helper_text
 endscript
 
 script ui_destroy_character_hub 
-	DestroyScreenElement \{id = myinterfaceelement}
+	DestroyScreenElement \{id = MyInterfaceElement}
 	generic_ui_destroy
 	cleanup_all_photo_assets
 endscript
@@ -120,11 +120,11 @@ script ui_character_hub_continue
 		<num_ready> = (<num_ready> + 1)
 	endif
 	i = (<i> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	if (<num_ready> = 2)
 		cancel_all_cas_loads
 		if (($game_mode = p2_faceoff) || ($game_mode = p2_pro_faceoff) || ($game_mode = p2_battle))
-			SoundEvent \{event = band_mode_career_ready}
+			SoundEvent \{event = Band_Mode_Career_Ready}
 			generic_event_choose \{no_sound
 				state = uistate_setlist
 				data = {

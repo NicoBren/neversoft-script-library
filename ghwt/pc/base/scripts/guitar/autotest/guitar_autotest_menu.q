@@ -1,33 +1,33 @@
 autotest_part_strings = {
-	none = qs(0x3f1bbbb1)
-	guitar = qs(0x826ca62c)
-	bass = qs(0xec55f51b)
-	vocals = qs(0x0cf770e2)
-	drum = qs(0xf9468e57)
+	none = qs("\LNone")
+	guitar = qs("\LGuitar")
+	Bass = qs("\LBass")
+	Vocals = qs("\LVocals")
+	drum = qs("\LDrums")
 }
 autotest_difficulty_strings = {
-	easy_rhythm = qs(0x43448a88)
-	easy = qs(0x1c7f1488)
-	medium = qs(0x79990567)
-	hard = qs(0xc0aa0a20)
-	expert = qs(0x242117ca)
+	easy_rhythm = qs("\LEasyRh")
+	easy = qs("\LEasy")
+	medium = qs("\LMedium")
+	hard = qs("\LHard")
+	expert = qs("\LExpert")
 }
 autotest_game_mode_names = {
-	p1_career = qs(0x1690f5c2)
-	p2_career = qs(0x3f584130)
-	p3_career = qs(0x9130d0a1)
-	p4_career = qs(0x1126b7ca)
-	p1_quickplay = qs(0xf8741321)
-	p2_quickplay = qs(0xc10cbe61)
-	p3_quickplay = qs(0xd624daa1)
-	p4_quickplay = qs(0xb3fde4e1)
-	p2_faceoff = qs(0xdf15d399)
-	p2_pro_faceoff = qs(0x0fc5176c)
-	p4_pro_faceoff = qs(0x301bcadd)
-	p8_pro_faceoff = qs(0x4fa671bf)
-	p2_battle = qs(0xd2931efa)
-	p2_coop = qs(0x28b1029d)
-	training = qs(0xd5da4d20)
+	p1_career = qs("\Lp1_career")
+	p2_career = qs("\Lp2_career")
+	p3_career = qs("\Lp3_career")
+	p4_career = qs("\Lpr_career")
+	p1_quickplay = qs("\Lp1_quickplay")
+	p2_quickplay = qs("\Lp2_quickplay")
+	p3_quickplay = qs("\Lp3_quickplay")
+	p4_quickplay = qs("\Lp4_quickplay")
+	p2_faceoff = qs("\Lp2_faceoff")
+	p2_pro_faceoff = qs("\Lp2_pro_faceoff")
+	p4_pro_faceoff = qs("\Lp4_pro_faceoff")
+	p8_pro_faceoff = qs("\Lp8_pro_faceoff")
+	p2_battle = qs("\Lp2_battle")
+	p2_coop = qs("\Lp2_coop")
+	training = qs("\Ltraining")
 }
 autotest_hud_on = 0
 autotest_restore_globals = 0
@@ -67,10 +67,10 @@ script autotest_save_globals
 endscript
 
 script autotest_autotest_restore_globals 
-	setplayerinfo 1 bot_play = ($autotest_save_bot1)
-	setplayerinfo 2 bot_play = ($autotest_save_bot2)
-	setplayerinfo 3 bot_play = ($autotest_save_bot3)
-	setplayerinfo 4 bot_play = ($autotest_save_bot4)
+	SetPlayerInfo 1 bot_play = ($autotest_save_bot1)
+	SetPlayerInfo 2 bot_play = ($autotest_save_bot2)
+	SetPlayerInfo 3 bot_play = ($autotest_save_bot3)
+	SetPlayerInfo 4 bot_play = ($autotest_save_bot4)
 	change current_song = ($autotest_save_current_song)
 	change current_starttime = ($autotest_save_current_starttime)
 	change current_level = ($autotest_save_current_level)
@@ -98,18 +98,18 @@ script create_autotest_menu
 		z_priority = 90}
 	change \{autotest_on = 1}
 	autotest_save_globals
-	setplayerinfo \{1
+	SetPlayerInfo \{1
 		bot_play = 1}
-	setplayerinfo \{2
+	SetPlayerInfo \{2
 		bot_play = 1}
-	setplayerinfo \{3
+	SetPlayerInfo \{3
 		bot_play = 1}
-	setplayerinfo \{4
+	SetPlayerInfo \{4
 		bot_play = 1}
-	createscreenelement {
-		type = menuelement
+	CreateScreenElement {
+		type = MenuElement
 		id = autotest_vmenu
-		parent = pause_menu
+		parent = Pause_Menu
 		font = debug
 		dims = (400.0, 480.0)
 		pos = ($menu_pos - (30.0, 0.0))
@@ -124,10 +124,10 @@ script create_autotest_menu
 			{pad_back generic_menu_pad_back params = {callback = back_to_debug_menu}}
 		]
 	}
-	formattext \{textname = suite_text
-		qs(0x9caa8f36)}
-	createscreenelement {
-		type = textelement
+	FormatText \{TextName = suite_text
+		qs("\LSelect Test Suite")}
+	CreateScreenElement {
+		type = TextElement
 		id = suite_select
 		parent = autotest_vmenu
 		font = debug
@@ -146,20 +146,20 @@ script create_autotest_menu
 		]
 	}
 	if ($autotest_hud_on = 0)
-		formattext \{textname = hud_text
-			qs(0x507fe429)}
+		FormatText \{TextName = Hud_Text
+			qs("\LToggle HUD: Off")}
 	else
-		formattext \{textname = hud_text
-			qs(0x379652e5)}
+		FormatText \{TextName = Hud_Text
+			qs("\LToggle HUD: On")}
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		id = hud_toggle
 		parent = autotest_vmenu
 		font = debug
 		scale = 0.75
 		rgba = [210 210 210 250]
-		text = <hud_text>
+		text = <Hud_Text>
 		just = [left top]
 		z_priority = 100.0
 		shadow
@@ -174,14 +174,14 @@ script create_autotest_menu
 		]
 	}
 	if ($autotest_turbo_mode = 0)
-		formattext \{textname = turbo_mode_text
-			qs(0xa6fddccd)}
+		FormatText \{TextName = turbo_mode_text
+			qs("\LTurbo Mode: Off")}
 	else
-		formattext \{textname = turbo_mode_text
-			qs(0xc83d6361)}
+		FormatText \{TextName = turbo_mode_text
+			qs("\LTurboMode: On")}
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		id = turbo_mode_toggle
 		parent = autotest_vmenu
 		font = debug
@@ -201,7 +201,7 @@ script create_autotest_menu
 			{pad_choose autotest_toggle_turbo_mode params = {turbo_mode_toggle = hud_toggle}}
 		]
 	}
-	createscreenelement \{type = textelement
+	CreateScreenElement \{type = TextElement
 		id = start_autotest_button
 		parent = autotest_vmenu
 		font = debug
@@ -212,7 +212,7 @@ script create_autotest_menu
 			210
 			250
 		]
-		text = qs(0xf6b74bf1)
+		text = qs("\LStart Autotesting . . .")
 		just = [
 			left
 			top
@@ -242,7 +242,7 @@ script create_autotest_menu
 		]}
 	autotest_create_suite_list
 	change \{autotest_test_index = 0}
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = autotest_vmenu}
 endscript
 
@@ -257,15 +257,15 @@ script create_test_suite_select_menu
 			128
 		]
 		z_priority = 90}
-	createscreenelement {
-		type = vscrollingmenu
-		parent = pause_menu
+	CreateScreenElement {
+		type = VScrollingMenu
+		parent = Pause_Menu
 		id = test_suite_scrolling_menu
 		just = [left top]
 		dims = (400.0, 550.0)
 		pos = ($menu_pos)
 	}
-	createscreenelement \{type = vmenu
+	CreateScreenElement \{type = VMenu
 		parent = test_suite_scrolling_menu
 		id = test_suite_vmenu
 		pos = (0.0, 0.0)
@@ -300,14 +300,14 @@ script create_test_suite_select_menu
 	<suite_num> = 0
 	begin
 	<found_suite> = 0
-	formattext checksumname = suite_struct 'autotest_suite%x' x = <suite_num>
-	if globalexists name = <suite_struct> type = structure
+	FormatText checksumname = suite_struct 'autotest_suite%x' x = <suite_num>
+	if GlobalExists name = <suite_struct> type = Structure
 		<found_suite> = 1
 	endif
 	if (<found_suite> = 1)
 		autotest_get_suite suite_num = <suite_num>
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = test_suite_vmenu
 			font = debug
 			scale = 0.75
@@ -325,20 +325,20 @@ script create_test_suite_select_menu
 	endif
 	<suite_num> = (<suite_num> + 1)
 	repeat $autotest_max_suites
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = test_suite_vmenu}
-	add_user_control_helper \{text = qs(0x0c828bb9)
+	add_user_control_helper \{text = qs("ADD SELECTED SUITE")
 		button = green
 		z = 1000}
-	add_user_control_helper \{text = qs(0xf5af43a1)
-		button = blue
+	add_user_control_helper \{text = qs("REMOVE LAST SUITE")
+		button = Blue
 		z = 1000}
 endscript
 
 script autotest_create_suite_list 
-	createscreenelement {
-		type = vmenu
-		parent = pause_menu
+	CreateScreenElement {
+		type = VMenu
+		parent = Pause_Menu
 		id = test_suite_list
 		just = [left top]
 		dims = (400.0, 550.0)
@@ -349,122 +349,122 @@ script autotest_create_suite_list
 endscript
 
 script destroy_test_suite_select_menu 
-	if screenelementexists \{id = test_suite_scrolling_menu}
-		destroyscreenelement \{id = test_suite_scrolling_menu}
+	if ScreenElementExists \{id = test_suite_scrolling_menu}
+		DestroyScreenElement \{id = test_suite_scrolling_menu}
 	endif
-	if screenelementexists \{id = test_suite_list}
-		destroyscreenelement \{id = test_suite_list}
+	if ScreenElementExists \{id = test_suite_list}
+		DestroyScreenElement \{id = test_suite_list}
 	endif
 	clean_up_user_control_helpers
 	destroy_menu_backdrop
 endscript
 
 script autotest_suite_transition_set_props 
-	gettrueelapsedtime \{starttime = $autotest_initial_time}
-	change autotest_total_time = <elapsedtime>
+	GetTrueElapsedTime \{StartTime = $autotest_initial_time}
+	change autotest_total_time = <ElapsedTime>
 	autotest_format_time \{time = $autotest_total_time
 		mode = hours_minutes_seconds}
-	autotest_suite_transition :se_setprops test_suite_text = (<suite_struct>.name)
-	autotest_suite_transition :se_setprops total_time_text = <formatted_time>
+	autotest_suite_transition :SE_SetProps test_suite_text = (<suite_struct>.name)
+	autotest_suite_transition :SE_SetProps total_time_text = <formatted_time>
 	if ($autotest_total_frames > 0)
 		change autotest_average_fps = ($autotest_average_fps / $autotest_total_frames)
 	endif
-	formattext \{textname = average_fps_text
-		qs(0x44859f25)
+	FormatText \{TextName = average_fps_text
+		qs("\L%f")
 		f = $autotest_average_fps}
 	autotest_format_time \{time = $autotest_highest_fps_time
 		mode = minutes_seconds_ms}
-	formattext \{textname = highest_fps_text
-		qs(0x44859f25)
+	FormatText \{TextName = highest_fps_text
+		qs("\L%f")
 		f = $autotest_highest_fps}
-	formattext textname = highest_fps_info qs(0xb17c4417) s = $autotest_highest_fps_test t = <formatted_time>
+	FormatText TextName = highest_fps_info qs("\LTest %s  at  %t") s = $autotest_highest_fps_test t = <formatted_time>
 	autotest_format_time \{time = $autotest_lowest_fps_time
 		mode = minutes_seconds_ms}
-	formattext \{textname = lowest_fps_text
-		qs(0x44859f25)
+	FormatText \{TextName = lowest_fps_text
+		qs("\L%f")
 		f = $autotest_lowest_fps}
-	formattext textname = lowest_fps_info qs(0xb17c4417) s = $autotest_lowest_fps_test t = <formatted_time>
-	autotest_suite_transition :se_setprops average_fps_text = <average_fps_text>
-	autotest_suite_transition :se_setprops highest_fps_text = <highest_fps_text>
-	autotest_suite_transition :se_setprops highest_fps_info_text = <highest_fps_info>
-	autotest_suite_transition :se_setprops lowest_fps_text = <lowest_fps_text>
-	autotest_suite_transition :se_setprops lowest_fps_info_text = <lowest_fps_info>
+	FormatText TextName = lowest_fps_info qs("\LTest %s  at  %t") s = $autotest_lowest_fps_test t = <formatted_time>
+	autotest_suite_transition :SE_SetProps average_fps_text = <average_fps_text>
+	autotest_suite_transition :SE_SetProps highest_fps_text = <highest_fps_text>
+	autotest_suite_transition :SE_SetProps highest_fps_info_text = <highest_fps_info>
+	autotest_suite_transition :SE_SetProps lowest_fps_text = <lowest_fps_text>
+	autotest_suite_transition :SE_SetProps lowest_fps_info_text = <lowest_fps_info>
 endscript
 
 script autotest_transition_set_props 
 	autotest_get_suite \{suite_num = $autotest_suite_index
-		fromsuitelist}
+		FromSuiteList}
 	autotest_get_test \{suite_num = $autotest_suite_index
 		test_num = $autotest_test_index}
-	formattext textname = suite_and_test_text qs(0x2a2c7f76) s = (<suite_struct>.name) t = $autotest_test_index
-	autotest_transition :se_setprops test_suite_text = <suite_and_test_text>
+	FormatText TextName = suite_and_test_text qs("\L%s / Test #%t") s = (<suite_struct>.name) t = $autotest_test_index
+	autotest_transition :SE_SetProps test_suite_text = <suite_and_test_text>
 	<song_name> = (<test_struct>.song)
 	<song_struct> = ($permanent_songlist_props.<song_name>)
 	<song_text> = (<song_struct>.title)
-	autotest_transition :se_setprops song_text = <song_text>
+	autotest_transition :SE_SetProps song_text = <song_text>
 	<venue_name> = (<test_struct>.venue)
-	<venue_struct> = ($levelzones.<venue_name>)
+	<venue_struct> = ($LevelZones.<venue_name>)
 	<venue_text> = (<venue_struct>.title)
-	autotest_transition :se_setprops venue_text = <venue_text>
+	autotest_transition :SE_SetProps venue_text = <venue_text>
 	<game_mode> = (<test_struct>.game_mode)
-	autotest_transition :se_setprops game_mode_text = ($autotest_game_mode_names.<game_mode>)
-	<starttime_text> = qs(0x431892ee)
-	<endtime_text> = qs(0x449293a1)
+	autotest_transition :SE_SetProps game_mode_text = ($autotest_game_mode_names.<game_mode>)
+	<starttime_text> = qs("\LBeginning")
+	<endtime_text> = qs("\LEnd")
 	if ($autotest_has_starttime = 1)
 		autotest_format_time \{mode = minutes_seconds_ms
 			time = $current_starttime}
-		formattext textname = starttime_text qs(0x73307931) s = <formatted_time>
+		FormatText TextName = starttime_text qs("\L%s") s = <formatted_time>
 	endif
 	if ($autotest_has_endtime = 1)
 		autotest_format_time \{mode = minutes_seconds_ms
 			time = $autotest_endtime}
-		formattext textname = endtime_text qs(0x6fa8cce6) e = <formatted_time>
+		FormatText TextName = endtime_text qs("\L%e") e = <formatted_time>
 	endif
-	formattext textname = time_span_text qs(0xcdace2e0) s = <starttime_text> e = <endtime_text>
-	autotest_transition :se_setprops time_span_text = <time_span_text>
-	formattext textname = speed_text qs(0x73307931) s = <speed>
-	autotest_transition :se_setprops speed_text = <speed_text>
+	FormatText TextName = time_span_text qs("\L%s to %e") s = <starttime_text> e = <endtime_text>
+	autotest_transition :SE_SetProps time_span_text = <time_span_text>
+	FormatText TextName = speed_text qs("\L%s") s = <Speed>
+	autotest_transition :SE_SetProps speed_text = <speed_text>
 	if (<test_struct>.p1_part != none)
-		autotest_transition :se_setprops p1_part_text = ($autotest_part_strings.(<test_struct>.p1_part))
-		autotest_transition :se_setprops p1_difficulty_text = ($autotest_difficulty_strings.(<test_struct>.p1_difficulty))
+		autotest_transition :SE_SetProps p1_part_text = ($autotest_part_strings.(<test_struct>.p1_part))
+		autotest_transition :SE_SetProps p1_difficulty_text = ($autotest_difficulty_strings.(<test_struct>.p1_difficulty))
 	else
-		autotest_transition :se_setprops \{p1_part_text = qs(0x549620e7)}
-		autotest_transition :se_setprops \{p1_difficulty_text = qs(0x03ac90f0)}
+		autotest_transition :SE_SetProps \{p1_part_text = qs("\LDISABLED")}
+		autotest_transition :SE_SetProps \{p1_difficulty_text = qs("\L")}
 	endif
 	if (<test_struct>.p2_part != none)
-		autotest_transition :se_setprops p2_part_text = ($autotest_part_strings.(<test_struct>.p2_part))
-		autotest_transition :se_setprops p2_difficulty_text = ($autotest_difficulty_strings.(<test_struct>.p2_difficulty))
+		autotest_transition :SE_SetProps p2_part_text = ($autotest_part_strings.(<test_struct>.p2_part))
+		autotest_transition :SE_SetProps p2_difficulty_text = ($autotest_difficulty_strings.(<test_struct>.p2_difficulty))
 	else
-		autotest_transition :se_setprops \{p2_part_text = qs(0x549620e7)}
-		autotest_transition :se_setprops \{p2_difficulty_text = qs(0x03ac90f0)}
+		autotest_transition :SE_SetProps \{p2_part_text = qs("\LDISABLED")}
+		autotest_transition :SE_SetProps \{p2_difficulty_text = qs("\L")}
 	endif
 	if (<test_struct>.p3_part != none)
-		autotest_transition :se_setprops p3_part_text = ($autotest_part_strings.(<test_struct>.p3_part))
-		autotest_transition :se_setprops p3_difficulty_text = ($autotest_difficulty_strings.(<test_struct>.p3_difficulty))
+		autotest_transition :SE_SetProps p3_part_text = ($autotest_part_strings.(<test_struct>.p3_part))
+		autotest_transition :SE_SetProps p3_difficulty_text = ($autotest_difficulty_strings.(<test_struct>.p3_difficulty))
 	else
-		autotest_transition :se_setprops \{p3_part_text = qs(0x549620e7)}
-		autotest_transition :se_setprops \{p3_difficulty_text = qs(0x03ac90f0)}
+		autotest_transition :SE_SetProps \{p3_part_text = qs("\LDISABLED")}
+		autotest_transition :SE_SetProps \{p3_difficulty_text = qs("\L")}
 	endif
 	if (<test_struct>.p4_part != none)
-		autotest_transition :se_setprops p4_part_text = ($autotest_part_strings.(<test_struct>.p4_part))
-		autotest_transition :se_setprops p4_difficulty_text = ($autotest_difficulty_strings.(<test_struct>.p4_difficulty))
+		autotest_transition :SE_SetProps p4_part_text = ($autotest_part_strings.(<test_struct>.p4_part))
+		autotest_transition :SE_SetProps p4_difficulty_text = ($autotest_difficulty_strings.(<test_struct>.p4_difficulty))
 	else
-		autotest_transition :se_setprops \{p4_part_text = qs(0x549620e7)}
-		autotest_transition :se_setprops \{p4_difficulty_text = qs(0x03ac90f0)}
+		autotest_transition :SE_SetProps \{p4_part_text = qs("\LDISABLED")}
+		autotest_transition :SE_SetProps \{p4_difficulty_text = qs("\L")}
 	endif
 endscript
 
 script destroy_autotest_menu 
-	if screenelementexists \{id = autotest_vmenu}
-		destroyscreenelement \{id = autotest_vmenu}
+	if ScreenElementExists \{id = autotest_vmenu}
+		DestroyScreenElement \{id = autotest_vmenu}
 	endif
-	if screenelementexists \{id = test_suite_list}
-		destroyscreenelement \{id = test_suite_list}
+	if ScreenElementExists \{id = test_suite_list}
+		DestroyScreenElement \{id = test_suite_list}
 	endif
 	destroy_menu_backdrop
-	killspawnedscript \{name = autotest_check_end_time}
-	killspawnedscript \{name = autotest_update_gpu_info}
-	if NOT gotparam \{still_testing}
+	KillSpawnedScript \{name = autotest_check_end_time}
+	KillSpawnedScript \{name = autotest_update_gpu_info}
+	if NOT GotParam \{still_testing}
 		change \{autotest_on = 0}
 		change \{autotest_suite_index = 0}
 		change \{autotest_test_index = 0}
@@ -481,17 +481,17 @@ script back_to_autotest_menu
 endscript
 
 script destroy_autotest_complete 
-	if screenelementexists \{id = autotest_complete}
-		destroyscreenelement \{id = autotest_complete}
+	if ScreenElementExists \{id = autotest_complete}
+		DestroyScreenElement \{id = autotest_complete}
 	endif
 endscript
 
 script autotest_create_hud 
 	if ($autotest_hud_on)
-		if NOT screenelementexists \{id = autotest_hud}
-			createscreenelement \{parent = root_window
+		if NOT ScreenElementExists \{id = autotest_hud}
+			CreateScreenElement \{parent = root_window
 				id = autotest_hud
-				type = descinterface
+				type = DescInterface
 				desc = 'autotest_hud'}
 			spawnscriptnow \{autotest_update_in_game_hud}
 		endif
@@ -499,8 +499,8 @@ script autotest_create_hud
 endscript
 
 script autotest_destroy_hud 
-	killspawnedscript \{name = autotest_update_in_game_hud}
-	if screenelementexists \{id = autotest_hud}
-		destroyscreenelement \{id = autotest_hud}
+	KillSpawnedScript \{name = autotest_update_in_game_hud}
+	if ScreenElementExists \{id = autotest_hud}
+		DestroyScreenElement \{id = autotest_hud}
 	endif
 endscript

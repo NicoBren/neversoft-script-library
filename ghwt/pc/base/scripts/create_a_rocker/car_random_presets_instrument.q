@@ -1,40 +1,40 @@
 cas_preset_guitars = [
 	{
 		genre = [
-			rock
-			punk
-			`classic rock`
+			Rock
+			Punk
+			`Classic Rock`
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body01
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style1_d_01.dds`
-					material = guitar_body_style_01_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/GTR_Body_Style1_D_01.dds`
+					material = Guitar_Body_Style_01_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style1_ld_06.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style1_LD_06.img`
 							flags = 4
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style1_dtl_22.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style1_DTL_22.img`
 							flags = 4
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck05
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck05
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_05.dds`
-					material = guitar_neck5_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_05.dds`
+					material = Guitar_Neck5_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_dots1_d_01.img`
+							texture = `tex/models/Characters/Layers/CAG/neck1_inlay_dots1_d_01.img`
 							flags = 36
 							color = grey_3
 						}
@@ -42,82 +42,82 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head13
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head13
 			chosen_materials = {
 				material1 = grey_5guitar
 			}
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock13_d_01.dds`
-					material = guitar_head_13_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock13_d_01.dds`
+					material = Guitar_Head_13_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock13_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock13_LD_01.img`
 							flags = 36
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock13_dtl_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock13_DTL_01.img`
 							flags = 36
-							color = black_1guitar
+							color = Black_1guitar
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_pickguards = {
-			desc_id = guitar_pickg01
+		CAS_Guitar_Pickguards = {
+			desc_id = Guitar_PickG01
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/pickgrd1_body1_d_01.dds`
-					material = gtr_body1_pickgrd_01_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/Pickgrd1_Body1_D_01.dds`
+					material = GTR_Body1_Pickgrd_01_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/pickgrd1_body1_ld_02.img`
+							texture = `tex/models/Characters/Layers/CAG/Pickgrd1_Body1_LD_02.img`
 							flags = 4
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware01b
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware01b
 			chosen_materials = {
 				material1 = grey_5guitar
 			}
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr1_knob_type4_04
+		CAS_Guitar_Knobs = {
+			desc_id = GTR1_Knob_Type4_04
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type1_blk_2
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type1_Blk_2
 			chosen_materials = {
-				material1 = black_1guitar
+				material1 = Black_1guitar
 			}
 		}
 	}
 	{
 		genre = [
-			goth
-			`black metal`
-			`heavy metal`
+			Goth
+			`Black Metal`
+			`Heavy Metal`
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body02
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style2_d_01.dds`
-					material = guitar_body_style_02_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/GTR_Body_Style2_D_01.dds`
+					material = Guitar_Body_Style_02_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style2_ld_13.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style2_LD_13.img`
 							flags = 4
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style2_d_04.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style2_D_04.img`
 							flags = 4
 							color = yellow_1guitar
 						}
@@ -125,16 +125,16 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck04
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck04
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_04.dds`
-					material = guitar_neck4_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_04.dds`
+					material = Guitar_Neck4_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_vine1_d_03.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_Vine1_D_03.img`
 							flags = 36
 							color = yellow_orange_1
 						}
@@ -142,24 +142,24 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head02
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head02
 			chosen_materials = {
 				material1 = grey_2guitar
 			}
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock02_d_01.dds`
-					material = headstock2_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock02_d_01.dds`
+					material = Headstock2_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock02_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock02_LD_01.img`
 							flags = 36
 							color = orange_3
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock02_dtl_04.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock02_DTL_04.img`
 							flags = 36
 							color = yellow_orange_1
 						}
@@ -167,46 +167,46 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_pickguards = {
+		CAS_Guitar_Pickguards = {
 			desc_id = none
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware01b
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware01b
 			chosen_materials = {
 				material1 = grey_2guitar
 			}
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr2_knob_type4_04
+		CAS_Guitar_Knobs = {
+			desc_id = GTR2_Knob_Type4_04
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type3b_03
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type3b_03
 			chosen_materials = {
-				material1 = black_1guitar
+				material1 = Black_1guitar
 			}
 		}
 	}
 	{
 		genre = [
-			`classic rock`
-			`black metal`
-			`heavy metal`
+			`Classic Rock`
+			`Black Metal`
+			`Heavy Metal`
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body03
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style3_d_01.dds`
-					material = guitar_body_style_03_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style3_d_01.dds`
+					material = Guitar_Body_Style_03_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style3_ld_41.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style3_LD_41.img`
 							flags = 4
 							color = orange_5
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style3_dtl_04.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style3_DTL_04.img`
 							color = red_3
 							flags = 4
 							a = 70
@@ -215,38 +215,38 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck03
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck03
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_03.dds`
-					material = guitar_neck3_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_03.dds`
+					material = Guitar_Neck3_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_wedge2_d_11.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_Wedge2_D_11.img`
 							flags = 36
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head10
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head10
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock10_d_01.dds`
-					material = guitar_head_10_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock10_d_01.dds`
+					material = Guitar_Head_10_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock10_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock10_LD_01.img`
 							color = orange_1
 							flags = 36
 							a = 55
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock10_dtl_04.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock10_DTL_04.img`
 							flags = 36
 							color = red_2
 						}
@@ -257,50 +257,50 @@ cas_preset_guitars = [
 				material1 = orange_4
 			}
 		}
-		cas_guitar_pickguards = {
+		CAS_Guitar_Pickguards = {
 			desc_id = none
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware01a
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware01a
 			chosen_materials = {
 				material1 = orange_4
 			}
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr3_knob_type10_03
+		CAS_Guitar_Knobs = {
+			desc_id = GTR3_Knob_Type10_03
 			chosen_materials = {
 				material1 = grey_2guitar
 			}
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type1_blktan_2
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type1_Blktan_2
 			chosen_materials = {
-				material1 = black_1guitar
+				material1 = Black_1guitar
 			}
 		}
 	}
 	{
 		genre = [
-			`classic rock`
-			punk
-			`heavy metal`
-			rock
+			`Classic Rock`
+			Punk
+			`Heavy Metal`
+			Rock
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body04
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style4_d_01.dds`
-					material = guitar_body_style_04_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style4_d_01.dds`
+					material = Guitar_Body_Style_04_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style4_ld_40.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style4_LD_40.img`
 							flags = 4
 							color = orange_4
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style4_dtl_04.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style4_DTL_04.img`
 							color = red_1
 							flags = 4
 							a = 90
@@ -309,16 +309,16 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck03
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck03
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_03.dds`
-					material = guitar_neck3_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_03.dds`
+					material = Guitar_Neck3_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_stars_d_02.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_Stars_D_02.img`
 							flags = 36
 							color = grey_2guitar
 						}
@@ -326,24 +326,24 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head99
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head99
 			chosen_materials = {
 				material1 = orange_4
 			}
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock099.dds`
-					material = guitar_head_99_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock099.dds`
+					material = Guitar_Head_99_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock099_wht.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock099_WHT.img`
 							flags = 36
-							color = black_1guitar
+							color = Black_1guitar
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock99__dtl_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock99__DTL_01.img`
 							flags = 36
 							color = red_3
 						}
@@ -351,16 +351,16 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_pickguards = {
-			desc_id = gtr_body4_pickg01
+		CAS_Guitar_Pickguards = {
+			desc_id = GTR_Body4_PickG01
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/pickgrd_body4_d_01.dds`
-					material = pckgrd_body4_01_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/pickgrd_body4_d_01.dds`
+					material = Pckgrd_Body4_01_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/pickgrd_body4_ld_04.img`
+							texture = `tex/models/Characters/Layers/CAG/Pickgrd_Body4_LD_04.img`
 							flags = 4
 							color = red_3
 						}
@@ -368,43 +368,43 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware05
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware05
 			chosen_materials = {
 				material1 = orange_4
 			}
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr4_knob_type10_04
+		CAS_Guitar_Knobs = {
+			desc_id = GTR4_Knob_Type10_04
 			chosen_materials = {
 				material1 = grey_2guitar
 			}
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type1_blk_3
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type1_Blk_3
 			chosen_materials = {
-				material1 = black_1guitar
+				material1 = Black_1guitar
 			}
 		}
 	}
 	{
 		genre = [
-			`classic rock`
-			punk
-			`heavy metal`
-			rock
-			goth
+			`Classic Rock`
+			Punk
+			`Heavy Metal`
+			Rock
+			Goth
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body05
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style5_d_01.dds`
-					material = guitar_body_style_05_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style5_d_01.dds`
+					material = Guitar_Body_Style_05_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style5_dtl_03.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style5_DTL_03.img`
 							flags = 4
 							color = red_1
 						}
@@ -412,16 +412,16 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck02
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck02
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_02.dds`
-					material = guitar_neck2_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_02.dds`
+					material = Guitar_Neck2_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_dancers_d_22.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_Dancers_D_22.img`
 							flags = 36
 							color = red_1
 						}
@@ -429,25 +429,25 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head04
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head04
 			chosen_materials = {
 				material1 = yellow_5guitar
 			}
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock04_d_01.dds`
-					material = guitar_head_04_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock04_d_01.dds`
+					material = Guitar_Head_04_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock04_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock04_LD_01.img`
 							color = red_3
 							flags = 36
 							a = 45
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock04_dtl_03.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock04_DTL_03.img`
 							flags = 36
 							color = red_1
 						}
@@ -455,16 +455,16 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_pickguards = {
-			desc_id = gtr_body5_pickg01
+		CAS_Guitar_Pickguards = {
+			desc_id = GTR_Body5_PickG01
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/pickgrd_body5_d_01.dds`
-					material = pckgrd_body5_01_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/pickgrd_body5_d_01.dds`
+					material = Pckgrd_Body5_01_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/pickgrd_body5_ld_04.img`
+							texture = `tex/models/Characters/Layers/CAG/Pickgrd_Body5_LD_04.img`
 							flags = 4
 							color = grey_1
 						}
@@ -472,20 +472,20 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware06
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware06
 			chosen_materials = {
 				material1 = yellow_5guitar
 			}
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr4_knob_type7_04
+		CAS_Guitar_Knobs = {
+			desc_id = GTR4_Knob_Type7_04
 			chosen_materials = {
 				material1 = grey_2guitar
 			}
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type1_blk_2
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type1_Blk_2
 			chosen_materials = {
 				material1 = grey_2guitar
 			}
@@ -493,41 +493,41 @@ cas_preset_guitars = [
 	}
 	{
 		genre = [
-			`classic rock`
-			rock
-			`glam rock`
+			`Classic Rock`
+			Rock
+			`Glam Rock`
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body06
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style6_d_01.dds`
-					material = guitar_body_style_06_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style6_d_01.dds`
+					material = Guitar_Body_Style_06_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style6_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style6_LD_01.img`
 							flags = 4
 							color = red_1
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style6_dtl_22.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style6_DTL_22.img`
 							flags = 4
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck04
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck04
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_04.dds`
-					material = guitar_neck4_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_04.dds`
+					material = Guitar_Neck4_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_skulls_d_21.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_Skulls_D_21.img`
 							flags = 36
 							color = grey_4guitar
 						}
@@ -535,21 +535,21 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head12
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head12
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock12_d_01.dds`
-					material = guitar_head_12_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock12_d_01.dds`
+					material = Guitar_Head_12_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock12_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock12_LD_01.img`
 							flags = 36
 							color = red_1
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock12_dtl_06.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock12_Dtl_06.img`
 							flags = 36
 						}
 					]
@@ -559,23 +559,23 @@ cas_preset_guitars = [
 				material1 = orange_4
 			}
 		}
-		cas_guitar_pickguards = {
+		CAS_Guitar_Pickguards = {
 			desc_id = none
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware01b
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware01b
 			chosen_materials = {
 				material1 = orange_4
 			}
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr6_knob_type5_03
+		CAS_Guitar_Knobs = {
+			desc_id = GTR6_Knob_Type5_03
 			chosen_materials = {
 				material1 = grey_5guitar
 			}
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type1_blktan_2
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type1_Blktan_2
 			chosen_materials = {
 				material1 = red_2
 			}
@@ -583,25 +583,25 @@ cas_preset_guitars = [
 	}
 	{
 		genre = [
-			goth
-			`black metal`
-			`heavy metal`
+			Goth
+			`Black Metal`
+			`Heavy Metal`
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body07
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style7_d_01.dds`
-					material = guitar_body_style_07_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style7_d_01.dds`
+					material = Guitar_Body_Style_07_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style7_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style7_LD_01.img`
 							flags = 4
-							color = black_1guitar
+							color = Black_1guitar
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style7_dtl_81.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style7_DTL_81.img`
 							color = red_orange_3
 							flags = 4
 							a = 85
@@ -610,16 +610,16 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck02
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck02
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_02.dds`
-					material = guitar_neck2_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_02.dds`
+					material = Guitar_Neck2_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_diamonds_d_16.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_Diamonds_D_16.img`
 							flags = 36
 							color = grey_3guitar
 						}
@@ -627,24 +627,24 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head08
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head08
 			chosen_materials = {
 				material1 = orange_5
 			}
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock08_d_01.dds`
-					material = guitar_head_08_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock08_d_01.dds`
+					material = Guitar_Head_08_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock08_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock08_LD_01.img`
 							flags = 36
-							color = black_1guitar
+							color = Black_1guitar
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock08_dtl_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock08_DTL_01.img`
 							flags = 36
 							color = red_orange_3
 						}
@@ -652,16 +652,16 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_pickguards = {
-			desc_id = gtr_body7_pickg01
+		CAS_Guitar_Pickguards = {
+			desc_id = GTR_Body7_PickG01
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/pickgrd_body7_d_01.dds`
-					material = pckgrd_body7_01_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/pickgrd_body7_d_01.dds`
+					material = Pckgrd_Body7_01_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/pickgrd_body7_ld_04.img`
+							texture = `tex/models/Characters/Layers/CAG/Pickgrd_Body7_LD_04.img`
 							flags = 4
 							color = yellow_orange_1
 						}
@@ -669,20 +669,20 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware01b
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware01b
 			chosen_materials = {
 				material1 = orange_5
 			}
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr7_knob_type1_03
+		CAS_Guitar_Knobs = {
+			desc_id = GTR7_Knob_Type1_03
 			chosen_materials = {
-				material1 = black_1guitar
+				material1 = Black_1guitar
 			}
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type1_blk_3
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type1_Blk_3
 			chosen_materials = {
 				material1 = red_orange_1
 			}
@@ -690,24 +690,24 @@ cas_preset_guitars = [
 	}
 	{
 		genre = [
-			goth
-			`black metal`
-			`heavy metal`
+			Goth
+			`Black Metal`
+			`Heavy Metal`
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body08
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style8_d_01.dds`
-					material = guitar_body_style_08_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style8_d_01.dds`
+					material = Guitar_Body_Style_08_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style8_ld_66.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style8_LD_66.img`
 							flags = 4
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style8_dtl_82.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style8_DTL_82.img`
 							color = teal_1
 							flags = 4
 							a = 60
@@ -716,16 +716,16 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck02
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck02
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_02.dds`
-					material = guitar_neck2_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_02.dds`
+					material = Guitar_Neck2_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_dots1_d_01.img`
+							texture = `tex/models/Characters/Layers/CAG/neck1_inlay_dots1_d_01.img`
 							flags = 36
 							color = teal_2
 						}
@@ -733,22 +733,22 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head99
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head99
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock099.dds`
-					material = guitar_head_99_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock099.dds`
+					material = Guitar_Head_99_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock099_wht.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock099_WHT.img`
 							color = red_orange_1
 							flags = 36
 							a = 90
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock099_dtl_03.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock099_DTL_03.img`
 							color = teal_1
 							flags = 36
 							a = 45
@@ -760,16 +760,16 @@ cas_preset_guitars = [
 				material1 = orange_5
 			}
 		}
-		cas_guitar_pickguards = {
-			desc_id = gtr_body8_pickg03
+		CAS_Guitar_Pickguards = {
+			desc_id = GTR_Body8_PickG03
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/pickgrd_body8_d_03.dds`
-					material = pckgrd_body8_03_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/pickgrd_body8_d_03.dds`
+					material = Pckgrd_Body8_03_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/pickgrd_body8_ld_06.img`
+							texture = `tex/models/Characters/Layers/CAG/Pickgrd_Body8_LD_06.img`
 							flags = 4
 							color = teal_1
 						}
@@ -777,17 +777,17 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware01b
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware01b
 			chosen_materials = {
 				material1 = orange_5
 			}
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr8_knob_type4_03
+		CAS_Guitar_Knobs = {
+			desc_id = GTR8_Knob_Type4_03
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type6_tkd_02
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type6_TKD_02
 			chosen_materials = {
 				material1 = teal_1
 			}
@@ -795,28 +795,28 @@ cas_preset_guitars = [
 	}
 	{
 		genre = [
-			goth
-			`black metal`
-			`heavy metal`
-			rock
-			punk
-			`glam rock`
-			pop
+			Goth
+			`Black Metal`
+			`Heavy Metal`
+			Rock
+			Punk
+			`Glam Rock`
+			Pop
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body09
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style9_d_01.dds`
-					material = guitar_body_style_09_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style9_d_01.dds`
+					material = Guitar_Body_Style_09_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style9_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style9_LD_01.img`
 							flags = 4
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style9_dtl_82.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style9_DTL_82.img`
 							flags = 4
 							color = grey_4guitar
 						}
@@ -824,87 +824,87 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck03
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck03
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_03.dds`
-					material = guitar_neck3_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_03.dds`
+					material = Guitar_Neck3_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_ironx_d_07.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_IronX_D_07.img`
 							flags = 36
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head10
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head10
 			chosen_materials = {
 				material1 = grey_5guitar
 			}
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock10_d_01.dds`
-					material = guitar_head_10_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock10_d_01.dds`
+					material = Guitar_Head_10_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock10_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock10_LD_01.img`
 							flags = 36
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock10_dtl_06.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock10_Dtl_06.img`
 							flags = 36
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_pickguards = {
-			desc_id = gtr_body9_pickg01
+		CAS_Guitar_Pickguards = {
+			desc_id = GTR_Body9_PickG01
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware01b
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware01b
 			chosen_materials = {
 				material1 = grey_5guitar
 			}
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr9_knob_type2_03
+		CAS_Guitar_Knobs = {
+			desc_id = GTR9_Knob_Type2_03
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickups_style_01a
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickups_Style_01a
 			chosen_materials = {
-				material1 = black_1guitar
+				material1 = Black_1guitar
 			}
 		}
 	}
 	{
 		genre = [
-			goth
-			`heavy metal`
-			rock
-			punk
-			`glam rock`
-			pop
+			Goth
+			`Heavy Metal`
+			Rock
+			Punk
+			`Glam Rock`
+			Pop
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body10
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style10_d_01.dds`
-					material = guitar_body_style_10_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style10_d_01.dds`
+					material = Guitar_Body_Style_10_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style10_ld_66.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style10_LD_66.img`
 							flags = 4
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style10_dtl_80.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style10_DTL_80.img`
 							color = yellow_1guitar
 							flags = 4
 							a = 45
@@ -913,16 +913,16 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck02
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck02
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_02.dds`
-					material = guitar_neck2_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_02.dds`
+					material = Guitar_Neck2_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_tribal2_d_20.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_Tribal2_D_20.img`
 							flags = 36
 							color = grey_3guitar
 						}
@@ -930,21 +930,21 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head12
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head12
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock12_d_01.dds`
-					material = guitar_head_12_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock12_d_01.dds`
+					material = Guitar_Head_12_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock12_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock12_LD_01.img`
 							flags = 36
 							color = orange_3
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock12_dtl_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock12_DTL_01.img`
 							flags = 36
 							color = orange_2
 						}
@@ -955,69 +955,69 @@ cas_preset_guitars = [
 				material1 = orange_5
 			}
 		}
-		cas_guitar_pickguards = {
-			desc_id = gtr_body10_pickg01
+		CAS_Guitar_Pickguards = {
+			desc_id = GTR_Body10_PickG01
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware01b
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware01b
 			chosen_materials = {
 				material1 = orange_5
 			}
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr10_knob_type2_03
+		CAS_Guitar_Knobs = {
+			desc_id = GTR10_Knob_Type2_03
 			chosen_materials = {
 				material1 = red_1
 			}
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type2_04
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type2_04
 			chosen_materials = {
-				material1 = black_1guitar
+				material1 = Black_1guitar
 			}
 		}
 	}
 	{
 		genre = [
-			goth
-			`black metal`
-			`heavy metal`
-			rock
-			punk
-			`glam rock`
-			pop
-			`classic rock`
+			Goth
+			`Black Metal`
+			`Heavy Metal`
+			Rock
+			Punk
+			`Glam Rock`
+			Pop
+			`Classic Rock`
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body11
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style11_d_01.dds`
-					material = guitar_body_style_11_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style11_d_01.dds`
+					material = Guitar_Body_Style_11_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style11_ld_11.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style11_LD_11.img`
 							flags = 4
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style11_dtl_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style11_DTL_01.img`
 							color = green_3guitar
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck05
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck05
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_05.dds`
-					material = guitar_neck5_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_05.dds`
+					material = Guitar_Neck5_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_block2_d_26.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_Block2_D_26.img`
 							flags = 36
 							color = grey_5guitar
 						}
@@ -1025,19 +1025,19 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head01
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head01
 			chosen_materials = {
 				material1 = yellow_4guitar
 			}
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock01_d_01.dds`
-					material = guitar_head_headstock
+					base_tex = `tex/models/Car_Instruments/Guitars/GTR_Headtock01_D_01.dds`
+					material = Guitar_Head_Headstock
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock01_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock01_LD_01.img`
 							flags = 36
 							color = green_3guitar
 						}
@@ -1045,23 +1045,23 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_pickguards = {
+		CAS_Guitar_Pickguards = {
 			desc_id = none
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware06
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware06
 			chosen_materials = {
 				material1 = yellow_4guitar
 			}
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr11_knob_type1_03
+		CAS_Guitar_Knobs = {
+			desc_id = GTR11_Knob_Type1_03
 			chosen_materials = {
 				material1 = yellow_green_1guitar
 			}
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type1_blktan_2
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type1_Blktan_2
 			chosen_materials = {
 				material1 = green_3guitar
 			}
@@ -1069,67 +1069,67 @@ cas_preset_guitars = [
 	}
 	{
 		genre = [
-			rock
-			punk
-			`glam rock`
-			pop
-			`classic rock`
+			Rock
+			Punk
+			`Glam Rock`
+			Pop
+			`Classic Rock`
 		]
-		cas_guitar_body = {
-			desc_id = guitar_body12
+		CAS_Guitar_Body = {
+			desc_id = Guitar_Body12
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style12_d_01.dds`
-					material = guitar_body_style_12_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style12_d_01.dds`
+					material = Guitar_Body_Style_12_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style12_ld_20.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style12_LD_20.img`
 							flags = 4
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style12_dtl_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style12_DTL_01.img`
 							color = orange_2
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck04
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck04
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_04.dds`
-					material = guitar_neck4_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_04.dds`
+					material = Guitar_Neck4_Primary
 					diffuse
 					pre_layer = [
 						{
 							color = grey_1
-							texture = `tex/models/characters/layers/cag/neck1_inlay_diamonds_d_16.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_Diamonds_D_16.img`
 							flags = 36
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head14
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head14
 			chosen_materials = {
 				material1 = grey_3guitar
 			}
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock14_d_01.dds`
-					material = guitar_head_14_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock14_d_01.dds`
+					material = Guitar_Head_14_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock14_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock14_LD_01.img`
 							flags = 36
-							color = black_1guitar
+							color = Black_1guitar
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock14_dtl_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock14_DTL_01.img`
 							flags = 36
 							color = orange_3
 						}
@@ -1137,49 +1137,49 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_pickguards = {
+		CAS_Guitar_Pickguards = {
 			desc_id = none
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr12_hardware_01
+		CAS_Guitar_Bridges = {
+			desc_id = GTR12_Hardware_01
 			chosen_materials = {
 				material1 = grey_3guitar
 			}
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr12_knob_type6_04
+		CAS_Guitar_Knobs = {
+			desc_id = GTR12_Knob_Type6_04
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type1_blk_3
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type1_Blk_3
 			chosen_materials = {
-				material1 = black_1guitar
+				material1 = Black_1guitar
 			}
 		}
 	}
 	{
 		genre = [
-			rock
-			punk
-			`glam rock`
-			pop
-			`classic rock`
+			Rock
+			Punk
+			`Glam Rock`
+			Pop
+			`Classic Rock`
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body13
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style13_d_01.dds`
-					material = guitar_body_style_13_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style13_d_01.dds`
+					material = Guitar_Body_Style_13_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style13_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style13_LD_01.img`
 							color = yellow_2guitar
 							flags = 4
 							a = 60
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style13_dtl_04.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style13_DTL_04.img`
 							flags = 4
 							color = red_2
 						}
@@ -1187,39 +1187,39 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck02
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck02
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_02.dds`
-					material = guitar_neck2_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_02.dds`
+					material = Guitar_Neck2_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_dots1_d_01.img`
+							texture = `tex/models/Characters/Layers/CAG/neck1_inlay_dots1_d_01.img`
 							flags = 36
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head01
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head01
 			chosen_materials = {
 				material1 = grey_3guitar
 			}
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock01_d_01.dds`
-					material = guitar_head_headstock
+					base_tex = `tex/models/Car_Instruments/Guitars/GTR_Headtock01_D_01.dds`
+					material = Guitar_Head_Headstock
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock01_dtl_06.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock01_Dtl_06.img`
 							flags = 36
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock01_detail_04.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock01_Detail_04.img`
 							flags = 36
 							color = red_3
 						}
@@ -1227,16 +1227,16 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_pickguards = {
-			desc_id = gtr_body13_pickg03
+		CAS_Guitar_Pickguards = {
+			desc_id = GTR_Body13_PickG03
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/pickgrd_body13_d_03.dds`
-					material = pckgrd_body13_03_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/pickgrd_body13_d_03.dds`
+					material = Pckgrd_Body13_03_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/pickgrd_body13_ld_06.img`
+							texture = `tex/models/Characters/Layers/CAG/Pickgrd_Body13_LD_06.img`
 							flags = 4
 							color = red_2
 						}
@@ -1244,49 +1244,49 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware01b
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware01b
 			chosen_materials = {
 				material1 = grey_3guitar
 			}
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr13_knob_type10_02
+		CAS_Guitar_Knobs = {
+			desc_id = GTR13_Knob_Type10_02
 			chosen_materials = {
 				material1 = grey_4guitar
 			}
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type4_03
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type4_03
 			chosen_materials = {
-				material1 = black_1guitar
+				material1 = Black_1guitar
 			}
 		}
 	}
 	{
 		genre = [
-			goth
-			rock
-			punk
-			`glam rock`
-			pop
-			`classic rock`
+			Goth
+			Rock
+			Punk
+			`Glam Rock`
+			Pop
+			`Classic Rock`
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body14
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style14_d_01.dds`
-					material = guitar_body_style_14_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style14_d_01.dds`
+					material = Guitar_Body_Style_14_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style14_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style14_LD_01.img`
 							flags = 4
 							color = orange_4
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style14_dtl_03.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style14_DTL_03.img`
 							flags = 4
 							color = red_orange_1
 						}
@@ -1294,39 +1294,39 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck04
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck04
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_04.dds`
-					material = guitar_neck4_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_04.dds`
+					material = Guitar_Neck4_Primary
 					diffuse
 					pre_layer = [
 						{
 							color = grey_1
-							texture = `tex/models/characters/layers/cag/neck1_inlay_dots1_d_01.img`
+							texture = `tex/models/Characters/Layers/CAG/neck1_inlay_dots1_d_01.img`
 							flags = 36
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head09
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head09
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock09_d_01.dds`
-					material = guitar_head_09_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock09_d_01.dds`
+					material = Guitar_Head_09_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock09_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock09_LD_01.img`
 							color = red_orange_1
 							flags = 36
 							a = 80
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock09_dtl_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock09_DTL_01.img`
 							flags = 36
 							color = red_1
 						}
@@ -1337,49 +1337,49 @@ cas_preset_guitars = [
 				material1 = orange_4
 			}
 		}
-		cas_guitar_pickguards = {
-			desc_id = gtr_body14_pickg02
+		CAS_Guitar_Pickguards = {
+			desc_id = GTR_Body14_PickG02
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware05
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware05
 			chosen_materials = {
 				material1 = orange_4
 			}
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr14_knob_type10_04
+		CAS_Guitar_Knobs = {
+			desc_id = GTR14_Knob_Type10_04
 			chosen_materials = {
 				material1 = orange_4
 			}
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type3b_03
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type3b_03
 			chosen_materials = {
-				material1 = black_1guitar
+				material1 = Black_1guitar
 			}
 		}
 	}
 	{
 		genre = [
-			goth
-			`heavy metal`
-			`glam rock`
-			pop
+			Goth
+			`Heavy Metal`
+			`Glam Rock`
+			Pop
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body15
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style15_d_01.dds`
-					material = guitar_body_style_15_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style15_d_01.dds`
+					material = Guitar_Body_Style_15_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style15_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style15_LD_01.img`
 							flags = 4
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style15_dtl_04.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style15_DTL_04.img`
 							flags = 4
 							color = teal_1
 						}
@@ -1387,37 +1387,37 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck03
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck03
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_03.dds`
-					material = guitar_neck3_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_03.dds`
+					material = Guitar_Neck3_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_stars_d_02.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_Stars_D_02.img`
 							flags = 36
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head06
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head06
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock06_d_01.dds`
-					material = guitar_head_06_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock06_d_01.dds`
+					material = Guitar_Head_06_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock06_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock06_LD_01.img`
 							flags = 36
 							color = teal_4
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock06_dtl_04.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock06_DTL_04.img`
 							flags = 36
 							color = teal_1
 						}
@@ -1428,49 +1428,49 @@ cas_preset_guitars = [
 				material1 = teal_5
 			}
 		}
-		cas_guitar_pickguards = {
+		CAS_Guitar_Pickguards = {
 			desc_id = none
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware07
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware07
 			chosen_materials = {
 				material1 = teal_5
 			}
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr15_knob_type3_03
+		CAS_Guitar_Knobs = {
+			desc_id = GTR15_Knob_Type3_03
 			chosen_materials = {
 				material1 = grey_3guitar
 			}
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickups_style_01c
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickups_Style_01c
 			chosen_materials = {
-				material1 = black_1guitar
+				material1 = Black_1guitar
 			}
 		}
 	}
 	{
 		genre = [
-			rock
-			`glam rock`
-			`classic rock`
+			Rock
+			`Glam Rock`
+			`Classic Rock`
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body05
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style5_d_01.dds`
-					material = guitar_body_style_05_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style5_d_01.dds`
+					material = Guitar_Body_Style_05_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style5_ld_14.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style5_LD_14.img`
 							flags = 4
 							color = green_3guitar
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style5_dtl_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style5_DTL_01.img`
 							flags = 4
 							color = yellow_green_3guitar
 						}
@@ -1478,16 +1478,16 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck01
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck01
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_01.dds`
-					material = guitar_neck1_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_01.dds`
+					material = Guitar_Neck1_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_shards_d_12.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_Shards_D_12.img`
 							flags = 36
 							color = grey_3guitar
 						}
@@ -1495,24 +1495,24 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head05
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head05
 			chosen_materials = {
 				material1 = yellow_4guitar
 			}
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock05_d_01.dds`
-					material = guitar_head_05_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock05_d_01.dds`
+					material = Guitar_Head_05_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock05_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock05_LD_01.img`
 							flags = 36
 							color = green_1guitar
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock05_dtl_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock05_DTL_01.img`
 							flags = 36
 							color = yellow_green_3guitar
 						}
@@ -1520,20 +1520,20 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_pickguards = {
-			desc_id = gtr_body5_pickg01
+		CAS_Guitar_Pickguards = {
+			desc_id = GTR_Body5_PickG01
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware01a
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware01a
 			chosen_materials = {
 				material1 = yellow_4guitar
 			}
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr4_knob_type1_04
+		CAS_Guitar_Knobs = {
+			desc_id = GTR4_Knob_Type1_04
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type1_blk_3
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type1_Blk_3
 			chosen_materials = {
 				material1 = green_1guitar
 			}
@@ -1541,25 +1541,25 @@ cas_preset_guitars = [
 	}
 	{
 		genre = [
-			goth
-			`black metal`
-			`heavy metal`
+			Goth
+			`Black Metal`
+			`Heavy Metal`
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body07
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style7_d_01.dds`
-					material = guitar_body_style_07_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style7_d_01.dds`
+					material = Guitar_Body_Style_07_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style7_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style7_LD_01.img`
 							flags = 4
-							color = black_1guitar
+							color = Black_1guitar
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style7_dtl_81.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style7_DTL_81.img`
 							flags = 4
 							color = grey_2guitar
 						}
@@ -1567,16 +1567,16 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck03
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck03
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_03.dds`
-					material = guitar_neck3_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_03.dds`
+					material = Guitar_Neck3_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_tribal_d_17.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_Tribal_D_17.img`
 							flags = 36
 							color = grey_2guitar
 						}
@@ -1584,24 +1584,24 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head02
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head02
 			chosen_materials = {
 				material1 = grey_2guitar
 			}
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock02_d_01.dds`
-					material = headstock2_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock02_d_01.dds`
+					material = Headstock2_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock02_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock02_LD_01.img`
 							flags = 36
-							color = black_1guitar
+							color = Black_1guitar
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock02_dtl_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock02_DTL_01.img`
 							flags = 36
 							color = grey_2guitar
 						}
@@ -1609,59 +1609,59 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_pickguards = {
+		CAS_Guitar_Pickguards = {
 			desc_id = none
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware01b
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware01b
 			chosen_materials = {
 				material1 = grey_2guitar
 			}
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr7_knob_type5_03
+		CAS_Guitar_Knobs = {
+			desc_id = GTR7_Knob_Type5_03
 			chosen_materials = {
 				material1 = grey_3guitar
 			}
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type6_tkd_03
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type6_TKD_03
 			chosen_materials = {
-				material1 = black_1guitar
+				material1 = Black_1guitar
 			}
 		}
 	}
 	{
 		genre = [
-			rock
-			`classic rock`
+			Rock
+			`Classic Rock`
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body08
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style8_d_01.dds`
-					material = guitar_body_style_08_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style8_d_01.dds`
+					material = Guitar_Body_Style_08_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style8_ld_69.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style8_LD_69.img`
 							flags = 4
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck03
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck03
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_03.dds`
-					material = guitar_neck3_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_03.dds`
+					material = Guitar_Neck3_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_diamonds_d_16.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_Diamonds_D_16.img`
 							flags = 36
 							color = grey_2guitar
 						}
@@ -1669,19 +1669,19 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head08
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head08
 			chosen_materials = {
 				material1 = grey_2guitar
 			}
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock08_d_01.dds`
-					material = guitar_head_08_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock08_d_01.dds`
+					material = Guitar_Head_08_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock08_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock08_LD_01.img`
 							color = red_1
 							flags = 36
 							a = 75
@@ -1690,47 +1690,47 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_pickguards = {
+		CAS_Guitar_Pickguards = {
 			desc_id = none
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware01b
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware01b
 			chosen_materials = {
 				material1 = grey_2guitar
 			}
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr8_knob_type4_03
+		CAS_Guitar_Knobs = {
+			desc_id = GTR8_Knob_Type4_03
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type6_tkd_03
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type6_TKD_03
 			chosen_materials = {
-				material1 = black_1guitar
+				material1 = Black_1guitar
 			}
 		}
 	}
 	{
 		genre = [
-			rock
-			`classic rock`
-			`heavy metal`
+			Rock
+			`Classic Rock`
+			`Heavy Metal`
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body04
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style4_d_01.dds`
-					material = guitar_body_style_04_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style4_d_01.dds`
+					material = Guitar_Body_Style_04_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style4_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style4_LD_01.img`
 							color = yellow_1guitar
 							flags = 4
 							a = 75
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style4_dtl_04.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style4_DTL_04.img`
 							flags = 4
 							color = red_1
 						}
@@ -1738,37 +1738,37 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck03
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck03
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_03.dds`
-					material = guitar_neck3_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_03.dds`
+					material = Guitar_Neck3_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_ornate1_d_05.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_Ornate1_D_05.img`
 							flags = 36
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head05
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head05
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock05_d_01.dds`
-					material = guitar_head_05_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock05_d_01.dds`
+					material = Guitar_Head_05_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock05_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock05_LD_01.img`
 							flags = 36
-							color = black_1guitar
+							color = Black_1guitar
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock05_dtl_06.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock05_Dtl_06.img`
 							flags = 36
 							color = red_3
 						}
@@ -1779,65 +1779,65 @@ cas_preset_guitars = [
 				material1 = orange_4
 			}
 		}
-		cas_guitar_pickguards = {
-			desc_id = gtr_body4_pickg01
+		CAS_Guitar_Pickguards = {
+			desc_id = GTR_Body4_PickG01
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware05
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware05
 			chosen_materials = {
 				material1 = orange_4
 			}
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr4_knob_type1_04
+		CAS_Guitar_Knobs = {
+			desc_id = GTR4_Knob_Type1_04
 			chosen_materials = {
-				material1 = black_1guitar
+				material1 = Black_1guitar
 			}
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type1_blktan_3
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type1_Blktan_3
 			chosen_materials = {
-				material1 = black_1guitar
+				material1 = Black_1guitar
 			}
 		}
 	}
 	{
 		genre = [
-			rock
-			`glam rock`
-			`heavy metal`
+			Rock
+			`Glam Rock`
+			`Heavy Metal`
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body02
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style2_d_01.dds`
-					material = guitar_body_style_02_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/GTR_Body_Style2_D_01.dds`
+					material = Guitar_Body_Style_02_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style2_d_05.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style2_D_05.img`
 							flags = 4
 							color = yellow_green_3guitar
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style2_dtl_23.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style2_DTL_23.img`
 							flags = 36
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck01
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck01
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_01.dds`
-					material = guitar_neck1_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_01.dds`
+					material = Guitar_Neck1_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_vine1_d_03.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_Vine1_D_03.img`
 							flags = 36
 							color = blue_5
 						}
@@ -1845,21 +1845,21 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head02
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head02
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock02_d_01.dds`
-					material = headstock2_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock02_d_01.dds`
+					material = Headstock2_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock02_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock02_LD_01.img`
 							flags = 36
 							color = yellow_green_3guitar
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock02_dtl_02.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock02_DTL_02.img`
 							flags = 36
 							color = yellow_green_1guitar
 						}
@@ -1870,48 +1870,48 @@ cas_preset_guitars = [
 				material1 = grey_4guitar
 			}
 		}
-		cas_guitar_pickguards = {
+		CAS_Guitar_Pickguards = {
 			desc_id = none
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware01b
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware01b
 			chosen_materials = {
 				material1 = grey_4guitar
 			}
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr2_knob_type2_04
+		CAS_Guitar_Knobs = {
+			desc_id = GTR2_Knob_Type2_04
 			chosen_materials = {
-				material1 = black_1guitar
+				material1 = Black_1guitar
 			}
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type2_03
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type2_03
 			chosen_materials = {
-				material1 = black_1guitar
+				material1 = Black_1guitar
 			}
 		}
 	}
 	{
 		genre = [
-			rock
-			`glam rock`
+			Rock
+			`Glam Rock`
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body03
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style3_d_01.dds`
-					material = guitar_body_style_03_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style3_d_01.dds`
+					material = Guitar_Body_Style_03_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style3_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style3_LD_01.img`
 							flags = 4
 							color = red_2
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style3_dtl_82.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style3_DTL_82.img`
 							flags = 4
 							color = red_orange_2
 						}
@@ -1919,16 +1919,16 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck02
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck02
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_02.dds`
-					material = guitar_neck2_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_02.dds`
+					material = Guitar_Neck2_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_shards_d_12.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_Shards_D_12.img`
 							flags = 36
 							color = blue_5
 						}
@@ -1936,21 +1936,21 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head10
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head10
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock10_d_01.dds`
-					material = guitar_head_10_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock10_d_01.dds`
+					material = Guitar_Head_10_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock10_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock10_LD_01.img`
 							flags = 36
 							color = red_2
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock10_dtl_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock10_DTL_01.img`
 							flags = 36
 							color = orange_2
 						}
@@ -1958,17 +1958,17 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_pickguards = {
+		CAS_Guitar_Pickguards = {
 			desc_id = none
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware01b
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware01b
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr3_knob_type10_03
+		CAS_Guitar_Knobs = {
+			desc_id = GTR3_Knob_Type10_03
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type1_blk_2
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type1_Blk_2
 			chosen_materials = {
 				material1 = red_1
 			}
@@ -1976,24 +1976,24 @@ cas_preset_guitars = [
 	}
 	{
 		genre = [
-			pop
-			`glam rock`
+			Pop
+			`Glam Rock`
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body14
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style14_d_01.dds`
-					material = guitar_body_style_14_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style14_d_01.dds`
+					material = Guitar_Body_Style_14_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style14_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style14_LD_01.img`
 							flags = 4
 							color = violet_3
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style14_dtl_03.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style14_DTL_03.img`
 							flags = 4
 							color = purple_blue_1
 						}
@@ -2001,16 +2001,16 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck03
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck03
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_03.dds`
-					material = guitar_neck3_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_03.dds`
+					material = Guitar_Neck3_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_stars_d_02.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_Stars_D_02.img`
 							flags = 36
 							color = blue_4
 						}
@@ -2018,19 +2018,19 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head06
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head06
 			chosen_materials = {
 				material1 = blue_5
 			}
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock06_d_01.dds`
-					material = guitar_head_06_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock06_d_01.dds`
+					material = Guitar_Head_06_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock06_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock06_LD_01.img`
 							flags = 36
 							color = purple_blue_1
 						}
@@ -2038,23 +2038,23 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_pickguards = {
-			desc_id = gtr_body14_pickg02
+		CAS_Guitar_Pickguards = {
+			desc_id = GTR_Body14_PickG02
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware01b
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware01b
 			chosen_materials = {
 				material1 = blue_5
 			}
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr14_knob_type2_04
+		CAS_Guitar_Knobs = {
+			desc_id = GTR14_Knob_Type2_04
 			chosen_materials = {
 				material1 = violet_3
 			}
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type1_blk_2
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type1_Blk_2
 			chosen_materials = {
 				material1 = violet_1
 			}
@@ -2062,82 +2062,82 @@ cas_preset_guitars = [
 	}
 	{
 		genre = [
-			punk
+			Punk
 		]
-		cas_guitar_body = {
-			desc_id = guitar_body12
+		CAS_Guitar_Body = {
+			desc_id = Guitar_Body12
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style12_d_01.dds`
-					material = guitar_body_style_12_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style12_d_01.dds`
+					material = Guitar_Body_Style_12_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style12_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style12_LD_01.img`
 							flags = 4
-							color = black_1guitar
+							color = Black_1guitar
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style12_dtl_22.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style12_DTL_22.img`
 							flags = 4
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck03
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck03
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_03.dds`
-					material = guitar_neck3_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_03.dds`
+					material = Guitar_Neck3_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_ironx_d_07.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_IronX_D_07.img`
 							flags = 36
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head12
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head12
 			chosen_materials = {
 				material1 = grey_3guitar
 			}
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock12_d_01.dds`
-					material = guitar_head_12_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock12_d_01.dds`
+					material = Guitar_Head_12_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock12_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock12_LD_01.img`
 							flags = 36
-							color = black_1guitar
+							color = Black_1guitar
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_pickguards = {
+		CAS_Guitar_Pickguards = {
 			desc_id = none
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr12_hardware_01
+		CAS_Guitar_Bridges = {
+			desc_id = GTR12_Hardware_01
 			chosen_materials = {
 				material1 = grey_3guitar
 			}
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr12_knob_type5_04
+		CAS_Guitar_Knobs = {
+			desc_id = GTR12_Knob_Type5_04
 			chosen_materials = {
 				material1 = grey_3guitar
 			}
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type1_blk_3
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type1_Blk_3
 			chosen_materials = {
 				material1 = grey_2guitar
 			}
@@ -2145,25 +2145,25 @@ cas_preset_guitars = [
 	}
 	{
 		genre = [
-			goth
-			`black metal`
-			`heavy metal`
+			Goth
+			`Black Metal`
+			`Heavy Metal`
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body07
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style7_d_01.dds`
-					material = guitar_body_style_07_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style7_d_01.dds`
+					material = Guitar_Body_Style_07_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style7_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style7_LD_01.img`
 							flags = 4
-							color = black_1guitar
+							color = Black_1guitar
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style7_dtl_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style7_DTL_01.img`
 							flags = 4
 							color = grey_3guitar
 						}
@@ -2171,40 +2171,40 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck03
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck03
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_03.dds`
-					material = guitar_neck3_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_03.dds`
+					material = Guitar_Neck3_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_skulls_d_21.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_Skulls_D_21.img`
 							flags = 36
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head09
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head09
 			chosen_materials = {
 				material1 = grey_3guitar
 			}
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock09_d_01.dds`
-					material = guitar_head_09_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock09_d_01.dds`
+					material = Guitar_Head_09_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock09_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock09_LD_01.img`
 							flags = 36
-							color = black_1guitar
+							color = Black_1guitar
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock09_dtl_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock09_DTL_01.img`
 							flags = 36
 							color = grey_2guitar
 						}
@@ -2212,20 +2212,20 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_pickguards = {
-			desc_id = gtr_body7_pickg03
+		CAS_Guitar_Pickguards = {
+			desc_id = GTR_Body7_PickG03
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware01a
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware01a
 			chosen_materials = {
 				material1 = grey_3guitar
 			}
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr7_knob_type4_03
+		CAS_Guitar_Knobs = {
+			desc_id = GTR7_Knob_Type4_03
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type1_blk_3
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type1_Blk_3
 			chosen_materials = {
 				material1 = grey_2guitar
 			}
@@ -2233,116 +2233,116 @@ cas_preset_guitars = [
 	}
 	{
 		genre = [
-			`black metal`
+			`Black Metal`
 			metal
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body02
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style2_d_01.dds`
-					material = guitar_body_style_02_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/GTR_Body_Style2_D_01.dds`
+					material = Guitar_Body_Style_02_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style2_d_05.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style2_D_05.img`
 							flags = 4
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style2_d_04.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style2_D_04.img`
 							flags = 4
-							color = black_1guitar
+							color = Black_1guitar
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck07
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck07
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_stone_tb_07.dds`
-					material = guitar_neck7_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_stone_tb_07.dds`
+					material = Guitar_Neck7_Primary
 					diffuse
 					pre_layer = [
 						{
 							color = grey_1
-							texture = `tex/models/characters/layers/cag/gtr_nek_binding_dtl.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Nek_Binding_DTL.img`
 							flags = 36
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head02
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head02
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock02_d_01.dds`
-					material = headstock2_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock02_d_01.dds`
+					material = Headstock2_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock02_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock02_LD_01.img`
 							flags = 36
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock02_dtl_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock02_DTL_01.img`
 							flags = 36
-							color = black_1guitar
+							color = Black_1guitar
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_pickguards = {
+		CAS_Guitar_Pickguards = {
 			desc_id = none
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware01b
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware01b
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr2_knob_type7_04
+		CAS_Guitar_Knobs = {
+			desc_id = GTR2_Knob_Type7_04
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickups_style_01c
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickups_Style_01c
 		}
 	}
 	{
 		genre = [
-			pop
+			Pop
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body15
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style15_d_01.dds`
-					material = guitar_body_style_15_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style15_d_01.dds`
+					material = Guitar_Body_Style_15_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style15_ld_41.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style15_LD_41.img`
 							flags = 4
 							color = violet_4
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style15_dtl_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style15_DTL_01.img`
 							color = teal_1
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck01
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck01
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_01.dds`
-					material = guitar_neck1_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_01.dds`
+					material = Guitar_Neck1_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_dotbinding_d_76.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_DotBinding_D_76.img`
 							flags = 36
 							color = blue_2
 						}
@@ -2350,21 +2350,21 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head04
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head04
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock04_d_01.dds`
-					material = guitar_head_04_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock04_d_01.dds`
+					material = Guitar_Head_04_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock04_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock04_LD_01.img`
 							flags = 36
 							color = violet_2
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock04_dtl_04.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock04_DTL_04.img`
 							flags = 36
 							color = blue_1
 						}
@@ -2375,16 +2375,16 @@ cas_preset_guitars = [
 				material1 = grey_5guitar
 			}
 		}
-		cas_guitar_pickguards = {
-			desc_id = gtr_body15_pickg01
+		CAS_Guitar_Pickguards = {
+			desc_id = GTR_Body15_PickG01
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/pickgrd_body15_d_01.dds`
-					material = pckgrd_body15_01_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/pickgrd_body15_d_01.dds`
+					material = Pckgrd_Body15_01_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/pickgrd_body15_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/Pickgrd_Body15_LD_01.img`
 							flags = 4
 							color = blue_2
 						}
@@ -2392,17 +2392,17 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware07
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware07
 			chosen_materials = {
 				material1 = grey_5guitar
 			}
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr15_knob_type2_03
+		CAS_Guitar_Knobs = {
+			desc_id = GTR15_Knob_Type2_03
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type2_03
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type2_03
 			chosen_materials = {
 				material1 = blue_5
 			}
@@ -2410,24 +2410,24 @@ cas_preset_guitars = [
 	}
 	{
 		genre = [
-			pop
-			rock
-			`classic rock`
+			Pop
+			Rock
+			`Classic Rock`
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body10
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style10_d_01.dds`
-					material = guitar_body_style_10_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style10_d_01.dds`
+					material = Guitar_Body_Style_10_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style10_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style10_LD_01.img`
 							flags = 4
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style10_dtl_23.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style10_DTL_23.img`
 							flags = 4
 							color = red_4
 						}
@@ -2435,118 +2435,118 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck03
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck03
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_03.dds`
-					material = guitar_neck3_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_03.dds`
+					material = Guitar_Neck3_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_vine1_d_03.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_Vine1_D_03.img`
 							flags = 36
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head09
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head09
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock09_d_01.dds`
-					material = guitar_head_09_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock09_d_01.dds`
+					material = Guitar_Head_09_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock09_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock09_LD_01.img`
 							flags = 36
-							color = black_1guitar
+							color = Black_1guitar
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock09_dtl_06.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock09_Dtl_06.img`
 							flags = 36
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_pickguards = {
-			desc_id = gtr_body10_pickg02
+		CAS_Guitar_Pickguards = {
+			desc_id = GTR_Body10_PickG02
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware01a
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware01a
 		}
-		cas_guitar_knobs = {
+		CAS_Guitar_Knobs = {
 			desc_id = none
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type2_03
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type2_03
 		}
 	}
 	{
 		genre = [
-			rock
-			`classic rock`
+			Rock
+			`Classic Rock`
 			metal
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body01
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style1_d_01.dds`
-					material = guitar_body_style_01_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/GTR_Body_Style1_D_01.dds`
+					material = Guitar_Body_Style_01_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style1_ld_41.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style1_LD_41.img`
 							flags = 4
 							color = grey_3guitar
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style1_dtl_22.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style1_DTL_22.img`
 							flags = 4
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck05
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck05
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_05.dds`
-					material = guitar_neck5_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_05.dds`
+					material = Guitar_Neck5_Primary
 					diffuse
 					pre_layer = [
 						{
 							color = grey_1
-							texture = `tex/models/characters/layers/cag/all_clear.img`
+							texture = `tex/models/Characters/Layers/CAG/All_Clear.img`
 							flags = 36
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head07
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head07
 			chosen_materials = {
 				material1 = grey_2guitar
 			}
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock07_d_01.dds`
-					material = guitar_head_07_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock07_d_01.dds`
+					material = Guitar_Head_07_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock07_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock07_LD_01.img`
 							flags = 36
 							color = yellow_orange_1
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock07_dtl_06.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock07_Dtl_06.img`
 							flags = 36
 							color = yellow_1guitar
 						}
@@ -2554,16 +2554,16 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_pickguards = {
-			desc_id = gtr_body1_pickg03
+		CAS_Guitar_Pickguards = {
+			desc_id = GTR_Body1_PickG03
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/pickgrd3_body1_d_01.dds`
-					material = gtr_pckgrd3_body1_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/Pickgrd3_Body1_D_01.dds`
+					material = GTR_Pckgrd3_Body1_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/pickgrd3_body1_ld_04.img`
+							texture = `tex/models/Characters/Layers/CAG/Pickgrd3_Body1_LD_04.img`
 							flags = 4
 							color = grey_3guitar
 						}
@@ -2571,45 +2571,45 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware05
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware05
 			chosen_materials = {
 				material1 = grey_2guitar
 			}
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr1_knob_type10_04
+		CAS_Guitar_Knobs = {
+			desc_id = GTR1_Knob_Type10_04
 			chosen_materials = {
 				material1 = grey_2guitar
 			}
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type6_tkd_01
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type6_TKD_01
 			chosen_materials = {
-				material1 = black_1guitar
+				material1 = Black_1guitar
 			}
 		}
 	}
 	{
 		genre = [
-			goth
-			pop
+			Goth
+			Pop
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body03
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style3_d_01.dds`
-					material = guitar_body_style_03_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style3_d_01.dds`
+					material = Guitar_Body_Style_03_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style3_ld_15.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style3_LD_15.img`
 							flags = 4
 							color = teal_3
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style3_dtl_81.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style3_DTL_81.img`
 							flags = 4
 							color = purple_blue_2
 						}
@@ -2617,173 +2617,173 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck05
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck05
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_05.dds`
-					material = guitar_neck5_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_05.dds`
+					material = Guitar_Neck5_Primary
 					diffuse
 					pre_layer = [
 						{
 							color = grey_1
-							texture = `tex/models/characters/layers/cag/gtr_nek_binding_dtl.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Nek_Binding_DTL.img`
 							flags = 36
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head20
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head20
 			chosen_materials = {
-				material1 = black_1guitar
+				material1 = Black_1guitar
 			}
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock20_d_01.dds`
-					material = guitar_head_20_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock20_d_01.dds`
+					material = Guitar_Head_20_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock20_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock20_LD_01.img`
 							flags = 36
 							color = teal_3
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock20_dtl_02.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock20_DTL_02.img`
 							flags = 36
-							color = black_1guitar
+							color = Black_1guitar
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_pickguards = {
+		CAS_Guitar_Pickguards = {
 			desc_id = none
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware01a
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware01a
 			chosen_materials = {
-				material1 = black_1guitar
+				material1 = Black_1guitar
 			}
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr3_knob_type3_03
+		CAS_Guitar_Knobs = {
+			desc_id = GTR3_Knob_Type3_03
 			chosen_materials = {
-				material1 = black_1guitar
+				material1 = Black_1guitar
 			}
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type5_01
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type5_01
 			chosen_materials = {
-				material1 = black_1guitar
+				material1 = Black_1guitar
 			}
 		}
 	}
 	{
 		genre = [
-			`classic rock`
+			`Classic Rock`
 		]
-		cas_guitar_body = {
-			desc_id = guitar_body12
+		CAS_Guitar_Body = {
+			desc_id = Guitar_Body12
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style12_d_01.dds`
-					material = guitar_body_style_12_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style12_d_01.dds`
+					material = Guitar_Body_Style_12_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style12_ld_41.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style12_LD_41.img`
 							flags = 4
 							color = orange_4
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style12_dtl_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style12_DTL_01.img`
 							color = red_1
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck02
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck02
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_02.dds`
-					material = guitar_neck2_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_02.dds`
+					material = Guitar_Neck2_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_dots1_d_01.img`
+							texture = `tex/models/Characters/Layers/CAG/neck1_inlay_dots1_d_01.img`
 							flags = 36
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head06
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head06
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock06_d_01.dds`
-					material = guitar_head_06_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock06_d_01.dds`
+					material = Guitar_Head_06_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/all_clear.img`
+							texture = `tex/models/Characters/Layers/CAG/All_Clear.img`
 							flags = 36
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock06_dtl_06.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock06_Dtl_06.img`
 							flags = 36
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_pickguards = {
-			desc_id = gtr_body12_pickg01
+		CAS_Guitar_Pickguards = {
+			desc_id = GTR_Body12_PickG01
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/pickgrd_body12_d_01.dds`
-					material = pckgrd_body12_01_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/pickgrd_body12_d_01.dds`
+					material = Pckgrd_Body12_01_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/all_clear.img`
+							texture = `tex/models/Characters/Layers/CAG/All_Clear.img`
 							flags = 4
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware07
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware07
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr12_knob_type2_04
+		CAS_Guitar_Knobs = {
+			desc_id = GTR12_Knob_Type2_04
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type4_02
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type4_02
 		}
 	}
 	{
 		genre = [
-			`black metal`
+			`Black Metal`
 			metal
-			rock
+			Rock
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body01
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style1_d_01.dds`
-					material = guitar_body_style_01_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/GTR_Body_Style1_D_01.dds`
+					material = Guitar_Body_Style_01_Primary
 					diffuse
 					layers = [
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_graphics010.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics010.img`
 							x_trans = -33
 							y_trans = 24
 							x_scale = 21
@@ -2792,7 +2792,7 @@ cas_preset_guitars = [
 							flags = 27
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_graphics010.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics010.img`
 							y_trans = 24
 							x_scale = 21
 							y_scale = 35
@@ -2801,7 +2801,7 @@ cas_preset_guitars = [
 							x_trans = -29
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_graphics010.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics010.img`
 							y_trans = 24
 							x_skew = -15
 							y_skew = 0
@@ -2812,7 +2812,7 @@ cas_preset_guitars = [
 							x_trans = -27
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_icon007.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon007.img`
 							color = grey_5guitar
 							x_trans = -31
 							y_trans = 10
@@ -2822,8 +2822,8 @@ cas_preset_guitars = [
 							flags = 3
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_icon007.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon007.img`
+							color = Black_1guitar
 							x_trans = -31
 							x_scale = 71
 							y_scale = 25
@@ -2834,11 +2834,11 @@ cas_preset_guitars = [
 					]
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style1_ld_23.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style1_LD_23.img`
 							flags = 4
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style1_dtl_02.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style1_DTL_02.img`
 							color = red_1
 							flags = 4
 							a = 45
@@ -2847,16 +2847,16 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck03
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck03
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_03.dds`
-					material = guitar_neck3_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_03.dds`
+					material = Guitar_Neck3_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_nek_binding_dtl.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Nek_Binding_DTL.img`
 							flags = 36
 							color = red_1
 						}
@@ -2864,21 +2864,21 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head12
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head12
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock12_d_01.dds`
-					material = guitar_head_12_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock12_d_01.dds`
+					material = Guitar_Head_12_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock12_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock12_LD_01.img`
 							flags = 36
 							color = red_1
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock12_dtl_06.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock12_Dtl_06.img`
 							flags = 36
 						}
 					]
@@ -2888,56 +2888,56 @@ cas_preset_guitars = [
 				material1 = red_1
 			}
 		}
-		cas_guitar_pickguards = {
-			desc_id = guitar_pickg01
+		CAS_Guitar_Pickguards = {
+			desc_id = Guitar_PickG01
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/pickgrd1_body1_d_01.dds`
-					material = gtr_body1_pickgrd_01_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/Pickgrd1_Body1_D_01.dds`
+					material = GTR_Body1_Pickgrd_01_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/all_clear.img`
+							texture = `tex/models/Characters/Layers/CAG/All_Clear.img`
 							flags = 4
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware06
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware06
 			chosen_materials = {
 				material1 = red_1
 			}
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr1_knob_type8_04
+		CAS_Guitar_Knobs = {
+			desc_id = GTR1_Knob_Type8_04
 			chosen_materials = {
 				material1 = grey_5guitar
 			}
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type1_blk_3
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type1_Blk_3
 			chosen_materials = {
-				material1 = black_1guitar
+				material1 = Black_1guitar
 			}
 		}
 	}
 	{
 		genre = [
-			glam
-			pop
+			Glam
+			Pop
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body15
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style15_d_01.dds`
-					material = guitar_body_style_15_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style15_d_01.dds`
+					material = Guitar_Body_Style_15_Primary
 					diffuse
 					layers = [
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 							color = grey_5guitar
 							y_trans = -1
 							x_scale = 116
@@ -2947,7 +2947,7 @@ cas_preset_guitars = [
 							x_trans = -29
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 							color = blue_2
 							x_trans = -10
 							y_trans = 3
@@ -2957,7 +2957,7 @@ cas_preset_guitars = [
 							x_scale = 81
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 							color = blue_2
 							y_trans = 3
 							x_scale = 81
@@ -2967,7 +2967,7 @@ cas_preset_guitars = [
 							x_trans = -5
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 							color = yellow_2guitar
 							x_trans = -5
 							y_trans = 3
@@ -2977,7 +2977,7 @@ cas_preset_guitars = [
 							rot = 1250
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 							color = yellow_2guitar
 							x_trans = -38
 							y_trans = -5
@@ -2987,7 +2987,7 @@ cas_preset_guitars = [
 							x_scale = 116
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 							color = yellow_2guitar
 							x_trans = -38
 							x_scale = 116
@@ -2997,7 +2997,7 @@ cas_preset_guitars = [
 							y_trans = -1
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 							color = grey_5guitar
 							x_trans = -20
 							y_trans = -1
@@ -3009,7 +3009,7 @@ cas_preset_guitars = [
 					]
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style15_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style15_LD_01.img`
 							flags = 4
 							color = violet_1
 						}
@@ -3021,16 +3021,16 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck03
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck03
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_03.dds`
-					material = guitar_neck3_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_03.dds`
+					material = Guitar_Neck3_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_birds_d_08.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_Birds_D_08.img`
 							flags = 36
 							color = yellow_1guitar
 						}
@@ -3038,37 +3038,37 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head10
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head10
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock10_d_01.dds`
-					material = guitar_head_10_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock10_d_01.dds`
+					material = Guitar_Head_10_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock10_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock10_LD_01.img`
 							flags = 36
 							color = violet_1
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock10_dtl_06.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock10_Dtl_06.img`
 							flags = 36
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_pickguards = {
-			desc_id = gtr_body15_pickg01
+		CAS_Guitar_Pickguards = {
+			desc_id = GTR_Body15_PickG01
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/pickgrd_body15_d_01.dds`
-					material = pckgrd_body15_01_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/pickgrd_body15_d_01.dds`
+					material = Pckgrd_Body15_01_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/pickgrd_body15_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/Pickgrd_Body15_LD_01.img`
 							flags = 4
 							color = violet_5
 						}
@@ -3076,51 +3076,51 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware01b
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware01b
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr15_knob_type1_03
+		CAS_Guitar_Knobs = {
+			desc_id = GTR15_Knob_Type1_03
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type2_03
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type2_03
 		}
 	}
 	{
 		genre = [
-			punk
-			rock
+			Punk
+			Rock
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body11
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style11_d_01.dds`
-					material = guitar_body_style_11_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style11_d_01.dds`
+					material = Guitar_Body_Style_11_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style11_ld_60.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style11_LD_60.img`
 							flags = 4
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style11_dtl_22.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style11_DTL_22.img`
 							flags = 4
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck05
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck05
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_05.dds`
-					material = guitar_neck5_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_05.dds`
+					material = Guitar_Neck5_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_wedge2_d_11.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_Wedge2_D_11.img`
 							flags = 36
 							color = grey_5guitar
 						}
@@ -3128,16 +3128,16 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head14
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head14
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock14_d_01.dds`
-					material = guitar_head_14_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock14_d_01.dds`
+					material = Guitar_Head_14_Primary
 					diffuse
 					layers = [
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_elemental003.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_elemental003.img`
 							x_trans = -3
 							x_scale = 81
 							y_scale = 35
@@ -3146,7 +3146,7 @@ cas_preset_guitars = [
 							y_trans = -3
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_graphics005.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics005.img`
 							y_trans = 12
 							x_scale = 46
 							y_scale = 70
@@ -3157,46 +3157,46 @@ cas_preset_guitars = [
 					]
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock14_dtl_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock14_DTL_01.img`
 							flags = 4
-							color = black_1guitar
+							color = Black_1guitar
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_pickguards = {
+		CAS_Guitar_Pickguards = {
 			desc_id = none
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware06
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware06
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr11_knob_type4_03
+		CAS_Guitar_Knobs = {
+			desc_id = GTR11_Knob_Type4_03
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type2_03
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type2_03
 		}
 	}
 	{
 		genre = [
-			`classic rock`
+			`Classic Rock`
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body13
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style13_d_01.dds`
-					material = guitar_body_style_13_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style13_d_01.dds`
+					material = Guitar_Body_Style_13_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style13_ld_42.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style13_LD_42.img`
 							flags = 4
 							color = orange_3
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style13_dtl_23.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style13_DTL_23.img`
 							flags = 4
 							color = yellow_orange_2
 						}
@@ -3204,96 +3204,96 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck03
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck03
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_03.dds`
-					material = guitar_neck3_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_03.dds`
+					material = Guitar_Neck3_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_dots1_d_01.img`
+							texture = `tex/models/Characters/Layers/CAG/neck1_inlay_dots1_d_01.img`
 							flags = 36
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head07
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head07
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock07_d_01.dds`
-					material = guitar_head_07_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock07_d_01.dds`
+					material = Guitar_Head_07_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock07_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock07_LD_01.img`
 							flags = 36
 							color = yellow_orange_1
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock07_dtl_06.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock07_Dtl_06.img`
 							flags = 36
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_pickguards = {
-			desc_id = gtr_body13_pickg03
+		CAS_Guitar_Pickguards = {
+			desc_id = GTR_Body13_PickG03
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/pickgrd_body13_d_03.dds`
-					material = pckgrd_body13_03_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/pickgrd_body13_d_03.dds`
+					material = Pckgrd_Body13_03_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/all_clear.img`
+							texture = `tex/models/Characters/Layers/CAG/All_Clear.img`
 							flags = 4
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware01b
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware01b
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr13_knob_type7_02
+		CAS_Guitar_Knobs = {
+			desc_id = GTR13_Knob_Type7_02
 			chosen_materials = {
 				material1 = grey_5guitar
 			}
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickups_style_01a
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickups_Style_01a
 			chosen_materials = {
-				material1 = black_1guitar
+				material1 = Black_1guitar
 			}
 		}
 	}
 	{
 		genre = [
 			metal
-			`black metal`
-			rock
+			`Black Metal`
+			Rock
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body02
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style2_d_01.dds`
-					material = guitar_body_style_02_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/GTR_Body_Style2_D_01.dds`
+					material = Guitar_Body_Style_02_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style2_d_05.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style2_D_05.img`
 							flags = 4
-							color = black_1guitar
+							color = Black_1guitar
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style2_dtl_21.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style2_DTL_21.img`
 							flags = 4
 							color = grey_5guitar
 						}
@@ -3301,16 +3301,16 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck03
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck03
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_03.dds`
-					material = guitar_neck3_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_03.dds`
+					material = Guitar_Neck3_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_tribal2_d_20.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_Tribal2_D_20.img`
 							flags = 36
 							color = grey_5guitar
 						}
@@ -3318,21 +3318,21 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head02
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head02
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock02_d_01.dds`
-					material = headstock2_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock02_d_01.dds`
+					material = Headstock2_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock02_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock02_LD_01.img`
 							flags = 36
-							color = black_1guitar
+							color = Black_1guitar
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock02_dtl_06.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock02_Dtl_06.img`
 							flags = 36
 						}
 					]
@@ -3342,69 +3342,69 @@ cas_preset_guitars = [
 				material1 = grey_2guitar
 			}
 		}
-		cas_guitar_pickguards = {
-			desc_id = gtr_body2_pickg02
+		CAS_Guitar_Pickguards = {
+			desc_id = GTR_Body2_PickG02
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/pickgrd1_body2_02.dds`
-					material = gtr_body2_pckgrd2_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/pickgrd1_body2_02.dds`
+					material = GTR_Body2_Pckgrd2_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/all_clear.img`
+							texture = `tex/models/Characters/Layers/CAG/All_Clear.img`
 							flags = 4
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware01a
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware01a
 			chosen_materials = {
 				material1 = grey_2guitar
 			}
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr2_knob_type3_04
+		CAS_Guitar_Knobs = {
+			desc_id = GTR2_Knob_Type3_04
 			chosen_materials = {
-				material1 = black_1guitar
+				material1 = Black_1guitar
 			}
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type1_blk_3
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type1_Blk_3
 			chosen_materials = {
-				material1 = black_1guitar
+				material1 = Black_1guitar
 			}
 		}
 	}
 	{
 		genre = [
 			metal
-			`black metal`
-			rock
-			pop
+			`Black Metal`
+			Rock
+			Pop
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body02
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style2_d_01.dds`
-					material = guitar_body_style_02_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/GTR_Body_Style2_D_01.dds`
+					material = Guitar_Body_Style_02_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style2_d_05.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style2_D_05.img`
 							flags = 4
-							color = black_1guitar
+							color = Black_1guitar
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style2_d_04.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style2_D_04.img`
 							flags = 4
 						}
 					]
 					layers = [
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_icon001.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon001.img`
 							y_trans = -33
 							x_scale = 36
 							y_scale = 95
@@ -3412,7 +3412,7 @@ cas_preset_guitars = [
 							x_trans = -34
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_icon002.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon002.img`
 							x_trans = -31
 							y_trans = 25
 							x_scale = 31
@@ -3420,7 +3420,7 @@ cas_preset_guitars = [
 							flags = 3
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_icon002.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon002.img`
 							x_trans = -22
 							x_scale = 41
 							y_scale = 100
@@ -3431,46 +3431,46 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck03
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck03
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_03.dds`
-					material = guitar_neck3_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_03.dds`
+					material = Guitar_Neck3_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_dotbinding_d_76.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_DotBinding_D_76.img`
 							flags = 36
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head02
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head02
 			chosen_materials = {
 				material1 = grey_2guitar
 			}
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock02_d_01.dds`
-					material = headstock2_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock02_d_01.dds`
+					material = Headstock2_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock02_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock02_LD_01.img`
 							flags = 36
-							color = black_1guitar
+							color = Black_1guitar
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock02_dtl_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock02_DTL_01.img`
 							flags = 36
 						}
 					]
 					layers = [
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_icon012.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon012.img`
 							x_trans = -34
 							x_scale = 51
 							y_scale = 65
@@ -3482,52 +3482,52 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_pickguards = {
+		CAS_Guitar_Pickguards = {
 			desc_id = none
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware06
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware06
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr2_knob_type8_04
+		CAS_Guitar_Knobs = {
+			desc_id = GTR2_Knob_Type8_04
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickups_style_01b
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickups_Style_01b
 			chosen_materials = {
-				material1 = black_1guitar
+				material1 = Black_1guitar
 			}
 		}
 	}
 	{
 		genre = [
 			metal
-			`black metal`
-			rock
-			pop
+			`Black Metal`
+			Rock
+			Pop
 		]
-		cas_guitar_body = {
-			desc_id = guitar_body12
+		CAS_Guitar_Body = {
+			desc_id = Guitar_Body12
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style12_d_01.dds`
-					material = guitar_body_style_12_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style12_d_01.dds`
+					material = Guitar_Body_Style_12_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style12_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style12_LD_01.img`
 							flags = 4
 							color = yellow_3guitar
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style12_dtl_21.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style12_DTL_21.img`
 							flags = 4
 							color = violet_3
 						}
 					]
 					layers = [
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+							color = Black_1guitar
 							x_trans = -39
 							y_trans = 21
 							x_scale = 21
@@ -3535,7 +3535,7 @@ cas_preset_guitars = [
 							flags = 3
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
 							color = yellow_1guitar
 							x_trans = -39
 							y_trans = 21
@@ -3544,8 +3544,8 @@ cas_preset_guitars = [
 							y_scale = 35
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_039.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_039.img`
+							color = Black_1guitar
 							y_trans = 28
 							x_scale = 6
 							y_scale = 5
@@ -3553,8 +3553,8 @@ cas_preset_guitars = [
 							x_trans = -36
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_039.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_039.img`
+							color = Black_1guitar
 							x_trans = -43
 							x_scale = 6
 							y_scale = 5
@@ -3562,8 +3562,8 @@ cas_preset_guitars = [
 							y_trans = 28
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_005.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_005.img`
+							color = Black_1guitar
 							y_trans = 14
 							x_scale = 11
 							y_scale = 20
@@ -3571,8 +3571,8 @@ cas_preset_guitars = [
 							x_trans = -42
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_005.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_005.img`
+							color = Black_1guitar
 							x_trans = -36
 							y_trans = 14
 							x_scale = 11
@@ -3583,41 +3583,41 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck01
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck01
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_01.dds`
-					material = guitar_neck1_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_01.dds`
+					material = Guitar_Neck1_Primary
 					diffuse
 					pre_layer = [
 						{
 							color = grey_1
-							texture = `tex/models/characters/layers/cag/gtr_nek_binding_dtl.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Nek_Binding_DTL.img`
 							flags = 36
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head99
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head99
 			chosen_materials = {
 				material1 = violet_2
 			}
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock099.dds`
-					material = guitar_head_99_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock099.dds`
+					material = Guitar_Head_99_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock099_wht.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock099_WHT.img`
 							flags = 36
 							color = yellow_3guitar
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock099_dtl_02.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock099_DTL_02.img`
 							flags = 36
 							color = purple_blue_1
 						}
@@ -3625,16 +3625,16 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_pickguards = {
-			desc_id = gtr_body12_pickg02
+		CAS_Guitar_Pickguards = {
+			desc_id = GTR_Body12_PickG02
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/pickgrd_body12_d_02.dds`
-					material = pckgrd_body12_02_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/pickgrd_body12_d_02.dds`
+					material = Pckgrd_Body12_02_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/pickgrd_body12_ld_05.img`
+							texture = `tex/models/Characters/Layers/CAG/Pickgrd_Body12_LD_05.img`
 							flags = 4
 							color = yellow_3guitar
 						}
@@ -3642,17 +3642,17 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware05
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware05
 			chosen_materials = {
 				material1 = violet_2
 			}
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr12_knob_type4_04
+		CAS_Guitar_Knobs = {
+			desc_id = GTR12_Knob_Type4_04
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickups_style_01c
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickups_Style_01c
 			chosen_materials = {
 				material1 = violet_1
 			}
@@ -3660,30 +3660,30 @@ cas_preset_guitars = [
 	}
 	{
 		genre = [
-			`classic rock`
-			rock
+			`Classic Rock`
+			Rock
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body05
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style5_d_01.dds`
-					material = guitar_body_style_05_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style5_d_01.dds`
+					material = Guitar_Body_Style_05_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style5_ld_11.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style5_LD_11.img`
 							flags = 4
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style5_dtl_22.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style5_DTL_22.img`
 							flags = 4
 						}
 					]
 					layers = [
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_icon022.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon022.img`
+							color = Black_1guitar
 							x_trans = -19
 							x_scale = 51
 							y_scale = 105
@@ -3691,8 +3691,8 @@ cas_preset_guitars = [
 							y_trans = 6
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_icon022.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon022.img`
+							color = Black_1guitar
 							x_trans = -19
 							x_scale = 51
 							y_scale = 105
@@ -3700,7 +3700,7 @@ cas_preset_guitars = [
 							y_trans = 2
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_icon022.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon022.img`
 							x_trans = -19
 							y_trans = 4
 							x_scale = 51
@@ -3712,32 +3712,32 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck02
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck02
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_02.dds`
-					material = guitar_neck2_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_02.dds`
+					material = Guitar_Neck2_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_skulls_d_21.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_Skulls_D_21.img`
 							flags = 36
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head07
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head07
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock07_d_01.dds`
-					material = guitar_head_07_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock07_d_01.dds`
+					material = Guitar_Head_07_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/all_clear.img`
+							texture = `tex/models/Characters/Layers/CAG/All_Clear.img`
 							flags = 36
 						}
 						{
@@ -3748,40 +3748,40 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_pickguards = {
+		CAS_Guitar_Pickguards = {
 			desc_id = none
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware01a
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware01a
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr4_knob_type7_04
+		CAS_Guitar_Knobs = {
+			desc_id = GTR4_Knob_Type7_04
 			chosen_materials = {
 				material1 = grey_3guitar
 			}
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickups_style_01b
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickups_Style_01b
 			chosen_materials = {
-				material1 = black_1guitar
+				material1 = Black_1guitar
 			}
 		}
 	}
 	{
 		genre = [
-			glam
+			Glam
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body04
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style4_d_01.dds`
-					material = guitar_body_style_04_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style4_d_01.dds`
+					material = Guitar_Body_Style_04_Primary
 					diffuse
 					layers = [
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+							color = Black_1guitar
 							x_trans = -23
 							x_scale = 71
 							y_scale = 10
@@ -3790,8 +3790,8 @@ cas_preset_guitars = [
 							y_trans = -10
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+							color = Black_1guitar
 							x_trans = -23
 							x_scale = 71
 							y_scale = 10
@@ -3802,7 +3802,7 @@ cas_preset_guitars = [
 					]
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style4_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style4_LD_01.img`
 							flags = 4
 							color = green_3guitar
 						}
@@ -3814,46 +3814,46 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck01
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck01
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_01.dds`
-					material = guitar_neck1_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_01.dds`
+					material = Guitar_Neck1_Primary
 					diffuse
 					pre_layer = [
 						{
 							color = grey_1
-							texture = `tex/models/characters/layers/cag/neck1_inlay_dancers_d_22.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_Dancers_D_22.img`
 							flags = 36
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head07
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head07
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock07_d_01.dds`
-					material = guitar_head_07_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock07_d_01.dds`
+					material = Guitar_Head_07_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock07_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock07_LD_01.img`
 							flags = 36
 							color = green_3guitar
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock07_dtl_03.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock07_DTL_03.img`
 							flags = 36
-							color = black_1guitar
+							color = Black_1guitar
 						}
 					]
 					layers = [
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+							color = Black_1guitar
 							x_trans = -16
 							y_trans = -5
 							x_scale = 86
@@ -3864,46 +3864,46 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_pickguards = {
+		CAS_Guitar_Pickguards = {
 			desc_id = none
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware01a
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware01a
 		}
-		cas_guitar_knobs = {
+		CAS_Guitar_Knobs = {
 			desc_id = none
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickups_style_01b
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickups_Style_01b
 		}
 	}
 	{
 		genre = [
-			glam
+			Glam
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body11
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style11_d_01.dds`
-					material = guitar_body_style_11_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style11_d_01.dds`
+					material = Guitar_Body_Style_11_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style11_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style11_LD_01.img`
 							color = red_3
 							flags = 4
 							a = 70
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style11_dtl_01.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style11_DTL_01.img`
+							color = Black_1guitar
 						}
 					]
 					layers = [
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_graphics077.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics077.img`
+							color = Black_1guitar
 							x_trans = -15
 							y_trans = -7
 							x_scale = 46
@@ -3914,16 +3914,16 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck03
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck03
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_03.dds`
-					material = guitar_neck3_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_03.dds`
+					material = Guitar_Neck3_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_hearts_d_13.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_Hearts_D_13.img`
 							flags = 36
 							color = red_4
 						}
@@ -3931,17 +3931,17 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head07
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head07
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock07_d_01.dds`
-					material = guitar_head_07_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock07_d_01.dds`
+					material = Guitar_Head_07_Primary
 					diffuse
 					layers = [
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+							color = Black_1guitar
 							x_trans = -16
 							y_trans = -5
 							x_scale = 86
@@ -3951,49 +3951,49 @@ cas_preset_guitars = [
 					]
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock07_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock07_LD_01.img`
 							flags = 36
 							color = red_4
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock07_dtl_03.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock07_DTL_03.img`
 							flags = 36
-							color = black_1guitar
+							color = Black_1guitar
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_pickguards = {
+		CAS_Guitar_Pickguards = {
 			desc_id = none
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware01a
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware01a
 		}
-		cas_guitar_knobs = {
+		CAS_Guitar_Knobs = {
 			desc_id = none
 		}
 	}
 	{
 		genre = [
-			`classic rock`
-			rock
-			glam
+			`Classic Rock`
+			Rock
+			Glam
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body10
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style10_d_01.dds`
-					material = guitar_body_style_10_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style10_d_01.dds`
+					material = Guitar_Body_Style_10_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style10_ld_66.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style10_LD_66.img`
 							flags = 4
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style10_dtl_21.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style10_DTL_21.img`
 							flags = 4
 							color = red_3
 						}
@@ -4001,38 +4001,38 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck04
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck04
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_04.dds`
-					material = guitar_neck4_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_04.dds`
+					material = Guitar_Neck4_Primary
 					diffuse
 					pre_layer = [
 						{
 							color = grey_1
-							texture = `tex/models/characters/layers/cag/neck1_inlay_shards_d_12.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_Shards_D_12.img`
 							flags = 36
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head09
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head09
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock09_d_01.dds`
-					material = guitar_head_09_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock09_d_01.dds`
+					material = Guitar_Head_09_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock09_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock09_LD_01.img`
 							flags = 36
 							color = red_2
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock09_dtl_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock09_DTL_01.img`
 							flags = 36
 							color = red_3
 						}
@@ -4043,27 +4043,27 @@ cas_preset_guitars = [
 				material1 = grey_3guitar
 			}
 		}
-		cas_guitar_pickguards = {
+		CAS_Guitar_Pickguards = {
 			desc_id = none
 		}
-		cas_guitar_bridges = {
+		CAS_Guitar_Bridges = {
 			container_id = generic_menu
-			part = cas_guitar_bridges
-			desc_id = gtr_hardware07
+			part = CAS_Guitar_Bridges
+			desc_id = GTR_Hardware07
 			chosen_materials = {
 				material1 = grey_3guitar
 			}
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr10_knob_type1_03
+		CAS_Guitar_Knobs = {
+			desc_id = GTR10_Knob_Type1_03
 			chosen_materials = {
-				material1 = black_1guitar
+				material1 = Black_1guitar
 			}
 		}
-		cas_guitar_pickups = {
+		CAS_Guitar_Pickups = {
 			container_id = generic_menu
-			part = cas_guitar_pickups
-			desc_id = gtr_pickup_type6_tkd_03
+			part = CAS_Guitar_Pickups
+			desc_id = GTR_Pickup_Type6_TKD_03
 			chosen_materials = {
 				material1 = red_1
 			}
@@ -4071,24 +4071,24 @@ cas_preset_guitars = [
 	}
 	{
 		genre = [
-			`classic rock`
-			rock
+			`Classic Rock`
+			Rock
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body09
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style9_d_01.dds`
-					material = guitar_body_style_09_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style9_d_01.dds`
+					material = Guitar_Body_Style_09_Primary
 					diffuse
 					pre_layer = [
 						{
 							color = orange_5
-							texture = `tex/models/characters/layers/cag/gtr_body_style9_ld_41.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style9_LD_41.img`
 							flags = 4
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style9_dtl_02.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style9_DTL_02.img`
 							a = 25
 							flags = 4
 							color = orange_4
@@ -4097,16 +4097,16 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck02
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck02
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_02.dds`
-					material = guitar_neck2_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_02.dds`
+					material = Guitar_Neck2_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_dotbinding_d_76.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_DotBinding_D_76.img`
 							flags = 36
 							color = grey_2guitar
 						}
@@ -4114,41 +4114,41 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head15
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head15
 			chosen_materials = {
 				material1 = grey_3guitar
 			}
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock15_d_01.dds`
-					material = guitar_head_15_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock15_d_01.dds`
+					material = Guitar_Head_15_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock15_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock15_LD_01.img`
 							color = yellow_orange_1
 							flags = 36
 							a = 75
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock15_dtl_06.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock15_Dtl_06.img`
 							flags = 36
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_pickguards = {
-			desc_id = gtr_body9_pickg02
+		CAS_Guitar_Pickguards = {
+			desc_id = GTR_Body9_PickG02
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/pickgrd_body9_d_02.dds`
-					material = pckgrd_body9_02_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/pickgrd_body9_d_02.dds`
+					material = Pckgrd_Body9_02_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/pickgrd_body9_ld_05.img`
+							texture = `tex/models/Characters/Layers/CAG/Pickgrd_Body9_LD_05.img`
 							flags = 4
 							color = teal_1
 						}
@@ -4156,17 +4156,17 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware01b
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware01b
 			chosen_materials = {
 				material1 = grey_3guitar
 			}
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr9_knob_type4_03
+		CAS_Guitar_Knobs = {
+			desc_id = GTR9_Knob_Type4_03
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type1_blk_2
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type1_Blk_2
 			chosen_materials = {
 				material1 = grey_2guitar
 			}
@@ -4174,25 +4174,25 @@ cas_preset_guitars = [
 	}
 	{
 		genre = [
-			glam
-			pop
-			rock
+			Glam
+			Pop
+			Rock
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body10
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style10_d_01.dds`
-					material = guitar_body_style_10_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style10_d_01.dds`
+					material = Guitar_Body_Style_10_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style10_ld_42.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style10_LD_42.img`
 							flags = 4
 							color = teal_1
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style10_dtl_82.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style10_DTL_82.img`
 							flags = 4
 							color = green_3guitar
 						}
@@ -4200,16 +4200,16 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck01
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck01
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_01.dds`
-					material = guitar_neck1_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_01.dds`
+					material = Guitar_Neck1_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_wedge1_d_10.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_Wedge1_D_10.img`
 							flags = 36
 							color = green_1guitar
 						}
@@ -4217,21 +4217,21 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head11
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head11
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock11_d_01.dds`
-					material = guitar_head_11_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock11_d_01.dds`
+					material = Guitar_Head_11_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock11_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock11_LD_01.img`
 							flags = 36
 							color = green_3guitar
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock11_dtl_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock11_DTL_01.img`
 							flags = 36
 							color = blue_1
 						}
@@ -4242,23 +4242,23 @@ cas_preset_guitars = [
 				material1 = grey_3guitar
 			}
 		}
-		cas_guitar_pickguards = {
+		CAS_Guitar_Pickguards = {
 			desc_id = none
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware01b
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware01b
 			chosen_materials = {
 				material1 = grey_3guitar
 			}
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr10_knob_type10_03
+		CAS_Guitar_Knobs = {
+			desc_id = GTR10_Knob_Type10_03
 			chosen_materials = {
 				material1 = green_3guitar
 			}
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type6_tkd_03
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type6_TKD_03
 			chosen_materials = {
 				material1 = green_2guitar
 			}
@@ -4266,23 +4266,23 @@ cas_preset_guitars = [
 	}
 	{
 		genre = [
-			`classic rock`
-			rock
+			`Classic Rock`
+			Rock
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body05
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style5_d_01.dds`
-					material = guitar_body_style_05_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style5_d_01.dds`
+					material = Guitar_Body_Style_05_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style5_ld_66.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style5_LD_66.img`
 							flags = 4
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style5_dtl_81.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style5_DTL_81.img`
 							a = 35
 							flags = 4
 							color = teal_1
@@ -4291,16 +4291,16 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck02
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck02
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_02.dds`
-					material = guitar_neck2_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_02.dds`
+					material = Guitar_Neck2_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_diamonds_d_16.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_Diamonds_D_16.img`
 							flags = 36
 							color = blue_4
 						}
@@ -4308,23 +4308,23 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head05
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head05
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock05_d_01.dds`
-					material = guitar_head_05_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock05_d_01.dds`
+					material = Guitar_Head_05_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock05_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock05_LD_01.img`
 							color = red_orange_1
 							flags = 36
 							a = 100
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock05_dtl_01.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock05_DTL_01.img`
+							color = Black_1guitar
 							flags = 36
 							a = 35
 						}
@@ -4332,16 +4332,16 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_pickguards = {
-			desc_id = gtr_body5_pickg03
+		CAS_Guitar_Pickguards = {
+			desc_id = GTR_Body5_PickG03
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/pickgrd_body5_d_03.dds`
-					material = pckgrd_body5_03_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/pickgrd_body5_d_03.dds`
+					material = Pckgrd_Body5_03_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/pickgrd_body5_ld_06.img`
+							texture = `tex/models/Characters/Layers/CAG/Pickgrd_Body5_LD_06.img`
 							flags = 4
 							color = yellow_orange_2
 						}
@@ -4349,39 +4349,39 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware01b
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware01b
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr4_knob_type2_04
+		CAS_Guitar_Knobs = {
+			desc_id = GTR4_Knob_Type2_04
 			chosen_materials = {
 				material1 = grey_2guitar
 			}
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type6_tkd_02
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type6_TKD_02
 		}
 	}
 	{
 		genre = [
-			glam
-			pop
+			Glam
+			Pop
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body08
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style8_d_01.dds`
-					material = guitar_body_style_08_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style8_d_01.dds`
+					material = Guitar_Body_Style_08_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style8_ld_41.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style8_LD_41.img`
 							flags = 4
 							color = violet_5
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style8_dtl_82.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style8_DTL_82.img`
 							flags = 4
 							color = violet_4
 						}
@@ -4389,37 +4389,37 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck02
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck02
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_02.dds`
-					material = guitar_neck2_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_02.dds`
+					material = Guitar_Neck2_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_hearts_d_13.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_Hearts_D_13.img`
 							flags = 36
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head13
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head13
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock13_d_01.dds`
-					material = guitar_head_13_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock13_d_01.dds`
+					material = Guitar_Head_13_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock13_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock13_LD_01.img`
 							flags = 36
 							color = orange_3
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock13_dtl_03.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock13_DTL_03.img`
 							flags = 36
 							color = violet_3
 						}
@@ -4427,129 +4427,129 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_pickguards = {
+		CAS_Guitar_Pickguards = {
 			desc_id = none
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware01a
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware01a
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr8_knob_type2_03
+		CAS_Guitar_Knobs = {
+			desc_id = GTR8_Knob_Type2_03
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type1_blktan_3
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type1_Blktan_3
 		}
 	}
 	{
 		genre = [
-			punk
-			rock
+			Punk
+			Rock
 			metal
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body11
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style11_d_01.dds`
-					material = guitar_body_style_11_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style11_d_01.dds`
+					material = Guitar_Body_Style_11_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style11_ld_19.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style11_LD_19.img`
 							flags = 4
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style11_dtl_22.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style11_DTL_22.img`
 							flags = 4
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck03
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck03
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_03.dds`
-					material = guitar_neck3_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_03.dds`
+					material = Guitar_Neck3_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_dots1_d_01.img`
+							texture = `tex/models/Characters/Layers/CAG/neck1_inlay_dots1_d_01.img`
 							flags = 36
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head15
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head15
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock15_d_01.dds`
-					material = guitar_head_15_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock15_d_01.dds`
+					material = Guitar_Head_15_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock15_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock15_LD_01.img`
 							flags = 36
-							color = black_1guitar
+							color = Black_1guitar
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_pickguards = {
+		CAS_Guitar_Pickguards = {
 			desc_id = none
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware01b
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware01b
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr11_knob_type10_03
+		CAS_Guitar_Knobs = {
+			desc_id = GTR11_Knob_Type10_03
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type1_blk_3
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type1_Blk_3
 		}
 	}
 	{
 		genre = [
 			metal
-			`black metal`
-			goth
+			`Black Metal`
+			Goth
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body11
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style11_d_01.dds`
-					material = guitar_body_style_11_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style11_d_01.dds`
+					material = Guitar_Body_Style_11_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style11_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style11_LD_01.img`
 							flags = 4
-							color = black_1guitar
+							color = Black_1guitar
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style11_dtl_21.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style11_DTL_21.img`
 							flags = 4
-							color = black_1guitar
+							color = Black_1guitar
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck05
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck05
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_05.dds`
-					material = guitar_neck5_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_05.dds`
+					material = Guitar_Neck5_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_dancers_d_22.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_Dancers_D_22.img`
 							flags = 36
 							color = yellow_orange_5
 						}
@@ -4557,23 +4557,23 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head15
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head15
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock15_d_01.dds`
-					material = guitar_head_15_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock15_d_01.dds`
+					material = Guitar_Head_15_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock15_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock15_LD_01.img`
 							flags = 36
 							color = grey_2guitar
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock15_dtl_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock15_DTL_01.img`
 							flags = 36
-							color = black_1guitar
+							color = Black_1guitar
 						}
 					]
 				}
@@ -4582,60 +4582,60 @@ cas_preset_guitars = [
 				material1 = grey_3guitar
 			}
 		}
-		cas_guitar_pickguards = {
-			desc_id = gtr_body11_pickg01
+		CAS_Guitar_Pickguards = {
+			desc_id = GTR_Body11_PickG01
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/pickgrd_body11_d_01.dds`
-					material = pckgrd_body11_01_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/pickgrd_body11_d_01.dds`
+					material = Pckgrd_Body11_01_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/pickgrd_body11_ld_04.img`
+							texture = `tex/models/Characters/Layers/CAG/Pickgrd_Body11_LD_04.img`
 							flags = 4
-							color = black_1guitar
+							color = Black_1guitar
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware01b
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware01b
 			chosen_materials = {
 				material1 = grey_3guitar
 			}
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr11_knob_type4_03
+		CAS_Guitar_Knobs = {
+			desc_id = GTR11_Knob_Type4_03
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type1_blk_2
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type1_Blk_2
 			chosen_materials = {
-				material1 = black_1guitar
+				material1 = Black_1guitar
 			}
 		}
 	}
 	{
 		genre = [
 			metal
-			`black metal`
-			goth
+			`Black Metal`
+			Goth
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body08
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style8_d_01.dds`
-					material = guitar_body_style_08_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style8_d_01.dds`
+					material = Guitar_Body_Style_08_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style8_ld_40.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style8_LD_40.img`
 							flags = 4
 							color = grey_2guitar
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style8_dtl_04.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style8_DTL_04.img`
 							color = blue_2
 							flags = 4
 							a = 65
@@ -4644,16 +4644,16 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck03
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck03
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_03.dds`
-					material = guitar_neck3_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_03.dds`
+					material = Guitar_Neck3_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_ironx_d_07.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_IronX_D_07.img`
 							flags = 36
 							color = grey_2guitar
 						}
@@ -4661,22 +4661,22 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head04
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head04
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock04_d_01.dds`
-					material = guitar_head_04_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock04_d_01.dds`
+					material = Guitar_Head_04_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock04_ld_01.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock04_LD_01.img`
+							color = Black_1guitar
 							flags = 36
 							a = 85
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock04_dtl_04.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock04_DTL_04.img`
 							flags = 36
 							color = navy_1
 						}
@@ -4687,25 +4687,25 @@ cas_preset_guitars = [
 				material1 = grey_2guitar
 			}
 		}
-		cas_guitar_pickguards = {
+		CAS_Guitar_Pickguards = {
 			desc_id = none
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware01b
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware01b
 			chosen_materials = {
 				material1 = grey_2guitar
 			}
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr8_knob_type5_03
+		CAS_Guitar_Knobs = {
+			desc_id = GTR8_Knob_Type5_03
 			chosen_materials = {
 				material1 = grey_2guitar
 			}
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type2_04
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type2_04
 			chosen_materials = {
-				material1 = black_1guitar
+				material1 = Black_1guitar
 			}
 		}
 	}
@@ -4713,20 +4713,20 @@ cas_preset_guitars = [
 		genre = [
 			metal
 		]
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body11
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_body_style11_d_01.dds`
-					material = guitar_body_style_11_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_body_style11_d_01.dds`
+					material = Guitar_Body_Style_11_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style11_ld_20.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style11_LD_20.img`
 							flags = 4
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style11_dtl_23.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style11_DTL_23.img`
 							flags = 4
 							color = red_5
 						}
@@ -4734,38 +4734,38 @@ cas_preset_guitars = [
 				}
 			]
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck04
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck04
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_04.dds`
-					material = guitar_neck4_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_04.dds`
+					material = Guitar_Neck4_Primary
 					diffuse
 					pre_layer = [
 						{
 							color = grey_1
-							texture = `tex/models/characters/layers/cag/neck1_inlay_lightning_d_25.img`
+							texture = `tex/models/Characters/Layers/CAG/Neck1_Inlay_Lightning_D_25.img`
 							flags = 36
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head99
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head99
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/gtr_headtock099.dds`
-					material = guitar_head_99_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/gtr_headtock099.dds`
+					material = Guitar_Head_99_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock098.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock098.img`
 							flags = 36
 							color = teal_1
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock099_dtl_04.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock099_DTL_04.img`
 							flags = 36
 							color = red_1
 						}
@@ -4776,22 +4776,22 @@ cas_preset_guitars = [
 				material1 = grey_2guitar
 			}
 		}
-		cas_guitar_pickguards = {
+		CAS_Guitar_Pickguards = {
 			desc_id = none
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware07
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware07
 			chosen_materials = {
 				material1 = grey_2guitar
 			}
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr11_knob_type3_03
+		CAS_Guitar_Knobs = {
+			desc_id = GTR11_Knob_Type3_03
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickup_type6_tkd_02
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickup_Type6_TKD_02
 			chosen_materials = {
-				material1 = black_1guitar
+				material1 = Black_1guitar
 			}
 		}
 	}
@@ -4799,24 +4799,24 @@ cas_preset_guitars = [
 cas_preset_basses = [
 	{
 		genre = [
-			rock
-			`classic rock`
+			Rock
+			`Classic Rock`
 		]
-		cas_bass_body = {
-			desc_id = bass_body_b1b
+		CAS_Bass_Body = {
+			desc_id = Bass_Body_B1B
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\bass\cab_body_b1f_d_mls.dds`
-					material = cab_body_unos_primary
+					base_tex = `tex\models\CAR_Instruments\Bass\cab_body_b1f_d_mls.dds`
+					material = CAB_Body_UNOS_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_body_unos_maplespalt_gk.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Body_unos_MapleSpalt_GK.img`
 							flags = 4
 							color = blue_1
 						}
 						{
-							texture = `tex/models/characters/layers/cab/cab_body_unos_dtl_fin.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Body_Unos_DTL_Fin.img`
 							color = red_1
 							flags = 4
 							a = 55
@@ -4825,16 +4825,16 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_neck = {
-			desc_id = cab_neck_bfretlss03
+		CAS_Bass_Neck = {
+			desc_id = CAB_Neck_BFretlss03
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/bass/cab_nekf_maple01.dds`
-					material = cab_neck_fretless03_neck
+					base_tex = `tex/models/Car_Instruments/Bass/cab_nekf_maple01.dds`
+					material = CAB_Neck_Fretless03_neck
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_nek_vinef_d_ds.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Nek_vineF_D_DS.img`
 							flags = 36
 							color = red_1
 						}
@@ -4842,19 +4842,19 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_head = {
-			desc_id = cab_head_flay_rev
+		CAS_Bass_Head = {
+			desc_id = CAB_Head_Flay_rev
 			chosen_materials = {
 				material1 = yellow_4
 			}
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/bass/cab_head_flay001.dds`
-					material = cab_head_bh1a_headstock
+					base_tex = `tex/models/Car_Instruments/Bass/cab_head_flay001.dds`
+					material = CAB_Head_BH1A_Headstock
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_head_flay001_wtfinish.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Head_Flay001_WTfinish.img`
 							color = blue_1
 							flags = 36
 							a = 90
@@ -4863,19 +4863,19 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_pickguards = {
+		CAS_Bass_Pickguards = {
 			desc_id = none
 		}
-		cas_bass_pickups = {
-			desc_id = cab_pickups_emg02
+		CAS_Bass_Pickups = {
+			desc_id = CAB_pickups_EMG02
 		}
-		cas_bass_bridges = {
-			desc_id = cab_bridge_bb2a
+		CAS_Bass_Bridges = {
+			desc_id = CAB_Bridge_BB2A
 			chosen_materials = {
 				material1 = yellow_4
 			}
 		}
-		cas_bass_knobs = {
+		CAS_Bass_Knobs = {
 			desc_id = cab_knob_unos04
 			chosen_materials = {
 				material1 = yellow_2
@@ -4884,24 +4884,24 @@ cas_preset_basses = [
 	}
 	{
 		genre = [
-			rock
-			`classic rock`
+			Rock
+			`Classic Rock`
 		]
-		cas_bass_body = {
-			desc_id = cab_body_bandera
+		CAS_Bass_Body = {
+			desc_id = CAB_Body_Bandera
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\guitars\gtr_body_style17_d.dds`
-					material = guitar_body_bandera_primary
+					base_tex = `tex\models\CAR_Instruments\guitars\gtr_body_style17_d.dds`
+					material = Guitar_Body_Bandera_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style17_ld_zi.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style17_LD_Zi.img`
 							flags = 4
 							color = yellow_green_3
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style17_dtl_fout.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style17_DTL_Fout.img`
 							color = yellow_green_1
 							flags = 4
 							a = 65
@@ -4910,16 +4910,16 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_neck = {
-			desc_id = cab_neck_bn1a
+		CAS_Bass_Neck = {
+			desc_id = CAB_Neck_BN1A
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/bass/cab_neck_01_maple_d_mls.dds`
-					material = cab_neck_bn1a_neck
+					base_tex = `tex/models/Car_Instruments/Bass/cab_neck_01_maple_d_mls.dds`
+					material = CAB_NECK_BN1A_Neck
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_nek_wedgelow.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Nek_wedgelow.img`
 							flags = 36
 							color = yellow_green_2
 						}
@@ -4927,21 +4927,21 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_head = {
-			desc_id = cab_head_predikt
+		CAS_Bass_Head = {
+			desc_id = CAB_Head_Predikt
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/bass/cab_predikt_hstock_d.dds`
-					material = cab_head_predikt_primary
+					base_tex = `tex/models/Car_Instruments/Bass/cab_predikt_hstock_d.dds`
+					material = CAB_Head_Predikt_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock16_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock16_LD_01.img`
 							flags = 36
 							color = yellow_green_1
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_predikt_hstock01_dtl_03.img`
+							texture = `tex/models/Characters/Layers/CAG/Gtr_Predikt_HStock01_DTL_03.img`
 							flags = 36
 							color = yellow_1
 						}
@@ -4952,16 +4952,16 @@ cas_preset_basses = [
 				material1 = yellow_1
 			}
 		}
-		cas_bass_pickguards = {
-			desc_id = cab_phnq_pg002
+		CAS_Bass_Pickguards = {
+			desc_id = CAB_Phnq_PG002
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/bass/cab_phnq_pg001b.dds`
-					material = cab_phnq_pg002_primary
+					base_tex = `tex/models/Car_Instruments/Bass/cab_phnq_pg001b.dds`
+					material = CAB_Phnq_PG002_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_phnq_pg001_tort.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Phnq_PG001_TORT.img`
 							flags = 36
 							color = yellow_green_1
 						}
@@ -4969,16 +4969,16 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_pickups = {
-			desc_id = cab_pickups_bp1a
+		CAS_Bass_Pickups = {
+			desc_id = CAB_Pickups_BP1A
 		}
-		cas_bass_bridges = {
-			desc_id = cab_bridge_bb1a
+		CAS_Bass_Bridges = {
+			desc_id = CAB_Bridge_BB1A
 			chosen_materials = {
 				material1 = yellow_1
 			}
 		}
-		cas_bass_knobs = {
+		CAS_Bass_Knobs = {
 			desc_id = cab_knob_phunq02
 			chosen_materials = {
 				material1 = yellow_green_2
@@ -4987,24 +4987,24 @@ cas_preset_basses = [
 	}
 	{
 		genre = [
-			`glam rock`
-			pop
+			`Glam Rock`
+			Pop
 		]
-		cas_bass_body = {
-			desc_id = cab_body_phunq01
+		CAS_Bass_Body = {
+			desc_id = CAB_Body_Phunq01
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\bass\cab_body_beech01_b1_d_mls.dds`
-					material = cab_body_bubinga01_primary
+					base_tex = `tex\models\CAR_Instruments\Bass\cab_body_beech01_b1_d_mls.dds`
+					material = CAB_Body_Bubinga01_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_body_phungwht_d_mls.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Body_PhungWHT_D_MLS.img`
 							flags = 4
 							color = yellow_2
 						}
 						{
-							texture = `tex/models/characters/layers/cab/cab_body_phunq_ray02.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Body_phunq_ray02.img`
 							flags = 4
 							color = purple_blue_1
 						}
@@ -5012,16 +5012,16 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_neck = {
-			desc_id = cab_stnek_ebony
+		CAS_Bass_Neck = {
+			desc_id = CAB_StNek_Ebony
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/bass/cab_nek_ebony01.dds`
-					material = cab_stnek_ebony_neck
+					base_tex = `tex/models/Car_Instruments/Bass/cab_nek_ebony01.dds`
+					material = CAB_StNek_Ebony_Neck
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_nek_barbwire.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Nek_barbwire.img`
 							flags = 36
 							color = teal_1
 						}
@@ -5029,16 +5029,16 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_head = {
-			desc_id = cab_head_radex
+		CAS_Bass_Head = {
+			desc_id = CAB_Head_RadEx
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/bass/cab_head_radex.dds`
-					material = cab_head_radex_headstock
+					base_tex = `tex/models/Car_Instruments/Bass/CAB_Head_RadEx.dds`
+					material = CAB_Head_RadEx_Headstock
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_head_radex_wt.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Head_RadEx_WT.img`
 							flags = 36
 							color = red_orange_3
 						}
@@ -5049,19 +5049,19 @@ cas_preset_basses = [
 				material1 = blue_2
 			}
 		}
-		cas_bass_pickguards = {
+		CAS_Bass_Pickguards = {
 			desc_id = none
 		}
-		cas_bass_pickups = {
-			desc_id = cab_bumbl_pickup_a2
+		CAS_Bass_Pickups = {
+			desc_id = CAB_Bumbl_pickup_A2
 		}
-		cas_bass_bridges = {
-			desc_id = cab_bridge_hack
+		CAS_Bass_Bridges = {
+			desc_id = CAB_Bridge_Hack
 			chosen_materials = {
 				material1 = blue_2
 			}
 		}
-		cas_bass_knobs = {
+		CAS_Bass_Knobs = {
 			desc_id = cab_knob_phunq06
 			chosen_materials = {
 				material1 = yellow_4
@@ -5070,40 +5070,40 @@ cas_preset_basses = [
 	}
 	{
 		genre = [
-			rock
-			`classic rock`
+			Rock
+			`Classic Rock`
 		]
-		cas_bass_body = {
-			desc_id = cab_body_bb3a
+		CAS_Bass_Body = {
+			desc_id = CAB_Body_BB3A
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\bass\cab_bodywood_b3a_e_mls.dds`
-					material = cab_body_bb3a_primary
+					base_tex = `tex\models\CAR_Instruments\Bass\cab_bodywood_b3a_e_mls.dds`
+					material = CAB_Body_BB3A_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_bachwht_mls.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_BachWHT_MLS.img`
 							a = 60
 							color = yellow_3guitar
 						}
 						{
-							texture = `tex/models/characters/layers/cab/cab_bach_ray01.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_bach_ray01.img`
 							color = red_1
 						}
 					]
 				}
 			]
 		}
-		cas_bass_neck = {
-			desc_id = cab_neck_bnebony
+		CAS_Bass_Neck = {
+			desc_id = CAB_Neck_BNEbony
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/bass/cab_nek_ebony01.dds`
-					material = cab_neck_ebony_neck
+					base_tex = `tex/models/Car_Instruments/Bass/cab_nek_ebony01.dds`
+					material = CAB_Neck_Ebony_Neck
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_nek_birds.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Nek_Birds.img`
 							flags = 36
 							color = yellow_3guitar
 						}
@@ -5111,24 +5111,24 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_head = {
-			desc_id = cab_head_guppy
+		CAS_Bass_Head = {
+			desc_id = CAB_Head_Guppy
 			chosen_materials = {
 				material1 = green_2guitar
 			}
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/bass/cab_head_guppy_d.dds`
-					material = cab_head_guppy_headstock
+					base_tex = `tex/models/Car_Instruments/Bass/cab_head_guppy_d.dds`
+					material = CAB_Head_Guppy_Headstock
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_head_guppy_wt.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Head_Guppy_WT.img`
 							flags = 36
 							color = red_1
 						}
 						{
-							texture = `tex/models/characters/layers/cab/cab_head_guppy_dtl_01.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Head_guppy_DTL_01.img`
 							flags = 36
 							color = yellow_2guitar
 						}
@@ -5136,32 +5136,32 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_pickguards = {
-			desc_id = cab_pickg_f3
+		CAS_Bass_Pickguards = {
+			desc_id = CAB_PickG_F3
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/bass/cab_pickg_f1_d_mls.dds`
-					material = cab_pickg_f1_primary
+					base_tex = `tex/models/Car_Instruments/Bass/cab_pickg_f1_d_mls.dds`
+					material = CAB_PickG_F1_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_pickg_f4_d_mls.img`
+							texture = `tex/models/Characters/Layers/CAB/cab_pickg_f4_d_mls.img`
 							flags = 36
 						}
 					]
 				}
 			]
 		}
-		cas_bass_pickups = {
-			desc_id = cab_jp_pickup_b
+		CAS_Bass_Pickups = {
+			desc_id = CAB_JP_Pickup_B
 		}
-		cas_bass_bridges = {
-			desc_id = cab_bridge_hack
+		CAS_Bass_Bridges = {
+			desc_id = CAB_Bridge_Hack
 			chosen_materials = {
 				material1 = green_2guitar
 			}
 		}
-		cas_bass_knobs = {
+		CAS_Bass_Knobs = {
 			desc_id = cab_knob_hack01
 			chosen_materials = {
 				material1 = green_2guitar
@@ -5170,24 +5170,24 @@ cas_preset_basses = [
 	}
 	{
 		genre = [
-			`glam rock`
-			pop
+			`Glam Rock`
+			Pop
 		]
-		cas_bass_body = {
-			desc_id = cab_body_kelly
+		CAS_Bass_Body = {
+			desc_id = CAB_Body_Kelly
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\bass\cab_body_kelly_d_mls.dds`
-					material = cab_kelly_primary
+					base_tex = `tex\models\CAR_Instruments\bass\cab_body_kelly_d_mls.dds`
+					material = CAB_Kelly_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_body_kelly_ld_16.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Body_Kelly_LD_16.img`
 							flags = 4
 							color = blue_5
 						}
 						{
-							texture = `tex/models/characters/layers/cab/cab_body_kelly_dtl_fin.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Body_Kelly_DTL_Fin.img`
 							a = 40
 							flags = 4
 							color = yellow_1guitar
@@ -5196,16 +5196,16 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_neck = {
-			desc_id = cab_neck_bn1b
+		CAS_Bass_Neck = {
+			desc_id = CAB_Neck_BN1B
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/bass/cab_neck_01b_rosewood_d_mls.dds`
-					material = cab_neck_bn1b_neck
+					base_tex = `tex/models/Car_Instruments/Bass/cab_neck_01b_rosewood_d_mls.dds`
+					material = CAB_NECK_BN1B_Neck
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_nek_lyr_scallops.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Nek_Lyr_Scallops.img`
 							flags = 36
 							color = blue_5
 						}
@@ -5213,43 +5213,43 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_head = {
-			desc_id = cab_head_bh1a
+		CAS_Bass_Head = {
+			desc_id = CAB_Head_BH1A
 			chosen_materials = {
 				material1 = yellow_green_5guitar
 			}
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/bass/cab_head_01_maple_d_mls.dds`
-					material = cab_head_bh2a_headstock
+					base_tex = `tex/models/Car_Instruments/Bass/cab_head_01_maple_d_mls.dds`
+					material = CAB_Head_BH2A_Headstock
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_head_gedulus_wtfinish.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Head_Gedulus_WTfinish.img`
 							flags = 36
-							color = black_1guitar
+							color = Black_1guitar
 						}
 						{
-							texture = `tex/models/characters/layers/cab/cab_head_gedulus_dtl_05.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Head_Gedulus_DTL_05.img`
 							flags = 36
 						}
 					]
 				}
 			]
 		}
-		cas_bass_pickguards = {
+		CAS_Bass_Pickguards = {
 			desc_id = none
 		}
-		cas_bass_pickups = {
-			desc_id = cab_bumbl_pickup_a2
+		CAS_Bass_Pickups = {
+			desc_id = CAB_Bumbl_pickup_A2
 		}
-		cas_bass_bridges = {
-			desc_id = cab_bridge_mls
+		CAS_Bass_Bridges = {
+			desc_id = CAB_Bridge_MLS
 			chosen_materials = {
 				material1 = yellow_green_5guitar
 			}
 		}
-		cas_bass_knobs = {
+		CAS_Bass_Knobs = {
 			desc_id = cab_knob_grmbl03
 			chosen_materials = {
 				material1 = grey_2guitar
@@ -5258,24 +5258,24 @@ cas_preset_basses = [
 	}
 	{
 		genre = [
-			rock
-			`classic rock`
+			Rock
+			`Classic Rock`
 		]
-		cas_bass_body = {
-			desc_id = cab_body_grmbl_a
+		CAS_Bass_Body = {
+			desc_id = CAB_Body_Grmbl_A
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\bass\cab_body_grumbel01_d_mls.dds`
-					material = cab_body_grmbl_a_primary
+					base_tex = `tex\models\CAR_Instruments\Bass\cab_body_grumbel01_d_mls.dds`
+					material = CAB_Body_Grmbl_A_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_body_grumbel10_d_mls.img`
+							texture = `tex/models/Characters/Layers/CAB/cab_body_grumbel10_d_mls.img`
 							color = yellow_1guitar
 							a = 55
 						}
 						{
-							texture = `tex/models/characters/layers/cab/cab_body_grumbel_dtl_tri.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Body_Grumbel_DTL_Tri.img`
 							flags = 4
 							color = red_2
 						}
@@ -5283,16 +5283,16 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_neck = {
-			desc_id = cab_stnek_bnst01
+		CAS_Bass_Neck = {
+			desc_id = CAB_StNek_BNSt01
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/bass/cab_neck_01b_rosewood_d_mls.dds`
-					material = cab_tneck_bnt01_neck
+					base_tex = `tex/models/Car_Instruments/Bass/cab_neck_01b_rosewood_d_mls.dds`
+					material = CAB_TNeck_BNT01_neck
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_nek_lyrmpl_blk_wht.img`
+							texture = `tex/models/Characters/Layers/CAB/cab_nek_lyrmpl_blk_wht.img`
 							flags = 36
 							color = blue_5
 						}
@@ -5300,25 +5300,25 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_head = {
-			desc_id = cab_head_grumbel01
+		CAS_Bass_Head = {
+			desc_id = CAB_Head_Grumbel01
 			chosen_materials = {
 				material1 = grey_4guitar
 			}
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/bass/cab_head_grumbel01.dds`
-					material = cab_head_grumbel01_headstock
+					base_tex = `tex/models/Car_Instruments/Bass/cab_head_grumbel01.dds`
+					material = CAB_Head_Grumbel01_Headstock
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_head_grumbel01_wtfinish.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Head_Grumbel01_WTfinish.img`
 							color = yellow_3guitar
 							flags = 36
 							a = 5
 						}
 						{
-							texture = `tex/models/characters/layers/cab/cab_head_grumbel01_dtl_04.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Head_Grumbel01_DTL_04.img`
 							flags = 36
 							color = red_orange_2
 						}
@@ -5326,20 +5326,20 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_pickguards = {
+		CAS_Bass_Pickguards = {
 			desc_id = none
 		}
-		cas_bass_pickups = {
-			desc_id = cab_bumbl_pickup_a3
+		CAS_Bass_Pickups = {
+			desc_id = CAB_Bumbl_pickup_A3
 		}
-		cas_bass_bridges = {
-			desc_id = cab_bridge_mls
+		CAS_Bass_Bridges = {
+			desc_id = CAB_Bridge_MLS
 			chosen_materials = {
 				material1 = grey_4guitar
 			}
 		}
-		cas_bass_knobs = {
-			desc_id = cab_knob_grmbl09
+		CAS_Bass_Knobs = {
+			desc_id = CAB_Knob_Grmbl09
 			chosen_materials = {
 				material1 = orange_2
 			}
@@ -5347,26 +5347,26 @@ cas_preset_basses = [
 	}
 	{
 		genre = [
-			rock
-			`classic rock`
-			`glam rock`
-			pop
+			Rock
+			`Classic Rock`
+			`Glam Rock`
+			Pop
 		]
-		cas_bass_body = {
-			desc_id = cab_body_b2a
+		CAS_Bass_Body = {
+			desc_id = CAB_Body_B2A
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\bass\cab_body_b1a_d_mls.dds`
-					material = cab_body_arcos_primary
+					base_tex = `tex\models\CAR_Instruments\Bass\cab_body_b1a_d_mls.dds`
+					material = CAB_Body_Arcos_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_body_arks_ld_zi.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Body_Arks_LD_Zi.img`
 							flags = 4
 							color = teal_1
 						}
 						{
-							texture = `tex/models/characters/layers/cab/cab_body_arcos_dtl_pin.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Body_Arcos_DTL_Pin.img`
 							flags = 4
 							color = red_orange_1
 						}
@@ -5374,16 +5374,16 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_neck = {
-			desc_id = cab_neck_bn1b
+		CAS_Bass_Neck = {
+			desc_id = CAB_Neck_BN1B
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/bass/cab_neck_01b_rosewood_d_mls.dds`
-					material = cab_neck_bn1b_neck
+					base_tex = `tex/models/Car_Instruments/Bass/cab_neck_01b_rosewood_d_mls.dds`
+					material = CAB_NECK_BN1B_Neck
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_nek_country.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Nek_Country.img`
 							flags = 36
 							color = orange_3
 						}
@@ -5391,24 +5391,24 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_head = {
-			desc_id = cab_head_bhphnq01
+		CAS_Bass_Head = {
+			desc_id = CAB_Head_BHPhnq01
 			chosen_materials = {
 				material1 = orange_4
 			}
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/bass/cab_head_bh8a.dds`
-					material = cab_head_phunquie01_headstock
+					base_tex = `tex/models/Car_Instruments/Bass/cab_head_bh8a.dds`
+					material = CAB_Head_Phunquie01_Headstock
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_head_bh8a_wtfinish.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Head_BH8A_WTfinish.img`
 							flags = 36
 							color = green_1guitar
 						}
 						{
-							texture = `tex/models/characters/layers/cab/cab_head_bh8a_dtl_01.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Head_BH8A_DTL_01.img`
 							flags = 36
 							color = red_orange_1
 						}
@@ -5416,16 +5416,16 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_pickguards = {
-			desc_id = cab_pickg_bp2
+		CAS_Bass_Pickguards = {
+			desc_id = CAB_PickG_BP2
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/bass/cab_pickg_dark001.dds`
-					material = cab_pickg_unos03_primary
+					base_tex = `tex/models/Car_Instruments/Bass/cab_pickg_dark001.dds`
+					material = CAB_PickG_Unos03_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_pgard_wht001.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_PGard_Wht001.img`
 							flags = 36
 							color = orange_5
 						}
@@ -5433,16 +5433,16 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_pickups = {
-			desc_id = cab_pickups_bp1a
+		CAS_Bass_Pickups = {
+			desc_id = CAB_Pickups_BP1A
 		}
-		cas_bass_bridges = {
-			desc_id = cab_bridge_hack
+		CAS_Bass_Bridges = {
+			desc_id = CAB_Bridge_Hack
 			chosen_materials = {
 				material1 = orange_4
 			}
 		}
-		cas_bass_knobs = {
+		CAS_Bass_Knobs = {
 			desc_id = cab_knob_unos08
 			chosen_materials = {
 				material1 = orange_4
@@ -5451,25 +5451,25 @@ cas_preset_basses = [
 	}
 	{
 		genre = [
-			`classic rock`
-			`glam rock`
-			pop
+			`Classic Rock`
+			`Glam Rock`
+			Pop
 		]
-		cas_bass_body = {
-			desc_id = cab_body_sixtease
+		CAS_Bass_Body = {
+			desc_id = CAB_Body_SixTease
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\bass\cab_body_sixtease01_d_mls.dds`
-					material = cab_body_sixtease_primary
+					base_tex = `tex\models\CAR_Instruments\Bass\cab_body_sixtease01_d_mls.dds`
+					material = CAB_Body_SixTease_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_body_6tease_ld_13.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Body_6tease_LD_13.img`
 							flags = 4
 							color = yellow_1guitar
 						}
 						{
-							texture = `tex/models/characters/layers/cab/cab_body_6tease_dtl_fin.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Body_6tease_DTL_Fin.img`
 							flags = 36
 							color = purple_blue_1
 						}
@@ -5477,16 +5477,16 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_neck = {
-			desc_id = cab_neck_bnebony
+		CAS_Bass_Neck = {
+			desc_id = CAB_Neck_BNEbony
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/bass/cab_nek_ebony01.dds`
-					material = cab_neck_ebony_neck
+					base_tex = `tex/models/Car_Instruments/Bass/cab_nek_ebony01.dds`
+					material = CAB_Neck_Ebony_Neck
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_nek_butterflies.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Nek_Butterflies.img`
 							flags = 36
 							color = red_orange_3
 						}
@@ -5494,24 +5494,24 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_head = {
-			desc_id = cab_head_sixtease
+		CAS_Bass_Head = {
+			desc_id = CAB_Head_SixTease
 			chosen_materials = {
 				material1 = teal_5
 			}
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/bass/cab_head_sixtease_d_mls.dds`
-					material = cab_head_sixtease_headstock
+					base_tex = `tex/models/Car_Instruments/Bass/cab_head_sixtease_d_mls.dds`
+					material = CAB_Head_SixTease_Headstock
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_head_sixtease_wtfinish.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Head_SixTease_WTfinish.img`
 							flags = 36
 							color = purple_blue_1
 						}
 						{
-							texture = `tex/models/characters/layers/cab/cab_head_sixtease_dtl_01.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Head_SixTease_DTL_01.img`
 							flags = 36
 							color = purple_blue_3
 						}
@@ -5519,61 +5519,61 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_pickguards = {
+		CAS_Bass_Pickguards = {
 			desc_id = none
 		}
-		cas_bass_pickups = {
-			desc_id = cab_bumbl_pickup_a1
+		CAS_Bass_Pickups = {
+			desc_id = CAB_Bumbl_pickup_A1
 		}
-		cas_bass_bridges = {
-			desc_id = cab_bridge_bb3a
+		CAS_Bass_Bridges = {
+			desc_id = CAB_Bridge_BB3A
 			chosen_materials = {
 				material1 = teal_5
 			}
 		}
-		cas_bass_knobs = {
+		CAS_Bass_Knobs = {
 			desc_id = cab_knobs_6tz01
 		}
 	}
 	{
 		genre = [
-			goth
-			`black metal`
-			`heavy metal`
+			Goth
+			`Black Metal`
+			`Heavy Metal`
 		]
-		cas_bass_body = {
-			desc_id = cab_body_prediktor
+		CAS_Bass_Body = {
+			desc_id = CAB_Body_Prediktor
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\guitars\gtr_predikt_body01_d_mls.dds`
-					material = guitar_body_prediktor_primary
+					base_tex = `tex\models\CAR_Instruments\guitars\gtr_predikt_body01_d_mls.dds`
+					material = Guitar_Body_Prediktor_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style16_ld_10.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style16_LD_10.img`
 							color = purple_blue_1
 							flags = 4
 							a = 85
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style16_dtl_02.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style16_DTL_02.img`
 							flags = 4
-							color = black_1guitar
+							color = Black_1guitar
 						}
 					]
 				}
 			]
 		}
-		cas_bass_neck = {
-			desc_id = cab_neck_bnebony
+		CAS_Bass_Neck = {
+			desc_id = CAB_Neck_BNEbony
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/bass/cab_nek_ebony01.dds`
-					material = cab_neck_ebony_neck
+					base_tex = `tex/models/Car_Instruments/Bass/cab_nek_ebony01.dds`
+					material = CAB_Neck_Ebony_Neck
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_nek_skulls.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Nek_skulls.img`
 							flags = 36
 							color = purple_blue_2
 						}
@@ -5581,23 +5581,23 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_head = {
-			desc_id = cab_head_bh5a
+		CAS_Bass_Head = {
+			desc_id = CAB_Head_BH5A
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/bass/cab_head_bh5a.dds`
-					material = cab_head_bh5a_headstock
+					base_tex = `tex/models/Car_Instruments/Bass/cab_head_bh5a.dds`
+					material = CAB_Head_BH5A_Headstock
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_head_bh5a_wtfinish.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Head_BH5A_WTfinish.img`
 							flags = 36
 							color = purple_blue_1
 						}
 						{
-							texture = `tex/models/characters/layers/cab/cab_head_bh5a_dtl_03.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Head_BH5A_DTL_03.img`
 							flags = 36
-							color = black_1guitar
+							color = Black_1guitar
 						}
 					]
 				}
@@ -5606,20 +5606,20 @@ cas_preset_basses = [
 				material1 = grey_2guitar
 			}
 		}
-		cas_bass_pickguards = {
+		CAS_Bass_Pickguards = {
 			desc_id = none
 		}
-		cas_bass_pickups = {
-			desc_id = cab_bumbl_pickup_a1
+		CAS_Bass_Pickups = {
+			desc_id = CAB_Bumbl_pickup_A1
 		}
-		cas_bass_bridges = {
-			desc_id = cab_bridge_mls
+		CAS_Bass_Bridges = {
+			desc_id = CAB_Bridge_MLS
 			chosen_materials = {
 				material1 = grey_2guitar
 			}
 		}
-		cas_bass_knobs = {
-			desc_id = cab_knob_phunq08
+		CAS_Bass_Knobs = {
+			desc_id = CAB_Knob_Phunq08
 			chosen_materials = {
 				material1 = purple_blue_3
 			}
@@ -5627,20 +5627,20 @@ cas_preset_basses = [
 	}
 	{
 		genre = [
-			`classic rock`
-			`glam rock`
-			pop
+			`Classic Rock`
+			`Glam Rock`
+			Pop
 		]
-		cas_bass_body = {
-			desc_id = cab_body_bandera
+		CAS_Bass_Body = {
+			desc_id = CAB_Body_Bandera
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\guitars\gtr_body_style17_d.dds`
-					material = guitar_body_bandera_primary
+					base_tex = `tex\models\CAR_Instruments\guitars\gtr_body_style17_d.dds`
+					material = Guitar_Body_Bandera_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style17001_d.img`
+							texture = `tex/models/Characters/Layers/CAG/Gtr_Body_Style17001_D.img`
 							color = yellow_5guitar
 							flags = 4
 							a = 100
@@ -5649,16 +5649,16 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_neck = {
-			desc_id = cab_neck_bn1b
+		CAS_Bass_Neck = {
+			desc_id = CAB_Neck_BN1B
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/bass/cab_neck_01b_rosewood_d_mls.dds`
-					material = cab_neck_bn1b_neck
+					base_tex = `tex/models/Car_Instruments/Bass/cab_neck_01b_rosewood_d_mls.dds`
+					material = CAB_NECK_BN1B_Neck
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_nek_notes.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Nek_Notes.img`
 							flags = 36
 							color = blue_5
 						}
@@ -5666,19 +5666,19 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_head = {
-			desc_id = cab_head_bh1a
+		CAS_Bass_Head = {
+			desc_id = CAB_Head_BH1A
 			chosen_materials = {
 				material1 = grey_5guitar
 			}
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/bass/cab_head_01_maple_d_mls.dds`
-					material = cab_head_bh2a_headstock
+					base_tex = `tex/models/Car_Instruments/Bass/cab_head_01_maple_d_mls.dds`
+					material = CAB_Head_BH2A_Headstock
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_head_gedulus_wtfinish.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Head_Gedulus_WTfinish.img`
 							flags = 36
 							color = grey_4guitar
 						}
@@ -5686,16 +5686,16 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_pickguards = {
-			desc_id = cab_phnq_pg002
+		CAS_Bass_Pickguards = {
+			desc_id = CAB_Phnq_PG002
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/bass/cab_phnq_pg001b.dds`
-					material = cab_phnq_pg002_primary
+					base_tex = `tex/models/Car_Instruments/Bass/cab_phnq_pg001b.dds`
+					material = CAB_Phnq_PG002_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_phnq_pg001_tort.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Phnq_PG001_TORT.img`
 							flags = 36
 							color = yellow_1
 						}
@@ -5703,16 +5703,16 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_pickups = {
-			desc_id = cab_jbass_pickup_01
+		CAS_Bass_Pickups = {
+			desc_id = CAB_Jbass_pickup_01
 		}
-		cas_bass_bridges = {
-			desc_id = cab_bridge_bb3a
+		CAS_Bass_Bridges = {
+			desc_id = CAB_Bridge_BB3A
 			chosen_materials = {
 				material1 = grey_5guitar
 			}
 		}
-		cas_bass_knobs = {
+		CAS_Bass_Knobs = {
 			desc_id = cab_knob_phunq01
 			chosen_materials = {
 				material1 = grey_4guitar
@@ -5721,34 +5721,34 @@ cas_preset_basses = [
 	}
 	{
 		genre = [
-			goth
+			Goth
 		]
-		cas_bass_body = {
-			desc_id = cab_body_b2a
+		CAS_Bass_Body = {
+			desc_id = CAB_Body_B2A
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\bass\cab_body_b1a_d_mls.dds`
-					material = cab_body_arcos_primary
+					base_tex = `tex\models\CAR_Instruments\Bass\cab_body_b1a_d_mls.dds`
+					material = CAB_Body_Arcos_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_body_arks_pale.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Layers/CAB/CAB_Body_ARKS_Pale.img`
+							color = Black_1guitar
 						}
 					]
 				}
 			]
 		}
-		cas_bass_neck = {
-			desc_id = cab_neck_bnebony
+		CAS_Bass_Neck = {
+			desc_id = CAB_Neck_BNEbony
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/bass/cab_nek_ebony01.dds`
-					material = cab_neck_ebony_neck
+					base_tex = `tex/models/Car_Instruments/Bass/cab_nek_ebony01.dds`
+					material = CAB_Neck_Ebony_Neck
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_nek_lyr_cats.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Nek_Lyr_Cats.img`
 							flags = 36
 							color = purple_blue_1
 						}
@@ -5756,36 +5756,36 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_head = {
-			desc_id = cab_head_flay_rev
+		CAS_Bass_Head = {
+			desc_id = CAB_Head_Flay_rev
 			chosen_materials = {
 				material1 = purple_blue_3
 			}
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/bass/cab_head_flay001.dds`
-					material = cab_head_bh1a_headstock
+					base_tex = `tex/models/Car_Instruments/Bass/cab_head_flay001.dds`
+					material = CAB_Head_BH1A_Headstock
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_head_flay001_wtfinish.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Head_Flay001_WTfinish.img`
 							flags = 36
-							color = black_1guitar
+							color = Black_1guitar
 						}
 					]
 				}
 			]
 		}
-		cas_bass_pickguards = {
-			desc_id = cab_pickg_bp2
+		CAS_Bass_Pickguards = {
+			desc_id = CAB_PickG_BP2
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/bass/cab_pickg_dark001.dds`
-					material = cab_pickg_unos03_primary
+					base_tex = `tex/models/Car_Instruments/Bass/cab_pickg_dark001.dds`
+					material = CAB_PickG_Unos03_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_pgard_wht001.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_PGard_Wht001.img`
 							flags = 36
 							color = grey_1
 						}
@@ -5793,16 +5793,16 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_pickups = {
-			desc_id = cab_pbass_pickup_a
+		CAS_Bass_Pickups = {
+			desc_id = CAB_PBass_Pickup_A
 		}
-		cas_bass_bridges = {
-			desc_id = cab_bridge_bb1a
+		CAS_Bass_Bridges = {
+			desc_id = CAB_Bridge_BB1A
 			chosen_materials = {
 				material1 = purple_blue_3
 			}
 		}
-		cas_bass_knobs = {
+		CAS_Bass_Knobs = {
 			desc_id = cab_knob_unos06
 			chosen_materials = {
 				material1 = grey_2guitar
@@ -5811,24 +5811,24 @@ cas_preset_basses = [
 	}
 	{
 		genre = [
-			`classic rock`
-			rock
+			`Classic Rock`
+			Rock
 		]
-		cas_bass_body = {
-			desc_id = bass_body_b1b
+		CAS_Bass_Body = {
+			desc_id = Bass_Body_B1B
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\bass\cab_body_b1f_d_mls.dds`
-					material = cab_body_unos_primary
+					base_tex = `tex\models\CAR_Instruments\Bass\cab_body_b1f_d_mls.dds`
+					material = CAB_Body_UNOS_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_body_unos_cherryswirl_gk.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Body_unos_CherrySwirl_GK.img`
 							flags = 4
 							color = blue_5
 						}
 						{
-							texture = `tex/models/characters/layers/cab/cab_body_unos_dtl_tri.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Body_Unos_DTL_Tri.img`
 							color = orange_1
 							flags = 4
 							a = 60
@@ -5837,22 +5837,22 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_neck = {
-			desc_id = cab_neck_bn1b
+		CAS_Bass_Neck = {
+			desc_id = CAB_Neck_BN1B
 		}
-		cas_bass_head = {
-			desc_id = cab_head_bh6b
+		CAS_Bass_Head = {
+			desc_id = CAB_Head_BH6B
 			chosen_materials = {
 				material1 = orange_3
 			}
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/bass/cab_head_trad_delx_d.dds`
-					material = cab_head_chunder01_headstock
+					base_tex = `tex/models/Car_Instruments/Bass/cab_head_trad_delx_d.dds`
+					material = CAB_Head_Chunder01_Headstock
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_head_trad_delx_dtl_05.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Head_Trad_Delx_DTL_05.img`
 							a = 100
 							flags = 36
 							color = yellow_orange_1
@@ -5861,19 +5861,19 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_pickguards = {
+		CAS_Bass_Pickguards = {
 			desc_id = none
 		}
-		cas_bass_pickups = {
-			desc_id = cab_pickups_bp1a
+		CAS_Bass_Pickups = {
+			desc_id = CAB_Pickups_BP1A
 		}
-		cas_bass_bridges = {
-			desc_id = cab_bridge_bb2a
+		CAS_Bass_Bridges = {
+			desc_id = CAB_Bridge_BB2A
 			chosen_materials = {
 				material1 = orange_3
 			}
 		}
-		cas_bass_knobs = {
+		CAS_Bass_Knobs = {
 			desc_id = cab_knob_unos08
 			chosen_materials = {
 				material1 = orange_3
@@ -5882,23 +5882,23 @@ cas_preset_basses = [
 	}
 	{
 		genre = [
-			punk
+			Punk
 		]
-		cas_bass_body = {
-			desc_id = cab_body_chunder01
+		CAS_Bass_Body = {
+			desc_id = CAB_Body_Chunder01
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\bass\cab_body_chndra_d_mls.dds`
-					material = cab_body_chunder01_primary
+					base_tex = `tex\models\CAR_Instruments\Bass\cab_body_chndra_d_mls.dds`
+					material = CAB_Body_Chunder01_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_body_chndr_wht_d_mls.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Body_Chndr_WHT_D_MLS.img`
 							flags = 4
 							color = red_1
 						}
 						{
-							texture = `tex/models/characters/layers/cab/cab_body_chndr_dtl_trash.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Body_chndr_DTL_Trash.img`
 							flags = 4
 							color = green_2guitar
 						}
@@ -5906,16 +5906,16 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_neck = {
-			desc_id = cab_neck_bn1a
+		CAS_Bass_Neck = {
+			desc_id = CAB_Neck_BN1A
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/bass/cab_neck_01_maple_d_mls.dds`
-					material = cab_neck_bn1a_neck
+					base_tex = `tex/models/Car_Instruments/Bass/cab_neck_01_maple_d_mls.dds`
+					material = CAB_NECK_BN1A_Neck
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_nek_tribal.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Nek_tribal.img`
 							flags = 36
 							color = green_1guitar
 						}
@@ -5923,25 +5923,25 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_head = {
-			desc_id = cab_head_bh6a
+		CAS_Bass_Head = {
+			desc_id = CAB_Head_BH6A
 			chosen_materials = {
 				material1 = grey_5guitar
 			}
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/bass/cab_head_bh6a.dds`
-					material = cab_head_chunder02_primary
+					base_tex = `tex/models/Car_Instruments/Bass/cab_head_bh6a.dds`
+					material = CAB_Head_Chunder02_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_head_bh6a_wtfinish.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Head_BH6A_WTfinish.img`
 							a = 45
 							flags = 36
 							color = orange_1
 						}
 						{
-							texture = `tex/models/characters/layers/cab/cab_head_bh6a_dtl_03.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Head_BH6A_DTL_03.img`
 							flags = 36
 							color = yellow_orange_1
 						}
@@ -5949,19 +5949,19 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_pickguards = {
-			desc_id = cab_pguardchndr01
+		CAS_Bass_Pickguards = {
+			desc_id = CAB_PGuardChndr01
 		}
-		cas_bass_pickups = {
-			desc_id = cab_pickup_hack01
+		CAS_Bass_Pickups = {
+			desc_id = CAB_pickup_Hack01
 		}
-		cas_bass_bridges = {
-			desc_id = cab_bridge_bb3a
+		CAS_Bass_Bridges = {
+			desc_id = CAB_Bridge_BB3A
 			chosen_materials = {
 				material1 = grey_5guitar
 			}
 		}
-		cas_bass_knobs = {
+		CAS_Bass_Knobs = {
 			desc_id = cab_knob_chndr10
 			chosen_materials = {
 				material1 = green_2guitar
@@ -5970,24 +5970,24 @@ cas_preset_basses = [
 	}
 	{
 		genre = [
-			punk
+			Punk
 		]
-		cas_bass_body = {
-			desc_id = cab_body_bandera
+		CAS_Bass_Body = {
+			desc_id = CAB_Body_Bandera
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\guitars\gtr_body_style17_d.dds`
-					material = guitar_body_bandera_primary
+					base_tex = `tex\models\CAR_Instruments\guitars\gtr_body_style17_d.dds`
+					material = Guitar_Body_Bandera_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style17_ld_15.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style17_LD_15.img`
 							color = green_1guitar
 							flags = 4
 							a = 60
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style17_dtl_trash.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style17_DTL_Trash.img`
 							color = red_2
 							flags = 4
 							a = 55
@@ -5996,16 +5996,16 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_neck = {
-			desc_id = cab_neck_bnebony
+		CAS_Bass_Neck = {
+			desc_id = CAB_Neck_BNEbony
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/bass/cab_nek_ebony01.dds`
-					material = cab_neck_ebony_neck
+					base_tex = `tex/models/Car_Instruments/Bass/cab_nek_ebony01.dds`
+					material = CAB_Neck_Ebony_Neck
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_nek_arrows01.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Nek_Arrows01.img`
 							flags = 36
 							color = blue_1
 						}
@@ -6013,18 +6013,18 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_head = {
-			desc_id = cab_head_guppy
+		CAS_Bass_Head = {
+			desc_id = CAB_Head_Guppy
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/bass/cab_head_guppy_d.dds`
-					material = cab_head_guppy_headstock
+					base_tex = `tex/models/Car_Instruments/Bass/cab_head_guppy_d.dds`
+					material = CAB_Head_Guppy_Headstock
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_head_guppy_wt.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Head_Guppy_WT.img`
 							flags = 36
-							color = black_1guitar
+							color = Black_1guitar
 						}
 					]
 				}
@@ -6033,16 +6033,16 @@ cas_preset_basses = [
 				material1 = orange_5
 			}
 		}
-		cas_bass_pickguards = {
-			desc_id = cab_phnq_pg002
+		CAS_Bass_Pickguards = {
+			desc_id = CAB_Phnq_PG002
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/bass/cab_phnq_pg001b.dds`
-					material = cab_phnq_pg002_primary
+					base_tex = `tex/models/Car_Instruments/Bass/cab_phnq_pg001b.dds`
+					material = CAB_Phnq_PG002_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_phnq_pg001.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Phnq_PG001.img`
 							flags = 36
 							color = green_3
 						}
@@ -6050,45 +6050,45 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_pickups = {
-			desc_id = cab_jbass_pickup_01
+		CAS_Bass_Pickups = {
+			desc_id = CAB_Jbass_pickup_01
 		}
-		cas_bass_bridges = {
-			desc_id = cab_bridge_mls
+		CAS_Bass_Bridges = {
+			desc_id = CAB_Bridge_MLS
 			chosen_materials = {
 				material1 = orange_5
 			}
 		}
-		cas_bass_knobs = {
+		CAS_Bass_Knobs = {
 			desc_id = cab_knob_phunq09
 			chosen_materials = {
-				material1 = black_1guitar
+				material1 = Black_1guitar
 			}
 		}
 	}
 	{
 		genre = [
-			punk
-			glam
-			rock
+			Punk
+			Glam
+			Rock
 			metal
-			goth
+			Goth
 		]
-		cas_bass_body = {
-			desc_id = cab_body_prediktor
+		CAS_Bass_Body = {
+			desc_id = CAB_Body_Prediktor
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\guitars\gtr_predikt_body01_d_mls.dds`
-					material = guitar_body_prediktor_primary
+					base_tex = `tex\models\CAR_Instruments\guitars\gtr_predikt_body01_d_mls.dds`
+					material = Guitar_Body_Prediktor_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style16_ld_zeb.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style16_LD_Zeb.img`
 							flags = 4
 							color = red_orange_3
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_body_style16_dtl_04.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Body_Style16_DTL_04.img`
 							color = red_orange_2
 							flags = 4
 							a = 75
@@ -6097,16 +6097,16 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_neck = {
-			desc_id = cab_neck_bfretlss02
+		CAS_Bass_Neck = {
+			desc_id = CAB_Neck_BFretlss02
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/bass/cab_nekf_ebony01.dds`
-					material = cab_neck_fretless02_neck
+					base_tex = `tex/models/Car_Instruments/Bass/cab_nekf_ebony01.dds`
+					material = CAB_Neck_Fretless02_neck
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cab/cab_nek_pumpkinf_d_ds.img`
+							texture = `tex/models/Characters/Layers/CAB/CAB_Nek_pumpkinF_D_DS.img`
 							flags = 36
 							color = red_orange_3
 						}
@@ -6114,21 +6114,21 @@ cas_preset_basses = [
 				}
 			]
 		}
-		cas_bass_head = {
-			desc_id = cab_head_predikt
+		CAS_Bass_Head = {
+			desc_id = CAB_Head_Predikt
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/bass/cab_predikt_hstock_d.dds`
-					material = cab_head_predikt_primary
+					base_tex = `tex/models/Car_Instruments/Bass/cab_predikt_hstock_d.dds`
+					material = CAB_Head_Predikt_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/gtr_headtock16_ld_01.img`
+							texture = `tex/models/Characters/Layers/CAG/GTR_Headtock16_LD_01.img`
 							flags = 36
-							color = black_1guitar
+							color = Black_1guitar
 						}
 						{
-							texture = `tex/models/characters/layers/cag/gtr_predikt_hstock01_dtl_01.img`
+							texture = `tex/models/Characters/Layers/CAG/Gtr_Predikt_HStock01_DTL_01.img`
 							flags = 36
 							color = red_orange_2
 						}
@@ -6139,19 +6139,19 @@ cas_preset_basses = [
 				material1 = red_orange_1
 			}
 		}
-		cas_bass_pickguards = {
+		CAS_Bass_Pickguards = {
 			desc_id = none
 		}
-		cas_bass_pickups = {
-			desc_id = cab_pickups_bp1a
+		CAS_Bass_Pickups = {
+			desc_id = CAB_Pickups_BP1A
 		}
-		cas_bass_bridges = {
-			desc_id = cab_bridge_bb3a
+		CAS_Bass_Bridges = {
+			desc_id = CAB_Bridge_BB3A
 			chosen_materials = {
 				material1 = red_orange_1
 			}
 		}
-		cas_bass_knobs = {
+		CAS_Bass_Knobs = {
 			desc_id = cab_knob_phunq09
 			chosen_materials = {
 				material1 = red_orange_3
@@ -6161,17 +6161,17 @@ cas_preset_basses = [
 ]
 cas_preset_drums = [
 	{
-		cas_drums = {
+		CAS_Drums = {
 			desc_id = basic
 		}
 	}
 	{
-		cas_drums = {
+		CAS_Drums = {
 			desc_id = basic
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\drums\drumshell_ds_pork1.dds`
-					material = cad_drums_01_primary
+					base_tex = `tex\models\CAR_Instruments\Drums\drumshell_ds_pork1.dds`
+					material = CAD_Drums_01_Primary
 					diffuse
 					pre_layer = [
 						{
@@ -6182,8 +6182,8 @@ cas_preset_drums = [
 					]
 				}
 				{
-					base_tex = `tex\models\car_instruments\drums\bass_skin_ds_15a.dds`
-					material = cad_drums_01_bassdrum
+					base_tex = `tex\models\CAR_Instruments\Drums\bass_skin_DS_15a.dds`
+					material = CAD_Drums_01_Bassdrum
 					diffuse
 					pre_layer = [
 						{
@@ -6199,12 +6199,12 @@ cas_preset_drums = [
 		}
 	}
 	{
-		cas_drums = {
+		CAS_Drums = {
 			desc_id = basic
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\drums\drumshell_ds_pork1.dds`
-					material = cad_drums_01_primary
+					base_tex = `tex\models\CAR_Instruments\Drums\drumshell_ds_pork1.dds`
+					material = CAD_Drums_01_Primary
 					diffuse
 					pre_layer = [
 						{
@@ -6215,8 +6215,8 @@ cas_preset_drums = [
 					]
 				}
 				{
-					base_tex = `tex\models\car_instruments\drums\bass_skin_ds_15a.dds`
-					material = cad_drums_01_bassdrum
+					base_tex = `tex\models\CAR_Instruments\Drums\bass_skin_DS_15a.dds`
+					material = CAD_Drums_01_Bassdrum
 					diffuse
 					pre_layer = [
 						{
@@ -6230,12 +6230,12 @@ cas_preset_drums = [
 		}
 	}
 	{
-		cas_drums = {
+		CAS_Drums = {
 			desc_id = basic
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\drums\drumshell_ds_pork1.dds`
-					material = cad_drums_01_primary
+					base_tex = `tex\models\CAR_Instruments\Drums\drumshell_ds_pork1.dds`
+					material = CAD_Drums_01_Primary
 					diffuse
 					pre_layer = [
 						{
@@ -6246,12 +6246,12 @@ cas_preset_drums = [
 					]
 				}
 				{
-					base_tex = `tex\models\car_instruments\drums\bass_skin_ds_15a.dds`
-					material = cad_drums_01_bassdrum
+					base_tex = `tex\models\CAR_Instruments\Drums\bass_skin_DS_15a.dds`
+					material = CAD_Drums_01_Bassdrum
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cadrm/bass_skin_gk_05.img`
+							texture = `tex/models/Characters/Layers/CADrm/bass_skin_GK_05.img`
 							color = red_orange_5
 						}
 					]
@@ -6260,12 +6260,12 @@ cas_preset_drums = [
 		}
 	}
 	{
-		cas_drums = {
+		CAS_Drums = {
 			desc_id = basic
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\drums\drumshell_ds_pork1.dds`
-					material = cad_drums_01_primary
+					base_tex = `tex\models\CAR_Instruments\Drums\drumshell_ds_pork1.dds`
+					material = CAD_Drums_01_Primary
 					diffuse
 					pre_layer = [
 						{
@@ -6276,12 +6276,12 @@ cas_preset_drums = [
 					]
 				}
 				{
-					base_tex = `tex\models\car_instruments\drums\bass_skin_ds_15a.dds`
-					material = cad_drums_01_bassdrum
+					base_tex = `tex\models\CAR_Instruments\Drums\bass_skin_DS_15a.dds`
+					material = CAD_Drums_01_Bassdrum
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cadrm/bass_skin_ds_73.img`
+							texture = `tex/models/Characters/Layers/CADrm/bass_skin_DS_73.img`
 							flags = 4
 							color = red_orange_4
 						}
@@ -6291,12 +6291,12 @@ cas_preset_drums = [
 		}
 	}
 	{
-		cas_drums = {
+		CAS_Drums = {
 			desc_id = basic
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\drums\drumshell_ds_pork1.dds`
-					material = cad_drums_01_primary
+					base_tex = `tex\models\CAR_Instruments\Drums\drumshell_ds_pork1.dds`
+					material = CAD_Drums_01_Primary
 					diffuse
 					pre_layer = [
 						{
@@ -6307,12 +6307,12 @@ cas_preset_drums = [
 					]
 				}
 				{
-					base_tex = `tex\models\car_instruments\drums\bass_skin_ds_15a.dds`
-					material = cad_drums_01_bassdrum
+					base_tex = `tex\models\CAR_Instruments\Drums\bass_skin_DS_15a.dds`
+					material = CAD_Drums_01_Bassdrum
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cadrm/bass_skin_ds_73.img`
+							texture = `tex/models/Characters/Layers/CADrm/bass_skin_DS_73.img`
 							flags = 4
 							color = red_orange_4
 						}
@@ -6323,14 +6323,14 @@ cas_preset_drums = [
 	}
 	{
 		genre = [
-			glam
+			Glam
 		]
-		cas_drums = {
+		CAS_Drums = {
 			desc_id = basic
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\drums\drumshell_ds_pork1.dds`
-					material = cad_drums_01_primary
+					base_tex = `tex\models\CAR_Instruments\Drums\drumshell_ds_pork1.dds`
+					material = CAD_Drums_01_Primary
 					diffuse
 					pre_layer = [
 						{
@@ -6341,8 +6341,8 @@ cas_preset_drums = [
 					]
 				}
 				{
-					base_tex = `tex\models\car_instruments\drums\bass_skin_ds_15a.dds`
-					material = cad_drums_01_bassdrum
+					base_tex = `tex\models\CAR_Instruments\Drums\bass_skin_DS_15a.dds`
+					material = CAD_Drums_01_Bassdrum
 					diffuse
 					pre_layer = [
 						{
@@ -6353,7 +6353,7 @@ cas_preset_drums = [
 					]
 					layers = [
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_graphics035.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics035.img`
 							y_trans = 53
 							x_scale = 125
 							y_scale = 80
@@ -6361,7 +6361,7 @@ cas_preset_drums = [
 							a = 50
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_graphics035.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics035.img`
 							a = 50
 							x_scale = 125
 							y_scale = 80
@@ -6375,14 +6375,14 @@ cas_preset_drums = [
 	}
 	{
 		genre = [
-			glam
+			Glam
 		]
-		cas_drums = {
+		CAS_Drums = {
 			desc_id = basic
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\drums\drumshell_ds_pork1.dds`
-					material = cad_drums_01_primary
+					base_tex = `tex\models\CAR_Instruments\Drums\drumshell_ds_pork1.dds`
+					material = CAD_Drums_01_Primary
 					diffuse
 					pre_layer = [
 						{
@@ -6393,8 +6393,8 @@ cas_preset_drums = [
 					]
 				}
 				{
-					base_tex = `tex\models\car_instruments\drums\bass_skin_ds_15a.dds`
-					material = cad_drums_01_bassdrum
+					base_tex = `tex\models\CAR_Instruments\Drums\bass_skin_DS_15a.dds`
+					material = CAD_Drums_01_Bassdrum
 					diffuse
 					pre_layer = [
 						{
@@ -6405,8 +6405,8 @@ cas_preset_drums = [
 					]
 					layers = [
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_034.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_034.img`
+							color = Black_1guitar
 							x_trans = -25
 							x_scale = 20
 							y_scale = 15
@@ -6415,7 +6415,7 @@ cas_preset_drums = [
 							y_trans = 35
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_034.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_034.img`
 							x_trans = -26
 							y_trans = 36
 							x_scale = 20
@@ -6425,8 +6425,8 @@ cas_preset_drums = [
 							color = yellow_1guitar
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_034.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_034.img`
+							color = Black_1guitar
 							x_trans = -17
 							x_scale = 20
 							y_scale = 15
@@ -6434,7 +6434,7 @@ cas_preset_drums = [
 							y_trans = 21
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_034.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_034.img`
 							color = red_3
 							x_trans = -16
 							x_scale = 20
@@ -6443,8 +6443,8 @@ cas_preset_drums = [
 							y_trans = 22
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_034.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_034.img`
+							color = Black_1guitar
 							x_trans = 21
 							x_scale = 20
 							y_scale = 15
@@ -6453,7 +6453,7 @@ cas_preset_drums = [
 							y_trans = 26
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_034.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_034.img`
 							color = green_2guitar
 							x_trans = 20
 							y_trans = 27
@@ -6463,8 +6463,8 @@ cas_preset_drums = [
 							flags = 11
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_034.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_034.img`
+							color = Black_1guitar
 							x_trans = 6
 							x_scale = 15
 							y_scale = 10
@@ -6473,7 +6473,7 @@ cas_preset_drums = [
 							y_trans = 32
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_034.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_034.img`
 							x_trans = 5
 							y_trans = 33
 							x_scale = 15
@@ -6483,8 +6483,8 @@ cas_preset_drums = [
 							color = teal_3
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_034.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_034.img`
+							color = Black_1guitar
 							y_trans = 9
 							x_scale = 15
 							y_scale = 10
@@ -6493,7 +6493,7 @@ cas_preset_drums = [
 							x_trans = 32
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_034.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_034.img`
 							color = yellow_1guitar
 							y_trans = 10
 							x_scale = 15
@@ -6503,7 +6503,7 @@ cas_preset_drums = [
 							x_trans = 31
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_graphics097.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics097.img`
 							color = yellow_3guitar
 							y_trans = -12
 							x_scale = 80
@@ -6518,15 +6518,15 @@ cas_preset_drums = [
 	}
 	{
 		genre = [
-			punk
-			rock
+			Punk
+			Rock
 		]
-		cas_drums = {
+		CAS_Drums = {
 			desc_id = basic
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\drums\drumshell_ds_pork1.dds`
-					material = cad_drums_01_primary
+					base_tex = `tex\models\CAR_Instruments\Drums\drumshell_ds_pork1.dds`
+					material = CAD_Drums_01_Primary
 					diffuse
 					pre_layer = [
 						{
@@ -6536,43 +6536,43 @@ cas_preset_drums = [
 					]
 				}
 				{
-					base_tex = `tex\models\car_instruments\drums\bass_skin_ds_15a.dds`
-					material = cad_drums_01_bassdrum
+					base_tex = `tex\models\CAR_Instruments\Drums\bass_skin_DS_15a.dds`
+					material = CAD_Drums_01_Bassdrum
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cadrm/bass_skin_ds_71.img`
+							texture = `tex/models/Characters/Layers/CADrm/bass_skin_DS_71.img`
 							flags = 4
 							color = red_orange_3
 						}
 					]
 					layers = [
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+							color = Black_1guitar
 							y_trans = -28
 							x_scale = 125
 							flags = 3
 							y_scale = 16
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+							color = Black_1guitar
 							x_scale = 125
 							y_scale = 6
 							flags = 3
 							y_trans = -9
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+							color = Black_1guitar
 							x_scale = 125
 							y_scale = 45
 							flags = 3
 							y_trans = 22
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_elemental004.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_elemental004.img`
 							y_trans = -39
 							x_scale = 85
 							y_scale = 60
@@ -6581,7 +6581,7 @@ cas_preset_drums = [
 							x_trans = 37
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_elemental004.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_elemental004.img`
 							x_trans = -36
 							x_scale = 85
 							y_scale = 60
@@ -6590,7 +6590,7 @@ cas_preset_drums = [
 							y_trans = -39
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_icon_wing002.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Wing002.img`
 							x_trans = -22
 							y_trans = 19
 							x_scale = 40
@@ -6600,7 +6600,7 @@ cas_preset_drums = [
 							color = green_3guitar
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_icon_wing002.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Wing002.img`
 							x_trans = 24
 							y_trans = 19
 							x_scale = 40
@@ -6610,7 +6610,7 @@ cas_preset_drums = [
 							color = green_3guitar
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_graphics012.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics012.img`
 							flags = 3
 						}
 					]
@@ -6620,15 +6620,15 @@ cas_preset_drums = [
 	}
 	{
 		genre = [
-			punk
-			rock
+			Punk
+			Rock
 		]
-		cas_drums = {
+		CAS_Drums = {
 			desc_id = basic
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\drums\drumshell_ds_pork1.dds`
-					material = cad_drums_01_primary
+					base_tex = `tex\models\CAR_Instruments\Drums\drumshell_ds_pork1.dds`
+					material = CAD_Drums_01_Primary
 					diffuse
 					pre_layer = [
 						{
@@ -6639,8 +6639,8 @@ cas_preset_drums = [
 					]
 				}
 				{
-					base_tex = `tex\models\car_instruments\drums\bass_skin_ds_15a.dds`
-					material = cad_drums_01_bassdrum
+					base_tex = `tex\models\CAR_Instruments\Drums\bass_skin_DS_15a.dds`
+					material = CAD_Drums_01_Bassdrum
 					diffuse
 					pre_layer = [
 						{
@@ -6652,40 +6652,40 @@ cas_preset_drums = [
 					]
 					layers = [
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 							y_trans = 38
 							x_scale = 5
 							y_scale = 50
 							flags = 3
-							color = black_1guitar
+							color = Black_1guitar
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+							color = Black_1guitar
 							x_scale = 5
 							y_scale = 50
 							flags = 3
 							y_trans = -37
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+							color = Black_1guitar
 							x_scale = 55
 							y_scale = 5
 							flags = 3
 							x_trans = 40
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+							color = Black_1guitar
 							x_scale = 55
 							y_scale = 5
 							flags = 3
 							x_trans = -39
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_icon_mammal001.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Mammal001.img`
+							color = Black_1guitar
 							y_trans = 19
 							x_scale = 40
 							y_scale = 55
@@ -6694,7 +6694,7 @@ cas_preset_drums = [
 							x_trans = -19
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_icon_mammal001.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Mammal001.img`
 							color = yellow_3guitar
 							x_trans = -21
 							y_trans = 21
@@ -6704,8 +6704,8 @@ cas_preset_drums = [
 							rot = 5783
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_icon_insect001.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Insect001.img`
+							color = Black_1guitar
 							x_trans = -19
 							x_scale = 40
 							y_scale = 50
@@ -6713,7 +6713,7 @@ cas_preset_drums = [
 							y_trans = -23
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_icon_insect001.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Insect001.img`
 							color = yellow_2guitar
 							x_trans = -21
 							x_scale = 40
@@ -6722,8 +6722,8 @@ cas_preset_drums = [
 							y_trans = -22
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_icon_insect002.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Insect002.img`
+							color = Black_1guitar
 							x_trans = 23
 							x_scale = 45
 							y_scale = 35
@@ -6732,7 +6732,7 @@ cas_preset_drums = [
 							y_trans = 19
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_icon_insect002.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Insect002.img`
 							color = yellow_2guitar
 							x_trans = 21
 							x_scale = 45
@@ -6742,8 +6742,8 @@ cas_preset_drums = [
 							y_trans = 21
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_icon_creature002.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Creature002.img`
+							color = Black_1guitar
 							x_trans = 24
 							x_scale = 45
 							y_scale = 40
@@ -6752,7 +6752,7 @@ cas_preset_drums = [
 							y_trans = -24
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_icon_creature002.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Creature002.img`
 							color = yellow_2guitar
 							x_trans = 21
 							y_trans = -22
@@ -6768,15 +6768,15 @@ cas_preset_drums = [
 	}
 	{
 		genre = [
-			punk
-			rock
+			Punk
+			Rock
 		]
-		cas_drums = {
+		CAS_Drums = {
 			desc_id = basic
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\drums\drumshell_ds_pork1.dds`
-					material = cad_drums_01_primary
+					base_tex = `tex\models\CAR_Instruments\Drums\drumshell_ds_pork1.dds`
+					material = CAD_Drums_01_Primary
 					diffuse
 					pre_layer = [
 						{
@@ -6787,8 +6787,8 @@ cas_preset_drums = [
 					]
 				}
 				{
-					base_tex = `tex\models\car_instruments\drums\bass_skin_ds_15a.dds`
-					material = cad_drums_01_bassdrum
+					base_tex = `tex\models\CAR_Instruments\Drums\bass_skin_DS_15a.dds`
+					material = CAD_Drums_01_Bassdrum
 					diffuse
 					pre_layer = [
 						{
@@ -6799,24 +6799,24 @@ cas_preset_drums = [
 					]
 					layers = [
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+							color = Black_1guitar
 							x_scale = 20
 							y_scale = 20
 							flags = 3
 							y_trans = -7
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+							color = Black_1guitar
 							x_scale = 20
 							y_scale = 20
 							flags = 3
 							y_trans = 27
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+							color = Black_1guitar
 							y_trans = -24
 							x_scale = 20
 							y_scale = 20
@@ -6824,16 +6824,16 @@ cas_preset_drums = [
 							x_trans = 17
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 							y_trans = -41
 							x_scale = 20
 							y_scale = 20
 							flags = 3
-							color = black_1guitar
+							color = Black_1guitar
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+							color = Black_1guitar
 							y_trans = -24
 							x_scale = 20
 							y_scale = 20
@@ -6841,8 +6841,8 @@ cas_preset_drums = [
 							x_trans = -17
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+							color = Black_1guitar
 							y_trans = 10
 							x_scale = 20
 							y_scale = 20
@@ -6850,8 +6850,8 @@ cas_preset_drums = [
 							x_trans = -17
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+							color = Black_1guitar
 							x_trans = -17
 							x_scale = 20
 							y_scale = 20
@@ -6859,8 +6859,8 @@ cas_preset_drums = [
 							y_trans = 44
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+							color = Black_1guitar
 							x_trans = 17
 							x_scale = 20
 							y_scale = 20
@@ -6868,8 +6868,8 @@ cas_preset_drums = [
 							y_trans = 10
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+							color = Black_1guitar
 							x_trans = 17
 							x_scale = 20
 							y_scale = 20
@@ -6877,8 +6877,8 @@ cas_preset_drums = [
 							y_trans = 44
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+							color = Black_1guitar
 							y_trans = 27
 							x_scale = 20
 							y_scale = 20
@@ -6886,8 +6886,8 @@ cas_preset_drums = [
 							x_trans = 34
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+							color = Black_1guitar
 							x_trans = 34
 							x_scale = 20
 							y_scale = 20
@@ -6895,8 +6895,8 @@ cas_preset_drums = [
 							y_trans = -7
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+							color = Black_1guitar
 							x_trans = 34
 							x_scale = 20
 							y_scale = 20
@@ -6904,8 +6904,8 @@ cas_preset_drums = [
 							y_trans = -41
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+							color = Black_1guitar
 							y_trans = -41
 							x_scale = 20
 							y_scale = 20
@@ -6913,8 +6913,8 @@ cas_preset_drums = [
 							x_trans = -34
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+							color = Black_1guitar
 							x_trans = -34
 							x_scale = 20
 							y_scale = 20
@@ -6922,8 +6922,8 @@ cas_preset_drums = [
 							y_trans = 27
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+							color = Black_1guitar
 							x_trans = -34
 							y_trans = -7
 							x_scale = 20
@@ -6931,7 +6931,7 @@ cas_preset_drums = [
 							flags = 3
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_007.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_007.img`
 							y_trans = 4
 							x_scale = 1
 							y_scale = 155
@@ -6940,7 +6940,7 @@ cas_preset_drums = [
 							color = red_orange_3
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_007.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_007.img`
 							y_trans = -5
 							x_scale = 1
 							y_scale = 155
@@ -6949,7 +6949,7 @@ cas_preset_drums = [
 							color = red_orange_3
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_007.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_007.img`
 							y_trans = -30
 							x_scale = 1
 							y_scale = 155
@@ -6958,7 +6958,7 @@ cas_preset_drums = [
 							color = red_orange_3
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_007.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_007.img`
 							y_trans = -40
 							x_scale = 1
 							y_scale = 155
@@ -6967,7 +6967,7 @@ cas_preset_drums = [
 							color = red_orange_3
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_007.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_007.img`
 							y_trans = -49
 							x_scale = 1
 							y_scale = 155
@@ -6976,7 +6976,7 @@ cas_preset_drums = [
 							color = red_orange_3
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_007.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_007.img`
 							y_trans = 26
 							x_scale = 1
 							y_scale = 155
@@ -6985,7 +6985,7 @@ cas_preset_drums = [
 							color = red_orange_3
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_007.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_007.img`
 							y_trans = -16
 							x_scale = 1
 							y_scale = 155
@@ -6994,7 +6994,7 @@ cas_preset_drums = [
 							color = red_orange_3
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_007.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_007.img`
 							y_trans = 17
 							x_scale = 1
 							y_scale = 155
@@ -7003,7 +7003,7 @@ cas_preset_drums = [
 							color = red_orange_3
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_007.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_007.img`
 							y_trans = 34
 							x_scale = 1
 							y_scale = 155
@@ -7012,7 +7012,7 @@ cas_preset_drums = [
 							color = red_orange_3
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_007.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_007.img`
 							y_trans = 60
 							x_scale = 1
 							y_scale = 155
@@ -7021,7 +7021,7 @@ cas_preset_drums = [
 							color = red_orange_3
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_007.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_007.img`
 							y_trans = 53
 							x_scale = 1
 							y_scale = 155
@@ -7030,7 +7030,7 @@ cas_preset_drums = [
 							color = red_orange_3
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_graphics017.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics017.img`
 							color = green_2guitar
 							x_trans = -4
 							x_scale = 85
@@ -7045,15 +7045,15 @@ cas_preset_drums = [
 	}
 	{
 		genre = [
-			punk
-			rock
+			Punk
+			Rock
 		]
-		cas_drums = {
+		CAS_Drums = {
 			desc_id = basic
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\drums\drumshell_ds_pork1.dds`
-					material = cad_drums_01_primary
+					base_tex = `tex\models\CAR_Instruments\Drums\drumshell_ds_pork1.dds`
+					material = CAD_Drums_01_Primary
 					diffuse
 					pre_layer = [
 						{
@@ -7063,8 +7063,8 @@ cas_preset_drums = [
 					]
 				}
 				{
-					base_tex = `tex\models\car_instruments\drums\bass_skin_ds_15a.dds`
-					material = cad_drums_01_bassdrum
+					base_tex = `tex\models\CAR_Instruments\Drums\bass_skin_DS_15a.dds`
+					material = CAD_Drums_01_Bassdrum
 					diffuse
 					pre_layer = [
 						{
@@ -7074,8 +7074,8 @@ cas_preset_drums = [
 					]
 					layers = [
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_011.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_011.img`
+							color = Black_1guitar
 							a = 60
 							x_trans = 0
 							x_scale = 20
@@ -7085,8 +7085,8 @@ cas_preset_drums = [
 							y_trans = -2
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_011.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_011.img`
+							color = Black_1guitar
 							a = 60
 							x_trans = -32
 							x_scale = 20
@@ -7096,8 +7096,8 @@ cas_preset_drums = [
 							y_trans = -21
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_011.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_011.img`
+							color = Black_1guitar
 							a = 60
 							x_trans = -16
 							x_scale = 20
@@ -7107,8 +7107,8 @@ cas_preset_drums = [
 							y_trans = -6
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_011.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_011.img`
+							color = Black_1guitar
 							a = 60
 							y_trans = -2
 							x_scale = 20
@@ -7118,8 +7118,8 @@ cas_preset_drums = [
 							x_trans = 17
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_011.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_011.img`
+							color = Black_1guitar
 							a = 60
 							y_trans = -7
 							x_scale = 20
@@ -7129,7 +7129,7 @@ cas_preset_drums = [
 							x_trans = 40
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_009.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_009.img`
 							x_trans = 1
 							y_trans = -13
 							x_scale = 35
@@ -7139,7 +7139,7 @@ cas_preset_drums = [
 							color = grey_5guitar
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_009.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_009.img`
 							x_trans = -3
 							x_scale = 45
 							y_scale = 25
@@ -7148,7 +7148,7 @@ cas_preset_drums = [
 							y_trans = 19
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_009.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_009.img`
 							y_trans = 1
 							x_scale = 45
 							y_scale = 40
@@ -7156,8 +7156,8 @@ cas_preset_drums = [
 							flags = 19
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+							color = Black_1guitar
 							x_trans = -20
 							y_trans = 18
 							x_scale = 5
@@ -7166,8 +7166,8 @@ cas_preset_drums = [
 							rot = 550
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+							color = Black_1guitar
 							y_trans = 27
 							x_scale = 5
 							y_scale = 25
@@ -7176,8 +7176,8 @@ cas_preset_drums = [
 							x_trans = -6
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+							color = Black_1guitar
 							x_trans = 11
 							x_scale = 5
 							y_scale = 25
@@ -7186,8 +7186,8 @@ cas_preset_drums = [
 							y_trans = 22
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+							color = Black_1guitar
 							x_trans = 16
 							x_scale = 5
 							y_scale = 35
@@ -7196,8 +7196,8 @@ cas_preset_drums = [
 							y_trans = 2
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+							color = Black_1guitar
 							x_trans = -16
 							x_scale = 5
 							y_scale = 35
@@ -7206,8 +7206,8 @@ cas_preset_drums = [
 							y_trans = 0
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+							color = Black_1guitar
 							y_trans = -16
 							x_scale = 5
 							y_scale = 15
@@ -7216,8 +7216,8 @@ cas_preset_drums = [
 							x_trans = -9
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+							color = Black_1guitar
 							y_trans = -15
 							x_scale = 5
 							y_scale = 10
@@ -7226,8 +7226,8 @@ cas_preset_drums = [
 							x_trans = 14
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+							color = Black_1guitar
 							x_trans = 4
 							x_scale = 5
 							y_scale = 30
@@ -7236,8 +7236,8 @@ cas_preset_drums = [
 							y_trans = -19
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_011.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_011.img`
+							color = Black_1guitar
 							x_trans = 1
 							y_trans = -3
 							y_skew = 27
@@ -7247,8 +7247,8 @@ cas_preset_drums = [
 							rot = 6183
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_icon026.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon026.img`
+							color = Black_1guitar
 							x_trans = 3
 							x_scale = 70
 							y_scale = 35
@@ -7257,8 +7257,8 @@ cas_preset_drums = [
 							y_trans = -28
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_011.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_011.img`
+							color = Black_1guitar
 							x_trans = -10
 							y_trans = 13
 							x_scale = 5
@@ -7267,8 +7267,8 @@ cas_preset_drums = [
 							rot = 5550
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_011.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_011.img`
+							color = Black_1guitar
 							x_trans = 8
 							y_trans = 13
 							x_scale = 5
@@ -7277,8 +7277,8 @@ cas_preset_drums = [
 							flags = 3
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_011.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_011.img`
+							color = Black_1guitar
 							x_trans = 6
 							x_scale = 5
 							y_scale = 10
@@ -7287,8 +7287,8 @@ cas_preset_drums = [
 							y_trans = -14
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_011.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_011.img`
+							color = Black_1guitar
 							x_trans = -2
 							x_scale = 5
 							y_scale = 10
@@ -7297,8 +7297,8 @@ cas_preset_drums = [
 							y_trans = -16
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_plant_002.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_plant_002.img`
+							color = Black_1guitar
 							x_trans = -2
 							y_trans = 16
 							x_scale = 90
@@ -7314,26 +7314,26 @@ cas_preset_drums = [
 	}
 	{
 		genre = [
-			`black metal`
+			`Black Metal`
 			metal
 		]
-		cas_drums = {
+		CAS_Drums = {
 			desc_id = basic
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\drums\bass_skin_ds_15a.dds`
-					material = cad_drums_01_bassdrum
+					base_tex = `tex\models\CAR_Instruments\Drums\bass_skin_DS_15a.dds`
+					material = CAD_Drums_01_Bassdrum
 					diffuse
 					pre_layer = [
 						{
 							texture = `tex/models/characters/layers/cadrm/bass_skin_ds_15.img`
 							flags = 4
-							color = black_1guitar
+							color = Black_1guitar
 						}
 					]
 					layers = [
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_graphics010.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics010.img`
 							y_trans = -13
 							x_scale = 70
 							y_scale = 80
@@ -7342,7 +7342,7 @@ cas_preset_drums = [
 							x_trans = -9
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_graphics010.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics010.img`
 							x_trans = -3
 							y_trans = -7
 							x_scale = 70
@@ -7351,7 +7351,7 @@ cas_preset_drums = [
 							rot = 5983
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_graphics010.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics010.img`
 							x_trans = 7
 							x_scale = 70
 							y_scale = 80
@@ -7360,7 +7360,7 @@ cas_preset_drums = [
 							y_trans = -4
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_graphics010.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics010.img`
 							x_trans = 13
 							y_trans = -4
 							x_scale = 70
@@ -7369,7 +7369,7 @@ cas_preset_drums = [
 							rot = 250
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_graphics010.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics010.img`
 							x_trans = 21
 							x_scale = 70
 							y_scale = 80
@@ -7378,7 +7378,7 @@ cas_preset_drums = [
 							y_trans = -13
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 							x_trans = 3
 							y_trans = 25
 							x_scale = 10
@@ -7388,7 +7388,7 @@ cas_preset_drums = [
 							color = grey_5guitar
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 							x_trans = -11
 							y_trans = 21
 							x_scale = 10
@@ -7398,7 +7398,7 @@ cas_preset_drums = [
 							color = grey_5guitar
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 							x_trans = -26
 							y_trans = 13
 							x_scale = 10
@@ -7408,7 +7408,7 @@ cas_preset_drums = [
 							color = grey_5guitar
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 							x_trans = -37
 							y_trans = 1
 							x_scale = 10
@@ -7420,7 +7420,7 @@ cas_preset_drums = [
 						{
 							font = fontgrid_title_a1
 							text = '6'
-							color = black_1guitar
+							color = Black_1guitar
 							x_trans = 3
 							y_trans = 25
 							y_scale = 90
@@ -7431,7 +7431,7 @@ cas_preset_drums = [
 						{
 							font = fontgrid_title_a1
 							text = '6'
-							color = black_1guitar
+							color = Black_1guitar
 							x_trans = -11
 							x_scale = 90
 							y_scale = 90
@@ -7442,7 +7442,7 @@ cas_preset_drums = [
 						{
 							font = fontgrid_title_a1
 							text = '6'
-							color = black_1guitar
+							color = Black_1guitar
 							x_trans = -26
 							y_trans = 14
 							x_scale = 90
@@ -7453,7 +7453,7 @@ cas_preset_drums = [
 						{
 							font = fontgrid_title_a1
 							text = 'K'
-							color = black_1guitar
+							color = Black_1guitar
 							y_trans = 2
 							x_scale = 75
 							y_scale = 75
@@ -7464,8 +7464,8 @@ cas_preset_drums = [
 					]
 				}
 				{
-					base_tex = `tex\models\car_instruments\drums\drumshell_ds_pork1.dds`
-					material = cad_drums_01_primary
+					base_tex = `tex\models\CAR_Instruments\Drums\drumshell_ds_pork1.dds`
+					material = CAD_Drums_01_Primary
 					diffuse
 					pre_layer = [
 						{
@@ -7479,15 +7479,15 @@ cas_preset_drums = [
 	}
 	{
 		genre = [
-			`black metal`
+			`Black Metal`
 			metal
 		]
-		cas_drums = {
+		CAS_Drums = {
 			desc_id = basic
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\drums\bass_skin_ds_15a.dds`
-					material = cad_drums_01_bassdrum
+					base_tex = `tex\models\CAR_Instruments\Drums\bass_skin_DS_15a.dds`
+					material = CAD_Drums_01_Bassdrum
 					diffuse
 					pre_layer = [
 						{
@@ -7497,7 +7497,7 @@ cas_preset_drums = [
 					]
 					layers = [
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_002.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_002.img`
 							color = red_1
 							y_trans = -22
 							x_scale = 130
@@ -7508,8 +7508,8 @@ cas_preset_drums = [
 					]
 				}
 				{
-					base_tex = `tex\models\car_instruments\drums\drumshell_ds_pork1.dds`
-					material = cad_drums_01_primary
+					base_tex = `tex\models\CAR_Instruments\Drums\drumshell_ds_pork1.dds`
+					material = CAD_Drums_01_Primary
 					diffuse
 					pre_layer = [
 						{
@@ -7525,15 +7525,15 @@ cas_preset_drums = [
 	}
 	{
 		genre = [
-			`black metal`
+			`Black Metal`
 			metal
 		]
-		cas_drums = {
+		CAS_Drums = {
 			desc_id = basic
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\drums\drumshell_ds_pork1.dds`
-					material = cad_drums_01_primary
+					base_tex = `tex\models\CAR_Instruments\Drums\drumshell_ds_pork1.dds`
+					material = CAD_Drums_01_Primary
 					diffuse
 					pre_layer = [
 						{
@@ -7545,26 +7545,26 @@ cas_preset_drums = [
 					]
 				}
 				{
-					base_tex = `tex\models\car_instruments\drums\bass_skin_ds_15a.dds`
-					material = cad_drums_01_bassdrum
+					base_tex = `tex\models\CAR_Instruments\Drums\bass_skin_DS_15a.dds`
+					material = CAD_Drums_01_Bassdrum
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cadrm/bass_skin_ds_56.img`
+							texture = `tex/models/Characters/Layers/CADrm/bass_skin_DS_56.img`
 							flags = 4
 							color = grey_2guitar
 						}
 					]
 					layers = [
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 							x_scale = 120
 							y_scale = 25
 							flags = 3
-							color = black_1guitar
+							color = Black_1guitar
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_graphics011.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics011.img`
 							color = red_1
 							x_scale = 105
 							flags = 3
@@ -7577,14 +7577,14 @@ cas_preset_drums = [
 	}
 	{
 		genre = [
-			goth
+			Goth
 		]
-		cas_drums = {
+		CAS_Drums = {
 			desc_id = basic
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\drums\drumshell_ds_pork1.dds`
-					material = cad_drums_01_primary
+					base_tex = `tex\models\CAR_Instruments\Drums\drumshell_ds_pork1.dds`
+					material = CAD_Drums_01_Primary
 					diffuse
 					pre_layer = [
 						{
@@ -7595,8 +7595,8 @@ cas_preset_drums = [
 					]
 				}
 				{
-					base_tex = `tex\models\car_instruments\drums\bass_skin_ds_15a.dds`
-					material = cad_drums_01_bassdrum
+					base_tex = `tex\models\CAR_Instruments\Drums\bass_skin_DS_15a.dds`
+					material = CAD_Drums_01_Bassdrum
 					diffuse
 					pre_layer = [
 						{
@@ -7607,14 +7607,14 @@ cas_preset_drums = [
 					]
 					layers = [
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+							color = Black_1guitar
 							x_scale = 95
 							flags = 3
 							y_scale = 95
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_graphics047.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics047.img`
 							flags = 3
 							y_trans = -11
 						}
@@ -7625,14 +7625,14 @@ cas_preset_drums = [
 	}
 	{
 		genre = [
-			goth
+			Goth
 		]
-		cas_drums = {
+		CAS_Drums = {
 			desc_id = basic
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\drums\drumshell_ds_pork1.dds`
-					material = cad_drums_01_primary
+					base_tex = `tex\models\CAR_Instruments\Drums\drumshell_ds_pork1.dds`
+					material = CAD_Drums_01_Primary
 					diffuse
 					pre_layer = [
 						{
@@ -7643,8 +7643,8 @@ cas_preset_drums = [
 					]
 				}
 				{
-					base_tex = `tex\models\car_instruments\drums\bass_skin_ds_15a.dds`
-					material = cad_drums_01_bassdrum
+					base_tex = `tex\models\CAR_Instruments\Drums\bass_skin_DS_15a.dds`
+					material = CAD_Drums_01_Bassdrum
 					diffuse
 					pre_layer = [
 						{
@@ -7655,14 +7655,14 @@ cas_preset_drums = [
 					]
 					layers = [
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_graphics073.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics073.img`
 							x_trans = 33
 							y_trans = 61
 							flags = 3
 							color = red_1
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_graphics073.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics073.img`
 							color = red_1
 							x_trans = -48
 							y_trans = 36
@@ -7675,30 +7675,30 @@ cas_preset_drums = [
 	}
 	{
 		genre = [
-			goth
+			Goth
 		]
-		cas_drums = {
+		CAS_Drums = {
 			desc_id = basic
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\drums\drumshell_ds_pork1.dds`
-					material = cad_drums_01_primary
+					base_tex = `tex\models\CAR_Instruments\Drums\drumshell_ds_pork1.dds`
+					material = CAD_Drums_01_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cadrm/drumshell_ds_31.img`
+							texture = `tex/models/Characters/Layers/CADrm/Drumshell_DS_31.img`
 							flags = 32
 							color = teal_4
 						}
 					]
 				}
 				{
-					base_tex = `tex\models\car_instruments\drums\bass_skin_ds_15a.dds`
-					material = cad_drums_01_bassdrum
+					base_tex = `tex\models\CAR_Instruments\Drums\bass_skin_DS_15a.dds`
+					material = CAD_Drums_01_Bassdrum
 					diffuse
 					layers = [
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_graphics058.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics058.img`
 							x_trans = 3
 							y_trans = -23
 							x_scale = 95
@@ -7720,14 +7720,14 @@ cas_preset_drums = [
 	}
 	{
 		genre = [
-			pop
+			Pop
 		]
-		cas_drums = {
+		CAS_Drums = {
 			desc_id = basic
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\drums\bass_skin_ds_15a.dds`
-					material = cad_drums_01_bassdrum
+					base_tex = `tex\models\CAR_Instruments\Drums\bass_skin_DS_15a.dds`
+					material = CAD_Drums_01_Bassdrum
 					diffuse
 					pre_layer = [
 						{
@@ -7738,8 +7738,8 @@ cas_preset_drums = [
 					]
 					layers = [
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_icon_insect003.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Insect003.img`
+							color = Black_1guitar
 							x_trans = -1
 							x_scale = 80
 							y_scale = 50
@@ -7748,7 +7748,7 @@ cas_preset_drums = [
 							y_trans = -36
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_icon_insect003.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Insect003.img`
 							color = violet_4
 							x_trans = -1
 							y_trans = -36
@@ -7758,8 +7758,8 @@ cas_preset_drums = [
 							y_scale = 40
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_icon_insect003.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Insect003.img`
+							color = Black_1guitar
 							x_trans = 26
 							y_trans = 22
 							x_scale = 30
@@ -7768,7 +7768,7 @@ cas_preset_drums = [
 							rot = 200
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_icon_insect003.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Insect003.img`
 							x_trans = 26
 							y_trans = 22
 							x_scale = 25
@@ -7778,8 +7778,8 @@ cas_preset_drums = [
 							color = violet_4
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_icon_insect003.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Insect003.img`
+							color = Black_1guitar
 							x_trans = -14
 							y_trans = 34
 							x_scale = 30
@@ -7788,7 +7788,7 @@ cas_preset_drums = [
 							y_scale = 25
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_icon_insect003.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Insect003.img`
 							color = violet_4
 							x_trans = -14
 							y_trans = 34
@@ -7800,8 +7800,8 @@ cas_preset_drums = [
 					]
 				}
 				{
-					base_tex = `tex\models\car_instruments\drums\drumshell_ds_pork1.dds`
-					material = cad_drums_01_primary
+					base_tex = `tex\models\CAR_Instruments\Drums\drumshell_ds_pork1.dds`
+					material = CAD_Drums_01_Primary
 					diffuse
 					pre_layer = [
 						{
@@ -7815,14 +7815,14 @@ cas_preset_drums = [
 	}
 	{
 		genre = [
-			pop
+			Pop
 		]
-		cas_drums = {
+		CAS_Drums = {
 			desc_id = basic
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\drums\drumshell_ds_pork1.dds`
-					material = cad_drums_01_primary
+					base_tex = `tex\models\CAR_Instruments\Drums\drumshell_ds_pork1.dds`
+					material = CAD_Drums_01_Primary
 					diffuse
 					pre_layer = [
 						{
@@ -7833,8 +7833,8 @@ cas_preset_drums = [
 					]
 				}
 				{
-					base_tex = `tex\models\car_instruments\drums\bass_skin_ds_15a.dds`
-					material = cad_drums_01_bassdrum
+					base_tex = `tex\models\CAR_Instruments\Drums\bass_skin_DS_15a.dds`
+					material = CAD_Drums_01_Bassdrum
 					diffuse
 					pre_layer = [
 						{
@@ -7845,7 +7845,7 @@ cas_preset_drums = [
 					]
 					layers = [
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_graphics104.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics104.img`
 							x_trans = -4
 							x_scale = 250
 							y_scale = 195
@@ -7859,18 +7859,18 @@ cas_preset_drums = [
 	}
 	{
 		genre = [
-			pop
+			Pop
 		]
-		cas_drums = {
+		CAS_Drums = {
 			desc_id = basic
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\drums\drumshell_ds_pork1.dds`
-					material = cad_drums_01_primary
+					base_tex = `tex\models\CAR_Instruments\Drums\drumshell_ds_pork1.dds`
+					material = CAD_Drums_01_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cadrm/drumshell_ds_15.img`
+							texture = `tex/models/Characters/Layers/CADrm/Drumshell_DS_15.img`
 							flags = 0
 							color = red_3
 							flags = 32
@@ -7878,8 +7878,8 @@ cas_preset_drums = [
 					]
 				}
 				{
-					base_tex = `tex\models\car_instruments\drums\bass_skin_ds_15a.dds`
-					material = cad_drums_01_bassdrum
+					base_tex = `tex\models\CAR_Instruments\Drums\bass_skin_DS_15a.dds`
+					material = CAD_Drums_01_Bassdrum
 					diffuse
 					pre_layer = [
 						{
@@ -7894,14 +7894,14 @@ cas_preset_drums = [
 	}
 	{
 		genre = [
-			`classic rock`
+			`Classic Rock`
 		]
-		cas_drums = {
+		CAS_Drums = {
 			desc_id = basic
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\drums\drumshell_ds_pork1.dds`
-					material = cad_drums_01_primary
+					base_tex = `tex\models\CAR_Instruments\Drums\drumshell_ds_pork1.dds`
+					material = CAD_Drums_01_Primary
 					diffuse
 					pre_layer = [
 						{
@@ -7912,8 +7912,8 @@ cas_preset_drums = [
 					]
 				}
 				{
-					base_tex = `tex\models\car_instruments\drums\bass_skin_ds_15a.dds`
-					material = cad_drums_01_bassdrum
+					base_tex = `tex\models\CAR_Instruments\Drums\bass_skin_DS_15a.dds`
+					material = CAD_Drums_01_Bassdrum
 					diffuse
 					pre_layer = [
 						{
@@ -7928,14 +7928,14 @@ cas_preset_drums = [
 	}
 	{
 		genre = [
-			`classic rock`
+			`Classic Rock`
 		]
-		cas_drums = {
+		CAS_Drums = {
 			desc_id = basic
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\drums\drumshell_ds_pork1.dds`
-					material = cad_drums_01_primary
+					base_tex = `tex\models\CAR_Instruments\Drums\drumshell_ds_pork1.dds`
+					material = CAD_Drums_01_Primary
 					diffuse
 					pre_layer = [
 						{
@@ -7945,8 +7945,8 @@ cas_preset_drums = [
 					]
 				}
 				{
-					base_tex = `tex\models\car_instruments\drums\bass_skin_ds_15a.dds`
-					material = cad_drums_01_bassdrum
+					base_tex = `tex\models\CAR_Instruments\Drums\bass_skin_DS_15a.dds`
+					material = CAD_Drums_01_Bassdrum
 					diffuse
 					pre_layer = [
 						{
@@ -7961,14 +7961,14 @@ cas_preset_drums = [
 	}
 	{
 		genre = [
-			`classic rock`
+			`Classic Rock`
 		]
-		cas_drums = {
+		CAS_Drums = {
 			desc_id = basic
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\drums\drumshell_ds_pork1.dds`
-					material = cad_drums_01_primary
+					base_tex = `tex\models\CAR_Instruments\Drums\drumshell_ds_pork1.dds`
+					material = CAD_Drums_01_Primary
 					diffuse
 					pre_layer = [
 						{
@@ -7978,8 +7978,8 @@ cas_preset_drums = [
 					]
 				}
 				{
-					base_tex = `tex\models\car_instruments\drums\bass_skin_ds_15a.dds`
-					material = cad_drums_01_bassdrum
+					base_tex = `tex\models\CAR_Instruments\Drums\bass_skin_DS_15a.dds`
+					material = CAD_Drums_01_Bassdrum
 					diffuse
 					pre_layer = [
 						{
@@ -7990,7 +7990,7 @@ cas_preset_drums = [
 					]
 					layers = [
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_graphics076.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics076.img`
 							flags = 3
 							color = yellow_2guitar
 						}
@@ -8001,14 +8001,14 @@ cas_preset_drums = [
 	}
 	{
 		genre = [
-			rock
+			Rock
 		]
-		cas_drums = {
+		CAS_Drums = {
 			desc_id = basic
 			cap = [
 				{
-					base_tex = `tex\models\car_instruments\drums\drumshell_ds_pork1.dds`
-					material = cad_drums_01_primary
+					base_tex = `tex\models\CAR_Instruments\Drums\drumshell_ds_pork1.dds`
+					material = CAD_Drums_01_Primary
 					diffuse
 					pre_layer = [
 						{
@@ -8019,20 +8019,20 @@ cas_preset_drums = [
 					]
 				}
 				{
-					base_tex = `tex\models\car_instruments\drums\bass_skin_ds_15a.dds`
-					material = cad_drums_01_bassdrum
+					base_tex = `tex\models\CAR_Instruments\Drums\bass_skin_DS_15a.dds`
+					material = CAD_Drums_01_Bassdrum
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cadrm/bass_skin_gk_05.img`
+							texture = `tex/models/Characters/Layers/CADrm/bass_skin_GK_05.img`
 							flags = 4
 							color = grey_5guitar
 						}
 					]
 					layers = [
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_icon010.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon010.img`
+							color = Black_1guitar
 							y_trans = 20
 							x_scale = 60
 							y_scale = 65
@@ -8041,7 +8041,7 @@ cas_preset_drums = [
 							x_trans = 12
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_icon010.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon010.img`
 							x_trans = 13
 							y_trans = 20
 							x_scale = 60
@@ -8051,8 +8051,8 @@ cas_preset_drums = [
 							color = yellow_orange_1
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_icon006.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon006.img`
+							color = Black_1guitar
 							y_trans = 10
 							x_scale = 80
 							y_scale = 90
@@ -8061,21 +8061,21 @@ cas_preset_drums = [
 							x_trans = -36
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_icon005.img`
-							color = black_1guitar
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon005.img`
+							color = Black_1guitar
 							y_trans = 6
 							flags = 3
 							x_trans = -15
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_icon005.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon005.img`
 							x_trans = -14
 							y_trans = 6
 							flags = 3
 							color = yellow_orange_1
 						}
 						{
-							texture = `tex/models/characters/skater_male/decals/cag_icon006.img`
+							texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon006.img`
 							x_trans = -35
 							y_trans = 10
 							x_scale = 80
@@ -8093,252 +8093,252 @@ cas_preset_drums = [
 cas_preset_female_vocals = [
 	{
 		genre = [
-			glam
-			rock
-			goth
-			pop
-			punk
-			`black metal`
-			`heavy metal`
-			`classic rock`
+			Glam
+			Rock
+			Goth
+			Pop
+			Punk
+			`Black Metal`
+			`Heavy Metal`
+			`Classic Rock`
 		]
-		cas_mic = {
+		CAS_Mic = {
 			desc_id = mic_standard
 		}
-		cas_mic_stand = {
-			desc_id = `classic rock`
+		CAS_Mic_Stand = {
+			desc_id = `Classic Rock`
 		}
 	}
 	{
-		cas_mic = {
-			desc_id = `black metal`
+		CAS_Mic = {
+			desc_id = `Black Metal`
 		}
-		cas_mic_stand = {
-			desc_id = `classic rock`
-		}
-	}
-	{
-		cas_mic = {
-			desc_id = `glam rock`
-		}
-		cas_mic_stand = {
-			desc_id = `classic rock`
+		CAS_Mic_Stand = {
+			desc_id = `Classic Rock`
 		}
 	}
 	{
-		cas_mic = {
-			desc_id = punk
+		CAS_Mic = {
+			desc_id = `Glam Rock`
 		}
-		cas_mic_stand = {
-			desc_id = `classic rock`
+		CAS_Mic_Stand = {
+			desc_id = `Classic Rock`
 		}
 	}
 	{
-		cas_mic = {
-			desc_id = `classic rock`
+		CAS_Mic = {
+			desc_id = Punk
 		}
-		cas_mic_stand = {
-			desc_id = `classic rock`
+		CAS_Mic_Stand = {
+			desc_id = `Classic Rock`
+		}
+	}
+	{
+		CAS_Mic = {
+			desc_id = `Classic Rock`
+		}
+		CAS_Mic_Stand = {
+			desc_id = `Classic Rock`
 		}
 	}
 	{
 		genre = [
-			glam
-			rock
+			Glam
+			Rock
 			metal
-			goth
-			pop
+			Goth
+			Pop
 		]
-		cas_mic = {
+		CAS_Mic = {
 			desc_id = mic_standard
 		}
-		cas_mic_stand = {
-			desc_id = glam
+		CAS_Mic_Stand = {
+			desc_id = Glam
 		}
 	}
 	{
-		cas_mic = {
-			desc_id = `black metal`
+		CAS_Mic = {
+			desc_id = `Black Metal`
 		}
-		cas_mic_stand = {
-			desc_id = glam
-		}
-	}
-	{
-		cas_mic = {
-			desc_id = `glam rock`
-		}
-		cas_mic_stand = {
-			desc_id = glam
+		CAS_Mic_Stand = {
+			desc_id = Glam
 		}
 	}
 	{
-		cas_mic = {
-			desc_id = punk
+		CAS_Mic = {
+			desc_id = `Glam Rock`
 		}
-		cas_mic_stand = {
-			desc_id = glam
+		CAS_Mic_Stand = {
+			desc_id = Glam
 		}
 	}
 	{
-		cas_mic = {
-			desc_id = `classic rock`
+		CAS_Mic = {
+			desc_id = Punk
 		}
-		cas_mic_stand = {
-			desc_id = glam
+		CAS_Mic_Stand = {
+			desc_id = Glam
+		}
+	}
+	{
+		CAS_Mic = {
+			desc_id = `Classic Rock`
+		}
+		CAS_Mic_Stand = {
+			desc_id = Glam
 		}
 	}
 	{
 		genre = [
-			glam
-			rock
-			pop
-			punk
-			`classic rock`
+			Glam
+			Rock
+			Pop
+			Punk
+			`Classic Rock`
 		]
-		cas_mic = {
+		CAS_Mic = {
 			desc_id = mic_standard
 		}
-		cas_mic_stand = {
-			desc_id = poptastic
+		CAS_Mic_Stand = {
+			desc_id = Poptastic
 		}
 	}
 	{
-		cas_mic = {
-			desc_id = `black metal`
+		CAS_Mic = {
+			desc_id = `Black Metal`
 		}
-		cas_mic_stand = {
-			desc_id = poptastic
-		}
-	}
-	{
-		cas_mic = {
-			desc_id = `glam rock`
-		}
-		cas_mic_stand = {
-			desc_id = poptastic
+		CAS_Mic_Stand = {
+			desc_id = Poptastic
 		}
 	}
 	{
-		cas_mic = {
-			desc_id = punk
+		CAS_Mic = {
+			desc_id = `Glam Rock`
 		}
-		cas_mic_stand = {
-			desc_id = poptastic
+		CAS_Mic_Stand = {
+			desc_id = Poptastic
 		}
 	}
 	{
-		cas_mic = {
-			desc_id = `classic rock`
+		CAS_Mic = {
+			desc_id = Punk
 		}
-		cas_mic_stand = {
-			desc_id = poptastic
+		CAS_Mic_Stand = {
+			desc_id = Poptastic
+		}
+	}
+	{
+		CAS_Mic = {
+			desc_id = `Classic Rock`
+		}
+		CAS_Mic_Stand = {
+			desc_id = Poptastic
 		}
 	}
 	{
 		genre = [
-			rock
-			goth
-			`black metal`
-			`heavy metal`
+			Rock
+			Goth
+			`Black Metal`
+			`Heavy Metal`
 		]
-		cas_mic = {
+		CAS_Mic = {
 			desc_id = mic_standard
 		}
-		cas_mic_stand = {
-			desc_id = rock
+		CAS_Mic_Stand = {
+			desc_id = Rock
 		}
 	}
 	{
-		cas_mic = {
-			desc_id = `black metal`
+		CAS_Mic = {
+			desc_id = `Black Metal`
 		}
-		cas_mic_stand = {
-			desc_id = rock
-		}
-	}
-	{
-		cas_mic = {
-			desc_id = `glam rock`
-		}
-		cas_mic_stand = {
-			desc_id = rock
+		CAS_Mic_Stand = {
+			desc_id = Rock
 		}
 	}
 	{
-		cas_mic = {
-			desc_id = punk
+		CAS_Mic = {
+			desc_id = `Glam Rock`
 		}
-		cas_mic_stand = {
-			desc_id = rock
+		CAS_Mic_Stand = {
+			desc_id = Rock
 		}
 	}
 	{
-		cas_mic = {
-			desc_id = `classic rock`
+		CAS_Mic = {
+			desc_id = Punk
 		}
-		cas_mic_stand = {
-			desc_id = rock
+		CAS_Mic_Stand = {
+			desc_id = Rock
+		}
+	}
+	{
+		CAS_Mic = {
+			desc_id = `Classic Rock`
+		}
+		CAS_Mic_Stand = {
+			desc_id = Rock
 		}
 	}
 ]
 cas_preset_male_vocals = [
 	{
-		cas_mic = {
-			desc_id = rock
+		CAS_Mic = {
+			desc_id = Rock
 		}
-		cas_mic_stand = {
-			desc_id = rock
+		CAS_Mic_Stand = {
+			desc_id = Rock
 		}
 		genre = [
-			rock
+			Rock
 		]
 	}
 	{
-		cas_mic = {
-			desc_id = goth
+		CAS_Mic = {
+			desc_id = Goth
 		}
-		cas_mic_stand = {
-			desc_id = goth
+		CAS_Mic_Stand = {
+			desc_id = Goth
 		}
 		genre = [
-			goth
+			Goth
 		]
 	}
 	{
-		cas_mic = {
-			desc_id = pop
+		CAS_Mic = {
+			desc_id = Pop
 		}
-		cas_mic_stand = {
-			desc_id = poptastic
+		CAS_Mic_Stand = {
+			desc_id = Poptastic
 		}
 		genre = [
-			pop
+			Pop
 		]
 	}
 	{
-		cas_mic = {
+		CAS_Mic = {
 			desc_id = metal
 		}
-		cas_mic_stand = {
-			desc_id = goth
+		CAS_Mic_Stand = {
+			desc_id = Goth
 		}
 		genre = [
-			`glam rock`
-			`classic rock`
-			punk
+			`Glam Rock`
+			`Classic Rock`
+			Punk
 		]
 	}
 	{
-		cas_mic = {
+		CAS_Mic = {
 			desc_id = mic_standard
 		}
-		cas_mic_stand = {
+		CAS_Mic_Stand = {
 			desc_id = mic_stand_metal
 		}
 		genre = [
-			`heavy metal`
-			`black metal`
+			`Heavy Metal`
+			`Black Metal`
 		]
 	}
 ]

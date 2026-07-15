@@ -1,72 +1,72 @@
 
-script ondebuggerstartup 
+script OnDebuggerStartup 
 	printf \{"Starting up debugger scripts..."}
-	sendscriptfunctionstodebugger
-	debuggersendmodetext
+	SendScriptFunctionsToDebugger
+	DebuggerSendModeText
 endscript
 
-script ondebuggerquit 
-	clearspritepreview
+script OnDebuggerQuit 
+	ClearSpritePreview
 endscript
 
-script debuggersendmodetext 
-	debuggergetmodetext
-	runremotescript {
-		objid = mouse_window
-		scriptname = settitle
+script DebuggerSendModeText 
+	DebuggerGetModeText
+	RunRemoteScript {
+		ObjID = mouse_window
+		ScriptName = SetTitle
 		params = {
 			('Mouse window: ' + <mode_text>)
 		}
 	}
 endscript
 
-script getgamescriptfunctionlist 
-	scriptfunctions = [
-		{text = 'Toggle Mouse Select Mode' , scriptname = debuggercycleselectmode}
-		{text = 'Preview Image' , scriptname = requestimagepreview}
-		{text = 'Clear Previewed Images' , scriptname = clearspritepreview}
-		{text = 'Send Camera to Clipboard' , scriptname = copycameralocationtoclipboard}
+script GetGameScriptFunctionList 
+	ScriptFunctions = [
+		{text = 'Toggle Mouse Select Mode' , ScriptName = DebuggerCycleSelectMode}
+		{text = 'Preview Image' , ScriptName = RequestImagePreview}
+		{text = 'Clear Previewed Images' , ScriptName = ClearSpritePreview}
+		{text = 'Send Camera to Clipboard' , ScriptName = CopyCameraLocationToClipboard}
 	]
 	return <...>
 endscript
 
-script getandcombinescriptfunctionlists 
-	getgamescriptfunctionlist
-	if scriptexists \{getuserscriptfunctionlist}
-		getuserscriptfunctionlist
-		if gotparam \{userscriptfunctions}
+script GetAndCombineScriptFunctionLists 
+	GetGameScriptFunctionList
+	if ScriptExists \{GetUserScriptFunctionList}
+		GetUserScriptFunctionList
+		if GotParam \{UserScriptFunctions}
 			return {
-				functionsets = [
-					{setname = 'User Scripts' functions = <userscriptfunctions>}
-					{setname = 'Game Scripts' functions = <scriptfunctions>}
+				FunctionSets = [
+					{SetName = 'User Scripts' Functions = <UserScriptFunctions>}
+					{SetName = 'Game Scripts' Functions = <ScriptFunctions>}
 				]
 				title = 'Script Function List'
 				id = scriptfuncs
-				buttonscript = runremotescript
+				ButtonScript = RunRemoteScript
 			}
 		endif
 	endif
 	return {
-		functionsets = [
-			{setname = 'Game Scripts' functions = <scriptfunctions>}
+		FunctionSets = [
+			{SetName = 'Game Scripts' Functions = <ScriptFunctions>}
 		]
 		title = 'Script Function List'
 		id = scriptfuncs
-		buttonscript = runremotescript
+		ButtonScript = RunRemoteScript
 	}
 endscript
 
-script sendscriptfunctionstodebugger 
-	getandcombinescriptfunctionlists
-	runremotescript scriptname = createfunctionlistwindow params = <...>
+script SendScriptFunctionsToDebugger 
+	GetAndCombineScriptFunctionLists
+	RunRemoteScript ScriptName = CreateFunctionListWindow params = <...>
 endscript
 
 script dospritehighlighteffect 
-	setscreenelementlock \{id = root_window
+	SetScreenElementLock \{id = root_window
 		off}
-	createscreenelement \{parent = root_window
+	CreateScreenElement \{parent = root_window
 		id = debugger_sprite_highlight
-		type = containerelement
+		type = ContainerElement
 		tags = {
 			hide_from_debugger
 		}
@@ -78,33 +78,33 @@ script dospritehighlighteffect
 	box_border_width = 3
 	box_color = [128 30 128 128]
 	resize_color = [128 80 0 128]
-	createscreenelement {
+	CreateScreenElement {
 		parent = debugger_sprite_highlight
-		type = spriteelement
+		type = SpriteElement
 		pos = (<x> * (1.0, 0.0) + <y> * (0.0, 1.0))
 		dims = (<w> * (1.0, 0.0) + <box_border_width> * (0.0, 1.0))
 		rgba = <box_color>
 		just = [left top]
 	}
-	createscreenelement {
+	CreateScreenElement {
 		parent = debugger_sprite_highlight
-		type = spriteelement
+		type = SpriteElement
 		pos = (<x> * (1.0, 0.0) + <y> * (0.0, 1.0) + <h> * (0.0, 1.0))
 		dims = (<w> * (1.0, 0.0) + <box_border_width> * (0.0, 1.0))
 		rgba = <box_color>
 		just = [left bottom]
 	}
-	createscreenelement {
+	CreateScreenElement {
 		parent = debugger_sprite_highlight
-		type = spriteelement
+		type = SpriteElement
 		pos = (<x> * (1.0, 0.0) + <y> * (0.0, 1.0))
 		dims = (<box_border_width> * (1.0, 0.0) + <h> * (0.0, 1.0))
 		rgba = <box_color>
 		just = [left top]
 	}
-	createscreenelement {
+	CreateScreenElement {
 		parent = debugger_sprite_highlight
-		type = spriteelement
+		type = SpriteElement
 		pos = (<x> * (1.0, 0.0) + <w> * (1.0, 0.0) + <y> * (0.0, 1.0))
 		dims = (<box_border_width> * (1.0, 0.0) + <h> * (0.0, 1.0))
 		rgba = <box_color>
@@ -118,54 +118,54 @@ script dospritehighlighteffect
 	if (<h> < <resize_handle_y>)
 		resize_handle_y = <h>
 	endif
-	createscreenelement {
+	CreateScreenElement {
 		parent = debugger_sprite_highlight
-		type = spriteelement
+		type = SpriteElement
 		pos = (<x> * (1.0, 0.0) + <w> * (1.0, 0.0) + <y> * (0.0, 1.0) + <h> * (0.0, 1.0))
 		dims = (<resize_handle_x> * (1.0, 0.0) + <resize_handle_y> * (0.0, 1.0))
 		rgba = <resize_color>
 		just = [right bottom]
 	}
-	runscriptonscreenelement \{id = debugger_sprite_highlight
+	RunScriptOnScreenElement \{id = debugger_sprite_highlight
 		debugger_sprite_highlight_flash}
 endscript
 
 script debugger_sprite_highlight_flash 
 	begin
-	domorph \{alpha = 0.5
+	DoMorph \{alpha = 0.5
 		time = 1}
-	domorph \{alpha = 1
+	DoMorph \{alpha = 1
 		time = 1}
 	repeat
 endscript
 
 script killspritehighlighteffect 
-	if screenelementexists \{id = debugger_sprite_highlight}
-		destroyscreenelement \{id = debugger_sprite_highlight}
+	if ScreenElementExists \{id = debugger_sprite_highlight}
+		DestroyScreenElement \{id = debugger_sprite_highlight}
 	endif
 endscript
 
-script requestimagepreview 
-	runremotescript \{scriptname = getopenfilename
-		disabletimeout
+script RequestImagePreview 
+	RunRemoteScript \{ScriptName = GetOpenFileName
+		DisableTimeout
 		params = {
 			typename = 'PNG Images'
 			typefilter = '*.png'
 		}
-		localcallback = requestimagepreview_gotfile}
+		LocalCallback = RequestImagePreview_GotFile}
 endscript
 
-script requestimagepreview_gotfile 
-	if gotparam \{filename}
-		formattext textname = args '-pp -f%a' a = <filename>
-		runremotescript {
-			scriptname = runshellcommand
-			disabletimeout
+script RequestImagePreview_GotFile 
+	if GotParam \{filename}
+		FormatText TextName = args '-pp -f%a' a = <filename>
+		RunRemoteScript {
+			ScriptName = RunShellCommand
+			DisableTimeout
 			params = {
 				command = 'bindproj && pngconv.exe'
 				args = <args>
 			}
-			localcallback = requestimagepreview_fileconverted
+			LocalCallback = RequestImagePreview_FileConverted
 			callbackparams = {filename = <filename>}
 		}
 	else
@@ -173,46 +173,46 @@ script requestimagepreview_gotfile
 	endif
 endscript
 
-script requestimagepreview_fileconverted 
-	if getrelativepath path = (<callbackparams>.filename) dir = 'images' discard_extension
-		getfilenamefrompath path = <relativepath>
+script RequestImagePreview_FileConverted 
+	if GetRelativePath path = (<callbackparams>.filename) dir = 'images' discard_extension
+		GetFileNameFromPath path = <relativepath>
 	else
 		message = 'Sprite needs to be located in ' [proj_root] / data / images ' or subdirectory thereof !!!!'
 		printf <message>
-		runremotescript scriptname = printf params = {<message>}
+		RunRemoteScript ScriptName = printf params = {<message>}
 		return
 	endif
-	addimagetogame <...>
+	AddImageToGame <...>
 endscript
 
-script addimagetogame 
-	formattext checksumname = texture_checksum <filename>
-	formattext checksumname = sprite_id 'debugger_preview_sprite_%s' s = <filename>
-	if screenelementexists id = <sprite_id>
-		clearspritepreview_killpreviewelement id = <sprite_id>
+script AddImageToGame 
+	FormatText checksumname = texture_checksum <filename>
+	FormatText checksumname = sprite_id 'debugger_preview_sprite_%s' s = <filename>
+	if ScreenElementExists id = <sprite_id>
+		ClearSpritePreview_KillPreviewElement id = <sprite_id>
 	endif
-	if NOT istextureindictionary dictionary = sprite texture = <texture_checksum>
-		loadtexture <relativepath>
+	if NOT IsTextureInDictionary dictionary = sprite texture = <texture_checksum>
+		LoadTexture <relativepath>
 		need_unload = 1
 	endif
 	element_z = 20000
-	if NOT screenelementexists \{id = debugger_sprite_preview_anchor}
-		setscreenelementlock \{id = root_window
+	if NOT ScreenElementExists \{id = debugger_sprite_preview_anchor}
+		SetScreenElementLock \{id = root_window
 			off}
-		createscreenelement {
-			type = containerelement
+		CreateScreenElement {
+			type = ContainerElement
 			parent = root_window
 			id = debugger_sprite_preview_anchor
 			z_priority = <element_z>
 		}
 	else
-		debugger_sprite_preview_anchor :getsingletag \{element_z}
+		debugger_sprite_preview_anchor :GetSingleTag \{element_z}
 	endif
 	element_z = (<element_z> + 1)
-	setscreenelementlock \{id = debugger_sprite_preview_anchor
+	SetScreenElementLock \{id = debugger_sprite_preview_anchor
 		off}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = debugger_sprite_preview_anchor
 		id = <sprite_id>
 		texture = <texture_checksum>
@@ -221,35 +221,35 @@ script addimagetogame
 		rgba = [128 128 128 128]
 		z_priority = <element_z>
 	}
-	<sprite_id> :settags debugger_display_name = <filename>
-	debugger_sprite_preview_anchor :settags element_z = <element_z>
-	if gotparam \{need_unload}
-		<sprite_id> :settags need_sprite_unload = <relativepath>
+	<sprite_id> :SetTags debugger_display_name = <filename>
+	debugger_sprite_preview_anchor :SetTags element_z = <element_z>
+	if GotParam \{need_unload}
+		<sprite_id> :SetTags need_sprite_unload = <relativepath>
 	endif
 endscript
 
-script clearspritepreview 
-	if screenelementexists \{id = debugger_sprite_preview_anchor}
-		getscreenelementchildren \{id = debugger_sprite_preview_anchor}
-		if gotparam \{children}
+script ClearSpritePreview 
+	if ScreenElementExists \{id = debugger_sprite_preview_anchor}
+		GetScreenElementChildren \{id = debugger_sprite_preview_anchor}
+		if GotParam \{children}
 			i = 0
-			getarraysize <children>
+			GetArraySize <children>
 			begin
-			clearspritepreview_killpreviewelement id = (<children> [<i>])
+			ClearSpritePreview_KillPreviewElement id = (<children> [<i>])
 			i = (<i> + 1)
 			repeat <array_size>
 		endif
-		destroyscreenelement \{id = debugger_sprite_preview_anchor}
+		DestroyScreenElement \{id = debugger_sprite_preview_anchor}
 	endif
 endscript
 
-script clearspritepreview_killpreviewelement 
-	if <id> :getsingletag need_sprite_unload
+script ClearSpritePreview_KillPreviewElement 
+	if <id> :GetSingleTag need_sprite_unload
 		printf \{"destroying element with sprite unload"}
-		destroyscreenelement id = <id>
-		unloadtexture <need_sprite_unload>
+		DestroyScreenElement id = <id>
+		UnloadTexture <need_sprite_unload>
 	else
 		printf \{"destroying element with no sprite unload"}
-		destroyscreenelement id = <id>
+		DestroyScreenElement id = <id>
 	endif
 endscript

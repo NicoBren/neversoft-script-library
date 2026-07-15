@@ -66,10 +66,10 @@ script play_intro
 		disable_bg_viewport
 		return
 	endif
-	killspawnedscript \{name = guitarevent_songfailed_spawned}
-	if gotparam \{fast}
+	KillSpawnedScript \{name = GuitarEvent_SongFailed_Spawned}
+	if GotParam \{Fast}
 		change \{current_intro = fastintro_sequence_props}
-	elseif gotparam \{practice}
+	elseif GotParam \{practice}
 		change \{current_intro = practice_sequence_props}
 	else
 		change \{current_intro = intro_sequence_props}
@@ -78,14 +78,14 @@ script play_intro
 		spawnscriptnow \{intro_song_info
 			id = intro_scripts}
 	endif
-	if NOT ($cheat_performancemode = 1 && $is_network_game = 0)
+	if NOT ($Cheat_PerformanceMode = 1 && $is_network_game = 0)
 		spawnscriptnow \{intro_highway_move
 			id = intro_scripts}
 	endif
 	player = 1
 	begin
-	formattext checksumname = player_status 'player%i_status' i = <player>
-	formattext textname = player_text 'p%i' i = <player>
+	FormatText checksumname = player_status 'player%i_status' i = <player>
+	FormatText TextName = player_text 'p%i' i = <player>
 	spawnscriptnow intro_buttonup_ripple params = <...> id = intro_scripts
 	player = (<player> + 1)
 	repeat $current_num_players
@@ -96,108 +96,108 @@ script play_intro
 endscript
 
 script destroy_intro 
-	killspawnedscript \{id = intro_scripts}
-	killspawnedscript \{name = song_intro_kick_sfx_waiting}
-	killspawnedscript \{name = song_intro_highway_up_sfx_waiting}
-	killspawnedscript \{name = move_highway_2d}
-	killspawnedscript \{name = intro_buttonup_ripple}
-	killspawnedscript \{name = intro_hud_move}
-	doscreenelementmorph \{id = intro_song_info_text
+	KillSpawnedScript \{id = intro_scripts}
+	KillSpawnedScript \{name = Song_Intro_Kick_SFX_Waiting}
+	KillSpawnedScript \{name = Song_Intro_Highway_Up_SFX_Waiting}
+	KillSpawnedScript \{name = move_highway_2d}
+	KillSpawnedScript \{name = intro_buttonup_ripple}
+	KillSpawnedScript \{name = intro_hud_move}
+	doScreenElementMorph \{id = intro_song_info_text
 		alpha = 0}
-	doscreenelementmorph \{id = intro_artist_info_text
+	doScreenElementMorph \{id = intro_artist_info_text
 		alpha = 0}
-	doscreenelementmorph \{id = intro_performed_by_text
+	doScreenElementMorph \{id = intro_performed_by_text
 		alpha = 0}
 	player = 1
 	begin
-	formattext checksumname = player_status 'player%i_status' i = <player> addtostringlookup
-	enableinput controller = ($<player_status>.controller)
+	FormatText checksumname = player_status 'player%i_status' i = <player> AddToStringLookup
+	EnableInput controller = ($<player_status>.controller)
 	player = (<player> + 1)
 	repeat $current_num_players
 endscript
 
 script intro_buttonup_ripple 
-	enableinput off controller = ($<player_status>.controller)
+	EnableInput off controller = ($<player_status>.controller)
 	begin
-	getsongtimems
+	GetSongTimeMs
 	if ($current_intro.button_ripple_start_time + $current_starttime < <time>)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	if ($current_intro.button_ripple_per_button_time = 0)
 		return
 	endif
-	getarraysize \{$gem_colors}
-	soundevent \{event = notes_ripple_up_sfx}
-	extendcrc button_up_pixel_array ($<player_status>.text) out = pixel_array
+	GetArraySize \{$gem_colors}
+	SoundEvent \{event = Notes_Ripple_Up_SFX}
+	ExtendCRC button_up_pixel_array ($<player_status>.text) out = pixel_array
 	buttonup_count = 0
 	begin
-	wait ($current_intro.button_ripple_per_button_time / 1000.0) seconds
+	Wait ($current_intro.button_ripple_per_button_time / 1000.0) seconds
 	array_count = 0
 	begin
 	color = ($gem_colors [<array_count>])
 	if (<array_count> = <buttonup_count>)
-		setarrayelement arrayname = <pixel_array> globalarray index = <array_count> newvalue = $button_up_pixels
+		SetArrayElement ArrayName = <pixel_array> GlobalArray index = <array_count> newvalue = $button_up_pixels
 	endif
 	array_count = (<array_count> + 1)
 	repeat <array_size>
 	buttonup_count = (<buttonup_count> + 1)
 	repeat (<array_size> + 1)
-	enableinput controller = ($<player_status>.controller)
+	EnableInput controller = ($<player_status>.controller)
 endscript
 
 script intro_song_info 
 	begin
-	getsongtimems
+	GetSongTimeMs
 	if ($current_intro.song_title_start_time + $current_starttime < <time>)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	if ($current_intro.song_title_on_time = 0)
 		return
 	endif
 	get_song_title song = ($current_song)
-	getuppercasestring <song_title>
-	intro_song_info_text :setprops text = <uppercasestring>
-	intro_song_info_text :domorph pos = ($current_intro.song_title_pos)
+	GetUpperCaseString <song_title>
+	intro_song_info_text :SetProps text = <UpperCaseString>
+	intro_song_info_text :DoMorph pos = ($current_intro.song_title_pos)
 	get_song_artist song = ($current_song)
-	getuppercasestring <song_artist>
-	intro_artist_info_text :setprops text = <uppercasestring>
-	intro_artist_info_text :domorph pos = ($current_intro.song_artist_pos)
+	GetUpperCaseString <song_artist>
+	intro_artist_info_text :SetProps text = <UpperCaseString>
+	intro_artist_info_text :DoMorph pos = ($current_intro.song_artist_pos)
 	get_song_artist_text song = ($current_song)
-	getuppercasestring <song_artist_text>
-	intro_performed_by_text :setprops text = <uppercasestring>
-	intro_performed_by_text :domorph pos = ($current_intro.performed_by_pos)
-	intro_song_info_text :setprops \{z_priority = 5.0}
-	intro_artist_info_text :setprops \{z_priority = 5.0}
-	intro_performed_by_text :setprops \{z_priority = 5.0}
-	doscreenelementmorph id = intro_song_info_text alpha = 1 time = ($current_intro.song_title_fade_time / 1000.0)
-	doscreenelementmorph id = intro_performed_by_text alpha = 1 time = ($current_intro.song_title_fade_time / 1000.0)
-	doscreenelementmorph id = intro_artist_info_text alpha = 1 time = ($current_intro.song_title_fade_time / 1000.0)
-	wait ($current_intro.song_title_on_time / 1000.0) seconds
-	doscreenelementmorph id = intro_song_info_text alpha = 0 time = ($current_intro.song_title_fade_time / 1000.0)
-	doscreenelementmorph id = intro_artist_info_text alpha = 0 time = ($current_intro.song_title_fade_time / 1000.0)
-	doscreenelementmorph id = intro_performed_by_text alpha = 0 time = ($current_intro.song_title_fade_time / 1000.0)
+	GetUpperCaseString <song_artist_text>
+	intro_performed_by_text :SetProps text = <UpperCaseString>
+	intro_performed_by_text :DoMorph pos = ($current_intro.performed_by_pos)
+	intro_song_info_text :SetProps \{z_priority = 5.0}
+	intro_artist_info_text :SetProps \{z_priority = 5.0}
+	intro_performed_by_text :SetProps \{z_priority = 5.0}
+	doScreenElementMorph id = intro_song_info_text alpha = 1 time = ($current_intro.song_title_fade_time / 1000.0)
+	doScreenElementMorph id = intro_performed_by_text alpha = 1 time = ($current_intro.song_title_fade_time / 1000.0)
+	doScreenElementMorph id = intro_artist_info_text alpha = 1 time = ($current_intro.song_title_fade_time / 1000.0)
+	Wait ($current_intro.song_title_on_time / 1000.0) seconds
+	doScreenElementMorph id = intro_song_info_text alpha = 0 time = ($current_intro.song_title_fade_time / 1000.0)
+	doScreenElementMorph id = intro_artist_info_text alpha = 0 time = ($current_intro.song_title_fade_time / 1000.0)
+	doScreenElementMorph id = intro_performed_by_text alpha = 0 time = ($current_intro.song_title_fade_time / 1000.0)
 endscript
 
 script intro_highway_move 
 	begin
-	getsongtimems
+	GetSongTimeMs
 	if ($current_intro.highway_start_time + $current_starttime < <time>)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
-	spawnscriptnow \{song_intro_highway_up_sfx_waiting}
+	spawnscriptnow \{Song_Intro_Highway_Up_SFX_Waiting}
 	player = 1
 	begin
-	formattext checksumname = player_status 'player%i_status' i = <player> addtostringlookup
-	formattext textname = player_text 'p%i' i = <player> addtostringlookup
+	FormatText checksumname = player_status 'player%i_status' i = <player> AddToStringLookup
+	FormatText TextName = player_text 'p%i' i = <player> AddToStringLookup
 	move_highway_camera_to_default <...> time = ($current_intro.highway_move_time / 1000.0)
 	player = (<player> + 1)
 	repeat $current_num_players
@@ -205,45 +205,45 @@ endscript
 
 script intro_hud_move 
 	begin
-	getsongtimems
+	GetSongTimeMs
 	if ($current_intro.hud_start_time + $current_starttime < <time>)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	get_num_players_by_gamemode
 	player = 1
 	begin
-	formattext checksumname = player_status 'player%i_status' i = <player> addtostringlookup
-	formattext textname = player_text 'p%i' i = <player> addtostringlookup
+	FormatText checksumname = player_status 'player%i_status' i = <player> AddToStringLookup
+	FormatText TextName = player_text 'p%i' i = <player> AddToStringLookup
 	move_hud_to_default <...> time = ($current_intro.hud_move_time / 1000.0)
 	player = (<player> + 1)
 	repeat <num_players>
 	if ($game_mode = p2_battle && $battle_sudden_death = 1)
 		restore_saved_powerups
 	endif
-	spawnscriptnow \{song_intro_kick_sfx_waiting}
+	spawnscriptnow \{Song_Intro_Kick_SFX_Waiting}
 endscript
 
 script play_outro 
-	songunloadfsbifdownloaded
-	kill_starpower_camera \{changecamera = 0}
-	kill_walk_camera \{changecamera = 0}
+	SongUnLoadFSBIfDownloaded
+	Kill_StarPower_Camera \{changecamera = 0}
+	Kill_Walk_Camera \{changecamera = 0}
 	change \{structurename = player1_status
 		star_power_amount = 0}
 	change \{structurename = player2_status
 		star_power_amount = 0}
-	kill_starpower_stagefx player_text = ($player1_status.text) player_status = $player1_status ifempty = 0
-	kill_starpower_stagefx player_text = ($player2_status.text) player_status = $player2_status ifempty = 0
+	Kill_StarPower_StageFX player_text = ($player1_status.text) player_status = $player1_status ifEmpty = 0
+	Kill_StarPower_StageFX player_text = ($player2_status.text) player_status = $player2_status ifEmpty = 0
 	change \{showing_raise_axe = 0}
-	destroy2dparticlesystem \{id = all}
-	launchgemevent \{event = kill_objects}
+	Destroy2DParticleSystem \{id = all}
+	LaunchGemEvent \{event = kill_objects}
 	player = 1
 	begin
-	formattext checksumname = player_status 'player%i_status' i = <player> addtostringlookup
-	formattext textname = player_text 'p%i' i = <player> addtostringlookup
-	guitarevent_killsong <...>
+	FormatText checksumname = player_status 'player%i_status' i = <player> AddToStringLookup
+	FormatText TextName = player_text 'p%i' i = <player> AddToStringLookup
+	GuitarEvent_KillSong <...>
 	destroy_hud <...>
 	battlemode_deinit <...>
 	bossbattle_deinit <...>
@@ -254,92 +254,92 @@ script play_outro
 	practicemode_deinit
 	notemap_deinit
 	kill_startup_script <...>
-	killspawnedscript \{name = guitarevent_missednote}
-	killspawnedscript \{name = guitarevent_unnecessarynote}
-	killspawnedscript \{name = guitarevent_hitnotes}
-	killspawnedscript \{name = guitarevent_hitnote}
-	killspawnedscript \{name = guitarevent_starpoweron}
-	killspawnedscript \{name = guitarevent_starpoweroff}
-	killspawnedscript \{name = guitarevent_starhitnote}
-	killspawnedscript \{name = guitarevent_starsequencebonus}
-	killspawnedscript \{name = guitarevent_starmissnote}
-	killspawnedscript \{name = guitarevent_whammyon}
-	killspawnedscript \{name = guitarevent_whammyoff}
-	killspawnedscript \{name = guitarevent_starwhammyon}
-	killspawnedscript \{name = guitarevent_starwhammyoff}
-	killspawnedscript \{name = guitarevent_note_window_open}
-	killspawnedscript \{name = guitarevent_note_window_close}
-	killspawnedscript \{name = guitarevent_crowd_poor_medium}
-	killspawnedscript \{name = guitarevent_crowd_medium_good}
-	killspawnedscript \{name = guitarevent_crowd_medium_poor}
-	killspawnedscript \{name = guitarevent_crowd_good_medium}
-	killspawnedscript \{name = guitarevent_createfirstgem}
-	killspawnedscript \{name = highway_pulse_black}
-	killspawnedscript \{name = guitarevent_hitnote_spawned}
-	killspawnedscript \{name = hit_note_fx}
-	killspawnedscript \{name = do_starpower_stagefx}
-	killspawnedscript \{name = do_starpower_camera}
-	killspawnedscript \{name = first_gem_fx}
-	killspawnedscript \{name = gem_iterator}
-	killspawnedscript \{name = gem_array_stepper}
-	killspawnedscript \{name = gem_array_events}
-	killspawnedscript \{name = gem_step}
-	killspawnedscript \{name = gem_step_end}
-	killspawnedscript \{name = fretbar_iterator}
-	killspawnedscript \{name = strum_iterator}
-	killspawnedscript \{name = fretpos_iterator}
-	killspawnedscript \{name = fretfingers_iterator}
-	killspawnedscript \{name = drum_iterator}
-	killspawnedscript \{name = drum_cymbal_iterator}
-	killspawnedscript \{name = watchforstartplaying_iterator}
-	killspawnedscript \{name = gem_scroller}
-	killspawnedscript \{name = button_checker}
-	killspawnedscript \{name = check_buttons}
-	killspawnedscript \{name = check_buttons_fast}
-	killspawnedscript \{name = fretbar_update_tempo}
-	killspawnedscript \{name = fretbar_update_hammer_on_tolerance}
-	killspawnedscript \{name = move_whammy}
-	killspawnedscript \{name = create_fretbar}
-	killspawnedscript \{name = move_highway_2d}
-	killspawnedscript \{name = update_score_fast}
-	killspawnedscript \{name = check_for_star_power}
-	killspawnedscript \{name = wait_for_inactive}
-	killspawnedscript \{name = guitarevent_prefretbar}
-	killspawnedscript \{name = guitarevent_fretbar}
-	killspawnedscript \{name = check_note_hold}
-	killspawnedscript \{name = star_power_whammy}
-	killspawnedscript \{name = show_star_power_ready}
-	killspawnedscript \{name = hud_glowburst_alert}
+	KillSpawnedScript \{name = GuitarEvent_MissedNote}
+	KillSpawnedScript \{name = GuitarEvent_UnnecessaryNote}
+	KillSpawnedScript \{name = GuitarEvent_HitNotes}
+	KillSpawnedScript \{name = GuitarEvent_HitNote}
+	KillSpawnedScript \{name = GuitarEvent_StarPowerOn}
+	KillSpawnedScript \{name = GuitarEvent_StarPowerOff}
+	KillSpawnedScript \{name = GuitarEvent_StarHitNote}
+	KillSpawnedScript \{name = GuitarEvent_StarSequenceBonus}
+	KillSpawnedScript \{name = GuitarEvent_StarMissNote}
+	KillSpawnedScript \{name = GuitarEvent_WhammyOn}
+	KillSpawnedScript \{name = GuitarEvent_WhammyOff}
+	KillSpawnedScript \{name = GuitarEvent_StarWhammyOn}
+	KillSpawnedScript \{name = GuitarEvent_StarWhammyOff}
+	KillSpawnedScript \{name = GuitarEvent_Note_Window_Open}
+	KillSpawnedScript \{name = GuitarEvent_Note_Window_Close}
+	KillSpawnedScript \{name = GuitarEvent_crowd_poor_medium}
+	KillSpawnedScript \{name = GuitarEvent_crowd_medium_good}
+	KillSpawnedScript \{name = GuitarEvent_crowd_medium_poor}
+	KillSpawnedScript \{name = GuitarEvent_crowd_good_medium}
+	KillSpawnedScript \{name = GuitarEvent_CreateFirstGem}
+	KillSpawnedScript \{name = highway_pulse_black}
+	KillSpawnedScript \{name = GuitarEvent_HitNote_Spawned}
+	KillSpawnedScript \{name = hit_note_fx}
+	KillSpawnedScript \{name = Do_StarPower_StageFX}
+	KillSpawnedScript \{name = Do_StarPower_Camera}
+	KillSpawnedScript \{name = first_gem_fx}
+	KillSpawnedScript \{name = gem_iterator}
+	KillSpawnedScript \{name = gem_array_stepper}
+	KillSpawnedScript \{name = gem_array_events}
+	KillSpawnedScript \{name = gem_step}
+	KillSpawnedScript \{name = gem_step_end}
+	KillSpawnedScript \{name = fretbar_iterator}
+	KillSpawnedScript \{name = Strum_iterator}
+	KillSpawnedScript \{name = FretPos_iterator}
+	KillSpawnedScript \{name = FretFingers_iterator}
+	KillSpawnedScript \{name = Drum_iterator}
+	KillSpawnedScript \{name = Drum_cymbal_iterator}
+	KillSpawnedScript \{name = WatchForStartPlaying_iterator}
+	KillSpawnedScript \{name = gem_scroller}
+	KillSpawnedScript \{name = button_checker}
+	KillSpawnedScript \{name = check_buttons}
+	KillSpawnedScript \{name = check_buttons_fast}
+	KillSpawnedScript \{name = fretbar_update_tempo}
+	KillSpawnedScript \{name = fretbar_update_hammer_on_tolerance}
+	KillSpawnedScript \{name = move_whammy}
+	KillSpawnedScript \{name = create_fretbar}
+	KillSpawnedScript \{name = move_highway_2d}
+	KillSpawnedScript \{name = update_score_fast}
+	KillSpawnedScript \{name = check_for_star_power}
+	KillSpawnedScript \{name = wait_for_inactive}
+	KillSpawnedScript \{name = GuitarEvent_PreFretbar}
+	KillSpawnedScript \{name = GuitarEvent_Fretbar}
+	KillSpawnedScript \{name = check_note_hold}
+	KillSpawnedScript \{name = star_power_whammy}
+	KillSpawnedScript \{name = show_star_power_ready}
+	KillSpawnedScript \{name = hud_glowburst_alert}
 	change \{star_power_ready_on_p1 = 0}
 	change \{star_power_ready_on_p2 = 0}
-	killspawnedscript \{name = event_iterator}
-	killspawnedscript \{name = win_song}
-	killspawnedscript \{name = hand_note_iterator}
-	killspawnedscript \{name = kill_object_later}
-	killspawnedscript \{name = show_coop_raise_axe_for_starpower}
-	killspawnedscript \{name = net_whammy_pitch_shift}
-	killspawnedscript \{name = crowd_allplayanim}
-	killspawnedscript \{name = hud_activated_star_power_spawned}
-	killspawnedscript \{name = pulsate_all_star_power_bulbs}
-	killspawnedscript \{name = pulsate_star_power_bulb}
-	killspawnedscript \{name = rock_meter_star_power_on}
-	killspawnedscript \{name = rock_meter_star_power_off}
-	killspawnedscript \{name = hud_activated_star_power}
-	killspawnedscript \{name = hud_move_note_scorebar}
-	killspawnedscript \{name = hud_flash_red_bg_p1}
-	killspawnedscript \{name = hud_flash_red_bg_p2}
-	killspawnedscript \{name = hud_flash_red_bg_kill}
-	killspawnedscript \{name = hud_lightning_alert}
-	killspawnedscript \{name = hud_show_note_streak_combo}
-	killspawnedscript \{name = play_intro}
-	killspawnedscript \{name = begin_song_after_intro}
-	if gotparam \{kill_cameracuts_iterator}
-		killspawnedscript \{name = cameracuts_iterator}
+	KillSpawnedScript \{name = event_iterator}
+	KillSpawnedScript \{name = win_song}
+	KillSpawnedScript \{name = hand_note_iterator}
+	KillSpawnedScript \{name = kill_object_later}
+	KillSpawnedScript \{name = show_coop_raise_axe_for_starpower}
+	KillSpawnedScript \{name = net_whammy_pitch_shift}
+	KillSpawnedScript \{name = Crowd_AllPlayAnim}
+	KillSpawnedScript \{name = hud_activated_star_power_spawned}
+	KillSpawnedScript \{name = pulsate_all_star_power_bulbs}
+	KillSpawnedScript \{name = pulsate_star_power_bulb}
+	KillSpawnedScript \{name = rock_meter_star_power_on}
+	KillSpawnedScript \{name = rock_meter_star_power_off}
+	KillSpawnedScript \{name = hud_activated_star_power}
+	KillSpawnedScript \{name = hud_move_note_scorebar}
+	KillSpawnedScript \{name = hud_flash_red_bg_p1}
+	KillSpawnedScript \{name = hud_flash_red_bg_p2}
+	KillSpawnedScript \{name = hud_flash_red_bg_kill}
+	KillSpawnedScript \{name = hud_lightning_alert}
+	KillSpawnedScript \{name = hud_show_note_streak_combo}
+	KillSpawnedScript \{name = play_intro}
+	KillSpawnedScript \{name = begin_song_after_intro}
+	if GotParam \{kill_cameracuts_iterator}
+		KillSpawnedScript \{name = cameracuts_iterator}
 	endif
 	printf \{"kill_gem_scroller - Killing Event Scripts"}
-	killspawnedscript \{id = song_event_scripts}
+	KillSpawnedScript \{id = song_event_scripts}
 	printf \{"kill_gem_scroller - Killing Event Scripts Finished"}
-	destroy_allwhammyfx
+	Destroy_AllWhammyFX
 	destroy_intro
 	end_song <...>
 endscript

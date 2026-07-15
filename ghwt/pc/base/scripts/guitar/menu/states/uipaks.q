@@ -1,4 +1,4 @@
-uipaks = {
+UIPaks = {
 	music_store = {
 		name = 'music_store'
 		zones = [
@@ -184,7 +184,7 @@ uipaks = {
 		zones = [
 		]
 	}
-	setlist = {
+	SetList = {
 		name = 'setlist'
 		zones = [
 		]

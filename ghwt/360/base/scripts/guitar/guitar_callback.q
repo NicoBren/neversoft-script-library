@@ -21,10 +21,10 @@ script script_postcallback_script
 		CheckBossCutoff
 		if ($output_gpu_log = 1)
 			GetProfileData \{cpu = 6
-				Name = gpu}
+				name = gpu}
 			milliseconds = (<microseconds> / 1000.0)
 			GetSongTime
-			formatText TextName = text qs(0x8a7791b0) s = <songtime> m = <milliseconds> DontAssertForChecksums
+			FormatText TextName = text qs("\LGPU Time; %s; %m") s = <songtime> m = <milliseconds> DontAssertForChecksums
 			TextOutput text = <text>
 		endif
 	endif

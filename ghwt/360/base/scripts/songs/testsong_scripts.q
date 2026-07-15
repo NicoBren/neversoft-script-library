@@ -1,7 +1,7 @@
 
 script testsongmode_startup 
 	begin
-	WaitForEvent \{Type = hit_notes}
+	WaitForEvent \{type = hit_notes}
 	if ControllerMake \{L2}
 		if ControllerPressed \{L1}
 			SoundEvent \{event = Improv_Pentatonic_Chord_D5_G5}
@@ -50,7 +50,7 @@ script testsongmode_startup
 			StopSoundEvent \{Improv_Pentatonic_Single_Note_B8}
 			StopSoundEvent \{Improv_Pentatonic_Single_Note_EE5}
 		else
-			if ControllerPressed \{X}
+			if ControllerPressed \{x}
 				SoundEvent \{event = Improv_Pentatonic_Chord_B8_EE8}
 				StopSoundEvent \{Improv_Pentatonic_Single_Note_EE5}
 				StopSoundEvent \{Improv_Pentatonic_Single_Note_EE8}
@@ -60,7 +60,7 @@ script testsongmode_startup
 		endif
 		printf \{'R2'}
 	endif
-	if ControllerMake \{X}
+	if ControllerMake \{x}
 		if ControllerPressed \{R2}
 			SoundEvent \{event = Improv_Pentatonic_Chord_B8_EE8}
 			StopSoundEvent \{Improv_Pentatonic_Single_Note_EE5}
@@ -75,7 +75,7 @@ script testsongmode_startup
 		printf \{'X'}
 	endif
 	Wait \{1
-		Frame}
+		frame}
 	if NOT ControllerPressed \{L2}
 		StopSoundEvent \{Improv_Pentatonic_Single_Note_G7}
 	endif
@@ -88,7 +88,7 @@ script testsongmode_startup
 	if NOT ControllerPressed \{R2}
 		StopSoundEvent \{Improv_Pentatonic_Single_Note_EE5}
 	endif
-	if NOT ControllerPressed \{X}
+	if NOT ControllerPressed \{x}
 		StopSoundEvent \{Improv_Pentatonic_Single_Note_EE8}
 	endif
 	repeat

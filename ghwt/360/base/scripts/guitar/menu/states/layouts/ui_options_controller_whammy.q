@@ -7,8 +7,8 @@ script ui_create_options_controller_whammy
 	endif
 	CreateScreenElement {
 		parent = root_window
-		id = calibratewhammyinterface
-		Type = descinterface
+		id = CalibrateWhammyInterface
+		type = DescInterface
 		desc = 'calibrate_whammy'
 		event_handlers = [
 			{pad_back generic_event_back}
@@ -16,16 +16,16 @@ script ui_create_options_controller_whammy
 		]
 		exclusive_device = <controller>
 	}
-	LaunchEvent \{Type = focus
-		target = calibratewhammyinterface}
+	LaunchEvent \{type = focus
+		target = CalibrateWhammyInterface}
 	menu_finish
-	SpawnScriptNow menu_whammy_bar_update_current_menu params = {controller = <controller>}
+	spawnscriptnow menu_whammy_bar_update_current_menu params = {controller = <controller>}
 endscript
 
 script ui_destroy_options_controller_whammy 
 	clean_up_user_control_helpers
-	KillSpawnedScript \{Name = menu_whammy_bar_update_current_menu}
-	destroy_menu \{menu_id = calibratewhammyinterface}
+	KillSpawnedScript \{name = menu_whammy_bar_update_current_menu}
+	destroy_menu \{menu_id = CalibrateWhammyInterface}
 endscript
 
 script menu_whammy_bar_calibration_enter_sample 
@@ -53,13 +53,13 @@ script menu_whammy_bar_calibration_enter_sample
 		endswitch
 		get_resting_whammy_position controller = <device_num>
 		if (<device_num> = $player1_status.controller)
-			Change structurename = player1_status resting_whammy_position = <resting_whammy_position>
+			change structurename = player1_status resting_whammy_position = <resting_whammy_position>
 		elseif (<device_num> = $player2_status.controller)
-			Change structurename = player2_status resting_whammy_position = <resting_whammy_position>
+			change structurename = player2_status resting_whammy_position = <resting_whammy_position>
 		elseif (<device_num> = $player3_status.controller)
-			Change structurename = player3_status resting_whammy_position = <resting_whammy_position>
+			change structurename = player3_status resting_whammy_position = <resting_whammy_position>
 		elseif (<device_num> = $player4_status.controller)
-			Change structurename = player4_status resting_whammy_position = <resting_whammy_position>
+			change structurename = player4_status resting_whammy_position = <resting_whammy_position>
 		endif
 	endif
 endscript
@@ -69,21 +69,21 @@ script menu_whammy_bar_update_current_menu
 	if is_whammy_resting controller = <controller>
 		if ($SHOULD_WE_PLAY_WHAMMY_SOUND = 0)
 			SoundEvent \{event = Whammy_Test_SFX}
-			Change \{SHOULD_WE_PLAY_WHAMMY_SOUND = 1}
+			change \{SHOULD_WE_PLAY_WHAMMY_SOUND = 1}
 		endif
-		if calibratewhammyinterface :desc_resolvealias \{Name = alias_resting_position_text}
+		if CalibrateWhammyInterface :Desc_ResolveAlias \{name = alias_resting_position_text}
 			SetScreenElementProps id = <resolved_id> unhide
 		endif
-		if calibratewhammyinterface :desc_resolvealias \{Name = alias_bg2}
+		if CalibrateWhammyInterface :Desc_ResolveAlias \{name = alias_bg2}
 			SetScreenElementProps id = <resolved_id> alpha = 1
 		endif
-		if calibratewhammyinterface :desc_resolvealias \{Name = alias_portrait}
+		if CalibrateWhammyInterface :Desc_ResolveAlias \{name = alias_portrait}
 			SetScreenElementProps id = <resolved_id> alpha = 1
 		endif
 	else
-		Change \{SHOULD_WE_PLAY_WHAMMY_SOUND = 0}
-		if calibratewhammyinterface :desc_resolvealias \{Name = alias_resting_position_text}
-			SetScreenElementProps id = <resolved_id> Hide
+		change \{SHOULD_WE_PLAY_WHAMMY_SOUND = 0}
+		if CalibrateWhammyInterface :Desc_ResolveAlias \{name = alias_resting_position_text}
+			SetScreenElementProps id = <resolved_id> hide
 		endif
 		menu_whammy_bar_do_poster_morph controller = <controller>
 	endif
@@ -96,17 +96,17 @@ script menu_whammy_bar_do_poster_morph
 	if GuitarGetAnalogueInfo controller = <controller>
 		printf 'rightx = %d' d = <rightx>
 		if (<rightx> >= 0)
-			if calibratewhammyinterface :desc_resolvealias \{Name = alias_bg2}
+			if CalibrateWhammyInterface :Desc_ResolveAlias \{name = alias_bg2}
 				SetScreenElementProps id = <resolved_id> alpha = ((1 - <rightx>) * 0.5)
 			endif
-			if calibratewhammyinterface :desc_resolvealias \{Name = alias_portrait}
+			if CalibrateWhammyInterface :Desc_ResolveAlias \{name = alias_portrait}
 				SetScreenElementProps id = <resolved_id> alpha = ((1 - <rightx>) * 0.5)
 			endif
 		else
-			if calibratewhammyinterface :desc_resolvealias \{Name = alias_bg2}
+			if CalibrateWhammyInterface :Desc_ResolveAlias \{name = alias_bg2}
 				SetScreenElementProps id = <resolved_id> alpha = ((0.5 * (<rightx> * -1)) + 0.5)
 			endif
-			if calibratewhammyinterface :desc_resolvealias \{Name = alias_portrait}
+			if CalibrateWhammyInterface :Desc_ResolveAlias \{name = alias_portrait}
 				SetScreenElementProps id = <resolved_id> alpha = ((0.5 * (<rightx> * -1)) + 0.5)
 			endif
 		endif

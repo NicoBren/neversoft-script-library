@@ -1,37 +1,37 @@
-l_sing_haley_bulls_anims_set = {
-	stance_a = {
-		idle = {
+L_SING_Haley_Bulls_anims_set = {
+	Stance_A = {
+		Idle = {
 			good = {
-				slow = [
-					sing_haley_bulls_075_01
+				Slow = [
+					sing_Haley_Bulls_075_01
 				]
-				med = [
-					sing_haley_bulls_100_01
+				Med = [
+					sing_Haley_Bulls_100_01
 				]
-				fast = [
-					sing_haley_bulls_120_01
-				]
-			}
-			normal = {
-				slow = [
-					sing_haley_bulls_075_01
-				]
-				med = [
-					sing_haley_bulls_100_01
-				]
-				fast = [
-					sing_haley_bulls_120_01
+				Fast = [
+					sing_Haley_Bulls_120_01
 				]
 			}
-			bad = {
-				slow = [
-					sing_haley_bulls_075_01
+			Normal = {
+				Slow = [
+					sing_Haley_Bulls_075_01
 				]
-				med = [
-					sing_haley_bulls_100_01
+				Med = [
+					sing_Haley_Bulls_100_01
 				]
-				fast = [
-					sing_haley_bulls_120_01
+				Fast = [
+					sing_Haley_Bulls_120_01
+				]
+			}
+			Bad = {
+				Slow = [
+					sing_Haley_Bulls_075_01
+				]
+				Med = [
+					sing_Haley_Bulls_100_01
+				]
+				Fast = [
+					sing_Haley_Bulls_120_01
 				]
 			}
 		}

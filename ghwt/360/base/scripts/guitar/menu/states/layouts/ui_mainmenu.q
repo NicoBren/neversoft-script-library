@@ -1,6 +1,6 @@
 
 script ui_create_mainmenu 
-	SpawnScriptNow ui_create_mainmenu_spawned params = <...>
+	spawnscriptnow ui_create_mainmenu_spawned params = <...>
 endscript
 
 script ui_create_mainmenu_spawned 
@@ -8,15 +8,15 @@ script ui_create_mainmenu_spawned
 		mark_safe_for_shutdown
 		return
 	endif
-	Change \{respond_to_signin_changed = 0}
-	Change \{respond_to_signin_changed_func = main_menu_signin_changed}
+	change \{respond_to_signin_changed = 0}
+	change \{respond_to_signin_changed_func = main_menu_signin_changed}
 	if ($invite_controller = -1)
 		printf \{'ui_create_mainmenu_spawned - NO INVITE'}
-		Change \{in_join_band_screens = 0}
-		Change \{game_mode = p1_quickplay}
-		Change \{current_num_players = 1}
-		NetSessionFunc \{func = removeallcontrollers}
-		fadetoblack \{OFF
+		change \{in_join_band_screens = 0}
+		change \{game_mode = p1_quickplay}
+		change \{current_num_players = 1}
+		NetSessionFunc \{func = RemoveAllControllers}
+		fadetoblack \{off
 			alpha = 1.0
 			time = 0.1
 			z_priority = 100
@@ -27,12 +27,12 @@ script ui_create_mainmenu_spawned
 			create_main_menu_elements
 		endif
 		create_main_menu
-		add_user_control_helper \{text = qs(0xc18d5e76)
+		add_user_control_helper \{text = qs("SELECT")
 			button = green
 			z = 100
 			all_buttons}
 		current_menu :Obj_SpawnScriptNow \{create_motd}
-		LaunchEvent Type = focus target = current_menu data = {child_index = <selected_index>}
+		LaunchEvent type = focus target = current_menu data = {child_index = <selected_index>}
 		destroy_loading_screen
 	else
 		printf \{'ui_create_mainmenu_spawned - INVITE CONTROLLER %c'
@@ -41,84 +41,84 @@ script ui_create_mainmenu_spawned
 		UnPauseGame
 		frontend_load_soundcheck \{loadingscreen
 			async = 0}
-		z_soundcheck_uiresetpos
+		z_soundcheck_UIResetPos
 	endif
 endscript
 
 script ui_destroy_mainmenu 
-	SpawnScriptNow \{destroy_main_menu}
-	KillSpawnedScript \{Name = create_modt}
-	KillSpawnedScript \{Name = run_motd}
-	KillSpawnedScript \{Name = run_motd_demon}
-	if ScreenElementExists \{id = motdinterface}
-		motdinterface :Die
+	spawnscriptnow \{destroy_main_menu}
+	KillSpawnedScript \{name = create_modt}
+	KillSpawnedScript \{name = run_motd}
+	KillSpawnedScript \{name = run_motd_demon}
+	if ScreenElementExists \{id = MotdInterface}
+		MotdInterface :Die
 	endif
 endscript
 
 script main_menu_signin_changed 
-	printf \{qs(0x283e65d1)}
-	removecontentfiles playerid = <controller>
+	printf \{qs("\Lmain_menu_signin_changed")}
+	RemoveContentFiles playerid = <controller>
 	reset_globaltags savegame = <controller>
 	cheat_turnoffalllocked
-	monitorcontrollerstates
+	MonitorControllerStates
 endscript
 
 script callback_motd 
 	if GotParam \{motd_text}
-		Change \{retrieved_message_of_the_day = 1}
-		Change message_of_the_day = <motd_text>
+		change \{retrieved_message_of_the_day = 1}
+		change message_of_the_day = <motd_text>
 	endif
 	if GotParam \{success}
 		if (<success> = success)
-			if ScreenElementExists \{id = motdinterface}
-				motdinterface :se_setprops text_text = ($motd_header)
+			if ScreenElementExists \{id = MotdInterface}
+				MotdInterface :SE_SetProps text_text = ($MOTD_Header)
 			endif
 			if ScreenElementExists \{id = {
-						motdinterface
-						child = motd_container
+						MotdInterface
+						child = MOTD_Container
 					}}
-				add_user_control_helper \{text = qs(0x789d1099)
-					button = yellow
+				add_user_control_helper \{text = qs("DAILY MESSAGE")
+					button = Yellow
 					z = 100
 					all_buttons}
 				RunScriptOnScreenElement \{id = {
-						motdinterface
-						child = motd_container
+						MotdInterface
+						child = MOTD_Container
 					}
 					run_motd}
-				LaunchEvent \{Type = focus
-					target = motdinterface}
+				LaunchEvent \{type = focus
+					target = MotdInterface}
 			endif
 		endif
 	endif
 endscript
 
 script create_motd 
-	NetSessionFunc \{Obj = motd
+	NetSessionFunc \{obj = motd
 		func = get_demonware_motd
 		params = {
 			callback = motd_callback
 		}}
 	CreateScreenElement {
 		parent = root_window
-		id = motdinterface
-		Type = descinterface
+		id = MotdInterface
+		type = DescInterface
 		desc = 'motd'
-		text_text = ($motd_header)
-		Pos = (-200.0, 600.0)
-		auto_dims = FALSE
+		text_text = ($MOTD_Header)
+		pos = (-200.0, 600.0)
+		auto_dims = false
 		dims = (250.0, 250.0)
 	}
-	motdinterface :se_setprops \{event_handlers = [
+	MotdInterface :SE_SetProps \{event_handlers = [
 			{
 				pad_option2
 				generic_event_choose
 				params = {
-					state = uistate_motd
+					state = UIstate_motd
 				}
 			}
 		]}
-	NetSessionFunc \{Obj = motd
+	NetSessionFunc \{obj = motd
 		func = get_demonware_motd
 		params = {
 			callback = callback_motd
@@ -127,28 +127,28 @@ endscript
 
 script run_motd 
 	Obj_GetID
-	motdinterface :se_setprops \{img_texture = motd_download_image}
-	SetProps \{Pos = (0.0, 0.0)}
-	RunScriptOnScreenElement id = {<objID> child = demon_container} run_motd_demon
+	MotdInterface :SE_SetProps \{img_texture = motd_download_image}
+	SetProps \{pos = (0.0, 0.0)}
+	RunScriptOnScreenElement id = {<ObjID> child = demon_container} run_motd_demon
 	begin
-	SetProps \{Pos = (1680.0, 0.0)
+	SetProps \{pos = (1680.0, 0.0)
 		time = 10}
-	se_waitprops
-	SetProps \{Pos = (0.0, 0.0)
+	SE_WaitProps
+	SetProps \{pos = (0.0, 0.0)
 		time = 10}
-	se_waitprops
+	SE_WaitProps
 	Wait \{1
-		Second}
+		second}
 	repeat
 endscript
 
 script run_motd_demon 
 	Obj_GetID
-	GetScreenElementChildren id = <objID>
+	GetScreenElementChildren id = <ObjID>
 	if GotParam \{children}
 		GetArraySize <children>
 		i = 0
-		add = 1
+		Add = 1
 		begin
 		j = 0
 		begin
@@ -158,21 +158,21 @@ script run_motd_demon
 			SetScreenElementProps id = (<children> [<j>]) alpha = 0.0 time = 0.05
 		endif
 		j = (<j> + 1)
-		repeat <array_Size>
+		repeat <array_size>
 		if (<i> = 0)
-			add = 1
-		elseif (<i> = (<array_Size> - 1))
-			add = -1
+			Add = 1
+		elseif (<i> = (<array_size> - 1))
+			Add = -1
 		endif
-		i = (<i> + <add>)
+		i = (<i> + <Add>)
 		Wait \{0.25
-			Seconds}
+			seconds}
 		repeat
 	endif
 endscript
 main_menu_fs = {
 	create = ui_mainmenu_temp
-	Destroy = destroy_main_menu
+	destroy = destroy_main_menu
 	actions = [
 		{
 			action = select_xbox_live

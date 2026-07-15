@@ -18,28 +18,28 @@ script jam_recording_check_disconnect
 			return
 		endif
 	endif
-	getcontrollertype controller = ($primary_controller)
+	GetControllerType controller = ($primary_controller)
 	begin
 	prev_controller_type = <controller_type>
-	getcontrollertype controller = ($primary_controller)
+	GetControllerType controller = ($primary_controller)
 	GetActiveControllers
 	<is_active_controller> = (<active_controllers> [($primary_controller)])
 	if NOT GotParam \{recording_studio}
 		if NOT (<is_active_controller> = 1)
-			ui_event_wait state = uistate_recording_disconnect data = {training = <training>}
+			ui_event_wait state = UIstate_recording_disconnect data = {training = <training>}
 			return
 		endif
 		if NOT ((<controller_type> = guitar) || (<controller_type> = drum))
-			ui_event_wait state = uistate_recording_disconnect data = {training = <training>}
+			ui_event_wait state = UIstate_recording_disconnect data = {training = <training>}
 			return
 		endif
 		if NOT (<controller_type> = <prev_controller_type>)
-			ui_event_wait state = uistate_recording_disconnect data = {training = <training>}
+			ui_event_wait state = UIstate_recording_disconnect data = {training = <training>}
 			return
 		endif
 	else
 		if NOT (<is_active_controller> = 1)
-			ui_event_wait state = uistate_recording_disconnect data = {recording_studio training = <training>}
+			ui_event_wait state = UIstate_recording_disconnect data = {recording_studio training = <training>}
 			return
 		endif
 	endif
@@ -51,121 +51,121 @@ endscript
 script create_jam_recording_menu \{song = dangerzone
 		editing = 0
 		back_to_jam_band = 1}
-	printf channel = jam_mode qs(0xc812d4f6) s = <editing>
-	Change \{select_shift = 0}
-	Change \{debug_show_analog_options = 0}
-	create_viewport_ui \{texture = `tex\zones\z_studio\rm_studio_monitor_gh_mix.dds`
-		texdict = `zones/z_studio/z_studio.tex`
+	printf channel = jam_mode qs("\LAdvanced Recording editing: %s") s = <editing>
+	change \{select_shift = 0}
+	change \{debug_show_analog_options = 0}
+	create_viewport_ui \{texture = `tex\zones\Z_Studio\RM_Studio_Monitor_GH_Mix.dds`
+		texdict = `zones/z_studio/Z_Studio.tex`
 		keep_current_level}
-	SpawnScriptNow id = jam_band_spawns menu_jam_screensaver_loading params = {window_id = <window_id>}
-	Change \{target_jam_camera_prop = jam_advanced_recording}
+	spawnscriptnow id = jam_band_spawns menu_jam_screensaver_loading params = {window_id = <window_id>}
+	change \{target_jam_camera_prop = jam_advanced_recording}
 	jam_camera_wait
-	Change \{jam_advanced_record = 1}
+	change \{jam_advanced_record = 1}
 	destroy_bg_viewport
 	setup_bg_viewport
 	if GotParam \{current_instrument}
-		Change jam_current_track = <current_instrument>
-		setplayerinfo <Player> jam_instrument = <current_instrument>
+		change jam_current_track = <current_instrument>
+		SetPlayerInfo <player> jam_instrument = <current_instrument>
 	endif
-	getplayerinfo <Player> controller
-	if isdrumcontroller controller = <controller>
-		Change \{jam_current_track = 3}
-		setplayerinfo <Player> part = drum
-		setplayerinfo <Player> jam_instrument = ($jam_current_track)
+	GetPlayerInfo <player> controller
+	if IsDrumController controller = <controller>
+		change \{jam_current_track = 3}
+		SetPlayerInfo <player> part = drum
+		SetPlayerInfo <player> jam_instrument = ($jam_current_track)
 	else
-		setplayerinfo <Player> part = guitar
+		SetPlayerInfo <player> part = guitar
 	endif
-	menu_music_off
-	Change \{jam_control_selected = 0}
-	Change \{jam_undo_track = -1}
-	Change \{jam_copy_bound_low = 0}
-	Change \{jam_copy_bound_high = 0}
-	Change \{jam_loop_bound_low = -1}
-	Change \{jam_loop_bound_high = -1}
+	Menu_Music_Off
+	change \{jam_control_selected = 0}
+	change \{jam_undo_track = -1}
+	change \{jam_copy_bound_low = 0}
+	change \{jam_copy_bound_high = 0}
+	change \{jam_loop_bound_low = -1}
+	change \{jam_loop_bound_high = -1}
 	CreateScreenElement \{parent = root_window
 		id = jam_studio_element
-		Type = descinterface
+		type = DescInterface
 		desc = 'adv_record'}
-	KillSpawnedScript \{Name = menu_jam_screensaver_loading}
+	KillSpawnedScript \{name = menu_jam_screensaver_loading}
 	destroy_viewport_ui
 	jam_studio_element :obj_spawnscript \{jam_recording_check_disconnect}
 	<song> = jamsession
-	Change \{jam_highway_recording_mode = 1}
+	change \{jam_highway_recording_mode = 1}
 	jam_setup_song editing = <editing> advanced_record = 1
-	Change \{jam_current_quantize = 4}
-	Change \{no_marker_snap = 0}
-	Change \{no_precise_snap = 0}
+	change \{jam_current_quantize = 4}
+	change \{no_marker_snap = 0}
+	change \{no_precise_snap = 0}
 	jam_studio_element :SetProps snap_text = ($jam_quantize [($jam_current_quantize)].name_text)
-	if isps3
-		if jam_studio_element :desc_resolvealias \{Name = alias_d_pad}
+	if IsPs3
+		if jam_studio_element :Desc_ResolveAlias \{name = alias_d_pad}
 			<resolved_id> :SetProps texture = d_pad_ps3
 		endif
 	endif
 	jam_studio_hide_tilt_meter
 	if NOT (<editing> = 1)
-		Change \{jam_selected_song = qs(0xd9070aee)}
-		Change \{jam_current_bpm = 120}
+		change \{jam_selected_song = qs("New Song")}
+		change \{jam_current_bpm = 120}
 		song_prefix = 'editable'
-		formatText checksumName = fretbar_array '%s_fretbars' s = <song_prefix> AddToStringLookup = true
+		FormatText checksumname = fretbar_array '%s_fretbars' s = <song_prefix> AddToStringLookup = true
 		suffix = '_size'
 		AppendSuffixToChecksum Base = <fretbar_array> SuffixString = <suffix>
 		<fretbar_size> = <appended_id>
-		Change GlobalName = <fretbar_size> NewValue = 0
+		change globalname = <fretbar_size> newvalue = 0
 		jam_highway_create_fretbars
 	endif
-	formatText \{TextName = title_text
-		qs(0x90f34c93)
+	FormatText \{TextName = title_text
+		qs("\L%s (%b bpm)")
 		s = $jam_selected_song
 		b = $jam_current_bpm}
-	jam_studio_element :SetProps songtitleinfo_text = <title_text>
+	jam_studio_element :SetProps SongTitleInfo_text = <title_text>
 	create_jam_control_bar back_to_jam_band = <back_to_jam_band>
 	AssignAlias \{id = jam_control_container
 		alias = current_menu}
-	LaunchEvent \{Type = focus
+	LaunchEvent \{type = focus
 		target = current_menu}
 	create_studio_now_bar
-	SpawnScriptNow \{create_jam_multiple_highways
+	spawnscriptnow \{create_jam_multiple_highways
 		id = jam_recording_spawns
 		params = {
 			song = editable
 		}}
-	SpawnScriptNow \{jam_update_count
+	spawnscriptnow \{jam_update_count
 		id = jam_recording_spawns}
-	reset_song_time \{starttime = 0}
-	Change \{jam_highway_play_time = 0}
-	Change \{jam_highway_playing = 0}
-	CreateScreenElement \{Type = ContainerElement
+	reset_song_time \{StartTime = 0}
+	change \{jam_highway_play_time = 0}
+	change \{jam_highway_playing = 0}
+	CreateScreenElement \{type = ContainerElement
 		id = jam_pause_container
 		parent = jam_studio_element
-		Pos = (329.0, 90.0)}
-	jam_ghmix_note_quick_update Player = ($jam_current_recording_player)
+		pos = (329.0, 90.0)}
+	jam_ghmix_note_quick_update player = ($jam_current_recording_player)
 	jam_recording_add_user_control_helpers
 	if (<editing> = 1)
-		formatText \{TextName = title_text
-			qs(0x90f34c93)
+		FormatText \{TextName = title_text
+			qs("\L%s (%b bpm)")
 			s = $jam_selected_song
 			b = $jam_current_bpm}
-		KillSpawnedScript \{Name = jam_highway_select_quantize}
-		SpawnScriptNow \{jam_highway_select_quantize
+		KillSpawnedScript \{name = jam_highway_select_quantize}
+		spawnscriptnow \{jam_highway_select_quantize
 			id = jam_recording_spawns}
 	else
-		formatText TextName = title_text qs(0xc64bb950) b = $jam_current_bpm c = ($jam_tracks [$jam_current_track].name_text)
-		SpawnScriptNow \{id = jam_recording_spawns
+		FormatText TextName = title_text qs("New Song (%b bpm)") b = $jam_current_bpm c = ($jam_tracks [$jam_current_track].name_text)
+		spawnscriptnow \{id = jam_recording_spawns
 			show_change_bpm}
 	endif
-	SpawnScriptNow \{jam_recording_create_metaview
+	spawnscriptnow \{jam_recording_create_metaview
 		id = jam_recording_spawns}
-	broadcastevent \{Type = ghmix_load_complete}
+	BroadcastEvent \{type = ghmix_load_complete}
 endscript
 
 script jam_recording_update_note 
-	<Player> = ($jam_current_recording_player)
-	getplayerinfo <Player> controller
+	<player> = ($jam_current_recording_player)
+	GetPlayerInfo <player> controller
 	<last_instrument> = -1
 	begin
-	getplayerinfo <Player> jam_instrument
+	GetPlayerInfo <player> jam_instrument
 	if NOT (<last_instrument> = <jam_instrument>)
-		getplayerinfo <Player> jam_instrument
+		GetPlayerInfo <player> jam_instrument
 		switch (<jam_instrument>)
 			case 0
 			<note_func> = jam_input_rhythm_get_current_note
@@ -180,13 +180,13 @@ script jam_recording_update_note
 		endswitch
 		<jam_instrument> = <last_instrument>
 	endif
-	GetHeldPattern controller = <controller> Player = <Player> nobrokenstring
-	<note_func> Player = <Player> hold_pattern = <hold_pattern>
+	GetHeldPattern controller = <controller> player = <player> nobrokenstring
+	<note_func> player = <player> hold_pattern = <hold_pattern>
 	if ScreenElementExists \{id = studio_pick_text}
 		if NOT (<jam_instrument> = 3)
-			studio_pick_text :se_setprops text = <single_note_text>
+			studio_pick_text :SE_SetProps text = <single_note_text>
 		else
-			studio_pick_text :se_setprops \{text = qs(0x00000000)}
+			studio_pick_text :SE_SetProps \{text = qs("")}
 		endif
 	else
 		return
@@ -197,58 +197,58 @@ script jam_recording_update_note
 endscript
 
 script show_change_bpm 
-	LaunchEvent \{Type = unfocus
+	LaunchEvent \{type = unfocus
 		target = jam_control_container}
-	KillSpawnedScript \{Name = jam_highway_select_quantize}
+	KillSpawnedScript \{name = jam_highway_select_quantize}
 	GetEnterButtonAssignment
 	choose_button = <assignment>
 	clean_up_user_control_helpers
-	add_user_control_helper \{text = qs(0x582d7977)
+	add_user_control_helper \{text = qs("SET BPM")
 		button = green
 		z = 100}
-	add_user_control_helper \{text = qs(0xc4c7f798)
+	add_user_control_helper \{text = qs("CHANGE BPM")
 		button = strumbar
 		z = 100}
 	if ScreenElementExists \{id = jam_studio_element}
-		formatText \{TextName = curr_bpm_text
-			qs(0x4d4555da)
+		FormatText \{TextName = curr_bpm_text
+			qs("%s")
 			s = $jam_current_bpm}
 		jam_studio_element :SetProps bpm_number_text = <curr_bpm_text>
 	endif
-	if isps3
-		if jam_studio_element :desc_resolvealias \{Name = alias_bpm_d_pad}
-			<resolved_id> :SetProps texture = d_pad_ps3 Pos = (67.0, -49.0)
+	if IsPs3
+		if jam_studio_element :Desc_ResolveAlias \{name = alias_bpm_d_pad}
+			<resolved_id> :SetProps texture = d_pad_ps3 pos = (67.0, -49.0)
 		endif
 	endif
-	if jam_studio_element :desc_resolvealias \{Name = bpm_box}
-		<resolved_id> :SetProps Pos = (472.0, 800.0) time = 0.0
-		<resolved_id> :se_waitprops
+	if jam_studio_element :Desc_ResolveAlias \{name = bpm_box}
+		<resolved_id> :SetProps pos = (472.0, 800.0) time = 0.0
+		<resolved_id> :SE_WaitProps
 	endif
-	if jam_studio_element :desc_resolvealias \{Name = bpm_box}
-		<resolved_id> :SetProps Pos = (472.0, 47.0) time = 0.2
-		<resolved_id> :se_waitprops
+	if jam_studio_element :Desc_ResolveAlias \{name = bpm_box}
+		<resolved_id> :SetProps pos = (472.0, 47.0) time = 0.2
+		<resolved_id> :SE_WaitProps
 	endif
-	getplayerinfo ($jam_current_recording_player) controller
+	GetPlayerInfo ($jam_current_recording_player) controller
 	curr_bpm = $jam_current_bpm
 	mid_up_strum = 0
 	mid_down_strum = 0
 	begin
-	if has_lefty_adj_control_press Dir = up controller = <controller> Player = $jam_current_recording_player
+	if has_lefty_adj_control_press dir = up controller = <controller> player = $jam_current_recording_player
 		if (<mid_up_strum> = 0)
 			<curr_bpm> = (<curr_bpm> + 1)
 			if (<curr_bpm> > 160)
 				<curr_bpm> = 160
 			endif
-			ghmix_scroll \{adv_record}
-			KillSpawnedScript \{Name = scale_bpm_arrows}
-			SpawnScriptNow \{scale_bpm_arrows
+			GHMix_scroll \{adv_record}
+			KillSpawnedScript \{name = scale_bpm_arrows}
+			spawnscriptnow \{scale_bpm_arrows
 				id = jam_recording_spawns
 				params = {
 					up
 				}}
-			KillSpawnedScript \{Name = jam_recording_metronome}
-			reset_song_time \{starttime = 0}
-			SpawnScriptNow jam_recording_metronome id = jam_recording_spawns params = {bpm = <curr_bpm> time = 0 sound_only}
+			KillSpawnedScript \{name = jam_recording_metronome}
+			reset_song_time \{StartTime = 0}
+			spawnscriptnow jam_recording_metronome id = jam_recording_spawns params = {bpm = <curr_bpm> time = 0 sound_only}
 		endif
 		<mid_up_strum> = (<mid_up_strum> + 1)
 		if (<mid_up_strum> > 10)
@@ -257,22 +257,22 @@ script show_change_bpm
 	else
 		<mid_up_strum> = 0
 	endif
-	if has_lefty_adj_control_press Dir = down controller = <controller> Player = $jam_current_recording_player
+	if has_lefty_adj_control_press dir = down controller = <controller> player = $jam_current_recording_player
 		if (<mid_down_strum> = 0)
 			<curr_bpm> = (<curr_bpm> - 1)
 			if (<curr_bpm> < 80)
 				<curr_bpm> = 80
 			endif
-			ghmix_scroll \{adv_record}
-			KillSpawnedScript \{Name = scale_bpm_arrows}
-			SpawnScriptNow \{scale_bpm_arrows
+			GHMix_scroll \{adv_record}
+			KillSpawnedScript \{name = scale_bpm_arrows}
+			spawnscriptnow \{scale_bpm_arrows
 				id = jam_recording_spawns
 				params = {
 					down
 				}}
-			KillSpawnedScript \{Name = jam_recording_metronome}
-			reset_song_time \{starttime = 0}
-			SpawnScriptNow jam_recording_metronome id = jam_recording_spawns params = {bpm = <curr_bpm> time = 0 sound_only}
+			KillSpawnedScript \{name = jam_recording_metronome}
+			reset_song_time \{StartTime = 0}
+			spawnscriptnow jam_recording_metronome id = jam_recording_spawns params = {bpm = <curr_bpm> time = 0 sound_only}
 		endif
 		<mid_down_strum> = (<mid_down_strum> + 1)
 		if (<mid_down_strum> > 10)
@@ -281,7 +281,7 @@ script show_change_bpm
 	else
 		<mid_down_strum> = 0
 	endif
-	formatText TextName = curr_bpm_text qs(0x4d4555da) s = <curr_bpm>
+	FormatText TextName = curr_bpm_text qs("%s") s = <curr_bpm>
 	jam_studio_element :SetProps bpm_number_text = <curr_bpm_text>
 	if ControllerMake <choose_button> <controller>
 		break
@@ -292,31 +292,31 @@ script show_change_bpm
 	Wait \{1
 		gameframe}
 	repeat
-	KillSpawnedScript \{Name = jam_recording_metronome}
-	SoundEvent \{event = ghmix_select}
-	Change jam_current_bpm = <curr_bpm>
+	KillSpawnedScript \{name = jam_recording_metronome}
+	SoundEvent \{event = GhMix_Select}
+	change jam_current_bpm = <curr_bpm>
 	guitar_jam_settings_bpm_back \{no_sound
-		Player = $jam_current_recording_player}
-	broadcastevent \{Type = ghmix_bpm_selected}
-	settrackinfo track = rhythm bpm = ($jam_current_bpm)
-	settrackinfo track = lead bpm = ($jam_current_bpm)
-	settrackinfo track = bass bpm = ($jam_current_bpm)
-	settrackinfo track = drum bpm = ($jam_current_bpm)
-	if jam_studio_element :desc_resolvealias \{Name = bpm_box}
-		<resolved_id> :SetProps Pos = (472.0, 800.0) time = 0.2
-		<resolved_id> :se_waitprops
+		player = $jam_current_recording_player}
+	BroadcastEvent \{type = ghmix_bpm_selected}
+	SetTrackInfo track = rhythm bpm = ($jam_current_bpm)
+	SetTrackInfo track = lead bpm = ($jam_current_bpm)
+	SetTrackInfo track = Bass bpm = ($jam_current_bpm)
+	SetTrackInfo track = drum bpm = ($jam_current_bpm)
+	if jam_studio_element :Desc_ResolveAlias \{name = bpm_box}
+		<resolved_id> :SetProps pos = (472.0, 800.0) time = 0.2
+		<resolved_id> :SE_WaitProps
 	endif
-	formatText \{TextName = title_text
-		qs(0x90f34c93)
+	FormatText \{TextName = title_text
+		qs("\L%s (%b bpm)")
 		s = $jam_selected_song
 		b = $jam_current_bpm}
-	jam_studio_element :SetProps songtitleinfo_text = <title_text>
+	jam_studio_element :SetProps SongTitleInfo_text = <title_text>
 	clean_up_user_control_helpers
 	jam_recording_add_user_control_helpers
-	KillSpawnedScript \{Name = jam_highway_select_quantize}
-	SpawnScriptNow \{jam_highway_select_quantize
+	KillSpawnedScript \{name = jam_highway_select_quantize}
+	spawnscriptnow \{jam_highway_select_quantize
 		id = jam_recording_spawns}
-	LaunchEvent \{Type = focus
+	LaunchEvent \{type = focus
 		target = jam_control_container}
 endscript
 
@@ -325,13 +325,13 @@ script scale_bpm_arrows
 		jam_studio_element :SetProps \{bpm_arrow_up_scale = 2.0}
 		jam_studio_element :SetProps \{bpm_arrow_up_scale = 1.5
 			time = 0.15}
-		jam_studio_element :se_waitprops
+		jam_studio_element :SE_WaitProps
 	endif
 	if GotParam \{down}
 		jam_studio_element :SetProps \{bpm_arrow_down_scale = 2.0}
 		jam_studio_element :SetProps \{bpm_arrow_down_scale = 1.5
 			time = 0.15}
-		jam_studio_element :se_waitprops
+		jam_studio_element :SE_WaitProps
 	endif
 endscript
 
@@ -342,10 +342,10 @@ script jam_recording_create_editable_arrays
 	fretbarsize = ($fretbarsize)
 	markerssize = ($markerssize)
 	arraylistsize = ($arraylistsize)
-	jamsession_array_action <...> func = createscriptarray
-	formatText checksumName = arraylist '%s_arraylist' s = <song_prefix> AddToStringLookup = true
-	createscriptarray Name = <arraylist> size = <arraylistsize> Heap = heap_song Type = checksum
-	jamsession_array_action <...> func = jamsession_addscriptarrayitem
+	jamsession_array_action <...> func = CreateScriptArray
+	FormatText checksumname = arraylist '%s_arraylist' s = <song_prefix> AddToStringLookup = true
+	CreateScriptArray name = <arraylist> size = <arraylistsize> heap = heap_song type = checksum
+	jamsession_array_action <...> func = jamsession_AddScriptArrayItem
 endscript
 
 script jam_recording_create_jamsession_arrays 
@@ -355,20 +355,20 @@ script jam_recording_create_jamsession_arrays
 	fretbarsize = ($fretbarsize)
 	markerssize = ($markerssize)
 	arraylistsize = ($arraylistsize)
-	formatText checksumName = arraylist2 '%s_arraylist' s = <song_prefix> AddToStringLookup = true
-	createscriptarray Name = <arraylist2> size = <arraylistsize> Heap = heap_song Type = checksum
-	jamsession_array_action <...> func = jamsession_addscriptarrayitem arraylist = <arraylist2>
+	FormatText checksumname = arraylist2 '%s_arraylist' s = <song_prefix> AddToStringLookup = true
+	CreateScriptArray name = <arraylist2> size = <arraylistsize> heap = heap_song type = checksum
+	jamsession_array_action <...> func = jamsession_AddScriptArrayItem arraylist = <arraylist2>
 endscript
 
 script jam_highway_create_fretbars 
 	song_prefix = 'editable'
-	formatText checksumName = fretbar_array '%s_fretbars' s = <song_prefix> AddToStringLookup = true
+	FormatText checksumname = fretbar_array '%s_fretbars' s = <song_prefix> AddToStringLookup = true
 	song_length = $jam_highway_song_length
 	time_interval = (60000.0 / $jam_current_bpm)
 	song_time = 0.0
 	song_time_int = 0
 	begin
-	addscriptarrayitem Name = <fretbar_array> integer = <song_time_int>
+	AddScriptArrayItem name = <fretbar_array> Integer = <song_time_int>
 	<song_time> = (<song_time> + <time_interval>)
 	<new_time_rounding_check> = (<song_time> + 0.5)
 	CastToInteger \{new_time_rounding_check}
@@ -385,9 +385,9 @@ endscript
 
 script jam_recording_setup_timesig 
 	song_prefix = 'editable'
-	formatText checksumName = timesig_array '%s_timesig' s = <song_prefix> AddToStringLookup = true
+	FormatText checksumname = timesig_array '%s_timesig' s = <song_prefix> AddToStringLookup = true
 	timesig_to_add = [0 , 4 , 4]
-	addscriptarrayitem Name = <timesig_array> array = <timesig_to_add>
+	AddScriptArrayItem name = <timesig_array> array = <timesig_to_add>
 endscript
 
 script jam_control_bar_down 
@@ -399,12 +399,12 @@ script jam_control_bar_down
 			return
 		endif
 	endif
-	ghmix_scroll \{adv_record}
+	GHMix_scroll \{adv_record}
 	GetArraySize \{$jam_controls}
-	num_controls = (<array_Size> - 1)
-	Change jam_control_selected = ($jam_control_selected + 1)
+	num_controls = (<array_size> - 1)
+	change jam_control_selected = ($jam_control_selected + 1)
 	if ($jam_control_selected > <num_controls>)
-		Change \{jam_control_selected = 0}
+		change \{jam_control_selected = 0}
 	endif
 	if ($jam_control_selected = 10)
 		jam_show_paste_highlight
@@ -413,18 +413,18 @@ script jam_control_bar_down
 			DestroyScreenElement \{id = jam_paste_highlight}
 		endif
 	endif
-	jam_studio_element :se_setprops control_name_text = ($jam_controls [$jam_control_selected].name_text)
+	jam_studio_element :SE_SetProps control_name_text = ($jam_controls [$jam_control_selected].name_text)
 	if ($jam_control_selected = 2)
 		if ($jam_highway_playing = 0)
-			jam_studio_element :se_setprops control_name_text = ($jam_controls [$jam_control_selected].name_text)
+			jam_studio_element :SE_SetProps control_name_text = ($jam_controls [$jam_control_selected].name_text)
 		else
-			jam_studio_element :se_setprops control_name_text = ($jam_controls [$jam_control_selected].alt_name_text)
+			jam_studio_element :SE_SetProps control_name_text = ($jam_controls [$jam_control_selected].alt_name_text)
 		endif
 	endif
-	jam_studio_element :se_setprops control_help_text = ($jam_controls [$jam_control_selected].help_text)
+	jam_studio_element :SE_SetProps control_help_text = ($jam_controls [$jam_control_selected].help_text)
 	if ScreenElementExists \{id = control_bg}
-		SpawnScriptNow \{jam_studio_animate_mouse}
-		legacydoscreenelementmorph id = control_bg time = 0 Pos = ($jam_control_bar_offset + ($jam_control_selected * $jam_control_offset)) rot_angle = <rotation>
+		spawnscriptnow \{jam_studio_animate_mouse}
+		LegacyDoScreenElementMorph id = control_bg time = 0 pos = ($jam_control_bar_offset + ($jam_control_selected * $jam_control_offset)) rot_angle = <rotation>
 	endif
 endscript
 
@@ -437,12 +437,12 @@ script jam_control_bar_up
 			return
 		endif
 	endif
-	ghmix_scroll \{adv_record}
+	GHMix_scroll \{adv_record}
 	GetArraySize \{$jam_controls}
-	num_controls = (<array_Size> - 1)
-	Change jam_control_selected = ($jam_control_selected - 1)
+	num_controls = (<array_size> - 1)
+	change jam_control_selected = ($jam_control_selected - 1)
 	if ($jam_control_selected < 0)
-		Change jam_control_selected = <num_controls>
+		change jam_control_selected = <num_controls>
 	endif
 	if ($jam_control_selected = 10)
 		jam_show_paste_highlight
@@ -451,24 +451,24 @@ script jam_control_bar_up
 			DestroyScreenElement \{id = jam_paste_highlight}
 		endif
 	endif
-	jam_studio_element :se_setprops control_name_text = ($jam_controls [$jam_control_selected].name_text)
+	jam_studio_element :SE_SetProps control_name_text = ($jam_controls [$jam_control_selected].name_text)
 	if ($jam_control_selected = 2)
 		if ($jam_highway_playing = 0)
-			jam_studio_element :se_setprops control_name_text = ($jam_controls [$jam_control_selected].name_text)
+			jam_studio_element :SE_SetProps control_name_text = ($jam_controls [$jam_control_selected].name_text)
 		else
-			jam_studio_element :se_setprops control_name_text = ($jam_controls [$jam_control_selected].alt_name_text)
+			jam_studio_element :SE_SetProps control_name_text = ($jam_controls [$jam_control_selected].alt_name_text)
 		endif
 	endif
-	jam_studio_element :se_setprops control_help_text = ($jam_controls [$jam_control_selected].help_text)
+	jam_studio_element :SE_SetProps control_help_text = ($jam_controls [$jam_control_selected].help_text)
 	if ScreenElementExists \{id = control_bg}
-		SpawnScriptNow \{jam_studio_animate_mouse}
-		legacydoscreenelementmorph id = control_bg time = 0 Pos = ($jam_control_bar_offset + $jam_control_selected * $jam_control_offset) rot_angle = <rotation>
+		spawnscriptnow \{jam_studio_animate_mouse}
+		LegacyDoScreenElementMorph id = control_bg time = 0 pos = ($jam_control_bar_offset + $jam_control_selected * $jam_control_offset) rot_angle = <rotation>
 	endif
 endscript
 
 script jam_control_goto 
 	GetArraySize \{$jam_controls}
-	Change jam_control_selected = <option_index>
+	change jam_control_selected = <option_index>
 	if ($jam_control_selected = 10)
 		jam_show_paste_highlight
 	else
@@ -476,32 +476,32 @@ script jam_control_goto
 			DestroyScreenElement \{id = jam_paste_highlight}
 		endif
 	endif
-	jam_studio_element :se_setprops control_name_text = ($jam_controls [$jam_control_selected].name_text)
+	jam_studio_element :SE_SetProps control_name_text = ($jam_controls [$jam_control_selected].name_text)
 	if ($jam_control_selected = 2)
 		if ($jam_highway_playing = 0)
-			jam_studio_element :se_setprops control_name_text = ($jam_controls [$jam_control_selected].name_text)
+			jam_studio_element :SE_SetProps control_name_text = ($jam_controls [$jam_control_selected].name_text)
 		else
-			jam_studio_element :se_setprops control_name_text = ($jam_controls [$jam_control_selected].alt_name_text)
+			jam_studio_element :SE_SetProps control_name_text = ($jam_controls [$jam_control_selected].alt_name_text)
 		endif
 	endif
-	jam_studio_element :se_setprops control_help_text = ($jam_controls [$jam_control_selected].help_text)
+	jam_studio_element :SE_SetProps control_help_text = ($jam_controls [$jam_control_selected].help_text)
 	if ScreenElementExists \{id = control_bg}
-		SpawnScriptNow \{jam_studio_animate_mouse}
-		legacydoscreenelementmorph id = control_bg time = 0 Pos = ($jam_control_bar_offset + $jam_control_selected * $jam_control_offset) rot_angle = <rotation>
+		spawnscriptnow \{jam_studio_animate_mouse}
+		LegacyDoScreenElementMorph id = control_bg time = 0 pos = ($jam_control_bar_offset + $jam_control_selected * $jam_control_offset) rot_angle = <rotation>
 	endif
 endscript
 
 script jam_control_bar_choose 
-	KillSpawnedScript \{Name = jam_highway_play}
-	KillSpawnedScript \{Name = guitar_jam_playback_recording}
-	KillSpawnedScript \{Name = guitar_jam_drum_playback}
+	KillSpawnedScript \{name = jam_highway_play}
+	KillSpawnedScript \{name = guitar_jam_playback_recording}
+	KillSpawnedScript \{name = guitar_jam_drum_playback}
 	SetScreenElementProps \{id = control_playstop
 		texture = icon_play}
 	if ScreenElementExists \{id = jam_delete_highlight}
 		DestroyScreenElement \{id = jam_delete_highlight}
 	endif
-	formatText checksumName = jam_player_spawns 'jam_player_spawns_%s' s = ($jam_current_recording_player)
-	SpawnScriptNow \{jam_studio_animate_mouse}
+	FormatText checksumname = jam_player_spawns 'jam_player_spawns_%s' s = ($jam_current_recording_player)
+	spawnscriptnow \{jam_studio_animate_mouse}
 	if ScreenElementExists \{id = jam_studio_element}
 		jam_studio_element :GetTags
 		if GotParam \{controls_enabled}
@@ -511,45 +511,45 @@ script jam_control_bar_choose
 			endif
 		endif
 	endif
-	Change \{no_precise_snap = 0}
-	Change \{no_marker_snap = 0}
+	change \{no_precise_snap = 0}
+	change \{no_marker_snap = 0}
 	switch $jam_control_selected
 		case 0
 		printf \{channel = jam_mode
-			qs(0x0cc737d4)}
-		SoundEvent \{event = ghmix_scroll_up_down}
+			qs("\LCONTROL: End")}
+		SoundEvent \{event = GhMix_Scroll_Up_Down}
 		if ($jam_highway_recording_mode = 1)
 			jam_highway_move_last_note
 		else
 			jam_highway_move_end
 		endif
-		Change \{jam_highway_playing = 0}
+		change \{jam_highway_playing = 0}
 		case 1
 		printf \{channel = jam_mode
-			qs(0xba402bc0)}
-		SoundEvent \{event = ghmix_scroll_up_down}
-		SpawnScriptNow jam_highway_user_skip id = <jam_player_spawns> params = {forwards = 1}
-		Change \{jam_highway_playing = 0}
+			qs("\LCONTROL: Skip Forward")}
+		SoundEvent \{event = GhMix_Scroll_Up_Down}
+		spawnscriptnow jam_highway_user_skip id = <jam_player_spawns> params = {forwards = 1}
+		change \{jam_highway_playing = 0}
 		case 2
 		printf \{channel = jam_mode
-			qs(0xed59051a)}
-		SoundEvent \{event = ghmix_select}
-		Change \{jam_highway_playing = 1}
+			qs("\LCONTROL: Play")}
+		SoundEvent \{event = GhMix_Select}
+		change \{jam_highway_playing = 1}
 		if ($jam_highway_recording_mode = 0)
 			begin_jam_song
 		endif
-		getplayerinfo ($jam_current_recording_player) controller
-		ResolveScreenElementID \{id = {
+		GetPlayerInfo ($jam_current_recording_player) controller
+		ResolveScreenElementId \{id = {
 				jam_studio_element
 				child = {
 					adv_record
 					child = nowbar_bg
 				}
 			}}
-		RunScriptOnScreenElement id = <resolved_id> jam_lightup_held_note_sprites params = {controller = <controller> Player = ($jam_current_recording_player)}
-		SpawnScriptNow \{jam_studio_tilt_meter
+		RunScriptOnScreenElement id = <resolved_id> jam_lightup_held_note_sprites params = {controller = <controller> player = ($jam_current_recording_player)}
+		spawnscriptnow \{jam_studio_tilt_meter
 			id = jam_recording_spawns}
-		ResolveScreenElementID \{id = {
+		ResolveScreenElementId \{id = {
 				jam_studio_element
 				child = {
 					adv_record
@@ -557,123 +557,123 @@ script jam_control_bar_choose
 				}
 			}}
 		SetScreenElementProps id = <resolved_id> text = ($jam_controls [$jam_control_selected].alt_name_text)
-		SpawnScriptNow \{jam_highway_play
+		spawnscriptnow \{jam_highway_play
 			id = jam_recording_spawns}
 		case 3
 		printf \{channel = jam_mode
-			qs(0xcb8e98d2)}
-		SoundEvent \{event = ghmix_select}
-		Change \{no_marker_snap = 1}
-		getplayerinfo ($jam_current_recording_player) jam_instrument
+			qs("\LCONTROL: Record")}
+		SoundEvent \{event = GhMix_Select}
+		change \{no_marker_snap = 1}
+		GetPlayerInfo ($jam_current_recording_player) jam_instrument
 		if (<jam_instrument> = 4)
-			Change \{jam_melody_last_pattern = 1}
+			change \{jam_melody_last_pattern = 1}
 		endif
-		getplayerinfo ($jam_current_recording_player) controller
-		ResolveScreenElementID \{id = {
+		GetPlayerInfo ($jam_current_recording_player) controller
+		ResolveScreenElementId \{id = {
 				jam_studio_element
 				child = {
 					adv_record
 					child = nowbar_bg
 				}
 			}}
-		RunScriptOnScreenElement id = <resolved_id> jam_lightup_held_note_sprites params = {controller = <controller> Player = ($jam_current_recording_player)}
-		SpawnScriptNow \{jam_studio_tilt_meter
+		RunScriptOnScreenElement id = <resolved_id> jam_lightup_held_note_sprites params = {controller = <controller> player = ($jam_current_recording_player)}
+		spawnscriptnow \{jam_studio_tilt_meter
 			id = jam_recording_spawns}
-		SpawnScriptNow \{jam_highway_record
+		spawnscriptnow \{jam_highway_record
 			id = jam_recording_spawns}
-		Change \{jam_highway_playing = 0}
-		broadcastevent \{Type = ghmix_start_rec}
+		change \{jam_highway_playing = 0}
+		BroadcastEvent \{type = ghmix_start_rec}
 		case 4
 		printf \{channel = jam_mode
-			qs(0x3be47dca)}
-		SoundEvent \{event = ghmix_select}
-		Change \{no_precise_snap = 1}
-		Change \{no_marker_snap = 1}
-		getplayerinfo ($jam_current_recording_player) jam_instrument
+			qs("\LCONTROL: Step Record")}
+		SoundEvent \{event = GhMix_Select}
+		change \{no_precise_snap = 1}
+		change \{no_marker_snap = 1}
+		GetPlayerInfo ($jam_current_recording_player) jam_instrument
 		if (<jam_instrument> = 4)
-			Change \{jam_melody_last_pattern = 1}
+			change \{jam_melody_last_pattern = 1}
 		endif
-		getplayerinfo ($jam_current_recording_player) controller
-		ResolveScreenElementID \{id = {
+		GetPlayerInfo ($jam_current_recording_player) controller
+		ResolveScreenElementId \{id = {
 				jam_studio_element
 				child = {
 					adv_record
 					child = nowbar_bg
 				}
 			}}
-		RunScriptOnScreenElement id = <resolved_id> jam_lightup_held_note_sprites params = {controller = <controller> Player = ($jam_current_recording_player)}
-		SpawnScriptNow \{jam_studio_tilt_meter
+		RunScriptOnScreenElement id = <resolved_id> jam_lightup_held_note_sprites params = {controller = <controller> player = ($jam_current_recording_player)}
+		spawnscriptnow \{jam_studio_tilt_meter
 			id = jam_recording_spawns}
-		SpawnScriptNow \{jam_highway_step_record
+		spawnscriptnow \{jam_highway_step_record
 			id = jam_recording_spawns}
-		Change \{jam_highway_playing = 0}
-		broadcastevent \{Type = ghmix_start_step}
+		change \{jam_highway_playing = 0}
+		BroadcastEvent \{type = ghmix_start_step}
 		case 5
 		printf \{channel = jam_mode
-			qs(0xfd4062da)}
-		SoundEvent \{event = ghmix_scroll_up_down}
-		SpawnScriptNow jam_highway_user_skip id = <jam_player_spawns> params = {forwards = 0}
-		Change \{jam_highway_playing = 0}
+			qs("\LCONTROL: Skip Backwards")}
+		SoundEvent \{event = GhMix_Scroll_Up_Down}
+		spawnscriptnow jam_highway_user_skip id = <jam_player_spawns> params = {forwards = 0}
+		change \{jam_highway_playing = 0}
 		case 6
 		printf \{channel = jam_mode
-			qs(0x842241d3)}
-		SoundEvent \{event = ghmix_scroll_up_down}
+			qs("\LCONTROL: Beginning")}
+		SoundEvent \{event = GhMix_Scroll_Up_Down}
 		jam_highway_move_beginning
-		Change \{jam_highway_playing = 0}
+		change \{jam_highway_playing = 0}
 		case 7
-		broadcastevent \{Type = ghmix_start_loop}
+		BroadcastEvent \{type = ghmix_start_loop}
 		printf \{channel = jam_mode
-			qs(0x71c49faa)}
-		SoundEvent \{event = ghmix_select}
+			qs("\LCONTROL: Loop")}
+		SoundEvent \{event = GhMix_Select}
 		jam_highway_loop
-		Change \{jam_highway_playing = 0}
+		change \{jam_highway_playing = 0}
 		case 8
-		broadcastevent \{Type = ghmix_delete_start}
+		BroadcastEvent \{type = ghmix_delete_start}
 		printf \{channel = jam_mode
-			qs(0x4bcb1cce)}
-		SoundEvent \{event = ghmix_select}
+			qs("\LCONTROL: Delete Range")}
+		SoundEvent \{event = GhMix_Select}
 		jam_highway_delete_section
-		Change \{jam_highway_playing = 0}
+		change \{jam_highway_playing = 0}
 		case 9
-		broadcastevent \{Type = ghmix_start_copy}
+		BroadcastEvent \{type = ghmix_start_copy}
 		printf \{channel = jam_mode
-			qs(0x715c7186)}
-		SoundEvent \{event = ghmix_select}
+			qs("\LCONTROL: Copy")}
+		SoundEvent \{event = GhMix_Select}
 		jam_highway_copy
-		Change \{jam_highway_playing = 0}
+		change \{jam_highway_playing = 0}
 		case 10
-		broadcastevent \{Type = ghmix_paste_start}
+		BroadcastEvent \{type = ghmix_paste_start}
 		printf \{channel = jam_mode
-			qs(0xffbc1273)}
-		SoundEvent \{event = ghmix_select}
+			qs("\LCONTROL: Paste")}
+		SoundEvent \{event = GhMix_Select}
 		jam_highway_paste_control
-		Change \{jam_highway_playing = 0}
+		change \{jam_highway_playing = 0}
 		case 11
-		Change \{no_marker_snap = 1}
-		broadcastevent \{Type = ghmix_start_nudge}
+		change \{no_marker_snap = 1}
+		BroadcastEvent \{type = ghmix_start_nudge}
 		printf \{channel = jam_mode
-			qs(0x8b6d7f03)}
-		SoundEvent \{event = ghmix_select}
-		SpawnScriptNow jam_highway_note_nudge id = <jam_player_spawns>
-		Change \{jam_highway_playing = 0}
+			qs("\LCONTROL: Note Nudge")}
+		SoundEvent \{event = GhMix_Select}
+		spawnscriptnow jam_highway_note_nudge id = <jam_player_spawns>
+		change \{jam_highway_playing = 0}
 		case 12
 		printf \{channel = jam_mode
-			qs(0x75aa1924)}
-		SoundEvent \{event = ghmix_select}
-		LaunchEvent \{Type = unfocus
+			qs("\LCONTROL: Add Marker")}
+		SoundEvent \{event = GhMix_Select}
+		LaunchEvent \{type = unfocus
 			target = jam_control_container}
-		getplayerinfo ($jam_current_recording_player) controller
+		GetPlayerInfo ($jam_current_recording_player) controller
 		create_menu_jam_marker controller = <controller>
-		Change \{jam_highway_playing = 0}
+		change \{jam_highway_playing = 0}
 		case 13
 		printf \{channel = jam_mode
-			qs(0x17b9309e)}
-		SoundEvent \{event = ghtunes_ui_select}
+			qs("\LCONTROL: Switch Instrument")}
+		SoundEvent \{event = GHTunes_UI_Select}
 		jam_recording_switch_instrument
 		jam_clear_undo_clipboard
-		Change \{jam_undo_track = -1}
-		jam_ghmix_note_quick_update Player = ($jam_current_recording_player)
-		Change \{jam_highway_playing = 0}
+		change \{jam_undo_track = -1}
+		jam_ghmix_note_quick_update player = ($jam_current_recording_player)
+		change \{jam_highway_playing = 0}
 	endswitch
 endscript
 jam_loop_bound_low = -1
@@ -681,14 +681,14 @@ jam_loop_bound_high = -1
 
 script jam_highway_loop 
 	printf \{channel = jam_mode
-		qs(0xead72b33)}
+		qs("\LJAM_HIGHWAY_LOOP")}
 	if ($jam_highway_recording_mode = 0)
 		return
 	endif
 	tool_controls = []
 	clean_up_user_control_helpers
 	jam_recording_add_user_control_helpers \{state = Loop}
-	LaunchEvent \{Type = unfocus
+	LaunchEvent \{type = unfocus
 		target = jam_control_container}
 	orig_start_time = $jam_highway_play_time
 	low_pos = (($jam_highway_play_time / 1000.0) * $jam_highway_pixels_per_second)
@@ -696,29 +696,29 @@ script jam_highway_loop
 	loop_bound_high = 0
 	mid_up_strum = 0
 	mid_down_strum = 0
-	if isps3
-		<clear_button> = Square
+	if IsPs3
+		<clear_button> = square
 	elseif isXenon
-		<clear_button> = Triangle
+		<clear_button> = triangle
 	endif
 	GetEnterButtonAssignment
 	switch <assignment>
 		case circle
-		break_button = X
-		case X
+		break_button = x
+		case x
 		break_button = circle
 	endswitch
 	count = 0
-	getplayerinfo ($jam_current_recording_player) controller
+	GetPlayerInfo ($jam_current_recording_player) controller
 	loop_controls = [set_loop clear_loop select_area cancel]
 	begin
 	if ($game_mode = training)
 		jam_studio_element :GetTags
 	endif
 	if ArrayContains array = <loop_controls> contains = select_area
-		if has_lefty_adj_control_press Dir = up controller = <controller> Player = $jam_current_recording_player
+		if has_lefty_adj_control_press dir = up controller = <controller> player = $jam_current_recording_player
 			if (<mid_up_strum> = 0)
-				ghmix_scroll \{adv_record}
+				GHMix_scroll \{adv_record}
 				jam_highway_skip_forwards
 			endif
 			<mid_up_strum> = (<mid_up_strum> + 1)
@@ -728,9 +728,9 @@ script jam_highway_loop
 		else
 			<mid_up_strum> = 0
 		endif
-		if has_lefty_adj_control_press Dir = down controller = <controller> Player = $jam_current_recording_player
+		if has_lefty_adj_control_press dir = down controller = <controller> player = $jam_current_recording_player
 			if (<mid_down_strum> = 0)
-				ghmix_scroll \{adv_record}
+				GHMix_scroll \{adv_record}
 				jam_highway_skip_backwards
 			endif
 			<mid_down_strum> = (<mid_down_strum> + 1)
@@ -743,7 +743,7 @@ script jam_highway_loop
 	endif
 	if ArrayContains array = <loop_controls> contains = cancel
 		if ControllerMake <break_button> <controller>
-			ghmix_pad_back_sound
+			GhMix_Pad_Back_Sound
 			<broke> = 1
 			break
 		endif
@@ -758,19 +758,19 @@ script jam_highway_loop
 		highlight_pos = <low_pos>
 	endif
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = jam_highway_container
 		id = jam_loop_highlight
 		texture = white
 		just = [left top]
 		rgba = [255 0 0 50]
-		Pos = (<highlight_pos> + (0.0, 55.0))
+		pos = (<highlight_pos> + (0.0, 55.0))
 		dims = ((0.0, 175.0) + ((1.0, 0.0) * (<high_pos> [0] - <low_pos> [0])))
 		z_priority = 10
 	}
 	if ArrayContains array = <loop_controls> contains = set_loop
 		if ControllerMake start <controller>
-			SoundEvent \{event = ghmix_select}
+			SoundEvent \{event = GhMix_Select}
 			if ($jam_highway_play_time < <orig_start_time>)
 				<loop_bound_low> = $jam_highway_play_time
 				<loop_bound_high> = <orig_start_time>
@@ -781,7 +781,7 @@ script jam_highway_loop
 				<loop_bound_low> = (<orig_start_time>)
 				<loop_bound_high> = (($jam_highway_play_time))
 			endif
-			broadcastevent \{Type = ghmix_loop_set}
+			BroadcastEvent \{type = ghmix_loop_set}
 			break
 		endif
 	endif
@@ -800,49 +800,49 @@ script jam_highway_loop
 	Wait \{1
 		gameframe}
 	repeat
-	broadcastevent \{Type = ghmix_stop_loop}
+	BroadcastEvent \{type = ghmix_stop_loop}
 	if ((<loop_bound_low> != <loop_bound_high>) || (<loop_bound_low> = -1 && <loop_bound_high> = -1))
 		quantize_to = 1
 		ms_per_beat = (60000.0 / $jam_current_bpm)
 		ms_per_quarter = (<ms_per_beat> / <quantize_to>)
 		if NOT (<loop_bound_low> = -1 && <loop_bound_high> = -1)
 			if ((<loop_bound_high> - <loop_bound_low>) >= <ms_per_quarter>)
-				Change jam_loop_bound_low = <loop_bound_low>
-				Change jam_loop_bound_high = <loop_bound_high>
+				change jam_loop_bound_low = <loop_bound_low>
+				change jam_loop_bound_high = <loop_bound_high>
 			else
-				SpawnScriptNow \{show_warning_message
+				spawnscriptnow \{show_warning_message
 					id = jam_recording_spawns
 					params = {
-						warning_text = qs(0xe19408b8)
+						warning_text = qs("Loop error: Loop must be at least a quarter note in length.")
 					}}
 			endif
 		else
-			Change jam_loop_bound_low = <loop_bound_low>
-			Change jam_loop_bound_high = <loop_bound_high>
+			change jam_loop_bound_low = <loop_bound_low>
+			change jam_loop_bound_high = <loop_bound_high>
 		endif
 	else
 		if NOT GotParam \{broke}
-			SpawnScriptNow \{show_warning_message
+			spawnscriptnow \{show_warning_message
 				id = jam_recording_spawns
 				params = {
-					warning_text = qs(0xc7806153)
+					warning_text = qs("Loop error: Start time is the same as end time.")
 				}}
 		endif
 	endif
-	printf channel = jam_mode qs(0x40240d02) a = <loop_bound_low> b = <loop_bound_high>
+	printf channel = jam_mode qs("\LLoop bound low %a, loop bound high %b") a = <loop_bound_low> b = <loop_bound_high>
 	if ScreenElementExists \{id = jam_loop_highlight}
 		DestroyScreenElement \{id = jam_loop_highlight}
 	endif
-	LaunchEvent \{Type = focus
+	LaunchEvent \{type = focus
 		target = jam_control_container}
 	clean_up_user_control_helpers
 	jam_recording_add_user_control_helpers
 endscript
 
 script jam_highway_add_marker 
-	ghmix_pad_choose_sound
+	GhMix_Pad_Choose_Sound
 	destroy_menu_jam_marker
-	LaunchEvent \{Type = focus
+	LaunchEvent \{type = focus
 		target = jam_control_container}
 	quantize_to = 1
 	ms_per_beat = (60000.0 / $jam_current_bpm)
@@ -857,7 +857,7 @@ script jam_highway_add_marker
 	endif
 	CastToInteger \{new_time}
 	new_pos = ($jam_highway_play_line_pos - ((<new_time> / 1000.0) * $jam_highway_pixels_per_second))
-	SetScreenElementProps id = jam_highway_container Pos = (<new_pos>)
+	SetScreenElementProps id = jam_highway_container pos = (<new_pos>)
 	if (<new_time> < $jam_highway_play_time)
 		<new_low_bound> = ($jam_highway_low_bound - ($jam_highway_play_time - <new_time>))
 		<new_high_bound> = ($jam_highway_high_bound - ($jam_highway_play_time - <new_time>))
@@ -867,23 +867,23 @@ script jam_highway_add_marker
 	endif
 	CastToInteger \{new_low_bound}
 	CastToInteger \{new_high_bound}
-	Change jam_highway_low_bound = <new_low_bound>
-	Change jam_highway_high_bound = <new_high_bound>
+	change jam_highway_low_bound = <new_low_bound>
+	change jam_highway_high_bound = <new_high_bound>
 	jam_highway_reinit
-	Change jam_highway_play_time = <new_time>
+	change jam_highway_play_time = <new_time>
 	markers_array = editable_jam_markers
 	suffix = '_size'
 	AppendSuffixToChecksum Base = <markers_array> SuffixString = <suffix>
 	<markers_size> = <appended_id>
 	get_marker_count markers_array = <markers_array> markers_size = <markers_size> new_marker_time = ($jam_highway_play_time) new_marker_name = ($jam_markers [$jam_current_marker].name_text)
-	addmarkeritem Name = <markers_array> time = ($jam_highway_play_time) marker_name = ($jam_markers [$jam_current_marker].name_text) marker_count = <marker_count> bpm = ($jam_current_marker_bpm) LightShow = ($jam_current_lightshow)
+	AddMarkerItem name = <markers_array> time = ($jam_highway_play_time) marker_name = ($jam_markers [$jam_current_marker].name_text) marker_count = <marker_count> bpm = ($jam_current_marker_bpm) LightShow = ($jam_current_lightshow)
 	jam_recording_update_metaview
-	Change \{no_marker_snap = 0}
+	change \{no_marker_snap = 0}
 endscript
 
 script get_marker_count 
 	GetArraySize ($<markers_array>)
-	printf channel = jam_mode qs(0x601c28e9) s = <array_Size>
+	printf channel = jam_mode qs("\LMarkers size %s") s = <array_size>
 	count = 0
 	marker_count = 0
 	begin
@@ -915,21 +915,21 @@ script debug_print_markers
 	AppendSuffixToChecksum Base = <markers_array> SuffixString = <suffix>
 	<markers_size> = <appended_id>
 	GetArraySize ($<markers_array>)
-	printf channel = jam_mode qs(0x601c28e9) s = <array_Size>
+	printf channel = jam_mode qs("\LMarkers size %s") s = <array_size>
 	count = 0
 	begin
-	printf qs(0xf6643ac1) s = <count>
+	printf qs("\LMarker %s") s = <count>
 	printstruct ($<markers_array> [<count>])
 	<count> = (<count> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 endscript
 
 script jam_highway_move_beginning 
 	SetScreenElementProps \{id = jam_highway_container
-		Pos = $jam_highway_play_line_pos}
+		pos = $jam_highway_play_line_pos}
 	initialize_jam_highway
 	SetSeekPosition_Song \{position = 0}
-	Change \{jam_highway_play_time = 0}
+	change \{jam_highway_play_time = 0}
 	if ($jam_highway_recording_mode = 0)
 		begin_song \{Pause = 1}
 	endif
@@ -937,15 +937,15 @@ endscript
 
 script jam_highway_move_end 
 	end_pos = ($jam_highway_play_line_pos - ((($jam_highway_end_time) / 1000.0) * $jam_highway_pixels_per_second))
-	SetScreenElementProps id = jam_highway_container Pos = <end_pos>
+	SetScreenElementProps id = jam_highway_container pos = <end_pos>
 	SetSeekPosition_Song position = ($jam_highway_end_time)
-	Change jam_highway_play_time = ($jam_highway_end_time)
+	change jam_highway_play_time = ($jam_highway_end_time)
 	<new_low_bound> = ($jam_highway_start_low_bound + $jam_highway_end_time)
 	<new_high_bound> = ($jam_highway_start_high_bound + $jam_highway_end_time)
 	CastToInteger \{new_low_bound}
 	CastToInteger \{new_high_bound}
-	Change jam_highway_low_bound = <new_low_bound>
-	Change jam_highway_high_bound = <new_high_bound>
+	change jam_highway_low_bound = <new_low_bound>
+	change jam_highway_high_bound = <new_high_bound>
 	jam_highway_reinit
 endscript
 
@@ -956,27 +956,27 @@ script jam_highway_move_last_note
 	notetrack_size = ($<appended_id>)
 	if (<notetrack_size> > 0)
 		end_time = ($<gem_array> [(<notetrack_size> - 2)])
-		printf channel = jam_mode qs(0x76713ce2) s = <end_time>
+		printf channel = jam_mode qs("\Lend time %s") s = <end_time>
 	else
 		return
 	endif
 	end_pos = ($jam_highway_play_line_pos - ((<end_time> / 1000.0) * $jam_highway_pixels_per_second))
-	SetScreenElementProps id = jam_highway_container Pos = <end_pos>
-	Change jam_highway_play_time = <end_time>
+	SetScreenElementProps id = jam_highway_container pos = <end_pos>
+	change jam_highway_play_time = <end_time>
 	<new_low_bound> = (<end_time> + $jam_highway_start_low_bound)
 	<new_high_bound> = (<end_time> + $jam_highway_start_high_bound)
 	CastToInteger \{new_low_bound}
 	CastToInteger \{new_high_bound}
-	Change jam_highway_low_bound = <new_low_bound>
-	Change jam_highway_high_bound = <new_high_bound>
+	change jam_highway_low_bound = <new_low_bound>
+	change jam_highway_high_bound = <new_high_bound>
 	jam_highway_reinit
 endscript
 
 script jam_highway_play 
-	getplayerinfo ($jam_current_recording_player) jam_instrument
+	GetPlayerInfo ($jam_current_recording_player) jam_instrument
 	tool_controls = []
 	if ScreenElementExists \{id = jam_control_container}
-		LaunchEvent \{Type = unfocus
+		LaunchEvent \{type = unfocus
 			target = jam_control_container}
 	endif
 	if (<jam_instrument> = 3)
@@ -984,31 +984,31 @@ script jam_highway_play
 			gameframes}
 	endif
 	if ($jam_highway_recording_mode = 1)
-		SpawnScriptNow \{guitar_jam_playback_recording
+		spawnscriptnow \{guitar_jam_playback_recording
 			id = jam_recording_spawns
 			params = {
 				jam_instrument = 0
 				start_time = $jam_highway_play_time
 			}}
-		SpawnScriptNow \{guitar_jam_playback_recording
+		spawnscriptnow \{guitar_jam_playback_recording
 			id = jam_recording_spawns
 			params = {
 				jam_instrument = 1
 				start_time = $jam_highway_play_time
 			}}
-		SpawnScriptNow \{guitar_jam_playback_recording
+		spawnscriptnow \{guitar_jam_playback_recording
 			id = jam_recording_spawns
 			params = {
 				jam_instrument = 2
 				start_time = $jam_highway_play_time
 			}}
-		SpawnScriptNow \{guitar_jam_playback_recording
+		spawnscriptnow \{guitar_jam_playback_recording
 			id = jam_recording_spawns
 			params = {
 				jam_instrument = 4
 				start_time = $jam_highway_play_time
 			}}
-		SpawnScriptNow \{guitar_jam_drum_playback
+		spawnscriptnow \{guitar_jam_drum_playback
 			id = jam_recording_spawns
 			params = {
 				start_time = $jam_highway_play_time
@@ -1016,35 +1016,35 @@ script jam_highway_play
 	endif
 	if GotParam \{jam_mode}
 		begin_pos = ($jam_band_playline_pos + ((($jam_highway_play_time) / 1000.0) * $jam_band_pixels_per_second))
-		SetScreenElementProps id = jam_band_highway_playline Pos = <begin_pos>
+		SetScreenElementProps id = jam_band_highway_playline pos = <begin_pos>
 		pixels_per_frame = ($jam_band_pixels_per_second / 60)
 		GetScreenElementPosition \{id = jam_band_highway_playline}
 		end_pos = ($jam_band_playline_pos + ((($jam_band_song_length) / 1000.0) * $jam_band_pixels_per_second))
 		begin
 		new_pos = ($jam_band_playline_pos + ((($jam_highway_play_time) / 1000.0) * $jam_band_pixels_per_second))
 		if NOT (<new_pos> [0] > <end_pos> [0])
-			SetScreenElementProps id = jam_band_highway_playline Pos = <new_pos>
-			Change jam_highway_play_time = ($jam_highway_play_time + ((1.0 / 60.0) * 1000.0))
+			SetScreenElementProps id = jam_band_highway_playline pos = <new_pos>
+			change jam_highway_play_time = ($jam_highway_play_time + ((1.0 / 60.0) * 1000.0))
 		else
 			break
 		endif
 		Wait \{1
 			gameframe}
 		repeat
-		Change \{jam_highway_playing = 0}
+		change \{jam_highway_playing = 0}
 	else
-		LaunchEvent \{Type = unfocus
+		LaunchEvent \{type = unfocus
 			target = jam_control_container}
-		if StructureContains structure = ($jam_tracks [$jam_current_track]) input_func
-			getplayerinfo ($jam_current_recording_player) controller
-			formatText checksumName = input_spawn 'input_spawn_%s' s = ($jam_current_recording_player)
-			SpawnScriptNow ($jam_tracks [$jam_current_track].input_func) id = <input_spawn> params = {show_hud = 0 controller = <controller> select_player = ($jam_current_recording_player) hammer_on = <hammer_on>}
+		if StructureContains Structure = ($jam_tracks [$jam_current_track]) input_func
+			GetPlayerInfo ($jam_current_recording_player) controller
+			FormatText checksumname = input_spawn 'input_spawn_%s' s = ($jam_current_recording_player)
+			spawnscriptnow ($jam_tracks [$jam_current_track].input_func) id = <input_spawn> params = {show_hud = 0 controller = <controller> select_player = ($jam_current_recording_player) hammer_on = <hammer_on>}
 			if (($jam_current_track) = 3)
-				SpawnScriptNow \{id = jam_recording_spawns
+				spawnscriptnow \{id = jam_recording_spawns
 					jam_advanced_show_percussion_box}
 			else
 				if NOT (($jam_current_track) = 0)
-					SpawnScriptNow \{id = jam_recording_spawns
+					spawnscriptnow \{id = jam_recording_spawns
 						jam_advanced_show_arpeggiator_box}
 				endif
 			endif
@@ -1063,38 +1063,38 @@ script jam_highway_play
 			jam_studio_element :GetTags
 		endif
 		GetSongTimeMs
-		Change jam_highway_play_time = <time>
+		change jam_highway_play_time = <time>
 		if ($jam_loop_bound_low > -1 && $jam_loop_bound_high > -1)
 			if (<can_loop> = 1)
 				if ($jam_highway_play_time > ($jam_loop_bound_high - ((1000.0 / 60.0) * 2)))
-					Change \{jam_highway_play_time = $jam_loop_bound_low}
-					KillSpawnedScript \{Name = guitar_jam_playback_recording}
-					KillSpawnedScript \{Name = guitar_jam_drum_playback}
-					SpawnScriptNow \{guitar_jam_playback_recording
+					change \{jam_highway_play_time = $jam_loop_bound_low}
+					KillSpawnedScript \{name = guitar_jam_playback_recording}
+					KillSpawnedScript \{name = guitar_jam_drum_playback}
+					spawnscriptnow \{guitar_jam_playback_recording
 						id = jam_recording_spawns
 						params = {
 							jam_instrument = 0
 							start_time = $jam_highway_play_time
 						}}
-					SpawnScriptNow \{guitar_jam_playback_recording
+					spawnscriptnow \{guitar_jam_playback_recording
 						id = jam_recording_spawns
 						params = {
 							jam_instrument = 1
 							start_time = $jam_highway_play_time
 						}}
-					SpawnScriptNow \{guitar_jam_playback_recording
+					spawnscriptnow \{guitar_jam_playback_recording
 						id = jam_recording_spawns
 						params = {
 							jam_instrument = 2
 							start_time = $jam_highway_play_time
 						}}
-					SpawnScriptNow \{guitar_jam_playback_recording
+					spawnscriptnow \{guitar_jam_playback_recording
 						id = jam_recording_spawns
 						params = {
 							jam_instrument = 4
 							start_time = $jam_highway_play_time
 						}}
-					SpawnScriptNow \{guitar_jam_drum_playback
+					spawnscriptnow \{guitar_jam_drum_playback
 						id = jam_recording_spawns
 						params = {
 							start_time = $jam_highway_play_time
@@ -1107,22 +1107,22 @@ script jam_highway_play
 		new_pos = ($jam_highway_play_line_pos - ((($jam_highway_play_time) / 1000.0) * $jam_highway_pixels_per_second))
 		if NOT (<new_pos> [0] < <end_pos> [0])
 			if NOT (<count> = 0)
-				SetScreenElementProps id = jam_highway_container Pos = <new_pos>
+				SetScreenElementProps id = jam_highway_container pos = <new_pos>
 				<new_low_bound> = (($jam_highway_play_time) + ($jam_highway_start_low_bound))
 				<new_high_bound> = (($jam_highway_play_time) + ($jam_highway_start_high_bound))
 				CastToInteger \{new_low_bound}
 				CastToInteger \{new_high_bound}
-				Change jam_highway_low_bound = <new_low_bound>
-				Change jam_highway_high_bound = <new_high_bound>
+				change jam_highway_low_bound = <new_low_bound>
+				change jam_highway_high_bound = <new_high_bound>
 			endif
 			<count> = (<count> + 1)
 		else
 			jam_highway_move_end
 			break
 		endif
-		getplayerinfo ($jam_current_recording_player) controller
+		GetPlayerInfo ($jam_current_recording_player) controller
 		if ControllerMake start <controller>
-			SoundEvent \{event = ghmix_select}
+			SoundEvent \{event = GhMix_Select}
 			break
 		endif
 		if ArrayContains array = <tool_controls> contains = force_exit
@@ -1131,17 +1131,17 @@ script jam_highway_play
 		Wait \{1
 			gameframe}
 		repeat
-		SpawnScriptNow \{id = jam_recording_spawns
+		spawnscriptnow \{id = jam_recording_spawns
 			jam_advanced_hide_percussion_box}
-		SpawnScriptNow \{id = jam_recording_spawns
+		spawnscriptnow \{id = jam_recording_spawns
 			jam_advanced_hide_arpeggiator_box}
-		KillSpawnedScript \{Name = jam_play_arpeggiator_loop}
-		KillSpawnedScript \{Name = jam_play_drum_loop}
+		KillSpawnedScript \{name = jam_play_arpeggiator_loop}
+		KillSpawnedScript \{name = jam_play_drum_loop}
 		jam_stop_all_sound
-		KillSpawnedScript \{Name = jam_lightup_held_note_sprites}
-		KillSpawnedScript \{Name = jam_studio_tilt_meter}
+		KillSpawnedScript \{name = jam_lightup_held_note_sprites}
+		KillSpawnedScript \{name = jam_studio_tilt_meter}
 		jam_studio_hide_tilt_meter
-		ResolveScreenElementID \{id = {
+		ResolveScreenElementId \{id = {
 				jam_studio_element
 				child = {
 					adv_record
@@ -1151,17 +1151,17 @@ script jam_highway_play
 					}
 				}
 			}}
-		legacydoscreenelementmorph id = <resolved_id> time = 0.2 rot_angle = 0
-		destroyplayerserverjaminput Player = ($jam_current_recording_player)
-		formatText checksumName = input_spawn 'input_spawn_%s' s = ($jam_current_recording_player)
+		LegacyDoScreenElementMorph id = <resolved_id> time = 0.2 rot_angle = 0
+		DestroyPlayerServerJamInput player = ($jam_current_recording_player)
+		FormatText checksumname = input_spawn 'input_spawn_%s' s = ($jam_current_recording_player)
 		KillSpawnedScript id = <input_spawn>
 		KillSpawnedScript \{id = jam_input_spawns}
-		jam_kill_update_note_length Player = ($jam_current_recording_player)
-		LaunchEvent \{Type = focus
+		jam_kill_update_note_length player = ($jam_current_recording_player)
+		LaunchEvent \{type = focus
 			target = jam_control_container}
 		SetScreenElementProps \{id = control_playstop
 			texture = icon_play}
-		ResolveScreenElementID \{id = {
+		ResolveScreenElementId \{id = {
 				jam_studio_element
 				child = {
 					adv_record
@@ -1173,14 +1173,14 @@ script jam_highway_play
 		jam_recording_add_user_control_helpers
 	endif
 	printf \{channel = jam_mode
-		qs(0xbd4e4e75)}
-	Change \{jam_highway_playing = 0}
+		qs("\LCONTROL: Stop")}
+	change \{jam_highway_playing = 0}
 	if ($jam_highway_recording_mode = 0)
 		begin_jam_song \{Pause = 1}
 	endif
 	if ($jam_highway_recording_mode = 1)
-		KillSpawnedScript \{Name = guitar_jam_playback_recording}
-		KillSpawnedScript \{Name = guitar_jam_drum_playback}
+		KillSpawnedScript \{name = guitar_jam_playback_recording}
+		KillSpawnedScript \{name = guitar_jam_drum_playback}
 	endif
 	jam_stop_all_sound
 endscript
@@ -1191,47 +1191,47 @@ script jam_highway_record
 	endif
 	tool_controls = []
 	jam_update_undo_clipboard
-	Change \{jam_highway_recording = 1}
-	LaunchEvent \{Type = unfocus
+	change \{jam_highway_recording = 1}
+	LaunchEvent \{type = unfocus
 		target = jam_control_container}
-	getplayerinfo ($jam_current_recording_player) controller
-	getplayerinfo ($jam_current_recording_player) jam_instrument
+	GetPlayerInfo ($jam_current_recording_player) controller
+	GetPlayerInfo ($jam_current_recording_player) jam_instrument
 	if (<jam_instrument> = 3)
 		Wait \{20
 			gameframes}
 	endif
 	show_countin_message
 	jam_record_input
-	SpawnScriptNow \{guitar_jam_playback_recording
+	spawnscriptnow \{guitar_jam_playback_recording
 		id = jam_input_spawns
 		params = {
 			jam_instrument = 0
 			start_time = $jam_highway_play_time
 		}}
-	SpawnScriptNow \{guitar_jam_playback_recording
+	spawnscriptnow \{guitar_jam_playback_recording
 		id = jam_input_spawns
 		params = {
 			jam_instrument = 1
 			start_time = $jam_highway_play_time
 		}}
-	SpawnScriptNow \{guitar_jam_playback_recording
+	spawnscriptnow \{guitar_jam_playback_recording
 		id = jam_input_spawns
 		params = {
 			jam_instrument = 2
 			start_time = $jam_highway_play_time
 		}}
-	SpawnScriptNow \{guitar_jam_playback_recording
+	spawnscriptnow \{guitar_jam_playback_recording
 		id = jam_input_spawns
 		params = {
 			jam_instrument = 4
 			start_time = $jam_highway_play_time
 		}}
-	SpawnScriptNow \{guitar_jam_drum_playback
+	spawnscriptnow \{guitar_jam_drum_playback
 		id = jam_input_spawns
 		params = {
 			start_time = $jam_highway_play_time
 		}}
-	SpawnScriptNow \{jam_recording_metronome
+	spawnscriptnow \{jam_recording_metronome
 		id = jam_input_spawns
 		params = {
 			sound_only
@@ -1250,44 +1250,44 @@ script jam_highway_record
 		jam_studio_element :GetTags
 	endif
 	GetSongTimeMs
-	Change jam_highway_play_time = <time>
+	change jam_highway_play_time = <time>
 	if ($jam_loop_bound_low > -1 && $jam_loop_bound_high > -1)
 		if (<can_loop> = 1)
 			if ($jam_highway_play_time > ($jam_loop_bound_high - ((1000.0 / 60.0) * 2)))
-				Change \{jam_highway_play_time = $jam_loop_bound_low}
-				KillSpawnedScript \{Name = guitar_jam_playback_recording}
-				KillSpawnedScript \{Name = guitar_jam_drum_playback}
-				SpawnScriptNow \{guitar_jam_playback_recording
+				change \{jam_highway_play_time = $jam_loop_bound_low}
+				KillSpawnedScript \{name = guitar_jam_playback_recording}
+				KillSpawnedScript \{name = guitar_jam_drum_playback}
+				spawnscriptnow \{guitar_jam_playback_recording
 					id = jam_recording_spawns
 					params = {
 						jam_instrument = 0
 						start_time = $jam_highway_play_time
 					}}
-				SpawnScriptNow \{guitar_jam_playback_recording
+				spawnscriptnow \{guitar_jam_playback_recording
 					id = jam_recording_spawns
 					params = {
 						jam_instrument = 1
 						start_time = $jam_highway_play_time
 					}}
-				SpawnScriptNow \{guitar_jam_playback_recording
+				spawnscriptnow \{guitar_jam_playback_recording
 					id = jam_recording_spawns
 					params = {
 						jam_instrument = 2
 						start_time = $jam_highway_play_time
 					}}
-				SpawnScriptNow \{guitar_jam_playback_recording
+				spawnscriptnow \{guitar_jam_playback_recording
 					id = jam_recording_spawns
 					params = {
 						jam_instrument = 4
 						start_time = $jam_highway_play_time
 					}}
-				SpawnScriptNow \{guitar_jam_drum_playback
+				spawnscriptnow \{guitar_jam_drum_playback
 					id = jam_recording_spawns
 					params = {
 						start_time = $jam_highway_play_time
 					}}
-				KillSpawnedScript \{Name = jam_recording_metronome}
-				SpawnScriptNow \{jam_recording_metronome
+				KillSpawnedScript \{name = jam_recording_metronome}
+				spawnscriptnow \{jam_recording_metronome
 					id = jam_input_spawns
 					params = {
 						sound_only
@@ -1300,20 +1300,20 @@ script jam_highway_record
 	new_pos = ($jam_highway_play_line_pos - ((($jam_highway_play_time) / 1000.0) * $jam_highway_pixels_per_second))
 	if NOT (<new_pos> [0] < <end_pos> [0])
 		if NOT (<count> = 0)
-			SetScreenElementProps id = jam_highway_container Pos = <new_pos>
+			SetScreenElementProps id = jam_highway_container pos = <new_pos>
 			<new_low_bound> = (($jam_highway_play_time) + ($jam_highway_start_low_bound))
 			<new_high_bound> = (($jam_highway_play_time) + ($jam_highway_start_high_bound))
 			CastToInteger \{new_low_bound}
 			CastToInteger \{new_high_bound}
-			Change jam_highway_low_bound = <new_low_bound>
-			Change jam_highway_high_bound = <new_high_bound>
+			change jam_highway_low_bound = <new_low_bound>
+			change jam_highway_high_bound = <new_high_bound>
 		endif
 		<count> = (<count> + 1)
 	else
 		jam_highway_move_end
 		break
 	endif
-	getplayerinfo ($jam_current_recording_player) controller
+	GetPlayerInfo ($jam_current_recording_player) controller
 	<done> = 0
 	if ControllerMake start <controller>
 		<done> = 1
@@ -1321,11 +1321,11 @@ script jam_highway_record
 		<done> = 1
 	endif
 	if (<done> = 1)
-		SoundEvent \{event = ghmix_select}
+		SoundEvent \{event = GhMix_Select}
 		if (<jam_instrument> = 4)
 			jam_input_melody_stop_sound
 		endif
-		formatText checksumName = msg_box 'jam_limit_msg_box_%a' a = ($jam_current_recording_player)
+		FormatText checksumname = msg_box 'jam_limit_msg_box_%a' a = ($jam_current_recording_player)
 		if ScreenElementExists id = <msg_box>
 			DestroyScreenElement id = <msg_box>
 		endif
@@ -1334,24 +1334,24 @@ script jam_highway_record
 	Wait \{1
 		gameframe}
 	repeat
-	KillSpawnedScript \{Name = guitar_jam_playback_recording}
-	KillSpawnedScript \{Name = guitar_jam_drum_playback}
+	KillSpawnedScript \{name = guitar_jam_playback_recording}
+	KillSpawnedScript \{name = guitar_jam_drum_playback}
 	printf \{channel = jam_mode
-		qs(0xee7339d4)}
-	broadcastevent \{Type = ghmix_stop_rec}
+		qs("\LRecording Done")}
+	BroadcastEvent \{type = ghmix_stop_rec}
 	jam_update_highway_infobox
 	jam_recording_update_metaview
-	SpawnScriptNow \{id = jam_recording_spawns
+	spawnscriptnow \{id = jam_recording_spawns
 		jam_advanced_hide_percussion_box}
-	SpawnScriptNow \{id = jam_recording_spawns
+	spawnscriptnow \{id = jam_recording_spawns
 		jam_advanced_hide_arpeggiator_box}
-	KillSpawnedScript \{Name = jam_play_arpeggiator_loop}
-	KillSpawnedScript \{Name = jam_play_drum_loop}
+	KillSpawnedScript \{name = jam_play_arpeggiator_loop}
+	KillSpawnedScript \{name = jam_play_drum_loop}
 	jam_stop_all_sound
-	KillSpawnedScript \{Name = jam_lightup_held_note_sprites}
-	KillSpawnedScript \{Name = jam_studio_tilt_meter}
+	KillSpawnedScript \{name = jam_lightup_held_note_sprites}
+	KillSpawnedScript \{name = jam_studio_tilt_meter}
 	jam_studio_hide_tilt_meter
-	ResolveScreenElementID \{id = {
+	ResolveScreenElementId \{id = {
 			jam_studio_element
 			child = {
 				adv_record
@@ -1361,14 +1361,14 @@ script jam_highway_record
 				}
 			}
 		}}
-	legacydoscreenelementmorph id = <resolved_id> time = 0.2 rot_angle = 0
-	destroyplayerserverjaminput Player = ($jam_current_recording_player)
-	formatText checksumName = input_spawn 'input_spawn_%s' s = ($jam_current_recording_player)
+	LegacyDoScreenElementMorph id = <resolved_id> time = 0.2 rot_angle = 0
+	DestroyPlayerServerJamInput player = ($jam_current_recording_player)
+	FormatText checksumname = input_spawn 'input_spawn_%s' s = ($jam_current_recording_player)
 	KillSpawnedScript id = <input_spawn>
 	jam_recording_metronome_stop
 	KillSpawnedScript \{id = jam_input_spawns}
-	jam_kill_update_note_length Player = ($jam_current_recording_player)
-	LaunchEvent \{Type = focus
+	jam_kill_update_note_length player = ($jam_current_recording_player)
+	LaunchEvent \{type = focus
 		target = jam_control_container}
 	if ScreenElementExists \{id = control_record}
 		SetScreenElementProps \{id = control_record
@@ -1376,9 +1376,9 @@ script jam_highway_record
 	endif
 	clean_up_user_control_helpers
 	jam_recording_add_user_control_helpers
-	Change \{jam_highway_recording = 0}
-	Change \{no_precise_snap = 0}
-	Change \{no_marker_snap = 0}
+	change \{jam_highway_recording = 0}
+	change \{no_precise_snap = 0}
+	change \{no_marker_snap = 0}
 endscript
 
 script show_countin_message 
@@ -1386,8 +1386,8 @@ script show_countin_message
 	curr_time = $jam_highway_play_time
 	CastToInteger \{curr_time}
 	if ScreenElementExists \{id = jam_studio_element}
-		if jam_studio_element :desc_resolvealias \{Name = metronome_box}
-			<resolved_id> :SetProps Pos = (54.0, 800.0) time = 0.0
+		if jam_studio_element :Desc_ResolveAlias \{name = metronome_box}
+			<resolved_id> :SetProps pos = (54.0, 800.0) time = 0.0
 		endif
 	endif
 	quantize_to = 1
@@ -1400,44 +1400,44 @@ script show_countin_message
 	<wait_for_next_fretbar> = (<wait_for_next_fretbar> / 1000.0)
 	toggle_advanced_record_metronome \{left}
 	if ScreenElementExists \{id = jam_studio_element}
-		jam_studio_element :SetProps \{countin_number_text = qs(0x787beab2)}
+		jam_studio_element :SetProps \{countin_number_text = qs("1")}
 	endif
-	if jam_studio_element :desc_resolvealias \{Name = countin_box}
-		<resolved_id> :SetProps Pos = (357.0, 800.0) time = 0.0
-		<resolved_id> :se_waitprops
+	if jam_studio_element :Desc_ResolveAlias \{name = countin_box}
+		<resolved_id> :SetProps pos = (357.0, 800.0) time = 0.0
+		<resolved_id> :SE_WaitProps
 	endif
-	if jam_studio_element :desc_resolvealias \{Name = countin_box}
-		<resolved_id> :SetProps Pos = (357.0, 178.0) time = 0.2
-		<resolved_id> :se_waitprops
+	if jam_studio_element :Desc_ResolveAlias \{name = countin_box}
+		<resolved_id> :SetProps pos = (357.0, 178.0) time = 0.2
+		<resolved_id> :SE_WaitProps
 	endif
 	toggle_advanced_record_metronome \{right}
-	SoundEvent \{event = jam_mode_metronome}
-	Wait <count_wait> Seconds
+	SoundEvent \{event = Jam_Mode_Metronome}
+	Wait <count_wait> seconds
 	if ScreenElementExists \{id = jam_studio_element}
-		jam_studio_element :SetProps \{countin_number_text = qs(0x5356b971)}
+		jam_studio_element :SetProps \{countin_number_text = qs("2")}
 	endif
 	toggle_advanced_record_metronome \{left}
-	SoundEvent \{event = jam_mode_metronome}
-	Wait <count_wait> Seconds
+	SoundEvent \{event = Jam_Mode_Metronome}
+	Wait <count_wait> seconds
 	if ScreenElementExists \{id = jam_studio_element}
-		jam_studio_element :SetProps \{countin_number_text = qs(0x4a4d8830)}
+		jam_studio_element :SetProps \{countin_number_text = qs("3")}
 	endif
 	toggle_advanced_record_metronome \{right}
-	SoundEvent \{event = jam_mode_metronome}
-	Wait <count_wait> Seconds
+	SoundEvent \{event = Jam_Mode_Metronome}
+	Wait <count_wait> seconds
 	if ScreenElementExists \{id = jam_studio_element}
-		jam_studio_element :SetProps \{countin_number_text = qs(0x050c1ef7)}
+		jam_studio_element :SetProps \{countin_number_text = qs("4")}
 	endif
 	toggle_advanced_record_metronome \{right}
-	SoundEvent \{event = jam_mode_metronome}
+	SoundEvent \{event = Jam_Mode_Metronome}
 	if (<wait_for_next_fretbar> = 0)
-		Wait <count_wait> Seconds
-		SoundEvent \{event = jam_mode_metronome}
+		Wait <count_wait> seconds
+		SoundEvent \{event = Jam_Mode_Metronome}
 	else
-		Wait <wait_for_next_fretbar> Seconds
+		Wait <wait_for_next_fretbar> seconds
 	endif
-	if jam_studio_element :desc_resolvealias \{Name = countin_box}
-		<resolved_id> :SetProps Pos = (357.0, 800.0) time = 0.2
+	if jam_studio_element :Desc_ResolveAlias \{name = countin_box}
+		<resolved_id> :SetProps pos = (357.0, 800.0) time = 0.2
 	endif
 endscript
 
@@ -1448,7 +1448,7 @@ script jam_update_count
 	quantize = (<ms_per_beat> / <quantize_to>)
 	intervals = ($jam_highway_play_time / <quantize>)
 	CastToInteger \{intervals}
-	formatText TextName = measure_text qs(0x73307931) s = (<intervals> + 1)
+	FormatText TextName = measure_text qs("\L%s") s = (<intervals> + 1)
 	jam_studio_element :SetProps measure_count_text = <measure_text>
 	if NOT ($jam_current_quantize < 2)
 		quantize_to = ($jam_quantize [$jam_current_quantize].value)
@@ -1470,10 +1470,10 @@ script jam_update_count
 		endif
 		repeat
 		CastToInteger \{intervals}
-		formatText TextName = snap_text qs(0x73307931) s = (<intervals> + 1)
+		FormatText TextName = snap_text qs("\L%s") s = (<intervals> + 1)
 		jam_studio_element :SetProps note_count_text = <snap_text>
 	else
-		jam_studio_element :SetProps \{note_count_text = qs(0x00000000)}
+		jam_studio_element :SetProps \{note_count_text = qs("")}
 	endif
 	Wait \{5
 		gameframes}
@@ -1482,58 +1482,58 @@ endscript
 
 script jam_advanced_show_percussion_box 
 	if ($is_drum_machine = 1)
-		jam_studio_element :se_setprops \{drum_machine_glow_alpha = 0.65000004}
+		jam_studio_element :SE_SetProps \{drum_machine_glow_alpha = 0.65000004}
 	else
-		jam_studio_element :se_setprops \{drum_machine_glow_alpha = 0}
+		jam_studio_element :SE_SetProps \{drum_machine_glow_alpha = 0}
 	endif
 	box = percussion_box
 	end_pos = (188.0, 447.0)
-	if isdrumcontroller controller = <controller>
+	if IsDrumController controller = <controller>
 		box = percussion_box_small
 		end_pos = (188.0, 462.0)
 	endif
 	if ScreenElementExists \{id = jam_studio_element}
-		if jam_studio_element :desc_resolvealias Name = <box>
-			<resolved_id> :SetProps Pos = (188.0, 800.0) time = 0.0
+		if jam_studio_element :Desc_ResolveAlias name = <box>
+			<resolved_id> :SetProps pos = (188.0, 800.0) time = 0.0
 		endif
-		if jam_studio_element :desc_resolvealias Name = <box>
-			<resolved_id> :SetProps Pos = <end_pos> time = 0.2
+		if jam_studio_element :Desc_ResolveAlias name = <box>
+			<resolved_id> :SetProps pos = <end_pos> time = 0.2
 		endif
 	endif
 endscript
 
 script jam_advanced_hide_percussion_box 
 	box = percussion_box
-	if isdrumcontroller controller = <controller>
+	if IsDrumController controller = <controller>
 		box = percussion_box_small
 	endif
 	if ScreenElementExists \{id = jam_studio_element}
-		if jam_studio_element :desc_resolvealias Name = <box>
-			<resolved_id> :SetProps Pos = (188.0, 800.0) time = 0.2
+		if jam_studio_element :Desc_ResolveAlias name = <box>
+			<resolved_id> :SetProps pos = (188.0, 800.0) time = 0.2
 		endif
 	endif
 endscript
 
 script jam_advanced_show_arpeggiator_box 
 	if (($is_arpeggiator [$jam_current_track]) = 1)
-		jam_studio_element :se_setprops \{arpeggiator_glow_alpha = 0.65000004}
+		jam_studio_element :SE_SetProps \{arpeggiator_glow_alpha = 0.65000004}
 	else
-		jam_studio_element :se_setprops \{arpeggiator_glow_alpha = 0}
+		jam_studio_element :SE_SetProps \{arpeggiator_glow_alpha = 0}
 	endif
 	if ScreenElementExists \{id = jam_studio_element}
-		if jam_studio_element :desc_resolvealias \{Name = arpeggiator_box}
-			<resolved_id> :SetProps Pos = (188.0, 800.0) time = 0.0
+		if jam_studio_element :Desc_ResolveAlias \{name = arpeggiator_box}
+			<resolved_id> :SetProps pos = (188.0, 800.0) time = 0.0
 		endif
-		if jam_studio_element :desc_resolvealias \{Name = arpeggiator_box}
-			<resolved_id> :SetProps Pos = (188.0, 498.0) time = 0.2
+		if jam_studio_element :Desc_ResolveAlias \{name = arpeggiator_box}
+			<resolved_id> :SetProps pos = (188.0, 498.0) time = 0.2
 		endif
 	endif
 endscript
 
 script jam_advanced_hide_arpeggiator_box 
 	if ScreenElementExists \{id = jam_studio_element}
-		if jam_studio_element :desc_resolvealias \{Name = arpeggiator_box}
-			<resolved_id> :SetProps Pos = (188.0, 800.0) time = 0.2
+		if jam_studio_element :Desc_ResolveAlias \{name = arpeggiator_box}
+			<resolved_id> :SetProps pos = (188.0, 800.0) time = 0.2
 		endif
 	endif
 endscript
@@ -1544,18 +1544,18 @@ script jam_record_input \{step_record = 0
 	if (<step_record> = 1)
 		<hammer_on> = 0
 	endif
-	if StructureContains structure = ($jam_tracks [$jam_current_track]) input_func
-		getplayerinfo ($jam_current_recording_player) controller
-		formatText checksumName = input_spawn 'input_spawn_%s' s = ($jam_current_recording_player)
-		SpawnScriptNow ($jam_tracks [$jam_current_track].input_func) id = <input_spawn> params = {show_hud = 0 controller = <controller> select_player = ($jam_current_recording_player) hammer_on = <hammer_on>}
+	if StructureContains Structure = ($jam_tracks [$jam_current_track]) input_func
+		GetPlayerInfo ($jam_current_recording_player) controller
+		FormatText checksumname = input_spawn 'input_spawn_%s' s = ($jam_current_recording_player)
+		spawnscriptnow ($jam_tracks [$jam_current_track].input_func) id = <input_spawn> params = {show_hud = 0 controller = <controller> select_player = ($jam_current_recording_player) hammer_on = <hammer_on>}
 	endif
 	if (<show_box> = 1)
 		if (($jam_current_track) = 3)
-			SpawnScriptNow \{id = jam_recording_spawns
+			spawnscriptnow \{id = jam_recording_spawns
 				jam_advanced_show_percussion_box}
 		else
 			if NOT (($jam_current_track) = 0)
-				SpawnScriptNow \{id = jam_recording_spawns
+				spawnscriptnow \{id = jam_recording_spawns
 					jam_advanced_show_arpeggiator_box}
 			endif
 		endif
@@ -1568,18 +1568,18 @@ script jam_highway_step_record
 	endif
 	tool_controls = []
 	jam_update_undo_clipboard
-	Change \{jam_highway_recording = 1}
-	Change \{jam_highway_step_recording = 1}
-	LaunchEvent \{Type = unfocus
+	change \{jam_highway_recording = 1}
+	change \{jam_highway_step_recording = 1}
+	LaunchEvent \{type = unfocus
 		target = jam_control_container}
-	getplayerinfo ($jam_current_recording_player) controller
-	getplayerinfo ($jam_current_recording_player) jam_instrument
+	GetPlayerInfo ($jam_current_recording_player) controller
+	GetPlayerInfo ($jam_current_recording_player) jam_instrument
 	if (<jam_instrument> = 3 || <jam_instrument> = 4)
 		Wait \{30
 			gameframes}
 	endif
 	jam_record_input \{step_record = 1}
-	LaunchEvent \{Type = unfocus
+	LaunchEvent \{type = unfocus
 		target = jam_control_container}
 	clean_up_user_control_helpers
 	jam_recording_add_user_control_helpers \{state = step_recording}
@@ -1591,20 +1591,20 @@ script jam_highway_step_record
 	input_spawned = 1
 	whammy_hold_count = 0
 	if IsGuitarController controller = <controller>
-		KillSpawnedScript \{Name = show_warning_message}
-		SpawnScriptNow \{show_jam_helper_box
+		KillSpawnedScript \{name = show_warning_message}
+		spawnscriptnow \{show_jam_helper_box
 			id = jam_input_spawns
 			params = {
-				text = qs(0x88acb88a)
+				text = qs("Step recording. Hold whammy bar to skip.")
 			}}
 	endif
-	formatText checksumName = input_spawn 'input_spawn_%s' s = ($jam_current_recording_player)
-	SpawnScriptNow id = <input_spawn> jam_step_wait
+	FormatText checksumname = input_spawn 'input_spawn_%s' s = ($jam_current_recording_player)
+	spawnscriptnow id = <input_spawn> jam_step_wait
 	GetEnterButtonAssignment
 	switch <assignment>
 		case circle
-		break_button = X
-		case X
+		break_button = x
+		case x
 		break_button = circle
 	endswitch
 	count = 0
@@ -1619,23 +1619,23 @@ script jam_highway_step_record
 				if (<rightx> > 0.3)
 					if (<whammy_hold_count> > 3)
 						if (<input_spawned> = 1)
-							destroyplayerserverjaminput Player = ($jam_current_recording_player)
-							formatText checksumName = input_spawn 'input_spawn_%s' s = ($jam_current_recording_player)
+							DestroyPlayerServerJamInput player = ($jam_current_recording_player)
+							FormatText checksumname = input_spawn 'input_spawn_%s' s = ($jam_current_recording_player)
 							KillSpawnedScript id = <input_spawn>
 							KillSpawnedScript \{id = jam_input_spawns}
-							jam_kill_update_note_length Player = ($jam_current_recording_player)
-							KillSpawnedScript \{Name = jam_step_wait}
+							jam_kill_update_note_length player = ($jam_current_recording_player)
+							KillSpawnedScript \{name = jam_step_wait}
 							<input_spawned> = 0
 							clean_up_user_control_helpers
 							jam_recording_add_user_control_helpers \{state = step_rec_skip}
 						endif
 						if ControllerMake <break_button> <controller>
-							SoundEvent \{event = enter_band_name_back}
+							SoundEvent \{event = Enter_Band_Name_Back}
 							jam_delete_range track = <track> low_bound = (($jam_highway_play_time) -5) high_bound = (($jam_highway_play_time) + 5)
 						endif
 						if ScreenElementExists \{id = jam_studio_element}
 							if NOT ScriptIsRunning \{show_warning_message}
-								jam_studio_element :SetProps \{dialog_text = qs(0x18c05386)}
+								jam_studio_element :SetProps \{dialog_text = qs("Skipping. Release whammy bar to step record.")}
 							endif
 						endif
 					endif
@@ -1645,24 +1645,24 @@ script jam_highway_step_record
 					if (<input_spawned> = 0)
 						jam_record_input \{step_record = 1
 							show_box = 0}
-						SpawnScriptNow id = <input_spawn> jam_step_wait
+						spawnscriptnow id = <input_spawn> jam_step_wait
 						<input_spawned> = 1
 						clean_up_user_control_helpers
 						jam_recording_add_user_control_helpers \{state = step_recording}
 					endif
 					if ScreenElementExists \{id = jam_studio_element}
 						if NOT ScriptIsRunning \{show_warning_message}
-							jam_studio_element :SetProps \{dialog_text = qs(0x95b3eb24)}
+							jam_studio_element :SetProps \{dialog_text = qs("Step recording. Hold whammy bar for skip control.")}
 						endif
 					endif
 				endif
 			endif
 		endif
 	endif
-	if has_lefty_adj_control_press Dir = up controller = <controller> Player = $jam_current_recording_player
+	if has_lefty_adj_control_press dir = up controller = <controller> player = $jam_current_recording_player
 		if (<mid_up_strum> = 0)
 			if (<input_spawned> = 0)
-				ghmix_pad_up_down
+				GhMix_Pad_Up_Down
 				jam_highway_skip_forwards
 			endif
 		endif
@@ -1676,10 +1676,10 @@ script jam_highway_step_record
 		<mid_up_strum> = 0
 	endif
 	if (<jam_instrument> != 4 || <input_spawned> = 0)
-		if has_lefty_adj_control_press Dir = down controller = <controller> Player = $jam_current_recording_player
+		if has_lefty_adj_control_press dir = down controller = <controller> player = $jam_current_recording_player
 			if (<mid_down_strum> = 0)
 				if (<input_spawned> = 0)
-					ghmix_pad_up_down
+					GhMix_Pad_Up_Down
 					jam_highway_skip_backwards
 				endif
 			endif
@@ -1693,27 +1693,27 @@ script jam_highway_step_record
 			<mid_down_strum> = 0
 		endif
 	else
-		if issoundplayingbyid ($jam_input_current_melody)
+		if IsSoundPlayingByID ($jam_input_current_melody)
 			<mid_down_strum> = (<mid_down_strum> + 1)
 		else
 			<mid_down_strum> = 0
 		endif
 	endif
 	if (<mid_up_strum> = 0 && <mid_down_strum> = 0)
-		KillSpawnedScript \{Name = jam_sustain_step}
+		KillSpawnedScript \{name = jam_sustain_step}
 	endif
 	if (<mid_up_strum> > <wait_before_sustain>)
 		if NOT ScriptIsRunning \{jam_sustain_step}
 			<old_quantize> = $jam_current_quantize
-			SpawnScriptNow jam_sustain_step params = {old_quantize = <old_quantize>}
+			spawnscriptnow jam_sustain_step params = {old_quantize = <old_quantize>}
 		endif
 	elseif (<mid_down_strum> > <wait_before_sustain>)
 		if NOT ScriptIsRunning \{jam_sustain_step}
 			<old_quantize> = $jam_current_quantize
 			if (<whammy_hold_count> > 3)
-				SpawnScriptNow jam_sustain_step params = {old_quantize = <old_quantize> Dir = backwards}
+				spawnscriptnow jam_sustain_step params = {old_quantize = <old_quantize> dir = backwards}
 			else
-				SpawnScriptNow jam_sustain_step params = {old_quantize = <old_quantize>}
+				spawnscriptnow jam_sustain_step params = {old_quantize = <old_quantize>}
 			endif
 		endif
 	endif
@@ -1727,37 +1727,37 @@ script jam_highway_step_record
 		<done> = 1
 	endif
 	if (<done> = 1)
-		formatText checksumName = msg_box 'jam_limit_msg_box_%a' a = ($jam_current_recording_player)
+		FormatText checksumname = msg_box 'jam_limit_msg_box_%a' a = ($jam_current_recording_player)
 		if ScreenElementExists id = <msg_box>
 			DestroyScreenElement id = <msg_box>
 		endif
 		if (<jam_instrument> = 4)
 			jam_input_melody_stop_sound
 		endif
-		SoundEvent \{event = ghmix_select}
+		SoundEvent \{event = GhMix_Select}
 		break
 	endif
 	Wait \{1
 		gameframe}
 	repeat
-	SpawnScriptNow \{id = jam_recording_spawns
+	spawnscriptnow \{id = jam_recording_spawns
 		remove_jam_helper_box}
 	printf \{channel = jam_mode
-		qs(0x2063829b)}
-	broadcastevent \{Type = ghmix_stop_step}
+		qs("\LStep Recording Done")}
+	BroadcastEvent \{type = ghmix_stop_step}
 	jam_update_highway_infobox
 	jam_recording_update_metaview
-	SpawnScriptNow \{id = jam_recording_spawns
+	spawnscriptnow \{id = jam_recording_spawns
 		jam_advanced_hide_percussion_box}
-	SpawnScriptNow \{id = jam_recording_spawns
+	spawnscriptnow \{id = jam_recording_spawns
 		jam_advanced_hide_arpeggiator_box}
-	KillSpawnedScript \{Name = jam_play_arpeggiator_loop}
-	KillSpawnedScript \{Name = jam_play_drum_loop}
+	KillSpawnedScript \{name = jam_play_arpeggiator_loop}
+	KillSpawnedScript \{name = jam_play_drum_loop}
 	jam_stop_all_sound
-	KillSpawnedScript \{Name = jam_lightup_held_note_sprites}
-	KillSpawnedScript \{Name = jam_studio_tilt_meter}
+	KillSpawnedScript \{name = jam_lightup_held_note_sprites}
+	KillSpawnedScript \{name = jam_studio_tilt_meter}
 	jam_studio_hide_tilt_meter
-	ResolveScreenElementID \{id = {
+	ResolveScreenElementId \{id = {
 			jam_studio_element
 			child = {
 				adv_record
@@ -1767,14 +1767,14 @@ script jam_highway_step_record
 				}
 			}
 		}}
-	legacydoscreenelementmorph id = <resolved_id> time = 0.2 rot_angle = 0
-	destroyplayerserverjaminput Player = ($jam_current_recording_player)
-	formatText checksumName = input_spawn 'input_spawn_%s' s = ($jam_current_recording_player)
+	LegacyDoScreenElementMorph id = <resolved_id> time = 0.2 rot_angle = 0
+	DestroyPlayerServerJamInput player = ($jam_current_recording_player)
+	FormatText checksumname = input_spawn 'input_spawn_%s' s = ($jam_current_recording_player)
 	KillSpawnedScript id = <input_spawn>
-	KillSpawnedScript \{Name = jam_step_wait}
+	KillSpawnedScript \{name = jam_step_wait}
 	KillSpawnedScript \{id = jam_input_spawns}
-	jam_kill_update_note_length Player = ($jam_current_recording_player)
-	LaunchEvent \{Type = focus
+	jam_kill_update_note_length player = ($jam_current_recording_player)
+	LaunchEvent \{type = focus
 		target = jam_control_container}
 	if ScreenElementExists \{id = control_record}
 		SetScreenElementProps \{id = control_record
@@ -1782,33 +1782,33 @@ script jam_highway_step_record
 	endif
 	clean_up_user_control_helpers
 	jam_recording_add_user_control_helpers
-	Change \{jam_highway_recording = 0}
-	Change \{jam_highway_step_recording = 0}
-	Change \{no_precise_snap = 0}
-	Change \{no_marker_snap = 0}
+	change \{jam_highway_recording = 0}
+	change \{jam_highway_step_recording = 0}
+	change \{no_precise_snap = 0}
+	change \{no_marker_snap = 0}
 endscript
 
-script show_jam_helper_box \{title = qs(0x62c3095f)
-		text = qs(0x5449d8c0)}
+script show_jam_helper_box \{title = qs("Step Record Tool")
+		text = qs("HELP")}
 	if ScreenElementExists \{id = jam_studio_element}
 		jam_studio_element :SetProps dialog_title_text = <title>
 	endif
 	if ScreenElementExists \{id = jam_studio_element}
 		jam_studio_element :SetProps dialog_text = <text>
 	endif
-	if jam_studio_element :desc_resolvealias \{Name = dialog_box}
-		<resolved_id> :SetProps Pos = (21.0, 800.0) time = 0.0
-		<resolved_id> :se_waitprops
+	if jam_studio_element :Desc_ResolveAlias \{name = dialog_box}
+		<resolved_id> :SetProps pos = (21.0, 800.0) time = 0.0
+		<resolved_id> :SE_WaitProps
 	endif
-	if jam_studio_element :desc_resolvealias \{Name = dialog_box}
-		<resolved_id> :SetProps Pos = (21.0, -94.0) time = 0.2
-		<resolved_id> :se_waitprops
+	if jam_studio_element :Desc_ResolveAlias \{name = dialog_box}
+		<resolved_id> :SetProps pos = (21.0, -94.0) time = 0.2
+		<resolved_id> :SE_WaitProps
 	endif
 endscript
 
 script jam_step_wait 
 	begin
-	Block \{Type = jam_note_hit}
+	Block \{type = jam_note_hit}
 	Wait \{4
 		gameframes}
 	jam_highway_skip_forwards
@@ -1816,30 +1816,30 @@ script jam_step_wait
 endscript
 
 script remove_jam_helper_box 
-	if jam_studio_element :desc_resolvealias \{Name = dialog_box}
-		<resolved_id> :SetProps Pos = (5.0, 800.0) time = 0.2
-		<resolved_id> :se_waitprops
+	if jam_studio_element :Desc_ResolveAlias \{name = dialog_box}
+		<resolved_id> :SetProps pos = (5.0, 800.0) time = 0.2
+		<resolved_id> :SE_WaitProps
 	endif
 endscript
 
-script jam_sustain_step \{Dir = forwards}
+script jam_sustain_step \{dir = forwards}
 	quantize_to = ($jam_quantize [5].value)
 	ms_per_beat = (60000.0 / $jam_current_bpm)
 	quantize = (<ms_per_beat> / <quantize_to>)
 	Wait ((<quantize> / ((1.0 / 60.0) * 1000)) * 2) gameframes
-	Change \{jam_current_quantize = 5}
-	if (<Dir> = forwards)
+	change \{jam_current_quantize = 5}
+	if (<dir> = forwards)
 		jam_highway_skip_forwards
 	else
 		jam_highway_skip_backwards
 	endif
-	Change jam_current_quantize = <old_quantize>
+	change jam_current_quantize = <old_quantize>
 endscript
 
 script jam_highway_user_skip \{forwards = 1}
-	LaunchEvent \{Type = unfocus
+	LaunchEvent \{type = unfocus
 		target = jam_control_container}
-	getplayerinfo ($jam_current_recording_player) controller
+	GetPlayerInfo ($jam_current_recording_player) controller
 	GetEnterButtonAssignment
 	choose_button = <assignment>
 	mid_button_press = 0
@@ -1862,14 +1862,14 @@ script jam_highway_user_skip \{forwards = 1}
 	Wait \{1
 		gameframe}
 	repeat
-	LaunchEvent \{Type = focus
+	LaunchEvent \{type = focus
 		target = jam_control_container}
 endscript
 
 script jam_highway_skip_forwards 
 	GetScreenElementPosition \{id = jam_highway_container}
 	end_pos = ($jam_highway_play_line_pos - ((($jam_highway_end_time) / 1000.0) * $jam_highway_pixels_per_second))
-	if NOT StructureContains structure = ($jam_quantize [$jam_current_quantize]) marker
+	if NOT StructureContains Structure = ($jam_quantize [$jam_current_quantize]) marker
 		quantize_to = ($jam_quantize [$jam_current_quantize].value)
 		ms_per_beat = (60000.0 / $jam_current_bpm)
 		quantize = (<ms_per_beat> / <quantize_to>)
@@ -1924,18 +1924,18 @@ script jam_highway_skip_forwards
 	if (<new_pos> [0] < <end_pos> [0])
 		jam_highway_move_end
 	else
-		SetScreenElementProps id = jam_highway_container Pos = (<new_pos>)
+		SetScreenElementProps id = jam_highway_container pos = (<new_pos>)
 		<new_low_bound> = ($jam_highway_low_bound + (<new_time_int> - $jam_highway_play_time))
 		<new_high_bound> = ($jam_highway_high_bound + (<new_time_int> - $jam_highway_play_time))
 		CastToInteger \{new_low_bound}
 		CastToInteger \{new_high_bound}
-		Change jam_highway_low_bound = <new_low_bound>
-		Change jam_highway_high_bound = <new_high_bound>
+		change jam_highway_low_bound = <new_low_bound>
+		change jam_highway_high_bound = <new_high_bound>
 		jam_highway_reinit
 		if ($jam_highway_recording_mode = 0)
 			begin_jam_song \{Pause = 1}
 		endif
-		Change jam_highway_play_time = <new_time_int>
+		change jam_highway_play_time = <new_time_int>
 		play_time = $jam_highway_play_time
 		CastToInteger \{play_time}
 		SetSeekPosition_Song position = <play_time>
@@ -1944,7 +1944,7 @@ endscript
 
 script jam_highway_skip_backwards 
 	GetScreenElementPosition \{id = jam_highway_container}
-	if NOT StructureContains structure = ($jam_quantize [$jam_current_quantize]) marker
+	if NOT StructureContains Structure = ($jam_quantize [$jam_current_quantize]) marker
 		quantize_to = ($jam_quantize [$jam_current_quantize].value)
 		ms_per_beat = (60000.0 / $jam_current_bpm)
 		quantize = (<ms_per_beat> / <quantize_to>)
@@ -1999,18 +1999,18 @@ script jam_highway_skip_backwards
 	if (<new_pos> [0] > $jam_highway_play_line_pos [0])
 		jam_highway_move_beginning
 	else
-		SetScreenElementProps id = jam_highway_container Pos = (<new_pos>)
+		SetScreenElementProps id = jam_highway_container pos = (<new_pos>)
 		<low_bound> = ($jam_highway_low_bound - ($jam_highway_play_time - <new_time_int>))
 		<high_bound> = ($jam_highway_high_bound - ($jam_highway_play_time - <new_time_int>))
 		CastToInteger \{low_bound}
 		CastToInteger \{high_bound}
-		Change jam_highway_low_bound = <low_bound>
-		Change jam_highway_high_bound = <high_bound>
+		change jam_highway_low_bound = <low_bound>
+		change jam_highway_high_bound = <high_bound>
 		jam_highway_reinit
 		if ($jam_highway_recording_mode = 0)
 			begin_jam_song \{Pause = 1}
 		endif
-		Change jam_highway_play_time = <new_time_int>
+		change jam_highway_play_time = <new_time_int>
 		play_time = $jam_highway_play_time
 		CastToInteger \{play_time}
 		SetSeekPosition_Song position = <play_time>
@@ -2026,7 +2026,7 @@ script jam_highway_delete_section
 	jam_update_undo_clipboard
 	clean_up_user_control_helpers
 	jam_recording_add_user_control_helpers \{state = delete}
-	LaunchEvent \{Type = unfocus
+	LaunchEvent \{type = unfocus
 		target = jam_control_container}
 	orig_start_time = $jam_highway_play_time
 	low_pos = (($jam_highway_play_time / 1000.0) * $jam_highway_pixels_per_second)
@@ -2038,17 +2038,17 @@ script jam_highway_delete_section
 	count = 0
 	done = 0
 	cancel = 0
-	getplayerinfo ($jam_current_recording_player) controller
-	if isps3
-		<delete_button> = Square
+	GetPlayerInfo ($jam_current_recording_player) controller
+	if IsPs3
+		<delete_button> = square
 	elseif isXenon
-		<delete_button> = Triangle
+		<delete_button> = triangle
 	endif
 	GetEnterButtonAssignment
 	switch <assignment>
 		case circle
-		break_button = X
-		case X
+		break_button = x
+		case x
 		break_button = circle
 	endswitch
 	begin
@@ -2066,7 +2066,7 @@ script jam_highway_delete_section
 		endif
 	endif
 	if (<done> = 1)
-		SoundEvent \{event = enter_band_name_back}
+		SoundEvent \{event = Enter_Band_Name_Back}
 		if ($jam_highway_play_time < <orig_start_time>)
 			<delete_bound_low> = $jam_highway_play_time
 			<delete_bound_high> = <orig_start_time>
@@ -2080,9 +2080,9 @@ script jam_highway_delete_section
 		break
 	endif
 	if ArrayContains array = <delete_controls> contains = select
-		if has_lefty_adj_control_press Dir = up controller = <controller> Player = $jam_current_recording_player
+		if has_lefty_adj_control_press dir = up controller = <controller> player = $jam_current_recording_player
 			if (<mid_up_strum> = 0)
-				ghmix_scroll \{adv_record}
+				GHMix_scroll \{adv_record}
 				jam_highway_skip_forwards
 			endif
 			<mid_up_strum> = (<mid_up_strum> + 1)
@@ -2092,9 +2092,9 @@ script jam_highway_delete_section
 		else
 			<mid_up_strum> = 0
 		endif
-		if has_lefty_adj_control_press Dir = down controller = <controller> Player = $jam_current_recording_player
+		if has_lefty_adj_control_press dir = down controller = <controller> player = $jam_current_recording_player
 			if (<mid_down_strum> = 0)
-				ghmix_scroll \{adv_record}
+				GHMix_scroll \{adv_record}
 				jam_highway_skip_backwards
 			endif
 			<mid_down_strum> = (<mid_down_strum> + 1)
@@ -2107,7 +2107,7 @@ script jam_highway_delete_section
 	endif
 	if ArrayContains array = <delete_controls> contains = delete_toggle
 		if ControllerMake <delete_button> <controller>
-			SoundEvent \{event = ghmix_select}
+			SoundEvent \{event = GhMix_Select}
 			clean_up_user_control_helpers
 			if (<delete_all> = 1)
 				<delete_all> = 0
@@ -2130,25 +2130,25 @@ script jam_highway_delete_section
 	endif
 	if (<delete_all> = 1)
 		CreateScreenElement {
-			Type = SpriteElement
+			type = SpriteElement
 			parent = jam_highway_container
 			id = jam_delete_highlight
 			texture = white
 			just = [left top]
 			rgba = [255 0 0 50]
-			Pos = (<highlight_pos> + (0.0, 55.0))
+			pos = (<highlight_pos> + (0.0, 55.0))
 			dims = ((0.0, 650.0) + ((1.0, 0.0) * (<high_pos> [0] - <low_pos> [0])))
 			z_priority = 10
 		}
 	else
 		CreateScreenElement {
-			Type = SpriteElement
+			type = SpriteElement
 			parent = jam_highway_container
 			id = jam_delete_highlight
 			texture = white
 			just = [left top]
 			rgba = [255 0 0 50]
-			Pos = (<highlight_pos> + (0.0, 55.0))
+			pos = (<highlight_pos> + (0.0, 55.0))
 			dims = ((0.0, 175.0) + ((1.0, 0.0) * (<high_pos> [0] - <low_pos> [0])))
 			z_priority = 10
 		}
@@ -2167,20 +2167,20 @@ script jam_highway_delete_section
 				begin
 				jam_delete_range track = <track_count> low_bound = <delete_bound_low> high_bound = <delete_bound_high>
 				<track_count> = (<track_count> + 1)
-				repeat <array_Size>
+				repeat <array_size>
 			else
 				jam_delete_range low_bound = <delete_bound_low> high_bound = <delete_bound_high>
 			endif
 		endif
 	else
-		ghmix_pad_back_sound
+		GhMix_Pad_Back_Sound
 	endif
 	jam_highway_reinit
-	broadcastevent \{Type = ghmix_delete_done}
+	BroadcastEvent \{type = ghmix_delete_done}
 	if ScreenElementExists \{id = jam_delete_highlight}
 		DestroyScreenElement \{id = jam_delete_highlight}
 	endif
-	LaunchEvent \{Type = focus
+	LaunchEvent \{type = focus
 		target = jam_control_container}
 	jam_update_highway_infobox
 	jam_recording_update_metaview
@@ -2196,23 +2196,23 @@ script jam_highway_copy
 	endif
 	clean_up_user_control_helpers
 	jam_recording_add_user_control_helpers \{state = copy}
-	LaunchEvent \{Type = unfocus
+	LaunchEvent \{type = unfocus
 		target = jam_control_container}
 	orig_start_time = $jam_highway_play_time
 	low_pos = (($jam_highway_play_time / 1000.0) * $jam_highway_pixels_per_second)
-	getplayerinfo ($jam_current_recording_player) controller
-	if isps3
-		<copy_button> = Square
-		<loop_copy_button> = Triangle
+	GetPlayerInfo ($jam_current_recording_player) controller
+	if IsPs3
+		<copy_button> = square
+		<loop_copy_button> = triangle
 	elseif isXenon
-		<copy_button> = Triangle
-		<loop_copy_button> = Square
+		<copy_button> = triangle
+		<loop_copy_button> = square
 	endif
 	GetEnterButtonAssignment
 	switch <assignment>
 		case circle
-		break_button = X
-		case X
+		break_button = x
+		case x
 		break_button = circle
 	endswitch
 	mid_up_strum = 0
@@ -2228,7 +2228,7 @@ script jam_highway_copy
 	endif
 	if ControllerMake <break_button> <controller>
 		if ArrayContains array = <copy_controls> contains = cancel
-			ghmix_pad_back_sound
+			GhMix_Pad_Back_Sound
 			break
 		endif
 	endif
@@ -2238,14 +2238,14 @@ script jam_highway_copy
 		endif
 	endif
 	if (<done> = 1)
-		SoundEvent \{event = ghmix_select}
+		SoundEvent \{event = GhMix_Select}
 		if NOT ($jam_highway_play_time = <orig_start_time>)
 			if ($jam_highway_play_time < <orig_start_time>)
-				Change jam_copy_bound_low = ($jam_highway_play_time)
-				Change jam_copy_bound_high = (<orig_start_time>)
+				change jam_copy_bound_low = ($jam_highway_play_time)
+				change jam_copy_bound_high = (<orig_start_time>)
 			else
-				Change jam_copy_bound_low = (<orig_start_time>)
-				Change jam_copy_bound_high = ($jam_highway_play_time)
+				change jam_copy_bound_low = (<orig_start_time>)
+				change jam_copy_bound_high = ($jam_highway_play_time)
 			endif
 			SetScreenElementProps \{id = control_paste
 				rgba = [
@@ -2259,9 +2259,9 @@ script jam_highway_copy
 	endif
 	if ArrayContains array = <copy_controls> contains = strum
 		step_strum = 0
-		if has_lefty_adj_control_press Dir = up controller = <controller> Player = $jam_current_recording_player
+		if has_lefty_adj_control_press dir = up controller = <controller> player = $jam_current_recording_player
 			if (<mid_up_strum> = 0)
-				ghmix_scroll \{adv_record}
+				GHMix_scroll \{adv_record}
 				jam_highway_skip_forwards
 			endif
 			<mid_up_strum> = (<mid_up_strum> + 1)
@@ -2271,9 +2271,9 @@ script jam_highway_copy
 		else
 			<mid_up_strum> = 0
 		endif
-		if has_lefty_adj_control_press Dir = down controller = <controller> Player = $jam_current_recording_player
+		if has_lefty_adj_control_press dir = down controller = <controller> player = $jam_current_recording_player
 			if (<mid_down_strum> = 0)
-				ghmix_scroll \{adv_record}
+				GHMix_scroll \{adv_record}
 				jam_highway_skip_backwards
 			endif
 			<mid_down_strum> = (<mid_down_strum> + 1)
@@ -2286,7 +2286,7 @@ script jam_highway_copy
 	endif
 	if ArrayContains array = <copy_controls> contains = copy_toggle
 		if ControllerMake <copy_button> <controller>
-			SoundEvent \{event = ghmix_select}
+			SoundEvent \{event = GhMix_Select}
 			clean_up_user_control_helpers
 			if (<copy_all> = 1)
 				<copy_all> = 0
@@ -2309,33 +2309,33 @@ script jam_highway_copy
 	endif
 	if (<copy_all> = 1)
 		CreateScreenElement {
-			Type = SpriteElement
+			type = SpriteElement
 			parent = jam_highway_container
 			id = jam_copy_highlight
 			texture = white
 			just = [left top]
 			rgba = [255 0 0 50]
-			Pos = (<highlight_pos> + (0.0, 55.0))
+			pos = (<highlight_pos> + (0.0, 55.0))
 			dims = ((0.0, 650.0) + ((1.0, 0.0) * (<high_pos> [0] - <low_pos> [0])))
 			z_priority = 10
 		}
 	else
 		CreateScreenElement {
-			Type = SpriteElement
+			type = SpriteElement
 			parent = jam_highway_container
 			id = jam_copy_highlight
 			texture = white
 			just = [left top]
 			rgba = [255 0 0 50]
-			Pos = (<highlight_pos> + (0.0, 55.0))
+			pos = (<highlight_pos> + (0.0, 55.0))
 			dims = ((0.0, 175.0) + ((1.0, 0.0) * (<high_pos> [0] - <low_pos> [0])))
 			z_priority = 10
 		}
 	endif
 	if ControllerMake <loop_copy_button> <controller>
 		if ($jam_loop_bound_low > -1 && $jam_loop_bound_high > -1)
-			Change jam_copy_bound_low = ($jam_loop_bound_low)
-			Change jam_copy_bound_high = ($jam_loop_bound_high)
+			change jam_copy_bound_low = ($jam_loop_bound_low)
+			change jam_copy_bound_high = ($jam_loop_bound_high)
 			SetScreenElementProps \{id = control_paste
 				rgba = [
 					255
@@ -2353,33 +2353,33 @@ script jam_highway_copy
 		gameframe}
 	repeat
 	jam_clear_clipboards
-	broadcastevent \{Type = ghmix_stop_copy}
+	BroadcastEvent \{type = ghmix_stop_copy}
 	if (<copy_all> = 1)
 		GetArraySize \{$jam_tracks}
 		track_count = 0
 		begin
 		jam_copy_track track = <track_count>
 		<track_count> = (<track_count> + 1)
-		repeat <array_Size>
+		repeat <array_size>
 	else
 		jam_copy_track \{track = $jam_current_track}
 	endif
 	jam_debug_print_clipboards
 	printf \{channel = jam_mode
-		qs(0x8d7a590c)
+		qs("\LCOPY %a to %b")
 		a = $jam_copy_bound_low
 		b = $jam_copy_bound_high}
 	if ScreenElementExists \{id = jam_copy_highlight}
 		DestroyScreenElement \{id = jam_copy_highlight}
 	endif
-	LaunchEvent \{Type = focus
+	LaunchEvent \{type = focus
 		target = jam_control_container}
 	clean_up_user_control_helpers
 	jam_recording_add_user_control_helpers
 endscript
 
 script jam_copy_track \{track = 0}
-	printf channel = jam_mode qs(0xb53d417e) s = ($jam_tracks [<track>].name_text)
+	printf channel = jam_mode qs("\LCopying %s") s = ($jam_tracks [<track>].name_text)
 	gem_array = ($jam_tracks [<track>].gem_array)
 	suffix = '_size'
 	AppendSuffixToChecksum Base = <gem_array> SuffixString = <suffix>
@@ -2399,23 +2399,23 @@ script jam_copy_track \{track = 0}
 		repeat
 	endif
 	gemarraysize = <gem_count>
-	formatText checksumName = clipboard_array '%s_clipboard' s = ($jam_tracks [<track>].name_text)
-	if GlobalExists Name = <clipboard_array> Type = array
-		destroyscriptarray Name = <clipboard_array>
+	FormatText checksumname = clipboard_array '%s_clipboard' s = ($jam_tracks [<track>].name_text)
+	if GlobalExists name = <clipboard_array> type = array
+		DestroyScriptArray name = <clipboard_array>
 	endif
-	createscriptarray Name = <clipboard_array> size = ((2 * <gem_count>) + 2) Heap = heap_song <...>
+	CreateScriptArray name = <clipboard_array> size = ((2 * <gem_count>) + 2) heap = heap_song <...>
 	suffix = '_size'
 	AppendSuffixToChecksum Base = <clipboard_array> SuffixString = <suffix>
 	clipboard_size = ($<appended_id>)
-	formatText checksumName = clipboard_track '%s_clipboard_track' s = ($jam_tracks [<track>].name_text)
+	FormatText checksumname = clipboard_track '%s_clipboard_track' s = ($jam_tracks [<track>].name_text)
 	if (<gem_count> > 0)
 		notetrack_index = 0
 		begin
-		getnotetrackitem Name = <gem_array> index = <notetrack_index>
+		GetNoteTrackItem name = <gem_array> index = <notetrack_index>
 		if (<gem_time> >= ($jam_copy_bound_low - 2) && <gem_time> <= ($jam_copy_bound_high + 2))
-			addnotetrackitem Name = <clipboard_array> time = <gem_time> length = <gem_length> pattern = <gem_pattern>
-			getjamsessionsound track = ($jam_tracks [<track>].id) index = (<notetrack_index> / 2)
-			addjamsessionsound track = <clipboard_track> time = <gem_time> string = <note_string> fret = <note_fret> Type = <note_type> chord_type = <chord_type> effect = <effect> velocity = <velocity>
+			AddNoteTrackItem name = <clipboard_array> time = <gem_time> length = <gem_length> pattern = <gem_pattern>
+			GetJamSessionSound track = ($jam_tracks [<track>].id) index = (<notetrack_index> / 2)
+			AddJamSessionSound track = <clipboard_track> time = <gem_time> string = <note_string> fret = <note_fret> type = <note_type> chord_type = <chord_type> effect = <effect> velocity = <velocity>
 		endif
 		<notetrack_index> = (<notetrack_index> + 2)
 		if (<notetrack_index> >= <notetrack_size>)
@@ -2429,49 +2429,49 @@ script jam_debug_print_clipboards
 	GetArraySize \{$jam_tracks}
 	track_count = 0
 	begin
-	formatText checksumName = clipboard_array '%s_clipboard' s = ($jam_tracks [<track_count>].name_text)
+	FormatText checksumname = clipboard_array '%s_clipboard' s = ($jam_tracks [<track_count>].name_text)
 	suffix = '_size'
 	AppendSuffixToChecksum Base = <clipboard_array> SuffixString = <suffix>
 	clipboard_size = ($<appended_id>)
 	clipboard_index = 0
-	if GlobalExists Name = <clipboard_array> Type = array
+	if GlobalExists name = <clipboard_array> type = array
 		jamsession_debug_print_script_array gem_array = <clipboard_array>
 	endif
-	formatText checksumName = clipboard_track '%s_clipboard_track' s = ($jam_tracks [<track_count>].name_text)
-	getjamsessionsize track = <clipboard_track>
-	printf channel = jam_mode qs(0x9e0cb08c) s = <track_size> a = ($jam_tracks [<track_count>].name_text)
+	FormatText checksumname = clipboard_track '%s_clipboard_track' s = ($jam_tracks [<track_count>].name_text)
+	GetJamSessionSize track = <clipboard_track>
+	printf channel = jam_mode qs("\L%a Clipboard Track Size: %s") s = <track_size> a = ($jam_tracks [<track_count>].name_text)
 	track_index = 0
 	if (<track_size> > 0)
 		begin
-		getjamsessionsound track = <clipboard_track> index = <track_index>
+		GetJamSessionSound track = <clipboard_track> index = <track_index>
 		<track_index> = (<track_index> + 1)
 		repeat <track_size>
 	endif
 	<track_count> = (<track_count> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 endscript
 
 script jam_clear_clipboards 
 	GetArraySize \{$jam_tracks}
 	track_count = 0
 	begin
-	formatText checksumName = clipboard_track '%s_clipboard_track' s = ($jam_tracks [<track_count>].name_text)
-	formatText checksumName = clipboard_array '%s_clipboard' s = ($jam_tracks [<track_count>].name_text)
-	if GlobalExists Name = <clipboard_array> Type = array
-		destroyscriptarray Name = <clipboard_array> Type = array
+	FormatText checksumname = clipboard_track '%s_clipboard_track' s = ($jam_tracks [<track_count>].name_text)
+	FormatText checksumname = clipboard_array '%s_clipboard' s = ($jam_tracks [<track_count>].name_text)
+	if GlobalExists name = <clipboard_array> type = array
+		DestroyScriptArray name = <clipboard_array> type = array
 	endif
-	getjamsessionsize track = <clipboard_track>
+	GetJamSessionSize track = <clipboard_track>
 	if (<track_size> > 0)
 		begin
-		deletejamsessionsound track = <clipboard_track> index = 0
-		getjamsessionsize track = <clipboard_track>
+		DeleteJamSessionSound track = <clipboard_track> index = 0
+		GetJamSessionSize track = <clipboard_track>
 		if NOT (<track_size> > 0)
 			break
 		endif
 		repeat
 	endif
 	<track_count> = (<track_count> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 endscript
 
 script jam_highway_paste_control 
@@ -2481,7 +2481,7 @@ script jam_highway_paste_control
 	if ($jam_copy_bound_low = $jam_copy_bound_high)
 		return
 	endif
-	LaunchEvent \{Type = unfocus
+	LaunchEvent \{type = unfocus
 		target = jam_control_container}
 	jam_update_undo_clipboard
 	clean_up_user_control_helpers
@@ -2492,14 +2492,14 @@ script jam_highway_paste_control
 	choose_button = <assignment>
 	switch <choose_button>
 		case circle
-		break_button = X
-		case X
+		break_button = x
+		case x
 		break_button = circle
 	endswitch
 	if isXenon
-		paste_multiple_button = Triangle
-	elseif isps3
-		paste_multiple_button = Square
+		paste_multiple_button = triangle
+	elseif IsPs3
+		paste_multiple_button = square
 	endif
 	paste_controls = [paste_one paste_multi cancel]
 	tool_controls = []
@@ -2509,23 +2509,23 @@ script jam_highway_paste_control
 	endif
 	if ArrayContains array = <paste_controls> contains = paste_one
 		if ControllerMake <choose_button> <controller>
-			ghmix_scroll \{adv_record}
+			GHMix_scroll \{adv_record}
 			jam_highway_paste
 			printf \{channel = jam_mode
-				qs(0x76c31916)}
-			broadcastevent \{Type = ghmix_paste_pasted}
+				qs("\LPaste One")}
+			BroadcastEvent \{type = ghmix_paste_pasted}
 		endif
 	endif
 	if ArrayContains array = <paste_controls> contains = paste_multi
 		if ControllerMake <paste_multiple_button> <controller>
-			SoundEvent \{event = ghmix_select}
+			SoundEvent \{event = GhMix_Select}
 			show_paste_multiple
 			return
 		endif
 	endif
 	if ArrayContains array = <paste_controls> contains = cancel
 		if ControllerMake <break_button> <controller>
-			ghmix_pad_back_sound
+			GhMix_Pad_Back_Sound
 			break
 		endif
 	endif
@@ -2535,10 +2535,10 @@ script jam_highway_paste_control
 	Wait \{1
 		gameframe}
 	repeat
-	broadcastevent \{Type = ghmix_paste_done}
+	BroadcastEvent \{type = ghmix_paste_done}
 	clean_up_user_control_helpers
 	jam_recording_add_user_control_helpers
-	LaunchEvent \{Type = focus
+	LaunchEvent \{type = focus
 		target = jam_control_container}
 endscript
 
@@ -2546,22 +2546,22 @@ script show_paste_multiple
 	clean_up_user_control_helpers
 	jam_recording_add_user_control_helpers \{state = paste_multiple}
 	if ScreenElementExists \{id = jam_studio_element}
-		jam_studio_element :SetProps \{paste_number_text = qs(0x787beab2)}
+		jam_studio_element :SetProps \{paste_number_text = qs("1")}
 	endif
-	if jam_studio_element :desc_resolvealias \{Name = paste_box}
-		<resolved_id> :SetProps Pos = (468.0, 800.0) time = 0.0
-		<resolved_id> :se_waitprops
+	if jam_studio_element :Desc_ResolveAlias \{name = paste_box}
+		<resolved_id> :SetProps pos = (468.0, 800.0) time = 0.0
+		<resolved_id> :SE_WaitProps
 	endif
-	if jam_studio_element :desc_resolvealias \{Name = paste_box}
-		<resolved_id> :SetProps Pos = (468.0, 18.0) time = 0.2
-		<resolved_id> :se_waitprops
+	if jam_studio_element :Desc_ResolveAlias \{name = paste_box}
+		<resolved_id> :SetProps pos = (468.0, 18.0) time = 0.2
+		<resolved_id> :SE_WaitProps
 	endif
 	GetEnterButtonAssignment
 	choose_button = <assignment>
 	switch <choose_button>
 		case circle
-		break_button = X
-		case X
+		break_button = x
+		case x
 		break_button = circle
 	endswitch
 	paste_count = 1
@@ -2569,25 +2569,25 @@ script show_paste_multiple
 	max_num_pastes = 20
 	begin
 	if ControllerMake <break_button>
-		if jam_studio_element :desc_resolvealias \{Name = paste_box}
-			ghmix_pad_back_sound
-			<resolved_id> :SetProps Pos = (468.0, 800.0) time = 0.2
-			<resolved_id> :se_waitprops
+		if jam_studio_element :Desc_ResolveAlias \{name = paste_box}
+			GhMix_Pad_Back_Sound
+			<resolved_id> :SetProps pos = (468.0, 800.0) time = 0.2
+			<resolved_id> :SE_WaitProps
 		endif
 		clean_up_user_control_helpers
 		jam_recording_add_user_control_helpers
-		LaunchEvent \{Type = focus
+		LaunchEvent \{type = focus
 			target = jam_control_container}
 		return
 	endif
 	if ControllerPressed up <controller>
-		ghmix_scroll \{adv_record}
+		GHMix_scroll \{adv_record}
 		<paste_count> = (<paste_count> + 1)
 		if (<paste_count> > <max_num_pastes>)
 			<paste_count> = <max_num_pastes>
 		endif
-		KillSpawnedScript \{Name = scale_paste_arrows}
-		SpawnScriptNow \{scale_paste_arrows
+		KillSpawnedScript \{name = scale_paste_arrows}
+		spawnscriptnow \{scale_paste_arrows
 			id = jam_recording_spawns
 			params = {
 				up
@@ -2595,46 +2595,46 @@ script show_paste_multiple
 		Wait <delay> frames
 	endif
 	if ControllerPressed down <controller>
-		ghmix_scroll \{adv_record}
+		GHMix_scroll \{adv_record}
 		<paste_count> = (<paste_count> - 1)
 		if (<paste_count> < 1)
 			<paste_count> = 1
 		endif
-		KillSpawnedScript \{Name = scale_paste_arrows}
-		SpawnScriptNow \{scale_paste_arrows
+		KillSpawnedScript \{name = scale_paste_arrows}
+		spawnscriptnow \{scale_paste_arrows
 			id = jam_recording_spawns
 			params = {
 				down
 			}}
 		Wait <delay> frames
 	endif
-	formatText TextName = loop_count_text qs(0x73307931) s = <paste_count>
+	FormatText TextName = loop_count_text qs("\L%s") s = <paste_count>
 	jam_studio_element :SetProps paste_number_text = <loop_count_text>
 	if ControllerMake start <controller>
-		SoundEvent \{event = ghmix_select}
+		SoundEvent \{event = GhMix_Select}
 		break
 	endif
 	Wait \{1
 		gameframe}
 	repeat
-	formatText TextName = paste_text qs(0x32176178) s = <paste_count>
+	FormatText TextName = paste_text qs("Pasting clipboard %s times") s = <paste_count>
 	create_popup_warning_menu {
-		player_device = ($memcardcontroller)
-		title = qs(0xd7505531)
+		player_device = ($MemcardController)
+		title = qs("PASTING...")
 		textblock = {
 			text = <paste_text>
 		}
 	}
-	CreateScreenElement \{Type = SpriteElement
+	CreateScreenElement \{type = SpriteElement
 		parent = popup_warning_container
 		id = loading_record
 		texture = load_record
-		Pos = (640.0, 512.0)
+		pos = (640.0, 512.0)
 		z_priority = 10000
 		rot_angle = 0}
 	popup_warning_container :obj_spawnscript \{jam_recording_animate_spinning_record}
 	Wait \{1
-		Second}
+		second}
 	count = 0
 	begin
 	if (<count> = (<paste_count> - 1))
@@ -2647,32 +2647,32 @@ script show_paste_multiple
 	<count> = (<count> + 1)
 	repeat <paste_count>
 	destroy_popup_warning_menu
-	if jam_studio_element :desc_resolvealias \{Name = paste_box}
-		<resolved_id> :SetProps Pos = (468.0, 800.0) time = 0.2
-		<resolved_id> :se_waitprops
+	if jam_studio_element :Desc_ResolveAlias \{name = paste_box}
+		<resolved_id> :SetProps pos = (468.0, 800.0) time = 0.2
+		<resolved_id> :SE_WaitProps
 	endif
 	clean_up_user_control_helpers
 	jam_recording_add_user_control_helpers
-	LaunchEvent \{Type = focus
+	LaunchEvent \{type = focus
 		target = jam_control_container}
 endscript
 
 script jam_recording_animate_spinning_record 
 	if NOT ScreenElementExists \{id = loading_record}
 		if ScreenElementExists \{id = popup_warning_container}
-			CreateScreenElement \{Type = SpriteElement
+			CreateScreenElement \{type = SpriteElement
 				parent = popup_warning_container
 				id = loading_record
 				texture = load_record
-				Pos = (640.0, 512.0)
+				pos = (640.0, 512.0)
 				z_priority = 10000
 				rot_angle = 0}
 		endif
 	endif
 	begin
-	loading_record :se_getprops
-	loading_record :se_setprops rot_angle = (<rot_angle> + 360) time = 1
-	loading_record :se_waitprops
+	loading_record :SE_GetProps
+	loading_record :SE_SetProps rot_angle = (<rot_angle> + 360) time = 1
+	loading_record :SE_WaitProps
 	repeat
 endscript
 
@@ -2681,13 +2681,13 @@ script scale_paste_arrows
 		jam_studio_element :SetProps \{paste_arrow_up_scale = 2.0}
 		jam_studio_element :SetProps \{paste_arrow_up_scale = 1.5
 			time = 0.15}
-		jam_studio_element :se_waitprops
+		jam_studio_element :SE_WaitProps
 	endif
 	if GotParam \{down}
 		jam_studio_element :SetProps \{paste_arrow_down_scale = 2.0}
 		jam_studio_element :SetProps \{paste_arrow_down_scale = 1.5
 			time = 0.15}
-		jam_studio_element :se_waitprops
+		jam_studio_element :SE_WaitProps
 	endif
 endscript
 
@@ -2696,7 +2696,7 @@ script jam_highway_paste \{dont_skip = 0}
 	track_count = 0
 	copy_count = 0
 	begin
-	formatText checksumName = clipboard_array '%s_clipboard' s = ($jam_tracks [<track_count>].name_text)
+	FormatText checksumname = clipboard_array '%s_clipboard' s = ($jam_tracks [<track_count>].name_text)
 	suffix = '_size'
 	AppendSuffixToChecksum Base = <clipboard_array> SuffixString = <suffix>
 	clipboard_size = ($<appended_id>)
@@ -2704,7 +2704,7 @@ script jam_highway_paste \{dont_skip = 0}
 		copy_count = (<copy_count> + 1)
 	endif
 	<track_count> = (<track_count> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	copy_size = ($jam_copy_bound_high - $jam_copy_bound_low)
 	copy_distance = ($jam_highway_play_time - $jam_copy_bound_low)
 	end_time = ($jam_highway_play_time + <copy_size>)
@@ -2714,7 +2714,7 @@ script jam_highway_paste \{dont_skip = 0}
 		begin
 		jam_paste_track track = <track_count>
 		<track_count> = (<track_count> + 1)
-		repeat <array_Size>
+		repeat <array_size>
 	else
 		jam_paste_track \{track = $jam_current_track}
 	endif
@@ -2738,14 +2738,14 @@ script jam_highway_paste \{dont_skip = 0}
 	if (<new_pos> [0] < <end_pos> [0])
 		jam_highway_move_end
 	else
-		SetScreenElementProps id = jam_highway_container Pos = <new_pos>
-		Change jam_highway_play_time = <end_time>
+		SetScreenElementProps id = jam_highway_container pos = <new_pos>
+		change jam_highway_play_time = <end_time>
 		<new_low_bound> = ($jam_highway_start_low_bound + <end_time>)
 		<new_high_bound> = ($jam_highway_start_high_bound + <end_time>)
 		CastToInteger \{new_low_bound}
 		CastToInteger \{new_high_bound}
-		Change jam_highway_low_bound = <new_low_bound>
-		Change jam_highway_high_bound = <new_high_bound>
+		change jam_highway_low_bound = <new_low_bound>
+		change jam_highway_high_bound = <new_high_bound>
 		if (<dont_skip> = 0)
 			jam_highway_reinit
 		endif
@@ -2756,7 +2756,7 @@ script jam_highway_paste \{dont_skip = 0}
 endscript
 
 script jam_paste_track \{track = 0}
-	printf channel = jam_mode qs(0xa4c13ad4) s = ($jam_tracks [<track>].name_text)
+	printf channel = jam_mode qs("\LPASTING %s Track") s = ($jam_tracks [<track>].name_text)
 	copy_size = ($jam_copy_bound_high - $jam_copy_bound_low)
 	copy_distance = ($jam_highway_play_time - $jam_copy_bound_low)
 	end_time = ($jam_highway_play_time + <copy_size>)
@@ -2765,25 +2765,25 @@ script jam_paste_track \{track = 0}
 	suffix = '_size'
 	AppendSuffixToChecksum Base = <gem_array> SuffixString = <suffix>
 	notetrack_size = ($<appended_id>)
-	printf channel = jam_mode qs(0xc5dd4e22) s = <notetrack_size>
+	printf channel = jam_mode qs("\Lnotetrack_size %s") s = <notetrack_size>
 	if (<notetrack_size> > 0)
 		<count> = 0
 		begin
-		getnotetrackitem Name = <gem_array> index = <count>
+		GetNoteTrackItem name = <gem_array> index = <count>
 		if ((<gem_time> <= $jam_highway_play_time) && ((<gem_time> + <gem_length>) > $jam_highway_play_time))
 			<new_length> = ((($jam_highway_play_time) - <gem_time>))
 			CastToInteger \{new_length}
-			addnotetrackitem Name = <gem_array> time = <gem_time> length = <new_length> pattern = <gem_pattern>
+			AddNoteTrackItem name = <gem_array> time = <gem_time> length = <new_length> pattern = <gem_pattern>
 			if (<count> = 0)
-				getjamsessionsound track = ($jam_tracks [<track>].id) index = (<count>)
+				GetJamSessionSound track = ($jam_tracks [<track>].id) index = (<count>)
 			else
-				getjamsessionsound track = ($jam_tracks [<track>].id) index = ((<count> -2) / 2)
+				GetJamSessionSound track = ($jam_tracks [<track>].id) index = ((<count> -2) / 2)
 			endif
-			findjamsessionsound track = ($jam_tracks [<track>].id) time = <time>
+			FindJamSessionSound track = ($jam_tracks [<track>].id) time = <time>
 			if (<index> >= 0)
-				deletejamsessionsound track = ($jam_tracks [<track>].id) index = <index>
+				DeleteJamSessionSound track = ($jam_tracks [<track>].id) index = <index>
 			endif
-			addjamsessionsound track = ($jam_tracks [<track>].id) time = <time> string = <note_string> fret = <note_fret> Type = <note_type> chord_type = <chord_type> effect = <effect> velocity = <velocity>
+			AddJamSessionSound track = ($jam_tracks [<track>].id) time = <time> string = <note_string> fret = <note_fret> type = <note_type> chord_type = <chord_type> effect = <effect> velocity = <velocity>
 			break
 		endif
 		<count> = (<count> + 2)
@@ -2792,28 +2792,28 @@ script jam_paste_track \{track = 0}
 		endif
 		repeat
 	endif
-	formatText checksumName = clipboard_array '%s_clipboard' s = ($jam_tracks [<track>].name_text)
+	FormatText checksumname = clipboard_array '%s_clipboard' s = ($jam_tracks [<track>].name_text)
 	suffix = '_size'
 	AppendSuffixToChecksum Base = <clipboard_array> SuffixString = <suffix>
 	clipboard_size = ($<appended_id>)
-	formatText checksumName = clipboard_track '%s_clipboard_track' s = ($jam_tracks [<track>].name_text)
-	getjamsessionsize track = <clipboard_track>
+	FormatText checksumname = clipboard_track '%s_clipboard_track' s = ($jam_tracks [<track>].name_text)
+	GetJamSessionSize track = <clipboard_track>
 	<notes_in_clip> = <track_size>
-	getjamsessionsize track = ($jam_tracks [<track>].id)
+	GetJamSessionSize track = ($jam_tracks [<track>].id)
 	if ((<notes_in_clip> + <track_size>) >= (($gemarraysize) - 1))
 		<notes_in_clip> = (<notes_in_clip> - ((<notes_in_clip> + <track_size>) - (($gemarraysize) - 1)))
 		if ($jam_advanced_record = 1)
 			if NOT ScriptIsRunning \{show_warning_message}
-				SpawnScriptNow \{show_warning_message
+				spawnscriptnow \{show_warning_message
 					id = jam_recording_spawns
 					params = {
-						warning_text = qs(0xdd331019)
+						warning_text = qs("Maximum Note Limit Reached!")
 						start_pos = (15.0, 800.0)
 						end_pos = (15.0, -50.0)
 					}}
 			endif
 		else
-			SpawnScriptNow jam_note_limit_hit id = <limit_msg> params = {Player = ($jam_current_recording_player)}
+			spawnscriptnow jam_note_limit_hit id = <limit_msg> params = {player = ($jam_current_recording_player)}
 		endif
 	endif
 	if (<notes_in_clip> = 0)
@@ -2821,7 +2821,7 @@ script jam_paste_track \{track = 0}
 	endif
 	session_sound_index = 0
 	begin
-	if (getjamsessionsound track = <clipboard_track> index = <session_sound_index>)
+	if (GetJamSessionSound track = <clipboard_track> index = <session_sound_index>)
 		new_time = (<time> + <copy_distance>)
 		CastToInteger \{new_time}
 		if (<new_time> <= $jam_highway_end_time)
@@ -2831,8 +2831,8 @@ script jam_paste_track \{track = 0}
 			if (<new_time> > <end_time>)
 				<new_time> = <end_time>
 			endif
-			getjamsessionsound track = <clipboard_track> index = <session_sound_index>
-			addjamsessionsound track = ($jam_tracks [<track>].id) time = <new_time> string = <note_string> fret = <note_fret> chord_type = <chord_type> Type = <note_type> effect = <effect> velocity = <velocity>
+			GetJamSessionSound track = <clipboard_track> index = <session_sound_index>
+			AddJamSessionSound track = ($jam_tracks [<track>].id) time = <new_time> string = <note_string> fret = <note_fret> chord_type = <chord_type> type = <note_type> effect = <effect> velocity = <velocity>
 		endif
 	endif
 	<session_sound_index> = (<session_sound_index> + 1)
@@ -2843,7 +2843,7 @@ script jam_paste_track \{track = 0}
 	clipboard_index = 0
 	if (<clipboard_size> > 0)
 		begin
-		getnotetrackitem Name = <clipboard_array> index = <clipboard_index>
+		GetNoteTrackItem name = <clipboard_array> index = <clipboard_index>
 		new_time = (<gem_time> + <copy_distance>)
 		CastToInteger \{new_time}
 		if (<new_time> <= $jam_highway_end_time)
@@ -2853,7 +2853,7 @@ script jam_paste_track \{track = 0}
 			if (<new_time> > <end_time>)
 				<new_time> = <end_time>
 			endif
-			addnotetrackitem Name = <gem_array> time = <new_time> length = <gem_length> pattern = <gem_pattern>
+			AddNoteTrackItem name = <gem_array> time = <new_time> length = <gem_length> pattern = <gem_pattern>
 			<check_sustain> = 0
 			if (<notes_in_clip> = 1)
 				<check_sustain> = 1
@@ -2870,11 +2870,11 @@ script jam_paste_track \{track = 0}
 				<cur_gem_time> = <new_time>
 				<cur_gem_len> = <gem_length>
 				<cur_gem_pattern> = <gem_pattern>
-				getnotetrackitem Name = <gem_array> index = (<index> + 2)
+				GetNoteTrackItem name = <gem_array> index = (<index> + 2)
 				if ((<cur_gem_time> + <cur_gem_len>) > <gem_time>)
 					<new_length> = (<gem_time> - <cur_gem_time>)
 					CastToInteger \{new_length}
-					addnotetrackitem Name = <gem_array> time = <cur_gem_time> length = <new_length> pattern = <cur_gem_pattern>
+					AddNoteTrackItem name = <gem_array> time = <cur_gem_time> length = <new_length> pattern = <cur_gem_pattern>
 				endif
 			endif
 		endif
@@ -2894,7 +2894,7 @@ script jam_show_paste_highlight
 	track_count = 0
 	copy_count = 0
 	begin
-	formatText checksumName = clipboard_array '%s_clipboard' s = ($jam_tracks [<track_count>].name_text)
+	FormatText checksumname = clipboard_array '%s_clipboard' s = ($jam_tracks [<track_count>].name_text)
 	suffix = '_size'
 	AppendSuffixToChecksum Base = <clipboard_array> SuffixString = <suffix>
 	clipboard_size = ($<appended_id>)
@@ -2902,7 +2902,7 @@ script jam_show_paste_highlight
 		copy_count = (<copy_count> + 1)
 	endif
 	<track_count> = (<track_count> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	copy_size = ($jam_copy_bound_high - $jam_copy_bound_low)
 	highlight_low_pos = (($jam_highway_play_time / 1000.0) * $jam_highway_pixels_per_second)
 	highlight_high_pos = ((($jam_highway_play_time + <copy_size>) / 1000.0) * $jam_highway_pixels_per_second)
@@ -2911,25 +2911,25 @@ script jam_show_paste_highlight
 	endif
 	if (<copy_count> > 1)
 		CreateScreenElement {
-			Type = SpriteElement
+			type = SpriteElement
 			parent = jam_highway_container
 			id = jam_paste_highlight
 			texture = white
 			just = [left top]
 			rgba = [255 0 0 50]
-			Pos = (<highlight_low_pos> + (0.0, 55.0))
+			pos = (<highlight_low_pos> + (0.0, 55.0))
 			dims = ((0.0, 650.0) + ((1.0, 0.0) * (<highlight_high_pos> [0] - <highlight_low_pos> [0])))
 			z_priority = 10
 		}
 	else
 		CreateScreenElement {
-			Type = SpriteElement
+			type = SpriteElement
 			parent = jam_highway_container
 			id = jam_paste_highlight
 			texture = white
 			just = [left top]
 			rgba = [255 0 0 50]
-			Pos = (<highlight_low_pos> + (0.0, 55.0))
+			pos = (<highlight_low_pos> + (0.0, 55.0))
 			dims = ((0.0, 175.0) + ((1.0, 0.0) * (<highlight_high_pos> [0] - <highlight_low_pos> [0])))
 			z_priority = 10
 		}
@@ -2937,7 +2937,7 @@ script jam_show_paste_highlight
 endscript
 
 script jam_highway_note_nudge 
-	LaunchEvent \{Type = unfocus
+	LaunchEvent \{type = unfocus
 		target = jam_control_container}
 	nudge_controls = [nudge nudge_all cancel]
 	tool_controls = []
@@ -2952,14 +2952,14 @@ script jam_highway_note_nudge
 	choose_button = <assignment>
 	switch <choose_button>
 		case circle
-		break_button = X
-		case X
+		break_button = x
+		case x
 		break_button = circle
 	endswitch
 	if isXenon
-		nudge_all_button = Triangle
-	elseif isps3
-		nudge_all_button = Square
+		nudge_all_button = triangle
+	elseif IsPs3
+		nudge_all_button = square
 	endif
 	begin
 	if ($game_mode = training)
@@ -2971,25 +2971,25 @@ script jam_highway_note_nudge
 	if NOT ($jam_current_quantize = 0)
 		if ArrayContains array = <nudge_controls> contains = nudge
 			if ControllerMake <choose_button> <controller>
-				SoundEvent \{event = ghmix_scroll_up_down}
-				if notenudge time = ($jam_highway_play_time) nudge = <quantize> song_length = ($jam_highway_song_length) gem_array = <gem_array> track = <track>
+				SoundEvent \{event = GhMix_Scroll_Up_Down}
+				if NoteNudge time = ($jam_highway_play_time) nudge = <quantize> song_length = ($jam_highway_song_length) gem_array = <gem_array> track = <track>
 					jam_highway_skip_forwards amount = <quantize>
 					Wait \{1
 						gameframe}
 				else
-					KillSpawnedScript \{Name = show_warning_message}
-					SpawnScriptNow \{show_warning_message
+					KillSpawnedScript \{name = show_warning_message}
+					spawnscriptnow \{show_warning_message
 						id = jam_recording_spawns
 						params = {
-							warning_text = qs(0xf4ef3a8c)
+							warning_text = qs("Note nudge error: Can't nudge a note past an existing note.")
 						}}
 				endif
 			endif
 		endif
 		if ArrayContains array = <nudge_controls> contains = nudge_all
 			if ControllerMake <nudge_all_button> <controller>
-				SoundEvent \{event = ghmix_scroll_up_down}
-				if notenudge time = ($jam_highway_play_time) nudge = <quantize> song_length = ($jam_highway_song_length) gem_array = <gem_array> track = <track> all
+				SoundEvent \{event = GhMix_Scroll_Up_Down}
+				if NoteNudge time = ($jam_highway_play_time) nudge = <quantize> song_length = ($jam_highway_song_length) gem_array = <gem_array> track = <track> all
 					jam_highway_skip_forwards amount = <quantize>
 					Wait \{1
 						gameframe}
@@ -2999,7 +2999,7 @@ script jam_highway_note_nudge
 	endif
 	if ArrayContains array = <nudge_controls> contains = cancel
 		if ControllerMake <break_button> <controller>
-			ghmix_pad_back_sound
+			GhMix_Pad_Back_Sound
 			break
 		endif
 	endif
@@ -3009,50 +3009,50 @@ script jam_highway_note_nudge
 	Wait \{1
 		gameframe}
 	repeat
-	broadcastevent \{Type = ghmix_stop_nudge}
+	BroadcastEvent \{type = ghmix_stop_nudge}
 	clean_up_user_control_helpers
 	jam_recording_add_user_control_helpers
-	LaunchEvent \{Type = focus
+	LaunchEvent \{type = focus
 		target = jam_control_container}
-	Change \{no_precise_snap = 0}
-	Change \{no_marker_snap = 0}
+	change \{no_precise_snap = 0}
+	change \{no_marker_snap = 0}
 endscript
 
-script show_warning_message \{warning_text = qs(0x361603ec)
+script show_warning_message \{warning_text = qs("Warning")
 		start_pos = (21.0, 800.0)
 		end_pos = (21.0, -94.0)}
 	if ScreenElementExists \{id = jam_studio_element}
-		jam_studio_element :SetProps \{dialog_title_text = qs(0xaa163738)}
+		jam_studio_element :SetProps \{dialog_title_text = qs("WARNING")}
 	endif
 	if ScreenElementExists \{id = jam_studio_element}
 		jam_studio_element :SetProps dialog_text = <warning_text>
 	endif
-	if jam_studio_element :desc_resolvealias \{Name = dialog_box}
-		<resolved_id> :SetProps Pos = <start_pos> time = 0.0
-		<resolved_id> :se_waitprops
+	if jam_studio_element :Desc_ResolveAlias \{name = dialog_box}
+		<resolved_id> :SetProps pos = <start_pos> time = 0.0
+		<resolved_id> :SE_WaitProps
 	endif
-	if jam_studio_element :desc_resolvealias \{Name = dialog_box}
-		<resolved_id> :SetProps Pos = <end_pos> time = 0.2
-		<resolved_id> :se_waitprops
+	if jam_studio_element :Desc_ResolveAlias \{name = dialog_box}
+		<resolved_id> :SetProps pos = <end_pos> time = 0.2
+		<resolved_id> :SE_WaitProps
 	endif
 	Wait \{3
-		Seconds}
-	if jam_studio_element :desc_resolvealias \{Name = dialog_box}
-		<resolved_id> :SetProps Pos = <start_pos> time = 0.2
-		<resolved_id> :se_waitprops
+		seconds}
+	if jam_studio_element :Desc_ResolveAlias \{name = dialog_box}
+		<resolved_id> :SetProps pos = <start_pos> time = 0.2
+		<resolved_id> :SE_WaitProps
 	endif
 endscript
 
 script initialize_jam_highway 
 	seconds_per_screen = ((720.0 / $jam_highway_pixels_per_second [0]) * 1000)
-	Change \{jam_highway_start_low_bound = -800}
-	Change \{jam_highway_start_high_bound = 1250}
+	change \{jam_highway_start_low_bound = -800}
+	change \{jam_highway_start_high_bound = 1250}
 	<new_low_bound> = ($jam_highway_start_low_bound)
 	<new_high_bound> = ($jam_highway_start_high_bound)
 	CastToInteger \{new_low_bound}
 	CastToInteger \{new_high_bound}
-	Change jam_highway_low_bound = <new_low_bound>
-	Change jam_highway_high_bound = <new_high_bound>
+	change jam_highway_low_bound = <new_low_bound>
+	change jam_highway_high_bound = <new_high_bound>
 	jam_highway_reinit
 endscript
 jam_highway_low_bound = 0.0
@@ -3077,58 +3077,58 @@ jam_highway_play_line_pos_master = (450.0, 389.0)
 jam_highway_play_line_pos = (0.0, 0.0)
 
 script jam_recording_switch_instrument 
-	Player = ($jam_current_recording_player)
-	getplayerinfo <Player> controller
-	if isdrumcontroller controller = <controller>
-		SpawnScriptNow \{show_warning_message
+	player = ($jam_current_recording_player)
+	GetPlayerInfo <player> controller
+	if IsDrumController controller = <controller>
+		spawnscriptnow \{show_warning_message
 			id = jam_recording_spawns
 			params = {
-				warning_text = qs(0x955f2115)
+				warning_text = qs("Error: You may only edit drum tracks with a drum kit.")
 			}}
 		return
 	endif
-	StopRendering
-	Change \{jam_copy_bound_low = 0}
-	Change \{jam_copy_bound_high = 0}
+	stoprendering
+	change \{jam_copy_bound_low = 0}
+	change \{jam_copy_bound_high = 0}
 	jam_input_melody_stop_sound
 	jam_clear_clipboards
 	if ScreenElementExists \{id = jam_highway_container_master}
 		DestroyScreenElement \{id = jam_highway_container_master}
 	endif
-	KillSpawnedScript \{Name = create_jam_highway_notetrack}
-	KillSpawnedScript \{Name = create_jam_highway_fretbars}
+	KillSpawnedScript \{name = create_jam_highway_notetrack}
+	KillSpawnedScript \{name = create_jam_highway_fretbars}
 	GetArraySize \{$jam_tracks}
-	if ($jam_current_track = (<array_Size> - 1))
-		Change \{jam_current_track = 0}
+	if ($jam_current_track = (<array_size> - 1))
+		change \{jam_current_track = 0}
 	else
-		Change jam_current_track = ($jam_current_track + 1)
+		change jam_current_track = ($jam_current_track + 1)
 	endif
-	setplayerinfo <Player> jam_instrument = ($jam_current_track)
+	SetPlayerInfo <player> jam_instrument = ($jam_current_track)
 	create_studio_now_bar
 	jam_highway_reinit
-	SpawnScriptNow \{create_jam_multiple_highways
+	spawnscriptnow \{create_jam_multiple_highways
 		id = jam_recording_spawns
 		params = {
 			song = editable
 		}}
 	new_pos = ($jam_highway_play_line_pos - (($jam_highway_play_time / 1000.0) * $jam_highway_pixels_per_second))
-	SetScreenElementProps id = jam_highway_container Pos = (<new_pos>)
+	SetScreenElementProps id = jam_highway_container pos = (<new_pos>)
 	<new_low_bound> = ($jam_highway_play_time + $jam_highway_start_low_bound)
 	<new_high_bound> = ($jam_highway_play_time + $jam_highway_start_high_bound)
 	CastToInteger \{new_low_bound}
 	CastToInteger \{new_high_bound}
-	Change jam_highway_low_bound = <new_low_bound>
-	Change jam_highway_high_bound = <new_high_bound>
+	change jam_highway_low_bound = <new_low_bound>
+	change jam_highway_high_bound = <new_high_bound>
 	jam_highway_reinit
 	Wait \{10
 		gameframes}
-	StartRendering
+	startrendering
 endscript
 
 script jam_highway_reinit 
-	Change \{start_at_index_bars = 0}
-	Change \{start_at_index_markers = 0}
-	Change \{jam_start_at_index_array = [
+	change \{start_at_index_bars = 0}
+	change \{start_at_index_markers = 0}
+	change \{jam_start_at_index_array = [
 			0
 			0
 			0
@@ -3139,29 +3139,29 @@ endscript
 
 script create_jam_multiple_highways 
 	z_priority = 5
-	ResolveScreenElementID \{id = jam_studio_element}
+	ResolveScreenElementId \{id = jam_studio_element}
 	if ScreenElementExists \{id = highway_window_element}
 		DestroyScreenElement \{id = highway_window_element}
 	endif
-	CreateScreenElement \{Type = WindowElement
+	CreateScreenElement \{type = WindowElement
 		parent = jam_studio_element
 		id = highway_window_element
-		Pos = (394.0, 115.0)
+		pos = (394.0, 115.0)
 		dims = (717.0, 482.0)}
 	CreateScreenElement {
-		Type = ContainerElement
+		type = ContainerElement
 		parent = highway_window_element
 		id = jam_highway_container_master
 		just = [center center]
-		Pos = ($jam_highway_play_line_pos_master - (437.0, 96.0))
-		Scale = 1
+		pos = ($jam_highway_play_line_pos_master - (437.0, 96.0))
+		scale = 1
 		rot_angle = $jam_highway_rotation
 	}
-	CreateScreenElement \{Type = ContainerElement
+	CreateScreenElement \{type = ContainerElement
 		parent = jam_highway_container_master
 		id = jam_highway_container
-		Pos = $jam_highway_play_line_pos
-		Scale = 1}
+		pos = $jam_highway_play_line_pos
+		scale = 1}
 	initialize_jam_highway
 	suffix = '_fretbars'
 	AppendSuffixToChecksum Base = <song> SuffixString = <suffix>
@@ -3183,49 +3183,49 @@ script create_jam_multiple_highways
 	<jam_markers_size> = <appended_id>
 	bar_size = ((($<song_fretbars> [(($<fretbar_size>) - 1)]) / 1000.0) * $jam_highway_pixels_per_second)
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = jam_highway_container
 		texture = white
 		just = [left top]
 		rgba = [80 80 80 255]
-		Pos = (0.0, 56.0)
+		pos = (0.0, 56.0)
 		dims = ((0.0, 680.0) + <bar_size>)
 		z_priority = <z_priority>
 	}
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = jam_highway_container
 		texture = white
 		just = [left top]
 		rgba = [60 60 60 255]
-		Pos = (0.0, 240.0)
+		pos = (0.0, 240.0)
 		dims = ((0.0, 680.0) + <bar_size>)
 		z_priority = (<z_priority> + 1)
 	}
 	CreateScreenElement \{parent = jam_highway_container
 		id = loop_start_marker
-		Type = descinterface
-		Pos = (0.0, -1000.0)
+		type = DescInterface
+		pos = (0.0, -1000.0)
 		rot_angle = 90
 		desc = 'jam_loop_marker'}
-	loop_start_marker :SetProps \{loop_text = qs(0x3d20eae5)}
+	loop_start_marker :SetProps \{loop_text = qs("LOOP START")}
 	CreateScreenElement \{parent = jam_highway_container
 		id = loop_end_marker
-		Type = descinterface
-		Pos = (0.0, -1000.0)
+		type = DescInterface
+		pos = (0.0, -1000.0)
 		rot_angle = 90
 		desc = 'jam_loop_marker'}
-	loop_end_marker :SetProps \{loop_text = qs(0x3feb20d0)}
-	Change jam_highway_end_time = ($<song_fretbars> [($<fretbar_size> - 1)])
-	SpawnScriptNow create_jam_highway_fretbars id = jam_recording_spawns params = {<...>}
-	if jam_studio_element :desc_resolvealias \{Name = alias_main_inst_text}
-		<resolved_id> :se_setprops text = ($jam_tracks [$jam_current_track].name_text)
+	loop_end_marker :SetProps \{loop_text = qs("LOOP END")}
+	change jam_highway_end_time = ($<song_fretbars> [($<fretbar_size> - 1)])
+	spawnscriptnow create_jam_highway_fretbars id = jam_recording_spawns params = {<...>}
+	if jam_studio_element :Desc_ResolveAlias \{name = alias_main_inst_text}
+		<resolved_id> :SE_SetProps text = ($jam_tracks [$jam_current_track].name_text)
 	endif
-	SpawnScriptNow \{create_jam_highway_notetrack
+	spawnscriptnow \{create_jam_highway_notetrack
 		id = jam_recording_spawns
 		params = {
 			track = $jam_current_track
-			Pos = (0.0, 0.0)
+			pos = (0.0, 0.0)
 			gem_offset = (0.0, 32.0)
 			gem_scale = 0.8
 		}}
@@ -3234,18 +3234,18 @@ script create_jam_multiple_highways
 	track = ($jam_current_track + 1)
 	<count> = 1
 	begin
-	if (<track> > (<array_Size> - 1))
+	if (<track> > (<array_size> - 1))
 		<track> = 0
 	endif
-	SpawnScriptNow create_jam_highway_notetrack id = jam_recording_spawns params = {track = <track> Pos = <small_gems_begin_pos> gem_offset = (0.0, 20.0) gem_scale = 0.55 small_view = 1}
-	formatText checksumName = alias_id 'alias_inst_text%s' s = <count>
-	if jam_studio_element :desc_resolvealias Name = <alias_id>
-		<resolved_id> :se_setprops text = ($jam_tracks [<track>].name_text)
+	spawnscriptnow create_jam_highway_notetrack id = jam_recording_spawns params = {track = <track> pos = <small_gems_begin_pos> gem_offset = (0.0, 20.0) gem_scale = 0.55 small_view = 1}
+	FormatText checksumname = alias_id 'alias_inst_text%s' s = <count>
+	if jam_studio_element :Desc_ResolveAlias name = <alias_id>
+		<resolved_id> :SE_SetProps text = ($jam_tracks [<track>].name_text)
 	endif
 	<small_gems_begin_pos> = (<small_gems_begin_pos> + (0.0, 115.5))
 	<track> = (<track> + 1)
 	<count> = (<count> + 1)
-	repeat (<array_Size> - 1)
+	repeat (<array_size> - 1)
 endscript
 
 script create_jam_highway_fretbars 
@@ -3256,10 +3256,10 @@ script create_jam_highway_fretbars
 	if ScreenElementExists \{id = jam_highway_bars_container}
 		DestroyScreenElement \{id = jam_highway_bars_container}
 	endif
-	CreateScreenElement \{Type = ContainerElement
+	CreateScreenElement \{type = ContainerElement
 		parent = jam_highway_container
 		id = jam_highway_bars_container
-		Pos = (0.0, 0.0)}
+		pos = (0.0, 0.0)}
 	loop_offset = (22.0, 268.0)
 	if ($jam_loop_bound_low < 0)
 		loop_marker_pos = (0.0, -1000.0)
@@ -3267,7 +3267,7 @@ script create_jam_highway_fretbars
 		loop_marker_pos = (((($jam_loop_bound_low) / 1000.0) * $jam_highway_pixels_per_second) + <loop_offset>)
 	endif
 	if ScreenElementExists \{id = loop_start_marker}
-		loop_start_marker :SetProps Pos = <loop_marker_pos>
+		loop_start_marker :SetProps pos = <loop_marker_pos>
 	endif
 	if ($jam_loop_bound_high < 0)
 		loop_marker_pos = (0.0, -1000.0)
@@ -3275,7 +3275,7 @@ script create_jam_highway_fretbars
 		loop_marker_pos = (((($jam_loop_bound_high) / 1000.0) * $jam_highway_pixels_per_second) + <loop_offset>)
 	endif
 	if ScreenElementExists \{id = loop_start_marker}
-		loop_end_marker :SetProps Pos = <loop_marker_pos>
+		loop_end_marker :SetProps pos = <loop_marker_pos>
 	endif
 	count = $start_at_index_markers
 	begin
@@ -3291,19 +3291,19 @@ script create_jam_highway_fretbars
 	curr_bpm = ($<song_jam_markers> [<count>].bpm)
 	curr_marker_lightshow = ($<song_jam_markers> [<count>].LightShow)
 	if (<curr_time> < $jam_highway_low_bound)
-		Change start_at_index_markers = <count>
+		change start_at_index_markers = <count>
 	else
 		<marker_offset> = (28.0, 395.0)
 		<marker_pos> = (((<curr_time> / 1000.0) * $jam_highway_pixels_per_second) + <marker_offset>)
 		if (<curr_marker_count> > 0)
-			formatText TextName = marker qs(0x40e7ccd5) s = <curr_marker_name> c = <curr_marker_count> b = ($jam_lightshow [<curr_marker_lightshow>].name_text)
+			FormatText TextName = marker qs("\L%s %c  (%b)") s = <curr_marker_name> c = <curr_marker_count> b = ($jam_lightshow [<curr_marker_lightshow>].name_text)
 		else
-			formatText TextName = marker qs(0x54c9fe18) s = <curr_marker_name> b = ($jam_lightshow [<curr_marker_lightshow>].name_text)
+			FormatText TextName = marker qs("\L%s  (%b)") s = <curr_marker_name> b = ($jam_lightshow [<curr_marker_lightshow>].name_text)
 		endif
 		CreateScreenElement {
 			parent = jam_highway_bars_container
-			Type = descinterface
-			Pos = <marker_pos>
+			type = DescInterface
+			pos = <marker_pos>
 			rot_angle = 90
 			desc = 'jam_marker'
 		}
@@ -3325,68 +3325,68 @@ script create_jam_highway_fretbars
 	if ((<count> + 1) <= ($<fretbar_size> - 1))
 		song_beat_time = ($<song_fretbars> [(<count> + 1)] - $<song_fretbars> [<count>])
 		note_len = (4 / 4)
-		Change jam_highway_hammer_on_tolerance = ((<song_beat_time> / $default_hammer_on_measure_scale) * <note_len>)
+		change jam_highway_hammer_on_tolerance = ((<song_beat_time> / $default_hammer_on_measure_scale) * <note_len>)
 	endif
 	if (<curr_time> >= $jam_highway_low_bound)
 		bar_pos = ((($<song_fretbars> [<count>]) / 1000.0) * $jam_highway_pixels_per_second)
 		Mod a = <count> b = 4
 		if (<Mod> = 0)
 			CreateScreenElement {
-				Type = SpriteElement
+				type = SpriteElement
 				parent = jam_highway_bars_container
 				texture = white
 				just = [center top]
 				rgba = ($jam_highway_measurebar_color)
-				Pos = (<bar_pos> + <bar_offset>)
+				pos = (<bar_pos> + <bar_offset>)
 				dims = <whole_measure_dims>
 				z_priority = 7
 			}
 		else
 			CreateScreenElement {
-				Type = SpriteElement
+				type = SpriteElement
 				parent = jam_highway_bars_container
 				texture = white
 				just = [center top]
 				rgba = ($jam_highway_fretbar_color)
-				Pos = (<bar_pos> + <bar_offset>)
+				pos = (<bar_pos> + <bar_offset>)
 				dims = <quarter_measure_dims>
 				z_priority = 7
 			}
 		endif
 		if (<Mod> = 0)
 			CreateScreenElement {
-				Type = SpriteElement
+				type = SpriteElement
 				parent = jam_highway_bars_container
 				texture = measure_number_bg
 				just = [center center]
-				Scale = (2.5, 3.5)
-				Pos = ((<bar_pos>) + (0.0, 13.0))
+				scale = (2.5, 3.5)
+				pos = ((<bar_pos>) + (0.0, 13.0))
 				z_priority = 13
 			}
 			if (<count> = ($<fretbar_size> - 1))
-				formatText \{TextName = marker
-					qs(0xfe76608c)}
+				FormatText \{TextName = marker
+					qs("END")}
 			else
-				formatText TextName = marker qs(0x73307931) s = ((<count> / 4) + 1)
+				FormatText TextName = marker qs("\L%s") s = ((<count> / 4) + 1)
 			endif
 			CreateScreenElement {
-				Type = TextElement
+				type = TextElement
 				parent = jam_highway_bars_container
 				font = fontgrid_text_a8
 				just = [center center]
-				Scale = 0.6
+				scale = 0.6
 				rgba = [220 220 220 255]
-				Pos = ((<bar_pos>) + (1.0, 14.0))
+				pos = ((<bar_pos>) + (1.0, 14.0))
 				text = <marker>
 				rot_angle = (($jam_highway_rotation) * -1)
 				z_priority = 14
-				Shadow
+				shadow
 				shadow_offs = (3.0, 3.0)
 				shadow_rgba = [0 0 0 255]
 			}
 		endif
 	else
-		Change start_at_index_bars = <count>
+		change start_at_index_bars = <count>
 	endif
 	<count> = (<count> + 1)
 	if (<count> > ($<fretbar_size> - 1))
@@ -3404,7 +3404,7 @@ script create_jam_highway_fretbars
 endscript
 
 script cleanup_jam_highway_notetrack 
-	jamhighwaynotes_cleanup track = <track>
+	JamHighwayNotes_Cleanup track = <track>
 endscript
 
 script create_jam_highway_notetrack \{small_view = 0}
@@ -3413,14 +3413,14 @@ script create_jam_highway_notetrack \{small_view = 0}
 	suffix = '_size'
 	AppendSuffixToChecksum Base = <song_notetrack> SuffixString = <suffix>
 	notetrack_size = <appended_id>
-	formatText checksumName = notetrack_cont 'jam_highway_notetrack_containter_%s' s = <track>
+	FormatText checksumname = notetrack_cont 'jam_highway_notetrack_containter_%s' s = <track>
 	<drum> = 0
-	getplayerinfo \{$jam_current_recording_player
+	GetPlayerInfo \{$jam_current_recording_player
 		controller}
-	if isdrumcontroller controller = <controller>
+	if IsDrumController controller = <controller>
 		<drum> = 1
 	endif
-	jam_menu_get_lefty \{Player = $jam_current_recording_player}
+	jam_menu_get_lefty \{player = $jam_current_recording_player}
 	if (<drum> = 1)
 		<lefty> = 0
 		<gem_textures> = [
@@ -3481,12 +3481,12 @@ script create_jam_highway_notetrack \{small_view = 0}
 		DestroyScreenElement id = <notetrack_cont>
 	endif
 	CreateScreenElement {
-		Type = ContainerElement
+		type = ContainerElement
 		parent = jam_highway_container
 		id = <notetrack_cont>
-		Pos = <Pos>
+		pos = <pos>
 	}
-	jamhighwaynotes_init {
+	JamHighwayNotes_Init {
 		track = <track>
 		container = <notetrack_cont>
 		gem_textures = <gem_textures>
@@ -3500,7 +3500,7 @@ script create_jam_highway_notetrack \{small_view = 0}
 		gem_scale = <gem_scale>
 	}
 	begin
-	jamhighwaynotes_process track = <track>
+	JamHighwayNotes_Process track = <track>
 	Wait \{1
 		gameframes}
 	repeat
@@ -3508,27 +3508,27 @@ endscript
 
 script jam_create_song_info_boxes 
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = jam_highway_container
 		id = studio_highway_infobox
 		texture = white
 		just = [right top]
 		rgba = [50 50 50 255]
 		dims = (510.0, 120.0)
-		Pos = (0.0, 510.0)
-		Scale = 1
+		pos = (0.0, 510.0)
+		scale = 1
 		rot_angle = 90
 		z_priority = (<z_priority> + 1)
 	}
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = studio_highway_infobox
 		id = studio_highway_infobox_name
 		font = fontgrid_text_a8
 		just = [left center]
-		Scale = 0.8
+		scale = 0.8
 		rgba = [210 130 0 250]
-		Pos = (35.0, 35.0)
+		pos = (35.0, 35.0)
 		text = ($jam_selected_song)
 		z_priority = (<z_priority> + 1)
 	}
@@ -3551,75 +3551,75 @@ script jam_create_song_info_boxes
 	repeat 4
 	<total_notes> = (<total_notes> / 2)
 	Mod a = <last_end_time> b = 60000
-	<Seconds> = (<Mod> / 1000)
+	<seconds> = (<Mod> / 1000)
 	<minutes> = (<last_end_time> / 60000)
-	<sec_check> = (<Seconds> / 10)
+	<sec_check> = (<seconds> / 10)
 	if (<sec_check> < 1)
-		formatText TextName = song_len qs(0xb76f0df8) a = <minutes> b = <Seconds>
+		FormatText TextName = song_len qs("Length %a:0%b") a = <minutes> b = <seconds>
 	else
-		formatText TextName = song_len qs(0x84b9fd2b) a = <minutes> b = <Seconds>
+		FormatText TextName = song_len qs("Length %a:%b") a = <minutes> b = <seconds>
 	endif
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = studio_highway_infobox
 		id = studio_highway_infobox_length
 		font = fontgrid_text_a8
 		just = [left center]
-		Scale = 0.6
+		scale = 0.6
 		rgba = [210 130 0 250]
-		Pos = (35.0, 85.0)
+		pos = (35.0, 85.0)
 		text = <song_len>
 		z_priority = (<z_priority> + 1)
 	}
-	formatText TextName = song_bpm qs(0x3dbb8347) a = ($jam_current_bpm)
+	FormatText TextName = song_bpm qs("%a bpm") a = ($jam_current_bpm)
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = studio_highway_infobox
 		id = studio_highway_infobox_bpm
 		font = fontgrid_text_a8
 		just = [left center]
-		Scale = 0.6
+		scale = 0.6
 		rgba = [210 130 0 250]
-		Pos = (185.0, 85.0)
+		pos = (185.0, 85.0)
 		text = <song_bpm>
 		z_priority = (<z_priority> + 1)
 	}
-	formatText TextName = num_notes qs(0xf939f6cb) a = <total_notes>
+	FormatText TextName = num_notes qs("Total Notes %a") a = <total_notes>
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = studio_highway_infobox
 		id = studio_highway_infobox_notes
 		font = fontgrid_text_a8
 		just = [left center]
-		Scale = 0.6
+		scale = 0.6
 		rgba = [210 130 0 250]
-		Pos = (300.0, 85.0)
+		pos = (300.0, 85.0)
 		text = <num_notes>
 		z_priority = (<z_priority> + 1)
 	}
 	bar_size = ((($<song_fretbars> [(<fretbar_size> - 1)]) / 1000.0) * $jam_highway_pixels_per_second)
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = jam_highway_container
 		id = studio_highway_endbox
 		texture = white
 		just = [right top]
 		rgba = [50 50 50 255]
 		dims = (510.0, 370.0)
-		Pos = ((370.0, 500.0) + <bar_size>)
-		Scale = 1
+		pos = ((370.0, 500.0) + <bar_size>)
+		scale = 1
 		rot_angle = 90
 		z_priority = (<z_priority> + 1)
 	}
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = studio_highway_endbox
 		font = fontgrid_text_a11
 		just = [left center]
-		Scale = 2.2
+		scale = 2.2
 		rgba = [210 130 0 250]
-		Pos = (63.0, 270.0)
-		text = qs(0x3a7145e5)
+		pos = (63.0, 270.0)
+		text = qs("END OF SONG")
 		z_priority = (<z_priority> + 1)
 	}
 endscript
@@ -3630,95 +3630,95 @@ jam_controls = [
 	{
 		id = control_end
 		texture = icon_jump_end
-		name_text = qs(0x2f3f8abc)
-		help_text = qs(0x84422181)
+		name_text = qs("Skip to last note")
+		help_text = qs("Skip to the last note in the song.")
 	}
 	{
 		id = control_skip_forwards
 		texture = icon_forward
-		name_text = qs(0xef6d3166)
-		help_text = qs(0x53b2408e)
+		name_text = qs("Skip forward")
+		help_text = qs("Skip Forward to the distance the snap is set to.")
 	}
 	{
 		id = control_playstop
 		texture = icon_play
-		name_text = qs(0xcdaa4ea8)
-		alt_name_text = qs(0x9dbd05c7)
-		help_text = qs(0x28e3b51a)
+		name_text = qs("Play")
+		alt_name_text = qs("Stop")
+		help_text = qs("Play the song.")
 	}
 	{
 		id = control_record
 		texture = icon_record
-		name_text = qs(0x66451271)
-		help_text = qs(0x5a4c37a7)
+		name_text = qs("Live Record")
+		help_text = qs("Record notes to the song while it is playing back.")
 	}
 	{
 		id = control_step_record
 		texture = icon_step_record
-		name_text = qs(0x1de48f0a)
-		help_text = qs(0x4bb54cde)
+		name_text = qs("Step Record")
+		help_text = qs("Records a note at the playline location then skips forward.")
 	}
 	{
 		id = control_skip_backwards
 		texture = icon_back
-		name_text = qs(0x9c8914fd)
-		help_text = qs(0x0692ba97)
+		name_text = qs("Skip backward")
+		help_text = qs("Skip Backward to the distance the snap is set to.")
 	}
 	{
 		id = control_beginning
 		texture = icon_jump_begin
-		name_text = qs(0x54328aa0)
-		help_text = qs(0x12fc9bf2)
+		name_text = qs("Skip to beginning")
+		help_text = qs("Skip to the beginning of the song.")
 	}
 	{
 		id = control_loop
 		texture = icon_loop
-		name_text = qs(0x5137d418)
-		help_text = qs(0x77bc10b8)
+		name_text = qs("Loop")
+		help_text = qs("Set a loop area. Play back and live recording loop the section.")
 	}
 	{
 		id = control_delete
 		texture = icon_delete
-		name_text = qs(0xa32bf91f)
-		help_text = qs(0x1c37005c)
+		name_text = qs("Delete")
+		help_text = qs("Delete an area of notes.")
 	}
 	{
 		id = control_copy
 		texture = icon_copy
-		name_text = qs(0x51af3a34)
-		help_text = qs(0x3f4d7838)
+		name_text = qs("Copy")
+		help_text = qs("Select an area of notes to save into the copy clipboard.")
 	}
 	{
 		id = control_paste
 		texture = icon_paste
-		name_text = qs(0xc84166a2)
-		help_text = qs(0x76509fc3)
+		name_text = qs("Paste")
+		help_text = qs("Paste the notes that are saved in the copy clipboard.")
 	}
 	{
 		id = control_note_nudge
 		texture = icon_nudge
-		name_text = qs(0x9f5b93ea)
-		help_text = qs(0xbcfb291f)
+		name_text = qs("Note Nudge")
+		help_text = qs("Move notes forward in the song.")
 	}
 	{
 		id = control_marker
 		texture = icon_add_marker
-		name_text = qs(0x619cf5cd)
-		alt_name_text = qs(0xbc4e8553)
-		help_text = qs(0x8fe1dcc5)
+		name_text = qs("Add Marker")
+		alt_name_text = qs("Remove Marker")
+		help_text = qs("Add a marker that you can then skip to.")
 	}
 	{
 		id = control_switch_instrument
 		texture = icon_swap_instrument
-		name_text = qs(0x6759cd0a)
-		help_text = qs(0x8646efef)
+		name_text = qs("Switch Instrument")
+		help_text = qs("Switch between the rhythm, lead, bass, drums, and keyboard track.")
 	}
 ]
 jam_control_offset = (0.0, 33.0)
 
 script create_jam_control_bar 
 	z_priority = 31
-	ResolveScreenElementID \{id = {
+	ResolveScreenElementId \{id = {
 			jam_studio_element
 			child = {
 				adv_record
@@ -3726,7 +3726,7 @@ script create_jam_control_bar
 			}
 		}}
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		id = control_bg
 		parent = <resolved_id>
 		texture = highlighted_button
@@ -3734,29 +3734,29 @@ script create_jam_control_bar
 		rgba = [255 255 255 255]
 		dims = (39.0, 39.0)
 		rot_angle = -90
-		Pos = ($jam_control_bar_offset)
+		pos = ($jam_control_bar_offset)
 		z_priority = (<z_priority> + 2)
 	}
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		id = selection_arrow
 		parent = <resolved_id>
 		texture = selection_arrow
 		just = [left top]
 		rgba = [255 255 255 255]
-		Scale = 1
-		Pos = (($jam_control_bar_offset + ($jam_control_selected * $jam_control_offset)) + (25.0, -28.0))
+		scale = 1
+		pos = (($jam_control_bar_offset + ($jam_control_selected * $jam_control_offset)) + (25.0, -28.0))
 		z_priority = (<z_priority> + 5)
 	}
-	getplayerinfo ($jam_current_recording_player) controller
+	GetPlayerInfo ($jam_current_recording_player) controller
 	CreateScreenElement {
-		Type = ContainerElement
+		type = ContainerElement
 		parent = <resolved_id>
 		id = jam_control_container
 		exclusive_device = <controller>
-		Scale = 1
+		scale = 1
 		just = [center center]
-		Pos = (0.0, 0.0)
+		pos = (0.0, 0.0)
 		event_handlers = [
 			{pad_up jam_control_bar_up}
 			{pad_down jam_control_bar_down}
@@ -3770,35 +3770,35 @@ script create_jam_control_bar
 	<y_off> = ($jam_control_offset)
 	begin
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = jam_control_container
 		texture = toolbar_button
 		just = [left top]
 		rgba = [255 255 255 255]
 		dims = (39.0, 39.0)
 		rot_angle = -90
-		Pos = (<button_pos> + <count> * <y_off>)
+		pos = (<button_pos> + <count> * <y_off>)
 		z_priority = (<z_priority> + 2)
 	}
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = <id>
 		id = ($jam_controls [<count>].id)
 		texture = ($jam_controls [<count>].texture)
 		just = [left top]
-		Scale = 1.2750001
-		Pos = (42.5, -2.0)
+		scale = 1.2750001
+		pos = (42.5, -2.0)
 		rot_angle = 90
 		z_priority = (<z_priority> + 3)
 	}
 	<count> = (<count> + 1)
-	repeat <array_Size>
-	jam_studio_element :se_setprops control_name_text = ($jam_controls [0].name_text)
-	jam_studio_element :se_setprops control_help_text = ($jam_controls [0].help_text)
+	repeat <array_size>
+	jam_studio_element :SE_SetProps control_name_text = ($jam_controls [0].name_text)
+	jam_studio_element :SE_SetProps control_help_text = ($jam_controls [0].help_text)
 endscript
 
 script create_studio_now_bar 
-	ResolveScreenElementID \{id = {
+	ResolveScreenElementId \{id = {
 			jam_studio_element
 			child = {
 				adv_record
@@ -3809,25 +3809,25 @@ script create_studio_now_bar
 		DestroyScreenElement \{id = studio_nowbar_container}
 	endif
 	CreateScreenElement {
-		Type = ContainerElement
+		type = ContainerElement
 		id = studio_nowbar_container
 		parent = <resolved_id>
-		Pos = (-4.0, 12.5)
-		Scale = (0.78, 0.78)
+		pos = (-4.0, 12.5)
+		scale = (0.78, 0.78)
 		z_priority = 100
 	}
-	<gem_params> = {Type = SpriteElement parent = studio_nowbar_container just = [center center] Scale = 1 z_priority = 13}
+	<gem_params> = {type = SpriteElement parent = studio_nowbar_container just = [center center] scale = 1 z_priority = 13}
 	<drum> = 0
 	<rb_drum> = 0
-	getplayerinfo \{$jam_current_recording_player
+	GetPlayerInfo \{$jam_current_recording_player
 		controller}
-	if isdrumcontroller controller = <controller>
-		if isrbdrum controller = <controller>
+	if IsDrumController controller = <controller>
+		if isRBDrum controller = <controller>
 			<rb_drum> = 1
 		endif
 		<drum> = 1
 	endif
-	jam_menu_get_lefty \{Player = $jam_current_recording_player}
+	jam_menu_get_lefty \{player = $jam_current_recording_player}
 	if (<drum> = 1)
 		<lefty> = 0
 		<gem_positions> = [
@@ -3857,77 +3857,77 @@ script create_studio_now_bar
 	CreateScreenElement {
 		<gem_params>
 		texture = green_now_off
-		Pos = (<gem_positions> [0])
+		pos = (<gem_positions> [0])
 	}
 	CreateScreenElement {
 		<gem_params>
 		texture = red_now_off
-		Pos = (<gem_positions> [1])
+		pos = (<gem_positions> [1])
 	}
 	CreateScreenElement {
 		<gem_params>
 		texture = yellow_now_off
-		Pos = (<gem_positions> [2])
+		pos = (<gem_positions> [2])
 	}
 	CreateScreenElement {
 		<gem_params>
 		texture = blue_now_off
-		Pos = (<gem_positions> [3])
+		pos = (<gem_positions> [3])
 	}
 	if NOT (<rb_drum> = 1)
 		CreateScreenElement {
 			<gem_params>
 			texture = orange_now_off
-			Pos = (<gem_positions> [4])
+			pos = (<gem_positions> [4])
 		}
 	else
 		CreateScreenElement {
 			<gem_params>
 			texture = orange_now_off
-			Pos = (<gem_positions> [4])
+			pos = (<gem_positions> [4])
 			rgba = [80 80 80 255]
 		}
 	endif
-	<Player> = ($jam_current_recording_player)
-	<gem_on_params> = {Type = SpriteElement parent = studio_nowbar_container just = [center center] Scale = 1 z_priority = 14}
-	formatText checksumName = gem_id 'jam_now_on_gr_%s' s = <Player>
+	<player> = ($jam_current_recording_player)
+	<gem_on_params> = {type = SpriteElement parent = studio_nowbar_container just = [center center] scale = 1 z_priority = 14}
+	FormatText checksumname = gem_id 'jam_now_on_gr_%s' s = <player>
 	CreateScreenElement {
 		<gem_on_params>
 		id = <gem_id>
 		texture = green_now_on
-		Pos = (<gem_positions> [0])
+		pos = (<gem_positions> [0])
 	}
 	safe_hide id = <gem_id>
-	formatText checksumName = gem_id 'jam_now_on_re_%s' s = <Player>
+	FormatText checksumname = gem_id 'jam_now_on_re_%s' s = <player>
 	CreateScreenElement {
 		<gem_on_params>
 		id = <gem_id>
 		texture = red_now_on
-		Pos = (<gem_positions> [1])
+		pos = (<gem_positions> [1])
 	}
 	safe_hide id = <gem_id>
-	formatText checksumName = gem_id 'jam_now_on_ye_%s' s = <Player>
+	FormatText checksumname = gem_id 'jam_now_on_ye_%s' s = <player>
 	CreateScreenElement {
 		<gem_on_params>
 		id = <gem_id>
 		texture = yellow_now_on
-		Pos = (<gem_positions> [2])
+		pos = (<gem_positions> [2])
 	}
 	safe_hide id = <gem_id>
-	formatText checksumName = gem_id 'jam_now_on_bl_%s' s = <Player>
+	FormatText checksumname = gem_id 'jam_now_on_bl_%s' s = <player>
 	CreateScreenElement {
 		<gem_on_params>
 		id = <gem_id>
 		texture = blue_now_on
-		Pos = (<gem_positions> [3])
+		pos = (<gem_positions> [3])
 	}
 	safe_hide id = <gem_id>
-	formatText checksumName = gem_id 'jam_now_on_or_%s' s = <Player>
+	FormatText checksumname = gem_id 'jam_now_on_or_%s' s = <player>
 	CreateScreenElement {
 		<gem_on_params>
 		id = <gem_id>
 		texture = orange_now_on
-		Pos = (<gem_positions> [4])
+		pos = (<gem_positions> [4])
 	}
 	safe_hide id = <gem_id>
 endscript
@@ -3935,8 +3935,8 @@ endscript
 script jam_highway_select_quantize 
 	z_priority = 30
 	jam_studio_element :SetProps snap_text = ($jam_quantize [$jam_current_quantize].name_text)
-	jam_menu_get_lefty \{Player = $jam_current_recording_player}
-	getplayerinfo ($jam_current_recording_player) controller
+	jam_menu_get_lefty \{player = $jam_current_recording_player}
+	GetPlayerInfo ($jam_current_recording_player) controller
 	<last_note_count> = 0
 	<no_snap> = 0
 	begin
@@ -3949,14 +3949,14 @@ script jam_highway_select_quantize
 	endif
 	if NOT (($is_arpeggiator [$jam_current_track] = 1 || $is_drum_machine = 1) && ($jam_highway_recording = 1 && $jam_highway_step_recording != 1))
 		if (<disallow_snap> = 0)
-			if guitarcontrollermake left <controller>
+			if GuitarControllerMake left <controller>
 				if (<lefty> = 1)
 					change_quantize_right
 				else
 					change_quantize_left
 				endif
 			endif
-			if guitarcontrollermake right <controller>
+			if GuitarControllerMake right <controller>
 				if (<lefty> = 1)
 					change_quantize_left
 				else
@@ -3965,21 +3965,21 @@ script jam_highway_select_quantize
 			endif
 			markers_size = ($editable_jam_markers_size)
 			if (<markers_size> <= 0)
-				Change \{no_marker_snap = 1}
+				change \{no_marker_snap = 1}
 			endif
 			if (($no_marker_snap = 1) && ($jam_current_quantize = 0))
-				Change \{jam_current_quantize = 1}
+				change \{jam_current_quantize = 1}
 				jam_studio_element :SetProps snap_text = ($jam_quantize [1].name_text)
 			endif
 			if (($no_precise_snap = 1) && ($jam_current_quantize = 7))
-				Change \{jam_current_quantize = 6}
+				change \{jam_current_quantize = 6}
 				jam_studio_element :SetProps snap_text = ($jam_quantize [6].name_text)
 			endif
 		endif
 	else
-		Change \{jam_current_quantize = 5}
+		change \{jam_current_quantize = 5}
 		<no_snap> = 1
-		jam_studio_element :SetProps \{snap_text = qs(0xf40fa77f)}
+		jam_studio_element :SetProps \{snap_text = qs("No Snap")}
 	endif
 	if (<no_snap> = 1)
 		if ($jam_highway_recording = 0)
@@ -3996,7 +3996,7 @@ no_precise_snap = 0
 script change_quantize_left 
 	next_quantize = ($jam_current_quantize - 1)
 	GetArraySize ($jam_quantize)
-	ghmix_pad_back_sound
+	GhMix_Pad_Back_Sound
 	min_quantize = 0
 	if ($no_marker_snap = 1)
 		<min_quantize> = 1
@@ -4008,19 +4008,19 @@ script change_quantize_left
 	if (<next_quantize> < <min_quantize>)
 		<next_quantize> = <max_quantize>
 	endif
-	Change jam_current_quantize = <next_quantize>
+	change jam_current_quantize = <next_quantize>
 	jam_studio_element :SetProps snap_text = ($jam_quantize [$jam_current_quantize].name_text)
-	jam_studio_element :se_setprops \{snap_arrow_left_scale = 2.0}
-	jam_studio_element :se_setprops \{snap_arrow_left_scale = 1.3
+	jam_studio_element :SE_SetProps \{snap_arrow_left_scale = 2.0}
+	jam_studio_element :SE_SetProps \{snap_arrow_left_scale = 1.3
 		time = 0.15}
-	jam_studio_element :se_waitprops
-	broadcastevent \{Type = ghmix_snap_changed}
+	jam_studio_element :SE_WaitProps
+	BroadcastEvent \{type = ghmix_snap_changed}
 endscript
 
 script change_quantize_right 
 	next_quantize = ($jam_current_quantize + 1)
 	GetArraySize ($jam_quantize)
-	ghmix_pad_back_sound
+	GhMix_Pad_Back_Sound
 	min_quantize = 0
 	if ($no_marker_snap = 1)
 		<min_quantize> = 1
@@ -4032,13 +4032,13 @@ script change_quantize_right
 	if (<next_quantize> > <max_quantize>)
 		<next_quantize> = <min_quantize>
 	endif
-	Change jam_current_quantize = <next_quantize>
+	change jam_current_quantize = <next_quantize>
 	jam_studio_element :SetProps snap_text = ($jam_quantize [$jam_current_quantize].name_text)
-	jam_studio_element :se_setprops \{snap_arrow_right_scale = 2.0}
-	jam_studio_element :se_setprops \{snap_arrow_right_scale = 1.3
+	jam_studio_element :SE_SetProps \{snap_arrow_right_scale = 2.0}
+	jam_studio_element :SE_SetProps \{snap_arrow_right_scale = 1.3
 		time = 0.15}
-	jam_studio_element :se_waitprops
-	broadcastevent \{Type = ghmix_snap_changed}
+	jam_studio_element :SE_WaitProps
+	BroadcastEvent \{type = ghmix_snap_changed}
 endscript
 jam_undo_track = -1
 
@@ -4050,18 +4050,18 @@ script jam_advanced_recording_undo
 	suffix = '_size'
 	AppendSuffixToChecksum Base = <gem_array> SuffixString = <suffix>
 	old_gem_count = ($<appended_id>)
-	Change GlobalName = <appended_id> NewValue = 0
-	getjamsessionsize track = ($jam_tracks [$jam_undo_track].id)
+	change globalname = <appended_id> newvalue = 0
+	GetJamSessionSize track = ($jam_tracks [$jam_undo_track].id)
 	if (<track_size> > 0)
 		begin
-		deletejamsessionsound track = ($jam_tracks [$jam_undo_track].id) index = 0
-		getjamsessionsize track = ($jam_tracks [$jam_undo_track].id)
+		DeleteJamSessionSound track = ($jam_tracks [$jam_undo_track].id) index = 0
+		GetJamSessionSize track = ($jam_tracks [$jam_undo_track].id)
 		if NOT (<track_size> > 0)
 			break
 		endif
 		repeat
 	endif
-	formatText \{checksumName = undo_clipboard_array
+	FormatText \{checksumname = undo_clipboard_array
 		'undo_clipboard'}
 	suffix = '_size'
 	AppendSuffixToChecksum Base = <undo_clipboard_array> SuffixString = <suffix>
@@ -4069,13 +4069,13 @@ script jam_advanced_recording_undo
 	notetrack_index = 0
 	if (<new_gem_count> > 0)
 		begin
-		getnotetrackitem Name = <undo_clipboard_array> index = <notetrack_index>
-		addnotetrackitem Name = <gem_array> time = <gem_time> length = <gem_length> pattern = <gem_pattern>
+		GetNoteTrackItem name = <undo_clipboard_array> index = <notetrack_index>
+		AddNoteTrackItem name = <gem_array> time = <gem_time> length = <gem_length> pattern = <gem_pattern>
 		index = -1
-		findjamsessionsound track = undo_clipboard time = <gem_time>
+		FindJamSessionSound track = undo_clipboard time = <gem_time>
 		if (<index> >= 0)
-			getjamsessionsound track = undo_clipboard index = <index>
-			addjamsessionsound track = ($jam_tracks [$jam_undo_track].id) time = <time> string = <note_string> fret = <note_fret> Type = <note_type> chord_type = <chord_type> effect = <effect> velocity = <velocity>
+			GetJamSessionSound track = undo_clipboard index = <index>
+			AddJamSessionSound track = ($jam_tracks [$jam_undo_track].id) time = <time> string = <note_string> fret = <note_fret> type = <note_type> chord_type = <chord_type> effect = <effect> velocity = <velocity>
 		endif
 		<notetrack_index> = (<notetrack_index> + 2)
 		if (<notetrack_index> >= <new_gem_count>)
@@ -4083,21 +4083,21 @@ script jam_advanced_recording_undo
 		endif
 		repeat
 	endif
-	if GlobalExists Name = <undo_clipboard_array> Type = array
-		destroyscriptarray Name = <undo_clipboard_array>
+	if GlobalExists name = <undo_clipboard_array> type = array
+		DestroyScriptArray name = <undo_clipboard_array>
 	endif
-	Change \{jam_undo_track = -1}
+	change \{jam_undo_track = -1}
 	jam_band_remove_pause player_pause = <player_pause> scrolling_options = <scrolling_options> event_cont = <event_cont> select_player = <select_player> respawn_input = <respawn_input>
 	jam_highway_reinit
 endscript
 
 script jam_clear_undo_clipboard 
-	getjamsessionsize \{track = undo_clipboard}
+	GetJamSessionSize \{track = undo_clipboard}
 	if (<track_size> > 0)
 		begin
-		deletejamsessionsound \{track = undo_clipboard
+		DeleteJamSessionSound \{track = undo_clipboard
 			index = 0}
-		getjamsessionsize \{track = undo_clipboard}
+		GetJamSessionSize \{track = undo_clipboard}
 		if NOT (<track_size> > 0)
 			break
 		endif
@@ -4109,29 +4109,29 @@ script jam_update_undo_clipboard
 	jam_clear_undo_clipboard
 	gem_array = ($jam_tracks [$jam_current_track].gem_array)
 	GetArraySize ($<gem_array>)
-	notetrack_size = <array_Size>
+	notetrack_size = <array_size>
 	suffix = '_size'
 	AppendSuffixToChecksum Base = <gem_array> SuffixString = <suffix>
 	gem_count = ($<appended_id>)
 	if (<notetrack_size> <= 0)
 		return
 	endif
-	formatText \{checksumName = undo_clipboard_array
+	FormatText \{checksumname = undo_clipboard_array
 		'undo_clipboard'}
-	if GlobalExists Name = <undo_clipboard_array> Type = array
-		destroyscriptarray Name = <undo_clipboard_array>
+	if GlobalExists name = <undo_clipboard_array> type = array
+		DestroyScriptArray name = <undo_clipboard_array>
 	endif
-	createscriptarray Name = <undo_clipboard_array> size = <notetrack_size> Heap = heap_song <...>
+	CreateScriptArray name = <undo_clipboard_array> size = <notetrack_size> heap = heap_song <...>
 	if (<gem_count> > 0)
 		notetrack_index = 0
 		begin
-		getnotetrackitem Name = <gem_array> index = <notetrack_index>
-		addnotetrackitem Name = <undo_clipboard_array> time = <gem_time> length = <gem_length> pattern = <gem_pattern>
+		GetNoteTrackItem name = <gem_array> index = <notetrack_index>
+		AddNoteTrackItem name = <undo_clipboard_array> time = <gem_time> length = <gem_length> pattern = <gem_pattern>
 		index = -1
-		findjamsessionsound track = ($jam_tracks [$jam_current_track].id) time = <gem_time>
+		FindJamSessionSound track = ($jam_tracks [$jam_current_track].id) time = <gem_time>
 		if (<index> >= 0)
-			getjamsessionsound track = ($jam_tracks [$jam_current_track].id) index = <index>
-			addjamsessionsound track = undo_clipboard time = <time> string = <note_string> fret = <note_fret> Type = <note_type> chord_type = <chord_type> effect = <effect> velocity = <velocity>
+			GetJamSessionSound track = ($jam_tracks [$jam_current_track].id) index = <index>
+			AddJamSessionSound track = undo_clipboard time = <time> string = <note_string> fret = <note_fret> type = <note_type> chord_type = <chord_type> effect = <effect> velocity = <velocity>
 		endif
 		<notetrack_index> = (<notetrack_index> + 2)
 		if (<notetrack_index> >= <gem_count>)
@@ -4139,38 +4139,38 @@ script jam_update_undo_clipboard
 		endif
 		repeat
 	endif
-	Change \{jam_undo_track = $jam_current_track}
+	change \{jam_undo_track = $jam_current_track}
 endscript
 
 script jam_advanced_recording_init_undo 
 	if ($jam_undo_track < 0)
-		<option_text_id> :se_setprops rgba = [50 50 50 255]
-		<option_id> :se_setprops not_focusable
+		<option_text_id> :SE_SetProps rgba = [50 50 50 255]
+		<option_id> :SE_SetProps not_focusable
 	else
-		<option_text_id> :se_setprops rgba = ($menu_unfocus_color)
-		<option_id> :se_setprops focusable
+		<option_text_id> :SE_SetProps rgba = ($menu_unfocus_color)
+		<option_id> :SE_SetProps focusable
 	endif
 endscript
 
 script jam_clear_track_check 
-	getplayerinfo <select_player> jam_instrument
+	GetPlayerInfo <select_player> jam_instrument
 	if ($jam_advanced_record = 1)
-		LaunchEvent \{Type = unfocus
+		LaunchEvent \{type = unfocus
 			target = jam_pause_container}
-		formatText TextName = dialog qs(0x0fc7f97d) s = ($jam_tracks [$jam_current_track].alt_text)
+		FormatText TextName = dialog qs("Are you sure you want to clear the entire %s track?") s = ($jam_tracks [$jam_current_track].alt_text)
 		controller = ($primary_controller)
 	else
-		LaunchEvent Type = unfocus target = <vmenu_id>
+		LaunchEvent type = unfocus target = <vmenu_id>
 		destroy_jam_band_menu
-		formatText TextName = dialog qs(0x0fc7f97d) s = ($jam_tracks [<jam_instrument>].alt_text)
-		getplayerinfo <select_player> controller
+		FormatText TextName = dialog qs("Are you sure you want to clear the entire %s track?") s = ($jam_tracks [<jam_instrument>].alt_text)
+		GetPlayerInfo <select_player> controller
 	endif
 	clean_up_user_control_helpers
 	create_popup_warning_menu {
-		title = qs(0xbbcf951c)
+		title = qs("CLEAR TRACK")
 		textblock = {
 			text = <dialog>
-			Pos = (640.0, 370.0)
+			pos = (640.0, 370.0)
 		}
 		player_device = <controller>
 		menu_pos = (640.0, 465.0)
@@ -4178,12 +4178,12 @@ script jam_clear_track_check
 			{
 				func = {jam_clear_track_go_back}
 				func_params = {<...>}
-				text = qs(0x320a8d1c)
+				text = qs("GO BACK")
 			}
 			{
 				func = jam_clear_track
 				func_params = {<...>}
-				text = qs(0xbbcf951c)
+				text = qs("CLEAR TRACK")
 			}
 		]
 	}
@@ -4213,7 +4213,7 @@ script jam_clear_track_go_back
 endscript
 
 script jam_clear_track 
-	getplayerinfo <select_player> jam_instrument
+	GetPlayerInfo <select_player> jam_instrument
 	if ($jam_advanced_record = 1)
 		jam_update_undo_clipboard
 		jam_delete_range \{low_bound = 0
@@ -4230,29 +4230,29 @@ endscript
 
 script destroy_jam_recording_menu 
 	jam_stop_all_sound
-	Change \{jam_advanced_record = 0}
+	change \{jam_advanced_record = 0}
 	destroy_popup_warning_menu
 	KillSpawnedScript \{id = jam_recording_spawns}
-	formatText checksumName = jam_player_spawns 'jam_player_spawns_%s' s = ($jam_current_recording_player)
+	FormatText checksumname = jam_player_spawns 'jam_player_spawns_%s' s = ($jam_current_recording_player)
 	KillSpawnedScript id = <jam_player_spawns>
-	formatText checksumName = input_spawn 'input_spawn_%s' s = ($jam_current_recording_player)
+	FormatText checksumname = input_spawn 'input_spawn_%s' s = ($jam_current_recording_player)
 	KillSpawnedScript id = <input_spawn>
-	KillSpawnedScript \{Name = jam_step_wait}
-	destroyplayerserverjaminput Player = ($jam_current_recording_player)
+	KillSpawnedScript \{name = jam_step_wait}
+	DestroyPlayerServerJamInput player = ($jam_current_recording_player)
 	KillSpawnedScript \{id = jam_input_spawns}
-	KillSpawnedScript \{Name = guitar_jam_playback_recording}
-	KillSpawnedScript \{Name = guitar_jam_drum_playback}
-	KillSpawnedScript \{Name = jam_play_arpeggiator_loop}
-	KillSpawnedScript \{Name = jam_play_drum_loop}
-	jam_kill_update_note_length Player = ($jam_current_recording_player)
+	KillSpawnedScript \{name = guitar_jam_playback_recording}
+	KillSpawnedScript \{name = guitar_jam_drum_playback}
+	KillSpawnedScript \{name = jam_play_arpeggiator_loop}
+	KillSpawnedScript \{name = jam_play_drum_loop}
+	jam_kill_update_note_length player = ($jam_current_recording_player)
 	if ScreenElementExists \{id = jam_studio_element}
 		DestroyScreenElement \{id = jam_studio_element}
 	endif
 	jam_clear_clipboards
-	formatText \{checksumName = clipboard_array
+	FormatText \{checksumname = clipboard_array
 		'clipboard'}
-	if GlobalExists Name = <clipboard_array> Type = array
-		destroyscriptarray Name = <clipboard_array>
+	if GlobalExists name = <clipboard_array> type = array
+		DestroyScriptArray name = <clipboard_array>
 	endif
 	clean_up_user_control_helpers
 	destroy_menu_backdrop
@@ -4260,12 +4260,12 @@ script destroy_jam_recording_menu
 	else
 		end_song
 	endif
-	Change \{jam_highway_recording_mode = 0}
-	Change \{jam_highway_recording = 0}
-	Change \{jam_highway_step_recording = 0}
+	change \{jam_highway_recording_mode = 0}
+	change \{jam_highway_recording = 0}
+	change \{jam_highway_step_recording = 0}
 endscript
 
-script jam_recording_add_user_control_helpers \{state = NULL}
+script jam_recording_add_user_control_helpers \{state = null}
 	clean_up_user_control_helpers
 	if ($game_mode = training)
 		if ScreenElementExists \{id = jam_band_container}
@@ -4273,138 +4273,138 @@ script jam_recording_add_user_control_helpers \{state = NULL}
 		elseif ScreenElementExists \{id = jam_studio_element}
 			<skip_button> = back
 		endif
-		add_user_control_helper text = qs(0x784c64ff) button = <skip_button> z = 100
+		add_user_control_helper text = qs("SKIP") button = <skip_button> z = 100
 	endif
 	switch <state>
 		case Loop
 		if ($jam_loop_bound_low > -1 && $jam_loop_bound_high > -1)
-			add_user_control_helper \{text = qs(0x227300c8)
-				button = yellow
+			add_user_control_helper \{text = qs("CLEAR LOOP")
+				button = Yellow
 				z = 100}
 		endif
-		add_user_control_helper \{text = qs(0xbe1f4927)
+		add_user_control_helper \{text = qs("SET LOOP")
 			button = start
 			z = 100}
-		add_user_control_helper \{text = qs(0x4d17d51b)
+		add_user_control_helper \{text = qs("SELECT AREA")
 			button = strumbar
 			z = 100}
-		add_user_control_helper \{text = qs(0xf7723015)
+		add_user_control_helper \{text = qs("CANCEL")
 			button = red
 			z = 100}
 		case playing
-		add_user_control_helper \{text = qs(0xafa78b6d)
+		add_user_control_helper \{text = qs("STOP")
 			button = start
 			z = 100}
 		case recording
-		add_user_control_helper \{text = qs(0xb581da63)
+		add_user_control_helper \{text = qs("STOP RECORDING")
 			button = start
 			z = 100}
 		case step_recording
-		add_user_control_helper \{text = qs(0x37b6bf56)
+		add_user_control_helper \{text = qs("HOLD TO SUSTAIN")
 			button = strumbar
 			z = 100}
-		add_user_control_helper \{text = qs(0xb581da63)
+		add_user_control_helper \{text = qs("STOP RECORDING")
 			button = start
 			z = 100}
 		case step_rec_skip
-		add_user_control_helper \{text = qs(0x784c64ff)
+		add_user_control_helper \{text = qs("SKIP")
 			button = strumbar
 			z = 100}
-		add_user_control_helper \{text = qs(0xff5a6032)
+		add_user_control_helper \{text = qs("DELETE NOTE")
 			button = red
 			z = 100}
-		add_user_control_helper \{text = qs(0xb581da63)
+		add_user_control_helper \{text = qs("STOP RECORDING")
 			button = start
 			z = 100}
 		case delete
-		add_user_control_helper \{text = qs(0x271a1633)
+		add_user_control_helper \{text = qs("DELETE")
 			button = start
 			z = 100}
-		add_user_control_helper \{text = qs(0x4d17d51b)
+		add_user_control_helper \{text = qs("SELECT AREA")
 			button = strumbar
 			z = 100}
-		add_user_control_helper \{text = qs(0xf7723015)
+		add_user_control_helper \{text = qs("CANCEL")
 			button = red
 			z = 100}
 		if GotParam \{delete_one}
-			add_user_control_helper \{text = qs(0x2f5d6122)
-				button = yellow
+			add_user_control_helper \{text = qs("DELETE ONE")
+				button = Yellow
 				z = 100}
 		else
-			add_user_control_helper \{text = qs(0x6e9c7390)
-				button = yellow
+			add_user_control_helper \{text = qs("DELETE ALL")
+				button = Yellow
 				z = 100}
 		endif
 		case copy
 		if ($jam_loop_bound_low > -1 && $jam_loop_bound_high > -1)
-			add_user_control_helper \{text = qs(0x580fde84)
-				button = blue
+			add_user_control_helper \{text = qs("COPY LOOP")
+				button = Blue
 				z = 100}
 		endif
-		add_user_control_helper \{text = qs(0x63b5b49e)
+		add_user_control_helper \{text = qs("COPY")
 			button = start
 			z = 100}
-		add_user_control_helper \{text = qs(0x4d17d51b)
+		add_user_control_helper \{text = qs("SELECT AREA")
 			button = strumbar
 			z = 100}
-		add_user_control_helper \{text = qs(0xf7723015)
+		add_user_control_helper \{text = qs("CANCEL")
 			button = red
 			z = 100}
 		if GotParam \{copy_one}
-			add_user_control_helper \{text = qs(0x8b180c8a)
-				button = yellow
+			add_user_control_helper \{text = qs("COPY ONE")
+				button = Yellow
 				z = 100}
 		else
-			add_user_control_helper \{text = qs(0xaafdafa5)
-				button = yellow
+			add_user_control_helper \{text = qs("COPY ALL TRACKS")
+				button = Yellow
 				z = 100}
 		endif
 		case paste
-		add_user_control_helper \{text = qs(0x61e576d1)
+		add_user_control_helper \{text = qs("PASTE ONE")
 			button = green
 			z = 100}
-		add_user_control_helper \{text = qs(0x3fc1c076)
+		add_user_control_helper \{text = qs("DONE")
 			button = red
 			z = 100}
-		add_user_control_helper \{text = qs(0x307781c9)
-			button = yellow
+		add_user_control_helper \{text = qs("PASTE MULTIPLE")
+			button = Yellow
 			z = 100}
 		case paste_multiple
-		add_user_control_helper \{text = qs(0x307781c9)
+		add_user_control_helper \{text = qs("PASTE MULTIPLE")
 			button = start
 			z = 100}
-		add_user_control_helper \{text = qs(0x735df1b3)
+		add_user_control_helper \{text = qs("NUMBER OF PASTES")
 			button = strumbar
 			z = 100}
-		add_user_control_helper \{text = qs(0xf7723015)
+		add_user_control_helper \{text = qs("CANCEL")
 			button = red
 			z = 100}
 		case nudge
-		add_user_control_helper \{text = qs(0x1c84e3f9)
+		add_user_control_helper \{text = qs("NUDGE ONE")
 			button = green
 			z = 100}
-		add_user_control_helper \{text = qs(0x3fc1c076)
+		add_user_control_helper \{text = qs("DONE")
 			button = red
 			z = 100}
-		add_user_control_helper \{text = qs(0x5d45f14b)
-			button = yellow
+		add_user_control_helper \{text = qs("NUDGE ALL")
+			button = Yellow
 			z = 100}
 		default
 		if ScreenElementExists \{id = jam_studio_element}
-			add_user_control_helper \{text = qs(0xc18d5e76)
+			add_user_control_helper \{text = qs("SELECT")
 				button = green
 				z = 100}
 			if NOT ($game_mode = training)
-				add_user_control_helper \{text = qs(0x48a351fa)
+				add_user_control_helper \{text = qs("PAUSE")
 					button = start
 					z = 100}
 			endif
 		elseif ScreenElementExists \{id = jam_band_container}
 			if NOT ($game_mode = training)
-				add_user_control_helper \{text = qs(0x48a351fa)
+				add_user_control_helper \{text = qs("PAUSE")
 					button = start
 					z = 100}
-				add_user_control_helper \{text = qs(0xbdcf8d77)
+				add_user_control_helper \{text = qs("PALM / PERC")
 					button = back
 					z = 100}
 			endif
@@ -4414,10 +4414,10 @@ endscript
 
 script jam_recording_cleanup 
 	song_prefix = 'editable'
-	formatText checksumName = arraylist '%s_arraylist' s = <song_prefix> AddToStringLookup = true
+	FormatText checksumname = arraylist '%s_arraylist' s = <song_prefix> AddToStringLookup = true
 	song_prefix = 'jamsession'
-	formatText checksumName = arraylist2 '%s_arraylist' s = <song_prefix> AddToStringLookup = true
-	clearjamsession
+	FormatText checksumname = arraylist2 '%s_arraylist' s = <song_prefix> AddToStringLookup = true
+	ClearJamSession
 	jamsession_unload \{song_prefix = 'editable'}
 endscript
 
@@ -4425,7 +4425,7 @@ script jam_recording_pause
 	if ($game_mode = training)
 		return
 	endif
-	LaunchEvent \{Type = unfocus
+	LaunchEvent \{type = unfocus
 		target = jam_control_container}
 	jam_band_pause select_player = ($jam_current_recording_player) player_cont = jam_pause_container event_cont = jam_control_container adv_record back_to_jam_band = <back_to_jam_band> shake = 0
 endscript
@@ -4446,7 +4446,7 @@ script jam_recording_create_metaview
 	<new_pos> = (($jam_recording_metaview_length) - <new_pos>)
 	<new_pos> = ((0.0, 1.0) * <new_pos>)
 	<new_pos> = (<new_pos> + (376.0, 35.0))
-	jam_studio_element :se_setprops time_marker_pos = <new_pos>
+	jam_studio_element :SE_SetProps time_marker_pos = <new_pos>
 	Wait \{10
 		gameframes}
 	repeat
@@ -4462,7 +4462,7 @@ script jam_recording_destroy_metaview
 endscript
 
 script jam_studio_hide_tilt_meter 
-	ResolveScreenElementID \{id = {
+	ResolveScreenElementId \{id = {
 			jam_studio_element
 			child = {
 				adv_record
@@ -4473,7 +4473,7 @@ script jam_studio_hide_tilt_meter
 			}
 		}}
 	pitch_indicator = <resolved_id>
-	ResolveScreenElementID \{id = {
+	ResolveScreenElementId \{id = {
 			jam_studio_element
 			child = {
 				adv_record
@@ -4485,16 +4485,16 @@ script jam_studio_hide_tilt_meter
 		}}
 	pitch_meter = <resolved_id>
 	if ScreenElementExists id = <pitch_indicator>
-		<pitch_indicator> :se_setprops alpha = 0
+		<pitch_indicator> :SE_SetProps alpha = 0
 	endif
 	if ScreenElementExists id = <pitch_meter>
-		<pitch_meter> :se_setprops alpha = 0
+		<pitch_meter> :SE_SetProps alpha = 0
 	endif
 endscript
 
 script jam_studio_tilt_meter 
-	<Player> = ($jam_current_recording_player)
-	ResolveScreenElementID \{id = {
+	<player> = ($jam_current_recording_player)
+	ResolveScreenElementId \{id = {
 			jam_studio_element
 			child = {
 				adv_record
@@ -4505,7 +4505,7 @@ script jam_studio_tilt_meter
 			}
 		}}
 	pitch_indicator = <resolved_id>
-	ResolveScreenElementID \{id = {
+	ResolveScreenElementId \{id = {
 			jam_studio_element
 			child = {
 				adv_record
@@ -4516,7 +4516,7 @@ script jam_studio_tilt_meter
 			}
 		}}
 	pitch_meter = <resolved_id>
-	getplayerinfo <Player> jam_instrument
+	GetPlayerInfo <player> jam_instrument
 	switch (<jam_instrument>)
 		case 0
 		<tilt_var> = jam_tilt_rhythm
@@ -4525,8 +4525,8 @@ script jam_studio_tilt_meter
 		case 2
 		<tilt_var> = jam_tilt_bass
 		case 3
-		<pitch_indicator> :se_setprops alpha = 1
-		<pitch_meter> :se_setprops alpha = 1 texture = pitch_meter_whole
+		<pitch_indicator> :SE_SetProps alpha = 1
+		<pitch_meter> :SE_SetProps alpha = 1 texture = pitch_meter_whole
 		return
 		case 4
 		<tilt_var> = jam_tilt_melody
@@ -4534,26 +4534,26 @@ script jam_studio_tilt_meter
 	<chosen_scales_array> = ($jam_track_scaleindex)
 	<chosen_scale_index> = (<chosen_scales_array> [<jam_instrument>])
 	<chosen_scale> = ($jam_scales_new [<chosen_scale_index>])
-	if StructureContains structure = <chosen_scale> chromatic
+	if StructureContains Structure = <chosen_scale> chromatic
 		<chromatic> = 1
 	else
 		<chromatic> = 0
 	endif
 	if (<chromatic> = 1)
 		if (<jam_instrument> = 0)
-			<pitch_indicator> :se_setprops alpha = 1
-			<pitch_meter> :se_setprops alpha = 1 texture = pitch_meter
+			<pitch_indicator> :SE_SetProps alpha = 1
+			<pitch_meter> :SE_SetProps alpha = 1 texture = pitch_meter
 		else
-			<pitch_indicator> :se_setprops alpha = 1
-			<pitch_meter> :se_setprops alpha = 1 texture = pitch_meter_quarter
+			<pitch_indicator> :SE_SetProps alpha = 1
+			<pitch_meter> :SE_SetProps alpha = 1 texture = pitch_meter_quarter
 		endif
 	else
 		if (<jam_instrument> = 0)
-			<pitch_indicator> :se_setprops alpha = 0
-			<pitch_meter> :se_setprops alpha = 0
+			<pitch_indicator> :SE_SetProps alpha = 0
+			<pitch_meter> :SE_SetProps alpha = 0
 		else
-			<pitch_indicator> :se_setprops alpha = 1
-			<pitch_meter> :se_setprops alpha = 1 texture = pitch_meter
+			<pitch_indicator> :SE_SetProps alpha = 1
+			<pitch_meter> :SE_SetProps alpha = 1 texture = pitch_meter
 		endif
 	endif
 	<last_tilt> = -1
@@ -4563,20 +4563,20 @@ script jam_studio_tilt_meter
 		if ((<chromatic> = 0) || <jam_instrument> = 0)
 			switch (<last_tilt>)
 				case 0
-				legacydoscreenelementmorph id = <pitch_indicator> time = 0.15 rot_angle = -20
+				LegacyDoScreenElementMorph id = <pitch_indicator> time = 0.15 rot_angle = -20
 				case 1
-				legacydoscreenelementmorph id = <pitch_indicator> time = 0.15 rot_angle = 20
+				LegacyDoScreenElementMorph id = <pitch_indicator> time = 0.15 rot_angle = 20
 			endswitch
 		else
 			switch (<last_tilt>)
 				case 0
-				legacydoscreenelementmorph id = <pitch_indicator> time = 0.15 rot_angle = -45
+				LegacyDoScreenElementMorph id = <pitch_indicator> time = 0.15 rot_angle = -45
 				case 1
-				legacydoscreenelementmorph id = <pitch_indicator> time = 0.15 rot_angle = -15
+				LegacyDoScreenElementMorph id = <pitch_indicator> time = 0.15 rot_angle = -15
 				case 2
-				legacydoscreenelementmorph id = <pitch_indicator> time = 0.15 rot_angle = 15
+				LegacyDoScreenElementMorph id = <pitch_indicator> time = 0.15 rot_angle = 15
 				case 3
-				legacydoscreenelementmorph id = <pitch_indicator> time = 0.15 rot_angle = 45
+				LegacyDoScreenElementMorph id = <pitch_indicator> time = 0.15 rot_angle = 45
 			endswitch
 		endif
 	endif
@@ -4585,6 +4585,6 @@ script jam_studio_tilt_meter
 	repeat
 endscript
 
-script jam_studio_animate_mouse time = 0.1 Pos = (($jam_control_bar_offset + ($jam_control_selected * $jam_control_offset)) + (25.0, -28.0)) rotation = 0.0
-	legacydoscreenelementmorph id = selection_arrow time = <time> Pos = <Pos> rot_angle = <rotation>
+script jam_studio_animate_mouse time = 0.1 pos = (($jam_control_bar_offset + ($jam_control_selected * $jam_control_offset)) + (25.0, -28.0)) rotation = 0.0
+	LegacyDoScreenElementMorph id = selection_arrow time = <time> pos = <pos> rot_angle = <rotation>
 endscript

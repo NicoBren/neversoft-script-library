@@ -1,122 +1,122 @@
-cas_drums = [
+CAS_Drums = [
 	{
 		desc_id = basic
-		frontend_desc = qs(0xad046885)
+		frontend_desc = qs("\LSingle Bass Kit")
 		mesh = 'models\\CAR_Instruments\\Drums\\SingleBassKit.skin'
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x9f20f698)
+				desc_id = Finishes
+				frontend_desc = qs("Shells")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\drumshell_ds_pork1.dds'
-				material = cad_drums_01_primary
-				mask = $cadrm_01_finishes
+				material = CAD_Drums_01_Primary
+				mask = $CADrm_01_Finishes
 				diffuse
 				pre_userlayer
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x50a6f3e5)
+				desc_id = Details
+				frontend_desc = qs("Bass Skins")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_DS_15a.dds'
-				material = cad_drums_01_bassdrum
-				mask = $cadrm_01_finishes_bassdrum
+				material = CAD_Drums_01_Bassdrum
+				mask = $CADrm_01_Finishes_Bassdrum
 				diffuse
 				pre_userlayer
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_DS_15a.dds'
-				material = cad_drums_01_bassdrum
+				material = CAD_Drums_01_Bassdrum
 				mask = $car_basic_primitives_1
 				userlayer
 				diffuse
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_DS_15a.dds'
-				material = cad_drums_01_bassdrum
+				material = CAD_Drums_01_Bassdrum
 				mask = $car_basic_primitives_2
 				userlayer
 				diffuse
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_DS_15a.dds'
-				material = cad_drums_01_bassdrum
+				material = CAD_Drums_01_Bassdrum
 				mask = $car_gradiant_shapes
 				userlayer
 				diffuse
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_DS_15a.dds'
-				material = cad_drums_01_bassdrum
+				material = CAD_Drums_01_Bassdrum
 				mask = $car_icons
 				userlayer
 				diffuse
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_DS_15a.dds'
-				material = cad_drums_01_bassdrum
+				material = CAD_Drums_01_Bassdrum
 				mask = $car_living_shapes
 				userlayer
 				diffuse
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_DS_15a.dds'
-				material = cad_drums_01_bassdrum
+				material = CAD_Drums_01_Bassdrum
 				mask = $car_graphics
 				userlayer
 				diffuse
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_DS_15a.dds'
-				material = cad_drums_01_bassdrum
+				material = CAD_Drums_01_Bassdrum
 				mask = $car_sponsors
 				userlayer
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_DS_15a.dds'
-				material = cad_drums_01_bassdrum
+				material = CAD_Drums_01_Bassdrum
 				mask = $car_fontgrid_title_a1
 				diffuse
 				userlayer
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_DS_15a.dds'
-				material = cad_drums_01_bassdrum
+				material = CAD_Drums_01_Bassdrum
 				mask = $car_fontgrid_text_a3
 				diffuse
 				userlayer
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_DS_15a.dds'
-				material = cad_drums_01_bassdrum
+				material = CAD_Drums_01_Bassdrum
 				mask = $car_fontgrid_text_a6
 				diffuse
 				userlayer
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_DS_15a.dds'
-				material = cad_drums_01_bassdrum
+				material = CAD_Drums_01_Bassdrum
 				mask = $car_fontgrid_text_a8
 				diffuse
 				userlayer
@@ -124,126 +124,126 @@ cas_drums = [
 		]
 	}
 	{
-		desc_id = doublebass
-		frontend_desc = qs(0x42c9d1d2)
+		desc_id = DoubleBass
+		frontend_desc = qs("\LPork Pie Kit")
 		mesh = 'models\\CAR_Instruments\\Drums\\DoubleBassKit.skin'
 		locked
-		polaroid = drum_rewards_porkpie
+		polaroid = Drum_Rewards_Porkpie
 		price = 1500
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x9f20f698)
+				desc_id = Finishes
+				frontend_desc = qs("Shells")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\drumshell_ds_pork7.dds'
-				material = porkpie_kit_primary
-				mask = $cadrm_02_finishes
+				material = PorkPie_Kit_Primary
+				mask = $CADrm_02_Finishes
 				diffuse
 				pre_userlayer
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x50a6f3e5)
+				desc_id = Details
+				frontend_desc = qs("Bass Skins")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_ds_pork3.dds'
-				material = porkpie_kit_bassdrum
-				mask = $cadrm_02_finishes_bassdrum
+				material = PorkPie_Kit_Bassdrum
+				mask = $CADrm_02_Finishes_Bassdrum
 				diffuse
 				pre_userlayer
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_ds_pork3.dds'
-				material = porkpie_kit_bassdrum
+				material = PorkPie_Kit_Bassdrum
 				mask = $car_basic_primitives_1
 				userlayer
 				diffuse
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_ds_pork3.dds'
-				material = porkpie_kit_bassdrum
+				material = PorkPie_Kit_Bassdrum
 				mask = $car_basic_primitives_2
 				userlayer
 				diffuse
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_ds_pork3.dds'
-				material = porkpie_kit_bassdrum
+				material = PorkPie_Kit_Bassdrum
 				mask = $car_gradiant_shapes
 				userlayer
 				diffuse
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_ds_pork3.dds'
-				material = porkpie_kit_bassdrum
+				material = PorkPie_Kit_Bassdrum
 				mask = $car_icons
 				userlayer
 				diffuse
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_ds_pork3.dds'
-				material = porkpie_kit_bassdrum
+				material = PorkPie_Kit_Bassdrum
 				mask = $car_living_shapes
 				userlayer
 				diffuse
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_ds_pork3.dds'
-				material = porkpie_kit_bassdrum
+				material = PorkPie_Kit_Bassdrum
 				mask = $car_graphics
 				userlayer
 				diffuse
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_ds_pork3.dds'
-				material = porkpie_kit_bassdrum
+				material = PorkPie_Kit_Bassdrum
 				mask = $car_sponsors
 				userlayer
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_ds_pork3.dds'
-				material = porkpie_kit_bassdrum
+				material = PorkPie_Kit_Bassdrum
 				mask = $car_fontgrid_title_a1
 				diffuse
 				userlayer
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_ds_pork3.dds'
-				material = porkpie_kit_bassdrum
+				material = PorkPie_Kit_Bassdrum
 				mask = $car_fontgrid_text_a3
 				diffuse
 				userlayer
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_ds_pork3.dds'
-				material = porkpie_kit_bassdrum
+				material = PorkPie_Kit_Bassdrum
 				mask = $car_fontgrid_text_a6
 				diffuse
 				userlayer
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_ds_pork3.dds'
-				material = porkpie_kit_bassdrum
+				material = PorkPie_Kit_Bassdrum
 				mask = $car_fontgrid_text_a8
 				diffuse
 				userlayer
@@ -251,126 +251,126 @@ cas_drums = [
 		]
 	}
 	{
-		desc_id = monster
-		frontend_desc = qs(0x7c08db0d)
+		desc_id = Monster
+		frontend_desc = qs("\LTravis Barker OCDP")
 		price = 5000
 		locked
-		polaroid = drum_rewards_oc
+		polaroid = Drum_Rewards_OC
 		mesh = 'models\\CAR_Instruments\\Drums\\QuadBassKit.skin'
 		sections = [
 			{
-				desc_id = finishes
-				frontend_desc = qs(0x9f20f698)
+				desc_id = Finishes
+				frontend_desc = qs("Shells")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\drumshell_ds_oc1.dds'
-				material = quadbasskit_primary
-				mask = $cadrm_03_finishes
+				material = QuadBassKit_Primary
+				mask = $CADrm_03_Finishes
 				diffuse
 				pre_userlayer
 			}
 			{
-				desc_id = details
-				frontend_desc = qs(0x50a6f3e5)
+				desc_id = Details
+				frontend_desc = qs("Bass Skins")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_ds_oc1.dds'
-				material = quadbasskit_bassdrum
-				mask = $cadrm_03_finishes_bassdrum
+				material = QuadBassKit_Bassdrum
+				mask = $CADrm_03_Finishes_Bassdrum
 				diffuse
 				pre_userlayer
 			}
 			{
 				desc_id = car_primitives
-				frontend_desc = qs(0x7dc468d3)
+				frontend_desc = qs("PRIMITIVES")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_ds_oc1.dds'
-				material = quadbasskit_bassdrum
+				material = QuadBassKit_Bassdrum
 				mask = $car_basic_primitives_1
 				userlayer
 				diffuse
 			}
 			{
 				desc_id = car_outlines_primitives
-				frontend_desc = qs(0x955f1285)
+				frontend_desc = qs("OUTLINES")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_ds_oc1.dds'
-				material = quadbasskit_bassdrum
+				material = QuadBassKit_Bassdrum
 				mask = $car_basic_primitives_2
 				userlayer
 				diffuse
 			}
 			{
 				desc_id = car_tattoo_decal
-				frontend_desc = qs(0x80142024)
+				frontend_desc = qs("GRADIENTS")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_ds_oc1.dds'
-				material = quadbasskit_bassdrum
+				material = QuadBassKit_Bassdrum
 				mask = $car_gradiant_shapes
 				userlayer
 				diffuse
 			}
 			{
 				desc_id = car_icon_decals
-				frontend_desc = qs(0xcd9be7cd)
+				frontend_desc = qs("ICONS")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_ds_oc1.dds'
-				material = quadbasskit_bassdrum
+				material = QuadBassKit_Bassdrum
 				mask = $car_icons
 				userlayer
 				diffuse
 			}
 			{
 				desc_id = car_living
-				frontend_desc = qs(0xac01b8a2)
+				frontend_desc = qs("LIVING")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_ds_oc1.dds'
-				material = quadbasskit_bassdrum
+				material = QuadBassKit_Bassdrum
 				mask = $car_living_shapes
 				userlayer
 				diffuse
 			}
 			{
 				desc_id = car_graphics
-				frontend_desc = qs(0xde6cb37a)
+				frontend_desc = qs("GRAPHICS")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_ds_oc1.dds'
-				material = quadbasskit_bassdrum
+				material = QuadBassKit_Bassdrum
 				mask = $car_graphics
 				userlayer
 				diffuse
 			}
 			{
 				desc_id = car_sponsors
-				frontend_desc = qs(0xc26f9911)
+				frontend_desc = qs("SPONSORS")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_ds_oc1.dds'
-				material = quadbasskit_bassdrum
+				material = QuadBassKit_Bassdrum
 				mask = $car_sponsors
 				userlayer
 				diffuse
 			}
 			{
-				desc_id = `font	a1`
-				frontend_desc = qs(0x1c40b9b0)
+				desc_id = `Font A1`
+				frontend_desc = qs("\LHARBOUR")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_ds_oc1.dds'
-				material = quadbasskit_bassdrum
+				material = QuadBassKit_Bassdrum
 				mask = $car_fontgrid_title_a1
 				diffuse
 				userlayer
 			}
 			{
-				desc_id = `font	a3`
-				frontend_desc = qs(0x5c8b3f2b)
+				desc_id = `Font A3`
+				frontend_desc = qs("\LSQUARE 40")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_ds_oc1.dds'
-				material = quadbasskit_bassdrum
+				material = QuadBassKit_Bassdrum
 				mask = $car_fontgrid_text_a3
 				diffuse
 				userlayer
 			}
 			{
-				desc_id = `font	a6`
-				frontend_desc = qs(0x16701ac6)
+				desc_id = `Font A6`
+				frontend_desc = qs("\LBORDELLO")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_ds_oc1.dds'
-				material = quadbasskit_bassdrum
+				material = QuadBassKit_Bassdrum
 				mask = $car_fontgrid_text_a6
 				diffuse
 				userlayer
 			}
 			{
-				desc_id = `font	a8`
-				frontend_desc = qs(0x18698a72)
+				desc_id = `Font A8`
+				frontend_desc = qs("\LAAUX PRO B")
 				base_tex = 'tex\\models\\CAR_Instruments\\Drums\\bass_skin_ds_oc1.dds'
-				material = quadbasskit_bassdrum
+				material = QuadBassKit_Bassdrum
 				mask = $car_fontgrid_text_a8
 				diffuse
 				userlayer
@@ -378,31 +378,31 @@ cas_drums = [
 		]
 	}
 ]
-cas_drums_sticks = [
+CAS_Drums_Sticks = [
 	{
-		desc_id = drumsticks1
-		frontend_desc = qs(0x4a301f1d)
+		desc_id = Drumsticks1
+		frontend_desc = qs("\LSome sticks")
 		mesh = 'models\\CAR_Instruments\\Drums\\CAD_Sticks_01.skin'
 	}
 	{
-		desc_id = drumsticks_zildjian1
-		frontend_desc = qs(0x5c1a7bfd)
+		desc_id = Drumsticks_Zildjian1
+		frontend_desc = qs("\LZildjian ")
 		mesh = 'models\\CAR_Instruments\\Drums\\Drumsticks_zildj.skin'
 		locked
-		polaroid = drum_rewards_stix_zildjian
+		polaroid = Drum_Rewards_stix_zildjian
 	}
 	{
-		desc_id = drumsticks_zildjian2
-		frontend_desc = qs(0xdc01aa1e)
+		desc_id = Drumsticks_Zildjian2
+		frontend_desc = qs("\LZildjian Barker")
 		mesh = 'models\\CAR_Instruments\\Drums\\Drumsticks_Zildj2.skin'
 		locked
-		polaroid = drum_rewards_stix_zildjian
+		polaroid = Drum_Rewards_stix_zildjian
 	}
 	{
-		desc_id = drumsticks_regal
-		frontend_desc = qs(0x6c1a557c)
+		desc_id = Drumsticks_Regal
+		frontend_desc = qs("\LRegal")
 		mesh = 'models\\CAR_Instruments\\Drums\\Drumsticks_Regal.skin'
 		locked
-		polaroid = drum_rewards_stix_regal
+		polaroid = Drum_Rewards_stix_regal
 	}
 ]

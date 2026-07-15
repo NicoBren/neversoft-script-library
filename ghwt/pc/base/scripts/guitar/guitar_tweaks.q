@@ -1,10 +1,10 @@
 destroy_time = 1.0
 highway_guitar1 = {
-	ghighwaytiling = 1.5
+	gHighwayTiling = 1.5
 	highway_playline = 655
 	highway_height = 350
 	highway_top_width = 160.0
-	widthoffsetfactor = 2.2
+	widthOffsetFactor = 2.2
 	highway_fade = 30.0
 	gem_start_scale = [
 		0.32500002
@@ -41,11 +41,11 @@ highway_guitar1 = {
 	perspectiveexp = 1.00125
 }
 highway_guitar2 = {
-	ghighwaytiling = 1.4
+	gHighwayTiling = 1.4
 	highway_playline = 655
 	highway_height = 270
 	highway_top_width = 170.0
-	widthoffsetfactor = 1.3299999
+	widthOffsetFactor = 1.3299999
 	highway_fade = 25.0
 	gem_start_scale = [
 		0.351
@@ -82,11 +82,11 @@ highway_guitar2 = {
 	perspectiveexp = 1.00098
 }
 highway_guitar3 = {
-	ghighwaytiling = 1.4
+	gHighwayTiling = 1.4
 	highway_playline = 655
 	highway_height = 270
 	highway_top_width = 152.0
-	widthoffsetfactor = 1.2
+	widthOffsetFactor = 1.2
 	highway_fade = 25.0
 	gem_start_scale = [
 		0.351
@@ -122,7 +122,7 @@ highway_guitar3 = {
 	perspectivefact = 1.00087
 	perspectiveexp = 1.00095
 }
-debug_highway_material = sys_whammy2d_starpower_sys_whammy2d_starpower
+debug_highway_material = sys_Whammy2D_StarPower_sys_Whammy2D_StarPower
 drum_fretbar_alpha = 0.5
 x_offset_p2 = 230
 x_offset_p3 = 225
@@ -251,14 +251,14 @@ default_lag_settings = {
 		drum_midi_lag_ms = 54
 		prefretbar_time = 0.4
 	}
-	ps2 = {
+	Ps2 = {
 		audio_lag_ms = 0
 		gem_lag_ms = -41
 		input_lag_ms = -41
 		drum_midi_lag_ms = 41
 		prefretbar_time = 0.25
 	}
-	0xfb9194c8 = {
+	macintosh = {
 		audio_lag_ms = 0
 		gem_lag_ms = -45
 		input_lag_ms = -61
@@ -278,7 +278,7 @@ practice_slow_lag_settings = {
 		gem_lag_ms = 0
 		input_lag_ms = 0
 	}
-	ps2 = {
+	Ps2 = {
 		gem_lag_ms = 0
 		input_lag_ms = 0
 	}
@@ -295,7 +295,7 @@ practice_slower_lag_settings = {
 		gem_lag_ms = 0
 		input_lag_ms = 0
 	}
-	ps2 = {
+	Ps2 = {
 		gem_lag_ms = 0
 		input_lag_ms = 0
 	}
@@ -312,7 +312,7 @@ practice_slowest_lag_settings = {
 		gem_lag_ms = 0
 		input_lag_ms = 0
 	}
-	ps2 = {
+	Ps2 = {
 		gem_lag_ms = 0
 		input_lag_ms = 0
 	}
@@ -329,7 +329,7 @@ practice_drum_slow_lag_settings = {
 		gem_lag_ms = 0
 		input_lag_ms = 0
 	}
-	ps2 = {
+	Ps2 = {
 		gem_lag_ms = 0
 		input_lag_ms = 0
 	}
@@ -346,7 +346,7 @@ practice_drum_slower_lag_settings = {
 		gem_lag_ms = 0
 		input_lag_ms = 0
 	}
-	ps2 = {
+	Ps2 = {
 		gem_lag_ms = 0
 		input_lag_ms = 0
 	}
@@ -363,7 +363,7 @@ practice_drum_slowest_lag_settings = {
 		gem_lag_ms = 0
 		input_lag_ms = 0
 	}
-	ps2 = {
+	Ps2 = {
 		gem_lag_ms = 0
 		input_lag_ms = 0
 	}
@@ -383,7 +383,7 @@ default_lag_settings_dolbydigital = {
 		drum_midi_lag_ms = 0
 		prefretbar_time = 0
 	}
-	ps2 = {
+	Ps2 = {
 		audio_lag_ms = 0
 		gem_lag_ms = 0
 		input_lag_ms = 0
@@ -415,7 +415,7 @@ health_change_bad = {
 		-0.0374
 		-0.048
 	]
-	bass = [
+	Bass = [
 		-0.01
 		-0.053
 		-0.0267
@@ -429,7 +429,7 @@ health_change_bad = {
 		-0.029
 		-0.039
 	]
-	vocals = [
+	Vocals = [
 		-0.025
 		-0.035
 		-0.041699998
@@ -445,7 +445,7 @@ health_change_good = {
 		0.013499999
 		0.012
 	]
-	bass = [
+	Bass = [
 		0.029
 		0.029
 		0.0145
@@ -459,7 +459,7 @@ health_change_good = {
 		0.013499999
 		0.012
 	]
-	vocals = [
+	Vocals = [
 		0.035
 		0.035
 		0.041699998
@@ -475,7 +475,7 @@ health_change_star_bad = {
 		-0.0374
 		-0.048
 	]
-	bass = [
+	Bass = [
 		-0.01
 		-0.053
 		-0.0267
@@ -489,7 +489,7 @@ health_change_star_bad = {
 		-0.029
 		-0.039
 	]
-	vocals = [
+	Vocals = [
 		-0.012999999
 		-0.018
 		-0.021
@@ -505,7 +505,7 @@ health_change_star = {
 		0.058000002
 		0.058000002
 	]
-	bass = [
+	Bass = [
 		0.058000002
 		0.058000002
 		0.058000002
@@ -519,7 +519,7 @@ health_change_star = {
 		0.058000002
 		0.058000002
 	]
-	vocals = [
+	Vocals = [
 		0.07
 		0.07
 		0.084
@@ -535,7 +535,7 @@ health_change_bad_battle = {
 		-0.0374
 		-0.048
 	]
-	bass = [
+	Bass = [
 		-0.015
 		-0.053
 		-0.0267
@@ -549,7 +549,7 @@ health_change_bad_battle = {
 		-0.027999999
 		-0.036
 	]
-	vocals = [
+	Vocals = [
 		-0.035
 		-0.035
 		-0.041699998
@@ -565,7 +565,7 @@ health_change_good_battle = {
 		0.013499999
 		0.012
 	]
-	bass = [
+	Bass = [
 		0.029
 		0.029
 		0.0145
@@ -579,7 +579,7 @@ health_change_good_battle = {
 		0.013499999
 		0.012
 	]
-	vocals = [
+	Vocals = [
 		0.035
 		0.035
 		0.041699998
@@ -595,7 +595,7 @@ health_change_bad_boss = {
 		-0.0374
 		-0.048
 	]
-	bass = [
+	Bass = [
 		-0.015
 		-0.053
 		-0.0267
@@ -609,7 +609,7 @@ health_change_bad_boss = {
 		-0.027999999
 		-0.036
 	]
-	vocals = [
+	Vocals = [
 		-0.015
 		-0.053
 		-0.0267
@@ -625,7 +625,7 @@ health_change_good_boss = {
 		0.013499999
 		0.012
 	]
-	bass = [
+	Bass = [
 		0.029
 		0.029
 		0.0145
@@ -639,7 +639,7 @@ health_change_good_boss = {
 		0.013499999
 		0.012
 	]
-	vocals = [
+	Vocals = [
 		0.029
 		0.029
 		0.0145
@@ -655,7 +655,7 @@ health_change_red_multi = {
 		1.3499999
 		1.3499999
 	]
-	bass = [
+	Bass = [
 		1.3499999
 		1.3499999
 		1.3499999
@@ -669,7 +669,7 @@ health_change_red_multi = {
 		1.3499999
 		1.3499999
 	]
-	vocals = [
+	Vocals = [
 		1.3499999
 		1.3499999
 		1.3499999
@@ -685,7 +685,7 @@ health_change_green_multi = {
 		0.85
 		0.85
 	]
-	bass = [
+	Bass = [
 		0.85
 		0.85
 		0.85
@@ -699,7 +699,7 @@ health_change_green_multi = {
 		0.85
 		0.85
 	]
-	vocals = [
+	Vocals = [
 		0.85
 		0.85
 		0.85
@@ -735,8 +735,8 @@ battle_do_or_die_attack_scale_increase = 1.0
 battle_do_or_die_attack_scale_max = 10.0
 battle_do_or_die_speed_scale_percent = 50.0
 battle_mine_health_decrease_count = 10.0
-hyperspeed_slowest = 1.0
-hyperspeed_fastest = 0.68
+Hyperspeed_Slowest = 1.0
+Hyperspeed_Fastest = 0.68
 health_invincible_time_percentage_easy_rhythm = 30.0
 health_invincible_time_percentage_easy = 20.0
 health_invincible_time_percentage_medium = 10.0
@@ -760,7 +760,7 @@ star_power_trigger_frames = 8
 allowable_hammer_on_fails = 3
 allowable_hammer_on_fails_tapping = 10
 touch_pattern_switch_frames = 0
-song_win_delay = 2
+Song_Win_Delay = 2
 drum_kick_anim_delay = 0.0
 calibrate_lag_tick_ms_offset = 66
 star_rating_cutoffs = {

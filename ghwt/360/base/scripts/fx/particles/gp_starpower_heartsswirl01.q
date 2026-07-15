@@ -1,17 +1,17 @@
 GP_StarPower_HeartsSwirl01 = {
-	Pos = (0.35688803, 21.361553, 0.071379)
-	Angles = (0.0, 0.0, 0.0)
+	pos = (0.35688803, 21.361553, 0.071379)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = textureribbontrail
-	Active
+	type = textureribbontrail
+	active
 	CreatedAtStart
-	Attach
-	bone = BONE_PELVIS
+	attach
+	bone = Bone_Pelvis
 	EmitRangeDims = (0.7, 1.0, 0.7)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, 0.0, 0.0)
+	force = (0.0, 0.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 1.0
 	PerParticleWind
@@ -20,11 +20,11 @@ GP_StarPower_HeartsSwirl01 = {
 	ElevSpread = (90.0, 90.0)
 	SweepSpread = (0.0, 360.0)
 	LifeRange = (1.5, 2.0)
-	Emit_Rate = 12.0
-	Max = 0
+	emit_rate = 12.0
+	max = 0
 	TimeSeed = 0.5
-	LifeTime = 0.0
-	EmitNum = 0
+	lifeTime = 0.0
+	emitNum = 0
 	FollowEmitter = 0.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -38,15 +38,15 @@ GP_StarPower_HeartsSwirl01 = {
 	EmitDelayStart = 0.0
 	PathFollowTime = 0.3
 	History = 20
-	HistoryListCoordinateSpace = World
-	Color = -13127425
+	HistoryListCoordinateSpace = world
+	color = -13127425
 	NoVisibilityTest
 	QuickMaterial = {
 		DiffuseTextureEnabled
 		DiffuseTexture = JOW_Spark01
 		SpecularPower = 0
-		AlphaCutoff = 128
-		BlendMode = blend
+		alphacutoff = 128
+		blendMode = blend
 		Burn
 		BurnValue = 0.8
 		QuadAnimationFPS = 18

@@ -39,25 +39,25 @@ script reset_score
 		change current_section_array = $<song_section_array>
 		change \{current_section_array_entry = 0}
 	endif
-	formattext checksumname = detailstats_array '%s_last_song_detailed_stats' s = ($<player_status>.text)
+	FormatText checksumname = detailstats_array '%s_last_song_detailed_stats' s = ($<player_status>.text)
 	change structurename = <player_status> current_detailedstats_array_entry = 0
 	change structurename = <player_status> current_detailedstats_array = <detailstats_array>
-	formattext checksumname = detailstats_array_max '%s_last_song_detailed_stats_max' s = ($<player_status>.text)
+	FormatText checksumname = detailstats_array_max '%s_last_song_detailed_stats_max' s = ($<player_status>.text)
 	change structurename = <player_status> current_detailedstats_max_array = <detailstats_array_max>
-	getarraysize ($<detailstats_array>)
+	GetArraySize ($<detailstats_array>)
 	array_count = 0
 	begin
-	setarrayelement arrayname = <detailstats_array> globalarray index = <array_count> newvalue = 0
-	setarrayelement arrayname = <detailstats_array_max> globalarray index = <array_count> newvalue = 0
+	SetArrayElement ArrayName = <detailstats_array> GlobalArray index = <array_count> newvalue = 0
+	SetArrayElement ArrayName = <detailstats_array_max> GlobalArray index = <array_count> newvalue = 0
 	array_count = (<array_count> + 1)
 	repeat <array_size>
 	change \{whammy_mania_achievement_invalidated = 0}
-	change \{gstar_power_triggered = 0}
+	change \{gStar_Power_Triggered = 0}
 endscript
 
 script calc_songscoreinfo \{player_status = player1_status}
 	get_song_prefix song = ($current_song)
-	calcsongscoreinfo <...>
+	CalcSongScoreInfo <...>
 	return
 endscript
 
@@ -86,18 +86,18 @@ script unnecessary_note
 endscript
 
 script update_score_fast \{player_on_screen = 1}
-	updatescorefastinit player_status = <player_status> player_on_screen = <player_on_screen>
+	UpdateScoreFastInit player_status = <player_status> player_on_screen = <player_on_screen>
 	begin
-	getsongtimems
-	updatescorefastperframe player_status = <player_status> time = <time>
+	GetSongTimeMs
+	UpdateScoreFastPerFrame player_status = <player_status> time = <time>
 	if ($debug_showsongtime = on)
-		if screenelementexists \{id = debug_songtime_text}
-			formattimems ms = <time>
-			formattext textname = debug_songtime qs(0x9d784377) t = <formatted_time>
-			debug_songtime_text :se_setprops text = <debug_songtime>
+		if ScreenElementExists \{id = debug_songtime_text}
+			FormatTimeMs Ms = <time>
+			FormatText TextName = debug_songtime qs("Song Time: %t") t = <formatted_time>
+			debug_songtime_text :SE_SetProps text = <debug_songtime>
 		endif
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
@@ -107,24 +107,24 @@ script update_score
 	last_star = -1.0
 	last_health = -1.0
 	last_run = -1
-	extendcrc scoremeter_wheel_100000 <player_text> out = wheel_100000
-	extendcrc scoremeter_wheel_10000 <player_text> out = wheel_10000
-	extendcrc scoremeter_wheel_1000 <player_text> out = wheel_1000
-	extendcrc scoremeter_wheel_100 <player_text> out = wheel_100
-	extendcrc scoremeter_wheel_10 <player_text> out = wheel_10
-	extendcrc scoremeter_wheel_1 <player_text> out = wheel_1
-	extendcrc rockmeter_bulb0 <player_text> out = bulb0
-	extendcrc rockmeter_bulb1 <player_text> out = bulb1
-	extendcrc rockmeter_bulb2 <player_text> out = bulb2
-	extendcrc rockmeter_bulb3 <player_text> out = bulb3
-	extendcrc rockmeter_bulb4 <player_text> out = bulb4
-	extendcrc rockmeter_bulb5 <player_text> out = bulb5
-	extendcrc rockmeter_bulb_lit0 <player_text> out = bulb_lit0
-	extendcrc rockmeter_bulb_lit1 <player_text> out = bulb_lit1
-	extendcrc rockmeter_bulb_lit2 <player_text> out = bulb_lit2
-	extendcrc rockmeter_bulb_lit3 <player_text> out = bulb_lit3
-	extendcrc rockmeter_bulb_lit4 <player_text> out = bulb_lit4
-	extendcrc rockmeter_bulb_lit5 <player_text> out = bulb_lit5
+	ExtendCRC ScoreMeter_Wheel_100000 <player_text> out = Wheel_100000
+	ExtendCRC ScoreMeter_Wheel_10000 <player_text> out = Wheel_10000
+	ExtendCRC ScoreMeter_Wheel_1000 <player_text> out = Wheel_1000
+	ExtendCRC ScoreMeter_Wheel_100 <player_text> out = Wheel_100
+	ExtendCRC ScoreMeter_Wheel_10 <player_text> out = Wheel_10
+	ExtendCRC ScoreMeter_Wheel_1 <player_text> out = Wheel_1
+	ExtendCRC RockMeter_Bulb0 <player_text> out = Bulb0
+	ExtendCRC RockMeter_Bulb1 <player_text> out = Bulb1
+	ExtendCRC RockMeter_Bulb2 <player_text> out = Bulb2
+	ExtendCRC RockMeter_Bulb3 <player_text> out = Bulb3
+	ExtendCRC RockMeter_Bulb4 <player_text> out = Bulb4
+	ExtendCRC RockMeter_Bulb5 <player_text> out = Bulb5
+	ExtendCRC RockMeter_Bulb_Lit0 <player_text> out = Bulb_Lit0
+	ExtendCRC RockMeter_Bulb_Lit1 <player_text> out = Bulb_Lit1
+	ExtendCRC RockMeter_Bulb_Lit2 <player_text> out = Bulb_Lit2
+	ExtendCRC RockMeter_Bulb_Lit3 <player_text> out = Bulb_Lit3
+	ExtendCRC RockMeter_Bulb_Lit4 <player_text> out = Bulb_Lit4
+	ExtendCRC RockMeter_Bulb_Lit5 <player_text> out = Bulb_Lit5
 	begin
 	<score> = ($<player_status>.score)
 	if NOT (<last_score> = <score>)
@@ -142,66 +142,66 @@ script update_score
 		<score_10000> = (<score_10000> - (<score_100000> * 10))
 		<score_100000> = (<score_100000> - (<score_1000000> * 10))
 		<step> = ((3.1415927 * 2.0) / 10.0)
-		setscreenelementprops id = <wheel_100000> anglex = (<step> * <score_100000>)
-		setscreenelementprops id = <wheel_10000> anglex = (<step> * <score_10000>)
-		setscreenelementprops id = <wheel_1000> anglex = (<step> * <score_1000>)
-		setscreenelementprops id = <wheel_100> anglex = (<step> * <score_100>)
-		setscreenelementprops id = <wheel_10> anglex = (<step> * <score_10>)
-		setscreenelementprops id = <wheel_1> anglex = (<step> * <score_1>)
+		SetScreenElementProps id = <Wheel_100000> anglex = (<step> * <score_100000>)
+		SetScreenElementProps id = <Wheel_10000> anglex = (<step> * <score_10000>)
+		SetScreenElementProps id = <Wheel_1000> anglex = (<step> * <score_1000>)
+		SetScreenElementProps id = <Wheel_100> anglex = (<step> * <score_100>)
+		SetScreenElementProps id = <Wheel_10> anglex = (<step> * <score_10>)
+		SetScreenElementProps id = <Wheel_1> anglex = (<step> * <score_1>)
 	endif
 	<star> = ($<player_status>.star_power_amount)
 	if NOT (<last_star> = <star>)
 		<last_star> = <star>
 		<amount_per_bulb> = (100.0 / 6.0)
 		if (<star> >= <amount_per_bulb>)
-			legacydoscreenelementmorph id = <bulb0> alpha = 0
-			legacydoscreenelementmorph id = <bulb_lit0> alpha = 1
+			LegacyDoScreenElementMorph id = <Bulb0> alpha = 0
+			LegacyDoScreenElementMorph id = <Bulb_Lit0> alpha = 1
 		else
-			legacydoscreenelementmorph id = <bulb0> alpha = 1
-			legacydoscreenelementmorph id = <bulb_lit0> alpha = 0
+			LegacyDoScreenElementMorph id = <Bulb0> alpha = 1
+			LegacyDoScreenElementMorph id = <Bulb_Lit0> alpha = 0
 		endif
 		if (<star> >= (<amount_per_bulb> * 2))
-			legacydoscreenelementmorph id = <bulb1> alpha = 0
-			legacydoscreenelementmorph id = <bulb_lit1> alpha = 1
+			LegacyDoScreenElementMorph id = <Bulb1> alpha = 0
+			LegacyDoScreenElementMorph id = <Bulb_Lit1> alpha = 1
 		else
-			legacydoscreenelementmorph id = <bulb1> alpha = 1
-			legacydoscreenelementmorph id = <bulb_lit1> alpha = 0
+			LegacyDoScreenElementMorph id = <Bulb1> alpha = 1
+			LegacyDoScreenElementMorph id = <Bulb_Lit1> alpha = 0
 		endif
 		if (<star> >= (<amount_per_bulb> * 3))
-			legacydoscreenelementmorph id = <bulb2> alpha = 0
-			legacydoscreenelementmorph id = <bulb_lit2> alpha = 1
+			LegacyDoScreenElementMorph id = <Bulb2> alpha = 0
+			LegacyDoScreenElementMorph id = <Bulb_Lit2> alpha = 1
 		else
-			legacydoscreenelementmorph id = <bulb2> alpha = 1
-			legacydoscreenelementmorph id = <bulb_lit2> alpha = 0
+			LegacyDoScreenElementMorph id = <Bulb2> alpha = 1
+			LegacyDoScreenElementMorph id = <Bulb_Lit2> alpha = 0
 		endif
 		if (<star> >= (<amount_per_bulb> * 4))
-			legacydoscreenelementmorph id = <bulb3> alpha = 0
-			legacydoscreenelementmorph id = <bulb_lit3> alpha = 1
+			LegacyDoScreenElementMorph id = <Bulb3> alpha = 0
+			LegacyDoScreenElementMorph id = <Bulb_Lit3> alpha = 1
 		else
-			legacydoscreenelementmorph id = <bulb3> alpha = 1
-			legacydoscreenelementmorph id = <bulb_lit3> alpha = 0
+			LegacyDoScreenElementMorph id = <Bulb3> alpha = 1
+			LegacyDoScreenElementMorph id = <Bulb_Lit3> alpha = 0
 		endif
 		if (<star> >= (<amount_per_bulb> * 5))
-			legacydoscreenelementmorph id = <bulb4> alpha = 0
-			legacydoscreenelementmorph id = <bulb_lit4> alpha = 1
+			LegacyDoScreenElementMorph id = <Bulb4> alpha = 0
+			LegacyDoScreenElementMorph id = <Bulb_Lit4> alpha = 1
 		else
-			legacydoscreenelementmorph id = <bulb4> alpha = 1
-			legacydoscreenelementmorph id = <bulb_lit4> alpha = 0
+			LegacyDoScreenElementMorph id = <Bulb4> alpha = 1
+			LegacyDoScreenElementMorph id = <Bulb_Lit4> alpha = 0
 		endif
 		if (<star> >= (<amount_per_bulb> * 6))
-			legacydoscreenelementmorph id = <bulb5> alpha = 0
-			legacydoscreenelementmorph id = <bulb_lit5> alpha = 1
+			LegacyDoScreenElementMorph id = <Bulb5> alpha = 0
+			LegacyDoScreenElementMorph id = <Bulb_Lit5> alpha = 1
 		else
-			legacydoscreenelementmorph id = <bulb5> alpha = 1
-			legacydoscreenelementmorph id = <bulb_lit5> alpha = 0
+			LegacyDoScreenElementMorph id = <Bulb5> alpha = 1
+			LegacyDoScreenElementMorph id = <Bulb_Lit5> alpha = 0
 		endif
 	endif
 	<health> = ($health_scale - $<player_status>.current_health)
 	if NOT (<last_health> = <health>)
 		<last_health> = <health>
 		<rot> = (((<health> / $health_scale) * (0.65000004 * 2.0)) - 0.65000004)
-		extendcrc rockmeter_needle <player_text> out = needle
-		setscreenelementprops id = <needle> anglez = <rot>
+		ExtendCRC RockMeter_Needle <player_text> out = needle
+		SetScreenElementProps id = <needle> anglez = <rot>
 	endif
 	<run> = ($<player_status>.current_run)
 	if NOT (<last_run> = <run>)
@@ -226,14 +226,14 @@ script update_score
 		endif
 		index = 0
 		begin
-		formattext checksumname = dark_bulb 'ScoreMeter_Bulb%n%p' n = <index> p = <player_text>
-		formattext checksumname = lit_bulb 'ScoreMeter_Bulb_Lit%n%p' n = <index> p = <player_text>
+		FormatText checksumname = dark_bulb 'ScoreMeter_Bulb%n%p' n = <index> p = <player_text>
+		FormatText checksumname = lit_bulb 'ScoreMeter_Bulb_Lit%n%p' n = <index> p = <player_text>
 		if (<bulbs> > <index>)
-			legacydoscreenelementmorph id = <dark_bulb> alpha = 0
-			legacydoscreenelementmorph id = <lit_bulb> alpha = 1
+			LegacyDoScreenElementMorph id = <dark_bulb> alpha = 0
+			LegacyDoScreenElementMorph id = <lit_bulb> alpha = 1
 		else
-			legacydoscreenelementmorph id = <dark_bulb> alpha = 1
-			legacydoscreenelementmorph id = <lit_bulb> alpha = 0
+			LegacyDoScreenElementMorph id = <dark_bulb> alpha = 1
+			LegacyDoScreenElementMorph id = <lit_bulb> alpha = 0
 		endif
 		<index> = (<index> + 1)
 		repeat 10
@@ -242,16 +242,16 @@ script update_score
 		idx = 0
 		begin
 		<index> = (<mults> [<idx>])
-		formattext checksumname = multiplier_element 'ScoreMeter_Multiplier%n%p' n = <index> p = <player_text>
+		FormatText checksumname = multiplier_element 'ScoreMeter_Multiplier%n%p' n = <index> p = <player_text>
 		if (<multiplier> = <index>)
-			legacydoscreenelementmorph id = <multiplier_element> alpha = 1
+			LegacyDoScreenElementMorph id = <multiplier_element> alpha = 1
 		else
-			legacydoscreenelementmorph id = <multiplier_element> alpha = 0
+			LegacyDoScreenElementMorph id = <multiplier_element> alpha = 0
 		endif
 		<idx> = (<idx> + 1)
 		repeat 6
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
@@ -272,40 +272,40 @@ script get_current_multiplier
 endscript
 
 script set_song_section_array 
-	requireparams \{[
+	RequireParams \{[
 			player
 		]
 		all}
-	getplayerinfo <player> part
+	GetPlayerInfo <player> part
 	switch <part>
-		case vocals
+		case Vocals
 		<part_string> = 'vocals'
 		default
 		<part_string> = 'guitar'
 	endswitch
 	get_song_prefix song = ($current_song)
-	formattext checksumname = song_section_array '%s_%p_markers' s = <song_prefix> p = <part_string>
-	formattext checksumname = player_status 'player%d_status' d = <player>
+	FormatText checksumname = song_section_array '%s_%p_markers' s = <song_prefix> p = <part_string>
+	FormatText checksumname = player_status 'player%d_status' d = <player>
 	change structurename = <player_status> current_song_section_array = <song_section_array>
 endscript
 
 script get_song_section_array \{player = 1}
-	formattext checksumname = player_status 'player%p_status' p = <player>
+	FormatText checksumname = player_status 'player%p_status' p = <player>
 	return song_section_array = ($<player_status>.current_song_section_array)
 endscript
 
 script get_average_multiplier 
-	requireparams \{[
+	RequireParams \{[
 			player
 		]
 		all}
-	getplayerinfo <player> base_score
+	GetPlayerInfo <player> base_score
 	if (<base_score> > 0)
-		getplayerinfo <player> score
+		GetPlayerInfo <player> score
 		if ($game_mode != p2_pro_faceoff && $game_mode != p2_faceoff)
 			avg = ((1.0 * <score>) / (1.0 * <base_score>))
 		else
-			getplayerinfo <player> sim_bot_score
+			GetPlayerInfo <player> sim_bot_score
 			<avg_sim_bot> = (($player1_status.sim_bot_score + $player2_status.sim_bot_score) / 2.0)
 			<avg> = ((<score> * <sim_bot_score>) / (<base_score> * <avg_sim_bot>))
 		endif

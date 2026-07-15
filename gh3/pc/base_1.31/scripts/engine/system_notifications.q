@@ -17,31 +17,31 @@ sysnotify_paused_screen_elements = [
 script sysnotify_wait_until_safe 
 	begin
 	<should_wait> = 0
-	if systemuidelayed
+	if SystemUIDelayed
 		<should_wait> = 1
 		printf \{"WAITING FOR SYSTEM UI"}
 	endif
-	if istrue \{$is_changing_levels}
+	if IsTrue \{$is_changing_levels}
 		<should_wait> = 1
 		printf \{"WAITING FOR ISCHANGINGLEVELS"}
 	endif
-	if istrue \{$igc_playing}
+	if IsTrue \{$igc_playing}
 		<should_wait> = 1
 		printf \{"WAITING FOR IGC"}
 	endif
-	if NOT cutscenefinished \{name = cutscene}
+	if NOT CutsceneFinished \{name = cutscene}
 		<should_wait> = 1
 		printf \{"WAITING FOR CUTSCENE"}
 	endif
 	if ($ui_pro_success_screen_active = 0)
-		if screenelementexists \{id = screenfader}
+		if ScreenElementExists \{id = screenfader}
 			<should_wait> = 1
 			printf \{"WAITING FOR SCREENFADER"}
 		endif
 	endif
 	if (<should_wait> = 1)
 		change \{sysnotify_wait_in_progress = 1}
-		wait \{0.1
+		Wait \{0.1
 			seconds}
 	else
 		change \{sysnotify_wait_in_progress = 0}
@@ -51,12 +51,12 @@ script sysnotify_wait_until_safe
 endscript
 
 script sysnotify_handle_pause_eject 
-	if isps3
+	if IsPs3
 		notify_box \{container_id = notify_eject_static_text_container
 			line1 = "Disc Ejected"
 			line2 = "Please reinsert"
 			menu_z = 510001}
-		if (renderingenabled)
+		if (RenderingEnabled)
 			change \{pause_no_render = 0}
 			fade_overlay_on
 		else
@@ -65,18 +65,18 @@ script sysnotify_handle_pause_eject
 			fade_overlay_on \{alpha = 1.0}
 		endif
 	endif
-	pausegh3sounds \{no_seek}
-	setbuttoneventmappings \{block_menu_input}
+	PauseGh3Sounds \{no_seek}
+	SetButtonEventMappings \{block_menu_input}
 	sysnotify_handle_pause <...> seek_on_unpause
 endscript
 
 script sysnotify_handle_pause_controller 
-	if isps3
+	if IsPs3
 		notify_box \{container_id = notify_controller_static_text_container
 			line1 = "YOU ARE ROCKING OUT A BIT TOO HARD"
 			line2 = "Please ensure a controller is connected properly"
 			menu_z = 510000}
-		if (renderingenabled)
+		if (RenderingEnabled)
 			change \{pause_no_render = 0}
 			fade_overlay_on
 		else
@@ -84,14 +84,14 @@ script sysnotify_handle_pause_controller
 			startrendering
 			fade_overlay_on \{alpha = 1.0}
 		endif
-		setbuttoneventmappings \{block_menu_input}
+		SetButtonEventMappings \{block_menu_input}
 	endif
 	sysnotify_handle_pause <...>
 endscript
 
 script sysnotify_handle_pause_console 
-	if isps3
-		if (renderingenabled)
+	if IsPs3
+		if (RenderingEnabled)
 			change \{pause_no_render = 0}
 			fade_overlay_on
 		else
@@ -119,7 +119,7 @@ script sysnotify_handle_pause
 	change \{paused_for_hardware = 1}
 	change \{blade_active = 1}
 	change \{sysnotify_game_already_paused = 1}
-	if gameispaused
+	if GameIsPaused
 		printf \{"Game is already paused"}
 		return
 	endif
@@ -127,7 +127,7 @@ script sysnotify_handle_pause
 	if ($shutdown_game_for_signin_change_flag = 1)
 		return
 	endif
-	if scriptisrunning \{guitarevent_songwon_spawned}
+	if ScriptIsRunning \{GuitarEvent_SongWon_Spawned}
 		return
 	endif
 	if (($game_mode = tutorial) && ($playing_song = 1))
@@ -138,7 +138,7 @@ script sysnotify_handle_pause
 endscript
 
 script sysnotify_handle_unpause_eject 
-	if isps3
+	if IsPs3
 		kill_notify_box \{container_id = notify_eject_static_text_container}
 		if ($pause_no_render = 1)
 			change \{pause_no_render = 0}
@@ -147,33 +147,33 @@ script sysnotify_handle_unpause_eject
 		fade_overlay_off
 	endif
 	if (($is_network_game) || ($g_connection_loss_dialogue))
-		unpausegh3sounds \{seek_on_unpause}
+		UnpauseGh3Sounds \{seek_on_unpause}
 	endif
-	setbuttoneventmappings \{unblock_menu_input}
+	SetButtonEventMappings \{unblock_menu_input}
 	sysnotify_handle_unpause <...> seek_on_unpause
 endscript
 
 script sysnotify_handle_unpause_controller 
-	if isps3
+	if IsPs3
 		kill_notify_box \{container_id = notify_controller_static_text_container}
 		if ($pause_no_render = 1)
 			change \{pause_no_render = 0}
 			stoprendering
 		endif
 		fade_overlay_off
-		setbuttoneventmappings \{unblock_menu_input}
+		SetButtonEventMappings \{unblock_menu_input}
 	endif
 	sysnotify_handle_unpause <...>
 endscript
 
 script sysnotify_handle_unpause_console 
-	if isps3
+	if IsPs3
 		if ($pause_no_render = 1)
 			change \{pause_no_render = 0}
 			stoprendering
 		endif
 		fade_overlay_off
-		reacquirecontrollers
+		ReAcquireControllers
 	endif
 	sysnotify_handle_unpause <...>
 endscript
@@ -185,14 +185,14 @@ script sysnotify_handle_unpause
 	if (($is_network_game) || ($g_connection_loss_dialogue))
 		return
 	endif
-	if shouldgamebepausedduetosysnotification
+	if ShouldGameBePausedDueToSysNotification
 		return
 	endif
 	sysnotify_wait_until_safe
 	change \{paused_for_hardware = 0}
 	change \{blade_active = 0}
 	change \{wait_for_sysnotify_unpause_flag = 1}
-	if NOT gameispaused
+	if NOT GameIsPaused
 		return
 	endif
 	if ($sysnotify_game_already_paused = 0)
@@ -205,10 +205,10 @@ endscript
 fade_overlay_count = 0
 
 script fade_overlay_on \{alpha = 0.9}
-	if isps3
-		if NOT screenelementexists \{id = pause_fader}
-			createscreenelement {
-				type = spriteelement
+	if IsPs3
+		if NOT ScreenElementExists \{id = pause_fader}
+			CreateScreenElement {
+				type = SpriteElement
 				id = pause_fader
 				parent = root_window
 				texture = black
@@ -225,11 +225,11 @@ script fade_overlay_on \{alpha = 0.9}
 endscript
 
 script fade_overlay_off 
-	if isps3
+	if IsPs3
 		change fade_overlay_count = ($fade_overlay_count - 1)
 		if ($fade_overlay_count = 0)
-			if screenelementexists \{id = pause_fader}
-				destroyscreenelement \{id = pause_fader}
+			if ScreenElementExists \{id = pause_fader}
+				DestroyScreenElement \{id = pause_fader}
 			endif
 		endif
 	endif
@@ -262,7 +262,7 @@ script sysnotify_handle_signin_change
 	endif
 	switch <message>
 		case live_connection_lost
-		if infrontend
+		if InFrontend
 			if NOT ($is_network_game)
 				change \{signin_change_happening = 0}
 				return
@@ -314,7 +314,7 @@ endscript
 
 script sysnotify_invite_go 
 	printf \{"----sysnotify_invite_go"}
-	if gotparam \{cross_game}
+	if GotParam \{cross_game}
 		cross_game_invite_accepted <...>
 	else
 		sysnotify_wait_until_safe
@@ -337,21 +337,21 @@ script sysnotify_handle_connection_loss
 	xboxlive_lost_connection_ui_cleanup
 	begin
 	if (main_menu_created = 1)
-		wait \{2.0
+		Wait \{2.0
 			seconds}
 		break
 	endif
-	wait \{1.0
+	Wait \{1.0
 		second}
 	repeat
 	begin
-	if NOT (screenelementexists id = pause_menu_frame_container)
+	if NOT (ScreenElementExists id = pause_menu_frame_container)
 		break
 	endif
-	wait \{1.0
+	Wait \{1.0
 		second}
 	repeat
-	if (gotparam reason)
+	if (GotParam reason)
 		create_link_unplugged_dialog reason = <reason>
 	else
 		create_link_unplugged_dialog
@@ -359,44 +359,44 @@ script sysnotify_handle_connection_loss
 endscript
 
 script sysnotify_cleanup_misc 
-	if screenelementexists \{id = root_window}
-		launchevent \{type = unfocus
+	if ScreenElementExists \{id = root_window}
+		LaunchEvent \{type = unfocus
 			target = root_window}
 	endif
 	sysnotify_cleanup_ui
-	if infrontend
-		killspawnedscript \{name = attract_mode_timer}
-		if screenelementexists \{id = cas_category_anchor}
-			destroyscreenelement \{id = cas_category_anchor}
+	if InFrontend
+		KillSpawnedScript \{name = attract_mode_timer}
+		if ScreenElementExists \{id = cas_category_anchor}
+			DestroyScreenElement \{id = cas_category_anchor}
 		endif
-		if screenelementexists \{id = progress_anchor}
-			destroyscreenelement \{id = progress_anchor}
+		if ScreenElementExists \{id = progress_anchor}
+			DestroyScreenElement \{id = progress_anchor}
 		endif
 	endif
 	destroy_onscreen_keyboard
-	if innetgame
+	if InNetGame
 		force_close_rankings \{dont_retry}
-		if localskaterexists
-			skater :vibrate \{off}
+		if LocalSkaterExists
+			skater :Vibrate \{off}
 		endif
-		if NOT isobserving
-			exitsurveyormode
+		if NOT IsObserving
+			ExitSurveyorMode
 		endif
 		dialog_box_exit \{anchor_id = link_lost_dialog_anchor}
 		dialog_box_exit \{anchor_id = quit_dialog_anchor}
 	endif
-	if screenelementexists \{id = piece_menu_hmenu}
-		destroyscreenelement \{id = piece_menu_hmenu}
+	if ScreenElementExists \{id = piece_menu_hmenu}
+		DestroyScreenElement \{id = piece_menu_hmenu}
 	endif
 	dialog_box_exit
 	change \{main_menu_return_to_createamodes = 0}
 	change \{check_for_unplugged_controllers = 0}
 	change \{inside_pause = 0}
 	kill_start_key_binding
-	killspawnedscript \{name = main_menu_exit}
-	getcurrentlevel
+	KillSpawnedScript \{name = main_menu_exit}
+	GetCurrentLevel
 	if (<level> = load_z_bedroom)
-		if viewportexists \{id = z_bedroom_select_viewport}
+		if ViewportExists \{id = z_bedroom_select_viewport}
 			z_bedroom_kill_select_bink
 		endif
 		z_bedroom_exit_unload
@@ -407,61 +407,61 @@ script sysnotify_cleanup_ui
 	printf \{"--------------------------------"}
 	printf \{"sysnotify_cleanup_ui"}
 	printf \{"--------------------------------"}
-	killspawnedscript \{name = ui_mainmovies_wait_for_movie}
-	killspawnedscript \{name = ui_initial_interactive_screen}
-	killspawnedscript \{name = ui_attract_wait_for_movie}
-	killspawnedscript \{name = ui_mainmenu_wait_for_movie}
-	killspawnedscript \{name = attract_timer_wait}
-	killspawnedscript \{name = goal_classic_mode_post_cams}
-	killspawnedscript \{name = goal_classic_mode_show_cams}
-	killskatercamanim \{name = goal_classic_mode_cam}
-	if screenelementexists \{id = ui_mainmovie_wait_anchor}
-		destroyscreenelement \{id = ui_mainmovie_wait_anchor}
+	KillSpawnedScript \{name = ui_mainmovies_wait_for_movie}
+	KillSpawnedScript \{name = ui_initial_interactive_screen}
+	KillSpawnedScript \{name = ui_attract_wait_for_movie}
+	KillSpawnedScript \{name = ui_mainmenu_wait_for_movie}
+	KillSpawnedScript \{name = attract_timer_wait}
+	KillSpawnedScript \{name = goal_classic_mode_post_cams}
+	KillSpawnedScript \{name = goal_classic_mode_show_cams}
+	KillSkaterCamAnim \{name = goal_classic_mode_cam}
+	if ScreenElementExists \{id = ui_mainmovie_wait_anchor}
+		DestroyScreenElement \{id = ui_mainmovie_wait_anchor}
 	endif
-	if ismovieplaying \{textureslot = 0}
-		killmovie \{textureslot = 0}
+	if IsMoviePlaying \{TextureSlot = 0}
+		KillMovie \{TextureSlot = 0}
 	endif
-	if ismovieplaying \{textureslot = 1}
-		killmovie \{textureslot = 1}
+	if IsMoviePlaying \{TextureSlot = 1}
+		KillMovie \{TextureSlot = 1}
 	endif
-	if viewportexists \{id = z_mainmenu_bink_viewport}
-		pushassetcontext \{context = z_mainmenu}
-		destroyviewporttextureoverride \{id = z_mainmenu_bink_viewport}
-		destroyviewport \{id = z_mainmenu_bink_viewport}
-		popassetcontext
+	if ViewportExists \{id = z_mainmenu_bink_viewport}
+		PushAssetContext \{context = Z_Mainmenu}
+		DestroyViewportTextureOverride \{id = z_mainmenu_bink_viewport}
+		DestroyViewport \{id = z_mainmenu_bink_viewport}
+		PopAssetContext
 	endif
-	if viewportexists \{id = thp8_shop_viewport}
-		pushassetcontext \{context = z_shops}
-		destroyviewporttextureoverride \{id = thp8_shop_viewport}
-		destroyviewport \{id = thp8_shop_viewport}
-		popassetcontext
+	if ViewportExists \{id = thp8_shop_viewport}
+		PushAssetContext \{context = Z_Shops}
+		DestroyViewportTextureOverride \{id = thp8_shop_viewport}
+		DestroyViewport \{id = thp8_shop_viewport}
+		PopAssetContext
 	endif
 	change \{pause_fmv_playing = 0}
-	killspawnedscript \{name = xenon_handle_first_input}
-	if screenelementexists \{id = edit_tricks_menu_parts_anchor}
-		destroyscreenelement \{id = edit_tricks_menu_parts_anchor}
+	KillSpawnedScript \{name = xenon_handle_first_input}
+	if ScreenElementExists \{id = edit_tricks_menu_parts_anchor}
+		DestroyScreenElement \{id = edit_tricks_menu_parts_anchor}
 	endif
-	if screenelementexists \{id = edit_tricks_sub_menu_anchor}
-		destroyscreenelement \{id = edit_tricks_sub_menu_anchor}
+	if ScreenElementExists \{id = edit_tricks_sub_menu_anchor}
+		DestroyScreenElement \{id = edit_tricks_sub_menu_anchor}
 	endif
-	if screenelementexists \{id = choose_trick_menu_container}
-		destroyscreenelement \{id = choose_trick_menu_container}
+	if ScreenElementExists \{id = choose_trick_menu_container}
+		DestroyScreenElement \{id = choose_trick_menu_container}
 	endif
-	if screenelementexists \{id = ui_mainmenu_wait_anchor}
-		destroyscreenelement \{id = ui_mainmenu_wait_anchor}
+	if ScreenElementExists \{id = ui_mainmenu_wait_anchor}
+		DestroyScreenElement \{id = ui_mainmenu_wait_anchor}
 	endif
-	if screenelementexists \{id = goal_presentation_anchor}
-		destroyscreenelement \{id = goal_presentation_anchor}
+	if ScreenElementExists \{id = goal_presentation_anchor}
+		DestroyScreenElement \{id = goal_presentation_anchor}
 	endif
-	if screenelementexists \{id = select_skater_anchor}
-		destroyscreenelement \{id = select_skater_anchor}
+	if ScreenElementExists \{id = select_skater_anchor}
+		DestroyScreenElement \{id = select_skater_anchor}
 	endif
-	killspawnedscript \{name = goal_create_pro_success_screen}
-	killspawnedscript \{name = goal_destroy_pro_success_screen}
-	killspawnedscript \{name = goal_generic_exit_menu_and_videos}
+	KillSpawnedScript \{name = goal_create_pro_success_screen}
+	KillSpawnedScript \{name = goal_destroy_pro_success_screen}
+	KillSpawnedScript \{name = goal_generic_exit_menu_and_videos}
 	if ($ui_pro_success_screen_active = 1)
-		if gman_hasactivegoals
-			gman_getactivatedgoalid
+		if GMan_HasActiveGoals
+			GMan_GetActivatedGoalId
 			goal_destroy_pro_success_screen do_pause = 0 goal = <activated_goal_id> pass_pro_goal = 0
 		endif
 	endif
@@ -470,25 +470,25 @@ endscript
 script notify_box \{scale1 = 0.75
 		scale2 = 0.6
 		container_pos = (0.0, 0.0)}
-	if screenelementexists id = <container_id>
+	if ScreenElementExists id = <container_id>
 		return
 	endif
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = root_window
 		id = <container_id>
 		pos = <container_pos>
 	}
 	menu_font = fontgrid_title_gh3
-	if gotparam \{line3}
-		displaysprite parent = <container_id> tex = dialog_bg pos = (640.0, 24.0) scale = (3.0, 2.0) z = <menu_z> just = [center top]
-		displaysprite parent = <container_id> tex = dialog_bg flip_h pos = (640.0, 120.0) scale = (3.0, 2.0) z = <menu_z> just = [center top]
+	if GotParam \{line3}
+		displaySprite parent = <container_id> tex = dialog_bg pos = (640.0, 24.0) scale = (3.0, 2.0) z = <menu_z> just = [center top]
+		displaySprite parent = <container_id> tex = dialog_bg flip_h pos = (640.0, 120.0) scale = (3.0, 2.0) z = <menu_z> just = [center top]
 	else
-		displaysprite parent = <container_id> tex = dialog_bg pos = (640.0, 32.0) scale = (3.0, 1.5) z = <menu_z> just = [center top]
-		displaysprite parent = <container_id> tex = dialog_bg flip_h pos = (640.0, 112.0) scale = (3.0, 1.5) z = <menu_z> just = [center top]
+		displaySprite parent = <container_id> tex = dialog_bg pos = (640.0, 32.0) scale = (3.0, 1.5) z = <menu_z> just = [center top]
+		displaySprite parent = <container_id> tex = dialog_bg flip_h pos = (640.0, 112.0) scale = (3.0, 1.5) z = <menu_z> just = [center top]
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <container_id>
 		font = <menu_font>
 		scale = <scale1>
@@ -498,8 +498,8 @@ script notify_box \{scale1 = 0.75
 		z_priority = (<menu_z> + 0.2)
 		pos = (640.0, 80.0)
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <container_id>
 		font = <menu_font>
 		scale = <scale2>
@@ -509,9 +509,9 @@ script notify_box \{scale1 = 0.75
 		z_priority = (<menu_z> + 0.2)
 		pos = (640.0, 124.0)
 	}
-	if gotparam \{line3}
-		createscreenelement {
-			type = textelement
+	if GotParam \{line3}
+		CreateScreenElement {
+			type = TextElement
 			parent = <container_id>
 			font = <menu_font>
 			scale = <scale2>
@@ -525,8 +525,8 @@ script notify_box \{scale1 = 0.75
 endscript
 
 script kill_notify_box \{container_id = notify_static_text_container}
-	if screenelementexists id = <container_id>
-		destroyscreenelement id = <container_id>
+	if ScreenElementExists id = <container_id>
+		DestroyScreenElement id = <container_id>
 	endif
 endscript
 wait_for_sysnotify_unpause_flag = 0
@@ -539,7 +539,7 @@ script wait_for_sysnotify_unpause
 	if ($wait_for_sysnotify_unpause_flag = 1)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
@@ -548,23 +548,23 @@ script xboxlive_lost_connection_ui_cleanup
 	if ($is_network_game)
 		cancel_join_server
 		destroy_connection_dialog_scroller
-		killspawnedscript \{id = client_lobby_setup}
+		KillSpawnedScript \{id = client_lobby_setup}
 		fadetoblack \{on
 			time = 0
 			alpha = 1.0
 			z_priority = 20000
 			id = invite_screenfader}
-		wait \{1
+		Wait \{1
 			gameframe}
 		stoprendering
 		shutdown_game_for_signin_change \{unloadcontent = 0}
 		startrendering
-		wait \{60
+		Wait \{60
 			gameframes}
 		fadetoblack \{off
 			time = 0
 			id = invite_screenfader}
-		wait \{1
+		Wait \{1
 			gameframe}
 	endif
 endscript

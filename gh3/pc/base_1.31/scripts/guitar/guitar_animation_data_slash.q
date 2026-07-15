@@ -1,2139 +1,2139 @@
 slash_animations = {
-	stance_a = {
-		idle = {
+	Stance_A = {
+		Idle = {
 			good = {
-				slow = [
-					gh3_guit_slash_a_slw_idle01
-					gh3_guit_slash_a_slw_idle03
-					gh3_guit_slash_a_slw_idle04
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Idle01
+					GH3_Guit_Slash_A_Slw_Idle03
+					GH3_Guit_Slash_A_Slw_Idle04
 				]
-				med = [
-					gh3_guit_slash_a_med_idle01
-					gh3_guit_slash_a_med_idle02
-					gh3_guit_slash_a_med_idle04
+				Med = [
+					GH3_Guit_Slash_A_Med_Idle01
+					GH3_Guit_Slash_A_Med_Idle02
+					GH3_Guit_Slash_A_Med_Idle04
 				]
-				fast = [
-					gh3_guit_slash_a_fst_idle01
-					gh3_guit_slash_a_fst_idle03
-					gh3_guit_slash_a_fst_idle04
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_a_slw_idle01
-					gh3_guit_slash_a_slw_idle02
-					gh3_guit_slash_a_slw_idle04
-				]
-				med = [
-					gh3_guit_slash_a_med_idle01
-					gh3_guit_slash_a_med_idle02
-					gh3_guit_slash_a_med_idle03
-				]
-				fast = [
-					gh3_guit_slash_a_fst_idle01
-					gh3_guit_slash_a_fst_idle02
-					gh3_guit_slash_a_fst_idle03
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Idle01
+					GH3_Guit_Slash_A_Fst_Idle03
+					GH3_Guit_Slash_A_Fst_Idle04
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_a_slw_idle04
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Idle01
+					GH3_Guit_Slash_A_Slw_Idle02
+					GH3_Guit_Slash_A_Slw_Idle04
 				]
-				med = [
-					gh3_guit_slash_a_med_idle01
+				Med = [
+					GH3_Guit_Slash_A_Med_Idle01
+					GH3_Guit_Slash_A_Med_Idle02
+					GH3_Guit_Slash_A_Med_Idle03
 				]
-				fast = [
-					gh3_guit_slash_a_fst_idle01
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Idle01
+					GH3_Guit_Slash_A_Fst_Idle02
+					GH3_Guit_Slash_A_Fst_Idle03
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Idle04
+				]
+				Med = [
+					GH3_Guit_Slash_A_Med_Idle01
+				]
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Idle01
 				]
 			}
 		}
 		solo = {
 			good = {
-				slow = [
-					gh3_guit_slash_a_slw_solo02
-					gh3_guit_slash_a_slw_solo03
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Solo02
+					GH3_Guit_Slash_A_Slw_Solo03
 				]
-				med = [
-					gh3_guit_slash_a_med_solo01
-					gh3_guit_slash_a_med_solo02
+				Med = [
+					GH3_Guit_Slash_A_Med_Solo01
+					GH3_Guit_Slash_A_Med_Solo02
 				]
-				fast = [
-					gh3_guit_slash_a_fst_solo01
-					gh3_guit_slash_a_fst_solo02
-					gh3_guit_slash_a_fst_solo04
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_a_slw_solo01
-					gh3_guit_slash_a_slw_solo03
-				]
-				med = [
-					gh3_guit_slash_a_med_solo01
-					gh3_guit_slash_a_med_solo03
-				]
-				fast = [
-					gh3_guit_slash_a_fst_solo02
-					gh3_guit_slash_a_fst_solo03
-					gh3_guit_slash_a_fst_solo04
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Solo01
+					GH3_Guit_Slash_A_Fst_Solo02
+					GH3_Guit_Slash_A_Fst_Solo04
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_a_slw_idle04
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Solo01
+					GH3_Guit_Slash_A_Slw_Solo03
 				]
-				med = [
-					gh3_guit_slash_a_med_idle01
+				Med = [
+					GH3_Guit_Slash_A_Med_Solo01
+					GH3_Guit_Slash_A_Med_Solo03
 				]
-				fast = [
-					gh3_guit_slash_a_fst_idle01
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Solo02
+					GH3_Guit_Slash_A_Fst_Solo03
+					GH3_Guit_Slash_A_Fst_Solo04
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Idle04
+				]
+				Med = [
+					GH3_Guit_Slash_A_Med_Idle01
+				]
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Idle01
 				]
 			}
 		}
-		jump = {
+		Jump = {
 			good = {
-				slow = [
-					gh3_guit_slash_a_slw_idle01
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Idle01
 				]
-				med = [
-					gh3_guit_slash_a_med_idle01
+				Med = [
+					GH3_Guit_Slash_A_Med_Idle01
 				]
-				fast = [
-					gh3_guit_slash_a_fst_idle01
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_a_slw_idle02
-				]
-				med = [
-					gh3_guit_slash_a_med_idle02
-				]
-				fast = [
-					gh3_guit_slash_a_fst_idle02
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Idle01
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_a_slw_idle04
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Idle02
 				]
-				med = [
-					gh3_guit_slash_a_med_idle01
+				Med = [
+					GH3_Guit_Slash_A_Med_Idle02
 				]
-				fast = [
-					gh3_guit_slash_a_fst_idle01
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Idle02
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Idle04
+				]
+				Med = [
+					GH3_Guit_Slash_A_Med_Idle01
+				]
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Idle01
 				]
 			}
 		}
 		kick = {
 			good = {
-				slow = [
-					gh3_guit_slash_a_slw_idle01
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Idle01
 				]
-				med = [
-					gh3_guit_slash_a_med_idle01
+				Med = [
+					GH3_Guit_Slash_A_Med_Idle01
 				]
-				fast = [
-					gh3_guit_slash_a_fst_idle01
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_a_slw_idle02
-				]
-				med = [
-					gh3_guit_slash_a_med_idle02
-				]
-				fast = [
-					gh3_guit_slash_a_fst_idle02
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Idle01
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_a_slw_idle04
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Idle02
 				]
-				med = [
-					gh3_guit_slash_a_med_idle01
+				Med = [
+					GH3_Guit_Slash_A_Med_Idle02
 				]
-				fast = [
-					gh3_guit_slash_a_fst_idle01
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Idle02
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Idle04
+				]
+				Med = [
+					GH3_Guit_Slash_A_Med_Idle01
+				]
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Idle01
 				]
 			}
 		}
 		special = {
 			good = {
-				slow = [
-					gh3_guit_slash_a_slw_special01
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Special01
 				]
-				med = [
-					gh3_guit_slash_a_med_special01
+				Med = [
+					GH3_Guit_Slash_A_Med_Special01
 				]
-				fast = [
-					gh3_guit_slash_a_fst_special02
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_a_slw_special02
-				]
-				med = [
-					gh3_guit_slash_a_med_special02
-				]
-				fast = [
-					gh3_guit_slash_a_fst_special01
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Special02
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_a_slw_idle04
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Special02
 				]
-				med = [
-					gh3_guit_slash_a_med_idle01
+				Med = [
+					GH3_Guit_Slash_A_Med_Special02
 				]
-				fast = [
-					gh3_guit_slash_a_fst_idle01
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Special01
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Idle04
+				]
+				Med = [
+					GH3_Guit_Slash_A_Med_Idle01
+				]
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Idle01
 				]
 			}
 		}
 		starpower = {
 			good = {
-				slow = [
-					gh3_guit_slash_a_slw_special01
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Special01
 				]
-				med = [
-					gh3_guit_slash_a_med_special01
+				Med = [
+					GH3_Guit_Slash_A_Med_Special01
 				]
-				fast = [
-					gh3_guit_slash_a_fst_special02
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_a_slw_special01
-				]
-				med = [
-					gh3_guit_slash_a_med_special01
-				]
-				fast = [
-					gh3_guit_slash_a_fst_special02
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Special02
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_a_slw_special01
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Special01
 				]
-				med = [
-					gh3_guit_slash_a_med_special01
+				Med = [
+					GH3_Guit_Slash_A_Med_Special01
 				]
-				fast = [
-					gh3_guit_slash_a_fst_special02
-				]
-			}
-		}
-		attack = {
-			good = {
-				slow = [
-					gh3_guit_slash_a_attack_left01
-				]
-				med = [
-					gh3_guit_slash_a_attack_left01
-				]
-				fast = [
-					gh3_guit_slash_a_attack_left01
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Special02
 				]
 			}
-			normal = {
-				slow = [
-					gh3_guit_slash_a_attack_left01
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Special01
 				]
-				med = [
-					gh3_guit_slash_a_attack_left01
+				Med = [
+					GH3_Guit_Slash_A_Med_Special01
 				]
-				fast = [
-					gh3_guit_slash_a_attack_left01
-				]
-			}
-			bad = {
-				slow = [
-					gh3_guit_slash_a_taunt_left01
-				]
-				med = [
-					gh3_guit_slash_a_taunt_left01
-				]
-				fast = [
-					gh3_guit_slash_a_taunt_left01
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Special02
 				]
 			}
 		}
-		attack_right = {
+		Attack = {
 			good = {
-				slow = [
-					gh3_guit_slash_a_attack_right01
+				Slow = [
+					GH3_Guit_Slash_A_Attack_Left01
 				]
-				med = [
-					gh3_guit_slash_a_attack_right01
+				Med = [
+					GH3_Guit_Slash_A_Attack_Left01
 				]
-				fast = [
-					gh3_guit_slash_a_attack_right01
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_a_attack_right01
-				]
-				med = [
-					gh3_guit_slash_a_attack_right01
-				]
-				fast = [
-					gh3_guit_slash_a_attack_right01
+				Fast = [
+					GH3_Guit_Slash_A_Attack_Left01
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_a_taunt_right01
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_A_Attack_Left01
 				]
-				med = [
-					gh3_guit_slash_a_taunt_right01
+				Med = [
+					GH3_Guit_Slash_A_Attack_Left01
 				]
-				fast = [
-					gh3_guit_slash_a_taunt_right01
+				Fast = [
+					GH3_Guit_Slash_A_Attack_Left01
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_A_Taunt_Left01
+				]
+				Med = [
+					GH3_Guit_Slash_A_Taunt_Left01
+				]
+				Fast = [
+					GH3_Guit_Slash_A_Taunt_Left01
 				]
 			}
 		}
-		react = {
+		Attack_right = {
 			good = {
-				slow = [
-					gh3_guit_slash_a_react_right01
+				Slow = [
+					GH3_Guit_Slash_A_Attack_Right01
 				]
-				med = [
-					gh3_guit_slash_a_react_right01
+				Med = [
+					GH3_Guit_Slash_A_Attack_Right01
 				]
-				fast = [
-					gh3_guit_slash_a_react_right01
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_a_react_right01
-				]
-				med = [
-					gh3_guit_slash_a_react_right01
-				]
-				fast = [
-					gh3_guit_slash_a_react_right01
+				Fast = [
+					GH3_Guit_Slash_A_Attack_Right01
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_a_react_right01
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_A_Attack_Right01
 				]
-				med = [
-					gh3_guit_slash_a_react_right01
+				Med = [
+					GH3_Guit_Slash_A_Attack_Right01
 				]
-				fast = [
-					gh3_guit_slash_a_react_right01
+				Fast = [
+					GH3_Guit_Slash_A_Attack_Right01
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_A_Taunt_Right01
+				]
+				Med = [
+					GH3_Guit_Slash_A_Taunt_Right01
+				]
+				Fast = [
+					GH3_Guit_Slash_A_Taunt_Right01
 				]
 			}
 		}
-		react_right = {
+		React = {
 			good = {
-				slow = [
-					gh3_guit_slash_a_react_left01
+				Slow = [
+					GH3_Guit_Slash_A_React_Right01
 				]
-				med = [
-					gh3_guit_slash_a_react_left01
+				Med = [
+					GH3_Guit_Slash_A_React_Right01
 				]
-				fast = [
-					gh3_guit_slash_a_react_left01
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_a_react_left01
-				]
-				med = [
-					gh3_guit_slash_a_react_left01
-				]
-				fast = [
-					gh3_guit_slash_a_react_left01
+				Fast = [
+					GH3_Guit_Slash_A_React_Right01
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_a_react_left01
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_A_React_Right01
 				]
-				med = [
-					gh3_guit_slash_a_react_left01
+				Med = [
+					GH3_Guit_Slash_A_React_Right01
 				]
-				fast = [
-					gh3_guit_slash_a_react_left01
+				Fast = [
+					GH3_Guit_Slash_A_React_Right01
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_A_React_Right01
+				]
+				Med = [
+					GH3_Guit_Slash_A_React_Right01
+				]
+				Fast = [
+					GH3_Guit_Slash_A_React_Right01
+				]
+			}
+		}
+		React_right = {
+			good = {
+				Slow = [
+					GH3_Guit_Slash_A_React_Left01
+				]
+				Med = [
+					GH3_Guit_Slash_A_React_Left01
+				]
+				Fast = [
+					GH3_Guit_Slash_A_React_Left01
+				]
+			}
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_A_React_Left01
+				]
+				Med = [
+					GH3_Guit_Slash_A_React_Left01
+				]
+				Fast = [
+					GH3_Guit_Slash_A_React_Left01
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_A_React_Left01
+				]
+				Med = [
+					GH3_Guit_Slash_A_React_Left01
+				]
+				Fast = [
+					GH3_Guit_Slash_A_React_Left01
 				]
 			}
 		}
 		handsoff = {
 			good = {
-				slow = [
-					gh3_guit_slash_a_break01
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
+				Slow = [
+					GH3_Guit_Slash_A_Break01
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
 				]
-				med = [
-					gh3_guit_slash_a_break01
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
+				Med = [
+					GH3_Guit_Slash_A_Break01
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
 				]
-				fast = [
-					gh3_guit_slash_a_break01
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_a_break01
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
-				]
-				med = [
-					gh3_guit_slash_a_break01
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
-				]
-				fast = [
-					gh3_guit_slash_a_break01
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
+				Fast = [
+					GH3_Guit_Slash_A_Break01
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_a_break01
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_A_Break01
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
 				]
-				med = [
-					gh3_guit_slash_a_break01
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
+				Med = [
+					GH3_Guit_Slash_A_Break01
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
 				]
-				fast = [
-					gh3_guit_slash_a_break01
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
+				Fast = [
+					GH3_Guit_Slash_A_Break01
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_A_Break01
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
+				]
+				Med = [
+					GH3_Guit_Slash_A_Break01
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
+				]
+				Fast = [
+					GH3_Guit_Slash_A_Break01
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
 				]
 			}
 		}
 		dragon_reaction = {
 			good = {
-				slow = [
-					gh3_guit_slash_dragon_react
+				Slow = [
+					GH3_Guit_Slash_dragon_react
 				]
-				med = [
-					gh3_guit_slash_dragon_react
+				Med = [
+					GH3_Guit_Slash_dragon_react
 				]
-				fast = [
-					gh3_guit_slash_dragon_react
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_dragon_react
-				]
-				med = [
-					gh3_guit_slash_dragon_react
-				]
-				fast = [
-					gh3_guit_slash_dragon_react
+				Fast = [
+					GH3_Guit_Slash_dragon_react
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_dragon_react
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_dragon_react
 				]
-				med = [
-					gh3_guit_slash_dragon_react
+				Med = [
+					GH3_Guit_Slash_dragon_react
 				]
-				fast = [
-					gh3_guit_slash_dragon_react
+				Fast = [
+					GH3_Guit_Slash_dragon_react
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_dragon_react
+				]
+				Med = [
+					GH3_Guit_Slash_dragon_react
+				]
+				Fast = [
+					GH3_Guit_Slash_dragon_react
 				]
 			}
 		}
 		dragon_climb = {
 			good = {
-				slow = [
-					gh3_guit_slash_dragon_climb
+				Slow = [
+					GH3_Guit_Slash_dragon_climb
 				]
-				med = [
-					gh3_guit_slash_dragon_climb
+				Med = [
+					GH3_Guit_Slash_dragon_climb
 				]
-				fast = [
-					gh3_guit_slash_dragon_climb
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_dragon_climb
-				]
-				med = [
-					gh3_guit_slash_dragon_climb
-				]
-				fast = [
-					gh3_guit_slash_dragon_climb
+				Fast = [
+					GH3_Guit_Slash_dragon_climb
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_dragon_climb
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_dragon_climb
 				]
-				med = [
-					gh3_guit_slash_dragon_climb
+				Med = [
+					GH3_Guit_Slash_dragon_climb
 				]
-				fast = [
-					gh3_guit_slash_dragon_climb
+				Fast = [
+					GH3_Guit_Slash_dragon_climb
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_dragon_climb
+				]
+				Med = [
+					GH3_Guit_Slash_dragon_climb
+				]
+				Fast = [
+					GH3_Guit_Slash_dragon_climb
 				]
 			}
 		}
-		transitions = {
-			stance_b = gh3_guit_slash_trans_atob
+		Transitions = {
+			stance_b = GH3_Guit_Slash_Trans_AtoB
 		}
 	}
 	stance_b = {
-		idle = {
+		Idle = {
 			good = {
-				slow = [
-					gh3_guit_slash_b_slw_idle
-					gh3_guit_slash_b_slw_idle01
-					gh3_guit_slash_b_slw_idle02
-					gh3_guit_slash_b_slw_idle03
+				Slow = [
+					GH3_Guit_Slash_B_Slw_Idle
+					GH3_Guit_Slash_B_Slw_Idle01
+					GH3_Guit_Slash_B_Slw_Idle02
+					GH3_Guit_Slash_B_Slw_Idle03
 				]
-				med = [
-					gh3_guit_slash_b_med_idle
-					gh3_guit_slash_b_med_idle01
-					gh3_guit_slash_b_med_idle02
-					gh3_guit_slash_b_med_idle03
+				Med = [
+					GH3_Guit_Slash_B_Med_Idle
+					GH3_Guit_Slash_B_Med_Idle01
+					GH3_Guit_Slash_B_Med_Idle02
+					GH3_Guit_Slash_B_Med_Idle03
 				]
-				fast = [
-					gh3_guit_slash_b_fst_idle
-					gh3_guit_slash_b_fst_idle01
-					gh3_guit_slash_b_fst_idle02
-					gh3_guit_slash_b_fst_idle03
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_b_slw_idle
-					gh3_guit_slash_b_slw_idle01
-					gh3_guit_slash_b_slw_idle02
-					gh3_guit_slash_b_slw_idle03
-				]
-				med = [
-					gh3_guit_slash_b_med_idle
-					gh3_guit_slash_b_med_idle01
-					gh3_guit_slash_b_med_idle02
-					gh3_guit_slash_b_med_idle03
-				]
-				fast = [
-					gh3_guit_slash_b_fst_idle
-					gh3_guit_slash_b_fst_idle01
-					gh3_guit_slash_b_fst_idle02
-					gh3_guit_slash_b_fst_idle03
+				Fast = [
+					GH3_Guit_Slash_B_Fst_Idle
+					GH3_Guit_Slash_B_Fst_Idle01
+					GH3_Guit_Slash_B_Fst_Idle02
+					GH3_Guit_Slash_B_Fst_Idle03
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_b_slw_idle
-					gh3_guit_slash_b_slw_idle01
-					gh3_guit_slash_b_slw_idle02
-					gh3_guit_slash_b_slw_idle03
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_B_Slw_Idle
+					GH3_Guit_Slash_B_Slw_Idle01
+					GH3_Guit_Slash_B_Slw_Idle02
+					GH3_Guit_Slash_B_Slw_Idle03
 				]
-				med = [
-					gh3_guit_slash_b_med_idle
-					gh3_guit_slash_b_med_idle01
-					gh3_guit_slash_b_med_idle02
-					gh3_guit_slash_b_med_idle03
+				Med = [
+					GH3_Guit_Slash_B_Med_Idle
+					GH3_Guit_Slash_B_Med_Idle01
+					GH3_Guit_Slash_B_Med_Idle02
+					GH3_Guit_Slash_B_Med_Idle03
 				]
-				fast = [
-					gh3_guit_slash_b_fst_idle
-					gh3_guit_slash_b_fst_idle01
-					gh3_guit_slash_b_fst_idle02
-					gh3_guit_slash_b_fst_idle03
+				Fast = [
+					GH3_Guit_Slash_B_Fst_Idle
+					GH3_Guit_Slash_B_Fst_Idle01
+					GH3_Guit_Slash_B_Fst_Idle02
+					GH3_Guit_Slash_B_Fst_Idle03
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_B_Slw_Idle
+					GH3_Guit_Slash_B_Slw_Idle01
+					GH3_Guit_Slash_B_Slw_Idle02
+					GH3_Guit_Slash_B_Slw_Idle03
+				]
+				Med = [
+					GH3_Guit_Slash_B_Med_Idle
+					GH3_Guit_Slash_B_Med_Idle01
+					GH3_Guit_Slash_B_Med_Idle02
+					GH3_Guit_Slash_B_Med_Idle03
+				]
+				Fast = [
+					GH3_Guit_Slash_B_Fst_Idle
+					GH3_Guit_Slash_B_Fst_Idle01
+					GH3_Guit_Slash_B_Fst_Idle02
+					GH3_Guit_Slash_B_Fst_Idle03
 				]
 			}
 		}
-		jump = {
+		Jump = {
 			good = {
-				slow = [
-					gh3_guit_slash_b_slw_idle
-					gh3_guit_slash_b_slw_idle01
-					gh3_guit_slash_b_slw_idle02
-					gh3_guit_slash_b_slw_idle03
+				Slow = [
+					GH3_Guit_Slash_B_Slw_Idle
+					GH3_Guit_Slash_B_Slw_Idle01
+					GH3_Guit_Slash_B_Slw_Idle02
+					GH3_Guit_Slash_B_Slw_Idle03
 				]
-				med = [
-					gh3_guit_slash_b_med_idle
-					gh3_guit_slash_b_med_idle01
-					gh3_guit_slash_b_med_idle02
-					gh3_guit_slash_b_med_idle03
+				Med = [
+					GH3_Guit_Slash_B_Med_Idle
+					GH3_Guit_Slash_B_Med_Idle01
+					GH3_Guit_Slash_B_Med_Idle02
+					GH3_Guit_Slash_B_Med_Idle03
 				]
-				fast = [
-					gh3_guit_slash_b_fst_idle
-					gh3_guit_slash_b_fst_idle01
-					gh3_guit_slash_b_fst_idle02
-					gh3_guit_slash_b_fst_idle03
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_b_slw_idle
-					gh3_guit_slash_b_slw_idle01
-					gh3_guit_slash_b_slw_idle02
-					gh3_guit_slash_b_slw_idle03
-				]
-				med = [
-					gh3_guit_slash_b_med_idle
-					gh3_guit_slash_b_med_idle01
-					gh3_guit_slash_b_med_idle02
-					gh3_guit_slash_b_med_idle03
-				]
-				fast = [
-					gh3_guit_slash_b_fst_idle
-					gh3_guit_slash_b_fst_idle01
-					gh3_guit_slash_b_fst_idle02
-					gh3_guit_slash_b_fst_idle03
+				Fast = [
+					GH3_Guit_Slash_B_Fst_Idle
+					GH3_Guit_Slash_B_Fst_Idle01
+					GH3_Guit_Slash_B_Fst_Idle02
+					GH3_Guit_Slash_B_Fst_Idle03
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_b_slw_idle
-					gh3_guit_slash_b_slw_idle01
-					gh3_guit_slash_b_slw_idle02
-					gh3_guit_slash_b_slw_idle03
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_B_Slw_Idle
+					GH3_Guit_Slash_B_Slw_Idle01
+					GH3_Guit_Slash_B_Slw_Idle02
+					GH3_Guit_Slash_B_Slw_Idle03
 				]
-				med = [
-					gh3_guit_slash_b_med_idle
-					gh3_guit_slash_b_med_idle01
-					gh3_guit_slash_b_med_idle02
-					gh3_guit_slash_b_med_idle03
+				Med = [
+					GH3_Guit_Slash_B_Med_Idle
+					GH3_Guit_Slash_B_Med_Idle01
+					GH3_Guit_Slash_B_Med_Idle02
+					GH3_Guit_Slash_B_Med_Idle03
 				]
-				fast = [
-					gh3_guit_slash_b_fst_idle
-					gh3_guit_slash_b_fst_idle01
-					gh3_guit_slash_b_fst_idle02
-					gh3_guit_slash_b_fst_idle03
+				Fast = [
+					GH3_Guit_Slash_B_Fst_Idle
+					GH3_Guit_Slash_B_Fst_Idle01
+					GH3_Guit_Slash_B_Fst_Idle02
+					GH3_Guit_Slash_B_Fst_Idle03
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_B_Slw_Idle
+					GH3_Guit_Slash_B_Slw_Idle01
+					GH3_Guit_Slash_B_Slw_Idle02
+					GH3_Guit_Slash_B_Slw_Idle03
+				]
+				Med = [
+					GH3_Guit_Slash_B_Med_Idle
+					GH3_Guit_Slash_B_Med_Idle01
+					GH3_Guit_Slash_B_Med_Idle02
+					GH3_Guit_Slash_B_Med_Idle03
+				]
+				Fast = [
+					GH3_Guit_Slash_B_Fst_Idle
+					GH3_Guit_Slash_B_Fst_Idle01
+					GH3_Guit_Slash_B_Fst_Idle02
+					GH3_Guit_Slash_B_Fst_Idle03
 				]
 			}
 		}
 		kick = {
 			good = {
-				slow = [
-					gh3_guit_slash_b_slw_idle
-					gh3_guit_slash_b_slw_idle01
-					gh3_guit_slash_b_slw_idle02
-					gh3_guit_slash_b_slw_idle03
+				Slow = [
+					GH3_Guit_Slash_B_Slw_Idle
+					GH3_Guit_Slash_B_Slw_Idle01
+					GH3_Guit_Slash_B_Slw_Idle02
+					GH3_Guit_Slash_B_Slw_Idle03
 				]
-				med = [
-					gh3_guit_slash_b_med_idle
-					gh3_guit_slash_b_med_idle01
-					gh3_guit_slash_b_med_idle02
-					gh3_guit_slash_b_med_idle03
+				Med = [
+					GH3_Guit_Slash_B_Med_Idle
+					GH3_Guit_Slash_B_Med_Idle01
+					GH3_Guit_Slash_B_Med_Idle02
+					GH3_Guit_Slash_B_Med_Idle03
 				]
-				fast = [
-					gh3_guit_slash_b_fst_idle
-					gh3_guit_slash_b_fst_idle01
-					gh3_guit_slash_b_fst_idle02
-					gh3_guit_slash_b_fst_idle03
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_b_slw_idle
-					gh3_guit_slash_b_slw_idle01
-					gh3_guit_slash_b_slw_idle02
-					gh3_guit_slash_b_slw_idle03
-				]
-				med = [
-					gh3_guit_slash_b_med_idle
-					gh3_guit_slash_b_med_idle01
-					gh3_guit_slash_b_med_idle02
-					gh3_guit_slash_b_med_idle03
-				]
-				fast = [
-					gh3_guit_slash_b_fst_idle
-					gh3_guit_slash_b_fst_idle01
-					gh3_guit_slash_b_fst_idle02
-					gh3_guit_slash_b_fst_idle03
+				Fast = [
+					GH3_Guit_Slash_B_Fst_Idle
+					GH3_Guit_Slash_B_Fst_Idle01
+					GH3_Guit_Slash_B_Fst_Idle02
+					GH3_Guit_Slash_B_Fst_Idle03
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_b_slw_idle
-					gh3_guit_slash_b_slw_idle01
-					gh3_guit_slash_b_slw_idle02
-					gh3_guit_slash_b_slw_idle03
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_B_Slw_Idle
+					GH3_Guit_Slash_B_Slw_Idle01
+					GH3_Guit_Slash_B_Slw_Idle02
+					GH3_Guit_Slash_B_Slw_Idle03
 				]
-				med = [
-					gh3_guit_slash_b_med_idle
-					gh3_guit_slash_b_med_idle01
-					gh3_guit_slash_b_med_idle02
-					gh3_guit_slash_b_med_idle03
+				Med = [
+					GH3_Guit_Slash_B_Med_Idle
+					GH3_Guit_Slash_B_Med_Idle01
+					GH3_Guit_Slash_B_Med_Idle02
+					GH3_Guit_Slash_B_Med_Idle03
 				]
-				fast = [
-					gh3_guit_slash_b_fst_idle
-					gh3_guit_slash_b_fst_idle01
-					gh3_guit_slash_b_fst_idle02
-					gh3_guit_slash_b_fst_idle03
+				Fast = [
+					GH3_Guit_Slash_B_Fst_Idle
+					GH3_Guit_Slash_B_Fst_Idle01
+					GH3_Guit_Slash_B_Fst_Idle02
+					GH3_Guit_Slash_B_Fst_Idle03
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_B_Slw_Idle
+					GH3_Guit_Slash_B_Slw_Idle01
+					GH3_Guit_Slash_B_Slw_Idle02
+					GH3_Guit_Slash_B_Slw_Idle03
+				]
+				Med = [
+					GH3_Guit_Slash_B_Med_Idle
+					GH3_Guit_Slash_B_Med_Idle01
+					GH3_Guit_Slash_B_Med_Idle02
+					GH3_Guit_Slash_B_Med_Idle03
+				]
+				Fast = [
+					GH3_Guit_Slash_B_Fst_Idle
+					GH3_Guit_Slash_B_Fst_Idle01
+					GH3_Guit_Slash_B_Fst_Idle02
+					GH3_Guit_Slash_B_Fst_Idle03
 				]
 			}
 		}
 		solo = {
 			good = {
-				slow = [
-					gh3_guit_slash_b_slw_solo01
-					gh3_guit_slash_b_slw_solo02
-					gh3_guit_slash_b_slw_solo03
-					gh3_guit_slash_b_slw_solo04
+				Slow = [
+					GH3_Guit_Slash_B_Slw_Solo01
+					GH3_Guit_Slash_B_Slw_Solo02
+					GH3_Guit_Slash_B_Slw_Solo03
+					GH3_Guit_Slash_B_Slw_Solo04
 				]
-				med = [
-					gh3_guit_slash_b_med_solo01
-					gh3_guit_slash_b_med_solo02
-					gh3_guit_slash_b_med_solo03
-					gh3_guit_slash_b_med_solo04
+				Med = [
+					GH3_Guit_Slash_B_Med_Solo01
+					GH3_Guit_Slash_B_Med_Solo02
+					GH3_Guit_Slash_B_Med_Solo03
+					GH3_Guit_Slash_B_Med_Solo04
 				]
-				fast = [
-					gh3_guit_slash_b_fst_solo01
-					gh3_guit_slash_b_fst_solo02
-					gh3_guit_slash_b_fst_solo03
-					gh3_guit_slash_b_fst_solo04
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_b_slw_solo01
-					gh3_guit_slash_b_slw_solo02
-					gh3_guit_slash_b_slw_solo03
-					gh3_guit_slash_b_slw_solo04
-				]
-				med = [
-					gh3_guit_slash_b_med_solo01
-					gh3_guit_slash_b_med_solo02
-					gh3_guit_slash_b_med_solo03
-					gh3_guit_slash_b_med_solo04
-				]
-				fast = [
-					gh3_guit_slash_b_fst_solo01
-					gh3_guit_slash_b_fst_solo02
-					gh3_guit_slash_b_fst_solo03
-					gh3_guit_slash_b_fst_solo04
+				Fast = [
+					GH3_Guit_Slash_B_Fst_Solo01
+					GH3_Guit_Slash_B_Fst_Solo02
+					GH3_Guit_Slash_B_Fst_Solo03
+					GH3_Guit_Slash_B_Fst_Solo04
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_b_slw_solo01
-					gh3_guit_slash_b_slw_solo02
-					gh3_guit_slash_b_slw_solo03
-					gh3_guit_slash_b_slw_solo04
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_B_Slw_Solo01
+					GH3_Guit_Slash_B_Slw_Solo02
+					GH3_Guit_Slash_B_Slw_Solo03
+					GH3_Guit_Slash_B_Slw_Solo04
 				]
-				med = [
-					gh3_guit_slash_b_med_solo01
-					gh3_guit_slash_b_med_solo02
-					gh3_guit_slash_b_med_solo03
-					gh3_guit_slash_b_med_solo04
+				Med = [
+					GH3_Guit_Slash_B_Med_Solo01
+					GH3_Guit_Slash_B_Med_Solo02
+					GH3_Guit_Slash_B_Med_Solo03
+					GH3_Guit_Slash_B_Med_Solo04
 				]
-				fast = [
-					gh3_guit_slash_b_fst_solo01
-					gh3_guit_slash_b_fst_solo02
-					gh3_guit_slash_b_fst_solo03
-					gh3_guit_slash_b_fst_solo04
+				Fast = [
+					GH3_Guit_Slash_B_Fst_Solo01
+					GH3_Guit_Slash_B_Fst_Solo02
+					GH3_Guit_Slash_B_Fst_Solo03
+					GH3_Guit_Slash_B_Fst_Solo04
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_B_Slw_Solo01
+					GH3_Guit_Slash_B_Slw_Solo02
+					GH3_Guit_Slash_B_Slw_Solo03
+					GH3_Guit_Slash_B_Slw_Solo04
+				]
+				Med = [
+					GH3_Guit_Slash_B_Med_Solo01
+					GH3_Guit_Slash_B_Med_Solo02
+					GH3_Guit_Slash_B_Med_Solo03
+					GH3_Guit_Slash_B_Med_Solo04
+				]
+				Fast = [
+					GH3_Guit_Slash_B_Fst_Solo01
+					GH3_Guit_Slash_B_Fst_Solo02
+					GH3_Guit_Slash_B_Fst_Solo03
+					GH3_Guit_Slash_B_Fst_Solo04
 				]
 			}
 		}
 		special = {
 			good = {
-				slow = [
-					gh3_guit_slash_b_slw_solo01
-					gh3_guit_slash_b_slw_solo02
-					gh3_guit_slash_b_slw_solo03
-					gh3_guit_slash_b_slw_solo04
+				Slow = [
+					GH3_Guit_Slash_B_Slw_Solo01
+					GH3_Guit_Slash_B_Slw_Solo02
+					GH3_Guit_Slash_B_Slw_Solo03
+					GH3_Guit_Slash_B_Slw_Solo04
 				]
-				med = [
-					gh3_guit_slash_b_med_solo01
-					gh3_guit_slash_b_med_solo02
-					gh3_guit_slash_b_med_solo03
-					gh3_guit_slash_b_med_solo04
+				Med = [
+					GH3_Guit_Slash_B_Med_Solo01
+					GH3_Guit_Slash_B_Med_Solo02
+					GH3_Guit_Slash_B_Med_Solo03
+					GH3_Guit_Slash_B_Med_Solo04
 				]
-				fast = [
-					gh3_guit_slash_b_fst_solo01
-					gh3_guit_slash_b_fst_solo02
-					gh3_guit_slash_b_fst_solo03
-					gh3_guit_slash_b_fst_solo04
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_b_slw_solo01
-					gh3_guit_slash_b_slw_solo02
-					gh3_guit_slash_b_slw_solo03
-					gh3_guit_slash_b_slw_solo04
-				]
-				med = [
-					gh3_guit_slash_b_med_solo01
-					gh3_guit_slash_b_med_solo02
-					gh3_guit_slash_b_med_solo03
-					gh3_guit_slash_b_med_solo04
-				]
-				fast = [
-					gh3_guit_slash_b_fst_solo01
-					gh3_guit_slash_b_fst_solo02
-					gh3_guit_slash_b_fst_solo03
-					gh3_guit_slash_b_fst_solo04
+				Fast = [
+					GH3_Guit_Slash_B_Fst_Solo01
+					GH3_Guit_Slash_B_Fst_Solo02
+					GH3_Guit_Slash_B_Fst_Solo03
+					GH3_Guit_Slash_B_Fst_Solo04
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_b_slw_solo01
-					gh3_guit_slash_b_slw_solo02
-					gh3_guit_slash_b_slw_solo03
-					gh3_guit_slash_b_slw_solo04
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_B_Slw_Solo01
+					GH3_Guit_Slash_B_Slw_Solo02
+					GH3_Guit_Slash_B_Slw_Solo03
+					GH3_Guit_Slash_B_Slw_Solo04
 				]
-				med = [
-					gh3_guit_slash_b_med_solo01
-					gh3_guit_slash_b_med_solo02
-					gh3_guit_slash_b_med_solo03
-					gh3_guit_slash_b_med_solo04
+				Med = [
+					GH3_Guit_Slash_B_Med_Solo01
+					GH3_Guit_Slash_B_Med_Solo02
+					GH3_Guit_Slash_B_Med_Solo03
+					GH3_Guit_Slash_B_Med_Solo04
 				]
-				fast = [
-					gh3_guit_slash_b_fst_solo01
-					gh3_guit_slash_b_fst_solo02
-					gh3_guit_slash_b_fst_solo03
-					gh3_guit_slash_b_fst_solo04
+				Fast = [
+					GH3_Guit_Slash_B_Fst_Solo01
+					GH3_Guit_Slash_B_Fst_Solo02
+					GH3_Guit_Slash_B_Fst_Solo03
+					GH3_Guit_Slash_B_Fst_Solo04
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_B_Slw_Solo01
+					GH3_Guit_Slash_B_Slw_Solo02
+					GH3_Guit_Slash_B_Slw_Solo03
+					GH3_Guit_Slash_B_Slw_Solo04
+				]
+				Med = [
+					GH3_Guit_Slash_B_Med_Solo01
+					GH3_Guit_Slash_B_Med_Solo02
+					GH3_Guit_Slash_B_Med_Solo03
+					GH3_Guit_Slash_B_Med_Solo04
+				]
+				Fast = [
+					GH3_Guit_Slash_B_Fst_Solo01
+					GH3_Guit_Slash_B_Fst_Solo02
+					GH3_Guit_Slash_B_Fst_Solo03
+					GH3_Guit_Slash_B_Fst_Solo04
 				]
 			}
 		}
 		starpower = {
 			good = {
-				slow = [
-					gh3_guit_slash_b_slw_solo02
+				Slow = [
+					GH3_Guit_Slash_B_Slw_Solo02
 				]
-				med = [
-					gh3_guit_slash_b_med_solo03
+				Med = [
+					GH3_Guit_Slash_B_Med_Solo03
 				]
-				fast = [
-					gh3_guit_slash_b_fst_solo01
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_b_slw_solo02
-				]
-				med = [
-					gh3_guit_slash_b_med_solo03
-				]
-				fast = [
-					gh3_guit_slash_b_fst_solo01
+				Fast = [
+					GH3_Guit_Slash_B_Fst_Solo01
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_b_slw_solo02
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_B_Slw_Solo02
 				]
-				med = [
-					gh3_guit_slash_b_med_solo03
+				Med = [
+					GH3_Guit_Slash_B_Med_Solo03
 				]
-				fast = [
-					gh3_guit_slash_b_fst_solo01
-				]
-			}
-		}
-		attack_right = {
-			good = {
-				slow = [
-					gh3_guit_slash_a_attack_right01
-				]
-				med = [
-					gh3_guit_slash_a_attack_right01
-				]
-				fast = [
-					gh3_guit_slash_a_attack_right01
+				Fast = [
+					GH3_Guit_Slash_B_Fst_Solo01
 				]
 			}
-			normal = {
-				slow = [
-					gh3_guit_slash_a_attack_right01
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_B_Slw_Solo02
 				]
-				med = [
-					gh3_guit_slash_a_attack_right01
+				Med = [
+					GH3_Guit_Slash_B_Med_Solo03
 				]
-				fast = [
-					gh3_guit_slash_a_attack_right01
-				]
-			}
-			bad = {
-				slow = [
-					gh3_guit_slash_a_taunt_right01
-				]
-				med = [
-					gh3_guit_slash_a_taunt_right01
-				]
-				fast = [
-					gh3_guit_slash_a_taunt_right01
+				Fast = [
+					GH3_Guit_Slash_B_Fst_Solo01
 				]
 			}
 		}
-		react = {
+		Attack_right = {
 			good = {
-				slow = [
-					gh3_guit_slash_a_react_right01
+				Slow = [
+					GH3_Guit_Slash_A_Attack_Right01
 				]
-				med = [
-					gh3_guit_slash_a_react_right01
+				Med = [
+					GH3_Guit_Slash_A_Attack_Right01
 				]
-				fast = [
-					gh3_guit_slash_a_react_right01
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_a_react_right01
-				]
-				med = [
-					gh3_guit_slash_a_react_right01
-				]
-				fast = [
-					gh3_guit_slash_a_react_right01
+				Fast = [
+					GH3_Guit_Slash_A_Attack_Right01
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_a_react_right01
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_A_Attack_Right01
 				]
-				med = [
-					gh3_guit_slash_a_react_right01
+				Med = [
+					GH3_Guit_Slash_A_Attack_Right01
 				]
-				fast = [
-					gh3_guit_slash_a_react_right01
+				Fast = [
+					GH3_Guit_Slash_A_Attack_Right01
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_A_Taunt_Right01
+				]
+				Med = [
+					GH3_Guit_Slash_A_Taunt_Right01
+				]
+				Fast = [
+					GH3_Guit_Slash_A_Taunt_Right01
 				]
 			}
 		}
-		react_right = {
+		React = {
 			good = {
-				slow = [
-					gh3_guit_slash_a_react_left01
+				Slow = [
+					GH3_Guit_Slash_A_React_Right01
 				]
-				med = [
-					gh3_guit_slash_a_react_left01
+				Med = [
+					GH3_Guit_Slash_A_React_Right01
 				]
-				fast = [
-					gh3_guit_slash_a_react_left01
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_a_react_left01
-				]
-				med = [
-					gh3_guit_slash_a_react_left01
-				]
-				fast = [
-					gh3_guit_slash_a_react_left01
+				Fast = [
+					GH3_Guit_Slash_A_React_Right01
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_a_react_left01
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_A_React_Right01
 				]
-				med = [
-					gh3_guit_slash_a_react_left01
+				Med = [
+					GH3_Guit_Slash_A_React_Right01
 				]
-				fast = [
-					gh3_guit_slash_a_react_left01
+				Fast = [
+					GH3_Guit_Slash_A_React_Right01
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_A_React_Right01
+				]
+				Med = [
+					GH3_Guit_Slash_A_React_Right01
+				]
+				Fast = [
+					GH3_Guit_Slash_A_React_Right01
+				]
+			}
+		}
+		React_right = {
+			good = {
+				Slow = [
+					GH3_Guit_Slash_A_React_Left01
+				]
+				Med = [
+					GH3_Guit_Slash_A_React_Left01
+				]
+				Fast = [
+					GH3_Guit_Slash_A_React_Left01
+				]
+			}
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_A_React_Left01
+				]
+				Med = [
+					GH3_Guit_Slash_A_React_Left01
+				]
+				Fast = [
+					GH3_Guit_Slash_A_React_Left01
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_A_React_Left01
+				]
+				Med = [
+					GH3_Guit_Slash_A_React_Left01
+				]
+				Fast = [
+					GH3_Guit_Slash_A_React_Left01
 				]
 			}
 		}
 		handsoff = {
 			good = {
-				slow = [
-					gh3_guit_slash_b_break
-					gh3_guit_slash_b_break01
-					gh3_guit_slash_b_break02
-					gh3_guit_slash_b_break03
-					gh3_guit_slash_b_break04
+				Slow = [
+					GH3_Guit_Slash_B_Break
+					GH3_Guit_Slash_B_Break01
+					GH3_Guit_Slash_B_Break02
+					GH3_Guit_Slash_B_Break03
+					GH3_Guit_Slash_B_Break04
 				]
-				med = [
-					gh3_guit_slash_b_break
-					gh3_guit_slash_b_break01
-					gh3_guit_slash_b_break02
-					gh3_guit_slash_b_break03
-					gh3_guit_slash_b_break04
+				Med = [
+					GH3_Guit_Slash_B_Break
+					GH3_Guit_Slash_B_Break01
+					GH3_Guit_Slash_B_Break02
+					GH3_Guit_Slash_B_Break03
+					GH3_Guit_Slash_B_Break04
 				]
-				fast = [
-					gh3_guit_slash_b_break
-					gh3_guit_slash_b_break01
-					gh3_guit_slash_b_break02
-					gh3_guit_slash_b_break03
-					gh3_guit_slash_b_break04
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_b_break
-					gh3_guit_slash_b_break01
-					gh3_guit_slash_b_break02
-					gh3_guit_slash_b_break03
-					gh3_guit_slash_b_break04
-				]
-				med = [
-					gh3_guit_slash_b_break
-					gh3_guit_slash_b_break01
-					gh3_guit_slash_b_break02
-					gh3_guit_slash_b_break03
-					gh3_guit_slash_b_break04
-				]
-				fast = [
-					gh3_guit_slash_b_break
-					gh3_guit_slash_b_break01
-					gh3_guit_slash_b_break02
-					gh3_guit_slash_b_break03
-					gh3_guit_slash_b_break04
+				Fast = [
+					GH3_Guit_Slash_B_Break
+					GH3_Guit_Slash_B_Break01
+					GH3_Guit_Slash_B_Break02
+					GH3_Guit_Slash_B_Break03
+					GH3_Guit_Slash_B_Break04
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_b_break
-					gh3_guit_slash_b_break01
-					gh3_guit_slash_b_break02
-					gh3_guit_slash_b_break03
-					gh3_guit_slash_b_break04
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_B_Break
+					GH3_Guit_Slash_B_Break01
+					GH3_Guit_Slash_B_Break02
+					GH3_Guit_Slash_B_Break03
+					GH3_Guit_Slash_B_Break04
 				]
-				med = [
-					gh3_guit_slash_b_break
-					gh3_guit_slash_b_break01
-					gh3_guit_slash_b_break02
-					gh3_guit_slash_b_break03
-					gh3_guit_slash_b_break04
+				Med = [
+					GH3_Guit_Slash_B_Break
+					GH3_Guit_Slash_B_Break01
+					GH3_Guit_Slash_B_Break02
+					GH3_Guit_Slash_B_Break03
+					GH3_Guit_Slash_B_Break04
 				]
-				fast = [
-					gh3_guit_slash_b_break
-					gh3_guit_slash_b_break01
-					gh3_guit_slash_b_break02
-					gh3_guit_slash_b_break03
-					gh3_guit_slash_b_break04
+				Fast = [
+					GH3_Guit_Slash_B_Break
+					GH3_Guit_Slash_B_Break01
+					GH3_Guit_Slash_B_Break02
+					GH3_Guit_Slash_B_Break03
+					GH3_Guit_Slash_B_Break04
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_B_Break
+					GH3_Guit_Slash_B_Break01
+					GH3_Guit_Slash_B_Break02
+					GH3_Guit_Slash_B_Break03
+					GH3_Guit_Slash_B_Break04
+				]
+				Med = [
+					GH3_Guit_Slash_B_Break
+					GH3_Guit_Slash_B_Break01
+					GH3_Guit_Slash_B_Break02
+					GH3_Guit_Slash_B_Break03
+					GH3_Guit_Slash_B_Break04
+				]
+				Fast = [
+					GH3_Guit_Slash_B_Break
+					GH3_Guit_Slash_B_Break01
+					GH3_Guit_Slash_B_Break02
+					GH3_Guit_Slash_B_Break03
+					GH3_Guit_Slash_B_Break04
 				]
 			}
 		}
 		dragon_reaction = {
 			good = {
-				slow = [
-					gh3_guit_slash_dragon_react
+				Slow = [
+					GH3_Guit_Slash_dragon_react
 				]
-				med = [
-					gh3_guit_slash_dragon_react
+				Med = [
+					GH3_Guit_Slash_dragon_react
 				]
-				fast = [
-					gh3_guit_slash_dragon_react
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_dragon_react
-				]
-				med = [
-					gh3_guit_slash_dragon_react
-				]
-				fast = [
-					gh3_guit_slash_dragon_react
+				Fast = [
+					GH3_Guit_Slash_dragon_react
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_dragon_react
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_dragon_react
 				]
-				med = [
-					gh3_guit_slash_dragon_react
+				Med = [
+					GH3_Guit_Slash_dragon_react
 				]
-				fast = [
-					gh3_guit_slash_dragon_react
+				Fast = [
+					GH3_Guit_Slash_dragon_react
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_dragon_react
+				]
+				Med = [
+					GH3_Guit_Slash_dragon_react
+				]
+				Fast = [
+					GH3_Guit_Slash_dragon_react
 				]
 			}
 		}
 		dragon_climb = {
 			good = {
-				slow = [
-					gh3_guit_slash_dragon_climb
+				Slow = [
+					GH3_Guit_Slash_dragon_climb
 				]
-				med = [
-					gh3_guit_slash_dragon_climb
+				Med = [
+					GH3_Guit_Slash_dragon_climb
 				]
-				fast = [
-					gh3_guit_slash_dragon_climb
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_dragon_climb
-				]
-				med = [
-					gh3_guit_slash_dragon_climb
-				]
-				fast = [
-					gh3_guit_slash_dragon_climb
+				Fast = [
+					GH3_Guit_Slash_dragon_climb
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_dragon_climb
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_dragon_climb
 				]
-				med = [
-					gh3_guit_slash_dragon_climb
+				Med = [
+					GH3_Guit_Slash_dragon_climb
 				]
-				fast = [
-					gh3_guit_slash_dragon_climb
+				Fast = [
+					GH3_Guit_Slash_dragon_climb
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_dragon_climb
+				]
+				Med = [
+					GH3_Guit_Slash_dragon_climb
+				]
+				Fast = [
+					GH3_Guit_Slash_dragon_climb
 				]
 			}
 		}
-		transitions = {
-			stance_a = gh3_guit_slash_trans_btoa
-			stance_c = gh3_guit_slash_trans_btoa
-			win = gh3_guit_slash_trans_btoa
-			lose = gh3_guit_slash_trans_btoa
+		Transitions = {
+			Stance_A = GH3_Guit_Slash_Trans_BtoA
+			stance_c = GH3_Guit_Slash_Trans_BtoA
+			win = GH3_Guit_Slash_Trans_BtoA
+			lose = GH3_Guit_Slash_Trans_BtoA
 		}
 	}
 	stance_c = {
-		idle = {
+		Idle = {
 			good = {
-				slow = [
-					gh3_guit_slash_a_slw_idle01
-					gh3_guit_slash_a_slw_idle03
-					gh3_guit_slash_a_slw_idle04
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Idle01
+					GH3_Guit_Slash_A_Slw_Idle03
+					GH3_Guit_Slash_A_Slw_Idle04
 				]
-				med = [
-					gh3_guit_slash_a_med_idle01
-					gh3_guit_slash_a_med_idle02
-					gh3_guit_slash_a_med_idle04
+				Med = [
+					GH3_Guit_Slash_A_Med_Idle01
+					GH3_Guit_Slash_A_Med_Idle02
+					GH3_Guit_Slash_A_Med_Idle04
 				]
-				fast = [
-					gh3_guit_slash_a_fst_idle01
-					gh3_guit_slash_a_fst_idle03
-					gh3_guit_slash_a_fst_idle04
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_a_slw_idle01
-					gh3_guit_slash_a_slw_idle02
-					gh3_guit_slash_a_slw_idle04
-				]
-				med = [
-					gh3_guit_slash_a_med_idle01
-					gh3_guit_slash_a_med_idle02
-					gh3_guit_slash_a_med_idle03
-				]
-				fast = [
-					gh3_guit_slash_a_fst_idle01
-					gh3_guit_slash_a_fst_idle02
-					gh3_guit_slash_a_fst_idle03
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Idle01
+					GH3_Guit_Slash_A_Fst_Idle03
+					GH3_Guit_Slash_A_Fst_Idle04
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_a_slw_idle04
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Idle01
+					GH3_Guit_Slash_A_Slw_Idle02
+					GH3_Guit_Slash_A_Slw_Idle04
 				]
-				med = [
-					gh3_guit_slash_a_med_idle01
+				Med = [
+					GH3_Guit_Slash_A_Med_Idle01
+					GH3_Guit_Slash_A_Med_Idle02
+					GH3_Guit_Slash_A_Med_Idle03
 				]
-				fast = [
-					gh3_guit_slash_a_fst_idle01
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Idle01
+					GH3_Guit_Slash_A_Fst_Idle02
+					GH3_Guit_Slash_A_Fst_Idle03
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Idle04
+				]
+				Med = [
+					GH3_Guit_Slash_A_Med_Idle01
+				]
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Idle01
 				]
 			}
 		}
 		solo = {
 			good = {
-				slow = [
-					gh3_guit_slash_a_slw_solo02
-					gh3_guit_slash_a_slw_solo03
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Solo02
+					GH3_Guit_Slash_A_Slw_Solo03
 				]
-				med = [
-					gh3_guit_slash_a_med_solo01
-					gh3_guit_slash_a_med_solo02
+				Med = [
+					GH3_Guit_Slash_A_Med_Solo01
+					GH3_Guit_Slash_A_Med_Solo02
 				]
-				fast = [
-					gh3_guit_slash_a_fst_solo01
-					gh3_guit_slash_a_fst_solo02
-					gh3_guit_slash_a_fst_solo04
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_a_slw_solo01
-					gh3_guit_slash_a_slw_solo03
-				]
-				med = [
-					gh3_guit_slash_a_med_solo01
-					gh3_guit_slash_a_med_solo03
-				]
-				fast = [
-					gh3_guit_slash_a_fst_solo02
-					gh3_guit_slash_a_fst_solo03
-					gh3_guit_slash_a_fst_solo04
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Solo01
+					GH3_Guit_Slash_A_Fst_Solo02
+					GH3_Guit_Slash_A_Fst_Solo04
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_a_slw_idle04
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Solo01
+					GH3_Guit_Slash_A_Slw_Solo03
 				]
-				med = [
-					gh3_guit_slash_a_med_idle01
+				Med = [
+					GH3_Guit_Slash_A_Med_Solo01
+					GH3_Guit_Slash_A_Med_Solo03
 				]
-				fast = [
-					gh3_guit_slash_a_fst_idle01
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Solo02
+					GH3_Guit_Slash_A_Fst_Solo03
+					GH3_Guit_Slash_A_Fst_Solo04
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Idle04
+				]
+				Med = [
+					GH3_Guit_Slash_A_Med_Idle01
+				]
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Idle01
 				]
 			}
 		}
-		jump = {
+		Jump = {
 			good = {
-				slow = [
-					gh3_guit_slash_a_slw_idle01
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Idle01
 				]
-				med = [
-					gh3_guit_slash_a_med_idle01
+				Med = [
+					GH3_Guit_Slash_A_Med_Idle01
 				]
-				fast = [
-					gh3_guit_slash_a_fst_idle01
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_a_slw_idle02
-				]
-				med = [
-					gh3_guit_slash_a_med_idle02
-				]
-				fast = [
-					gh3_guit_slash_a_fst_idle02
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Idle01
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_a_slw_idle04
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Idle02
 				]
-				med = [
-					gh3_guit_slash_a_med_idle01
+				Med = [
+					GH3_Guit_Slash_A_Med_Idle02
 				]
-				fast = [
-					gh3_guit_slash_a_fst_idle01
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Idle02
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Idle04
+				]
+				Med = [
+					GH3_Guit_Slash_A_Med_Idle01
+				]
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Idle01
 				]
 			}
 		}
 		kick = {
 			good = {
-				slow = [
-					gh3_guit_slash_a_slw_idle01
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Idle01
 				]
-				med = [
-					gh3_guit_slash_a_med_idle01
+				Med = [
+					GH3_Guit_Slash_A_Med_Idle01
 				]
-				fast = [
-					gh3_guit_slash_a_fst_idle01
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_a_slw_idle02
-				]
-				med = [
-					gh3_guit_slash_a_med_idle02
-				]
-				fast = [
-					gh3_guit_slash_a_fst_idle02
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Idle01
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_a_slw_idle04
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Idle02
 				]
-				med = [
-					gh3_guit_slash_a_med_idle01
+				Med = [
+					GH3_Guit_Slash_A_Med_Idle02
 				]
-				fast = [
-					gh3_guit_slash_a_fst_idle01
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Idle02
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Idle04
+				]
+				Med = [
+					GH3_Guit_Slash_A_Med_Idle01
+				]
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Idle01
 				]
 			}
 		}
 		special = {
 			good = {
-				slow = [
-					gh3_guit_slash_a_slw_special01
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Special01
 				]
-				med = [
-					gh3_guit_slash_a_med_special01
+				Med = [
+					GH3_Guit_Slash_A_Med_Special01
 				]
-				fast = [
-					gh3_guit_slash_a_fst_special02
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_a_slw_special02
-				]
-				med = [
-					gh3_guit_slash_a_med_special02
-				]
-				fast = [
-					gh3_guit_slash_a_fst_special01
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Special02
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_a_slw_idle04
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Special02
 				]
-				med = [
-					gh3_guit_slash_a_med_idle01
+				Med = [
+					GH3_Guit_Slash_A_Med_Special02
 				]
-				fast = [
-					gh3_guit_slash_a_fst_idle01
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Special01
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Idle04
+				]
+				Med = [
+					GH3_Guit_Slash_A_Med_Idle01
+				]
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Idle01
 				]
 			}
 		}
 		starpower = {
 			good = {
-				slow = [
-					gh3_guit_slash_a_slw_special01
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Special01
 				]
-				med = [
-					gh3_guit_slash_a_med_special01
+				Med = [
+					GH3_Guit_Slash_A_Med_Special01
 				]
-				fast = [
-					gh3_guit_slash_a_fst_special02
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_a_slw_special01
-				]
-				med = [
-					gh3_guit_slash_a_med_special01
-				]
-				fast = [
-					gh3_guit_slash_a_fst_special02
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Special02
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_a_slw_special01
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Special01
 				]
-				med = [
-					gh3_guit_slash_a_med_special01
+				Med = [
+					GH3_Guit_Slash_A_Med_Special01
 				]
-				fast = [
-					gh3_guit_slash_a_fst_special02
-				]
-			}
-		}
-		attack = {
-			good = {
-				slow = [
-					gh3_guit_slash_a_attack_left01
-				]
-				med = [
-					gh3_guit_slash_a_attack_left01
-				]
-				fast = [
-					gh3_guit_slash_a_attack_left01
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Special02
 				]
 			}
-			normal = {
-				slow = [
-					gh3_guit_slash_a_attack_left01
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_A_Slw_Special01
 				]
-				med = [
-					gh3_guit_slash_a_attack_left01
+				Med = [
+					GH3_Guit_Slash_A_Med_Special01
 				]
-				fast = [
-					gh3_guit_slash_a_attack_left01
-				]
-			}
-			bad = {
-				slow = [
-					gh3_guit_slash_a_taunt_left01
-				]
-				med = [
-					gh3_guit_slash_a_taunt_left01
-				]
-				fast = [
-					gh3_guit_slash_a_taunt_left01
+				Fast = [
+					GH3_Guit_Slash_A_Fst_Special02
 				]
 			}
 		}
-		attack_right = {
+		Attack = {
 			good = {
-				slow = [
-					gh3_guit_slash_a_attack_right01
+				Slow = [
+					GH3_Guit_Slash_A_Attack_Left01
 				]
-				med = [
-					gh3_guit_slash_a_attack_right01
+				Med = [
+					GH3_Guit_Slash_A_Attack_Left01
 				]
-				fast = [
-					gh3_guit_slash_a_attack_right01
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_a_attack_right01
-				]
-				med = [
-					gh3_guit_slash_a_attack_right01
-				]
-				fast = [
-					gh3_guit_slash_a_attack_right01
+				Fast = [
+					GH3_Guit_Slash_A_Attack_Left01
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_a_taunt_right01
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_A_Attack_Left01
 				]
-				med = [
-					gh3_guit_slash_a_taunt_right01
+				Med = [
+					GH3_Guit_Slash_A_Attack_Left01
 				]
-				fast = [
-					gh3_guit_slash_a_taunt_right01
+				Fast = [
+					GH3_Guit_Slash_A_Attack_Left01
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_A_Taunt_Left01
+				]
+				Med = [
+					GH3_Guit_Slash_A_Taunt_Left01
+				]
+				Fast = [
+					GH3_Guit_Slash_A_Taunt_Left01
 				]
 			}
 		}
-		react = {
+		Attack_right = {
 			good = {
-				slow = [
-					gh3_guit_slash_a_react_right01
+				Slow = [
+					GH3_Guit_Slash_A_Attack_Right01
 				]
-				med = [
-					gh3_guit_slash_a_react_right01
+				Med = [
+					GH3_Guit_Slash_A_Attack_Right01
 				]
-				fast = [
-					gh3_guit_slash_a_react_right01
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_a_react_right01
-				]
-				med = [
-					gh3_guit_slash_a_react_right01
-				]
-				fast = [
-					gh3_guit_slash_a_react_right01
+				Fast = [
+					GH3_Guit_Slash_A_Attack_Right01
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_a_react_right01
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_A_Attack_Right01
 				]
-				med = [
-					gh3_guit_slash_a_react_right01
+				Med = [
+					GH3_Guit_Slash_A_Attack_Right01
 				]
-				fast = [
-					gh3_guit_slash_a_react_right01
+				Fast = [
+					GH3_Guit_Slash_A_Attack_Right01
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_A_Taunt_Right01
+				]
+				Med = [
+					GH3_Guit_Slash_A_Taunt_Right01
+				]
+				Fast = [
+					GH3_Guit_Slash_A_Taunt_Right01
 				]
 			}
 		}
-		react_right = {
+		React = {
 			good = {
-				slow = [
-					gh3_guit_slash_a_react_left01
+				Slow = [
+					GH3_Guit_Slash_A_React_Right01
 				]
-				med = [
-					gh3_guit_slash_a_react_left01
+				Med = [
+					GH3_Guit_Slash_A_React_Right01
 				]
-				fast = [
-					gh3_guit_slash_a_react_left01
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_a_react_left01
-				]
-				med = [
-					gh3_guit_slash_a_react_left01
-				]
-				fast = [
-					gh3_guit_slash_a_react_left01
+				Fast = [
+					GH3_Guit_Slash_A_React_Right01
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_a_react_left01
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_A_React_Right01
 				]
-				med = [
-					gh3_guit_slash_a_react_left01
+				Med = [
+					GH3_Guit_Slash_A_React_Right01
 				]
-				fast = [
-					gh3_guit_slash_a_react_left01
+				Fast = [
+					GH3_Guit_Slash_A_React_Right01
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_A_React_Right01
+				]
+				Med = [
+					GH3_Guit_Slash_A_React_Right01
+				]
+				Fast = [
+					GH3_Guit_Slash_A_React_Right01
+				]
+			}
+		}
+		React_right = {
+			good = {
+				Slow = [
+					GH3_Guit_Slash_A_React_Left01
+				]
+				Med = [
+					GH3_Guit_Slash_A_React_Left01
+				]
+				Fast = [
+					GH3_Guit_Slash_A_React_Left01
+				]
+			}
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_A_React_Left01
+				]
+				Med = [
+					GH3_Guit_Slash_A_React_Left01
+				]
+				Fast = [
+					GH3_Guit_Slash_A_React_Left01
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_A_React_Left01
+				]
+				Med = [
+					GH3_Guit_Slash_A_React_Left01
+				]
+				Fast = [
+					GH3_Guit_Slash_A_React_Left01
 				]
 			}
 		}
 		handsoff = {
 			good = {
-				slow = [
-					gh3_guit_slash_a_break01
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
+				Slow = [
+					GH3_Guit_Slash_A_Break01
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
 				]
-				med = [
-					gh3_guit_slash_a_break01
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
+				Med = [
+					GH3_Guit_Slash_A_Break01
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
 				]
-				fast = [
-					gh3_guit_slash_a_break01
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_a_break01
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
-				]
-				med = [
-					gh3_guit_slash_a_break01
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
-				]
-				fast = [
-					gh3_guit_slash_a_break01
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
+				Fast = [
+					GH3_Guit_Slash_A_Break01
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_a_break01
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_A_Break01
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
 				]
-				med = [
-					gh3_guit_slash_a_break01
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
+				Med = [
+					GH3_Guit_Slash_A_Break01
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
 				]
-				fast = [
-					gh3_guit_slash_a_break01
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
+				Fast = [
+					GH3_Guit_Slash_A_Break01
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_A_Break01
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
+				]
+				Med = [
+					GH3_Guit_Slash_A_Break01
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
+				]
+				Fast = [
+					GH3_Guit_Slash_A_Break01
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
 				]
 			}
 		}
 		dragon_reaction = {
 			good = {
-				slow = [
-					gh3_guit_slash_dragon_react
+				Slow = [
+					GH3_Guit_Slash_dragon_react
 				]
-				med = [
-					gh3_guit_slash_dragon_react
+				Med = [
+					GH3_Guit_Slash_dragon_react
 				]
-				fast = [
-					gh3_guit_slash_dragon_react
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_dragon_react
-				]
-				med = [
-					gh3_guit_slash_dragon_react
-				]
-				fast = [
-					gh3_guit_slash_dragon_react
+				Fast = [
+					GH3_Guit_Slash_dragon_react
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_dragon_react
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_dragon_react
 				]
-				med = [
-					gh3_guit_slash_dragon_react
+				Med = [
+					GH3_Guit_Slash_dragon_react
 				]
-				fast = [
-					gh3_guit_slash_dragon_react
+				Fast = [
+					GH3_Guit_Slash_dragon_react
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_dragon_react
+				]
+				Med = [
+					GH3_Guit_Slash_dragon_react
+				]
+				Fast = [
+					GH3_Guit_Slash_dragon_react
 				]
 			}
 		}
 		dragon_climb = {
 			good = {
-				slow = [
-					gh3_guit_slash_dragon_climb
+				Slow = [
+					GH3_Guit_Slash_dragon_climb
 				]
-				med = [
-					gh3_guit_slash_dragon_climb
+				Med = [
+					GH3_Guit_Slash_dragon_climb
 				]
-				fast = [
-					gh3_guit_slash_dragon_climb
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_dragon_climb
-				]
-				med = [
-					gh3_guit_slash_dragon_climb
-				]
-				fast = [
-					gh3_guit_slash_dragon_climb
+				Fast = [
+					GH3_Guit_Slash_dragon_climb
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_dragon_climb
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_dragon_climb
 				]
-				med = [
-					gh3_guit_slash_dragon_climb
+				Med = [
+					GH3_Guit_Slash_dragon_climb
 				]
-				fast = [
-					gh3_guit_slash_dragon_climb
+				Fast = [
+					GH3_Guit_Slash_dragon_climb
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_dragon_climb
+				]
+				Med = [
+					GH3_Guit_Slash_dragon_climb
+				]
+				Fast = [
+					GH3_Guit_Slash_dragon_climb
 				]
 			}
 		}
-		transitions = {
-			stance_b = gh3_guit_slash_trans_atob
+		Transitions = {
+			stance_b = GH3_Guit_Slash_Trans_AtoB
 		}
 	}
 	stance_frontend = {
-		idle = {
+		Idle = {
 			good = {
-				slow = [
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
-					gh3_guit_slash_a_break01
+				Slow = [
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
+					GH3_Guit_Slash_A_Break01
 				]
-				med = [
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
-					gh3_guit_slash_a_break01
+				Med = [
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
+					GH3_Guit_Slash_A_Break01
 				]
-				fast = [
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
-					gh3_guit_slash_a_break01
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
-					gh3_guit_slash_a_break01
-				]
-				med = [
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
-					gh3_guit_slash_a_break01
-				]
-				fast = [
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
-					gh3_guit_slash_a_break01
+				Fast = [
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
+					GH3_Guit_Slash_A_Break01
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
-					gh3_guit_slash_a_break01
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
+					GH3_Guit_Slash_A_Break01
 				]
-				med = [
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
-					gh3_guit_slash_a_break01
+				Med = [
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
+					GH3_Guit_Slash_A_Break01
 				]
-				fast = [
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
-					gh3_guit_slash_a_break01
+				Fast = [
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
+					GH3_Guit_Slash_A_Break01
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
+					GH3_Guit_Slash_A_Break01
+				]
+				Med = [
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
+					GH3_Guit_Slash_A_Break01
+				]
+				Fast = [
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
+					GH3_Guit_Slash_A_Break01
 				]
 			}
 		}
-		transitions = {
-			stance_b = gh3_guit_slash_trans_atob
-			stance_c = gh3_guit_slash_trans_atob
-			stance_frontend_guitar = gh3_guit_slash_trans_a2frntendguit
+		Transitions = {
+			stance_b = GH3_Guit_Slash_Trans_AtoB
+			stance_c = GH3_Guit_Slash_Trans_AtoB
+			stance_frontend_guitar = GH3_Guit_Slash_Trans_A2FrntEndGuit
 		}
 	}
 	stance_frontend_guitar = {
-		idle = {
+		Idle = {
 			good = {
-				slow = [
-					gh3_guit_slash_frntendguit_idle
+				Slow = [
+					GH3_Guit_Slash_FrntEndGuit_Idle
 				]
-				med = [
-					gh3_guit_slash_frntendguit_idle
+				Med = [
+					GH3_Guit_Slash_FrntEndGuit_Idle
 				]
-				fast = [
-					gh3_guit_slash_frntendguit_idle
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_frntendguit_idle
-				]
-				med = [
-					gh3_guit_slash_frntendguit_idle
-				]
-				fast = [
-					gh3_guit_slash_frntendguit_idle
+				Fast = [
+					GH3_Guit_Slash_FrntEndGuit_Idle
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_frntendguit_idle
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_FrntEndGuit_Idle
 				]
-				med = [
-					gh3_guit_slash_frntendguit_idle
+				Med = [
+					GH3_Guit_Slash_FrntEndGuit_Idle
 				]
-				fast = [
-					gh3_guit_slash_frntendguit_idle
+				Fast = [
+					GH3_Guit_Slash_FrntEndGuit_Idle
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_FrntEndGuit_Idle
+				]
+				Med = [
+					GH3_Guit_Slash_FrntEndGuit_Idle
+				]
+				Fast = [
+					GH3_Guit_Slash_FrntEndGuit_Idle
 				]
 			}
 		}
-		transitions = {
-			stance_b = gh3_guit_slash_trans_atob
-			stance_frontend = gh3_guit_slash_trans_frntendguit2a
+		Transitions = {
+			stance_b = GH3_Guit_Slash_Trans_AtoB
+			stance_frontend = GH3_Guit_Slash_Trans_FrntEndGuit2A
 		}
 	}
 	intro = {
-		idle = {
+		Idle = {
 			good = {
-				slow = [
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
+				Slow = [
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
 				]
-				med = [
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
+				Med = [
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
 				]
-				fast = [
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
-				]
-				med = [
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
-				]
-				fast = [
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
+				Fast = [
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
 				]
-				med = [
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
+				Med = [
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
 				]
-				fast = [
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
+				Fast = [
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
+				]
+				Med = [
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
+				]
+				Fast = [
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
 				]
 			}
 		}
-		transitions = {
-			stance_b = gh3_guit_slash_trans_atob
+		Transitions = {
+			stance_b = GH3_Guit_Slash_Trans_AtoB
 		}
 	}
 	intro_smstg = {
-		idle = {
+		Idle = {
 			good = {
-				slow = [
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
+				Slow = [
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
 				]
-				med = [
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
+				Med = [
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
 				]
-				fast = [
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
-				]
-				med = [
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
-				]
-				fast = [
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
+				Fast = [
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
 				]
-				med = [
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
+				Med = [
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
 				]
-				fast = [
-					gh3_guit_slash_a_intro1
-					gh3_guit_slash_a_intro2
+				Fast = [
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
+				]
+				Med = [
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
+				]
+				Fast = [
+					GH3_Guit_Slash_A_Intro1
+					GH3_Guit_Slash_A_Intro2
 				]
 			}
 		}
-		transitions = {
-			stance_b = gh3_guit_slash_trans_atob
+		Transitions = {
+			stance_b = GH3_Guit_Slash_Trans_AtoB
 		}
 	}
-	intro_walk = {
-		idle = {
+	Intro_walk = {
+		Idle = {
 			good = {
-				slow = [
+				Slow = [
 					gh3_guit_slash_a_intro_walk
 				]
-				med = [
+				Med = [
 					gh3_guit_slash_a_intro_walk
 				]
-				fast = [
-					gh3_guit_slash_a_intro_walk
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_a_intro_walk
-				]
-				med = [
-					gh3_guit_slash_a_intro_walk
-				]
-				fast = [
+				Fast = [
 					gh3_guit_slash_a_intro_walk
 				]
 			}
-			bad = {
-				slow = [
+			Normal = {
+				Slow = [
 					gh3_guit_slash_a_intro_walk
 				]
-				med = [
+				Med = [
 					gh3_guit_slash_a_intro_walk
 				]
-				fast = [
+				Fast = [
+					gh3_guit_slash_a_intro_walk
+				]
+			}
+			Bad = {
+				Slow = [
+					gh3_guit_slash_a_intro_walk
+				]
+				Med = [
+					gh3_guit_slash_a_intro_walk
+				]
+				Fast = [
 					gh3_guit_slash_a_intro_walk
 				]
 			}
 		}
-		transitions = {
-			stance_b = gh3_guit_slash_trans_atob
+		Transitions = {
+			stance_b = GH3_Guit_Slash_Trans_AtoB
 		}
 	}
 	win = {
-		idle = {
+		Idle = {
 			good = {
-				slow = [
-					gh3_guit_slash_a_win1
-					gh3_guit_slash_a_win2
+				Slow = [
+					GH3_Guit_Slash_A_Win1
+					GH3_Guit_Slash_A_Win2
 				]
-				med = [
-					gh3_guit_slash_a_win1
-					gh3_guit_slash_a_win2
+				Med = [
+					GH3_Guit_Slash_A_Win1
+					GH3_Guit_Slash_A_Win2
 				]
-				fast = [
-					gh3_guit_slash_a_win1
-					gh3_guit_slash_a_win2
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_a_win1
-					gh3_guit_slash_a_win2
-				]
-				med = [
-					gh3_guit_slash_a_win1
-					gh3_guit_slash_a_win2
-				]
-				fast = [
-					gh3_guit_slash_a_win1
-					gh3_guit_slash_a_win2
+				Fast = [
+					GH3_Guit_Slash_A_Win1
+					GH3_Guit_Slash_A_Win2
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_a_win1
-					gh3_guit_slash_a_win2
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_A_Win1
+					GH3_Guit_Slash_A_Win2
 				]
-				med = [
-					gh3_guit_slash_a_win1
-					gh3_guit_slash_a_win2
+				Med = [
+					GH3_Guit_Slash_A_Win1
+					GH3_Guit_Slash_A_Win2
 				]
-				fast = [
-					gh3_guit_slash_a_win1
-					gh3_guit_slash_a_win2
+				Fast = [
+					GH3_Guit_Slash_A_Win1
+					GH3_Guit_Slash_A_Win2
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_A_Win1
+					GH3_Guit_Slash_A_Win2
+				]
+				Med = [
+					GH3_Guit_Slash_A_Win1
+					GH3_Guit_Slash_A_Win2
+				]
+				Fast = [
+					GH3_Guit_Slash_A_Win1
+					GH3_Guit_Slash_A_Win2
 				]
 			}
 		}
-		transitions = {
-			stance_b = gh3_guit_slash_trans_atob
+		Transitions = {
+			stance_b = GH3_Guit_Slash_Trans_AtoB
 		}
 	}
 	win_smstg = {
-		idle = {
+		Idle = {
 			good = {
-				slow = [
-					gh3_guit_slash_a_win1
-					gh3_guit_slash_a_win2
+				Slow = [
+					GH3_Guit_Slash_A_Win1
+					GH3_Guit_Slash_A_Win2
 				]
-				med = [
-					gh3_guit_slash_a_win1
-					gh3_guit_slash_a_win2
+				Med = [
+					GH3_Guit_Slash_A_Win1
+					GH3_Guit_Slash_A_Win2
 				]
-				fast = [
-					gh3_guit_slash_a_win1
-					gh3_guit_slash_a_win2
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_a_win1
-					gh3_guit_slash_a_win2
-				]
-				med = [
-					gh3_guit_slash_a_win1
-					gh3_guit_slash_a_win2
-				]
-				fast = [
-					gh3_guit_slash_a_win1
-					gh3_guit_slash_a_win2
+				Fast = [
+					GH3_Guit_Slash_A_Win1
+					GH3_Guit_Slash_A_Win2
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_a_win1
-					gh3_guit_slash_a_win2
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_A_Win1
+					GH3_Guit_Slash_A_Win2
 				]
-				med = [
-					gh3_guit_slash_a_win1
-					gh3_guit_slash_a_win2
+				Med = [
+					GH3_Guit_Slash_A_Win1
+					GH3_Guit_Slash_A_Win2
 				]
-				fast = [
-					gh3_guit_slash_a_win1
-					gh3_guit_slash_a_win2
+				Fast = [
+					GH3_Guit_Slash_A_Win1
+					GH3_Guit_Slash_A_Win2
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_A_Win1
+					GH3_Guit_Slash_A_Win2
+				]
+				Med = [
+					GH3_Guit_Slash_A_Win1
+					GH3_Guit_Slash_A_Win2
+				]
+				Fast = [
+					GH3_Guit_Slash_A_Win1
+					GH3_Guit_Slash_A_Win2
 				]
 			}
 		}
-		transitions = {
-			stance_b = gh3_guit_slash_trans_atob
+		Transitions = {
+			stance_b = GH3_Guit_Slash_Trans_AtoB
 		}
 	}
 	lose = {
-		idle = {
+		Idle = {
 			good = {
-				slow = [
-					gh3_guit_slash_a_loss1
-					gh3_guit_slash_a_breakguit
+				Slow = [
+					GH3_Guit_Slash_A_Loss1
+					GH3_Guit_Slash_A_BreakGuit
 				]
-				med = [
-					gh3_guit_slash_a_loss1
-					gh3_guit_slash_a_breakguit
+				Med = [
+					GH3_Guit_Slash_A_Loss1
+					GH3_Guit_Slash_A_BreakGuit
 				]
-				fast = [
-					gh3_guit_slash_a_loss1
-					gh3_guit_slash_a_breakguit
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_a_loss1
-					gh3_guit_slash_a_breakguit
-				]
-				med = [
-					gh3_guit_slash_a_loss1
-					gh3_guit_slash_a_breakguit
-				]
-				fast = [
-					gh3_guit_slash_a_loss1
-					gh3_guit_slash_a_breakguit
+				Fast = [
+					GH3_Guit_Slash_A_Loss1
+					GH3_Guit_Slash_A_BreakGuit
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_a_loss1
-					gh3_guit_slash_a_breakguit
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_A_Loss1
+					GH3_Guit_Slash_A_BreakGuit
 				]
-				med = [
-					gh3_guit_slash_a_loss1
-					gh3_guit_slash_a_breakguit
+				Med = [
+					GH3_Guit_Slash_A_Loss1
+					GH3_Guit_Slash_A_BreakGuit
 				]
-				fast = [
-					gh3_guit_slash_a_loss1
-					gh3_guit_slash_a_breakguit
+				Fast = [
+					GH3_Guit_Slash_A_Loss1
+					GH3_Guit_Slash_A_BreakGuit
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_A_Loss1
+					GH3_Guit_Slash_A_BreakGuit
+				]
+				Med = [
+					GH3_Guit_Slash_A_Loss1
+					GH3_Guit_Slash_A_BreakGuit
+				]
+				Fast = [
+					GH3_Guit_Slash_A_Loss1
+					GH3_Guit_Slash_A_BreakGuit
 				]
 			}
 		}
-		transitions = {
-			stance_b = gh3_guit_slash_trans_atob
+		Transitions = {
+			stance_b = GH3_Guit_Slash_Trans_AtoB
 		}
 	}
 	lose_smstg = {
-		idle = {
+		Idle = {
 			good = {
-				slow = [
-					gh3_guit_slash_a_loss2
+				Slow = [
+					GH3_Guit_Slash_A_Loss2
 				]
-				med = [
-					gh3_guit_slash_a_loss2
+				Med = [
+					GH3_Guit_Slash_A_Loss2
 				]
-				fast = [
-					gh3_guit_slash_a_loss2
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_slash_a_loss2
-				]
-				med = [
-					gh3_guit_slash_a_loss2
-				]
-				fast = [
-					gh3_guit_slash_a_loss2
+				Fast = [
+					GH3_Guit_Slash_A_Loss2
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_slash_a_loss2
+			Normal = {
+				Slow = [
+					GH3_Guit_Slash_A_Loss2
 				]
-				med = [
-					gh3_guit_slash_a_loss2
+				Med = [
+					GH3_Guit_Slash_A_Loss2
 				]
-				fast = [
-					gh3_guit_slash_a_loss2
+				Fast = [
+					GH3_Guit_Slash_A_Loss2
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Slash_A_Loss2
+				]
+				Med = [
+					GH3_Guit_Slash_A_Loss2
+				]
+				Fast = [
+					GH3_Guit_Slash_A_Loss2
 				]
 			}
 		}
-		transitions = {
-			stance_b = gh3_guit_slash_trans_atob
+		Transitions = {
+			stance_b = GH3_Guit_Slash_Trans_AtoB
 		}
 	}
 	facial_anims = {
-		idle = [
-			gh3_guitarist_slash_elvis
-			gh3_guitarist_slash_grumble
-			gh3_guitarist_slash_idle
-			gh3_guitarist_slash_satisfied
-			gh3_guitarist_slash_yeah_eyesclose
-			gh3_guitarist_slash_yeah_eyesopen
+		Idle = [
+			GH3_Guitarist_Slash_Elvis
+			GH3_Guitarist_Slash_Grumble
+			GH3_Guitarist_Slash_Idle
+			GH3_Guitarist_Slash_Satisfied
+			GH3_Guitarist_Slash_Yeah_EyesClose
+			GH3_Guitarist_Slash_Yeah_EyesOpen
 		]
 	}
 	walking = {
 		forward = {
 			start_anim = {
-				slow = gh3_guit_slash_a_wlk_start
-				med = gh3_guit_slash_a_wlk_start
-				fast = gh3_guit_slash_a_wlk_start
+				Slow = GH3_Guit_Slash_A_Wlk_Start
+				Med = GH3_Guit_Slash_A_Wlk_Start
+				Fast = GH3_Guit_Slash_A_Wlk_Start
 			}
 			cycle_anim = {
-				slow = gh3_guit_slash_a_wlk_loop
-				med = gh3_guit_slash_a_wlk_loop
-				fast = gh3_guit_slash_a_wlk_loop
+				Slow = GH3_Guit_Slash_A_Wlk_Loop
+				Med = GH3_Guit_Slash_A_Wlk_Loop
+				Fast = GH3_Guit_Slash_A_Wlk_Loop
 			}
 			stop_left_anim = {
-				slow = gh3_guit_slash_a_wlk_stpl
-				med = gh3_guit_slash_a_wlk_stpl
-				fast = gh3_guit_slash_a_wlk_stpl
+				Slow = GH3_Guit_Slash_A_Wlk_StpL
+				Med = GH3_Guit_Slash_A_Wlk_StpL
+				Fast = GH3_Guit_Slash_A_Wlk_StpL
 			}
 			stop_right_anim = {
-				slow = gh3_guit_slash_a_wlk_stpr
-				med = gh3_guit_slash_a_wlk_stpr
-				fast = gh3_guit_slash_a_wlk_stpr
+				Slow = GH3_Guit_Slash_A_Wlk_StpR
+				Med = GH3_Guit_Slash_A_Wlk_StpR
+				Fast = GH3_Guit_Slash_A_Wlk_StpR
 			}
 		}
 		backward = {
 			start_anim = {
-				slow = gh3_guit_slash_a_bwlk_start
-				med = gh3_guit_slash_a_bwlk_start
-				fast = gh3_guit_slash_a_bwlk_start
+				Slow = GH3_Guit_Slash_A_BWlk_Start
+				Med = GH3_Guit_Slash_A_BWlk_Start
+				Fast = GH3_Guit_Slash_A_BWlk_Start
 			}
 			cycle_anim = {
-				slow = gh3_guit_slash_a_bwlk_loop
-				med = gh3_guit_slash_a_bwlk_loop
-				fast = gh3_guit_slash_a_bwlk_loop
+				Slow = GH3_Guit_Slash_A_BWlk_Loop
+				Med = GH3_Guit_Slash_A_BWlk_Loop
+				Fast = GH3_Guit_Slash_A_BWlk_Loop
 			}
 			stop_left_anim = {
-				slow = gh3_guit_slash_a_bwlk_stpl
-				med = gh3_guit_slash_a_bwlk_stpl
-				fast = gh3_guit_slash_a_bwlk_stpl
+				Slow = GH3_Guit_Slash_A_BWlk_StpL
+				Med = GH3_Guit_Slash_A_BWlk_StpL
+				Fast = GH3_Guit_Slash_A_BWlk_StpL
 			}
 			stop_right_anim = {
-				slow = gh3_guit_slash_a_bwlk_stpr
-				med = gh3_guit_slash_a_bwlk_stpr
-				fast = gh3_guit_slash_a_bwlk_stpr
+				Slow = GH3_Guit_Slash_A_BWlk_StpR
+				Med = GH3_Guit_Slash_A_BWlk_StpR
+				Fast = GH3_Guit_Slash_A_BWlk_StpR
 			}
 		}
-		turn_left = gh3_guitarist_judy_a_med_turn_l
-		turn_idle = gh3_guit_slash_a_wlkcycle
-		turn_right = gh3_guitarist_judy_a_med_turn_r
+		turn_left = GH3_Guitarist_Judy_A_Med_Turn_L
+		turn_idle = GH3_Guit_Slash_A_WlkCycle
+		turn_right = GH3_Guitarist_Judy_A_Med_Turn_R
 		min_turn = 45
 		max_turn = 180
 		turn_speed = 45
 		face_audience_speed = 90
 	}
 }
-guitarist_finger_anims_slash = {
-	green = gh3_hnd_guit_chord_sls_roll3_1_d
-	red = gh3_hnd_guit_chord_sls_roll3_2_d
-	yellow = gh3_hnd_guit_chord_sls_roll3_3_d
-	blue = gh3_hnd_guit_chord_sls_roll3_4_d
-	orange = gh3_hnd_guit_chord_sls_roll3_4_d
-	green_red = gh3_hnd_guit_chord_sls_bar2_d
-	green_yellow = gh3_hnd_guit_chord_sls_bar3_d
-	green_blue = gh3_hnd_guit_chord_sls_bar4_d
-	green_orange = gh3_hnd_guit_chord_sls_bar5_d
-	red_yellow = gh3_hnd_guit_chord_sls_bar2_d
-	red_blue = gh3_hnd_guit_chord_sls_bar3_d
-	red_orange = gh3_hnd_guit_chord_sls_bar4_d
-	yellow_blue = gh3_hnd_guit_chord_sls_bar2_d
-	yellow_orange = gh3_hnd_guit_chord_sls_bar3_d
-	blue_orange = gh3_hnd_guit_chord_sls_bar2_d
-	green_red_yellow = gh3_hnd_guit_chord_sls_bar1_d
-	green_red_blue = gh3_hnd_guit_chord_sls_bar5_d
-	green_red_orange = gh3_hnd_guit_chord_sls_bar5_d
-	green_yellow_blue = gh3_hnd_guit_chord_sls_bar5_d
-	green_yellow_orange = gh3_hnd_guit_chord_sls_bar5_d
-	green_blue_orange = gh3_hnd_guit_chord_sls_bar5_d
-	red_yellow_blue = gh3_hnd_guit_chord_sls_bar1_d
-	red_yellow_orange = gh3_hnd_guit_chord_sls_bar5_d
-	red_blue_orange = gh3_hnd_guit_chord_sls_bar5_d
-	yellow_blue_orange = gh3_hnd_guit_chord_sls_bar1_d
-	green_red_yellow_blue = gh3_hnd_guit_chord_sls_bar5_d
-	green_red_yellow_orange = gh3_hnd_guit_chord_sls_bar5_d
-	green_red_blue_orange = gh3_hnd_guit_chord_sls_bar5_d
-	green_yellow_blue_orange = gh3_hnd_guit_chord_sls_bar5_d
-	green_red_yellow_blue_orange = gh3_hnd_guit_chord_sls_g_d
-	none = gh3_hnd_guit_chord_sls_empty_d
-	track_none = gh3_hnd_guit_chord_sls_empty_d
+guitarist_finger_anims_Slash = {
+	green = GH3_Hnd_Guit_Chord_SLS_Roll3_1_D
+	red = GH3_Hnd_Guit_Chord_SLS_Roll3_2_D
+	Yellow = GH3_Hnd_Guit_Chord_SLS_Roll3_3_D
+	Blue = GH3_Hnd_Guit_Chord_SLS_Roll3_4_D
+	Orange = GH3_Hnd_Guit_Chord_SLS_Roll3_4_D
+	green_red = GH3_Hnd_Guit_Chord_SLS_Bar2_D
+	green_yellow = GH3_Hnd_Guit_Chord_SLS_Bar3_D
+	green_blue = GH3_Hnd_Guit_Chord_SLS_Bar4_D
+	green_orange = GH3_Hnd_Guit_Chord_SLS_Bar5_D
+	red_yellow = GH3_Hnd_Guit_Chord_SLS_Bar2_D
+	red_blue = GH3_Hnd_Guit_Chord_SLS_Bar3_D
+	red_orange = GH3_Hnd_Guit_Chord_SLS_Bar4_D
+	yellow_blue = GH3_Hnd_Guit_Chord_SLS_Bar2_D
+	yellow_orange = GH3_Hnd_Guit_Chord_SLS_Bar3_D
+	blue_orange = GH3_Hnd_Guit_Chord_SLS_Bar2_D
+	green_red_yellow = GH3_Hnd_Guit_Chord_SLS_Bar1_D
+	green_red_blue = GH3_Hnd_Guit_Chord_SLS_Bar5_D
+	green_red_orange = GH3_Hnd_Guit_Chord_SLS_Bar5_D
+	green_yellow_blue = GH3_Hnd_Guit_Chord_SLS_Bar5_D
+	green_yellow_orange = GH3_Hnd_Guit_Chord_SLS_Bar5_D
+	green_blue_orange = GH3_Hnd_Guit_Chord_SLS_Bar5_D
+	red_yellow_blue = GH3_Hnd_Guit_Chord_SLS_Bar1_D
+	red_yellow_orange = GH3_Hnd_Guit_Chord_SLS_Bar5_D
+	red_blue_orange = GH3_Hnd_Guit_Chord_SLS_Bar5_D
+	yellow_blue_orange = GH3_Hnd_Guit_Chord_SLS_Bar1_D
+	green_red_yellow_blue = GH3_Hnd_Guit_Chord_SLS_Bar5_D
+	green_red_yellow_orange = GH3_Hnd_Guit_Chord_SLS_Bar5_D
+	green_red_blue_orange = GH3_Hnd_Guit_Chord_SLS_Bar5_D
+	green_yellow_blue_orange = GH3_Hnd_Guit_Chord_SLS_Bar5_D
+	green_red_yellow_blue_orange = GH3_Hnd_Guit_Chord_SLS_G_D
+	none = Gh3_hnd_guit_chord_SLS_Empty_D
+	track_none = Gh3_hnd_guit_chord_SLS_Empty_D
 }
-normalslash_strums = {
-	no_strum_anim = gh3_hnd_guit_strum_slas_nostrum_d
-	short = [
-		gh3_hnd_guit_strum_slas_norm_s01_d
-		gh3_hnd_guit_strum_slas_norm_s02_d
-		gh3_hnd_guit_strum_slas_norm_s03_d
-		gh3_hnd_guit_strum_slas_norm_s04_d
-		gh3_hnd_guit_strum_slas_norm_s05_d
+NormalSlash_Strums = {
+	no_strum_anim = GH3_Hnd_Guit_Strum_Slas_NoStrum_D
+	Short = [
+		GH3_Hnd_Guit_Strum_Slas_Norm_S01_D
+		GH3_Hnd_Guit_Strum_Slas_Norm_S02_D
+		GH3_Hnd_Guit_Strum_Slas_Norm_S03_D
+		GH3_Hnd_Guit_Strum_Slas_Norm_S04_D
+		GH3_Hnd_Guit_Strum_Slas_Norm_S05_D
 	]
-	med = [
-		gh3_hnd_guit_strum_slas_norm_m01_d
-		gh3_hnd_guit_strum_slas_norm_m02_d
-		gh3_hnd_guit_strum_slas_norm_m03_d
+	Med = [
+		GH3_Hnd_Guit_Strum_Slas_Norm_M01_D
+		GH3_Hnd_Guit_Strum_Slas_Norm_M02_D
+		GH3_Hnd_Guit_Strum_Slas_Norm_M03_D
 	]
-	long = [
-		gh3_hnd_guit_strum_slas_norm_l01_d
-		gh3_hnd_guit_strum_slas_norm_l02_d
+	Long = [
+		GH3_Hnd_Guit_Strum_Slas_Norm_L01_D
+		GH3_Hnd_Guit_Strum_Slas_Norm_L02_D
 	]
 }

@@ -1,24 +1,24 @@
 modelviewer_axel = {
-	cas_body = {
-		desc_id = gh4_car_male
+	CAS_Body = {
+		desc_id = GH4_CAR_Male
 	}
 	cas_physique = {
-		desc_id = malephysique
+		desc_id = MalePhysique
 	}
-	cas_male_torso = {
-		desc_id = m_punk_torso_jacket
+	CAS_Male_Torso = {
+		desc_id = M_Punk_Torso_Jacket
 	}
-	cas_male_legs = {
-		desc_id = m_punk_legs_camo
+	CAS_Male_Legs = {
+		desc_id = M_Punk_Legs_Camo
 	}
 }
 modelviewer_pros = [
 	{
-		text = qs(0xfe2ba776)
-		Profile = $modelviewer_axel
-		animLoadScript = animload_sk9_skater_acc
-		skeletonname = GH3_guitarist_axel
-		Defaultanim = pedm_idle00_f
+		text = qs("\LAxel")
+		profile = $modelviewer_axel
+		animLoadScript = animload_Sk9_skater_acc
+		SkeletonName = GH3_Guitarist_Axel
+		defaultAnim = PedM_Idle00_F
 	}
 ]
 modelviewer_peds = [
@@ -31,23 +31,23 @@ modelviewer_cars = [
 ]
 modelviewer_categories = [
 	{
-		text = qs(0x2a410443)
+		text = qs("\LView Pros")
 		array = $modelviewer_pros
 	}
 	{
-		text = qs(0xe393b161)
+		text = qs("\LView Peds")
 		array = $modelviewer_peds
 	}
 	{
-		text = qs(0xe2dba683)
+		text = qs("\LView Cutscene Heads")
 		array = $modelviewer_heads
 	}
 	{
-		text = qs(0x4af4b224)
+		text = qs("\LView Animals")
 		array = $modelviewer_animals
 	}
 	{
-		text = qs(0xff44cdfc)
+		text = qs("\LView Cars")
 		array = $modelviewer_cars
 	}
 ]

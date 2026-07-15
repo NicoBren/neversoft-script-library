@@ -1,74 +1,74 @@
-debug_friends_list = 0
+DEBUG_FRIENDS_LIST = 0
 invite_sent_display_position = (640.0, 360.0)
 
 script ui_create_friends_list 
-	requireparams \{[
+	RequireParams \{[
 			exit_script
 		]
 		all}
 	<my_parent> = root_window
-	if screenelementexists \{id = onlinelobbyinterface}
-		<my_parent> = onlinelobbyinterface
+	if ScreenElementExists \{id = OnlineLobbyInterface}
+		<my_parent> = OnlineLobbyInterface
 	endif
-	createscreenelement {
-		type = descinterface
+	CreateScreenElement {
+		type = DescInterface
 		parent = <my_parent>
 		desc = 'online_lobby_left_side'
 		pos = (0.0, -1000.0)
-		id = friendslistinterface
+		id = FriendsListInterface
 		exclusive_device = <device_num>
 		tags = {
 			menu_index = 0
-			menu_items = 0
+			Menu_items = 0
 			device_num = <device_num>
 			exit_script = <exit_script>
 			scrollbar_id = null
 		}
 	}
-	friendslistinterface :desc_checkversion \{desired = 2
-		assertif = mismatch}
-	<id> :se_setprops title_text = qs(0xf41fb4ee)
+	FriendsListInterface :Desc_CheckVersion \{desired = 2
+		AssertIf = Mismatch}
+	<id> :SE_SetProps title_text = qs("FRIENDS")
 	set_friends_helper_text \{msg_checksum = friends_menu}
-	if friendslistinterface :desc_resolvealias \{name = alias_online_lobby_scrollbar
+	if FriendsListInterface :Desc_ResolveAlias \{name = alias_online_lobby_scrollbar
 			param = scrollbar_id}
-		friendslistinterface :settags scrollbar_id = <scrollbar_id>
+		FriendsListInterface :SetTags scrollbar_id = <scrollbar_id>
 	endif
-	<id> :obj_spawnscriptnow animate_left_side params = {direction = in}
+	<id> :Obj_SpawnScriptNow animate_left_side params = {direction = in}
 	create_friendslist_menu device_num = <device_num>
 	clean_up_user_control_helpers
-	if (iswinport)
-		menu_finish \{0x9838a750 = 1}
+	if (IsWinPort)
+		menu_finish \{winport_friend_buttons = 1}
 	else
 		menu_finish
 	endif
 endscript
 
-script animate_left_side \{id = friendslistinterface}
-	if screenelementexists id = <id>
+script animate_left_side \{id = FriendsListInterface}
+	if ScreenElementExists id = <id>
 		switch (<direction>)
 			case out
-			<id> :se_setprops pos = {(0.0, -1000.0) relative} time = 0.15 anim = gentle
+			<id> :SE_SetProps pos = {(0.0, -1000.0) relative} time = 0.15 Anim = gentle
 			case in
-			<id> :se_setprops pos = {(0.0, 1000.0) relative} time = 0.15 anim = gentle
+			<id> :SE_SetProps pos = {(0.0, 1000.0) relative} time = 0.15 Anim = gentle
 		endswitch
 	else
 		return
 	endif
-	wait \{0.15
+	Wait \{0.15
 		second}
-	if gotparam \{focus_id}
-		launchevent type = focus target = <focus_id> data = {child_index = (<focus_index>)}
+	if GotParam \{focus_id}
+		LaunchEvent type = focus target = <focus_id> data = {child_index = (<focus_index>)}
 	endif
 endscript
 
 script ui_destroy_friends_list 
-	if screenelementexists \{id = friendslistinterface}
+	if ScreenElementExists \{id = FriendsListInterface}
 		generic_menu_pad_back_sound
-		netsessionfunc \{func = friends_uninit}
+		NetSessionFunc \{func = friends_uninit}
 		animate_left_side \{direction = out}
-		friendslistinterface :gettags
-		destroyscreenelement \{id = friendslistinterface}
-		if gotparam \{no_focus}
+		FriendsListInterface :GetTags
+		DestroyScreenElement \{id = FriendsListInterface}
+		if GotParam \{no_focus}
 			spawnscriptnow <exit_script> params = {no_focus}
 		else
 			spawnscriptnow <exit_script>
@@ -77,52 +77,52 @@ script ui_destroy_friends_list
 endscript
 
 script set_friends_helper_text 
-	if NOT gotparam \{msg_checksum}
+	if NOT GotParam \{msg_checksum}
 		return
 	endif
-	if iswinport
-		plat_helper_strings = 0x98866af2
+	if IsWinPort
+		plat_helper_strings = net_helper_text_strings_winport
 	else
-		if isxenon
+		if isXenon
 			plat_helper_strings = net_helper_text_strings_xen
-		elseif isps3
+		elseif IsPs3
 			plat_helper_strings = net_helper_text_strings_ps3
 		endif
 	endif
-	appendsuffixtochecksum base = <msg_checksum> suffixstring = '_text'
-	if structurecontains structure = ($<plat_helper_strings>) <appended_id>
-		if screenelementexists \{id = friendslistinterface}
-			friendslistinterface :se_setprops info_text = ($<plat_helper_strings>.<appended_id>)
-			if iswinport
-				if 0x1c708d82 \{controller = $primary_controller}
+	AppendSuffixToChecksum Base = <msg_checksum> SuffixString = '_text'
+	if StructureContains Structure = ($<plat_helper_strings>) <appended_id>
+		if ScreenElementExists \{id = FriendsListInterface}
+			FriendsListInterface :SE_SetProps info_text = ($<plat_helper_strings>.<appended_id>)
+			if IsWinPort
+				if WinPortIsKeyboardController \{controller = $primary_controller}
 					if (<appended_id> = friends_menu_text)
-						friendslistinterface :se_setprops info_text = ($<plat_helper_strings>.0x8171fc15)
+						FriendsListInterface :SE_SetProps info_text = ($<plat_helper_strings>.friends_menu_text_keyboard)
 					endif
 				endif
 			endif
 		endif
-	elseif structurecontains structure = ($net_helper_text_strings) <appended_id>
-		if screenelementexists \{id = friendslistinterface}
-			friendslistinterface :se_setprops info_text = ($net_helper_text_strings.<appended_id>)
+	elseif StructureContains Structure = ($net_helper_text_strings) <appended_id>
+		if ScreenElementExists \{id = FriendsListInterface}
+			FriendsListInterface :SE_SetProps info_text = ($net_helper_text_strings.<appended_id>)
 		endif
 	endif
 endscript
 
 script create_friendslist_menu 
-	if iswinport
+	if IsWinPort
 		printf \{qs(0xf2ed3316)}
 	endif
-	if friendslistinterface :desc_resolvealias \{name = alias_left_side_vmenu}
-		<resolved_id> :se_setprops {
+	if FriendsListInterface :Desc_ResolveAlias \{name = alias_left_side_vmenu}
+		<resolved_id> :SE_SetProps {
 			event_handlers = [
 				{pad_up friendslist_up_or_down_action params = {action = up}}
 				{pad_down friendslist_up_or_down_action params = {action = down}}
 			]
 		}
-		if isps3
+		if IsPs3
 			add_friendslist_item {
 				vmenu_id = <resolved_id>
-				text = qs(0x0ee400a5)
+				text = qs("Invite as Guitar")
 				choose_script = invite_to_game
 				choose_script_params = {
 					net_id = <net_id>
@@ -132,7 +132,7 @@ script create_friendslist_menu
 			}
 			add_friendslist_item {
 				vmenu_id = <resolved_id>
-				text = qs(0xfd92cde8)
+				text = qs("Invite as Drums")
 				choose_script = invite_to_game
 				choose_script_params = {
 					net_id = <net_id>
@@ -142,7 +142,7 @@ script create_friendslist_menu
 			}
 			add_friendslist_item {
 				vmenu_id = <resolved_id>
-				text = qs(0x72d3f53a)
+				text = qs("Invite as Mic")
 				choose_script = invite_to_game
 				choose_script_params = {
 					net_id = <net_id>
@@ -150,22 +150,22 @@ script create_friendslist_menu
 					instrument = mic
 				}
 			}
-			friendslistinterface :gettags
-			destroyscreenelement id = <scrollbar_id>
-			friendslistinterface :settags \{scrollbar_id = null}
+			FriendsListInterface :GetTags
+			DestroyScreenElement id = <scrollbar_id>
+			FriendsListInterface :SetTags \{scrollbar_id = null}
 		else
-			netsessionfunc \{func = friends_init}
-			netsessionfunc obj = friends func = begin_retrieve_friends_list params = {callback = friendslist_callback device_num = <device_num> callback_params = {none}}
+			NetSessionFunc \{func = friends_init}
+			NetSessionFunc obj = friends func = begin_retrieve_friends_list params = {callback = friendslist_callback device_num = <device_num> callback_params = {none}}
 		endif
-		assignalias id = <resolved_id> alias = friends_list_popup
-		launchevent \{type = focus
+		AssignAlias id = <resolved_id> alias = friends_list_popup
+		LaunchEvent \{type = focus
 			target = friends_list_popup}
-		if iswinport
-			if friendslistinterface :desc_resolvealias \{name = alias_left_side_vmenu}
-				<resolved_id> :se_setprops {
+		if IsWinPort
+			if FriendsListInterface :Desc_ResolveAlias \{name = alias_left_side_vmenu}
+				<resolved_id> :SE_SetProps {
 					event_handlers = [
-						{pad_option2 0x2b3f388f}
-						{pad_option 0xf51827ee}
+						{pad_option2 winport_add_friend}
+						{pad_option winport_remove_friend}
 					]
 				}
 			endif
@@ -174,116 +174,116 @@ script create_friendslist_menu
 endscript
 
 script friendslist_up_or_down_action 
-	if NOT gotparam \{action}
+	if NOT GotParam \{action}
 		return
 	endif
-	if NOT screenelementexists \{id = friends_list_popup}
+	if NOT ScreenElementExists \{id = friends_list_popup}
 		return
 	endif
-	friendslistinterface :gettags
+	FriendsListInterface :GetTags
 	if (<action> = up)
 		generic_menu_up_or_down_sound \{up}
 		if (<menu_index> = 0)
-			friendslistinterface :settags menu_index = (<menu_items> - 1)
-			if screenelementexists id = <scrollbar_id>
-				<scrollbar_id> :se_setprops scrollbar_thumb_pos = (0.0, 175.0)
+			FriendsListInterface :SetTags menu_index = (<Menu_items> - 1)
+			if ScreenElementExists id = <scrollbar_id>
+				<scrollbar_id> :SE_SetProps scrollbar_thumb_pos = (0.0, 175.0)
 			endif
 		else
-			friendslistinterface :settags menu_index = (<menu_index> - 1)
-			if screenelementexists id = <scrollbar_id>
-				<scrollbar_id> :gettags
+			FriendsListInterface :SetTags menu_index = (<menu_index> - 1)
+			if ScreenElementExists id = <scrollbar_id>
+				<scrollbar_id> :GetTags
 				pos = ((0.0, -1.0) * <scroll_increment>)
-				<scrollbar_id> :se_setprops scrollbar_thumb_pos = {<pos> relative}
+				<scrollbar_id> :SE_SetProps scrollbar_thumb_pos = {<pos> relative}
 			endif
 		endif
 	elseif (<action> = down)
 		generic_menu_up_or_down_sound \{down}
-		if (<menu_index> = (<menu_items> - 1))
-			friendslistinterface :settags \{menu_index = 0}
-			if screenelementexists id = <scrollbar_id>
-				<scrollbar_id> :se_setprops scrollbar_thumb_pos = (0.0, 0.0)
+		if (<menu_index> = (<Menu_items> - 1))
+			FriendsListInterface :SetTags \{menu_index = 0}
+			if ScreenElementExists id = <scrollbar_id>
+				<scrollbar_id> :SE_SetProps scrollbar_thumb_pos = (0.0, 0.0)
 			endif
 		else
-			friendslistinterface :settags menu_index = (<menu_index> + 1)
-			if screenelementexists id = <scrollbar_id>
-				<scrollbar_id> :gettags
+			FriendsListInterface :SetTags menu_index = (<menu_index> + 1)
+			if ScreenElementExists id = <scrollbar_id>
+				<scrollbar_id> :GetTags
 				pos = ((0.0, 1.0) * (<scroll_increment>))
-				<scrollbar_id> :se_setprops scrollbar_thumb_pos = {<pos> relative}
+				<scrollbar_id> :SE_SetProps scrollbar_thumb_pos = {<pos> relative}
 			endif
 		endif
 	endif
 endscript
 
 script friendslist_callback 
-	printf \{qs(0x984d6ecc)}
-	if gotparam \{friendlist}
-		if screenelementexists \{id = friendslistinterface}
-			friendslistinterface :settags friendlist = <friendlist>
-			if friendslistinterface :desc_resolvealias \{name = alias_left_side_vmenu}
-				getarraysize <friendlist>
+	printf \{qs("\L----FriendsList Callback")}
+	if GotParam \{friendList}
+		if ScreenElementExists \{id = FriendsListInterface}
+			FriendsListInterface :SetTags friendList = <friendList>
+			if FriendsListInterface :Desc_ResolveAlias \{name = alias_left_side_vmenu}
+				GetArraySize <friendList>
 				if (<array_size> > 0)
 					i = 0
 					begin
-					if isxenon
-						if (0 != <friendlist> [<i>].localplayer)
-							cant_invite = 1
-						elseif (0 != <friendlist> [<i>].alreadyingame)
-							cant_invite = 1
+					if isXenon
+						if (0 != <friendList> [<i>].LocalPlayer)
+							CANT_INVITE = 1
+						elseif (0 != <friendList> [<i>].AlreadyInGame)
+							CANT_INVITE = 1
 						else
-							cant_invite = 0
+							CANT_INVITE = 0
 						endif
 						add_friendslist_item {
 							vmenu_id = <resolved_id>
-							text = (<friendlist> [<i>].name)
-							status = (<friendlist> [<i>].friendstate)
-							choose_script = 0x2aa43ff4
+							text = (<friendList> [<i>].name)
+							status = (<friendList> [<i>].friendstate)
+							choose_script = winport_search_for_friends_game
 							choose_script_params = {
-								net_id = (<friendlist> [<i>].id)
-								name = (<friendlist> [<i>].name)
-								cant_invite = <cant_invite>
+								net_id = (<friendList> [<i>].id)
+								name = (<friendList> [<i>].name)
+								CANT_INVITE = <CANT_INVITE>
 							}
 						}
 					else
 						add_friendslist_item {
 							vmenu_id = <resolved_id>
-							text = (<friendlist> [<i>].name)
-							choose_script = 0x2aa43ff4
+							text = (<friendList> [<i>].name)
+							choose_script = winport_search_for_friends_game
 							choose_script_params = {
-								net_id = (<friendlist> [<i>].id)
-								name = (<friendlist> [<i>].name)
+								net_id = (<friendList> [<i>].id)
+								name = (<friendList> [<i>].name)
 							}
 						}
 					endif
 					<i> = (<i> + 1)
 					repeat <array_size>
-					if ($debug_friends_list = 1)
+					if ($DEBUG_FRIENDS_LIST = 1)
 						begin
 						add_friendslist_item {
 							vmenu_id = <resolved_id>
-							text = qs(0x89810324)
-							choose_script = 0x2aa43ff4
+							text = qs("WWWWWWWWWWWWWWWW")
+							choose_script = winport_search_for_friends_game
 							choose_script_params = {
 								net_id = 0
-								name = qs(0x89810324)
+								name = qs("WWWWWWWWWWWWWWWW")
 							}
 						}
 						repeat 92
 					endif
-					launchevent type = focus target = <resolved_id> data = {child_index = 0}
+					LaunchEvent type = focus target = <resolved_id> data = {child_index = 0}
 				else
 					add_friendslist_item {
 						vmenu_id = <resolved_id>
-						text = qs(0x3e8a16b2)
+						text = qs("Empty")
 					}
-					launchevent type = focus target = <resolved_id> data = {child_index = 0}
+					LaunchEvent type = focus target = <resolved_id> data = {child_index = 0}
 				endif
-				friendslistinterface :gettags
-				if (<menu_items> > 1)
-					scroll_increment = (175 / (<menu_items> -1))
-					<scrollbar_id> :settags scroll_increment = <scroll_increment>
-					<scrollbar_id> :se_setprops scrollbar_thumb_pos = (0.0, 0.0)
+				FriendsListInterface :GetTags
+				if (<Menu_items> > 1)
+					scroll_increment = (175 / (<Menu_items> -1))
+					<scrollbar_id> :SetTags scroll_increment = <scroll_increment>
+					<scrollbar_id> :SE_SetProps scrollbar_thumb_pos = (0.0, 0.0)
 				else
-					destroyscreenelement id = <scrollbar_id>
+					DestroyScreenElement id = <scrollbar_id>
 				endif
 			endif
 		endif
@@ -291,28 +291,28 @@ script friendslist_callback
 endscript
 
 script friendslist_item_change_focus 
-	obj_getid
-	resolvescreenelementid id = [
-		{id = <objid>}
+	Obj_GetID
+	ResolveScreenElementId id = [
+		{id = <ObjID>}
 		{local_id = text}
 	]
-	if gotparam \{focus}
+	if GotParam \{focus}
 		retail_menu_focus id = <resolved_id>
-	elseif gotparam \{unfocus}
+	elseif GotParam \{unfocus}
 		retail_menu_unfocus id = <resolved_id>
 	endif
 endscript
 
 script add_friendslist_item \{vmenu_id = friendslist_vmenu
 		z_priority = 8.2}
-	if NOT gotparam \{vmenu_id}
+	if NOT GotParam \{vmenu_id}
 		return
 	endif
-	if NOT gotparam \{text}
-		text = qs(0x134b7e69)
+	if NOT GotParam \{text}
+		text = qs("TEST")
 	endif
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <vmenu_id>
 		pos = (0.0, 0.0)
 		dims = (385.0, 42.0)
@@ -325,28 +325,28 @@ script add_friendslist_item \{vmenu_id = friendslist_vmenu
 	event_handlers = [
 		{pad_back ui_destroy_friends_list}
 	]
-	if gotparam \{choose_script}
-		addarrayelement array = <event_handlers> element = {pad_choose generic_menu_pad_choose_sound}
+	if GotParam \{choose_script}
+		AddArrayElement array = <event_handlers> element = {pad_choose generic_menu_pad_choose_sound}
 		<event_handlers> = <array>
-		addarrayelement array = <event_handlers> element = {pad_choose <choose_script> params = <choose_script_params>}
+		AddArrayElement array = <event_handlers> element = {pad_choose <choose_script> params = <choose_script_params>}
 		<event_handlers> = <array>
 	endif
-	setscreenelementprops {
+	SetScreenElementProps {
 		id = <container_id>
 		event_handlers = <event_handlers>
 	}
-	if gotparam \{sub_menu_item}
+	if GotParam \{sub_menu_item}
 		text_width = 265
 		text_adjust = 15
 	else
-		friendslistinterface :gettags
-		friendslistinterface :settags menu_items = (<menu_items> + 1)
+		FriendsListInterface :GetTags
+		FriendsListInterface :SetTags Menu_items = (<Menu_items> + 1)
 		width = 385
 		text_width = 275
 		text_adjust = 0
 	endif
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = <container_id>
 		local_id = text
 		font = fontgrid_text_a6
@@ -362,7 +362,7 @@ script add_friendslist_item \{vmenu_id = friendslist_vmenu
 		scale_mode = `per axis`
 		internal_just = [left center]
 	}
-	if gotparam \{status}
+	if GotParam \{status}
 		switch (<status>)
 			case online
 			<status_texture> = friendslist_online
@@ -373,8 +373,8 @@ script add_friendslist_item \{vmenu_id = friendslist_vmenu
 			case busy
 			<status_texture> = friendslist_busy
 		endswitch
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			parent = <container_id>
 			texture = <status_texture>
 			pos = ((32.0, 5.0) + (1.0, 0.0) * <text_width>)
@@ -387,21 +387,21 @@ script add_friendslist_item \{vmenu_id = friendslist_vmenu
 endscript
 
 script create_friendslist_submenu 
-	requireparams \{[
+	RequireParams \{[
 			net_id
 			name
 		]
 		all}
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = friends_list_popup}
-	obj_getid
-	<objid> :se_getprops
+	Obj_GetID
+	<ObjID> :SE_GetProps
 	<z_priority> = (<z_priority> + 1)
-	if friendslistinterface :desc_resolvealias \{name = alias_left_side_vscollingmenu}
-		<resolved_id> :se_setprops dims = (256.0, 1000.0) time = 0.2
-		resolvescreenelementid \{id = [
+	if FriendsListInterface :Desc_ResolveAlias \{name = alias_left_side_vscollingmenu}
+		<resolved_id> :SE_SetProps dims = (256.0, 1000.0) time = 0.2
+		ResolveScreenElementId \{id = [
 				{
-					id = friendslistinterface
+					id = FriendsListInterface
 				}
 				{
 					local_id = lobby_menu
@@ -419,27 +419,27 @@ script create_friendslist_submenu
 		if (<dim_y> >= 575)
 			difference = (<dim_y> - 575)
 			<dim_y> = 575
-			<objid> :se_setprops dims = (385.0, 575.0)
-			<resolved_id> :se_setprops pos = {((0.0, 1.0) * <difference>) relative}
+			<ObjID> :SE_SetProps dims = (385.0, 575.0)
+			<resolved_id> :SE_SetProps pos = {((0.0, 1.0) * <difference>) relative}
 			break
 		endif
-		<objid> :se_setprops dims = ((0.0, 1.0) * <dim_y> + (385.0, 0.0))
-		<resolved_id> :se_setprops pos = {(0.0, 45.0) relative}
-		wait \{1
+		<ObjID> :SE_SetProps dims = ((0.0, 1.0) * <dim_y> + (385.0, 0.0))
+		<resolved_id> :SE_SetProps pos = {(0.0, 45.0) relative}
+		Wait \{1
 			gameframe}
 		repeat
 	endif
-	createscreenelement {
-		type = containerelement
-		parent = <objid>
+	CreateScreenElement {
+		type = ContainerElement
+		parent = <ObjID>
 		id = friendslist_submenu_container
 		pos = (0.0, 0.0)
 		just = [left top]
 		z_priority = <z_priority>
 	}
 	container_id = <id>
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <container_id>
 		texture = list_container
 		pos = (-35.0, 50.0)
@@ -448,8 +448,8 @@ script create_friendslist_submenu
 		alpha = 1.0
 		z_priority = (<z_priority> + 0.2)
 	}
-	createscreenelement {
-		type = vmenu
+	CreateScreenElement {
+		type = VMenu
 		parent = <container_id>
 		just = [left top]
 		internal_just = [left center]
@@ -463,18 +463,18 @@ script create_friendslist_submenu
 		]
 	}
 	subvmenu_id = <id>
-	setscreenelementprops {
+	SetScreenElementProps {
 		id = <subvmenu_id>
 		event_handlers = [
 			{pad_back generic_menu_pad_back_sound}
 			{pad_back destroy_friendslist_submenu}
 		]
 	}
-	if isxenon
+	if isXenon
 		add_friendslist_item {
 			sub_menu_item
 			vmenu_id = <subvmenu_id>
-			text = qs(0xce3d9374)
+			text = qs("Gamer card")
 			z_priority = (<z_priority> + 2)
 			choose_script = menu_show_gamercard_from_netid
 			choose_script_params = {
@@ -482,17 +482,17 @@ script create_friendslist_submenu
 			}
 		}
 	endif
-	dont_show_invite_options = 0
-	if gotparam \{cant_invite}
-		if (1 = <cant_invite>)
-			<dont_show_invite_options> = 1
+	DONT_SHOW_INVITE_OPTIONS = 0
+	if GotParam \{CANT_INVITE}
+		if (1 = <CANT_INVITE>)
+			<DONT_SHOW_INVITE_OPTIONS> = 1
 		endif
 	endif
-	if (0 = <dont_show_invite_options>)
+	if (0 = <DONT_SHOW_INVITE_OPTIONS>)
 		add_friendslist_item {
 			sub_menu_item
 			vmenu_id = <subvmenu_id>
-			text = qs(0x0ee400a5)
+			text = qs("Invite as Guitar")
 			z_priority = (<z_priority> + 2)
 			choose_script = invite_to_game
 			choose_script_params = {
@@ -504,7 +504,7 @@ script create_friendslist_submenu
 		add_friendslist_item {
 			sub_menu_item
 			vmenu_id = <subvmenu_id>
-			text = qs(0xfd92cde8)
+			text = qs("Invite as Drums")
 			z_priority = (<z_priority> + 2)
 			choose_script = invite_to_game
 			choose_script_params = {
@@ -516,7 +516,7 @@ script create_friendslist_submenu
 		add_friendslist_item {
 			sub_menu_item
 			vmenu_id = <subvmenu_id>
-			text = qs(0x72d3f53a)
+			text = qs("Invite as Mic")
 			z_priority = (<z_priority> + 2)
 			choose_script = invite_to_game
 			choose_script_params = {
@@ -526,19 +526,19 @@ script create_friendslist_submenu
 			}
 		}
 	endif
-	launchevent type = focus target = <subvmenu_id> data = {child_index = 0}
+	LaunchEvent type = focus target = <subvmenu_id> data = {child_index = 0}
 endscript
 
 script destroy_friendslist_submenu 
-	if screenelementexists \{id = friendslist_submenu_container}
-		destroyscreenelement \{id = friendslist_submenu_container}
+	if ScreenElementExists \{id = friendslist_submenu_container}
+		DestroyScreenElement \{id = friendslist_submenu_container}
 	endif
-	friendslistinterface :gettags
-	if friendslistinterface :desc_resolvealias \{name = alias_left_side_vmenu}
+	FriendsListInterface :GetTags
+	if FriendsListInterface :Desc_ResolveAlias \{name = alias_left_side_vmenu}
 		menu_id = <resolved_id>
-		resolvescreenelementid \{id = [
+		ResolveScreenElementId \{id = [
 				{
-					id = friendslistinterface
+					id = FriendsListInterface
 				}
 				{
 					local_id = lobby_menu
@@ -551,7 +551,7 @@ script destroy_friendslist_submenu
 				}
 			]}
 		info_container = <resolved_id>
-		resolvescreenelementid id = [
+		ResolveScreenElementId id = [
 			{id = <menu_id>}
 			{index = <menu_index>}
 		]
@@ -561,62 +561,62 @@ script destroy_friendslist_submenu
 		if (<dim_y> <= 42)
 			difference = (42 - <dim_y>)
 			<dim_y> = 42
-			<info_container> :se_setprops pos = {((0.0, -1.0) * <difference>) relative}
-			<resolved_id> :se_setprops dims = (385.0, 42.0)
+			<info_container> :SE_SetProps pos = {((0.0, -1.0) * <difference>) relative}
+			<resolved_id> :SE_SetProps dims = (385.0, 42.0)
 			break
 		endif
-		<resolved_id> :se_setprops dims = (((0.0, 1.0) * <dim_y>) + (385.0, 0.0))
-		<info_container> :se_setprops pos = {(0.0, -45.0) relative}
-		wait \{1
+		<resolved_id> :SE_SetProps dims = (((0.0, 1.0) * <dim_y>) + (385.0, 0.0))
+		<info_container> :SE_SetProps pos = {(0.0, -45.0) relative}
+		Wait \{1
 			gameframe}
 		repeat
-		if friendslistinterface :desc_resolvealias \{name = alias_left_side_vscollingmenu}
-			<resolved_id> :se_setprops dims = (256.0, 215.0)
+		if FriendsListInterface :Desc_ResolveAlias \{name = alias_left_side_vscollingmenu}
+			<resolved_id> :SE_SetProps dims = (256.0, 215.0)
 		endif
-		launchevent type = focus target = <menu_id> data = {child_index = (<menu_index>)}
+		LaunchEvent type = focus target = <menu_id> data = {child_index = (<menu_index>)}
 	endif
 endscript
 
 script invite_to_game 
-	requireparams \{[
+	RequireParams \{[
 			instrument
 		]
 		all}
-	invite_title = qs(0x2f992815)
-	base_msg = qs(0xd1038405)
+	invite_title = qs("GHWT Invite")
+	base_msg = qs("Join me in Guitar Hero World Tour with your ")
 	switch (<instrument>)
 		case guitar
-		formattext textname = invite_msg qs(0xb3a143ba) s = <base_msg> i = qs(0xbaa820f9)
+		FormatText TextName = invite_msg qs("%s %i") s = <base_msg> i = qs("Guitar.")
 		case drum
-		formattext textname = invite_msg qs(0xb3a143ba) s = <base_msg> i = qs(0x67a46594)
+		FormatText TextName = invite_msg qs("%s %i") s = <base_msg> i = qs("Drums.")
 		case mic
-		formattext textname = invite_msg qs(0xb3a143ba) s = <base_msg> i = qs(0x252af8f9)
+		FormatText TextName = invite_msg qs("%s %i") s = <base_msg> i = qs("Mic.")
 	endswitch
-	userlist = [
+	userList = [
 		{
 			name = <name>
 			id = <net_id>
 		}
 	]
-	netsessionfunc func = createcustominvite params = {
-		userlist = <userlist>
+	NetSessionFunc func = CreateCustomInvite params = {
+		userList = <userList>
 		game_msg = <invite_msg>
 		title = <invite_title>
 		game_specific = <instrument>
 		device_num = <device_num>
 	}
-	if isxenon
-		gamemode_gettype
+	if isXenon
+		GameMode_GetType
 		if (<type> = career)
-			if screenelementexists \{id = myinterfaceelement}
-				myinterfaceelement :obj_spawnscriptnow create_invite_sent_dialog params = {menu_index = <menu_index>}
+			if ScreenElementExists \{id = MyInterfaceElement}
+				MyInterfaceElement :Obj_SpawnScriptNow create_invite_sent_dialog params = {menu_index = <menu_index>}
 			endif
 		else
-			my_parent = friendslistinterface
-			if screenelementexists \{id = onlinelobbyinterface}
-				<my_parent> = onlinelobbyinterface
+			my_parent = FriendsListInterface
+			if ScreenElementExists \{id = OnlineLobbyInterface}
+				<my_parent> = OnlineLobbyInterface
 			endif
-			<my_parent> :obj_spawnscriptnow create_invite_sent_dialog
+			<my_parent> :Obj_SpawnScriptNow create_invite_sent_dialog
 			destroy_friendslist_submenu
 		endif
 	else
@@ -625,21 +625,21 @@ script invite_to_game
 endscript
 
 script create_invite_sent_dialog 
-	gamemode_gettype
+	GameMode_GetType
 	if (<type> = career)
-		getscreenelementzpriority \{id = myinterfaceelement}
+		GetScreenElementZPriority \{id = MyInterfaceElement}
 	else
-		getscreenelementzpriority \{id = friendslistinterface}
+		GetScreenElementZPriority \{id = FriendsListInterface}
 	endif
 	begin
-	if NOT (screenelementexists id = invite_sent_container)
+	if NOT (ScreenElementExists id = invite_sent_container)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	if (<type> = career)
-		my_parent = myinterfaceelement
+		my_parent = MyInterfaceElement
 		switch <menu_index>
 			case 0
 			change \{invite_sent_display_position = (250.0, 290.0)}
@@ -652,14 +652,14 @@ script create_invite_sent_dialog
 		endswitch
 		scale = 0.7
 	else
-		my_parent = friendslistinterface
-		if screenelementexists \{id = onlinelobbyinterface}
-			<my_parent> = onlinelobbyinterface
+		my_parent = FriendsListInterface
+		if ScreenElementExists \{id = OnlineLobbyInterface}
+			<my_parent> = OnlineLobbyInterface
 		endif
 		scale = 1.0
 	endif
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		id = invite_sent_container
 		parent = <my_parent>
 		pos = $invite_sent_display_position
@@ -668,33 +668,33 @@ script create_invite_sent_dialog
 		just = [center , center]
 		tags = {debug_me}
 	}
-	createscreenelement {
+	CreateScreenElement {
 		parent = invite_sent_container
-		id = invitesentinterface
-		type = descinterface
+		id = InviteSentInterface
+		type = DescInterface
 		desc = 'container_gamer_invite'
 		pos = (0.0, 0.0)
 		dims = (100.0, 100.0)
 		scale = <scale>
 		just = [center , center]
 	}
-	invite_sent_container :se_setprops \{alpha = 1.0
+	invite_sent_container :SE_SetProps \{alpha = 1.0
 		time = 1.0}
-	invite_sent_container :se_waitprops
-	wait \{1.0
+	invite_sent_container :SE_WaitProps
+	Wait \{1.0
 		second}
-	invite_sent_container :se_setprops \{alpha = 0.0
+	invite_sent_container :SE_SetProps \{alpha = 0.0
 		time = 1.0}
-	invite_sent_container :se_waitprops
-	if screenelementexists \{id = invite_sent_container}
-		destroyscreenelement \{id = invite_sent_container}
+	invite_sent_container :SE_WaitProps
+	if ScreenElementExists \{id = invite_sent_container}
+		DestroyScreenElement \{id = invite_sent_container}
 	endif
 	change \{invite_sent_display_position = (640.0, 360.0)}
 endscript
 
-script 0x2aa43ff4 
+script winport_search_for_friends_game 
 	printf \{qs(0xafafb7d6)}
-	requireparams \{[
+	RequireParams \{[
 			net_id
 			name
 		]
@@ -703,60 +703,60 @@ script 0x2aa43ff4
 		params = {
 			no_focus
 		}}
-	setnetworkpreference \{field = 'private_slots'
+	SetNetworkPreference \{field = 'private_slots'
 		num = 0
 		string = qs(0xaec7c1fb)}
-	netsessionfunc func = 0xe2e0930f params = {0x61afa310 = <name>}
-	change gprivatematchid = <privatematchid>
+	NetSessionFunc func = SetPrivateMatchId params = {privateMatchName = <name>}
+	change gPrivateMatchId = <privateMatchId>
 	printf qs(0x348b06ae) b = <name>
-	printf qs(0x6dc50ba4) b = <privatematchid>
-	spawnscriptnow start_matchmaking params = {<...> privatematchid = <privatematchid>}
+	printf qs(0x6dc50ba4) b = <privateMatchId>
+	spawnscriptnow start_matchmaking params = {<...> privateMatchId = <privateMatchId>}
 endscript
 
-script 0x2b3f388f 
+script winport_add_friend 
 	printf \{qs(0xdd9a6742)}
-	0x70ada6f7 \{0x007e14f4 = online}
+	ui_create_winport_add_friend \{winport_from = online}
 endscript
 
-script 0xf51827ee 
+script winport_remove_friend 
 	printf \{qs(0x866e4e1c)}
-	if screenelementexists \{id = friendslistinterface}
-		friendslistinterface :gettags
-		getarraysize <friendlist>
-		if friendslistinterface :desc_resolvealias \{name = alias_left_side_vmenu}
-			menu_getselectedindex
+	if ScreenElementExists \{id = FriendsListInterface}
+		FriendsListInterface :GetTags
+		GetArraySize <friendList>
+		if FriendsListInterface :Desc_ResolveAlias \{name = alias_left_side_vmenu}
+			Menu_GetSelectedIndex
 			if ((<array_size> > 0) && (<selected_index> < <array_size>))
-				netsessionfunc func = 0x9d862ba3 params = {name = (<friendlist> [<selected_index>].name)}
+				NetSessionFunc func = RemoveFriend params = {name = (<friendList> [<selected_index>].name)}
 				ui_destroy_friends_list
 			endif
 		endif
 	endif
 endscript
 
-script 0xaf30d9b5 
+script winport_refresh_friendslist_submenu 
 	printf \{qs(0x9fca7322)}
-	if screenelementexists \{id = friendslistinterface}
+	if ScreenElementExists \{id = FriendsListInterface}
 		ui_destroy_friends_list \{no_focus}
-		ui_create_friends_list device_num = <device_num> exit_script = 0x9e1e06e3
+		ui_create_friends_list device_num = <device_num> exit_script = winport_blank_exit_script
 	endif
 endscript
 
-script 0x9e1e06e3 
+script winport_blank_exit_script 
 endscript
 
-script 0x70ada6f7 
+script ui_create_winport_add_friend 
 	printf \{qs(0x601c29b9)}
-	requireparams \{[
-			0x007e14f4
+	RequireParams \{[
+			winport_from
 		]
 		all}
 	z = 110
 	create_menu_backdrop \{texture = xb_online_bg}
 	ui_event_wait event = menu_replace data = {
-		state = 0xe4d2b7e7
-		mode = addfriend
-		0x007e14f4 = <0x007e14f4>
+		state = UIstate_winport_account_management_screen
+		mode = AddFriend
+		winport_from = <winport_from>
 		title = qs(0xc29d3992)
-		container = accountlogincontainer
+		container = accountLoginContainer
 	}
 endscript

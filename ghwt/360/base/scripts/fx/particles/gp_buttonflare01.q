@@ -1,25 +1,25 @@
 GP_ButtonFlare01 = {
-	Pos = (198.65863, -99.2301, 4.6877437)
-	Angles = (0.0, 0.0, 0.0)
+	pos = (198.65863, -99.2301, 4.6877437)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
 	EmitRangeDims = (0.0, 0.0, 0.0)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, 0.0, 0.0)
+	force = (0.0, 0.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	AngleSpread = 45.0
 	LifeRange = (0.7, 0.7)
-	Emit_Rate = 1.0
-	Max = 1
+	emit_rate = 1.0
+	max = 1
 	TimeSeed = 0.0
-	LifeTime = 0.0
-	EmitNum = 1
+	lifeTime = 0.0
+	emitNum = 1
 	FollowEmitter = 1.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -33,15 +33,15 @@ GP_ButtonFlare01 = {
 	EmitDelayStart = 0.0
 	PathFollowTime = 0.0
 	History = 2
-	HistoryListCoordinateSpace = World
-	Color = -73
+	HistoryListCoordinateSpace = world
+	color = -73
 	LOD_Default
 	QuickMaterial = {
 		DiffuseTextureEnabled
 		DiffuseTexture = JOW_ButtonFlare01
 		SpecularPower = 0
-		AlphaCutoff = 1
-		BlendMode = add
+		alphacutoff = 1
+		blendMode = Add
 		QuadAnimationFPS = 0
 	}
 	Knot = [

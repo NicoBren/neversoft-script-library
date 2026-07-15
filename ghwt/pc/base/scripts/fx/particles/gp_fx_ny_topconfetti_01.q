@@ -1,55 +1,55 @@
-gp_fx_ny_topconfetti_01 = {
+GP_FX_NY_TopConfetti_01 = {
 	pos = (-0.080984, 11.183571, -1.075006)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	emitrangedims = (1.0, 1.0, 1.0)
-	docircularemit
-	emit_target = (0.0, 0.3, 0.2)
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	EmitRangeDims = (1.0, 1.0, 1.0)
+	DoCircularEmit
+	emit_Target = (0.0, 0.3, 0.2)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, -1.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 70.0
-	liferange = (5.0, 7.0)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 70.0
+	LifeRange = (5.0, 7.0)
 	emit_rate = 400.0
 	max = 0
-	timeseed = 1.0
-	lifetime = 3.0
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 1.0
+	lifeTime = 3.0
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.1, 0.1)
 		(0.1, 0.1)
 	]
-	speedrange = (1.2, 3.0)
-	rotvel = (5.0, -5.0)
-	rotveltimescale = 1.0
-	emitdelaystart = 0.0
-	pathfollowtime = 0.0
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (1.2, 3.0)
+	RotVel = (5.0, -5.0)
+	RotVelTimeScale = 1.0
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.0
+	History = 2
+	HistoryListCoordinateSpace = world
 	align_to = (1.0, 0.0, 0.0)
-	rotate3d
+	Rotate3D
 	color = -1
-	lod_default
-	quickmaterial = {
-		texturelayout = layout2x2
-		diffusetextureenabled
-		diffusetexture = jow_confetti01
-		specularpower = 0
-		twoside
+	LOD_Default
+	QuickMaterial = {
+		TextureLayout = Layout2x2
+		DiffuseTextureEnabled
+		DiffuseTexture = JOW_Confetti01
+		SpecularPower = 0
+		TwoSide
 		alphacutoff = 1
-		blendmode = blend
-		quadanimationfps = 0
+		blendMode = blend
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-1.1173441, 0.0, -0.0)
 		(-1.1173441, 0.0, -0.0)
 		(-0.965606, 0.0, -0.0)
@@ -63,7 +63,7 @@ gp_fx_ny_topconfetti_01 = {
 		(1.200111, 0.0, -0.0)
 		(1.200111, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-1
 		-1
 		-1
@@ -73,7 +73,7 @@ gp_fx_ny_topconfetti_01 = {
 		-1
 		-1
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.196428
 		0.7321429
 		1.0

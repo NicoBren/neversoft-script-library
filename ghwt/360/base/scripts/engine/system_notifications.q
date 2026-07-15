@@ -8,24 +8,24 @@ script sysnotify_wait_until_safe
 	<should_wait> = 0
 	if SystemUIDelayed
 		<should_wait> = 1
-		printf \{qs(0xd1fc043b)}
+		printf \{qs("\LWAITING FOR SYSTEM UI")}
 	endif
 	if IsTrue \{$is_changing_levels}
 		<should_wait> = 1
-		printf \{qs(0x5715648c)}
+		printf \{qs("\LWAITING FOR ISCHANGINGLEVELS")}
 	endif
 	if IsTrue \{$igc_playing}
 		<should_wait> = 1
-		printf \{qs(0x3e8990f4)}
+		printf \{qs("\LWAITING FOR IGC")}
 	endif
-	if NOT CutsceneFinished \{Name = cutscene}
+	if NOT CutsceneFinished \{name = cutscene}
 		<should_wait> = 1
-		printf \{qs(0x30949f69)}
+		printf \{qs("\LWAITING FOR CUTSCENE")}
 	endif
 	if ($ui_pro_success_screen_active = 0)
 		if ScreenElementExists \{id = screenfader}
 			<should_wait> = 1
-			printf \{qs(0xb27f946b)}
+			printf \{qs("\LWAITING FOR SCREENFADER")}
 		endif
 	endif
 	if NOT GotParam \{ignore_connection_loss}
@@ -34,11 +34,11 @@ script sysnotify_wait_until_safe
 		endif
 	endif
 	if (<should_wait> = 1)
-		Change \{sysnotify_wait_in_progress = 1}
+		change \{sysnotify_wait_in_progress = 1}
 		Wait \{0.1
-			Seconds}
+			seconds}
 	else
-		Change \{sysnotify_wait_in_progress = 0}
+		change \{sysnotify_wait_in_progress = 0}
 		return
 	endif
 	repeat
@@ -53,24 +53,24 @@ sysnotify_paused_controllers = [
 ]
 
 script sysnotify_handle_pause_controller 
-	setscriptcannotpause
-	printf \{qs(0x86fbe77a)}
-	printf \{qs(0x9eceeeee)}
-	printf \{qs(0x86fbe77a)}
+	SetScriptCannotPause
+	printf \{qs("\L---------------------------------")}
+	printf \{qs("\Lsysnotify_handle_pause_controller")}
+	printf \{qs("\L---------------------------------")}
 	GetArraySize \{$sysnotify_paused_controllers}
-	original_array_size = <array_Size>
-	if (<array_Size> > 0)
+	original_array_size = <array_size>
+	if (<array_size> > 0)
 		i = 0
 		begin
 		if (($sysnotify_paused_controllers [<i>]) = <device_num>)
 			return
 		endif
 		i = (<i> + 1)
-		repeat <array_Size>
+		repeat <array_size>
 	endif
 	array = $sysnotify_paused_controllers
 	AddArrayElement array = <array> element = <device_num>
-	Change sysnotify_paused_controllers = <array>
+	change sysnotify_paused_controllers = <array>
 	if (<original_array_size> > 0)
 		return
 	endif
@@ -80,29 +80,29 @@ script sysnotify_handle_pause_controller
 		endif
 	endif
 	if ui_event_exists_in_stack \{above = 'gameplay'
-			Name = 'pausemenu'}
+			name = 'pausemenu'}
 		return
 	elseif ui_event_exists_in_stack \{above = 'gameplay'
-			Name = 'song_unpause'}
+			name = 'song_unpause'}
 		ui_event_block \{event = menu_back}
 		PauseGame
 	elseif ui_event_exists_in_stack \{above = 'gameplay'
-			Name = 'fail_song'}
+			name = 'fail_song'}
 		return
 	elseif ui_event_exists_in_stack \{above = 'gameplay'
-			Name = 'song_breakdown'}
+			name = 'song_breakdown'}
 		return
 	elseif ui_event_exists_in_stack \{above = 'gameplay'
-			Name = 'controller_disconnect'}
+			name = 'controller_disconnect'}
 		return
 	elseif ui_event_exists_in_stack \{above = 'gameplay'
-			Name = 'options_calibrate_lag_warning'}
+			name = 'options_calibrate_lag_warning'}
 		return
 	elseif ui_event_exists_in_stack \{above = 'gameplay'
-			Name = 'encore_confirmation'}
+			name = 'encore_confirmation'}
 		return
 	elseif ui_event_exists_in_stack \{above = 'gameplay'
-			Name = 'pausemenu_quit_warning'}
+			name = 'pausemenu_quit_warning'}
 		return
 	elseif ($g_tutorial_pause_is_up = 1)
 		tutorial_close_pause_window \{dont_unpause}
@@ -115,19 +115,19 @@ script sysnotify_handle_pause_controller
 endscript
 
 script sysnotify_handle_pause_console 
-	printf \{qs(0x28151c2d)}
-	printf \{qs(0xca555308)}
-	printf \{qs(0x28151c2d)}
-	if isps3
+	printf \{qs("\L------------------------------")}
+	printf \{qs("\Lsysnotify_handle_pause_console")}
+	printf \{qs("\L------------------------------")}
+	if IsPs3
 		fade_overlay_on \{alpha = 1.0}
 	endif
 	sysnotify_handle_pause <...>
 endscript
 
 script sysnotify_handle_pause 
-	printf \{qs(0xab786eba)}
-	printf \{qs(0xea2c5792)}
-	printf \{qs(0xab786eba)}
+	printf \{qs("\L----------------------")}
+	printf \{qs("\Lsysnotify_handle_pause")}
+	printf \{qs("\L----------------------")}
 	if ($allow_console_pause_for_cal_lag = 1)
 		setup_calibration_lag_none
 		ui_event \{event = menu_refresh}
@@ -141,12 +141,12 @@ script sysnotify_handle_pause
 	SetButtonEventMappings \{block_menu_input}
 	sysnotify_wait_until_safe
 	ui_event_wait_for_safe
-	Change \{paused_for_hardware = 1}
-	Change \{blade_active = 1}
+	change \{paused_for_hardware = 1}
+	change \{blade_active = 1}
 	if GameIsPaused
-		printf \{qs(0xfb887cbe)}
+		printf \{qs("\LGame is already paused")}
 		if ui_event_exists_in_stack \{above = 'gameplay'
-				Name = 'song_unpause'}
+				name = 'song_unpause'}
 			ui_song_unpause_repause \{from_system}
 		endif
 		return
@@ -172,52 +172,52 @@ script sysnotify_handle_pause
 endscript
 
 script sysnotify_handle_unpause_eject 
-	if isps3
+	if IsPs3
 		kill_notify_box \{container_id = notify_eject_static_text_container}
 		fade_overlay_off
 	endif
 	if (($is_network_game) || ($g_connection_loss_dialogue))
-		UnPauseGh3Sounds \{seek_on_unpause}
+		UnpauseGh3Sounds \{seek_on_unpause}
 	endif
 	SetButtonEventMappings \{unblock_menu_input}
 	sysnotify_handle_unpause <...> seek_on_unpause
 endscript
 
 script sysnotify_handle_unpause_controller 
-	printf \{qs(0x29ceb5b2)}
-	printf \{qs(0xbc17ac78)}
-	printf \{qs(0x29ceb5b2)}
+	printf \{qs("\L-----------------------------------")}
+	printf \{qs("\Lsysnotify_handle_unpause_controller")}
+	printf \{qs("\L-----------------------------------")}
 	GetArraySize \{$sysnotify_paused_controllers}
-	if (<array_Size> > 0)
+	if (<array_size> > 0)
 		i = 0
 		begin
 		if (($sysnotify_paused_controllers [<i>]) = <device_num>)
 			array = $sysnotify_paused_controllers
 			RemoveArrayElement array = <array> index = <i>
-			Change sysnotify_paused_controllers = <array>
+			change sysnotify_paused_controllers = <array>
 			break
 		endif
 		i = (<i> + 1)
-		repeat <array_Size>
-		if (<i> = <array_Size>)
+		repeat <array_size>
+		if (<i> = <array_size>)
 			return
 		endif
 	endif
 	GetArraySize \{$sysnotify_paused_controllers}
-	if (<array_Size> > 0)
+	if (<array_size> > 0)
 		return
 	endif
 	if NOT ($playing_song)
 		return
 	endif
-	setsystemnotificationposition Pos = ($sysnotify_ingame_position)
+	SetSystemNotificationPosition pos = ($sysnotify_ingame_position)
 endscript
 
 script sysnotify_handle_unpause_console 
-	printf \{qs(0x37164e15)}
-	printf \{qs(0x1ba67f36)}
-	printf \{qs(0x37164e15)}
-	if isps3
+	printf \{qs("\L--------------------------------")}
+	printf \{qs("\Lsysnotify_handle_unpause_console")}
+	printf \{qs("\L--------------------------------")}
+	if IsPs3
 		fade_overlay_off
 		ReAcquireControllers
 	endif
@@ -225,18 +225,18 @@ script sysnotify_handle_unpause_console
 endscript
 
 script sysnotify_handle_unpause 
-	printf \{qs(0xe416ec46)}
-	printf \{qs(0x4b02efd7)}
-	printf \{qs(0xe416ec46)}
-	Change \{wait_for_sysnotify_unpause_flag = 1}
+	printf \{qs("\L------------------------")}
+	printf \{qs("\Lsysnotify_handle_unpause")}
+	printf \{qs("\L------------------------")}
+	change \{wait_for_sysnotify_unpause_flag = 1}
 	SetButtonEventMappings \{unblock_menu_input}
 	sysnotify_wait_until_safe
 	if ($end_credits = 1)
 		do_gh3_unpause
 	endif
 	ui_event_wait_for_safe
-	Change \{paused_for_hardware = 0}
-	Change \{blade_active = 0}
+	change \{paused_for_hardware = 0}
+	change \{blade_active = 0}
 	if (($is_network_game) || ($g_connection_loss_dialogue))
 		return
 	endif
@@ -253,28 +253,28 @@ script sysnotify_handle_unpause
 		do_gh3_unpause
 		return
 	elseif ui_event_exists_in_stack \{above = 'gameplay'
-			Name = 'pausemenu'}
+			name = 'pausemenu'}
 		return
 	elseif ui_event_exists_in_stack \{above = 'gameplay'
-			Name = 'controller_disconnect'}
+			name = 'controller_disconnect'}
 		return
 	elseif ui_event_exists_in_stack \{above = 'gameplay'
-			Name = 'pausemenu_quit_warning'}
+			name = 'pausemenu_quit_warning'}
 		return
 	elseif ui_event_exists_in_stack \{above = 'gameplay'
-			Name = 'song_breakdown'}
+			name = 'song_breakdown'}
 		return
 	elseif ui_event_exists_in_stack \{above = 'gameplay'
-			Name = 'fail_song'}
+			name = 'fail_song'}
 		return
 	elseif ui_event_exists_in_stack \{above = 'gameplay'
-			Name = 'options_calibrate_lag'}
+			name = 'options_calibrate_lag'}
 		return
 	elseif ui_event_exists_in_stack \{above = 'gameplay'
-			Name = 'options_calibrate_lag_warning'}
+			name = 'options_calibrate_lag_warning'}
 		return
 	elseif ui_event_exists_in_stack \{above = 'gameplay'
-			Name = 'encore_confirmation'}
+			name = 'encore_confirmation'}
 		return
 	endif
 	if ($playing_song = 1)
@@ -295,21 +295,21 @@ ps3_fade_overlay_z = 509000
 ps3_fader_started_rendering = 0
 
 script fade_overlay_on \{alpha = 0.9}
-	if isps3
+	if IsPs3
 		if NOT ScreenElementExists \{id = pause_fader}
 			if ($rendering_has_been_stopped_explicit = true)
 				if ($ps3_fader_started_rendering = 0)
-					StartRendering \{reason = explicit}
-					Change \{ps3_fader_started_rendering = 1}
+					startrendering \{reason = explicit}
+					change \{ps3_fader_started_rendering = 1}
 				endif
 			endif
 			CreateScreenElement {
-				Type = SpriteElement
+				type = SpriteElement
 				id = pause_fader
 				parent = root_window
 				texture = black
 				rgba = [0 0 0 255]
-				Pos = (640.0, 360.0)
+				pos = (640.0, 360.0)
 				dims = (1280.0, 720.0)
 				just = [center center]
 				z_priority = $ps3_fade_overlay_z
@@ -317,7 +317,7 @@ script fade_overlay_on \{alpha = 0.9}
 			}
 		endif
 		printscriptinfo \{'fade_overlay_on'}
-		Change fade_overlay_count = ($fade_overlay_count + 1)
+		change fade_overlay_count = ($fade_overlay_count + 1)
 		if ($fade_overlay_count > 16)
 			ScriptAssert \{'fade_overlay_count is suspiciously high'}
 		endif
@@ -325,17 +325,17 @@ script fade_overlay_on \{alpha = 0.9}
 endscript
 
 script fade_overlay_off 
-	if isps3
+	if IsPs3
 		printscriptinfo \{'fade_overlay_off'}
 		if ($fade_overlay_count <= 0)
 			return
 		endif
-		Change fade_overlay_count = ($fade_overlay_count - 1)
+		change fade_overlay_count = ($fade_overlay_count - 1)
 		if ($fade_overlay_count <= 0)
 			if ScreenElementExists \{id = pause_fader}
 				if ($ps3_fader_started_rendering = 1)
-					Change \{ps3_fader_started_rendering = 0}
-					StopRendering \{reason = explicit}
+					change \{ps3_fader_started_rendering = 0}
+					stoprendering \{reason = explicit}
 				endif
 				DestroyScreenElement \{id = pause_fader}
 			endif
@@ -345,25 +345,25 @@ endscript
 signin_change_happening = 0
 
 script sysnotify_handle_signin_change 
-	printf \{qs(0x37164e15)}
-	printf qs(0xb6c3d3e1) d = <controller>
-	printf \{qs(0x37164e15)}
-	Change \{invite_controller = -1}
+	printf \{qs("\L--------------------------------")}
+	printf qs("\Lsysnotify_handle_signin_change %d") d = <controller>
+	printf \{qs("\L--------------------------------")}
+	change \{invite_controller = -1}
 	if ($signin_change_happening = 1)
-		printf \{qs(0x0638d32c)}
+		printf \{qs("\LALREADY BEING PROCESSED")}
 		return
 	endif
-	Change \{signin_change_happening = 1}
+	change \{signin_change_happening = 1}
 	sysnotify_wait_until_safe
 	if ($ui_x360_sign_in_checked = 1)
-		Change \{ui_x360_sign_in_checked = 0}
-		Change \{signin_change_happening = 0}
+		change \{ui_x360_sign_in_checked = 0}
+		change \{signin_change_happening = 0}
 		return
 	endif
 	switch <message>
 		case live_connection_lost
 		if NOT ($is_network_game)
-			Change \{signin_change_happening = 0}
+			change \{signin_change_happening = 0}
 			return
 		else
 			sysnotify_handle_connection_loss
@@ -371,77 +371,77 @@ script sysnotify_handle_signin_change
 		case live_connection_gained
 		if (($playing_song) && ($is_network_game = 0))
 			xenon_singleplayer_session_init
-			Change \{signin_change_happening = 0}
+			change \{signin_change_happening = 0}
 			return
 		else
-			Change \{signin_change_happening = 0}
+			change \{signin_change_happening = 0}
 			return
 		endif
 		case user_changed
-		printf \{qs(0x55e8f027)}
+		printf \{qs("\Lsysnotify_handle_signin_change - user changed")}
 		if ($respond_to_signin_changed = 1)
 			if (<controller> = ($primary_controller))
-				printf \{qs(0xe2600322)}
+				printf \{qs("\Lsysnotify_handle_signin_change - user changed - primary")}
 				handle_signin_changed
 			else
 				if ($respond_to_signin_changed_all_players = 1)
-					printf \{qs(0x208051b4)}
+					printf \{qs("\Lsysnotify_handle_signin_change - user changed - all_players ")}
 					if ($is_network_game)
 						get_local_players_in_game
 					else
-						gamemode_getnumplayersshown
+						GameMode_GetNumPlayersShown
 						num_local_players = <num_players_shown>
 					endif
 					index = 1
 					if (<num_local_players> > 0)
 						begin
-						formatText checksumName = player_status 'player%d_status' d = <index>
+						FormatText checksumname = player_status 'player%d_status' d = <index>
 						printstruct <...>
 						if ($<player_status>.controller = <controller>)
-							printf qs(0x3c569072) i = <index> c = <controller>
+							printf qs("\Lsysnotify_handle_signin_change - user changed - secondary %i %c") i = <index> c = <controller>
 							handle_signin_changed
-							Change \{signin_change_happening = 0}
+							change \{signin_change_happening = 0}
 							return
 						endif
 						index = (<index> + 1)
 						repeat <num_local_players>
 					endif
 					if ($playing_song = 1)
-						removecontentfiles playerid = <controller>
+						RemoveContentFiles playerid = <controller>
 						mark_globaltags_to_invalidate savegame = <controller>
 						cheat_turnoffalllocked
 					else
-						removecontentfiles playerid = <controller>
+						RemoveContentFiles playerid = <controller>
 						reset_globaltags savegame = <controller>
 						cheat_turnoffalllocked
 					endif
 				else
-					printf \{qs(0x6ff28a99)}
-					removecontentfiles playerid = <controller>
+					printf \{qs("\Lsysnotify_handle_signin_change - user changed - all_players resetting")}
+					RemoveContentFiles playerid = <controller>
 					reset_globaltags savegame = <controller>
 					cheat_turnoffalllocked
 				endif
 			endif
 		else
-			printf \{qs(0x229ab93a)}
-			if NOT ($respond_to_signin_changed_func = None)
+			printf \{qs("\Lrespond_to_signin_changed_func")}
+			if NOT ($respond_to_signin_changed_func = none)
 				func = ($respond_to_signin_changed_func)
 				<func> <...>
 			endif
 		endif
 		default
-		printf \{qs(0x57f6e4e8)}
-		Change \{signin_change_happening = 0}
+		printf \{qs("\L- no response required")}
+		change \{signin_change_happening = 0}
 		return
 	endswitch
-	Change \{signin_change_happening = 0}
+	change \{signin_change_happening = 0}
 endscript
 sysnotify_allow_invite = 1
 
 script sysnotify_handle_game_invite 
-	printf \{qs(0x881acbf3)}
-	printf \{qs(0xd1557fb9)}
-	printf \{qs(0x881acbf3)}
+	printf \{qs("\L----------------------------")}
+	printf \{qs("\Lsysnotify_handle_game_invite")}
+	printf \{qs("\L----------------------------")}
 	sysnotify_invite_go <...>
 endscript
 
@@ -451,7 +451,7 @@ script sysnotify_invite_cancel
 endscript
 
 script sysnotify_invite_go 
-	printf \{qs(0x37c2017f)}
+	printf \{qs("\L----sysnotify_invite_go")}
 	if GotParam \{cross_game}
 		cross_game_invite_accepted <...>
 	else
@@ -465,19 +465,19 @@ endscript
 g_connection_loss_dialogue = 0
 
 script sysnotify_handle_connection_loss 
-	printf \{qs(0x37164e15)}
-	printf \{qs(0x6d5c96e2)}
-	printf \{qs(0x37164e15)}
+	printf \{qs("\L--------------------------------")}
+	printf \{qs("\Lsysnotify_handle_connection_loss")}
+	printf \{qs("\L--------------------------------")}
 	printstruct <...>
-	Change \{g_connection_loss_dialogue = 1}
+	change \{g_connection_loss_dialogue = 1}
 	destroy_player_drop_events
-	Change \{net_ready_to_start = 1}
+	change \{net_ready_to_start = 1}
 	destroy_net_setup
 	sysnotify_wait_until_safe \{ignore_connection_loss}
 	wait_for_safe_shutdown
 	displaySprite \{parent = root_window
 		tex = boot_brick_bg
-		Pos = (640.0, 360.0)
+		pos = (640.0, 360.0)
 		dims = (1280.0, 720.0)
 		just = [
 			center
@@ -489,7 +489,7 @@ script sysnotify_handle_connection_loss
 	ui_event_wait_for_safe
 	ui_event_block \{event = menu_back
 		data = {
-			state = uistate_null
+			state = UIstate_Null
 		}}
 	xboxlive_lost_connection_ui_cleanup
 	ui_event_block event = menu_replace data = {state = uistate_connection_loss clear_previous_stack <...>}
@@ -503,52 +503,52 @@ script notify_box \{scale1 = 0.75
 		return
 	endif
 	CreateScreenElement {
-		Type = ContainerElement
+		type = ContainerElement
 		parent = root_window
 		id = <container_id>
-		Pos = <container_pos>
+		pos = <container_pos>
 	}
 	menu_font = fontgrid_title_a1
 	if GotParam \{line3}
-		displaySprite parent = <container_id> tex = dialog_menu_bg Pos = (640.0, 24.0) Scale = (3.0, 2.0) z = <menu_z> just = [center top]
-		displaySprite parent = <container_id> tex = dialog_menu_bg flip_h Pos = (640.0, 120.0) Scale = (3.0, 2.0) z = <menu_z> just = [center top]
+		displaySprite parent = <container_id> tex = dialog_menu_bg pos = (640.0, 24.0) scale = (3.0, 2.0) z = <menu_z> just = [center top]
+		displaySprite parent = <container_id> tex = dialog_menu_bg flip_h pos = (640.0, 120.0) scale = (3.0, 2.0) z = <menu_z> just = [center top]
 	else
-		displaySprite parent = <container_id> tex = dialog_menu_bg Pos = (640.0, 32.0) Scale = (3.0, 1.5) z = <menu_z> just = [center top]
-		displaySprite parent = <container_id> tex = dialog_menu_bg flip_h Pos = (640.0, 112.0) Scale = (3.0, 1.5) z = <menu_z> just = [center top]
+		displaySprite parent = <container_id> tex = dialog_menu_bg pos = (640.0, 32.0) scale = (3.0, 1.5) z = <menu_z> just = [center top]
+		displaySprite parent = <container_id> tex = dialog_menu_bg flip_h pos = (640.0, 112.0) scale = (3.0, 1.5) z = <menu_z> just = [center top]
 	endif
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = <container_id>
 		font = <menu_font>
-		Scale = <scale1>
+		scale = <scale1>
 		rgba = [180 50 50 255]
 		text = <line1>
 		just = [center top]
 		z_priority = (<menu_z> + 0.2)
-		Pos = (640.0, 80.0)
+		pos = (640.0, 80.0)
 	}
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = <container_id>
 		font = <menu_font>
-		Scale = <scale2>
+		scale = <scale2>
 		rgba = [0 0 0 255]
 		text = <line2>
 		just = [center top]
 		z_priority = (<menu_z> + 0.2)
-		Pos = (640.0, 124.0)
+		pos = (640.0, 124.0)
 	}
 	if GotParam \{line3}
 		CreateScreenElement {
-			Type = TextElement
+			type = TextElement
 			parent = <container_id>
 			font = <menu_font>
-			Scale = <scale2>
+			scale = <scale2>
 			rgba = [0 0 0 255]
 			text = <line3>
 			just = [center top]
 			z_priority = (<menu_z> + 0.2)
-			Pos = (640.0, 160.0)
+			pos = (640.0, 160.0)
 		}
 	endif
 endscript
@@ -561,11 +561,11 @@ endscript
 wait_for_sysnotify_unpause_flag = 0
 
 script wait_for_sysnotify_unpause 
-	Change \{wait_for_sysnotify_unpause_flag = 0}
-	printf \{qs(0x7e1c2c48)
+	change \{wait_for_sysnotify_unpause_flag = 0}
+	printf \{qs("\LWaiting for sysnotify Pause Off")
 		channel = sysnotify}
 	begin
-	printf qs(0xf5e8c2d0) i = ($paused_for_hardware) channel = sysnotify
+	printf qs("\LWaiting for sysnotify paused_for_hardware = %i") i = ($paused_for_hardware) channel = sysnotify
 	if (($wait_for_sysnotify_unpause_flag = 1) && ($paused_for_hardware = 0))
 		break
 	endif
@@ -578,19 +578,19 @@ script xboxlive_lost_connection_ui_cleanup
 	if ($is_network_game)
 		cancel_join_server
 		destroy_connection_dialog_scroller
-		fadetoblack \{On
+		fadetoblack \{on
 			time = 0
 			alpha = 1.0
 			z_priority = 20000
 			id = invite_screenfader}
 		Wait \{1
 			gameframe}
-		StopRendering
+		stoprendering
 		shutdown_game_for_signin_change \{unloadcontent = 0}
-		StartRendering
+		startrendering
 		Wait \{60
 			gameframes}
-		fadetoblack \{OFF
+		fadetoblack \{off
 			time = 0
 			id = invite_screenfader}
 		Wait \{1

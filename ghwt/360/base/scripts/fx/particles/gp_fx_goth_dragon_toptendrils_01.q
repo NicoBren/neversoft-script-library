@@ -1,25 +1,25 @@
-gp_fx_goth_dragon_toptendrils_01 = {
-	Pos = (-3.0256412, -0.074459, 5.09981)
-	Angles = (0.0, 0.0, 0.0)
+GP_FX_Goth_Dragon_TopTendrils_01 = {
+	pos = (-3.0256412, -0.074459, 5.09981)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
 	EmitRangeDims = (0.2, 0.2, 0.2)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, -3.0, 0.0)
+	force = (0.0, -3.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	AngleSpread = 10.0
 	LifeRange = (1.2, 1.2)
-	Emit_Rate = 50.0
-	Max = 0
+	emit_rate = 50.0
+	max = 0
 	TimeSeed = 0.0
-	LifeTime = 2.0
-	EmitNum = 20
+	lifeTime = 2.0
+	emitNum = 20
 	FollowEmitter = 0.0
 	AlwaysEmit
 	EmitFunction = constant
@@ -34,15 +34,15 @@ gp_fx_goth_dragon_toptendrils_01 = {
 	EmitDelayStart = 0.2
 	PathFollowTime = 0.0
 	History = 2
-	HistoryListCoordinateSpace = World
-	Color = -2515201
+	HistoryListCoordinateSpace = world
+	color = -2515201
 	LOD_Default
 	QuickMaterial = {
 		DiffuseTextureEnabled
-		DiffuseTexture = ph_firetendrils
+		DiffuseTexture = PH_FireTendrils
 		SpecularPower = 0
-		AlphaCutoff = 1
-		BlendMode = add
+		alphacutoff = 1
+		blendMode = Add
 		QuadAnimationFPS = 0
 	}
 	Knot = [

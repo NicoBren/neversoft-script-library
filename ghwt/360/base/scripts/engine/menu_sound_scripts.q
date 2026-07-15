@@ -9,23 +9,23 @@ script menu_soundevent_in
 			return
 		else
 			if NOT GotParam \{old_base_name}
-				SoundEvent \{event = menu_career_zoomin}
+				SoundEvent \{event = Menu_Career_ZoomIn}
 			elseif GotParam \{old_base_name}
 				switch <old_base_name>
 					case 'select_practice_mode'
-					SpawnScriptNow \{menu_music_on}
-					Skate8_SFX_Backgrounds_New_Area \{BG_SFX_Area = frontend_menu_music}
+					spawnscriptnow \{menu_music_on}
+					Skate8_SFX_Backgrounds_New_Area \{BG_SFX_Area = FrontEnd_Menu_Music}
 				endswitch
 			endif
 		endif
 		printf \{channel = sfx
-			qs(0x809ac889)}
+			qs("\LGame Mode In")}
 		case 'mainmenu'
-		SpawnScriptNow \{menu_music_panning_vol
+		spawnscriptnow \{Menu_Music_Panning_Vol
 			params = {
 				reset
 			}}
-		Skate8_SFX_Backgrounds_New_Area \{BG_SFX_Area = frontend_menu_music}
+		Skate8_SFX_Backgrounds_New_Area \{BG_SFX_Area = FrontEnd_Menu_Music}
 		if GotParam \{no_camera}
 			return
 		else
@@ -33,17 +33,17 @@ script menu_soundevent_in
 				if GotParam \{old_base_name}
 					switch <old_base_name>
 						case 'select_controller'
-						SoundEvent \{event = menu_headtohead_zoomout}
+						SoundEvent \{event = Menu_HeadToHead_ZoomOut}
 						case 'band_choose'
-						SoundEvent \{event = menu_career_zoomout}
+						SoundEvent \{event = Menu_Career_ZoomOut}
 						case 'game_mode'
-						SoundEvent \{event = menu_career_zoomout}
+						SoundEvent \{event = Menu_Career_ZoomOut}
 						case 'options'
-						SoundEvent \{event = menu_options_zoomout}
+						SoundEvent \{event = Menu_Options_ZoomOut}
 						case 'band_name_enter'
-						SoundEvent \{event = menu_career_zoomout}
+						SoundEvent \{event = Menu_Career_ZoomOut}
 						case 'downloads'
-						SoundEvent \{event = menu_headtohead_zoomout}
+						SoundEvent \{event = Menu_HeadToHead_ZoomOut}
 						case 'jam'
 						menu_music_fade \{in
 							time = 1.01}
@@ -55,13 +55,13 @@ script menu_soundevent_in
 			endif
 		endif
 		printf \{channel = sfx
-			qs(0xb938e98c)}
+			qs("\LMain Menu In")}
 		case 'options'
 		if GotParam \{no_camera}
 			return
 		else
 			if NOT GotParam \{old_base_name}
-				SoundEvent \{event = menu_options_zoomin}
+				SoundEvent \{event = Menu_Options_ZoomIn}
 			endif
 		endif
 		case 'select_controller'
@@ -69,10 +69,10 @@ script menu_soundevent_in
 			return
 		elseif GotParam \{old_base_name}
 			if (<old_base_name> = 'signin_warning')
-				nullsound
+				NullSound
 			endif
 		else
-			SoundEvent \{event = menu_headtohead_zoomin}
+			SoundEvent \{event = Menu_HeadToHead_ZoomIn}
 		endif
 		case 'motd'
 		if GotParam \{no_camera}
@@ -82,49 +82,49 @@ script menu_soundevent_in
 		if GotParam \{no_camera}
 			return
 		else
-			SoundEvent \{event = menu_headtohead_zoomin}
+			SoundEvent \{event = Menu_HeadToHead_ZoomIn}
 		endif
 		case 'select_instrument'
 		if GotParam \{old_base_name}
 			switch <old_base_name>
 				case 'setlist_quit_warning'
 				case 'setlist'
-				SpawnScriptNow \{menu_music_on}
+				spawnscriptnow \{menu_music_on}
 			endswitch
 		endif
 		printf \{channel = sfx
-			qs(0x904de698)}
+			qs("\LSelect Instrument In")}
 		case 'select_difficulty'
 		if GotParam \{old_base_name}
 			switch <old_base_name>
 				case 'character_selection'
-				menu_music_panning_vol \{reset}
+				Menu_Music_Panning_Vol \{reset}
 				case 'singleplayer_character_hub'
-				menu_music_panning_vol \{reset}
+				Menu_Music_Panning_Vol \{reset}
 			endswitch
 		endif
 		printf \{channel = sfx
-			qs(0xf48ac805)}
+			qs("\LSelect Difficulty In")}
 		case 'character_selection'
-		menu_music_panning_vol \{panandlowervol}
+		Menu_Music_Panning_Vol \{panandlowervol}
 		printf \{channel = sfx
-			qs(0x1348bf65)}
+			qs("\LCharacter Selection In")}
 		case 'singleplayer_character_hub'
-		menu_music_panning_vol \{panandlowervol}
+		Menu_Music_Panning_Vol \{panandlowervol}
 		printf \{channel = sfx
-			qs(0x5e1edda0)}
+			qs("\LSingle Player Character Hub In")}
 		case 'customize_character'
 		printf \{channel = sfx
-			qs(0x8a6e76e2)}
+			qs("\LCustomize character In")}
 		case 'customize_character_instrument'
 		printf \{channel = sfx
-			qs(0x997014f4)}
+			qs("\LCustomize Character Instrument In")}
 		case 'cag_main'
 		if GotParam \{back}
 			return
 		endif
 		printf \{channel = sfx
-			qs(0x842de458)}
+			qs("\LCAG Main In")}
 		case 'cadrm_main'
 		if GotParam \{back}
 			return
@@ -138,38 +138,38 @@ script menu_soundevent_in
 			'Create Character Gender In'}
 		case 'options_audio'
 		menu_music_fade \{out
-			Volume = 10
+			volume = 10
 			time = 0.5}
 		case 'band_mode'
 		if GotParam \{old_base_name}
 			switch <old_base_name>
 				case 'setlist'
-				SpawnScriptNow \{menu_music_on}
+				spawnscriptnow \{menu_music_on}
 			endswitch
 		endif
 		case 'character_hub'
 		if GotParam \{old_base_name}
 			switch <old_base_name>
 				case 'setlist'
-				SpawnScriptNow \{menu_music_on}
+				spawnscriptnow \{menu_music_on}
 			endswitch
 		endif
 		case 'online'
 		if GotParam \{old_base_name}
 			switch <old_base_name>
 				case 'online_quit_warning'
-				SpawnScriptNow \{menu_music_on}
+				spawnscriptnow \{menu_music_on}
 			endswitch
 		endif
 		case 'play_song'
 		if NOT ($game_mode = training || $game_mode = tutorial || $game_mode = practice)
-			SpawnScriptNow \{loading_screen_crowd_swell}
+			spawnscriptnow \{Loading_Screen_Crowd_Swell}
 		endif
 		case 'leaderboard_instrument'
 		if GotParam \{old_base_name}
 			switch <old_base_name>
 				case 'setlist'
-				SpawnScriptNow \{menu_music_on}
+				spawnscriptnow \{menu_music_on}
 			endswitch
 		endif
 		default
@@ -183,26 +183,26 @@ script menu_soundevent_out
 	switch (<base_name>)
 		case 'band_choose'
 		printf \{channel = sfx
-			qs(0xd6964400)}
+			qs("\LBand Choose Out")}
 		case 'main_menu'
 		printf \{channel = sfx
-			qs(0x54f2bbd2)}
+			qs("\LMain Menu Out")}
 		case 'game_mode'
 		printf \{channel = sfx
-			qs(0x65ec666b)}
+			qs("\LGame Mode Out")}
 		case 'select_controller'
-		printf \{qs(0x03ac90f0)}
+		printf \{qs("\L")}
 		case 'options'
-		printf \{qs(0x03ac90f0)}
+		printf \{qs("\L")}
 		case 'band_name_enter'
 		printf \{channel = sfx
-			qs(0x57104d21)}
+			qs("\LBand Name Enter Out")}
 		case 'select_instrument'
 		printf \{channel = sfx
-			qs(0xeae35863)}
+			qs("\LSelect Instrument Out")}
 		case 'select_difficulty'
 		printf \{channel = sfx
-			qs(0xf2dac53c)}
+			qs("\LSelect Difficulty Out")}
 		if GotParam \{back}
 			return
 		endif
@@ -219,7 +219,7 @@ script menu_soundevent_out
 					return
 				endif
 			else
-				menu_music_off
+				Menu_Music_Off
 				return
 			endif
 		endif
@@ -227,25 +227,25 @@ script menu_soundevent_out
 		repeat <stack_size>
 		case 'character_selection'
 		printf \{channel = sfx
-			qs(0x5946adc6)}
+			qs("\LCharacter Selection Out")}
 		case 'singleplayer_character_hub'
 		printf \{channel = sfx
-			qs(0x4c77c3ef)}
+			qs("\LSingle Player Character Hub Out")}
 		case 'customize_character'
 		printf \{channel = sfx
-			qs(0xcf3c4078)}
+			qs("\LCustomize character Out")}
 		case 'customize_character_instrument'
 		printf \{channel = sfx
-			qs(0x7018e6c5)}
+			qs("\LCustomize Character Instrument Out")}
 		case 'cag_main'
 		if GotParam \{back}
 			if (<back> = 1)
 				if ((<instrument_info>.desc_id) = guitar)
-					SoundEvent \{event = guitar_affirmation}
-				elseif ((<instrument_info>.desc_id) = bass)
-					SoundEvent \{event = bass_affirmation}
+					SoundEvent \{event = Guitar_Affirmation}
+				elseif ((<instrument_info>.desc_id) = Bass)
+					SoundEvent \{event = Bass_Affirmation}
 				else
-					printf \{qs(0xf12ce5bb)}
+					printf \{qs("\L################### UNKNOWN INSTRUMENT SOUND ###################")}
 				endif
 			endif
 		endif
@@ -256,17 +256,17 @@ script menu_soundevent_out
 		if GotParam \{back}
 			return
 		endif
-		menu_music_off
+		Menu_Music_Off
 		case 'cadrm_main'
 		if GotParam \{back}
 			if (<back> = 1)
-				SoundEvent \{event = drum_affirmation}
+				SoundEvent \{event = Drum_Affirmation}
 			endif
 		endif
 		case 'customize_character_mic'
 		if GotParam \{back}
 			if (<back> = 1)
-				SoundEvent \{event = mic_affirmation}
+				SoundEvent \{event = Mic_Affirmation}
 			endif
 		endif
 		case 'options_audio'

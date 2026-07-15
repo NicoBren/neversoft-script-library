@@ -26,14 +26,14 @@ g_high_scores = [
 ]
 
 script create_net_detailed_stats_menu 
-	Change \{left_column_num_elements = 0}
-	Change left_column_y_end = ($initial_column_y_end)
-	Change \{center_column_num_elements = 0}
-	Change center_column_y_end = ($initial_column_y_end)
-	Change \{right_column_num_elements = 0}
-	Change right_column_y_end = ($initial_column_y_end)
-	Change \{relative_screen_y_position = 0}
-	Change center_column_x = (($left_column_x) + (0.5 * ($right_column_x - $left_column_x)))
+	change \{left_column_num_elements = 0}
+	change left_column_y_end = ($initial_column_y_end)
+	change \{center_column_num_elements = 0}
+	change center_column_y_end = ($initial_column_y_end)
+	change \{right_column_num_elements = 0}
+	change right_column_y_end = ($initial_column_y_end)
+	change \{relative_screen_y_position = 0}
+	change center_column_x = (($left_column_x) + (0.5 * ($right_column_x - $left_column_x)))
 	left_margin = 400
 	right_margin = 800
 	basic_stats_y_offset = 100
@@ -44,52 +44,52 @@ script create_net_detailed_stats_menu
 	p2_stat_internal_just = [right top]
 	p2_stat_x_offset = <right_margin>
 	detailed_stats_create_container
-	if (NetSessionFunc Obj = match func = get_gamertag)
-		add_text_to_column column = 'left' text = <Name> rgba = ($player1_color) dont_force_caps
+	if (NetSessionFunc obj = match func = get_gamertag)
+		add_text_to_column column = 'left' text = <name> rgba = ($player1_color) dont_force_caps
 	endif
 	add_text_to_column \{column = 'center'
-		text = qs(0x03ac90f0)}
+		text = qs("\L")}
 	add_text_to_column \{column = 'right'
-		text = qs(0x03ac90f0)}
+		text = qs("\L")}
 	add_text_to_column \{column = 'left'
-		text = qs(0x03ac90f0)}
+		text = qs("\L")}
 	if ($game_mode = p2_coop)
 		add_text_to_column \{column = 'center'
-			text = qs(0x65e7229a)}
+			text = qs("AND")}
 	else
 		add_text_to_column \{column = 'center'
-			text = qs(0x46551cd6)}
+			text = qs("VS.")}
 	endif
 	add_text_to_column \{column = 'right'
-		text = qs(0x03ac90f0)}
+		text = qs("\L")}
 	add_text_to_column \{column = 'left'
-		text = qs(0x03ac90f0)}
+		text = qs("\L")}
 	add_text_to_column \{column = 'center'
-		text = qs(0x03ac90f0)}
-	if NOT ($opponent_gamertag = NULL)
-		add_text_to_column column = 'right' text = ($opponent_gamertag) rgba = ($player2_color) Scale = (0.75, 1.0) dont_force_caps
+		text = qs("\L")}
+	if NOT ($opponent_gamertag = null)
+		add_text_to_column column = 'right' text = ($opponent_gamertag) rgba = ($player2_color) scale = (0.75, 1.0) dont_force_caps
 	else
-		add_text_to_column column = 'right' text = qs(0x713755f7) rgba = ($player2_color) Scale = (0.75, 1.0) dont_force_caps
+		add_text_to_column column = 'right' text = qs("\L ") rgba = ($player2_color) scale = (0.75, 1.0) dont_force_caps
 	endif
 	add_text_to_column \{column = 'left'
-		text = qs(0x03ac90f0)}
+		text = qs("\L")}
 	add_text_to_column \{column = 'center'
-		text = qs(0x03ac90f0)}
+		text = qs("\L")}
 	add_text_to_column \{column = 'right'
-		text = qs(0x03ac90f0)}
+		text = qs("\L")}
 	net_add_basic_stats
 	add_text_to_column \{column = 'left'
-		text = qs(0x03ac90f0)}
+		text = qs("\L")}
 	add_text_to_column \{column = 'center'
-		text = qs(0x03ac90f0)}
+		text = qs("\L")}
 	add_text_to_column \{column = 'right'
-		text = qs(0x03ac90f0)}
+		text = qs("\L")}
 	add_text_to_column \{column = 'left'
-		text = qs(0x03ac90f0)}
+		text = qs("\L")}
 	add_text_to_column \{column = 'center'
-		text = qs(0x03ac90f0)}
+		text = qs("\L")}
 	add_text_to_column \{column = 'right'
-		text = qs(0x03ac90f0)}
+		text = qs("\L")}
 	add_divider_graphic
 	get_number_of_songs
 	set_index = 0
@@ -119,11 +119,11 @@ script create_net_detailed_stats_menu
 			0
 			200
 		]}
-	add_user_control_helper \{text = qs(0x182f0173)
+	add_user_control_helper \{text = qs("CONTINUE")
 		button = green
 		z = 100}
 	if (isXenon)
-		add_user_control_helper \{text = qs(0x9a7d1fe5)
+		add_user_control_helper \{text = qs("GAMER CARD")
 			button = start
 			z = 100}
 	endif
@@ -131,77 +131,77 @@ endscript
 
 script net_add_basic_stats 
 	net_stats_calculate_wins
-	Player = 0
+	player = 0
 	begin
 	wins_color = $detailed_stats_text_color
 	streak_color = $detailed_stats_text_color
 	score_color = $detailed_stats_text_color
-	if (<Player> = 0)
+	if (<player> = 0)
 		stat_column = 'left'
-		formatText TextName = wins_text qs(0x76b3fda7) d = <p1_wins>
-		Color = $player1_color
+		FormatText TextName = wins_text qs("\L%d") d = <p1_wins>
+		color = $player1_color
 	else
 		stat_column = 'right'
-		formatText TextName = wins_text qs(0x76b3fda7) d = <p2_wins>
-		Color = $player2_color
+		FormatText TextName = wins_text qs("\L%d") d = <p2_wins>
+		color = $player2_color
 	endif
-	formatText TextName = streak_text qs(0x76b3fda7) d = ($g_best_streaks [<Player>])
-	formatText TextName = score_text qs(0x76b3fda7) d = ($g_high_scores [<Player>])
+	FormatText TextName = streak_text qs("\L%d") d = ($g_best_streaks [<player>])
+	FormatText TextName = score_text qs("\L%d") d = ($g_high_scores [<player>])
 	if ($game_mode = p2_coop)
-		add_text_to_column column = <stat_column> text = qs(0x03ac90f0) rgba = <Color>
+		add_text_to_column column = <stat_column> text = qs("\L") rgba = <color>
 	else
-		add_text_to_column column = <stat_column> text = <wins_text> rgba = <Color>
+		add_text_to_column column = <stat_column> text = <wins_text> rgba = <color>
 	endif
-	add_text_to_column column = <stat_column> text = <streak_text> rgba = <Color>
-	add_text_to_column column = <stat_column> text = <score_text> rgba = <Color>
-	<Player> = (<Player> + 1)
+	add_text_to_column column = <stat_column> text = <streak_text> rgba = <color>
+	add_text_to_column column = <stat_column> text = <score_text> rgba = <color>
+	<player> = (<player> + 1)
 	repeat 2
 	desc_column = 'center'
 	if ($game_mode = p2_coop)
-		add_text_to_column column = <desc_column> text = qs(0x713755f7)
+		add_text_to_column column = <desc_column> text = qs("\L ")
 	else
-		add_text_to_column column = <desc_column> text = qs(0x0734a074)
+		add_text_to_column column = <desc_column> text = qs("WINS")
 	endif
-	add_text_to_column column = <desc_column> text = qs(0x81b7b14c)
-	add_text_to_column column = <desc_column> text = qs(0xcde50da7)
+	add_text_to_column column = <desc_column> text = qs("BEST STREAK")
+	add_text_to_column column = <desc_column> text = qs("HIGHEST SCORE")
 endscript
 
 script net_add_stats_and_desc_row \{set_index = 0
 		highlight = 0}
 	desc_column = 'center'
 	get_song_title song = ($net_setlist_songs [<set_index>])
-	add_text_to_column column = <desc_column> text = <song_title> Scale = (0.8, 1.0) dims = (320.0, 0.0)
-	Player = 0
+	add_text_to_column column = <desc_column> text = <song_title> scale = (0.8, 1.0) dims = (320.0, 0.0)
+	player = 0
 	begin
-	Color = $detailed_stats_text_color
-	if (<Player> = 0)
+	color = $detailed_stats_text_color
+	if (<player> = 0)
 		stat_column = 'left'
 		if ($game_mode = p2_battle)
 			if (($g_p1_scores [<set_index>]) = -1)
-				score = qs(0x713755f7)
+				score = qs("\L ")
 			else
-				score = qs(0xcc443a5c)
+				score = qs("X")
 			endif
 		else
 			score = ($g_p1_scores [<set_index>])
 		endif
-		Color = ($player1_color)
+		color = ($player1_color)
 	else
 		stat_column = 'right'
 		if ($game_mode = p2_battle)
 			if (($g_p2_scores [<set_index>]) = -1)
-				score = qs(0x713755f7)
+				score = qs("\L ")
 			else
-				score = qs(0xcc443a5c)
+				score = qs("X")
 			endif
 		else
 			score = ($g_p2_scores [<set_index>])
 		endif
-		Color = ($player2_color)
+		color = ($player2_color)
 	endif
-	formatText TextName = score_text qs(0x76b3fda7) d = <score>
-	add_text_to_column column = <stat_column> text = <score_text> rgba = <Color> highlight = <highlight>
-	<Player> = (<Player> + 1)
+	FormatText TextName = score_text qs("\L%d") d = <score>
+	add_text_to_column column = <stat_column> text = <score_text> rgba = <color> highlight = <highlight>
+	<player> = (<player> + 1)
 	repeat 2
 endscript
 
@@ -226,12 +226,12 @@ endscript
 
 script print_scores 
 	GetArraySize \{$g_p1_scores}
-	printf \{qs(0x6df880c8)}
+	printf \{qs("\L===1=== ===2===")}
 	index = 0
 	begin
-	printf qs(0xed2624ce) a = ($g_p1_scores [<index>]) b = ($g_p2_scores [<index>])
+	printf qs("\L   %a       %b") a = ($g_p1_scores [<index>]) b = ($g_p2_scores [<index>])
 	<index> = (<index> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 endscript
 
 script net_stats_calculate_total_scores 
@@ -248,54 +248,54 @@ script net_stats_calculate_total_scores
 endscript
 
 script reset_net_stats_menu 
-	Player = 0
+	player = 0
 	get_number_of_songs
 	begin
 	array_count = 0
 	begin
-	formatText checksumName = scores_array 'g_p%p_scores' p = (<Player> + 1)
-	SetArrayElement ArrayName = <scores_array> globalarray index = <array_count> NewValue = 0
+	FormatText checksumname = scores_array 'g_p%p_scores' p = (<player> + 1)
+	SetArrayElement ArrayName = <scores_array> GlobalArray index = <array_count> newvalue = 0
 	<array_count> = (<array_count> + 1)
 	repeat <num_songs>
-	SetArrayElement ArrayName = g_best_streaks globalarray index = <Player> NewValue = 0
-	SetArrayElement ArrayName = g_high_scores globalarray index = <Player> NewValue = 0
-	<Player> = (<Player> + 1)
+	SetArrayElement ArrayName = g_best_streaks GlobalArray index = <player> newvalue = 0
+	SetArrayElement ArrayName = g_high_scores GlobalArray index = <player> newvalue = 0
+	<player> = (<player> + 1)
 	repeat 2
 endscript
 
 script record_net_statistics 
-	Player = 0
+	player = 0
 	if ($game_mode = p2_battle)
 		if (($player1_status.current_health) > ($player2_status.current_health))
 			if NOT ($player1_status.final_blow_powerup = -1)
-				SetArrayElement ArrayName = g_p1_scores globalarray index = ($net_song_num) NewValue = ($player1_status.final_blow_powerup)
+				SetArrayElement ArrayName = g_p1_scores GlobalArray index = ($net_song_num) newvalue = ($player1_status.final_blow_powerup)
 			else
-				SetArrayElement ArrayName = g_p1_scores globalarray index = ($net_song_num) NewValue = 8
+				SetArrayElement ArrayName = g_p1_scores GlobalArray index = ($net_song_num) newvalue = 8
 			endif
-			SetArrayElement ArrayName = g_p2_scores globalarray index = ($net_song_num) NewValue = -1
+			SetArrayElement ArrayName = g_p2_scores GlobalArray index = ($net_song_num) newvalue = -1
 		else
 			if NOT ($player2_status.final_blow_powerup = -1)
-				SetArrayElement ArrayName = g_p2_scores globalarray index = ($net_song_num) NewValue = ($player2_status.final_blow_powerup)
+				SetArrayElement ArrayName = g_p2_scores GlobalArray index = ($net_song_num) newvalue = ($player2_status.final_blow_powerup)
 			else
-				SetArrayElement ArrayName = g_p2_scores globalarray index = ($net_song_num) NewValue = 8
+				SetArrayElement ArrayName = g_p2_scores GlobalArray index = ($net_song_num) newvalue = 8
 			endif
-			SetArrayElement ArrayName = g_p1_scores globalarray index = ($net_song_num) NewValue = -1
+			SetArrayElement ArrayName = g_p1_scores GlobalArray index = ($net_song_num) newvalue = -1
 		endif
 	endif
 	begin
-	formatText checksumName = player_status 'player%p_status' p = (<Player> + 1)
+	FormatText checksumname = player_status 'player%p_status' p = (<player> + 1)
 	player_score = ($<player_status>.score)
 	CastToInteger \{player_score}
 	if NOT ($game_mode = p2_battle)
-		formatText checksumName = scores_array 'g_p%p_scores' p = (<Player> + 1)
-		SetArrayElement ArrayName = <scores_array> globalarray index = ($net_song_num) NewValue = <player_score>
+		FormatText checksumname = scores_array 'g_p%p_scores' p = (<player> + 1)
+		SetArrayElement ArrayName = <scores_array> GlobalArray index = ($net_song_num) newvalue = <player_score>
 	endif
-	if ($<player_status>.best_run > $g_best_streaks [<Player>])
-		SetArrayElement ArrayName = g_best_streaks globalarray index = <Player> NewValue = ($<player_status>.best_run)
+	if ($<player_status>.best_run > $g_best_streaks [<player>])
+		SetArrayElement ArrayName = g_best_streaks GlobalArray index = <player> newvalue = ($<player_status>.best_run)
 	endif
-	if ($<player_status>.score > $g_high_scores [<Player>])
-		SetArrayElement ArrayName = g_high_scores globalarray index = <Player> NewValue = <player_score>
+	if ($<player_status>.score > $g_high_scores [<player>])
+		SetArrayElement ArrayName = g_high_scores GlobalArray index = <player> newvalue = <player_score>
 	endif
-	<Player> = (<Player> + 1)
+	<player> = (<player> + 1)
 	repeat 2
 endscript

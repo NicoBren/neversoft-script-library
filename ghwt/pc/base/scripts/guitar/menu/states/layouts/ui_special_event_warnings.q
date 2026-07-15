@@ -1,10 +1,10 @@
 
 script ui_create_special_event_popup 
 	destroy_popup_warning_menu
-	create_popup_warning_menu \{title = qs(0x2e5b84db)
+	create_popup_warning_menu \{title = qs("SPECIAL EVENT")
 		header_offset = (0.0, -50.0)
 		textblock = {
-			text = qs(0x47f9731f)
+			text = qs("So you think you're ready to join the band? Well we're not going to let you in just like that. You're going to have to prove you can play... from memory. We're going to play this song during our next show. We'll let you practice it for a while and then ask you to play a part from memory. Think you can do that?")
 			pos = (640.0, 370.0)
 			scale = 0.475
 			dims = (1000.0, 500.0)
@@ -15,13 +15,13 @@ script ui_create_special_event_popup
 				func = {
 					special_event_popup_continue
 				}
-				text = qs(0x182f0173)
+				text = qs("CONTINUE")
 			}
 			{
 				func = {
 					generic_event_back
 				}
-				text = qs(0x320a8d1c)
+				text = qs("GO BACK")
 			}
 		]}
 endscript
@@ -35,23 +35,23 @@ script special_event_popup_continue
 endscript
 
 script special_event_2_ingame_setup 
-	getplayerinfo \{1
+	GetPlayerInfo \{1
 		part}
-	formattext \{checksumname = event_num
+	FormatText \{checksumname = event_num
 		'special_event%d'
 		d = $current_special_event_num}
-	formattext \{checksumname = challenge_num
+	FormatText \{checksumname = challenge_num
 		'challenge%d'
 		d = $current_special_event_challenge_num}
-	formattext checksumname = songs_ar '%p_songs' p = ($part_list_props.<part>.text_nl)
-	if (($special_events_challenges.<event_num>.<challenge_num>.<songs_ar> [$special_event_song_index].sections [0]) > 0)
-		start_index = (($special_events_challenges.<event_num>.<challenge_num>.<songs_ar> [$special_event_song_index].sections [0]))
+	FormatText checksumname = songs_ar '%p_songs' p = ($part_list_props.<part>.text_nl)
+	if (($Special_Events_Challenges.<event_num>.<challenge_num>.<songs_ar> [$special_event_song_index].sections [0]) > 0)
+		start_index = (($Special_Events_Challenges.<event_num>.<challenge_num>.<songs_ar> [$special_event_song_index].sections [0]))
 	else
 		start_index = 0
 	endif
 	end_index = (<start_index> + 1)
 	get_song_section_array
-	getmarkerarraysize array = (<song_section_array>)
+	GetMarkerArraySize array = (<song_section_array>)
 	if (<array_size> > 0 && <start_index> >= 0)
 		change practice_start_time = (($<song_section_array> [<start_index>]).time)
 		change practice_start_index = <start_index>

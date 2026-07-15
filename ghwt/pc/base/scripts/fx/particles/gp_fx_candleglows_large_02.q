@@ -1,54 +1,54 @@
-gp_fx_candleglows_large_02 = {
+GP_FX_CandleGlows_Large_02 = {
 	pos = (0.0, -2.364223, -0.0)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	align
-	applypositionoffset
-	emitrangedims = (0.0, 0.0, 0.0)
-	emit_target = (0.0, 1.0, 0.0)
-	enablerotate
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	Align
+	ApplyPositionOffset
+	EmitRangeDims = (0.0, 0.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
+	EnableRotate
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, 0.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 45.0
-	liferange = (0.5, 0.8)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 45.0
+	LifeRange = (0.5, 0.8)
 	emit_rate = 4.0
 	max = 3
-	timeseed = 0.0
-	lifetime = 0.0
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 0.0
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(7.0, 4.0)
 		(7.0, 4.0)
 	]
-	speedrange = (0.0, 0.0)
-	rotvel = (0.0, 0.0)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	pathfollowtime = 0.0
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (0.0, 0.0)
+	RotVel = (0.0, 0.0)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.0
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = 1228808959
-	lod_default
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = ph_radialglow_01
-		specularpower = 0
+	LOD_Default
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = PH_RadialGlow_01
+		SpecularPower = 0
 		fillburst
 		alphacutoff = 1
-		blendmode = add
-		quadanimationfps = 1
+		blendMode = Add
+		QuadAnimationFPS = 1
 	}
-	knot = [
+	Knot = [
 		(-0.6431611, 0.0, -0.0)
 		(-0.6431611, 0.0, -0.0)
 		(-0.55260897, 0.0, -0.0)
@@ -62,7 +62,7 @@ gp_fx_candleglows_large_02 = {
 		(0.6475231, 0.0, -0.0)
 		(0.6475231, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-256
 		-256
 		-1
@@ -72,7 +72,7 @@ gp_fx_candleglows_large_02 = {
 		-256
 		-256
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.21047503
 		0.782766
 		1.0

@@ -1,4 +1,4 @@
-gamemode_list = [
+Gamemode_list = [
 	p1_quickplay
 	p2_quickplay
 	p3_quickplay
@@ -20,98 +20,98 @@ gamemode_list = [
 ]
 default_gamemode_props = {
 	num_players = 1
-	Type = quickplay
-	cooperative = FALSE
-	faceoff = FALSE
-	singleplayer = FALSE
+	type = quickplay
+	cooperative = false
+	faceoff = false
+	singleplayer = false
 }
 p1_quickplay_props = {
 	num_players = 1
-	Type = quickplay
+	type = quickplay
 	singleplayer = true
 }
 p2_quickplay_props = {
 	num_players = 2
-	Type = quickplay
+	type = quickplay
 	cooperative = true
 }
 p3_quickplay_props = {
 	num_players = 3
-	Type = quickplay
+	type = quickplay
 	cooperative = true
 }
 p4_quickplay_props = {
 	num_players = 4
-	Type = quickplay
+	type = quickplay
 	cooperative = true
 }
 p1_career_props = {
 	num_players = 1
-	Type = career
+	type = career
 	singleplayer = true
 }
 p2_career_props = {
 	num_players = 2
-	Type = career
+	type = career
 	cooperative = true
 }
 p3_career_props = {
 	num_players = 3
-	Type = career
+	type = career
 	cooperative = true
 }
 p4_career_props = {
 	num_players = 4
-	Type = career
+	type = career
 	cooperative = true
 }
 p1_improv_props = {
 	num_players = 1
-	Type = improv
+	type = improv
 	singleplayer = true
 }
 p1_boss_props = {
 	num_players = 1
-	Type = boss
+	type = boss
 	singleplayer = true
 }
 p2_faceoff_props = {
 	num_players = 2
-	Type = faceoff
+	type = faceoff
 	faceoff = true
 }
 p2_pro_faceoff_props = {
 	num_players = 2
-	Type = pro_faceoff
+	type = pro_faceoff
 	faceoff = true
 }
 p4_pro_faceoff_props = {
 	num_players = 4
-	Type = pro_faceoff
+	type = pro_faceoff
 	faceoff = true
 }
 p8_pro_faceoff_props = {
 	num_players = 8
-	Type = pro_faceoff
+	type = pro_faceoff
 	faceoff = true
 }
 p2_coop_props = {
 	num_players = 2
-	Type = coop
+	type = coop
 	cooperative = true
 }
 p2_battle_props = {
 	num_players = 2
-	Type = battle
+	type = battle
 }
 tutorial_props = {
 	num_players = 4
-	Type = tutorial
-	singleplayer = FALSE
-	cooperative = FALSE
+	type = tutorial
+	singleplayer = false
+	cooperative = false
 }
 training_props = {
 	num_players = 4
-	Type = training
-	singleplayer = FALSE
+	type = training
+	singleplayer = false
 }

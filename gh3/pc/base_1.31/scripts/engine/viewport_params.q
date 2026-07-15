@@ -187,7 +187,7 @@ viewport_params = {
 			]
 			render_to_texture_with_alpha
 			width = 768
-			height = 320
+			Height = 320
 			copy_to_main
 			resolution = 1.0
 			discard_previous_frame
@@ -201,7 +201,7 @@ viewport_params = {
 			]
 			render_to_texture_with_alpha
 			width = 384
-			height = 160
+			Height = 160
 			copy_to_main
 			resolution = 1.0
 			discard_previous_frame
@@ -268,7 +268,7 @@ viewport_params = {
 				1.0
 			]
 			width = 1024
-			height = 1024
+			Height = 1024
 			depth_only
 		}
 		shadow_small = {
@@ -279,7 +279,7 @@ viewport_params = {
 				1.0
 			]
 			width = 512
-			height = 512
+			Height = 512
 			depth_only
 		}
 		imposter_rendering = {
@@ -290,7 +290,7 @@ viewport_params = {
 				1.0
 			]
 			width = 128
-			height = 256
+			Height = 256
 			render_to_texture_with_alpha
 			mipmap
 			resolution = 1.0
@@ -303,7 +303,7 @@ viewport_params = {
 				1.0
 			]
 			width = 256
-			height = 512
+			Height = 512
 			render_to_texture_with_alpha
 			mipmap
 			resolution = 1.0

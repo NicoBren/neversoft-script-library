@@ -1,9 +1,9 @@
-transition_playing = FALSE
-current_playing_transition = None
+transition_playing = false
+current_playing_transition = none
 finalbandintro_transition_playing = 0
 skipping_jimmy_encore_anim = 0
 Transition_Types = {
-	Intro = {
+	intro = {
 		textnl = 'intro'
 	}
 	fastintro = {
@@ -18,7 +18,7 @@ Transition_Types = {
 	preencore = {
 		textnl = 'preencore'
 	}
-	ENCORE = {
+	encore = {
 		textnl = 'encore'
 	}
 	restartencore = {
@@ -45,22 +45,22 @@ Transition_Types = {
 	loadingintro = {
 		textnl = 'loadingintro'
 	}
-	finalbandintro = {
+	FinalBandIntro = {
 		textnl = 'finalbandintro'
 	}
-	finalbandoutro = {
+	FinalBandOutro = {
 		textnl = 'finalbandoutro'
 	}
 }
-celeb_intro_transitions = [
+Celeb_Intro_Transitions = [
 	{
-		Intro = 'intro_ozzy'
+		intro = 'intro_ozzy'
 		song = mrcrowley
 		venue = load_z_metalfest
-		part = vocals
+		part = Vocals
 	}
 	{
-		Intro = 'intro_zakk'
+		intro = 'intro_zakk'
 		song = bosszakk
 		venue = load_z_bayou
 		part = guitar_vocals
@@ -68,20 +68,20 @@ celeb_intro_transitions = [
 		show_boss_helper_screen
 	}
 	{
-		Intro = 'intro_zakk'
+		intro = 'intro_zakk'
 		song = stillborn
 		venue = load_z_bayou
 		part = guitar_vocals
-		boss_song = FALSE
+		boss_song = false
 	}
 	{
-		Intro = 'intro_hayley'
+		intro = 'intro_hayley'
 		song = miserybusiness
 		venue = load_z_recordstore
-		part = vocals
+		part = Vocals
 	}
 	{
-		Intro = 'intro_ted'
+		intro = 'intro_ted'
 		song = bossted
 		venue = load_z_fairgrounds
 		part = guitar
@@ -89,33 +89,33 @@ celeb_intro_transitions = [
 		show_boss_helper_screen
 	}
 	{
-		Intro = 'intro_ted'
+		intro = 'intro_ted'
 		song = stranglehold
 		venue = load_z_fairgrounds
 		part = guitar
-		boss_song = FALSE
+		boss_song = false
 	}
 	{
-		Intro = 'intro_billy'
-		song = today
+		intro = 'intro_billy'
+		song = Today
 		venue = load_z_cathedral
 		part = guitar_vocals
 	}
 	{
-		Intro = 'intro_travis'
-		song = dammit
+		intro = 'intro_travis'
+		song = Dammit
 		venue = load_z_military
-		part = drums
+		part = Drums
 	}
 	{
-		Intro = 'intro_jimi'
+		intro = 'intro_jimi'
 		song = windcriesmary
-		venue = load_z_ballpark
+		venue = load_z_Ballpark
 		part = no_replacements
 	}
 	{
-		Intro = 'intro_sting'
-		song = demolitionman
+		intro = 'intro_sting'
+		song = DemolitionMan
 		venue = load_z_castle
 		part = bass_vocals
 	}
@@ -137,7 +137,7 @@ Common_Immediate_Transition = {
 		}
 		{
 			time = 0
-			Scr = bandmanager_setplayingintroanims
+			Scr = BandManager_SetPlayingIntroAnims
 		}
 		{
 			time = 100
@@ -159,7 +159,7 @@ Common_FastIntro_Transition = {
 		}
 		{
 			time = 0
-			Scr = bandmanager_setplayingintroanims
+			Scr = BandManager_SetPlayingIntroAnims
 		}
 		{
 			time = 0
@@ -173,12 +173,12 @@ Common_FastIntro_Transition = {
 			time = 0
 			Scr = play_intro
 			params = {
-				FAST
+				Fast
 			}
 		}
 		{
 			time = 0
-			Scr = band_playtransitionidles
+			Scr = Band_PlayTransitionIdles
 			params = {
 				from_restart = true
 			}
@@ -195,12 +195,12 @@ Common_FastIntro_Transition = {
 	EndWithDefaultCamera
 	SyncWithNoteCameras
 }
-default_fastintrotutorial_transition = {
+Default_FastIntroTutorial_Transition = {
 	time = 3000
 	ScriptTable = [
 	]
 }
-common_fastintrotutorial_transition = {
+Common_FastIntroTutorial_Transition = {
 	ScriptTable = [
 		{
 			time = 0
@@ -208,25 +208,25 @@ common_fastintrotutorial_transition = {
 		}
 		{
 			time = 0
-			Scr = bandmanager_setplayingintroanims
+			Scr = BandManager_SetPlayingIntroAnims
 		}
 		{
 			time = 0
 			Scr = training_setup_camera
 			params = {
-				Name = CameraCutCam
+				name = CameraCutCam
 			}
 		}
 		{
 			time = 0
 			Scr = play_intro
 			params = {
-				FAST
+				Fast
 			}
 		}
 		{
 			time = 0
-			Scr = band_playtransitionidles
+			Scr = Band_PlayTransitionIdles
 		}
 		{
 			time = 100
@@ -253,7 +253,7 @@ Common_RestartEncore_Transition = {
 		}
 		{
 			time = 0
-			Scr = bandmanager_setplayingintroanims
+			Scr = BandManager_SetPlayingIntroAnims
 		}
 		{
 			time = 0
@@ -267,12 +267,12 @@ Common_RestartEncore_Transition = {
 			time = 0
 			Scr = play_intro
 			params = {
-				FAST
+				Fast
 			}
 		}
 		{
 			time = 0
-			Scr = band_playtransitionidles
+			Scr = Band_PlayTransitionIdles
 			params = {
 				from_restart = true
 			}
@@ -298,7 +298,7 @@ Common_RestartBoss_Transition = {
 		}
 		{
 			time = 0
-			Scr = bandmanager_setplayingintroanims
+			Scr = BandManager_SetPlayingIntroAnims
 		}
 		{
 			time = 0
@@ -312,12 +312,12 @@ Common_RestartBoss_Transition = {
 			time = 0
 			Scr = play_intro
 			params = {
-				FAST
+				Fast
 			}
 		}
 		{
 			time = 0
-			Scr = band_playtransitionidles
+			Scr = Band_PlayTransitionIdles
 		}
 		{
 			time = 100
@@ -340,7 +340,7 @@ Common_Practice_Transition = {
 		}
 		{
 			time = 0
-			Scr = bandmanager_setplayingintroanims
+			Scr = BandManager_SetPlayingIntroAnims
 		}
 		{
 			time = 0
@@ -374,7 +374,7 @@ Common_Intro_Transition = {
 	ScriptTable = [
 		{
 			time = 0
-			Scr = start_preloaded_celeb_intro_stream
+			Scr = Start_Preloaded_Celeb_Intro_Stream
 		}
 		{
 			time = 0
@@ -384,7 +384,7 @@ Common_Intro_Transition = {
 			time = 0
 			Scr = Crowd_AllPlayAnim
 			params = {
-				anim = Idle
+				Anim = Idle
 			}
 		}
 		{
@@ -418,16 +418,16 @@ Common_Intro_Transition = {
 	EndWithDefaultCamera
 	SyncWithNoteCameras
 }
-default_finalbandintro_transition = {
+Default_FinalBandIntro_Transition = {
 	time = 20000
 	ScriptTable = [
 	]
 }
-common_finalbandintro_transition = {
+Common_FinalBandIntro_Transition = {
 	ScriptTable = [
 		{
 			time = 0
-			Scr = start_preloaded_celeb_intro_stream
+			Scr = Start_Preloaded_Celeb_Intro_Stream
 		}
 		{
 			time = 0
@@ -469,7 +469,7 @@ Common_PreEncore_Transition = {
 			time = 0
 			Scr = kill_gem_scroller
 			params = {
-				Type = outro
+				type = outro
 				kill_cameracuts_iterator
 			}
 		}
@@ -477,7 +477,7 @@ Common_PreEncore_Transition = {
 			time = 0
 			Scr = Crowd_AllPlayAnim
 			params = {
-				anim = Idle
+				Anim = Idle
 			}
 		}
 		{
@@ -509,12 +509,12 @@ Common_Encore_Transition = {
 			time = 0
 			Scr = Crowd_AllPlayAnim
 			params = {
-				anim = Idle
+				Anim = Idle
 			}
 		}
 		{
 			time = 0
-			Scr = start_preloaded_encore_event_stream
+			Scr = Start_Preloaded_Encore_Event_Stream
 		}
 		{
 			time = 0
@@ -559,7 +559,7 @@ Common_PreBoss_Transition = {
 			time = 0
 			Scr = kill_gem_scroller
 			params = {
-				Type = outro
+				type = outro
 				kill_cameracuts_iterator
 			}
 		}
@@ -567,7 +567,7 @@ Common_PreBoss_Transition = {
 			time = 0
 			Scr = Crowd_AllPlayAnim
 			params = {
-				anim = Idle
+				Anim = Idle
 			}
 		}
 		{
@@ -592,7 +592,7 @@ Common_Boss_Transition = {
 			time = 0
 			Scr = Crowd_AllPlayAnim
 			params = {
-				anim = Idle
+				Anim = Idle
 			}
 		}
 		{
@@ -644,7 +644,7 @@ Common_SongWon_Transition = {
 			time = 0
 			Scr = kill_gem_scroller
 			params = {
-				Type = outro
+				type = outro
 				kill_cameracuts_iterator
 			}
 		}
@@ -652,7 +652,7 @@ Common_SongWon_Transition = {
 			time = 0
 			Scr = Crowd_AllPlayAnim
 			params = {
-				anim = Idle
+				Anim = Idle
 			}
 		}
 		{
@@ -683,14 +683,14 @@ Common_SongLost_Transition = {
 			time = 0
 			Scr = Change_Crowd_Looping_SFX
 			params = {
-				crowd_looping_state = bad
+				crowd_looping_state = Bad
 			}
 		}
 		{
 			time = 0
 			Scr = kill_gem_scroller
 			params = {
-				Type = outro
+				type = outro
 				kill_cameracuts_iterator
 				song_failed_pitch_streams = 1
 			}
@@ -699,7 +699,7 @@ Common_SongLost_Transition = {
 			time = 0
 			Scr = Crowd_AllPlayAnim
 			params = {
-				anim = Idle
+				Anim = Idle
 			}
 		}
 		{
@@ -713,18 +713,18 @@ Common_SongLost_Transition = {
 	]
 	EndWithDefaultCamera
 }
-default_finalbandoutro_transition = {
+Default_FinalBandOutro_Transition = {
 	time = 10000
 	ScriptTable = [
 	]
 }
-common_finalbandoutro_transition = {
+Common_FinalBandOutro_Transition = {
 	ScriptTable = [
 		{
 			time = 0
 			Scr = kill_gem_scroller
 			params = {
-				Type = outro
+				type = outro
 				kill_cameracuts_iterator
 			}
 		}
@@ -732,7 +732,7 @@ common_finalbandoutro_transition = {
 			time = 0
 			Scr = Crowd_AllPlayAnim
 			params = {
-				anim = Idle
+				Anim = Idle
 			}
 		}
 		{
@@ -745,23 +745,23 @@ common_finalbandoutro_transition = {
 		}
 		{
 			time = 0
-			Scr = start_preloaded_finalbandoutro_stream
+			Scr = Start_Preloaded_FinalBandOutro_Stream
 		}
 	]
 	EndWithDefaultCamera
 }
-default_loading_transition = {
+Default_Loading_Transition = {
 	time = 10000
 	ScriptTable = [
 	]
 }
-common_loading_transition = {
+Common_Loading_Transition = {
 	ScriptTable = [
 		{
 			time = 0
 			Scr = Crowd_AllPlayAnim
 			params = {
-				anim = Idle
+				Anim = Idle
 			}
 		}
 		{
@@ -774,35 +774,35 @@ common_loading_transition = {
 		}
 		{
 			time = 0
-			Scr = createinvenueloadingscreen
+			Scr = CreateInVenueLoadingScreen
 			params = {
 			}
 		}
 		{
 			time = 9900
-			Scr = pauseinvenueloadingscreen
+			Scr = PauseInVenueLoadingScreen
 			params = {
 			}
 		}
 	]
 }
-default_loadingintro_transition = {
+Default_LoadingIntro_Transition = {
 	time = 3000
 	ScriptTable = [
 	]
 }
-common_loadingintro_transition = {
+Common_LoadingIntro_Transition = {
 	ScriptTable = [
 		{
 			time = 0
 			Scr = Crowd_AllPlayAnim
 			params = {
-				anim = Idle
+				Anim = Idle
 			}
 		}
 		{
 			time = 0
-			Scr = bandmanager_setplayingintroanims
+			Scr = BandManager_SetPlayingIntroAnims
 		}
 		{
 			time = 0
@@ -816,12 +816,12 @@ common_loadingintro_transition = {
 			time = 0
 			Scr = play_intro
 			params = {
-				FAST
+				Fast
 			}
 		}
 		{
 			time = 0
-			Scr = band_playtransitionidles
+			Scr = Band_PlayTransitionIdles
 		}
 		{
 			time = 100
@@ -832,15 +832,15 @@ common_loadingintro_transition = {
 	SyncWithNoteCameras
 }
 
-script createinvenueloadingscreen 
-	gamemode_gettype
-	if NOT (($current_transition) = ENCORE)
+script CreateInVenueLoadingScreen 
+	GameMode_GetType
+	if NOT (($current_transition) = encore)
 		if (($skipping_jimmy_encore_anim) = 1)
 			ui_event_wait \{event = menu_change
 				data = {
-					state = uistate_encore_confirmation
+					state = UIstate_encore_confirmation
 				}}
-		elseif (($is_network_game = 1 && <Type> = career) || $is_network_game = 0)
+		elseif (($is_network_game = 1 && <type> = career) || $is_network_game = 0)
 			ui_event_wait \{event = menu_change
 				data = {
 					state = uistate_song_breakdown
@@ -849,38 +849,38 @@ script createinvenueloadingscreen
 	else
 		ui_event_wait \{event = menu_change
 			data = {
-				state = uistate_encore_confirmation
+				state = UIstate_encore_confirmation
 			}}
 	endif
 endscript
 
-script pauseinvenueloadingscreen 
+script PauseInVenueLoadingScreen 
 	if ($is_network_game = 1)
-		gamemode_gettype
-		if (<Type> = career)
-			Change \{songtime_paused = 1}
-			cleargameover
+		GameMode_GetType
+		if (<type> = career)
+			change \{songtime_paused = 1}
+			ClearGameOver
 			SyncAndLaunchNetGame
-			broadcastevent \{Type = done_loading}
+			BroadcastEvent \{type = done_loading}
 			begin
 			if ($net_ready_to_start)
-				printf \{qs(0x8fbf033d)}
+				printf \{qs("\LReady to start let's fire")}
 				break
 			endif
 			Wait \{1
 				gameframe}
 			repeat
-			Change \{songtime_paused = 0}
+			change \{songtime_paused = 0}
 		endif
 		return
 	endif
-	if (($current_transition) = ENCORE)
+	if (($current_transition) = encore)
 		return
 	elseif (($skipping_jimmy_encore_anim) = 1)
-		Change \{skipping_jimmy_encore_anim = 0}
+		change \{skipping_jimmy_encore_anim = 0}
 		return
 	endif
-	Change \{songtime_paused = 1}
+	change \{songtime_paused = 1}
 	begin
 	if ($finished_gig_band_rebuild = 0)
 		Wait \{1
@@ -892,34 +892,34 @@ script pauseinvenueloadingscreen
 	ui_song_breakdown_pause_between_songs
 endscript
 
-script common_loading_transitionend 
+script Common_Loading_TransitionEnd 
 	printscriptinfo \{'Common_Loading_TransitionEnd'}
-	gamemode_gettype
-	if (($is_network_game = 1 && <Type> = career) || $is_network_game = 0)
+	GameMode_GetType
+	if (($is_network_game = 1 && <type> = career) || $is_network_game = 0)
 		ui_event \{event = menu_back
 			data = {
-				state = Uistate_gameplay
+				state = uistate_gameplay
 			}}
-		if CompositeObjectExists \{Name = vocalist}
+		if CompositeObjectExists \{name = vocalist}
 			vocalist :unhide
-			vocalist :Ragdoll_MarkForReset
+			vocalist :ragdoll_markforreset
 		endif
 	endif
 endscript
 
 script Transition_SelectTransition \{practice_intro = 0}
-	Change \{finalbandintro_transition_playing = 0}
-	Change \{show_boss_helper_screen = 0}
-	Change \{skipping_jimmy_encore_anim = 0}
+	change \{finalbandintro_transition_playing = 0}
+	change \{show_boss_helper_screen = 0}
+	change \{skipping_jimmy_encore_anim = 0}
 	if (<practice_intro> = 1)
 		return
 	endif
 	if ($current_transition = debugintro)
-		Change \{current_transition = Intro}
+		change \{current_transition = intro}
 		return
 	endif
 	if ($coop_dlc_active = 1)
-		Change \{current_transition = Intro}
+		change \{current_transition = intro}
 		return
 	endif
 	if ($game_mode = p1_career ||
@@ -928,76 +928,76 @@ script Transition_SelectTransition \{practice_intro = 0}
 			$game_mode = p4_career)
 		get_progression_globals ($current_progression_flag) use_current_tab = 1
 		Career_Songs = <tier_global>
-		Tier = ($current_gig_number)
-		formatText checksumName = tier_checksum 'tier%s' s = <Tier>
-		if NOT StructureContains structure = ($<Career_Songs>) <tier_checksum>
-			Change \{current_transition = Intro}
+		tier = ($current_gig_number)
+		FormatText checksumname = tier_checksum 'tier%s' s = <tier>
+		if NOT StructureContains Structure = ($<Career_Songs>) <tier_checksum>
+			change \{current_transition = intro}
 			return
 		endif
 		if ($is_network_game = 0)
-			if StructureContains structure = ($<Career_Songs>.<tier_checksum>) play_finalbandintro_transition_type
+			if StructureContains Structure = ($<Career_Songs>.<tier_checksum>) play_finalbandintro_transition_type
 				if ($current_level = load_z_newyork)
 					bandname_id = band_info
-					Type = ($<Career_Songs>.<tier_checksum>.play_finalbandintro_transition_type)
-					GetGlobalTags <bandname_id> param = <Type>
-					if (<...>.<Type> = 0)
-						AddParam structure_name = new_params Name = <Type> value = 1
+					type = ($<Career_Songs>.<tier_checksum>.play_finalbandintro_transition_type)
+					GetGlobalTags <bandname_id> param = <type>
+					if (<...>.<type> = 0)
+						AddParam structure_name = new_params name = <type> value = 1
 						SetGlobalTags <bandname_id> params = <new_params>
-						Change \{current_transition = Intro}
-						Change \{finalbandintro_transition_playing = 1}
+						change \{current_transition = intro}
+						change \{finalbandintro_transition_playing = 1}
 						return
 					endif
 				endif
 			endif
 		endif
-		if Progression_IsEncoreSong tier_global = <tier_global> Tier = <Tier> song = ($current_song)
+		if Progression_IsEncoreSong tier_global = <tier_global> tier = <tier> song = ($current_song)
 			band_builder_get_band_global
-			if (<Band> = band_hendrix && $current_level != load_z_ballpark)
-				Change \{skipping_jimmy_encore_anim = 1}
+			if (<Band> = Band_Hendrix && $current_level != load_z_Ballpark)
+				change \{skipping_jimmy_encore_anim = 1}
 			else
-				Change \{current_transition = ENCORE}
+				change \{current_transition = encore}
 				return
 			endif
 		endif
-		if transition_selectcelebtransition
+		if Transition_SelectCelebTransition
 			return
 		endif
 	endif
 	if ($game_mode = p1_quickplay || $game_mode = p2_quickplay)
 		get_progression_globals game_mode = ($game_mode) use_current_tab = 1
 		SetList_Songs = <tier_global>
-		Tier = ($setlist_selection_tier)
-		formatText checksumName = tier_checksum 'tier%s' s = <Tier>
-		if NOT StructureContains structure = ($<SetList_Songs>) <tier_checksum>
-			Change \{current_transition = Intro}
+		tier = ($setlist_selection_tier)
+		FormatText checksumname = tier_checksum 'tier%s' s = <tier>
+		if NOT StructureContains Structure = ($<SetList_Songs>) <tier_checksum>
+			change \{current_transition = intro}
 			return
 		endif
 	endif
-	Change \{current_transition = Intro}
+	change \{current_transition = intro}
 endscript
 
-script transition_selectcelebtransition 
-	GetArraySize ($celeb_intro_transitions)
+script Transition_SelectCelebTransition 
+	GetArraySize ($Celeb_Intro_Transitions)
 	index = 0
 	begin
 	valid = 1
-	if StructureContains structure = ($celeb_intro_transitions [<index>]) song
-		if NOT ($current_song = $celeb_intro_transitions [<index>].song)
+	if StructureContains Structure = ($Celeb_Intro_Transitions [<index>]) song
+		if NOT ($current_song = $Celeb_Intro_Transitions [<index>].song)
 			valid = 0
 		endif
 	else
 		valid = 0
 	endif
-	if StructureContains structure = ($celeb_intro_transitions [<index>]) venue
-		if NOT ($current_level = $celeb_intro_transitions [<index>].venue)
+	if StructureContains Structure = ($Celeb_Intro_Transitions [<index>]) venue
+		if NOT ($current_level = $Celeb_Intro_Transitions [<index>].venue)
 			valid = 0
 		endif
 	else
 		valid = 0
 	endif
-	gamemode_getnumplayersshown
+	GameMode_GetNumPlayersShown
 	if (<num_players_shown> > 1)
-		part = ($celeb_intro_transitions [<index>].part)
+		part = ($Celeb_Intro_Transitions [<index>].part)
 		switch <part>
 			case guitar
 			if is_any_player_on_part \{part = guitar}
@@ -1005,21 +1005,21 @@ script transition_selectcelebtransition
 			endif
 			case guitar_vocals
 			if is_any_player_on_part \{part = guitar}
-				if is_any_player_on_part \{part = vocals}
+				if is_any_player_on_part \{part = Vocals}
 					valid = 0
 				endif
 			endif
 			case bass_vocals
-			if is_any_player_on_part \{part = bass}
-				if is_any_player_on_part \{part = vocals}
+			if is_any_player_on_part \{part = Bass}
+				if is_any_player_on_part \{part = Vocals}
 					valid = 0
 				endif
 			endif
-			case vocals
-			if is_any_player_on_part \{part = vocals}
+			case Vocals
+			if is_any_player_on_part \{part = Vocals}
 				valid = 0
 			endif
-			case drums
+			case Drums
 			if is_any_player_on_part \{part = drum}
 				valid = 0
 			endif
@@ -1029,11 +1029,11 @@ script transition_selectcelebtransition
 			valid = 0
 		endswitch
 	endif
-	if StructureContains structure = ($celeb_intro_transitions [<index>]) boss_song
-		boss_song = ($celeb_intro_transitions [<index>].Intro)
-		gamemode_getnumplayersshown
+	if StructureContains Structure = ($Celeb_Intro_Transitions [<index>]) boss_song
+		boss_song = ($Celeb_Intro_Transitions [<index>].intro)
+		GameMode_GetNumPlayersShown
 		if ((<num_players_shown> = 1) && ($player1_status.part = guitar))
-			if (<boss_song> = FALSE)
+			if (<boss_song> = false)
 				valid = 0
 			endif
 		else
@@ -1043,125 +1043,125 @@ script transition_selectcelebtransition
 		endif
 	endif
 	if (<valid> = 1)
-		formatText checksumName = transition '%s' s = ($celeb_intro_transitions [<index>].Intro) AddToStringLookup = true
-		Change current_transition = <transition>
-		if StructureContains structure = ($celeb_intro_transitions [<index>]) show_boss_helper_screen
-			Change \{show_boss_helper_screen = 1}
+		FormatText checksumname = transition '%s' s = ($Celeb_Intro_Transitions [<index>].intro) AddToStringLookup = true
+		change current_transition = <transition>
+		if StructureContains Structure = ($Celeb_Intro_Transitions [<index>]) show_boss_helper_screen
+			change \{show_boss_helper_screen = 1}
 		endif
 		return \{true}
 	endif
 	index = (<index> + 1)
-	repeat <array_Size>
-	return \{FALSE}
+	repeat <array_size>
+	return \{false}
 endscript
 
 script Transition_KillAll 
-	KillSpawnedScript \{id = transitions}
-	Change \{transition_playing = FALSE}
-	Change \{current_playing_transition = None}
+	KillSpawnedScript \{id = Transitions}
+	change \{transition_playing = false}
+	change \{current_playing_transition = none}
 endscript
 
-script transition_getprefix \{Type = Intro}
+script Transition_GetPrefix \{type = intro}
 	celeb_intro = 0
-	if StructureContains structure = $Transition_Types <Type>
+	if StructureContains Structure = $Transition_Types <type>
 		printstruct <...>
-		type_textnl = ($Transition_Types.<Type>.textnl)
+		type_textnl = ($Transition_Types.<type>.textnl)
 	else
-		GetArraySize ($celeb_intro_transitions)
+		GetArraySize ($Celeb_Intro_Transitions)
 		index = 0
 		begin
-		formatText checksumName = transition '%s' s = ($celeb_intro_transitions [<index>].Intro)
-		if (<Type> = <transition>)
-			type_textnl = ($celeb_intro_transitions [<index>].Intro)
+		FormatText checksumname = transition '%s' s = ($Celeb_Intro_Transitions [<index>].intro)
+		if (<type> = <transition>)
+			type_textnl = ($Celeb_Intro_Transitions [<index>].intro)
 			celeb_intro = 1
 			break
 		endif
 		index = (<index> + 1)
-		repeat <array_Size>
+		repeat <array_size>
 	endif
 	if NOT GotParam \{type_textnl}
 		printstruct <...>
-		ScriptAssert \{qs(0xf6d7c577)}
+		ScriptAssert \{qs("\LUnknown transition type")}
 	endif
 	return type_textnl = <type_textnl> celeb_intro = <celeb_intro>
 endscript
 
-script transition_getprops 
-	transition_getprefix <...>
+script Transition_GetProps 
+	Transition_GetPrefix <...>
 	GetPakManCurrentName \{map = zones}
-	formatText checksumName = Transition_Props '%s_%p_Transition' p = <type_textnl> s = <pakname>
-	if NOT GlobalExists Name = <Transition_Props>
-		formatText checksumName = Transition_Props 'default_%p_Transition' p = <type_textnl> s = <pakname>
+	FormatText checksumname = Transition_Props '%s_%p_Transition' p = <type_textnl> s = <pakname>
+	if NOT GlobalExists name = <Transition_Props>
+		FormatText checksumname = Transition_Props 'default_%p_Transition' p = <type_textnl> s = <pakname>
 	endif
 	if (<celeb_intro> = 1)
-		if NOT GlobalExists Name = <Transition_Props>
+		if NOT GlobalExists name = <Transition_Props>
 			Transition_Props = Default_Intro_Transition
 		endif
 	endif
-	formatText checksumName = common_transition_props 'Common_%p_Transition' p = <type_textnl>
+	FormatText checksumname = Common_Transition_Props 'Common_%p_Transition' p = <type_textnl>
 	common_type_textnl = <type_textnl>
 	if (<celeb_intro> = 1)
 		common_type_textnl = 'intro'
-		if NOT GlobalExists Name = <common_transition_props>
-			common_transition_props = Common_Intro_Transition
+		if NOT GlobalExists name = <Common_Transition_Props>
+			Common_Transition_Props = Common_Intro_Transition
 		endif
 	endif
-	return type_textnl = <type_textnl> common_type_textnl = <common_type_textnl> Transition_Props = <Transition_Props> common_transition_props = <common_transition_props>
+	return type_textnl = <type_textnl> common_type_textnl = <common_type_textnl> Transition_Props = <Transition_Props> Common_Transition_Props = <Common_Transition_Props>
 endscript
 
-script Transition_GetTime \{Type = Intro}
-	transition_getprops Type = <Type>
+script Transition_GetTime \{type = intro}
+	Transition_GetProps type = <type>
 	return transition_time = ($<Transition_Props>.time)
 endscript
 
-script Transition_Play \{Type = Intro}
-	printf 'Transition_Play type=%t' t = <Type>
+script Transition_Play \{type = intro}
+	printf 'Transition_Play type=%t' t = <type>
 	Transition_KillAll
-	Change current_playing_transition = <Type>
-	transition_getprops Type = <Type>
+	change current_playing_transition = <type>
+	Transition_GetProps type = <type>
 	GetPakManCurrentName \{map = zones}
-	formatText checksumName = event 'Common_%p_TransitionSetup' p = <common_type_textnl> s = <pakname>
+	FormatText checksumname = event 'Common_%p_TransitionSetup' p = <common_type_textnl> s = <pakname>
 	if ScriptExists <event>
 		<event>
 	endif
-	formatText checksumName = event '%s_%p_TransitionSetup' p = <type_textnl> s = <pakname>
+	FormatText checksumname = event '%s_%p_TransitionSetup' p = <type_textnl> s = <pakname>
 	if ScriptExists <event>
-		SpawnScriptNow <event>
+		spawnscriptnow <event>
 	endif
-	SpawnScriptNow Transition_Play_Spawned id = transitions params = {<...>}
-	formatText checksumName = event 'GuitarEvent_Transition%s' s = <type_textnl>
+	spawnscriptnow Transition_Play_Spawned id = Transitions params = {<...>}
+	FormatText checksumname = event 'GuitarEvent_Transition%s' s = <type_textnl>
 	if ScriptExists <event>
-		SpawnScriptNow <event>
+		spawnscriptnow <event>
 	endif
 endscript
 
 script Transition_Play_Spawned 
-	Change \{transition_playing = true}
+	change \{transition_playing = true}
 	GetPakManCurrentName \{map = zones}
 	transition_time = ($<Transition_Props>.time)
-	SpawnScriptNow Transition_Play_Iterator id = transitions params = {<...>}
-	SpawnScriptNow Transition_Play_Iterator id = transitions params = {<...> Transition_Props = <common_transition_props>}
+	spawnscriptnow Transition_Play_Iterator id = Transitions params = {<...>}
+	spawnscriptnow Transition_Play_Iterator id = Transitions params = {<...> Transition_Props = <Common_Transition_Props>}
 	GetSongTimeMs
 	time_offset = (0 - <time>)
 	begin
 	GetSongTimeMs time_offset = <time_offset>
 	if (<transition_time> <= <time>)
-		Change \{transition_playing = FALSE}
+		change \{transition_playing = false}
 		break
 	endif
 	Wait \{1
 		gameframe}
 	repeat
-	if StructureContains structure = ($<common_transition_props>) EndWithDefaultCamera
+	if StructureContains Structure = ($<Common_Transition_Props>) EndWithDefaultCamera
 		if ($finalbandintro_transition_playing = 1)
-			if ($current_playing_transition = finalbandintro)
-				Change \{finalbandintro_transition_playing = 0}
+			if ($current_playing_transition = FinalBandIntro)
+				change \{finalbandintro_transition_playing = 0}
 			else
-				StopRendering
+				stoprendering
 			endif
 		elseif ($game_mode = p2_faceoff || $game_mode = p2_pro_faceoff || $game_mode = p2_battle || $boss_battle = 1 || $current_song = jamsession)
-			CameraCuts_EnableChangeCam \{enable = FALSE}
-			getfps
+			CameraCuts_EnableChangeCam \{enable = false}
+			GetFPS
 			delay_ms = (0.0 - $time_input_offset)
 			ms_per_frame = (1000.0 / <fps>)
 			frames = (<delay_ms> / <ms_per_frame>)
@@ -1175,18 +1175,18 @@ script Transition_Play_Spawned
 					changenow}
 			endif
 		else
-			if StructureContains structure = ($<common_transition_props>) SyncWithNoteCameras
+			if StructureContains Structure = ($<Common_Transition_Props>) SyncWithNoteCameras
 				CameraCuts_GetNextNoteCameraTime
 				GetSongTimeMs
 				if (<camera_time> >= -200 &&
 						<camera_time> - <time> < 2000)
-					CameraCuts_EnableChangeCam \{enable = FALSE}
+					CameraCuts_EnableChangeCam \{enable = false}
 				else
 					if NOT ($game_mode = training || $game_mode = tutorial || $game_mode = practice)
 						CameraCuts_SetArrayPrefix \{prefix = 'cameras'
 							changenow}
 					else
-						CameraCuts_EnableChangeCam \{enable = FALSE}
+						CameraCuts_EnableChangeCam \{enable = false}
 					endif
 				endif
 			else
@@ -1194,40 +1194,40 @@ script Transition_Play_Spawned
 					CameraCuts_SetArrayPrefix \{prefix = 'cameras'
 						changenow}
 				else
-					CameraCuts_EnableChangeCam \{enable = FALSE}
+					CameraCuts_EnableChangeCam \{enable = false}
 				endif
 			endif
 		endif
 	endif
-	formatText checksumName = event 'Common_%p_TransitionEnd' p = <type_textnl> s = <pakname>
+	FormatText checksumname = event 'Common_%p_TransitionEnd' p = <type_textnl> s = <pakname>
 	if ScriptExists <event>
-		SpawnScriptNow <event>
+		spawnscriptnow <event>
 	endif
-	formatText checksumName = event '%s_%p_TransitionEnd' p = <type_textnl> s = <pakname>
+	FormatText checksumname = event '%s_%p_TransitionEnd' p = <type_textnl> s = <pakname>
 	if ScriptExists <event>
-		SpawnScriptNow <event>
+		spawnscriptnow <event>
 	endif
-	Change \{current_playing_transition = None}
+	change \{current_playing_transition = none}
 endscript
 
-script istransitionplaying 
-	if GotParam \{Type}
-		if (<Type> = $current_playing_transition)
+script IsTransitionPlaying 
+	if GotParam \{type}
+		if (<type> = $current_playing_transition)
 			return \{true}
 		endif
 	else
-		if NOT (<Type> = None)
+		if NOT (<type> = none)
 			return \{true}
 		endif
 	endif
-	return \{FALSE}
+	return \{false}
 endscript
 
 script Transition_Play_Iterator 
 	GetSongTimeMs
 	time_offset = (0 - <time>)
 	GetArraySize ($<Transition_Props>.ScriptTable)
-	if (<array_Size> = 0)
+	if (<array_size> = 0)
 		return
 	endif
 	GetSongTimeMs time_offset = <time_offset>
@@ -1242,15 +1242,15 @@ script Transition_Play_Iterator
 		gameframe}
 	repeat
 	if ScriptExists ($<Transition_Props>.ScriptTable [<array_count>].Scr)
-		SpawnScriptNow ($<Transition_Props>.ScriptTable [<array_count>].Scr) id = transitions params = {transition_time = <transition_time> ($<Transition_Props>.ScriptTable [<array_count>].params)}
+		spawnscriptnow ($<Transition_Props>.ScriptTable [<array_count>].Scr) id = Transitions params = {transition_time = <transition_time> ($<Transition_Props>.ScriptTable [<array_count>].params)}
 	endif
 	array_count = (<array_count> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 endscript
 
 script Transition_Wait 
 	begin
-	if ($transition_playing = FALSE)
+	if ($transition_playing = false)
 		return
 	endif
 	Wait \{1
@@ -1258,165 +1258,165 @@ script Transition_Wait
 	repeat
 endscript
 
-script momentcamera_playanim \{cycle = 0
+script MomentCamera_PlayAnim \{Cycle = 0
 		start = 0.0
 		BlendDuration = 0.0}
-	if NOT CompositeObjectExists Name = <lock_target>
-		printf channel = anim_info qs(0xb08c6979) a = <lock_target>
+	if NOT CompositeObjectExists name = <lock_target>
+		printf channel = anim_info qs("\Lcouldn't find camera lock target %a") a = <lock_target>
 		return
 	endif
 	SetSearchAllAssetContexts
 	GetPakManCurrent \{map = zones}
 	GetPakManCurrentName \{map = zones}
 	if GotParam \{start_node}
-		ExtendCrc <pak> <start_node> out = start_node_id
-		GetWaypointPos Name = <start_node_id>
-		GetWaypointDir Name = <start_node_id>
-		<lock_target> :Obj_SetPosition position = <Pos>
-		<lock_target> :Obj_SetOrientation Dir = <Dir>
+		ExtendCRC <pak> <start_node> out = start_node_id
+		GetWaypointPos name = <start_node_id>
+		GetWaypointDir name = <start_node_id>
+		<lock_target> :Obj_SetPosition position = <pos>
+		<lock_target> :Obj_SetOrientation dir = <dir>
 	else
 		suffix = ('_' + <node>)
 		AppendSuffixToChecksum Base = <pak> SuffixString = <suffix>
-		if CompositeObjectExists Name = <appended_id>
+		if CompositeObjectExists name = <appended_id>
 			<appended_id> :Obj_GetPosition
-			<lock_target> :Obj_SetPosition position = <Pos>
+			<lock_target> :Obj_SetPosition position = <pos>
 			<appended_id> :Obj_GetOrientation
-			Dir = ((1.0, 0.0, 0.0) * <X> + (0.0, 1.0, 0.0) * <y> + (0.0, 0.0, 1.0) * <z>)
-			<lock_target> :Obj_SetOrientation Dir = <Dir>
+			dir = ((1.0, 0.0, 0.0) * <x> + (0.0, 1.0, 0.0) * <y> + (0.0, 0.0, 1.0) * <z>)
+			<lock_target> :Obj_SetOrientation dir = <dir>
 		else
-			printf channel = anim_info qs(0xc0212f38) a = <appended_id>
+			printf channel = anim_info qs("\Lunable to move camera to node %a") a = <appended_id>
 		endif
 	endif
 	if NOT GotParam \{tempo_anim}
-		tempo_anim = <anim>
+		tempo_anim = <Anim>
 	endif
-	SpawnScriptNow momentcamera_playanim_spawned params = {Name = <lock_target> anim = <anim> tempoanim = <tempo_anim> cycle = <cycle> start = <start> BlendDuration = <BlendDuration>}
-	SetSearchAllAssetContexts \{OFF}
+	spawnscriptnow MomentCamera_PlayAnim_Spawned params = {name = <lock_target> Anim = <Anim> TempoAnim = <tempo_anim> Cycle = <Cycle> start = <start> BlendDuration = <BlendDuration>}
+	SetSearchAllAssetContexts \{off}
 endscript
 
-script momentcamera_playanim_spawned \{start = 0.0
-		speed = 1.0
+script MomentCamera_PlayAnim_Spawned \{start = 0.0
+		Speed = 1.0
 		BlendDuration = -1.0}
-	printf \{qs(0xc2684cb9)}
-	if NOT CompositeObjectExists Name = <Name>
-		printf qs(0x9e08b783) a = <Name>
+	printf \{qs("\LMomentCamera_PlayAnim_Spawned")}
+	if NOT CompositeObjectExists name = <name>
+		printf qs("\L%a doesn't exists") a = <name>
 		return
 	endif
 	begin
 	SetSearchAllAssetContexts
-	if NOT GotParam \{anim}
-		<Name> :Anim_GetDefaultAnimName
-		anim = <defaultAnimName>
+	if NOT GotParam \{Anim}
+		<name> :Anim_GetDefaultAnimName
+		Anim = <DefaultAnimName>
 	endif
-	if NOT GotParam \{tempoanim}
-		tempoanim = anim
+	if NOT GotParam \{TempoAnim}
+		TempoAnim = Anim
 	endif
-	<Name> :RemoveTags [animrequestedfovradians]
-	<Name> :anim_enable
-	<Name> :Anim_Command target = Body Command = DegenerateBlend_AddBranch params = {
-		Tree = $specialcamera_standardanimbranch
+	<name> :RemoveTags [AnimRequestedFOVRadians]
+	<name> :Anim_Enable
+	<name> :Anim_Command target = Body command = DegenerateBlend_AddBranch params = {
+		Tree = $SpecialCamera_StandardAnimBranch
 		BlendDuration = <BlendDuration>
 		params = {
-			anim = <anim>
-			speed = <speed>
+			Anim = <Anim>
+			Speed = <Speed>
 			TimerType = tempo
 			start = <start>
-			AnimEvents = On
-			tempoanim = <tempoanim>
-			allowbeatskipping = true
+			AnimEvents = on
+			TempoAnim = <TempoAnim>
+			AllowBeatSkipping = true
 		}
 	}
-	<Name> :Anim_Command target = BodyTimer Command = Timer_WaitAnimComplete
-	SetSearchAllAssetContexts \{OFF}
-	if (<cycle> = 0)
+	<name> :Anim_Command target = BodyTimer command = Timer_WaitAnimComplete
+	SetSearchAllAssetContexts \{off}
+	if (<Cycle> = 0)
 		break
 	endif
 	repeat
 endscript
 
-script specialcamera_playanim \{cycle = 0
+script SpecialCamera_PlayAnim \{Cycle = 0
 		start = 0.0}
 	SetSearchAllAssetContexts
 	GetPakManCurrent \{map = zones}
 	GetPakManCurrentName \{map = zones}
-	formatText TextName = suffix '_%s' s = <Obj>
+	FormatText TextName = suffix '_%s' s = <obj>
 	AppendSuffixToChecksum Base = <pak> SuffixString = <suffix>
 	cameraname = (<pakname> + <suffix>)
-	if CompositeObjectExists Name = <appended_id>
-		<appended_id> :Obj_SwitchScript specialcamera_playanim_spawned params = {anim = <anim> cycle = <cycle> start = <start> BlendDuration = <BlendDuration>}
+	if CompositeObjectExists name = <appended_id>
+		<appended_id> :Obj_SwitchScript SpecialCamera_PlayAnim_Spawned params = {Anim = <Anim> Cycle = <Cycle> start = <start> BlendDuration = <BlendDuration>}
 	else
-		printf qs(0x5f796dcf) s = <cameraname>
+		printf qs("\LUnable to find SpecialCamera %s....") s = <cameraname>
 	endif
-	SetSearchAllAssetContexts \{OFF}
+	SetSearchAllAssetContexts \{off}
 endscript
 
-script specialcamera_playanim_spawned \{start = 0.0
-		speed = 1.0
+script SpecialCamera_PlayAnim_Spawned \{start = 0.0
+		Speed = 1.0
 		BlendDuration = -1.0}
 	begin
 	SetSearchAllAssetContexts
-	if NOT GotParam \{anim}
+	if NOT GotParam \{Anim}
 		Anim_GetDefaultAnimName
-		anim = <defaultAnimName>
+		Anim = <DefaultAnimName>
 	endif
-	if NOT GotParam \{tempoanim}
-		tempoanim = anim
+	if NOT GotParam \{TempoAnim}
+		TempoAnim = Anim
 	endif
-	printf qs(0x0c017022) a = <anim> b = <tempoanim>
+	printf qs("\Lfiring specialcamera command... anim %a tempo %b") a = <Anim> b = <TempoAnim>
 	RemoveTags \{[
-			animrequestedfovradians
+			AnimRequestedFOVRadians
 		]}
-	anim_enable
-	Anim_Command target = Body Command = DegenerateBlend_AddBranch params = {
-		Tree = $specialcamera_standardanimbranch
+	Anim_Enable
+	Anim_Command target = Body command = DegenerateBlend_AddBranch params = {
+		Tree = $SpecialCamera_StandardAnimBranch
 		BlendDuration = <BlendDuration>
 		params = {
-			anim = <anim>
-			speed = <speed>
+			Anim = <Anim>
+			Speed = <Speed>
 			TimerType = tempo
 			start = <start>
-			AnimEvents = On
-			tempoanim = <tempoanim>
-			allowbeatskipping = true
+			AnimEvents = on
+			TempoAnim = <TempoAnim>
+			AllowBeatSkipping = true
 		}
 	}
-	specialcamera_waitanimfinished
-	SetSearchAllAssetContexts \{OFF}
-	if (<cycle> = 0)
+	SpecialCamera_WaitAnimFinished
+	SetSearchAllAssetContexts \{off}
+	if (<Cycle> = 0)
 		break
 	endif
 	repeat
 endscript
 
-script specialcamera_waitanimfinished \{Timer = BodyTimer}
-	Anim_Command target = <Timer> Command = Timer_WaitAnimComplete
+script SpecialCamera_WaitAnimFinished \{Timer = BodyTimer}
+	Anim_Command target = <Timer> command = Timer_WaitAnimComplete
 endscript
-specialcamera_standardanimbranch = {
-	Type = TimerType
+SpecialCamera_StandardAnimBranch = {
+	type = TimerType
 	id = BodyTimer
-	anim = anim
-	tempo_anim = tempoanim
+	Anim = Anim
+	tempo_anim = TempoAnim
 	anim_events = AnimEvents
-	allow_beat_skipping = allowbeatskipping
-	speed = speed
+	allow_beat_skipping = AllowBeatSkipping
+	Speed = Speed
 	start = start
 	[
 		{
-			Type = Source
-			anim = anim
+			type = Source
+			Anim = Anim
 		}
 	]
 }
 
-script Transition_PlayAnim \{cycle = 0}
-	<Obj> :Obj_SwitchScript Transition_PlayAnim_Spawned params = {anim = <anim> cycle = <cycle> BlendDuration = <BlendDuration>}
+script Transition_PlayAnim \{Cycle = 0}
+	<obj> :Obj_SwitchScript Transition_PlayAnim_Spawned params = {Anim = <Anim> Cycle = <Cycle> BlendDuration = <BlendDuration>}
 endscript
 
 script Transition_PlayAnim_Spawned 
 	begin
-	GameObj_PlayAnim anim = <anim> BlendDuration = <BlendDuration>
+	GameObj_PlayAnim Anim = <Anim> BlendDuration = <BlendDuration>
 	GameObj_WaitAnimFinished
-	if (<cycle> = 0)
+	if (<Cycle> = 0)
 		break
 	endif
 	repeat
@@ -1426,17 +1426,17 @@ script Transition_CameraCut
 	if GotParam \{prefix}
 		CameraCuts_SetArrayPrefix <...> length = <transition_time>
 	else
-		if NOT ($current_playing_transition = None)
-			transition_getprefix Type = ($current_playing_transition)
+		if NOT ($current_playing_transition = none)
+			Transition_GetPrefix type = ($current_playing_transition)
 		else
-			transition_getprefix \{Type = Intro}
+			Transition_GetPrefix \{type = intro}
 		endif
 		GetPakManCurrentName \{map = zones}
-		formatText checksumName = Cameras_Array 'default_cameras_%t' t = <type_textnl>
-		formatText TextName = prefix 'cameras_%t' t = <type_textnl>
-		if NOT GlobalExists Name = <Cameras_Array>
-			formatText checksumName = Cameras_Array '%s_cameras_%t' s = <pakname> t = <type_textnl>
-			if NOT GlobalExists Name = <Cameras_Array>
+		FormatText checksumname = Cameras_Array 'default_cameras_%t' t = <type_textnl>
+		FormatText TextName = prefix 'cameras_%t' t = <type_textnl>
+		if NOT GlobalExists name = <Cameras_Array>
+			FormatText checksumname = Cameras_Array '%s_cameras_%t' s = <pakname> t = <type_textnl>
+			if NOT GlobalExists name = <Cameras_Array>
 				prefix = 'cameras_intro'
 			endif
 		endif
@@ -1445,16 +1445,16 @@ script Transition_CameraCut
 endscript
 
 script Transition_StopRendering 
-	printf \{qs(0x61460438)}
-	StopRendering
+	printf \{qs("\LTransition_StopRendering")}
+	stoprendering
 endscript
 
 script Transition_StartRendering 
-	printf \{qs(0xeddd15af)}
-	StartRendering
-	Change \{is_changing_levels = 0}
+	printf \{qs("\LTransition_StartRendering")}
+	startrendering
+	change \{is_changing_levels = 0}
 	if ($blade_active = 1)
-		Change \{blade_active = 0}
+		change \{blade_active = 0}
 		gh3_start_pressed \{from_handler}
 	endif
 endscript
@@ -1464,57 +1464,57 @@ script Transition_Printf
 endscript
 
 script Transitions_ResetZone 
-	printf \{qs(0x119c40dd)}
+	printf \{qs("\LTransitions_ResetZone")}
 	GetPakManCurrentName \{map = zones}
-	formatText checksumName = reset_func '%s_ResetTransition' s = <pakname>
+	FormatText checksumname = reset_func '%s_ResetTransition' s = <pakname>
 	if ScriptExists <reset_func>
 		<reset_func>
 	endif
-	formatText checksumName = nodearray_checksum '%s_NodeArray' s = <pakname>
-	if NOT GlobalExists Name = <nodearray_checksum> Type = array
+	FormatText checksumname = nodearray_checksum '%s_NodeArray' s = <pakname>
+	if NOT GlobalExists name = <nodearray_checksum> type = array
 		return
 	endif
 	GetArraySize $<nodearray_checksum>
 	array_count = 0
 	begin
 	resetvalid = true
-	if GotParam \{Profile}
-		resetvalid = FALSE
-		if StructureContains structure = ($<nodearray_checksum> [<array_count>]) Profile
-			if comparestructs struct1 = ($<nodearray_checksum> [<array_count>].Profile) struct2 = (<Profile>)
+	if GotParam \{profile}
+		resetvalid = false
+		if StructureContains Structure = ($<nodearray_checksum> [<array_count>]) profile
+			if CompareStructs struct1 = ($<nodearray_checksum> [<array_count>].profile) struct2 = (<profile>)
 				resetvalid = true
 			endif
 		endif
 	endif
-	if StructureContains structure = ($<nodearray_checksum> [<array_count>]) CreatedFromVariable
-		resetvalid = FALSE
+	if StructureContains Structure = ($<nodearray_checksum> [<array_count>]) CreatedFromVariable
+		resetvalid = false
 	endif
-	if StructureContains structure = ($<nodearray_checksum> [<array_count>]) CreatedOnProgress
-		resetvalid = FALSE
+	if StructureContains Structure = ($<nodearray_checksum> [<array_count>]) CreatedOnProgress
+		resetvalid = false
 	endif
-	if StructureContains structure = ($<nodearray_checksum> [<array_count>]) Class
+	if StructureContains Structure = ($<nodearray_checksum> [<array_count>]) Class
 		if NOT ($<nodearray_checksum> [<array_count>].Class = GameObject ||
-				$<nodearray_checksum> [<array_count>].Class = LevelGeometry)
-			resetvalid = FALSE
+				$<nodearray_checksum> [<array_count>].Class = levelgeometry)
+			resetvalid = false
 		endif
 	else
-		resetvalid = FALSE
+		resetvalid = false
 	endif
 	if (<resetvalid> = true)
-		printf qs(0x9f03166a) s = ($<nodearray_checksum> [<array_count>].Name)
-		kill Name = ($<nodearray_checksum> [<array_count>].Name)
-		if StructureContains structure = ($<nodearray_checksum> [<array_count>]) CreatedAtStart
-			create Name = ($<nodearray_checksum> [<array_count>].Name)
+		printf qs("\LResetting %s") s = ($<nodearray_checksum> [<array_count>].name)
+		kill name = ($<nodearray_checksum> [<array_count>].name)
+		if StructureContains Structure = ($<nodearray_checksum> [<array_count>]) CreatedAtStart
+			create name = ($<nodearray_checksum> [<array_count>].name)
 		endif
 	endif
 	array_count = (<array_count> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 endscript
 
-script common_intro_transitionsetup 
+script Common_Intro_TransitionSetup 
 	printf \{channel = sfx
-		qs(0x0ea33ed5)}
-	preload_celeb_intro_stream
+		qs("\L##############################  Common_Intro_TransitionSetup")}
+	Preload_Celeb_Intro_Stream
 endscript
 
 script Common_PreEncore_TransitionSetup 
@@ -1524,30 +1524,30 @@ endscript
 script Common_PreEncore_TransitionEnd 
 endscript
 
-script finalbandintro_transitionsetup 
+script FinalBandIntro_TransitionSetup 
 	printf \{channel = sfx
-		qs(0x86acca66)}
-	transition_getprefix Type = ($current_playing_transition)
-	if NOT ($celeb_intro_stream_id = None)
-		stopsound unique_id = ($celeb_intro_stream_id)
-		Change \{celeb_intro_stream_id = None}
+		qs("\L##############################  Common_FinalBandIntro_TransitionSetup")}
+	Transition_GetPrefix type = ($current_playing_transition)
+	if NOT ($celeb_intro_stream_id = none)
+		StopSound unique_id = ($celeb_intro_stream_id)
+		change \{celeb_intro_stream_id = none}
 	endif
-	PreloadStream \{intro_finalgig}
-	Change celeb_intro_stream_id = <unique_id>
+	PreloadStream \{Intro_FinalGig}
+	change celeb_intro_stream_id = <unique_id>
 endscript
 
-script common_finalbandoutro_transitionsetup 
+script Common_FinalBandOutro_TransitionSetup 
 	printf \{channel = sfx
-		qs(0x52f3ee09)}
-	if NOT ($celeb_intro_stream_id = None)
-		stopsound unique_id = ($celeb_intro_stream_id)
-		Change \{celeb_intro_stream_id = None}
+		qs("\L##############################  Common_FinalBandOutro_TransitionSetup")}
+	if NOT ($celeb_intro_stream_id = none)
+		StopSound unique_id = ($celeb_intro_stream_id)
+		change \{celeb_intro_stream_id = none}
 	endif
-	PreloadStream \{encore_finalgig}
-	Change celeb_intro_stream_id = <unique_id>
+	PreloadStream \{Encore_FinalGig}
+	change celeb_intro_stream_id = <unique_id>
 	begin
-	printf \{qs(0xb1fb7278)}
-	if PreloadStreamDone <unique_id>
+	printf \{qs("\LWaiting for final band outro stream")}
+	if PreLoadStreamDone <unique_id>
 		break
 	endif
 	Wait \{1
@@ -1557,8 +1557,8 @@ endscript
 
 script Common_Encore_TransitionSetup 
 	printf \{channel = sfx
-		qs(0x456e2c58)}
-	preload_encore_event_stream
+		qs("\L##############################  Common_Encore_TransitionSetup")}
+	Preload_Encore_Event_Stream
 endscript
 
 script Common_Boss_TransitionSetup 
@@ -1570,63 +1570,63 @@ endscript
 script Preload_Encore_Bink_Audio \{movie_name = 'z_artdeco_encore_audio'}
 endscript
 
-script common_loading_transitionsetup 
+script Common_Loading_TransitionSetup 
 	GetPakManCurrent \{map = zones}
 	switch <pak>
 		case z_metalfest
-		SoundEvent \{event = large_ext_crowd_song_transition}
+		SoundEvent \{event = Large_EXT_Crowd_Song_Transition}
 		case z_newyork
-		SoundEvent \{event = large_ext_crowd_song_transition}
+		SoundEvent \{event = Large_EXT_Crowd_Song_Transition}
 		case z_goth
-		SoundEvent \{event = medium_int_crowd_song_transition}
+		SoundEvent \{event = Medium_INT_Crowd_Song_Transition}
 		case z_cathedral
-		SoundEvent \{event = medium_int_crowd_song_transition}
+		SoundEvent \{event = Medium_INT_Crowd_Song_Transition}
 		case z_fairgrounds
-		SoundEvent \{event = medium_int_crowd_song_transition}
+		SoundEvent \{event = Medium_INT_Crowd_Song_Transition}
 		case z_ballpark
-		SoundEvent \{event = medium_int_crowd_song_transition}
+		SoundEvent \{event = Medium_INT_Crowd_Song_Transition}
 		case z_castle
-		SoundEvent \{event = medium_int_crowd_song_transition}
+		SoundEvent \{event = Medium_INT_Crowd_Song_Transition}
 		case z_military
-		SoundEvent \{event = medium_int_crowd_song_transition}
-		case Z_Harbor
-		SoundEvent \{event = medium_int_crowd_song_transition}
+		SoundEvent \{event = Medium_INT_Crowd_Song_Transition}
+		case z_harbor
+		SoundEvent \{event = Medium_INT_Crowd_Song_Transition}
 		case z_scifi
-		SoundEvent \{event = medium_int_crowd_song_transition}
+		SoundEvent \{event = Medium_INT_Crowd_Song_Transition}
 		case z_submarine
-		SoundEvent \{event = medium_int_crowd_song_transition}
+		SoundEvent \{event = Medium_INT_Crowd_Song_Transition}
 		default
 		printf \{channel = sfx
-			qs(0x21a8e0d5)}
+			qs("\LNo Surge, Small Crowd")}
 	endswitch
-	SoundEvent \{event = $current_crowd_swell_short_soundevent_l}
-	SoundEvent \{event = $current_crowd_swell_short_soundevent_r}
-	SoundEvent \{event = $current_crowd_swell_med_soundevent_l}
-	SoundEvent \{event = $current_crowd_swell_med_soundevent_r}
-	SoundEvent \{event = $current_crowd_swell_long_soundevent_l}
-	SoundEvent \{event = $current_crowd_swell_long_soundevent_r}
-	SoundEvent \{event = oneshotsbetweensongs}
-	SoundEvent \{event = surgebetweensongs}
+	SoundEvent \{event = $Current_Crowd_Swell_Short_SoundEvent_L}
+	SoundEvent \{event = $Current_Crowd_Swell_Short_SoundEvent_R}
+	SoundEvent \{event = $Current_Crowd_Swell_Med_SoundEvent_L}
+	SoundEvent \{event = $Current_Crowd_Swell_Med_SoundEvent_R}
+	SoundEvent \{event = $Current_Crowd_Swell_Long_SoundEvent_L}
+	SoundEvent \{event = $Current_Crowd_Swell_Long_SoundEvent_R}
+	SoundEvent \{event = OneShotsBetweenSongs}
+	SoundEvent \{event = SurgeBetweenSongs}
 endscript
-celeb_intro_stream_id = None
+celeb_intro_stream_id = none
 
-script preload_celeb_intro_stream 
+script Preload_Celeb_Intro_Stream 
 	printf \{channel = sfx
-		qs(0x9f3ca4a3)}
-	transition_getprefix Type = ($current_playing_transition)
-	if NOT ($celeb_intro_stream_id = None)
-		stopsound unique_id = ($celeb_intro_stream_id)
-		Change \{celeb_intro_stream_id = None}
+		qs("\L################################ Preload_Celeb_Intro_Stream")}
+	Transition_GetPrefix type = ($current_playing_transition)
+	if NOT ($celeb_intro_stream_id = none)
+		StopSound unique_id = ($celeb_intro_stream_id)
+		change \{celeb_intro_stream_id = none}
 	endif
 	if (<celeb_intro> = 0)
 		return
 	endif
 	celeb_intro_checksum = ($current_playing_transition)
 	PreloadStream <celeb_intro_checksum>
-	Change celeb_intro_stream_id = <unique_id>
+	change celeb_intro_stream_id = <unique_id>
 	begin
-	printf \{qs(0x50818c55)}
-	if PreloadStreamDone <unique_id>
+	printf \{qs("\LWaiting for celeb intro stream")}
+	if PreLoadStreamDone <unique_id>
 		break
 	endif
 	Wait \{1
@@ -1634,33 +1634,33 @@ script preload_celeb_intro_stream
 	repeat
 endscript
 
-script start_preloaded_celeb_intro_stream 
+script Start_Preloaded_Celeb_Intro_Stream 
 	printf \{channel = sfx
-		qs(0x9ff5df66)}
-	if NOT ($celeb_intro_stream_id = None)
-		StartPreLoadedStream \{$celeb_intro_stream_id
+		qs("\L################################ Start_Preloaded_Celeb_Intro_Stream")}
+	if NOT ($celeb_intro_stream_id = none)
+		StartPreloadedStream \{$celeb_intro_stream_id
 			buss = Encore_Events
 			forcesafepreload = 1
 			pitch = 100}
-		Change \{celeb_intro_stream_id = None}
+		change \{celeb_intro_stream_id = none}
 	endif
 endscript
-encore_event_stream_id = None
+encore_event_stream_id = none
 
-script preload_encore_event_stream 
+script Preload_Encore_Event_Stream 
 	printf \{channel = sfx
-		qs(0x03f14c32)}
-	if NOT ($encore_event_stream_id = None)
-		stopsound unique_id = ($encore_event_stream_id)
-		Change \{encore_event_stream_id = None}
+		qs("\L################################ Preload_Encore_Event_Stream")}
+	if NOT ($encore_event_stream_id = none)
+		StopSound unique_id = ($encore_event_stream_id)
+		change \{encore_event_stream_id = none}
 	endif
 	GetPakManCurrentName \{map = zones}
-	formatText checksumName = encore_stream_name '%s_encore' s = <pakname> AddToStringLookup = true
+	FormatText checksumname = encore_stream_name '%s_encore' s = <pakname> AddToStringLookup = true
 	PreloadStream <encore_stream_name>
-	Change encore_event_stream_id = <unique_id>
+	change encore_event_stream_id = <unique_id>
 	begin
-	printf \{qs(0x93305209)}
-	if PreloadStreamDone <unique_id>
+	printf \{qs("\LWaiting for encore stream")}
+	if PreLoadStreamDone <unique_id>
 		break
 	endif
 	Wait \{1
@@ -1668,41 +1668,41 @@ script preload_encore_event_stream
 	repeat
 endscript
 
-script start_preloaded_encore_event_stream 
+script Start_Preloaded_Encore_Event_Stream 
 	printf \{channel = sfx
-		qs(0x72abc744)}
-	if NOT ($encore_event_stream_id = None)
-		StopSoundEvent \{$current_crowd_encore
+		qs("\L################################ Start_Preloaded_Encore_Event_Stream")}
+	if NOT ($encore_event_stream_id = none)
+		StopSoundEvent \{$Current_Crowd_Encore
 			fade_time = 2.5
 			fade_type = log_slow}
 		printf \{channel = sfx
-			qs(0x554dbcd0)}
-		StartPreLoadedStream \{$encore_event_stream_id
+			qs("\L$$$$$$$$$$$$$$$$$  PLAYING!!!!")}
+		StartPreloadedStream \{$encore_event_stream_id
 			buss = Encore_Events
 			forcesafepreload = 1
 			pitch = 100}
-		Change \{encore_event_stream_id = None}
+		change \{encore_event_stream_id = none}
 	endif
 endscript
 
-script start_preloaded_finalbandoutro_stream 
+script Start_Preloaded_FinalBandOutro_Stream 
 	printf \{channel = sfx
-		qs(0x12d0a014)}
-	if NOT ($celeb_intro_stream_id = None)
-		StopSoundEvent \{$current_crowd_encore
+		qs("\L################################ Start_Preloaded_FinalBandOutro_Event_Stream")}
+	if NOT ($celeb_intro_stream_id = none)
+		StopSoundEvent \{$Current_Crowd_Encore
 			fade_time = 2.5
 			fade_type = log_slow}
-		StartPreLoadedStream \{$celeb_intro_stream_id
+		StartPreloadedStream \{$celeb_intro_stream_id
 			buss = Encore_Events
 			forcesafepreload = 1
 			pitch = 100}
-		Change \{celeb_intro_stream_id = None}
+		change \{celeb_intro_stream_id = none}
 	endif
 endscript
 
-script kill_transition_preload_streams 
-	KillSpawnedScript \{Name = preload_encore_event_stream}
-	KillSpawnedScript \{Name = preload_celeb_intro_stream}
-	Change \{encore_event_stream_id = None}
-	Change \{celeb_intro_stream_id = None}
+script Kill_Transition_Preload_Streams 
+	KillSpawnedScript \{name = Preload_Encore_Event_Stream}
+	KillSpawnedScript \{name = Preload_Celeb_Intro_Stream}
+	change \{encore_event_stream_id = none}
+	change \{celeb_intro_stream_id = none}
 endscript

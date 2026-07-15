@@ -1,6 +1,6 @@
 
 script ui_init_song_summary 
-	SpawnScriptNow \{kill_gem_scroller}
+	spawnscriptnow \{kill_gem_scroller}
 endscript
 
 script ui_create_song_summary 
@@ -10,9 +10,9 @@ script ui_create_song_summary
 		{pad_choose ui_song_summary_continue_next_screen params = {<...>}}
 		{pad_back generic_event_choose params = {state = uistate_detailed_stats}}
 	]
-	gamemode_gettype
-	if NOT ((<Type> = battle) || (<Type> = faceoff) || (<Type> = pro_faceoff))
-		getplayerinfo \{1
+	GameMode_GetType
+	if NOT ((<type> = battle) || (<type> = faceoff) || (<type> = pro_faceoff))
+		GetPlayerInfo \{1
 			controller}
 		if CheckForSignIn controller_index = <controller>
 			my_events = [
@@ -32,28 +32,28 @@ script ui_create_song_summary
 		case 4
 		build_page_for_4p <...>
 	endswitch
-	gamemode_gettype
+	GameMode_GetType
 	printstruct channel = mychannel <...>
-	if (<Type> = training)
+	if (<type> = training)
 		build_menu_for_practice_mode
 	else
-		add_user_control_helper \{text = qs(0x182f0173)
+		add_user_control_helper \{text = qs("CONTINUE")
 			button = green
 			z = 100000}
-		add_user_control_helper \{text = qs(0x3f11367e)
+		add_user_control_helper \{text = qs("MORE STATS")
 			button = red
 			z = 100000}
-		if NOT ((<Type> = battle) || (<Type> = faceoff) || (<Type> = pro_faceoff))
+		if NOT ((<type> = battle) || (<type> = faceoff) || (<type> = pro_faceoff))
 			if CheckForSignIn controller_index = <controller>
-				add_user_control_helper \{text = qs(0x87251a1f)
-					button = yellow
+				add_user_control_helper \{text = qs("LEADERBOARD")
+					button = Yellow
 					z = 100000}
 			endif
 		endif
 		AssignAlias \{id = summary_page_id
 			alias = current_menu}
 	endif
-	if (<Type> = quickplay)
+	if (<type> = quickplay)
 		if NOT GotParam \{failed_song}
 			menu_top_rockers_check_for_new_top_score \{nowrite = 1}
 		endif
@@ -66,12 +66,12 @@ script ui_destroy_song_summary
 endscript
 
 script my_get_player_data \{player_index = 1}
-	getplayerinfo <player_index> part
-	getplayerinfo <player_index> best_run
-	getplayerinfo <player_index> score
-	getplayerinfo <player_index> max_notes
-	getplayerinfo <player_index> notes_hit
-	getplayerinfo <player_index> stars
+	GetPlayerInfo <player_index> part
+	GetPlayerInfo <player_index> best_run
+	GetPlayerInfo <player_index> score
+	GetPlayerInfo <player_index> max_notes
+	GetPlayerInfo <player_index> notes_hit
+	GetPlayerInfo <player_index> stars
 	if (<max_notes> = 0)
 		max_notes = 1
 	endif
@@ -89,19 +89,19 @@ script my_get_player_data \{player_index = 1}
 		get_difficulty_text_nl difficulty = ($player4_status.difficulty)
 	endswitch
 	CastToInteger \{score}
-	formatText TextName = player_text qs(0x5c5cedaa) p = <player_index>
-	formatText TextName = score_text qs(0x4d4555da) s = <score> DecimalPlaces = 0 usecommas
-	formatText TextName = difficulty_text qs(0x48c6d14c) d = <difficulty_text_nl>
-	formatText TextName = percent_text qs(0x49412198) p = (((<notes_hit> * 1.0) / <max_notes>) * 100.0) DecimalPlaces = 0
-	formatText TextName = streak_text qs(0xb22939c6) n = <best_run> DecimalPlaces = 0
+	FormatText TextName = player_text qs("Player %p") p = <player_index>
+	FormatText TextName = score_text qs("%s") s = <score> DecimalPlaces = 0 usecommas
+	FormatText TextName = difficulty_text qs("%d") d = <difficulty_text_nl>
+	FormatText TextName = percent_text qs("%p\%") p = (((<notes_hit> * 1.0) / <max_notes>) * 100.0) DecimalPlaces = 0
+	FormatText TextName = streak_text qs("%n") n = <best_run> DecimalPlaces = 0
 	switch (<part>)
 		case guitar
 		icon_texture = guitar_stat
-		case bass
+		case Bass
 		icon_texture = bass_stat
 		case drum
 		icon_texture = drum_stat
-		case vocals
+		case Vocals
 		icon_texture = vocal_stat
 	endswitch
 	return <...>
@@ -111,13 +111,13 @@ script build_page_for_1p
 	CreateScreenElement {
 		parent = root_window
 		id = summary_page_id
-		Type = descinterface
+		type = DescInterface
 		desc = 'song_summary_1p'
 		event_handlers = <my_events>
 	}
-	if summary_page_id :desc_resolvealias \{Name = alias_song_summary_1p_collumn}
+	if summary_page_id :Desc_ResolveAlias \{name = alias_song_summary_1p_collumn}
 	else
-		ScriptAssert \{qs(0x471a8e40)}
+		ScriptAssert \{qs("\LProblem resolving alias in UIstate_song_complete")}
 	endif
 	my_get_player_data
 	SetScreenElementProps {
@@ -149,11 +149,11 @@ script build_page_for_2p
 	CreateScreenElement {
 		parent = root_window
 		id = summary_page_id
-		Type = descinterface
+		type = DescInterface
 		desc = 'song_summary_2p'
 		event_handlers = <my_events>
 	}
-	summary_page_id :desc_resolvealias \{Name = alias_collumns_container}
+	summary_page_id :Desc_ResolveAlias \{name = alias_collumns_container}
 	col_container_id = <resolved_id>
 	GetScreenElementChildren id = <col_container_id>
 	col_cont_children = <children>
@@ -192,11 +192,11 @@ script build_page_for_3p
 	CreateScreenElement {
 		parent = root_window
 		id = summary_page_id
-		Type = descinterface
+		type = DescInterface
 		desc = 'song_summary_3p'
 		event_handlers = <my_events>
 	}
-	summary_page_id :desc_resolvealias \{Name = alias_collumn_container}
+	summary_page_id :Desc_ResolveAlias \{name = alias_collumn_container}
 	col_container_id = <resolved_id>
 	GetScreenElementChildren id = <col_container_id>
 	col_cont_children = <children>
@@ -235,11 +235,11 @@ script build_page_for_4p
 	CreateScreenElement {
 		parent = root_window
 		id = summary_page_id
-		Type = descinterface
+		type = DescInterface
 		desc = 'song_summary_4p'
 		event_handlers = <my_events>
 	}
-	summary_page_id :desc_resolvealias \{Name = alias_collumn_container}
+	summary_page_id :Desc_ResolveAlias \{name = alias_collumn_container}
 	col_container_id = <resolved_id>
 	GetScreenElementChildren id = <col_container_id>
 	col_cont_children = <children>
@@ -281,41 +281,41 @@ script ui_song_summary_continue_next_screen
 	progression_get_new_unlocks
 	GetArraySize <new_unlocks>
 	sponsored = ($progression_got_sponsored_last_song)
-	gamemode_gettype
-	if (<Type> = career)
+	GameMode_GetType
+	if (<type> = career)
 	endif
-	if (<Type> = training)
+	if (<type> = training)
 		ui_win_song_continue_next_menu
 	elseif (<sponsored> = true)
 		generic_event_choose \{state = uistate_sponsor_new}
-	elseif (<array_Size> > 0)
+	elseif (<array_size> > 0)
 		generic_event_choose \{state = uistate_rewards}
-	elseif progression_anyplayerwoncash
+	elseif Progression_AnyPlayerWonCash
 		if (($current_num_players) = 1)
 			generic_event_choose \{state = uistate_cash_rewards_3}
 		else
-			generic_event_choose \{state = uistate_cash_milestones}
+			generic_event_choose \{state = UIstate_cash_milestones}
 		endif
 	else
 		ui_win_song_continue_next_menu
 	endif
 	RemoveParameter \{base_name}
 	RemoveParameter \{pakname}
-	generic_event_choose state = uistate_win_song data = {<...>}
+	generic_event_choose state = UIstate_win_song data = {<...>}
 endscript
 
 script build_menu_for_practice_mode 
 	disable_pause
-	if summary_page_id :desc_resolvealias \{Name = alias_my_menu}
+	if summary_page_id :Desc_ResolveAlias \{name = alias_my_menu}
 	else
-		ScriptAssert \{qs(0x293d0971)}
+		ScriptAssert \{qs("\LProblem resolving alias_my_menu in UI_song_summary")}
 	endif
 	continue_script = song_summary_continue_practice_mode
 	CreateScreenElement {
 		parent = <resolved_id>
-		Type = TextElement
+		type = TextElement
 		font = fontgrid_text_a8
-		text = qs(0x5e743602)
+		text = qs("continue")
 		rgba = ($menu_unfocus_color)
 		event_handlers = [
 			{focus retail_menu_focus}
@@ -325,9 +325,9 @@ script build_menu_for_practice_mode
 	}
 	CreateScreenElement {
 		parent = <resolved_id>
-		Type = TextElement
+		type = TextElement
 		font = fontgrid_text_a8
-		text = qs(0xcbd10828)
+		text = qs("detailed stats")
 		rgba = ($menu_unfocus_color)
 		event_handlers = [
 			{focus retail_menu_focus}
@@ -337,9 +337,9 @@ script build_menu_for_practice_mode
 	}
 	CreateScreenElement {
 		parent = <resolved_id>
-		Type = TextElement
+		type = TextElement
 		font = fontgrid_text_a8
-		text = qs(0x0c711699)
+		text = qs("replay song")
 		rgba = ($menu_unfocus_color)
 		event_handlers = [
 			{focus retail_menu_focus}
@@ -349,9 +349,9 @@ script build_menu_for_practice_mode
 	}
 	CreateScreenElement {
 		parent = <resolved_id>
-		Type = TextElement
+		type = TextElement
 		font = fontgrid_text_a8
-		text = qs(0x4a1f8323)
+		text = qs("select speed")
 		rgba = ($menu_unfocus_color)
 		event_handlers = [
 			{focus retail_menu_focus}
@@ -361,9 +361,9 @@ script build_menu_for_practice_mode
 	}
 	CreateScreenElement {
 		parent = <resolved_id>
-		Type = TextElement
+		type = TextElement
 		font = fontgrid_text_a8
-		text = qs(0x07b66aa5)
+		text = qs("select section")
 		rgba = ($menu_unfocus_color)
 		event_handlers = [
 			{focus retail_menu_focus}

@@ -6,10 +6,10 @@ script faceoff_init
 	change structurename = <player_status> gem_filler_enabled_time_on = 0
 	change structurename = <player_status> gem_filler_enabled_time_off = 0
 	change structurename = <player_status> gem_filler_first_note = 0
-	printf qs(0x28f9f4f4) d = <time_offset>
+	printf qs("\LFaceoff Iterator started with time %d") d = <time_offset>
 	change \{faceoff_enabled = 1}
 	if ($is_network_game)
-		if NOT ishost
+		if NOT IsHost
 			if (<player_text> = 'p1')
 				<player_text> = 'p2'
 			else
@@ -19,8 +19,8 @@ script faceoff_init
 	endif
 	get_notetrack_part_text player_status = <player_status> song_name = <song_name>
 	get_song_prefix song = <song_name>
-	formattext checksumname = note_array '%s_%jfaceoff%p' s = <song_prefix> j = <part> p = <player_text> addtostringlookup
-	getarraysize $<note_array>
+	FormatText checksumname = note_array '%s_%jfaceoff%p' s = <song_prefix> j = <part> p = <player_text> AddToStringLookup
+	GetArraySize $<note_array>
 	if (<array_size> = 0)
 		time = 1000000
 	else
@@ -48,9 +48,9 @@ script faceoff_volumes_init
 	if ($boss_battle = 1)
 		return
 	endif
-	printf qs(0x2f6515d8) d = <time_offset>
+	printf qs("\LFaceoff Volume Iterator started with time %d") d = <time_offset>
 	if ($is_network_game)
-		if NOT ishost
+		if NOT IsHost
 			if (<player_text> = 'p1')
 				<player_text> = 'p2'
 			else
@@ -60,8 +60,8 @@ script faceoff_volumes_init
 	endif
 	get_song_prefix song = <song_name>
 	get_notetrack_part_text player_status = <player_status> song_name = <song_name>
-	formattext checksumname = note_array '%s_%ifaceoff%p' s = <song_prefix> i = <part> p = <player_text> addtostringlookup
-	getarraysize $<note_array>
+	FormatText checksumname = note_array '%s_%ifaceoff%p' s = <song_prefix> i = <part> p = <player_text> AddToStringLookup
+	GetArraySize $<note_array>
 	if (<array_size> = 0)
 		time = 1000000
 	else
@@ -101,7 +101,7 @@ script faceoff_volumes_init
 		change \{structurename = player2_status
 			last_faceoff_note = 100}
 	endif
-	updateguitarvolume
+	UpdateGuitarVolume
 endscript
 
 script faceoff_volumes_deinit 

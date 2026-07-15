@@ -10,9 +10,9 @@ script ui_destroy_select_tutorial
 endscript
 
 script ui_init_select_tutorial \{from_career = 0}
-	Change \{in_tutorial_mode = 1}
+	change \{in_tutorial_mode = 1}
 endscript
 
 script ui_deinit_select_tutorial \{from_career = 0}
-	Change \{in_tutorial_mode = 0}
+	change \{in_tutorial_mode = 0}
 endscript

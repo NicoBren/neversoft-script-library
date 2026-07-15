@@ -20,7 +20,7 @@ debug_hud_layouts_list = [
 		gamemode = p2_quickplay
 		parts = [
 			guitar
-			vocals
+			Vocals
 			guitar
 			guitar
 		]
@@ -35,7 +35,7 @@ debug_hud_layouts_list = [
 		layout = 'hud_1v'
 		gamemode = p1_quickplay
 		parts = [
-			vocals
+			Vocals
 			guitar
 			guitar
 			guitar
@@ -52,8 +52,8 @@ debug_hud_layouts_list = [
 		gamemode = p3_quickplay
 		parts = [
 			guitar
-			bass
-			vocals
+			Bass
+			Vocals
 			guitar
 		]
 		aliases = [
@@ -69,8 +69,8 @@ debug_hud_layouts_list = [
 		parts = [
 			guitar
 			drum
-			bass
-			vocals
+			Bass
+			Vocals
 		]
 		aliases = [
 			alias_g1
@@ -99,8 +99,8 @@ debug_hud_layouts_list = [
 		layout = 'hud_2v'
 		gamemode = p2_faceoff
 		parts = [
-			vocals
-			vocals
+			Vocals
+			Vocals
 			guitar
 			guitar
 		]

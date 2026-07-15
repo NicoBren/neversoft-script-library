@@ -6,19 +6,19 @@ menu_gp_last_gignum = 1
 should_reset_gig_posters_selection = 0
 
 script gig_posters_choose_next 
-	setspawninstancelimits \{max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
 	if ($is_network_game = 0)
 		if NOT vocals_mic_distribution_is_valid
-			getplayerinfo <invalid_mic_player> controller
-			generic_event_choose state = uistate_select_instrument_warning data = {instrument = vocals controller = <controller>}
+			GetPlayerInfo <invalid_mic_player> controller
+			generic_event_choose state = uistate_select_instrument_warning data = {instrument = Vocals controller = <controller>}
 			return
 		endif
 	endif
 	wait_for_camera_anim
 	ready = 1
-	if screenelementexists \{id = gp_selection_menu}
-		gp_selection_menu :gettags
+	if ScreenElementExists \{id = gp_selection_menu}
+		gp_selection_menu :GetTags
 	endif
 	if (<ready> = 0)
 		return
@@ -27,14 +27,14 @@ script gig_posters_choose_next
 		return
 	endif
 	if ($menu_gp_stage != 1)
-		if NOT gotparam \{song_checksum}
+		if NOT GotParam \{song_checksum}
 			return
 		endif
 	endif
-	if screenelementexists \{id = gp_selection_menu}
-		gp_selection_menu :settags \{ready = 0}
+	if ScreenElementExists \{id = gp_selection_menu}
+		gp_selection_menu :SetTags \{ready = 0}
 	endif
-	if ((($is_network_game = 1) && (ishost)) || ($is_network_game = 0))
+	if ((($is_network_game = 1) && (IsHost)) || ($is_network_game = 0))
 		gig_num = ($gigposter_creation_numbers [($menu_gp_current_selection - 1)])
 		change current_gig_number = <gig_num>
 		change menu_gp_last_gignum = <gig_num>
@@ -43,18 +43,18 @@ script gig_posters_choose_next
 		is_special_event = 0
 		is_paytoplay = 0
 		get_progression_globals <progression_flag>
-		formattext \{checksumname = tiernum
+		FormatText \{checksumname = tiernum
 			'tier%d'
 			d = $menu_gp_last_gignum}
 		format_globaltag_gigname setlist_prefix = ($<tier_global>.prefix) gignum = $menu_gp_last_gignum
-		if structurecontains structure = ($<tier_global>.<tiernum>) specialevent
+		if StructureContains Structure = ($<tier_global>.<tiernum>) specialevent
 			<is_special_event> = 1
 		endif
-		if structurecontains structure = ($<tier_global>.<tiernum>) paytoplay
+		if StructureContains Structure = ($<tier_global>.<tiernum>) paytoplay
 			<is_paytoplay> = 1
 		endif
-		if structurecontains structure = ($<tier_global>.<tiernum>) createagig
-			setglobaltags \{progression
+		if StructureContains Structure = ($<tier_global>.<tiernum>) createagig
+			SetGlobalTags \{Progression
 				params = {
 					career_using_createagig = 1
 				}
@@ -62,56 +62,56 @@ script gig_posters_choose_next
 			generic_event_choose state = uistate_setlist data = {<...> createagig no_jamsession keep_current_level next_state = uistate_select_venue}
 			return
 		endif
-		if gotparam \{song_checksum}
+		if GotParam \{song_checksum}
 			change current_song = <song_checksum>
 		else
 			change current_song = ($<tier_global>.<tiernum>.songs [0])
 			song_checksum = $current_song
 			song_index = 0
 		endif
-		if ($current_progression_flag = career_band && $is_network_game = 0)
-			getsavegamefromcontroller controller = ($band_mode_current_leader)
+		if ($current_progression_flag = Career_Band && $is_network_game = 0)
+			GetSavegameFromController controller = ($band_mode_current_leader)
 		else
-			getsavegamefromcontroller controller = ($primary_controller)
+			GetSavegameFromController controller = ($primary_controller)
 		endif
-		getglobaltags <gig_name> savegame = <savegame>
+		GetGlobalTags <gig_name> savegame = <savegame>
 		if ($menu_gp_stage = 1)
-			soundevent \{event = gigboard_select}
-			soundevent \{event = gig_board_zoom_in}
+			SoundEvent \{event = Gigboard_Select}
+			SoundEvent \{event = Gig_Board_Zoom_In}
 			get_gigposter_camera_name num = ($menu_gp_current_selection)
 			change target_menu_camera = <gigposter_camera>
 			gig_posters_focus_popup current_selection = ($menu_gp_current_selection)
 			change \{menu_gp_stage = 2}
-			launchevent \{type = unfocus
+			LaunchEvent \{type = unfocus
 				target = gp_selection_menu}
-			if screenelementexists \{id = gp_selection_menu}
-				gp_selection_menu :settags \{ready = 1}
+			if ScreenElementExists \{id = gp_selection_menu}
+				gp_selection_menu :SetTags \{ready = 1}
 			endif
 			return
 		endif
 		single_song = 0
-		setglobaltags \{progression
+		SetGlobalTags \{Progression
 			params = {
 				career_play_song_and_end = 0
 			}
 			all_active_players = 1}
 		if (<completed> = 1 || <completed> = 2)
-			if NOT gotparam \{play_entire_gig}
+			if NOT GotParam \{play_entire_gig}
 				single_song = 1
-				setglobaltags \{progression
+				SetGlobalTags \{Progression
 					params = {
 						career_play_song_and_end = 1
 					}
 					all_active_players = 1}
 			endif
 		else
-			if gotparam \{play_entire_gig}
+			if GotParam \{play_entire_gig}
 				if (<is_paytoplay> = 1)
 					if (<started> = 1)
-						soundevent \{event = song_affirmation}
+						SoundEvent \{event = Song_Affirmation}
 					endif
 				else
-					soundevent \{event = song_affirmation}
+					SoundEvent \{event = Song_Affirmation}
 				endif
 			endif
 		endif
@@ -119,14 +119,14 @@ script gig_posters_choose_next
 			if NOT search_for_tool_in_gig \{gig = $menu_gp_last_gignum}
 				if (<completed> = 1 || <completed> = 2)
 					change \{menu_gp_stage = 3}
-					launchevent \{type = unfocus
+					LaunchEvent \{type = unfocus
 						target = gigboard_setlist_menu_content}
 					generic_menu_pad_choose_sound
 					if ($is_network_game = 0)
-						destroy_menu \{menu_id = gigboardsetlistinterface}
+						destroy_menu \{menu_id = GigBoardSetlistInterface}
 						create_gig_poster_venue_select poster_gig_num = <gig_num> song_checksum = <song_checksum> song_index = <song_index>
 					else
-						sendstructure {callback = net_gig_posters_choose_next data_to_send = {
+						SendStructure {callback = net_gig_posters_choose_next data_to_send = {
 								gig_num = <gig_num> progression_flag = <progression_flag> song_checksum = <song_checksum> song_index = <song_index> single_song = <single_song>
 							}
 						}
@@ -143,29 +143,29 @@ script gig_posters_choose_next
 			endif
 		endif
 		if (<is_special_event> = 1)
-			if NOT gotparam \{challenge_num}
-				if ($current_progression_flag = career_band)
-					generic_event_choose state = uistate_band_difficulty data = {continue_data = {state = uistate_special_events <...> specialevent_num = ($<tier_global>.<tiernum>.specialevent)}}
+			if NOT GotParam \{challenge_num}
+				if ($current_progression_flag = Career_Band)
+					generic_event_choose state = uistate_band_difficulty data = {continue_data = {state = UIstate_special_events <...> specialevent_num = ($<tier_global>.<tiernum>.specialevent)}}
 					return
 				endif
-				ui_event event = menu_change data = {state = uistate_special_events <...> specialevent_num = ($<tier_global>.<tiernum>.specialevent)}
+				ui_event event = menu_change data = {state = UIstate_special_events <...> specialevent_num = ($<tier_global>.<tiernum>.specialevent)}
 			else
-				getplayerinfo \{1
+				GetPlayerInfo \{1
 					part}
-				formattext checksumname = special_event_num 'special_event%d' d = ($<tier_global>.<tiernum>.specialevent)
-				formattext checksumname = challenge 'challenge%d' d = <challenge_num>
-				formattext checksumname = songs_ar '%p_songs' p = ($part_list_props.<part>.text_nl)
-				if structurecontains structure = ($special_events_challenges.<special_event_num>.<challenge>) name
+				FormatText checksumname = special_event_num 'special_event%d' d = ($<tier_global>.<tiernum>.specialevent)
+				FormatText checksumname = challenge 'challenge%d' d = <challenge_num>
+				FormatText checksumname = songs_ar '%p_songs' p = ($part_list_props.<part>.text_nl)
+				if StructureContains Structure = ($Special_Events_Challenges.<special_event_num>.<challenge>) name
 					change \{special_event_stage = 1}
-					change current_special_event = ($special_events_challenges.<special_event_num>.<challenge>.name)
+					change current_special_event = ($Special_Events_Challenges.<special_event_num>.<challenge>.name)
 					change current_special_event_num = ($<tier_global>.<tiernum>.specialevent)
 					change current_special_event_challenge_num = <challenge_num>
-					getspecialeventtimer
+					GetSpecialEventTimer
 					change total_special_event_time = <time>
 					load_songpak = 0
 					if ($current_special_event_num = 1 || $current_special_event_num = 2)
 						reset_current_special_event_percentages
-						change current_song = ($special_events_challenges.<special_event_num>.<challenge>.<songs_ar> [$special_event_song_index].song)
+						change current_song = ($Special_Events_Challenges.<special_event_num>.<challenge>.<songs_ar> [$special_event_song_index].song)
 						<load_songpak> = 1
 					endif
 					if (<load_songpak> = 1)
@@ -176,33 +176,33 @@ script gig_posters_choose_next
 					endif
 					if NOT ($current_special_event_num = 3)
 						reset_score \{player_status = player1_status}
-						if ($current_progression_flag = career_band)
-							generic_event_choose state = uistate_band_difficulty data = {continue_data = {state = ($special_events_challenges.<special_event_num>.<challenge>.state) <...>}}
+						if ($current_progression_flag = Career_Band)
+							generic_event_choose state = uistate_band_difficulty data = {continue_data = {state = ($Special_Events_Challenges.<special_event_num>.<challenge>.state) <...>}}
 							return
 						endif
 					endif
-					ui_event event = menu_change data = {state = ($special_events_challenges.<special_event_num>.<challenge>.state) <...>}
+					ui_event event = menu_change data = {state = ($Special_Events_Challenges.<special_event_num>.<challenge>.state) <...>}
 				endif
 			endif
 		elseif (<is_paytoplay> = 1)
 			if (<started> = 0)
-				if ($current_progression_flag = career_band && $is_network_game = 0)
-					getsavegamefromcontroller controller = ($band_mode_current_leader)
+				if ($current_progression_flag = Career_Band && $is_network_game = 0)
+					GetSavegameFromController controller = ($band_mode_current_leader)
 				else
-					getsavegamefromcontroller controller = ($primary_controller)
+					GetSavegameFromController controller = ($primary_controller)
 				endif
 				get_current_band_info
-				getglobaltags <band_info> savegame = <savegame>
+				GetGlobalTags <band_info> savegame = <savegame>
 				paytoplay_price = ($<tier_global>.<tiernum>.paytoplay)
-				launchevent \{type = unfocus
+				LaunchEvent \{type = unfocus
 					target = gigboard_setlist_menu_content}
-				if screenelementexists \{id = gigboardarrowinterface}
-					destroyscreenelement \{id = gigboardarrowinterface}
+				if ScreenElementExists \{id = GigBoardArrowInterface}
+					DestroyScreenElement \{id = GigBoardArrowInterface}
 				endif
-				if (<cash> >= <paytoplay_price>)
+				if (<Cash> >= <paytoplay_price>)
 					generic_menu_pad_choose_sound
 					change \{target_setlist_songpreview = none}
-					formattext textname = areyousuretext qs(0x48959918) d = <paytoplay_price>
+					FormatText TextName = areyousuretext qs("Are you sure you want to spend $%d on this gig?") d = <paytoplay_price>
 					create_popup_warning_menu {
 						textblock = {
 							text = <areyousuretext>
@@ -218,19 +218,19 @@ script gig_posters_choose_next
 						options = [
 							{
 								func = {gigboard_continue_to_paytoplay params = {<...> deduct_funds}}
-								text = qs(0x9b07ecb6)
+								text = qs("BUY")
 							}
 							{
 								func = {gigboard_cancel_paytoplay params = {setup_paytoplay_helpers}}
-								text = qs(0xf7723015)
+								text = qs("CANCEL")
 							}
 						]
 					}
 				else
-					soundevent \{event = ui_sfx_negative_select}
+					SoundEvent \{event = UI_SFX_Negative_Select}
 					create_popup_warning_menu {
 						textblock = {
-							text = qs(0x531362be)
+							text = qs("You don't have enough cash to play this gig!")
 							dims = (600.0, 400.0)
 							scale = 0.6
 						}
@@ -243,7 +243,7 @@ script gig_posters_choose_next
 						options = [
 							{
 								func = {gigboard_cancel_paytoplay params = {setup_paytoplay_helpers}}
-								text = qs(0x0e41fe46)
+								text = qs("OK")
 							}
 						]
 					}
@@ -252,9 +252,9 @@ script gig_posters_choose_next
 				gigboard_continue_to_paytoplay <...>
 			endif
 		else
-			if ($current_progression_flag = career_band)
-				if (($is_network_game = 1) && (ishost))
-					sendstructure {callback = net_gig_posters_choose_next data_to_send = {
+			if ($current_progression_flag = Career_Band)
+				if (($is_network_game = 1) && (IsHost))
+					SendStructure {callback = net_gig_posters_choose_next data_to_send = {
 							gig_num = <gig_num> progression_flag = <progression_flag> song_checksum = <song_checksum> song_index = <song_index> single_song = <single_song>
 						}
 					}
@@ -277,16 +277,16 @@ script gig_posters_choose_next
 endscript
 
 script net_gig_posters_choose_next 
-	printf \{qs(0xdcdb9658)}
+	printf \{qs("\L--- net_gig_posters_choose_next ---")}
 	printstruct <...>
 	change menu_gp_current_selection = <gig_num>
 	change current_gig_number = <gig_num>
 	change current_progression_flag = <progression_flag>
 	change current_song = <song_checksum>
 	change net_career_song_index = <song_index>
-	setglobaltags progression params = {career_play_song_and_end = <single_song>}
-	if screenelementexists \{id = band_mode_menu}
-		band_mode_menu :settags \{net_gig_ready = 1}
+	SetGlobalTags Progression params = {career_play_song_and_end = <single_song>}
+	if ScreenElementExists \{id = band_mode_menu}
+		band_mode_menu :SetTags \{net_gig_ready = 1}
 		update_network_ticker \{msg_checksum = gig_selected}
 	endif
 	change net_career_selected_song = <song_checksum>
@@ -299,7 +299,7 @@ script create_gig_posters_menu
 		return
 	endif
 	change \{rich_presence_context = presence_gigboard_and_setlist}
-	setglobaltags \{progression
+	SetGlobalTags \{Progression
 		params = {
 			career_using_createagig = 0
 		}
@@ -310,42 +310,42 @@ script create_gig_posters_menu
 		change \{menu_gp_current_selection = 1}
 		change \{should_reset_gig_posters_selection = 0}
 	endif
-	if gameispaused
-		unpausegame
+	if GameIsPaused
+		UnPauseGame
 	endif
-	menu_music_off
+	Menu_Music_Off
 	gig_posters_song_focus
 	reset_all_special_events
-	getpakmancurrentname \{map = zones}
+	GetPakManCurrentName \{map = zones}
 	if (<pakname> != 'z_board_room')
-		if pakfilesarecached
+		if PakFilesAreCached
 			stoprendering
 		else
 			create_loading_screen
 		endif
-		if pakfilesarecached
-			setpakmancurrentblock \{map = zones
+		if PakFilesAreCached
+			SetPakManCurrentBlock \{map = zones
 				pak = z_board_room
 				block_scripts = 1}
 		else
-			setpakmancurrentblock \{map = zones
+			SetPakManCurrentBlock \{map = zones
 				pak = z_board_room
 				block_scripts = 0}
 		endif
 		apply_band_logo_to_venue \{step = build}
-		wait \{2
+		Wait \{2
 			gameframes}
 		apply_band_logo_to_venue \{step = apply}
-		if pakfilesarecached
-			if isxenon
+		if PakFilesAreCached
+			if isXenon
 				hide_glitch \{num_frames = 3}
 			endif
 			startrendering
 		endif
 		destroy_loading_screen
-		lightshow_initeventmappings
-		lightshow_dummyloop
-		if NOT viewportexists \{id = bg_viewport}
+		LightShow_InitEventMappings
+		LightShow_DummyLoop
+		if NOT ViewportExists \{id = bg_viewport}
 			setup_bg_viewport
 		endif
 		spawnscriptnow \{task_menu_default_anim_in
@@ -357,30 +357,30 @@ script create_gig_posters_menu
 	gigboard_get_exclusive_controller controller = <controller>
 	change \{menu_gp_stage = 1}
 	change \{gig_posters_last_focused_selection = 1}
-	progression_flag = career_band
-	unlock_order = gh4_career_band_progression_unlock_order
-	part = band
+	progression_flag = Career_Band
+	unlock_order = GH4_Career_Band_Progression_Unlock_Order
+	part = Band
 	if (($current_num_players = 1) && ($is_network_game = 0))
-		getplayerinfo \{1
+		GetPlayerInfo \{1
 			part}
 	endif
 	if (<part> = guitar)
-		progression_flag = career_guitar
-		unlock_order = gh4_career_guitar_progression_unlock_order
-	elseif (<part> = bass)
-		progression_flag = career_bass
-		unlock_order = gh4_career_bass_progression_unlock_order
+		progression_flag = Career_Guitar
+		unlock_order = GH4_Career_Guitar_Progression_Unlock_Order
+	elseif (<part> = Bass)
+		progression_flag = Career_Bass
+		unlock_order = GH4_Career_Bass_Progression_Unlock_Order
 	elseif (<part> = drum)
-		progression_flag = career_drum
-		unlock_order = gh4_career_drum_progression_unlock_order
-	elseif (<part> = vocals)
-		progression_flag = career_vocals
-		unlock_order = gh4_career_vocals_progression_unlock_order
+		progression_flag = Career_Drum
+		unlock_order = GH4_Career_Drum_Progression_Unlock_Order
+	elseif (<part> = Vocals)
+		progression_flag = Career_Vocals
+		unlock_order = GH4_Career_Vocals_Progression_Unlock_Order
 	endif
-	if ($current_progression_flag = career_band && $is_network_game = 0)
-		getsavegamefromcontroller controller = ($band_mode_current_leader)
+	if ($current_progression_flag = Career_Band && $is_network_game = 0)
+		GetSavegameFromController controller = ($band_mode_current_leader)
 	else
-		getsavegamefromcontroller controller = ($primary_controller)
+		GetSavegameFromController controller = ($primary_controller)
 	endif
 	change current_progression_savegame = <savegame>
 	register_new_progression_atoms <progression_flag> keep_current_savegame
@@ -393,30 +393,30 @@ script create_gig_posters_menu
 		{pad_choose gig_posters_choose_next params = {progression_flag = <progression_flag>}}
 		{pad_option debug_gig_start params = {progression_flag = <progression_flag>}}
 	]
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = root_window
 		id = gp_selection_menu
 		exclusive_device = <controller>
 		event_handlers = <event_handlers>
 		tags = {ready = 0 last_section = 0 first_unlocked_selection = 0}
 	}
-	formattext checksumname = gignum 'gig%d' d = ($menu_gp_current_selection)
+	FormatText checksumname = gignum 'gig%d' d = ($menu_gp_current_selection)
 	created_gignum = 1
-	if structurecontains structure = $<unlock_order> freegigs
+	if StructureContains Structure = $<unlock_order> freegigs
 		gig_num = 1
 		begin
-		formattext checksumname = gignum 'gig%d' d = <gig_num>
-		if NOT structurecontains structure = ($<unlock_order>.freegigs) <gignum>
+		FormatText checksumname = gignum 'gig%d' d = <gig_num>
+		if NOT StructureContains Structure = ($<unlock_order>.freegigs) <gignum>
 			break
 		endif
-		if structurecontains structure = ($<unlock_order>.freegigs.<gignum>) dont_add_gig_poster
+		if StructureContains Structure = ($<unlock_order>.freegigs.<gignum>) DONT_ADD_GIG_POSTER
 			break
 		endif
 		gig = ($<unlock_order>.freegigs.<gignum>.name)
 		free_gig_num = ($<unlock_order>.freegigs.<gignum>.num)
 		format_globaltag_gigname setlist_prefix = <setlist_prefix> gig = <gig>
-		getglobaltags <gig_name> savegame = <savegame>
+		GetGlobalTags <gig_name> savegame = <savegame>
 		setup_gigboard_poster <...> poster_gig_num = <free_gig_num>
 		<created_gignum> = (<created_gignum> + 1)
 		<gig_num> = (<gig_num> + 1)
@@ -424,18 +424,18 @@ script create_gig_posters_menu
 	endif
 	set_num = 1
 	begin
-	formattext checksumname = setnum 'unlockset%d' d = <set_num>
-	if NOT structurecontains structure = $<unlock_order> <setnum>
+	FormatText checksumname = setnum 'unlockset%d' d = <set_num>
+	if NOT StructureContains Structure = $<unlock_order> <setnum>
 		break
 	endif
 	gig_num = 1
 	begin
-	formattext checksumname = gignum 'gig%d' d = <gig_num>
-	if NOT structurecontains structure = ($<unlock_order>.<setnum>) <gignum>
+	FormatText checksumname = gignum 'gig%d' d = <gig_num>
+	if NOT StructureContains Structure = ($<unlock_order>.<setnum>) <gignum>
 		break
 	endif
-	if isgigunlocked set = <setnum> gig = <gignum> setlist_prefix = <setlist_prefix> unlock_order = <unlock_order> savegame = <savegame>
-		if structurecontains structure = ($<unlock_order>.<setnum>.<gignum>) forced_pos
+	if isGigUnlocked set = <setnum> gig = <gignum> setlist_prefix = <setlist_prefix> unlock_order = <unlock_order> savegame = <savegame>
+		if StructureContains Structure = ($<unlock_order>.<setnum>.<gignum>) forced_pos
 			setup_gigboard_poster <...> forced_pos = ($<unlock_order>.<setnum>.<gignum>.forced_pos)
 		else
 			setup_gigboard_poster <...>
@@ -446,11 +446,11 @@ script create_gig_posters_menu
 	repeat
 	specialevent_num = 1
 	begin
-	formattext checksumname = gignum 'special_event%d' d = <specialevent_num>
-	if NOT structurecontains structure = ($<unlock_order>.<setnum>) <gignum>
+	FormatText checksumname = gignum 'special_event%d' d = <specialevent_num>
+	if NOT StructureContains Structure = ($<unlock_order>.<setnum>) <gignum>
 		break
 	endif
-	if isgigunlocked set = <setnum> gig = <gignum> setlist_prefix = <setlist_prefix> unlock_order = <unlock_order> savegame = <savegame>
+	if isGigUnlocked set = <setnum> gig = <gignum> setlist_prefix = <setlist_prefix> unlock_order = <unlock_order> savegame = <savegame>
 		setup_gigboard_poster <...>
 		<created_gignum> = (<created_gignum> + 1)
 	endif
@@ -458,12 +458,12 @@ script create_gig_posters_menu
 	repeat
 	paytoplay_num = 1
 	begin
-	formattext checksumname = gignum 'pay_to_play%d' d = <paytoplay_num>
-	if NOT structurecontains structure = ($<unlock_order>.<setnum>) <gignum>
+	FormatText checksumname = gignum 'pay_to_play%d' d = <paytoplay_num>
+	if NOT StructureContains Structure = ($<unlock_order>.<setnum>) <gignum>
 		break
 	endif
-	if isgigunlocked set = <setnum> gig = <gignum> setlist_prefix = <setlist_prefix> unlock_order = <unlock_order> savegame = <savegame>
-		if structurecontains structure = ($<unlock_order>.<setnum>.<gignum>) forced_pos
+	if isGigUnlocked set = <setnum> gig = <gignum> setlist_prefix = <setlist_prefix> unlock_order = <unlock_order> savegame = <savegame>
+		if StructureContains Structure = ($<unlock_order>.<setnum>.<gignum>) forced_pos
 			setup_gigboard_poster <...> forced_pos = ($<unlock_order>.<setnum>.<gignum>.forced_pos)
 		else
 			setup_gigboard_poster <...>
@@ -474,18 +474,18 @@ script create_gig_posters_menu
 	repeat
 	<set_num> = (<set_num> + 1)
 	repeat
-	if structurecontains structure = $<unlock_order> freegigs_last
+	if StructureContains Structure = $<unlock_order> freegigs_last
 		gig_num = 1
 		begin
-		formattext checksumname = gignum 'gig%d' d = <gig_num>
-		if NOT structurecontains structure = ($<unlock_order>.freegigs_last) <gignum>
+		FormatText checksumname = gignum 'gig%d' d = <gig_num>
+		if NOT StructureContains Structure = ($<unlock_order>.freegigs_last) <gignum>
 			break
 		endif
 		gig = ($<unlock_order>.freegigs_last.<gignum>.name)
 		free_gig_num = ($<unlock_order>.freegigs_last.<gignum>.num)
 		format_globaltag_gigname setlist_prefix = <setlist_prefix> gig = <gig>
-		getglobaltags <gig_name> savegame = <savegame>
-		if structurecontains structure = ($<unlock_order>.freegigs_last.<gignum>) forced_pos
+		GetGlobalTags <gig_name> savegame = <savegame>
+		if StructureContains Structure = ($<unlock_order>.freegigs_last.<gignum>) forced_pos
 			setup_gigboard_poster <...> poster_gig_num = <free_gig_num> forced_pos = ($<unlock_order>.freegigs_last.<gignum>.forced_pos)
 		else
 			setup_gigboard_poster <...> poster_gig_num = <free_gig_num>
@@ -497,7 +497,7 @@ script create_gig_posters_menu
 	replace_texture_on_gig_posters
 	if ($enable_button_cheats = 1)
 		if ($is_network_game = 0)
-			gp_selection_menu :setprops {
+			gp_selection_menu :SetProps {
 				event_handlers = [
 					{pad_left debug_complete_gig_cheat params = {<...>}}
 				]
@@ -511,52 +511,52 @@ script create_gig_posters_menu
 		}
 	}
 	gig_posters_setup_helpers
-	assignalias \{id = gp_selection_menu
+	AssignAlias \{id = gp_selection_menu
 		alias = gig_posters_menu}
 endscript
 
 script gig_posters_setup_helpers 
 	clean_up_user_control_helpers
-	if screenelementexists \{id = gigboardarrowinterface}
-		destroyscreenelement \{id = gigboardarrowinterface}
+	if ScreenElementExists \{id = GigBoardArrowInterface}
+		DestroyScreenElement \{id = GigBoardArrowInterface}
 	endif
 	if ($is_network_game = 1)
-		if ishost
-			if gotparam \{setup_paytoplay_helpers}
-				add_user_control_helper \{text = qs(0xb7b2ba93)
+		if IsHost
+			if GotParam \{setup_paytoplay_helpers}
+				add_user_control_helper \{text = qs("PURCHASE")
 					button = green
 					z = 100}
-				add_user_control_helper \{text = qs(0x0bbc9ad9)
+				add_user_control_helper \{text = qs("DECLINE")
 					button = red
 					z = 100}
 			else
 				menu_finish
 			endif
 		else
-			add_user_control_helper \{text = qs(0xaf4d5dd2)
+			add_user_control_helper \{text = qs("BACK")
 				button = red
 				z = 100}
 		endif
 	else
-		if gotparam \{setup_paytoplay_helpers}
-			add_user_control_helper \{text = qs(0xb7b2ba93)
+		if GotParam \{setup_paytoplay_helpers}
+			add_user_control_helper \{text = qs("PURCHASE")
 				button = green
 				z = 100}
-			add_user_control_helper \{text = qs(0x0bbc9ad9)
+			add_user_control_helper \{text = qs("DECLINE")
 				button = red
 				z = 100}
 		else
 			menu_finish
 		endif
 	endif
-	if ((notcd) && ($enable_button_cheats = 1))
-		add_user_control_helper \{text = qs(0xb7802856)
-			button = blue
+	if ((NotCD) && ($enable_button_cheats = 1))
+		add_user_control_helper \{text = qs("DEBUG GIG")
+			button = Blue
 			z = 100}
 	endif
-	createscreenelement \{type = descinterface
+	CreateScreenElement \{type = DescInterface
 		parent = root_window
-		id = gigboardarrowinterface
+		id = GigBoardArrowInterface
 		desc = 'gig_board_arrows'
 		gig_board_arrow_left_alpha = 0
 		gig_board_arrow_right_alpha = 0
@@ -564,13 +564,13 @@ script gig_posters_setup_helpers
 endscript
 
 script gig_posters_back 
-	setspawninstancelimits \{max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
 	generic_menu_pad_back_sound
 	wait_for_camera_anim
 	ready = 1
-	if screenelementexists \{id = gp_selection_menu}
-		gp_selection_menu :gettags
+	if ScreenElementExists \{id = gp_selection_menu}
+		gp_selection_menu :GetTags
 	endif
 	if (<ready> = 0)
 		return
@@ -578,13 +578,13 @@ script gig_posters_back
 	if ($menu_gp_stage > 1)
 		return
 	endif
-	if NOT scriptisrunning \{gig_posters_setlist_back}
+	if NOT ScriptIsRunning \{gig_posters_setlist_back}
 		hide_glitch \{num_frames = 10}
-		gp_selection_menu :settags \{ready = 0}
+		gp_selection_menu :SetTags \{ready = 0}
 		wait_for_camera_anim
 		change \{menu_gp_current_selection = 1}
 		change \{menu_gp_stage = 0}
-		if pakfilesarecached
+		if PakFilesAreCached
 			if frontend_anim_paks_are_loaded
 				stoprendering
 			endif
@@ -597,151 +597,151 @@ script gig_posters_back
 endscript
 
 script wait_for_camera_anim 
-	wait \{5
+	Wait \{5
 		gameframes}
 	begin
 	if is_menu_camera_finished
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 gig_posters_popup_timer = 0
 
 script monitor_gig_poster_selection 
-	if NOT gotparam \{came_from_setlist}
+	if NOT GotParam \{came_from_setlist}
 		get_gigposter_camera_name \{num = 0}
 		change target_menu_camera = <gigposter_camera>
-		wait ($gig_posters_initial_wait_time) seconds
+		Wait ($gig_posters_initial_wait_time) seconds
 	endif
 	spawnscriptnow \{gigposters_camera_out}
 	gigposters_toggle_with_fire num = ($menu_gp_current_selection) off
-	wait \{15
+	Wait \{15
 		gameframes}
 	wait_for_camera_anim
-	if NOT gotparam \{came_from_setlist}
+	if NOT GotParam \{came_from_setlist}
 		gig_do_hand_animation
 	endif
 	gigposters_toggle_with_fire num = ($menu_gp_current_selection) on
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = gp_selection_menu}
-	gp_selection_menu :settags \{ready = 1}
+	gp_selection_menu :SetTags \{ready = 1}
 	show_setlist_on_gigboard created_gignum = ($menu_gp_current_selection)
-	spawnscriptlater \{setlist_songpreview_monitor}
+	SpawnScriptLater \{setlist_songpreview_monitor}
 	gigposters_cycle_song_previews
 endscript
 
 script gigposters_camera_out 
-	killspawnedscript \{name = oneshotsbetweensongs}
-	killspawnedscript \{name = surgebetweensongs}
-	setspawninstancelimits \{max = 1
+	KillSpawnedScript \{name = OneShotsBetweenSongs}
+	KillSpawnedScript \{name = SurgeBetweenSongs}
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
-	setsoundbussparams {sfx_balance = {vol = ($default_bussset.sfx_balance.vol)}}
-	setsoundbussparams {crowd_balance = {vol = ($default_bussset.crowd_balance.vol)}}
-	if NOT (issoundplaying ext_md_crowd_good_loop_ft)
-		skate8_sfx_backgrounds_new_area \{bg_sfx_area = frontend_menu_music
+	SetSoundBussParams {SFX_Balance = {vol = ($Default_BussSet.SFX_Balance.vol)}}
+	SetSoundBussParams {Crowd_Balance = {vol = ($Default_BussSet.Crowd_Balance.vol)}}
+	if NOT (issoundplaying EXT_MD_Crowd_Good_Loop_FT)
+		Skate8_SFX_Backgrounds_New_Area \{BG_SFX_Area = FrontEnd_Menu_Music
 			immediate = 1}
 	endif
 	begin
 	if is_menu_camera_finished
 		get_gigboard_section
 		if (<section> = 1)
-			lightshow_playsnapshot \{name = left_board
+			LightShow_PlaySnapshot \{name = left_board
 				save = false
-				usesnapshotpositions = false}
-			safecreate \{nodename = z_board_room_g_rm_light_off}
-			safekill \{nodename = z_board_room_g_rm_light_on}
-			safekill \{nodename = z_board_room_g_rm_small_lights_off}
-			safecreate \{nodename = z_board_room_g_rm_small_lights_on}
+				UseSnapshotPositions = false}
+			SafeCreate \{nodeName = Z_Board_Room_G_RM_Light_off}
+			SafeKill \{nodeName = Z_Board_Room_G_RM_Light_on}
+			SafeKill \{nodeName = Z_Board_Room_G_RM_Small_Lights_off}
+			SafeCreate \{nodeName = Z_Board_Room_G_RM_Small_Lights_on}
 		elseif (<section> = 2)
-			lightshow_playsnapshot \{name = middle_board
+			LightShow_PlaySnapshot \{name = middle_board
 				save = false
-				usesnapshotpositions = false}
-			safekill \{nodename = z_board_room_g_rm_light_off}
-			safecreate \{nodename = z_board_room_g_rm_light_on}
-			safecreate \{nodename = z_board_room_g_rm_small_lights_off}
-			safekill \{nodename = z_board_room_g_rm_small_lights_on}
+				UseSnapshotPositions = false}
+			SafeKill \{nodeName = Z_Board_Room_G_RM_Light_off}
+			SafeCreate \{nodeName = Z_Board_Room_G_RM_Light_on}
+			SafeCreate \{nodeName = Z_Board_Room_G_RM_Small_Lights_off}
+			SafeKill \{nodeName = Z_Board_Room_G_RM_Small_Lights_on}
 			i = 5
 			begin
-			formattext checksumname = dark_poster 'Z_Board_Room_G_RM_Gig_dark_%d' d = <i>
-			safekill nodename = <dark_poster>
+			FormatText checksumname = dark_poster 'Z_Board_Room_G_RM_Gig_dark_%d' d = <i>
+			SafeKill nodeName = <dark_poster>
 			<i> = (<i> + 1)
 			repeat 5
-			safekill \{nodename = z_board_room_g_rm_poster_dark}
+			SafeKill \{nodeName = Z_Board_Room_G_RM_Poster_dark}
 		else
 			i = 5
 			begin
-			formattext checksumname = dark_poster 'Z_Board_Room_G_RM_Gig_dark_%d' d = <i>
-			safecreate nodename = <dark_poster>
+			FormatText checksumname = dark_poster 'Z_Board_Room_G_RM_Gig_dark_%d' d = <i>
+			SafeCreate nodeName = <dark_poster>
 			<i> = (<i> + 1)
 			repeat 5
-			safecreate \{nodename = z_board_room_g_rm_poster_dark}
+			SafeCreate \{nodeName = Z_Board_Room_G_RM_Poster_dark}
 		endif
 		if (<section> = 5)
-			safekill \{nodename = z_board_room_gfx_fx_confetti_01}
+			SafeKill \{nodeName = Z_Board_Room_GFX_FX_Confetti_01}
 			get_progression_globals ($current_progression_flag)
 			format_globaltag_gigname setlist_prefix = ($<tier_global>.prefix) gignum = 13
-			getglobaltags <gig_name> params = first_time_unlocked savegame = <savegame>
+			GetGlobalTags <gig_name> params = first_time_unlocked savegame = <savegame>
 			if (<first_time_unlocked> = 1)
-				soundevent \{event = fireworks_last_venue}
-				kill \{prefix = z_board_room_gfx_fx_twfx_01
+				SoundEvent \{event = Fireworks_Last_Venue}
+				kill \{prefix = Z_Board_Room_GFX_FX_TWFX_01
 					noprefixwarning}
-				create \{prefix = z_board_room_gfx_fx_twfx_01
+				create \{prefix = Z_Board_Room_GFX_FX_TWFX_01
 					noprefixwarning}
-				safecreate \{nodename = z_board_room_gfx_fx_confetti_01}
+				SafeCreate \{nodeName = Z_Board_Room_GFX_FX_Confetti_01}
 			endif
 		endif
 		if (<section> = 4)
-			kill \{prefix = z_board_room_gfx_fx_twfx_01
+			kill \{prefix = Z_Board_Room_GFX_FX_TWFX_01
 				noprefixwarning}
-			safekill \{nodename = z_board_room_gfx_fx_confetti_01}
+			SafeKill \{nodeName = Z_Board_Room_GFX_FX_Confetti_01}
 		endif
 		if (<section> = 3)
-			kill \{prefix = z_board_room_gfx_fx_twfx_01
+			kill \{prefix = Z_Board_Room_GFX_FX_TWFX_01
 				noprefixwarning}
-			safekill \{nodename = z_board_room_gfx_fx_confetti_01}
+			SafeKill \{nodeName = Z_Board_Room_GFX_FX_Confetti_01}
 		endif
 		if (<section> = 2)
-			kill \{prefix = z_board_room_gfx_fx_twfx_01
+			kill \{prefix = Z_Board_Room_GFX_FX_TWFX_01
 				noprefixwarning}
-			safekill \{nodename = z_board_room_gfx_fx_confetti_01}
+			SafeKill \{nodeName = Z_Board_Room_GFX_FX_Confetti_01}
 		endif
 		if (<section> = 1)
-			kill \{prefix = z_board_room_gfx_fx_twfx_01
+			kill \{prefix = Z_Board_Room_GFX_FX_TWFX_01
 				noprefixwarning}
-			safekill \{nodename = z_board_room_gfx_fx_confetti_01}
+			SafeKill \{nodeName = Z_Board_Room_GFX_FX_Confetti_01}
 		endif
 		get_gigposter_camera_name_section num = <section>
 		if ($target_menu_camera != <gigposter_camera>)
-			gp_selection_menu :getsingletag \{last_section}
+			gp_selection_menu :GetSingleTag \{last_section}
 			if (<last_section> > <section>)
-				soundevent \{event = gigboard_zoom_left}
+				SoundEvent \{event = GigBoard_Zoom_Left}
 			elseif (<last_section> < <section>)
-				soundevent \{event = gigboard_zoom_right}
+				SoundEvent \{event = GigBoard_Zoom_right}
 			endif
-			gp_selection_menu :settags last_section = <section>
+			gp_selection_menu :SetTags last_section = <section>
 		endif
 		change target_menu_camera = <gigposter_camera>
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	update_gigboard_arrows
 	wait_for_camera_anim
-	if screenelementexists \{id = gp_selection_menu}
-		gp_selection_menu :settags \{ready = 1}
+	if ScreenElementExists \{id = gp_selection_menu}
+		gp_selection_menu :SetTags \{ready = 1}
 	endif
 endscript
 
 script update_gigboard_arrows 
-	if screenelementexists \{id = gigboardarrowinterface}
+	if ScreenElementExists \{id = GigBoardArrowInterface}
 		gig_board_arrow_left_alpha = 0
 		gig_board_arrow_right_alpha = 0
 		get_gigboard_section
 		current_section = <section>
-		getarraysize \{$gigposter_creation_numbers}
+		GetArraySize \{$gigposter_creation_numbers}
 		i = ($menu_gp_current_selection)
 		begin
 		if (<i> >= <array_size>)
@@ -773,7 +773,7 @@ script update_gigboard_arrows
 		if (<current_section> = 5)
 			gig_board_arrow_right_alpha = 0
 		endif
-		gigboardarrowinterface :se_setprops {
+		GigBoardArrowInterface :SE_SetProps {
 			gig_board_arrow_left_alpha = <gig_board_arrow_left_alpha>
 			gig_board_arrow_right_alpha = <gig_board_arrow_right_alpha>
 		}
@@ -781,25 +781,25 @@ script update_gigboard_arrows
 endscript
 
 script destroy_gig_posters_menu 
-	if screenelementexists \{id = gp_selection_menu}
-		setsoundbussparams {music_setlist = {vol = ($default_bussset.music_setlist.vol)}}
-		killspawnedscript \{name = gigposters_cycle_song_previews_spawned}
+	if ScreenElementExists \{id = gp_selection_menu}
+		SetSoundBussParams {Music_Setlist = {vol = ($Default_BussSet.Music_Setlist.vol)}}
+		KillSpawnedScript \{name = gigposters_cycle_song_previews_spawned}
 		spawnscriptnow \{destroy_setlist_songpreview_monitor}
-		killspawnedscript \{name = monitor_gig_poster_selection}
-		destroy_menu \{menu_id = gigboardsetlistinterface}
-		killcamanim \{name = ch_view_cam}
+		KillSpawnedScript \{name = monitor_gig_poster_selection}
+		destroy_menu \{menu_id = GigBoardSetlistInterface}
+		KillCamAnim \{name = ch_view_cam}
 		destroy_viewport_ui
 		destroy_menu \{menu_id = gp_selection_menu}
 		generic_ui_destroy
 		destroy_gig_band_money_display
-		if screenelementexists \{id = gigboardarrowinterface}
-			destroyscreenelement \{id = gigboardarrowinterface}
+		if ScreenElementExists \{id = GigBoardArrowInterface}
+			DestroyScreenElement \{id = GigBoardArrowInterface}
 		endif
 		destroy_count = 1
 		begin
-		formattext checksumname = viewport_id 'gigposters_viewport_id%d' d = <destroy_count>
-		formattext checksumname = viewport_override_id 'gigposters_viewport_override_id%d' d = <destroy_count>
-		formattext checksumname = window_id 'gigposters_window_id%d' d = <destroy_count>
+		FormatText checksumname = viewport_id 'gigposters_viewport_id%d' d = <destroy_count>
+		FormatText checksumname = viewport_override_id 'gigposters_viewport_override_id%d' d = <destroy_count>
+		FormatText checksumname = window_id 'gigposters_window_id%d' d = <destroy_count>
 		destroy_viewport_ui {
 			viewport_id = <viewport_id>
 			viewport_override_id = <viewport_override_id>
@@ -809,9 +809,9 @@ script destroy_gig_posters_menu
 		repeat 19
 		destroy_count = 1
 		begin
-		formattext checksumname = viewport_id 'setlist_viewport_id%d' d = <destroy_count>
-		formattext checksumname = viewport_override_id 'setlist_viewport_override_id%d' d = <destroy_count>
-		formattext checksumname = window_id 'setlist_window_id%d' d = <destroy_count>
+		FormatText checksumname = viewport_id 'setlist_viewport_id%d' d = <destroy_count>
+		FormatText checksumname = viewport_override_id 'setlist_viewport_override_id%d' d = <destroy_count>
+		FormatText checksumname = window_id 'setlist_window_id%d' d = <destroy_count>
 		destroy_viewport_ui {
 			viewport_id = <viewport_id>
 			viewport_override_id = <viewport_override_id>
@@ -821,46 +821,46 @@ script destroy_gig_posters_menu
 		repeat 19
 		created_gignum = 1
 		begin
-		formattext checksumname = poster_container_id 'poster_%d' d = <created_gignum>
-		if screenelementexists id = <poster_container_id>
+		FormatText checksumname = poster_container_id 'poster_%d' d = <created_gignum>
+		if ScreenElementExists id = <poster_container_id>
 			destroy_menu menu_id = <poster_container_id>
 		endif
 		<created_gignum> = (<created_gignum> + 1)
 		repeat 19
 	endif
-	if NOT gotparam \{destroy_ui_only}
+	if NOT GotParam \{destroy_ui_only}
 		if ($menu_gp_stage = 0)
 			destroy_band
 		endif
-		setsoundbussparams {music_setlist = {vol = ($default_bussset.music_setlist.vol)}}
-		spawnscriptlater \{menu_music_on}
-		if NOT (issoundplaying ext_md_crowd_good_loop_ft)
-			skate8_sfx_backgrounds_new_area \{bg_sfx_area = frontend_menu_music
+		SetSoundBussParams {Music_Setlist = {vol = ($Default_BussSet.Music_Setlist.vol)}}
+		SpawnScriptLater \{menu_music_on}
+		if NOT (issoundplaying EXT_MD_Crowd_Good_Loop_FT)
+			Skate8_SFX_Backgrounds_New_Area \{BG_SFX_Area = FrontEnd_Menu_Music
 				immediate = 1}
 		endif
 	endif
-	destroy_menu \{menu_id = gigboardvenueselectinterface}
+	destroy_menu \{menu_id = GigBoardVenueSelectInterface}
 endscript
 gig_posters_last_focused_selection = 1
 
 script gig_posters_focus_popup 
-	if NOT gotparam \{back_from_venue_select}
+	if NOT GotParam \{back_from_venue_select}
 		change gig_posters_last_focused_selection = <current_selection>
 		gigposters_toggle_with_fire num = <current_selection> off focused
 		toggle_gigposter_difficulty_texture diffnum = <current_selection> off fix_for_last_gigs
 	endif
 	create_gigboard_poster_with_viewport <...> created_gignum = <current_selection>
-	gp_selection_menu :settags \{ready = 1}
+	gp_selection_menu :SetTags \{ready = 1}
 endscript
 
 script gig_posters_unfocus_popup 
-	if screenelementexists \{id = gp_selection_menu}
-		gp_selection_menu :settags \{ready = 0}
+	if ScreenElementExists \{id = gp_selection_menu}
+		gp_selection_menu :SetTags \{ready = 0}
 	endif
 	destroy_gig_posters_window created_gignum = <current_selection>
 	gigposters_toggle_with_fire num = <current_selection> off unfocused
 	gig_posters_song_focus
-	if NOT gotparam \{keep_viewport}
+	if NOT GotParam \{keep_viewport}
 		destroy_gigboard_setlist_viewport created_gignum = <current_selection>
 	endif
 endscript
@@ -876,8 +876,8 @@ script gig_posters_move_selection
 endscript
 
 script gig_posters_up 
-	if screenelementexists \{id = gp_selection_menu}
-		gp_selection_menu :gettags
+	if ScreenElementExists \{id = gp_selection_menu}
+		gp_selection_menu :GetTags
 	endif
 	if (<ready> = 0)
 		return
@@ -892,8 +892,8 @@ script gig_posters_up
 	begin
 	if (($gigposter_creation_numbers [(<entry> - 1)]) != 0)
 		<found_gig> = ($gigposter_creation_numbers [(<entry> - 1)])
-		formattext checksumname = tier 'tier%d' d = <found_gig>
-		if structurecontains structure = ($<tier_global>.<tier>) createagig
+		FormatText checksumname = tier 'tier%d' d = <found_gig>
+		if StructureContains Structure = ($<tier_global>.<tier>) createagig
 			if ($is_network_game)
 				found_gig = 0
 			else
@@ -912,15 +912,15 @@ script gig_posters_up
 	if (<found_gig> = 0)
 		return
 	endif
-	soundevent \{event = gigboard_scroll_up_down}
+	SoundEvent \{event = Gigboard_Scroll_Up_Down}
 	gig_posters_unfocus_popup current_selection = ($menu_gp_current_selection)
 	change menu_gp_current_selection = <entry>
 	gig_posters_move_selection
 endscript
 
 script gig_posters_down 
-	if screenelementexists \{id = gp_selection_menu}
-		gp_selection_menu :gettags
+	if ScreenElementExists \{id = gp_selection_menu}
+		gp_selection_menu :GetTags
 	endif
 	if (<ready> = 0)
 		return
@@ -935,8 +935,8 @@ script gig_posters_down
 	begin
 	if (($gigposter_creation_numbers [(<entry> - 1)]) != 0)
 		<found_gig> = ($gigposter_creation_numbers [(<entry> - 1)])
-		formattext checksumname = tier 'tier%d' d = <found_gig>
-		if structurecontains structure = ($<tier_global>.<tier>) createagig
+		FormatText checksumname = tier 'tier%d' d = <found_gig>
+		if StructureContains Structure = ($<tier_global>.<tier>) createagig
 			if ($is_network_game)
 				found_gig = 0
 			else
@@ -955,37 +955,37 @@ script gig_posters_down
 	if (<found_gig> = 0)
 		return
 	endif
-	soundevent \{event = gigboard_scroll_up_down}
+	SoundEvent \{event = Gigboard_Scroll_Up_Down}
 	gig_posters_unfocus_popup current_selection = ($menu_gp_current_selection)
 	change menu_gp_current_selection = <entry>
 	gig_posters_move_selection
 endscript
 
 script create_gig_poster_venue_select progression_flag = ($current_progression_flag)
-	if screenelementexists \{id = gigboardarrowinterface}
-		destroyscreenelement \{id = gigboardarrowinterface}
+	if ScreenElementExists \{id = GigBoardArrowInterface}
+		DestroyScreenElement \{id = GigBoardArrowInterface}
 	endif
-	if ($current_progression_flag = career_band && $is_network_game = 0)
-		getsavegamefromcontroller controller = ($band_mode_current_leader)
+	if ($current_progression_flag = Career_Band && $is_network_game = 0)
+		GetSavegameFromController controller = ($band_mode_current_leader)
 	else
-		getsavegamefromcontroller controller = ($primary_controller)
+		GetSavegameFromController controller = ($primary_controller)
 	endif
 	gig_posters_song_focus
 	get_progression_globals <progression_flag>
-	formattext checksumname = tiername 'tier%d' d = <poster_gig_num>
+	FormatText checksumname = tiername 'tier%d' d = <poster_gig_num>
 	tier_level = ($<tier_global>.<tiername>.level)
 	level_poster = ($<tier_global>.<tiername>.poster_texture)
 	gigboard_get_exclusive_controller
-	createscreenelement \{type = descinterface
+	CreateScreenElement \{type = DescInterface
 		parent = root_window
-		id = gigboardvenueselectinterface
+		id = GigBoardVenueSelectInterface
 		desc = 'gig_board_venue'
 		z_priority = 20000
 		arrow_texture = name_arrow_dn
 		head_bg_texture = gig_highlight_blacken}
-	if gigboardvenueselectinterface :desc_resolvealias \{name = alias_gig_venue_content}
-		assignalias id = <resolved_id> alias = venue_select_menu
-		venue_select_menu :se_setprops {
+	if GigBoardVenueSelectInterface :Desc_ResolveAlias \{name = alias_gig_venue_content}
+		AssignAlias id = <resolved_id> alias = venue_select_menu
+		venue_select_menu :SE_SetProps {
 			exclusive_device = <controller>
 			event_handlers = [
 				{pad_back gig_posters_setlist_back}
@@ -994,35 +994,35 @@ script create_gig_poster_venue_select progression_flag = ($current_progression_f
 			]
 		}
 	endif
-	getarraysize \{$levelzonearray}
+	GetArraySize \{$LevelZoneArray}
 	level_zone_array_size = <array_size>
 	index = 0
 	num_added = 0
 	begin
-	get_levelzonearray_checksum index = <index>
-	if NOT structurecontains structure = ($levelzones.<level_checksum>) debug_only
+	get_LevelZoneArray_checksum index = <index>
+	if NOT StructureContains Structure = ($LevelZones.<level_checksum>) debug_only
 		get_progression_globals (<progression_flag>)
-		formattext {
+		FormatText {
 			checksumname = venue_checksum
 			'%s_%i'
-			s = ($levelzones.<level_checksum>.name)
+			s = ($LevelZones.<level_checksum>.name)
 			i = ($instrument_list.($<tier_global>.part).text_nl)
-			addtostringlookup = true
+			AddToStringLookup = true
 		}
-		getglobaltags <venue_checksum> param = unlocked savegame = <savegame>
+		GetGlobalTags <venue_checksum> param = unlocked savegame = <savegame>
 		printf 'venue_checksum = %v .. unlocked = %u' v = <venue_checksum> u = <unlocked>
 		add_venue = 0
 		if (<unlocked> = 1)
 			add_venue = 1
 		endif
-		if ($cheat_unlockattballpark = 1)
-			if (<level_checksum> = load_z_ballpark)
+		if ($Cheat_UnlockATTBallpark = 1)
+			if (<level_checksum> = load_z_Ballpark)
 				add_venue = 1
 			endif
 		endif
 		if (<add_venue> = 1)
-			createscreenelement {
-				type = containerelement
+			CreateScreenElement {
+				type = ContainerElement
 				parent = venue_select_menu
 				dims = (500.0, 50.0)
 				just = [center center]
@@ -1034,11 +1034,11 @@ script create_gig_poster_venue_select progression_flag = ($current_progression_f
 				]
 			}
 			item_container = <id>
-			createscreenelement {
-				type = spriteelement
+			CreateScreenElement {
+				type = SpriteElement
 				parent = <item_container>
 				texture = gig_highlight_blacken
-				rgba = ($gigboard_setlist_props.<level_poster>.highlight_rgba)
+				rgba = ($GigBoard_Setlist_Props.<level_poster>.highlight_rgba)
 				dims = (500.0, 50.0)
 				pos = (250.0, 0.0)
 				z_priority = 2
@@ -1046,12 +1046,12 @@ script create_gig_poster_venue_select progression_flag = ($current_progression_f
 				just = [center center]
 				internal_just = [center center]
 			}
-			createscreenelement {
-				type = textelement
+			CreateScreenElement {
+				type = TextElement
 				parent = <item_container>
 				font = fontgrid_text_a8
-				text = ($levelzones.<level_checksum>.title)
-				rgba = ($gigboard_setlist_props.<level_poster>.songname_rgba)
+				text = ($LevelZones.<level_checksum>.title)
+				rgba = ($GigBoard_Setlist_Props.<level_poster>.songname_rgba)
 				pos = (250.0, 0.0)
 				internal_scale = (0.8, 0.8)
 				z_priority = 3
@@ -1064,72 +1064,72 @@ script create_gig_poster_venue_select progression_flag = ($current_progression_f
 	<index> = (<index> + 1)
 	repeat <level_zone_array_size>
 	if (<num_added> > 5)
-		gigboardvenueselectinterface :se_setprops \{arrow_up_alpha = 1
+		GigBoardVenueSelectInterface :SE_SetProps \{arrow_up_alpha = 1
 			arrow_down_alpha = 1}
 	endif
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = venue_select_menu}
-	gp_selection_menu :settags \{ready = 1}
+	gp_selection_menu :SetTags \{ready = 1}
 endscript
 
 script gigposter_venue_focus 
-	obj_getid
-	if resolvescreenelementid id = {<objid> child = 0} param = focus_item
-		setscreenelementprops id = <focus_item> alpha = 1
+	Obj_GetID
+	if ResolveScreenElementId id = {<ObjID> child = 0} param = focus_item
+		SetScreenElementProps id = <focus_item> alpha = 1
 	endif
 endscript
 
 script gigposter_venue_unfocus 
-	obj_getid
-	if resolvescreenelementid id = {<objid> child = 0} param = focus_item
-		setscreenelementprops id = <focus_item> alpha = 0
+	Obj_GetID
+	if ResolveScreenElementId id = {<ObjID> child = 0} param = focus_item
+		SetScreenElementProps id = <focus_item> alpha = 0
 	endif
 endscript
 
 script create_gig_poster_setlist progression_flag = ($current_progression_flag)
-	if screenelementexists \{id = gigboardarrowinterface}
-		destroyscreenelement \{id = gigboardarrowinterface}
+	if ScreenElementExists \{id = GigBoardArrowInterface}
+		DestroyScreenElement \{id = GigBoardArrowInterface}
 	endif
-	if ($current_progression_flag = career_band && $is_network_game = 0)
-		getsavegamefromcontroller controller = ($band_mode_current_leader)
+	if ($current_progression_flag = Career_Band && $is_network_game = 0)
+		GetSavegameFromController controller = ($band_mode_current_leader)
 	else
-		getsavegamefromcontroller controller = ($primary_controller)
+		GetSavegameFromController controller = ($primary_controller)
 	endif
 	get_progression_globals <progression_flag>
-	formattext checksumname = poster_container_id 'poster_%d' d = <created_gignum>
-	extendcrc <poster_container_id> '_songlist' out = songlist_popup
-	<poster_container_id> :gettags
-	formattext checksumname = tiername 'tier%d' d = <poster_gig_num>
+	FormatText checksumname = poster_container_id 'poster_%d' d = <created_gignum>
+	ExtendCRC <poster_container_id> '_songlist' out = songlist_popup
+	<poster_container_id> :GetTags
+	FormatText checksumname = tiername 'tier%d' d = <poster_gig_num>
 	format_globaltag_gigname setlist_prefix = ($<tier_global>.prefix) gignum = <poster_gig_num>
-	formattext checksumname = gignum 'gig%d' d = <poster_gig_num>
+	FormatText checksumname = gignum 'gig%d' d = <poster_gig_num>
 	tier_level = ($<tier_global>.<tiername>.level)
 	level_poster = ($<tier_global>.<tiername>.poster_texture)
-	tier_name = ($levelzones.<tier_level>.title)
-	formattext checksumname = gig_posters_setlist_container 'gig_posters_setlist_container_%d' d = <created_gignum>
+	tier_name = ($LevelZones.<tier_level>.title)
+	FormatText checksumname = gig_posters_setlist_container 'gig_posters_setlist_container_%d' d = <created_gignum>
 	destroy_menu menu_id = <gig_posters_setlist_container>
 	gigboard_get_exclusive_controller
-	getglobaltags <gig_name> savegame = <savegame>
+	GetGlobalTags <gig_name> savegame = <savegame>
 	instrument_texture = icon_gig_band
 	switch ($<tier_global>.part)
 		case guitar
 		instrument_texture = mixer_icon_guitar
-		case bass
+		case Bass
 		instrument_texture = mixer_icon_bass
 		case drum
 		instrument_texture = mixer_icon_drums
-		case vocals
+		case Vocals
 		instrument_texture = mixer_icon_vox
 	endswitch
-	header_option_text = qs(0x049fdf89)
+	header_option_text = qs("PLAY ENTIRE GIG")
 	my_song_checksum = ($<tier_global>.<tiername>.songs [0])
 	song_index = 0
 	if (<started> = 1 && (<completed> = 0 || <completed> = -1))
-		header_option_text = qs(0x90cd6090)
-		getarraysize ($<tier_global>.<tiername>.songs)
+		header_option_text = qs("CONTINUE GIG")
+		GetArraySize ($<tier_global>.<tiername>.songs)
 		index = 0
 		begin
 		song = ($<tier_global>.<tiername>.songs [<index>])
-		if ($current_progression_flag = career_band)
+		if ($current_progression_flag = Career_Band)
 			if ($is_network_game = 1)
 				net_career_get_band_leader_difficulty
 			else
@@ -1148,50 +1148,50 @@ script create_gig_poster_setlist progression_flag = ($current_progression_flag)
 		index = (<index> + 1)
 		repeat <array_size>
 	endif
-	destroy_menu \{menu_id = gigboardsetlistinterface}
-	createscreenelement {
-		type = descinterface
+	destroy_menu \{menu_id = GigBoardSetlistInterface}
+	CreateScreenElement {
+		type = DescInterface
 		parent = root_window
-		id = gigboardsetlistinterface
+		id = GigBoardSetlistInterface
 		desc = 'gig_board_setlist'
-		play_gig_text = <header_option_text>
+		PLAY_GIG_text = <header_option_text>
 		icon_guitar_64_texture = <instrument_texture>
 		z_priority = 20000
-		pos = ($gigboard_setlist_props.<level_poster>.offset)
-		highlight_rgba = ($gigboard_setlist_props.<level_poster>.highlight_rgba)
-		play_gig_rgba = ($gigboard_setlist_props.<level_poster>.songname_rgba)
-		icon_instrument_rgba = ($gigboard_setlist_props.<level_poster>.icon_instrument_rgba)
-		arrow_up_rgba = ($gigboard_setlist_props.<level_poster>.arrow_rgba)
-		arrow_down_rgba = ($gigboard_setlist_props.<level_poster>.arrow_rgba)
+		pos = ($GigBoard_Setlist_Props.<level_poster>.offset)
+		highlight_rgba = ($GigBoard_Setlist_Props.<level_poster>.highlight_rgba)
+		PLAY_GIG_rgba = ($GigBoard_Setlist_Props.<level_poster>.songname_rgba)
+		icon_instrument_rgba = ($GigBoard_Setlist_Props.<level_poster>.icon_instrument_rgba)
+		arrow_up_rgba = ($GigBoard_Setlist_Props.<level_poster>.arrow_rgba)
+		arrow_down_rgba = ($GigBoard_Setlist_Props.<level_poster>.arrow_rgba)
 		alpha = 0
 		arrow_up_texture = name_arrow_up
 		arrow_down_texture = name_arrow_dn
 		exclusive_device = <controller>
 	}
-	if gigboardsetlistinterface :desc_resolvealias \{name = alias_gig_setlist_master}
-		assignalias id = <resolved_id> alias = gigboard_setlist_menu_master
+	if GigBoardSetlistInterface :Desc_ResolveAlias \{name = alias_gig_setlist_master}
+		AssignAlias id = <resolved_id> alias = gigboard_setlist_menu_master
 	endif
-	if gigboardsetlistinterface :desc_resolvealias \{name = alias_gig_setlist_content}
-		assignalias id = <resolved_id> alias = gigboard_setlist_menu_content
-		gigboard_setlist_menu_content :se_setprops {
+	if GigBoardSetlistInterface :Desc_ResolveAlias \{name = alias_gig_setlist_content}
+		AssignAlias id = <resolved_id> alias = gigboard_setlist_menu_content
+		gigboard_setlist_menu_content :SE_SetProps {
 			exclusive_device = <controller>
 			event_handlers = [
 				{pad_back gig_posters_setlist_back}
 			]
 		}
 	endif
-	if gigboardsetlistinterface :desc_resolvealias \{name = alias_gig_item_play}
-		<resolved_id> :se_setprops {
+	if GigBoardSetlistInterface :Desc_ResolveAlias \{name = alias_gig_item_play}
+		<resolved_id> :SE_SetProps {
 			event_handlers = [
 				{pad_choose gig_posters_choose_next params = {play_entire_gig progression_flag = <progression_flag> song_checksum = <my_song_checksum> song_index = <song_index>}}
-				{focus gigposters_setlist_item_focus params = {id = gigboardsetlistinterface level_poster = <level_poster> completed = <completed>}}
-				{unfocus gigposters_setlist_item_unfocus params = {id = gigboardsetlistinterface level_poster = <level_poster>}}
+				{focus gigposters_setlist_item_focus params = {id = GigBoardSetlistInterface level_poster = <level_poster> completed = <completed>}}
+				{unfocus gigposters_setlist_item_unfocus params = {id = GigBoardSetlistInterface level_poster = <level_poster>}}
 			]
 		}
 	endif
-	getarraysize ($<tier_global>.<tiername>.songs)
+	GetArraySize ($<tier_global>.<tiername>.songs)
 	pay_to_play = 0
-	if structurecontains structure = ($<tier_global>.<tiername>) paytoplay
+	if StructureContains Structure = ($<tier_global>.<tiername>) paytoplay
 		pay_to_play = 1
 	endif
 	if (<array_size> > 0)
@@ -1221,7 +1221,7 @@ script create_gig_poster_setlist progression_flag = ($current_progression_flag)
 	icon_alpha = 0
 	icon_texture = white
 	item_desc = 'gig_board_setlist_item_desc'
-	if structurecontains structure = ($<tier_global>.<tiername>) encorep1
+	if StructureContains Structure = ($<tier_global>.<tiername>) encorep1
 		if (<song> = ($<tier_global>.<tiername>.encorep1))
 			icon_alpha = 0.6
 			icon_texture = icon_gig_encore
@@ -1230,7 +1230,7 @@ script create_gig_poster_setlist progression_flag = ($current_progression_flag)
 			endif
 		endif
 	endif
-	if structurecontains structure = ($<tier_global>.<tiername>) boss
+	if StructureContains Structure = ($<tier_global>.<tiername>) boss
 		if (<song> = ($<tier_global>.<tiername>.boss))
 			item_desc = 'gig_board_setlist_itemBoss_desc'
 			icon_alpha = 0.6
@@ -1264,23 +1264,23 @@ script create_gig_poster_setlist progression_flag = ($current_progression_flag)
 		format_globaltag_song_checksum part = ($<tier_global>.part) song = <song> difficulty_text_nl = <highest_diff_completed>
 		get_song_title song = <song>
 		get_song_artist song = <song>
-		getglobaltags <song_checksum> param = stars savegame = <savegame>
-		getglobaltags <song_checksum> param = score savegame = <savegame>
-		getglobaltags <song_checksum> param = percent100 savegame = <savegame>
-		formattext textname = song_score_text qs(0x48c6d14c) d = <score> usecommas
-		getrandomvalue \{a = 0
+		GetGlobalTags <song_checksum> param = stars savegame = <savegame>
+		GetGlobalTags <song_checksum> param = score savegame = <savegame>
+		GetGlobalTags <song_checksum> param = percent100 savegame = <savegame>
+		FormatText TextName = song_score_text qs("%d") d = <score> usecommas
+		GetRandomValue \{a = 0
 			b = 360
 			name = rand_rot1}
-		getrandomvalue \{a = 0
+		GetRandomValue \{a = 0
 			b = 360
 			name = rand_rot2}
-		getrandomvalue \{a = 0
+		GetRandomValue \{a = 0
 			b = 360
 			name = rand_rot3}
-		getrandomvalue \{a = 0
+		GetRandomValue \{a = 0
 			b = 360
 			name = rand_rot4}
-		getrandomvalue \{a = 0
+		GetRandomValue \{a = 0
 			b = 360
 			name = rand_rot5}
 		<num_selectable> = (<num_selectable> + 1)
@@ -1288,14 +1288,14 @@ script create_gig_poster_setlist progression_flag = ($current_progression_flag)
 		focusable_flag = {}
 		master_alpha = 1.0
 		scores_alpha = 1.0
-		defeated_text = qs(0x0b35106b)
+		defeated_text = qs("DEFEATED!")
 		progression_song_get_highest_difficulty_completed ($current_progression_flag) song = <song>
 		if (<highest_diff_completed> = 'none')
 			scores_alpha = 0.0
 			<focusable_flag> = {not_focusable}
 			<num_selectable> = (<num_selectable> - 1)
 			<num_selectable_already_decremented> = true
-			defeated_text = qs(0x9e499be4)
+			defeated_text = qs("STILL UNDEFEATED")
 		endif
 		if (<completed> = 0)
 			<focusable_flag> = {not_focusable}
@@ -1303,17 +1303,17 @@ script create_gig_poster_setlist progression_flag = ($current_progression_flag)
 				<num_selectable> = (<num_selectable> - 1)
 			endif
 		endif
-		if structurecontains structure = <focusable_flag> not_focusable
-			master_alpha = ($gigboard_setlist_props.<level_poster>.unavailable_alpha)
+		if StructureContains Structure = <focusable_flag> not_focusable
+			master_alpha = ($GigBoard_Setlist_Props.<level_poster>.unavailable_alpha)
 		endif
 		star_texture = song_summary_score_star
-		stars_rgba = ($gigboard_setlist_props.<level_poster>.stars_rgba)
+		stars_rgba = ($GigBoard_Setlist_Props.<level_poster>.stars_rgba)
 		if (<percent100> = 1)
 			star_texture = song_complete_star_perfect
 			stars_rgba = [255 255 255 255]
 		endif
-		createscreenelement {
-			type = descinterface
+		CreateScreenElement {
+			type = DescInterface
 			parent = gigboard_setlist_menu_content
 			desc = <item_desc>
 			gig_poster_list_item_master_alpha = <master_alpha>
@@ -1341,9 +1341,9 @@ script create_gig_poster_setlist progression_flag = ($current_progression_flag)
 			gig_star_3_texture = <star_texture>
 			gig_star_4_texture = <star_texture>
 			gig_star_5_texture = <star_texture>
-			gig_item_song_rgba = ($gigboard_setlist_props.<level_poster>.songname_rgba)
-			gig_item_artist_rgba = ($gigboard_setlist_props.<level_poster>.artistname_rgba)
-			gig_item_score_rgba = ($gigboard_setlist_props.<level_poster>.artistname_rgba)
+			gig_item_song_rgba = ($GigBoard_Setlist_Props.<level_poster>.songname_rgba)
+			gig_item_artist_rgba = ($GigBoard_Setlist_Props.<level_poster>.artistname_rgba)
+			gig_item_score_rgba = ($GigBoard_Setlist_Props.<level_poster>.artistname_rgba)
 			gig_star_1_rgba = <stars_rgba>
 			gig_star_2_rgba = <stars_rgba>
 			gig_star_3_rgba = <stars_rgba>
@@ -1355,17 +1355,17 @@ script create_gig_poster_setlist progression_flag = ($current_progression_flag)
 				{focus gigposters_setlist_item_focus params = {song = <song> level_poster = <level_poster> completed = <completed>}}
 				{unfocus gigposters_setlist_item_unfocus params = {song = <song> level_poster = <level_poster>}}
 			]
-			autosizedims = true
+			autoSizeDims = true
 		}
 		if (<icon_alpha> = 0)
-			<id> :se_setprops gig_item_icon_container_dims = (0.0, 0.0)
+			<id> :SE_SetProps gig_item_icon_container_dims = (0.0, 0.0)
 		endif
-		if <id> :desc_resolvealias name = alias_gig_item_stars
-			getscreenelementchildren id = <resolved_id>
+		if <id> :Desc_ResolveAlias name = alias_gig_item_stars
+			GetScreenElementChildren id = <resolved_id>
 			i = 1
 			begin
 			if (<i> > <stars>)
-				destroyscreenelement id = (<children> [(<i> - 1)])
+				DestroyScreenElement id = (<children> [(<i> - 1)])
 			endif
 			i = (<i> + 1)
 			repeat 5
@@ -1375,11 +1375,11 @@ script create_gig_poster_setlist progression_flag = ($current_progression_flag)
 	<song_num> = (<song_num> + 1)
 	repeat <array_size>
 	if (<num_shown> > 3 && <num_selectable> > 1)
-		gigboardsetlistinterface :se_setprops \{arrow_up_alpha = 1
+		GigBoardSetlistInterface :SE_SetProps \{arrow_up_alpha = 1
 			arrow_down_alpha = 1}
 	endif
 	if (<num_selectable> > 1)
-		gigboard_setlist_menu_content :se_setprops \{event_handlers = [
+		gigboard_setlist_menu_content :SE_SetProps \{event_handlers = [
 				{
 					pad_up
 					generic_menu_up_or_down_sound
@@ -1397,25 +1397,25 @@ script create_gig_poster_setlist progression_flag = ($current_progression_flag)
 			]}
 	endif
 	wait_for_camera_anim
-	gigboardsetlistinterface :se_setprops \{alpha = 1}
-	launchevent \{type = focus
+	GigBoardSetlistInterface :SE_SetProps \{alpha = 1}
+	LaunchEvent \{type = focus
 		target = gigboard_setlist_menu_content}
 	gigposters_cycle_song_previews
 endscript
 
 script gigposters_setlist_item_focus 
-	obj_getid
-	if NOT gotparam \{id}
-		id = <objid>
+	Obj_GetID
+	if NOT GotParam \{id}
+		id = <ObjID>
 	endif
-	<id> :se_setprops {
+	<id> :SE_SetProps {
 		gig_item_highlight_alpha = 1
-		highlight_rgba = ($gigboard_setlist_props.<level_poster>.highlight_rgba)
+		highlight_rgba = ($GigBoard_Setlist_Props.<level_poster>.highlight_rgba)
 	}
-	if (<id> = gigboardsetlistinterface && (<completed> = 0 || <completed> = -1))
+	if (<id> = GigBoardSetlistInterface && (<completed> = 0 || <completed> = -1))
 		return
 	endif
-	if gotparam \{song}
+	if GotParam \{song}
 		gig_posters_song_focus song = <song>
 	else
 		gigposters_cycle_song_previews
@@ -1423,66 +1423,66 @@ script gigposters_setlist_item_focus
 endscript
 
 script gigposters_setlist_item_unfocus 
-	obj_getid
-	if NOT gotparam \{id}
-		id = <objid>
+	Obj_GetID
+	if NOT GotParam \{id}
+		id = <ObjID>
 	endif
-	<id> :se_setprops {
+	<id> :SE_SetProps {
 		gig_item_highlight_alpha = 0
 	}
 endscript
 
 script gig_posters_song_focus \{song = none}
-	setsoundbussparams {music_setlist = {vol = ($default_bussset.music_setlist.vol)}}
-	killspawnedscript \{name = gigposters_cycle_song_previews_spawned}
+	SetSoundBussParams {Music_Setlist = {vol = ($Default_BussSet.Music_Setlist.vol)}}
+	KillSpawnedScript \{name = gigposters_cycle_song_previews_spawned}
 	change \{target_setlist_songpreview = none}
-	wait \{2
+	Wait \{2
 		gameframes}
 	change target_setlist_songpreview = <song>
 endscript
 
 script gig_posters_setlist_back 
-	setspawninstancelimits \{max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
-	if ($current_progression_flag = career_band && $is_network_game = 0)
-		getsavegamefromcontroller controller = ($band_mode_current_leader)
+	if ($current_progression_flag = Career_Band && $is_network_game = 0)
+		GetSavegameFromController controller = ($band_mode_current_leader)
 	else
-		getsavegamefromcontroller controller = ($primary_controller)
+		GetSavegameFromController controller = ($primary_controller)
 	endif
 	wait_for_camera_anim
 	ready = 1
-	if screenelementexists \{id = gp_selection_menu}
-		gp_selection_menu :gettags
+	if ScreenElementExists \{id = gp_selection_menu}
+		gp_selection_menu :GetTags
 	endif
 	if (<ready> = 0)
 		return
 	endif
 	if ($menu_gp_stage = 2)
-		soundevent \{event = gigboard_select_back}
-		soundevent \{event = gig_board_zoom_out}
-		launchevent \{type = unfocus
+		SoundEvent \{event = Gigboard_Select_back}
+		SoundEvent \{event = Gig_Board_Zoom_out}
+		LaunchEvent \{type = unfocus
 			target = gigboard_setlist_menu_content}
-		launchevent \{type = focus
+		LaunchEvent \{type = focus
 			target = gp_selection_menu}
-		formattext checksumname = poster_container_id 'poster_%d' d = ($menu_gp_current_selection)
-		if screenelementexists id = <poster_container_id>
-			<poster_container_id> :gettags
+		FormatText checksumname = poster_container_id 'poster_%d' d = ($menu_gp_current_selection)
+		if ScreenElementExists id = <poster_container_id>
+			<poster_container_id> :GetTags
 			get_progression_globals ($current_progression_flag)
 			format_globaltag_gigname setlist_prefix = ($<tier_global>.prefix) gignum = <poster_gig_num>
-			getglobaltags <gig_name> params = completed savegame = <savegame>
+			GetGlobalTags <gig_name> params = completed savegame = <savegame>
 			if (<completed> = 1 || <completed> = 2)
 				toggle_gigposter_difficulty_texture diffnum = ($menu_gp_current_selection) fix_for_last_gigs
 			endif
 		endif
 		destroy_gig_band_money_display
-		destroy_menu \{menu_id = gigboardsetlistinterface}
+		destroy_menu \{menu_id = GigBoardSetlistInterface}
 		gigposters_camera_out
 		gig_posters_unfocus_popup current_selection = ($gig_posters_last_focused_selection) keep_viewport
 		gigposters_toggle_with_fire num = ($menu_gp_current_selection) on
 		gigposters_cycle_song_previews
 		change \{menu_gp_stage = 1}
 	elseif ($menu_gp_stage = 3)
-		destroy_menu \{menu_id = gigboardvenueselectinterface}
+		destroy_menu \{menu_id = GigBoardVenueSelectInterface}
 		gig_posters_focus_popup current_selection = ($menu_gp_current_selection) back_from_venue_select
 		change \{menu_gp_stage = 2}
 	endif
@@ -1490,7 +1490,7 @@ script gig_posters_setlist_back
 	if ($menu_gp_stage = 1)
 		update_gigboard_arrows
 	endif
-	gp_selection_menu :settags \{ready = 1}
+	gp_selection_menu :SetTags \{ready = 1}
 endscript
 gigposter_creation_numbers = [
 	0
@@ -1521,7 +1521,7 @@ gigposter_creation_numbers = [
 ]
 
 script debug_output_gigposter_creation_numbers 
-	getarraysize \{$gigposter_creation_numbers}
+	GetArraySize \{$gigposter_creation_numbers}
 	i = 0
 	begin
 	printf 'gigposter_creation_numbers[%a] = %b' a = <i> b = ($gigposter_creation_numbers [<i>])
@@ -1530,30 +1530,30 @@ script debug_output_gigposter_creation_numbers
 endscript
 
 script reset_gigposter_creation_numbers 
-	getarraysize \{$gigposter_creation_numbers}
+	GetArraySize \{$gigposter_creation_numbers}
 	i = 0
 	begin
-	setarrayelement arrayname = gigposter_creation_numbers globalarray index = <i> newvalue = 0
+	SetArrayElement ArrayName = gigposter_creation_numbers GlobalArray index = <i> newvalue = 0
 	<i> = (<i> + 1)
 	repeat <array_size>
 endscript
 
 script setup_gigboard_poster 
-	if ($current_progression_flag = career_band && $is_network_game = 0)
-		getsavegamefromcontroller controller = ($band_mode_current_leader)
+	if ($current_progression_flag = Career_Band && $is_network_game = 0)
+		GetSavegameFromController controller = ($band_mode_current_leader)
 	else
-		getsavegamefromcontroller controller = ($primary_controller)
+		GetSavegameFromController controller = ($primary_controller)
 	endif
-	if NOT gotparam \{poster_gig_num}
+	if NOT GotParam \{poster_gig_num}
 		poster_gig_num = ($<unlock_order>.<setnum>.<gignum>.num)
 	endif
-	gp_selection_menu :settags tier_global = <tier_global>
-	if gotparam \{forced_pos}
+	gp_selection_menu :SetTags tier_global = <tier_global>
+	if GotParam \{forced_pos}
 		index = (<forced_pos> - 1)
 	else
 		index = (<created_gignum> - 1)
 	endif
-	setarrayelement arrayname = gigposter_creation_numbers globalarray index = <index> newvalue = <poster_gig_num>
+	SetArrayElement ArrayName = gigposter_creation_numbers GlobalArray index = <index> newvalue = <poster_gig_num>
 	diffnum = (<index> + 1)
 	if (<diffnum> = 18)
 		diffnum = 17
@@ -1562,31 +1562,31 @@ script setup_gigboard_poster
 	if (<diffnum> = 19)
 		diffnum = 18
 		format_globaltag_gigname setlist_prefix = ($<tier_global>.prefix) gignum = 18
-		getglobaltags <gig_name> savegame = <savegame>
+		GetGlobalTags <gig_name> savegame = <savegame>
 		if (<first_time_unlocked> = 0)
 			create_small_gig_poster \{num = 19}
 		endif
 	endif
 	if (<diffnum> < 19)
 		format_globaltag_gigname setlist_prefix = ($<tier_global>.prefix) gignum = <poster_gig_num>
-		getglobaltags <gig_name> savegame = <savegame>
+		GetGlobalTags <gig_name> savegame = <savegame>
 		if (<completed> = 1 || <completed> = 2)
 			source_texture = difficulty_beginner_icon
 			progression_gig_get_highest_difficulty_completed gig = <poster_gig_num>
 			if (<highest_diff_completed> = 'easy_rhythm' || <highest_diff_completed> = 'none')
 				<highest_diff_completed> = 'beginner'
 			endif
-			formattext checksumname = source_texture 'difficulty_%s_icon' s = <highest_diff_completed>
+			FormatText checksumname = source_texture 'difficulty_%s_icon' s = <highest_diff_completed>
 			if (<diffnum> > 9)
-				formattext checksumname = difftexname 'tex\\zones\\Z_Board_Room\\Gig_Tex_Board_Room_Difficulty_%d.dds' d = <diffnum> addtostringlookup = true
+				FormatText checksumname = difftexname 'tex\\zones\\Z_Board_Room\\Gig_Tex_Board_Room_Difficulty_%d.dds' d = <diffnum> AddToStringLookup = true
 			else
-				formattext checksumname = difftexname 'tex\\zones\\Z_Board_Room\\Gig_Tex_Board_Room_Difficulty_0%d.dds' d = <diffnum> addtostringlookup = true
+				FormatText checksumname = difftexname 'tex\\zones\\Z_Board_Room\\Gig_Tex_Board_Room_Difficulty_0%d.dds' d = <diffnum> AddToStringLookup = true
 			endif
 			if (<first_time_unlocked> = 0)
 				toggle_gigposter_difficulty_texture diffnum = <diffnum>
 			endif
 			stoprendering
-			replacetexture {
+			ReplaceTexture {
 				src = <source_texture>
 				dest_tex_dict_assetname = `zones\z_board_room\z_board_room.tex`
 				dest_tex_dict_assetcontext = z_board_room
@@ -1595,9 +1595,9 @@ script setup_gigboard_poster
 			startrendering
 		endif
 		if (<first_time_unlocked> = 1)
-			gp_selection_menu :getsingletag \{first_unlocked_selection}
+			gp_selection_menu :GetSingleTag \{first_unlocked_selection}
 			if (<first_unlocked_selection> = 0)
-				gp_selection_menu :settags first_unlocked_selection = <diffnum>
+				gp_selection_menu :SetTags first_unlocked_selection = <diffnum>
 			endif
 		else
 			create_small_gig_poster num = <diffnum>
@@ -1607,20 +1607,20 @@ endscript
 
 script create_gigboard_poster_with_viewport 
 	poster_gig_num = ($gigposter_creation_numbers [(<created_gignum> - 1)])
-	formattext checksumname = tiername 'tier%d' d = <poster_gig_num>
-	formattext checksumname = poster_container_id 'poster_%d' d = <created_gignum>
-	if screenelementexists id = <poster_container_id>
-		if NOT gotparam \{back_from_venue_select}
+	FormatText checksumname = tiername 'tier%d' d = <poster_gig_num>
+	FormatText checksumname = poster_container_id 'poster_%d' d = <created_gignum>
+	if ScreenElementExists id = <poster_container_id>
+		if NOT GotParam \{back_from_venue_select}
 			destroy_gig_posters_window created_gignum = <created_gignum>
 		endif
 	endif
 	create_gig_posters_window <...> created_gignum = <created_gignum>
-	if gotparam \{back_from_venue_select}
+	if GotParam \{back_from_venue_select}
 		generic_menu_pad_back_sound
 		destroy_menu menu_id = <poster_container_id>
 	endif
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <window_id>
 		id = <poster_container_id>
 		just = [left top]
@@ -1629,10 +1629,10 @@ script create_gigboard_poster_with_viewport
 			poster_gig_num = <poster_gig_num>
 		}
 	}
-	gp_selection_menu :gettags
-	extendcrc <poster_container_id> '_songlist' out = songlist_popup
-	createscreenelement {
-		type = spriteelement
+	gp_selection_menu :GetTags
+	ExtendCRC <poster_container_id> '_songlist' out = songlist_popup
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <poster_container_id>
 		id = <songlist_popup>
 		z_priority = 102
@@ -1644,18 +1644,18 @@ script create_gigboard_poster_with_viewport
 endscript
 
 script create_gig_posters_window \{created_gignum = 1}
-	formattext checksumname = viewport_id 'gigposters_viewport_id%d' d = <created_gignum>
-	formattext checksumname = viewport_override_id 'gigposters_viewport_override_id%d' d = <created_gignum>
-	formattext checksumname = window_id 'gigposters_window_id%d' d = <created_gignum>
+	FormatText checksumname = viewport_id 'gigposters_viewport_id%d' d = <created_gignum>
+	FormatText checksumname = viewport_override_id 'gigposters_viewport_override_id%d' d = <created_gignum>
+	FormatText checksumname = window_id 'gigposters_window_id%d' d = <created_gignum>
 	if (<created_gignum> > 9)
-		formattext checksumname = texture_id 'tex/zones/Z_Board_Room/Gig_Tex_Board_Room_Large_%d_.dds' d = <created_gignum>
-		formattext checksumname = posternamelarge 'Z_Board_Room_G_RM_Gig_poster_%d' d = <created_gignum>
+		FormatText checksumname = texture_id 'tex/zones/Z_Board_Room/Gig_Tex_Board_Room_Large_%d_.dds' d = <created_gignum>
+		FormatText checksumname = posternamelarge 'Z_Board_Room_G_RM_Gig_poster_%d' d = <created_gignum>
 	else
-		formattext checksumname = texture_id 'tex/zones/Z_Board_Room/Gig_Tex_Board_Room_Large_0%d_.dds' d = <created_gignum>
-		formattext checksumname = posternamelarge 'Z_Board_Room_G_RM_Gig_poster_0%d' d = <created_gignum>
+		FormatText checksumname = texture_id 'tex/zones/Z_Board_Room/Gig_Tex_Board_Room_Large_0%d_.dds' d = <created_gignum>
+		FormatText checksumname = posternamelarge 'Z_Board_Room_G_RM_Gig_poster_0%d' d = <created_gignum>
 	endif
-	if gotparam \{back_from_venue_select}
-		if screenelementexists id = <window_id>
+	if GotParam \{back_from_venue_select}
+		if ScreenElementExists id = <window_id>
 			return window_id = <window_id>
 		endif
 	endif
@@ -1672,76 +1672,76 @@ script create_gig_posters_window \{created_gignum = 1}
 		texdict = `zones\z_board_room\z_board_room.tex`
 		keep_current_level
 	}
-	safecreate nodename = <posternamelarge>
+	SafeCreate nodeName = <posternamelarge>
 	return window_id = <window_id>
 endscript
 
 script destroy_gig_posters_window \{created_gignum = 1}
-	formattext checksumname = viewport_id 'gigposters_viewport_id%d' d = <created_gignum>
-	formattext checksumname = viewport_override_id 'gigposters_viewport_override_id%d' d = <created_gignum>
-	formattext checksumname = window_id 'gigposters_window_id%d' d = <created_gignum>
+	FormatText checksumname = viewport_id 'gigposters_viewport_id%d' d = <created_gignum>
+	FormatText checksumname = viewport_override_id 'gigposters_viewport_override_id%d' d = <created_gignum>
+	FormatText checksumname = window_id 'gigposters_window_id%d' d = <created_gignum>
 	destroy_viewport_ui {
 		viewport_id = <viewport_id>
 		viewport_override_id = <viewport_override_id>
 		window_id = <window_id>
 	}
 	if (<created_gignum> > 9)
-		formattext checksumname = posternamelarge 'Z_Board_Room_G_RM_Gig_poster_%d' d = <created_gignum>
+		FormatText checksumname = posternamelarge 'Z_Board_Room_G_RM_Gig_poster_%d' d = <created_gignum>
 	else
-		formattext checksumname = posternamelarge 'Z_Board_Room_G_RM_Gig_poster_0%d' d = <created_gignum>
+		FormatText checksumname = posternamelarge 'Z_Board_Room_G_RM_Gig_poster_0%d' d = <created_gignum>
 	endif
-	safekill nodename = <posternamelarge>
+	SafeKill nodeName = <posternamelarge>
 endscript
 
 script debug_complete_gig_cheat 
-	if ($current_progression_flag = career_band && $is_network_game = 0)
-		getsavegamefromcontroller controller = ($band_mode_current_leader)
+	if ($current_progression_flag = Career_Band && $is_network_game = 0)
+		GetSavegameFromController controller = ($band_mode_current_leader)
 	else
-		getsavegamefromcontroller controller = ($primary_controller)
+		GetSavegameFromController controller = ($primary_controller)
 	endif
 	poster_gig_num = ($gigposter_creation_numbers [($menu_gp_current_selection - 1)])
-	formattext checksumname = tier 'tier%d' d = <poster_gig_num>
-	if structurecontains structure = ($<tier_global>.<tier>) createagig
+	FormatText checksumname = tier 'tier%d' d = <poster_gig_num>
+	if StructureContains Structure = ($<tier_global>.<tier>) createagig
 		return
 	endif
 	format_globaltag_gigname setlist_prefix = ($<tier_global>.prefix) gignum = <poster_gig_num>
-	getglobaltags <gig_name> params = completed savegame = <savegame>
+	GetGlobalTags <gig_name> params = completed savegame = <savegame>
 	if (<completed> = 0)
-		setglobaltags <gig_name> params = {completed = 1} all_active_players = 1
+		SetGlobalTags <gig_name> params = {completed = 1} all_active_players = 1
 		change \{allow_career_progression_check = 1}
 	elseif (<completed> = -1)
-		setglobaltags <gig_name> params = {completed = 2} all_active_players = 1
+		SetGlobalTags <gig_name> params = {completed = 2} all_active_players = 1
 	endif
-	setglobaltags <gig_name> params = {encore_unlocked = 1 boss_unlocked = 1 started = 1} all_active_players = 1
-	progression_career_gig_complete <...> (<progression_flag>)
-	getplayerinfo \{1
+	SetGlobalTags <gig_name> params = {encore_unlocked = 1 boss_unlocked = 1 started = 1} all_active_players = 1
+	Progression_Career_Gig_Complete <...> (<progression_flag>)
+	GetPlayerInfo \{1
 		difficulty}
-	formattext checksumname = tiername 'tier%d' d = <poster_gig_num>
-	getarraysize ($<tier_global>.<tiername>.songs)
+	FormatText checksumname = tiername 'tier%d' d = <poster_gig_num>
+	GetArraySize ($<tier_global>.<tiername>.songs)
 	song_index = 0
 	printstruct <...>
 	begin
 	format_globaltag_song_checksum part = ($<tier_global>.part) song = ($<tier_global>.<tiername>.songs [<song_index>])
-	setglobaltags <song_checksum> params = {score = 149457 stars = 5 unlocked = 1} all_active_players = 1
+	SetGlobalTags <song_checksum> params = {score = 149457 stars = 5 unlocked = 1} all_active_players = 1
 	song_index = (<song_index> + 1)
 	repeat <array_size>
-	if structurecontains structure = ($<tier_global>.<tiername>) level
-		formattext {
+	if StructureContains Structure = ($<tier_global>.<tiername>) level
+		FormatText {
 			checksumname = venue_checksum
 			'%s_%i'
-			s = ($levelzones.($<tier_global>.<tiername>.level).name)
+			s = ($LevelZones.($<tier_global>.<tiername>.level).name)
 			i = ($instrument_list.($<tier_global>.part).text_nl)
-			addtostringlookup = true
+			AddToStringLookup = true
 		}
-		setglobaltags <venue_checksum> params = {unlocked = 1} all_active_players = 1
+		SetGlobalTags <venue_checksum> params = {unlocked = 1} all_active_players = 1
 	endif
 	ui_event \{event = menu_refresh}
 endscript
 
-script isgigunlocked 
+script isGigUnlocked 
 	gig = ($<unlock_order>.<set>.<gig>.name)
 	format_globaltag_gigname setlist_prefix = <setlist_prefix> gig = <gig>
-	getglobaltags <gig_name> savegame = <savegame>
+	GetGlobalTags <gig_name> savegame = <savegame>
 	if (<unlocked> = 1)
 		return \{true}
 	endif
@@ -1750,71 +1750,71 @@ endscript
 
 script gigposters_toggle_with_fire 
 	if (<num> > 9)
-		formattext checksumname = postername 'Z_Board_Room_G_RM_Gig_poster_small_%d' d = <num>
-		formattext checksumname = fire 'Z_Board_Room_poster_Fire_%d' d = <num>
-		formattext checksumname = posterfire 'Z_Board_Room_G_RM_Gig_%d_Fire' d = <num>
+		FormatText checksumname = postername 'Z_Board_Room_G_RM_Gig_poster_small_%d' d = <num>
+		FormatText checksumname = fire 'Z_Board_Room_poster_Fire_%d' d = <num>
+		FormatText checksumname = posterfire 'Z_Board_Room_G_RM_Gig_%d_Fire' d = <num>
 	else
-		formattext checksumname = postername 'Z_Board_Room_G_RM_Gig_poster_small_0%d' d = <num>
-		formattext checksumname = fire 'Z_Board_Room_poster_Fire_0%d' d = <num>
-		formattext checksumname = posterfire 'Z_Board_Room_G_RM_Gig_0%d_Fire' d = <num>
+		FormatText checksumname = postername 'Z_Board_Room_G_RM_Gig_poster_small_0%d' d = <num>
+		FormatText checksumname = fire 'Z_Board_Room_poster_Fire_0%d' d = <num>
+		FormatText checksumname = posterfire 'Z_Board_Room_G_RM_Gig_0%d_Fire' d = <num>
 	endif
 	if (<num> > 9)
-		formattext checksumname = glowlines 'Z_Board_Room_G_RM_Glowlines_%d' d = <num>
-		formattext checksumname = glowball 'Z_Board_Room_G_RM_Glowball_%d' d = <num> addtostringlookup = true
+		FormatText checksumname = glowlines 'Z_Board_Room_G_RM_Glowlines_%d' d = <num>
+		FormatText checksumname = glowball 'Z_Board_Room_G_RM_Glowball_%d' d = <num> AddToStringLookup = true
 	else
-		formattext checksumname = glowlines 'Z_Board_Room_G_RM_Glowlines_0%d' d = <num>
-		formattext checksumname = glowball 'Z_Board_Room_G_RM_Glowball_0%d' d = <num> addtostringlookup = true
+		FormatText checksumname = glowlines 'Z_Board_Room_G_RM_Glowlines_0%d' d = <num>
+		FormatText checksumname = glowball 'Z_Board_Room_G_RM_Glowball_0%d' d = <num> AddToStringLookup = true
 	endif
-	if gotparam \{on}
-		if NOT gotparam \{poster_only}
-			safecreate nodename = <fire>
-			safecreate nodename = <glowball>
-			if NOT gotparam \{no_poster_fire}
-				safecreate nodename = <glowlines>
-				safecreate nodename = <posterfire>
+	if GotParam \{on}
+		if NOT GotParam \{poster_only}
+			SafeCreate nodeName = <fire>
+			SafeCreate nodeName = <glowball>
+			if NOT GotParam \{no_poster_fire}
+				SafeCreate nodeName = <glowlines>
+				SafeCreate nodeName = <posterfire>
 			endif
 		endif
-		safekill nodename = <postername>
-	elseif gotparam \{off}
-		if NOT gotparam \{poster_only}
-			safekill nodename = <fire>
-			safekill nodename = <glowlines>
-			safekill nodename = <glowball>
-			safekill nodename = <posterfire>
+		SafeKill nodeName = <postername>
+	elseif GotParam \{off}
+		if NOT GotParam \{poster_only}
+			SafeKill nodeName = <fire>
+			SafeKill nodeName = <glowlines>
+			SafeKill nodeName = <glowball>
+			SafeKill nodeName = <posterfire>
 		endif
-		if NOT gotparam \{focused}
-			safecreate nodename = <postername>
+		if NOT GotParam \{focused}
+			SafeCreate nodeName = <postername>
 		endif
 	endif
 endscript
 
 script show_setlist_on_gigboard progression_flag = ($current_progression_flag)
-	if ($current_progression_flag = career_band && $is_network_game = 0)
-		getsavegamefromcontroller controller = ($band_mode_current_leader)
+	if ($current_progression_flag = Career_Band && $is_network_game = 0)
+		GetSavegameFromController controller = ($band_mode_current_leader)
 	else
-		getsavegamefromcontroller controller = ($primary_controller)
+		GetSavegameFromController controller = ($primary_controller)
 	endif
 	get_progression_globals <progression_flag>
 	poster_gig_num = ($gigposter_creation_numbers [(<created_gignum> - 1)])
-	formattext checksumname = tiername 'tier%d' d = <poster_gig_num>
+	FormatText checksumname = tiername 'tier%d' d = <poster_gig_num>
 	format_globaltag_gigname setlist_prefix = ($<tier_global>.prefix) gignum = <poster_gig_num>
-	if structurecontains structure = ($<tier_global>.<tiername>) level
+	if StructureContains Structure = ($<tier_global>.<tiername>) level
 		tier_level = ($<tier_global>.<tiername>.level)
-		tier_name = ($levelzones.<tier_level>.title)
+		tier_name = ($LevelZones.<tier_level>.title)
 	else
-		tier_name = qs(0x03ac90f0)
+		tier_name = qs("\L")
 	endif
 	level_poster = ($<tier_global>.<tiername>.poster_texture)
-	formattext checksumname = viewport_id 'setlist_viewport_id%d' d = <created_gignum>
-	formattext checksumname = viewport_override_id 'setlist_viewport_override_id%d' d = <created_gignum>
-	formattext checksumname = window_id 'setlist_window_id%d' d = <created_gignum>
+	FormatText checksumname = viewport_id 'setlist_viewport_id%d' d = <created_gignum>
+	FormatText checksumname = viewport_override_id 'setlist_viewport_override_id%d' d = <created_gignum>
+	FormatText checksumname = window_id 'setlist_window_id%d' d = <created_gignum>
 	get_gigboard_section
 	if (<section> = 1)
-		texture_id = `tex/zones/z_board_room/rm_board_room_setlist.dds`
+		texture_id = `tex/zones/Z_Board_Room/RM_Board_Room_setlist.dds`
 	elseif (<section> = 5)
-		texture_id = `tex/zones/z_board_room/rm_board_room_setlist05.dds`
+		texture_id = `tex/zones/Z_Board_Room/RM_Board_Room_setlist05.dds`
 	else
-		formattext checksumname = texture_id 'tex/zones/Z_Board_Room/RM_Board_Room_setlist0%d.dds' d = (<section> - 1)
+		FormatText checksumname = texture_id 'tex/zones/Z_Board_Room/RM_Board_Room_setlist0%d.dds' d = (<section> - 1)
 	endif
 	destroy_gig_band_money_display
 	create_viewport_ui {
@@ -1830,61 +1830,61 @@ script show_setlist_on_gigboard progression_flag = ($current_progression_flag)
 		pos_offset = (-512.0, 128.0)
 	endif
 	instrument_texture = mixer_icon_crowd
-	wanted_text = qs(0xdd90f869)
+	wanted_text = qs("BAND WANTED")
 	switch ($<tier_global>.part)
 		case guitar
 		instrument_texture = mixer_icon_guitar
-		wanted_text = qs(0x890e464a)
-		case bass
+		wanted_text = qs("GUITARIST WANTED")
+		case Bass
 		instrument_texture = mixer_icon_bass
-		wanted_text = qs(0xa1983b50)
+		wanted_text = qs("BASSIST WANTED")
 		case drum
 		instrument_texture = mixer_icon_drums
-		wanted_text = qs(0xedb4407e)
-		case vocals
+		wanted_text = qs("DRUMMERS WANTED")
+		case Vocals
 		instrument_texture = mixer_icon_vox
-		wanted_text = qs(0x1ade89f5)
+		wanted_text = qs("SINGER WANTED")
 	endswitch
 	if (<poster_gig_num> = 13)
 		scale = (1.7, 0.98499995)
 	else
 		scale = (1.7, 1.0)
 	endif
-	createscreenelement {
-		type = descinterface
+	CreateScreenElement {
+		type = DescInterface
 		parent = <window_id>
-		id = gigboardsetlistinterfaceb
+		id = GigBoardSetlistInterfaceB
 		desc = 'gig_board_setlistB'
-		gig_board_head_bg_texture = ($gigboard_setlist_props.<level_poster>.header_texture)
+		gig_board_head_bg_texture = ($GigBoard_Setlist_Props.<level_poster>.header_texture)
 		gig_board_heading_rgba = [255 200 175 255]
-		gig_board_heading_text = ($gigboard_setlist_props.<level_poster>.header_text)
+		gig_board_heading_text = ($GigBoard_Setlist_Props.<level_poster>.header_text)
 		pos = <pos_offset>
 		container_scale = <scale>
-		gig_board_wanted_text = <wanted_text>
+		gig_board_WANTED_text = <wanted_text>
 		gig_board_venue_text = <tier_name>
 		gig_board_instrument_icon_texture = <instrument_texture>
 	}
-	if gigboardsetlistinterfaceb :desc_resolvealias \{name = alias_gig_board_songlist_stack}
-		assignalias id = <resolved_id> alias = gigboard_songlist_menu
+	if GigBoardSetlistInterfaceB :Desc_ResolveAlias \{name = alias_gig_board_songlist_stack}
+		AssignAlias id = <resolved_id> alias = gigboard_songlist_menu
 	endif
 	format_globaltag_gigname setlist_prefix = ($<tier_global>.prefix) gignum = <poster_gig_num>
-	getglobaltags <gig_name> savegame = <savegame>
-	if structurecontains structure = ($<tier_global>.<tiername>) createagig
-		createscreenelement \{type = descinterface
+	GetGlobalTags <gig_name> savegame = <savegame>
+	if StructureContains Structure = ($<tier_global>.<tiername>) createagig
+		CreateScreenElement \{type = DescInterface
 			parent = gigboard_songlist_menu
 			desc = 'gig_board_setlistB_item'
-			autosizedims = true
-			gig_item_song_text = qs(0xb5c20682)}
+			autoSizeDims = true
+			gig_item_song_text = qs("Book Your Own Gig!")}
 	else
 		song_index = 0
-		getarraysize ($<tier_global>.<tiername>.songs)
+		GetArraySize ($<tier_global>.<tiername>.songs)
 		song_size = <array_size>
 		encore_song = none
-		if structurecontains structure = ($<tier_global>.<tiername>) encorep1
+		if StructureContains Structure = ($<tier_global>.<tiername>) encorep1
 			encore_song = ($<tier_global>.<tiername>.encorep1)
 		endif
 		boss_song = none
-		if structurecontains structure = ($<tier_global>.<tiername>) boss
+		if StructureContains Structure = ($<tier_global>.<tiername>) boss
 			boss_song = ($<tier_global>.<tiername>.boss)
 		endif
 		begin
@@ -1902,19 +1902,19 @@ script show_setlist_on_gigboard progression_flag = ($current_progression_flag)
 		endif
 		if (<show_song> = 1)
 			get_song_title song = <song>
-			createscreenelement {
-				type = descinterface
+			CreateScreenElement {
+				type = DescInterface
 				parent = gigboard_songlist_menu
 				desc = 'gig_board_setlistB_item'
-				autosizedims = true
+				autoSizeDims = true
 				gig_item_song_text = <song_title>
 			}
 			diff_index = 0
 			begin
 			format_globaltag_song_checksum part = ($<tier_global>.part) song = <song> difficulty_index = <diff_index>
-			getglobaltags <song_checksum> params = stars savegame = <savegame>
+			GetGlobalTags <song_checksum> params = stars savegame = <savegame>
 			if (<stars> > 2)
-				<id> :se_setprops desc = 'gig_board_setlistB_item_complete' gig_item_song_text = <song_title>
+				<id> :SE_SetProps desc = 'gig_board_setlistB_item_complete' gig_item_song_text = <song_title>
 				break
 			endif
 			diff_index = (<diff_index> + 1)
@@ -1940,9 +1940,9 @@ script get_gigboard_section num = ($menu_gp_current_selection)
 endscript
 
 script destroy_gigboard_setlist_viewport 
-	formattext checksumname = viewport_id 'setlist_viewport_id%d' d = <created_gignum>
-	formattext checksumname = viewport_override_id 'setlist_viewport_override_id%d' d = <created_gignum>
-	formattext checksumname = window_id 'setlist_window_id%d' d = <created_gignum>
+	FormatText checksumname = viewport_id 'setlist_viewport_id%d' d = <created_gignum>
+	FormatText checksumname = viewport_override_id 'setlist_viewport_override_id%d' d = <created_gignum>
+	FormatText checksumname = window_id 'setlist_window_id%d' d = <created_gignum>
 	destroy_viewport_ui {
 		viewport_id = <viewport_id>
 		viewport_override_id = <viewport_override_id>
@@ -1951,46 +1951,46 @@ script destroy_gigboard_setlist_viewport
 endscript
 
 script gigposters_cycle_song_previews 
-	setsoundbussparams {music_setlist = {vol = ($default_bussset.music_setlist.vol)}}
-	killspawnedscript \{name = gigposters_cycle_song_previews_spawned}
+	SetSoundBussParams {Music_Setlist = {vol = ($Default_BussSet.Music_Setlist.vol)}}
+	KillSpawnedScript \{name = gigposters_cycle_song_previews_spawned}
 	change \{target_setlist_songpreview = none}
-	wait \{2
+	Wait \{2
 		gameframes}
 	spawnscriptnow gigposters_cycle_song_previews_spawned params = {<...>}
 endscript
 
 script gigposters_cycle_song_previews_spawned 
-	setspawninstancelimits \{max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
 	gignum = ($gigposter_creation_numbers [($menu_gp_current_selection - 1)])
 	get_progression_globals ($current_progression_flag)
-	formattext checksumname = tiername 'tier%d' d = <gignum>
-	if ($current_progression_flag = career_band && $is_network_game = 0)
-		getsavegamefromcontroller controller = ($band_mode_current_leader)
+	FormatText checksumname = tiername 'tier%d' d = <gignum>
+	if ($current_progression_flag = Career_Band && $is_network_game = 0)
+		GetSavegameFromController controller = ($band_mode_current_leader)
 	else
-		getsavegamefromcontroller controller = ($primary_controller)
+		GetSavegameFromController controller = ($primary_controller)
 	endif
 	format_globaltag_gigname setlist_prefix = ($<tier_global>.prefix) gignum = <gignum>
-	getglobaltags <gig_name> savegame = <savegame>
+	GetGlobalTags <gig_name> savegame = <savegame>
 	encore_song = none
-	if structurecontains structure = ($<tier_global>.<tiername>) encorep1
+	if StructureContains Structure = ($<tier_global>.<tiername>) encorep1
 		encore_song = ($<tier_global>.<tiername>.encorep1)
 	endif
 	boss_song = none
-	if structurecontains structure = ($<tier_global>.<tiername>) boss
+	if StructureContains Structure = ($<tier_global>.<tiername>) boss
 		boss_song = ($<tier_global>.<tiername>.boss)
 	endif
-	if structurecontains structure = ($<tier_global>.<tiername>) specialevent
+	if StructureContains Structure = ($<tier_global>.<tiername>) specialevent
 		return
 	endif
-	if structurecontains structure = ($<tier_global>.<tiername>) createagig
+	if StructureContains Structure = ($<tier_global>.<tiername>) createagig
 		return
 	endif
-	getarraysize ($<tier_global>.<tiername>.songs)
+	GetArraySize ($<tier_global>.<tiername>.songs)
 	begin
 	song_index = 0
 	begin
-	setsoundbussparams {music_setlist = {vol = ($default_bussset.music_setlist.vol)}}
+	SetSoundBussParams {Music_Setlist = {vol = ($Default_BussSet.Music_Setlist.vol)}}
 	song = ($<tier_global>.<tiername>.songs [<song_index>])
 	play_song_preview = 1
 	if (<song> = <encore_song>)
@@ -2005,20 +2005,20 @@ script gigposters_cycle_song_previews_spawned
 	endif
 	if (<play_song_preview> = 1)
 		change target_setlist_songpreview = <song>
-		wait \{7
+		Wait \{7
 			seconds}
-		setsoundbussparams {music_setlist = {vol = (($default_bussset.music_setlist.vol) - 100)} time = 1.0}
-		wait \{1.1
+		SetSoundBussParams {Music_Setlist = {vol = (($Default_BussSet.Music_Setlist.vol) - 100)} time = 1.0}
+		Wait \{1.1
 			seconds}
 	endif
 	<song_index> = (<song_index> + 1)
-	setsoundbussparams {music_setlist = {vol = ($default_bussset.music_setlist.vol)}}
+	SetSoundBussParams {Music_Setlist = {vol = ($Default_BussSet.Music_Setlist.vol)}}
 	repeat <array_size>
 	repeat
 endscript
 
 script toggle_gigposter_difficulty_texture \{diffnum = 1}
-	if gotparam \{fix_for_last_gigs}
+	if GotParam \{fix_for_last_gigs}
 		if (<diffnum> = 18)
 			diffnum = 17
 		endif
@@ -2027,64 +2027,64 @@ script toggle_gigposter_difficulty_texture \{diffnum = 1}
 		endif
 	endif
 	if (<diffnum> > 9)
-		formattext checksumname = diffname 'Z_Board_Room_G_RM_Gig_Difficulty_%d' d = <diffnum>
+		FormatText checksumname = diffname 'Z_Board_Room_G_RM_Gig_Difficulty_%d' d = <diffnum>
 	else
-		formattext checksumname = diffname 'Z_Board_Room_G_RM_Gig_Difficulty_0%d' d = <diffnum>
+		FormatText checksumname = diffname 'Z_Board_Room_G_RM_Gig_Difficulty_0%d' d = <diffnum>
 	endif
-	if gotparam \{off}
-		safekill nodename = <diffname>
+	if GotParam \{off}
+		SafeKill nodeName = <diffname>
 	else
-		safecreate nodename = <diffname>
+		SafeCreate nodeName = <diffname>
 	endif
 endscript
 
 script debug_yuk \{gignum = 1
 		diff = easy
 		part = guitar}
-	progression_flag = career_band
+	progression_flag = Career_Band
 	if (<part> = guitar)
-		progression_flag = career_guitar
+		progression_flag = Career_Guitar
 	elseif (<part> = drum)
-		progression_flag = career_drum
-	elseif (<part> = bass)
-		progression_flag = career_bass
-	elseif (<part> = vocals)
-		progression_flag = career_vocals
+		progression_flag = Career_Drum
+	elseif (<part> = Bass)
+		progression_flag = Career_Bass
+	elseif (<part> = Vocals)
+		progression_flag = Career_Vocals
 	endif
-	if (<progression_flag> = career_band && $is_network_game = 0)
-		getsavegamefromcontroller controller = ($band_mode_current_leader)
+	if (<progression_flag> = Career_Band && $is_network_game = 0)
+		GetSavegameFromController controller = ($band_mode_current_leader)
 	else
-		getsavegamefromcontroller controller = ($primary_controller)
+		GetSavegameFromController controller = ($primary_controller)
 	endif
 	get_progression_globals <progression_flag>
 	format_globaltag_gigname setlist_prefix = ($<tier_global>.prefix) gignum = <gignum>
-	getglobaltags <gig_name> savegame = <savegame>
+	GetGlobalTags <gig_name> savegame = <savegame>
 	printstruct <...>
-	formattext checksumname = tiername 'tier%d' d = <gignum>
-	getarraysize ($<tier_global>.<tiername>.songs)
+	FormatText checksumname = tiername 'tier%d' d = <gignum>
+	GetArraySize ($<tier_global>.<tiername>.songs)
 	i = 0
 	begin
 	format_globaltag_song_checksum part = <part> song = ($<tier_global>.<tiername>.songs [<i>]) difficulty = <diff>
-	getglobaltags <song_checksum> savegame = <savegame>
+	GetGlobalTags <song_checksum> savegame = <savegame>
 	printstruct <...>
 	<i> = (<i> + 1)
 	repeat <array_size>
 endscript
 
 script debug_gig_start 
-	if ((cd) || ($enable_button_cheats = 0))
+	if ((CD) || ($enable_button_cheats = 0))
 		return
 	endif
 	get_progression_globals <progression_flag>
 	change \{menu_gp_stage = 3}
 	i = 0
 	begin
-	formattext checksumname = tier 'tier%d' d = (<i> + 1)
-	if structurecontains structure = ($<tier_global>.<tier>) debug_gig
+	FormatText checksumname = tier 'tier%d' d = (<i> + 1)
+	if StructureContains Structure = ($<tier_global>.<tier>) debug_gig
 		gig_num = (<i> + 1)
 		create_loading_screen
-		if (($is_network_game = 1) && (ishost))
-			sendstructure callback = net_gig_posters_choose_next data_to_send = {gig_num = <gig_num> progression_flag = <progression_flag>}
+		if (($is_network_game = 1) && (IsHost))
+			SendStructure callback = net_gig_posters_choose_next data_to_send = {gig_num = <gig_num> progression_flag = <progression_flag>}
 			ui_event \{event = menu_back
 				data = {
 					gig_selected
@@ -2099,32 +2099,32 @@ script debug_gig_start
 endscript
 
 script gigboard_continue_to_paytoplay 
-	if gotparam \{deduct_funds}
-		soundevent \{event = menu_purchase_item}
+	if GotParam \{deduct_funds}
+		SoundEvent \{event = Menu_Purchase_Item}
 		get_savegame_from_controller controller = ($primary_controller)
 		decrease_band_money price = <paytoplay_price> savegame = <savegame>
 		destroy_popup_warning_menu
-		setglobaltags <gig_name> params = {started = 1} all_active_players = 1
-		getarraysize ($<tier_global>.<tiernum>.songs)
+		SetGlobalTags <gig_name> params = {started = 1} all_active_players = 1
+		GetArraySize ($<tier_global>.<tiernum>.songs)
 		i = 0
 		begin
-		setglobaltags ($<tier_global>.<tiernum>.songs [<i>]) all_active_players = 1 params = {unlocked = 1}
+		SetGlobalTags ($<tier_global>.<tiernum>.songs [<i>]) all_active_players = 1 params = {unlocked = 1}
 		i = (<i> + 1)
 		repeat <array_size>
 		level_checksum = ($<tier_global>.<tiernum>.level)
-		formattext {
+		FormatText {
 			checksumname = venue_checksum
 			'%s_%i'
-			s = ($levelzones.<level_checksum>.name)
+			s = ($LevelZones.<level_checksum>.name)
 			i = ($instrument_list.($<tier_global>.part).text_nl)
-			addtostringlookup = true
+			AddToStringLookup = true
 		}
-		setglobaltags <venue_checksum> params = {unlocked = 1} all_active_players = 1
-		formattext checksumname = venue_checksum 'venue_%s' s = ($levelzones.<level_checksum>.name)
-		setglobaltags <venue_checksum> all_active_players = 1 params = {unlocked = 1}
+		SetGlobalTags <venue_checksum> params = {unlocked = 1} all_active_players = 1
+		FormatText checksumname = venue_checksum 'venue_%s' s = ($LevelZones.<level_checksum>.name)
+		SetGlobalTags <venue_checksum> all_active_players = 1 params = {unlocked = 1}
 	endif
-	if (($is_network_game = 1) && (ishost))
-		sendstructure {callback = net_gig_posters_choose_next data_to_send = {
+	if (($is_network_game = 1) && (IsHost))
+		SendStructure {callback = net_gig_posters_choose_next data_to_send = {
 				gig_num = <gig_num> progression_flag = <progression_flag> song_checksum = <song_checksum> song_index = <song_index> single_song = <single_song>
 			}
 		}
@@ -2143,38 +2143,38 @@ endscript
 script gigboard_cancel_paytoplay 
 	generic_menu_pad_back_sound
 	destroy_popup_warning_menu
-	if screenelementexists \{id = gigboard_setlist_menu_content}
-		launchevent \{type = focus
+	if ScreenElementExists \{id = gigboard_setlist_menu_content}
+		LaunchEvent \{type = focus
 			target = gigboard_setlist_menu_content}
 	endif
-	gp_selection_menu :settags \{ready = 1}
+	gp_selection_menu :SetTags \{ready = 1}
 	gig_posters_setup_helpers <...>
 endscript
 
 script get_songs_available_for_create_a_setlist progression_flag = ($current_progression_flag)
 	get_progression_globals <progression_flag>
 	num_tiers = ($<tier_global>.num_tiers)
-	if ($current_progression_flag = career_band && $is_network_game = 0)
-		getsavegamefromcontroller controller = ($band_mode_current_leader)
+	if ($current_progression_flag = Career_Band && $is_network_game = 0)
+		GetSavegameFromController controller = ($band_mode_current_leader)
 	else
-		getsavegamefromcontroller controller = ($primary_controller)
+		GetSavegameFromController controller = ($primary_controller)
 	endif
 	unlocked_songs_array = []
 	num_songs_available = 0
 	gig = 1
 	begin
-	formattext checksumname = tier 'tier%d' d = <gig>
+	FormatText checksumname = tier 'tier%d' d = <gig>
 	format_globaltag_gigname setlist_prefix = ($<tier_global>.prefix) gignum = <gig>
-	getglobaltags <gig_name> savegame = <savegame>
+	GetGlobalTags <gig_name> savegame = <savegame>
 	if (<completed> > 0)
-		getarraysize ($<tier_global>.<tier>.songs)
+		GetArraySize ($<tier_global>.<tier>.songs)
 		song_index = 0
 		begin
 		song = ($<tier_global>.<tier>.songs [<song_index>])
 		get_song_allowed_in_quickplay song = <song>
 		if (<allowed_in_quickplay> = 1)
 			printf 'adding song = %d' d = <song>
-			addarrayelement array = <unlocked_songs_array> element = <song>
+			AddArrayElement array = <unlocked_songs_array> element = <song>
 			<unlocked_songs_array> = <array>
 			num_songs_available = (<num_songs_available> + 1)
 		endif
@@ -2183,10 +2183,10 @@ script get_songs_available_for_create_a_setlist progression_flag = ($current_pro
 	endif
 	gig = (<gig> + 1)
 	repeat <num_tiers>
-	getarraysize \{$gh4_download_songlist}
+	GetArraySize \{$GH4_download_songlist}
 	num_songs_available = (<num_songs_available> + <array_size>)
 	i = 0
-	getarraysize <unlocked_songs_array>
+	GetArraySize <unlocked_songs_array>
 	if (<array_size> > 0)
 		begin
 		printf '%d' d = (<unlocked_songs_array> [<i>])
@@ -2199,34 +2199,34 @@ endscript
 
 script create_gig_band_money_display \{gig_cost = 0}
 	destroy_gig_band_money_display
-	pushassetcontext \{context = ui_board_room}
-	createscreenelement \{parent = gp_selection_menu
-		type = descinterface
+	PushAssetContext \{context = ui_board_room}
+	CreateScreenElement \{parent = gp_selection_menu
+		type = DescInterface
 		id = gig_band_money_id
 		desc = 'gig_pay2play'
 		z_priority = 50000}
-	popassetcontext \{context = ui_board_room}
+	PopAssetContext \{context = ui_board_room}
 	refresh_gig_band_money_display gig_cost = <gig_cost>
 endscript
 
 script destroy_gig_band_money_display 
-	if screenelementexists \{id = gig_band_money_id}
-		destroyscreenelement \{id = gig_band_money_id}
+	if ScreenElementExists \{id = gig_band_money_id}
+		DestroyScreenElement \{id = gig_band_money_id}
 	endif
 endscript
 
 script refresh_gig_band_money_display 
-	if ($current_progression_flag = career_band && $is_network_game = 0)
-		getsavegamefromcontroller controller = ($band_mode_current_leader)
+	if ($current_progression_flag = Career_Band && $is_network_game = 0)
+		GetSavegameFromController controller = ($band_mode_current_leader)
 	else
-		getsavegamefromcontroller controller = ($primary_controller)
+		GetSavegameFromController controller = ($primary_controller)
 	endif
 	get_current_band_info
-	getglobaltags <band_info> savegame = <savegame>
-	formattext textname = cash_text qs(0xf1d3969e) i = <cash>
-	formattext textname = gig_cost_text qs(0xf1d3969e) i = <gig_cost>
-	if screenelementexists \{id = gig_band_money_id}
-		setscreenelementprops {
+	GetGlobalTags <band_info> savegame = <savegame>
+	FormatText TextName = cash_text qs("$%i") i = <Cash>
+	FormatText TextName = gig_cost_text qs("$%i") i = <gig_cost>
+	if ScreenElementExists \{id = gig_band_money_id}
+		SetScreenElementProps {
 			id = gig_band_money_id
 			cash_available_value_text = <cash_text>
 			gig_cost_money_text = <gig_cost_text>
@@ -2238,35 +2238,35 @@ script kill_all_posters
 	poster_name_num = 1
 	begin
 	if (<poster_name_num> > 9)
-		formattext checksumname = postername 'Z_Board_Room_G_RM_Gig_poster_%d' d = <poster_name_num>
-		formattext checksumname = smallposter 'Z_Board_Room_G_RM_Gig_poster_small_%d' d = <poster_name_num>
-		formattext checksumname = diffname 'Z_Board_Room_G_RM_Gig_Difficulty_%d' d = <poster_name_num>
+		FormatText checksumname = postername 'Z_Board_Room_G_RM_Gig_poster_%d' d = <poster_name_num>
+		FormatText checksumname = smallposter 'Z_Board_Room_G_RM_Gig_poster_small_%d' d = <poster_name_num>
+		FormatText checksumname = diffname 'Z_Board_Room_G_RM_Gig_Difficulty_%d' d = <poster_name_num>
 	else
-		formattext checksumname = postername 'Z_Board_Room_G_RM_Gig_poster_0%d' d = <poster_name_num>
-		formattext checksumname = smallposter 'Z_Board_Room_G_RM_Gig_poster_small_0%d' d = <poster_name_num>
-		formattext checksumname = diffname 'Z_Board_Room_G_RM_Gig_Difficulty_0%d' d = <poster_name_num>
+		FormatText checksumname = postername 'Z_Board_Room_G_RM_Gig_poster_0%d' d = <poster_name_num>
+		FormatText checksumname = smallposter 'Z_Board_Room_G_RM_Gig_poster_small_0%d' d = <poster_name_num>
+		FormatText checksumname = diffname 'Z_Board_Room_G_RM_Gig_Difficulty_0%d' d = <poster_name_num>
 	endif
-	safekill nodename = <postername>
-	if NOT gotparam \{no_diff}
-		safekill nodename = <diffname>
+	SafeKill nodeName = <postername>
+	if NOT GotParam \{no_diff}
+		SafeKill nodeName = <diffname>
 	endif
 	gigposters_toggle_with_fire num = <poster_name_num> off
-	safekill nodename = <smallposter>
+	SafeKill nodeName = <smallposter>
 	<poster_name_num> = (<poster_name_num> + 1)
 	repeat 23
 endscript
 
 script search_for_tool_in_gig 
 	get_progression_globals ($current_progression_flag)
-	formattext \{checksumname = tiernum
+	FormatText \{checksumname = tiernum
 		'tier%d'
 		d = $menu_gp_last_gignum}
-	getarraysize ($<tier_global>.<tiernum>.songs)
+	GetArraySize ($<tier_global>.<tiernum>.songs)
 	if (<array_size> > 0)
 		song_index = 0
 		begin
 		song = ($<tier_global>.<tiernum>.songs [<song_index>])
-		if (<song> = parabola || <song> = schism || <song> = vicarious)
+		if (<song> = Parabola || <song> = Schism || <song> = Vicarious)
 			return \{true}
 		endif
 		song_index = (<song_index> + 1)
@@ -2296,24 +2296,24 @@ script get_gigposter_pos_in_2d
 	pos_18 = (488.0, 300.0)
 	pos_19 = (512.0, 581.0)
 	pos_20 = (640.0, 360.0)
-	formattext checksumname = pos 'pos_%d' d = <num>
+	FormatText checksumname = pos 'pos_%d' d = <num>
 	return gig_pos_2d = (<...>.<pos>)
 endscript
 
 script gig_do_hand_animation 
 	get_progression_globals ($current_progression_flag)
-	if ($current_progression_flag = career_band && $is_network_game = 0)
-		getsavegamefromcontroller controller = ($band_mode_current_leader)
+	if ($current_progression_flag = Career_Band && $is_network_game = 0)
+		GetSavegameFromController controller = ($band_mode_current_leader)
 	else
-		getsavegamefromcontroller controller = ($primary_controller)
+		GetSavegameFromController controller = ($primary_controller)
 	endif
-	getarraysize ($gigposter_creation_numbers)
+	GetArraySize ($gigposter_creation_numbers)
 	num = 1
 	begin
 	poster_gig_num = ($gigposter_creation_numbers [(<num> -1)])
 	if (<poster_gig_num> != 0)
 		format_globaltag_gigname setlist_prefix = ($<tier_global>.prefix) gignum = <poster_gig_num>
-		getglobaltags <gig_name> params = first_time_unlocked savegame = <savegame>
+		GetGlobalTags <gig_name> params = first_time_unlocked savegame = <savegame>
 		if (<first_time_unlocked> = 1)
 			wait_and_do_gigboard_hand_animation <...>
 		endif
@@ -2326,11 +2326,11 @@ script gig_do_hand_animation
 	gig_number = ($gigposter_creation_numbers [<index>])
 	if (<gig_number> != 0)
 		format_globaltag_gigname setlist_prefix = ($<tier_global>.prefix) gignum = <gig_number>
-		getglobaltags <gig_name> params = completed savegame = <savegame>
+		GetGlobalTags <gig_name> params = completed savegame = <savegame>
 		if (<completed> = 0 || <completed> = -1)
-			formattext checksumname = tiername 'tier%d' d = <gig_number>
+			FormatText checksumname = tiername 'tier%d' d = <gig_number>
 			contains_createagig = 0
-			if structurecontains structure = ($<tier_global>.<tiername>) createagig
+			if StructureContains Structure = ($<tier_global>.<tiername>) createagig
 				contains_createagig = 1
 			endif
 			if ($is_network_game = 0 || <contains_createagig> = 0)
@@ -2352,25 +2352,25 @@ script wait_and_do_gigboard_hand_animation
 	gig_posters_move_selection \{no_poster_fire}
 	if (<poster_gig_num> = 13)
 		create_small_gig_poster num = <num>
-		wait \{2.5
+		Wait \{2.5
 			seconds}
 	else
 		get_gigposter_pos_in_2d num = <num>
-		soundevent \{event = gigboard_gig_unlock}
+		SoundEvent \{event = Gigboard_Gig_Unlock}
 		ui_create_handslapper pos = <gig_pos_2d> callback = {create_small_gig_poster params = {num = <num>}}
 	endif
-	if gotparam \{gig_name}
-		setglobaltags <gig_name> params = {first_time_unlocked = 0} all_active_players = 1
+	if GotParam \{gig_name}
+		SetGlobalTags <gig_name> params = {first_time_unlocked = 0} all_active_players = 1
 	endif
 	begin
-	if NOT scriptisrunning \{anim_handslapper}
+	if NOT ScriptIsRunning \{Anim_Handslapper}
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
-	if gotparam \{gig_name}
-		getglobaltags <gig_name> param = completed
+	if GotParam \{gig_name}
+		GetGlobalTags <gig_name> param = completed
 		if (<completed> = 1)
 			toggle_gigposter_difficulty_texture diffnum = ($menu_gp_current_selection) fix_for_last_gigs
 		endif
@@ -2379,36 +2379,36 @@ endscript
 
 script get_gigposter_camera_name \{num = 1}
 	switch ($current_progression_flag)
-		case career_guitar
-		formattext textname = gigposter_camera 'gigposters_guitar_%a' a = <num>
-		case career_bass
-		formattext textname = gigposter_camera 'gigposters_bass_%a' a = <num>
-		case career_drum
-		formattext textname = gigposter_camera 'gigposters_drum_%a' a = <num>
-		case career_vocals
-		formattext textname = gigposter_camera 'gigposters_vocals_%a' a = <num>
-		case career_band
-		formattext textname = gigposter_camera 'gigposters_band_%a' a = <num>
+		case Career_Guitar
+		FormatText TextName = gigposter_camera 'gigposters_guitar_%a' a = <num>
+		case Career_Bass
+		FormatText TextName = gigposter_camera 'gigposters_bass_%a' a = <num>
+		case Career_Drum
+		FormatText TextName = gigposter_camera 'gigposters_drum_%a' a = <num>
+		case Career_Vocals
+		FormatText TextName = gigposter_camera 'gigposters_vocals_%a' a = <num>
+		case Career_Band
+		FormatText TextName = gigposter_camera 'gigposters_band_%a' a = <num>
 		default
-		formattext textname = gigposter_camera 'gigposters_guitar_%a' a = <num>
+		FormatText TextName = gigposter_camera 'gigposters_guitar_%a' a = <num>
 	endswitch
 	return gigposter_camera = <gigposter_camera>
 endscript
 
 script get_gigposter_camera_name_section \{num = 1}
 	switch ($current_progression_flag)
-		case career_guitar
-		formattext textname = gigposter_camera 'gigposters_guitar_0_%a' a = <num>
-		case career_bass
-		formattext textname = gigposter_camera 'gigposters_bass_0_%a' a = <num>
-		case career_drum
-		formattext textname = gigposter_camera 'gigposters_drum_0_%a' a = <num>
-		case career_vocals
-		formattext textname = gigposter_camera 'gigposters_vocals_0_%a' a = <num>
-		case career_band
-		formattext textname = gigposter_camera 'gigposters_band_0_%a' a = <num>
+		case Career_Guitar
+		FormatText TextName = gigposter_camera 'gigposters_guitar_0_%a' a = <num>
+		case Career_Bass
+		FormatText TextName = gigposter_camera 'gigposters_bass_0_%a' a = <num>
+		case Career_Drum
+		FormatText TextName = gigposter_camera 'gigposters_drum_0_%a' a = <num>
+		case Career_Vocals
+		FormatText TextName = gigposter_camera 'gigposters_vocals_0_%a' a = <num>
+		case Career_Band
+		FormatText TextName = gigposter_camera 'gigposters_band_0_%a' a = <num>
 		default
-		formattext textname = gigposter_camera 'gigposters_guitar_0_%a' a = <num>
+		FormatText TextName = gigposter_camera 'gigposters_guitar_0_%a' a = <num>
 	endswitch
 	return gigposter_camera = <gigposter_camera>
 endscript
@@ -2419,18 +2419,18 @@ script replace_texture_on_gig_posters progression_flag = ($current_progression_f
 	gig_num = 1
 	begin
 	poster_gig_num = ($gigposter_creation_numbers [(<gig_num> - 1)])
-	formattext checksumname = tiername 'tier%d' d = <poster_gig_num>
-	if structurecontains structure = ($<tier_global>) <tiername>
-		if structurecontains structure = ($<tier_global>.<tiername>) poster_texture
+	FormatText checksumname = tiername 'tier%d' d = <poster_gig_num>
+	if StructureContains Structure = ($<tier_global>) <tiername>
+		if StructureContains Structure = ($<tier_global>.<tiername>) poster_texture
 			poster_texture = ($<tier_global>.<tiername>.poster_texture)
-			extendcrc <poster_texture> '_small' out = source_texture
+			ExtendCRC <poster_texture> '_small' out = source_texture
 			printf 'source_texture = %d' d = <source_texture>
 			if (<gig_num> > 9)
-				formattext checksumname = difftexname 'tex\\zones\\Z_Board_Room\\Gig_poster_small_%d.dds' d = <gig_num> addtostringlookup = true
+				FormatText checksumname = difftexname 'tex\\zones\\Z_Board_Room\\Gig_poster_small_%d.dds' d = <gig_num> AddToStringLookup = true
 			else
-				formattext checksumname = difftexname 'tex\\zones\\Z_Board_Room\\Gig_poster_small_0%d.dds' d = <gig_num> addtostringlookup = true
+				FormatText checksumname = difftexname 'tex\\zones\\Z_Board_Room\\Gig_poster_small_0%d.dds' d = <gig_num> AddToStringLookup = true
 			endif
-			replacetexture {
+			ReplaceTexture {
 				src = <source_texture>
 				dest_tex_dict_assetname = `zones\z_board_room\z_board_room.tex`
 				dest_tex_dict_assetcontext = z_board_room
@@ -2446,17 +2446,17 @@ endscript
 script create_small_gig_poster \{num = 1}
 	printf 'create_small_gig_poster - %d' d = <num>
 	if (<num> > 9)
-		formattext checksumname = postername 'Z_Board_Room_G_RM_Gig_poster_small_%d' d = <num>
+		FormatText checksumname = postername 'Z_Board_Room_G_RM_Gig_poster_small_%d' d = <num>
 	else
-		formattext checksumname = postername 'Z_Board_Room_G_RM_Gig_poster_small_0%d' d = <num>
+		FormatText checksumname = postername 'Z_Board_Room_G_RM_Gig_poster_small_0%d' d = <num>
 	endif
-	safecreate nodename = <postername>
+	SafeCreate nodeName = <postername>
 endscript
 
 script gigboard_get_exclusive_controller controller = ($primary_controller)
 	if ($is_network_game = 1)
 		array = []
-		addarrayelement array = <array> element = (<controller>)
+		AddArrayElement array = <array> element = (<controller>)
 		controller = <array>
 	else
 		switch ($game_mode)

@@ -1,9 +1,9 @@
-cadrm_01_finishes = [
+CADrm_01_Finishes = [
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_04.dds'
-		frontend_desc = qs(0x22b03a55)
+		frontend_desc = qs("\LClear")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -11,9 +11,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_01.dds'
-		frontend_desc = qs(0xa337cdc9)
+		frontend_desc = qs("\LRed Action")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -21,9 +21,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_51.dds'
-		frontend_desc = qs(0xb93e8408)
+		frontend_desc = qs("\LFlutterbyes")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -31,9 +31,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_49.dds'
-		frontend_desc = qs(0x2864a5fa)
+		frontend_desc = qs("\LRockabilly Rebels")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -41,9 +41,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_46.dds'
-		frontend_desc = qs(0xa55d05dc)
+		frontend_desc = qs("\LZebras")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -51,9 +51,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_45.dds'
-		frontend_desc = qs(0x9b21d7db)
+		frontend_desc = qs("\LCheetah")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -61,9 +61,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_43.dds'
-		frontend_desc = qs(0xcd61e910)
+		frontend_desc = qs("\LLeopard")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -71,9 +71,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_42.dds'
-		frontend_desc = qs(0xb30249b6)
+		frontend_desc = qs("\LRhythm Master")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -81,9 +81,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_41.dds'
-		frontend_desc = qs(0x52eb97f4)
+		frontend_desc = qs("\LLove Hearts")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -91,9 +91,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_37.dds'
-		frontend_desc = qs(0xb715286c)
+		frontend_desc = qs("\LThe Movies")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -101,9 +101,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_36.dds'
-		frontend_desc = qs(0x7045edd4)
+		frontend_desc = qs("\LBurnin' Rubber")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -111,9 +111,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_32.dds'
-		frontend_desc = qs(0xad6144ef)
+		frontend_desc = qs("\LHazardous Waste")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -121,9 +121,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_31.dds'
-		frontend_desc = qs(0x419e6269)
+		frontend_desc = qs("\LMajor Pattern")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -131,9 +131,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_30.dds'
-		frontend_desc = qs(0x95dbd2f8)
+		frontend_desc = qs("\LSnakeskin Zinc")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -141,9 +141,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_29.dds'
-		frontend_desc = qs(0x79a70b1a)
+		frontend_desc = qs("\LEngineering")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -151,9 +151,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_33.dds'
-		frontend_desc = qs(0x15fcc697)
+		frontend_desc = qs("\LDiamond Plate")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -161,9 +161,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_18.dds'
-		frontend_desc = qs(0x52877d4b)
+		frontend_desc = qs("\LCryptic")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		wrap_texture
@@ -171,9 +171,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_17.dds'
-		frontend_desc = qs(0x83055b89)
+		frontend_desc = qs("\LSkullzilla")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -181,9 +181,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_26.dds'
-		frontend_desc = qs(0x135bca94)
+		frontend_desc = qs("\LGiant Steps")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -191,9 +191,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_27.dds'
-		frontend_desc = qs(0xb7805dd6)
+		frontend_desc = qs("\LWalking on the Moon")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -201,9 +201,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_24.dds'
-		frontend_desc = qs(0xd1aa6e02)
+		frontend_desc = qs("\LJeff's Tiny Monkeys")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -211,9 +211,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_21.dds'
-		frontend_desc = qs(0x4ffc5cd4)
+		frontend_desc = qs("\LBite the Bullet")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -221,9 +221,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_20.dds'
-		frontend_desc = qs(0xa45021aa)
+		frontend_desc = qs("\LClassic Swirl")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -231,9 +231,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_19.dds'
-		frontend_desc = qs(0xb3692aaa)
+		frontend_desc = qs("\LClassic Crosshatch")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -241,9 +241,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_16.dds'
-		frontend_desc = qs(0xcef673ef)
+		frontend_desc = qs("\LMarbled")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -251,9 +251,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_15.dds'
-		frontend_desc = qs(0xc8c24be0)
+		frontend_desc = qs("\LDiagonalism I")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -261,9 +261,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_14.dds'
-		frontend_desc = qs(0x9ecb577a)
+		frontend_desc = qs("\LDiagonalism II")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		wrap_texture
@@ -271,9 +271,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_13.dds'
-		frontend_desc = qs(0xf64af042)
+		frontend_desc = qs("\LPurple Passion")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		wrap_texture
@@ -281,9 +281,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_12.dds'
-		frontend_desc = qs(0xb89ec562)
+		frontend_desc = qs("\LCrazily Paisley")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		wrap_texture
@@ -291,9 +291,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_11.dds'
-		frontend_desc = qs(0x47c40739)
+		frontend_desc = qs("\LHerringbone")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -301,9 +301,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_10.dds'
-		frontend_desc = qs(0xa90dc214)
+		frontend_desc = qs("\LBurlwood")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -311,9 +311,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_09.dds'
-		frontend_desc = qs(0xa8eee0f6)
+		frontend_desc = qs("\LQuilted")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -321,9 +321,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_08.dds'
-		frontend_desc = qs(0xd98247d3)
+		frontend_desc = qs("\LBookmatched")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -331,9 +331,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_07.dds'
-		frontend_desc = qs(0x038ed054)
+		frontend_desc = qs("\LMaple")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -341,9 +341,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_06.dds'
-		frontend_desc = qs(0x02e5982a)
+		frontend_desc = qs("\LDesert Camo")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -351,9 +351,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_05.dds'
-		frontend_desc = qs(0x69d6b1cb)
+		frontend_desc = qs("\LGreen Goddess")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -361,9 +361,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_03.dds'
-		frontend_desc = qs(0x9140aa49)
+		frontend_desc = qs("\LChoco Burl")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		wrap_texture
@@ -371,9 +371,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_02.dds'
-		frontend_desc = qs(0xbaa75fa3)
+		frontend_desc = qs("\LBurning Ring Afire")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		wrap_texture
 		no_u_flip
@@ -381,9 +381,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_01.dds'
-		frontend_desc = qs(0xa1faa5c9)
+		frontend_desc = qs("\LInfernal!")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -391,9 +391,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_55.dds'
-		frontend_desc = qs(0xbe447a2c)
+		frontend_desc = qs("\LFour Aces")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -401,9 +401,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_54.dds'
-		frontend_desc = qs(0xeb775ae3)
+		frontend_desc = qs("\LHouse of Cards")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -411,9 +411,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_53.dds'
-		frontend_desc = qs(0x22c9dc3a)
+		frontend_desc = qs("\LYardies")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -421,9 +421,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_52.dds'
-		frontend_desc = qs(0x163737e7)
+		frontend_desc = qs("\LBarbed Baterista")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -431,9 +431,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_50.dds'
-		frontend_desc = qs(0x666fa565)
+		frontend_desc = qs("\LTrad Plaid")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -441,9 +441,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_40.dds'
-		frontend_desc = qs(0x42b526d5)
+		frontend_desc = qs("\LShell Shocked!")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -451,9 +451,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_48.dds'
-		frontend_desc = qs(0xbac6fe67)
+		frontend_desc = qs("\LThorn without a Rose")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -461,9 +461,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_38.dds'
-		frontend_desc = qs(0x554160f4)
+		frontend_desc = qs("\LPulse")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -471,9 +471,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_34.dds'
-		frontend_desc = qs(0xed7813e6)
+		frontend_desc = qs("\LHomemaker")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -481,9 +481,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_28.dds'
-		frontend_desc = qs(0xf2406960)
+		frontend_desc = qs("\LHappy Pink Sparkle")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -491,9 +491,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_23.dds'
-		frontend_desc = qs(0x3c5ac233)
+		frontend_desc = qs("\LNew World Order")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -501,9 +501,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_22.dds'
-		frontend_desc = qs(0x62547d1c)
+		frontend_desc = qs("\LRandom,Sample,Hold")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -511,9 +511,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_RM_01.dds'
-		frontend_desc = qs(0x88138701)
+		frontend_desc = qs("\LBatterscape")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -521,9 +521,9 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_RM_02.dds'
-		frontend_desc = qs(0xf1639a3b)
+		frontend_desc = qs("\LMidsummer Cumulus")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -531,19 +531,19 @@ cadrm_01_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_RM_03.dds'
-		frontend_desc = qs(0xb3f09c29)
+		frontend_desc = qs("\LLava Lamp")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
 		wrap_texture
 	}
 ]
-cadrm_01_finishes_bassdrum = [
+CADrm_01_Finishes_Bassdrum = [
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_15.dds'
-		frontend_desc = qs(0x22b03a55)
+		frontend_desc = qs("\LClear")
 		no_translate
 		no_scale
 		no_skew
@@ -553,7 +553,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_85.dds'
-		frontend_desc = qs(0x6faf4d0f)
+		frontend_desc = qs("\LCustom black")
 		no_translate
 		no_scale
 		no_skew
@@ -563,7 +563,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_86.dds'
-		frontend_desc = qs(0x957cc99c)
+		frontend_desc = qs("\LCustom white")
 		no_translate
 		no_scale
 		no_skew
@@ -573,7 +573,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_80.dds'
-		frontend_desc = qs(0xe23d6556)
+		frontend_desc = qs("\LCowboys From ...")
 		no_translate
 		no_scale
 		no_skew
@@ -583,7 +583,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_79.dds'
-		frontend_desc = qs(0x91e485d7)
+		frontend_desc = qs("\LMasquerade")
 		no_translate
 		no_scale
 		no_skew
@@ -593,7 +593,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_78.dds'
-		frontend_desc = qs(0x0039dd19)
+		frontend_desc = qs("\LGas Mask")
 		no_translate
 		no_scale
 		no_skew
@@ -603,7 +603,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_77.dds'
-		frontend_desc = qs(0x9279b4ed)
+		frontend_desc = qs("\LCobra")
 		no_translate
 		no_scale
 		no_skew
@@ -613,7 +613,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_76.dds'
-		frontend_desc = qs(0x6772a378)
+		frontend_desc = qs("\LStage Diving")
 		no_translate
 		no_scale
 		no_skew
@@ -623,7 +623,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_75.dds'
-		frontend_desc = qs(0xb19e2e3f)
+		frontend_desc = qs("\LBad Kitty")
 		no_translate
 		no_scale
 		no_skew
@@ -633,7 +633,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_74.dds'
-		frontend_desc = qs(0xfd188d46)
+		frontend_desc = qs("\LMy Sweet Ride")
 		no_translate
 		no_scale
 		no_skew
@@ -643,7 +643,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_73.dds'
-		frontend_desc = qs(0xb0a17253)
+		frontend_desc = qs("\LExecute")
 		no_translate
 		no_scale
 		no_skew
@@ -653,7 +653,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_72.dds'
-		frontend_desc = qs(0xd643416c)
+		frontend_desc = qs("\LCrossed Keys")
 		no_translate
 		no_scale
 		no_skew
@@ -663,7 +663,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_70.dds'
-		frontend_desc = qs(0x3f55056e)
+		frontend_desc = qs("\LClone of Thorns")
 		no_translate
 		no_scale
 		no_skew
@@ -673,7 +673,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_71.dds'
-		frontend_desc = qs(0xf6c85b58)
+		frontend_desc = qs("\LBullet Time")
 		no_translate
 		no_scale
 		no_skew
@@ -683,7 +683,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_69.dds'
-		frontend_desc = qs(0x5e24be92)
+		frontend_desc = qs("\LCenterpoint")
 		no_translate
 		no_scale
 		no_skew
@@ -693,7 +693,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_67.dds'
-		frontend_desc = qs(0x475e7d64)
+		frontend_desc = qs("\LHeads of Industry")
 		no_translate
 		no_scale
 		no_skew
@@ -703,7 +703,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_66.dds'
-		frontend_desc = qs(0xd10fb5b7)
+		frontend_desc = qs("\LRoyal Flower")
 		no_translate
 		no_scale
 		no_skew
@@ -713,7 +713,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_68.dds'
-		frontend_desc = qs(0x3a1121f2)
+		frontend_desc = qs("\LDog's Breakfast")
 		no_translate
 		no_scale
 		no_skew
@@ -723,7 +723,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_63.dds'
-		frontend_desc = qs(0x91451897)
+		frontend_desc = qs("\LYin Yang")
 		no_translate
 		no_scale
 		no_skew
@@ -733,7 +733,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_61.dds'
-		frontend_desc = qs(0x621b3f51)
+		frontend_desc = qs("\LPterofractal ")
 		no_translate
 		no_scale
 		no_skew
@@ -743,7 +743,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_58.dds'
-		frontend_desc = qs(0x67cf5513)
+		frontend_desc = qs("\LPinkness Abounds")
 		no_translate
 		no_scale
 		no_skew
@@ -753,7 +753,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_57.dds'
-		frontend_desc = qs(0x3d544d24)
+		frontend_desc = qs("\LSchlera")
 		no_translate
 		no_scale
 		no_skew
@@ -763,7 +763,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_56.dds'
-		frontend_desc = qs(0x9d6b83a3)
+		frontend_desc = qs("\LWish")
 		no_translate
 		no_scale
 		no_skew
@@ -773,7 +773,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_55.dds'
-		frontend_desc = qs(0xd705e9a5)
+		frontend_desc = qs("\LPartial I")
 		no_translate
 		no_scale
 		no_skew
@@ -783,7 +783,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_49.dds'
-		frontend_desc = qs(0x3cd955e3)
+		frontend_desc = qs("\LArr Matey")
 		no_translate
 		no_scale
 		no_skew
@@ -793,7 +793,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_48.dds'
-		frontend_desc = qs(0xe10760ff)
+		frontend_desc = qs("\LTractor")
 		no_translate
 		no_scale
 		no_skew
@@ -803,7 +803,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_47.dds'
-		frontend_desc = qs(0xcb0e6a43)
+		frontend_desc = qs("\LViral Intentions")
 		no_translate
 		no_scale
 		no_skew
@@ -813,7 +813,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_17.dds'
-		frontend_desc = qs(0x5aaac487)
+		frontend_desc = qs("\LSpiral Headcase")
 		no_translate
 		no_scale
 		no_skew
@@ -823,7 +823,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_09.dds'
-		frontend_desc = qs(0x059ce868)
+		frontend_desc = qs("\LBullseye")
 		no_translate
 		no_scale
 		no_skew
@@ -833,7 +833,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_64.dds'
-		frontend_desc = qs(0xdf56b157)
+		frontend_desc = qs("\LDream Tunnel")
 		no_translate
 		no_scale
 		no_skew
@@ -843,7 +843,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_46.dds'
-		frontend_desc = qs(0x1a6924a3)
+		frontend_desc = qs("\LStar Power")
 		no_translate
 		no_scale
 		no_skew
@@ -853,7 +853,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_45.dds'
-		frontend_desc = qs(0x6205906b)
+		frontend_desc = qs("\LMy Cherry Amour")
 		no_translate
 		no_scale
 		no_skew
@@ -863,7 +863,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_43.dds'
-		frontend_desc = qs(0x316cdc0b)
+		frontend_desc = qs("\LFallout")
 		no_translate
 		no_scale
 		no_skew
@@ -873,7 +873,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_42.dds'
-		frontend_desc = qs(0x0d489e31)
+		frontend_desc = qs("\LTwo Minutes To...")
 		no_translate
 		no_scale
 		no_skew
@@ -883,7 +883,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_42a.dds'
-		frontend_desc = qs(0xec79023e)
+		frontend_desc = qs("\LBiology 101")
 		no_translate
 		no_scale
 		no_skew
@@ -893,7 +893,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_40.dds'
-		frontend_desc = qs(0xb4d0ffa7)
+		frontend_desc = qs("\LDiamond-Star Halo")
 		no_translate
 		no_scale
 		no_skew
@@ -903,7 +903,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_39.dds'
-		frontend_desc = qs(0x00cf01b6)
+		frontend_desc = qs("\LForgotten Kiss")
 		no_translate
 		no_scale
 		no_skew
@@ -913,7 +913,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_38.dds'
-		frontend_desc = qs(0x7e966cce)
+		frontend_desc = qs("\LBattle Worn")
 		no_translate
 		no_scale
 		no_skew
@@ -923,7 +923,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_37.dds'
-		frontend_desc = qs(0x4aea380a)
+		frontend_desc = qs("\LA Tiny Pink Kitten")
 		no_translate
 		no_scale
 		no_skew
@@ -933,7 +933,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_36.dds'
-		frontend_desc = qs(0xb40898ba)
+		frontend_desc = qs("\LWatching")
 		no_translate
 		no_scale
 		no_skew
@@ -943,7 +943,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_84.dds'
-		frontend_desc = qs(0x41252024)
+		frontend_desc = qs("\LZeitgeist")
 		no_translate
 		no_scale
 		no_skew
@@ -953,7 +953,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_35.dds'
-		frontend_desc = qs(0xca6382ce)
+		frontend_desc = qs("\LLabel Me")
 		no_translate
 		no_scale
 		no_skew
@@ -963,7 +963,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_90.dds'
-		frontend_desc = qs(0xa7d6a16b)
+		frontend_desc = qs("\LHeart Power")
 		no_translate
 		no_scale
 		no_skew
@@ -972,7 +972,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_41.dds'
-		frontend_desc = qs(0xe59e5a9e)
+		frontend_desc = qs("\LDigital Future")
 		no_translate
 		no_scale
 		no_skew
@@ -982,7 +982,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_32.dds'
-		frontend_desc = qs(0xc5020ec8)
+		frontend_desc = qs("\LBarbed Wire")
 		no_translate
 		no_scale
 		no_skew
@@ -992,7 +992,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_31.dds'
-		frontend_desc = qs(0x38ea3a72)
+		frontend_desc = qs("\LThe Dogs of War")
 		no_translate
 		no_scale
 		no_skew
@@ -1002,7 +1002,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_30.dds'
-		frontend_desc = qs(0x543155a5)
+		frontend_desc = qs("\LFacial Matter")
 		no_translate
 		no_scale
 		no_skew
@@ -1012,7 +1012,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_29.dds'
-		frontend_desc = qs(0xb16f1d65)
+		frontend_desc = qs("\LGTF - Goat")
 		no_translate
 		no_scale
 		no_skew
@@ -1022,7 +1022,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_28.dds'
-		frontend_desc = qs(0xdf709ac3)
+		frontend_desc = qs("\LNot Listening")
 		no_translate
 		no_scale
 		no_skew
@@ -1032,7 +1032,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_27.dds'
-		frontend_desc = qs(0x942241c5)
+		frontend_desc = qs("\LFeet'll Matter II")
 		no_translate
 		no_scale
 		no_skew
@@ -1042,7 +1042,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_25.dds'
-		frontend_desc = qs(0x3c5ac233)
+		frontend_desc = qs("\LNew World Order")
 		no_translate
 		no_scale
 		no_skew
@@ -1052,7 +1052,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_24.dds'
-		frontend_desc = qs(0x98219646)
+		frontend_desc = qs("\LBarrel")
 		no_translate
 		no_scale
 		no_skew
@@ -1062,7 +1062,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_22.dds'
-		frontend_desc = qs(0x5f5f6997)
+		frontend_desc = qs("\LSplat")
 		no_translate
 		no_scale
 		no_skew
@@ -1072,7 +1072,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_21.dds'
-		frontend_desc = qs(0xf0197158)
+		frontend_desc = qs("\LTarget Practice")
 		no_translate
 		no_scale
 		no_skew
@@ -1082,7 +1082,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_16.dds'
-		frontend_desc = qs(0x03c0db49)
+		frontend_desc = qs("\LThe Crest")
 		no_translate
 		no_scale
 		no_skew
@@ -1092,7 +1092,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_13.dds'
-		frontend_desc = qs(0xd079192c)
+		frontend_desc = qs("\LPaisley Power")
 		no_translate
 		no_scale
 		no_skew
@@ -1102,7 +1102,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_12.dds'
-		frontend_desc = qs(0xbbeb45e6)
+		frontend_desc = qs("\LPhoenix")
 		no_translate
 		no_scale
 		no_skew
@@ -1112,7 +1112,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_11.dds'
-		frontend_desc = qs(0x3c4ed364)
+		frontend_desc = qs("\LHollow be thy name")
 		no_translate
 		no_scale
 		no_skew
@@ -1122,7 +1122,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_05.dds'
-		frontend_desc = qs(0xba9bb0c7)
+		frontend_desc = qs("\LMi Amor")
 		no_translate
 		no_scale
 		no_skew
@@ -1132,7 +1132,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_04.dds'
-		frontend_desc = qs(0xaefab4f8)
+		frontend_desc = qs("\L'narchy")
 		no_translate
 		no_scale
 		no_skew
@@ -1142,7 +1142,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_RM_06.dds'
-		frontend_desc = qs(0x30f84b9a)
+		frontend_desc = qs("\LPop Top")
 		no_translate
 		no_scale
 		no_skew
@@ -1152,7 +1152,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_RM_05.dds'
-		frontend_desc = qs(0xdd7876e0)
+		frontend_desc = qs("\LLadybug's Johnson")
 		no_translate
 		no_scale
 		no_skew
@@ -1162,7 +1162,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_RM_03.dds'
-		frontend_desc = qs(0xb3f09c29)
+		frontend_desc = qs("\LLava Lamp")
 		no_translate
 		no_scale
 		no_skew
@@ -1172,7 +1172,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_RM_02.dds'
-		frontend_desc = qs(0x1aca8a1e)
+		frontend_desc = qs("\LMoonlit Knight")
 		no_translate
 		no_scale
 		no_skew
@@ -1182,7 +1182,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_RM_01.dds'
-		frontend_desc = qs(0x0223f5b3)
+		frontend_desc = qs("\LJez, the Faces!")
 		no_translate
 		no_scale
 		no_skew
@@ -1192,7 +1192,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_GK_03.dds'
-		frontend_desc = qs(0x10e0cb9b)
+		frontend_desc = qs("\LJ'entends ton coeur")
 		no_translate
 		no_scale
 		no_skew
@@ -1202,7 +1202,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_GK_01.dds'
-		frontend_desc = qs(0xd68374a2)
+		frontend_desc = qs("\LWelcome")
 		no_translate
 		no_scale
 		no_skew
@@ -1212,7 +1212,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_GK_04.dds'
-		frontend_desc = qs(0xf3ce0f03)
+		frontend_desc = qs("\LDragon World")
 		no_translate
 		no_scale
 		no_skew
@@ -1222,7 +1222,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_GK_02.dds'
-		frontend_desc = qs(0xbbd1ee2f)
+		frontend_desc = qs("\LThe Rose Tattoo")
 		no_translate
 		no_scale
 		no_skew
@@ -1232,7 +1232,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_GK_05.dds'
-		frontend_desc = qs(0xa8e60bd9)
+		frontend_desc = qs("\LFly Blown")
 		no_translate
 		no_scale
 		no_skew
@@ -1242,7 +1242,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_GK_08.dds'
-		frontend_desc = qs(0xa1716989)
+		frontend_desc = qs("\LClowndestine...")
 		no_translate
 		no_scale
 		no_skew
@@ -1252,7 +1252,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_81.dds'
-		frontend_desc = qs(0x921e9ae0)
+		frontend_desc = qs("\LPrincess")
 		no_translate
 		no_scale
 		no_skew
@@ -1262,7 +1262,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_20.dds'
-		frontend_desc = qs(0xaaf04f6a)
+		frontend_desc = qs("\LSham Rock")
 		no_translate
 		no_scale
 		no_skew
@@ -1272,7 +1272,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_19.dds'
-		frontend_desc = qs(0xb35ce39b)
+		frontend_desc = qs("\LFive Year Plan")
 		no_translate
 		no_scale
 		no_skew
@@ -1282,7 +1282,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_23.dds'
-		frontend_desc = qs(0x3060702e)
+		frontend_desc = qs("\LStars 'n' Bars")
 		no_translate
 		no_scale
 		no_skew
@@ -1292,7 +1292,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_08.dds'
-		frontend_desc = qs(0x6393cf2b)
+		frontend_desc = qs("\LThe Red & The Gold")
 		no_translate
 		no_scale
 		no_skew
@@ -1302,7 +1302,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_07.dds'
-		frontend_desc = qs(0xac3f0014)
+		frontend_desc = qs("\LGive'r Canada")
 		no_translate
 		no_scale
 		no_skew
@@ -1312,7 +1312,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_03.dds'
-		frontend_desc = qs(0x4fc9ec85)
+		frontend_desc = qs("\LGDR")
 		no_translate
 		no_scale
 		no_skew
@@ -1322,7 +1322,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_02.dds'
-		frontend_desc = qs(0x665172e1)
+		frontend_desc = qs("\LAntipodean")
 		no_translate
 		no_scale
 		no_skew
@@ -1332,7 +1332,7 @@ cadrm_01_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_01.dds'
-		frontend_desc = qs(0xbb3a93c9)
+		frontend_desc = qs("\LEmpire Expired")
 		no_translate
 		no_scale
 		no_skew
@@ -1341,12 +1341,12 @@ cadrm_01_finishes_bassdrum = [
 		no_v_flip
 	}
 ]
-cadrm_02_finishes = [
+CADrm_02_Finishes = [
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_04.dds'
-		frontend_desc = qs(0x22b03a55)
+		frontend_desc = qs("\LClear")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1354,9 +1354,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_Pork1.dds'
-		frontend_desc = qs(0xe776f6aa)
+		frontend_desc = qs("\LPork Pie - Ebony Satin")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1364,9 +1364,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_Pork2.dds'
-		frontend_desc = qs(0x9a05c9d6)
+		frontend_desc = qs("\LPork Pie - Green Sparkle")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1374,9 +1374,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_Pork3.dds'
-		frontend_desc = qs(0x434cd77f)
+		frontend_desc = qs("\LPork Pie - Gold Sparkle")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1384,9 +1384,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_Pork4.dds'
-		frontend_desc = qs(0xb166728a)
+		frontend_desc = qs("\LPork Pie - Red Burst")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1394,9 +1394,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_Pork5.dds'
-		frontend_desc = qs(0x1493fdc4)
+		frontend_desc = qs("\LPork Pie - Forest Green Burst")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1404,9 +1404,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_Pork6.dds'
-		frontend_desc = qs(0x096b26f6)
+		frontend_desc = qs("\LPork Pie - White Ice")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1414,9 +1414,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_Pork7.dds'
-		frontend_desc = qs(0x18d2e9c7)
+		frontend_desc = qs("\LPork Pie - Orange Candy")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1424,9 +1424,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_Pork8.dds'
-		frontend_desc = qs(0xbf1d7a74)
+		frontend_desc = qs("\LPork Pie - Piggies")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1434,9 +1434,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_Pork9.dds'
-		frontend_desc = qs(0x42ad554b)
+		frontend_desc = qs("\LPork Pie - Silver Sparkle")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1444,9 +1444,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_Pork10.dds'
-		frontend_desc = qs(0xbcb7cce2)
+		frontend_desc = qs("\LPork Pie - Blue Slop")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1454,9 +1454,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_01.dds'
-		frontend_desc = qs(0xa337cdc9)
+		frontend_desc = qs("\LRed Action")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1464,9 +1464,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_51.dds'
-		frontend_desc = qs(0xb93e8408)
+		frontend_desc = qs("\LFlutterbyes")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1474,9 +1474,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_49.dds'
-		frontend_desc = qs(0x2864a5fa)
+		frontend_desc = qs("\LRockabilly Rebels")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1484,9 +1484,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_46.dds'
-		frontend_desc = qs(0xa55d05dc)
+		frontend_desc = qs("\LZebras")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1494,9 +1494,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_45.dds'
-		frontend_desc = qs(0x9b21d7db)
+		frontend_desc = qs("\LCheetah")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1504,9 +1504,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_43.dds'
-		frontend_desc = qs(0xcd61e910)
+		frontend_desc = qs("\LLeopard")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1514,9 +1514,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_42.dds'
-		frontend_desc = qs(0xb30249b6)
+		frontend_desc = qs("\LRhythm Master")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1524,9 +1524,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_41.dds'
-		frontend_desc = qs(0x52eb97f4)
+		frontend_desc = qs("\LLove Hearts")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1534,9 +1534,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_37.dds'
-		frontend_desc = qs(0xb715286c)
+		frontend_desc = qs("\LThe Movies")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1544,9 +1544,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_36.dds'
-		frontend_desc = qs(0x7045edd4)
+		frontend_desc = qs("\LBurnin' Rubber")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1554,9 +1554,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_32.dds'
-		frontend_desc = qs(0xad6144ef)
+		frontend_desc = qs("\LHazardous Waste")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1564,9 +1564,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_31.dds'
-		frontend_desc = qs(0x419e6269)
+		frontend_desc = qs("\LMajor Pattern")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1574,9 +1574,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_30.dds'
-		frontend_desc = qs(0x95dbd2f8)
+		frontend_desc = qs("\LSnakeskin Zinc")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1584,9 +1584,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_29.dds'
-		frontend_desc = qs(0x79a70b1a)
+		frontend_desc = qs("\LEngineering")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1594,9 +1594,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_33.dds'
-		frontend_desc = qs(0x15fcc697)
+		frontend_desc = qs("\LDiamond Plate")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1604,9 +1604,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_18.dds'
-		frontend_desc = qs(0x52877d4b)
+		frontend_desc = qs("\LCryptic")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1614,9 +1614,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_17.dds'
-		frontend_desc = qs(0x83055b89)
+		frontend_desc = qs("\LSkullzilla")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1624,9 +1624,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_26.dds'
-		frontend_desc = qs(0x135bca94)
+		frontend_desc = qs("\LGiant Steps")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1634,9 +1634,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_27.dds'
-		frontend_desc = qs(0xb7805dd6)
+		frontend_desc = qs("\LWalking on the Moon")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1644,9 +1644,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_24.dds'
-		frontend_desc = qs(0xd1aa6e02)
+		frontend_desc = qs("\LJeff's Tiny Monkeys")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1654,9 +1654,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_21.dds'
-		frontend_desc = qs(0x4ffc5cd4)
+		frontend_desc = qs("\LBite the Bullet")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1664,9 +1664,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_20.dds'
-		frontend_desc = qs(0xa45021aa)
+		frontend_desc = qs("\LClassic Swirl")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1674,9 +1674,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_19.dds'
-		frontend_desc = qs(0xb3692aaa)
+		frontend_desc = qs("\LClassic Crosshatch")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1684,9 +1684,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_16.dds'
-		frontend_desc = qs(0xcef673ef)
+		frontend_desc = qs("\LMarbled")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1694,9 +1694,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_15.dds'
-		frontend_desc = qs(0xc8c24be0)
+		frontend_desc = qs("\LDiagonalism I")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1704,9 +1704,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_14.dds'
-		frontend_desc = qs(0x9ecb577a)
+		frontend_desc = qs("\LDiagonalism II")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1714,9 +1714,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_13.dds'
-		frontend_desc = qs(0xf64af042)
+		frontend_desc = qs("\LPurple Passion")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1724,9 +1724,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_12.dds'
-		frontend_desc = qs(0xb89ec562)
+		frontend_desc = qs("\LCrazily Paisley")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1734,9 +1734,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_11.dds'
-		frontend_desc = qs(0x47c40739)
+		frontend_desc = qs("\LHerringbone")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1744,9 +1744,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_10.dds'
-		frontend_desc = qs(0xa90dc214)
+		frontend_desc = qs("\LBurlwood")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1754,9 +1754,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_09.dds'
-		frontend_desc = qs(0xa8eee0f6)
+		frontend_desc = qs("\LQuilted")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1764,9 +1764,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_08.dds'
-		frontend_desc = qs(0xd98247d3)
+		frontend_desc = qs("\LBookmatched")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1774,9 +1774,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_07.dds'
-		frontend_desc = qs(0x038ed054)
+		frontend_desc = qs("\LMaple")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1784,9 +1784,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_06.dds'
-		frontend_desc = qs(0x02e5982a)
+		frontend_desc = qs("\LDesert Camo")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1794,9 +1794,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_05.dds'
-		frontend_desc = qs(0x69d6b1cb)
+		frontend_desc = qs("\LGreen Goddess")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1804,9 +1804,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_03.dds'
-		frontend_desc = qs(0x9140aa49)
+		frontend_desc = qs("\LChoco Burl")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1814,9 +1814,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_02.dds'
-		frontend_desc = qs(0xbaa75fa3)
+		frontend_desc = qs("\LBurning Ring Afire")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1824,9 +1824,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_01.dds'
-		frontend_desc = qs(0xa1faa5c9)
+		frontend_desc = qs("\LInfernal!")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1834,9 +1834,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_55.dds'
-		frontend_desc = qs(0xbe447a2c)
+		frontend_desc = qs("\LFour Aces")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1844,9 +1844,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_54.dds'
-		frontend_desc = qs(0xeb775ae3)
+		frontend_desc = qs("\LHouse of Cards")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1854,9 +1854,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_53.dds'
-		frontend_desc = qs(0x22c9dc3a)
+		frontend_desc = qs("\LYardies")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1864,9 +1864,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_52.dds'
-		frontend_desc = qs(0x163737e7)
+		frontend_desc = qs("\LBarbed Baterista")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1874,9 +1874,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_50.dds'
-		frontend_desc = qs(0x666fa565)
+		frontend_desc = qs("\LTrad Plaid")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1884,9 +1884,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_40.dds'
-		frontend_desc = qs(0x42b526d5)
+		frontend_desc = qs("\LShell Shocked!")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1894,9 +1894,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_48.dds'
-		frontend_desc = qs(0xbac6fe67)
+		frontend_desc = qs("\LThorn without a Rose")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1904,9 +1904,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_38.dds'
-		frontend_desc = qs(0x554160f4)
+		frontend_desc = qs("\LPulse")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1914,9 +1914,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_34.dds'
-		frontend_desc = qs(0xed7813e6)
+		frontend_desc = qs("\LHomemaker")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1924,9 +1924,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_28.dds'
-		frontend_desc = qs(0xf2406960)
+		frontend_desc = qs("\LHappy Pink Sparkle")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1934,9 +1934,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_23.dds'
-		frontend_desc = qs(0x3c5ac233)
+		frontend_desc = qs("\LNew World Order")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1944,9 +1944,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_22.dds'
-		frontend_desc = qs(0x62547d1c)
+		frontend_desc = qs("\LRandom,Sample,Hold")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1954,9 +1954,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_RM_01.dds'
-		frontend_desc = qs(0x88138701)
+		frontend_desc = qs("\LBatterscape")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1964,9 +1964,9 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_RM_02.dds'
-		frontend_desc = qs(0xf1639a3b)
+		frontend_desc = qs("\LMidsummer Cumulus")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -1974,19 +1974,19 @@ cadrm_02_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_RM_03.dds'
-		frontend_desc = qs(0xb3f09c29)
+		frontend_desc = qs("\LLava Lamp")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
 		wrap_texture
 	}
 ]
-cadrm_02_finishes_bassdrum = [
+CADrm_02_Finishes_Bassdrum = [
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_15.dds'
-		frontend_desc = qs(0x22b03a55)
+		frontend_desc = qs("\LClear")
 		no_translate
 		no_scale
 		no_skew
@@ -1996,34 +1996,34 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_Pork1.dds'
-		frontend_desc = qs(0x5424c210)
+		frontend_desc = qs("\LPork Pie Drums")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_Pork2.dds'
-		frontend_desc = qs(0x129e9ab5)
+		frontend_desc = qs("\LPork Pie Drums 2")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_Pork3.dds'
-		frontend_desc = qs(0x0b85abf4)
+		frontend_desc = qs("\LPork Pie Drums 3")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_85.dds'
-		frontend_desc = qs(0x6faf4d0f)
+		frontend_desc = qs("\LCustom black")
 		no_translate
 		no_scale
 		no_skew
@@ -2033,7 +2033,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_86.dds'
-		frontend_desc = qs(0x957cc99c)
+		frontend_desc = qs("\LCustom white")
 		no_translate
 		no_scale
 		no_skew
@@ -2043,7 +2043,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_80.dds'
-		frontend_desc = qs(0xe23d6556)
+		frontend_desc = qs("\LCowboys From ...")
 		no_translate
 		no_scale
 		no_skew
@@ -2053,7 +2053,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_79.dds'
-		frontend_desc = qs(0x91e485d7)
+		frontend_desc = qs("\LMasquerade")
 		no_translate
 		no_scale
 		no_skew
@@ -2063,7 +2063,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_78.dds'
-		frontend_desc = qs(0x0039dd19)
+		frontend_desc = qs("\LGas Mask")
 		no_translate
 		no_scale
 		no_skew
@@ -2073,7 +2073,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_77.dds'
-		frontend_desc = qs(0x9279b4ed)
+		frontend_desc = qs("\LCobra")
 		no_translate
 		no_scale
 		no_skew
@@ -2083,7 +2083,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_76.dds'
-		frontend_desc = qs(0x6772a378)
+		frontend_desc = qs("\LStage Diving")
 		no_translate
 		no_scale
 		no_skew
@@ -2093,7 +2093,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_75.dds'
-		frontend_desc = qs(0xb19e2e3f)
+		frontend_desc = qs("\LBad Kitty")
 		no_translate
 		no_scale
 		no_skew
@@ -2103,7 +2103,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_74.dds'
-		frontend_desc = qs(0xfd188d46)
+		frontend_desc = qs("\LMy Sweet Ride")
 		no_translate
 		no_scale
 		no_skew
@@ -2113,7 +2113,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_73.dds'
-		frontend_desc = qs(0xb0a17253)
+		frontend_desc = qs("\LExecute")
 		no_translate
 		no_scale
 		no_skew
@@ -2123,7 +2123,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_72.dds'
-		frontend_desc = qs(0xd643416c)
+		frontend_desc = qs("\LCrossed Keys")
 		no_translate
 		no_scale
 		no_skew
@@ -2133,7 +2133,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_70.dds'
-		frontend_desc = qs(0x3f55056e)
+		frontend_desc = qs("\LClone of Thorns")
 		no_translate
 		no_scale
 		no_skew
@@ -2143,7 +2143,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_71.dds'
-		frontend_desc = qs(0xf6c85b58)
+		frontend_desc = qs("\LBullet Time")
 		no_translate
 		no_scale
 		no_skew
@@ -2153,7 +2153,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_69.dds'
-		frontend_desc = qs(0x5e24be92)
+		frontend_desc = qs("\LCenterpoint")
 		no_translate
 		no_scale
 		no_skew
@@ -2163,7 +2163,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_67.dds'
-		frontend_desc = qs(0x475e7d64)
+		frontend_desc = qs("\LHeads of Industry")
 		no_translate
 		no_scale
 		no_skew
@@ -2173,7 +2173,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_66.dds'
-		frontend_desc = qs(0xd10fb5b7)
+		frontend_desc = qs("\LRoyal Flower")
 		no_translate
 		no_scale
 		no_skew
@@ -2183,7 +2183,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_68.dds'
-		frontend_desc = qs(0x3a1121f2)
+		frontend_desc = qs("\LDog's Breakfast")
 		no_translate
 		no_scale
 		no_skew
@@ -2193,7 +2193,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_63.dds'
-		frontend_desc = qs(0x91451897)
+		frontend_desc = qs("\LYin Yang")
 		no_translate
 		no_scale
 		no_skew
@@ -2203,7 +2203,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_61.dds'
-		frontend_desc = qs(0x621b3f51)
+		frontend_desc = qs("\LPterofractal ")
 		no_translate
 		no_scale
 		no_skew
@@ -2213,7 +2213,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_58.dds'
-		frontend_desc = qs(0x67cf5513)
+		frontend_desc = qs("\LPinkness Abounds")
 		no_translate
 		no_scale
 		no_skew
@@ -2223,7 +2223,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_57.dds'
-		frontend_desc = qs(0x3d544d24)
+		frontend_desc = qs("\LSchlera")
 		no_translate
 		no_scale
 		no_skew
@@ -2233,7 +2233,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_56.dds'
-		frontend_desc = qs(0x9d6b83a3)
+		frontend_desc = qs("\LWish")
 		no_translate
 		no_scale
 		no_skew
@@ -2243,7 +2243,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_55.dds'
-		frontend_desc = qs(0xd705e9a5)
+		frontend_desc = qs("\LPartial I")
 		no_translate
 		no_scale
 		no_skew
@@ -2253,7 +2253,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_49.dds'
-		frontend_desc = qs(0x3cd955e3)
+		frontend_desc = qs("\LArr Matey")
 		no_translate
 		no_scale
 		no_skew
@@ -2263,7 +2263,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_48.dds'
-		frontend_desc = qs(0xe10760ff)
+		frontend_desc = qs("\LTractor")
 		no_translate
 		no_scale
 		no_skew
@@ -2273,7 +2273,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_47.dds'
-		frontend_desc = qs(0xcb0e6a43)
+		frontend_desc = qs("\LViral Intentions")
 		no_translate
 		no_scale
 		no_skew
@@ -2283,7 +2283,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_17.dds'
-		frontend_desc = qs(0x5aaac487)
+		frontend_desc = qs("\LSpiral Headcase")
 		no_translate
 		no_scale
 		no_skew
@@ -2293,7 +2293,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_09.dds'
-		frontend_desc = qs(0x059ce868)
+		frontend_desc = qs("\LBullseye")
 		no_translate
 		no_scale
 		no_skew
@@ -2303,7 +2303,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_64.dds'
-		frontend_desc = qs(0xdf56b157)
+		frontend_desc = qs("\LDream Tunnel")
 		no_translate
 		no_scale
 		no_skew
@@ -2313,7 +2313,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_46.dds'
-		frontend_desc = qs(0x1a6924a3)
+		frontend_desc = qs("\LStar Power")
 		no_translate
 		no_scale
 		no_skew
@@ -2323,7 +2323,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_45.dds'
-		frontend_desc = qs(0x6205906b)
+		frontend_desc = qs("\LMy Cherry Amour")
 		no_translate
 		no_scale
 		no_skew
@@ -2333,7 +2333,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_43.dds'
-		frontend_desc = qs(0x316cdc0b)
+		frontend_desc = qs("\LFallout")
 		no_translate
 		no_scale
 		no_skew
@@ -2343,7 +2343,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_42.dds'
-		frontend_desc = qs(0x0d489e31)
+		frontend_desc = qs("\LTwo Minutes To...")
 		no_translate
 		no_scale
 		no_skew
@@ -2353,7 +2353,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_42a.dds'
-		frontend_desc = qs(0xec79023e)
+		frontend_desc = qs("\LBiology 101")
 		no_translate
 		no_scale
 		no_skew
@@ -2363,7 +2363,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_40.dds'
-		frontend_desc = qs(0xb4d0ffa7)
+		frontend_desc = qs("\LDiamond-Star Halo")
 		no_translate
 		no_scale
 		no_skew
@@ -2373,7 +2373,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_39.dds'
-		frontend_desc = qs(0x00cf01b6)
+		frontend_desc = qs("\LForgotten Kiss")
 		no_translate
 		no_scale
 		no_skew
@@ -2383,7 +2383,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_38.dds'
-		frontend_desc = qs(0x7e966cce)
+		frontend_desc = qs("\LBattle Worn")
 		no_translate
 		no_scale
 		no_skew
@@ -2393,7 +2393,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_37.dds'
-		frontend_desc = qs(0x4aea380a)
+		frontend_desc = qs("\LA Tiny Pink Kitten")
 		no_translate
 		no_scale
 		no_skew
@@ -2403,7 +2403,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_36.dds'
-		frontend_desc = qs(0xb40898ba)
+		frontend_desc = qs("\LWatching")
 		no_translate
 		no_scale
 		no_skew
@@ -2413,7 +2413,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_84.dds'
-		frontend_desc = qs(0x41252024)
+		frontend_desc = qs("\LZeitgeist")
 		no_translate
 		no_scale
 		no_skew
@@ -2423,7 +2423,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_35.dds'
-		frontend_desc = qs(0xca6382ce)
+		frontend_desc = qs("\LLabel Me")
 		no_translate
 		no_scale
 		no_skew
@@ -2433,7 +2433,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_90.dds'
-		frontend_desc = qs(0xa7d6a16b)
+		frontend_desc = qs("\LHeart Power")
 		no_translate
 		no_scale
 		no_skew
@@ -2442,7 +2442,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_41.dds'
-		frontend_desc = qs(0xe59e5a9e)
+		frontend_desc = qs("\LDigital Future")
 		no_translate
 		no_scale
 		no_skew
@@ -2452,7 +2452,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_32.dds'
-		frontend_desc = qs(0xc5020ec8)
+		frontend_desc = qs("\LBarbed Wire")
 		no_translate
 		no_scale
 		no_skew
@@ -2462,7 +2462,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_31.dds'
-		frontend_desc = qs(0x38ea3a72)
+		frontend_desc = qs("\LThe Dogs of War")
 		no_translate
 		no_scale
 		no_skew
@@ -2472,7 +2472,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_30.dds'
-		frontend_desc = qs(0x543155a5)
+		frontend_desc = qs("\LFacial Matter")
 		no_translate
 		no_scale
 		no_skew
@@ -2482,7 +2482,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_29.dds'
-		frontend_desc = qs(0xb16f1d65)
+		frontend_desc = qs("\LGTF - Goat")
 		no_translate
 		no_scale
 		no_skew
@@ -2492,7 +2492,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_28.dds'
-		frontend_desc = qs(0xdf709ac3)
+		frontend_desc = qs("\LNot Listening")
 		no_translate
 		no_scale
 		no_skew
@@ -2502,7 +2502,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_27.dds'
-		frontend_desc = qs(0x942241c5)
+		frontend_desc = qs("\LFeet'll Matter II")
 		no_translate
 		no_scale
 		no_skew
@@ -2512,7 +2512,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_25.dds'
-		frontend_desc = qs(0x3c5ac233)
+		frontend_desc = qs("\LNew World Order")
 		no_translate
 		no_scale
 		no_skew
@@ -2522,7 +2522,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_24.dds'
-		frontend_desc = qs(0x98219646)
+		frontend_desc = qs("\LBarrel")
 		no_translate
 		no_scale
 		no_skew
@@ -2532,7 +2532,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_22.dds'
-		frontend_desc = qs(0x5f5f6997)
+		frontend_desc = qs("\LSplat")
 		no_translate
 		no_scale
 		no_skew
@@ -2542,7 +2542,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_21.dds'
-		frontend_desc = qs(0xf0197158)
+		frontend_desc = qs("\LTarget Practice")
 		no_translate
 		no_scale
 		no_skew
@@ -2552,7 +2552,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_16.dds'
-		frontend_desc = qs(0x03c0db49)
+		frontend_desc = qs("\LThe Crest")
 		no_translate
 		no_scale
 		no_skew
@@ -2562,7 +2562,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_13.dds'
-		frontend_desc = qs(0xd079192c)
+		frontend_desc = qs("\LPaisley Power")
 		no_translate
 		no_scale
 		no_skew
@@ -2572,7 +2572,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_12.dds'
-		frontend_desc = qs(0xbbeb45e6)
+		frontend_desc = qs("\LPhoenix")
 		no_translate
 		no_scale
 		no_skew
@@ -2582,7 +2582,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_11.dds'
-		frontend_desc = qs(0x3c4ed364)
+		frontend_desc = qs("\LHollow be thy name")
 		no_translate
 		no_scale
 		no_skew
@@ -2592,7 +2592,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_05.dds'
-		frontend_desc = qs(0xba9bb0c7)
+		frontend_desc = qs("\LMi Amor")
 		no_translate
 		no_scale
 		no_skew
@@ -2602,7 +2602,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_04.dds'
-		frontend_desc = qs(0xaefab4f8)
+		frontend_desc = qs("\L'narchy")
 		no_translate
 		no_scale
 		no_skew
@@ -2612,7 +2612,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_RM_06.dds'
-		frontend_desc = qs(0x30f84b9a)
+		frontend_desc = qs("\LPop Top")
 		no_translate
 		no_scale
 		no_skew
@@ -2622,7 +2622,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_RM_05.dds'
-		frontend_desc = qs(0xdd7876e0)
+		frontend_desc = qs("\LLadybug's Johnson")
 		no_translate
 		no_scale
 		no_skew
@@ -2632,7 +2632,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_RM_03.dds'
-		frontend_desc = qs(0xb3f09c29)
+		frontend_desc = qs("\LLava Lamp")
 		no_translate
 		no_scale
 		no_skew
@@ -2642,7 +2642,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_RM_02.dds'
-		frontend_desc = qs(0x1aca8a1e)
+		frontend_desc = qs("\LMoonlit Knight")
 		no_translate
 		no_scale
 		no_skew
@@ -2652,7 +2652,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_RM_01.dds'
-		frontend_desc = qs(0x0223f5b3)
+		frontend_desc = qs("\LJez, the Faces!")
 		no_translate
 		no_scale
 		no_skew
@@ -2662,7 +2662,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_GK_03.dds'
-		frontend_desc = qs(0x10e0cb9b)
+		frontend_desc = qs("\LJ'entends ton coeur")
 		no_translate
 		no_scale
 		no_skew
@@ -2672,7 +2672,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_GK_01.dds'
-		frontend_desc = qs(0xd68374a2)
+		frontend_desc = qs("\LWelcome")
 		no_translate
 		no_scale
 		no_skew
@@ -2682,7 +2682,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_GK_04.dds'
-		frontend_desc = qs(0xf3ce0f03)
+		frontend_desc = qs("\LDragon World")
 		no_translate
 		no_scale
 		no_skew
@@ -2692,7 +2692,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_GK_02.dds'
-		frontend_desc = qs(0xbbd1ee2f)
+		frontend_desc = qs("\LThe Rose Tattoo")
 		no_translate
 		no_scale
 		no_skew
@@ -2702,7 +2702,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_GK_05.dds'
-		frontend_desc = qs(0xa8e60bd9)
+		frontend_desc = qs("\LFly Blown")
 		no_translate
 		no_scale
 		no_skew
@@ -2712,7 +2712,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_GK_08.dds'
-		frontend_desc = qs(0xa1716989)
+		frontend_desc = qs("\LClowndestine...")
 		no_translate
 		no_scale
 		no_skew
@@ -2722,7 +2722,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_81.dds'
-		frontend_desc = qs(0x921e9ae0)
+		frontend_desc = qs("\LPrincess")
 		no_translate
 		no_scale
 		no_skew
@@ -2732,7 +2732,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_20.dds'
-		frontend_desc = qs(0xaaf04f6a)
+		frontend_desc = qs("\LSham Rock")
 		no_translate
 		no_scale
 		no_skew
@@ -2742,7 +2742,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_19.dds'
-		frontend_desc = qs(0xb35ce39b)
+		frontend_desc = qs("\LFive Year Plan")
 		no_translate
 		no_scale
 		no_skew
@@ -2752,7 +2752,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_23.dds'
-		frontend_desc = qs(0x3060702e)
+		frontend_desc = qs("\LStars 'n' Bars")
 		no_translate
 		no_scale
 		no_skew
@@ -2762,7 +2762,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_08.dds'
-		frontend_desc = qs(0x6393cf2b)
+		frontend_desc = qs("\LThe Red & The Gold")
 		no_translate
 		no_scale
 		no_skew
@@ -2772,7 +2772,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_07.dds'
-		frontend_desc = qs(0xac3f0014)
+		frontend_desc = qs("\LGive'r Canada")
 		no_translate
 		no_scale
 		no_skew
@@ -2782,7 +2782,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_03.dds'
-		frontend_desc = qs(0x4fc9ec85)
+		frontend_desc = qs("\LGDR")
 		no_translate
 		no_scale
 		no_skew
@@ -2792,7 +2792,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_02.dds'
-		frontend_desc = qs(0x665172e1)
+		frontend_desc = qs("\LAntipodean")
 		no_translate
 		no_scale
 		no_skew
@@ -2802,7 +2802,7 @@ cadrm_02_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_01.dds'
-		frontend_desc = qs(0xbb3a93c9)
+		frontend_desc = qs("\LEmpire Expired")
 		no_translate
 		no_scale
 		no_skew
@@ -2811,12 +2811,12 @@ cadrm_02_finishes_bassdrum = [
 		no_v_flip
 	}
 ]
-cadrm_03_finishes = [
+CADrm_03_Finishes = [
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_04.dds'
-		frontend_desc = qs(0x22b03a55)
+		frontend_desc = qs("\LClear")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -2824,9 +2824,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_OC1.dds'
-		frontend_desc = qs(0xf98ea7b3)
+		frontend_desc = qs("\LOC - Travis Barker")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -2834,9 +2834,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_OC2.dds'
-		frontend_desc = qs(0x7cc447c2)
+		frontend_desc = qs("\LOC - Peering Skulls")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -2844,9 +2844,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_OC3.dds'
-		frontend_desc = qs(0x095cbb33)
+		frontend_desc = qs("\LOC - Hot Rod Etchings")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -2854,9 +2854,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_OC4.dds'
-		frontend_desc = qs(0x81676dbe)
+		frontend_desc = qs("\LOC - Stars")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -2864,9 +2864,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_OC5.dds'
-		frontend_desc = qs(0xd52d34c6)
+		frontend_desc = qs("\LOC - Pink and Black")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -2874,9 +2874,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_OC6.dds'
-		frontend_desc = qs(0x3733793d)
+		frontend_desc = qs("\LOC - Camo")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -2884,9 +2884,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_01.dds'
-		frontend_desc = qs(0xa337cdc9)
+		frontend_desc = qs("\LRed Action")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -2894,9 +2894,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_51.dds'
-		frontend_desc = qs(0xb93e8408)
+		frontend_desc = qs("\LFlutterbyes")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -2904,9 +2904,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_49.dds'
-		frontend_desc = qs(0x2864a5fa)
+		frontend_desc = qs("\LRockabilly Rebels")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -2914,9 +2914,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_46.dds'
-		frontend_desc = qs(0xa55d05dc)
+		frontend_desc = qs("\LZebras")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -2924,9 +2924,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_45.dds'
-		frontend_desc = qs(0x9b21d7db)
+		frontend_desc = qs("\LCheetah")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -2934,9 +2934,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_43.dds'
-		frontend_desc = qs(0xcd61e910)
+		frontend_desc = qs("\LLeopard")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -2944,9 +2944,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_42.dds'
-		frontend_desc = qs(0xb30249b6)
+		frontend_desc = qs("\LRhythm Master")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -2954,9 +2954,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_41.dds'
-		frontend_desc = qs(0x52eb97f4)
+		frontend_desc = qs("\LLove Hearts")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -2964,9 +2964,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_37.dds'
-		frontend_desc = qs(0xb715286c)
+		frontend_desc = qs("\LThe Movies")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -2974,9 +2974,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_36.dds'
-		frontend_desc = qs(0x7045edd4)
+		frontend_desc = qs("\LBurnin' Rubber")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -2984,9 +2984,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_32.dds'
-		frontend_desc = qs(0xad6144ef)
+		frontend_desc = qs("\LHazardous Waste")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -2994,9 +2994,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_31.dds'
-		frontend_desc = qs(0x419e6269)
+		frontend_desc = qs("\LMajor Pattern")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3004,9 +3004,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_30.dds'
-		frontend_desc = qs(0x95dbd2f8)
+		frontend_desc = qs("\LSnakeskin Zinc")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3014,9 +3014,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_29.dds'
-		frontend_desc = qs(0x79a70b1a)
+		frontend_desc = qs("\LEngineering")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3024,9 +3024,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_33.dds'
-		frontend_desc = qs(0x15fcc697)
+		frontend_desc = qs("\LDiamond Plate")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3034,9 +3034,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_18.dds'
-		frontend_desc = qs(0x52877d4b)
+		frontend_desc = qs("\LCryptic")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3044,9 +3044,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_17.dds'
-		frontend_desc = qs(0x83055b89)
+		frontend_desc = qs("\LSkullzilla")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3054,9 +3054,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_26.dds'
-		frontend_desc = qs(0x135bca94)
+		frontend_desc = qs("\LGiant Steps")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3064,9 +3064,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_27.dds'
-		frontend_desc = qs(0xb7805dd6)
+		frontend_desc = qs("\LWalking on the Moon")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3074,9 +3074,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_24.dds'
-		frontend_desc = qs(0xd1aa6e02)
+		frontend_desc = qs("\LJeff's Tiny Monkeys")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3084,9 +3084,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_21.dds'
-		frontend_desc = qs(0x4ffc5cd4)
+		frontend_desc = qs("\LBite the Bullet")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3094,9 +3094,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_20.dds'
-		frontend_desc = qs(0xa45021aa)
+		frontend_desc = qs("\LClassic Swirl")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3104,9 +3104,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_19.dds'
-		frontend_desc = qs(0xb3692aaa)
+		frontend_desc = qs("\LClassic Crosshatch")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3114,9 +3114,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_16.dds'
-		frontend_desc = qs(0xcef673ef)
+		frontend_desc = qs("\LMarbled")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3124,9 +3124,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_15.dds'
-		frontend_desc = qs(0xc8c24be0)
+		frontend_desc = qs("\LDiagonalism I")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3134,9 +3134,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_14.dds'
-		frontend_desc = qs(0x9ecb577a)
+		frontend_desc = qs("\LDiagonalism II")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3144,9 +3144,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_13.dds'
-		frontend_desc = qs(0xf64af042)
+		frontend_desc = qs("\LPurple Passion")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3154,9 +3154,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_12.dds'
-		frontend_desc = qs(0xb89ec562)
+		frontend_desc = qs("\LCrazily Paisley")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3164,9 +3164,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_11.dds'
-		frontend_desc = qs(0x47c40739)
+		frontend_desc = qs("\LHerringbone")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3174,9 +3174,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_10.dds'
-		frontend_desc = qs(0xa90dc214)
+		frontend_desc = qs("\LBurlwood")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3184,9 +3184,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_09.dds'
-		frontend_desc = qs(0xa8eee0f6)
+		frontend_desc = qs("\LQuilted")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3194,9 +3194,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_08.dds'
-		frontend_desc = qs(0xd98247d3)
+		frontend_desc = qs("\LBookmatched")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3204,9 +3204,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_07.dds'
-		frontend_desc = qs(0x038ed054)
+		frontend_desc = qs("\LMaple")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3214,9 +3214,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_06.dds'
-		frontend_desc = qs(0x02e5982a)
+		frontend_desc = qs("\LDesert Camo")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3224,9 +3224,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_05.dds'
-		frontend_desc = qs(0x69d6b1cb)
+		frontend_desc = qs("\LGreen Goddess")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3234,9 +3234,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_03.dds'
-		frontend_desc = qs(0x9140aa49)
+		frontend_desc = qs("\LChoco Burl")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3244,9 +3244,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_02.dds'
-		frontend_desc = qs(0x43d13df5)
+		frontend_desc = qs("\LBurning Ring AFire")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3254,9 +3254,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_01.dds'
-		frontend_desc = qs(0xa1faa5c9)
+		frontend_desc = qs("\LInfernal!")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3264,9 +3264,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_55.dds'
-		frontend_desc = qs(0xbe447a2c)
+		frontend_desc = qs("\LFour Aces")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3274,9 +3274,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_54.dds'
-		frontend_desc = qs(0xeb775ae3)
+		frontend_desc = qs("\LHouse of Cards")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3284,9 +3284,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_53.dds'
-		frontend_desc = qs(0x22c9dc3a)
+		frontend_desc = qs("\LYardies")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3294,9 +3294,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_52.dds'
-		frontend_desc = qs(0x163737e7)
+		frontend_desc = qs("\LBarbed Baterista")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3304,9 +3304,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_50.dds'
-		frontend_desc = qs(0x666fa565)
+		frontend_desc = qs("\LTrad Plaid")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3314,9 +3314,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_40.dds'
-		frontend_desc = qs(0x42b526d5)
+		frontend_desc = qs("\LShell Shocked!")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3324,9 +3324,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_48.dds'
-		frontend_desc = qs(0xbac6fe67)
+		frontend_desc = qs("\LThorn without a Rose")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3334,9 +3334,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_38.dds'
-		frontend_desc = qs(0x554160f4)
+		frontend_desc = qs("\LPulse")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3344,9 +3344,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_34.dds'
-		frontend_desc = qs(0xed7813e6)
+		frontend_desc = qs("\LHomemaker")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3354,9 +3354,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_28.dds'
-		frontend_desc = qs(0xf2406960)
+		frontend_desc = qs("\LHappy Pink Sparkle")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3364,9 +3364,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_23.dds'
-		frontend_desc = qs(0x3c5ac233)
+		frontend_desc = qs("\LNew World Order")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3374,9 +3374,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_DS_22.dds'
-		frontend_desc = qs(0x62547d1c)
+		frontend_desc = qs("\LRandom,Sample,Hold")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3384,9 +3384,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_RM_01.dds'
-		frontend_desc = qs(0x88138701)
+		frontend_desc = qs("\LBatterscape")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3394,9 +3394,9 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_RM_02.dds'
-		frontend_desc = qs(0xf1639a3b)
+		frontend_desc = qs("\LMidsummer Cumulus")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
@@ -3404,19 +3404,19 @@ cadrm_03_finishes = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/Drumshell_RM_03.dds'
-		frontend_desc = qs(0xb3f09c29)
+		frontend_desc = qs("\LLava Lamp")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
 		wrap_texture
 	}
 ]
-cadrm_03_finishes_bassdrum = [
+CADrm_03_Finishes_Bassdrum = [
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_15.dds'
-		frontend_desc = qs(0x22b03a55)
+		frontend_desc = qs("\LClear")
 		no_translate
 		no_scale
 		no_skew
@@ -3426,34 +3426,34 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_OC1.dds'
-		frontend_desc = qs(0x47b25033)
+		frontend_desc = qs("\LTravis Barker")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_OC2.dds'
-		frontend_desc = qs(0x253c159d)
+		frontend_desc = qs("\LOrange County Drums I")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_OC3.dds'
-		frontend_desc = qs(0x8889c1cc)
+		frontend_desc = qs("\LOrange County Drums II")
 		no_translate
-		NO_ROTATE
+		no_rotate
 		no_scale
 		no_u_flip
 		no_v_flip
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_85.dds'
-		frontend_desc = qs(0x6faf4d0f)
+		frontend_desc = qs("\LCustom black")
 		no_translate
 		no_scale
 		no_skew
@@ -3463,7 +3463,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_86.dds'
-		frontend_desc = qs(0x957cc99c)
+		frontend_desc = qs("\LCustom white")
 		no_translate
 		no_scale
 		no_skew
@@ -3473,7 +3473,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_80.dds'
-		frontend_desc = qs(0xe23d6556)
+		frontend_desc = qs("\LCowboys From ...")
 		no_translate
 		no_scale
 		no_skew
@@ -3483,7 +3483,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_79.dds'
-		frontend_desc = qs(0x91e485d7)
+		frontend_desc = qs("\LMasquerade")
 		no_translate
 		no_scale
 		no_skew
@@ -3493,7 +3493,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_78.dds'
-		frontend_desc = qs(0x0039dd19)
+		frontend_desc = qs("\LGas Mask")
 		no_translate
 		no_scale
 		no_skew
@@ -3503,7 +3503,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_77.dds'
-		frontend_desc = qs(0x9279b4ed)
+		frontend_desc = qs("\LCobra")
 		no_translate
 		no_scale
 		no_skew
@@ -3513,7 +3513,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_76.dds'
-		frontend_desc = qs(0x6772a378)
+		frontend_desc = qs("\LStage Diving")
 		no_translate
 		no_scale
 		no_skew
@@ -3523,7 +3523,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_75.dds'
-		frontend_desc = qs(0xb19e2e3f)
+		frontend_desc = qs("\LBad Kitty")
 		no_translate
 		no_scale
 		no_skew
@@ -3533,7 +3533,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_74.dds'
-		frontend_desc = qs(0xfd188d46)
+		frontend_desc = qs("\LMy Sweet Ride")
 		no_translate
 		no_scale
 		no_skew
@@ -3543,7 +3543,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_73.dds'
-		frontend_desc = qs(0xb0a17253)
+		frontend_desc = qs("\LExecute")
 		no_translate
 		no_scale
 		no_skew
@@ -3553,7 +3553,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_72.dds'
-		frontend_desc = qs(0xd643416c)
+		frontend_desc = qs("\LCrossed Keys")
 		no_translate
 		no_scale
 		no_skew
@@ -3563,7 +3563,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_70.dds'
-		frontend_desc = qs(0x3f55056e)
+		frontend_desc = qs("\LClone of Thorns")
 		no_translate
 		no_scale
 		no_skew
@@ -3573,7 +3573,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_71.dds'
-		frontend_desc = qs(0xf6c85b58)
+		frontend_desc = qs("\LBullet Time")
 		no_translate
 		no_scale
 		no_skew
@@ -3583,7 +3583,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_69.dds'
-		frontend_desc = qs(0x5e24be92)
+		frontend_desc = qs("\LCenterpoint")
 		no_translate
 		no_scale
 		no_skew
@@ -3593,7 +3593,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_67.dds'
-		frontend_desc = qs(0x475e7d64)
+		frontend_desc = qs("\LHeads of Industry")
 		no_translate
 		no_scale
 		no_skew
@@ -3603,7 +3603,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_66.dds'
-		frontend_desc = qs(0xd10fb5b7)
+		frontend_desc = qs("\LRoyal Flower")
 		no_translate
 		no_scale
 		no_skew
@@ -3613,7 +3613,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_68.dds'
-		frontend_desc = qs(0x3a1121f2)
+		frontend_desc = qs("\LDog's Breakfast")
 		no_translate
 		no_scale
 		no_skew
@@ -3623,7 +3623,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_63.dds'
-		frontend_desc = qs(0x91451897)
+		frontend_desc = qs("\LYin Yang")
 		no_translate
 		no_scale
 		no_skew
@@ -3633,7 +3633,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_61.dds'
-		frontend_desc = qs(0x621b3f51)
+		frontend_desc = qs("\LPterofractal ")
 		no_translate
 		no_scale
 		no_skew
@@ -3643,7 +3643,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_58.dds'
-		frontend_desc = qs(0x67cf5513)
+		frontend_desc = qs("\LPinkness Abounds")
 		no_translate
 		no_scale
 		no_skew
@@ -3653,7 +3653,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_57.dds'
-		frontend_desc = qs(0x3d544d24)
+		frontend_desc = qs("\LSchlera")
 		no_translate
 		no_scale
 		no_skew
@@ -3663,7 +3663,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_56.dds'
-		frontend_desc = qs(0x9d6b83a3)
+		frontend_desc = qs("\LWish")
 		no_translate
 		no_scale
 		no_skew
@@ -3673,7 +3673,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_55.dds'
-		frontend_desc = qs(0xd705e9a5)
+		frontend_desc = qs("\LPartial I")
 		no_translate
 		no_scale
 		no_skew
@@ -3683,7 +3683,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_49.dds'
-		frontend_desc = qs(0x3cd955e3)
+		frontend_desc = qs("\LArr Matey")
 		no_translate
 		no_scale
 		no_skew
@@ -3693,7 +3693,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_48.dds'
-		frontend_desc = qs(0xe10760ff)
+		frontend_desc = qs("\LTractor")
 		no_translate
 		no_scale
 		no_skew
@@ -3703,7 +3703,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_47.dds'
-		frontend_desc = qs(0xcb0e6a43)
+		frontend_desc = qs("\LViral Intentions")
 		no_translate
 		no_scale
 		no_skew
@@ -3713,7 +3713,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_17.dds'
-		frontend_desc = qs(0x5aaac487)
+		frontend_desc = qs("\LSpiral Headcase")
 		no_translate
 		no_scale
 		no_skew
@@ -3723,7 +3723,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_09.dds'
-		frontend_desc = qs(0x059ce868)
+		frontend_desc = qs("\LBullseye")
 		no_translate
 		no_scale
 		no_skew
@@ -3733,7 +3733,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_64.dds'
-		frontend_desc = qs(0xdf56b157)
+		frontend_desc = qs("\LDream Tunnel")
 		no_translate
 		no_scale
 		no_skew
@@ -3743,7 +3743,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_46.dds'
-		frontend_desc = qs(0x1a6924a3)
+		frontend_desc = qs("\LStar Power")
 		no_translate
 		no_scale
 		no_skew
@@ -3753,7 +3753,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_45.dds'
-		frontend_desc = qs(0x6205906b)
+		frontend_desc = qs("\LMy Cherry Amour")
 		no_translate
 		no_scale
 		no_skew
@@ -3763,7 +3763,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_43.dds'
-		frontend_desc = qs(0x316cdc0b)
+		frontend_desc = qs("\LFallout")
 		no_translate
 		no_scale
 		no_skew
@@ -3773,7 +3773,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_42.dds'
-		frontend_desc = qs(0x0d489e31)
+		frontend_desc = qs("\LTwo Minutes To...")
 		no_translate
 		no_scale
 		no_skew
@@ -3783,7 +3783,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_42a.dds'
-		frontend_desc = qs(0xec79023e)
+		frontend_desc = qs("\LBiology 101")
 		no_translate
 		no_scale
 		no_skew
@@ -3793,7 +3793,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_40.dds'
-		frontend_desc = qs(0xb4d0ffa7)
+		frontend_desc = qs("\LDiamond-Star Halo")
 		no_translate
 		no_scale
 		no_skew
@@ -3803,7 +3803,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_39.dds'
-		frontend_desc = qs(0x00cf01b6)
+		frontend_desc = qs("\LForgotten Kiss")
 		no_translate
 		no_scale
 		no_skew
@@ -3813,7 +3813,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_38.dds'
-		frontend_desc = qs(0x7e966cce)
+		frontend_desc = qs("\LBattle Worn")
 		no_translate
 		no_scale
 		no_skew
@@ -3823,7 +3823,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_37.dds'
-		frontend_desc = qs(0x4aea380a)
+		frontend_desc = qs("\LA Tiny Pink Kitten")
 		no_translate
 		no_scale
 		no_skew
@@ -3833,7 +3833,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_36.dds'
-		frontend_desc = qs(0xb40898ba)
+		frontend_desc = qs("\LWatching")
 		no_translate
 		no_scale
 		no_skew
@@ -3843,7 +3843,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_84.dds'
-		frontend_desc = qs(0x41252024)
+		frontend_desc = qs("\LZeitgeist")
 		no_translate
 		no_scale
 		no_skew
@@ -3853,7 +3853,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_35.dds'
-		frontend_desc = qs(0xca6382ce)
+		frontend_desc = qs("\LLabel Me")
 		no_translate
 		no_scale
 		no_skew
@@ -3863,7 +3863,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_90.dds'
-		frontend_desc = qs(0xa7d6a16b)
+		frontend_desc = qs("\LHeart Power")
 		no_translate
 		no_scale
 		no_skew
@@ -3872,7 +3872,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_41.dds'
-		frontend_desc = qs(0xe59e5a9e)
+		frontend_desc = qs("\LDigital Future")
 		no_translate
 		no_scale
 		no_skew
@@ -3882,7 +3882,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_32.dds'
-		frontend_desc = qs(0xc5020ec8)
+		frontend_desc = qs("\LBarbed Wire")
 		no_translate
 		no_scale
 		no_skew
@@ -3892,7 +3892,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_31.dds'
-		frontend_desc = qs(0x38ea3a72)
+		frontend_desc = qs("\LThe Dogs of War")
 		no_translate
 		no_scale
 		no_skew
@@ -3902,7 +3902,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_30.dds'
-		frontend_desc = qs(0x543155a5)
+		frontend_desc = qs("\LFacial Matter")
 		no_translate
 		no_scale
 		no_skew
@@ -3912,7 +3912,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_29.dds'
-		frontend_desc = qs(0xb16f1d65)
+		frontend_desc = qs("\LGTF - Goat")
 		no_translate
 		no_scale
 		no_skew
@@ -3922,7 +3922,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_28.dds'
-		frontend_desc = qs(0xdf709ac3)
+		frontend_desc = qs("\LNot Listening")
 		no_translate
 		no_scale
 		no_skew
@@ -3932,7 +3932,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_27.dds'
-		frontend_desc = qs(0x942241c5)
+		frontend_desc = qs("\LFeet'll Matter II")
 		no_translate
 		no_scale
 		no_skew
@@ -3942,7 +3942,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_25.dds'
-		frontend_desc = qs(0x3c5ac233)
+		frontend_desc = qs("\LNew World Order")
 		no_translate
 		no_scale
 		no_skew
@@ -3952,7 +3952,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_24.dds'
-		frontend_desc = qs(0x98219646)
+		frontend_desc = qs("\LBarrel")
 		no_translate
 		no_scale
 		no_skew
@@ -3962,7 +3962,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_22.dds'
-		frontend_desc = qs(0x5f5f6997)
+		frontend_desc = qs("\LSplat")
 		no_translate
 		no_scale
 		no_skew
@@ -3972,7 +3972,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_21.dds'
-		frontend_desc = qs(0xf0197158)
+		frontend_desc = qs("\LTarget Practice")
 		no_translate
 		no_scale
 		no_skew
@@ -3982,7 +3982,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_16.dds'
-		frontend_desc = qs(0x03c0db49)
+		frontend_desc = qs("\LThe Crest")
 		no_translate
 		no_scale
 		no_skew
@@ -3992,7 +3992,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_13.dds'
-		frontend_desc = qs(0xd079192c)
+		frontend_desc = qs("\LPaisley Power")
 		no_translate
 		no_scale
 		no_skew
@@ -4002,7 +4002,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_12.dds'
-		frontend_desc = qs(0xbbeb45e6)
+		frontend_desc = qs("\LPhoenix")
 		no_translate
 		no_scale
 		no_skew
@@ -4012,7 +4012,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_11.dds'
-		frontend_desc = qs(0x3c4ed364)
+		frontend_desc = qs("\LHollow be thy name")
 		no_translate
 		no_scale
 		no_skew
@@ -4022,7 +4022,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_05.dds'
-		frontend_desc = qs(0xba9bb0c7)
+		frontend_desc = qs("\LMi Amor")
 		no_translate
 		no_scale
 		no_skew
@@ -4032,7 +4032,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_04.dds'
-		frontend_desc = qs(0xaefab4f8)
+		frontend_desc = qs("\L'narchy")
 		no_translate
 		no_scale
 		no_skew
@@ -4042,7 +4042,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_RM_06.dds'
-		frontend_desc = qs(0x30f84b9a)
+		frontend_desc = qs("\LPop Top")
 		no_translate
 		no_scale
 		no_skew
@@ -4052,7 +4052,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_RM_05.dds'
-		frontend_desc = qs(0xdd7876e0)
+		frontend_desc = qs("\LLadybug's Johnson")
 		no_translate
 		no_scale
 		no_skew
@@ -4062,7 +4062,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_RM_03.dds'
-		frontend_desc = qs(0xb3f09c29)
+		frontend_desc = qs("\LLava Lamp")
 		no_translate
 		no_scale
 		no_skew
@@ -4072,7 +4072,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_RM_02.dds'
-		frontend_desc = qs(0x1aca8a1e)
+		frontend_desc = qs("\LMoonlit Knight")
 		no_translate
 		no_scale
 		no_skew
@@ -4082,7 +4082,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_RM_01.dds'
-		frontend_desc = qs(0x0223f5b3)
+		frontend_desc = qs("\LJez, the Faces!")
 		no_translate
 		no_scale
 		no_skew
@@ -4092,7 +4092,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_GK_03.dds'
-		frontend_desc = qs(0x10e0cb9b)
+		frontend_desc = qs("\LJ'entends ton coeur")
 		no_translate
 		no_scale
 		no_skew
@@ -4102,7 +4102,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_GK_01.dds'
-		frontend_desc = qs(0xd68374a2)
+		frontend_desc = qs("\LWelcome")
 		no_translate
 		no_scale
 		no_skew
@@ -4112,7 +4112,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_GK_04.dds'
-		frontend_desc = qs(0xf3ce0f03)
+		frontend_desc = qs("\LDragon World")
 		no_translate
 		no_scale
 		no_skew
@@ -4122,7 +4122,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_GK_02.dds'
-		frontend_desc = qs(0xbbd1ee2f)
+		frontend_desc = qs("\LThe Rose Tattoo")
 		no_translate
 		no_scale
 		no_skew
@@ -4132,7 +4132,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_GK_05.dds'
-		frontend_desc = qs(0xa8e60bd9)
+		frontend_desc = qs("\LFly Blown")
 		no_translate
 		no_scale
 		no_skew
@@ -4142,7 +4142,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_GK_08.dds'
-		frontend_desc = qs(0xfe331765)
+		frontend_desc = qs("\LClowndestine")
 		no_translate
 		no_scale
 		no_skew
@@ -4152,7 +4152,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_81.dds'
-		frontend_desc = qs(0x921e9ae0)
+		frontend_desc = qs("\LPrincess")
 		no_translate
 		no_scale
 		no_skew
@@ -4162,7 +4162,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_20.dds'
-		frontend_desc = qs(0xaaf04f6a)
+		frontend_desc = qs("\LSham Rock")
 		no_translate
 		no_scale
 		no_skew
@@ -4172,7 +4172,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_19.dds'
-		frontend_desc = qs(0xb35ce39b)
+		frontend_desc = qs("\LFive Year Plan")
 		no_translate
 		no_scale
 		no_skew
@@ -4182,7 +4182,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_23.dds'
-		frontend_desc = qs(0x3060702e)
+		frontend_desc = qs("\LStars 'n' Bars")
 		no_translate
 		no_scale
 		no_skew
@@ -4192,7 +4192,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_08.dds'
-		frontend_desc = qs(0x6393cf2b)
+		frontend_desc = qs("\LThe Red & The Gold")
 		no_translate
 		no_scale
 		no_skew
@@ -4202,7 +4202,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_07.dds'
-		frontend_desc = qs(0xac3f0014)
+		frontend_desc = qs("\LGive'r Canada")
 		no_translate
 		no_scale
 		no_skew
@@ -4212,7 +4212,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_03.dds'
-		frontend_desc = qs(0x4fc9ec85)
+		frontend_desc = qs("\LGDR")
 		no_translate
 		no_scale
 		no_skew
@@ -4222,7 +4222,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_02.dds'
-		frontend_desc = qs(0x665172e1)
+		frontend_desc = qs("\LAntipodean")
 		no_translate
 		no_scale
 		no_skew
@@ -4232,7 +4232,7 @@ cadrm_03_finishes_bassdrum = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CADrm/bass_skin_DS_01.dds'
-		frontend_desc = qs(0xbb3a93c9)
+		frontend_desc = qs("\LEmpire Expired")
 		no_translate
 		no_scale
 		no_skew

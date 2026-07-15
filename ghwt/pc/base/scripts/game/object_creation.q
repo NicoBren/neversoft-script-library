@@ -1,53 +1,53 @@
 proximobj_composite_structure = [
 	{
-		component = sound
+		Component = Sound
 	}
 ]
 particle_composite_structure = [
 	{
-		component = suspend
+		Component = Suspend
 	}
 	{
-		component = particle
+		Component = particle
 	}
 ]
 moving_particle_composite_structure = [
 	{
-		component = suspend
+		Component = Suspend
 	}
 	{
-		component = motion
+		Component = motion
 	}
 	{
-		component = particle
+		Component = particle
 	}
 ]
 flexparticle_composite_structure = [
 	{
-		component = suspend
+		Component = Suspend
 	}
 	{
-		component = flexibleparticle
+		Component = flexibleparticle
 	}
 ]
 moving_flexparticle_composite_structure = [
 	{
-		component = suspend
+		Component = Suspend
 	}
 	{
-		component = motion
+		Component = motion
 	}
 	{
-		component = flexibleparticle
+		Component = flexibleparticle
 	}
 ]
 viewercam_composite_structure = [
 	{
-		component = camera
+		Component = camera
 		far_clip = $camera_default_far_clip
 	}
 	{
-		component = proximtrigger
+		Component = ProximTrigger
 		cube_length = 0.4
 		trigger_checksum = camera
 		inactive
@@ -55,110 +55,110 @@ viewercam_composite_structure = [
 ]
 levellight_composite_structure = [
 	{
-		component = positionmorph
+		Component = PositionMorph
 	}
 	{
-		component = dynamiclight
+		Component = dynamiclight
 	}
 ]
 igc_camera_structure = [
 	{
-		component = cinematiccamera
-		updatewhencamerainactive = false
+		Component = CinematicCamera
+		UpdateWhenCameraInactive = false
 	}
 	{
-		component = camera
+		Component = camera
 	}
 ]
 gridobj_composite_structure = [
 	{
-		component = suspend
+		Component = Suspend
 	}
 ]
-geometryobject_structure = [
+GeometryObject_structure = [
 	{
-		component = geometryobject
+		Component = GeometryObject
 	}
 ]
 master_node_composite_structure = [
 	{
-		component = eventcache
+		Component = EventCache
 	}
 	{
-		component = statemachinemanager
+		Component = StateMachineManager
 	}
 ]
 gameobj_composite_structure = [
 	{
-		component = lockobj
+		Component = lockobj
 		off
 	}
 	{
-		component = motion
+		Component = motion
 	}
 ]
 constraint_composite_structure = [
 	{
-		component = constraint
+		Component = constraint
 	}
 ]
 bouncy_composite_structure = [
 	{
-		component = suspend
+		Component = Suspend
 	}
 	{
-		component = rigidbody
+		Component = rigidbody
 	}
 	{
-		component = sound
+		Component = Sound
 	}
 ]
 
-script processorgroup_registerdefault 
-	registerprocessorgroupdesc \{name = processorgroup_compositesystem
+script ProcessorGroup_RegisterDefault 
+	RegisterProcessorGroupDesc \{name = ProcessorGroup_CompositeSystem
 		processors = [
 			{
-				name = processor_default
+				name = Processor_Default
 				task = {
-					name = ptask_default
+					name = PTask_Default
 				}
 			}
 		]}
-	processormgr_init \{group = processorgroup_compositesystem}
+	ProcessorMgr_Init \{group = ProcessorGroup_CompositeSystem}
 endscript
 
-script passgroup_registerdefault 
-	registerpassgroupdesc \{name = passgroup_compositesystem
+script PassGroup_RegisterDefault 
+	RegisterPassGroupDesc \{name = PassGroup_CompositeSystem
 		passes = [
 			{
-				name = pass_default
+				name = Pass_Default
 				processors = [
-					processor_default
+					Processor_Default
 				]
 			}
 			{
-				name = pass_move
+				name = Pass_Move
 				processors = [
-					processor_default
+					Processor_Default
 				]
 			}
 		]}
-	passmgr_init \{group = passgroup_compositesystem}
+	PassMgr_Init \{group = PassGroup_CompositeSystem}
 endscript
 
-script compositeobjects_registerdefault 
-	adobject_components = [{name = model}
+script CompositeObjects_RegisterDefault 
+	AdObject_components = [{name = Model}
 		{name = motion}
 	]
-	massive_components = [{name = dynamicad}]
-	adobject_components = (<adobject_components> + <massive_components>)
-	registercompositeobjectdesc {
+	Massive_components = [{name = dynamicad}]
+	AdObject_components = (<AdObject_components> + <Massive_components>)
+	RegisterCompositeObjectDesc {
 		name = compositegameobject_adobject
 		callback = nullscript
 		passes =
 		[
-			{pass = pass_default
-				components = <adobject_components>
+			{pass = Pass_Default
+				Components = <AdObject_components>
 			}
 		]
 	}

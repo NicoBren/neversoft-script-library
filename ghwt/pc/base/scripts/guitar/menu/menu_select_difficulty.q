@@ -31,7 +31,7 @@ script create_select_difficulty_menu
 		exclusive_device = ($primary_controller)
 	else
 		if ($game_mode = p2_pro_faceoff)
-			removeparameter \{exclusive_device}
+			RemoveParameter \{exclusive_device}
 			get_all_exclusive_devices
 		else
 			exclusive_device = ($primary_controller)
@@ -49,7 +49,7 @@ script create_select_difficulty_menu
 	create_menu_backdrop \{texture = menu_bg_1}
 	if ($game_mode = p1_career || $game_mode = p2_career)
 	else
-		if gotparam \{song}
+		if GotParam \{song}
 			change current_song = <song>
 		endif
 	endif
@@ -65,32 +65,32 @@ script create_select_difficulty_menu
 			210
 			250
 		]}
-	setscreenelementprops \{id = current_menu
+	SetScreenElementProps \{id = current_menu
 		internal_just = [
 			left
 			top
 		]}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = sd_container
 		pos = (220.0, 130.0)}
 	p1_diff_index = 8
-	displaysprite id = sd_white_p1 parent = sd_container tex = white pos = ($g_sd_hilite_props [<p1_diff_index>].pos) dims = (300.0, 37.0) rgba = [225 120 60 255]
+	displaySprite id = sd_white_p1 parent = sd_container tex = white pos = ($g_sd_hilite_props [<p1_diff_index>].pos) dims = (300.0, 37.0) rgba = [225 120 60 255]
 	if (($game_mode = p1_career) || ($game_mode = p2_career))
 		get_diff_completion_text
 	endif
-	getplayerinfo \{1
+	GetPlayerInfo \{1
 		part}
-	if NOT (($game_mode = p1_career) || ($game_mode = p2_career) || <part> = drum || <part> = vocals)
+	if NOT (($game_mode = p1_career) || ($game_mode = p2_career) || <part> = drum || <part> = Vocals)
 		diff_dims = (210.0, 38.0)
 		sd_highlight_index = 12
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = current_menu
 			id = rhythm_title_text
 			font = <menu_font>
 			rgba = [60 35 20 255]
-			text = qs(0x74d6a0a0)
+			text = qs("BEGINNER")
 			just = [left top]
 			font_spacing = 0
 			event_handlers = [
@@ -103,13 +103,13 @@ script create_select_difficulty_menu
 		diff_dims = (210.0, 50.0)
 		sd_highlight_index = 8
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = current_menu
 		id = easy_title_text
 		font = <menu_font>
 		rgba = [60 35 20 255]
-		text = qs(0x8d657387)
+		text = qs("EASY")
 		just = [left top]
 		font_spacing = 0
 		event_handlers = [
@@ -120,8 +120,8 @@ script create_select_difficulty_menu
 	fit_text_in_rectangle id = <id> dims = <diff_dims>
 	completion_pos = (490.0, 290.0)
 	if (($game_mode = p1_career) || ($game_mode = p2_career))
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = sd_container
 			font = <main_menu_font>
 			scale = <completion_scale>
@@ -132,13 +132,13 @@ script create_select_difficulty_menu
 			z_priority = 100
 		}
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = current_menu
 		id = medium_title_text
 		font = <menu_font>
 		rgba = [60 35 20 255]
-		text = qs(0x6ef11a01)
+		text = qs("MEDIUM")
 		just = [left top]
 		font_spacing = 0
 		event_handlers = [
@@ -149,8 +149,8 @@ script create_select_difficulty_menu
 	fit_text_in_rectangle id = <id> dims = <diff_dims>
 	<completion_pos> = (490.0, 360.0)
 	if (($game_mode = p1_career) || ($game_mode = p2_career))
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = sd_container
 			font = <main_menu_font>
 			scale = <completion_scale>
@@ -161,13 +161,13 @@ script create_select_difficulty_menu
 			z_priority = 100
 		}
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = current_menu
 		id = hard_title_text
 		font = <menu_font>
 		rgba = [60 35 20 255]
-		text = qs(0x51b06d2f)
+		text = qs("HARD")
 		just = [left top]
 		font_spacing = 0
 		event_handlers = [
@@ -178,8 +178,8 @@ script create_select_difficulty_menu
 	fit_text_in_rectangle id = <id> dims = <diff_dims>
 	<completion_pos> = (490.0, 430.0)
 	if (($game_mode = p1_career) || ($game_mode = p2_career))
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = sd_container
 			font = <main_menu_font>
 			scale = <completion_scale>
@@ -190,13 +190,13 @@ script create_select_difficulty_menu
 			z_priority = 100
 		}
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = current_menu
 		id = expert_title_text
 		font = <menu_font>
 		rgba = [60 35 20 255]
-		text = qs(0x334908ac)
+		text = qs("EXPERT")
 		just = [left top]
 		font_spacing = 0
 		event_handlers = [
@@ -207,8 +207,8 @@ script create_select_difficulty_menu
 	fit_text_in_rectangle id = <id> dims = <diff_dims>
 	<completion_pos> = (490.0, 500.0)
 	if (($game_mode = p1_career) || ($game_mode = p2_career))
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = sd_container
 			font = <main_menu_font>
 			scale = <completion_scale>
@@ -223,13 +223,13 @@ script create_select_difficulty_menu
 	change \{sd_highlight_time = 0.0}
 	change \{sd_highlight_menuitem_morph = 0}
 	if ($menu_select_difficulty_first_time = 1)
-		if isxenon
-			if getgameprofilesetting \{gsid = 1}
+		if isXenon
+			if GetGameProfileSetting \{gsid = 1}
 				begin
 				if (<game_setting> < 3)
 					break
 				endif
-				launchevent \{type = pad_down
+				LaunchEvent \{type = pad_down
 					target = current_menu}
 				<game_setting> = (<game_setting> - 1)
 				repeat
@@ -248,7 +248,7 @@ script create_select_difficulty_menu
 		endswitch
 		if (<launch_num>)
 			begin
-			launchevent \{type = pad_down
+			LaunchEvent \{type = pad_down
 				target = current_menu}
 			repeat <launch_num>
 		endif
@@ -256,24 +256,24 @@ script create_select_difficulty_menu
 	change \{sd_highlight_menuitem_morph = 1}
 	change \{disable_menu_sounds = 0}
 	change \{sd_highlight_time = 0.05}
-	if english
+	if English
 		select_diff_tex = difficulty_title_en
-	elseif french
+	elseif French
 		select_diff_tex = difficulty_title_fr
-	elseif spanish
+	elseif Spanish
 		select_diff_tex = difficulty_title_sp
-	elseif german
+	elseif German
 		select_diff_tex = difficulty_title_de
-	elseif italian
+	elseif Italian
 		select_diff_tex = difficulty_title_it
 	endif
-	add_user_control_helper \{text = qs(0xc18d5e76)
+	add_user_control_helper \{text = qs("SELECT")
 		button = green
 		z = 100}
-	add_user_control_helper \{text = qs(0xaf4d5dd2)
+	add_user_control_helper \{text = qs("BACK")
 		button = red
 		z = 100}
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = current_menu}
 endscript
 
@@ -291,13 +291,13 @@ endscript
 
 script selected_difficulty 
 	if ($transitions_locked = 0)
-		launchevent \{type = unfocus
+		LaunchEvent \{type = unfocus
 			target = current_menu}
 	endif
 	change structurename = player1_status difficulty = <diff>
 	change structurename = player2_status difficulty = <diff>
 	if ($player1_status.controller < 4)
-		setarrayelement arrayname = default_difficulty globalarray index = ($player1_status.controller) newvalue = <diff>
+		SetArrayElement ArrayName = default_difficulty GlobalArray index = ($player1_status.controller) newvalue = <diff>
 	endif
 	if ($top_rockers_enabled)
 		generic_event_replace \{state = uistate_top_rockers
@@ -311,7 +311,7 @@ script selected_difficulty
 	else
 		switch ($game_mode)
 			case p1_quickplay
-			soundevent \{event = song_affirmation}
+			SoundEvent \{event = Song_Affirmation}
 			generic_event_replace no_sound state = uistate_play_song no_sound data = {can_change_level = <can_change_level>}
 			case p1_career
 			career_select_difficulty_flow_state_func
@@ -325,17 +325,17 @@ script selected_difficulty
 			generic_event_choose \{state = uistate_play_song}
 		endswitch
 	endif
-	if screenelementexists \{id = difficultyinterface}
-		difficultyinterface :se_setprops \{alpha = 0.0}
+	if ScreenElementExists \{id = DifficultyInterface}
+		DifficultyInterface :SE_SetProps \{alpha = 0.0}
 	endif
 endscript
 
-script setdrumplayers 
+script SetDrumPlayers 
 	player = 1
 	begin
-	getplayerinfo <player> controller
-	if isdrumcontroller controller = <controller>
-		setplayerinfo <player> part = drum
+	GetPlayerInfo <player> controller
+	if IsDrumController controller = <controller>
+		SetPlayerInfo <player> part = drum
 	endif
 	player = (<player> + 1)
 	repeat $current_num_players
@@ -399,7 +399,7 @@ g_sd_p2_ready = 0
 
 script create_mp_select_difficulty_menu 
 	spawnscriptnow \{menu_music_on}
-	printf \{qs(0xaf73f64e)}
+	printf \{qs("\L--- create_mp_select_difficulty_menu")}
 	if ($game_mode = p2_career)
 		change \{rich_presence_context = presence_menus}
 	endif
@@ -458,11 +458,11 @@ script create_mp_select_difficulty_menu
 		exclusive_device = <exclusive_dev>
 		no_focus = <no_focus_value>
 	}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = sd_container
 		pos = (0.0, 0.0)}
-	displaysprite \{parent = sd_container
+	displaySprite \{parent = sd_container
 		tex = 2p_difficulty_poster
 		pos = (640.0, 0.0)
 		just = [
@@ -486,20 +486,20 @@ script create_mp_select_difficulty_menu
 				top
 			]}
 	else
-		displaytext parent = sd_container text = qs(0x4a26bcf3) font = <menu_font> pos = (260.0, 160.0) scale = 1 rgba = [205 105 50 255] noshadow
-		getscreenelementdims id = <id>
+		displayText parent = sd_container text = qs("player") font = <menu_font> pos = (260.0, 160.0) scale = 1 rgba = [205 105 50 255] noshadow
+		GetScreenElementDims id = <id>
 		if (<width> > 150)
-			setscreenelementprops id = <id> scale = 1
-			fit_text_in_rectangle id = <id> dims = ((150.0, 0.0) + ((0.0, 1.0) * <height>)) pos = (260.0, 160.0)
+			SetScreenElementProps id = <id> scale = 1
+			fit_text_in_rectangle id = <id> dims = ((150.0, 0.0) + ((0.0, 1.0) * <Height>)) pos = (260.0, 160.0)
 		endif
-		displaytext parent = sd_container text = qs(0x4a26bcf3) font = <menu_font> pos = (860.0, 160.0) scale = 1 rgba = [205 105 50 255] noshadow
-		getscreenelementdims id = <id>
+		displayText parent = sd_container text = qs("player") font = <menu_font> pos = (860.0, 160.0) scale = 1 rgba = [205 105 50 255] noshadow
+		GetScreenElementDims id = <id>
 		if (<width> > 150)
-			setscreenelementprops id = <id> scale = 1
-			fit_text_in_rectangle id = <id> dims = ((150.0, 0.0) + ((0.0, 1.0) * <height>)) pos = (860.0, 160.0)
+			SetScreenElementProps id = <id> scale = 1
+			fit_text_in_rectangle id = <id> dims = ((150.0, 0.0) + ((0.0, 1.0) * <Height>)) pos = (860.0, 160.0)
 		endif
-		displaytext \{parent = sd_container
-			text = qs(0x22ee76e7)
+		displayText \{parent = sd_container
+			text = qs("\L1")
 			font = fontgrid_text_a11_large
 			pos = (320.0, 180.0)
 			scale = 1
@@ -510,8 +510,8 @@ script create_mp_select_difficulty_menu
 				255
 			]
 			noshadow}
-		displaytext \{parent = sd_container
-			text = qs(0x09c32524)
+		displayText \{parent = sd_container
+			text = qs("\L2")
 			font = fontgrid_text_a11_large
 			pos = (920.0, 180.0)
 			scale = 1
@@ -523,15 +523,15 @@ script create_mp_select_difficulty_menu
 			]
 			noshadow}
 	endif
-	displaysprite id = sd_white_p1 parent = sd_container tex = white pos = ($g_sd_hilite_props [<p1_diff_index>].pos) dims = (228.0, 48.0) rgba = [225 120 60 255]
-	displaysprite id = sd_white_p2 parent = sd_container tex = white pos = ($g_sd_hilite_props [<p2_diff_index>].pos) dims = (228.0, 48.0) rgba = [225 120 60 255]
-	displaysprite \{parent = sd_container
+	displaySprite id = sd_white_p1 parent = sd_container tex = white pos = ($g_sd_hilite_props [<p1_diff_index>].pos) dims = (228.0, 48.0) rgba = [225 120 60 255]
+	displaySprite id = sd_white_p2 parent = sd_container tex = white pos = ($g_sd_hilite_props [<p2_diff_index>].pos) dims = (228.0, 48.0) rgba = [225 120 60 255]
+	displaySprite \{parent = sd_container
 		tex = tape_01
 		pos = (1150.0, 0.0)
 		dims = (212.0, 128.0)
 		z = 50
 		rot_angle = 90}
-	displaysprite \{parent = sd_container
+	displaySprite \{parent = sd_container
 		tex = tape_01
 		pos = (1155.0, 3.0)
 		dims = (212.0, 128.0)
@@ -543,13 +543,13 @@ script create_mp_select_difficulty_menu
 		]
 		z = 49
 		rot_angle = 90}
-	displaysprite \{parent = sd_container
+	displaySprite \{parent = sd_container
 		tex = tape_02
 		pos = (230.0, 550.0)
 		z = 50
 		rot_angle = 90
 		dims = (212.0, 128.0)}
-	displaysprite \{parent = sd_container
+	displaySprite \{parent = sd_container
 		tex = tape_02
 		pos = (235.0, 553.0)
 		rgba = [
@@ -567,7 +567,7 @@ script create_mp_select_difficulty_menu
 		endif
 		initial_pos = (635.0, 592.0)
 		rot = 0
-		displaytext {
+		displayText {
 			id = sd_songs_completed_p1
 			parent = sd_container
 			pos = <initial_pos>
@@ -580,7 +580,7 @@ script create_mp_select_difficulty_menu
 			z = 15
 		}
 		if ($game_mode = p2_career)
-			displaysprite {
+			displaySprite {
 				parent = sd_container
 				id = diff_select_completed_bg
 				tex = helper_pill_body
@@ -589,11 +589,11 @@ script create_mp_select_difficulty_menu
 				rgba = [225 120 60 255]
 				z = 10
 			}
-			sd_songs_completed_p1 :settags diff_completion_text = <diff_completion_text>
+			sd_songs_completed_p1 :SetTags diff_completion_text = <diff_completion_text>
 			<width> = 500
 			completed_dims = (<width> * (1.0, 0.0) + (20.0, 32.0))
-			diff_select_completed_bg :se_setprops dims = <completed_dims>
-			displaysprite {
+			diff_select_completed_bg :SE_SetProps dims = <completed_dims>
+			displaySprite {
 				parent = sd_container
 				tex = helper_pill_end
 				pos = ((625.0, 589.0) - <width> * (0.5, 0.0))
@@ -602,7 +602,7 @@ script create_mp_select_difficulty_menu
 				flip_v
 				z = 10
 			}
-			displaysprite {
+			displaySprite {
 				parent = sd_container
 				tex = helper_pill_end
 				pos = ((645.0, 589.5) + <width> * (0.5, 0.0))
@@ -611,7 +611,7 @@ script create_mp_select_difficulty_menu
 				z = 10
 			}
 		endif
-		displaytext \{parent = sd_container
+		displayText \{parent = sd_container
 			id = sd_combined_diff_text
 			pos = (640.0, 500.0)
 			just = [
@@ -636,12 +636,12 @@ script create_mp_select_difficulty_menu
 		<choose_script> = temp_selected_difficulty
 		<highlight_script> = sd_highlight_menuitem
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = current_menu
 		font = <menu_font>
 		rgba = [60 35 20 255]
-		text = qs(0x8d657387)
+		text = qs("EASY")
 		just = [left top]
 		event_handlers = [
 			{focus <highlight_script> params = {player = 1 index = 0 difficulty_index = 0}}
@@ -650,12 +650,12 @@ script create_mp_select_difficulty_menu
 		exclusive_device = $player1_device
 	}
 	fit_text_in_rectangle id = <id> dims = (180.0, 50.0)
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = current_menu
 		font = <menu_font>
 		rgba = [60 35 20 255]
-		text = qs(0x6ef11a01)
+		text = qs("MEDIUM")
 		just = [left top]
 		event_handlers = [
 			{focus <highlight_script> params = {player = 1 index = 1 difficulty_index = 1}}
@@ -664,12 +664,12 @@ script create_mp_select_difficulty_menu
 		exclusive_device = $player1_device
 	}
 	fit_text_in_rectangle id = <id> dims = (180.0, 50.0)
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = current_menu
 		font = <menu_font>
 		rgba = [60 35 20 255]
-		text = qs(0x51b06d2f)
+		text = qs("HARD")
 		just = [left top]
 		event_handlers = [
 			{focus <highlight_script> params = {player = 1 index = 2 difficulty_index = 2}}
@@ -678,12 +678,12 @@ script create_mp_select_difficulty_menu
 		exclusive_device = $player1_device
 	}
 	fit_text_in_rectangle id = <id> dims = (180.0, 50.0)
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = current_menu
 		font = <menu_font>
 		rgba = [60 35 20 255]
-		text = qs(0x334908ac)
+		text = qs("EXPERT")
 		just = [left top]
 		event_handlers = [
 			{focus <highlight_script> params = {player = 1 index = 3 difficulty_index = 3}}
@@ -692,12 +692,12 @@ script create_mp_select_difficulty_menu
 		exclusive_device = $player1_device
 	}
 	fit_text_in_rectangle id = <id> dims = (180.0, 50.0)
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = current_menu2
 		font = <menu_font>
 		rgba = [60 35 20 255]
-		text = qs(0x8d657387)
+		text = qs("EASY")
 		just = [left top]
 		event_handlers = [
 			{focus sd_highlight_menuitem params = {player = 2 index = 4 difficulty_index = 0}}
@@ -706,12 +706,12 @@ script create_mp_select_difficulty_menu
 		exclusive_device = $player2_device
 	}
 	fit_text_in_rectangle id = <id> dims = (180.0, 50.0)
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = current_menu2
 		font = <menu_font>
 		rgba = [60 35 20 255]
-		text = qs(0x6ef11a01)
+		text = qs("MEDIUM")
 		just = [left top]
 		event_handlers = [
 			{focus sd_highlight_menuitem params = {player = 2 index = 5 difficulty_index = 1}}
@@ -720,12 +720,12 @@ script create_mp_select_difficulty_menu
 		exclusive_device = $player2_device
 	}
 	fit_text_in_rectangle id = <id> dims = (180.0, 50.0)
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = current_menu2
 		font = <menu_font>
 		rgba = [60 35 20 255]
-		text = qs(0x51b06d2f)
+		text = qs("HARD")
 		just = [left top]
 		event_handlers = [
 			{focus sd_highlight_menuitem params = {player = 2 index = 6 difficulty_index = 2}}
@@ -734,13 +734,13 @@ script create_mp_select_difficulty_menu
 		exclusive_device = $player2_device
 	}
 	fit_text_in_rectangle id = <id> dims = (180.0, 50.0)
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = current_menu2
 		id = elxpert_title_text
 		font = <menu_font>
 		rgba = [60 35 20 255]
-		text = qs(0x334908ac)
+		text = qs("EXPERT")
 		just = [left top]
 		event_handlers = [
 			{focus sd_highlight_menuitem params = {player = 2 index = 7 difficulty_index = 3}}
@@ -749,7 +749,7 @@ script create_mp_select_difficulty_menu
 		exclusive_device = $player2_device
 	}
 	fit_text_in_rectangle id = <id> dims = (180.0, 50.0)
-	displaysprite \{parent = sd_container
+	displaySprite \{parent = sd_container
 		tex = light_overlay_3spots
 		pos = (0.0, 0.0)
 		dims = (1280.0, 720.0)
@@ -768,7 +768,7 @@ script create_mp_select_difficulty_menu
 			pos2 = (880.0, 180.0)}
 	endif
 	if ($game_mode = p2_career)
-		displaysprite \{parent = sd_container
+		displaySprite \{parent = sd_container
 			id = diff_select_helper
 			tex = white
 			pos = (640.0, 620.0)
@@ -783,13 +783,13 @@ script create_mp_select_difficulty_menu
 				255
 			]
 			z = 10}
-		displaytext \{parent = sd_container
+		displayText \{parent = sd_container
 			pos = (640.0, 622.0)
 			just = [
 				center
 				center
 			]
-			text = qs(0xde58cc84)
+			text = qs("Don't wimp out! Lowest difficulty determines cash and unlocks!")
 			rgba = [
 				225
 				120
@@ -800,14 +800,14 @@ script create_mp_select_difficulty_menu
 			z = 11
 			font = fontgrid_text_a6
 			noshadow}
-		getscreenelementdims id = <id>
+		GetScreenElementDims id = <id>
 		if (<width> > 400)
-			setscreenelementprops id = <id> scale = (0.5, 0.6)
-			fit_text_in_rectangle id = <id> dims = ((400.0, 0.0) + <height> * (0.0, 0.6))
+			SetScreenElementProps id = <id> scale = (0.5, 0.6)
+			fit_text_in_rectangle id = <id> dims = ((400.0, 0.0) + <Height> * (0.0, 0.6))
 		endif
-		getscreenelementdims id = <id>
+		GetScreenElementDims id = <id>
 		bg_dims = (<width> * (1.0, 0.0) + (0.0, 32.0))
-		diff_select_helper :se_setprops dims = <bg_dims>
+		diff_select_helper :SE_SetProps dims = <bg_dims>
 	endif
 	change \{disable_menu_sounds = 1}
 	change \{sd_highlight_menuitem_morph = 0}
@@ -823,7 +823,7 @@ script create_mp_select_difficulty_menu
 		endswitch
 		if (<launch_num>)
 			begin
-			launchevent \{type = pad_down
+			LaunchEvent \{type = pad_down
 				target = current_menu}
 			repeat <launch_num>
 		endif
@@ -838,25 +838,25 @@ script create_mp_select_difficulty_menu
 		endswitch
 		if (<launch_num>)
 			begin
-			launchevent \{type = pad_down
+			LaunchEvent \{type = pad_down
 				target = current_menu2}
 			repeat <launch_num>
 		endif
 	endif
 	if NOT ($game_mode = p2_career || $game_mode = p2_quickplay)
-		if english
+		if English
 			select_diff_tex = difficulty_title_en
-		elseif french
+		elseif French
 			select_diff_tex = difficulty_title_fr
-		elseif spanish
+		elseif Spanish
 			select_diff_tex = difficulty_title_sp
-		elseif german
+		elseif German
 			select_diff_tex = difficulty_title_de
-		elseif italian
+		elseif Italian
 			select_diff_tex = difficulty_title_it
 		endif
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			parent = sd_container
 			texture = <select_diff_tex>
 			pos = (640.0, 491.0)
@@ -868,14 +868,14 @@ script create_mp_select_difficulty_menu
 	endif
 	change \{sd_highlight_menuitem_morph = 1}
 	change \{disable_menu_sounds = 0}
-	add_user_control_helper \{text = qs(0xc18d5e76)
+	add_user_control_helper \{text = qs("SELECT")
 		button = green
 		z = 100}
-	add_user_control_helper \{text = qs(0xaf4d5dd2)
+	add_user_control_helper \{text = qs("BACK")
 		button = red
 		z = 100}
-	if screenelementexists \{id = current_menu2}
-		launchevent \{type = focus
+	if ScreenElementExists \{id = current_menu2}
+		LaunchEvent \{type = focus
 			target = current_menu2}
 	endif
 endscript
@@ -891,46 +891,46 @@ script sd_highlight_menuitem \{player = 1
 		change menu_select_difficulty_p2_difficulty_index = <difficulty_index>
 	endif
 	min = ($menu_select_difficulty_p1_difficulty_index)
-	mathmin a = ($menu_select_difficulty_p1_difficulty_index) b = ($menu_select_difficulty_p2_difficulty_index)
-	casttointeger \{min}
+	MathMin a = ($menu_select_difficulty_p1_difficulty_index) b = ($menu_select_difficulty_p2_difficulty_index)
+	CastToInteger \{min}
 	difficulty_index = <min>
 	if (<player> = 1)
 		if (g_sd_p1_ready = 1)
 			return
 		endif
-		if screenelementexists \{id = sd_white_p1}
-			runscriptonscreenelement id = sd_white_p1 menu_sd_move_highlight params = {player = <player> time = <time> pos = ($g_sd_hilite_props [<index>].pos)}
+		if ScreenElementExists \{id = sd_white_p1}
+			RunScriptOnScreenElement id = sd_white_p1 menu_sd_move_highlight params = {player = <player> time = <time> pos = ($g_sd_hilite_props [<index>].pos)}
 		endif
 	else
 		if (g_sd_p2_ready = 1)
 			return
 		endif
-		if screenelementexists \{id = sd_white_p2}
-			runscriptonscreenelement id = sd_white_p2 menu_sd_move_highlight params = {player = <player> time = <time> pos = ($g_sd_hilite_props [<index>].pos)}
+		if ScreenElementExists \{id = sd_white_p2}
+			RunScriptOnScreenElement id = sd_white_p2 menu_sd_move_highlight params = {player = <player> time = <time> pos = ($g_sd_hilite_props [<index>].pos)}
 		endif
 	endif
 	if ($game_mode = p2_career || $game_mode = p2_quickplay)
-		if screenelementexists \{id = sd_songs_completed_p1}
-			sd_songs_completed_p1 :gettags
+		if ScreenElementExists \{id = sd_songs_completed_p1}
+			sd_songs_completed_p1 :GetTags
 		endif
-		if screenelementexists \{id = sd_combined_diff_text}
+		if ScreenElementExists \{id = sd_combined_diff_text}
 			my_diff = ($difficulty_list [<difficulty_index>])
 			get_difficulty_text difficulty = <my_diff>
-			if english
-				<difficulty_text> = (<difficulty_text> + qs(0x682c64b6))
+			if English
+				<difficulty_text> = (<difficulty_text> + qs("\L!"))
 			endif
-			setscreenelementprops id = sd_combined_diff_text text = <difficulty_text> scale = 1
+			SetScreenElementProps id = sd_combined_diff_text text = <difficulty_text> scale = 1
 			fit_text_in_rectangle \{id = sd_combined_diff_text
 				dims = (165.0, 50.0)
 				keep_ar = 1}
-			sd_songs_completed_p1 :gettags
-			if gotparam \{diff_completion_text}
-				setscreenelementprops id = sd_songs_completed_p1 text = (<diff_completion_text> [<difficulty_index>])
-				getscreenelementdims \{id = sd_songs_completed_p1}
+			sd_songs_completed_p1 :GetTags
+			if GotParam \{diff_completion_text}
+				SetScreenElementProps id = sd_songs_completed_p1 text = (<diff_completion_text> [<difficulty_index>])
+				GetScreenElementDims \{id = sd_songs_completed_p1}
 				if (<width> > 350)
-					setscreenelementprops \{id = sd_songs_completed_p1
+					SetScreenElementProps \{id = sd_songs_completed_p1
 						scale = 0.75}
-					fit_text_in_rectangle id = sd_songs_completed_p1 dims = ((350.0, 0.0) + <height> * (0.0, 0.75))
+					fit_text_in_rectangle id = sd_songs_completed_p1 dims = ((350.0, 0.0) + <Height> * (0.0, 0.75))
 				endif
 			endif
 		endif
@@ -957,38 +957,38 @@ script temp_selected_difficulty \{player = 1}
 		if ($g_sd_p1_ready = 0)
 			change structurename = player1_status difficulty = <diff>
 			change \{g_sd_p1_ready = 1}
-			formattext checksumname = ready_container 'ready_container_p%d' d = <player>
-			if screenelementexists id = <ready_container>
-				runscriptonscreenelement id = <ready_container> drop_in_ready_sign params = {player = <player>}
+			FormatText checksumname = ready_container 'ready_container_p%d' d = <player>
+			if ScreenElementExists id = <ready_container>
+				RunScriptOnScreenElement id = <ready_container> drop_in_ready_sign params = {player = <player>}
 			endif
-			setscreenelementprops \{id = current_menu
+			SetScreenElementProps \{id = current_menu
 				disable_pad_handling}
 		endif
 	else
 		if ($g_sd_p2_ready = 0)
 			change structurename = player2_status difficulty = <diff>
 			change \{g_sd_p2_ready = 1}
-			formattext checksumname = ready_container 'ready_container_p%d' d = <player>
-			if screenelementexists id = <ready_container>
-				runscriptonscreenelement id = <ready_container> drop_in_ready_sign params = {player = <player>}
+			FormatText checksumname = ready_container 'ready_container_p%d' d = <player>
+			if ScreenElementExists id = <ready_container>
+				RunScriptOnScreenElement id = <ready_container> drop_in_ready_sign params = {player = <player>}
 			endif
-			setscreenelementprops \{id = current_menu2
+			SetScreenElementProps \{id = current_menu2
 				disable_pad_handling}
 		endif
 	endif
 	if (($g_sd_p1_ready) && ($g_sd_p2_ready))
 		change \{menu_flow_locked = 1}
-		wait \{0.5
+		Wait \{0.5
 			seconds}
 		change \{menu_flow_locked = 0}
 		diff_index_p1 = ($difficulty_list_props.($player1_status.difficulty).index)
 		diff_index_p2 = ($difficulty_list_props.($player2_status.difficulty).index)
 		min = <diff_index_p1>
-		mathmin a = <diff_index_p1> b = <diff_index_p2>
-		casttointeger \{min}
+		MathMin a = <diff_index_p1> b = <diff_index_p2>
+		CastToInteger \{min}
 		difficulty_index = <min>
 		change current_difficulty_coop = ($difficulty_list [<difficulty_index>])
-		setdrumplayers
+		SetDrumPlayers
 		if ($coop_dlc_active = 1)
 			generic_event_choose \{state = uistate_select_part
 				data = {
@@ -1022,11 +1022,11 @@ script menu_sd_back_up \{player = 1}
 	if (<player> = 1)
 		if ($g_sd_p1_ready = 1)
 			change \{g_sd_p1_ready = 0}
-			formattext checksumname = ready_container 'ready_container_p%d' d = <player>
-			if screenelementexists id = <ready_container>
-				runscriptonscreenelement id = <ready_container> drop_out_ready_sign params = {player = <player>}
+			FormatText checksumname = ready_container 'ready_container_p%d' d = <player>
+			if ScreenElementExists id = <ready_container>
+				RunScriptOnScreenElement id = <ready_container> drop_out_ready_sign params = {player = <player>}
 			endif
-			setscreenelementprops \{id = current_menu
+			SetScreenElementProps \{id = current_menu
 				enable_pad_handling}
 		else
 			generic_event_back
@@ -1034,11 +1034,11 @@ script menu_sd_back_up \{player = 1}
 	else
 		if ($g_sd_p2_ready = 1)
 			change \{g_sd_p2_ready = 0}
-			formattext checksumname = ready_container 'ready_container_p%d' d = <player>
-			if screenelementexists id = <ready_container>
-				runscriptonscreenelement id = <ready_container> drop_out_ready_sign params = {player = <player>}
+			FormatText checksumname = ready_container 'ready_container_p%d' d = <player>
+			if ScreenElementExists id = <ready_container>
+				RunScriptOnScreenElement id = <ready_container> drop_out_ready_sign params = {player = <player>}
 			endif
-			setscreenelementprops \{id = current_menu2
+			SetScreenElementProps \{id = current_menu2
 				enable_pad_handling}
 		else
 			generic_event_back
@@ -1047,10 +1047,10 @@ script menu_sd_back_up \{player = 1}
 endscript
 
 script menu_sd_move_highlight 
-	formattext checksumname = hilight_container 'sd_white_p%d' d = <player>
+	FormatText checksumname = hilight_container 'sd_white_p%d' d = <player>
 	if ($sd_highlight_menuitem_morph = 1)
-		legacydoscreenelementmorph id = <hilight_container> pos = <pos> time = <time>
+		LegacyDoScreenElementMorph id = <hilight_container> pos = <pos> time = <time>
 	else
-		legacydoscreenelementmorph id = <hilight_container> pos = <pos>
+		LegacyDoScreenElementMorph id = <hilight_container> pos = <pos>
 	endif
 endscript

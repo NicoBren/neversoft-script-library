@@ -1,6 +1,6 @@
 calibrate_lag_warning_menu_font = fontgrid_title_a1
 
-script create_calibrate_lag_warning_menu \{Body = qs(0x4370f34e)
+script create_calibrate_lag_warning_menu \{Body = qs("TO CALIBRATE LAG, THIS SONG MUST BE RESTARTED. YOU WILL LOSE ALL UNSAVED PROGRESS IF YOU RESTART. ARE YOU SURE YOU WANT TO CONTINUE?")
 		cancel_script = generic_event_back
 		yes_func_params = {
 		}}
@@ -12,7 +12,7 @@ script create_calibrate_lag_warning_menu \{Body = qs(0x4370f34e)
 		textblock = {
 			text = <Body>
 			dims = (800.0, 400.0)
-			Scale = 0.55
+			scale = 0.55
 		}
 		player_device = <controller>
 		no_background
@@ -20,12 +20,12 @@ script create_calibrate_lag_warning_menu \{Body = qs(0x4370f34e)
 		options = [
 			{
 				func = <cancel_script>
-				text = qs(0xf7723015)
+				text = qs("CANCEL")
 			}
 			{
 				func = menu_calibrate_lag_warning_select_yes
 				func_params = <yes_func_params>
-				text = qs(0x0e56c83c)
+				text = qs("CALIBRATE")
 			}
 		]
 	}
@@ -38,8 +38,8 @@ endscript
 
 script menu_calibrate_lag_warning_select_yes 
 	kill_intro_celeb_ui
-	resetscoreupdateready
+	ResetScoreUpdateReady
 	GH3_SFX_fail_song_stop_sounds
 	StopSoundsByBuss \{Encore_Events}
-	generic_event_choose event = menu_replace state = uistate_options_calibrate_lag data = {from_in_game = 1 <...>}
+	generic_event_choose event = menu_replace state = UIstate_options_calibrate_lag data = {from_in_game = 1 <...>}
 endscript

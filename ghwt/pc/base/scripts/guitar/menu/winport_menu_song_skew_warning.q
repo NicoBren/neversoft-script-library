@@ -5,7 +5,7 @@ script winport_create_calibrate_lag_warning_menu
 	player_device = ($last_start_pressed_device)
 	create_popup_warning_menu {
 		textblock = {
-			text = qs(0x0a3798b8)
+			text = qs("To calibrate lag, this song must be restarted. You will lose all unsaved progress if you restart. Are you sure you want to continue?")
 			dims = (800.0, 400.0)
 			scale = 0.55
 		}
@@ -16,11 +16,11 @@ script winport_create_calibrate_lag_warning_menu
 		options = [
 			{
 				func = menu_flow_go_back
-				text = qs(0xf7723015)
+				text = qs("CANCEL")
 			}
 			{
 				func = winport_menu_calibrate_lag_warning_select_yes
-				text = qs(0x0e56c83c)
+				text = qs("CALIBRATE")
 			}
 		]
 	}
@@ -31,6 +31,6 @@ script winport_destroy_calibrate_lag_warning_menu
 endscript
 
 script winport_menu_calibrate_lag_warning_select_yes 
-	gh3_sfx_fail_song_stop_sounds
+	GH3_SFX_fail_song_stop_sounds
 	ui_flow_manager_respond_to_action \{action = continue}
 endscript

@@ -43,7 +43,7 @@ camera_lock_button_pressed_time = 300
 skater_walking_camera_target_zoom = 1.1
 skater_walking_camera_above_val = 1.651
 skater_cam_lean_out_transition_time = 1.0
-swc_run_cam_tracked_bone = control_root
+swc_run_cam_tracked_bone = Control_Root
 swc_default_focus_height_offset = 1.0
 swc_in_air_cam_above_target = 0.5
 swc_max_cam_height_above_target = 0.5
@@ -96,7 +96,7 @@ Skater_Camera_Undefined = {
 	grind_zoom = 0.0
 	origin_offset = 0.0
 	wallride_offset_angle = 0.5
-	Name = qs(0x0a5892d2)
+	name = qs("\Lundefined")
 }
 Skater_Camera_Standard_Medium = {
 	horiz_fov = 81.0
@@ -121,7 +121,7 @@ Skater_Camera_Standard_Medium = {
 	focus_mode_lerp = 1.0
 	origin_offset = 0.2
 	wallride_offset_angle = 0.5
-	Name = qs(0x7e4cc0db)
+	name = qs("\Lstandard")
 }
 Skater_Camera_Standard_Far = {
 	horiz_fov = 72.0
@@ -146,7 +146,7 @@ Skater_Camera_Standard_Far = {
 	focus_mode_lerp = 1.0
 	origin_offset = 0.06
 	wallride_offset_angle = 0.5
-	Name = qs(0x815141b8)
+	name = qs("\Lfar")
 }
 Skater_Camera_Standard_Near = {
 	horiz_fov = 88.0
@@ -171,7 +171,7 @@ Skater_Camera_Standard_Near = {
 	focus_mode_lerp = 1.0
 	origin_offset = 0.06
 	wallride_offset_angle = 0.5
-	Name = qs(0x3a166e41)
+	name = qs("\Lnear")
 }
 Skater_Camera_Standard_Medium_LTG = {
 	horiz_fov = 72.0
@@ -196,7 +196,7 @@ Skater_Camera_Standard_Medium_LTG = {
 	focus_mode_lerp = 1.0
 	origin_offset = 0.06
 	wallride_offset_angle = 0.5
-	Name = qs(0xe1b306a4)
+	name = qs("\Lstandard ltg")
 }
 Skater_Camera_2P_Vert_Medium = {
 	horiz_fov = 88.0
@@ -221,7 +221,7 @@ Skater_Camera_2P_Vert_Medium = {
 	focus_mode_lerp = 1.0
 	origin_offset = 0.06
 	wallride_offset_angle = 0.5
-	Name = qs(0x7e4cc0db)
+	name = qs("\Lstandard")
 }
 Skater_Camera_2P_Vert_Far = {
 	horiz_fov = 72.0
@@ -246,7 +246,7 @@ Skater_Camera_2P_Vert_Far = {
 	focus_mode_lerp = 1.0
 	origin_offset = 0.06
 	wallride_offset_angle = 0.5
-	Name = qs(0x815141b8)
+	name = qs("\Lfar")
 }
 Skater_Camera_2P_Vert_Near = {
 	horiz_fov = 72.0
@@ -271,7 +271,7 @@ Skater_Camera_2P_Vert_Near = {
 	focus_mode_lerp = 1.0
 	origin_offset = 0.06
 	wallride_offset_angle = 0.5
-	Name = qs(0x3a166e41)
+	name = qs("\Lnear")
 }
 Skater_Camera_2P_Vert_Medium_LTG = {
 	horiz_fov = 72.0
@@ -296,7 +296,7 @@ Skater_Camera_2P_Vert_Medium_LTG = {
 	focus_mode_lerp = 1.0
 	origin_offset = 0.06
 	wallride_offset_angle = 0.5
-	Name = qs(0xe1b306a4)
+	name = qs("\Lstandard ltg")
 }
 Skater_Camera_2P_Horiz_Medium = {
 	horiz_fov = 88.0
@@ -321,7 +321,7 @@ Skater_Camera_2P_Horiz_Medium = {
 	focus_mode_lerp = 1.0
 	origin_offset = 0.06
 	wallride_offset_angle = 0.5
-	Name = qs(0x7e4cc0db)
+	name = qs("\Lstandard")
 }
 Skater_Camera_2P_Horiz_Far = {
 	horiz_fov = 72.0
@@ -346,7 +346,7 @@ Skater_Camera_2P_Horiz_Far = {
 	focus_mode_lerp = 1.0
 	origin_offset = 0.06
 	wallride_offset_angle = 0.5
-	Name = qs(0x815141b8)
+	name = qs("\Lfar")
 }
 Skater_Camera_2P_Horiz_Near = {
 	horiz_fov = 72.0
@@ -371,7 +371,7 @@ Skater_Camera_2P_Horiz_Near = {
 	focus_mode_lerp = 1.0
 	origin_offset = 0.06
 	wallride_offset_angle = 0.5
-	Name = qs(0x3a166e41)
+	name = qs("\Lnear")
 }
 Skater_Camera_2P_Horiz_Medium_LTG = {
 	horiz_fov = 72.0
@@ -396,7 +396,7 @@ Skater_Camera_2P_Horiz_Medium_LTG = {
 	focus_mode_lerp = 1.0
 	origin_offset = 0.06
 	wallride_offset_angle = 0.5
-	Name = qs(0xe1b306a4)
+	name = qs("\Lstandard ltg")
 }
 Skater_Camera_Array = [
 	Skater_Camera_Undefined
@@ -422,26 +422,26 @@ Skater_Camera_2P_Horiz_Array = [
 
 script screen_setup_standard 
 	SetScreen \{Aspect = 1.3333334
-		angle = camera_fov
+		Angle = camera_fov
 		letterbox = 0}
-	Change \{current_screen_mode = standard_screen_mode}
-	printf \{qs(0x502b5a6e)}
+	change \{current_screen_mode = standard_screen_mode}
+	printf \{qs("\Lchange to standard")}
 endscript
 
 script screen_setup_widescreen 
 	SetScreen \{Aspect = 1.7777778
-		angle = $widescreen_camera_fov
+		Angle = $widescreen_camera_fov
 		letterbox = 0}
-	Change \{current_screen_mode = widescreen_screen_mode}
-	printf \{qs(0x41e25f69)}
+	change \{current_screen_mode = widescreen_screen_mode}
+	printf \{qs("\Lchange to widescreen")}
 endscript
 
 script screen_setup_letterbox 
 	SetScreen \{Aspect = 1.7777778
-		angle = $widescreen_camera_fov
+		Angle = $widescreen_camera_fov
 		letterbox = 1}
-	Change \{current_screen_mode = letterbox_screen_mode}
-	printf \{qs(0xcaaa8599)}
+	change \{current_screen_mode = letterbox_screen_mode}
+	printf \{qs("\Lchange to letterbox")}
 endscript
 
 script fake_letterboxing 
@@ -449,32 +449,32 @@ script fake_letterboxing
 		switch ($current_screen_mode)
 			case standard_screen_mode
 			fake_letterboxing_elements
-			Change \{last_screen_mode = standard_screen_mode}
+			change \{last_screen_mode = standard_screen_mode}
 			case widescreen_screen_mode
-			Change \{last_screen_mode = widescreen_screen_mode}
+			change \{last_screen_mode = widescreen_screen_mode}
 			case letterbox_screen_mode
-			Change \{last_screen_mode = letterbox_screen_mode}
+			change \{last_screen_mode = letterbox_screen_mode}
 			default
-			printf \{qs(0xe4cf3554)
+			printf \{qs("\Lcurrent screen mode = %d")
 				d = $current_screen_mode}
-			script_assert \{qs(0xbf9a965b)}
+			script_assert \{qs("\LUnrecognized screen mode")}
 		endswitch
 	else
 		switch ($last_screen_mode)
 			case standard_screen_mode
 			fake_letterboxing_elements \{remove}
 			case widescreen_screen_mode
-			printf \{qs(0xbeb288ee)
+			printf \{qs("\Llast screen mode = %d")
 				d = $last_screen_mode}
 			nullscript
 			case letterbox_screen_mode
-			printf \{qs(0xbeb288ee)
+			printf \{qs("\Llast screen mode = %d")
 				d = $last_screen_mode}
 			nullscript
 			default
-			printf \{qs(0xbeb288ee)
+			printf \{qs("\Llast screen mode = %d")
 				d = $last_screen_mode}
-			script_assert \{qs(0xbf9a965b)}
+			script_assert \{qs("\LUnrecognized screen mode")}
 		endswitch
 	endif
 endscript
@@ -484,16 +484,16 @@ script fake_letterboxing_elements
 		DestroyScreenElement \{id = letterbox_anchor}
 	endif
 	if GotParam \{remove}
-		SetScreen \{angle = 72.0
+		SetScreen \{Angle = 72.0
 			Aspect = 1.3333334}
 		return
 	else
-		SetScreen \{angle = 72.0
+		SetScreen \{Angle = 72.0
 			Aspect = 1.3333334}
 	endif
 	SetScreenElementLock \{id = root_window
-		OFF}
-	CreateScreenElement \{Type = ContainerElement
+		off}
+	CreateScreenElement \{type = ContainerElement
 		id = letterbox_anchor
 		parent = root_window
 		z_priority = 999
@@ -505,11 +505,11 @@ script fake_letterboxing_elements
 			left
 			top
 		]}
-	CreateScreenElement \{Type = SpriteElement
+	CreateScreenElement \{type = SpriteElement
 		parent = letterbox_anchor
 		texture = white
-		Scale = (200.0, 19.0)
-		Pos = (0.0, -20.0)
+		scale = (200.0, 19.0)
+		pos = (0.0, -20.0)
 		rgba = [
 			0
 			0
@@ -521,11 +521,11 @@ script fake_letterboxing_elements
 			top
 		]
 		z_priority = 15}
-	CreateScreenElement \{Type = SpriteElement
+	CreateScreenElement \{type = SpriteElement
 		parent = letterbox_anchor
 		texture = white
-		Scale = (200.0, 24.0)
-		Pos = (0.0, 392.0)
+		scale = (200.0, 24.0)
+		pos = (0.0, 392.0)
 		rgba = [
 			0
 			0

@@ -29,17 +29,17 @@ script training_create_and_hide_headers
 endscript
 
 script training_create_lesson_and_task_headers 
-	if screenelementexists \{id = training_container}
+	if ScreenElementExists \{id = training_container}
 		return
 	endif
 	z = 5
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		id = training_container
 		parent = root_window
 		pos = (0.0, 0.0)}
 	lesson_header_rect_pos = (350.0, 55.0)
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = training_container
 		id = lesson_header_rect
 		just = [left top]
@@ -49,8 +49,8 @@ script training_create_lesson_and_task_headers
 		z_priority = (<z> - 0.1)
 	}
 	scale = ($training_text_scale)
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = training_container
 		id = lesson_header_text
 		just = [left top]
@@ -61,11 +61,11 @@ script training_create_lesson_and_task_headers
 		rgba = ($training_header_color)
 		z_priority = <z>
 	}
-	getscreenelementdims \{id = lesson_header_rect}
+	GetScreenElementDims \{id = lesson_header_rect}
 	scale_mult = (1.0 / <scale>)
-	dims = ((1.0, 0.0) * <scale_mult> * <width> + (0.0, 1.0) * <scale_mult> * <height> + (-10.0, -10.0))
-	createscreenelement {
-		type = textblockelement
+	dims = ((1.0, 0.0) * <scale_mult> * <width> + (0.0, 1.0) * <scale_mult> * <Height> + (-10.0, -10.0))
+	CreateScreenElement {
+		type = TextBlockElement
 		font = ($training_font)
 		parent = training_container
 		id = lesson_header_body
@@ -78,10 +78,10 @@ script training_create_lesson_and_task_headers
 		rgba = ($training_text_color)
 		z_priority = <z>
 	}
-	getscreenelementdims \{id = lesson_header_body}
+	GetScreenElementDims \{id = lesson_header_body}
 	task_header_rect_pos = (1050.0, 55.0)
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = training_container
 		id = task_header_rect
 		just = [right top]
@@ -90,11 +90,11 @@ script training_create_lesson_and_task_headers
 		rgba = ($training_rect_color)
 		z_priority = (<z> - 0.1)
 	}
-	getscreenelementdims \{id = task_header_rect}
+	GetScreenElementDims \{id = task_header_rect}
 	scale_mult = (1.0 / <scale>)
-	dims = ((1.0, 0.0) * <scale_mult> * <width> + (0.0, 1.0) * <scale_mult> * <height> + (-10.0, -10.0))
-	createscreenelement {
-		type = textelement
+	dims = ((1.0, 0.0) * <scale_mult> * <width> + (0.0, 1.0) * <scale_mult> * <Height> + (-10.0, -10.0))
+	CreateScreenElement {
+		type = TextElement
 		parent = training_container
 		id = task_header_text
 		just = [left top]
@@ -105,8 +105,8 @@ script training_create_lesson_and_task_headers
 		rgba = ($training_header_color)
 		z_priority = <z>
 	}
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		font = ($training_font)
 		parent = training_container
 		id = task_header_body
@@ -119,9 +119,9 @@ script training_create_lesson_and_task_headers
 		rgba = ($training_text_color)
 		z_priority = <z>
 	}
-	getscreenelementdims \{id = lesson_header_body}
-	createscreenelement {
-		type = spriteelement
+	GetScreenElementDims \{id = lesson_header_body}
+	CreateScreenElement {
+		type = SpriteElement
 		parent = training_container
 		id = temp_vo_sub_rect
 		just = [center top]
@@ -129,11 +129,11 @@ script training_create_lesson_and_task_headers
 		dims = (600.0, 175.0)
 		rgba = ($training_rect_color)
 	}
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	text_block_pos = ((640.0, 460.0) - (1.0, 0.0) * 0.5 * <width> + (10.0, 10.0))
-	dims = ((1.0, 0.0) * <scale_mult> * <width> + (0.0, 1.0) * <scale_mult> * <height> + (-10.0, -10.0))
-	createscreenelement {
-		type = textblockelement
+	dims = ((1.0, 0.0) * <scale_mult> * <width> + (0.0, 1.0) * <scale_mult> * <Height> + (-10.0, -10.0))
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = training_container
 		id = temp_vo_sub_body
 		just = [left top]
@@ -162,64 +162,64 @@ script training_show_lesson_and_task_headers
 endscript
 
 script training_hide_lesson_header 
-	doscreenelementmorph \{id = lesson_header_rect
+	doScreenElementMorph \{id = lesson_header_rect
 		alpha = 0}
-	doscreenelementmorph \{id = lesson_header_text
+	doScreenElementMorph \{id = lesson_header_text
 		alpha = 0}
-	doscreenelementmorph \{id = lesson_header_body
+	doScreenElementMorph \{id = lesson_header_body
 		alpha = 0}
 endscript
 
 script training_show_lesson_header 
-	doscreenelementmorph \{id = lesson_header_rect
+	doScreenElementMorph \{id = lesson_header_rect
 		alpha = 1}
-	doscreenelementmorph \{id = lesson_header_text
+	doScreenElementMorph \{id = lesson_header_text
 		alpha = 1}
-	doscreenelementmorph \{id = lesson_header_body
+	doScreenElementMorph \{id = lesson_header_body
 		alpha = 1}
 endscript
 
 script training_hide_task_header 
-	doscreenelementmorph \{id = task_header_rect
+	doScreenElementMorph \{id = task_header_rect
 		alpha = 0}
-	doscreenelementmorph \{id = task_header_text
+	doScreenElementMorph \{id = task_header_text
 		alpha = 0}
-	doscreenelementmorph \{id = task_header_body
+	doScreenElementMorph \{id = task_header_body
 		alpha = 0}
 endscript
 
 script training_show_task_header 
-	doscreenelementmorph \{id = task_header_rect
+	doScreenElementMorph \{id = task_header_rect
 		alpha = 1}
-	doscreenelementmorph \{id = task_header_text
+	doScreenElementMorph \{id = task_header_text
 		alpha = 1}
-	doscreenelementmorph \{id = task_header_body
+	doScreenElementMorph \{id = task_header_body
 		alpha = 1}
 endscript
 
 script training_set_lesson_header_text \{text = ""}
-	setscreenelementprops id = lesson_header_text text = <text>
+	SetScreenElementProps id = lesson_header_text text = <text>
 endscript
 
 script training_set_lesson_header_body \{text = ""}
-	setscreenelementprops id = lesson_header_body text = <text>
+	SetScreenElementProps id = lesson_header_body text = <text>
 endscript
 
 script training_set_task_header_body \{text = ""}
-	setscreenelementprops id = task_header_body text = <text>
+	SetScreenElementProps id = task_header_body text = <text>
 endscript
 
 script training_hide_vo_sub 
-	doscreenelementmorph \{id = temp_vo_sub_rect
+	doScreenElementMorph \{id = temp_vo_sub_rect
 		alpha = 0}
-	doscreenelementmorph \{id = temp_vo_sub_body
+	doScreenElementMorph \{id = temp_vo_sub_body
 		alpha = 0}
 endscript
 
 script training_show_vo_sub 
-	doscreenelementmorph \{id = temp_vo_sub_rect
+	doScreenElementMorph \{id = temp_vo_sub_rect
 		alpha = 1}
-	doscreenelementmorph \{id = temp_vo_sub_body
+	doScreenElementMorph \{id = temp_vo_sub_body
 		alpha = 1}
 endscript
 
@@ -227,13 +227,13 @@ script training_add_arrow \{pos = (640.0, 360.0)
 		rot = 0
 		z = 5
 		scale = 1.0}
-	if NOT gotparam \{life}
+	if NOT GotParam \{life}
 		life = ($training_arrow_life)
 	endif
-	setsearchallassetcontexts
-	createscreenelement {
+	SetSearchAllAssetContexts
+	CreateScreenElement {
 		parent = training_container
-		type = spriteelement
+		type = SpriteElement
 		just = [center bottom]
 		texture = training_arrow_blue
 		pos = <pos>
@@ -243,24 +243,24 @@ script training_add_arrow \{pos = (640.0, 360.0)
 		z_priority = <z>
 	}
 	arrow_id = <id>
-	setsearchallassetcontexts \{off}
-	<arrow_id> :settags phase = 0.0
-	<arrow_id> :settags phase_change = 1
+	SetSearchAllAssetContexts \{off}
+	<arrow_id> :SetTags phase = 0.0
+	<arrow_id> :SetTags phase_change = 1
 	cos <rot>
 	sin <rot>
-	<arrow_id> :settags phase_direction = ((1.0, 0.0) * <sin> + (0.0, -1.0) * <cos>)
-	<arrow_id> :settags alive = 0.0
-	<arrow_id> :settags initial_pos = <pos>
+	<arrow_id> :SetTags phase_direction = ((1.0, 0.0) * <sin> + (0.0, -1.0) * <cos>)
+	<arrow_id> :SetTags alive = 0.0
+	<arrow_id> :SetTags initial_pos = <pos>
 	spawnscriptnow training_make_pointer_point_now params = {id = <arrow_id> life = <life>} id = training_spawned_script
 endscript
 
 script training_make_pointer_point_now 
-	if NOT gotparam \{id}
-		scriptassert \{"Need id!"}
+	if NOT GotParam \{id}
+		ScriptAssert \{"Need id!"}
 	endif
 	begin
-	getdeltatime \{ignore_slomo}
-	<id> :gettags
+	GetDeltaTime \{ignore_slomo}
+	<id> :GetTags
 	arrow_age = (<alive> + <delta_time>)
 	if (<arrow_age> > <life>)
 		break
@@ -274,52 +274,52 @@ script training_make_pointer_point_now
 		<phase_change> = 1
 	endif
 	new_pos = (<initial_pos> + <phase_direction> * ($training_arrow_movement_distance) * <phase>)
-	setscreenelementprops id = <id> pos = (<new_pos>)
-	<id> :settags alive = (<arrow_age>)
-	<id> :settags phase = (<phase>)
-	<id> :settags phase_change = (<phase_change>)
-	wait \{1
+	SetScreenElementProps id = <id> pos = (<new_pos>)
+	<id> :SetTags alive = (<arrow_age>)
+	<id> :SetTags phase = (<phase>)
+	<id> :SetTags phase_change = (<phase_change>)
+	Wait \{1
 		gameframe}
 	repeat
-	destroyscreenelement id = <id>
+	DestroyScreenElement id = <id>
 endscript
 
 script set_vo_sub_text 
-	setscreenelementprops id = temp_vo_sub_body text = <text>
+	SetScreenElementProps id = temp_vo_sub_body text = <text>
 endscript
 
 script training_init_session 
 	change \{game_mode = tutorial}
-	menu_music_off
+	Menu_Music_Off
 	destroy_bg_viewport
 	setup_bg_viewport
 	destroy_crowd_models
-	getpakmancurrentname \{map = zones}
-	if gotparam \{pakname}
+	GetPakManCurrentName \{map = zones}
+	if GotParam \{pakname}
 		if NOT (<pakname> = "z_soundcheck")
-			resetwaypoints
-			setpakmancurrentblock \{map = zones
+			ResetWaypoints
+			SetPakManCurrentBlock \{map = zones
 				pak = z_soundcheck
 				block_scripts = 1}
 		endif
 	else
-		resetwaypoints
-		setpakmancurrentblock \{map = zones
+		ResetWaypoints
+		SetPakManCurrentBlock \{map = zones
 			pak = z_soundcheck
 			block_scripts = 1}
 	endif
-	safekill \{nodename = z_soundcheck_gfx_trg_lh_hotspot_p2}
-	unpausegame
+	SafeKill \{nodeName = Z_SoundCheck_GFX_TRG_LH_HotSpot_P2}
+	UnPauseGame
 	training_create_and_hide_headers
 	training_hide_vo_sub
-	playigccam \{id = cs_view_cam_id
+	PlayIGCCam \{id = cs_view_cam_id
 		name = ch_view_cam
 		viewport = bg_viewport
-		lockto = world
+		LockTo = world
 		pos = (-0.068807, 1.5990009, 5.7975965)
-		quat = (0.000506, 0.99942994, -0.017537998)
-		fov = 72.0
-		play_hold = 1
+		Quat = (0.000506, 0.99942994, -0.017537998)
+		FOV = 72.0
+		Play_hold = 1
 		interrupt_current}
 	change \{current_crowd = 1.0}
 	change \{structurename = player1_status
@@ -328,11 +328,11 @@ script training_init_session
 endscript
 
 script training_kill_session 
-	pausegame
-	killcamanim \{name = ch_view_cam}
+	PauseGame
+	KillCamAnim \{name = ch_view_cam}
 	destroy_bg_viewport
 	training_destroy_lesson_and_task_headers
-	if NOT gotparam \{shutdown}
+	if NOT GotParam \{shutdown}
 		spawnscriptnow \{menu_music_on}
 	endif
 	change \{disable_note_input = 0}
@@ -341,7 +341,7 @@ script training_kill_session
 endscript
 
 script training_are_notes_flipped 
-	getglobaltags \{user_options
+	GetGlobalTags \{user_options
 		params = {
 			lefty_flip_p1
 		}}
@@ -352,13 +352,13 @@ script training_are_notes_flipped
 endscript
 
 script show_training_pause_screen 
-	if gameispaused
+	if GameIsPaused
 		return
 	endif
-	pausegame
-	pausegh3sounds
+	PauseGame
+	PauseGh3Sounds
 	training_create_pause_backdrop <...>
-	if iswinport
+	if IsWinPort
 		change \{winport_in_top_pause_menu = 1}
 	endif
 endscript
@@ -382,10 +382,10 @@ training_pause_z = 100
 training_prev_paused_title = none
 
 script training_create_pause_backdrop 
-	if NOT screenelementexists \{id = training_backdrop_container}
+	if NOT ScreenElementExists \{id = training_backdrop_container}
 		change \{tutorial_pause_current_item = 1}
 		create_pause_menu_frame \{z = $training_pause_z}
-		createscreenelement \{type = containerelement
+		CreateScreenElement \{type = ContainerElement
 			parent = root_window
 			id = training_backdrop_container
 			pos = (0.0, 0.0)
@@ -393,16 +393,16 @@ script training_create_pause_backdrop
 				left
 				top
 			]}
-		displaysprite parent = training_backdrop_container tex = dialog_title_bg flip_v pos = (416.0, 100.0) scale = (1.75, 1.75) z = ($training_pause_z + 10)
-		displaysprite parent = training_backdrop_container tex = dialog_title_bg pos = (640.0, 100.0) scale = (1.75, 1.75) z = ($training_pause_z + 10)
-		if gotparam \{uselasttitle}
+		displaySprite parent = training_backdrop_container tex = Dialog_Title_BG flip_v pos = (416.0, 100.0) scale = (1.75, 1.75) z = ($training_pause_z + 10)
+		displaySprite parent = training_backdrop_container tex = Dialog_Title_BG pos = (640.0, 100.0) scale = (1.75, 1.75) z = ($training_pause_z + 10)
+		if GotParam \{UseLastTitle}
 			if ($training_prev_paused_title = failed)
 				title = "SONG FAILED"
 			else
 				title = "PAUSED"
 			endif
 		else
-			if gotparam \{songfailed}
+			if GotParam \{SongFailed}
 				title = "SONG FAILED"
 				training_prev_paused_title = failed
 			else
@@ -410,8 +410,8 @@ script training_create_pause_backdrop
 				training_prev_paused_title = paused
 			endif
 		endif
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = training_backdrop_container
 			id = lesson_song_failed_text
 			font = fontgrid_title_gh3
@@ -425,10 +425,10 @@ script training_create_pause_backdrop
 			shadow_offs = (3.0, 3.0)
 			shadow_rgba = [0 0 0 255]
 		}
-		getscreenelementdims id = <id>
-		fit_text_in_rectangle id = <id> dims = (<height> * (0.0, 1.0) + (300.0, 0.0)) only_if_larger_x = 1 start_x_scale = 1.2 start_y_scale = 1.2
-		createscreenelement {
-			type = textelement
+		GetScreenElementDims id = <id>
+		fit_text_in_rectangle id = <id> dims = (<Height> * (0.0, 1.0) + (300.0, 0.0)) only_if_larger_x = 1 start_x_scale = 1.2 start_y_scale = 1.2
+		CreateScreenElement {
+			type = TextElement
 			parent = training_backdrop_container
 			id = lesson_continue_text
 			just = [center center]
@@ -439,8 +439,8 @@ script training_create_pause_backdrop
 			rgba = ($training_text_color)
 			z_priority = ($training_pause_z + 2)
 		}
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = training_backdrop_container
 			id = lesson_restart_text
 			just = [center center]
@@ -451,8 +451,8 @@ script training_create_pause_backdrop
 			rgba = ($training_text_color)
 			z_priority = ($training_pause_z + 2)
 		}
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = training_backdrop_container
 			id = lesson_quit_text
 			just = [center center]
@@ -463,8 +463,8 @@ script training_create_pause_backdrop
 			rgba = ($training_text_color)
 			z_priority = ($training_pause_z + 2)
 		}
-		if screenelementexists \{id = menu_tutorial}
-			launchevent \{type = unfocus
+		if ScreenElementExists \{id = menu_tutorial}
+			LaunchEvent \{type = unfocus
 				target = menu_tutorial}
 		endif
 		event_handlers = [
@@ -481,11 +481,11 @@ script training_create_pause_backdrop
 			use_backdrop = 0
 			event_handlers = <event_handlers>
 		}
-		if screenelementexists \{id = menu_tutorial}
-			launchevent \{type = unfocus
+		if ScreenElementExists \{id = menu_tutorial}
+			LaunchEvent \{type = unfocus
 				target = menu_tutorial}
 		endif
-		launchevent \{type = focus
+		LaunchEvent \{type = focus
 			target = menu_tutorial_pause}
 		change \{tutorial_pause_current_item = 1}
 		tutorial_pause_set_highlight selection = ($tutorial_pause_current_item)
@@ -512,12 +512,12 @@ script tutorial_pause_selection_down
 endscript
 
 script tutorial_pause_set_highlight 
-	setscreenelementprops id = lesson_continue_text rgba = ($training_text_color)
-	setscreenelementprops id = lesson_restart_text rgba = ($training_text_color)
-	setscreenelementprops id = lesson_quit_text rgba = ($training_text_color)
+	SetScreenElementProps id = lesson_continue_text rgba = ($training_text_color)
+	SetScreenElementProps id = lesson_restart_text rgba = ($training_text_color)
+	SetScreenElementProps id = lesson_quit_text rgba = ($training_text_color)
 	switch (<selection>)
 		case 1
-		setscreenelementprops \{id = lesson_continue_text
+		SetScreenElementProps \{id = lesson_continue_text
 			rgba = [
 				232
 				232
@@ -525,7 +525,7 @@ script tutorial_pause_set_highlight
 				232
 			]}
 		case 2
-		setscreenelementprops \{id = lesson_restart_text
+		SetScreenElementProps \{id = lesson_restart_text
 			rgba = [
 				232
 				232
@@ -533,7 +533,7 @@ script tutorial_pause_set_highlight
 				232
 			]}
 		case 3
-		setscreenelementprops \{id = lesson_quit_text
+		SetScreenElementProps \{id = lesson_quit_text
 			rgba = [
 				232
 				232
@@ -556,42 +556,42 @@ endscript
 
 script tutorial_resume 
 	tutorial_close_pause_window
-	if iswinport
+	if IsWinPort
 		change \{winport_in_top_pause_menu = 0}
 	endif
 endscript
 
 script tutorial_restart 
 	tutorial_close_pause_window
-	if screenelementexists \{id = menu_tutorial}
-		launchevent \{type = unfocus
+	if ScreenElementExists \{id = menu_tutorial}
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif
 	training_destroy_gem_scroller \{delay = 0.0}
 	training_kill_session
 	kill_training_script_system
-	stopallsounds
-	unpausegame
-	unpausegh3sounds
+	StopAllSounds
+	UnPauseGame
+	UnpauseGh3Sounds
 	setslomo \{1.0}
 	setslomo_song \{slomo = 1.0}
 	enable_pause
 	generic_menu_pad_choose_sound
-	run_training_script \{restart_lesson}
+	run_training_script \{Restart_Lesson}
 endscript
 
 script tutorial_shutdown 
 	tutorial_close_pause_window
-	if screenelementexists \{id = menu_tutorial}
-		launchevent \{type = unfocus
+	if ScreenElementExists \{id = menu_tutorial}
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif
 	training_destroy_gem_scroller \{delay = 0.0}
 	training_kill_session \{shutdown}
 	kill_training_script_system
-	stopallsounds
+	StopAllSounds
 	change \{disable_note_input = 0}
 	change \{tutorial_disable_hud = 0}
 	setslomo \{1.0}
@@ -601,10 +601,10 @@ endscript
 script tutorial_quit 
 	tutorial_shutdown
 	generic_menu_pad_choose_sound
-	unpausegame
-	unpausegh3sounds
+	UnPauseGame
+	UnpauseGh3Sounds
 	enable_pause
-	setscreenelementprops \{id = root_window
+	SetScreenElementProps \{id = root_window
 		event_handlers = [
 			{
 				pad_start
@@ -617,8 +617,8 @@ endscript
 
 script tutorial_quit_warning 
 	tutorial_close_pause_window
-	pausegame
-	pausegh3sounds
+	PauseGame
+	PauseGh3Sounds
 	training_create_quit_warning_backdrop
 endscript
 
@@ -628,80 +628,80 @@ script training_destroy_pause_backdrop
 endscript
 
 script tutorial_close_pause_window 
-	if screenelementexists \{id = menu_tutorial_pause}
-		launchevent \{type = unfocus
+	if ScreenElementExists \{id = menu_tutorial_pause}
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial_pause}
 	else
 		return
 	endif
-	if screenelementexists \{id = menu_tutorial}
-		launchevent \{type = focus
+	if ScreenElementExists \{id = menu_tutorial}
+		LaunchEvent \{type = focus
 			target = menu_tutorial}
 	endif
 	training_destroy_pause_backdrop
 	destroy_pause_menu_frame
 	destroy_menu \{menu_id = menu_tutorial_pause}
-	unpausegame
-	unpausegh3sounds
+	UnPauseGame
+	UnpauseGh3Sounds
 endscript
 
 script training_get_language_prefix 
-	if english
+	if English
 		return \{language_prefix = 'EN'}
-	elseif german
+	elseif German
 		return \{language_prefix = 'GR'}
-	elseif french
+	elseif French
 		return \{language_prefix = 'FR'}
-	elseif italian
+	elseif Italian
 		return \{language_prefix = 'IT'}
-	elseif spanish
+	elseif Spanish
 		return \{language_prefix = 'SP'}
 	endif
 	return \{language_prefix = 'EN'}
 endscript
 
 script training_play_sound 
-	if NOT gotparam \{sound}
+	if NOT GotParam \{Sound}
 		printf \{"training_play_sound called without sound param"}
 		return
 	endif
 	training_get_language_prefix
-	formattext checksumname = sound_id '%a_%b' a = <language_prefix> b = <sound>
-	playsound <sound_id> buss = training_vo
-	if gotparam \{wait}
+	FormatText checksumname = sound_id '%a_%b' a = <language_prefix> b = <Sound>
+	PlaySound <sound_id> buss = Training_VO
+	if GotParam \{Wait}
 		begin
 		if NOT issoundplaying <sound_id>
 			break
 		endif
-		wait \{1
+		Wait \{1
 			gameframe}
 		repeat
 	endif
 endscript
 
 script training_wait_for_sound 
-	if NOT gotparam \{sound}
+	if NOT GotParam \{Sound}
 		printf \{"training_wait_for_sound called without sound param"}
 		return
 	endif
 	training_get_language_prefix
-	formattext checksumname = sound_id '%a_%b' a = <language_prefix> b = <sound>
+	FormatText checksumname = sound_id '%a_%b' a = <language_prefix> b = <Sound>
 	begin
 	if NOT issoundplaying <sound_id>
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
 script training_is_sound_playing 
-	if NOT gotparam \{sound}
+	if NOT GotParam \{Sound}
 		printf \{"training_is_sound_playing called without sound param"}
 		return
 	endif
 	training_get_language_prefix
-	formattext checksumname = sound_id '%a_%b' a = <language_prefix> b = <sound>
+	FormatText checksumname = sound_id '%a_%b' a = <language_prefix> b = <Sound>
 	if issoundplaying <sound_id>
 		return \{true}
 	else
@@ -712,22 +712,22 @@ endscript
 script training_play_positive \{who = god}
 	if (<who> = god)
 		RandomNoRepeat (
-			@ training_play_sound \{sound = 'Tutorial_God_Positive_01'}
-			@ training_play_sound \{sound = 'Tutorial_God_Positive_02'}
-			@ training_play_sound \{sound = 'Tutorial_God_Positive_03'}
-			@ training_play_sound \{sound = 'Tutorial_God_Positive_05'}
-			@ training_play_sound \{sound = 'Tutorial_God_Positive_06'}
-			@ training_play_sound \{sound = 'Tutorial_God_Positive_07'}
+			@ training_play_sound \{Sound = 'Tutorial_God_Positive_01'}
+			@ training_play_sound \{Sound = 'Tutorial_God_Positive_02'}
+			@ training_play_sound \{Sound = 'Tutorial_God_Positive_03'}
+			@ training_play_sound \{Sound = 'Tutorial_God_Positive_05'}
+			@ training_play_sound \{Sound = 'Tutorial_God_Positive_06'}
+			@ training_play_sound \{Sound = 'Tutorial_God_Positive_07'}
 			)
 	elseif (<who> = lou)
 		RandomNoRepeat (
-			@ training_play_sound \{sound = 'Tutorial_Lou_Positive_01'}
-			@ training_play_sound \{sound = 'Tutorial_Lou_Positive_02'}
-			@ training_play_sound \{sound = 'Tutorial_Lou_Positive_03'}
-			@ training_play_sound \{sound = 'Tutorial_Lou_Positive_04'}
-			@ training_play_sound \{sound = 'Tutorial_Lou_Positive_05'}
-			@ training_play_sound \{sound = 'Tutorial_Lou_Positive_06'}
-			@ training_play_sound \{sound = 'Tutorial_Lou_Positive_07'}
+			@ training_play_sound \{Sound = 'Tutorial_Lou_Positive_01'}
+			@ training_play_sound \{Sound = 'Tutorial_Lou_Positive_02'}
+			@ training_play_sound \{Sound = 'Tutorial_Lou_Positive_03'}
+			@ training_play_sound \{Sound = 'Tutorial_Lou_Positive_04'}
+			@ training_play_sound \{Sound = 'Tutorial_Lou_Positive_05'}
+			@ training_play_sound \{Sound = 'Tutorial_Lou_Positive_06'}
+			@ training_play_sound \{Sound = 'Tutorial_Lou_Positive_07'}
 			)
 	endif
 endscript
@@ -735,46 +735,46 @@ endscript
 script training_play_negative \{who = god}
 	if (<who> = god)
 		RandomNoRepeat (
-			@ training_play_sound \{sound = 'Tutorial_God_Negative_01'}
-			@ training_play_sound \{sound = 'Tutorial_God_Negative_02'}
-			@ training_play_sound \{sound = 'Tutorial_God_Negative_03'}
-			@ training_play_sound \{sound = 'Tutorial_God_Negative_04'}
-			@ training_play_sound \{sound = 'Tutorial_God_Negative_05'}
-			@ training_play_sound \{sound = 'Tutorial_God_Negative_06'}
+			@ training_play_sound \{Sound = 'Tutorial_God_Negative_01'}
+			@ training_play_sound \{Sound = 'Tutorial_God_Negative_02'}
+			@ training_play_sound \{Sound = 'Tutorial_God_Negative_03'}
+			@ training_play_sound \{Sound = 'Tutorial_God_Negative_04'}
+			@ training_play_sound \{Sound = 'Tutorial_God_Negative_05'}
+			@ training_play_sound \{Sound = 'Tutorial_God_Negative_06'}
 			)
 	elseif (<who> = lou)
 		RandomNoRepeat (
-			@ training_play_sound \{sound = 'Tutorial_Lou_Negative_01'}
-			@ training_play_sound \{sound = 'Tutorial_Lou_Negative_02'}
+			@ training_play_sound \{Sound = 'Tutorial_Lou_Negative_01'}
+			@ training_play_sound \{Sound = 'Tutorial_Lou_Negative_02'}
 			)
 	endif
 endscript
 
 script safe_show 
-	if screenelementexists id = <id>
-		doscreenelementmorph id = <id> alpha = 1
+	if ScreenElementExists id = <id>
+		doScreenElementMorph id = <id> alpha = 1
 	endif
 endscript
 
 script safe_hide 
-	if screenelementexists id = <id>
-		doscreenelementmorph id = <id> alpha = 0
+	if ScreenElementExists id = <id>
+		doScreenElementMorph id = <id> alpha = 0
 	endif
 endscript
 
 script safe_destroy 
-	if screenelementexists id = <id>
-		destroyscreenelement id = <id>
+	if ScreenElementExists id = <id>
+		DestroyScreenElement id = <id>
 	endif
 endscript
 
 script training_display_notes_hit 
-	formattext textname = hit_text "Notes Hit %a / 8" a = <notes_hit>
-	if screenelementexists \{id = notes_hit_text}
-		destroyscreenelement \{id = notes_hit_text}
+	FormatText TextName = hit_text "Notes Hit %a / 8" a = <notes_hit>
+	if ScreenElementExists \{id = notes_hit_text}
+		DestroyScreenElement \{id = notes_hit_text}
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = training_container
 		id = notes_hit_text
 		just = [center center]
@@ -788,31 +788,31 @@ script training_display_notes_hit
 endscript
 
 script training_start_gem_scroller 
-	if NOT compositeobjectexists \{name = guitarist}
+	if NOT CompositeObjectExists \{name = Guitarist}
 		change \{structurename = player1_status
 			character_id = axel}
 		create_guitarist
 	endif
-	if NOT compositeobjectexists \{name = bassist}
+	if NOT CompositeObjectExists \{name = bassist}
 		change \{structurename = player2_status
 			character_id = axel}
 		create_guitarist \{name = bassist}
 	endif
 	hide_band
-	if screenelementexists \{id = menu_tutorial}
-		launchevent \{type = unfocus
+	if ScreenElementExists \{id = menu_tutorial}
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif
 	disable_pause
 	change \{tutorial_okay_to_create_pause_handler = 0}
 	change \{current_transition = fastintro}
-	start_gem_scroller song_name = <song> difficulty = easy difficulty2 = easy starttime = 0 device_num = ($player1_status.controller) training_mode = 1 <...>
+	start_gem_scroller song_name = <song> difficulty = easy difficulty2 = easy StartTime = 0 device_num = ($player1_status.controller) training_mode = 1 <...>
 	begin
 	if ($tutorial_okay_to_create_pause_handler = 1)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	create_training_pause_handler
@@ -845,8 +845,8 @@ script training_resume_gem_scroller
 endscript
 
 script training_show_title 
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = training_container
 		id = lesson_title_text
 		just = [center center]
@@ -867,20 +867,20 @@ endscript
 
 script training_wait_for_gem_scroller_time 
 	begin
-	getsongtime
+	GetSongTime
 	if (<songtime> >= <time>)
 		return
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
 script training_create_quit_warning_backdrop 
-	if NOT screenelementexists \{id = training_backdrop_container}
+	if NOT ScreenElementExists \{id = training_backdrop_container}
 		change \{tutorial_verify_quit_current_item = 1}
 		create_pause_menu_frame \{z = $training_pause_z}
-		createscreenelement \{type = containerelement
+		CreateScreenElement \{type = ContainerElement
 			parent = root_window
 			id = training_backdrop_container
 			pos = (0.0, 0.0)
@@ -888,11 +888,11 @@ script training_create_quit_warning_backdrop
 				left
 				top
 			]}
-		displaysprite parent = training_backdrop_container tex = dialog_title_bg flip_v pos = (416.0, 100.0) scale = (1.75, 1.75) z = ($training_pause_z + 10)
-		displaysprite parent = training_backdrop_container tex = dialog_title_bg pos = (640.0, 100.0) scale = (1.75, 1.75) z = ($training_pause_z + 10)
+		displaySprite parent = training_backdrop_container tex = Dialog_Title_BG flip_v pos = (416.0, 100.0) scale = (1.75, 1.75) z = ($training_pause_z + 10)
+		displaySprite parent = training_backdrop_container tex = Dialog_Title_BG pos = (640.0, 100.0) scale = (1.75, 1.75) z = ($training_pause_z + 10)
 		title = "WARNING"
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = training_backdrop_container
 			id = lesson_song_failed_text
 			font = fontgrid_title_gh3
@@ -911,8 +911,8 @@ script training_create_quit_warning_backdrop
 			dims = (600.0, 400.0)
 			scale = 0.6
 		}
-		createscreenelement {
-			type = textblockelement
+		CreateScreenElement {
+			type = TextBlockElement
 			font = ($popup_warning_menu_font)
 			just = [center center]
 			pos = (640.0, 375.0)
@@ -928,18 +928,18 @@ script training_create_quit_warning_backdrop
 		}
 		<menu_pos> = (640.0, 510.0)
 		<menu_bg_offset> = (0.0, -28.0)
-		createscreenelement {
-			type = vmenu
+		CreateScreenElement {
+			type = VMenu
 			parent = training_backdrop_container
 			id = options_bg_id
 			pos = (<menu_pos> + <menu_bg_offset>)
 			just = [center top]
 			internal_just = [center center]
 		}
-		displaysprite parent = options_bg_id tex = dialog_bg z = ($training_pause_z + 12)
-		displaysprite parent = options_bg_id tex = dialog_bg flip_h z = ($training_pause_z + 12)
-		createscreenelement {
-			type = textelement
+		displaySprite parent = options_bg_id tex = dialog_bg z = ($training_pause_z + 12)
+		displaySprite parent = options_bg_id tex = dialog_bg flip_h z = ($training_pause_z + 12)
+		CreateScreenElement {
+			type = TextElement
 			font = ($popup_warning_menu_font)
 			parent = training_backdrop_container
 			text = "CANCEL"
@@ -951,8 +951,8 @@ script training_create_quit_warning_backdrop
 			just = [center center]
 			z_priority = ($training_pause_z + 13)
 		}
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			font = ($popup_warning_menu_font)
 			parent = training_backdrop_container
 			text = "QUIT"
@@ -964,8 +964,8 @@ script training_create_quit_warning_backdrop
 			just = [center center]
 			z_priority = ($training_pause_z + 13)
 		}
-		if screenelementexists \{id = menu_tutorial}
-			launchevent \{type = unfocus
+		if ScreenElementExists \{id = menu_tutorial}
+			LaunchEvent \{type = unfocus
 				target = menu_tutorial}
 		endif
 		event_handlers = [
@@ -982,11 +982,11 @@ script training_create_quit_warning_backdrop
 			use_backdrop = 0
 			event_handlers = <event_handlers>
 		}
-		if screenelementexists \{id = menu_tutorial}
-			launchevent \{type = unfocus
+		if ScreenElementExists \{id = menu_tutorial}
+			LaunchEvent \{type = unfocus
 				target = menu_tutorial}
 		endif
-		launchevent \{type = focus
+		LaunchEvent \{type = focus
 			target = menu_tutorial_pause}
 		change \{tutorial_pause_current_item = 1}
 		tutorial_quit_warning_set_highlight selection = ($tutorial_pause_current_item)
@@ -997,11 +997,11 @@ script tutorial_quit_warning_set_highlight
 	menu_focus_color = [180 50 50 255]
 	menu_unfocus_color = [0 0 0 255]
 	if ($tutorial_verify_quit_current_item = 1)
-		doscreenelementmorph id = tutorial_quit_warning_cancel rgba = <menu_focus_color>
-		doscreenelementmorph id = tutorial_quit_warning_quit rgba = <menu_unfocus_color>
+		doScreenElementMorph id = tutorial_quit_warning_cancel rgba = <menu_focus_color>
+		doScreenElementMorph id = tutorial_quit_warning_quit rgba = <menu_unfocus_color>
 	else
-		doscreenelementmorph id = tutorial_quit_warning_cancel rgba = <menu_unfocus_color>
-		doscreenelementmorph id = tutorial_quit_warning_quit rgba = <menu_focus_color>
+		doScreenElementMorph id = tutorial_quit_warning_cancel rgba = <menu_unfocus_color>
+		doScreenElementMorph id = tutorial_quit_warning_quit rgba = <menu_focus_color>
 	endif
 endscript
 tutorial_verify_quit_current_item = 1
@@ -1026,27 +1026,27 @@ endscript
 
 script tutorial_quit_warning_resume 
 	tutorial_close_quit_warning_screen
-	training_create_pause_backdrop \{uselasttitle}
+	training_create_pause_backdrop \{UseLastTitle}
 endscript
 
 script tutorial_quit_warning_choose 
 	tutorial_close_quit_warning_screen
 	if ($tutorial_verify_quit_current_item = 1)
-		training_create_pause_backdrop \{uselasttitle}
+		training_create_pause_backdrop \{UseLastTitle}
 	else
 		tutorial_quit
 	endif
 endscript
 
 script tutorial_close_quit_warning_screen 
-	if screenelementexists \{id = menu_tutorial_pause}
-		launchevent \{type = unfocus
+	if ScreenElementExists \{id = menu_tutorial_pause}
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial_pause}
 	else
 		return
 	endif
-	if screenelementexists \{id = menu_tutorial}
-		launchevent \{type = focus
+	if ScreenElementExists \{id = menu_tutorial}
+		LaunchEvent \{type = focus
 			target = menu_tutorial}
 	endif
 	training_destroy_pause_backdrop

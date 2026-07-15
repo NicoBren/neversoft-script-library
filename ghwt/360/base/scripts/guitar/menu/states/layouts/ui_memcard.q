@@ -4,26 +4,26 @@ memcard_state_active = 0
 
 script ui_init_memcard 
 	memcard_controller_reset
-	if (<Type> = autosave)
+	if (<type> = autosave)
 		if GotParam \{event_params}
-			if StructureContains structure = <event_params> data
-				if StructureContains structure = (<event_params>.data) requested_autosave
+			if StructureContains Structure = <event_params> data
+				if StructureContains Structure = (<event_params>.data) requested_autosave
 					requested_autosave = (<event_params>.data.requested_autosave)
 				endif
 			endif
 		endif
 		stars
-		if isps3
+		if IsPs3
 			printf \{'Regular PS3 save'}
 			memcard_controller_add controller = ($primary_controller) requested_autosave = <requested_autosave>
 		else
 			if GotParam \{event_params}
-				if StructureContains structure = <event_params> data
-					if StructureContains structure = (<event_params>.data) savegame
+				if StructureContains Structure = <event_params> data
+					if StructureContains Structure = (<event_params>.data) savegame
 						printf 'Saving specific savegame %d' d = ((<event_params>.data).savegame)
 						memcard_controller_add controller = ((<event_params>.data).savegame) requested_autosave = <requested_autosave>
 						done_something = 1
-					elseif StructureContains structure = (<event_params>.data) all_active_players
+					elseif StructureContains Structure = (<event_params>.data) all_active_players
 						memcard_controller_add_signed_in_and_valid
 						done_something = 1
 					endif
@@ -37,41 +37,41 @@ script ui_init_memcard
 		stars
 	endif
 endscript
-memcard_after_func = None
+memcard_after_func = none
 
 script ui_create_memcard \{event_params = {
 			event = menu_back
 		}}
-	Change \{memcard_state_active = 1}
+	change \{memcard_state_active = 1}
 	if ($is_network_game = 1)
-		original_type = <Type>
-		gamemode_gettype
-		if (<Type> = career)
+		original_type = <type>
+		GameMode_GetType
+		if (<type> = career)
 			spawn_player_drop_listeners \{drop_player_script = net_career_memcard_drop_player
 				end_game_script = net_career_memcard_end_game}
 		endif
-		Type = <original_type>
+		type = <original_type>
 	endif
-	StartRendering
+	startrendering
 	CreateScreenElement {
-		Type = ContainerElement
+		type = ContainerElement
 		parent = root_window
 		id = current_menu
-		Pos = (0.0, 0.0)
+		pos = (0.0, 0.0)
 		just = [left center]
 		z_priority = 0
 		tags = {
-			Type = <Type>
+			type = <type>
 			event_params = <event_params>
 			signin_changed = ($respond_to_signin_changed)
 		}
 	}
-	Change \{respond_to_signin_changed = 1}
-	switch <Type>
+	change \{respond_to_signin_changed = 1}
+	switch <type>
 		case boot
-		Change \{memcard_initial_boot = 1}
+		change \{memcard_initial_boot = 1}
 		if isXenon
-			if NetSessionFunc \{func = xenonisguest
+			if NetSessionFunc \{func = XenonIsGuest
 					params = {
 						controller_index = $primary_controller
 					}}
@@ -87,7 +87,7 @@ script ui_create_memcard \{event_params = {
 		call = memcard_sequence_begin_autosave
 		requested_autosave = 0
 		if GotParam \{event_params}
-			if StructureContains \{structure = event_params
+			if StructureContains \{Structure = event_params
 					data}
 				requested_autosave = (<event_params>.data.requested_autosave)
 			endif
@@ -107,19 +107,19 @@ script ui_create_memcard \{event_params = {
 		case rename_jam
 		call = memcard_sequence_begin_rename_jam
 		case secondary_signin_load
-		ScriptAssert \{qs(0x2c2b1078)}
+		ScriptAssert \{qs("\Ldeprecated")}
 		call = memcard_sequence_begin_ss_load
 		default
-		ScriptAssert 'invalid type: %t' t = <Type>
+		ScriptAssert 'invalid type: %t' t = <type>
 	endswitch
-	if (<Type> = autosave)
+	if (<type> = autosave)
 		if NOT memcard_controller_get_next
 			ui_event_wait <event_params>
 			return
 		endif
 	endif
 	if isXenon
-		if NetSessionFunc func = xenonisguest params = {controller_index = <controller>}
+		if NetSessionFunc func = XenonIsGuest params = {controller_index = <controller>}
 			printf 'Controller %d is guest, aborting memcard' d = <controller>
 			ui_event_wait <event_params>
 			return
@@ -130,10 +130,10 @@ script ui_create_memcard \{event_params = {
 			return
 		endif
 	endif
-	if isps3
+	if IsPs3
 		if is_autosave_on \{savegame = 0}
 			if ($ps3_autosave_warning_shown = 0)
-				Change \{ps3_autosave_warning_shown = 1}
+				change \{ps3_autosave_warning_shown = 1}
 				do_ps3_memcard_warning func = <call> func_params = <...>
 				return
 			endif
@@ -146,14 +146,14 @@ script ui_destroy_memcard
 	if ScreenElementExists \{id = current_menu}
 		current_menu :Die
 	endif
-	SpawnScriptNow \{memcard_sequence_cleanup_generic}
-	Change \{memcard_state_active = 0}
+	spawnscriptnow \{memcard_sequence_cleanup_generic}
+	change \{memcard_state_active = 0}
 endscript
 
 script ui_deinit_memcard 
 	ui_options_audio_set_dolby_digital
 	update_all_volumes
-	Change \{memcard_initial_boot = 0}
+	change \{memcard_initial_boot = 0}
 endscript
 
 script ui_memcard_finish 
@@ -162,10 +162,10 @@ script ui_memcard_finish
 		return
 	endif
 	current_menu :GetTags
-	if NOT (<Type> = boot)
-		Change respond_to_signin_changed = <signin_changed>
+	if NOT (<type> = boot)
+		change respond_to_signin_changed = <signin_changed>
 	endif
-	if (<Type> = autosave)
+	if (<type> = autosave)
 		if memcard_controller_has_next
 			MC_WaitAsyncOpsFinished
 			memcard_cleanup_messages
@@ -174,13 +174,13 @@ script ui_memcard_finish
 			endif
 			ui_create_memcard {
 				controller = <controller>
-				Type = <Type>
+				type = <type>
 				event_params = <event_params>
 			}
 			return
 		endif
 	endif
-	switch <Type>
+	switch <type>
 		case boot
 		if GotParam \{success}
 			if current_band_has_band_name controller = <controller>
@@ -207,8 +207,8 @@ script ui_memcard_finish
 			return
 		endif
 		if GotParam \{event_params}
-			if StructureContains structure = <event_params> data
-				if StructureContains structure = (<event_params>.data) pass_to_gigboard
+			if StructureContains Structure = <event_params> data
+				if StructureContains Structure = (<event_params>.data) pass_to_gigboard
 					create_loading_screen \{destroy_state = 'gig_posters'}
 				endif
 			endif
@@ -265,14 +265,14 @@ script ui_memcard_finish
 			ui_event \{event = menu_back}
 		endif
 		case secondary_signin_load
-		ScriptAssert \{qs(0x2c2b1078)}
+		ScriptAssert \{qs("\Ldeprecated")}
 		if GotParam \{success}
 			ui_event_wait <event_params>
 		elseif GotParam \{failed}
 			ui_event_wait \{event = menu_back}
 		endif
 	endswitch
-	if ($memcard_after_func != None)
+	if ($memcard_after_func != none)
 		if GotParam \{success}
 			($memcard_after_func) success
 		elseif GotParam \{failed}
@@ -280,7 +280,7 @@ script ui_memcard_finish
 		else
 			ScriptAssert \{'Yeah, something is wrong'}
 		endif
-		Change \{memcard_after_func = None}
+		change \{memcard_after_func = none}
 	endif
 endscript
 
@@ -290,7 +290,7 @@ script ui_memcard_autosave \{event = menu_back
 	if GotParam \{state}
 		data = {<data> state = <state>}
 	endif
-	generic_event_choose no_sound state = uistate_memcard data = {Type = autosave event_params = {event = <event> data = <data>}}
+	generic_event_choose no_sound state = uistate_memcard data = {type = autosave event_params = {event = <event> data = <data>}}
 endscript
 
 script ui_memcard_autosave_replace \{event = menu_back
@@ -299,7 +299,7 @@ script ui_memcard_autosave_replace \{event = menu_back
 	if GotParam \{state}
 		data = {<data> state = <state>}
 	endif
-	ui_event event = menu_replace data = {state = uistate_memcard Type = autosave event_params = {event = <event> data = <data>}}
+	ui_event event = menu_replace data = {state = uistate_memcard type = autosave event_params = {event = <event> data = <data>}}
 endscript
 
 script ui_memcard_autoload \{this_event = menu_change
@@ -309,7 +309,7 @@ script ui_memcard_autoload \{this_event = menu_change
 	if GotParam \{state}
 		data = {<data> state = <state>}
 	endif
-	generic_event_choose no_sound event = <this_event> state = uistate_memcard data = {Type = autoload event_params = {event = <event> data = <data>} controller = <controller>}
+	generic_event_choose no_sound event = <this_event> state = uistate_memcard data = {type = autoload event_params = {event = <event> data = <data>} controller = <controller>}
 endscript
 
 script ui_memcard_save \{event = menu_replace
@@ -318,7 +318,7 @@ script ui_memcard_save \{event = menu_replace
 	if GotParam \{state}
 		data = {<data> state = <state>}
 	endif
-	generic_event_choose state = uistate_memcard data = {Type = save event_params = {event = <event> data = <data>}}
+	generic_event_choose state = uistate_memcard data = {type = save event_params = {event = <event> data = <data>}}
 endscript
 
 script ui_memcard_load \{this_event = menu_change
@@ -328,12 +328,12 @@ script ui_memcard_load \{this_event = menu_change
 	if GotParam \{state}
 		data = {<data> state = <state>}
 	endif
-	generic_event_choose event = <this_event> state = uistate_memcard data = {Type = load event_params = {event = <event> data = <data>}}
+	generic_event_choose event = <this_event> state = uistate_memcard data = {type = load event_params = {event = <event> data = <data>}}
 endscript
-jam_memcard_signin_save_after_func = None
+jam_memcard_signin_save_after_func = none
 
 script jam_memcard_signin_load_after_func 
-	Change \{memcard_after_func = $jam_memcard_signin_save_after_func}
+	change \{memcard_after_func = $jam_memcard_signin_save_after_func}
 endscript
 
 script ui_memcard_save_jam \{event = menu_replace
@@ -341,15 +341,15 @@ script ui_memcard_save_jam \{event = menu_replace
 		}}
 	if isXenon
 		if NOT CheckForSignIn local controller_index = <controller>
-			Change \{jam_memcard_signin_save_after_func = $memcard_after_func}
-			Change \{memcard_after_func = jam_memcard_signin_load_after_func}
+			change \{jam_memcard_signin_save_after_func = $memcard_after_func}
+			change \{memcard_after_func = jam_memcard_signin_load_after_func}
 			generic_event_choose {
 				state = uistate_signin
 				data = {
 					no_sound
 					new_state = uistate_memcard
 					new_data = {
-						Type = save_jam
+						type = save_jam
 						event_params = {
 							event = <event>
 							data = <data>
@@ -363,7 +363,7 @@ script ui_memcard_save_jam \{event = menu_replace
 	if GotParam \{state}
 		data = {<data> state = <state>}
 	endif
-	generic_event_choose no_sound state = uistate_memcard data = {Type = save_jam event_params = {event = <event> data = <data>}}
+	generic_event_choose no_sound state = uistate_memcard data = {type = save_jam event_params = {event = <event> data = <data>}}
 endscript
 
 script ui_memcard_rename_jam \{event = menu_replace
@@ -372,7 +372,7 @@ script ui_memcard_rename_jam \{event = menu_replace
 	if GotParam \{state}
 		data = {<data> state = <state>}
 	endif
-	generic_event_choose state = uistate_memcard data = {Type = rename_jam event_params = {event = <event> data = <data>}}
+	generic_event_choose state = uistate_memcard data = {type = rename_jam event_params = {event = <event> data = <data>}}
 endscript
 
 script ui_memcard_delete_jam \{event = menu_replace
@@ -381,36 +381,36 @@ script ui_memcard_delete_jam \{event = menu_replace
 	if GotParam \{state}
 		data = {<data> state = <state>}
 	endif
-	generic_event_choose state = uistate_memcard data = {Type = delete_jam event_params = {event = <event> data = <data>}}
+	generic_event_choose state = uistate_memcard data = {type = delete_jam event_params = {event = <event> data = <data>}}
 endscript
 
 script ui_memcard_secondary_siginin_load \{event = menu_replace
 		data = {
 		}}
-	ScriptAssert \{qs(0x2c2b1078)}
+	ScriptAssert \{qs("\Ldeprecated")}
 	if GotParam \{state}
 		data = {<data> state = <state>}
 	endif
-	generic_event_choose state = uistate_memcard data = {Type = secondary_signin_load event_params = {event = <event> data = <data>}}
+	generic_event_choose state = uistate_memcard data = {type = secondary_signin_load event_params = {event = <event> data = <data>}}
 endscript
 memcard_controller_iterator = 0
 memcard_controller_list = [
 ]
 
 script memcard_controller_reset 
-	Change \{memcard_controller_iterator = 0}
-	Change \{memcard_controller_list = [
+	change \{memcard_controller_iterator = 0}
+	change \{memcard_controller_list = [
 		]}
 endscript
 
 script memcard_controller_add \{requested_autosave = 0}
 	if isXenon
 		if NOT CheckForSignIn local controller_index = <controller>
-			printf qs(0x637aadd2) d = <controller>
+			printf qs("\LNot signed in memcard_controller_add %d") d = <controller>
 			return
 		endif
-		if NetSessionFunc func = xenonisguest params = {controller_index = <controller>}
-			printf qs(0xb916c871) d = <controller>
+		if NetSessionFunc func = XenonIsGuest params = {controller_index = <controller>}
+			printf qs("\LGuest in memcard_controller_add %d") d = <controller>
 			return
 		endif
 	endif
@@ -418,13 +418,13 @@ script memcard_controller_add \{requested_autosave = 0}
 	GetGlobalTags savegame = <savegame> user_options
 	if (<requested_autosave> = 0)
 		if (<autosave> = 0)
-			printf qs(0xee8ab3f5) i = <controller>
+			printf qs("\LNo autosave on memcard_controller_add %i") i = <controller>
 			return
 		endif
 	endif
 	if NOT ArrayContains array = $memcard_controller_list contains = <controller>
 		AddArrayElement array = $memcard_controller_list element = <controller>
-		Change memcard_controller_list = <array>
+		change memcard_controller_list = <array>
 	endif
 endscript
 
@@ -432,13 +432,13 @@ script memcard_controller_add_signed_in_and_valid
 	memcard_controller_add controller = ($primary_controller)
 	printf 'memcard_controller_add_signed_in_and_valid - Saving %d' d = ($primary_controller)
 	if isXenon
-		gamemode_getnumplayersshown
+		GameMode_GetNumPlayersShown
 		if (($current_num_players) > 0)
 			i = 0
 			begin
-			formatText checksumName = player_status 'player%d_status' d = (<i> + 1)
+			FormatText checksumname = player_status 'player%d_status' d = (<i> + 1)
 			controller = ($<player_status>.controller)
-			getsavegamefromcontroller controller = <controller>
+			GetSavegameFromController controller = <controller>
 			if CheckForSignIn local controller_index = <savegame>
 				printf 'memcard_controller_add_signed_in_and_valid - Saving %d' d = <savegame>
 				memcard_controller_add controller = <savegame>
@@ -451,43 +451,43 @@ endscript
 
 script memcard_controller_has_next 
 	GetArraySize \{$memcard_controller_list}
-	if ($memcard_controller_iterator < <array_Size>)
+	if ($memcard_controller_iterator < <array_size>)
 		return \{true}
 	endif
-	return \{FALSE}
+	return \{false}
 endscript
 
 script memcard_controller_get_next 
 	GetArraySize \{$memcard_controller_list}
-	if ($memcard_controller_iterator < <array_Size>)
+	if ($memcard_controller_iterator < <array_size>)
 		ctl = ($memcard_controller_list [($memcard_controller_iterator)])
-		Change memcard_controller_iterator = ($memcard_controller_iterator + 1)
+		change memcard_controller_iterator = ($memcard_controller_iterator + 1)
 		return true controller = <ctl>
 	endif
-	return \{FALSE}
+	return \{false}
 endscript
 
 script memcard_guest_profile_warning 
-	Change \{MemcardDoneScript = memcard_sequence_generic_done}
+	change \{MemcardDoneScript = memcard_sequence_generic_done}
 	<options_array> = [
 		{
 			func = {signin_warning_select_signin params = {allow_back = 1}}
-			text = qs(0x17df5913)
+			text = qs("SIGN IN")
 		}
 		{
 			func = memcard_disable_saves_and_quit
-			text = qs(0x06d0b6b0)
+			text = qs("CONTINUE WITHOUT SAVING")
 		}
 		{
-			func = {generic_event_replace params = {state = uistate_boot_iis}}
-			text = qs(0xf7723015)
+			func = {generic_event_replace params = {state = UIstate_boot_iis}}
+			text = qs("CANCEL")
 		}
 	]
 	create_popup_warning_menu {
 		textblock = {
-			text = qs(0xe6d4cc00)
-			Pos = (640.0, 380.0)
-			Scale = 0.6
+			text = qs("You are signed in as a guest. Guest profiles cannot save their progress or settings. Do you wish to continue without saving?")
+			pos = (640.0, 380.0)
+			scale = 0.6
 		}
 		player_device = ($primary_controller)
 		menu_pos = (640.0, 465.0)

@@ -42,7 +42,7 @@ debugger_names = [
 	a
 	a_couple_of_streakers
 	abort
-	absentinnetgames
+	AbsentInNetGames
 	absolute
 	accelerate_ramp_range
 	acceleration
@@ -75,20 +75,20 @@ debugger_names = [
 	active_value_source
 	active_value_source_list
 	active_value_upper_bound
-	active_viewport
+	Active_Viewport
 	activeripplecreator
 	activeripplecreatorforce
 	activeripplecreatorfrequency
 	actual_file_name
 	actuator
-	add
+	Add
 	add_no_servers_found_message
 	add_stat_header_menu_item
 	add_stat_personal_menu_item
 	add_stat_score_menu_item
 	add_super_sectors
 	addbutton
-	addgeom
+	AddGeom
 	`additional asset overhead`
 	addn
 	addonactivevalue
@@ -96,27 +96,27 @@ debugger_names = [
 	addoscillating
 	addsrcmuldst
 	addthumbstick
-	addtostringlookup
-	adinventoryelement
+	AddToStringLookup
+	AdInventoryElement
 	adjust_vel
 	adjustspeed
 	adjustspeedonactivevalue
 	adlevelobject
-	adtexture
-	agent
-	agent_playvo
-	aiinfo
+	AdTexture
+	Agent
+	Agent_PlayVO
+	AiInfo
 	air_guitar_active
 	alias
 	alias_geom
 	alias_material_index
-	align
+	Align
 	align_forward
 	align_to
 	align_vector
 	align_world
-	aligntoground
-	alignwithpath
+	AlignToGround
+	AlignWithPath
 	all
 	`all startup qb files`
 	all_groups
@@ -136,17 +136,17 @@ debugger_names = [
 	allow_random
 	allow_wrap
 	allowed_to_pick
-	allowedradius
+	allowedRadius
 	allstreamsets
 	alltypes
-	almost_got_it
+	ALMOST_GOT_IT
 	alpha
 	alphaclamp
 	alphacutoff
 	alphascale
 	already_did_a_block_with_data
 	already_selected
-	alt_band
+	Alt_Band
 	alt_cutscene
 	alt_group1
 	alt_group2
@@ -158,14 +158,14 @@ debugger_names = [
 	alt_outdoor
 	always
 	always_collide
-	always_hard
-	alwaysemit
-	ambient
+	ALWAYS_HARD
+	AlwaysEmit
+	Ambient
 	amount
 	amp
 	amplitude
-	amplitudeposition
-	amplituderotation
+	amplitudePosition
+	amplitudeRotation
 	analog_l_b
 	analog_l_b_button
 	analog_l_l
@@ -181,7 +181,7 @@ debugger_names = [
 	anarchyintheuk
 	anchor_id
 	and_visible
-	angle
+	Angle
 	angle_between_vel_and_z
 	angleorderxyz
 	angleorderxzy
@@ -190,30 +190,30 @@ debugger_names = [
 	angleorderzxy
 	angleorderzyx
 	angles
-	anglespread
+	AngleSpread
 	anglethreshold
 	anglex
 	angley
 	anglez
-	angular_damping
+	Angular_Damping
 	angular_velocity_x
 	angular_velocity_y
 	angular_velocity_z
 	angvelx
 	angvely
 	angvelz
-	anim
-	anim_animnodeexists
-	anim_command
+	Anim
+	Anim_AnimNodeExists
+	Anim_Command
 	anim_debuganimfetchtime
 	anim_duration
-	anim_enable
+	Anim_Enable
 	anim_events
 	anim_getcounts
-	anim_getdefaultanimname
-	anim_gettotaldisplacement
-	anim_hitnote
-	anim_inittree
+	Anim_GetDefaultAnimName
+	Anim_GetTotalDisplacement
+	Anim_HitNote
+	Anim_InitTree
 	anim_list
 	anim_loadanims
 	anim_name
@@ -222,28 +222,28 @@ debugger_names = [
 	anim_size
 	anim_speed
 	anim_to_run
-	anim_uninittree
+	Anim_UnInitTree
 	anim_update
-	anim_updatepose
+	Anim_UpdatePose
 	anim_usetreeofobject
 	animate_mouth
 	animcache
-	animeventtablename
-	animheapsize
-	animinfo
+	AnimEventTableName
+	AnimHeapSize
+	AnimInfo
 	animinfo_dumpactivevaluesources
 	animinfo_resetcachedactivevalues
 	animinfo_watchactivevaluesource
-	animlodinterleave2
-	animname
+	AnimLODInterleave2
+	AnimName
 	animnode
-	animnxbuffersize
-	animpreview
-	animpreview_setsourcevalues
+	AnimNxBufferSize
+	AnimPreview
+	AnimPreview_SetSourceValues
 	animtags
-	animtagtable
-	animtree
-	anyobjectinradius
+	AnimTagTable
+	AnimTree
+	AnyObjectInRadius
 	anyobjects
 	anytypes
 	aperture_end
@@ -260,12 +260,12 @@ debugger_names = [
 	applydifferenceonactivevalue
 	applydifferenceoscillating
 	applydifferencethumbstick
-	applyenvbrightness
+	ApplyEnvBrightness
 	applygeneraloptions
 	applylightgroup
 	applypartial
 	applypartialonactivevalue
-	applypositionoffset
+	ApplyPositionOffset
 	applystory
 	applystoryskater
 	area
@@ -277,21 +277,21 @@ debugger_names = [
 	array_entry
 	array_name
 	array_size
-	arrayname
-	arrayofarrays
-	arrayofstructures
+	ArrayName
+	ArrayOfArrays
+	ArrayOfStructures
 	arraysize
 	artists
 	as_pos_update
 	asin
-	aspect
+	Aspect
 	assert
 	assert_on_rigidbody_falling_through_world
 	assert_on_texturereplacefail
-	assertonmissinganims
-	assertonmissingassets
-	assertonmissingscripts
-	assertwhenglobalschangetype
+	AssertOnMissingAnims
+	AssertOnMissingAssets
+	AssertOnMissingScripts
+	AssertWhenGlobalsChangeType
 	`asset overhead`
 	asset_context
 	asset_list
@@ -314,13 +314,13 @@ debugger_names = [
 	attach
 	attach_angles
 	attach_attach
-	attach_bone
+	Attach_Bone
 	attach_detach
 	attach_morph
 	attach_offset
-	attach_target
-	attachnode
-	attachobjid
+	Attach_Target
+	attachNode
+	attachObjID
 	attenend
 	attenstart
 	attenuation
@@ -338,60 +338,60 @@ debugger_names = [
 	autoadjust
 	autoadjustfar
 	autoadjustnear
-	autoluminancemod
+	AutoLuminanceMod
 	avalancha
 	average_crowd
 	averagedecompresscount
-	axe_collector
-	axe_grinder
+	AXE_COLLECTOR
+	AXE_GRINDER
 	axis
 	b
 	back
 	back_tattoo
-	back_up_hero
+	BACK_UP_HERO
 	backcolor
-	backdist
+	BackDist
 	backlight_comp
 	backwards
-	bad
+	Bad
 	badfilename
 	badfolder
 	badversion
 	badversionnumber
 	ball_and_socket
 	ban_player
-	band
+	Band
 	band_id
 	band_member
 	band_name
 	bandmember
 	barracuda
-	base
+	Base
 	base_pass
 	base_score
 	base_x
 	base_y
-	basedon
+	basedOn
 	basename
-	basepolys
-	bass
+	BasePolys
+	Bass
 	bassist
 	bassist_info
 	battle_attempt_powerup
-	battle_break_string_index
+	BATTLE_BREAK_STRING_INDEX
 	battle_flicker_difficulty_p1
 	battle_flicker_difficulty_p2
 	battle_gem
 	battle_star_hammer_material
 	battle_star_material
 	battle_steal_ack
-	battle_steal_index
+	BATTLE_STEAL_INDEX
 	battle_trigger_on
 	battlemode_creation_selection
 	battlemode_powerups
 	battlemode_ready
 	battlemode_select
-	bbox
+	BBox
 	bbox_max
 	bbox_min
 	beat_duration
@@ -400,59 +400,59 @@ debugger_names = [
 	begin_test
 	behavior_id
 	behavior_params
-	behaviorsystem
+	BehaviorSystem
 	bellyofashark
 	best_run
 	best_streak
 	best_streak2
 	bg_color
 	bg_viewport
-	big_ol_pile_of_wins
+	BIG_OL_PILE_OF_WINS
 	bighead_scale_info
 	bigscripts
-	billion_gulp
+	BILLION_GULP
 	bink
 	bink_mem
 	binkcutscenes
 	black
 	blackmagicwoman
 	blacksunshine
-	blank
+	Blank
 	blend
 	blend_duration
 	blend_factor
 	blend_factors
-	blend_mode
+	Blend_Mode
 	blend_speed
 	blend_strength
 	blendbutton
 	blendcurve
 	blenddebugthree
 	blenddebugtwo
-	blendduration
+	BlendDuration
 	blendfactor
 	blendfunction
 	blendintime
-	blendmode
-	blendnactive
+	blendMode
+	blendNactive
 	blendonactivevalue
 	blendoscillating
 	blendthumbstick
-	blendtime
+	Blendtime
 	blendtofullbody
 	blendtopartial
-	block
+	Block
 	block_events
 	block_menu_input
 	block_scripts
-	blockalign
+	BlockAlign
 	blocking
-	blockingfunctions
+	BlockingFunctions
 	bloom
-	bloom1
+	Bloom1
 	bloom2
-	blowin_it
-	blue
+	BLOWIN_IT
+	Blue
 	blue_mix
 	blur
 	blur_alpha_pair
@@ -460,11 +460,11 @@ debugger_names = [
 	blur_effect
 	blur_max_displacement
 	blur_rgba
-	blurradius
-	blurresolution
-	body
+	BlurRadius
+	BlurResolution
+	Body
 	body_shape
-	bodytimer
+	BodyTimer
 	bone
 	bone0
 	bone1
@@ -472,38 +472,38 @@ debugger_names = [
 	bone_acc_shirt_back
 	bone_acc_shirt_l
 	bone_acc_shirt_r
-	bone_ankle_l
-	bone_ankle_r
-	bone_bicep_l
-	bone_bicep_r
+	Bone_Ankle_L
+	Bone_Ankle_R
+	Bone_Bicep_L
+	Bone_Bicep_R
 	bone_center
-	bone_chest
+	Bone_Chest
 	bone_end
-	bone_forearm_l
-	bone_forearm_r
-	bone_head
-	bone_knee_l
-	bone_knee_r
+	Bone_Forearm_L
+	Bone_Forearm_R
+	Bone_Head
+	Bone_Knee_L
+	Bone_Knee_R
 	bone_left
-	bone_lod_distances
-	bone_neck
-	bone_palm_l
-	bone_palm_r
-	bone_pelvis
+	Bone_LOD_Distances
+	Bone_Neck
+	Bone_Palm_L
+	Bone_Palm_R
+	Bone_Pelvis
 	bone_pos
 	bone_right
 	bone_scaling
 	bone_start
-	bone_stomach_lower
-	bone_stomach_upper
-	bone_thigh_l
-	bone_thigh_r
+	Bone_Stomach_Lower
+	Bone_Stomach_Upper
+	Bone_Thigh_L
+	Bone_Thigh_R
 	bone_volume
 	bonecollisioninfo
 	boneid
 	boneoffset
 	bonerotate
-	bonetarget
+	boneTarget
 	bool
 	boolean_true
 	boss_battle
@@ -527,15 +527,15 @@ debugger_names = [
 	bot_play
 	bot_strum
 	bottom
-	bottomupheap
+	BottomUpHeap
 	bounce_amp
 	bounce_floor
 	bounce_friction
 	bouncecallback
-	bouncecallbackrate
-	bouncecoeff
-	bounceheight
-	bouncy
+	BounceCallbackRate
+	BounceCoeff
+	BounceHeight
+	Bouncy
 	bouncy_composite_structure
 	bouncy_object
 	bouncy_sfx_maincallback
@@ -546,8 +546,8 @@ debugger_names = [
 	boundingboxmin
 	box
 	boxangles
-	boxcenter
-	boxcorner
+	BoxCenter
+	BoxCorner
 	boxsize
 	brake_full_pct
 	brake_ramp_range
@@ -571,12 +571,12 @@ debugger_names = [
 	buffer_size
 	buffer_slot
 	build_version_string
-	buildscript
+	buildScript
 	bullsonparade
 	bum_note
-	burn
-	burning_a_hole_in_your_pocket
-	burnvalue
+	Burn
+	BURNING_A_HOLE_IN_YOUR_POCKET
+	BurnValue
 	buss
 	buss_id
 	button
@@ -597,7 +597,7 @@ debugger_names = [
 	button_g_midp2
 	button_g_neckp1
 	button_g_neckp2
-	button_masher
+	BUTTON_MASHER
 	button_models
 	button_o_headp1
 	button_o_headp2
@@ -641,7 +641,7 @@ debugger_names = [
 	c2
 	cache_hits
 	cache_misses
-	cacheblockalign
+	CacheBlockAlign
 	cached
 	cached_time
 	cachedscripts
@@ -650,37 +650,37 @@ debugger_names = [
 	callback_complete
 	callback_data
 	callback_params
-	callback_script
+	callBack_Script
 	callbackparams
 	callbackscript
 	callbackscriptparams
 	callstack
 	callstackandloopbuffermemoryusage
 	cam
-	cam1
-	cam2
+	Cam1
+	Cam2
 	cam_object_id
 	camanimduration
 	camera
-	camera_array
+	Camera_Array
 	camera_cuts
 	camera_fov
 	camera_main
 	cameraaim
 	cameraaim_activate
 	cameraaim_deactivate
-	cameracuts_setparams
-	cameracuts_shadowcasters
+	CameraCuts_SetParams
+	CameraCuts_ShadowCasters
 	cameraname
-	cameraz
+	CameraZ
 	camid
 	campaign_score_easy
 	campaign_score_expert
 	campaign_score_hard
 	campaign_score_medium
 	campaign_score_overall
-	camparams
-	cancelrotatedisplay
+	CamParams
+	CancelRotateDisplay
 	canimcachepredictor
 	canimlookup
 	cantbesaved
@@ -703,33 +703,33 @@ debugger_names = [
 	carray
 	cas
 	cas_artist
-	cas_body
-	cash
+	CAS_Body
+	Cash
 	cassman
 	catchandrelease
 	catchandrelease_catch
 	catchandrelease_release
 	category_all_levels
 	cbindings
-	ccam_domorph
-	ccam_enablehandcam
+	CCam_DoMorph
+	CCam_EnableHandcam
 	ccam_endmorph
-	ccam_freeze
+	CCam_Freeze
 	ccam_off
-	ccam_on
-	ccam_orbit
+	CCam_On
+	CCam_Orbit
 	ccam_pan
 	ccam_pause
 	ccam_pitch
 	ccam_restart
 	ccam_roll
 	ccam_setcollision
-	ccam_sethandcamparams
-	ccam_setsmoothing
-	ccam_splinemorph
+	CCam_SetHandcamParams
+	CCam_SetSmoothing
+	CCam_SplineMorph
 	ccam_stoptransforms
 	ccam_unpause
-	ccam_waitmorph
+	CCam_WaitMorph
 	ccam_yaw
 	ccam_zoom
 	`ccomponent and reserve ccomponent`
@@ -740,7 +740,7 @@ debugger_names = [
 	ccompositeobjectdesc
 	ccompositeobjectinstancemanager
 	ccompositeobjectmanager
-	cd
+	CD
 	cd_only
 	ceil
 	center
@@ -758,7 +758,7 @@ debugger_names = [
 	chains
 	chance
 	change
-	change_crowd_looping_sfx
+	Change_Crowd_Looping_SFX
 	change_multiplayer_spawn_in
 	change_stars_to_gems
 	channel
@@ -774,10 +774,10 @@ debugger_names = [
 	charcollision_enable
 	cheat_array_ps3
 	cheat_array_xenon
-	cheat_easyexpert
+	Cheat_EasyExpert
 	cheat_flag
-	cheat_nofail
-	cheat_performancemode
+	Cheat_NoFail
+	Cheat_PerformanceMode
 	cheat_playsound_bad
 	cheat_playsound_good
 	cheatscript
@@ -805,15 +805,15 @@ debugger_names = [
 	cimpostermanager
 	cinematic_camera_default_handcam_params
 	cinematic_camera_default_lerp_params
-	cinematiccamera
+	CinematicCamera
 	circle
 	circular
 	citiesonflame
 	clampback
 	clamped
-	class
+	Class
 	cleanup
-	clear
+	Clear
 	clear_colorbuffer
 	clear_depthstencilbuffer
 	clear_history_on_hit
@@ -821,7 +821,7 @@ debugger_names = [
 	cleared
 	cleargeom
 	clearinvite
-	clearpart
+	ClearPart
 	client_handle_end_song
 	client_lobby_setup
 	client_songs_to_pick
@@ -829,45 +829,45 @@ debugger_names = [
 	clightvolumemanager
 	climbingnode
 	clip_poly
-	clonefrom
+	CloneFrom
 	clonematerial
 	clonemodel
 	clonesrc
 	closer
-	closeup
+	CloseUp
 	closing
 	cluster
 	cnodearraymanager
-	coeff0
-	coeff1
-	coeff2
-	coeff3
-	coeff4
-	coeff5
-	coeff6
-	coeff7
-	coeff8
+	Coeff0
+	Coeff1
+	Coeff2
+	Coeff3
+	Coeff4
+	Coeff5
+	Coeff6
+	Coeff7
+	Coeff8
 	coim
 	coim_blockalign
 	coim_debug_name
 	coim_failures
-	coim_initial_num_perm_objects
-	coim_kill_priority
-	coim_kill_relevance
-	coim_max_distance
-	coim_max_offscreen_seconds
-	coim_max_peds_remove_atonce
-	coim_min_offscreen_dist
-	coim_min_scratch_blocks
+	COIM_Initial_Num_Perm_Objects
+	COIM_Kill_Priority
+	COIM_Kill_Relevance
+	COIM_Max_Distance
+	COIM_Max_Offscreen_Seconds
+	COIM_Max_Peds_Remove_AtOnce
+	COIM_Min_Offscreen_Dist
+	COIM_Min_Scratch_Blocks
 	coim_min_scratch_blocks_nonperm
 	coim_object_debug
-	coim_perm_max_offscreen_seconds
-	coim_permanent_cleanup_relevance
+	COIM_Perm_Max_Offscreen_Seconds
+	COIM_Permanent_Cleanup_Relevance
 	coim_priority
-	coim_priority_effects
-	coim_priority_permanent
-	coim_priority_permanentcleanup
-	coim_type_id
+	COIM_Priority_Effects
+	COIM_Priority_Permanent
+	COIM_Priority_PermanentCleanup
+	COIM_Type_ID
 	coimheap
 	coimpriority
 	col_size
@@ -879,11 +879,11 @@ debugger_names = [
 	collision
 	collision_info
 	collision_stats
-	collisioncache
+	CollisionCache
 	collisioncache_getcollision
-	collisionmode
+	CollisionMode
 	colmod
-	colobjid
+	colObjId
 	color
 	color_all_materials
 	color_b
@@ -891,27 +891,27 @@ debugger_names = [
 	color_r
 	color_tab
 	color_text
-	coloroverrideexclusions
+	ColorOverrideExclusions
 	colorpulseinuse
 	columns
-	com
+	COM
 	combo
 	combochallenge
 	combomambo
 	command
 	commongamenet
 	commonplayerinfo_noname
-	compassblip
-	compassbliptype
+	CompassBlip
+	CompassBlipType
 	complete
-	component
-	components
+	Component
+	Components
 	composite_type
 	compositegameobject_adobject
-	compositehuman
+	CompositeHuman
 	compositeobject
-	compositeobjectmanager_budget
-	compositevehicle
+	CompositeObjectManager_budget
+	CompositeVehicle
 	compress
 	compressedname
 	condition
@@ -924,17 +924,17 @@ debugger_names = [
 	constraint_composite_structure
 	constraint_type
 	constraint_updates_per_sec
-	constraintbones
+	ConstraintBones
 	contact
-	contact_script
+	contact_Script
 	contacts
 	contacts_scaling
 	container
 	container_id
-	containerelement
+	ContainerElement
 	containerid
 	contains
-	containscomponent
+	ContainsComponent
 	content
 	content_index
 	contentfolderstate
@@ -985,10 +985,10 @@ debugger_names = [
 	corona_texture
 	corrupt
 	corruptcontentdetected
-	corrupteddata
+	CorruptedData
 	cos
-	cosmaxhingeangle
-	cosminhingeangle
+	CosMaxHingeAngle
+	CosMinHingeAngle
 	count
 	count_add
 	count_anim_multi_frame
@@ -1023,24 +1023,24 @@ debugger_names = [
 	create_panel_message
 	create_script
 	create_team_flags
-	createcomponentfromstructure
+	CreateComponentFromStructure
 	createconnectingdialog
-	created
+	Created
 	`created texture`
 	created_piece
-	createdatstart
+	CreatedAtStart
 	createdfromtod
-	createdfromvariable
+	CreatedFromVariable
 	createdgraphic
-	createdonprogress
+	CreatedOnProgress
 	createenterpasswordcontrol
-	createfromstructure
-	createfunctionlistwindow
+	CreateFromStructure
+	CreateFunctionListWindow
 	creategameinprogressdialog
 	createjoiningdialog
 	createjoinrefuseddialog
-	createlensflare
-	createobjlabel
+	CreateLensFlare
+	CreateObjLabel
 	createripples
 	createtexture
 	createtryingpassworddialog
@@ -1058,13 +1058,13 @@ debugger_names = [
 	crowd_model_array
 	crowd_poor_medium
 	crowd_scale
-	crowd_singalong_volume_down
-	crowd_singalong_volume_up
-	crowd_transition_sfx_good_to_medium
-	crowd_transition_sfx_medium_to_good
-	crowd_transition_sfx_medium_to_poor
-	crowd_transition_sfx_poor_to_medium
-	crowdlevelforsurges
+	Crowd_Singalong_Volume_Down
+	Crowd_Singalong_Volume_Up
+	Crowd_Transition_SFX_Good_To_Medium
+	Crowd_Transition_SFX_Medium_To_Good
+	Crowd_Transition_SFX_Medium_To_Poor
+	Crowd_Transition_SFX_Poor_To_Medium
+	CrowdLevelForSurges
 	cscreenelementmanager
 	cscript
 	cscriptcache
@@ -1120,7 +1120,7 @@ debugger_names = [
 	current_time_only
 	currentalloced
 	currentlinks
-	currenttime
+	CurrentTime
 	curscreenfx
 	curve
 	custombinary
@@ -1138,7 +1138,7 @@ debugger_names = [
 	cut_gel_getrefobjectinfo
 	cut_gel_initobjectlist
 	cut_gel_loaddata
-	cut_gel_pause
+	Cut_GEL_Pause
 	cut_gel_pauserefobjects
 	cut_gel_preloadaudiostream
 	cut_gel_processrefobjects
@@ -1177,7 +1177,7 @@ debugger_names = [
 	cvector
 	cviewportmanager
 	cyan
-	cycle
+	Cycle
 	cycle_backwards
 	cycle_length
 	cycleonactivevalue
@@ -1194,7 +1194,7 @@ debugger_names = [
 	dayofweek
 	dbg_clear_color
 	dbgfile
-	deactivate_script
+	deactivate_Script
 	dead
 	dead_whammy
 	deadentry
@@ -1215,42 +1215,42 @@ debugger_names = [
 	debuganimevents
 	debugcomplexstreams
 	debugger_display_name
-	debuggersendmodetext
-	debugheap
+	DebuggerSendModeText
+	DebugHeap
 	debuglocalizations
-	debugprintappearance
+	DebugPrintAppearance
 	debugproxims
-	debugscriptprintf
+	DebugScriptPrintf
 	debugsoundeffects
 	debugsoundevents
-	debugsoundfx
+	DebugSoundFX
 	debugstreams
 	deceleration
-	decimalplaces
+	DecimalPlaces
 	decrease_size_by_radius
-	default_buss
+	Default_Buss
 	default_degeneration_duration
 	default_diffuse
 	default_far_plane_distance
-	default_fast_particle_lod_dist_pair
+	Default_Fast_Particle_LOD_Dist_Pair
 	default_highway
 	default_light_group
 	default_network_preferences
 	default_params
-	default_particle_lod_dist_pair
-	default_priority
+	Default_Particle_LOD_Dist_Pair
+	Default_Priority
 	default_screen_mode
-	defaultanim
-	defaultanimname
-	defaultcommandtarget
+	defaultAnim
+	DefaultAnimName
+	DefaultCommandTarget
 	defaultgroup
-	defaultmovingobjectsuspenddistance
+	DefaultMovingObjectSuspendDistance
 	defer
 	deferreddelete
 	defrag
-	degenerateblend
-	degenerateblend_addbranch
-	degenerateblend_setnextblendduration
+	DegenerateBlend
+	DegenerateBlend_AddBranch
+	DegenerateBlend_SetNextBlendDuration
 	degenerateblend_skipnextupdate
 	degeneratepartial
 	degeneratepartial_addbranch
@@ -1260,14 +1260,14 @@ debugger_names = [
 	delete_error
 	delta
 	delta_time
-	density
+	Density
 	depend_func
 	dependency
 	depends_on
-	depth
+	DEPTH
 	depth_only
 	depthmap
-	depthrange
+	DepthRange
 	depthscale
 	desc
 	desc_id
@@ -1282,12 +1282,12 @@ debugger_names = [
 	destroy_params
 	destroy_server_menu_children
 	destroy_time
-	destroyed
+	Destroyed
 	destroyifempty
 	destroymousecursor
 	destroymousetext
-	destroyparticles
-	details
+	DestroyParticles
+	Details
 	device
 	device_none
 	device_num
@@ -1299,7 +1299,7 @@ debugger_names = [
 	dialog
 	dialog_box_container
 	dialog_box_exit
-	die
+	Die
 	difference
 	differencebutton
 	differenceoscillating
@@ -1312,8 +1312,8 @@ debugger_names = [
 	difficulty_selection
 	difficulty_text_nl
 	diffuse
-	diffusetexture
-	diffusetextureenabled
+	DiffuseTexture
+	DiffuseTextureEnabled
 	digital_button_tol_angle
 	digital_button_tol_impulse
 	digital_button_tol_twist
@@ -1337,13 +1337,13 @@ debugger_names = [
 	disabledisplayflip
 	disableinputevents
 	disableobjviewer
-	disableplayerinput
+	Disableplayerinput
 	disablepointing
 	disables
 	disableshadowcasting
 	disableviewerroll
 	disallow_tolerance_strums
-	disassociatefromobject
+	DisassociateFromObject
 	discard_extension
 	discard_previous_frame
 	displacement
@@ -1357,19 +1357,19 @@ debugger_names = [
 	distabove
 	distance
 	distance_to_camera
-	distancemod
+	DistanceMod
 	distbelow
 	do
 	do_hacky_pak_magic
 	do_join_invite_stuff
-	do_starpower_camera
-	docircularemit
+	Do_StarPower_Camera
+	DoCircularEmit
 	dof
 	dofiles
-	domorph
+	DoMorph
 	domouseclickeffect
-	donotassertforinfiniteloopsinthesescripts
-	donotresolve
+	DoNotAssertForInfiniteLoopsInTheseScripts
+	DoNotResolve
 	dont_allow_wrap
 	dont_assert
 	dont_assert_node
@@ -1378,7 +1378,7 @@ debugger_names = [
 	dont_override_encoded_rgba
 	dont_propagate
 	dont_recurse
-	dontassertforchecksums
+	DontAssertForChecksums
 	dontendsessionafterwrite
 	dontholdback
 	dontpause
@@ -1391,32 +1391,32 @@ debugger_names = [
 	double_notes
 	double_sided
 	double_sided_slope
-	doupdatelensflare
+	DoUpdateLensFlare
 	down
 	downleft
 	download
 	downloadcontent
 	downndirty
-	downpressed
+	DownPressed
 	downright
 	dragonforce_hack
 	draw_cutscene_panel
 	draw_debug_lines
 	draw_viewer_object_panel
-	draworder
+	DrawOrder
 	drawskeletons
-	driftallowedamplitude
-	driftenabled
-	driftlerpmap
-	driftslerpmap
+	driftAllowedAmplitude
+	DriftEnabled
+	driftLerpMap
+	driftSlerpMap
 	dropdown_length
 	dropdown_vertical
 	dropoff
 	dropoff_function
 	drum_blend_time
-	drumkick_left
-	drumkick_right
-	drummer
+	DrumKick_Left
+	DrumKick_Right
+	Drummer
 	drummer_anims
 	drummer_info
 	drummer_left_arm_twist_factors
@@ -1429,7 +1429,7 @@ debugger_names = [
 	dumptofile
 	duration
 	dvd
-	dynamic
+	DYNAMIC
 	dynamic_duo
 	dynamic_proxim_trigger
 	dynamiclight
@@ -1439,9 +1439,9 @@ debugger_names = [
 	ease_in
 	ease_out
 	easy
-	easy_duo
+	EASY_DUO
 	easy_expert
-	easy_rider
+	EASY_RIDER
 	echooff
 	echoon
 	ed
@@ -1449,14 +1449,14 @@ debugger_names = [
 	effects
 	effects_rigidbody
 	eh
-	elapsedtime
+	ElapsedTime
 	element
-	element3d
+	Element3d
 	element3d_add_components
 	element3d_init_model
 	elements
 	elevation
-	elevspread
+	ElevSpread
 	emit
 	emit_dir
 	emit_params
@@ -1465,25 +1465,25 @@ debugger_names = [
 	emit_script
 	emit_spread
 	emit_start_radius
-	emit_target
-	emitangle
-	emitdelaystart
+	emit_Target
+	EmitAngle
+	EmitDelayStart
 	emitdelaystarttime
-	emitduration
-	emitfunction
-	emitnum
+	EmitDuration
+	EmitFunction
+	emitNum
 	emitoff
 	emiton
-	emitperiod
-	emitrangedims
-	emitrate
+	EmitPeriod
+	EmitRangeDims
+	EmitRate
 	emitratespeed
 	emitscript
 	emitter
 	`emitter objects`
-	emitterindependent
+	EmitterIndependent
 	emitterobject
-	emittervelocityweight
+	EmitterVelocityWeight
 	empty
 	empty_script
 	emptysystem
@@ -1498,9 +1498,9 @@ debugger_names = [
 	enabled_bones
 	enabledisplayflip
 	enableinputevents
-	enableobjviewer
-	enableplayerinput
-	enablerotate
+	EnableObjViewer
+	Enableplayerinput
+	EnableRotate
 	encryptionkey
 	end
 	end_color
@@ -1518,16 +1518,16 @@ debugger_names = [
 	endangle
 	endfov
 	endgap
-	endpos
+	endPos
 	endquat
-	endradius
+	EndRadius
 	endtime
 	endvalue
 	enforce_max_width
 	engine_max_torque
 	engine_startup_params
-	enlightened_guitarist
-	enter_behavior
+	ENLIGHTENED_GUITARIST
+	Enter_Behavior
 	entering_free_skate
 	enterproximityscript
 	entityactivatedcallback
@@ -1538,7 +1538,7 @@ debugger_names = [
 	envmappolys
 	epsilon
 	error
-	errorcode
+	ErrorCode
 	evenflow
 	event
 	event_data
@@ -1549,8 +1549,8 @@ debugger_names = [
 	event_source
 	event_type
 	event_type_array
-	eventcache
-	eventcache_add
+	EventCache
+	EventCache_Add
 	eventcache_addusingparams
 	eventcache_broadcast
 	eventcache_display
@@ -1563,7 +1563,7 @@ debugger_names = [
 	eventscr
 	everyframeoff
 	everyframeon
-	everything
+	Everything
 	ew
 	exactvalues
 	exception
@@ -1618,7 +1618,7 @@ debugger_names = [
 	facingvector
 	fade
 	fade_time
-	fadeout
+	fadeOut
 	fadetoblackcoverstartframes
 	fail_song
 	failed
@@ -1626,11 +1626,11 @@ debugger_names = [
 	failedtocreategame
 	failure
 	fake_strum
-	falloff1
-	falloff2
+	FallOff1
+	FallOff2
 	falloffalpha
 	false
-	fam
+	FAM
 	fam_getuniqueid
 	fam_isplaying
 	fam_ispreloading
@@ -1640,12 +1640,12 @@ debugger_names = [
 	far_clip
 	farblend
 	farthest_degenerate_rail
-	fast
+	Fast
 	fast_in
 	fast_lerp_factor
 	fast_out
 	fast_tempo
-	fastparticlecomponents
+	FastParticleComponents
 	fcpremix
 	feeler
 	feeler_increment
@@ -1661,12 +1661,12 @@ debugger_names = [
 	filesize
 	filesleft
 	fileslimitreached
-	filetype
+	FileType
 	fill_input_array
 	fill_stats_array
 	fillburst
 	filldist
-	fillpath
+	FillPath
 	filter_center_frames
 	filter_gravity_frames
 	filter_sensor_frames
@@ -1684,7 +1684,7 @@ debugger_names = [
 	first_active_value_lower_bound
 	first_active_value_source
 	first_active_value_upper_bound
-	first_big_score
+	FIRST_BIG_SCORE
 	first_body_axis
 	first_body_axis_perp
 	first_body_pivot_pos
@@ -1694,7 +1694,7 @@ debugger_names = [
 	first_gemp1
 	first_gemp2
 	first_link
-	first_mill
+	FIRST_MILL
 	first_strength
 	firstfreeslot
 	firstnote_window_openp1
@@ -1707,15 +1707,15 @@ debugger_names = [
 	flag_max_coords
 	flag_whole_rail
 	flags
-	flareonly
+	FlareOnly
 	flat
 	flat_ended
 	flat_middle
 	flatribbontrail
-	flexible
+	FLEXIBLE
 	flexibleparticle
-	flexibleparticlecomponents
-	flexparticle
+	FlexibleParticleComponents
+	FlexParticle
 	flexparticle_composite_structure
 	flexparticleparams
 	flicker
@@ -1730,7 +1730,7 @@ debugger_names = [
 	floor
 	flow_state_index
 	flushcutscenedestroylist
-	flushdeadobjects
+	FlushDeadObjects
 	fmod
 	fmod_diskejected_event
 	fmodupdate
@@ -1743,12 +1743,12 @@ debugger_names = [
 	fogging
 	folder
 	folder_name
-	folderindex
+	FolderIndex
 	folderlisting
-	foldername
+	FolderName
 	follow
-	followemitter
-	followtarget
+	FollowEmitter
+	FollowTarget
 	font
 	font_baseline_offset
 	font_spacing
@@ -1756,7 +1756,7 @@ debugger_names = [
 	force32_litflag
 	force_lods
 	force_nodelistman_metrics
-	force_particle_update_time
+	Force_Particle_Update_Time
 	force_refresh
 	force_tex_dict_lookup
 	force_update
@@ -1771,7 +1771,7 @@ debugger_names = [
 	formatted_time
 	forward
 	forwards
-	fov
+	FOV
 	fov1
 	fov2
 	fov_adjustment
@@ -1795,7 +1795,7 @@ debugger_names = [
 	freeblocks
 	freemem
 	freeze
-	freq
+	Freq
 	fret_anims
 	fret_anims_lrg
 	fret_anims_med
@@ -1815,8 +1815,8 @@ debugger_names = [
 	front_end_pad
 	front_vector
 	frontcolor
-	frontdist
-	frontend
+	FrontDist
+	FrontEnd
 	frustum
 	frustumdebugtype
 	fsb_index
@@ -1827,14 +1827,14 @@ debugger_names = [
 	fsm_printevents
 	fsm_printparamreplacement
 	fsm_printreplacement
-	fsm_printstatemachine
-	fsm_replace
+	FSM_PrintStateMachine
+	Fsm_Replace
 	full_speed
 	func
 	function
 	functionname
-	functions
-	functionsets
+	Functions
+	FunctionSets
 	functionwindowrefresh
 	furthest
 	fx
@@ -1874,7 +1874,7 @@ debugger_names = [
 	g_hud_2d_struct_used
 	g_overridefps
 	gain
-	gainpernote
+	GainPerNote
 	game
 	`game objects`
 	`game singletons`
@@ -1894,11 +1894,11 @@ debugger_names = [
 	gamemode
 	gamemodeisp2careerorcoop
 	`gamenet::manager`
-	gameobj
+	GameObj
 	gameobj_add_components
 	gameobj_composite_structure
 	gameobj_init_animtree
-	gameobject
+	GameObject
 	gapscript
 	gem
 	gem_colors
@@ -1932,14 +1932,14 @@ debugger_names = [
 	geom_stats_old_particle_prims
 	geom_stats_old_particle_systems
 	geom_stats_old_particles
-	geometry
-	geometryobject
-	geometryobject_structure
-	geommodulatecolor
+	Geometry
+	GeometryObject
+	GeometryObject_structure
+	GeomModulateColor
 	geomname
-	geomreplacetexture
+	GeomReplaceTexture
 	geoms
-	geomsetuvmatrix
+	GeomSetUVMatrix
 	get_agora_token
 	get_current_level_name
 	get_demonware_motd
@@ -1951,37 +1951,37 @@ debugger_names = [
 	get_stats
 	get_stats_state
 	get_then_load
-	getbeatadevlist
-	getchecksum
+	GetBeatADevList
+	GetChecksum
 	getcurrentterraintype
 	getflexparticleparams
-	gethfov
+	GetHFov
 	getnumplayers
-	getparentid
+	GetParentID
 	getpart
 	getparticleparams
-	getprops
+	GetProps
 	getrendertarget
-	getsetoftags
-	getsingletag
+	GetSetOfTags
+	GetSingleTag
 	getspeed
-	gettags
+	GetTags
 	getvelocity
 	gfx_size
 	gfxfx
 	gh3_songlist_props
-	gh_battlemode_modulate_wah_value
-	ghighwayendfade
-	ghighwaystartfade
-	ghighwaytiling
+	gh_battlemode_modulate_Wah_value
+	gHighwayEndFade
+	gHighwayStartFade
+	gHighwayTiling
 	global
-	global_soundevent_default_buss
-	global_soundevent_default_priority
-	global_soundevent_instancelimit
-	global_soundevent_instancemanagement
-	global_soundevent_norepeatfor
-	globalarray
-	globallodzones
+	Global_SoundEvent_Default_Buss
+	Global_SoundEvent_Default_Priority
+	Global_SoundEvent_InstanceLimit
+	Global_SoundEvent_InstanceManagement
+	Global_SoundEvent_NoRepeatFor
+	GlobalArray
+	GlobalLODZones
 	globalname
 	globalstruct
 	globaltag_checksum
@@ -1995,7 +1995,7 @@ debugger_names = [
 	good
 	got_backspace
 	got_down
-	got_em_all
+	GOT_EM_ALL
 	got_enter
 	got_escape
 	got_f1
@@ -2005,7 +2005,7 @@ debugger_names = [
 	got_left
 	got_right
 	got_up
-	gotextramemory
+	GotExtraMemory
 	gothatfar
 	gotpart
 	gpu
@@ -2029,41 +2029,41 @@ debugger_names = [
 	group3
 	group4
 	group5
-	groupid
+	groupID
 	gs_default
 	gsid
 	guest
 	guitar
 	guitar2
-	guitar_always_volume_100
-	guitar_hero
+	Guitar_Always_Volume_100
+	GUITAR_HERO
 	guitar_player1_unique_id
 	guitar_player2_unique_id
 	guitar_startup
 	guitar_stream
 	guitar_used_select
 	guitar_volume
-	guitar_wizard
-	guitarcontent
-	guitarevent_multiplier2xoff
-	guitarevent_multiplier2xon
-	guitarevent_multiplier3xoff
-	guitarevent_multiplier3xon
-	guitarevent_multiplier4xoff
-	guitarevent_multiplier4xon
-	guitarist
+	GUITAR_WIZARD
+	GuitarContent
+	GuitarEvent_Multiplier2xOff
+	GuitarEvent_Multiplier2xOn
+	GuitarEvent_Multiplier3xOff
+	GuitarEvent_Multiplier3xOn
+	GuitarEvent_Multiplier4xOff
+	GuitarEvent_Multiplier4xOn
+	Guitarist
 	guitarist_finger_anims_large
 	guitarist_finger_anims_medium
 	guitarist_finger_anims_small
 	guitarist_info
-	guitarvolumefullstereolevel
-	guitarvolumepartialstereolevel
-	guitarvolumeramptimedown
-	guitarvolumeramptimeup
+	GuitarVolumeFullStereoLevel
+	GuitarVolumePartialStereoLevel
+	GuitarVolumeRamptimeDown
+	GuitarVolumeRamptimeUp
 	h
 	half
-	half_a_mill
-	half_mill_club
+	HALF_A_MILL
+	HALF_MILL_CLUB
 	hammer
 	hammer_hits
 	hammer_on
@@ -2075,7 +2075,7 @@ debugger_names = [
 	handle_keyboard_input
 	handling_pad_event
 	hard
-	hard_duo
+	HARD_DUO
 	hardware_letterbox
 	has_active_antileaderboard_cheats
 	has_active_session
@@ -2085,7 +2085,7 @@ debugger_names = [
 	has_ui_only
 	haschildrails
 	`hash item pool manager`
-	haslocalheadset
+	HasLocalHeadset
 	hasmotion
 	hasvoicethroughspeakers
 	have_captured_pose
@@ -2097,7 +2097,7 @@ debugger_names = [
 	havok_mem_debug_checked
 	hb
 	hdd
-	head
+	Head
 	head_tattoo
 	heading
 	health_change_bad_battle_easy
@@ -2198,18 +2198,18 @@ debugger_names = [
 	heap_zones_vram
 	heapinfo
 	heapname
-	height
+	Height
 	heightmap_size
 	heightmapactivaterange
 	heightmapbias
 	heightmapbiasforrain
 	heightmapcache
 	heightmapcacherange
-	heightperspexp
-	heightperspfact
+	heightPerspExp
+	heightPerspFact
 	heldlongerthan
 	helicopter
-	hendrix_reborn
+	HENDRIX_REBORN
 	hero_body_branch
 	hero_drumming_branch
 	hero_play_adjusting_random_anims
@@ -2221,13 +2221,13 @@ debugger_names = [
 	hide_console_window
 	hide_from_debugger
 	hide_geom
-	hidegeom
-	hideloadingscreen
+	HideGeom
+	Hideloadingscreen
 	hierarchy
 	hierkommtalex
 	high_average_threshold
 	high_bpm
-	higher_than_most
+	HIGHER_THAN_MOST
 	highlight
 	highway_2dp1
 	highway_2dp2
@@ -2246,9 +2246,9 @@ debugger_names = [
 	hinge_max_angular_limit
 	hinge_max_friction_torque
 	hinge_min_angular_limit
-	hingeaxis
-	history
-	historylistcoordinatespace
+	HingeAxis
+	History
+	HistoryListCoordinateSpace
 	hit_norm
 	hit_notep1
 	hit_notep2
@@ -2260,12 +2260,12 @@ debugger_names = [
 	hit_terrain
 	hitbone
 	hitmewithyourbestshot
-	hitnote_blue
-	hitnote_green
-	hitnote_orange
-	hitnote_red
-	hitnote_yellow
-	hmenu
+	HitNote_Blue
+	HitNote_Green
+	HitNote_Orange
+	HitNote_Red
+	HitNote_Yellow
+	HMenu
 	hold_difficulty_up
 	hold_pattern
 	holding
@@ -2277,23 +2277,23 @@ debugger_names = [
 	horse
 	host_handle_dropped_client
 	host_songs_to_pick
-	hotspot
+	Hotspot
 	hour
 	housingchecksum
-	hover
+	Hover
 	hoverparams
 	hp
 	hscrollingmenu
 	hsv
-	hud2d_rock_bg_green
-	hud2d_rock_bg_red
-	hud2d_rock_bg_yellow
+	HUD2D_rock_BG_green
+	HUD2D_rock_BG_red
+	HUD2D_rock_BG_yellow
 	hud2d_rock_glowp1
 	hud2d_rock_glowp2
-	hud2d_rock_lights_green
-	hud2d_rock_lights_red
-	hud2d_rock_lights_yellow
-	hud2d_rock_needle
+	HUD2D_rock_lights_green
+	HUD2D_rock_lights_red
+	HUD2D_rock_lights_yellow
+	HUD2D_rock_needle
 	hud2d_rock_tube_1p1
 	hud2d_rock_tube_1p1full
 	hud2d_rock_tube_1p1tube
@@ -2333,18 +2333,18 @@ debugger_names = [
 	hud_flash_red_bg_kill
 	hud_flip_note_streak_num
 	hud_move_note_scorebar
-	hud_score_light_0
-	hud_score_light_0_blue
-	hud_score_light_0_green
-	hud_score_light_0_purple
-	hud_score_light_1
-	hud_score_light_1_blue
-	hud_score_light_1_green
-	hud_score_light_1_purple
-	hud_score_light_2
-	hud_score_light_2_blue
-	hud_score_light_2_green
-	hud_score_light_2_purple
+	HUD_score_light_0
+	HUD_score_light_0_blue
+	HUD_score_light_0_green
+	HUD_score_light_0_purple
+	HUD_score_light_1
+	HUD_score_light_1_blue
+	HUD_score_light_1_green
+	HUD_score_light_1_purple
+	HUD_score_light_2
+	HUD_score_light_2_blue
+	HUD_score_light_2_green
+	HUD_score_light_2_purple
 	hud_show_note_streak_combo
 	hue
 	hyper_speed
@@ -2358,17 +2358,17 @@ debugger_names = [
 	icon_xen
 	id
 	identity
-	idle
+	Idle
 	if_not_visible
 	ifdisabled
-	ifempty
+	ifEmpty
 	ifpossible
 	ifzero
 	igc_camera_frame_counter_kill
 	igc_camera_show_frame_info
 	igc_camera_structure
 	igc_camera_update_frame_count
-	igc_runcamerascript
+	IGC_RunCameraScript
 	igccamera
 	ignore
 	ignore_0
@@ -2383,11 +2383,11 @@ debugger_names = [
 	ignore_strums_after_hammers
 	ignore_time
 	ignoredlights
-	ignorelockdie
+	IgnoreLockDie
 	ignoreslomo
-	ignoresnapshotpositions
-	ik
-	ik_setchainstrength
+	IgnoreSnapshotPositions
+	Ik
+	IK_SetChainStrength
 	imintheband
 	immediate
 	impostor
@@ -2425,13 +2425,13 @@ debugger_names = [
 	inner_alpha
 	inner_color
 	inner_radius
-	innerradius
-	innervolume
-	input
+	InnerRadius
+	InnerVolume
+	Input
 	input_array
 	input_arrayp1
 	input_arrayp2
-	input_debounce
+	Input_Debounce
 	input_getbuttonid
 	input_getstickstates
 	input_mode
@@ -2443,35 +2443,35 @@ debugger_names = [
 	insideangle
 	instance_count
 	instance_rule
-	instancelimit
-	instancemanagement
+	InstanceLimit
+	InstanceManagement
 	instancepolys
 	instant
 	instantly
 	instrument_index
 	instrument_selection
 	int
-	integer
+	Integer
 	integer_width
 	intensity
-	interact
+	Interact
 	interact_with_water
 	interaction
 	interactive
 	interactive_rigidbody
 	interactivewater
-	interiorpanningradius
+	InteriorPanningRadius
 	interleavable
 	internal_just
 	internal_scale
 	interpolated
 	interpolateintonextpacket
 	interrupt_current
-	intid
+	intId
 	intro
 	intro_smstg
 	intromission
-	inv_distance
+	INV_DISTANCE
 	inv_exponential
 	invalid
 	invalid_desc_crc
@@ -2480,7 +2480,7 @@ debugger_names = [
 	invalid_screen_element_id
 	invalid_sector_id
 	invalidheightmapcache
-	invalidtoc
+	InvalidTOC
 	inventory
 	invite
 	inviter
@@ -2506,19 +2506,19 @@ debugger_names = [
 	isactive
 	isbuttonfont
 	isdebugfont
-	isemitting
+	IsEmitting
 	isfinalized
 	isheadmodel
-	ishidden
+	IsHidden
 	islevelnodearray
-	isolate_2d_render
+	ISOLATE_2D_RENDER
 	isperm
 	isranked
 	isrefobject
 	isskinnedmodel
 	iswet
 	item
-	itemcontrol
+	ItemControl
 	iterator_text
 	jaw
 	jitteramount
@@ -2550,15 +2550,15 @@ debugger_names = [
 	kill_team_flags
 	kill_viewer_object_panel
 	kill_when_empty
-	killanimpreviewrefs
+	KillAnimPreviewRefs
 	killoldparticles
 	killspritehighlighteffect
 	knightsofcydonia
-	knot
+	Knot
 	knots
 	koolthing
-	l1
-	l2
+	L1
+	L2
 	l2raw
 	l3
 	label
@@ -2568,15 +2568,15 @@ debugger_names = [
 	language
 	language_dutch
 	language_english
-	language_french
-	language_german
-	language_italian
+	LANGUAGE_FRENCH
+	LANGUAGE_GERMAN
+	LANGUAGE_ITALIAN
 	language_japanese
 	language_portuguese
-	language_spanish
+	LANGUAGE_SPANISH
 	language_undefined
-	largeparticlesrgb
-	largescale
+	LargeParticlesRGB
+	LargeScale
 	largestfreeblock
 	last
 	last_anim_name
@@ -2601,14 +2601,14 @@ debugger_names = [
 	layout
 	layout1x1
 	layout1x2
-	layout2x1
-	layout2x2
-	lb
+	Layout2x1
+	Layout2x2
+	LB
 	leaderboard
 	leaderboard_data
 	leaderboard_id
 	leaderboards
-	leaders_of_the_pack
+	LEADERS_OF_THE_PACK
 	led
 	left
 	left_anchor
@@ -2626,7 +2626,7 @@ debugger_names = [
 	lefthanded_button_ups
 	lefthanded_gems
 	leftlength
-	leftpressed
+	LeftPressed
 	leftstick_down
 	leftstick_downleft
 	leftstick_downright
@@ -2650,65 +2650,65 @@ debugger_names = [
 	lefty_flip_p2
 	lefty_update
 	length
-	lens_flare_container
-	lens_flare_data
-	lensflare_morph_in
-	lensflare_morph_out
+	Lens_Flare_Container
+	Lens_Flare_Data
+	LensFlare_Morph_In
+	LensFlare_Morph_Out
 	lerp_dropoff
 	letterbox
 	level
 	level_name
 	levelgeometry
-	levellight
+	LevelLight
 	levellight_composite_structure
 	levellightnames
-	levellightobject_budget
-	levelobject
-	levelobjectobject_budget
+	LevelLightObject_Budget
+	LevelObject
+	LevelObjectObject_Budget
 	levelobjects
 	lfx_size
 	life
-	life_of_the_party
-	liferange
-	lifetime
+	LIFE_OF_THE_PARTY
+	LifeRange
+	lifeTime
 	light_group
-	light_setparams
+	Light_SetParams
 	light_tool_vmenu
-	lightcachepool
-	lightchecksum
-	lightcolor
+	LightCachePool
+	lightChecksum
+	LightColor
 	lightdist
 	lightfar
 	lightgroup
-	lighting
+	Lighting
 	lightnear
 	lightning_particle
-	lightshow
+	LightShow
 	lightshow_coloroverrideblend
-	lightshow_coloroverrides
+	LightShow_ColorOverrides
 	lightshow_defaultblendtime
 	lightshow_housingmodels
 	lightshow_spotlightoverrides
-	lightshow_statenodeflagmapping
-	lightvolume
+	LightShow_StateNodeFlagMapping
+	LightVolume
 	lightvolume_flarecutoff_high
 	lightvolume_flarecutoff_low
 	lightvolume_flarematerialcrc
 	lightvolume_flaresaturate
 	lightvolume_follow
-	lightvolume_getparams
-	lightvolume_setparams
-	lightvolumeobject_budget
-	lightvolumes
-	lightvolumetype
-	lightwidth
+	LightVolume_GetParams
+	LightVolume_SetParams
+	LightVolumeObject_Budget
+	LightVolumes
+	LightVolumeType
+	lightWidth
 	limited_hinge
 	line
 	line1
 	line2
 	line_spacing
 	linear
-	linear_damping
+	linear_Damping
 	linear_velocity_x
 	linear_velocity_y
 	linear_velocity_z
@@ -2725,7 +2725,7 @@ debugger_names = [
 	listtype
 	live_connection_gained
 	live_connection_lost
-	living_legends
+	LIVING_LEGENDS
 	`load overhead`
 	load_and_sync_timing
 	load_anim_set
@@ -2755,8 +2755,8 @@ debugger_names = [
 	localized
 	localsystemtime
 	localwind
-	localwindcoeff
-	locator
+	LocalWindCoeff
+	Locator
 	lock_framerate
 	lock_pos
 	lock_to_object_matrix
@@ -2764,45 +2764,45 @@ debugger_names = [
 	locked
 	lockfrustums
 	lockobj
-	lockobj_getparent
-	lockto
-	locktobone
+	LockObj_GetParent
+	LockTo
+	LockToBone
 	locktoworldorientation
-	lod_default
+	LOD_Default
 	lod_dist1
 	lod_dist2
 	lod_dist3
 	lod_distance
-	lod_distances
-	lod_enablelod
+	LOD_Distances
+	LOD_EnableLOD
 	lod_suspenddistance
 	loddistances
-	lodminparticles
+	LodMinParticles
 	lodzones
 	log_fast
 	log_slow
 	logged_in
 	logic_priority
-	logicframe
-	lookat
-	lookatbone
-	lookatpos
+	LogicFrame
+	LookAt
+	LookAtBone
+	LookAtPos
 	loop_duration
 	loop_end
 	loop_start
 	lose
 	loser
 	losing_player
-	losspernote
+	LossPerNote
 	low_average_threshold
 	low_bpm
 	lower_bound
-	lowerbound
+	lowerBound
 	lowercasestring
 	lowest_priority_slot
 	lowlevel_filter_cutoff
-	lowpass
-	lp
+	LowPass
+	LP
 	lpfcone
 	m_acceleration
 	m_active_state
@@ -2829,7 +2829,7 @@ debugger_names = [
 	m_emit_rate
 	m_emit_time_accum
 	m_emit_w
-	m_endfade
+	m_endFade
 	m_enter_turn_dist
 	m_ew
 	m_fcurtime
@@ -2898,10 +2898,10 @@ debugger_names = [
 	m_orig_pos
 	m_parent_id
 	m_pathob_state
-	m_playerindex
+	m_playerIndex
 	m_point_stick_to_ground
 	m_pos
-	m_pspass0materialcolor
+	m_psPass0MaterialColor
 	m_pspass1materialcolor
 	m_pspass2materialcolor
 	m_pspass3materialcolor
@@ -2915,7 +2915,7 @@ debugger_names = [
 	m_speed_max
 	m_speed_min
 	m_start_node
-	m_startfade
+	m_startFade
 	m_stop_dist
 	m_string
 	m_suspend_distance
@@ -2948,20 +2948,20 @@ debugger_names = [
 	m_wp_pos_from
 	m_wp_pos_to
 	m_y_offset
-	magenta
+	Magenta
 	main
 	main_buff_misc_size
 	main_mem
 	mainloop
-	mainloopasyncrender
-	mainloopasyncrendersync
+	MainLoopAsyncRender
+	MainLoopAsyncRenderSync
 	mainscene
 	makenewfirstdifferfromoldlast
 	makes
 	male_cas_part
 	malleable
 	management
-	mangled_id
+	mangled_ID
 	manualnode
 	map
 	mappedmappedoverlay
@@ -2979,7 +2979,7 @@ debugger_names = [
 	mass_without_accs
 	massive_log_level
 	massivead
-	master
+	Master
 	master_scaling_table
 	mastername
 	masternode
@@ -2992,7 +2992,7 @@ debugger_names = [
 	material_index
 	material_library_path
 	materialfilter
-	materialprops
+	MaterialProps
 	materials
 	matrixmanipulation
 	mauvaisgarcon
@@ -3046,20 +3046,20 @@ debugger_names = [
 	max_streams
 	max_stress_anim
 	max_wheel_speed
-	maxanimstages
-	maxanimsubsets
-	maxbonepriority
+	MaxAnimStages
+	MaxAnimSubsets
+	MaxBonePriority
 	maxchars
 	maxcscriptlistentrys
 	maxdecompresscount
-	maxdegenerateanims
+	MaxDegenerateAnims
 	maxeditor
 	maxpitch
 	maxplayers
-	maxrate
+	maxRate
 	maxrotvel
 	maxscale
-	maxspeed
+	maxSpeed
 	maxstreams
 	maxthps4filesallowed
 	maxusedscripts
@@ -3067,16 +3067,16 @@ debugger_names = [
 	maxx
 	maxy
 	maxz
-	maybehidelensflare
+	MaybeHideLensFlare
 	mdl
 	me
 	measure
-	med
+	Med
 	med_tempo
 	med_to_good
 	medium
-	medium_duo
-	medium_rare
+	MEDIUM_DUO
+	MEDIUM_RARE
 	meet_your_maker
 	`mem card ccomponent`
 	`mem card cstruct`
@@ -3089,7 +3089,7 @@ debugger_names = [
 	memoryleak_havok_assert
 	memoryleak_havok_warning
 	memview
-	menu_selectedindexis
+	Menu_SelectedIndexIs
 	menu_state
 	mesh
 	mesh1
@@ -3111,8 +3111,8 @@ debugger_names = [
 	mfx_size
 	microseconds
 	mid
-	midinote
-	millionaire_club
+	MidiNote
+	MILLIONAIRE_CLUB
 	millisecond
 	min
 	min_brake
@@ -3129,9 +3129,9 @@ debugger_names = [
 	minneravoidradiussqr
 	minnerradiussqr
 	minpitch
-	minrate
+	minRate
 	minrotvel
-	minspeed
+	minSpeed
 	minuscelsius
 	minute
 	minutes
@@ -3148,44 +3148,44 @@ debugger_names = [
 	mission
 	mississippiqueen
 	missmurder
-	mod
+	Mod
 	mod_value_hi
 	mod_value_lo
 	mode
 	mode_info
 	mode_text
-	model
+	Model
 	model_asset_preloader
 	model_coll_data_debug
 	model_data_buffer
 	model_size
-	modeladdgeom
-	modelappearancemembfunc
+	ModelAddGeom
+	ModelAppearanceMembFunc
 	modelapplybodyshape
 	modelapplybonescale
-	modelapplyobjectscale
+	ModelApplyObjectScale
 	modelassetname
-	modelchecksum
-	modelclearallgeoms
+	ModelChecksum
+	ModelClearAllGeoms
 	modelcleargeom
-	modelexpandboundingsphere
-	modelfinalize
+	ModelExpandBoundingSphere
+	ModelFinalize
 	modelhidegeom
-	modelname
-	modelremoveasset
-	modelremovepolys
+	modelName
+	ModelRemoveAsset
+	ModelRemovePolys
 	modelresetscale
-	modelrunscript
+	ModelRunScript
 	models
 	modeltriggerscriptparams
-	modelviewer
-	modelviewer_isstopped
-	modelviewer_play
-	modelviewer_step
+	ModelViewer
+	ModelViewer_IsStopped
+	ModelViewer_Play
+	ModelViewer_Step
 	modify
 	modulate
-	modulate_setstrength
-	modulate_startblend
+	Modulate_SetStrength
+	Modulate_StartBlend
 	modulatecolor
 	modulateonactivevalue
 	monitor
@@ -3201,14 +3201,14 @@ debugger_names = [
 	motd_uninit
 	motion
 	motion_bone
-	motionbalanceactive
-	motionextractedsource
-	motionsensitivity
+	MotionBalanceActive
+	MotionExtractedSource
+	MotionSensitivity
 	motionsource
-	motionsteeringactive
-	motiontricksactive
-	motionx
-	motiony
+	MotionSteeringActive
+	MotionTricksActive
+	motionX
+	motionY
 	mouse_left_button_down
 	mouse_left_button_up
 	mouse_off_screen
@@ -3228,8 +3228,8 @@ debugger_names = [
 	movie
 	movie_mem
 	moviecam_debug
-	moviedisplaysubtitles
-	movieelement
+	MovieDisplaySubtitles
+	MovieElement
 	moving_flexparticle_composite_structure
 	moving_particle_composite_structure
 	mp_collision
@@ -3246,13 +3246,13 @@ debugger_names = [
 	multi
 	multiplayer
 	multiplayer_spawn_in
-	music_frontend
+	Music_FrontEnd
 	muteremote
 	mycurse
 	mynameisjonas
 	name
 	name_checksum
-	navcollision
+	NavCollision
 	navigation
 	near
 	near_clip
@@ -3330,9 +3330,9 @@ debugger_names = [
 	net_win_song
 	netcombochallenge
 	netcombomambo
-	netdisableplayerinput
+	NetDisablePlayerInput
 	netenabled
-	netenableplayerinput
+	NetEnablePlayerInput
 	netgraffiti
 	nethorse
 	netlobby
@@ -3349,10 +3349,10 @@ debugger_names = [
 	network_id
 	network_player_lobby_update
 	network_player_update
-	networkplatformcomplete
+	NetworkPlatformComplete
 	neutral
 	never
-	never_gonna_spend_it_all
+	NEVER_GONNA_SPEND_IT_ALL
 	neversuspend
 	new_id
 	new_net_logic
@@ -3362,10 +3362,10 @@ debugger_names = [
 	new_scale
 	new_stance
 	new_string
-	newarrayname
+	NewArrayName
 	newindex
 	newsave
-	newsize
+	newSize
 	newstruct
 	newtextname
 	newvalue
@@ -3418,10 +3418,10 @@ debugger_names = [
 	nodearrays
 	nodefilter
 	nodeflags
-	nodeiddeclaration
+	NodeIdDeclaration
 	nodeinfo
 	nodelistman_metrics_mode
-	nodename
+	nodeName
 	nodetopointto
 	noextramemory
 	noise
@@ -3441,10 +3441,10 @@ debugger_names = [
 	noqbid
 	norail
 	norender_overridechecksum
-	norepeatfor
+	NoRepeatFor
 	norestart
 	norm
-	normal
+	Normal
 	normalmap
 	normalmapenabled
 	noscale_distance
@@ -3453,7 +3453,7 @@ debugger_names = [
 	not_focusable
 	not_satisfied
 	not_set
-	notcd
+	NotCD
 	note
 	note_data
 	note_streak
@@ -3462,7 +3462,7 @@ debugger_names = [
 	note_window_openp1
 	note_window_openp2
 	notes
-	notes_from_hell
+	NOTES_FROM_HELL
 	notes_hit
 	notes_hit2
 	notes_missed
@@ -3470,7 +3470,7 @@ debugger_names = [
 	nothing
 	nothingformehere
 	notsessionspecific
-	novisibilitytest
+	NoVisibilityTest
 	nowait
 	nowbar_scale_x
 	nowbar_scale_y
@@ -3544,15 +3544,15 @@ debugger_names = [
 	nxwatson_channels
 	oba
 	obj
-	`obj::ceventreceiverlist`
+	`Obj::CEventReceiverList`
 	obj_addstream
 	obj_adjustsound
 	obj_angletonearestskatergreaterthan
-	obj_applyscaling
+	Obj_ApplyScaling
 	obj_blendalpha
 	obj_clearcolor
 	obj_clearflag
-	obj_cleargeoms
+	Obj_ClearGeoms
 	obj_clearvisibility
 	obj_disableambientlight
 	obj_disablediffuselight
@@ -3562,17 +3562,17 @@ debugger_names = [
 	obj_dumpdebuginfo
 	obj_enableambientlight
 	obj_enablediffuselight
-	obj_enablescaling
+	Obj_EnableScaling
 	obj_end
 	obj_flagnotset
 	obj_flagset
 	obj_flipmatrix
 	obj_followpath
-	obj_followpathlinked
-	obj_forceupdate
+	Obj_FollowPathLinked
+	Obj_ForceUpdate
 	obj_getassetcontext
 	obj_getboneparent
-	obj_getboneposition
+	Obj_GetBonePosition
 	obj_getbonepositioninobjectspace
 	obj_getbonequat
 	obj_getbonescale
@@ -3580,25 +3580,25 @@ debugger_names = [
 	obj_getcollision
 	obj_getdistancetoobject
 	obj_getdisttonode
-	obj_getid
+	Obj_GetID
 	obj_getmaterialcolor
-	obj_getmatrix
+	Obj_GetMatrix
 	obj_getmodelname
-	obj_getorientation
+	Obj_GetOrientation
 	obj_getorientationtoobject
 	obj_getorientationvectors
-	obj_getposition
+	Obj_GetPosition
 	obj_getpriority
-	obj_getquat
-	obj_getscaling
+	Obj_GetQuat
+	Obj_GetScaling
 	obj_getspeed
 	obj_gettype
-	obj_getvelocity
-	obj_hascomponent
+	Obj_GetVelocity
+	Obj_HasComponent
 	obj_hasmodellights
 	obj_hover
-	obj_initmodel
-	obj_initmodelfromprofile
+	Obj_InitModel
+	Obj_InitModelFromProfile
 	obj_invisible
 	obj_isdirectaccesssky
 	obj_ismoving
@@ -3608,17 +3608,17 @@ debugger_names = [
 	obj_isstreamforbidden
 	obj_isstreamplaying
 	obj_killallspawnedscripts
-	obj_killspawnedscript
+	Obj_KillSpawnedScript
 	obj_lockoffset
-	obj_locktoobject
+	Obj_LockToObject
 	obj_lookatpos
 	obj_makematerialunique
-	obj_morphscaling
+	Obj_MorphScaling
 	obj_moveforward
 	obj_movetolink
 	obj_movetonode
-	obj_movetopos
-	obj_movetorelpos
+	Obj_MoveToPos
+	Obj_MoveToRelPos
 	obj_objectinattentionradius
 	obj_objectinradius
 	obj_objectinradiusofnode
@@ -3626,7 +3626,7 @@ debugger_names = [
 	obj_pathheading
 	obj_pausesounds
 	obj_playfam
-	obj_playsound
+	Obj_PlaySound
 	obj_playstream
 	obj_playstreamfromset
 	obj_printdetails
@@ -3635,15 +3635,15 @@ debugger_names = [
 	obj_replacetexture
 	obj_resetnosuspendcount
 	obj_restoreboundingsphere
-	obj_rotate
-	obj_rotx
-	obj_roty
-	obj_rotz
+	Obj_Rotate
+	Obj_RotX
+	Obj_RotY
+	Obj_RotZ
 	obj_setattentionradius
 	obj_setboneactive
 	obj_setbonecolldata
 	obj_setbonescale
-	obj_setboundingsphere
+	Obj_SetBoundingSphere
 	obj_setcolor
 	obj_setcolorrgb
 	obj_setconstantheight
@@ -3651,27 +3651,27 @@ debugger_names = [
 	obj_setfirstrenderflag
 	obj_setflag
 	obj_setinneravoidradius
-	obj_setinnerradius
+	Obj_SetInnerRadius
 	obj_setlightambientcolor
 	obj_setlightdiffusecolor
 	obj_setlightdirection
 	obj_setmaterialalpha
-	obj_setmaterialcolor
+	Obj_SetMaterialColor
 	obj_setmaterialvoffset
 	obj_setmorphscalemask
 	obj_setnoshadowflag
-	obj_setnosizecull
-	obj_setorientation
+	Obj_SetNoSizeCull
+	Obj_SetOrientation
 	obj_setouteravoidradius
-	obj_setouterradius
+	Obj_SetOuterRadius
 	obj_setoutlinecolorindex
 	obj_setoutlineflag
-	obj_setpathacceleration
-	obj_setpathdeceleration
+	Obj_SetPathAcceleration
+	Obj_SetPathDeceleration
 	obj_setpathminstopvel
 	obj_setpathturndist
-	obj_setpathvelocity
-	obj_setposition
+	Obj_SetPathVelocity
+	Obj_SetPosition
 	obj_setpriority
 	obj_settempperm
 	obj_setvelocity
@@ -3679,26 +3679,26 @@ debugger_names = [
 	obj_setwaterinteractionflag
 	obj_skiptorestart
 	obj_spawnscript
-	obj_spawnscriptlater
-	obj_spawnscriptnow
-	obj_startalongpath
+	Obj_SpawnScriptLater
+	Obj_SpawnScriptNow
+	Obj_StartAlongPath
 	obj_startpreloadedstream
 	obj_sticktoground
-	obj_stopalongpath
+	Obj_StopAlongPath
 	obj_stoplastfam
-	obj_stopmoving
-	obj_stoprotating
+	Obj_StopMoving
+	Obj_StopRotating
 	obj_stopsound
 	obj_stopstream
 	obj_suspendenable
 	obj_suspendisenabled
-	obj_switchscript
+	Obj_SwitchScript
 	obj_testmodelcollision
 	obj_updatebrightness
-	obj_updatemodel
+	Obj_UpdateModel
 	obj_visible
-	obj_waitmove
-	obj_waitrotate
+	Obj_WaitMove
+	Obj_WaitRotate
 	obj_waitstop
 	object
 	object_count
@@ -3713,36 +3713,36 @@ debugger_names = [
 	object_vel_factor
 	objecta
 	objectaliases
-	objectalphaclamp
+	ObjectAlphaClamp
 	objectanim
 	objectb
-	objectblendmode
+	ObjectBlendMode
 	objectcolor
 	objectdensity
 	objectdesc_undefined
 	objectdistance
-	objectfixedalpha
+	ObjectFixedAlpha
 	objecthook
 	objecthookmanager
 	`objecthookmanager.m_is_transformed`
 	objectinattentionradius
 	objectinavoidradius
-	objectinradius
+	ObjectInRadius
 	objectname
 	objectoutofattentionradius
 	objectoutofavoidradius
-	objectoutofradius
+	ObjectOutOfRadius
 	objectplaybackrefs
 	objectpositions
-	objectproximity
+	ObjectProximity
 	objects
 	objecttopointto
-	objid
-	objid1
-	objid2
-	objname
+	ObjID
+	objID1
+	ObjID2
+	ObjName
 	objpriority
-	objtype
+	ObjType
 	occluder
 	occlusiondebug
 	off
@@ -3753,7 +3753,7 @@ debugger_names = [
 	old_animate_bulbs_star_power_p2
 	old_stance
 	oldest
-	oldheap
+	OldHeap
 	oldpitchmodulation
 	oldreverblevel
 	oldreverbmode
@@ -3761,8 +3761,8 @@ debugger_names = [
 	oldzoneparamsstruct
 	on
 	on_side
-	ondebuggerquit
-	one
+	OnDebuggerQuit
+	ONE
 	one_event_per_frame
 	one_per_frame
 	online_fail_song_fs
@@ -3773,8 +3773,8 @@ debugger_names = [
 	online_win_song
 	online_win_song_fs
 	onlinesignin
-	only
-	only_the_l33t
+	Only
+	ONLY_THE_L33T
 	onlyrender_meshid
 	onlyrender_overridechecksum
 	onscriptstack
@@ -3782,10 +3782,10 @@ debugger_names = [
 	opened
 	opening
 	opponent_gamertag
-	orange
+	Orange
 	order
-	orient
-	orientation
+	Orient
+	Orientation
 	origin
 	original_colors
 	original_scale
@@ -3801,8 +3801,8 @@ debugger_names = [
 	outerradius
 	outfit
 	outfit2
-	outintid
-	outofspace
+	outIntId
+	OutOfSpace
 	output_anim_names
 	output_cutscene_video
 	output_file
@@ -3813,7 +3813,7 @@ debugger_names = [
 	outsideangle
 	outsidelevel
 	overbudget
-	overlay
+	Overlay
 	overlay_setanim
 	overlay_setblend
 	overlay_setstate
@@ -3850,7 +3850,7 @@ debugger_names = [
 	pair
 	pak
 	pak_name
-	pak_optional
+	PAK_OPTIONAL
 	pak_string_name
 	pakmanager
 	pakname
@@ -3869,13 +3869,13 @@ debugger_names = [
 	pan2randomrightext
 	pan2x
 	pan2y
-	panlcr1
-	panlcr2
+	panLCR1
+	panLCR2
 	param
 	param_stacks
 	parameter
 	params
-	params_script
+	params_Script
 	params_struct
 	paranoid
 	parent
@@ -3888,75 +3888,75 @@ debugger_names = [
 	part
 	part2
 	partgotflag
-	partialswitch
+	PartialSwitch
 	partialswitch_ison
-	partialswitch_setstate
+	PartialSwitch_SetState
 	particle
 	`particle systems`
 	particle2d
 	particle_composite_structure
 	particle_heap_size
 	particle_id
-	particle_options_debug
+	particle_options_DEBUG
 	particle_process_frame_pcnt
 	particle_render_frame_pcnt
 	particle_stats
 	particle_warning_script
 	particle_warnings
 	particlechain
-	particlecolor
+	ParticleColor
 	particledepth
 	particlelod
-	particleobject
+	ParticleObject
 	particleparams
 	particlequadtree
 	particleradius
 	particleshape
 	particlesize
 	particlesystem
-	particletype
+	ParticleType
 	pass
-	pass_default
+	Pass_Default
 	pass_index
-	passenger
+	Passenger
 	passes
 	passive_events
 	password
 	path
-	pathfollowtime
+	PathFollowTime
 	pathob_state_follow_curve
 	pathob_state_follow_line
 	pathob_state_idle
 	pathob_state_linear_interp
 	pathob_state_uninitialized
 	pattern
-	pause
+	Pause
 	paused
-	pausegame
+	PauseGame
 	pausewithobject
 	pct
 	pdetail
-	ped
+	Ped
 	ped_fade_and_destroy
 	pedestrian
 	pedestrians
-	pedlife
+	PedLife
 	pedparts
 	pedparts_vram
 	pedprofile
 	percent
-	perfectionist
+	PERFECTIONIST
 	performance
 	performance_mode
-	periodbase
-	periodmultiples
-	perm
+	periodBase
+	periodMultiples
+	PERM
 	perm_viewports
 	permanent
 	permanent_songlist_props
 	permesh
 	permutesource
-	perparticlewind
+	PerParticleWind
 	perspective
 	pfxfiles
 	phase
@@ -3981,7 +3981,7 @@ debugger_names = [
 	plane_axis
 	platform
 	platform_ext
-	play
+	Play
 	play_drummer_left_arm_anim
 	play_drummer_right_arm_anim
 	player
@@ -4011,27 +4011,27 @@ debugger_names = [
 	playline_song_beat_time
 	playline_song_measure_time
 	playmode
-	playsound
-	pm_setparams
+	PlaySound
+	PM_SetParams
 	pm_waitmorph
 	pmem
 	pmovies_playtexturemovie
 	pmovies_sendplaymovierequest
-	point
+	Point
 	points_per_note
 	points_per_note_per_beat
 	poisson_dof
 	polys
-	polystat0
-	polystat1
-	polystat2
-	polystat3
-	polystat4
-	polystat5
-	polystat6
-	polystat7
-	polystat8
-	polystat9
+	PolyStat0
+	PolyStat1
+	PolyStat2
+	PolyStat3
+	PolyStat4
+	PolyStat5
+	PolyStat6
+	PolyStat7
+	PolyStat8
+	PolyStat9
 	pool_sizes
 	pool_text_instances
 	poolinfo
@@ -4039,13 +4039,13 @@ debugger_names = [
 	poor
 	port
 	pos
-	pos3d
+	pos3D
 	pos_2d
 	pos_scale
 	pos_x
 	pos_y
-	posa
-	posb
+	posA
+	PosB
 	pose_fingers
 	posecapture
 	posecapture_capture
@@ -4053,7 +4053,7 @@ debugger_names = [
 	position
 	position_offset
 	positional
-	positionmorph
+	PositionMorph
 	positive_x
 	positive_y
 	positive_z
@@ -4064,12 +4064,12 @@ debugger_names = [
 	postrunqueuedscripts
 	posx
 	posy
-	posz
+	PosZ
 	pow
 	prayeroftherefugee
 	pre_qbr
 	precision_mode
-	preferredid
+	preferredID
 	prefix
 	prefixed_nodes
 	preload_model
@@ -4134,34 +4134,34 @@ debugger_names = [
 	profile_font_scale
 	profile_name
 	profile_names
-	profile_pages
+	Profile_Pages
 	profile_size
 	profile_time_font_scale
 	profile_time_offset
 	profilebudget
-	profilecolor
+	ProfileColor
 	profiler_vblanks
 	profilerheap
-	progress
+	Progress
 	projectedvelocity
 	projectile
 	projectileproximity
-	projectorcolor
-	projectorcolorblue
-	projectorcolorgreen
-	projectorcolorred
+	ProjectorColor
+	ProjectorColorBlue
+	ProjectorColorGreen
+	ProjectorColorRed
 	projectortexture
-	projectortexturename
-	projectortype
+	ProjectorTextureName
+	ProjectorType
 	propagate
 	propagate_reverse
-	property
+	Property
 	proportion
 	proportional
 	props
 	proxim
 	proximactions
-	proximity
+	Proximity
 	`proximity nodes`
 	proximity_agent
 	proximity_box
@@ -4179,53 +4179,53 @@ debugger_names = [
 	proximobj_composite_structure
 	proximobject
 	proximscript
-	proximtrigger
+	ProximTrigger
 	proximtrigger_addtriggerchecksum
 	proximtrigger_dump
 	proximtrigger_removetriggerchecksum
 	proximtrigger_setactive
 	proximtrigger_setsize
 	proximtriggerid
-	prt
-	ps2
+	PRT
+	Ps2
 	ps3
-	ps3_animlodinterleave2
+	PS3_AnimLODInterleave2
 	ps3_viewer_ip
 	pstat
 	ptask_camdistancepriorityqueue
 	ptask_camdistanceupdate
-	ptask_default
+	PTask_Default
 	ptask_scriptupdate
 	puddlethresh
 	purchases
-	pyro_script
+	Pyro_Script
 	qb
 	qbname
 	qbrcallbacks
 	qos
 	quad
-	quadanimationfps
+	QuadAnimationFPS
 	quaddbg_2
-	quadtextures
+	QuadTextures
 	quadtreedebug
 	quadtreedensity_alpha_inc
 	quality_level
 	quarter
-	quat
+	Quat
 	queue
 	queued
 	quickmatch
-	quickmaterial
+	QuickMaterial
 	quickplay
 	quit_early
 	quit_early_flag
 	r
-	r1
-	r2
+	R1
+	R2
 	r2raw
 	r3
 	radians
-	radiate
+	Radiate
 	radiosong
 	radius
 	rag_doll0
@@ -4278,9 +4278,9 @@ debugger_names = [
 	ragdoll_setvelocity
 	ragdoll_setvelocitywhilemaintaininginternalvelocities
 	ragdoll_teleport
-	ragdollcollisiongroup
-	ragdollcollisiongroups
-	ragdollname
+	RagdollCollisionGroup
+	RagdollCollisionGroups
+	ragdollName
 	railnode1
 	railnodeheap
 	rain
@@ -4299,14 +4299,14 @@ debugger_names = [
 	randomdirection
 	randomized_desc_id
 	randomlink
-	randomness
-	randomnorepeatlasttwotype
-	randomnorepeattype
-	randompitch
-	randomrangetype
+	Randomness
+	RandomNoRepeatLastTwoType
+	RandomNoRepeatType
+	RandomPitch
+	RandomRangeType
 	randomrotveldirection
-	randomtype
-	randomvol
+	RandomType
+	RandomVol
 	range
 	rank
 	ranked
@@ -4317,7 +4317,7 @@ debugger_names = [
 	readerrorrecovery
 	reading_leaderboard_storage
 	ready_status
-	ready_to_rock
+	READY_TO_ROCK
 	real_highway_lines
 	realdepth
 	realtimeheightmap
@@ -4339,7 +4339,7 @@ debugger_names = [
 	regiontotalsize
 	registerallcomponents
 	`registering script functions`
-	registersoundevent
+	RegisterSoundEvent
 	regular_space_amount
 	relangles
 	relative
@@ -4347,7 +4347,7 @@ debugger_names = [
 	relative_scale
 	relativepath
 	relativescenecenter
-	relativeto
+	relativeTo
 	relativetonode
 	release_black
 	release_circle
@@ -4382,7 +4382,7 @@ debugger_names = [
 	removeall
 	removealltags
 	removeobserverbg
-	removetags
+	RemoveTags
 	render2d
 	render_geom_list
 	render_lock_framerate
@@ -4394,9 +4394,9 @@ debugger_names = [
 	renderinstances
 	renderlast
 	rendermaingeo
-	rendermethod
+	RenderMethod
 	rendermetrics
-	rendermetricszonenames
+	RenderMetricsZoneNames
 	rendermode
 	renderparticles
 	renderprims
@@ -4405,7 +4405,7 @@ debugger_names = [
 	renderraineffect
 	renderscreenfx
 	renderskins
-	renderzonemode
+	renderZoneMode
 	repair_string
 	replace
 	replace1
@@ -4429,7 +4429,7 @@ debugger_names = [
 	reset_window
 	reset_window_bottom
 	reset_window_top
-	resetcameratoviewerobject
+	ResetCameraToViewerObject
 	resetsystem
 	`resgistering and starting modules`
 	resolution
@@ -4439,7 +4439,7 @@ debugger_names = [
 	resolve_to_texture
 	resolve_to_texture_with_alpha
 	resolved_id
-	resolveglobals
+	ResolveGlobals
 	resource
 	response
 	responses
@@ -4448,7 +4448,7 @@ debugger_names = [
 	restart_types
 	restitution
 	restore_override_rgba_state
-	restore_skater_camera
+	Restore_skater_camera
 	result
 	result_var
 	result_vector
@@ -4462,13 +4462,13 @@ debugger_names = [
 	right
 	right_bicep_tattoo
 	right_forearm_tattoo
-	right_hand_of_god
+	RIGHT_HAND_OF_GOD
 	right_leg_tattoo
 	right_normal
 	rightfoot
 	rightfoot_timer
 	rightlength
-	rightpressed
+	RightPressed
 	rightstick_down
 	rightstick_downleft
 	rightstick_downright
@@ -4481,7 +4481,7 @@ debugger_names = [
 	rightstickmagnitude
 	righttrigger
 	rightx
-	righty
+	RightY
 	rigidbody
 	rigidbody_addcallbackscripts
 	rigidbody_deactivateconstraint
@@ -4497,7 +4497,7 @@ debugger_names = [
 	rigidbody_getsoundtype
 	rigidbody_ignoreskater
 	rigidbody_kick
-	rigidbody_linearimpulse
+	RigidBody_LinearImpulse
 	rigidbody_matchvelocityto
 	rigidbody_positionalimpulse
 	rigidbody_relativepositionalimpulse
@@ -4511,7 +4511,7 @@ debugger_names = [
 	ripplecreator
 	ripplecreatorocclusionquery
 	ripplerange
-	rock_guru
+	ROCK_GURU
 	rocknrollallnite
 	rockulikeahurricane
 	root_window
@@ -4525,18 +4525,18 @@ debugger_names = [
 	rot_z_local
 	rotate
 	rotate2
-	rotate3d
+	Rotate3D
 	rotated_quat
 	rotatedisplay
 	rotation_offset
 	rotationoffset
-	rotationquat
+	RotationQuat
 	rotationspeed
 	rotbone
-	rotvel
-	rotveltimescale
-	rowheight
-	rowheightnormalizeddistance
+	RotVel
+	RotVelTimeScale
+	rowHeight
+	rowHeightNormalizedDistance
 	ruby
 	run_destroy_func
 	runmenow
@@ -4557,8 +4557,8 @@ debugger_names = [
 	save
 	save_zone
 	saveinvalidduetoleethacker
-	saving
-	savingorloading
+	Saving
+	SavingOrLoading
 	scale
 	scale_to_screen_dims
 	scale_x
@@ -4566,7 +4566,7 @@ debugger_names = [
 	scalefromorigin
 	scalemultiplier
 	scales
-	scalesize
+	scaleSize
 	scalewithdistance
 	scaling
 	scalingtest
@@ -4580,7 +4580,7 @@ debugger_names = [
 	score2
 	score_frame_width
 	scorechallenge
-	scr
+	Scr
 	scr_cleanup
 	scr_setup
 	scratch
@@ -4591,12 +4591,12 @@ debugger_names = [
 	screenelement_postcallback_script
 	screenelementpos
 	screenfx
-	screenoffset
+	ScreenOffset
 	screenspace_height
 	screenspace_width
-	screnter
-	screvent
-	screxit
+	ScrEnter
+	ScrEvent
+	ScrExit
 	`script debugger`
 	`script::allocatepools`
 	script_callback_script
@@ -4609,18 +4609,18 @@ debugger_names = [
 	scriptcachingdisabled
 	scriptheap
 	scriptparams
-	scriptreference
+	ScriptReference
 	scripts
 	scripts_size
 	scriptsize
 	scripttoprofile
-	scripttorun
-	scripttorun_params
+	ScriptToRun
+	ScriptToRun_Params
 	scriptupdatewarningtime
 	scroll_speed
 	scroll_time
 	sd
-	search_and_destroy
+	SEARCH_AND_DESTROY
 	second
 	second_active_value
 	second_active_value_curve
@@ -4641,10 +4641,10 @@ debugger_names = [
 	secondary_subset_time
 	seconds
 	seconds_per_gamehour
-	secondsfromend
+	SecondsFromEnd
 	section
 	sector
-	sectors
+	Sectors
 	seed1
 	seed2
 	seed3
@@ -4699,39 +4699,39 @@ debugger_names = [
 	setchecksum
 	setcircularemit
 	setcolor
-	setdisplaymatrix
+	SetDisplayMatrix
 	setdry
 	setemitangle
 	setemitrange
-	setemitrate
+	SetEmitRate
 	setemitscript
-	setemittarget
+	SetEmitTarget
 	setemitterindependent
-	seteventhandler
+	SetEventHandler
 	setforce
-	sethfov
+	SetHFov
 	setlife
 	setlifetime
 	setlodparams
 	setmousetext
-	setname
+	SetName
 	setobjectcolor
-	setpart
-	setparticlesize
-	setparticlesizescale
+	SetPart
+	SetParticleSize
+	SetParticleSizeScale
 	setpos
-	setprops
+	SetProps
 	setragdoll
 	setrandomangle
 	setrendernodesflag
-	setrotate
+	SetRotate
 	setrotation
 	setrotationvelocity
 	setscripts
 	setskeleton
-	setspeedrange
-	setsubfrustum
-	settags
+	SetSpeedRange
+	SetSubFrustum
+	SetTags
 	settimeseed
 	setup_controller_button_event_mappings
 	setupdatescript
@@ -4759,7 +4759,7 @@ debugger_names = [
 	shadowdensity
 	shadowintensity
 	shadowmapflags
-	shakeenabled
+	ShakeEnabled
 	shape
 	shared
 	shebangsadrum
@@ -4767,7 +4767,7 @@ debugger_names = [
 	shininess
 	shop
 	short_ui_string
-	shouldemit
+	ShouldEmit
 	show_analog_options
 	show_coop_raise_axe_for_starpower
 	show_cutscene_timecode
@@ -4778,23 +4778,23 @@ debugger_names = [
 	show_render_metrics
 	show_scripts
 	show_star_power_ready
-	show_zone_budget_warnings
-	showgamercard
+	Show_Zone_budget_Warnings
+	showGamerCard
 	showing_raise_axe
 	showjointimeoutnotice
-	showmarketplaceui
-	showpakmap
-	showpakmapexpand
+	ShowMarketPlaceUI
+	showPakMap
+	showPakMapExpand
 	showsigninui
 	showthread0aibudgetdetails
-	shredder
+	SHREDDER
 	side
-	signedin
+	SignedIn
 	signinchanged
 	silent_miss
 	silver_streaker
 	sim_bot_score
-	simple_bloom
+	Simple_Bloom
 	simplebinary
 	simplecustomunary
 	simplesource
@@ -4805,7 +4805,7 @@ debugger_names = [
 	sixteenth
 	size
 	sizefromstruct
-	sizerange
+	SizeRange
 	sizescale
 	sk8_bg_school_halls
 	sk8_bg_shops
@@ -4824,21 +4824,21 @@ debugger_names = [
 	skatercam0
 	skatercamanim
 	`skatercareer: story structure`
-	skatercollision
+	SkaterCollision
 	skatercorephysics
 	skaterhead
 	skaterinfoheap
-	skaterloopingsound
+	SkaterLoopingSound
 	ske
 	skeleton
-	skeleton_getskeletonname
+	Skeleton_GetSkeletonName
 	skeleton_printactivebonelist
 	skeleton_setcustomboneunactivelist
 	skeleton_spawncompositeobject
 	skeleton_switchskeletondata
 	skeleton_transformbyboneworldmatrix
 	skeletonfilename
-	skeletonname
+	SkeletonName
 	skew
 	skill
 	skill_level
@@ -4855,14 +4855,14 @@ debugger_names = [
 	slomo
 	slot
 	slots_reserve
-	slow
+	Slow
 	slow_lerp_factor
 	slow_tempo
 	slowride
 	small_bulb_scale
 	smallgameobj
-	smallparticlesrgb
-	smallscale
+	SmallParticlesRGB
+	SmallScale
 	smoketexcoordscale
 	smoketexture
 	smokevelocity
@@ -4871,9 +4871,9 @@ debugger_names = [
 	snapshots
 	soft_assert
 	softassertonfragmentation
-	softedge
-	softedgescale
-	solo_career
+	SoftEdge
+	SoftedgeScale
+	SOLO_CAREER
 	solo_highway
 	song
 	song_array_size
@@ -4886,31 +4886,31 @@ debugger_names = [
 	song_wonp1
 	song_wonp2
 	songtime
-	sortgroup
+	SortGroup
 	sortsize
-	sound
+	Sound
 	sound_memory_size
 	sound_type
 	sound_volume
 	sound_volume_db
-	soundactions
+	SoundActions
 	soundevent_default_buss
 	soundevent_default_priority
-	soundevent_eventid
+	SoundEvent_EventID
 	soundevent_instancelimit
 	soundevent_instancemanagement
 	soundevent_norepeatfor
 	soundmanager
-	sounds
-	source
-	source_animequals
-	source_getanimname
+	Sounds
+	Source
+	Source_AnimEquals
+	Source_GetAnimName
 	source_type
 	sourcewithoverlay
 	sp_phrases_total
-	spaceavailable
+	SpaceAvailable
 	spacer
-	spacerequired
+	SpaceRequired
 	spaceused
 	spaceusedbypfxfiles
 	spacing_between
@@ -4925,42 +4925,42 @@ debugger_names = [
 	spawnscriptnow
 	spawnterrainsound
 	special
-	specialitem
-	specularintensity
-	specularpower
+	SpecialItem
+	SpecularIntensity
+	SpecularPower
 	speculartexture
 	speculartextureenabled
-	speed
+	Speed
 	speedequals
 	speedgreaterthan
 	speedlessthan
-	speedrange
+	SpeedRange
 	sphere
 	sphereradius
 	spin_texture
 	spin_x
 	spin_y
-	splat_critical_remaining_polys_pcnt
+	Splat_Critical_Remaining_Polys_Pcnt
 	splat_phantom
 	splat_position_bias
 	spline
 	spline_knots
 	spline_points
 	spline_pos
-	splineparticle
+	SplineParticle
 	splineresolution
-	split
+	Split
 	split_late_percent
 	splitfile
-	splitr
-	spot
+	SplitR
+	Spot
 	spread
 	spring
 	spring_length
 	sprite
 	sprite_missing
-	spriteelement
-	sqrt
+	SpriteElement
+	Sqrt
 	square
 	src
 	srequestinstance
@@ -4968,21 +4968,21 @@ debugger_names = [
 	sspawnedpolydetails
 	sstartengine
 	stage
-	stageonly
+	StageOnly
 	stance
 	stance_frontend
 	stance_frontend_guitar
 	stand_normal
 	standard
 	standard_rigidbody
-	standard_terrain_default
+	STANDARD_TERRAIN_DEFAULT
 	star
 	star_hammer_material
 	star_hit_notep1
 	star_hit_notep2
 	star_hit_particle_params
 	star_lean_scale
-	star_mania
+	STAR_MANIA
 	star_material
 	star_miss_note
 	star_miss_notep1
@@ -5037,19 +5037,19 @@ debugger_names = [
 	start_time
 	start_x
 	start_y
-	startanda
+	StartAndA
 	startangle
 	started_event_id
 	startfov
 	startpaused
-	startpos
+	startPos
 	startquat
-	startradius
-	starttime
-	startvalue
+	StartRadius
+	StartTime
+	startValue
 	startzone
 	state
-	statemachinemanager
+	StateMachineManager
 	static_agent
 	static_geometry
 	static_geometry_feeler
@@ -5084,7 +5084,7 @@ debugger_names = [
 	streamlistbuffersize
 	streamlistbufferused
 	streamparams
-	streamprioritysystem
+	StreamPrioritySystem
 	streamsets
 	strength
 	stricken
@@ -5093,7 +5093,7 @@ debugger_names = [
 	struct
 	struct1
 	struct2
-	structure
+	Structure
 	structure_name
 	structurename
 	strum
@@ -5106,8 +5106,8 @@ debugger_names = [
 	style
 	styles
 	sub_index
-	subimage
-	submitplayerreview
+	subImage
+	submitPlayerReview
 	subsrcmulinvdst
 	substitutions
 	subsystem
@@ -5116,9 +5116,9 @@ debugger_names = [
 	success_script
 	suckmykiss
 	suffix
-	suffixstring
+	SuffixString
 	sun_pos
-	sunburst_out
+	SunBurst_Out
 	sundirlight
 	sunshineofyourlove
 	supdatebusseffects
@@ -5127,16 +5127,16 @@ debugger_names = [
 	surroundpan1y
 	surroundpan2x
 	surroundpan2y
-	suspend
+	Suspend
 	suspend_testing_distance
-	suspenddistance
+	SuspendDistance
 	sw
 	sweep
-	sweepspread
+	SweepSpread
 	switch_script
 	switchobjscript
-	switchoffatomic
-	switchonatomic
+	SwitchOffAtomic
+	SwitchOnAtomic
 	`symbol hash table`
 	sync
 	`sys::cbasenotify`
@@ -5188,15 +5188,15 @@ debugger_names = [
 	tag_selected_index
 	tags
 	takethislife
-	talkdirtytome
+	TalkDirtyToMe
 	tan
-	tangentweight
+	tangentWeight
 	target
 	target_node
 	target_ntsc_framerate
 	target_scale
-	targetable
-	targetposition
+	Targetable
+	TargetPosition
 	task
 	task_params
 	team
@@ -5208,20 +5208,20 @@ debugger_names = [
 	techniqueindex
 	temp_language_hack
 	temp_perm
-	template
+	Template
 	templates
 	tempo
 	tensionstorage
 	terrain
 	terrain1
 	terrain2
-	terrain_actions
-	terrain_concsmooth
-	terrain_default
+	Terrain_Actions
+	TERRAIN_CONCSMOOTH
+	TERRAIN_DEFAULT
 	terrain_id
-	terrain_metalsmooth
-	terrain_types
-	terraintype
+	TERRAIN_METALSMOOTH
+	Terrain_Types
+	TerrainType
 	territory
 	territory_asia
 	territory_europe
@@ -5229,7 +5229,7 @@ debugger_names = [
 	territory_us
 	tessellatortype
 	test
-	test_drum_hithat_r
+	Test_Drum_HitHat_R
 	test_get_stats
 	tex
 	tex_dict
@@ -5245,21 +5245,21 @@ debugger_names = [
 	text_texture
 	text_x
 	text_y
-	textblockelement
-	textelement
-	textname
+	TextBlockElement
+	TextElement
+	TextName
 	texture
 	`texture from buffer`
 	texture_size
 	texture_swap
-	texturelayout
-	texturememory
+	TextureLayout
+	TextureMemory
 	texturename
-	texturepri
+	TexturePri
 	textureribbontrail
-	textureslot
+	TextureSlot
 	texturesplat
-	thats_what_friends_are_for
+	THATS_WHAT_FRIENDS_ARE_FOR
 	themetal
 	theseeker
 	theta
@@ -5269,16 +5269,16 @@ debugger_names = [
 	thin_fretbar_timesigs
 	thin_fretbars
 	this
-	thread0aiagentbudget
-	thread0aianimtreebudget
-	thread0aibehaviorsystembudget
-	thread0aibudget
-	thread0ainavcollisionbudget
-	thread0ainavigationbudget
-	thread0aiseekbudget
-	thread0budgetalwayson
-	thread0renderbudget
-	thread0skaterbudget
+	Thread0AIAgentBudget
+	Thread0AIAnimTreeBudget
+	Thread0AIBehaviorSystemBudget
+	Thread0AIBudget
+	Thread0AINavCollisionBudget
+	Thread0AINavigationBudget
+	Thread0AISeekBudget
+	Thread0BudgetAlwaysOn
+	Thread0RenderBudget
+	Thread0SkaterBudget
 	threaded_animation
 	threesandsevens
 	throwupobserverbg
@@ -5309,28 +5309,28 @@ debugger_names = [
 	timeonactivevalue
 	timer_callback_script
 	timer_force_waits_to_complete
-	timer_getanimduration
-	timer_getcurrentanimtime
-	timer_getframefactor
-	timer_getspeed
+	Timer_GetAnimDuration
+	Timer_GetCurrentAnimTime
+	Timer_GetFrameFactor
+	Timer_GetSpeed
 	timer_id
-	timer_isanimcomplete
+	Timer_IsAnimComplete
 	timer_reset
 	timer_seek
 	timer_seek_to_end
-	timer_setspeed
+	Timer_SetSpeed
 	timer_type
-	timer_wait
-	timer_waitanimcomplete
+	Timer_Wait
+	Timer_WaitAnimComplete
 	timerangeswitch
-	timerid
-	timeseed
+	timerId
+	TimeSeed
 	title
 	tlsheap
 	to
 	toggleaidebugmenu
 	token
-	tone_deaf
+	TONE_DEAF
 	tool_only
 	top
 	total
@@ -5345,13 +5345,13 @@ debugger_names = [
 	totalscriptsizes
 	totalthps4filesoncard
 	trace
-	track_master
+	TRACK_MASTER
 	trail
 	training
 	transition_sfx_left_side
 	transition_sfx_right_side
-	transitions
-	tree
+	Transitions
+	Tree
 	triangle
 	`trick object clusters`
 	trickattack
@@ -5388,7 +5388,7 @@ debugger_names = [
 	triggerid
 	triggeringobject
 	triggers
-	triggerscript
+	TriggerScript
 	triggerscriptparams
 	triggertype
 	triggertypes
@@ -5396,18 +5396,18 @@ debugger_names = [
 	tty
 	tumble
 	tutorial
-	twist
+	Twist
 	twist_amount
 	twist_axis
 	twist_clockwise
 	twist_counterclockwise
-	twistchild
+	Twistchild
 	twistimpulseleft
 	twistimpulseright
 	two_bone_chains
 	two_by_four
 	two_timer
-	twoside
+	TwoSide
 	type
 	types
 	udivs
@@ -5427,7 +5427,7 @@ debugger_names = [
 	unique_materials
 	uniquefilename
 	uniquefoldername
-	uniqueid
+	uniqueID
 	unitlengthtime
 	unknown
 	unknownsource
@@ -5441,14 +5441,14 @@ debugger_names = [
 	unnamedoccluder
 	unnecessary_notep1
 	unnecessary_notep2
-	unpause
+	UnPause
 	unpost_game
 	unset
 	unsuspend
 	untilevent
 	up
 	up_vector
-	update2dparticlesystems
+	Update2DParticleSystems
 	update_brightness
 	update_lobby_player_list
 	update_lobby_server_list
@@ -5461,17 +5461,17 @@ debugger_names = [
 	updateflexparticleparams
 	updategemmovers
 	updateimmediately
-	updateobjviewer
-	updateparams
+	UpdateObjViewer
+	UpdateParams
 	updaterelevance_fadenonperm
-	updatescript
-	updatewhencamerainactive
+	UpdateScript
+	UpdateWhenCameraInactive
 	updatewhengamepaused
 	upleft
 	upper_bound
-	upperbound
-	uppercasestring
-	uppressed
+	upperBound
+	UpperCaseString
+	UpPressed
 	upright
 	usage
 	use_as_first
@@ -5510,9 +5510,9 @@ debugger_names = [
 	uselaststarttime
 	uselinkslots
 	uselockobjcomponent
-	usemodellights
+	UseModelLights
 	usemotioncomponent
-	usemotionextraction
+	UseMotionExtraction
 	useocclusionculling
 	usepaddingslot
 	user
@@ -5521,28 +5521,28 @@ debugger_names = [
 	user_params
 	userandomangle
 	userandomuvquadrants
-	userselectcircle
-	userselectdown
+	UserSelectCircle
+	UserSelectDown
 	userselectl1
 	userselectl2
 	userselectleft
-	userselectleftanalogdown
-	userselectleftanalogleft
-	userselectleftanalogright
-	userselectleftanalogup
+	UserSelectLeftAnalogDown
+	UserSelectLeftAnalogLeft
+	UserSelectLeftAnalogRight
+	UserSelectLeftAnalogUp
 	userselectr1
-	userselectr2
-	userselectright
-	userselectrightanalogdown
-	userselectrightanalogleft
-	userselectrightanalogright
-	userselectrightanalogup
-	userselectsquare
-	userselectstart
-	userselecttriangle
+	UserSelectR2
+	UserSelectRight
+	UserSelectRightAnalogDown
+	UserSelectRightAnalogLeft
+	UserSelectRightAnalogRight
+	UserSelectRightAnalogUp
+	UserSelectSquare
+	UserSelectStart
+	UserSelectTriangle
 	userselectup
-	userselectx
-	usesnapshotpositions
+	UserSelectX
+	UseSnapshotPositions
 	usesystemtimer
 	useupto
 	usingcameracoordinates
@@ -5554,7 +5554,7 @@ debugger_names = [
 	uvremap
 	v
 	val
-	validateprev
+	ValidatePrev
 	vals
 	value
 	variance
@@ -5571,14 +5571,14 @@ debugger_names = [
 	vector_x
 	vector_y
 	vector_z
-	vehicle
+	Vehicle
 	vehicle_initial_speed
 	vehicle_physics
 	vehicle_sliding_milliseconds
 	vehicle_sliding_speed
 	vehicle_stick_to_ground_offset
 	vehicle_stopped_linear_damping
-	vehiclephysics
+	VehiclePhysics
 	vehiclephysics_disablecontrollerinput
 	vehiclephysics_enablecontrollerinput
 	vehiclephysicssource
@@ -5586,7 +5586,7 @@ debugger_names = [
 	vel
 	velocity
 	venue
-	venuesnapshots
+	VenueSnapshots
 	version
 	vert_blend_acceleration
 	vert_blend_displacement_for_max_velocity_up
@@ -5594,16 +5594,16 @@ debugger_names = [
 	vert_blend_max_velocity_up
 	vert_blend_min_velocity_up
 	vert_blend_step_velocity_up
-	vertexweight
+	VertexWeight
 	vertical
 	vertical_feeler_length
-	verticaldist
-	verts
+	VerticalDist
+	Verts
 	vflat
 	vfogcolor
 	vfogdensity
 	vgouraud
-	vibrate
+	Vibrate
 	vibration
 	video_editor_in_video_editor
 	videoeditor
@@ -5615,12 +5615,12 @@ debugger_names = [
 	viewer_ip
 	viewer_model
 	viewer_subnet
-	viewerautorepeatspeed
-	viewerautorepeattime
+	ViewerAutoRepeatSpeed
+	ViewerAutoRepeatTime
 	viewercam_composite_structure
 	viewercam_nofail
-	viewerdown
-	viewerleft
+	ViewerDown
+	ViewerLeft
 	viewerobj
 	viewerobj_add_components
 	viewerobj_components
@@ -5630,9 +5630,9 @@ debugger_names = [
 	viewerobj_set_anim_speed
 	viewerobj_step_frame
 	viewerobjectid
-	viewerobjpos
-	viewerright
-	viewerup
+	ViewerObjPos
+	ViewerRight
+	ViewerUp
 	viewport
 	viewport0
 	viewport1
@@ -5641,12 +5641,12 @@ debugger_names = [
 	viewport_priority
 	viewport_render_nodes
 	viewport_rendered_pcnt
-	viewportelement
+	ViewportElement
 	viewportid
 	viewports
-	vignette
-	vision
-	vmenu
+	Vignette
+	Vision
+	VMenu
 	vnone
 	vocalist_info
 	voice
@@ -5656,23 +5656,23 @@ debugger_names = [
 	vol
 	vol_db
 	vol_percent
-	voll
-	volr
+	volL
+	volR
 	volume
 	volume_fog
-	volumecolor
-	volumecolorblue
-	volumecolorgreen
-	volumecolorred
+	VolumeColor
+	VolumeColorBlue
+	VolumeColorGreen
+	VolumeColorRed
 	volumecone
 	volumecurve
-	volumedensity
+	VolumeDensity
 	volumefog
 	volumepercent
 	volumetricfog
 	votofacialanimmap
 	vram_size
-	vscrollingmenu
+	VScrollingMenu
 	vskeleton
 	vtextured
 	vwireframe
@@ -5704,18 +5704,18 @@ debugger_names = [
 	waternormalmapheight
 	waternormalmaprange
 	waternormalmapwidth
-	waterripplegenerated
+	WaterRippleGenerated
 	waterrippleinitialsize
 	waterripplespeed
 	waterrippletextureheight
 	waterrippletexturewidth
 	waterthresh
 	waterwindcoeff
-	waypoint
+	Waypoint
 	weight
 	weight_scale
 	weights
-	welcome_to_hell
+	WELCOME_TO_HELL
 	welcometothejungle
 	wgt
 	whammy
@@ -5724,7 +5724,7 @@ debugger_names = [
 	whammy_count
 	whammy_cutoff
 	whammy_length
-	whammy_mania
+	WHAMMY_MANIA
 	whammy_mania_achievement_invalidated
 	whammy_material
 	whammy_min_hold_mute_ms
@@ -5742,8 +5742,8 @@ debugger_names = [
 	whammy_units_per_second
 	whammy_wibble_speed
 	whammy_width_offset
-	whammywibble0
-	whammywibble1
+	WhammyWibble0
+	WhammyWibble1
 	wheel0_friction
 	wheel1_friction
 	wheel2_friction
@@ -5751,19 +5751,19 @@ debugger_names = [
 	wheel_radius
 	whenyouwereyoung
 	white
-	who_needs_the_power
+	WHO_NEEDS_THE_POWER
 	whole_world
 	wholeworld
 	widescreen
 	width
-	widthoffsetfactor
+	widthOffsetFactor
 	wildcard
 	win
 	win32
 	wind
-	windcoeff
+	WindCoeff
 	windmultiplier
-	windowelement
+	WindowElement
 	winlosevalue
 	winner
 	with
@@ -5784,8 +5784,8 @@ debugger_names = [
 	write_stats
 	write_type
 	write_update
-	writetobuffer_compressionlookuptable_16
-	writetobuffer_compressionlookuptable_8
+	WriteToBuffer_CompressionLookupTable_16
+	WriteToBuffer_CompressionLookupTable_8
 	writing_leaderboard_storage
 	wtf_value
 	wuss_out
@@ -5799,7 +5799,7 @@ debugger_names = [
 	xboxlive_menu_optimatch_results_stop
 	xboxlive_num_results
 	xenon
-	xenon_animlodinterleave2
+	Xenon_AnimLODInterleave2
 	xenon_auto_load_progress
 	xenon_invite_confirm_dialog
 	xenon_invite_confirm_no
@@ -5810,7 +5810,7 @@ debugger_names = [
 	y_offset
 	y_rot
 	year
-	yellow
+	Yellow
 	yuv
 	z
 	z3d
@@ -5822,8 +5822,8 @@ debugger_names = [
 	zone_name
 	zone_string_name
 	zones
-	zoomdriftmap
-	zoomstabilitymap
+	zoomDriftMap
+	zoomStabilityMap
 	zpass
 	zpassonly
 	zpassshader

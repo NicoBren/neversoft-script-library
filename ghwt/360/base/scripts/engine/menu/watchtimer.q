@@ -3,9 +3,9 @@ script make_watch_timer \{id = watch_timer}
 	CreateScreenElement {
 		id = <id>
 		parent = root_window
-		Type = descinterface
+		type = DescInterface
 		desc = 'watch_timer'
-		Pos = <Pos>
+		pos = <pos>
 	}
 	<id> :animate_watch_timer
 endscript
@@ -17,78 +17,78 @@ script animate_watch_timer
 endscript
 
 script animate_watch_timer_swing 
-	setscriptcannotpause
-	se_setprops \{timer_rot_angle = -3}
-	se_setprops \{timer_watch_alpha = 0.0}
-	se_setprops \{timer_hand_big_alpha = 0.0}
-	se_setprops \{timer_hand_small_alpha = 0.0}
+	SetScriptCannotPause
+	SE_SetProps \{Timer_rot_angle = -3}
+	SE_SetProps \{Timer_watch_alpha = 0.0}
+	SE_SetProps \{Timer_hand_big_alpha = 0.0}
+	SE_SetProps \{Timer_hand_small_alpha = 0.0}
 	Wait \{15
 		gameframes}
-	se_setprops \{timer_watch_alpha = 1.0
+	SE_SetProps \{Timer_watch_alpha = 1.0
 		time = 0.25}
-	se_setprops \{timer_hand_big_alpha = 1.0
+	SE_SetProps \{Timer_hand_big_alpha = 1.0
 		time = 0.25}
-	se_setprops \{timer_hand_small_alpha = 1.0
+	SE_SetProps \{Timer_hand_small_alpha = 1.0
 		time = 0.25}
 	begin
-	se_setprops \{timer_rot_angle = 3
+	SE_SetProps \{Timer_rot_angle = 3
 		time = 0.6
-		anim = slow_out}
+		Anim = slow_out}
 	Wait \{0.63
-		Seconds}
-	se_setprops \{timer_rot_angle = -3
+		seconds}
+	SE_SetProps \{Timer_rot_angle = -3
 		time = 0.6
-		anim = slow_out}
+		Anim = slow_out}
 	Wait \{0.63
-		Seconds}
+		seconds}
 	repeat
 endscript
 
 script animate_watch_timer_sweep_second 
-	setscriptcannotpause
+	SetScriptCannotPause
 	begin
-	se_setprops \{timer_hand_small_rot_angle = 0}
+	SE_SetProps \{timer_hand_small_rot_angle = 0}
 	i = 0
 	begin
-	se_setprops timer_hand_small_rot_angle = (-1 * <i>) time = 0.005 anim = gentle
+	SE_SetProps timer_hand_small_rot_angle = (-1 * <i>) time = 0.005 Anim = gentle
 	Wait \{0.005
-		Seconds}
+		seconds}
 	i = (<i> + 1)
 	repeat 359
 	repeat
 endscript
 
 script animate_watch_timer_sweep_minute 
-	setscriptcannotpause
+	SetScriptCannotPause
 	begin
-	se_setprops \{timer_hand_big_rot_angle = 0}
+	SE_SetProps \{timer_hand_big_rot_angle = 0}
 	i = 0
 	begin
-	se_setprops timer_hand_big_rot_angle = (-1 * <i>) time = 0.2 anim = gentle
+	SE_SetProps timer_hand_big_rot_angle = (-1 * <i>) time = 0.2 Anim = gentle
 	Wait \{0.2
-		Seconds}
+		seconds}
 	i = (<i> + 1)
 	repeat 359
 	repeat
 endscript
 
 script watch_animate_in 
-	setscriptcannotpause
+	SetScriptCannotPause
 	if GetSingleTag \{animating_out}
 		if (<animating_out> = 0)
 			return
 		endif
 		SetTags \{animating_out = 0}
-		se_setprops timer_watch_alpha = 1.0 time = <time>
-		se_setprops timer_hand_big_alpha = 1.0 time = <time>
-		se_setprops timer_hand_small_alpha = 1.0 time = <time>
+		SE_SetProps Timer_watch_alpha = 1.0 time = <time>
+		SE_SetProps Timer_hand_big_alpha = 1.0 time = <time>
+		SE_SetProps Timer_hand_small_alpha = 1.0 time = <time>
 	endif
 endscript
 
 script watch_animate_out 
-	setscriptcannotpause
+	SetScriptCannotPause
 	SetTags \{animating_out = 1}
-	se_setprops timer_watch_alpha = 0.0 time = <time>
-	se_setprops timer_hand_big_alpha = 0.0 time = <time>
-	se_setprops timer_hand_small_alpha = 0.0 time = <time>
+	SE_SetProps Timer_watch_alpha = 0.0 time = <time>
+	SE_SetProps Timer_hand_big_alpha = 0.0 time = <time>
+	SE_SetProps Timer_hand_small_alpha = 0.0 time = <time>
 endscript

@@ -1,233 +1,233 @@
-force_particle_update_time = 1.0
+Force_Particle_Update_Time = 1.0
 
-script createflexibleparticlesystem \{groupid = 0}
-	if gotparam \{perm}
-		perm = 1
+script CreateFlexibleParticleSystem \{groupID = 0}
+	if GotParam \{PERM}
+		PERM = 1
 	else
-		perm = 0
+		PERM = 0
 	endif
-	if NOT gotparam \{name}
+	if NOT GotParam \{name}
 		script_assert \{"No <name> parameter"}
 	endif
-	if NOT gotparam \{params_script}
+	if NOT GotParam \{params_Script}
 		script_assert \{"No <params_script> parameter"}
 	endif
-	if NOT gotparam \{params_script}
-		if NOT globalexists name = <params_script> type = structure
-			printf "Global particle %s could not be found." s = <params_script>
+	if NOT GotParam \{params_Script}
+		if NOT GlobalExists name = <params_Script> type = Structure
+			printf "Global particle %s could not be found." s = <params_Script>
 			return
 		endif
 	endif
-	if NOT gotparam \{objid}
-		obj_getid
+	if NOT GotParam \{ObjID}
+		Obj_GetID
 	endif
-	manglechecksums a = <name> b = <objid>
-	if NOT objectexists id = <mangled_id>
-		if cutscenedestroylistactive
-			addtocutscenedestroylist {
-				destroy_func = destroyflexibleparticlesystem
+	MangleChecksums a = <name> b = <ObjID>
+	if NOT ObjectExists id = <mangled_ID>
+		if CutsceneDestroyListActive
+			AddToCutsceneDestroyList {
+				destroy_func = DestroyFlexibleParticleSystem
 				ignore_duplicates
-				name = <mangled_id>
-				destroy_params = {name = <name> objid = <objid>}
+				name = <mangled_ID>
+				destroy_params = {name = <name> ObjID = <ObjID>}
 			}
 		endif
-		alloc_flexible_particle params_script = (<params_script>) name = <mangled_id> objid = <objid> bone = <bone> attachnode = <attachnode> bone = <bone> groupid = <groupid> perm = <perm>
+		alloc_flexible_particle params_Script = (<params_Script>) name = <mangled_ID> ObjID = <ObjID> bone = <bone> attachNode = <attachNode> bone = <bone> groupID = <groupID> PERM = <PERM>
 	endif
 endscript
 
-script createflexibleparticlesystem_editor 
-	killspawnedscript \{name = createflexibleparticlesystem_editor_spawned}
-	spawnscriptnow createflexibleparticlesystem_editor_spawned params = <...>
+script CreateFlexibleParticleSystem_Editor 
+	KillSpawnedScript \{name = CreateFlexibleParticleSystem_Editor_Spawned}
+	spawnscriptnow CreateFlexibleParticleSystem_Editor_Spawned params = <...>
 endscript
 
-script createflexibleparticlesystem_editor_spawned \{groupid = 0}
-	if gotparam \{perm}
-		perm = 1
+script CreateFlexibleParticleSystem_Editor_Spawned \{groupID = 0}
+	if GotParam \{PERM}
+		PERM = 1
 	else
-		perm = 0
+		PERM = 0
 	endif
-	if NOT gotparam \{name}
+	if NOT GotParam \{name}
 		script_assert \{"No <name> parameter"}
 	endif
-	if NOT gotparam \{params_script}
+	if NOT GotParam \{params_Script}
 		script_assert \{"No <params_script> parameter"}
 	endif
-	if NOT gotparam \{objid}
-		obj_getid
+	if NOT GotParam \{ObjID}
+		Obj_GetID
 	endif
-	if gotparam \{attachobjid}
-		<objid> = <attachobjid>
+	if GotParam \{attachObjID}
+		<ObjID> = <attachObjID>
 	endif
-	if gotparam \{objid}
-		attachobjid = <objid>
+	if GotParam \{ObjID}
+		attachObjID = <ObjID>
 	endif
-	if gotparam \{objid}
-		manglechecksums a = <name> b = <attachobjid>
+	if GotParam \{ObjID}
+		MangleChecksums a = <name> b = <attachObjID>
 	else
-		<mangled_id> = <name>
+		<mangled_ID> = <name>
 	endif
-	if (iscreated <name>)
-		<name> :die
-		wait \{1
+	if (IsCreated <name>)
+		<name> :Die
+		Wait \{1
 			frame}
 	endif
-	if (iscreated <mangled_id>)
-		<mangled_id> :die
-		wait \{1
+	if (IsCreated <mangled_ID>)
+		<mangled_ID> :Die
+		Wait \{1
 			frame}
 	endif
-	if NOT iscreated <mangled_id>
-		if (gotparam attach)
-			alloc_flexible_particle params_script = (<params_script>) name = <mangled_id> objid = <attachobjid> attachnode = <attachnode> bone = <bone> groupid = <groupid> perm = <perm>
+	if NOT IsCreated <mangled_ID>
+		if (GotParam attach)
+			alloc_flexible_particle params_Script = (<params_Script>) name = <mangled_ID> ObjID = <attachObjID> attachNode = <attachNode> bone = <bone> groupID = <groupID> PERM = <PERM>
 		else
-			alloc_flexible_particle params_script = (<params_script>) name = <mangled_id> groupid = <groupid> perm = <perm>
+			alloc_flexible_particle params_Script = (<params_Script>) name = <mangled_ID> groupID = <groupID> PERM = <PERM>
 		endif
 	endif
 endscript
 
-script getflexibleparticlesystem 
-	if NOT gotparam \{name}
+script GetFlexibleParticleSystem 
+	if NOT GotParam \{name}
 		script_assert \{"No <name> parameter"}
 	endif
-	if NOT gotparam \{objid}
-		obj_getid
+	if NOT GotParam \{ObjID}
+		Obj_GetID
 	endif
-	manglechecksums a = <name> b = <objid>
-	if objectexists id = <mangled_id>
-		return systemid = <mangled_id>
+	MangleChecksums a = <name> b = <ObjID>
+	if ObjectExists id = <mangled_ID>
+		return systemID = <mangled_ID>
 	endif
 endscript
 
-script destroyflexibleparticlesystem 
-	if NOT gotparam \{name}
+script DestroyFlexibleParticleSystem 
+	if NOT GotParam \{name}
 		script_assert \{"No <name> parameter"}
 	endif
-	if NOT gotparam \{objid}
-		obj_getid
+	if NOT GotParam \{ObjID}
+		Obj_GetID
 	endif
-	manglechecksums a = <name> b = <objid>
-	if objectexists id = <mangled_id>
-		if cutscenedestroylistactive
-			removefromcutscenedestroylist name = <mangled_id>
+	MangleChecksums a = <name> b = <ObjID>
+	if ObjectExists id = <mangled_ID>
+		if CutsceneDestroyListActive
+			RemoveFromCutsceneDestroyList name = <mangled_ID>
 		endif
-		<mangled_id> :destroyparticles
+		<mangled_ID> :DestroyParticles
 	endif
 endscript
 
-script destroyflexibleparticlesystem_editor 
-	if NOT gotparam \{name}
+script DestroyFlexibleParticleSystem_Editor 
+	if NOT GotParam \{name}
 		script_assert \{"No <name> parameter"}
 	endif
-	if NOT gotparam \{objid}
-		obj_getid
+	if NOT GotParam \{ObjID}
+		Obj_GetID
 	endif
-	manglechecksums a = <name> b = <objid>
-	if objectexists id = <name>
-		<name> :destroyparticles
+	MangleChecksums a = <name> b = <ObjID>
+	if ObjectExists id = <name>
+		<name> :DestroyParticles
 	endif
-	if objectexists id = <mangled_id>
-		if cutscenedestroylistactive
-			removefromcutscenedestroylist name = <mangled_id>
+	if ObjectExists id = <mangled_ID>
+		if CutsceneDestroyListActive
+			RemoveFromCutsceneDestroyList name = <mangled_ID>
 		endif
-		<mangled_id> :destroyparticles
+		<mangled_ID> :DestroyParticles
 	endif
 endscript
-lockableflexibleparticlecomponents = [
+LockableFlexibleParticleComponents = [
 	{
-		component = lockobj
+		Component = lockobj
 	}
 	{
-		component = flexibleparticle
+		Component = flexibleparticle
 	}
 ]
 
-script alloc_flexible_particle \{groupid = 0}
-	if NOT checkflexibleparticlestructure <params_script>
+script alloc_flexible_particle \{groupID = 0}
+	if NOT CheckFlexibleParticleStructure <params_Script>
 		printf \{"Invalid particle structure"}
 		return
 	endif
-	if gotparam \{perm}
-		if (<perm> = 1)
-			priority = coim_priority_permanent
-			heap = gameobj
+	if GotParam \{PERM}
+		if (<PERM> = 1)
+			priority = COIM_Priority_Permanent
+			heap = GameObj
 		else
-			priority = coim_priority_effects
+			priority = COIM_Priority_Effects
 			heap = particle
 		endif
 	else
-		priority = coim_priority_effects
+		priority = COIM_Priority_Effects
 		heap = particle
 	endif
-	creategameobject priority = <priority> heap = <heap> components = $lockableflexibleparticlecomponents params = {
+	CreateGameObject priority = <priority> heap = <heap> Components = $LockableFlexibleParticleComponents params = {
 		name = <name>
-		<params_script>
-		ignorelockdie
-		id = <objid>
-		parent_object = <objid>
+		<params_Script>
+		IgnoreLockDie
+		id = <ObjID>
+		parent_object = <ObjID>
 		bone = <bone>
-		groupid = <groupid>
-		attachnode = <attachnode>
+		groupID = <groupID>
+		attachNode = <attachNode>
 		object_type = particle
 	}
 endscript
-suspendibleflexibleparticlecomponents = [
+SuspendibleFlexibleParticleComponents = [
 	{
-		component = flexibleparticle
+		Component = flexibleparticle
 	}
 ]
-flexibleparticlecomponents = [
+FlexibleParticleComponents = [
 	{
-		component = flexibleparticle
+		Component = flexibleparticle
 	}
 ]
 
-script createglobalflexparticlesystem \{groupid = 0}
-	if NOT checkflexibleparticlestructure <params_script>
+script CreateGlobalFlexParticlesystem \{groupID = 0}
+	if NOT CheckFlexibleParticleStructure <params_Script>
 		printf \{"Invalid particle structure"}
 		return
 	endif
-	if gotparam \{perm}
-		priority = coim_priority_permanent
-		heap = gameobj
+	if GotParam \{PERM}
+		priority = COIM_Priority_Permanent
+		heap = GameObj
 	else
-		priority = coim_priority_effects
+		priority = COIM_Priority_Effects
 		heap = particle
 	endif
-	if NOT gotparam \{name}
+	if NOT GotParam \{name}
 		script_assert \{"No <name> parameter"}
 	endif
-	if NOT gotparam \{params_script}
+	if NOT GotParam \{params_Script}
 		script_assert \{"No <params_script> parameter"}
 	endif
-	if NOT gotparam \{params_script}
-		if NOT globalexists name = <params_script> type = structure
-			printf "Global particle %s could not be found." s = <params_script>
+	if NOT GotParam \{params_Script}
+		if NOT GlobalExists name = <params_Script> type = Structure
+			printf "Global particle %s could not be found." s = <params_Script>
 			return
 		endif
 	endif
-	if NOT objectexists id = <name>
-		if cutscenedestroylistactive
-			addtocutscenedestroylist {
-				destroy_func = destroyglobalflexparticlesystem
+	if NOT ObjectExists id = <name>
+		if CutsceneDestroyListActive
+			AddToCutsceneDestroyList {
+				destroy_func = DestroyGlobalFlexParticleSystem
 				ignore_duplicates
 				name = <name>
 				destroy_params = {name = <name>}
 			}
 		endif
-		if structurecontains \{structure = params_script
-				suspenddistance}
-			creategameobject priority = <priority> heap = <heap> components = $suspendibleflexibleparticlecomponents params = {
+		if StructureContains \{Structure = params_Script
+				SuspendDistance}
+			CreateGameObject priority = <priority> heap = <heap> Components = $SuspendibleFlexibleParticleComponents params = {
 				name = <name>
-				<params_script>
-				groupid = <groupid>
+				<params_Script>
+				groupID = <groupID>
 				pos = <pos>
 				object_type = particle
 			}
 		else
-			creategameobject priority = <priority> heap = <heap> components = $flexibleparticlecomponents params = {
+			CreateGameObject priority = <priority> heap = <heap> Components = $FlexibleParticleComponents params = {
 				name = <name>
-				<params_script>
-				groupid = <groupid>
+				<params_Script>
+				groupID = <groupID>
 				pos = <pos>
 				object_type = particle
 			}
@@ -235,341 +235,341 @@ script createglobalflexparticlesystem \{groupid = 0}
 	endif
 endscript
 
-script destroyglobalflexparticlesystem 
-	if NOT gotparam \{name}
+script DestroyGlobalFlexParticleSystem 
+	if NOT GotParam \{name}
 		script_assert \{"No <name> parameter"}
 	endif
-	if objectexists id = <name>
-		if cutscenedestroylistactive
-			removefromcutscenedestroylist name = <name>
+	if ObjectExists id = <name>
+		if CutsceneDestroyListActive
+			RemoveFromCutsceneDestroyList name = <name>
 		endif
-		<name> :destroyparticles
+		<name> :DestroyParticles
 	endif
 endscript
 
-script createfastparticlesystem \{groupid = 0}
-	createsplineparticlesystem params = <...>
+script CreateFastParticleSystem \{groupID = 0}
+	CreateSplineParticleSystem params = <...>
 endscript
 
-script createsplineparticlesystem \{groupid = 0}
-	if gotparam \{perm}
-		perm = 1
+script CreateSplineParticleSystem \{groupID = 0}
+	if GotParam \{PERM}
+		PERM = 1
 	else
-		perm = 0
+		PERM = 0
 	endif
-	if NOT gotparam \{name}
+	if NOT GotParam \{name}
 		script_assert \{"No <name> parameter"}
 	endif
-	if NOT gotparam \{params_script}
+	if NOT GotParam \{params_Script}
 		script_assert \{"No <params_script> parameter"}
 	endif
-	if NOT gotparam \{params_script}
-		if NOT globalexists name = <params_script> type = structure
-			printf "Global particle %s could not be found." s = <params_script>
+	if NOT GotParam \{params_Script}
+		if NOT GlobalExists name = <params_Script> type = Structure
+			printf "Global particle %s could not be found." s = <params_Script>
 			return
 		endif
 	endif
-	if gotparam \{attachobjid}
-		<objid> = <attachobjid>
+	if GotParam \{attachObjID}
+		<ObjID> = <attachObjID>
 	endif
-	if gotparam \{objid}
-		attachobjid = <objid>
+	if GotParam \{ObjID}
+		attachObjID = <ObjID>
 	endif
-	if gotparam \{objid}
-		manglechecksums a = <name> b = <attachobjid>
+	if GotParam \{ObjID}
+		MangleChecksums a = <name> b = <attachObjID>
 	else
-		<mangled_id> = <name>
+		<mangled_ID> = <name>
 	endif
-	if NOT iscreated <mangled_id>
-		if cutscenedestroylistactive
-			addtocutscenedestroylist {
-				destroy_func = destroyfastparticlesystem
+	if NOT IsCreated <mangled_ID>
+		if CutsceneDestroyListActive
+			AddToCutsceneDestroyList {
+				destroy_func = DestroyFastParticleSystem
 				ignore_duplicates
-				name = <mangled_id>
-				destroy_params = {name = <name> attachobjid = <attachobjid>}
+				name = <mangled_ID>
+				destroy_params = {name = <name> attachObjID = <attachObjID>}
 			}
 		endif
-		alloc_spline_particle {params_script = <params_script> name = <mangled_id> attachobjid = <objid> objid = <objid> bone = <bone> groupid = <groupid>
-			attachnode = <attachnode> emit_script = <emit_script> emit_params = <emit_params> perm = <perm> creation_node = <creation_node>}
+		alloc_spline_particle {params_Script = <params_Script> name = <mangled_ID> attachObjID = <ObjID> ObjID = <ObjID> bone = <bone> groupID = <groupID>
+			attachNode = <attachNode> emit_script = <emit_script> emit_params = <emit_params> PERM = <PERM> creation_node = <creation_node>}
 	endif
-	if ((iscreated <mangled_id>) && (gotparam objid) && (structurecontains structure = params_script applyenvbrightness))
-		<mangled_id> :applyenvbrightness from = <objid>
+	if ((IsCreated <mangled_ID>) && (GotParam ObjID) && (StructureContains Structure = params_Script ApplyEnvBrightness))
+		<mangled_ID> :ApplyEnvBrightness from = <ObjID>
 	endif
-	if iscreated <mangled_id>
-		return systemid = <mangled_id>
+	if IsCreated <mangled_ID>
+		return systemID = <mangled_ID>
 	endif
 endscript
 
-script createsplineparticlesystem_editor 
-	killspawnedscript \{name = createsplineparticlesystem_editor_spawned}
-	spawnscriptnow createsplineparticlesystem_editor_spawned params = <...>
+script CreateSplineParticleSystem_Editor 
+	KillSpawnedScript \{name = CreateSplineParticleSystem_Editor_Spawned}
+	spawnscriptnow CreateSplineParticleSystem_Editor_Spawned params = <...>
 endscript
 
-script createsplineparticlesystem_editor_spawned \{groupid = 0}
-	if gotparam \{perm}
-		perm = 1
+script CreateSplineParticleSystem_Editor_Spawned \{groupID = 0}
+	if GotParam \{PERM}
+		PERM = 1
 	else
-		perm = 0
+		PERM = 0
 	endif
-	if NOT gotparam \{name}
+	if NOT GotParam \{name}
 		script_assert \{"No <name> parameter"}
 	endif
-	if NOT gotparam \{params_script}
+	if NOT GotParam \{params_Script}
 		script_assert \{"No <params_script> parameter"}
 	endif
-	if gotparam \{attachobjid}
-		<objid> = <attachobjid>
+	if GotParam \{attachObjID}
+		<ObjID> = <attachObjID>
 	endif
-	if gotparam \{objid}
-		attachobjid = <objid>
+	if GotParam \{ObjID}
+		attachObjID = <ObjID>
 	endif
-	if gotparam \{objid}
-		manglechecksums a = <name> b = <attachobjid>
+	if GotParam \{ObjID}
+		MangleChecksums a = <name> b = <attachObjID>
 	else
-		<mangled_id> = <name>
+		<mangled_ID> = <name>
 	endif
-	if (iscreated <name>)
-		<name> :die
-		wait \{1
+	if (IsCreated <name>)
+		<name> :Die
+		Wait \{1
 			frame}
 	endif
-	if (iscreated <mangled_id>)
-		<mangled_id> :die
-		wait \{1
+	if (IsCreated <mangled_ID>)
+		<mangled_ID> :Die
+		Wait \{1
 			frame}
 	endif
-	if (iscreated <mangled_id>)
-		<mangled_id> :updateparams {params_script = <params_script>}
-		if gotparam \{attach}
-			<mangled_id> :obj_locktoobject objectname = <objid>
+	if (IsCreated <mangled_ID>)
+		<mangled_ID> :UpdateParams {params_Script = <params_Script>}
+		if GotParam \{attach}
+			<mangled_ID> :Obj_LockToObject objectname = <ObjID>
 		else
-			<mangled_id> :obj_locktoobject off objectname = <objid>
+			<mangled_ID> :Obj_LockToObject off objectname = <ObjID>
 		endif
 	else
-		alloc_spline_particle {params_script = <params_script> name = <mangled_id> attachobjid = <objid> objid = <objid> bone = <bone> groupid = <groupid>
-			attachnode = <attachnode> emit_script = <emit_script> emit_params = <emit_params> perm = <perm> creation_node = <creation_node>}
+		alloc_spline_particle {params_Script = <params_Script> name = <mangled_ID> attachObjID = <ObjID> ObjID = <ObjID> bone = <bone> groupID = <groupID>
+			attachNode = <attachNode> emit_script = <emit_script> emit_params = <emit_params> PERM = <PERM> creation_node = <creation_node>}
 	endif
 endscript
-suspendiblefastparticlecomponents = [
+SuspendibleFastParticleComponents = [
 	{
-		component = particle
+		Component = particle
 	}
 ]
-fastparticlecomponents = [
+FastParticleComponents = [
 	{
-		component = particle
+		Component = particle
 	}
 ]
 
-script createglobalfastparticlesystem \{groupid = 0}
-	if NOT checksplineparticlestructure <params_script>
+script CreateGlobalFastParticleSystem \{groupID = 0}
+	if NOT CheckSplineParticleStructure <params_Script>
 		printf \{"Invalid particle structure"}
 		return
 	endif
-	if gotparam \{perm}
-		priority = coim_priority_permanent
-		heap = gameobj
+	if GotParam \{PERM}
+		priority = COIM_Priority_Permanent
+		heap = GameObj
 	else
-		priority = coim_priority_effects
+		priority = COIM_Priority_Effects
 		heap = particle
 	endif
-	if NOT gotparam \{name}
+	if NOT GotParam \{name}
 		script_assert \{"No <name> parameter"}
 	endif
-	if NOT gotparam \{params_script}
+	if NOT GotParam \{params_Script}
 		script_assert \{"No <params_script> parameter"}
 	endif
-	if NOT gotparam \{params_script}
-		if NOT globalexists name = <params_script> type = structure
-			printf "Global particle %s could not be found." s = <params_script>
+	if NOT GotParam \{params_Script}
+		if NOT GlobalExists name = <params_Script> type = Structure
+			printf "Global particle %s could not be found." s = <params_Script>
 			return
 		endif
 	endif
-	if NOT iscreated <name>
-		if cutscenedestroylistactive
-			addtocutscenedestroylist {
-				destroy_func = destroyglobalfastparticlesystem
+	if NOT IsCreated <name>
+		if CutsceneDestroyListActive
+			AddToCutsceneDestroyList {
+				destroy_func = DestroyGlobalFastParticleSystem
 				ignore_duplicates
 				name = <name>
 				destroy_params = {name = <name>}
 			}
 		endif
-		if structurecontains \{structure = params_script
-				suspenddistance}
-			creategameobject priority = <priority> heap = <heap> components = suspendiblefastparticlecomponents params = {
+		if StructureContains \{Structure = params_Script
+				SuspendDistance}
+			CreateGameObject priority = <priority> heap = <heap> Components = SuspendibleFastParticleComponents params = {
 				name = <name>
-				parent_object = <objid>
-				groupid = <groupid>
-				<params_script>
+				parent_object = <ObjID>
+				groupID = <groupID>
+				<params_Script>
 				pos = <pos>
 				object_type = particle
 			}
 		else
-			creategameobject priority = <priority> heap = <heap> components = $fastparticlecomponents params = {
+			CreateGameObject priority = <priority> heap = <heap> Components = $FastParticleComponents params = {
 				name = <name>
-				parent_object = <objid>
-				groupid = <groupid>
-				<params_script>
+				parent_object = <ObjID>
+				groupID = <groupID>
+				<params_Script>
 				pos = <pos>
 				object_type = particle
 			}
 		endif
 	endif
-	if iscreated <name>
-		if gotparam \{emit_script}
-			<name> :obj_spawnscriptlater <emit_script> params = <emit_params>
+	if IsCreated <name>
+		if GotParam \{emit_script}
+			<name> :Obj_SpawnScriptLater <emit_script> params = <emit_params>
 		endif
 	endif
 endscript
 
-script destroyglobalfastparticlesystem 
-	if NOT gotparam \{name}
+script DestroyGlobalFastParticleSystem 
+	if NOT GotParam \{name}
 		script_assert \{"No <name> parameter"}
 	endif
-	if objectexists id = <name>
-		if cutscenedestroylistactive
-			removefromcutscenedestroylist name = <name>
+	if ObjectExists id = <name>
+		if CutsceneDestroyListActive
+			RemoveFromCutsceneDestroyList name = <name>
 		endif
-		<name> :die
+		<name> :Die
 	endif
 endscript
 
-script destroyfastparticlesystem 
-	if NOT gotparam \{name}
+script DestroyFastParticleSystem 
+	if NOT GotParam \{name}
 		script_assert \{"No <name> parameter"}
 	endif
-	if gotparam \{objid}
-		attachobjid = <objid>
+	if GotParam \{ObjID}
+		attachObjID = <ObjID>
 	endif
-	if gotparam \{attachobjid}
-		manglechecksums a = <name> b = <attachobjid>
+	if GotParam \{attachObjID}
+		MangleChecksums a = <name> b = <attachObjID>
 	else
-		<mangled_id> = <name>
+		<mangled_ID> = <name>
 	endif
-	if objectexists id = <mangled_id>
-		if cutscenedestroylistactive
-			removefromcutscenedestroylist name = <mangled_id>
+	if ObjectExists id = <mangled_ID>
+		if CutsceneDestroyListActive
+			RemoveFromCutsceneDestroyList name = <mangled_ID>
 		endif
-		<mangled_id> :die
+		<mangled_ID> :Die
 	endif
 endscript
 
-script destroyparticlesystem_editor 
-	killspawnedscript \{name = destroyparticlesystem_editor_spawn}
-	spawnscriptnow destroyparticlesystem_editor_spawn params = <...>
+script DestroyParticleSystem_Editor 
+	KillSpawnedScript \{name = DestroyParticleSystem_Editor_Spawn}
+	spawnscriptnow DestroyParticleSystem_Editor_Spawn params = <...>
 endscript
 
-script destroyparticlesystem_editor_spawn 
-	if NOT gotparam \{name}
+script DestroyParticleSystem_Editor_Spawn 
+	if NOT GotParam \{name}
 		script_assert \{"No <name> parameter"}
 	endif
-	if gotparam \{objid}
-		attachobjid = <objid>
+	if GotParam \{ObjID}
+		attachObjID = <ObjID>
 	endif
-	if gotparam \{attachobjid}
-		manglechecksums a = <name> b = <attachobjid>
+	if GotParam \{attachObjID}
+		MangleChecksums a = <name> b = <attachObjID>
 	else
-		<mangled_id> = <name>
+		<mangled_ID> = <name>
 	endif
-	if objectexists id = <mangled_id>
-		<mangled_id> :die
+	if ObjectExists id = <mangled_ID>
+		<mangled_ID> :Die
 	endif
-	if objectexists id = <name>
-		<name> :die
+	if ObjectExists id = <name>
+		<name> :Die
 	endif
 endscript
 
-script destroysplineparticlesystem_editor 
-	if NOT gotparam \{name}
+script DestroySplineParticleSystem_Editor 
+	if NOT GotParam \{name}
 		script_assert \{"No <name> parameter"}
 	endif
-	if gotparam \{objid}
-		attachobjid = <objid>
+	if GotParam \{ObjID}
+		attachObjID = <ObjID>
 	endif
-	if gotparam \{attachobjid}
-		manglechecksums a = <name> b = <attachobjid>
+	if GotParam \{attachObjID}
+		MangleChecksums a = <name> b = <attachObjID>
 	else
-		<mangled_id> = <name>
+		<mangled_ID> = <name>
 	endif
-	if objectexists id = <mangled_id>
-		if cutscenedestroylistactive
-			removefromcutscenedestroylist name = <mangled_id>
+	if ObjectExists id = <mangled_ID>
+		if CutsceneDestroyListActive
+			RemoveFromCutsceneDestroyList name = <mangled_ID>
 		endif
-		<mangled_id> :die
+		<mangled_ID> :Die
 	endif
-	if objectexists id = <name>
-		if cutscenedestroylistactive
-			removefromcutscenedestroylist name = <name>
+	if ObjectExists id = <name>
+		if CutsceneDestroyListActive
+			RemoveFromCutsceneDestroyList name = <name>
 		endif
-		<name> :die
+		<name> :Die
 	endif
 endscript
 
-script emitfastparticles 
-	if gotparam \{wait_frames}
-		wait <wait_frames> frames
+script EmitFastParticles 
+	if GotParam \{wait_frames}
+		Wait <wait_frames> frames
 	else
-		wait <wait_seconds> seconds
+		Wait <wait_seconds> seconds
 	endif
-	setemitrate \{0}
+	SetEmitRate \{0}
 	begin
-	if NOT isemitting
+	if NOT IsEmitting
 		break
 	endif
-	wait \{1
+	Wait \{1
 		frame}
 	repeat
-	die
+	Die
 endscript
-lockablesplineparticlecomponents = [
+LockableSplineParticleComponents = [
 	{
-		component = lockobj
+		Component = lockobj
 	}
 	{
-		component = particle
+		Component = particle
 	}
 ]
 
-script alloc_spline_particle \{groupid = 0}
-	if NOT checksplineparticlestructure <params_script>
+script alloc_spline_particle \{groupID = 0}
+	if NOT CheckSplineParticleStructure <params_Script>
 		printf \{"Invalid particle structure"}
 		return
 	endif
-	if gotparam \{perm}
-		if (<perm> = 1)
-			priority = coim_priority_permanent
-			heap = gameobj
+	if GotParam \{PERM}
+		if (<PERM> = 1)
+			priority = COIM_Priority_Permanent
+			heap = GameObj
 		else
-			priority = coim_priority_effects
+			priority = COIM_Priority_Effects
 			heap = particle
 		endif
 	else
-		priority = coim_priority_effects
+		priority = COIM_Priority_Effects
 		heap = particle
 	endif
-	if NOT objectexists id = <name>
-		if gotparam \{attachobjid}
-			creategameobject priority = <priority> heap = <heap> components = $lockablesplineparticlecomponents params = {
+	if NOT ObjectExists id = <name>
+		if GotParam \{attachObjID}
+			CreateGameObject priority = <priority> heap = <heap> Components = $LockableSplineParticleComponents params = {
 				name = <name>
-				<params_script>
-				id = <attachobjid>
-				ignorelockdie
-				parent_object = <attachobjid>
+				<params_Script>
+				id = <attachObjID>
+				IgnoreLockDie
+				parent_object = <attachObjID>
 				bone = <bone>
-				groupid = <groupid>
-				localspace
+				groupID = <groupID>
+				LocalSpace
 				creation_node = <creation_node>
 				object_type = particle
 			}
 		else
-			creategameobject priority = <priority> heap = <heap> {
-				components = [
+			CreateGameObject priority = <priority> heap = <heap> {
+				Components = [
 					{
-						component = particle
+						Component = particle
 						name = <name>
 						bone = <bone>
-						groupid = <groupid>
-						<params_script>
+						groupID = <groupID>
+						<params_Script>
 					}
 				]
 				params = {
@@ -579,83 +579,83 @@ script alloc_spline_particle \{groupid = 0}
 					object_type = particle
 				}
 			}
-			if structurecontains \{structure = params_script
-					localspace}
-				if NOT structurecontains \{structure = params_script
-						boxpositions}
-					printstruct <params_script>
+			if StructureContains \{Structure = params_Script
+					LocalSpace}
+				if NOT StructureContains \{Structure = params_Script
+						boxPositions}
+					printstruct <params_Script>
 					script_assert \{"No <boxPositions> parameter...  system should not have been defined in LocalSpace"}
 				endif
-				if objectexists id = <name>
-					<name> :setstartpos (<params_script>.boxpositions [1])
+				if ObjectExists id = <name>
+					<name> :SetStartPos (<params_Script>.boxPositions [1])
 				endif
 			endif
 		endif
 	endif
-	if objectexists id = <name>
-		if gotparam \{emit_script}
-			<name> :obj_spawnscriptlater <emit_script> params = <emit_params>
+	if ObjectExists id = <name>
+		if GotParam \{emit_script}
+			<name> :Obj_SpawnScriptLater <emit_script> params = <emit_params>
 		endif
 	endif
 endscript
 
-script alloc_fast_particle \{groupid = 0}
-	if NOT gotparam \{params_script}
-		if NOT globalexists name = <params_script> type = structure
-			printf "Global particle %s could not be found." s = <params_script>
+script alloc_fast_particle \{groupID = 0}
+	if NOT GotParam \{params_Script}
+		if NOT GlobalExists name = <params_Script> type = Structure
+			printf "Global particle %s could not be found." s = <params_Script>
 			return
 		endif
 	endif
-	if gotparam \{perm}
-		if (<perm> = 1)
-			priority = coim_priority_permanent
-			heap = gameobj
+	if GotParam \{PERM}
+		if (<PERM> = 1)
+			priority = COIM_Priority_Permanent
+			heap = GameObj
 		else
-			priority = coim_priority_effects
+			priority = COIM_Priority_Effects
 			heap = particle
 		endif
 	else
-		priority = coim_priority_effects
+		priority = COIM_Priority_Effects
 		heap = particle
 	endif
-	if NOT objectexists id = <name>
-		if gotparam \{attachobjid}
-			creategameobject priority = <priority> heap = <heap> {
-				components = [
+	if NOT ObjectExists id = <name>
+		if GotParam \{attachObjID}
+			CreateGameObject priority = <priority> heap = <heap> {
+				Components = [
 					{
-						component = lockobj
-						id = <attachobjid>
-						<params_script>
-						ignorelockdie
+						Component = lockobj
+						id = <attachObjID>
+						<params_Script>
+						IgnoreLockDie
 					}
 					{
-						component = particle
+						Component = particle
 						name = <name>
-						groupid = <groupid>
-						parent_object = <attachobjid>
+						groupID = <groupID>
+						parent_object = <attachObjID>
 						bone = <bone>
-						<params_script>
-						systemlifetime = (<params_script>.emitduration)
-						systemlifetime = <systemlifetime>
+						<params_Script>
+						systemLifetime = (<params_Script>.EmitDuration)
+						systemLifetime = <systemLifetime>
 					}
 				]
 				params = {
 					name = <name>
 					bone = <bone>
-					localspace
+					LocalSpace
 					creation_node = <creation_node>
 					object_type = particle
 				}
 			}
 		else
-			creategameobject priority = <priority> heap = <heap> {
-				components = [
+			CreateGameObject priority = <priority> heap = <heap> {
+				Components = [
 					{
-						component = particle
+						Component = particle
 						name = <name>
 						bone = <bone>
-						groupid = <groupid>
-						<params_script>
+						groupID = <groupID>
+						<params_Script>
 					}
 				]
 				params = {
@@ -665,35 +665,35 @@ script alloc_fast_particle \{groupid = 0}
 					object_type = particle
 				}
 			}
-			if structurecontains \{structure = params_script
-					localspace}
-				if NOT structurecontains \{structure = params_script
-						boxpositions}
-					printstruct <params_script>
+			if StructureContains \{Structure = params_Script
+					LocalSpace}
+				if NOT StructureContains \{Structure = params_Script
+						boxPositions}
+					printstruct <params_Script>
 					script_assert \{"No <boxPositions> parameter...  system should not have been defined in LocalSpace"}
 				endif
-				if objectexists id = <name>
-					<name> :setstartpos (<params_script>.boxpositions [1])
+				if ObjectExists id = <name>
+					<name> :SetStartPos (<params_Script>.boxPositions [1])
 				endif
 			endif
 		endif
 	endif
-	if objectexists id = <name>
-		if gotparam \{emit_script}
-			<name> :obj_spawnscriptlater <emit_script> params = <emit_params>
+	if ObjectExists id = <name>
+		if GotParam \{emit_script}
+			<name> :Obj_SpawnScriptLater <emit_script> params = <emit_params>
 		endif
 	endif
 endscript
 
-script creategameobject 
-	if iscompositeobjectmanagerenabled
-		createcompositeobject <...>
+script CreateGameObject 
+	if IsCompositeObjectManagerEnabled
+		CreateCompositeObject <...>
 	else
-		createcompositeobjectinstance <...>
+		CreateCompositeObjectInstance <...>
 	endif
 endscript
 
-script jow_rgbatovector \{rgba = [
+script JOW_RGBAToVector \{rgba = [
 			0
 			0
 			0
@@ -702,105 +702,105 @@ script jow_rgbatovector \{rgba = [
 	return rgb = (<rgba> [0] * (1.0, 0.0, 0.0) + <rgba> [1] * (0.0, 1.0, 0.0) + <rgba> [2] * (0.0, 0.0, 1.0)) a = (<rgba> [3])
 endscript
 
-script jow_vectortorgba \{rgb = (0.0, 0.0, 0.0)
+script JOW_VectorToRGBA \{rgb = (0.0, 0.0, 0.0)
 		a = 0}
 	rgba = [0 0 0 0]
 	val = (<rgb>.(1.0, 0.0, 0.0))
-	casttointeger \{val}
-	setarrayelement arrayname = rgba index = 0 newvalue = <val>
+	CastToInteger \{val}
+	SetArrayElement ArrayName = rgba index = 0 newvalue = <val>
 	val = (<rgb>.(0.0, 1.0, 0.0))
-	casttointeger \{val}
-	setarrayelement arrayname = rgba index = 1 newvalue = <val>
+	CastToInteger \{val}
+	SetArrayElement ArrayName = rgba index = 1 newvalue = <val>
 	val = (<rgb>.(0.0, 0.0, 1.0))
-	casttointeger \{val}
-	setarrayelement arrayname = rgba index = 2 newvalue = <val>
-	casttointeger \{a}
-	setarrayelement arrayname = rgba index = 3 newvalue = <a>
+	CastToInteger \{val}
+	SetArrayElement ArrayName = rgba index = 2 newvalue = <val>
+	CastToInteger \{a}
+	SetArrayElement ArrayName = rgba index = 3 newvalue = <a>
 	return rgba = <rgba>
 endscript
 
-script hero_continuousterrainparticles_off 
-	cleareventhandlergroup
-	seteventhandler \{event = newterraintype
-		scr = hero_continuousterrainparticles_on
+script Hero_ContinuousTerrainParticles_Off 
+	ClearEventHandlerGroup
+	SetEventHandler \{event = NewTerrainType
+		Scr = Hero_ContinuousTerrainParticles_On
 		response = switch_script}
-	onexceptionrun
-	block
+	OnExceptionRun
+	Block
 endscript
 
-script hero_continuousterrainparticles_on 
-	getterraintypeparam param = treadactions terrain_id = <terraintype>
-	if NOT structurecontains \{structure = treadactions
-			herocontinuousparticleparams}
-		goto \{hero_continuousterrainparticles_off}
+script Hero_ContinuousTerrainParticles_On 
+	GetTerrainTypeParam param = treadActions terrain_id = <TerrainType>
+	if NOT StructureContains \{Structure = treadActions
+			HeroContinuousParticleParams}
+		goto \{Hero_ContinuousTerrainParticles_Off}
 	endif
-	getuniquecompositeobjectid \{preferredid = hero_continuousterrainparticles}
-	cleareventhandlergroup
-	seteventhandler event = newterraintype scr = hero_continuousterrainparticles_switch response = switch_script params = {particleid = <uniqueid>}
-	onexceptionrun
+	GetUniqueCompositeObjectID \{preferredID = Hero_ContinuousTerrainParticles}
+	ClearEventHandlerGroup
+	SetEventHandler event = NewTerrainType Scr = Hero_ContinuousTerrainParticles_Switch response = switch_script params = {ParticleId = <uniqueID>}
+	OnExceptionRun
 	begin
-	if NOT compositeobjectexists <uniqueid>
-		creategameobject priority = coim_priority_effects heap = particle oldheap = com components = [
-			{component = flexibleparticle}
+	if NOT CompositeObjectExists <uniqueID>
+		CreateGameObject priority = COIM_Priority_Effects heap = particle OldHeap = COM Components = [
+			{Component = flexibleparticle}
 		] params = {
-			name = <uniqueid>
-			(<treadactions>.herocontinuousparticleparams)
-			novisibilitytest
+			name = <uniqueID>
+			(<treadActions>.HeroContinuousParticleParams)
+			NoVisibilityTest
 			object_type = particle
 		}
 	endif
-	obj_getvelocity
-	normalizevector <vel>
-	obj_getposition
-	if compositeobjectexists <uniqueid>
-		<uniqueid> :obj_setposition position = (((1.0, 0.0, 1.0) && <pos>) + (0.0, 1.0, 0.0) * <terrainparticleheight> + (((1.0, 0.0, 1.0) && <norm>) * 0.1 * <length>))
+	Obj_GetVelocity
+	NormalizeVector <vel>
+	Obj_GetPosition
+	if CompositeObjectExists <uniqueID>
+		<uniqueID> :Obj_SetPosition position = (((1.0, 0.0, 1.0) && <pos>) + (0.0, 1.0, 0.0) * <TerrainParticleHeight> + (((1.0, 0.0, 1.0) && <norm>) * 0.1 * <length>))
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
-script hero_continuousterrainparticles_switch 
-	if compositeobjectexists <particleid>
-		<particleid> :emitrate rate = 0
-		<particleid> :destroy ifempty = 1
+script Hero_ContinuousTerrainParticles_Switch 
+	if CompositeObjectExists <ParticleId>
+		<ParticleId> :EmitRate rate = 0
+		<ParticleId> :destroy ifEmpty = 1
 	endif
-	goto hero_continuousterrainparticles_on params = <...>
+	goto Hero_ContinuousTerrainParticles_On params = <...>
 endscript
 
-script getparticletype \{params_script}
-	type = flexible
-	if checkflexibleparticlestructure <params_script>
-		if globalexists name = <params_script> type = structure
-			if structurecontains structure = (<params_script>) particletype
-				switch (<params_script>.particletype)
-					case flexparticle
-					type = flexible
-					case splineparticle
-					type = fast
+script GetParticleType \{params_Script}
+	type = FLEXIBLE
+	if CheckFlexibleParticleStructure <params_Script>
+		if GlobalExists name = <params_Script> type = Structure
+			if StructureContains Structure = (<params_Script>) ParticleType
+				switch (<params_Script>.ParticleType)
+					case FlexParticle
+					type = FLEXIBLE
+					case SplineParticle
+					type = Fast
 				endswitch
 			else
-				if structurecontains structure = (<params_script>) class
-					if ((<params_script>.class) = particleobject)
-						type = fast
+				if StructureContains Structure = (<params_Script>) Class
+					if ((<params_Script>.Class) = ParticleObject)
+						type = Fast
 					endif
 				endif
 			endif
 		endif
 	endif
-	if checksplineparticlestructure <params_script>
-		if globalexists name = <params_script> type = structure
-			if structurecontains structure = (<params_script>) particletype
-				switch (<params_script>.particletype)
-					case flexparticle
-					type = flexible
-					case splineparticle
-					type = fast
+	if CheckSplineParticleStructure <params_Script>
+		if GlobalExists name = <params_Script> type = Structure
+			if StructureContains Structure = (<params_Script>) ParticleType
+				switch (<params_Script>.ParticleType)
+					case FlexParticle
+					type = FLEXIBLE
+					case SplineParticle
+					type = Fast
 				endswitch
 			else
-				if structurecontains structure = (<params_script>) class
-					if ((<params_script>.class) = particleobject)
-						type = fast
+				if StructureContains Structure = (<params_Script>) Class
+					if ((<params_Script>.Class) = ParticleObject)
+						type = Fast
 					endif
 				endif
 			endif
@@ -809,5 +809,5 @@ script getparticletype \{params_script}
 	return type = <type>
 endscript
 
-script waterripplegenerated 
+script WaterRippleGenerated 
 endscript

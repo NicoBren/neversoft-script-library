@@ -1,25 +1,25 @@
-gp_fx_goth_firecol_bottompuffs_01 = {
-	Pos = (-3.062752, -0.09869001, 5.133168)
-	Angles = (0.0, 0.0, 0.0)
+GP_FX_Goth_FireCol_BottomPuffs_01 = {
+	pos = (-3.062752, -0.09869001, 5.133168)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
 	EmitRangeDims = (0.0, 0.0, 0.0)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, -1.0, 0.0)
+	force = (0.0, -1.0, 0.0)
 	WindCoeff = 1.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	AngleSpread = 7.0
 	LifeRange = (0.5, 0.6)
-	Emit_Rate = 20.0
-	Max = 0
+	emit_rate = 20.0
+	max = 0
 	TimeSeed = 0.0
-	LifeTime = 1.0
-	EmitNum = 0
+	lifeTime = 1.0
+	emitNum = 0
 	FollowEmitter = 0.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -33,16 +33,16 @@ gp_fx_goth_firecol_bottompuffs_01 = {
 	EmitDelayStart = 0.0
 	PathFollowTime = 0.0
 	History = 2
-	HistoryListCoordinateSpace = World
-	Color = -3574273
+	HistoryListCoordinateSpace = world
+	color = -3574273
 	LOD_Default
 	QuickMaterial = {
 		DiffuseTextureEnabled
-		DiffuseTexture = ph_firepuffs
+		DiffuseTexture = PH_FirePuffs
 		SpecularPower = 0
-		Bloom
-		AlphaCutoff = 1
-		BlendMode = add
+		bloom
+		alphacutoff = 1
+		blendMode = Add
 		QuadAnimationFPS = 0
 	}
 	Knot = [

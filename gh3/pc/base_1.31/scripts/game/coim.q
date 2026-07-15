@@ -1,41 +1,41 @@
-coim_priority_permanent = 0
-coim_priority_permanentcleanup = 1
-coim_priority_nonpermanent = 2
-coim_priority_droppedweapons = 3
-coim_priority_pedlife_actor = 4
-coim_priority_pedlife = 5
-coim_priority_pedlifedead = 10
-coim_priority_effects = 20
-generic_coim_size = 524288
-career_pedlife_coim_size = 0
-noncareer_pedlife_coim_size = 0
-career_pedlife_xbox_coim_size = 256819
-noncareer_pedlife_xbox_coim_size = 856064
-generic_coim_blockalign = 8192
-generic_xbox_coim_blockalign = 4096
-classicmode_reservedcoimblocksforpermobjects = 250
-coim_max_offscreen_seconds = 0.5
-coim_perm_max_offscreen_seconds = 0.5
-coim_min_offscreen_dist = 25.0
-coim_vehicle_min_offscreen_dist = 32.0
-coim_min_scratch_blocks = 9
-generic_coim_params = {
-	coim_max_peds_remove_atonce = 2
-	coim_kill_relevance = 0.0
-	coim_max_distance = 200.0
-	coim_kill_priority = $coim_priority_nonpermanent
-	coim_initial_num_perm_objects = 36
-	coim_permanent_cleanup_relevance = 0.5
-	coim_type_id = generic
+COIM_Priority_Permanent = 0
+COIM_Priority_PermanentCleanup = 1
+COIM_Priority_NonPermanent = 2
+COIM_Priority_DroppedWeapons = 3
+COIM_Priority_PedLife_Actor = 4
+COIM_Priority_PedLife = 5
+COIM_Priority_PedlifeDead = 10
+COIM_Priority_Effects = 20
+Generic_COIM_Size = 524288
+Career_PedLife_COIM_Size = 0
+NonCareer_PedLife_COIM_Size = 0
+Career_PedLife_XBOX_COIM_Size = 256819
+NonCareer_PedLife_XBOX_COIM_Size = 856064
+Generic_COIM_BlockAlign = 8192
+Generic_XBox_COIM_BlockAlign = 4096
+ClassicMode_ReservedCOIMBlocksForPermObjects = 250
+COIM_Max_Offscreen_Seconds = 0.5
+COIM_Perm_Max_Offscreen_Seconds = 0.5
+COIM_Min_Offscreen_Dist = 25.0
+COIM_Vehicle_Min_Offscreen_Dist = 32.0
+COIM_Min_Scratch_Blocks = 9
+Generic_COIM_Params = {
+	COIM_Max_Peds_Remove_AtOnce = 2
+	COIM_Kill_Relevance = 0.0
+	COIM_Max_Distance = 200.0
+	COIM_Kill_Priority = $COIM_Priority_NonPermanent
+	COIM_Initial_Num_Perm_Objects = 36
+	COIM_Permanent_Cleanup_Relevance = 0.5
+	COIM_Type_ID = generic
 }
-spawner_cleanup_relevance_amount = 0.4
-spawner_cleanup_min_count = 2
+Spawner_Cleanup_Relevance_Amount = 0.4
+Spawner_Cleanup_Min_Count = 2
 
-script coim_preallocate 
-	<blocks> = (<size> / $generic_coim_blockalign)
-	if gamemodeequals \{is_classic}
-		reservecoimblocksforpermobjects (<blocks> / 3)
+script COIM_PreAllocate 
+	<blocks> = (<size> / $Generic_COIM_BlockAlign)
+	if GameModeEquals \{is_classic}
+		ReserveCOIMBlocksForPermObjects (<blocks> / 3)
 	else
-		reservecoimblocksforpermobjects \{$classicmode_reservedcoimblocksforpermobjects}
+		ReserveCOIMBlocksForPermObjects \{$ClassicMode_ReservedCOIMBlocksForPermObjects}
 	endif
 endscript

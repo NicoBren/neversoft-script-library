@@ -13,27 +13,27 @@ script ui_create_singleplayer_character_hub_spawned
 		switch ($<player_status>.part)
 			case guitar
 			hist_tex = icon_progression_guitar
-			case bass
+			case Bass
 			hist_tex = icon_progression_bass
 			case drum
 			hist_tex = icon_progression_drums
-			case vocals
+			case Vocals
 			hist_tex = icon_progression_vocals
 		endswitch
 		make_generic_menu {
-			title = qs(0x1f05c183)
+			title = qs("VIP LOUNGE")
 			show_history
 			num_icons = 0
 			hist_tex = <hist_tex>
 			vmenu_id = create_singleplayer_character_hub_vmenu
 			pad_back_script = generic_event_back_block
 		}
-		cas_set_object_node_pos player = ($cas_current_player) node = z_soundcheck_trg_waypoint_car_select
-		add_generic_menu_icon_item \{text = qs(0xb980b3ee)
+		cas_set_object_node_pos player = ($cas_current_player) node = Z_Soundcheck_TRG_Waypoint_CAR_Select
+		add_generic_menu_icon_item \{text = qs("PLAY SHOW")
 			icon = play_show
 			pad_choose_script = singleplayer_player_show}
 		add_generic_menu_icon_item {
-			text = qs(0xebd11692)
+			text = qs("SELECT ROCKER")
 			icon = select_hero
 			choose_state = uistate_character_selection
 			choose_state_data = {object = <player>}
@@ -43,28 +43,28 @@ script ui_create_singleplayer_character_hub_spawned
 			focusable_flags = {not_focusable}
 		endif
 		add_generic_menu_icon_item {
-			text = qs(0x67bd7527)
-			icon = icon_editcharacter
+			text = qs("EDIT ROCKER")
+			icon = icon_EditCharacter
 			pad_choose_script = single_player_character_hub_edit_character
 			<focusable_flags>
 		}
-		add_generic_menu_icon_item \{text = qs(0x9560fb22)
+		add_generic_menu_icon_item \{text = qs("VIDEOS")
 			icon = vids
 			choose_state = uistate_bonus_videos}
-		add_generic_menu_icon_item \{text = qs(0x9baf87e5)
+		add_generic_menu_icon_item \{text = qs("BAND INFO")
 			icon = manage_band
 			choose_state = uistate_band_name_logo
 			choose_state_data = {
 				override_base_name = 'none'
 			}}
-		add_generic_menu_icon_item \{text = qs(0x0229b698)
+		add_generic_menu_icon_item \{text = qs("ROCK RANKS")
 			icon = cash_milestone_icon_012
-			choose_state = uistate_cash_milestones}
-		if isdrumcontroller controller = ($primary_controller)
+			choose_state = UIstate_cash_milestones}
+		if IsDrumController controller = ($primary_controller)
 			focusable_flags = {not_focusable}
 		endif
 		menu_finish
-		launchevent \{type = focus
+		LaunchEvent \{type = focus
 			target = create_singleplayer_character_hub_vmenu}
 		create_band_money_display savegame = <savegame>
 	endif
@@ -89,10 +89,10 @@ endscript
 first_character_hub_enter = 1
 
 script init_singleplayer_character_hub \{player = 1}
-	formattext checksumname = player_status 'player%d_status' d = <player>
+	FormatText checksumname = player_status 'player%d_status' d = <player>
 	get_savegame_from_player_status player_status = <player_status>
-	if gotparam \{pass_to_gigboard}
-		spawnscriptnow cleanup_singleplayer_hub_return_tutorials params = {player = <player> progression = <progression> ent_player_status = <ent_player_status>}
+	if GotParam \{pass_to_gigboard}
+		spawnscriptnow cleanup_singleplayer_hub_return_tutorials params = {player = <player> Progression = <Progression> ent_player_status = <ent_player_status>}
 		return \{false}
 	else
 		if ($first_character_hub_enter = 0)
@@ -101,10 +101,10 @@ script init_singleplayer_character_hub \{player = 1}
 	endif
 	if NOT ($game_mode = training)
 		bandname_id = band_info
-		getglobaltags <bandname_id> param = first_venue_movie_played
+		GetGlobalTags <bandname_id> param = first_venue_movie_played
 		if (<first_venue_movie_played> = 0)
 			get_progression_globals game_mode = ($game_mode)
-			setglobaltags <bandname_id> params = {first_venue_movie_played = 1}
+			SetGlobalTags <bandname_id> params = {first_venue_movie_played = 1}
 		endif
 	endif
 	if ($first_character_hub_enter = 1)
@@ -129,12 +129,12 @@ script singleplayer_player_show
 	cleanup_singleplayer_hub
 	player_status = player1_status
 	ui_event_add_params ent_player_status = ($<player_status>)
-	ui_event_wait event = menu_change data = {state = uistate_tutorial_prompt is_popup <...>}
+	ui_event_wait event = menu_change data = {state = UIstate_tutorial_prompt is_popup <...>}
 endscript
 
 script cleanup_singleplayer_hub 
-	killcamanim \{name = ch_view_cam}
-	killcamanim \{name = gs_view_cam}
+	KillCamAnim \{name = ch_view_cam}
+	KillCamAnim \{name = gs_view_cam}
 	destroy_bg_viewport
 	disable_pause
 endscript
@@ -144,31 +144,31 @@ script cleanup_singleplayer_hub_return_tutorials
 	change globalname = <player_status> newvalue = <ent_player_status>
 	switch (<ent_player_status>.part)
 		case guitar
-		change \{current_progression_flag = career_guitar}
-		setplayerinfo \{1
+		change \{current_progression_flag = Career_Guitar}
+		SetPlayerInfo \{1
 			part = guitar}
-		case bass
-		change \{current_progression_flag = career_bass}
-		setplayerinfo \{1
-			part = bass}
+		case Bass
+		change \{current_progression_flag = Career_Bass}
+		SetPlayerInfo \{1
+			part = Bass}
 		case drum
-		change \{current_progression_flag = career_drum}
-		setplayerinfo \{1
+		change \{current_progression_flag = Career_Drum}
+		SetPlayerInfo \{1
 			part = drum}
-		case vocals
-		change \{current_progression_flag = career_vocals}
-		setplayerinfo \{1
-			part = vocals}
+		case Vocals
+		change \{current_progression_flag = Career_Vocals}
+		SetPlayerInfo \{1
+			part = Vocals}
 	endswitch
 	ui_event_remove_params \{param = ent_player_status}
 	change \{game_mode = p1_career}
 	change \{current_num_players = 1}
-	gamemode_updatenumplayers \{num_players = 1}
+	GameMode_UpdateNumPlayers \{num_players = 1}
 	create_loading_screen
 	destroy_bandname_viewport
 	destroy_band
 	frontend_load_soundcheck
-	formattext checksumname = player_status 'player%d_status' d = <player>
+	FormatText checksumname = player_status 'player%d_status' d = <player>
 	get_savegame_from_player_status player_status = <player_status>
 	cas_fix_cameras_for_game
 	destroy_loading_screen

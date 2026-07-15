@@ -23,16 +23,16 @@ script coop_career_autosave_or_setlist
 	destroy_sponsored_menu
 	if ($progression_play_completion_movie = 1)
 		get_progression_globals game_mode = ($game_mode)
-		formattext checksumname = tiername 'tier%i' i = ($progression_completion_tier)
-		if structurecontains structure = ($<tier_global>.<tiername>) completion_movie
-			menu_music_off
-			playmovieandwait movie = ($<tier_global>.<tiername>.completion_movie)
+		FormatText checksumname = tiername 'tier%i' i = ($progression_completion_tier)
+		if StructureContains Structure = ($<tier_global>.<tiername>) completion_movie
+			Menu_Music_Off
+			PlayMovieAndWait movie = ($<tier_global>.<tiername>.completion_movie)
 			get_movie_id_by_name movie = ($<tier_global>.<tiername>.completion_movie)
-			setglobaltags <id> params = {unlocked = 1}
+			SetGlobalTags <id> params = {unlocked = 1}
 		endif
 		change \{progression_play_completion_movie = 0}
 	endif
-	getglobaltags \{user_options}
+	GetGlobalTags \{user_options}
 	if (<autosave> = 1)
 		return \{flow_state = coop_career_autosave_fs}
 	else
@@ -143,14 +143,14 @@ script coop_career_select_difficulty_flow_state_func
 	progression_pop_current
 	if ($game_mode = p2_career)
 		index = ($difficulty_list_props.($current_difficulty).index)
-		setprogressiondifficulty difficulty = <index>
-		deregisteratoms
+		SetProgressionDifficulty difficulty = <index>
+		DeRegisterAtoms
 		get_progression_globals game_mode = ($game_mode)
 		if NOT (<progression_global> = none)
-			registeratoms name = progression $<progression_global>
-			registeratoms \{name = achievement
-				$achievement_atoms}
-			updateatoms \{name = progression}
+			RegisterAtoms name = Progression $<progression_global>
+			RegisterAtoms \{name = achievement
+				$Achievement_Atoms}
+			UpdateAtoms \{name = Progression}
 		endif
 	endif
 	get_current_first_play
@@ -642,7 +642,7 @@ coop_career_controller_settings_lefty_flip_warning = {
 }
 
 script coop_career_lefty_flip_func 
-	getglobaltags \{user_options}
+	GetGlobalTags \{user_options}
 	change structurename = player1_status lefthanded_gems = <lefty_flip_p1>
 	change structurename = player1_status lefthanded_button_ups = <lefty_flip_p1>
 	change structurename = player2_status lefthanded_gems = <lefty_flip_p2>
@@ -761,7 +761,7 @@ script coop_career_fail_song_select_quit
 	change \{structurename = player1_status
 		new_cash = 0}
 	progression_push_current
-	gh3_sfx_fail_song_stop_sounds
+	GH3_SFX_fail_song_stop_sounds
 	kill_gem_scroller
 endscript
 coop_career_song_ended_fs = {
@@ -860,7 +860,7 @@ script coop_career_find_newspaper_successor
 	elseif (<got_cash>)
 		return \{flow_state = coop_career_cash_reward_fs}
 	else
-		getglobaltags \{user_options}
+		GetGlobalTags \{user_options}
 		if (<autosave> = 1)
 			return \{flow_state = coop_career_autosave_fs}
 		else
@@ -964,7 +964,7 @@ script find_coop_career_unlock_successor
 	elseif (<got_cash>)
 		return \{flow_state = coop_career_cash_reward_fs}
 	else
-		getglobaltags \{user_options}
+		GetGlobalTags \{user_options}
 		if (<autosave> = 1)
 			return \{flow_state = coop_career_autosave_fs}
 		else

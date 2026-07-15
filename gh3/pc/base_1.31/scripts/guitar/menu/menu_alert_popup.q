@@ -2,7 +2,7 @@ g_ap_prev_menu_id = 0
 
 script create_alert_popup 
 	change g_ap_prev_menu_id = <prev_menu_id>
-	launchevent type = unfocus target = <prev_menu_id>
+	LaunchEvent type = unfocus target = <prev_menu_id>
 	new_menu \{scrollid = ap_popup_scroll
 		vmenuid = ap_popup_vmenu
 		menu_pos = (485.0, 485.0)
@@ -24,7 +24,7 @@ script create_alert_popup
 			0
 			255
 		]}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = ap_popup_container
 		pos = (0.0, 0.0)
@@ -32,9 +32,9 @@ script create_alert_popup
 			left
 			top
 		]}
-	createscreenelement \{type = spriteelement
+	CreateScreenElement \{type = SpriteElement
 		parent = ap_popup_container
-		texture = venue_bg
+		texture = Venue_BG
 		pos = (640.0, 360.0)
 		dims = (1280.0, 720.0)
 		just = [
@@ -42,12 +42,12 @@ script create_alert_popup
 			center
 		]
 		z_priority = 1000}
-	displaysprite \{parent = ap_popup_container
-		tex = autosave_poster
+	displaySprite \{parent = ap_popup_container
+		tex = Autosave_Poster
 		pos = (0.0, 50.0)
 		dims = (1240.0, 620.0)
 		z = 1004}
-	createscreenelement \{type = spriteelement
+	CreateScreenElement \{type = SpriteElement
 		parent = ap_popup_container
 		id = autosave_light_overlay
 		texture = venue_overlay
@@ -58,13 +58,13 @@ script create_alert_popup
 			center
 		]
 		z_priority = 1099}
-	displaysprite \{parent = ap_popup_container
-		tex = tape_h_03
+	displaySprite \{parent = ap_popup_container
+		tex = tape_H_03
 		pos = (210.0, 74.0)
 		dims = (180.0, 80.0)
 		z = 1005}
-	displaysprite \{parent = ap_popup_container
-		tex = tape_h_03
+	displaySprite \{parent = ap_popup_container
+		tex = tape_H_03
 		rgba = [
 			0
 			0
@@ -74,13 +74,13 @@ script create_alert_popup
 		pos = (208.0, 77.0)
 		dims = (180.0, 80.0)
 		z = 1005}
-	displaysprite \{parent = ap_popup_container
-		tex = tape_h_04
+	displaySprite \{parent = ap_popup_container
+		tex = tape_H_04
 		pos = (760.0, 44.0)
 		dims = (180.0, 80.0)
 		z = 1005}
-	displaysprite \{parent = ap_popup_container
-		tex = tape_h_04
+	displaySprite \{parent = ap_popup_container
+		tex = tape_H_04
 		rgba = [
 			0
 			0
@@ -90,13 +90,13 @@ script create_alert_popup
 		pos = (762.0, 47.0)
 		dims = (180.0, 80.0)
 		z = 1005}
-	if gotparam \{alert}
+	if GotParam \{alert}
 		<alert_text> = <alert>
 	else
 		<alert_text> = "WARNING"
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		id = ap_alert_text
 		font = text_a5
 		text = <alert_text>
@@ -106,14 +106,14 @@ script create_alert_popup
 		rgba = [205 180 120 250]
 		z_priority = 1006
 	}
-	getscreenelementdims \{id = ap_alert_text}
+	GetScreenElementDims \{id = ap_alert_text}
 	if (<width> > 780)
 		fit_text_in_rectangle \{id = ap_alert_text
 			dims = (720.0, 40.0)
 			pos = (638.0, 540.0)}
 	endif
-	displaysprite \{parent = ap_popup_container
-		tex = autosave_underline
+	displaySprite \{parent = ap_popup_container
+		tex = Autosave_Underline
 		pos = (508.0, 556.0)
 		dims = (256.0, 48.0)
 		rgba = [
@@ -142,12 +142,12 @@ script create_alert_popup
 endscript
 
 script destroy_alert_popup \{force = 0}
-	soundevent \{event = ui_sfx_select}
+	SoundEvent \{event = ui_sfx_select}
 	destroy_menu \{menu_id = ap_popup_scroll}
 	destroy_menu \{menu_id = ap_popup_container}
 	if (<force> = 0)
-		if screenelementexists \{id = $g_ap_prev_menu_id}
-			launchevent \{type = focus
+		if ScreenElementExists \{id = $g_ap_prev_menu_id}
+			LaunchEvent \{type = focus
 				target = $g_ap_prev_menu_id}
 		endif
 	endif
@@ -176,18 +176,18 @@ script autosave_popup_dot_progression
 	<active_pos> = <ap_dot_init_pos>
 	<j> = 0
 	begin
-	formattext checksumname = ap_dot_checksum 'ap_dot_checksum_%n' n = <j>
-	displaysprite {
+	FormatText checksumname = ap_dot_checksum 'ap_dot_checksum_%n' n = <j>
+	displaySprite {
 		parent = ap_popup_container
 		id = <ap_dot_checksum>
-		tex = autosave_dot_16
+		tex = Autosave_Dot_16
 		rgba = <active_color>
 		pos = <active_pos>
 		dims = (24.0, 24.0)
 		z = 4
 	}
 	<active_pos> = (<active_pos> + <as_dot_offset>)
-	wait \{0.5
+	Wait \{0.5
 		seconds}
 	<j> = (<j> + 1)
 	repeat 3
@@ -196,7 +196,7 @@ script autosave_popup_dot_progression
 		destroy_menu \{menu_id = ap_dot_checksum_1}
 		destroy_menu \{menu_id = ap_dot_checksum_2}
 	endif
-	wait \{0.5
+	Wait \{0.5
 		seconds}
 	<i> = (<i> + 1)
 	repeat 3

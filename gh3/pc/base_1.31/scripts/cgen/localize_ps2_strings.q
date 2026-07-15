@@ -1,73 +1,73 @@
-string_ps2_blah = "BLAH"
-string_ps2_warning = "WARNING"
-string_ps2_caution = "CAUTION"
-string_ps2_checking = "CHECKING..."
-string_ps2_memory_card_error = "MEMORY CARD ERROR"
-string_ps2_retry = "RETRY"
-string_ps2_continue_without_saving = "CONTINUE WITHOUT SAVING"
-string_ps2_save_not_found = "SAVE NOT FOUND"
-string_ps2_yes = "YES"
-string_ps2_no = "NO"
-string_ps2_ok = "OK"
-string_ps2_cancel = "CANCEL"
-string_ps2_loading = "LOADING..."
-string_ps2_load_successful = "LOAD SUCCESSFUL"
-string_ps2_formatting = "FORMATTING..."
-string_ps2_format_successful = "FORMAT SUCCESSFUL"
-string_ps2_overwriting = "OVERWRITING..."
-string_ps2_overwrite_successful = "OVERWRITE SUCCESSFUL"
-string_ps2_saving = "SAVING..."
-string_ps2_save_successful = "SAVE SUCCESSFUL"
-string_ps2_in_the_event_of_rock = "IN THE EVENT OF ROCK"
-string_ps2_using_the_guitar_controller = "USING THE GUITAR CONTROLLER"
-string_ps2_plug_in = "PLUG IN"
-string_ps2_strap_on = "STRAP ON"
-string_ps2_bang = "BANG"
-string_ps2_head = "HEAD"
-string_ps2_start = "START"
-string_ps2_button = "Button"
-string_ps2_back = "BACK"
-string_ps2_red_button = "Red Button"
-string_ps2_continue = "CONTINUE"
-string_ps2_green_button = "Green Button"
-string_ps2_up_down = "UP/DOWN"
-string_ps2_strum_bar = "Strum Bar"
-string_ps2_star_power = "STAR POWER"
-string_ps2_tilt = "Tilt"
-string_ps2_as_made_famous_by = "as made famous by"
-string_ps2_large_gems = "large gems"
-string_ps2_stereo = "STEREO"
-string_ps2_mono = "MONO"
+string_ps2_BLAH = "BLAH"
+string_ps2_WARNING = "WARNING"
+string_ps2_CAUTION = "CAUTION"
+string_ps2_CHECKING = "CHECKING..."
+string_ps2_MEMORY_CARD_ERROR = "MEMORY CARD ERROR"
+string_ps2_RETRY = "RETRY"
+string_ps2_CONTINUE_WITHOUT_SAVING = "CONTINUE WITHOUT SAVING"
+string_ps2_SAVE_NOT_FOUND = "SAVE NOT FOUND"
+string_ps2_YES = "YES"
+string_ps2_NO = "NO"
+string_ps2_OK = "OK"
+string_ps2_CANCEL = "CANCEL"
+string_ps2_LOADING = "LOADING..."
+string_ps2_LOAD_SUCCESSFUL = "LOAD SUCCESSFUL"
+string_ps2_FORMATTING = "FORMATTING..."
+string_ps2_FORMAT_SUCCESSFUL = "FORMAT SUCCESSFUL"
+string_ps2_OVERWRITING = "OVERWRITING..."
+string_ps2_OVERWRITE_SUCCESSFUL = "OVERWRITE SUCCESSFUL"
+string_ps2_SAVING = "SAVING..."
+string_ps2_SAVE_SUCCESSFUL = "SAVE SUCCESSFUL"
+string_ps2_IN_THE_EVENT_OF_ROCK = "IN THE EVENT OF ROCK"
+string_ps2_USING_THE_GUITAR_CONTROLLER = "USING THE GUITAR CONTROLLER"
+string_ps2_PLUG_IN = "PLUG IN"
+string_ps2_STRAP_ON = "STRAP ON"
+string_ps2_BANG = "BANG"
+string_ps2_HEAD = "HEAD"
+string_ps2_START = "START"
+string_ps2_BUTTON = "Button"
+string_ps2_BACK = "BACK"
+string_ps2_RED_BUTTON = "Red Button"
+string_ps2_CONTINUE = "CONTINUE"
+string_ps2_GREEN_BUTTON = "Green Button"
+string_ps2_UP_DOWN = "UP/DOWN"
+string_ps2_STRUM_BAR = "Strum Bar"
+string_ps2_STAR_POWER = "STAR POWER"
+string_ps2_TILT = "Tilt"
+string_ps2_AS_MADE_FAMOUS_BY = "as made famous by"
+string_ps2_LARGE_GEMS = "large gems"
+string_ps2_STEREO = "STEREO"
+string_ps2_MONO = "MONO"
 
 script get_string_ps2 \{message = unknown}
 	localized_string = ""
 	switch <message>
 		case loading
-		if ispal
+		if IsPAL
 			localized_string = "Loading data. Do not remove the ^Memory Card (8MB) (for PlayStation®2)^ in ^MEMORY CARD slot 1,^ controller, or reset/switch off the console."
 		else
 			localized_string = "Loading data. Do not remove the ^memory card (8MB)(for PlayStation®2)^ in ^MEMORY CARD slot 1,^ controller, or reset/switch off the console."
 		endif
-		case saving
-		if ispal
+		case Saving
+		if IsPAL
 			localized_string = "Saving data. Do not remove the ^Memory Card (8MB) (for PlayStation®2)^ in ^MEMORY CARD slot 1,^ controller, or reset/switch off the console."
 		else
 			localized_string = "Saving data. Do not remove the ^memory card (8MB)(for PlayStation®2)^ in ^MEMORY CARD slot 1,^ controller, or reset/switch off the console."
 		endif
 		case autosaving
-		if ispal
+		if IsPAL
 			localized_string = "Autosaving data. Do not remove the ^Memory Card (8MB) (for PlayStation®2)^ in ^MEMORY CARD slot 1,^ controller, or reset/switch off the console."
 		else
 			localized_string = "Autosaving data. Do not remove the ^memory card (8MB)(for PlayStation®2)^ in ^MEMORY CARD slot 1,^ controller, or reset/switch off the console."
 		endif
 		case overwriting
-		if ispal
+		if IsPAL
 			localized_string = "Overwriting data. Do not remove the ^Memory Card (8MB) (for PlayStation®2)^ in ^MEMORY CARD slot 1,^ controller, or reset/switch off the console."
 		else
 			localized_string = "Overwriting data. Do not remove the ^memory card (8MB)(for PlayStation®2)^ in ^MEMORY CARD slot 1,^ controller, or reset/switch off the console."
 		endif
 		case formatting
-		if ispal
+		if IsPAL
 			localized_string = "Formatting ^Memory Card (8MB) (for PlayStation®2)^ in ^MEMORY CARD slot 1.^ Do not remove ^Memory Card (8MB) (for PlayStation®2),^ controller, or reset/switch off the console."
 		else
 			localized_string = "Formatting ^memory card (8MB)(for PlayStation®2)^ in ^MEMORY CARD slot 1.^ Do not remove ^memory card (8MB)(for PlayStation®2),^ controller, or reset/switch off the console."
@@ -81,73 +81,73 @@ script get_string_ps2 \{message = unknown}
 		case overwrite_successful
 		localized_string = "Overwrite Successful."
 		case boot_autosave_warning
-		if ispal
+		if IsPAL
 			localized_string = "Guitar Hero III uses an autosave feature. The insertion or removal of a ^Memory Card (8MB) (for PlayStation®2)^ beyond this point may cause data to be overwritten."
 		else
 			localized_string = "Guitar Hero III uses an autosave feature. The insertion or removal of a ^memory card (8MB)(for PlayStation®2)^ beyond this point may cause data to be overwritten."
 		endif
 		case check_memcard
-		if ispal
+		if IsPAL
 			localized_string = "Checking ^Memory Card (8MB) (for PlayStation®2)^ in ^MEMORY CARD slot 1.^ Do not remove ^Memory Card (8MB) (for PlayStation®2),^ controller, or reset/switch off the console."
 		else
 			localized_string = "Checking ^memory card (8MB)(for PlayStation®2)^ in ^MEMORY CARD slot 1.^ Do not remove ^memory card (8MB)(for PlayStation®2),^ controller, or reset/switch off the console."
 		endif
 		case no_memcard_boot
-		if ispal
+		if IsPAL
 			localized_string = "No ^Memory Card (8MB) (for PlayStation®2)^ inserted in ^MEMORY CARD slot 1.^ Guitar Hero III uses an Autosave feature. Insertion of a ^Memory Card (8MB) (for PlayStation®2)^ beyond this point may cause data to be overwritten. Insert a ^Memory Card (8MB) (for PlayStation®2)^ with at least 325 KB of free space to save game data."
 		else
 			localized_string = "No ^memory card (8MB)(for PlayStation®2)^ inserted in ^MEMORY CARD slot 1.^ Guitar Hero III uses an Autosave feature. Insertion of a ^memory card (8MB)(for PlayStation®2)^ beyond this point may cause data to be overwritten. Insert a ^memory card (8MB)(for PlayStation®2)^ with at least 325 KB of free space to save game data."
 		endif
 		case no_memcard_save_boot
-		if ispal
+		if IsPAL
 			localized_string = "No ^Memory Card (8MB) (for PlayStation®2)^ in ^MEMORY CARD slot 1.^"
 		else
 			localized_string = "No ^memory card (8MB)(for PlayStation®2)^ in ^MEMORY CARD slot 1.^"
 		endif
 		case no_save_boot
-		if ispal
+		if IsPAL
 			localized_string = "No Guitar Hero III save data present on ^Memory Card (8MB) (for PlayStation®2)^ in ^MEMORY CARD slot 1.^ Guitar Hero III uses an Autosave feature. 325 KB of space is required to save game data. Do you want to create a save file now?"
 		else
 			localized_string = "No Guitar Hero III save data present on ^memory card (8MB)(for PlayStation®2)^ in ^MEMORY CARD slot 1.^ Guitar Hero III uses an Autosave feature. 325 KB of space is required to save game data. Do you want to create a save file now?"
 		endif
 		case no_save_ingame
-		if ispal
+		if IsPAL
 			localized_string = "No Guitar Hero III save data present on ^Memory Card (8MB) (for PlayStation®2)^ in ^MEMORY CARD slot 1.^"
 		else
 			localized_string = "No Guitar Hero III save data present on ^memory card (8MB)(for PlayStation®2)^ in ^MEMORY CARD slot 1.^"
 		endif
 		case save_failed
-		if ispal
+		if IsPAL
 			localized_string = "Save failed! Check ^Memory Card (8MB) (for PlayStation®2)^ in ^MEMORY CARD slot 1^ and please try again."
 		else
 			localized_string = "Save failed! Check ^memory card (8MB)(for PlayStation®2)^ in ^MEMORY CARD slot 1^ and please try again."
 		endif
 		case overwrite_failed
-		if ispal
+		if IsPAL
 			localized_string = "Overwrite failed! Check ^Memory Card (8MB) (for PlayStation®2)^ in ^MEMORY CARD slot 1^ and please try again."
 		else
 			localized_string = "Overwrite failed! Check ^memory card (8MB)(for PlayStation®2)^ in ^MEMORY CARD slot 1^ and please try again."
 		endif
 		case attempt_format
-		if ispal
+		if IsPAL
 			localized_string = "^Memory Card (8MB) (for PlayStation®2)^ in ^MEMORY CARD slot 1^ is unformatted. Format ^Memory Card (8MB) (for PlayStation®2)?^"
 		else
 			localized_string = "^memory card (8MB)(for PlayStation®2)^ in ^MEMORY CARD slot 1^ is unformatted. Format ^memory card (8MB)(for PlayStation®2)?^"
 		endif
 		case confirm_format
-		if ispal
+		if IsPAL
 			localized_string = "Are you sure you wish to format ^Memory Card (8MB) (for PlayStation®2)^ in ^MEMORY CARD slot 1?^"
 		else
 			localized_string = "Are you sure you wish to format ^memory card (8MB)(for PlayStation®2)^ in ^MEMORY CARD slot 1?^"
 		endif
 		case already_formatted
-		if ispal
+		if IsPAL
 			localized_string = "The ^Memory Card (8MB) (for PlayStation®2)^ in ^MEMORY CARD slot 1^ has already been formatted! Please reinsert unformatted ^Memory Card (8MB) (for PlayStation®2)^ in ^MEMORY CARD slot 1^ and select retry."
 		else
 			localized_string = "The ^memory card (8MB)(for PlayStation®2)^ in ^MEMORY CARD slot 1^ has already been formatted! Please reinsert unformatted ^memory card (8MB)(for PlayStation®2)^ in ^MEMORY CARD slot 1^ and select retry."
 		endif
 		case format_failed
-		if ispal
+		if IsPAL
 			localized_string = "Format failed! Please check ^Memory Card (8MB) (for PlayStation®2)^ in ^MEMORY CARD slot 1^ and try again."
 		else
 			localized_string = "Format failed! Please check ^memory card (8MB)(for PlayStation®2)^ in ^MEMORY CARD slot 1^ and try again."
@@ -155,19 +155,19 @@ script get_string_ps2 \{message = unknown}
 		case format_cancelled
 		localized_string = "Format cancelled. Continue without saving?"
 		case no_memcard_ingame
-		if ispal
+		if IsPAL
 			localized_string = "No ^Memory Card (8MB) (for PlayStation®2)^ in ^MEMORY CARD slot 1.^"
 		else
 			localized_string = "No ^memory card (8MB)(for PlayStation®2)^ in ^MEMORY CARD slot 1.^"
 		endif
 		case load_failed
-		if ispal
+		if IsPAL
 			localized_string = "Load failed! Check ^Memory Card (8MB) (for PlayStation®2)^ in ^MEMORY CARD slot 1^ and please try again."
 		else
 			localized_string = "Load failed! Check ^memory card (8MB)(for PlayStation®2)^ in ^MEMORY CARD slot 1^ and please try again."
 		endif
 		case overwrite_warning_boot
-		if ispal
+		if IsPAL
 			localized_string = "Guitar Hero III uses an Autosave feature. Insertion of a ^Memory Card (8MB) (for PlayStation®2)^ beyond this point may cause data to be overwritten. Continue without saving?"
 		else
 			localized_string = "Guitar Hero III uses an Autosave feature. Insertion of a ^memory card (8MB)(for PlayStation®2)^ beyond this point may cause data to be overwritten. Continue without saving?"
@@ -175,31 +175,31 @@ script get_string_ps2 \{message = unknown}
 		case disable_autosave
 		localized_string = "Autosave has been disabled.\\nAutosave can be re-enabled in the options menu."
 		case overwrite_warning_ingame
-		if ispal
+		if IsPAL
 			localized_string = "WARNING: Saving will overwrite any existing Guitar Hero III data on the ^Memory Card (8MB) (for PlayStation®2)^ in ^MEMORY CARD slot 1.^ Are you sure you want to save?"
 		else
 			localized_string = "WARNING: Saving will overwrite any existing Guitar Hero III data on the ^memory card (8MB)(for PlayStation®2)^ in ^MEMORY CARD slot 1.^ Are you sure you want to save?"
 		endif
 		case lose_progress_ingame
-		if ispal
+		if IsPAL
 			localized_string = "WARNING: If you load data from a ^Memory Card (8MB) (for PlayStation®2)^ in ^MEMORY CARD slot 1,^ you will lose your current game progress. Continue with load?"
 		else
 			localized_string = "WARNING: If you load data from a ^memory card (8MB)(for PlayStation®2)^ in ^MEMORY CARD slot 1,^ you will lose your current game progress. Continue with load?"
 		endif
 		case insufficient_space_boot
-		if ispal
+		if IsPAL
 			localized_string = "Insufficient free space on ^Memory Card (8MB) (for PlayStation®2)^ in ^MEMORY CARD slot 1.^ Insert a ^Memory Card (8MB) (for PlayStation®2)^ with at least 325 KB of free space, or create some space using the console's internal browser."
 		else
 			localized_string = "Insufficient free space on ^memory card (8MB)(for PlayStation®2)^ in ^MEMORY CARD slot 1.^ Insert a ^memory card (8MB)(for PlayStation®2)^ with at least 325 KB of free space, or create some space using the console's internal browser."
 		endif
 		case insufficient_space_ingame
-		if ispal
+		if IsPAL
 			localized_string = "Insufficient free space on ^Memory Card (8MB) (for PlayStation®2)^ in ^MEMORY CARD slot 1.^ Guitar Hero III requires 325 KB of free space to save data."
 		else
 			localized_string = "Insufficient free space on ^memory card (8MB)(for PlayStation®2)^ in ^MEMORY CARD slot 1.^ Guitar Hero III requires 325 KB of free space to save data."
 		endif
 		case corrupt_boot
-		if ispal
+		if IsPAL
 			localized_string = "Corrupt data detected on ^Memory Card (8MB) (for PlayStation®2)^ in ^MEMORY CARD slot 1.^ 325 KB of free space is required to save game data. Replace the corrupt file and create a new save file?"
 		else
 			localized_string = "Corrupt data detected on ^memory card (8MB)(for PlayStation®2)^ in ^MEMORY CARD slot 1.^ 325 KB of free space is required to save game data. Replace the corrupt file and create a new save file?"
@@ -207,7 +207,7 @@ script get_string_ps2 \{message = unknown}
 		case confirm_overwrite_boot
 		localized_string = "Are you sure you wish to overwrite the save file?"
 		case new_memcard_ingame
-		if ispal
+		if IsPAL
 			localized_string = "The status of the ^Memory Card (8MB) (for Playstation®2)^ in ^MEMORY CARD slot 1^ has changed. Data may be overwritten. Proceed with save?"
 		else
 			localized_string = "The status of the ^memory card (8MB)(for Playstation®2)^ in ^MEMORY CARD slot 1^ has changed. Data may be overwritten. Proceed with save?"

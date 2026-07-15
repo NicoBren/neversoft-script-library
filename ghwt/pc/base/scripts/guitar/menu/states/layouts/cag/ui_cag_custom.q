@@ -1,7 +1,7 @@
 
 script ui_create_cag_custom 
 	make_generic_menu \{vmenu_id = create_cag_custom_vmenu
-		title = qs(0x1f790f57)
+		title = qs("AXE SMITH")
 		show_history}
 	setup_cas_menu_handlers \{vmenu_id = create_cag_custom_vmenu
 		camera_list = [
@@ -13,18 +13,18 @@ script ui_create_cag_custom
 		zoom_camera = 'customize_cag_Zoom'}
 	add_generic_menu_icon_item {
 		icon = icon_cag_body
-		text = qs(0x706474c8)
-		choose_state = uistate_cag_custom_body
+		text = qs("BODY")
+		choose_state = UIstate_cag_custom_body
 		choose_state_data = {instrument_info = <instrument_info>}
 	}
 	add_generic_menu_icon_item {
 		icon = icon_cag_neck
-		text = qs(0xf95d39e5)
-		choose_state = uistate_cag_select_part_inclusion
+		text = qs("FRET BOARD")
+		choose_state = UIstate_cag_select_part_inclusion
 		choose_state_data = {
 			part = (<instrument_info>.neck_part)
 			body_part = (<instrument_info>.body_part)
-			text = qs(0x63730a8b)
+			text = qs("NECK")
 			cam_name = 'DrumStart'
 			is_popup
 			hist_tex = icon_cag_neck
@@ -34,15 +34,15 @@ script ui_create_cag_custom
 			zoom_camera = 'customize_cag_Zoom'
 		}
 	}
-	get_section_index_from_desc_id part = (<instrument_info>.neck_part) target_desc_id = finishes
-	if gotparam \{section_index}
+	get_section_index_from_desc_id part = (<instrument_info>.neck_part) target_desc_id = Finishes
+	if GotParam \{section_index}
 		add_generic_menu_icon_item {
 			icon = icon_cag_inlay
-			text = qs(0x3436c336)
-			choose_state = uistate_cap_artist_layer_popout
+			text = qs("INLAYS")
+			choose_state = UIstate_cap_artist_layer_popout
 			choose_state_data = {
 				part = (<instrument_info>.neck_part)
-				text = qs(0x3436c336)
+				text = qs("INLAYS")
 				section_index = <section_index>
 				is_popup
 				hist_tex = icon_cag_inlay
@@ -52,39 +52,39 @@ script ui_create_cag_custom
 				zoom_camera = 'customize_cag_Zoom'
 			}
 		}
-		removeparameter \{section_index}
+		RemoveParameter \{section_index}
 	endif
 	add_generic_menu_icon_item {
 		icon = icon_cag_head
-		text = qs(0x69a146e9)
-		choose_state = uistate_cag_custom_head
+		text = qs("HEADSTOCK")
+		choose_state = UIstate_cag_custom_head
 		choose_state_data = {part = (<instrument_info>.head_part) body_part = (<instrument_info>.body_part)}
 	}
 	add_generic_menu_icon_item {
 		icon = icon_cag_hardware
-		text = qs(0xa263f7ae)
-		choose_state = uistate_cag_custom_hardware
+		text = qs("HARDWARE")
+		choose_state = UIstate_cag_custom_hardware
 		choose_state_data = {instrument_info = <instrument_info>}
 	}
 	add_generic_menu_icon_item {
 		icon = icon_highway
-		text = qs(0x2e2ac615)
-		choose_state = uistate_cag_custom_highway
+		text = qs("HIGHWAY")
+		choose_state = UIstate_cag_custom_highway
 		choose_state_data = {instrument_info = <instrument_info>}
 	}
-	getglobaltags savegame = ($cas_current_savegame) cas_helper_dialogue param = visit_cag
+	GetGlobalTags savegame = ($cas_current_savegame) cas_helper_dialogue param = visit_cag
 	if (<visit_cag> = 0)
-		setglobaltags savegame = ($cas_current_savegame) cas_helper_dialogue params = {visit_cag = 1}
+		SetGlobalTags savegame = ($cas_current_savegame) cas_helper_dialogue params = {visit_cag = 1}
 		ui_event_wait \{event = menu_change
 			data = {
-				state = uistate_helper_dialogue
+				state = UIstate_helper_dialogue
 				is_popup
 				life = 30
-				text = qs(0x8cf3582a)
+				text = qs("The CUSTOMIZE option allows you to build a custom axe.  Changing BODY STYLE, FRET BOARD, HEADSTOCK STYLE and PICKGUARD STYLE will undo any changes to the FINISHES that you make.")
 			}}
 	endif
 	menu_finish \{car_helper_text}
-	launchevent type = focus target = create_cag_custom_vmenu data = {child_index = <selected_index>}
+	LaunchEvent type = focus target = create_cag_custom_vmenu data = {child_index = <selected_index>}
 endscript
 
 script ui_destroy_cag_custom 

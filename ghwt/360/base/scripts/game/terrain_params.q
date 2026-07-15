@@ -8,11 +8,11 @@ STANDARD_TERRAIN_DEFAULT = {
 	SoundActions = {
 		SoundAssets = TERRAIN_DEFAULT_SoundAssets
 	}
-	PhysicsActions = {
+	physicsactions = {
 		SKATE_ROLL_FRICTION = $default_friction
 		SKATE_GRIND_FRICTION = $default_rail_friction
 	}
-	TreadActions = {
+	treadActions = {
 		SkaterGrindParticleParms = [
 			{
 				$GP_TER_Grind_Metal_Sparks01
@@ -58,7 +58,7 @@ STANDARD_TERRAIN_CONCSMOOTH = {
 	SoundActions = {
 		SoundAssets = TERRAIN_CONCSMOOTH_SoundAssets
 	}
-	TreadActions = {
+	treadActions = {
 		SkaterGrindParticleParms = [
 			{
 				$GP_TER_Grind_Metal_Sparks01
@@ -104,7 +104,7 @@ STANDARD_TERRAIN_CONCROUGH = {
 	SoundActions = {
 		SoundAssets = TERRAIN_CONCROUGH_SoundAssets
 	}
-	TreadActions = {
+	treadActions = {
 		SkaterGrindParticleParms = [
 			{
 				$GP_TER_Grind_Metal_Sparks01
@@ -150,7 +150,7 @@ STANDARD_TERRAIN_CONCROUGHTRAINING = {
 	SoundActions = {
 		SoundAssets = TERRAIN_CONCROUGH_SoundAssets
 	}
-	TreadActions = {
+	treadActions = {
 		SkaterGrindParticleParms = [
 			{
 				$GP_TER_Grind_Metal_Sparks01
@@ -196,7 +196,7 @@ STANDARD_TERRAIN_CONCSMOOTHTRAINING = {
 	SoundActions = {
 		SoundAssets = TERRAIN_CONCSMOOTH_SoundAssets
 	}
-	TreadActions = {
+	treadActions = {
 		SkaterGrindParticleParms = [
 			{
 				$GP_TER_Grind_Metal_Sparks01
@@ -242,7 +242,7 @@ STANDARD_TERRAIN_BRICK = {
 	SoundActions = {
 		SoundAssets = TERRAIN_DEFAULT_SoundAssets
 	}
-	TreadActions = {
+	treadActions = {
 		SkaterGrindParticleParms = [
 			{
 				$GP_TER_Grind_Metal_Sparks01
@@ -288,7 +288,7 @@ STANDARD_TERRAIN_SIDEWALK = {
 	SoundActions = {
 		SoundAssets = TERRAIN_SIDEWALK_SoundAssets
 	}
-	TreadActions = {
+	treadActions = {
 		SkaterGrindParticleParms = [
 			{
 				$GP_TER_Grind_Metal_Sparks01
@@ -329,7 +329,7 @@ STANDARD_TERRAIN_ASPHALT = {
 	SoundActions = {
 		SoundAssets = TERRAIN_ASPHALT_SoundAssets
 	}
-	TreadActions = {
+	treadActions = {
 		SkaterGrindParticleParms = [
 			{
 				$GP_TER_Grind_Metal_Sparks01
@@ -373,7 +373,7 @@ STANDARD_TERRAIN_GOLDCOINS = {
 	SoundActions = {
 		SoundAssets = TERRAIN_METAL_SoundAssets
 	}
-	TreadActions = {
+	treadActions = {
 		SkaterJumpLandParticleParms = [
 			{
 				$GP_TER_JumpLand_GoldCoins_Dust01
@@ -407,7 +407,7 @@ STANDARD_TERRAIN_FLOWERBED = {
 	SoundActions = {
 		SoundAssets = TERRAIN_DIRT_SoundAssets
 	}
-	TreadActions = {
+	treadActions = {
 		SkaterJumpLandParticleParms = [
 			{
 				$GP_TER_JumpLand_Dirt_Dust01
@@ -438,7 +438,7 @@ STANDARD_TERRAIN_LEAVES = {
 	SoundActions = {
 		SoundAssets = TERRAIN_DEFAULT_SoundAssets
 	}
-	TreadActions = {
+	treadActions = {
 		SkaterJumpLandParticleParms = [
 			{
 				$GP_TER_JumpLand_Default_Dust01
@@ -469,7 +469,7 @@ STANDARD_TERRAIN_SAND = {
 	SoundActions = {
 		SoundAssets = TERRAIN_DIRT_SoundAssets
 	}
-	TreadActions = {
+	treadActions = {
 		SkaterJumpLandParticleParms = [
 			{
 				$GP_TER_JumpLand_Default_Dust01
@@ -500,7 +500,7 @@ STANDARD_TERRAIN_METAL = {
 	SoundActions = {
 		SoundAssets = TERRAIN_METAL_SoundAssets
 	}
-	TreadActions = {
+	treadActions = {
 		SkaterGrindParticleParms = [
 			{
 				$GP_TER_Grind_Metal_Sparks01
@@ -540,7 +540,7 @@ STANDARD_TERRAIN_WOOD = {
 	SoundActions = {
 		SoundAssets = TERRAIN_WOOD_SoundAssets
 	}
-	TreadActions = {
+	treadActions = {
 		SkaterGrindParticleParms = [
 			{
 				$GP_TER_Grind_Wood_Bits01
@@ -580,7 +580,7 @@ STANDARD_TERRAIN_WOOD_PAINTED_W = {
 	SoundActions = {
 		SoundAssets = TERRAIN_WOOD_SoundAssets
 	}
-	TreadActions = {
+	treadActions = {
 		SkaterGrindParticleParms = [
 			{
 				$GP_TER_Grind_WoodPaint_Bits
@@ -620,7 +620,7 @@ STANDARD_TERRAIN_GRASS_DRIED = {
 	SoundActions = {
 		SoundAssets = TERRAIN_GRASS_SoundAssets
 	}
-	TreadActions = {
+	treadActions = {
 		SkaterJumpLandParticleParms = [
 			{
 				$GP_TER_JumpLand_Grass_Dust01
@@ -651,7 +651,7 @@ STANDARD_TERRAIN_GRASS = {
 	SoundActions = {
 		SoundAssets = TERRAIN_GRASS_SoundAssets
 	}
-	TreadActions = {
+	treadActions = {
 		SkaterJumpLandParticleParms = [
 			{
 				$GP_TER_JumpLand_Grass_Dust01
@@ -686,7 +686,7 @@ STANDARD_TERRAIN_DIRT = {
 	SoundActions = {
 		SoundAssets = TERRAIN_DIRT_SoundAssets
 	}
-	TreadActions = {
+	treadActions = {
 		SkaterJumpLandParticleParms = [
 			{
 				$GP_TER_JumpLand_Dirt_Dust01
@@ -711,7 +711,7 @@ STANDARD_TERRAIN_WATER = {
 	SoundActions = {
 		SoundAssets = TERRAIN_WATER_SoundAssets
 	}
-	TreadActions = {
+	treadActions = {
 		SkaterJumpLandParticleParms = [
 			{
 				$GP_TER_JumpLand_Water_Splash01
@@ -733,7 +733,7 @@ STANDARD_TERRAIN_METALPOLE = {
 	SoundActions = {
 		SoundAssets = TERRAIN_METALPOLE_SoundAssets
 	}
-	TreadActions = {
+	treadActions = {
 		SkaterGrindParticleParms = [
 			{
 				$GP_TER_Grind_Metal_Sparks01
@@ -758,7 +758,7 @@ STANDARD_TERRAIN_ELECTRICWIRE = {
 	SoundActions = {
 		SoundAssets = TERRAIN_ELECTRICWIRE_SoundAssets
 	}
-	TreadActions = {
+	treadActions = {
 		SkaterGrindParticleParms = [
 			{
 				$GP_TER_Grind_ElectricWire_Sparks01
@@ -770,7 +770,7 @@ STANDARD_TERRAIN_BAMBOO = {
 	SoundActions = {
 		SoundAssets = TERRAIN_WATER_SoundAssets
 	}
-	TreadActions = {
+	treadActions = {
 		SkaterGrindParticleParms = [
 			{
 				$GP_TER_Grind_Wood_Bits01
@@ -810,7 +810,7 @@ STANDARD_TERRAIN_TILE_4FT = {
 	SoundActions = {
 		SoundAssets = TERRAIN_WATER_SoundAssets
 	}
-	TreadActions = {
+	treadActions = {
 		SkaterGrindParticleParms = [
 			{
 				$GP_TER_Grind_Metal_Sparks01
@@ -856,11 +856,11 @@ STANDARD_TERRAIN_ARCADE = {
 	SoundActions = {
 		SoundAssets = TERRAIN_DEFAULT_SoundAssets
 	}
-	PhysicsActions = {
+	physicsactions = {
 		SKATE_ROLL_FRICTION = $default_friction
 		SKATE_GRIND_FRICTION = $default_rail_friction
 	}
-	TreadActions = {
+	treadActions = {
 		SkaterGrindParticleParms = [
 			{
 				$GP_TER_Grind_Metal_Sparks01
@@ -906,11 +906,11 @@ STANDARD_TERRAIN_ZEROFRICTION = {
 	SoundActions = {
 		SoundAssets = TERRAIN_DEFAULT_SoundAssets
 	}
-	PhysicsActions = {
+	physicsactions = {
 		SKATE_ROLL_FRICTION = 0
 		SKATE_GRIND_FRICTION = 0
 	}
-	TreadActions = {
+	treadActions = {
 		SkaterGrindParticleParms = [
 			{
 				$GP_TER_Grind_Metal_Sparks01
@@ -956,11 +956,11 @@ STANDARD_TERRAIN_HIGHFRICTION = {
 	SoundActions = {
 		SoundAssets = TERRAIN_DEFAULT_SoundAssets
 	}
-	PhysicsActions = {
+	physicsactions = {
 		SKATE_ROLL_FRICTION = 0.15
 		SKATE_GRIND_FRICTION = 0
 	}
-	TreadActions = {
+	treadActions = {
 		SkaterGrindParticleParms = [
 			{
 				$GP_TER_Grind_Metal_Sparks01
@@ -1004,7 +1004,7 @@ STANDARD_TERRAIN_HIGHFRICTION = {
 }
 STANDARD_TERRAIN_HIGHFRICTION_HOUSES = {
 	$STANDARD_TERRAIN_DEFAULT
-	PhysicsActions = {
+	physicsactions = {
 		SKATE_ROLL_FRICTION = 0.05
 	}
 }

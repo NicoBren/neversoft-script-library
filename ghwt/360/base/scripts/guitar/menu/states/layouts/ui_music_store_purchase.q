@@ -1,20 +1,20 @@
 
 script ui_create_music_store_purchase 
-	formatText TextName = text qs(0x3f136ba0) i = (<purchase_struct>.Name) a = (<purchase_struct>.artist)
+	FormatText TextName = text qs("\LYOU ARE ABOUT TO PURCHASE ''%i'' BY %a.\nDO YOU ACCEPT THIS PURCHASE?") i = (<purchase_struct>.name) a = (<purchase_struct>.artist)
 	add_music_store_purchase_dialogue {
 		text = <text>
 		price = (<purchase_struct>.price)
 	}
-	add_music_store_item \{text = qs(0x642bc05f)
+	add_music_store_item \{text = qs("\LCANCEL")
 		pad_choose_script = generic_event_back}
-	add_music_store_item \{text = qs(0x246547c5)}
+	add_music_store_item \{text = qs("\LACCEPT")}
 	ui_music_store_purchase_add_info_items option_struct = <purchase_struct>
-	SpawnScriptNow \{music_store_fade_in_options}
-	music_store_set_previous_history previous_history = <previous_history> new_entry = qs(0xf4a055f9)
-	add_user_control_helper \{text = qs(0x52d4ae3c)
+	spawnscriptnow \{music_store_fade_in_options}
+	music_store_set_previous_history previous_history = <previous_history> new_entry = qs("\LPURCHASE")
+	add_user_control_helper \{text = qs("\LSELECT")
 		button = green
 		z = 100000}
-	add_user_control_helper \{text = qs(0x0c4db477)
+	add_user_control_helper \{text = qs("\LBACK")
 		button = red
 		z = 100000}
 endscript
@@ -28,13 +28,13 @@ script ui_music_store_purchase_add_info_items
 			option_struct
 		]
 		all}
-	if ((<option_struct>.Type) = song)
+	if ((<option_struct>.type) = song)
 		music_store_set_song_info_items option_struct = <option_struct>
-	elseif ((<option_struct>.Type) = album)
+	elseif ((<option_struct>.type) = album)
 		music_store_set_album_info_items option_struct = <option_struct>
-	elseif ((<option_struct>.Type) = pack)
+	elseif ((<option_struct>.type) = pack)
 		music_store_set_pack_info_items option_struct = <option_struct>
 	else
-		ScriptAssert qs(0xda7bde3a) i = (<purchase_struct>.Name) donotresolve
+		ScriptAssert qs("\Lui_music_store_purchase_add_info_items was given an invalid type for item %i") i = (<purchase_struct>.name) DoNotResolve
 	endif
 endscript

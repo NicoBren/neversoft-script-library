@@ -1,28 +1,28 @@
-gp_fx_harborencore_littlewheelsparks_01 = {
-	Pos = (-0.254066, 0.0, -0.0)
-	Angles = (0.0, 0.0, 0.0)
+GP_FX_HarborEncore_LittleWheelSparks_01 = {
+	pos = (-0.254066, 0.0, -0.0)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
 	Align
 	ApplyPositionOffset
 	EmitRangeDims = (0.0, 0.0, 0.0)
-	Emit_Target = (1.0, 0.0, 0.0)
+	emit_Target = (1.0, 0.0, 0.0)
 	EnableRotate
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, -5.0, 0.0)
+	force = (0.0, -5.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	AngleSpread = 10.0
 	LifeRange = (1.0, 1.5)
-	Emit_Rate = 300.0
-	Max = 0
+	emit_rate = 300.0
+	max = 0
 	TimeSeed = 0.0
-	LifeTime = 0.0
-	EmitNum = 0
+	lifeTime = 0.0
+	emitNum = 0
 	FollowEmitter = 0.0
 	AlwaysEmit
 	EmitFunction = constant
@@ -38,16 +38,16 @@ gp_fx_harborencore_littlewheelsparks_01 = {
 	AlignWithPath
 	PathFollowTime = 0.1
 	History = 2
-	HistoryListCoordinateSpace = World
-	Color = -184584961
+	HistoryListCoordinateSpace = world
+	color = -184584961
 	LOD_Default
 	QuickMaterial = {
 		DiffuseTextureEnabled
 		DiffuseTexture = JOW_Spark01
 		SpecularPower = 0
-		Bloom
-		AlphaCutoff = 1
-		BlendMode = add
+		bloom
+		alphacutoff = 1
+		blendMode = Add
 		QuadAnimationFPS = 0
 	}
 	Knot = [

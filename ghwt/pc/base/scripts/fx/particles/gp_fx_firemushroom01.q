@@ -1,49 +1,49 @@
-gp_fx_firemushroom01 = {
+GP_FX_FireMushroom01 = {
 	pos = (2.928119, 1.8252, -3.508374)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	emitrangedims = (0.0, 0.0, 0.0)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	EmitRangeDims = (0.0, 0.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, -1.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 35.0
-	liferange = (1.0, 1.0)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 35.0
+	LifeRange = (1.0, 1.0)
 	emit_rate = 20.0
 	max = 0
-	timeseed = 0.0
-	lifetime = 0.0
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 0.0
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(1.0, 1.0)
 		(0.3, 0.3)
 	]
-	speedrange = (2.0, 2.0)
-	rotvel = (2.0, 2.0)
-	rotveltimescale = 0.5
-	emitdelaystart = 0.0
-	pathfollowtime = 0.3
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (2.0, 2.0)
+	RotVel = (2.0, 2.0)
+	RotVelTimeScale = 0.5
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.3
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -1
-	lod_default
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = ph_firepuffs
-		specularpower = 0
+	LOD_Default
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = PH_FirePuffs
+		SpecularPower = 0
 		alphacutoff = 1
-		blendmode = add
-		quadanimationfps = 0
+		blendMode = Add
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.45461005, 0.0, -0.0)
 		(-0.45461005, 0.0, -0.0)
 		(-0.37518397, 0.0, -0.0)
@@ -57,7 +57,7 @@ gp_fx_firemushroom01 = {
 		(0.473422, 0.0, -0.0)
 		(0.473422, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-2733824
 		-10000640
 		-2000640
@@ -67,7 +67,7 @@ gp_fx_firemushroom01 = {
 		-870445199
 		-1082713781
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.25675702
 		0.58260894
 		1.0

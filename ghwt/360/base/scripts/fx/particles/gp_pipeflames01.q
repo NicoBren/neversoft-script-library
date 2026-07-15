@@ -1,26 +1,26 @@
 GP_PipeFlames01 = {
-	Pos = (2.0216632, 5.1616206, -1.478416)
-	Angles = (0.0, 0.0, 0.0)
+	pos = (2.0216632, 5.1616206, -1.478416)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
 	EmitRangeDims = (0.2, 0.2, 0.1)
-	Emit_Target = (0.0, 0.4, 1.0)
+	emit_Target = (0.0, 0.4, 1.0)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, -1.0, 0.0)
+	force = (0.0, -1.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	Radiate
 	AngleSpread = 25.0
 	LifeRange = (0.1, 0.5)
-	Emit_Rate = 48.0
-	Max = 0
+	emit_rate = 48.0
+	max = 0
 	TimeSeed = 0.0
-	LifeTime = 0.0
-	EmitNum = 0
+	lifeTime = 0.0
+	emitNum = 0
 	FollowEmitter = 0.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -35,17 +35,17 @@ GP_PipeFlames01 = {
 	AlignWithPath
 	PathFollowTime = 0.3
 	History = 2
-	HistoryListCoordinateSpace = World
-	Color = -9223425
+	HistoryListCoordinateSpace = world
+	color = -9223425
 	LOD_Distances = (20.0, 30.0)
 	NoVisibilityTest
 	QuickMaterial = {
 		TextureLayout = Layout2x2
 		DiffuseTextureEnabled
-		DiffuseTexture = JOW_StatueFlames01
+		DiffuseTexture = jow_statueflames01
 		SpecularPower = 0
-		AlphaCutoff = 16
-		BlendMode = add
+		alphacutoff = 16
+		blendMode = Add
 		Burn
 		BurnValue = 0.8
 		SortGroup = 3

@@ -10,28 +10,28 @@ script ui_create_cap_shape_edit
 			mask
 		]
 		all}
-	Change \{achievements_modified_logo = 1}
-	if NOT checksumequals a = <part> b = cas_band_logo
+	change \{Achievements_modified_logo = 1}
+	if NOT ChecksumEquals a = <part> b = CAS_Band_Logo
 		show_history = {show_history}
 	endif
 	make_generic_menu {
 		vmenu_id = create_cap_shape_edit_vmenu
 		pad_back_script = ui_event
-		pad_back_params = {event = menu_back data = {state = uistate_cap_layers_list}}
-		title = qs(0x3a03d46e)
+		pad_back_params = {event = menu_back data = {state = UIstate_cap_layers_list}}
+		title = qs("Edit Design")
 		<show_history>
 	}
-	if checksumequals a = <part> b = cas_band_logo
+	if ChecksumEquals a = <part> b = CAS_Band_Logo
 		no_cas_handlers = {no_cas_handlers}
 	endif
 	edit_cas_layer part = <part> mask = <mask> layer_index = <layer_index> cap_index = <cap_index> section = (<sections> [<section_index>]) vmenu_id = create_cap_shape_edit_vmenu no_cas_handlers = <no_cas_handlers> camera_list = <camera_list> zoom_camera = <zoom_camera>
 	add_generic_menu_icon_item {
 		icon = widget_delete
-		text = qs(0x5bbcb1d5)
+		text = qs("Delete Layer")
 		pad_choose_script = ui_delete_layer
 		pad_choose_params = {part = <part> cap_index = <cap_index> layer_index = <layer_index>}
 	}
-	if checksumequals a = <part> b = cas_band_logo
+	if ChecksumEquals a = <part> b = CAS_Band_Logo
 		menu_finish \{car_helper_text
 			no_rotate_zoom_text}
 	else
@@ -49,10 +49,10 @@ endscript
 
 script cap_new_shape 
 	destroy_generic_menu
-	delete_layer part = <part> cap_index = <cap_index> layer_index = <layer_index> state = uistate_cap_layers_list
+	delete_layer part = <part> cap_index = <cap_index> layer_index = <layer_index> state = UIstate_cap_layers_list
 	ui_event_wait \{event = menu_back
 		data = {
-			state = uistate_cap_layers_list
+			state = UIstate_cap_layers_list
 			new_layer_selected = true
 		}}
 endscript
@@ -62,6 +62,6 @@ script ui_delete_layer
 	delete_layer part = <part> cap_index = <cap_index> layer_index = <layer_index>
 	ui_event_wait \{event = menu_back
 		data = {
-			state = uistate_cap_layers_list
+			state = UIstate_cap_layers_list
 		}}
 endscript

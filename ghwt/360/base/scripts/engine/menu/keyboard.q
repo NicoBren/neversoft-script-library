@@ -2,13 +2,13 @@ current_page = 0
 current_cpu = 0
 
 script handle_keyboard_input 
-	if NOT GlobalExists \{Name = Profile_Pages}
+	if NOT GlobalExists \{name = Profile_Pages}
 		return
 	endif
 	if GotParam \{got_escape}
 		if ($show_gpu_time = 1)
 			ToggleMetrics \{mode = 5}
-			Change \{current_cpu = 6}
+			change \{current_cpu = 6}
 		else
 			ToggleMetrics \{mode = 0}
 		endif
@@ -27,27 +27,27 @@ script handle_keyboard_input
 	endif
 	GetMetricsMode
 	GetArraySize \{$Profile_Pages}
-	num_pages = <array_Size>
+	num_pages = <array_size>
 	num_cpus = 7
-	if isps3
+	if IsPs3
 		<num_cpus> = 3
 	endif
 	if GotParam \{text}
 		<key> = 1
 		begin
-		formatText TextName = key_name qs(0xf12be168) k = <key>
+		FormatText TextName = key_name qs("\L%k") k = <key>
 		if (<text> = <key_name>)
 			if (<mode> = 2)
 				if ((<key> - 1) < <num_cpus>)
-					Change current_cpu = (<key> -1)
-					printf \{qs(0x34de4ddc)
+					change current_cpu = (<key> -1)
+					printf \{qs("\LCurrent CPU %c")
 						c = $current_cpu}
 					break
 				endif
 			endif
 			if (<mode> = 3)
 				if ((<key> - 1) < <num_pages>)
-					Change current_page = (<key> -1)
+					change current_page = (<key> -1)
 					break
 				endif
 			endif
@@ -55,29 +55,29 @@ script handle_keyboard_input
 		<key> = (<key> + 1)
 		repeat 9
 		if (<mode> >= 2)
-			if (<text> = qs(0x713755f7))
+			if (<text> = qs("\L "))
 				MoveProfileCursor cpu = ($current_cpu) freeze
 			endif
 		endif
 		if (<mode> = 2)
-			if (<text> = qs(0xe522dff6))
+			if (<text> = qs("\Ld"))
 				dumpprofilestart
-				dumpprofile cpu = ($current_cpu) title = qs(0x056363d7)
+				dumpprofile cpu = ($current_cpu) title = qs("\LProfile Dump:")
 				dumpprofileend \{output_text
 					output_file}
 			endif
 		endif
-		if (<text> = qs(0xce0f8c35))
-			Change show_gpu_time = (1 - $show_gpu_time)
+		if (<text> = qs("\Lg"))
+			change show_gpu_time = (1 - $show_gpu_time)
 			if ($show_gpu_time = 1)
 				ToggleMetrics \{mode = 5}
-				Change \{current_cpu = 6}
+				change \{current_cpu = 6}
 			else
 				ToggleMetrics \{mode = 0}
 			endif
 		endif
-		if (<text> = qs(0xaa634931))
-			begincpucapture \{1}
+		if (<text> = qs("\Lc"))
+			BeginCPUCapture \{1}
 		endif
 		if ScriptExists \{user_keyboard_script}
 			user_keyboard_script text = <text>
